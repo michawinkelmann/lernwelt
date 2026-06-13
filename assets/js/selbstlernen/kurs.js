@@ -212,8 +212,7 @@ function rendereLandkarte() {
       <table><thead><tr><th>Wochen</th><th>Thema</th><th>Lektionen</th><th>KC-Schwerpunkt</th></tr></thead><tbody></tbody></table></details>`);
     const tb = det.querySelector("tbody");
     KURS.stoffverteilung.forEach(z => {
-      const pilot = z.status === "in-arbeit";
-      tb.append(el(`<tr class="${pilot ? "ist-pilot" : ""}"><td>${esc(z.wochen)}</td><td>${esc(z.thema)}${pilot ? " — <em>Pilot</em>" : ""}</td><td>${esc(z.lektionen)}</td><td>${esc(z.kc)}</td></tr>`));
+      tb.append(el(`<tr><td>${esc(z.wochen)}</td><td>${esc(z.thema)}</td><td>${esc(z.lektionen)}</td><td>${esc(z.kc)}</td></tr>`));
     });
     wrap.append(det);
   }

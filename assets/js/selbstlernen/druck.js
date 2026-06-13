@@ -21,7 +21,8 @@ function leseParameter() {
   return {
     kurs: (p.get("kurs") || "").trim(),
     loesung: p.get("loesung") === "1" || p.get("loesung") === "true",
-    spuren: (p.get("spuren") || "").trim().toLowerCase()  // basis | standard | plus
+    spuren: (p.get("spuren") || "").trim().toLowerCase(),  // basis | standard | plus
+    zweig: (p.get("zweig") || "").trim().toLowerCase()       // gym | rs | beide
   };
 }
 
@@ -79,12 +80,15 @@ function metaHinweis(a) {
   return `<span class="dr-meta">${teile.join(" · ")}</span>`;
 }
 
-// einzelne Lücke im Lückentext: feste Schreiblinie
+// Lückentext: Text an "___" splitten, dazwischen feste Schreiblinien.
+// Der Textanteil wird NICHT maskiert — die Aufgabendaten sind geprüft und dürfen
+// $…$-Formeln sowie HTML enthalten (analog zu `frage`). Nur \n -> <br>.
+// rendereMathe(...) läuft danach über den Bereich und setzt die Formeln.
 function lueckenText(a) {
   const teile = String(a.text || "").split("___");
   let html = "";
   teile.forEach((t, i) => {
-    html += escHtml(t).replace(/\n/g, "<br>");
+    html += t.replace(/\n/g, "<br>");
     if (i < teile.length - 1) html += '<span class="dr-luecke" aria-hidden="true"></span>';
   });
   return `<p class="dr-luecketext">${html}</p>`;
@@ -247,6 +251,7 @@ function baueArbeitsblatt(kurs, index, opt) {
   const titel = kurs.titel || kurs.kurs || "Arbeitsblatt";
   const untertitel = kurs.untertitel ? `<p class="dr-untertitel">${escHtml(kurs.untertitel)}</p>` : "";
   const spurText = { basis: "Basis", standard: "Basis + Standard", plus: "Basis + Standard + Plus" }[opt.spuren] || "Basis + Standard";
+  const zweigText = { gym: "nur Gymnasium", rs: "nur Realschule", beide: "Gym + RS" }[opt.zweig] || "Gym + RS";
   const exemplar = opt.loesung
     ? '<span class="dr-exemplar">Lehrer-Exemplar (mit Lösungen)</span>'
     : "";
@@ -254,7 +259,7 @@ function baueArbeitsblatt(kurs, index, opt) {
     <h1 class="dr-titel">${escHtml(titel)}</h1>
     ${untertitel}
     <p class="dr-felder"><span>Name: ${SCHREIBLINIE}</span><span>Datum: ${SCHREIBLINIE}</span><span>Klasse: ${SCHREIBLINIE}</span></p>
-    <p class="dr-spurinfo">Spuren: ${escHtml(spurText)}${opt.sichern ? " · inkl. Sichern-Aufgaben" : ""} ${exemplar}</p>
+    <p class="dr-spurinfo">Zweig: ${escHtml(zweigText)} · Spuren: ${escHtml(spurText)}${opt.sichern ? " · inkl. Sichern-Aufgaben" : ""} ${exemplar}</p>
   </header>`);
 
   // Lektionen nach Blöcken gruppieren (Blöcke definieren Reihenfolge + Überschriften).
@@ -278,6 +283,7 @@ function baueArbeitsblatt(kurs, index, opt) {
       for (const r of refs) {
         const a = index.get(r.id);
         if (!a) continue; // fehlende Aufgabe robust überspringen
+        if (opt.zweig && opt.zweig !== "beide" && Array.isArray(a.zweig) && !a.zweig.includes(opt.zweig)) continue; // Zweig-Filter (RS: nur both-zweig)
         nummer += 1;
         aufgabenGesamt += 1;
         aufgabenHtml.push(rendereAufgabe(a, nummer, opt.loesung));
@@ -326,6 +332,7 @@ function aktuelleOptionen() {
   const spurRadio = document.querySelector('input[name="spuren"]:checked');
   return {
     spuren: spurRadio ? spurRadio.value : "standard",
+    zweig: (document.querySelector('input[name="zweig"]:checked')?.value) || "beide",
     sichern: $("#opt-sichern")?.checked || false,
     loesung: $("#opt-loesung")?.checked || false
   };
@@ -349,6 +356,10 @@ function setzeOptionenAusUrl(p) {
   if (p.loesung) {
     const c = $("#opt-loesung");
     if (c) c.checked = true;
+  }
+  if (p.zweig && ["gym", "rs", "beide"].includes(p.zweig)) {
+    const r = document.querySelector(`input[name="zweig"][value="${p.zweig}"]`);
+    if (r) r.checked = true;
   }
 }
 
@@ -374,7 +385,7 @@ async function init() {
   $("#kurs-name").textContent = KURS.titel || p.kurs;
 
   // Bedienelemente live verdrahten
-  for (const el of document.querySelectorAll('input[name="spuren"], #opt-sichern, #opt-loesung')) {
+  for (const el of document.querySelectorAll('input[name="spuren"], input[name="zweig"], #opt-sichern, #opt-loesung')) {
     el.addEventListener("change", () => { neuRendern(); });
   }
   const druck = $("#knopf-drucken");

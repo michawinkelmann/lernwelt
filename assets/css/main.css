@@ -90,6 +90,7 @@ html[data-theme="dunkel"] .knopf.zweitrangig { color: var(--akzent); }
 .kachel svg.kachel-bild { width: 100%; height: 60px; display: block; color: var(--kachel-farbe, var(--akzent)); }
 
 /* ===== Abzeichen ===== */
+.abzeichen[hidden] { display: none; } /* sonst überstimmt display:inline-block das hidden-Attribut (Bug: ✓gelöst immer sichtbar) */
 .abzeichen { display: inline-block; font-size: .74rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; border: 1.5px solid var(--linie); color: var(--text-leise); white-space: nowrap; }
 .abzeichen.sim { border-color: var(--physik); color: var(--physik); }
 .abzeichen.zweig-tag { border-color: var(--mathe); color: var(--mathe); }

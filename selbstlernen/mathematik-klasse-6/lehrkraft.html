@@ -1,134 +1,131 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lehrkraft-Leitfaden · Mathematik Klasse 6</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderation: Mathematik 6 — Lernbüro (Lehrkraft) — Lernwelt</title>
+<meta name="description" content="Moderationsseite für die Lehrkraft: Stoffverteilung, typische Fehler, Differenzierung und Praxis-Leitfaden zum Selbstlern-Kurs Mathematik Klasse 6.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
 <link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/selbstlernen.css">
 <link rel="stylesheet" href="../../assets/css/print.css" media="print">
 </head>
-<body>
-<header class="site-header">
-  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-  <div class="header-innen">
-    <a class="logo" href="../../index.html">Dr. Winkelmann · Lernseiten</a>
-  </div>
-</header>
+<body data-seite="lehrkraft">
+<noscript><p class="noscript-hinweis"><a href="../../index.html">Zur Startseite</a></p></noscript>
 <main id="inhalt" class="inhalt">
-  <h1>Lehrkraft-Leitfaden · Mathematik Klasse 6</h1>
-  <p class="einleitung">Diese Seite ist nur für die Lehrkraft. Alle Lernbüro-Lektionen, typischen Fehler und Differenzierungshinweise auf einen Blick.</p>
+ <h1>Moderation: Mathematik 6 · Lernbüro</h1>
+ <p class="einleitung">Diese Seite ist nur für die Lehrkraft. Alle Lernbüro-Lektionen, typischen Fehler und Differenzierungshinweise auf einen Blick.</p>
 
-  <h2>Stoffverteilung Halbjahr (KC Mathematik Gym/RS Sek I, Klasse 6)</h2>
-  <table class="vergleich-tabelle">
-    <thead><tr><th>Wochen</th><th>Thema</th><th>Lektionen</th><th>KC-Bezug</th></tr></thead>
-    <tbody>
-        <tr class="ist-pilot"><td>1–5</td><td>Bruchrechnung — <em>Pilot (5 Lektionen ausgebaut)</em></td><td>5 von ca. 18</td><td>Zahlen &amp; Operationen: Brüche, Rechnen mit Brüchen</td></tr>
-        <tr><td>6–9</td><td>Dezimalzahlen</td><td>ca. 12</td><td>Zahlen &amp; Operationen: Dezimalzahlen, Umrechnen</td></tr>
-        <tr><td>10–12</td><td>Teilbarkeit und Primzahlen</td><td>ca. 8</td><td>Zahlen &amp; Operationen: Teilbarkeit, ggT, kgV</td></tr>
-        <tr><td>13–15</td><td>Kreis und Winkel</td><td>ca. 9</td><td>Raum und Form: Winkel, Kreisumfang und -fläche</td></tr>
-        <tr><td>16–17</td><td>Körper und Volumen</td><td>ca. 7</td><td>Raum und Form: Prismen, Volumen und Oberfläche</td></tr>
-        <tr><td>18</td><td>Statistische Kennwerte</td><td>ca. 5</td><td>Daten und Zufall: Mittelwert, Median, Häufigkeit</td></tr>
-    </tbody>
-  </table>
-  <p class="einleitung">Echte Stundenzahlen nach Stundentafel kalibrieren. Der Pilot baut nur den Bruchrechnung-Block aus; die übrigen Blöcke stehen als <code>geplant</code> in <code>daten/kurse/ma-06.json</code>.</p>
+ <p class="knopfzeile"><a class="knopf zweitrangig klein" href="../druck.html?kurs=ma-06">🖨 Druckmaterial erstellen</a></p>
 
-  <h2>Lektionen im Einzelnen</h2>
+ <h2>Stoffverteilung Halbjahr (KC Mathematik Gym/RS Sek I, Klasse 6)</h2>
+ <table class="vergleich-tabelle">
+ <thead><tr><th>Wochen</th><th>Thema</th><th>Lektionen</th><th>KC-Bezug</th></tr></thead>
+ <tbody>
+ <tr><td>1–5</td><td>Bruchrechnung</td><td>5 von ca. 18</td><td>Zahlen &amp; Operationen: Brüche, Rechnen mit Brüchen</td></tr>
+ <tr><td>6–9</td><td>Dezimalzahlen</td><td>ca. 12</td><td>Zahlen &amp; Operationen: Dezimalzahlen, Umrechnen</td></tr>
+ <tr><td>10–12</td><td>Teilbarkeit und Primzahlen</td><td>ca. 8</td><td>Zahlen &amp; Operationen: Teilbarkeit, ggT, kgV</td></tr>
+ <tr><td>13–15</td><td>Kreis und Winkel</td><td>ca. 9</td><td>Raum und Form: Winkel, Kreisumfang und -fläche</td></tr>
+ <tr><td>16–17</td><td>Körper und Volumen</td><td>ca. 7</td><td>Raum und Form: Prismen, Volumen und Oberfläche</td></tr>
+ <tr><td>18</td><td>Statistische Kennwerte</td><td>ca. 5</td><td>Daten und Zufall: Mittelwert, Median, Häufigkeit</td></tr>
+ </tbody>
+ </table>
+ <p class="einleitung">Echte Stundenzahlen nach Stundentafel kalibrieren.</p>
 
-  <section class="merkkasten">
-    <span class="merk-etikett">Lektion 1 · Was ein Bruch bedeutet</span>
-    <p><strong>Ziele:</strong> Zähler und Nenner eines Bruchs deuten; Bruchteil einer Größe berechnen (z. B. 3/4 von 20 Euro).<br>
-    <strong>Typische Fehler:</strong> Zähler und Nenner verwechselt; Bruch als „zwei getrennte Zahlen" gelesen statt als ein Anteil; Bruchteil-Berechnung als einfache Multiplikation statt „erst teilen, dann malnehmen"; schon 3/4 &gt; 1 angenommen.<br>
-    <strong>Differenzierung:</strong> Basis = Bruchbedeutung und Bruchteil (br-001, br-004), Standard = gleichwertige Brüche erkennen (br-005). <em>Plus-Lücke:</em> es gibt noch keine AFB-III-Aufgabe zum Bruchbegriff – Schnelle bearbeiten br-011 aus Lektion 2 vor.<br>
-    <strong>Ankommen:</strong> Vorwissen aus Klasse 5 (natürliche Zahlen, Teilen: nz-001, nz-002). Wer hier unsicher ist, kurz nachfragen – das Teilen als Grundoperation ist Voraussetzung.<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 1; Trainingsraum „Bruch-Paare".</p>
-  </section>
+ <h2>Lektionen im Einzelnen</h2>
 
-  <section class="merkkasten">
-    <span class="merk-etikett">Lektion 2 · Erweitern und Kürzen</span>
-    <p><strong>Ziele:</strong> Brüche vollständig kürzen; durch Erweitern gleichnamig machen.<br>
-    <strong>Typische Fehler:</strong> Nicht vollständig gekürzt (4/6 statt 2/3); beim Kürzen nur Zähler oder nur Nenner geteilt; ggT nicht erkannt und mehrfach hintereinander gekürzt statt einmal durch den ggT; „Erweitern verändert den Wert" – dieser Irrtum sitzt tief.<br>
-    <strong>Differenzierung:</strong> Basis = Kürzen mit Dropdown und numerisch (br-002, br-003), Standard = gleichwertige Brüche per Erweitern zuordnen (br-005), Plus = Umkehraufgabe Multiplikation (br-011). Volle drei Spuren vorhanden.<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 2. Ein kurzer Tafelvergleich 8/12 = 4/6 = 2/3 lohnt sich am Anfang.</p>
-  </section>
+ <section class="merkkasten">
+ <span class="merk-etikett">Lektion 1 · Was ein Bruch bedeutet</span>
+ <p><strong>Ziele:</strong> Zähler und Nenner eines Bruchs deuten; Bruchteil einer Größe berechnen (z. B. 3/4 von 20 Euro).<br>
+ <strong>Typische Fehler:</strong> Zähler und Nenner verwechselt; Bruch als „zwei getrennte Zahlen" gelesen statt als ein Anteil; Bruchteil-Berechnung als einfache Multiplikation statt „erst teilen, dann malnehmen"; schon 3/4 &gt; 1 angenommen.<br>
+ <strong>Differenzierung:</strong> Basis = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-001">Bruchbedeutung und Bruchteil</a>, Standard = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-005">gleichwertige Brüche erkennen</a>. Plus: Schnelle bearbeiten <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-011">Umgekehrt gedacht</a> aus Lektion 2 vor.<br>
+ <strong>Ankommen:</strong> Vorwissen aus Klasse 5 (natürliche Zahlen, Teilen: <a href="../../mathematik/klasse-5/natuerliche-zahlen/uebungen.html#aufgabe-ma-05-nz-001">Schau dir die Zahl … genau an</a>). Wer hier unsicher ist, kurz nachfragen – das Teilen als Grundoperation ist Voraussetzung.<br>
+ <strong>Material:</strong> Erklärseite Abschnitt 1; Trainingsraum „Bruch-Paare".</p>
+ </section>
 
-  <section class="merkkasten">
-    <span class="merk-etikett">Lektion 3 · Brüche vergleichen und ordnen</span>
-    <p><strong>Ziele:</strong> Brüche durch Gleichnamigmachen vergleichen; mehrere Brüche ordnen.<br>
-    <strong>Typische Fehler:</strong> Brüche mit größerem Nenner pauschal als kleiner eingeschätzt (1/8 und 1/2 verwechselt); Hauptnenner falsch bestimmt (Produkt statt kgV); beim Ordnen nur Zähler verglichen ohne Gleichnamigmachen.<br>
-    <strong>Differenzierung:</strong> Basis = gleichwertige Brüche erkennen (br-005), Standard = Reihenfolge-Aufgabe mit vier Brüchen (br-010). <em>Plus-Lücke:</em> es gibt noch keine AFB-III-Aufgabe zum Vergleichen – Schnelle bearbeiten br-012 oder br-013 aus Lektion 5 vor.<br>
-    <strong>Sichern:</strong> br-008 prüft das Konzept Kürzen/Erweitern + Vergleichen auf Niveau 2 – bewusst eine Lektion früher eingesetzt als Brücke.<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 3.</p>
-  </section>
+ <section class="merkkasten">
+ <span class="merk-etikett">Lektion 2 · Erweitern und Kürzen</span>
+ <p><strong>Ziele:</strong> Brüche vollständig kürzen; durch Erweitern gleichnamig machen.<br>
+ <strong>Typische Fehler:</strong> Nicht vollständig gekürzt (4/6 statt 2/3); beim Kürzen nur Zähler oder nur Nenner geteilt; ggT nicht erkannt und mehrfach hintereinander gekürzt statt einmal durch den ggT; „Erweitern verändert den Wert" – dieser Irrtum sitzt tief.<br>
+ <strong>Differenzierung:</strong> Basis = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-002">Kürzen mit Dropdown und numerisch</a>, Standard = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-005">gleichwertige Brüche per Erweitern zuordnen</a>, Plus = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-011">Umkehraufgabe Multiplikation</a>. Volle drei Spuren vorhanden.<br>
+ <strong>Material:</strong> Erklärseite Abschnitt 2. Ein kurzer Tafelvergleich 8/12 = 4/6 = 2/3 lohnt sich am Anfang.</p>
+ </section>
 
-  <section class="merkkasten">
-    <span class="merk-etikett">Lektion 4 · Addieren und Subtrahieren</span>
-    <p><strong>Ziele:</strong> gleichnamige und ungleichnamige Brüche addieren und subtrahieren.<br>
-    <strong>Typische Fehler:</strong> Der Klassiker: Zähler und Nenner separat addiert (1/2 + 1/3 = 2/5) – muss explizit thematisiert werden; Hauptnenner vergessen; nach dem Addieren nicht gekürzt; gemischte Zahlen (2 1/4) noch nicht eingeführt – nur echte Brüche, maximal ungekürzte Ergebnisse größer 1.<br>
-    <strong>Stopp-Punkt:</strong> Vor dieser Lektion lohnt ein kurzes Gespräch: Warum kann man Nenner nicht einfach addieren? Die Erklärseite enthält ein Gegenbeispiel – gemeinsam zeigen.<br>
-    <strong>Differenzierung:</strong> Basis = Bruchteil berechnen als Aufwärmaufgabe (br-004), Standard = ungleichnamige Addition (br-006) und Sachaufgabe (br-007), Plus = mehrstufige Sachaufgabe (br-012). Volle drei Spuren vorhanden.<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 4.</p>
-  </section>
+ <section class="merkkasten">
+ <span class="merk-etikett">Lektion 3 · Brüche vergleichen und ordnen</span>
+ <p><strong>Ziele:</strong> Brüche durch Gleichnamigmachen vergleichen; mehrere Brüche ordnen.<br>
+ <strong>Typische Fehler:</strong> Brüche mit größerem Nenner pauschal als kleiner eingeschätzt (1/8 und 1/2 verwechselt); Hauptnenner falsch bestimmt (Produkt statt kgV); beim Ordnen nur Zähler verglichen ohne Gleichnamigmachen.<br>
+ <strong>Differenzierung:</strong> Basis = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-005">gleichwertige Brüche erkennen</a>, Standard = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-010">Reihenfolge-Aufgabe mit vier Brüchen</a>. Plus: Schnelle bearbeiten <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-012">Für das Klassenfest ist ein</a> oder <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-013">Jana behauptet</a> aus Lektion 5 vor.<br>
+ <strong>Sichern:</strong> <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-008">Rechnen mit Brüchen</a> prüft das Konzept Kürzen/Erweitern + Vergleichen auf Niveau 2 – bewusst eine Lektion früher eingesetzt als Brücke.<br>
+ <strong>Material:</strong> Erklärseite Abschnitt 3.</p>
+ </section>
 
-  <section class="merkkasten">
-    <span class="merk-etikett">Lektion 5 · Multiplizieren und Dividieren</span>
-    <p><strong>Ziele:</strong> Brüche multiplizieren (Zähler mal Zähler, Nenner mal Nenner); durch einen Bruch dividieren (mit Kehrwert malnehmen).<br>
-    <strong>Typische Fehler:</strong> Beim Multiplizieren trotzdem gleichnamig gemacht; Kehrwert falsch gebildet (Zähler und Nenner nicht vollständig getauscht); Division durch einen Bruch als Subtraktion verstanden; „Malnehmen mit einem Bruch kleiner 1 ergibt ein kleineres Ergebnis" – Schülerinnen und Schüler überrascht.<br>
-    <strong>Basis-Lücke:</strong> Es gibt keine eigenständige Niveau-1-Aufgabe zu Multiplikation/Division. Der Player verweist auf die Rechenbeispiele der Erklärseite als geführte Basis-Spur; br-003 (Kürzen) dient als Einstieg, da Kürzen vor dem Malnehmen hilfreich ist.<br>
-    <strong>Differenzierung:</strong> Basis = Erklärseiten-Beispiele + br-003, Standard = Rechenregeln Multiple-Choice (br-008) und Multiplikation Sachaufgabe (br-009), Plus = Umkehraufgabe (br-011) und Freitext-Begründung (br-013).<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 5. Trainingsraum „Bruch-Paare" als abschliessende Übung geeignet.</p>
-  </section>
+ <section class="merkkasten">
+ <span class="merk-etikett">Lektion 4 · Addieren und Subtrahieren</span>
+ <p><strong>Ziele:</strong> gleichnamige und ungleichnamige Brüche addieren und subtrahieren.<br>
+ <strong>Typische Fehler:</strong> Der Klassiker: Zähler und Nenner separat addiert (1/2 + 1/3 = 2/5) – muss explizit thematisiert werden; Hauptnenner vergessen; nach dem Addieren nicht gekürzt; gemischte Zahlen (2 1/4) noch nicht eingeführt – nur echte Brüche, maximal ungekürzte Ergebnisse größer 1.<br>
+ <strong>Stopp-Punkt:</strong> Vor dieser Lektion lohnt ein kurzes Gespräch: Warum kann man Nenner nicht einfach addieren? Die Erklärseite enthält ein Gegenbeispiel – gemeinsam zeigen.<br>
+ <strong>Differenzierung:</strong> Basis = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-004">Bruchteil berechnen als Aufwärmaufgabe</a>, Standard = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-006">ungleichnamige Addition</a> <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-007">und Sachaufgabe</a>, Plus = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-012">mehrstufige Sachaufgabe</a>. Volle drei Spuren vorhanden.<br>
+ <strong>Material:</strong> Erklärseite Abschnitt 4.</p>
+ </section>
 
-  <div class="merkkasten">
-    <span class="merk-etikett">Bekannte Grenze des Pilots (Rückmeldung erbeten)</span>
-    <p>Pro Thema liegen <strong>13 Aufgaben</strong> vor. Auf fünf Lektionen mit je drei Spuren verteilt sind einzelne Spuren dünn – die <em>Lücken</em> sind im Player ehrlich ausgewiesen (L1 Plus, L3 Plus, L5 Basis). Wichtigste Konsequenz für den Ausbau: <strong>mehr Aufgaben je Thema</strong> (besonders Niveau 1 zu Multiplizieren/Dividieren und Niveau 3 zu Vergleichen) machen das Lektionsformat erst voll tragfähig. Hinweis: br-005 (gleichwertige Brüche) erscheint in drei verschiedenen Lektionen als Wiederholungs- oder Übungsaufgabe – das ist didaktisch gewollt (Spiralprinzip), muss aber im Player nicht als Dopplung gewertet werden.</p>
-  </div>
+ <section class="merkkasten">
+ <span class="merk-etikett">Lektion 5 · Multiplizieren und Dividieren</span>
+ <p><strong>Ziele:</strong> Brüche multiplizieren (Zähler mal Zähler, Nenner mal Nenner); durch einen Bruch dividieren (mit Kehrwert malnehmen).<br>
+ <strong>Typische Fehler:</strong> Beim Multiplizieren trotzdem gleichnamig gemacht; Kehrwert falsch gebildet (Zähler und Nenner nicht vollständig getauscht); Division durch einen Bruch als Subtraktion verstanden; „Malnehmen mit einem Bruch kleiner 1 ergibt ein kleineres Ergebnis" – Schülerinnen und Schüler überrascht.<br>
+ <strong>Basis: </strong> Es gibt keine eigenständige Niveau-1-Aufgabe zu Multiplikation/Division. Der Player verweist auf die Rechenbeispiele der Erklärseite als geführte Basis-Spur; <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-003">Kürzen</a> dient als Einstieg, da Kürzen vor dem Malnehmen hilfreich ist.<br>
+ <strong>Differenzierung:</strong> Basis = Erklärseiten-Beispiele + <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-003">Kürze den Bruch … vollständig</a>, Standard = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-008">Rechenregeln Multiple-Choice</a> <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-009">und Multiplikation Sachaufgabe</a>, Plus = <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-011">Umkehraufgabe</a> <a href="../../mathematik/klasse-6/brueche/uebungen.html#aufgabe-ma-06-br-013">und Freitext-Begründung</a>.<br>
+ <strong>Material:</strong> Erklärseite Abschnitt 5. Trainingsraum „Bruch-Paare" als abschliessende Übung geeignet.</p>
+ </section>
 
-    <h2>Block 2: Dezimalzahlen</h2>
-  <section class="merkkasten">
-    <span class="merk-etikett">Dezimalzahlen · 5 Lektionen (L6–L10)</span>
-    <p><strong>Lektionen:</strong> Dezimalzahlen verstehen: Stellenwerttafel; Dezimalzahlen vergleichen, ordnen und runden; Dezimalzahlen addieren und subtrahieren; Dezimalzahlen multiplizieren und dividieren; Brüche und Dezimalzahlen.<br>
-    <strong>Typische Fehler:</strong> Stellenwerte nach dem Komma verwechseln; Trugschluss „mehr Nachkommastellen = größer" (0,45 vs. 0,5); Komma beim Multiplizieren/Dividieren falsch setzen.<br>
-    <strong>Differenzierung:</strong> Basis und Standard durchgehend für Gymnasium UND Realschule; die AFB-III-Zusatzaufgaben erscheinen für RS am Lektionsende im Block „Ausblick Gymnasium". 12 neue Ergänzungsaufgaben (<code>daten/aufgaben/lernbuero/ma-06-dezimalzahlen.json</code>) – fachliche Prüfung ausstehend.</p>
-  </section>
+ 
 
-  <h2>Block 3: Teilbarkeit und Primzahlen</h2>
-  <section class="merkkasten">
-    <span class="merk-etikett">Teilbarkeit und Primzahlen · 5 Lektionen (L11–L15)</span>
-    <p><strong>Lektionen:</strong> Teiler und Vielfache; Teilbarkeitsregeln (2, 3, 4, 5, 9, 10); Primzahlen und Sieb des Eratosthenes; Primfaktorzerlegung; ggT und kgV.<br>
-    <strong>Typische Fehler:</strong> 1 als Primzahl gezählt; Teiler-Paare nicht systematisch gesucht (z. B. T(36) unvollständig); Quersummen-Regel für 9 mit Regel für 3 verwechselt; beim Primfaktorzerlegungsbaum denselben Faktor auf verschiedenen Stufen nicht erkannt; ggT und kgV vertauscht (ggT wird addiert statt als gemeinsamer Teiler gesucht).<br>
-    <strong>Differenzierung:</strong> Basis und Standard durchgehend für Gymnasium UND Realschule; Plus-Aufgaben je nach Lektion aus dem Regelaufgaben-Pool oder Lernbüro-Ergänzungen. Ausblick Gymnasium: Primfaktorzerlegung als Werkzeug für Brüche kürzen und Hauptnenner bestimmen.<br>
-    <strong>Ergänzungsdatei:</strong> <code>daten/aufgaben/lernbuero/ma-06-teilbarkeit-und-primzahlen.json</code> (IDs ma-06-tp-101 bis ma-06-tp-110) – fachliche Prüfung ausstehend.</p>
-  </section>
+ <h2>Block 2: Dezimalzahlen</h2>
+ <section class="merkkasten">
+ <span class="merk-etikett">Dezimalzahlen · 5 Lektionen (L6–L10)</span>
+ <p><strong>Lektionen:</strong> Dezimalzahlen verstehen: Stellenwerttafel; Dezimalzahlen vergleichen, ordnen und runden; Dezimalzahlen addieren und subtrahieren; Dezimalzahlen multiplizieren und dividieren; Brüche und Dezimalzahlen.<br>
+ <strong>Typische Fehler:</strong> Stellenwerte nach dem Komma verwechseln; Trugschluss „mehr Nachkommastellen = größer" (0,45 vs. 0,5); Komma beim Multiplizieren/Dividieren falsch setzen.<br>
+ <strong>Differenzierung:</strong> Basis und Standard durchgehend für Gymnasium UND Realschule; die AFB-III-Zusatzaufgaben erscheinen für RS am Lektionsende im Block „Ausblick Gymnasium".</p>
+ </section>
 
-  <h2>Block 4: Kreis und Winkel</h2>
-  <section class="merkkasten">
-    <span class="merk-etikett">Kreis und Winkel · 5 Lektionen (L16–L20)</span>
-    <p><strong>Lektionen:</strong> Der Kreis – Radius, Durchmesser und Kreisfiguren; Winkel und Winkelarten; Winkel messen und zeichnen; Winkelsummen in Dreiecken und Vierecken; Winkel im Alltag (Uhrzeiger und Kreisaufteilung).<br>
-    <strong>Typische Fehler:</strong> Radius und Durchmesser vertauscht; beim Geodreieck die falsche der beiden Skalen abgelesen (führt zu Fehlern wie 148° statt 32°); Winkelsumme im Viereck mit 180° (Dreieck) verwechselt; beim Berechnen fehlender Winkel die Summe der bekannten Winkel von der falschen Gesamtsumme abgezogen.<br>
-    <strong>Differenzierung:</strong> Basis (kw-101 bis kw-103) = Grundbegriffe und Zuordnung Winkelarten; Standard = Messen und Winkelsummen; Plus = Winkelsummen in Vielecken, Kreisaufteilung, Uhrwinkelproblem (kw-107, nur Gymnasium). Ausblick Gymnasium: Winkelsumme im n-Eck als Verallgemeinerung; Scheitelwinkel und Nebenwinkel.<br>
-    <strong>Ergänzungsdatei:</strong> <code>daten/aufgaben/lernbuero/ma-06-kreis-und-winkel.json</code> (IDs ma-06-kw-101 bis ma-06-kw-107) – fachliche Prüfung ausstehend.</p>
-  </section>
+ <h2>Block 3: Teilbarkeit und Primzahlen</h2>
+ <section class="merkkasten">
+ <span class="merk-etikett">Teilbarkeit und Primzahlen · 5 Lektionen (L11–L15)</span>
+ <p><strong>Lektionen:</strong> Teiler und Vielfache; Teilbarkeitsregeln (2, 3, 4, 5, 9, 10); Primzahlen und Sieb des Eratosthenes; Primfaktorzerlegung; ggT und kgV.<br>
+ <strong>Typische Fehler:</strong> 1 als Primzahl gezählt; Teiler-Paare nicht systematisch gesucht (z. B. T(36) unvollständig); Quersummen-Regel für 9 mit Regel für 3 verwechselt; beim Primfaktorzerlegungsbaum denselben Faktor auf verschiedenen Stufen nicht erkannt; ggT und kgV vertauscht (ggT wird addiert statt als gemeinsamer Teiler gesucht).<br>
+ <strong>Differenzierung:</strong> Basis und Standard durchgehend für Gymnasium UND Realschule; Plus-Aufgaben je nach Lektion aus dem Regelaufgaben-Pool oder Lernbüro-Ergänzungen. Ausblick Gymnasium: Primfaktorzerlegung als Werkzeug für Brüche kürzen und Hauptnenner bestimmen.</p>
+ </section>
 
-  <h2>Block 5: Körper und Volumen</h2>
-  <section class="merkkasten">
-    <span class="merk-etikett">Körper und Volumen · 4 Lektionen (L21–L24)</span>
-    <p><strong>Lektionen:</strong> Rauminhalt – was ist ein Volumen?; Volumen berechnen (Quader und Würfel); Volumeneinheiten und Liter; Oberflächeninhalt, Netze und Schrägbilder.<br>
-    <strong>Typische Fehler:</strong> Volumen (cm³) und Flächeninhalt (cm²) verwechselt – besonders nach dem Abschnitt Oberfläche; beim Berechnen der Oberfläche nur eine Fläche statt drei Paare angesetzt; Einheitenumrechnung Liter/dm³/cm³ in falsche Richtung (mal statt durch 1000); rückwärtiges Rechnen (Kantenlänge aus Volumen) als Verständnisproblem unterschätzt.<br>
-    <strong>Differenzierung:</strong> Basis (kv-101 bis kv-103) = Volumen-Begriff, einfache Formel-Anwendung, Liter-Umrechnung; Standard = Kantenlänge zurückrechnen, Oberfläche berechnen; Plus = Würfel-Quader-Vergleich bei gleichem Volumen (kv-106, nur Gymnasium). Ausblick Gymnasium: isoperimetrisches Prinzip als Motivation; Prisma-Volumen als Verallgemeinerung $V = G \cdot h$.<br>
-    <strong>Ergänzungsdatei:</strong> <code>daten/aufgaben/lernbuero/ma-06-koerper-und-volumen.json</code> (IDs ma-06-kv-101 bis ma-06-kv-106) – fachliche Prüfung ausstehend.</p>
-  </section>
+ <h2>Block 4: Kreis und Winkel</h2>
+ <section class="merkkasten">
+ <span class="merk-etikett">Kreis und Winkel · 5 Lektionen (L16–L20)</span>
+ <p><strong>Lektionen:</strong> Der Kreis – Radius, Durchmesser und Kreisfiguren; Winkel und Winkelarten; Winkel messen und zeichnen; Winkelsummen in Dreiecken und Vierecken; Winkel im Alltag (Uhrzeiger und Kreisaufteilung).<br>
+ <strong>Typische Fehler:</strong> Radius und Durchmesser vertauscht; beim Geodreieck die falsche der beiden Skalen abgelesen (führt zu Fehlern wie 148° statt 32°); Winkelsumme im Viereck mit 180° (Dreieck) verwechselt; beim Berechnen fehlender Winkel die Summe der bekannten Winkel von der falschen Gesamtsumme abgezogen.<br>
+ <strong>Differenzierung:</strong> <a href="../../mathematik/klasse-6/kreis-und-winkel/uebungen.html">Basis</a> = Grundbegriffe und Zuordnung Winkelarten; Standard = Messen und Winkelsummen; Plus = Winkelsummen in Vielecken, Kreisaufteilung, Uhrwinkelproblem (<a href="../../mathematik/klasse-6/kreis-und-winkel/uebungen.html#aufgabe-ma-06-kw-107">Eine Uhr zeigt 3</a>, nur Gymnasium). Ausblick Gymnasium: Winkelsumme im n-Eck als Verallgemeinerung; Scheitelwinkel und Nebenwinkel.</p>
+ </section>
 
-  <h2>Block 6: Statistische Kennwerte</h2>
-  <section class="merkkasten">
-    <span class="merk-etikett">Statistische Kennwerte · 5 Lektionen (L25–L29)</span>
-    <p><strong>Lektionen:</strong> Daten sammeln und das arithmetische Mittel; der Median; Spannweite und Streuung; Mittel oder Median – der Ausreißer-Effekt; Kennwerte und Diagramme kritisch lesen.<br>
-    <strong>Typische Fehler:</strong> Median ohne vorheriges Sortieren bestimmt; bei gerader Anzahl von Werten nur einen der beiden mittleren Werte genommen statt deren Mittelwert; Mittel und Median als stets gleich angesehen; Spannweite als Streumaß nicht von Lage-Kennwerten (Mittel, Median) unterschieden; Diagramme mit manipulierter Achse nicht kritisch hinterfragt.<br>
-    <strong>Differenzierung:</strong> Basis (sk-101 bis sk-103) = Mittel, Median, Spannweite an einfachen ganzzahligen Datenreihen; Standard = alle drei Kennwerte an einem Datensatz kombiniert (sk-104); Plus = Teamvergleich mit gleichem Mittel, verschiedener Spannweite (sk-106, für alle) und kritisches Diagrammlesen. Ausblick Gymnasium: Quartile als Erweiterung der Spannweite; Boxplot als Darstellung.<br>
-    <strong>Ergänzungsdatei:</strong> <code>daten/aufgaben/lernbuero/ma-06-statistische-kennwerte.json</code> (IDs ma-06-sk-101 bis ma-06-sk-106) – fachliche Prüfung ausstehend.</p>
-  </section>
+ <h2>Block 5: Körper und Volumen</h2>
+ <section class="merkkasten">
+ <span class="merk-etikett">Körper und Volumen · 4 Lektionen (L21–L24)</span>
+ <p><strong>Lektionen:</strong> Rauminhalt – was ist ein Volumen?; Volumen berechnen (Quader und Würfel); Volumeneinheiten und Liter; Oberflächeninhalt, Netze und Schrägbilder.<br>
+ <strong>Typische Fehler:</strong> Volumen (cm³) und Flächeninhalt (cm²) verwechselt – besonders nach dem Abschnitt Oberfläche; beim Berechnen der Oberfläche nur eine Fläche statt drei Paare angesetzt; Einheitenumrechnung Liter/dm³/cm³ in falsche Richtung (mal statt durch 1000); rückwärtiges Rechnen (Kantenlänge aus Volumen) als Verständnisproblem unterschätzt.<br>
+ <strong>Differenzierung:</strong> <a href="../../mathematik/klasse-6/koerper-und-volumen/uebungen.html">Basis</a> = Volumen-Begriff, einfache Formel-Anwendung, Liter-Umrechnung; Standard = Kantenlänge zurückrechnen, Oberfläche berechnen; Plus = Würfel-Quader-Vergleich bei gleichem Volumen (<a href="../../mathematik/klasse-6/koerper-und-volumen/uebungen.html#aufgabe-ma-06-kv-106">Ein Würfel und ein Quader haben</a>, nur Gymnasium). Ausblick Gymnasium: isoperimetrisches Prinzip als Motivation; Prisma-Volumen als Verallgemeinerung $V = G \cdot h$.</p>
+ </section>
+
+ <h2>Block 6: Statistische Kennwerte</h2>
+ <section class="merkkasten">
+ <span class="merk-etikett">Statistische Kennwerte · 5 Lektionen (L25–L29)</span>
+ <p><strong>Lektionen:</strong> Daten sammeln und das arithmetische Mittel; der Median; Spannweite und Streuung; Mittel oder Median – der Ausreißer-Effekt; Kennwerte und Diagramme kritisch lesen.<br>
+ <strong>Typische Fehler:</strong> Median ohne vorheriges Sortieren bestimmt; bei gerader Anzahl von Werten nur einen der beiden mittleren Werte genommen statt deren Mittelwert; Mittel und Median als stets gleich angesehen; Spannweite als Streumaß nicht von Lage-Kennwerten (Mittel, Median) unterschieden; Diagramme mit manipulierter Achse nicht kritisch hinterfragt.<br>
+ <strong>Differenzierung:</strong> <a href="../../mathematik/klasse-6/statistische-kennwerte/uebungen.html">Basis</a> = Mittel, Median, Spannweite an einfachen ganzzahligen Datenreihen; Standard = <a href="../../mathematik/klasse-6/statistische-kennwerte/uebungen.html#aufgabe-ma-06-sk-104">alle drei Kennwerte an einem Datensatz kombiniert</a>; Plus = Teamvergleich mit gleichem Mittel, verschiedener Spannweite (<a href="../../mathematik/klasse-6/statistische-kennwerte/uebungen.html#aufgabe-ma-06-sk-106">Zwei Fußballmannschaften haben</a>, für alle) und kritisches Diagrammlesen. Ausblick Gymnasium: Quartile als Erweiterung der Spannweite; Boxplot als Darstellung.</p>
+ </section>
 
 <p class="einleitung"><a href="index.html">← Zur Schüler-Kursseite</a></p>
-  <p class="knopfzeile"><a class="knopf zweitrangig klein" href="../druck.html?kurs=ma-06">🖨 Druckmaterial erstellen</a></p>
 </main>
 <script type="module" src="../../assets/js/komponenten.js"></script>
 </body>

@@ -186,3 +186,35 @@ async function ergaenzeKlassenarbeitenHinweis(ziel, fach, stufe, zweig) {
     ziel.append(kasten);
   } catch (e) { /* Übersicht funktioniert auch ohne Klassenarbeiten-Daten */ }
 }
+
+// ---------- Üben-Übersicht (alle Fächer + Stufen auf einer Seite, ohne Zwischenebene) ----------
+export async function rendereUebenUebersicht() {
+  const ziel = document.getElementById("ueben-uebersicht");
+  if (!ziel) return;
+  const themen = await ladeThemen();
+
+  function zeichne() {
+    const zweig = aktuellerZweig();
+    ziel.innerHTML = ["mathematik", "physik", "informatik"].map(fach => {
+      const stufen = STUFEN_REIHENFOLGE.filter(s =>
+        themen.some(t => t.fach === fach && t.stufe === s && passtZumZweig(t, zweig)));
+      if (!stufen.length) return "";
+      const karten = stufen.map(stufe => {
+        const liste = themen.filter(t => t.fach === fach && t.stufe === stufe && passtZumZweig(t, zweig));
+        const sims = liste.filter(t => t.hat_simulation).length;
+        return `
+          <article class="kachel ${fach}">
+            <h3><a class="kachel-link" href="${WURZEL.href}${fach}/${stufe}/index.html">${STUFEN_LABEL[stufe]}</a></h3>
+            <div class="kachel-fuss">
+              <span class="abzeichen">${liste.length} Themen</span>
+              ${sims ? `<span class="abzeichen sim">${sims} mit Simulation</span>` : ""}
+            </div>
+          </article>`;
+      }).join("");
+      return `<section class="ueben-fach"><h2>${FACH_LABEL[fach]}</h2><div class="kacheln">${karten}</div></section>`;
+    }).join("");
+  }
+
+  zeichne();
+  document.addEventListener("zweig-geaendert", zeichne);
+}

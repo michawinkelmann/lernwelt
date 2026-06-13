@@ -19,11 +19,10 @@
 <noscript><p class="noscript-hinweis"><a href="../../index.html">Zur Startseite</a></p></noscript>
 <main id="inhalt" class="inhalt">
   <h1>Moderation: Informatik 10 · Lernbüro</h1>
-  <p class="einleitung">Interne Seite für die Lehrkraft – im Schüler-Flow bewusst <strong>unverlinkt</strong>. Enthält den Praxis-Leitfaden, die Stoffverteilung und je Lektion typische Fehler, Differenzierungs- und Material-Hinweise. Mit „Drucken" als A4-Handzettel ausgebbar. Pilot: <a href="index.html">Schüler-Kursseite öffnen</a>.</p>
+  <p class="einleitung">Interne Seite für die Lehrkraft – im Schüler-Flow bewusst <strong>unverlinkt</strong>. Enthält den Praxis-Leitfaden, die Stoffverteilung und je Lektion typische Fehler, Differenzierungs- und Material-Hinweise. <a href="index.html">Schüler-Kursseite öffnen</a>.</p>
 
-  <p class="knopfzeile"><button type="button" class="knopf zweitrangig klein" onclick="window.print()">Drucken</button></p>
+  <p class="knopfzeile"><a class="knopf zweitrangig klein" href="../druck.html?kurs=in-10">🖨 Druckmaterial erstellen</a></p>
 
-  <div class="merkkasten" style="border-left:4px solid var(--ok)"><span class="merk-etikett">Lücken gefüllt</span><p>Alle Basis- und Standard-Spuren sind vollständig belegt. Neue Aufgaben liegen in <code>daten/aufgaben/lernbuero/in-10-programmieren.json</code> (Marker <code>ergaenzung:"lernbuero"</code>) — zur fachlichen Prüfung durch die Lehrkraft. In L3 Plus ist in-10-prog-013 (nur Gymnasium) bewusst eingesetzt; für RS-Klassen empfiehlt sich als Plus-Ersatz in-10-prog-012.</p></div>
 
   <div class="merkkasten">
     <span class="merk-etikett">Praxis-Leitfaden Selbstlern-Moderation</span>
@@ -35,7 +34,7 @@
 
   <div class="merkkasten">
     <span class="merk-etikett">Eingebaute Entscheidungen dieses Kurses</span>
-    <p><strong>Taktung:</strong> Wochenplan mit Mindestmarke (Basis-Spur je Woche). <strong>Checkpoints:</strong> „Sichern" schaltet die nächste Lektion frei; jeder Checkpoint ist per Knopf „Lehrkraft hat freigegeben" ohne Passwort überschreibbar (Vertrauensmodell). <strong>Werkzeuge:</strong> Ampel + Lerntagebuch. <strong>Kein KaTeX:</strong> Alle Inhalte dieses Kurses sind Klartext bzw. Code – kein Mathe-Rendering nötig. <strong>Zweig:</strong> Kurs gilt für Gym und RS; Plus-Aufgabe in-10-prog-013 (L3) ist Gym-only – bei RS-Klassen bitte durch in-10-prog-012 ersetzen oder Plus-Spur leer lassen.</p>
+    <p><strong>Taktung:</strong> Wochenplan mit Mindestmarke (Basis-Spur je Woche). <strong>Checkpoints:</strong> „Sichern" schaltet die nächste Lektion frei; jeder Checkpoint ist per Knopf „Lehrkraft hat freigegeben" ohne Passwort überschreibbar (Vertrauensmodell). <strong>Werkzeuge:</strong> Ampel + Lerntagebuch. <strong>Kein KaTeX:</strong> Alle Inhalte dieses Kurses sind Klartext bzw. Code – kein Mathe-Rendering nötig. <strong>Zweig:</strong> Kurs gilt für Gym und RS; die Plus-Aufgabe zur Fehlersuche in L3 ist nur für das Gymnasium vorgesehen – bei RS-Klassen kann stattdessen die Plus-Aufgabe mit Funktion eingesetzt oder die Plus-Spur frei gelassen werden.</p>
   </div>
 
   <h2>Stoffverteilung (KC Informatik Sek I Niedersachsen)</h2>
@@ -44,46 +43,49 @@
     <table>
       <thead><tr><th>Wochen</th><th>Thema</th><th>Lektionen</th><th>KC-Schwerpunkt</th></tr></thead>
       <tbody>
-        <tr class="ist-pilot"><td>1–3</td><td>Programmieren — <em>Pilot (5 Lektionen ausgebaut)</em></td><td>5 von ca. 10</td><td>Algorithmisches Problemlösen: Algorithmisieren und Implementieren</td></tr>
+        <tr><td>1–3</td><td>Programmieren</td><td>5 von ca. 10</td><td>Algorithmisches Problemlösen: Algorithmisieren und Implementieren</td></tr>
         <tr><td>4–5</td><td>Suchen und Sortieren</td><td>geplant</td><td>Algorithmisches Problemlösen</td></tr>
         <tr><td>6–7</td><td>Verschlüsselung</td><td>geplant</td><td>Daten und ihre Spuren</td></tr>
         <tr><td>8–9</td><td>Endliche Automaten</td><td>geplant</td><td>Automatisierte Prozesse</td></tr>
-        <tr class="ist-pilot"><td>11–12</td><td>Steuern und Regeln (Mikrocontroller) — <em>KC-Erg&auml;nzung, 5 Lektionen</em></td><td>5 Lektionen</td><td>Automatisierte Prozesse: technische Realisierung (Sensoren, Aktoren, Steuerung)</td></tr>
+        <tr><td>11–12</td><td>Steuern und Regeln (Mikrocontroller) — <em>KC-Erg&auml;nzung, 5 Lektionen</em></td><td>5 Lektionen</td><td>Automatisierte Prozesse: technische Realisierung (Sensoren, Aktoren, Steuerung)</td></tr>
         <tr><td>10</td><td>Wiederholung + Klassenarbeitstraining</td><td>geplant</td><td>Tagesmischung</td></tr>
       </tbody>
     </table>
   </details>
-  <p class="einleitung">Echte Stundenzahlen nach Stundentafel kalibrieren. Der Pilot baut nur den Programmier-Block aus; die übrigen Blöcke stehen als <code>geplant</code> in <code>daten/kurse/in-10.json</code>.</p>
+  <p class="einleitung">Echte Stundenzahlen nach Stundentafel kalibrieren.</p>
 
   <h2>Lektionen im Einzelnen</h2>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 1 · Vom Algorithmus zum Programm</span>
     <p><strong>Ziele:</strong> Unterschied Pseudocode / Programm; Begriff Algorithmus festigen; Schreibtischtest kennenlernen.<br>
-    <strong>Vorwissen:</strong> Ankommen-Aufgaben aus in-09-algorithmen-grundlagen (in-09-alg-001, -002) – bei Lücken dort kurz nachschlagen lassen.<br>
+    <strong>Vorwissen:</strong> die Ankommen-Aufgaben aus <a href="../../informatik/klasse-9/algorithmen-grundlagen/uebungen.html">Algorithmen-Grundlagen (Klasse 9)</a> – bei Lücken dort kurz nachschlagen lassen.<br>
     <strong>Typische Fehler:</strong> Pseudocode und Programm gleichgesetzt; Fehleranfälligkeit von Programmiersprachen unterschätzt; Schreibtischtest-Idee noch abstrakt.<br>
-    <strong>Differenzierung:</strong> Basis = Multiple-Choice zu Programm-Begriff (prog-001); Standard = Vergleichsoperatoren (prog-005, topisch vorverlegt für den Lektionsrhythmus); Plus = Reihenfolge Algorithmus-Entwicklung (prog-109, both-zweig).<br>
-    <strong>Sichern:</strong> prog-101 (both-zweig) – Abgrenzung Pseudocode/Programm als Single-Choice.<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 1; Vertiefung „Fehler finden" als Ausblick.</p>
+    <strong>Differenzierung:</strong> Basis: Multiple-Choice zu Programm-Begriff; Standard: Vergleichsoperatoren; Plus: Reihenfolge Algorithmus-Entwicklung.<br>
+    <strong>Sichern:</strong> Abgrenzung Pseudocode/Programm als Single-Choice.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 1; Vertiefung „Fehler finden" als Ausblick.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/programmieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 2 · Variablen und Datentypen</span>
     <p><strong>Ziele:</strong> Variable als beschrifteter Speicherplatz; Zuweisung = als Befehl verstehen; int, float, str, bool unterscheiden.<br>
     <strong>Typische Fehler:</strong> = (Zuweisung) und == (Vergleich) verwechselt; float-Dezimalpunkt statt Komma vergessen; String "42" mit Zahl 42 gleichgesetzt; alter = alter + 1 als Gleichung gedeutet.<br>
-    <strong>Differenzierung:</strong> Basis = Datentypen zuordnen + Lückentext Zuweisung (prog-002, prog-003); Standard = if/elif/else-Ausgabe bestimmen (prog-006); Plus = Freitext Typunterschied 42 vs. "42" (prog-108, both-zweig, AFB III).<br>
-    <strong>Sichern:</strong> prog-102 (both-zweig) – Schreibtischtest a/b-Aufgabe.<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 2; Verständnis-Check „Worin unterscheiden sich 42 und '42'?".</p>
+    <strong>Differenzierung:</strong> Basis: Datentypen zuordnen + Lückentext Zuweisung; Standard: if/elif/else-Ausgabe bestimmen; Plus: Freitext Typunterschied 42 vs. "42" (AFB III).<br>
+    <strong>Sichern:</strong> Schreibtischtest a/b-Aufgabe.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 2; Verständnis-Check „Worin unterscheiden sich 42 und '42'?".<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/programmieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 3 · if, elif, else – Verzweigungen</span>
     <p><strong>Ziele:</strong> Verzweigungsstruktur lesen; Bedingungen von oben nach unten verfolgen; Einrückpflicht verstehen.<br>
     <strong>Typische Fehler:</strong> Alle Bedingungen mit True glauben nach erstem Treffer; = statt == in Bedingung; Einrückfehler verändert Programmlogik; elif-Kette endet nicht beim ersten Treffer.<br>
-    <strong>Differenzierung:</strong> Basis = Schreibtischtest Zuweisung (prog-004, AFB II); Standard = Lücke Summenschleife + Reihenfolge (prog-007, prog-008); Plus = Fehlersuche logischer Fehler (prog-013, nur Gym) – bei RS-Klassen bitte durch prog-012 ersetzen.<br>
-    <strong>Sichern:</strong> prog-103 (both-zweig) – Notenprogramm, konkreter Eingabewert.<br>
-    <strong>Hinweis Zweig:</strong> prog-013 ist Gymnasium-only. RS-Schüler erhalten automatisch keine Plus-Aufgabe (Zweig-Filter); ggf. prog-012 manuell in Plus setzen.<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 3 inkl. Ablaufdiagramm.</p>
+    <strong>Differenzierung:</strong> Basis: Schreibtischtest Zuweisung (AFB II); Standard: Lücke Summenschleife + Reihenfolge; Plus: Fehlersuche logischer Fehler (nur Gymnasium).<br>
+    <strong>Sichern:</strong> Notenprogramm, konkreter Eingabewert.<br>
+    <strong>Hinweis Zweig:</strong> Die Plus-Aufgabe zur Fehlersuche ist Gymnasium-only. RS-Schülerinnen und -Schüler erhalten automatisch keine Plus-Aufgabe (Zweig-Filter); bei Bedarf lässt sich die Plus-Aufgabe mit Funktion manuell einsetzen.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 3 inkl. Ablaufdiagramm.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/programmieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
@@ -91,25 +93,22 @@
     <p><strong>Ziele:</strong> for mit range() lesen; Schreibtischtest-Tabelle führen; while-Bedingung verfolgen; for vs. while unterscheiden.<br>
     <strong>Stopp-Punkt:</strong> vor der Lektion gemeinsam klären, was „Wiederholen" bedeutet – Tafel-Beispiele sammeln (Zinseszins, Spielrunden, Countdown).<br>
     <strong>Typische Fehler:</strong> range(1, 5) zählt bis 5 (Endwert falsch); range(3) beginnt bei 1 statt 0; while-Endlosschleife nicht erkannt; Schleifenvariable nach der Schleife falsch gelesen.<br>
-    <strong>Differenzierung:</strong> Basis = Multiple-Choice for/while (prog-104, both-zweig, neu); Standard = Schreibtischtest while-Akkumulator + geführter Rechenweg range(3) (prog-009, prog-010); Plus = Schreibtischtest mit Funktion (prog-012, both-zweig, AFB III).<br>
-    <strong>Sichern:</strong> prog-105 (both-zweig) – Schreibtischtest Fakultät (Produkt-Schleife).<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 4; Schreibtischtest-Tabelle; Verständnis-Check Seerosenbeispiel.</p>
+    <strong>Differenzierung:</strong> Basis: Multiple-Choice for/while; Standard: Schreibtischtest while-Akkumulator + geführter Rechenweg range(3); Plus: Schreibtischtest mit Funktion (AFB III).<br>
+    <strong>Sichern:</strong> Schreibtischtest Fakultät (Produkt-Schleife).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 4; Schreibtischtest-Tabelle; Verständnis-Check Seerosenbeispiel.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/programmieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 5 · Funktionen – Programme strukturieren</span>
     <p><strong>Ziele:</strong> def/Parameter/return lesen; Funktion aufrufen und Rückgabewert verfolgen; Vorteile von Funktionen nennen.<br>
     <strong>Typische Fehler:</strong> return-Wert wird nicht weitergenutzt (fehlendes print); Parameter und Argument verwechselt; Klammern beim Mittelwert vergessen (Punkt-vor-Strich); Funktion ruft sich selbst auf (Rekursion, hier noch nicht behandelt).<br>
-    <strong>Differenzierung:</strong> Basis = Zuordnung def/Parameter/return/Aufruf (prog-106, both-zweig, neu); Standard = Freitext mittelwert(a,b) entwerfen (prog-011, AFB III); Plus = Schreibtischtest quadrat + Schleife (prog-012, both-zweig, AFB III).<br>
-    <strong>Sichern:</strong> prog-107 (both-zweig) – Schreibtischtest doppelt(x) in Schleife.<br>
-    <strong>Hinweis:</strong> prog-011 ist Freitext (AFB III) und landet in Standard – didaktisch bewusst so gewählt, da das Thema Funktionen selbst schon AFB II/III ist. Bei Bedarf kann Standard auf prog-010 tauschen.<br>
-    <strong>Material:</strong> Erklärseite Abschnitt 5; Vertiefung „Fehler finden und testen".</p>
+    <strong>Differenzierung:</strong> Basis: Zuordnung def/Parameter/return/Aufruf; Standard: Freitext mittelwert(a,b) entwerfen (AFB III); Plus: Schreibtischtest quadrat + Schleife (AFB III).<br>
+    <strong>Sichern:</strong> Schreibtischtest doppelt(x) in Schleife.<br>
+    <strong>Hinweis:</strong> Die Standard-Aufgabe ist ein Freitext (AFB III) – didaktisch bewusst so gewählt, da das Thema Funktionen selbst schon AFB II/III ist. Bei Bedarf lässt sich für Standard eine geführte Rechenweg-Aufgabe einsetzen.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 5; Vertiefung „Fehler finden und testen".<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/programmieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
-
-  <div class="merkkasten">
-    <span class="merk-etikett">Bekannte Grenzen des Pilots (Rückmeldung erbeten)</span>
-    <p>Der Pilot umfasst nur das Thema „Programmieren" – weitere Themen (Suchen/Sortieren, Verschlüsselung, Endliche Automaten) sind als <code>geplant</code> markiert und noch nicht ausgebaut. In L3 Plus ist in-10-prog-013 Gym-only; der Zweig-Filter blendet sie für RS aus, aber eine RS-taugliche Plus-Aufgabe fehlt noch. Die Freitext-Aufgaben (prog-011, prog-108) erfordern Lehrkraft-Feedback – sie sind bewusst als Reflexionsanlass gesetzt, nicht als automatisch auswertbare Übung.</p>
-  </div>
 
 
   <h2>Block 2: Verschl&#xFC;sselung</h2>
@@ -117,27 +116,29 @@
     <span class="merk-etikett">Verschl&#xFC;sselung &middot; 5 Lektionen (L6&#x2013;L10)</span>
     <p><strong>Lektionen:</strong> L6 Warum verschl&#xFC;sseln? (Klartext/Geheimtext/Schl&#xFC;ssel); L7 Caesar-Verschl&#xFC;sselung (Verschiebetabelle, Modulo-Formel, Caesar-Scheibe); L8 Caesar knacken (Durchprobieren, H&#xE4;ufigkeitsanalyse); L9 Vigen&#xE8;re (Schl&#xFC;sselwort, Periodenl&#xE4;nge, Entschl&#xFC;sseln von Hand); L10 Moderne Verschl&#xFC;sselung (symmetrisch/asymmetrisch, &#xF6;ffentlicher/privater Schl&#xFC;ssel, Ende-zu-Ende).<br>
     <strong>Typische Fehler:</strong> Verschiebung &#xFC;ber das Z (Modulo) vergessen; Position A = 0 statt A = 1 verwendet; beim Vigen&#xE8;re-Entschl&#xFC;sseln Schl&#xFC;ssel addiert statt subtrahiert; &#x201E;&#xF6;ffentlicher Schl&#xFC;ssel&#x201C; f&#xE4;lschlicherweise als geheimzuhaltend missverstanden; Ende-zu-Ende mit Server-seitiger Verschl&#xFC;sselung verwechselt.<br>
-    <strong>Differenzierung:</strong> Basis und Standard durchgehend f&#xFC;r Gymnasium UND Realschule; AFB-III-Zusatzaufgaben erscheinen f&#xFC;r RS am Lektionsende im Block &#x201E;Ausblick Gymnasium&#x201C;. Erg&#xE4;nzungsaufgaben in <code>daten/aufgaben/lernbuero/in-10-verschluesselung.json</code> &#x2014; fachliche Pr&#xFC;fung ausstehend.</p>
+    <strong>Differenzierung:</strong> Basis und Standard durchgehend f&#xFC;r Gymnasium UND Realschule; AFB-III-Zusatzaufgaben erscheinen f&#xFC;r RS am Lektionsende im Block &#x201E;Ausblick Gymnasium&#x201C;.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 6 &middot; Warum verschl&#xFC;sseln?</span>
     <p><strong>Ziele:</strong> Vertraulichkeit als Schutzziel erkl&#xE4;ren; Klartext, Geheimtext, Schl&#xFC;ssel abgrenzen.<br>
-    <strong>Vorwissen:</strong> Datenschutz aus Informatik Kl. 9; Ankommen-Aufgabe in-10-vs-001 (MC Grundbegriffe).<br>
+    <strong>Vorwissen:</strong> Datenschutz aus Informatik Kl. 9; eine Ankommen-Aufgabe (MC Grundbegriffe).<br>
     <strong>Typische Fehler:</strong> Verschl&#xFC;sselung und Kompression verwechselt; Steganographie (Verstecken) mit Verschl&#xFC;sselung (Sch&#xFC;tzen) gleichgesetzt.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-vs-101 (MC Zweck Verschl&#xFC;sselung, gym+rs); Standard = in-10-vs-102 (Zuordnung Schutzeigenschaften, gym+rs); Plus = in-10-vs-011 (Freitext Caesar-Schw&#xE4;chen, gym+rs, AFB III &#x2014; hier als Ausblick eingesetzt).<br>
-    <strong>Sichern:</strong> in-10-vs-111 (gym+rs) &#x2014; MC Warum Verschl&#xFC;sselung im Internet.<br>
-    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 1; Merkkasten Grundbegriffe; Verst&#xE4;ndnis-Check (aufklappbar).</p>
+    <strong>Differenzierung:</strong> Basis: MC Zweck Verschl&#xFC;sselung; Standard: Zuordnung Schutzeigenschaften; Plus: Freitext Caesar-Schw&#xE4;chen, AFB III &#x2014; hier als Ausblick eingesetzt.<br>
+    <strong>Sichern:</strong> MC Warum Verschl&#xFC;sselung im Internet.<br>
+    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 1; Merkkasten Grundbegriffe; Verst&#xE4;ndnis-Check (aufklappbar).<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/verschluesselung/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 7 &middot; Die Caesar-Verschl&#xFC;sselung</span>
     <p><strong>Ziele:</strong> Verschiebechiffre beschreiben und anwenden; Buchstabenpositionen (A=0, &#x2026;, Z=25) nutzen; Modulo-Formel anwenden.<br>
     <strong>Typische Fehler:</strong> A = 1 statt A = 0 gesetzt; Verschiebung &#xFC;ber Z vergessen (z.&#x202F;B. W+9=V statt W+9=F); Entschl&#xFC;sseln als Addition statt Subtraktion verstanden.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-vs-103 (L&#xFC;cke HAUS/k=4, gym+rs); Standard = in-10-vs-005 (L&#xFC;cke k=5, gym+rs); Plus = in-10-vs-104 (Rechenweg SONNE/k=21, gym+rs, AFB II/III).<br>
-    <strong>Sichern:</strong> in-10-vs-112 (gym+rs) &#x2014; L&#xFC;cke WORT/k=9 mit Sprung &#xFC;ber Z.<br>
+    <strong>Differenzierung:</strong> Basis: L&#xFC;cke HAUS/k=4; Standard: L&#xFC;cke k=5; Plus: Rechenweg SONNE/k=21, AFB II/III.<br>
+    <strong>Sichern:</strong> L&#xFC;cke WORT/k=9 mit Sprung &#xFC;ber Z.<br>
     <strong>Hinweis:</strong> Caesar-Scheibe auf der Erkl&#xE4;rseite (Simulation) erm&#xF6;glicht visuelles Ausprobieren; gut geeignet f&#xFC;r Partner-Phase.<br>
-    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 2 inkl. Verschiebetabelle, Formel und Caesar-Scheibe.</p>
+    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 2 inkl. Verschiebetabelle, Formel und Caesar-Scheibe.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/verschluesselung/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
@@ -145,28 +146,31 @@
     <p><strong>Ziele:</strong> Caesar durch Durchprobieren knacken; H&#xE4;ufigkeitsanalyse erkl&#xE4;ren und anwenden; Schl&#xFC;ssel aus h&#xE4;ufigstem Buchstaben bestimmen.<br>
     <strong>Stopp-Punkt:</strong> Vor der Lektion gemeinsam besprechen: Was w&#xFC;rdet ihr tun, wenn ihr einen unbekannten Geheimtext entschl&#xFC;sseln sollt?<br>
     <strong>Typische Fehler:</strong> H&#xE4;ufigkeitsanalyse als unfehlbar missverstanden (funktioniert nur bei langen Texten); Richtung der Verschiebungsberechnung (Geheimtext &#x2192; E statt umgekehrt) umgedreht.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-vs-105 (L&#xFC;cke THBLY/k=7 entschl&#xFC;sseln, gym+rs); Standard = in-10-vs-008 + in-10-vs-010 (Reihenfolge Analyse + MC Caesar-Angriff, gym+rs); Plus = in-10-vs-011 (Freitext, gym+rs, AFB III).<br>
-    <strong>Sichern:</strong> in-10-vs-113 (gym+rs) &#x2014; MC beste Angriffsstrategie.<br>
-    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 3; Experiment H&#xE4;ufigkeitsanalyse (extern verlinkt).</p>
+    <strong>Differenzierung:</strong> Basis: L&#xFC;cke THBLY/k=7 entschl&#xFC;sseln; Standard: Reihenfolge Analyse + MC Caesar-Angriff; Plus: Freitext, AFB III.<br>
+    <strong>Sichern:</strong> MC beste Angriffsstrategie.<br>
+    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 3; Experiment H&#xE4;ufigkeitsanalyse (extern verlinkt).<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/verschluesselung/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 9 &middot; Vigen&#xE8;re: das Schl&#xFC;sselwort</span>
     <p><strong>Ziele:</strong> Vigen&#xE8;re-Verfahren erkl&#xE4;ren und anwenden; Periodenl&#xE4;nge bestimmen; Vigen&#xE8;re von Hand entschl&#xFC;sseln.<br>
     <strong>Typische Fehler:</strong> Schl&#xFC;sselwort-Wiederholung vergessen; beim Entschl&#xFC;sseln Schl&#xFC;ssel addiert statt subtrahiert; A = Verschiebung 1 statt 0.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-vs-107 (L&#xFC;cke TIGER/ABC verschl&#xFC;sseln, gym+rs); Standard = in-10-vs-006 (numerisch Periodenl&#xE4;nge) + in-10-vs-108 (L&#xFC;cke PINHM/BEI entschl&#xFC;sseln, gym+rs); Plus = in-10-vs-012 (L&#xFC;cke TACE/MAI entschl&#xFC;sseln, gym+rs, AFB III).<br>
-    <strong>Sichern:</strong> in-10-vs-114 (gym+rs) &#x2014; L&#xFC;cke ZCKNE/ACE entschl&#xFC;sseln.<br>
-    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 4; Vertiefung &#x201E;Warum galt Vigen&#xE8;re 300 Jahre als unknackbar&#x201C; (aufklappbar).</p>
+    <strong>Differenzierung:</strong> Basis: L&#xFC;cke TIGER/ABC verschl&#xFC;sseln; Standard: numerisch Periodenl&#xE4;nge + L&#xFC;cke PINHM/BEI entschl&#xFC;sseln; Plus: L&#xFC;cke TACE/MAI entschl&#xFC;sseln, AFB III.<br>
+    <strong>Sichern:</strong> L&#xFC;cke ZCKNE/ACE entschl&#xFC;sseln.<br>
+    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 4; Vertiefung &#x201E;Warum galt Vigen&#xE8;re 300 Jahre als unknackbar&#x201C; (aufklappbar).<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/verschluesselung/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 10 &middot; Moderne Verschl&#xFC;sselung</span>
     <p><strong>Ziele:</strong> Symmetrisch und asymmetrisch unterscheiden; &#xF6;ffentlicher/privater Schl&#xFC;ssel erkl&#xE4;ren; Ende-zu-Ende-Verschl&#xFC;sselung beschreiben.<br>
     <strong>Typische Fehler:</strong> &#x201E;&#xD6;ffentlich&#x201C; als &#x201E;muss geheimgehalten werden&#x201C; missverstanden; AES f&#xE4;lschlicherweise als asymmetrisch bezeichnet; Ende-zu-Ende mit TLS auf dem Server verwechselt.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-vs-109 (MC symmetrisch/asymmetrisch, gym+rs); Standard = in-10-vs-110 (L&#xFC;cke &#xF6;ffentl./privater Schl&#xFC;ssel, gym+rs); Plus = in-10-vs-013 (MC One-Time-Pad, nur Gym &#x2014; Zweig-Filter blendet f&#xFC;r RS automatisch aus).<br>
-    <strong>Sichern:</strong> in-10-vs-115 (gym+rs) &#x2014; Zuordnung alle vier Verfahren.<br>
-    <strong>Hinweis Zweig:</strong> in-10-vs-013 ist gymnasium-only. RS-Sch&#xFC;ler erhalten automatisch keine Plus-Aufgabe (Zweig-Filter); ggf. in-10-vs-012 manuell in Plus setzen oder Plus-Spur leer lassen.<br>
-    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 5; Merkkasten Ende-zu-Ende.</p>
+    <strong>Differenzierung:</strong> Basis: MC symmetrisch/asymmetrisch; Standard: L&#xFC;cke &#xF6;ffentl./privater Schl&#xFC;ssel; Plus: MC One-Time-Pad (nur Gymnasium &#x2014; der Zweig-Filter blendet sie f&#xFC;r RS automatisch aus).<br>
+    <strong>Sichern:</strong> Zuordnung alle vier Verfahren.<br>
+    <strong>Hinweis Zweig:</strong> Diese Plus-Aufgabe ist gymnasium-only. RS-Sch&#xFC;ler erhalten automatisch keine Plus-Aufgabe (Zweig-Filter); kann bei Bedarf die alternative Plus-Aufgabe gesetzt werden. oder Plus-Spur leer lassen.<br>
+    <strong>Material:</strong> Erkl&#xE4;rseite Abschnitt 5; Merkkasten Ende-zu-Ende.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/verschluesselung/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <h2>Block 3: Suchen und Sortieren</h2>
@@ -174,7 +178,7 @@
     <span class="merk-etikett">Suchen und Sortieren &middot; 5 Lektionen (L11&ndash;L15)</span>
     <p><strong>Lektionen:</strong> L11 Lineare Suche (Vergleiche im besten/schlechtesten Fall); L12 Bin&auml;re Suche (Halbieren, Voraussetzung Sortierung, log-Aufwand); L13 Bubble Sort Grundlage (Durchlauf, Tausch, Abbruchbedingung); L14 Aufwand (Vergleiche im schlechtesten Fall, Gegen&uuml;berstellung aller drei Verfahren); L15 &Uuml;berblick und Anwendung (Verfahrenwahl, Freitext-Reflexion).<br>
     <strong>Typische Fehler:</strong> Bin&auml;re Suche auf unsortierten Listen versucht; log&#x2082; n mit n/2 verwechselt; Bubble Sort endet nicht beim ersten tauschfreien Durchlauf; Aufwandsformel n(n-1)/2 nicht auf Summe 1+2+&hellip; zur&uuml;ckgef&uuml;hrt; Suchen und Sortieren konzeptuell gleichgesetzt.<br>
-    <strong>Differenzierung:</strong> Basis und Standard durchgehend f&uuml;r Gymnasium und Realschule; in-10-ss-106 (Freitext Amortisation, Plus L15) ist Gymnasium-only. Erg&auml;nzungsaufgaben in <code>daten/aufgaben/lernbuero/in-10-suchen-und-sortieren.json</code> &mdash; fachliche Pr&uuml;fung ausstehend.<br>
+    <strong>Differenzierung:</strong> Basis und Standard durchgehend f&uuml;r Gymnasium und Realschule; eine Freitext-Aufgabe zur Amortisation (Plus, L15) ist nur f&uuml;r das Gymnasium vorgesehen.<br>
     <strong>Ausblick Gymnasium:</strong> Aufwandsklassen O(n), O(log n), O(n&sup2;) als Begriff; ggf. Selection Sort oder Insertion Sort als zweites Sortierverfahren; Nachweis der Laufzeit durch Messung in der Simulation.</p>
   </section>
 
@@ -182,18 +186,20 @@
     <span class="merk-etikett">Lektion 11 &middot; Lineare Suche: der naive Weg</span>
     <p><strong>Ziele:</strong> Lineare Suche beschreiben; Anzahl der Vergleiche im besten und schlechtesten Fall angeben; begr&uuml;nden, warum keine Sortierung n&ouml;tig ist.<br>
     <strong>Typische Fehler:</strong> Anzahl der Vergleiche immer n gesetzt (bester Fall: 1); lineare Suche mit bin&auml;rer verwechselt; &bdquo;naive&ldquo; als Fehler missverstanden statt als effizienzarme, aber allgemeing&uuml;ltige Methode.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ss-001 (MC lineare vs. bin&auml;re Suche, gym+rs); Standard = in-10-ss-101 (numerisch n=16 worst case, gym+rs, neu); Plus = in-10-ss-013 (MC Aufwandsklassen, gym+rs, AFB III).<br>
-    <strong>Sichern:</strong> in-10-ss-003 (Zuordnung Bubble-Sort-Begriffe &mdash; als Br&uuml;cke zum Folge-Thema).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 1.</p>
+    <strong>Differenzierung:</strong> Basis: MC lineare vs. bin&auml;re Suche; Standard: numerisch n=16 worst case; Plus: MC Aufwandsklassen, AFB III.<br>
+    <strong>Sichern:</strong> Zuordnung Bubble-Sort-Begriffe &mdash; als Br&uuml;cke zum Folge-Thema.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 1.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/suchen-und-sortieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 12 &middot; Bin&auml;re Suche: halbieren statt durchprobieren</span>
     <p><strong>Ziele:</strong> Halbierungsprinzip beschreiben; maximale Vergleichszahl berechnen; Sortiervoraussetzung begr&uuml;nden.<br>
     <strong>Typische Fehler:</strong> Halbierungsschritte z&auml;hlen statt Tracing vollst&auml;ndig aufzuschreiben; 2^n statt n=log&#x2082;(Listenl&auml;nge) benutzt; Voraussetzung &bdquo;sortiert&ldquo; vergessen.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ss-004 (L&uuml;cke Bubble Sort &mdash; dient als Einstieg zum Vergleich); Standard = in-10-ss-102 (numerisch n=32, gym+rs, neu); Plus = in-10-ss-012 (Rechenweg, gym+rs, AFB III).<br>
-    <strong>Sichern:</strong> in-10-ss-002 (numerisch n=1000, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 2; W&ouml;rterbuch-Analogie.</p>
+    <strong>Differenzierung:</strong> Basis: L&uuml;cke Bubble Sort &mdash; dient als Einstieg zum Vergleich; Standard: numerisch n=32; Plus: Rechenweg, AFB III.<br>
+    <strong>Sichern:</strong> numerisch n=1000.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 2; W&ouml;rterbuch-Analogie.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/suchen-und-sortieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
@@ -201,27 +207,30 @@
     <p><strong>Stopp-Punkt:</strong> Vor der Lektion gemeinsam sammeln: Wie w&uuml;rdet ihr eine Kartenhand sortieren? Unterschiedliche Strategien an der Tafel festhalten.<br>
     <strong>Ziele:</strong> Bubble-Sort-Durchlauf von Hand ausf&uuml;hren; Abbruchbedingung (tauschfreier Durchlauf) erkl&auml;ren; begr&uuml;nden, warum das gr&ouml;&szlig;te Element nach Durchlauf 1 rechts steht.<br>
     <strong>Typische Fehler:</strong> Vergleichsrichtung (immer benachbarte Paare) vergessen; zu fr&uuml;h gestoppt (nach fixiertem Element statt nach tauschfreiem Durchlauf); &bdquo;sortierter Bereich&ldquo; w&auml;chst links statt rechts.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ss-004 (L&uuml;cke Grundbegriffe, gym+rs); Standard = in-10-ss-005 (Reihenfolge [3,1,2], gym+rs); Plus = in-10-ss-104 (Rechenweg [5,3,1,2] vollst&auml;ndig, gym+rs, AFB II/III, neu).<br>
-    <strong>Sichern:</strong> in-10-ss-003 (Zuordnung Bubble-Begriffe).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 3 mit Animation; Simulation im Schritt-Modus empfohlen.</p>
+    <strong>Differenzierung:</strong> Basis: L&uuml;cke Grundbegriffe; Standard: Reihenfolge [3,1,2]; Plus: Rechenweg [5,3,1,2] vollst&auml;ndig, AFB II/III.<br>
+    <strong>Sichern:</strong> Zuordnung Bubble-Begriffe.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 3 mit Animation; Simulation im Schritt-Modus empfohlen.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/suchen-und-sortieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 14 &middot; Aufwand: Wie teuer ist Sortieren?</span>
     <p><strong>Ziele:</strong> Aufwand von Bubble Sort (worst case) berechnen; mit linearer und bin&auml;rer Suche vergleichen; Verdopplungsargument nachvollziehen.<br>
     <strong>Typische Fehler:</strong> Formel n(n-1)/2 auswendig gelernt aber nicht hergeleitet; bin&auml;re Suche als Sortierverfahren missverstanden; Aufwandswachstum qualitativ nicht eingesch&auml;tzt.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ss-103 (numerisch n=6 worst case, gym+rs, neu); Standard = in-10-ss-006 (numerisch n=10 worst case, gym+rs); Plus = in-10-ss-009 (Rechenweg [4,2,5,1] vollst&auml;ndig, gym+rs, AFB II).<br>
-    <strong>Sichern:</strong> in-10-ss-007 (MC Aufwandsvergleich, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 4; Aufwandstabelle und Diagramm.</p>
+    <strong>Differenzierung:</strong> Basis: numerisch n=6 worst case; Standard: numerisch n=10 worst case; Plus: Rechenweg [4,2,5,1] vollst&auml;ndig, AFB II.<br>
+    <strong>Sichern:</strong> MC Aufwandsvergleich.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 4; Aufwandstabelle und Diagramm.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/suchen-und-sortieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 15 &middot; Suchen und Sortieren im &Uuml;berblick</span>
     <p><strong>Ziele:</strong> Alle drei Verfahren vergleichen; passendes Verfahren f&uuml;r gegebene Situation ausw&auml;hlen; Amortisationsargument kennen (Gym).<br>
     <strong>Typische Fehler:</strong> Sortieren als immer effizienter missverstanden; lineare Suche f&uuml;r gro&szlig;e sortierte Listen empfohlen.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ss-001 (MC, gym+rs, Wiederholung); Standard = in-10-ss-105 (MC Aufwand, gym+rs, neu); Plus = in-10-ss-106 (Freitext Amortisation, nur Gym, AFB III, neu).<br>
-    <strong>Sichern:</strong> in-10-ss-011 (Freitext Verfahrenwahl, gym+rs, AFB III).<br>
-    <strong>Material:</strong> Erkl&auml;rseite alle Abschnitte; &Uuml;berblicks-Merkkasten.</p>
+    <strong>Differenzierung:</strong> Basis: MC, Wiederholung; Standard: MC Aufwand; Plus: Freitext Amortisation, AFB III, nur Gymnasium.<br>
+    <strong>Sichern:</strong> Freitext Verfahrenwahl, AFB III.<br>
+    <strong>Material:</strong> Erkl&auml;rseite alle Abschnitte; &Uuml;berblicks-Merkkasten.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/suchen-und-sortieren/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <h2>Block 4: Endliche Automaten</h2>
@@ -229,7 +238,7 @@
     <span class="merk-etikett">Endliche Automaten &middot; 5 Lektionen (L16&ndash;L20)</span>
     <p><strong>Lektionen:</strong> L16 Automaten im Alltag (Drehkreuz, Begriffe Zustand/&Uuml;bergang/Start/Akzeptanz); L17 Bausteine (Diagramm lesen, Doppelkreis, Tabellengr&ouml;&szlig;e); L18 Wort-Pr&uuml;fer (Zustandsfolge verfolgen, Akzeptanz entscheiden); L19 &Uuml;bergangstabelle (Tabelle lesen und in Diagramm &uuml;bersetzen); L20 Anwendungen und Grenzen.<br>
     <strong>Typische Fehler:</strong> Automat merkt sich die ganze Eingabefolge (statt nur den aktuellen Zustand); Doppelkreis und einfacher Kreis vertauscht; Selbst&uuml;bergang nicht erkannt; Tabellengr&ouml;&szlig;e = Zust&auml;nde &times; Zeichen nicht hergeleitet.<br>
-    <strong>Differenzierung:</strong> Basis und Standard f&uuml;r Gymnasium und Realschule; in-10-ea-013 (Plus L19, Tabellen-Rechenweg) und in-10-ea-105 (Plus L20, Freitext Automat entwerfen) sind Gymnasium-only. Erg&auml;nzungsaufgaben in <code>daten/aufgaben/lernbuero/in-10-endliche-automaten.json</code> &mdash; fachliche Pr&uuml;fung ausstehend.<br>
+    <strong>Differenzierung:</strong> Basis und Standard f&uuml;r Gymnasium und Realschule; ein Tabellen-Rechenweg (Plus, L19) und eine Freitext-Aufgabe zum Entwerfen eines Automaten (Plus, L20) sind nur f&uuml;r das Gymnasium vorgesehen.<br>
     <strong>Ausblick Gymnasium:</strong> Regul&auml;re Ausdr&uuml;cke als kompakte Beschreibung akzeptierter Sprachen; nichtdeterministische Automaten (NEA) und &Auml;quivalenz zum DEA als Ausblick.</p>
   </section>
 
@@ -237,18 +246,20 @@
     <span class="merk-etikett">Lektion 16 &middot; Automaten im Alltag</span>
     <p><strong>Ziele:</strong> Endlichen Automaten erkl&auml;ren; Zustands-Eingabe-Reaktions-Prinzip verstehen; Alltagsbeispiele identifizieren.<br>
     <strong>Typische Fehler:</strong> Zustand als &bdquo;Schritt&ldquo; missverstanden; Verbindung zu Algorithmen (sequenzielle Schritte) und Automaten (zustandsabh&auml;ngige Reaktion) unklar.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ea-001 (MC Grundaussagen, gym+rs); Standard = in-10-ea-002 (Zuordnung Fachbegriffe, gym+rs); Plus = in-10-ea-011 (Freitext Grenzen, gym+rs, AFB III).<br>
-    <strong>Sichern:</strong> in-10-ea-003 (L&uuml;cke Drehkreuz-Text, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 1; Drehkreuz-Diagramm.</p>
+    <strong>Differenzierung:</strong> Basis: MC Grundaussagen; Standard: Zuordnung Fachbegriffe; Plus: Freitext Grenzen, AFB III.<br>
+    <strong>Sichern:</strong> L&uuml;cke Drehkreuz-Text.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 1; Drehkreuz-Diagramm.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/endliche-automaten/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 17 &middot; Bausteine: Zust&auml;nde, &Uuml;berg&auml;nge, Akzeptanz</span>
     <p><strong>Ziele:</strong> Zustandsdiagramm-Symbole erkl&auml;ren; Doppelkreis als akzeptierenden Zustand; Tabellengr&ouml;&szlig;e berechnen.<br>
     <strong>Typische Fehler:</strong> Doppelkreis = Endzustand im Sinne von &bdquo;letzter m&ouml;glicher Zustand&ldquo; missverstanden; Pfeil von au&szlig;en als eingehende Kante eines anderen Zustands gelesen.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ea-101 (L&uuml;cke Drehkreuz-Sequenz, gym+rs, neu); Standard = in-10-ea-102 (numerisch 4&times;2-Tabelle, gym+rs, neu); Plus = in-10-ea-012 (L&uuml;cke komplexer Automat, gym+rs, AFB III).<br>
-    <strong>Sichern:</strong> in-10-ea-004 (numerisch 3&times;2-Tabelle, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 2; Symbole-&Uuml;bersicht.</p>
+    <strong>Differenzierung:</strong> Basis: L&uuml;cke Drehkreuz-Sequenz; Standard: numerisch 4&times;2-Tabelle; Plus: L&uuml;cke komplexer Automat, AFB III.<br>
+    <strong>Sichern:</strong> numerisch 3&times;2-Tabelle.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 2; Symbole-&Uuml;bersicht.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/endliche-automaten/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
@@ -256,28 +267,31 @@
     <p><strong>Stopp-Punkt:</strong> Vor der Lektion kurz besprechen: Was k&ouml;nnte ein Automat pr&uuml;fen? PIN-Eingabe, Passwortregel, Zahlformat?<br>
     <strong>Ziele:</strong> Wort Schritt f&uuml;r Schritt durch Automaten verfolgen; Zustandsfolge aufschreiben; Akzeptanzentscheidung treffen.<br>
     <strong>Typische Fehler:</strong> Zustandsfolge beginnt nicht beim Startzustand; nach dem letzten Zeichen wird der Zustand nicht abgelesen; akzeptierend/abgelehnt nach dem vorletzten statt letzten Zeichen entschieden.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ea-005 (L&uuml;cke bab durch Wort-Pr&uuml;fer, gym+rs); Standard = in-10-ea-103 (L&uuml;cke abba, gym+rs, neu); Plus = in-10-ea-104 (MC welche W&ouml;rter akzeptiert, gym+rs, neu).<br>
-    <strong>Sichern:</strong> in-10-ea-007 (Reihenfolge Verarbeitung bba, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 3; interaktiver Wort-Pr&uuml;fer (Simulation).</p>
+    <strong>Differenzierung:</strong> Basis: L&uuml;cke bab durch Wort-Pr&uuml;fer; Standard: L&uuml;cke abba; Plus: MC welche W&ouml;rter akzeptiert.<br>
+    <strong>Sichern:</strong> Reihenfolge Verarbeitung bba.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 3; interaktiver Wort-Pr&uuml;fer (Simulation).<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/endliche-automaten/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 19 &middot; Die &Uuml;bergangstabelle</span>
     <p><strong>Ziele:</strong> &Uuml;bergangstabelle lesen; Folgezustand aus Tabelle ablesen; Diagramm aus Tabelle rekonstruieren (und umgekehrt).<br>
     <strong>Typische Fehler:</strong> Zeilen = Eingabezeichen, Spalten = Zust&auml;nde (statt umgekehrt) angenommen; Selbst&uuml;bergang nicht in die Tabelle eingetragen.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ea-006 (numerisch Tabellengr&ouml;&szlig;e, gym+rs); Standard = in-10-ea-008 + in-10-ea-010 (MC + L&uuml;cke Tabelle ausf&uuml;llen, gym+rs); Plus = in-10-ea-013 (Rechenweg, nur Gym, AFB III).<br>
-    <strong>Sichern:</strong> in-10-ea-009 (Reihenfolge Tabelle, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 4; Tabelle und Diagramm verglichen.</p>
+    <strong>Differenzierung:</strong> Basis: numerisch Tabellengr&ouml;&szlig;e; Standard: MC + L&uuml;cke Tabelle ausf&uuml;llen; Plus: Rechenweg, AFB III, nur Gymnasium.<br>
+    <strong>Sichern:</strong> Reihenfolge Tabelle.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 4; Tabelle und Diagramm verglichen.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/endliche-automaten/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 20 &middot; Wozu Automaten? Anwendungen und Grenzen</span>
     <p><strong>Ziele:</strong> Einsatzgebiete endlicher Automaten nennen; eine Grenze des Modells erkl&auml;ren (kein Stapelspeicher).<br>
     <strong>Typische Fehler:</strong> Automaten als &bdquo;schwache Programme&ldquo; missverstanden (sie sind f&uuml;r bestimmte Aufgaben &auml;u&szlig;erst effizient); Grenzen pauschal auf alle Informatik-Aufgaben verallgemeinert.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ea-001 (MC Grundaussagen, gym+rs, Wiederholung); Standard = in-10-ea-008 (MC Anwendungen, gym+rs); Plus = in-10-ea-105 (Freitext Automat entwerfen, nur Gym, AFB III, neu).<br>
-    <strong>Sichern:</strong> in-10-ea-004 (numerisch Tabellengr&ouml;&szlig;e).<br>
-    <strong>Hinweis Zweig:</strong> in-10-ea-013 und in-10-ea-105 sind Gymnasium-only; RS-Sch&uuml;ler erhalten automatisch keine Plus-Aufgabe (Zweig-Filter).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 5; Grenzen-Merkkasten.</p>
+    <strong>Differenzierung:</strong> Basis: MC Grundaussagen, Wiederholung; Standard: MC Anwendungen; Plus: Freitext Automat entwerfen, AFB III, nur Gymnasium.<br>
+    <strong>Sichern:</strong> numerisch Tabellengr&ouml;&szlig;e.<br>
+    <strong>Hinweis Zweig:</strong> die gymnasiumspezifischen Plus-Aufgaben sind Gymnasium-only; RS-Sch&uuml;ler erhalten automatisch keine Plus-Aufgabe (Zweig-Filter).<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 5; Grenzen-Merkkasten.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/endliche-automaten/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <h2>Block 5: Automatisierung und KI</h2>
@@ -285,7 +299,7 @@
     <span class="merk-etikett">Automatisierung und KI &middot; 5 Lektionen (L21&ndash;L25)</span>
     <p><strong>Lektionen:</strong> L21 Automatisierung im Alltag (Sensor/Verarbeitung/Aktor, Wenn-Dann-Grundmuster); L22 Regelbasierte Systeme (Spamfilter, Wenn-Dann-Regeln); L23 Lernende Systeme (Training/Test, maschinelles Lernen, Genauigkeit); L24 Wie gut ist ein Modell? (Falsch positiv/negativ, Bias, Transparenz); L25 KI verantwortungsvoll nutzen (Chancen, Risiken, Verantwortung).<br>
     <strong>Typische Fehler:</strong> Sensor und Aktor vertauscht; regelbasiert und lernend nicht klar abgegrenzt; Testdaten und Trainingsdaten gleichgesetzt; Genauigkeit allein als Guetemassstab akzeptiert; Verantwortung dem Modell statt dem Menschen zugeschrieben.<br>
-    <strong>Differenzierung:</strong> Basis und Standard f&uuml;r Gymnasium und Realschule; in-10-ki-012 (Plus L23, Rechenweg) und in-10-ki-105 (Plus L25, Freitext Krankenhaus) sind Gymnasium-only. Erg&auml;nzungsaufgaben in <code>daten/aufgaben/lernbuero/in-10-automatisierung-und-ki.json</code> &mdash; fachliche Pr&uuml;fung ausstehend.<br>
+    <strong>Differenzierung:</strong> Basis und Standard f&uuml;r Gymnasium und Realschule; ein Rechenweg (Plus, L23) und eine Freitext-Aufgabe zum Krankenhaus-Beispiel (Plus, L25) sind nur f&uuml;r das Gymnasium vorgesehen.<br>
     <strong>Ausblick Gymnasium:</strong> Entscheidungsbaum als erstes interpretierbares Modell; neuronale Netze als Black-Box; Erkl&auml;rbarkeit (Explainability) als Forschungsfeld; EU AI Act als aktuelle Regulierung.</p>
   </section>
 
@@ -293,18 +307,20 @@
     <span class="merk-etikett">Lektion 21 &middot; Automatisierung im Alltag</span>
     <p><strong>Ziele:</strong> Automatisierung erkl&auml;ren; Sensor, Verarbeitung, Aktor unterscheiden; System in Bestandteile zerlegen.<br>
     <strong>Typische Fehler:</strong> Aktor als messender Baustein missverstanden; Verarbeitungs-Schritt ausgelassen (Sensor direkt mit Aktor verbunden gedacht).<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ki-002 (Zuordnung Sensor/Verarbeitung/Aktor, gym+rs); Standard = in-10-ki-101 (Zuordnung Beispiele, gym+rs, neu); Plus = in-10-ki-013 (Freitext, gym+rs, AFB III).<br>
-    <strong>Sichern:</strong> in-10-ki-003 (L&uuml;cke Thermostat, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 1; Thermostat-Beispiel.</p>
+    <strong>Differenzierung:</strong> Basis: Zuordnung Sensor/Verarbeitung/Aktor; Standard: Zuordnung Beispiele; Plus: Freitext, AFB III.<br>
+    <strong>Sichern:</strong> L&uuml;cke Thermostat.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 1; Thermostat-Beispiel.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/automatisierung-und-ki/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 22 &middot; Regelbasierte Systeme</span>
     <p><strong>Ziele:</strong> Wenn-Dann-Regeln lesen und formulieren; regelbasierte von lernenden Systemen abgrenzen; Grenzen regelbasierter Systeme benennen.<br>
     <strong>Typische Fehler:</strong> Regelbasiert und lernend als Synonyme behandelt; Regeln als &bdquo;lernend&ldquo; bezeichnet, weil sie vom Menschen programmiert wurden.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ki-003 (L&uuml;cke Thermostat, gym+rs, Wiederholung/Vertiefung); Standard = in-10-ki-005 (L&uuml;cke falsch positiv/negativ, gym+rs); Plus = in-10-ki-010 (Freitext, gym+rs, AFB III).<br>
-    <strong>Sichern:</strong> in-10-ki-006 (MC regelbasiert vs. lernend, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 2; Spamfilter-Wenn-Dann-Beispiel.</p>
+    <strong>Differenzierung:</strong> Basis: L&uuml;cke Thermostat, Wiederholung/Vertiefung; Standard: L&uuml;cke falsch positiv/negativ; Plus: Freitext, AFB III.<br>
+    <strong>Sichern:</strong> MC regelbasiert vs. lernend.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 2; Spamfilter-Wenn-Dann-Beispiel.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/automatisierung-und-ki/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
@@ -312,54 +328,59 @@
     <p><strong>Stopp-Punkt:</strong> Vor der Lektion gemeinsam besprechen: Was bedeutet es, wenn ein Programm &bdquo;lernt&ldquo;? Vorstellungen an der Tafel sammeln.<br>
     <strong>Ziele:</strong> Lernenden Algorithmus (Trainingsphase) beschreiben; Unterschied Trainings-/Testdaten begr&uuml;nden; Genauigkeit berechnen.<br>
     <strong>Typische Fehler:</strong> Testdaten im Training verwendet (= Schulaufgabe von zuhause mit zur Pr&uuml;fung); Genauigkeit auf Trainingsdaten statt Testdaten berechnet; 90 % Genauigkeit als &bdquo;perfekt&ldquo; missverstanden.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ki-004 (numerisch Genauigkeit 90/100, gym+rs); Standard = in-10-ki-102 (numerisch 72/80, gym+rs, neu); Plus = in-10-ki-012 (Rechenweg, nur Gym, AFB II).<br>
-    <strong>Sichern:</strong> in-10-ki-103 (L&uuml;cke Trainings-/Testdaten, gym+rs, neu).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 3; Katzen-Hunde-Beispiel.</p>
+    <strong>Differenzierung:</strong> Basis: numerisch Genauigkeit 90/100; Standard: numerisch 72/80; Plus: Rechenweg, AFB II, nur Gymnasium.<br>
+    <strong>Sichern:</strong> L&uuml;cke Trainings-/Testdaten.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 3; Katzen-Hunde-Beispiel.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/automatisierung-und-ki/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 24 &middot; Wie gut ist ein Modell?</span>
     <p><strong>Ziele:</strong> Falsch positiv/negativ und Bias erkl&auml;ren; Grenzen der Genauigkeit als Guetema&szlig; benennen; Transparenz als Kriterium beschreiben.<br>
     <strong>Typische Fehler:</strong> Falsch positiv als &bdquo;richtig erkannt&ldquo; missverstanden (nur &bdquo;als positiv eingestuft&ldquo;); Bias auf absichtliche Benachteiligung eingeschr&auml;nkt; Transparenz als Offenlegen des Quellcodes verstanden.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ki-007 (Reihenfolge Trainingsschritte, gym+rs); Standard = in-10-ki-008 (numerisch Genauigkeit, gym+rs); Plus = in-10-ki-104 (MC Ethik, gym+rs, neu).<br>
-    <strong>Sichern:</strong> in-10-ki-005 (L&uuml;cke falsch positiv/negativ, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 4; Spamfilter-Guete-Merkkasten.</p>
+    <strong>Differenzierung:</strong> Basis: Reihenfolge Trainingsschritte; Standard: numerisch Genauigkeit; Plus: MC Ethik.<br>
+    <strong>Sichern:</strong> L&uuml;cke falsch positiv/negativ.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 4; Spamfilter-Guete-Merkkasten.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/automatisierung-und-ki/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 25 &middot; KI verantwortungsvoll nutzen</span>
     <p><strong>Ziele:</strong> Chancen und Risiken des KI-Einsatzes benennen und abw&auml;gen; erkl&auml;ren, warum menschliche Kontrolle bei KI-Entscheidungen wichtig ist.<br>
     <strong>Typische Fehler:</strong> KI als allwissend oder als rein neutrale Technologie beschrieben; Verantwortung dem Modell statt den beteiligten Menschen zugeschrieben.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-ki-009 (Zuordnung Anwendungsbeispiele, gym+rs); Standard = in-10-ki-011 (MC Anwendungen, gym+rs); Plus = in-10-ki-105 (Freitext Krankenhaus-KI, nur Gym, AFB III, neu).<br>
-    <strong>Sichern:</strong> in-10-ki-013 (Freitext, gym+rs, AFB III).<br>
-    <strong>Hinweis Zweig:</strong> in-10-ki-012 und in-10-ki-105 sind Gymnasium-only; Zweig-Filter blendet sie f&uuml;r RS automatisch aus. Bei RS-Klassen empfiehlt sich als Plus-Ersatz in-10-ki-010 (Freitext, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 5; Verantwortungs-Merkkasten.</p>
+    <strong>Differenzierung:</strong> Basis: Zuordnung Anwendungsbeispiele; Standard: MC Anwendungen; Plus: Freitext Krankenhaus-KI, AFB III, nur Gymnasium.<br>
+    <strong>Sichern:</strong> Freitext, AFB III.<br>
+    <strong>Hinweis Zweig:</strong> die gymnasiumspezifischen Plus-Aufgaben sind Gymnasium-only; Zweig-Filter blendet sie f&uuml;r RS automatisch aus. Bei RS-Klassen kann bei Bedarf die alternative Plus-Aufgabe gesetzt werden.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 5; Verantwortungs-Merkkasten.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/automatisierung-und-ki/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <h2>Block 6: Steuern und Regeln (Mikrocontroller)</h2>
   <section class="merkkasten">
     <span class="merk-etikett">Steuern und Regeln &middot; 5 Lektionen (L26&ndash;L30)</span>
-    <p><strong>Neu (KC-Erg&auml;nzung):</strong> Dieses Thema schlie&szlig;t die L&uuml;cke im Lernfeld &#x201E;Automatisierte Prozesse&#x201C; (Modul &#x201E;Technische Realisierung&#x201C;: Sensoren, Aktoren, Verarbeitungskomponenten der Eingabe/Verarbeitung/Ausgabe zuordnen; Algorithmus zur Steuerung einer technischen Komponente). Es ist das Theorie-Lernfeld zu den vorhandenen Calliope-Projektkarten. Alle Aufgaben tragen den Marker <code>ergaenzung:&quot;kc-neu&quot;</code> (Themendatei) bzw. <code>ergaenzung:&quot;lernbuero&quot;</code> (Erg&auml;nzungsspur) &mdash; fachliche Pr&uuml;fung ausstehend.<br>
-    <strong>Differenzierung:</strong> Basis und Standard durchg&auml;ngig f&uuml;r Gymnasium UND Realschule; in-10-sr-012 (Plus L29, Rechenweg Schaltl&uuml;cke) und in-10-sr-013 (Plus L30, Freitext Calliope-Treppenhaus) sind Gymnasium-only. Der Zweig-Filter blendet sie f&uuml;r RS automatisch aus. Erg&auml;nzungsaufgaben in <code>daten/aufgaben/lernbuero/in-10-steuern-und-regeln.json</code>.<br>
-    <strong>Ausblick Gymnasium:</strong> Hysterese (Schaltl&uuml;cke) als bewusster Teil des Reglers (in-10-sr-012, Vertiefung auf der Erkl&auml;rseite); Zweipunktregler vs. stetige Regelung (P-Regler) als Ausblick; Verkn&uuml;pfung mehrerer Bedingungen (UND/ODER) im Steuerungsalgorithmus; Bezug zu Schaltnetzen und Logikbausteinen (KC-Erg&auml;nzungsmodul).</p>
+    <p><strong>Neu (KC-Erg&auml;nzung):</strong> Dieses Thema schlie&szlig;t die L&uuml;cke im Lernfeld &#x201E;Automatisierte Prozesse&#x201C; (Modul &#x201E;Technische Realisierung&#x201C;: Sensoren, Aktoren, Verarbeitungskomponenten der Eingabe/Verarbeitung/Ausgabe zuordnen; Algorithmus zur Steuerung einer technischen Komponente). Es ist das Theorie-Lernfeld zu den vorhandenen Calliope-Projektkarten.<br>
+    <strong>Differenzierung:</strong> Basis und Standard durchg&auml;ngig f&uuml;r Gymnasium UND Realschule; ein Rechenweg zur Schaltl&uuml;cke (Plus, L29) und eine Freitext-Aufgabe zur Calliope-Treppenhausbeleuchtung (Plus, L30) sind nur f&uuml;r das Gymnasium vorgesehen. Der Zweig-Filter blendet sie f&uuml;r RS automatisch aus.<br>
+    <strong>Ausblick Gymnasium:</strong> Hysterese (Schaltl&uuml;cke) als bewusster Teil des Reglers (Vertiefung auf der Erkl&auml;rseite); Zweipunktregler vs. stetige Regelung (P-Regler) als Ausblick; Verkn&uuml;pfung mehrerer Bedingungen (UND/ODER) im Steuerungsalgorithmus; Bezug zu Schaltnetzen und Logikbausteinen (KC-Erg&auml;nzungsmodul).</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 26 &middot; Das EVA-Prinzip und der Mikrocontroller</span>
     <p><strong>Ziele:</strong> EVA-Prinzip (Eingabe, Verarbeitung, Ausgabe) erkl&auml;ren; Bauteile eines Ger&auml;ts den drei Schritten zuordnen.<br>
     <strong>Typische Fehler:</strong> Sensor und Aktor vertauscht; die Verarbeitung dem Aktor zugeschrieben; Ausgabe nur als Bildschirmanzeige verstanden (statt auch als Aktor-Befehl).<br>
-    <strong>Differenzierung:</strong> Basis = in-10-sr-002 (Zuordnung EVA, gym+rs); Standard = in-10-sr-101 (L&uuml;cke Einparkhilfe, gym+rs, neu); Plus = in-10-sr-005 (MC Steuern/Regeln, gym+rs).<br>
-    <strong>Sichern:</strong> in-10-sr-003 (L&uuml;cke Sensor/Aktor/Mikrocontroller, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 1; EVA-Schaubild (SVG).</p>
+    <strong>Differenzierung:</strong> Basis: Zuordnung EVA; Standard: L&uuml;cke Einparkhilfe; Plus: MC Steuern/Regeln.<br>
+    <strong>Sichern:</strong> L&uuml;cke Sensor/Aktor/Mikrocontroller.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 1; EVA-Schaubild (SVG).<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/steuern-und-regeln/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 27 &middot; Sensoren und Aktoren</span>
     <p><strong>Ziele:</strong> Sensoren und Aktoren unterscheiden und Beispiele nennen; Faustregel Sensor (Welt &rarr; Signal) vs. Aktor (Signal &rarr; Welt) anwenden.<br>
     <strong>Typische Fehler:</strong> Kamera oder Taster als Aktor eingeordnet; Sensor und Aktor als dasselbe Bauteil gesehen.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-sr-004 (Zuordnung Sensor/Aktor, gym+rs); Standard = in-10-sr-102 (MC Roboterarm, gym+rs, neu); Plus = in-10-sr-007 (MC Backofen Regelung, gym+rs).<br>
-    <strong>Sichern:</strong> in-10-sr-003 (L&uuml;cke, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 2; Bezug zu den Calliope-Sensoren (Temperatur, Helligkeit, Beschleunigung).</p>
+    <strong>Differenzierung:</strong> Basis: Zuordnung Sensor/Aktor; Standard: MC Roboterarm; Plus: MC Backofen Regelung.<br>
+    <strong>Sichern:</strong> L&uuml;cke.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 2; Bezug zu den Calliope-Sensoren (Temperatur, Helligkeit, Beschleunigung).<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/steuern-und-regeln/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
@@ -367,33 +388,35 @@
     <p><strong>Ziele:</strong> Unterschied Steuern vs. Regeln erkl&auml;ren; Sollwert, Istwert, R&uuml;ckkopplung, Regelkreis benennen und am Beispiel einordnen.<br>
     <strong>Typische Fehler:</strong> Steuern und Regeln gleichgesetzt; R&uuml;ckkopplung dem Steuern zugeschrieben; Soll- und Istwert verwechselt.<br>
     <strong>Stopppunkt:</strong> gemeinsames Tafelgespr&auml;ch &uuml;ber Ger&auml;te, die einen Wert konstant halten (Heizung, K&uuml;hlschrank, Tempomat).<br>
-    <strong>Differenzierung:</strong> Basis = in-10-sr-103 (Zuordnung Steuern/Regeln, gym+rs, neu); Standard = in-10-sr-006 (L&uuml;cke Regelkreis, gym+rs); Plus = in-10-sr-011 (Freitext Klimaanlage, gym+rs, AFB III).<br>
-    <strong>Sichern:</strong> in-10-sr-005 (MC, gym+rs).<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 3; Regelkreis-Schaubild (SVG) mit R&uuml;ckkopplung.</p>
+    <strong>Differenzierung:</strong> Basis: Zuordnung Steuern/Regeln; Standard: L&uuml;cke Regelkreis; Plus: Freitext Klimaanlage, AFB III.<br>
+    <strong>Sichern:</strong> MC.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 3; Regelkreis-Schaubild (SVG) mit R&uuml;ckkopplung.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/steuern-und-regeln/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 29 &middot; Der Steuerungsalgorithmus</span>
     <p><strong>Ziele:</strong> Schleife messen &ndash; entscheiden &ndash; handeln beschreiben; einfachen Steuerungs-Pseudocode lesen und erg&auml;nzen.<br>
     <strong>Typische Fehler:</strong> Reihenfolge der drei Schritte vertauscht; vergessen, dass die Schleife endlos l&auml;uft; Grenzwert/Schaltl&uuml;cke nicht verstanden.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-sr-104 (L&uuml;cke messen/entscheiden/handeln, gym+rs, neu); Standard = in-10-sr-008 + in-10-sr-009 (Reihenfolge + L&uuml;cke Pseudocode, gym+rs); Plus = in-10-sr-012 (Rechenweg Schaltl&uuml;cke/Hysterese, nur Gym, AFB II/III).<br>
-    <strong>Sichern:</strong> in-10-sr-007 (MC, gym+rs).<br>
-    <strong>Hinweis Zweig:</strong> in-10-sr-012 ist Gymnasium-only; RS-Sch&uuml;ler erhalten automatisch keine Plus-Aufgabe (Zweig-Filter). Bei RS-Klassen ggf. in-10-sr-011 als Plus-Ersatz.<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 4 mit Pseudocode; Vertiefung &#x201E;Hysterese&#x201C;.</p>
+    <strong>Differenzierung:</strong> Basis: L&uuml;cke messen/entscheiden/handeln; Standard: Reihenfolge + L&uuml;cke Pseudocode; Plus: Rechenweg Schaltl&uuml;cke/Hysterese, AFB II/III, nur Gymnasium.<br>
+    <strong>Sichern:</strong> MC.<br>
+    <strong>Hinweis Zweig:</strong> Diese Plus-Aufgabe ist gymnasium-only; RS-Sch&uuml;ler erhalten automatisch keine Plus-Aufgabe (Zweig-Filter). Bei RS-Klassen kann bei Bedarf die alternative Plus-Aufgabe gesetzt werden.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 4 mit Pseudocode; Vertiefung &#x201E;Hysterese&#x201C;.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/steuern-und-regeln/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <section class="merkkasten">
     <span class="merk-etikett">Lektion 30 &middot; Eingebettete Systeme</span>
     <p><strong>Ziele:</strong> erkl&auml;ren, was ein eingebettetes System ist, und Beispiele nennen; Nutzen und Grenzen automatisierter Prozesse abw&auml;gen.<br>
     <strong>Typische Fehler:</strong> eingebettetes System mit einem normalen PC gleichgesetzt; Grenzen automatisierter Prozesse (falsche Sensorwerte, ungeplante Lagen) &uuml;bersehen.<br>
-    <strong>Differenzierung:</strong> Basis = in-10-sr-105 (MC Ger&auml;te mit eingebettetem System, gym+rs, neu); Standard = in-10-sr-010 (MC eingebettete Systeme, gym+rs); Plus = in-10-sr-013 (Freitext Calliope-Treppenhausbeleuchtung, nur Gym, AFB III).<br>
-    <strong>Sichern:</strong> in-10-sr-011 (Freitext Klimaanlage, gym+rs, AFB III).<br>
-    <strong>Hinweis Zweig:</strong> in-10-sr-013 ist Gymnasium-only; Zweig-Filter blendet sie f&uuml;r RS automatisch aus. Bei RS-Klassen empfiehlt sich als Plus-Ersatz in-10-sr-011.<br>
-    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 5; Kasten Nutzen und Grenzen; Br&uuml;cke zu den Calliope-Projektkarten.</p>
+    <strong>Differenzierung:</strong> Basis: MC Ger&auml;te mit eingebettetem System; Standard: MC eingebettete Systeme; Plus: Freitext Calliope-Treppenhausbeleuchtung, AFB III, nur Gymnasium.<br>
+    <strong>Sichern:</strong> Freitext Klimaanlage, AFB III.<br>
+    <strong>Hinweis Zweig:</strong> Diese Plus-Aufgabe ist gymnasium-only; Zweig-Filter blendet sie f&uuml;r RS automatisch aus. Bei RS-Klassen kann bei Bedarf die alternative Plus-Aufgabe gesetzt werden.<br>
+    <strong>Material:</strong> Erkl&auml;rseite Abschnitt 5; Kasten Nutzen und Grenzen; Br&uuml;cke zu den Calliope-Projektkarten.<br>
+    <strong>&Uuml;bungen:</strong> <a href="../../informatik/klasse-10/steuern-und-regeln/uebungen.html">alle &Uuml;bungsaufgaben ansehen</a>.</p>
   </section>
 
   <p class="einleitung"><a href="index.html">&#x2190; Zur Sch&#xFC;ler-Kursseite</a></p>
-  <p class="knopfzeile"><a class="knopf zweitrangig klein" href="../druck.html?kurs=in-10">🖨 Druckmaterial erstellen</a></p>
 </main>
 <script type="module" src="../../assets/js/komponenten.js"></script>
 </body>

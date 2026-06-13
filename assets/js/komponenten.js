@@ -2,7 +2,7 @@
 // verwaltet Dunkelmodus und Zweig-Wahl (Gym/RS), startet die Übersichts-Renderer.
 // Einzige Skript-Einbindung pro Seite: <script type="module" src="…/assets/js/komponenten.js"></script>
 
-import { rendereStartseite, rendereFachseite, rendereStufenseite, STUFEN_LABEL } from "./uebersicht.js";
+import { rendereStartseite, rendereFachseite, rendereStufenseite, rendereUebenUebersicht, STUFEN_LABEL } from "./uebersicht.js";
 import { exportiereFortschritt, importiereFortschritt } from "./fortschritt.js";
 
 // Projektwurzel aus der Lage dieses Moduls ableiten (assets/js/ → zwei Ebenen hoch).
@@ -240,10 +240,24 @@ if (seite === "lehrkraft" && !lehrkraftFrei()) {
 const istEinbettung = new URLSearchParams(location.search).has("einbettung");
 if (istEinbettung) {
   document.body.classList.add("einbettung");
+  // Eingebettete Simulation meldet ihre Inhaltshöhe an die Elternseite, damit der iframe
+  // ohne inneren Scrollbalken dargestellt werden kann (kein Doppel-Scroll im Lernbüro).
+  const meldeHoehe = () => { try { parent.postMessage({ typ: "lernwelt-sim-hoehe", hoehe: document.documentElement.scrollHeight }, "*"); } catch (_e) {} };
+  window.addEventListener("load", meldeHoehe);
+  if (window.ResizeObserver) new ResizeObserver(meldeHoehe).observe(document.documentElement);
+  setTimeout(meldeHoehe, 400); setTimeout(meldeHoehe, 1500);
 } else {
   baueKopfzeile();
   baueBrotkruemel();
   baueFusszeile();
+  // Eingebettete Sim-iframes auf ihre tatsächliche Inhaltshöhe bringen (Meldung der Kindseite).
+  window.addEventListener("message", ereignis => {
+    const d = ereignis.data;
+    if (!d || d.typ !== "lernwelt-sim-hoehe" || typeof d.hoehe !== "number") return;
+    document.querySelectorAll("iframe").forEach(rahmen => {
+      if (rahmen.contentWindow === ereignis.source) rahmen.style.height = Math.max(200, Math.ceil(d.hoehe)) + "px";
+    });
+  });
 }
 
 if (seite === "lehrkraft") bereiteLehrkraftDruckVor();
@@ -252,6 +266,7 @@ if (seite === "lehrkraft") bereiteLehrkraftDruckVor();
 if (seite === "start") rendereStartseite();
 else if (seite === "fach") rendereFachseite(document.body.dataset.fach);
 else if (seite === "stufe") rendereStufenseite(document.body.dataset.fach, document.body.dataset.stufe);
+else if (seite === "ueben") rendereUebenUebersicht();
 else if (seite === "pausenraum") {
   // Spiele-Übersicht erst bei Bedarf laden
   import("./pausenraum.js").then(m => m.renderePausenraum());
