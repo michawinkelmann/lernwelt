@@ -1,0 +1,265 @@
+/* selbstlernen.css — Lernbüro (Selbstlernbereich): Lernlandkarte + Lektions-Player.
+   Bewusst isoliert von main.css. Nutzt die Design-Tokens; Aufgaben selbst kommen
+   weiterhin aus der Aufgaben-Engine (.aufgabe-Styles in main.css). */
+
+/* Ampel-Farben lokal (zusätzlich immer Symbol + Text — nie Farbe allein). */
+.lernbuero {
+  --lb-gruen: var(--ok);
+  --lb-gelb: #9a6700;
+  --lb-rot: var(--fehler);
+}
+[data-theme="dunkel"] .lernbuero { --lb-gelb: #e3b341; }
+
+/* ---------- Kopf ---------- */
+.lb-kopf { margin-bottom: var(--abstand-3); }
+.lb-untertitel { color: var(--text-leise); margin: .2rem 0 0; }
+.lb-leitleiste { display: flex; flex-wrap: wrap; gap: var(--abstand-2); margin: var(--abstand-3) 0; }
+.lb-chip { display: inline-flex; align-items: center; gap: .35rem; background: var(--hauch); border: 1px solid var(--linie);
+  border-radius: 999px; padding: .25rem .7rem; font-size: .85rem; color: var(--text-leise); }
+
+/* ---------- Lernlandkarte: Wochen ---------- */
+.lb-woche { background: var(--flaeche); border: 1px solid var(--linie); border-left: 4px solid var(--mathe);
+  border-radius: var(--radius); padding: var(--abstand-3); margin: var(--abstand-3) 0; box-shadow: var(--schatten); }
+.lb-woche-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--abstand-2); margin-bottom: var(--abstand-2); }
+.lb-woche-kopf h2 { margin: 0; font-size: 1.2rem; }
+.lb-woche-spanne { color: var(--text-leise); font-size: .9rem; }
+.lb-mindestmarke { font-size: .85rem; color: var(--text-leise); margin: 0 0 var(--abstand-2); }
+.lb-mindestmarke strong { color: var(--text); }
+
+.lb-lektionsliste { display: grid; gap: var(--abstand-2); }
+.lb-lektion-karte { display: flex; flex-wrap: wrap; align-items: center; gap: var(--abstand-2);
+  background: var(--bg); border: 1px solid var(--linie); border-radius: var(--radius-klein); padding: var(--abstand-2) var(--abstand-3); }
+.lb-lektion-karte.ist-fertig { border-color: var(--ok); }
+.lb-lektion-karte.ist-gesperrt { opacity: .85; }
+.lb-lektion-nr { flex: 0 0 auto; width: 2.2rem; height: 2.2rem; border-radius: 50%;
+  display: grid; place-items: center; font-weight: 700; background: var(--mathe); color: #fff; }
+.lb-lektion-karte.ist-gesperrt .lb-lektion-nr { background: var(--text-leise); }
+.lb-lektion-text { flex: 1 1 12rem; min-width: 0; }
+.lb-lektion-titel { font-weight: 600; }
+.lb-lektion-meta { font-size: .82rem; color: var(--text-leise); display: flex; flex-wrap: wrap; gap: .2rem .8rem; margin-top: .15rem; }
+.lb-lektion-aktion { flex: 0 0 auto; display: flex; flex-wrap: wrap; gap: var(--abstand-2); align-items: center; }
+
+/* Status-Abzeichen */
+.lb-badge { display: inline-flex; align-items: center; gap: .3rem; font-size: .8rem; padding: .15rem .55rem;
+  border-radius: 999px; border: 1px solid var(--linie); }
+.lb-badge.frei { color: var(--mathe); border-color: var(--mathe); }
+.lb-badge.fertig { color: var(--ok); border-color: var(--ok); }
+.lb-badge.gesperrt { color: var(--text-leise); }
+.lb-badge.sockel { color: var(--ok); border-color: var(--ok); }
+
+.lb-fortschritt-mini { font-size: .8rem; color: var(--text-leise); }
+
+/* ---------- Stoffverteilung ---------- */
+.lb-stoff { margin: var(--abstand-3) 0; }
+.lb-stoff summary { cursor: pointer; font-weight: 600; }
+.lb-stoff table { width: 100%; border-collapse: collapse; margin-top: var(--abstand-2); font-size: .9rem; display: block; overflow-x: auto; }
+.lb-stoff th, .lb-stoff td { border: 1px solid var(--linie); padding: .45rem .6rem; text-align: left; vertical-align: top; }
+.lb-stoff th { background: var(--hauch); }
+.lb-stoff tr.ist-pilot td { background: color-mix(in srgb, var(--mathe) 12%, transparent); font-weight: 600; }
+
+/* ---------- Player ---------- */
+.lb-zurueck { display: inline-block; margin-bottom: var(--abstand-2); }
+.lb-player-kopf h1 { margin-bottom: .2rem; }
+.lb-ziele { list-style: none; padding: 0; margin: var(--abstand-2) 0; display: grid; gap: .35rem; }
+.lb-ziele li { display: flex; gap: .5rem; align-items: baseline; }
+.lb-ziele li::before { content: "Ich kann"; flex: 0 0 auto; font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .03em; color: var(--mathe); background: var(--hauch); padding: .1rem .4rem; border-radius: var(--radius-klein); }
+
+.lb-stopp { border: 1px solid var(--akzent); border-left: 4px solid var(--akzent); background: var(--hauch);
+  border-radius: var(--radius); padding: var(--abstand-2) var(--abstand-3); margin: var(--abstand-3) 0; }
+.lb-stopp .lb-stopp-etikett { font-weight: 700; color: var(--akzent); display: block; margin-bottom: .2rem; }
+
+/* Phasen */
+.lb-phase { border: 1px solid var(--linie); border-radius: var(--radius); margin: var(--abstand-3) 0; overflow: hidden; background: var(--flaeche); }
+.lb-phase-kopf { display: flex; flex-wrap: wrap; align-items: center; gap: var(--abstand-2);
+  padding: var(--abstand-2) var(--abstand-3); background: var(--hauch); border-bottom: 1px solid var(--linie); }
+.lb-phase-kopf h2 { margin: 0; font-size: 1.1rem; }
+.lb-phase-zeit { font-size: .8rem; color: var(--text-leise); }
+.lb-pflicht { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em;
+  padding: .1rem .45rem; border-radius: var(--radius-klein); }
+.lb-pflicht.ja { color: #fff; background: var(--mathe); }
+.lb-pflicht.nein { color: var(--text-leise); border: 1px solid var(--linie); }
+.lb-phase-erledigt { margin-left: auto; display: inline-flex; align-items: center; gap: .4rem; font-size: .85rem; }
+.lb-phase-koerper { padding: var(--abstand-3); display: grid; gap: var(--abstand-3); }
+.lb-phase-hinweis { color: var(--text-leise); margin: 0; }
+
+.lb-beobachtung { background: var(--hauch); border-radius: var(--radius); padding: var(--abstand-2) var(--abstand-3); }
+.lb-beobachtung .lb-etikett { font-weight: 700; display: block; margin-bottom: .15rem; }
+
+/* Üben-Spuren */
+.lb-spur { border: 1px dashed var(--linie); border-radius: var(--radius); padding: var(--abstand-2) var(--abstand-3); }
+.lb-spur > h3 { margin: 0 0 var(--abstand-2); font-size: 1rem; display: flex; align-items: center; gap: .5rem; }
+.lb-spur-tag { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em;
+  padding: .1rem .45rem; border-radius: var(--radius-klein); color: #fff; }
+.lb-spur.basis .lb-spur-tag { background: var(--ok); }
+.lb-spur.standard .lb-spur-tag { background: var(--mathe); }
+.lb-spur.plus .lb-spur-tag { background: var(--akzent); }
+.lb-luecke { color: var(--text-leise); font-style: italic; margin: 0; }
+.lb-partner { background: color-mix(in srgb, var(--akzent) 9%, transparent); border-radius: var(--radius); padding: var(--abstand-2) var(--abstand-3); }
+.lb-partner .lb-etikett { font-weight: 700; }
+
+.lb-extra-links { margin: 0; padding-left: 1.1rem; display: grid; gap: .3rem; }
+
+/* Ampel-Selbsteinschätzung */
+.lb-ampel { border: 1px solid var(--linie); border-radius: var(--radius); padding: var(--abstand-3); background: var(--flaeche); }
+.lb-ampel > h2 { margin-top: 0; font-size: 1.1rem; }
+.lb-ampel-ziel { padding: var(--abstand-2) 0; border-top: 1px solid var(--linie); }
+.lb-ampel-ziel:first-of-type { border-top: 0; }
+.lb-ampel-frage { margin: 0 0 var(--abstand-2); }
+.lb-ampel-knoepfe { display: flex; flex-wrap: wrap; gap: var(--abstand-2); }
+.lb-ampel-knopf { display: inline-flex; align-items: center; gap: .4rem; min-height: var(--beruehrziel);
+  padding: .3rem .8rem; border: 1.5px solid var(--linie); border-radius: var(--radius-klein);
+  background: var(--bg); color: var(--text); cursor: pointer; font: inherit; }
+.lb-ampel-knopf:hover { border-color: var(--text-leise); }
+.lb-ampel-knopf[aria-pressed="true"].gruen { border-color: var(--lb-gruen); background: color-mix(in srgb, var(--lb-gruen) 16%, transparent); }
+.lb-ampel-knopf[aria-pressed="true"].gelb { border-color: var(--lb-gelb); background: color-mix(in srgb, var(--lb-gelb) 18%, transparent); }
+.lb-ampel-knopf[aria-pressed="true"].rot { border-color: var(--lb-rot); background: color-mix(in srgb, var(--lb-rot) 16%, transparent); }
+.lb-ampel-hinweis { margin: var(--abstand-2) 0 0; font-size: .9rem; }
+
+/* Checkpoint */
+.lb-checkpoint { display: flex; flex-wrap: wrap; gap: var(--abstand-2); align-items: center;
+  border: 1px solid var(--linie); border-radius: var(--radius); padding: var(--abstand-3); margin: var(--abstand-3) 0; background: var(--flaeche); }
+.lb-checkpoint.bestanden { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 10%, transparent); }
+.lb-checkpoint-text { flex: 1 1 14rem; }
+.lb-checkpoint-text strong { display: block; }
+
+/* Lerntagebuch */
+.lb-tagebuch { border: 1px solid var(--linie); border-radius: var(--radius); padding: var(--abstand-3); margin: var(--abstand-3) 0; background: var(--flaeche); }
+.lb-tagebuch > h2 { margin-top: 0; font-size: 1.1rem; }
+.lb-tagebuch-form { display: flex; flex-wrap: wrap; gap: var(--abstand-2); margin-bottom: var(--abstand-2); }
+.lb-tagebuch-form input[type="text"] { flex: 1 1 16rem; min-width: 0; padding: .5rem .7rem;
+  border: 1px solid var(--linie); border-radius: var(--radius-klein); font: inherit; background: var(--bg); color: var(--text); }
+.lb-tagebuch-liste { list-style: none; padding: 0; margin: 0; display: grid; gap: .4rem; }
+.lb-tagebuch-eintrag { display: flex; gap: var(--abstand-2); align-items: baseline;
+  background: var(--bg); border: 1px solid var(--linie); border-radius: var(--radius-klein); padding: .4rem .6rem; }
+.lb-tagebuch-eintrag .lb-te-text { flex: 1 1 auto; }
+.lb-tagebuch-eintrag .lb-te-meta { font-size: .75rem; color: var(--text-leise); flex: 0 0 auto; }
+.lb-tagebuch-loeschen { flex: 0 0 auto; background: none; border: 0; color: var(--fehler); cursor: pointer; font-size: 1.1rem; line-height: 1; padding: 0 .2rem; }
+.lb-leer { color: var(--text-leise); font-style: italic; margin: 0; }
+
+@media (prefers-reduced-motion: reduce) { .lernbuero * { scroll-behavior: auto !important; } }
+
+/* Eingebetteter Erklär-Abschnitt in der Verstehen-Phase (Quelle: Erklärseite) */
+.lb-erklaer { border: 1px solid var(--linie); border-left: 4px solid var(--mathe); border-radius: var(--radius); padding: var(--abstand-2) var(--abstand-3) var(--abstand-3); background: var(--bg); }
+.lb-erklaer-abschnitt > h3:first-child { margin-top: 0; }
+.lb-erklaer-abschnitt > :last-child { margin-bottom: 0; }
+.lb-erklaer-quelle { margin: var(--abstand-3) 0 0; font-size: .85rem; }
+
+/* Ausblick Gymnasium (nur RS): Gym-only-Zusatzaufgaben am Lektionsende */
+.lb-ausblick { border: 1px solid var(--akzent); border-top: 4px solid var(--akzent); border-radius: var(--radius); padding: var(--abstand-3); margin: var(--abstand-4) 0 var(--abstand-3); background: color-mix(in srgb, var(--akzent) 6%, transparent); }
+.lb-ausblick-kopf { margin-bottom: var(--abstand-2); }
+.lb-ausblick-etikett { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; color: var(--akzent); font-size: 1.05rem; }
+
+/* Projektkarten (Scratch/Calliope) */
+.lb-zeiges { border: 1px solid var(--linie); border-left: 4px solid var(--info); border-radius: var(--radius); padding: var(--abstand-3); margin: var(--abstand-3) 0; background: var(--flaeche); }
+.lb-zeiges > h3 { margin-top: 0; font-size: 1.1rem; }
+.lb-check-zeile { display: flex; gap: var(--abstand-2); align-items: baseline; padding: .35rem 0; }
+.lb-schritte, .lb-bausteine { margin: 0; padding-left: 1.3rem; display: grid; gap: .45rem; }
+.lb-bausteine li code, .lb-schritte li code { background: var(--hauch); padding: .05rem .3rem; border-radius: var(--radius-klein); }
+
+/* Lehrkraft-Sichtschutz (clientseitig) + diskreter Zugang */
+.lehrkraft-sperre { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: var(--bg); padding: var(--abstand-3); }
+.lehrkraft-sperre-box { background: var(--flaeche); border: 1px solid var(--linie); border-top: 4px solid var(--akzent); border-radius: var(--radius); box-shadow: var(--schatten); padding: var(--abstand-4); max-width: 26rem; width: 100%; display: grid; gap: var(--abstand-2); }
+.lehrkraft-sperre-box h1 { margin: 0; font-size: 1.3rem; }
+.lehrkraft-sperre-box p { margin: 0; }
+.lehrkraft-sperre-feld { display: block; font-weight: 600; }
+.lehrkraft-sperre-box input { width: 100%; margin-top: .3rem; padding: .5rem .7rem; border: 1px solid var(--linie); border-radius: var(--radius-klein); font: inherit; background: var(--bg); color: var(--text); }
+.lehrkraft-sperre-fehler { color: var(--fehler); font-weight: 600; }
+.lb-lehrkraft-link { margin-top: var(--abstand-4); font-size: .85rem; text-align: right; }
+.lb-lehrkraft-link a { color: var(--text-leise); }
+
+/* ---------- Schüler-Feedback (Lektionsende, dezent & freiwillig) ---------- */
+/* Bewusst zurückhaltend: kleiner Text, gedämpfte Farben, klare Abgrenzung nach oben,
+   kein greller Hintergrund — stört den Lernfluss nicht, standardmäßig zugeklappt. */
+.lb-feedback {
+  margin: var(--abstand-3) 0 0;
+  padding-top: var(--abstand-3);
+  border-top: 1px solid var(--linie);
+  font-size: .9rem;
+  color: var(--text-leise);
+}
+.lb-feedback > summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .25rem .5rem;
+  border-radius: var(--radius-klein);
+  color: var(--text-leise);
+  font-size: .9rem;
+}
+.lb-feedback > summary::-webkit-details-marker { display: none; }
+.lb-feedback > summary::before {
+  content: "▸";
+  display: inline-block;
+  font-size: .8em;
+  transition: transform .15s ease;
+}
+.lb-feedback[open] > summary::before { transform: rotate(90deg); }
+.lb-feedback > summary:hover { color: var(--text); background: var(--hauch); }
+.lb-feedback > summary:focus-visible {
+  outline: 2px solid var(--mathe);
+  outline-offset: 2px;
+}
+.lb-feedback-koerper {
+  display: grid;
+  gap: var(--abstand-2);
+  margin-top: var(--abstand-2);
+  padding: var(--abstand-2) var(--abstand-3);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius-klein);
+  background: var(--hauch);
+}
+.lb-feedback-hinweis { margin: 0; font-size: .82rem; color: var(--text-leise); }
+
+.lb-fb-gruppe { border: 0; margin: 0; padding: 0; min-width: 0; }
+.lb-fb-gruppe legend { padding: 0; font-size: .85rem; font-weight: 600; color: var(--text); margin-bottom: .35rem; }
+.lb-fb-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+
+/* Radio-Chips: ausgewählter Zustand sichtbar über Rahmen + Fettung — nie nur Farbe. */
+.lb-fb-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .25rem .65rem;
+  border: 1.5px solid var(--linie);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: .85rem;
+  min-height: calc(var(--beruehrziel) - .5rem);
+}
+.lb-fb-chip input { position: absolute; opacity: 0; width: 0; height: 0; }
+.lb-fb-chip:hover { border-color: var(--text-leise); }
+.lb-fb-chip:has(input:checked) {
+  border-color: var(--mathe);
+  font-weight: 700;
+  background: color-mix(in srgb, var(--mathe) 10%, transparent);
+}
+.lb-fb-chip:has(input:focus-visible) {
+  outline: 2px solid var(--mathe);
+  outline-offset: 2px;
+}
+
+.lb-fb-frei { display: grid; gap: .3rem; }
+.lb-fb-frei label { font-size: .85rem; font-weight: 600; color: var(--text); }
+.lb-fb-frei textarea {
+  width: 100%;
+  padding: .5rem .7rem;
+  border: 1px solid var(--linie);
+  border-radius: var(--radius-klein);
+  font: inherit;
+  font-size: .9rem;
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+}
+.lb-fb-frei textarea:focus-visible { outline: 2px solid var(--mathe); outline-offset: 1px; }
+
+.lb-fb-aktion { display: flex; flex-wrap: wrap; align-items: center; gap: var(--abstand-2); margin-top: .2rem; }
+.lb-fb-status { font-size: .85rem; color: var(--ok); font-weight: 600; }
+
+/* Nur in der Druckausgabe sichtbar (Lehrkraft-Handzettel; siehe print.css) */
+.nur-druck { display: none; }

@@ -1,0 +1,218 @@
+{
+  "thema": "ph-qp-bewegung-geladener-teilchen",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben — zur fachlichen Prüfung durch die Lehrkraft. Marker ergaenzung:\"lernbuero\".",
+  "aufgaben": [
+    {
+      "id": "ph-qp-bt-101",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Elektron startet aus der Ruhe und wird durch die Beschleunigungsspannung $U_0 = 600\\,\\text{V}$ beschleunigt ($e = 1{,}602 \\cdot 10^{-19}\\,\\text{C}$, $\\frac{e}{m_e} = 1{,}7588 \\cdot 10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$). Berechne die übertragene kinetische Energie $W$ und die Endgeschwindigkeit $v$.",
+      "eingaben": [
+        {
+          "label": "$W$",
+          "antwort": 9.612,
+          "toleranz": 0.05,
+          "einheit": "· 10⁻¹⁷ J"
+        },
+        {
+          "label": "$v$",
+          "antwort": 1.4528,
+          "toleranz": 0.005,
+          "einheit": "· 10⁷ m/s"
+        }
+      ],
+      "tipps": [
+        "Die elektrische Arbeit, die das Feld an der Ladung verrichtet, beträgt $W = e \\cdot U_0$.",
+        "Setze $e = 1{,}602 \\cdot 10^{-19}\\,\\text{C}$ und $U_0 = 600\\,\\text{V}$ ein — das Ergebnis liegt im Bereich $10^{-17}\\,\\text{J}$.",
+        "Für $v$ gilt: $\\frac{1}{2} m_e v^2 = e U_0$, also $v = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0} = \\sqrt{2 \\cdot 1{,}7588 \\cdot 10^{11} \\cdot 600}$."
+      ],
+      "loesungsweg": "$W = e \\cdot U_0 = 1{,}602 \\cdot 10^{-19} \\cdot 600 = 9{,}612 \\cdot 10^{-17}\\,\\text{J}$. Aus dem Energiesatz: $v = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0} = \\sqrt{2 \\cdot 1{,}7588 \\cdot 10^{11} \\cdot 600} = \\sqrt{2{,}1106 \\cdot 10^{14}} \\approx 1{,}4528 \\cdot 10^7\\,\\frac{\\text{m}}{\\text{s}}$.",
+      "kc": ["bewegung-geladener-teilchen"]
+    },
+    {
+      "id": "ph-qp-bt-102",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "An einem Ablenkkondensator liegt die Spannung $U_a = 180\\,\\text{V}$ bei einem Plattenabstand von $d = 4{,}0\\,\\text{cm}$. Berechne die elektrische Feldstärke $E$ zwischen den Platten und die Querbeschleunigung $a$ eines Elektrons ($\\frac{e}{m_e} = 1{,}7588 \\cdot 10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$).",
+      "eingaben": [
+        {
+          "label": "$E$",
+          "antwort": 4500,
+          "toleranz": 10,
+          "einheit": "V/m"
+        },
+        {
+          "label": "$a$",
+          "antwort": 7.9146,
+          "toleranz": 0.02,
+          "einheit": "· 10¹⁴ m/s²"
+        }
+      ],
+      "tipps": [
+        "Im homogenen Plattenkondensator gilt $E = \\frac{U_a}{d}$ — den Abstand unbedingt in Metern einsetzen.",
+        "$E = \\frac{180}{0{,}04} = 4500\\,\\frac{\\text{V}}{\\text{m}}$ — ein gut handhabbares Zwischenergebnis.",
+        "Die Querbeschleunigung folgt aus $F = e \\cdot E$ und $a = F / m_e$, also $a = \\frac{e}{m_e} \\cdot E = 1{,}7588 \\cdot 10^{11} \\cdot 4500$."
+      ],
+      "loesungsweg": "$E = \\frac{U_a}{d} = \\frac{180}{0{,}04} = 4500\\,\\frac{\\text{V}}{\\text{m}}$. Querbeschleunigung: $a = \\frac{e}{m_e} \\cdot E = 1{,}7588 \\cdot 10^{11} \\cdot 4500 = 7{,}9146 \\cdot 10^{14}\\,\\frac{\\text{m}}{\\text{s}^2}$. Zum Vergleich: Die Erdbeschleunigung ist $g \\approx 10\\,\\frac{\\text{m}}{\\text{s}^2}$ — die Querbeschleunigung des Elektrons ist also rund $10^{13}$-mal größer. Gravitation darf im Feld vollständig vernachlässigt werden.",
+      "kc": ["bewegung-geladener-teilchen"]
+    },
+    {
+      "id": "ph-qp-bt-103",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Elektron wird mit $U_0 = 1200\\,\\text{V}$ beschleunigt und tritt mittig in einen Ablenkkondensator ein ($U_a = 100\\,\\text{V}$, $d = 5{,}0\\,\\text{cm}$, Plattenlänge $L = 8{,}0\\,\\text{cm}$, $\\frac{e}{m_e} = 1{,}7588 \\cdot 10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$). Berechne die Bahn Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Eintrittsgeschwindigkeit $v_0 = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0}$ in $10^7\\,\\frac{\\text{m}}{\\text{s}}$.",
+          "eingaben": [
+            {
+              "label": "$v_0$",
+              "antwort": 2.0545,
+              "toleranz": 0.005,
+              "einheit": "· 10⁷ m/s"
+            }
+          ],
+          "tipps": [
+            "$v_0 = \\sqrt{2 \\cdot 1{,}7588 \\cdot 10^{11} \\cdot 1200} = \\sqrt{4{,}2211 \\cdot 10^{14}}$"
+          ]
+        },
+        {
+          "frage": "Schritt 2: Verweilzeit im Feld $t_1 = \\frac{L}{v_0}$ in Nanosekunden.",
+          "eingaben": [
+            {
+              "label": "$t_1$",
+              "antwort": 3.894,
+              "toleranz": 0.02,
+              "einheit": "ns"
+            }
+          ],
+          "tipps": [
+            "$t_1 = \\frac{0{,}08}{2{,}0545 \\cdot 10^7}$ — Ergebnis mal $10^9$ für Nanosekunden."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Ablenkung am Plattenende $y_1 = \\frac{1}{2} a t_1^2$ mit $a = \\frac{e}{m_e} \\cdot \\frac{U_a}{d}$, in Millimetern.",
+          "eingaben": [
+            {
+              "label": "$y_1$",
+              "antwort": 2.667,
+              "toleranz": 0.06,
+              "einheit": "mm"
+            }
+          ],
+          "tipps": [
+            "$a = 1{,}7588 \\cdot 10^{11} \\cdot \\frac{100}{0{,}05} = 3{,}5176 \\cdot 10^{14}\\,\\frac{\\text{m}}{\\text{s}^2}$, dann $y_1 = \\frac{1}{2} a t_1^2$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Zerlege in Längs- (gleichförmig mit $v_0$) und Querbewegung (gleichmäßig beschleunigt mit $a = \\frac{e}{m_e} \\cdot \\frac{U_a}{d}$).",
+        "Reihenfolge: erst $v_0$ aus $U_0$, dann $t_1 = L/v_0$, dann $y_1 = \\frac{1}{2} a t_1^2$.",
+        "Kurzformel zur Kontrolle: $y_1 = \\frac{U_a L^2}{4 U_0 d} = \\frac{100 \\cdot 0{,}0064}{4 \\cdot 1200 \\cdot 0{,}05} = 2{,}667\\,\\text{mm}$."
+      ],
+      "loesungsweg": "$v_0 = \\sqrt{2 \\cdot 1{,}7588 \\cdot 10^{11} \\cdot 1200} = 2{,}0545 \\cdot 10^7\\,\\frac{\\text{m}}{\\text{s}}$. $t_1 = \\frac{0{,}08}{2{,}0545 \\cdot 10^7} = 3{,}894\\,\\text{ns}$. $a = 1{,}7588 \\cdot 10^{11} \\cdot \\frac{100}{0{,}05} = 3{,}5176 \\cdot 10^{14}\\,\\frac{\\text{m}}{\\text{s}^2}$. $y_1 = \\frac{1}{2} \\cdot 3{,}5176 \\cdot 10^{14} \\cdot (3{,}894 \\cdot 10^{-9})^2 \\approx 2{,}667\\,\\text{mm}$. Kontrolle: $y_1 = \\frac{U_a L^2}{4 U_0 d} = \\frac{100 \\cdot 0{,}08^2}{4 \\cdot 1200 \\cdot 0{,}05} = \\frac{0{,}64}{240} = 2{,}667\\,\\text{mm}$. ✓",
+      "kc": ["bewegung-geladener-teilchen"]
+    },
+    {
+      "id": "ph-qp-bt-104",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "An einem Oszilloskop sind die Maße des Ablenkplattenpaares fest: Plattenlänge $L = 8{,}0\\,\\text{cm}$, Plattenabstand $d = 5{,}0\\,\\text{cm}$, Schirmabstand $s = 12\\,\\text{cm}$. Die Beschleunigungsspannung beträgt $U_0 = 1000\\,\\text{V}$. Welche Ablenkspannung $U_a$ ist nötig, damit das Bild am Schirm um genau $y = 25{,}0\\,\\text{mm}$ verschoben wird?",
+      "eingaben": [
+        {
+          "label": "$U_a$",
+          "antwort": 195.3,
+          "toleranz": 1.0,
+          "einheit": "V"
+        }
+      ],
+      "tipps": [
+        "Starte von der Schirmformel $y = \\frac{U_a \\cdot L \\cdot \\left(\\frac{L}{2} + s\\right)}{2 \\cdot U_0 \\cdot d}$ und stelle nach $U_a$ um.",
+        "$U_a = \\frac{y \\cdot 2 \\cdot U_0 \\cdot d}{L \\cdot \\left(\\frac{L}{2} + s\\right)}$ — alle Längen in Meter, $y = 0{,}025\\,\\text{m}$.",
+        "Im Nenner: $L \\cdot (0{,}04 + 0{,}12) = 0{,}08 \\cdot 0{,}16 = 0{,}0128\\,\\text{m}^2$."
+      ],
+      "loesungsweg": "Umstellen von $y = \\frac{U_a \\cdot L \\cdot (L/2 + s)}{2 U_0 d}$ nach $U_a$: $U_a = \\frac{y \\cdot 2 U_0 d}{L \\cdot (L/2 + s)} = \\frac{0{,}025 \\cdot 2 \\cdot 1000 \\cdot 0{,}05}{0{,}08 \\cdot 0{,}16} = \\frac{2{,}5}{0{,}0128} \\approx 195{,}3\\,\\text{V}$.",
+      "kc": ["bewegung-geladener-teilchen"]
+    },
+    {
+      "id": "ph-qp-bt-105",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Am Oszilloskop werden dieselbe Beschleunigungsspannung $U_0$ und dieselbe Geometrie benutzt, nur die Ablenkspannung $U_a$ wird verändert. Welche Aussagen zur Ablenkung am Schirm sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Ablenkung am Schirm ist proportional zu $U_a$: Verdoppelt man $U_a$, verdoppelt sich auch die Ablenkung.",
+          "richtig": true,
+          "erklaerung": "Richtig — in der Schirmformel $y = \\frac{U_a L (L/2+s)}{2 U_0 d}$ ist $U_a$ der einzige variable Faktor."
+        },
+        {
+          "text": "Die Verweilzeit des Elektrons zwischen den Platten ändert sich, wenn $U_a$ größer wird.",
+          "richtig": false,
+          "erklaerung": "Nein — die Verweilzeit $t_1 = L/v_0$ hängt nur von der Plattenlänge und der Eintrittsgeschwindigkeit $v_0$ ab; $v_0$ wird nur durch $U_0$ bestimmt."
+        },
+        {
+          "text": "Erhöht man stattdessen $U_0$ bei festem $U_a$, nimmt die Ablenkung am Schirm ab.",
+          "richtig": true,
+          "erklaerung": "Richtig — größeres $U_0$ erzeugt ein schnelleres Elektron; es ist kürzer im Querfeld und wird weniger stark ausgelenkt. In der Formel steht $U_0$ im Nenner."
+        },
+        {
+          "text": "Ein schwereres Teilchen (gleiches $q$, größere Masse) wird bei gleichen Spannungen stärker abgelenkt.",
+          "richtig": false,
+          "erklaerung": "Nein — in der Schirmformel kommen weder Ladung noch Masse vor. Alle Teilchen, die durch dieselbe Beschleunigungsspannung gelaufen sind, werden gleich stark abgelenkt."
+        }
+      ],
+      "tipps": [
+        "Schau in die Schirmformel $y = \\frac{U_a L (L/2+s)}{2 U_0 d}$: Welche Größen stehen im Zähler, welche im Nenner?",
+        "Die Verweilzeit $t_1 = L/v_0$ enthält $U_a$ gar nicht — warum?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 3. In der Schirmformel $y \\propto U_a$ (Zähler) und $y \\propto 1/U_0$ (Nenner). Die Verweilzeit ist unabhängig von $U_a$. Masse und Ladung kürzen sich vollständig heraus — alle Teilchen mit derselben Durchlaufspannung werden gleich stark abgelenkt.",
+      "kc": ["bewegung-geladener-teilchen"]
+    },
+    {
+      "id": "ph-qp-bt-106",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Elektron wird durch $U_0 = 3000\\,\\text{V}$ beschleunigt. (a) Wie groß ist die kinetische Energie in Elektronenvolt? (b) Wie groß ist die Endgeschwindigkeit ($\\frac{e}{m_e} = 1{,}7588 \\cdot 10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$)?",
+      "eingaben": [
+        {
+          "label": "(a) $W$ in eV",
+          "antwort": 3000,
+          "toleranz": 1,
+          "einheit": "eV"
+        },
+        {
+          "label": "(b) $v$",
+          "antwort": 3.2485,
+          "toleranz": 0.005,
+          "einheit": "· 10⁷ m/s"
+        }
+      ],
+      "tipps": [
+        "Ein Elektronenvolt ist die Energie, die ein Elektron beim Durchlaufen von $1\\,\\text{V}$ gewinnt — also $1\\,\\text{eV} = e \\cdot 1\\,\\text{V} = 1{,}602 \\cdot 10^{-19}\\,\\text{J}$.",
+        "Bei einer Beschleunigungsspannung $U_0$ gewinnt das Elektron genau $U_0$ Elektronenvolt — hier also $3000\\,\\text{eV}$.",
+        "$v = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0} = \\sqrt{2 \\cdot 1{,}7588 \\cdot 10^{11} \\cdot 3000}$."
+      ],
+      "loesungsweg": "(a) Die Energie in eV ist numerisch gleich der Beschleunigungsspannung in Volt: $W = 3000\\,\\text{eV} = 3{,}0\\,\\text{keV}$. (b) $v = \\sqrt{2 \\cdot 1{,}7588 \\cdot 10^{11} \\cdot 3000} = \\sqrt{1{,}0553 \\cdot 10^{15}} \\approx 3{,}2485 \\cdot 10^7\\,\\frac{\\text{m}}{\\text{s}}$ — das entspricht etwa $10{,}8\\,\\%$ der Lichtgeschwindigkeit. Hier beginnt die klassische Näherung an ihre Grenzen zu stoßen.",
+      "kc": ["bewegung-geladener-teilchen"]
+    }
+  ]
+}

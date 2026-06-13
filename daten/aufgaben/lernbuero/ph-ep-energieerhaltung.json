@@ -1,0 +1,105 @@
+{
+  "thema": "ph-ep-energieerhaltung",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben — zur fachlichen Pruefung durch die Lehrkraft vor dem Livebetrieb.",
+  "aufgaben": [
+    {
+      "id": "ph-ep-ee-101",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Berechne mit $g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$: (a) Lageenergie eines $m = 2{,}0\\,\\text{kg}$ schweren Steins in $h = 3{,}0\\,\\text{m}$ Hoehe ueber dem Boden; (b) Bewegungsenergie eines Fahrrads ($m = 20\\,\\text{kg}$, $v = 4{,}0\\,\\frac{\\text{m}}{\\text{s}}$).",
+      "eingaben": [
+        { "label": "$E_{\\text{pot}}$", "antwort": 58.86, "toleranz": 0.3, "einheit": "J" },
+        { "label": "$E_{\\text{kin}}$", "antwort": 160.0, "toleranz": 0.5, "einheit": "J" }
+      ],
+      "tipps": [
+        "(a) $E_{\\text{pot}} = m \\cdot g \\cdot h = 2{,}0 \\cdot 9{,}81 \\cdot 3{,}0$.",
+        "(b) $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2 = \\frac{1}{2} \\cdot 20 \\cdot 4{,}0^2$.",
+        "Beide Formeln ergeben die Einheit Joule = kg m² s⁻²."
+      ],
+      "loesungsweg": "(a) $E_{\\text{pot}} = 2{,}0 \\cdot 9{,}81 \\cdot 3{,}0\\,\\text{J} = 58{,}86\\,\\text{J}$. (b) $E_{\\text{kin}} = \\frac{1}{2} \\cdot 20 \\cdot 16\\,\\text{J} = 160\\,\\text{J}$.",
+      "kc": ["energieerhaltung"]
+    },
+    {
+      "id": "ph-ep-ee-102",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Kugel faellt reibungsfrei aus $h = 15\\,\\text{m}$ Hoehe ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$). Berechne mit dem Energieansatz ihre Aufprallgeschwindigkeit in $\\frac{\\text{m}}{\\text{s}}$ und in $\\frac{\\text{km}}{\\text{h}}$.",
+      "eingaben": [
+        { "label": "$v$", "antwort": 17.16, "toleranz": 0.1, "einheit": "m/s" },
+        { "label": "$v$", "antwort": 61.8, "toleranz": 0.3, "einheit": "km/h" }
+      ],
+      "tipps": [
+        "Energiebilanz: $m\\,g\\,h = \\frac{1}{2}\\,m\\,v^2$ — die Masse kuertzt sich.",
+        "$v = \\sqrt{2\\,g\\,h} = \\sqrt{2 \\cdot 9{,}81 \\cdot 15}$.",
+        "Umrechnung km/h: Wert in m/s mit $3{,}6$ multiplizieren."
+      ],
+      "loesungsweg": "Energiebilanz $m\\,g\\,h = \\frac{1}{2}\\,m\\,v^2$: $v = \\sqrt{2\\,g\\,h} = \\sqrt{2 \\cdot 9{,}81 \\cdot 15}\\,\\frac{\\text{m}}{\\text{s}} = \\sqrt{294{,}3}\\,\\frac{\\text{m}}{\\text{s}} \\approx 17{,}16\\,\\frac{\\text{m}}{\\text{s}}$. Umrechnung: $17{,}16 \\cdot 3{,}6 \\approx 61{,}8\\,\\frac{\\text{km}}{\\text{h}}$.",
+      "kc": ["energieerhaltung"]
+    },
+    {
+      "id": "ph-ep-ee-103",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Radfahrer ($m = 60\\,\\text{kg}$) rollt einen $h = 6{,}0\\,\\text{m}$ hohen Huegel hinab und kommt unten mit $v = 9{,}5\\,\\frac{\\text{m}}{\\text{s}}$ an ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$). Wie viel Energie wurde durch Reibung entwertet?",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne die Lageenergie $E_{\\text{pot}}$ am Hugelgipfel.",
+          "eingaben": [
+            { "label": "$E_{\\text{pot}}$", "antwort": 3531.6, "toleranz": 5, "einheit": "J" }
+          ],
+          "tipps": ["$E_{\\text{pot}} = 60 \\cdot 9{,}81 \\cdot 6{,}0$"]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Bewegungsenergie $E_{\\text{kin}}$ unten.",
+          "eingaben": [
+            { "label": "$E_{\\text{kin}}$", "antwort": 2707.5, "toleranz": 5, "einheit": "J" }
+          ],
+          "tipps": ["$E_{\\text{kin}} = \\frac{1}{2} \\cdot 60 \\cdot 9{,}5^2$"]
+        },
+        {
+          "frage": "Schritt 3: Berechne die entwertete Energie $W_{\\text{Reib}} = E_{\\text{pot}} - E_{\\text{kin}}$.",
+          "eingaben": [
+            { "label": "$W_{\\text{Reib}}$", "antwort": 824.1, "toleranz": 10, "einheit": "J" }
+          ],
+          "tipps": ["Differenz der beiden berechneten Energien."]
+        }
+      ],
+      "tipps": [
+        "Vergleiche die mechanische Energie oben (nur Lage) und unten (nur Bewegung).",
+        "Die Differenz ist die durch Reibung entwertete Energie.",
+        "Bilanz mit Reibung: $E_{\\text{pot,oben}} = E_{\\text{kin,unten}} + W_{\\text{Reib}}$."
+      ],
+      "loesungsweg": "$E_{\\text{pot}} = 60 \\cdot 9{,}81 \\cdot 6{,}0\\,\\text{J} \\approx 3532\\,\\text{J}$. $E_{\\text{kin}} = \\frac{1}{2} \\cdot 60 \\cdot 90{,}25\\,\\text{J} = 2708\\,\\text{J}$. Entwertet: $W_{\\text{Reib}} = 3532 - 2708 = 824\\,\\text{J}$ — knapp ein Viertel der Startenergie.",
+      "kc": ["energieerhaltung"]
+    },
+    {
+      "id": "ph-ep-ee-104",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Ein Looping hat den Radius $r = 0{,}40\\,\\text{m}$ ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$, reibungsfrei). Damit die Kugel im hoechsten Punkt nicht abhebt, muss dort $v^2 \\geq g \\cdot r$ gelten. Berechne (a) die Mindestgeschwindigkeit im hoechsten Punkt und (b) die Mindeststarthoehe $h_{\\text{min}}$ uber dem tiefsten Bahnpunkt (Start aus der Ruhe).",
+      "eingaben": [
+        { "label": "$v_{\\text{oben}}$", "antwort": 1.98, "toleranz": 0.02, "einheit": "m/s" },
+        { "label": "$h_{\\text{min}}$", "antwort": 1.0, "toleranz": 0.01, "einheit": "m" }
+      ],
+      "tipps": [
+        "(a) $v = \\sqrt{g \\cdot r} = \\sqrt{9{,}81 \\cdot 0{,}40}$.",
+        "(b) Energiebilanz: $m\\,g\\,h_{\\text{min}} = m\\,g \\cdot 2r + \\frac{1}{2}\\,m\\,v^2$ — Masse kuertzt sich.",
+        "Mit $v^2 = g\\,r$ folgt $h_{\\text{min}} = 2r + \\frac{r}{2} = 2{,}5\\,r$."
+      ],
+      "loesungsweg": "(a) $v = \\sqrt{9{,}81 \\cdot 0{,}40}\\,\\frac{\\text{m}}{\\text{s}} = \\sqrt{3{,}924}\\,\\frac{\\text{m}}{\\text{s}} \\approx 1{,}98\\,\\frac{\\text{m}}{\\text{s}}$. (b) Energiebilanz: $g\\,h_{\\text{min}} = g \\cdot 2r + \\frac{1}{2}\\,g\\,r$ (nach Kuertzen der Masse und Einsetzen $v^2 = g\\,r$). Also $h_{\\text{min}} = 2r + \\frac{r}{2} = 2{,}5 \\cdot 0{,}40\\,\\text{m} = 1{,}00\\,\\text{m}$.",
+      "kc": ["energieerhaltung"]
+    }
+  ]
+}

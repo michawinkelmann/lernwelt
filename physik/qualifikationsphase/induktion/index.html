@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elektromagnetische Induktion — Qualifikationsphase · Physik — Lernwelt</title>
+<meta name="description" content="Magnetischer Fluss, Induktionsgesetz und lenzsche Regel: Induktionsspannungen berechnen, Bewegungsinduktion U = B·l·v herleiten, Generator und Transformator verstehen — mit Beispielen und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Elektromagnetische Induktion</h1>
+  <p class="einleitung">Ein Fahrraddynamo, das Ladepad fürs Handy, der Induktionsherd und jedes Kraftwerk der Welt nutzen denselben Effekt: Wo sich Magnetfelder ändern oder Leiter durch Felder bewegen, entstehen Spannungen — elektromagnetische Induktion, entdeckt 1831 von Michael Faraday. Auf dieser Seite lernst du, wie der magnetische Fluss diese Spannungen berechenbar macht, warum das Induktionsgesetz ein Minuszeichen trägt und wie daraus die Wechselspannung aus der Steckdose wird. Grundlagen über <a href="../magnetfelder-und-lorentzkraft/index.html">Magnetfelder und Lorentzkraft</a> solltest du parat haben.</p>
+
+  <section aria-labelledby="ind-phaenomen">
+    <h2 id="ind-phaenomen">1. Das Phänomen Induktion</h2>
+    <p>Zwei klassische Versuche zeigen den Effekt. <strong>Versuch 1 — Magnet in Spule:</strong> An eine Spule mit vielen Windungen wird nur ein empfindliches Spannungsmessgerät angeschlossen, keine Stromquelle. Schiebt man einen Stabmagneten in die Spule, schlägt das Messgerät aus — aber nur, solange sich der Magnet bewegt. Ruht er in der Spule, zeigt das Gerät null, egal wie stark der Magnet ist. Beim Herausziehen schlägt es in die Gegenrichtung aus. Und: Je schneller die Bewegung und je mehr Windungen die Spule hat, desto größer die Spannung.</p>
+    <p><strong>Versuch 2 — bewegter Leiter:</strong> Ein gerader Leiterstab wird senkrecht zu den Feldlinien durch das homogene Feld eines Hufeisenmagneten gezogen. Zwischen seinen Enden entsteht eine Spannung — wieder nur während der Bewegung und umso größer, je schneller gezogen wird. Bewegt man den Stab dagegen parallel zu den Feldlinien, passiert gar nichts.</p>
+    <p>Beide Versuche haben denselben Kern: Eine Spannung entsteht genau dann, wenn sich ändert, „wie viel Magnetfeld“ den Leiterkreis durchsetzt. Beim ersten Versuch ändert sich das Feld am Ort der Spule, beim zweiten die im Feld aufgespannte Fläche des Stromkreises. Dieses Erzeugen einer Spannung ganz ohne Batterie heißt <strong>elektromagnetische Induktion</strong>. Um sie zu berechnen, brauchen wir zuerst ein Maß für „wie viel Feld durch die Fläche“ — den magnetischen Fluss.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Beobachtung</span>
+      <p>Induktionsspannung entsteht nur bei einer <strong>Änderung</strong>: wenn sich die magnetische Flussdichte $B$ am Ort der Spule ändert oder die vom Leiterkreis im Feld aufgespannte Fläche $A$. Ein noch so starkes, aber konstantes Feld durch eine ruhende Spule induziert nichts.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ind-fluss">
+    <h2 id="ind-fluss">2. Der magnetische Fluss</h2>
+    <p>Der <strong>magnetische Fluss</strong> $\Phi$ misst anschaulich, „wie viele Feldlinien“ eine Fläche durchsetzen. Er wächst mit der Flussdichte $B$ und mit der Fläche $A$ — und er hängt von der Lage der Fläche im Feld ab. Maßgeblich ist der Winkel $\alpha$ zwischen den Feldlinien und der <strong>Flächennormalen</strong>, der Senkrechten auf der Spulenfläche:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Magnetischer Fluss</span>
+      <p class="formel-abgesetzt">$$\Phi = B \cdot A \cdot \cos\alpha$$</p>
+      <p>Einheit: das <strong>Weber</strong>, $1\,\text{Wb} = 1\,\text{T} \cdot \text{m}^2 = 1\,\text{Vs}$. Durchsetzt das Feld die Fläche senkrecht (Flächennormale parallel zu den Feldlinien, $\alpha = 0^\circ$), ist der Fluss maximal: $\Phi = B \cdot A$. Verlaufen die Feldlinien parallel zur Fläche ($\alpha = 90^\circ$), durchsetzt keine einzige sie: $\Phi = 0$.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 560 320" width="560" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Eine kreisförmige Leiterschleife liegt schräg in einem homogenen Magnetfeld. Die Feldlinien verlaufen waagerecht nach rechts. Die Flächennormale der Schleife — die Senkrechte auf der Spulenfläche — bildet mit der Feldrichtung den Winkel Alpha von etwa 35 Grad. Zum magnetischen Fluss trägt nur der Anteil B mal Kosinus Alpha bei, der die Fläche senkrecht durchsetzt.">
+        <defs>
+          <marker id="pfeil-feld" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--physik)"/></marker>
+          <marker id="pfeil-normale" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text)"/></marker>
+        </defs>
+        <!-- Feldlinien: waagerecht, nach rechts -->
+        <g stroke="var(--physik)" stroke-width="2" fill="none">
+          <line x1="40" y1="50" x2="520" y2="50" marker-end="url(#pfeil-feld)"/>
+          <line x1="40" y1="110" x2="520" y2="110" marker-end="url(#pfeil-feld)"/>
+          <line x1="40" y1="210" x2="520" y2="210" marker-end="url(#pfeil-feld)"/>
+          <line x1="40" y1="270" x2="520" y2="270" marker-end="url(#pfeil-feld)"/>
+        </g>
+        <text x="40" y="34" fill="var(--physik)" font-size="15">Magnetfeld B (homogen)</text>
+        <!-- Gekippte Spulenflaeche -->
+        <ellipse cx="250" cy="160" rx="34" ry="95" transform="rotate(-35 250 160)" fill="var(--akzent)" fill-opacity="0.18" stroke="var(--akzent)" stroke-width="2.5"/>
+        <text x="250" y="308" fill="var(--akzent)" font-size="15" text-anchor="middle">Spulenfläche A</text>
+        <!-- Bezugslinie in Feldrichtung -->
+        <line x1="250" y1="160" x2="445" y2="160" stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="7 5"/>
+        <!-- Flaechennormale -->
+        <line x1="250" y1="160" x2="373" y2="74" stroke="var(--text)" stroke-width="2.5" marker-end="url(#pfeil-normale)"/>
+        <text x="384" y="70" fill="var(--text)" font-size="15">Flächennormale</text>
+        <!-- Winkel alpha -->
+        <path d="M 305 160 A 55 55 0 0 0 295 128" fill="none" stroke="var(--text)" stroke-width="1.5"/>
+        <text x="316" y="148" fill="var(--text)" font-size="17" font-style="italic">α</text>
+      </svg>
+    </div>
+    <p>Dass die Einheit $1\,\text{Wb} = 1\,\text{Vs}$ ausgerechnet „Volt mal Sekunde“ ist, ist kein Zufall — sie verrät schon das Induktionsgesetz: Flussänderung pro Zeit ergibt eine Spannung.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel</span>
+      <p>Eine Leiterschleife mit der Fläche $A = 20\,\text{cm}^2 = 2{,}0 \cdot 10^{-3}\,\text{m}^2$ liegt im homogenen Feld $B = 50\,\text{mT}$. Senkrechte Durchsetzung ($\alpha = 0^\circ$): $\Phi = 0{,}050 \cdot 2{,}0 \cdot 10^{-3}\,\text{Wb} = 1{,}0 \cdot 10^{-4}\,\text{Wb} = 0{,}10\,\text{mWb}$. Kippt man die Schleife auf $\alpha = 60^\circ$, bleibt wegen $\cos 60^\circ = 0{,}5$ genau die Hälfte: $\Phi = 0{,}050\,\text{mWb}$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Eine Spule wird so gedreht, dass die Feldlinien genau in der Spulenfläche verlaufen. Welcher Winkel α gehört dazu — und wie groß ist der Fluss?</summary>
+      <div class="check-antwort"><p>$\alpha$ wird zwischen Feldlinien und <em>Flächennormale</em> gemessen, nicht zur Fläche selbst. Liegen die Feldlinien in der Fläche, steht die Normale senkrecht auf ihnen: $\alpha = 90^\circ$, also $\cos\alpha = 0$ und $\Phi = 0$ — keine einzige Feldlinie durchsetzt die Fläche. Maximal wird der Fluss bei $\alpha = 0^\circ$, wenn das Feld senkrecht durch die Fläche tritt.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ind-gesetz">
+    <h2 id="ind-gesetz">3. Das Induktionsgesetz</h2>
+    <p>Mit dem Fluss lassen sich alle Eingangsversuche in einem einzigen Gesetz bündeln: Die Induktionsspannung hängt allein davon ab, <em>wie schnell</em> sich der Fluss durch den Leiterkreis ändert. Ändert er sich in der Zeitspanne $\Delta t$ gleichmäßig um $\Delta\Phi$, gilt für eine Spule mit $n$ Windungen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Induktionsgesetz</span>
+      <p class="formel-abgesetzt">$$U_\text{ind} = -n \cdot \frac{\Delta\Phi}{\Delta t}$$</p>
+      <p>Jede Windung umfasst die Flussänderung einzeln, deshalb der Faktor $n$. Ändert sich der Fluss nicht gleichmäßig, tritt an die Stelle des Differenzenquotienten die momentane Änderungsrate — die Ableitung: $U_\text{ind} = -n \cdot \Phi'(t)$, gleichwertig geschrieben $U_\text{ind} = -n \cdot \frac{\text{d}\Phi}{\text{d}t}$. Das Minuszeichen steckt die Richtung der Spannung fest (Abschnitt 4); für Beträge rechnet man ohne Vorzeichen.</p>
+    </div>
+    <p>Wegen $\Phi = B \cdot A \cdot \cos\alpha$ gibt es zwei grundsätzliche Wege, den Fluss zu ändern — und damit zwei Familien von Induktionsversuchen:</p>
+    <ul>
+      <li><strong>$B$ ändert sich:</strong> Ein Magnet nähert sich der Spule oder ein Elektromagnet wird hoch- bzw. heruntergeregelt. Bei fester, senkrecht durchsetzter Fläche gilt $|U_\text{ind}| = n \cdot A \cdot \frac{\Delta B}{\Delta t}$.</li>
+      <li><strong>$A$ oder $\alpha$ ändert sich:</strong> Der Leiterkreis wird vergrößert, aus dem Feld gezogen oder gedreht. Bei konstantem Feld gilt entsprechend $|U_\text{ind}| = n \cdot B \cdot \frac{\Delta A}{\Delta t}$.</li>
+    </ul>
+    <div class="merkkasten">
+      <span class="merk-etikett">Spezialfall Bewegungsinduktion</span>
+      <p>Ein Leiterstab der Länge $l$ gleitet mit konstanter Geschwindigkeit $v$ senkrecht zu den Feldlinien (z. B. auf zwei leitenden Schienen). In der Zeit $\Delta t$ überstreicht er die Fläche $\Delta A = l \cdot v \cdot \Delta t$, der Fluss durch den Leiterkreis ändert sich also um $\Delta\Phi = B \cdot l \cdot v \cdot \Delta t$. Das Induktionsgesetz (eine Windung, $n = 1$) liefert:</p>
+      <p class="formel-abgesetzt">$$|U_\text{ind}| = \frac{\Delta\Phi}{\Delta t} = B \cdot l \cdot v$$</p>
+      <p>Dasselbe Ergebnis liefert die <a href="../magnetfelder-und-lorentzkraft/index.html">Lorentzkraft</a>: Sie schiebt die Leitungselektronen im bewegten Stab ($F_L = e \cdot v \cdot B$) an ein Ende, bis das elektrische Feld der getrennten Ladungen sie genau kompensiert: $e \cdot E = e \cdot v \cdot B$, also $E = v \cdot B$. Zwischen den Stabenden liegt dann die Spannung $U = E \cdot l = B \cdot l \cdot v$ — Induktion und Lorentzkraft sind zwei Blicke auf denselben Vorgang.</p>
+    </div>
+    <p>Wie der Spannungsverlauf aussieht, wenn ein Leiterstab eine <em>begrenzte</em> Feldzone durchquert, zeigt die Simulation: Der Stab (Länge $l$) gleitet mit konstanter Geschwindigkeit $v$ auf Schienen durch eine 1 m breite homogene Feldzone — Fluss $\Phi$ und Spannung $U_\text{ind}$ laufen live mit.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/physik/leiterschaukel/index.html?einbettung=1#B=0.5&l=0.2&v=1"
+        title="Simulation: Bewegter Leiter im Magnetfeld (Induktion)" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/physik/leiterschaukel/index.html#B=0.5&l=0.2&v=1" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Starte mit dem Preset „Standard“ und beschreibe den Verlauf von $U_\text{ind}$ beim Eintritt in die Feldzone, währenddessen und beim Austritt. Prüfe den Wert nach: $U_\text{ind} = B \cdot l \cdot v = 0{,}5\,\text{T} \cdot 0{,}2\,\text{m} \cdot 1\,\text{m/s} = 0{,}1\,\text{V} = 100\,\text{mV}$.<br>
+      2. Verdopple $v$ (Preset „Doppelte Geschwindigkeit“): Wie ändern sich Höhe und Breite des Rechtecks im $U$-$t$-Diagramm? Vergleiche die Fläche unter dem Graphen in beiden Fällen — welcher Größe entspricht sie? (Kontrolle: $\Phi$-$t$-Diagramm)<br>
+      3. Erkläre mit dem Induktionsgesetz, warum $U_\text{ind}$ schlagartig auf null fällt, sobald der Stab die Feldzone verlassen hat — obwohl er sich unverändert weiterbewegt.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel</span>
+      <p>Eine Spule mit $n = 400$ Windungen und der Fläche $A = 25\,\text{cm}^2 = 2{,}5 \cdot 10^{-3}\,\text{m}^2$ steht senkrecht zu den Feldlinien eines Elektromagneten, der in $\Delta t = 0{,}20\,\text{s}$ gleichmäßig von $0$ auf $B = 0{,}50\,\text{T}$ hochgeregelt wird. Flussänderung pro Windung: $\Delta\Phi = 0{,}50 \cdot 2{,}5 \cdot 10^{-3}\,\text{Wb} = 1{,}25 \cdot 10^{-3}\,\text{Wb}$. Induktionsspannung: $|U_\text{ind}| = 400 \cdot \frac{1{,}25 \cdot 10^{-3}}{0{,}20}\,\text{V} = 2{,}5\,\text{V}$ — konstant während des gesamten Hochregelns, danach schlagartig null.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein extrem starker Magnet ruht mitten in einer Spule mit 10 000 Windungen. Welche Spannung zeigt das angeschlossene Voltmeter?</summary>
+      <div class="check-antwort"><p>Null. Der Fluss durch die Spule ist riesig — aber konstant: $\frac{\Delta\Phi}{\Delta t} = 0$, also $U_\text{ind} = 0$. Im Induktionsgesetz steht die <em>Änderungsrate</em> des Flusses, nicht der Fluss selbst; weder Feldstärke noch Windungszahl ändern daran etwas. Erst wenn der Magnet bewegt wird, entsteht Spannung — dann allerdings mit dem Faktor $n = 10\,000$ kräftig verstärkt.</p></div>
+    </details>
+  <p>Prüfe das Gesetz mit eigenen Zahlen: Im Experiment <a href="../../../experimente/physik/induktionsgesetz/index.html">Induktionsgesetz quantitativ</a> misst du U<sub>ind</sub> für verschiedene Windungszahlen und Stromänderungsraten.</p>
+  </section>
+
+  <section aria-labelledby="ind-lenz">
+    <h2 id="ind-lenz">4. Die lenzsche Regel</h2>
+    <p>Bleibt das Minuszeichen. Es legt fest, in welche Richtung Induktionsspannung und Induktionsstrom wirken — und dahinter steckt ein Stück fundamentale Physik, das Emil Lenz 1834 auf den Punkt brachte:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Lenzsche Regel</span>
+      <p>Der Induktionsstrom ist stets so gerichtet, dass er der Ursache seiner Entstehung <strong>entgegenwirkt</strong>. Wächst der Fluss durch die Spule, baut der Induktionsstrom ein Gegenfeld auf; nimmt der Fluss ab, stützt sein Feld den schwindenden Fluss. Das Minuszeichen im Induktionsgesetz codiert genau dieses „entgegen“.</p>
+    </div>
+    <p>Warum muss das so sein? Wegen der <strong>Energieerhaltung</strong>. Würde der Induktionsstrom seine Ursache nicht hemmen, sondern unterstützen, dann würde ein einmal angestoßener Magnet von der Spule angezogen, dadurch schneller, dadurch noch stärker angezogen … — elektrische Energie und Bewegungsenergie entstünden aus dem Nichts: ein Perpetuum mobile. Tatsächlich gilt das Gegenteil: Wer Strom induzieren will, muss gegen die lenzsche Gegenkraft <em>Arbeit verrichten</em>, und exakt diese mechanische Arbeit findet sich als elektrische Energie wieder. Jedes Kraftwerk bezahlt seine Kilowattstunden mit Antriebsarbeit an der Generatorwelle.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Thomsonscher Ringversuch</span>
+      <p>Auf dem Eisenkern einer Spule liegt ein loser Aluminiumring. Beim Einschalten springt er hoch: Der rasch anwachsende Fluss induziert im Ring einen kräftigen Strom, dessen Magnetfeld dem Spulenfeld entgegengerichtet ist — Spule und Ring stoßen sich ab. Ein aufgesägter Ring bleibt dagegen liegen: Die Spannung wird zwar genauso induziert, doch ohne geschlossenen Stromkreis fließt kein Strom, und ohne Strom gibt es keine Kraft.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Wirbelstrombremse</span>
+      <p>Pendelt eine massive Kupferplatte zwischen den Polen eines starken Magneten, kommt sie nach wenigen Schwingungen zur Ruhe — eine geschlitzte Platte pendelt fast ungestört weiter. In der massiven Platte induziert die Bewegung flächige <strong>Wirbelströme</strong>, deren Felder nach der lenzschen Regel die Bewegung hemmen; die Bewegungsenergie wird am elektrischen Widerstand des Metalls in innere Energie umgewandelt. Berührungs- und verschleißfrei bremsen so ICE-Züge, Achterbahnen und die Dämpfungen vieler Präzisionswaagen.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Neodym-Magnet fällt durch ein senkrechtes Kupferrohr viel langsamer als durch ein gleich großes Kunststoffrohr — obwohl Kupfer gar nicht magnetisch ist. Warum? Und wo bleibt die Energie?</summary>
+      <div class="check-antwort"><p>Der fallende Magnet ändert ständig den Fluss durch die Rohrwand. Die dort induzierten Wirbelströme wirken nach der lenzschen Regel der Ursache — der Fallbewegung — entgegen: unterhalb des Magneten abstoßend, oberhalb anziehend. Der Magnet sinkt fast gleichförmig statt frei zu fallen. Im Kunststoffrohr können keine Ströme fließen, also fällt er ungebremst. Die „fehlende“ Lageenergie wird über den Widerstand des Kupfers in innere Energie umgewandelt — das Rohr erwärmt sich geringfügig. Genau dieses Prinzip nutzt die Wirbelstrombremse.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ind-anwendungen">
+    <h2 id="ind-anwendungen">5. Anwendungen: Generator und Transformator</h2>
+    <p>Der <strong>Generator</strong> setzt die Flussänderung durch Drehung um: Eine Spule mit $n$ Windungen rotiert mit konstanter Winkelgeschwindigkeit $\omega = 2\pi f$ im homogenen Magnetfeld. Der Winkel zwischen Flächennormale und Feldrichtung wächst dabei gleichmäßig, $\alpha = \omega t$, und der Fluss pendelt kosinusförmig: $\Phi(t) = B \cdot A \cdot \cos(\omega t)$. Die Induktionsspannung ist die mit $-n$ multiplizierte Ableitung davon — wer ableiten kann, rechnet nach: $\Phi'(t) = -B \cdot A \cdot \omega \cdot \sin(\omega t)$, also $U(t) = -n \cdot \Phi'(t) = n \cdot B \cdot A \cdot \omega \cdot \sin(\omega t)$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Sinusförmige Wechselspannung</span>
+      <p class="formel-abgesetzt">$$U(t) = U_\text{max} \cdot \sin(\omega t) \qquad \text{mit} \qquad U_\text{max} = n \cdot B \cdot A \cdot \omega$$</p>
+      <p>Die Spannung ist am größten, wenn die Spulenfläche gerade parallel zu den Feldlinien liegt — dort ist der Fluss zwar null, ändert sich aber am schnellsten. Beim maximalen Fluss ist die Spannung dagegen null. Schnelleres Drehen erhöht beides: Frequenz <em>und</em> Scheitelspannung.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel</span>
+      <p>Experimentiergenerator: $n = 200$, $B = 0{,}15\,\text{T}$, $A = 100\,\text{cm}^2 = 1{,}0 \cdot 10^{-2}\,\text{m}^2$, Drehfrequenz $f = 50\,\text{Hz}$. Winkelgeschwindigkeit: $\omega = 2\pi \cdot 50\,\text{s}^{-1} \approx 314\,\text{s}^{-1}$. Scheitelspannung: $U_\text{max} = 200 \cdot 0{,}15 \cdot 1{,}0 \cdot 10^{-2} \cdot 314\,\text{V} \approx 94\,\text{V}$. Mit 50 Umdrehungen pro Sekunde liefert er genau die Frequenz des europäischen Stromnetzes.</p>
+    </div>
+    <p>Der <strong>Transformator</strong> nutzt die Induktion ganz ohne Bewegung: Zwei Spulen sitzen auf einem gemeinsamen, geschlossenen Eisenkern. Wechselstrom in der Primärspule erzeugt einen ständig wechselnden Fluss, den der Kern nahezu vollständig durch die Sekundärspule führt — dort wird nach dem Induktionsgesetz eine Wechselspannung induziert. Für den idealen, unbelasteten Transformator gilt $\frac{U_1}{U_2} = \frac{n_1}{n_2}$: Das Windungszahlverhältnis übersetzt die Spannung. So wird elektrische Energie für Überlandleitungen auf Hunderttausende Volt hinauf- und fürs Handynetzteil auf wenige Volt heruntertransformiert. Mit Gleichspannung funktioniert das prinzipbedingt nicht — ein konstanter Fluss induziert nichts.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Selbstinduktion und Induktivität</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Selbstinduktion.</strong> Eine Spule induziert auch in sich selbst: Ändert sich ihr eigener Strom, ändert sich ihr eigenes Magnetfeld — und damit der Fluss durch die eigenen Windungen. Nach der lenzschen Regel wirkt die <strong>Selbstinduktionsspannung</strong> der Stromänderung entgegen: Beim Einschalten wächst der Strom durch eine Spule deshalb nur allmählich an, beim abrupten Abschalten entsteht eine hohe Spannungsspitze, die an Schaltkontakten Funken ziehen kann. Quantitativ gilt</p>
+      <p class="formel-abgesetzt">$$U_\text{ind} = -L \cdot \frac{\Delta I}{\Delta t}$$</p>
+      <p>bzw. momentan $U_\text{ind} = -L \cdot I'(t)$. Die Bauteilkonstante $L$ heißt <strong>Induktivität</strong>; ihre Einheit ist das Henry, $1\,\text{H} = 1\,\frac{\text{Vs}}{\text{A}}$. Für eine lange, dicht gewickelte Spule (Windungszahl $n$, Länge $l$, Querschnittsfläche $A$) gilt $L = \mu_0 \cdot \frac{n^2 \cdot A}{l}$ mit der magnetischen Feldkonstanten $\mu_0 = 1{,}257 \cdot 10^{-6}\,\frac{\text{Vs}}{\text{Am}}$ — eine Spule mit $n = 1000$, $l = 40\,\text{cm}$ und $A = 12\,\text{cm}^2$ hat danach $L \approx 3{,}8\,\text{mH}$. Das Magnetfeld einer stromdurchflossenen Spule speichert die Energie $E_\text{mag} = \frac{1}{2} \cdot L \cdot I^2$; sie ist es, die sich beim Abschalten im Funken entlädt.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen — vom magnetischen Fluss über lenzsche Regel und Generator bis zur Selbstinduktion.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

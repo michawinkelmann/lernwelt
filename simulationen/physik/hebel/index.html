@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hebel und Drehmoment — Simulation — Lernwelt</title>
+<meta name="description" content="Balkenwaage mit zwei einstellbaren Kräften und Hebelarmen: Drehmomente vergleichen, Gleichgewicht finden und das Hebelgesetz F1·a1 = F2·a2 entdecken.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/sim.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="simulation" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Simulation benötigt JavaScript. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Hebel und Drehmoment</h1>
+  <p class="einleitung">Links und rechts ziehen Kräfte an einer Balkenwaage — du stellst Kraft und Hebelarm frei ein. Wann bleibt der Balken im Gleichgewicht? Entscheidend ist das Produkt aus Kraft und Hebelarm, das Drehmoment: Im Gleichgewicht gilt das Hebelgesetz F₁ · a₁ = F₂ · a₂.</p>
+  <div id="sim"></div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSimulation } from "../../../assets/js/sim/engine.js";
+  import * as sim from "./sim.js";
+  starteSimulation(sim, document.getElementById("sim"));
+</script>
+</body>
+</html>

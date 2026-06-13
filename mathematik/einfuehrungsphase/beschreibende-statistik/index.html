@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beschreibende Statistik — Einführungsphase · Mathematik — Lernwelt</title>
+<meta name="description" content="Beschreibende Statistik für die Einführungsphase: Merkmale und Häufigkeiten, Säulen- und Kreisdiagramm, Mittelwert, Median und Modalwert, Quartile und Standardabweichung, Boxplots und die Regressionsgerade — mit Beispielen, Schaubildern und Übungen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .vergleich-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .vergleich-tabelle th, .vergleich-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: left; }
+  .vergleich-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Beschreibende Statistik</h1>
+  <p class="einleitung">„Im Schnitt verdienen wir hier 5000 €.“ — „Unsere Mitgliederzahl explodiert!“ — „Eisessen verursacht Sonnenbrand.“ Alle drei Sätze stützen sich auf echte Daten, und alle drei führen in die Irre. Die <strong>beschreibende Statistik</strong> liefert dir das Handwerkszeug dagegen: Daten ordnen und darstellen, mit wenigen Kennzahlen das Wesentliche erfassen — und Diagramme so kritisch lesen wie Schlagzeilen. Genau diese Werkzeuge brauchst du wieder, wenn in der Qualifikationsphase die Stochastik ansteht.</p>
+
+  <section aria-labelledby="bst-daten">
+    <h2 id="bst-daten">1. Daten und ihre Darstellung</h2>
+    <p>Am Anfang jeder Statistik steht eine Erhebung: Bei $n$ Personen oder Objekten wird ein <strong>Merkmal</strong> beobachtet — etwa das Verkehrsmittel auf dem Schulweg, die Körpergröße oder die Anzahl der Geschwister. Die möglichen Werte heißen <strong>Ausprägungen</strong>, die unsortierte Liste aller Ergebnisse <strong>Urliste</strong>. Merkmale gibt es in zwei grundverschiedenen Sorten:</p>
+    <ul>
+      <li><strong>Qualitative (kategoriale) Merkmale</strong> haben Kategorien als Ausprägungen — Lieblingsfach, Augenfarbe, Verkehrsmittel. Mit ihnen lässt sich nicht rechnen, nur zählen.</li>
+      <li><strong>Quantitative (metrische) Merkmale</strong> haben Zahlen als Ausprägungen: <strong>diskret</strong>, wenn nur einzelne Werte vorkommen können (Anzahl der Geschwister: $0, 1, 2, \dots$), oder <strong>stetig</strong>, wenn jeder Zwischenwert möglich ist (Körpergröße, Sprintzeit).</li>
+    </ul>
+    <div class="merkkasten">
+      <span class="merk-etikett">Absolute und relative Häufigkeit</span>
+      <p>Kommt eine Ausprägung in den Daten $H$-mal vor, heißt $H$ ihre <strong>absolute Häufigkeit</strong>. Aussagekräftiger ist meist ihr Anteil an allen $n$ Werten, die <strong>relative Häufigkeit</strong> $h$ — als Bruch, Dezimalzahl oder in Prozent. Im Kreisdiagramm erhält die Ausprägung den Mittelpunktswinkel $\alpha$:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}h = \frac{H}{n} \\[4pt] \alpha = h \cdot 360^\circ\end{gathered}$$</p>
+      <p>Alle relativen Häufigkeiten zusammen ergeben stets $1$, also $100\,\%$ — eine gute Rechenkontrolle.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Schulweg-Umfrage</span>
+      <p>Von $25$ Befragten kommen $8$ mit dem Bus, $12$ mit dem Fahrrad und $5$ zu Fuß. Relative Häufigkeiten: $\frac{8}{25} = 0{,}32$, $\frac{12}{25} = 0{,}48$ und $\frac{5}{25} = 0{,}20$ — Kontrolle: $0{,}32 + 0{,}48 + 0{,}20 = 1$. Für das Kreisdiagramm: Bus $0{,}32 \cdot 360^\circ = 115{,}2^\circ$, Fahrrad $172{,}8^\circ$, zu Fuß $72^\circ$. Das <strong>Säulendiagramm</strong> stellt Häufigkeiten direkt nebeneinander, das <strong>Kreisdiagramm</strong> betont die Anteile am Ganzen — es passt nur, wenn die Kategorien zusammen wirklich alles abdecken.</p>
+    </div>
+    <p>Diagramme können täuschen, ohne dass eine einzige Zahl falsch ist. Der älteste Trick ist die <strong>abgeschnittene Achse</strong>. Ein Schulkiosk verkauft im September $480$ und im Oktober $520$ belegte Brötchen — ein Plus von gut $8\,\%$. Beide Diagramme zeigen exakt diese Werte:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 182" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zwei Säulendiagramme derselben Verkaufszahlen: September 480, Oktober 520 belegte Brötchen. Links beginnt die senkrechte Achse bei null, beide Säulen sind fast gleich hoch. Rechts beginnt die Achse erst bei 470, dadurch wirkt die Oktober-Säule rund fünfmal so hoch wie die September-Säule, obwohl die Zahlen identisch sind.">
+        <g font-size="11" fill="var(--text)" font-weight="600" text-anchor="middle">
+          <text x="100" y="16">Achse ab 0: ehrlich</text>
+          <text x="282" y="16">Achse ab 470: verzerrt</text>
+        </g>
+        <!-- linkes Diagramm: Achse beginnt bei 0 -->
+        <g stroke="var(--linie)" stroke-width="1">
+          <line x1="30" y1="116.7" x2="170" y2="116.7"/>
+          <line x1="30" y1="73.3" x2="170" y2="73.3"/>
+          <line x1="30" y1="30" x2="170" y2="30"/>
+        </g>
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="30" y1="30" x2="30" y2="160"/>
+          <line x1="30" y1="160" x2="170" y2="160"/>
+        </g>
+        <g font-size="9" fill="var(--text-leise)" text-anchor="end">
+          <text x="26" y="163">0</text>
+          <text x="26" y="120">200</text>
+          <text x="26" y="77">400</text>
+          <text x="26" y="33">600</text>
+        </g>
+        <rect x="55" y="56" width="28" height="104" fill="var(--mathe)"/>
+        <rect x="110" y="47.3" width="28" height="112.7" fill="var(--mathe)"/>
+        <g font-size="10" fill="var(--text)" text-anchor="middle">
+          <text x="69" y="50">480</text>
+          <text x="124" y="41">520</text>
+        </g>
+        <!-- rechtes Diagramm: Achse beginnt erst bei 470 -->
+        <g stroke="var(--linie)" stroke-width="1">
+          <line x1="215" y1="116.7" x2="355" y2="116.7"/>
+          <line x1="215" y1="73.3" x2="355" y2="73.3"/>
+          <line x1="215" y1="30" x2="355" y2="30"/>
+        </g>
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="215" y1="30" x2="215" y2="160"/>
+          <line x1="215" y1="160" x2="355" y2="160"/>
+        </g>
+        <g font-size="9" fill="var(--text-leise)" text-anchor="end">
+          <text x="211" y="163">470</text>
+          <text x="211" y="120">490</text>
+          <text x="211" y="77">510</text>
+          <text x="211" y="33">530</text>
+        </g>
+        <rect x="240" y="138.3" width="28" height="21.7" fill="var(--mathe)"/>
+        <rect x="295" y="51.7" width="28" height="108.3" fill="var(--mathe)"/>
+        <g font-size="10" fill="var(--text)" text-anchor="middle">
+          <text x="254" y="132">480</text>
+          <text x="309" y="46">520</text>
+        </g>
+        <g font-size="10" fill="var(--text-leise)" text-anchor="middle">
+          <text x="69" y="175">Sep</text>
+          <text x="124" y="175">Okt</text>
+          <text x="254" y="175">Sep</text>
+          <text x="309" y="175">Okt</text>
+        </g>
+      </svg>
+    </div>
+    <p>Links beginnt die $y$-Achse bei $0$: Die Säulen sind fast gleich hoch, wie es den Zahlen entspricht. Rechts beginnt sie erst bei $470$ — sichtbar sind nur die Säulenspitzen, und der Oktober wirkt wie ein Verkaufsschlager. Prüfe deshalb bei jedem Säulendiagramm zuerst den Achsenbeginn, bevor du Säulenhöhen vergleichst.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Doppelt so hohe Säule — doppelt so großer Wert?</summary>
+      <div class="check-antwort"><p>Nur wenn die Achse bei $0$ beginnt! Dann sind Säulenhöhe und Wert proportional. Bei abgeschnittener Achse zeigt die Höhe nur noch den Abstand zum Achsenbeginn — im rechten Bild oben wirken die Säulen wie $1:5$, obwohl $520$ nur etwa $8\,\%$ mehr als $480$ ist.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="bst-lagemasse">
+    <h2 id="bst-lagemasse">2. Lagemaße: Mittelwert, Median und Modalwert</h2>
+    <p>Eine Datenreihe mit hundert Werten ist unhandlich. <strong>Lagemaße</strong> verdichten sie auf eine einzige Zahl, die angibt, wo die Daten „liegen“. Drei Kandidaten stehen zur Wahl:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die drei Lagemaße</span>
+      <p class="formel-abgesetzt">$$\bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n}$$</p>
+      <p>Das <strong>arithmetische Mittel</strong> $\bar{x}$ verteilt die Summe aller Werte gleichmäßig auf alle $n$ Beteiligten. Der <strong>Median</strong> ist der mittlere Wert der <strong>geordneten</strong> Liste — höchstens die Hälfte der Werte liegt darunter, höchstens die Hälfte darüber; bei gerader Anzahl nimmt man das Mittel der beiden mittleren Werte. Der <strong>Modalwert</strong> ist die häufigste Ausprägung — das einzige Lagemaß, das auch bei kategorialen Merkmalen funktioniert.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Das Gehalts-Argument</span>
+      <p>In einer kleinen Werbeagentur verdienen die vier Angestellten monatlich $2800$ €, $3000$ €, $3200$ € und $3400$ € — die Chefin zahlt sich selbst $12\,600$ €. Sie wirbt: „Bei uns verdient man im Schnitt $5000$ €.“</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}\bar{x} = \frac{2800 + 3000 + 3200 + 3400 + 12600}{5} = \frac{25000}{5} = 5000 \\[4pt] \text{Median: } 2800,\; 3000,\; \underline{3200},\; 3400,\; 12600 \;\Rightarrow\; 3200\end{gathered}$$</p>
+      <p>Die Rechnung stimmt — und führt trotzdem in die Irre: Vier von fünf Personen verdienen deutlich weniger als $5000$ €. Ein einziger <strong>Ausreißer</strong> zieht das arithmetische Mittel kräftig zu sich heran. Der Median bleibt gelassen: Er bliebe sogar bei $3200$ €, wenn die Chefin ihr Gehalt verdoppelte.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 150" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zahlenstrahl der fünf Monatsgehälter: Vier Punkte liegen dicht beieinander zwischen 2800 und 3400 Euro, ein Ausreißer liegt weit rechts bei 12600 Euro. Der Median 3200 Euro ist mitten in der Punktgruppe markiert, das arithmetische Mittel 5000 Euro liegt deutlich rechts von der Gruppe.">
+        <line x1="14" y1="110" x2="340" y2="110" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <path d="M348 110 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <g stroke="var(--text-leise)" stroke-width="1">
+          <line x1="49.1" y1="110" x2="49.1" y2="116"/>
+          <line x1="136.4" y1="110" x2="136.4" y2="116"/>
+          <line x1="223.6" y1="110" x2="223.6" y2="116"/>
+          <line x1="310.9" y1="110" x2="310.9" y2="116"/>
+        </g>
+        <g font-size="10" fill="var(--text-leise)" text-anchor="middle">
+          <text x="49.1" y="130">3000</text>
+          <text x="136.4" y="130">6000</text>
+          <text x="223.6" y="130">9000</text>
+          <text x="310.9" y="130">12000</text>
+        </g>
+        <line x1="54.9" y1="99" x2="54.9" y2="56" stroke="var(--ok)" stroke-width="2"/>
+        <text x="8" y="48" font-size="12" font-weight="600" fill="var(--ok)">Median 3200 €</text>
+        <line x1="107.3" y1="104" x2="107.3" y2="66" stroke="var(--fehler)" stroke-width="2" stroke-dasharray="5 3"/>
+        <text x="115" y="60" font-size="12" font-weight="600" fill="var(--fehler)">arithmetisches Mittel 5000 €</text>
+        <text x="328" y="88" font-size="11" fill="var(--text-leise)" text-anchor="middle">Ausreißer</text>
+        <g fill="var(--mathe)" stroke="var(--bg)" stroke-width="1">
+          <circle cx="43.3" cy="105" r="4"/>
+          <circle cx="49.1" cy="105" r="4"/>
+          <circle cx="54.9" cy="105" r="4"/>
+          <circle cx="60.7" cy="105" r="4"/>
+          <circle cx="328.4" cy="105" r="4"/>
+        </g>
+        <text x="180" y="146" font-size="11" fill="var(--text-leise)" text-anchor="middle">Monatsgehalt in €</text>
+      </svg>
+    </div>
+    <p>Gleicher Datensatz, zwei Lagemaße: Der Median sitzt mitten in der Punktgruppe, das Mittel hängt weit rechts davon — allein wegen des Ausreißers. Daraus ergibt sich eine einfache Auswahlregel:</p>
+    <table class="vergleich-tabelle">
+      <caption class="nur-screenreader">Übersicht: drei Lagemaße, ihre Bestimmung und ihr typischer Einsatz</caption>
+      <thead>
+        <tr><th scope="col">Lagemaß</th><th scope="col">so bestimmst du es</th><th scope="col">typischer Einsatz</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">arithm. Mittel $\bar{x}$</th><td>Summe aller Werte, geteilt durch $n$</td><td>metrische Daten ohne starke Ausreißer</td></tr>
+        <tr><th scope="row">Median</th><td>mittlerer Wert der geordneten Liste</td><td>metrische Daten mit Ausreißern (Gehälter, Mieten)</td></tr>
+        <tr><th scope="row">Modalwert</th><td>häufigste Ausprägung</td><td>kategoriale Merkmale (Lieblingsfach)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="bst-streumasse">
+    <h2 id="bst-streumasse">3. Streumaße: Spannweite, Quartile, Standardabweichung</h2>
+    <p>Lagemaße erzählen nur die halbe Geschichte. Die Datenreihen $12, 13, 14$ und $1, 13, 25$ haben denselben Mittelwert $13$ und denselben Median $13$ — und könnten verschiedener kaum sein. <strong>Streumaße</strong> messen, wie weit die Werte auseinanderliegen.</p>
+    <p>Das gröbste ist die <strong>Spannweite</strong>: Maximum minus Minimum, oben also $2$ gegenüber $24$. Sie hängt allerdings nur von den zwei Extremwerten ab — ein einziger Ausreißer bläht sie auf. Robuster sind die <strong>Quartile</strong>:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Quartile und Interquartilsabstand</span>
+      <p>Das <strong>untere Quartil</strong> $Q_1$ ist der Median der unteren Hälfte der geordneten Liste, das <strong>obere Quartil</strong> $Q_3$ der Median der oberen Hälfte; bei ungerader Anzahl zählt der Median selbst zu keiner der beiden Hälften. Rund ein Viertel der Werte liegt unter $Q_1$, rund ein Viertel über $Q_3$. Der <strong>Interquartilsabstand</strong> $Q_3 - Q_1$ misst, wie breit die mittleren $50\,\%$ der Daten streuen — Ausreißer können ihm nichts anhaben.</p>
+    </div>
+    <p><em>Hinweis:</em> CAS und Statistik-Software verwenden teils leicht abweichende Quartil-Regeln; bei den Datensätzen dieser Seite liefern alle gängigen Konventionen dieselben Werte.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Testergebnisse der Klasse A</span>
+      <p>Elf Ergebnisse, bereits sortiert: $8, 9, 11, 11, 12, 13, 14, 15, 15, 17, 18$ Punkte. Der Median ist der $6.$ Wert: $13$. Untere Hälfte $8, 9, 11, 11, 12$ — ihr Median ist $Q_1 = 11$. Obere Hälfte $14, 15, 15, 17, 18$ — also $Q_3 = 15$. Interquartilsabstand: $15 - 11 = 4$, Spannweite: $18 - 8 = 10$.</p>
+    </div>
+    <p>Das wichtigste Streumaß der Oberstufe nutzt schließlich <em>alle</em> Werte: Die <strong>Standardabweichung</strong> misst, wie weit die Daten im Mittel vom Mittelwert $\bar{x}$ entfernt liegen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Standardabweichung</span>
+      <p class="formel-abgesetzt">$$\sigma = \sqrt{\frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \dots + (x_n - \bar{x})^2}{n}}$$</p>
+      <p>Rezept: Abweichungen vom Mittelwert bilden — quadrieren — mitteln (Division durch $n$) — Wurzel ziehen. Das Quadrieren macht alle Abweichungen positiv und gewichtet große besonders stark; die Wurzel bringt das Ergebnis zurück in die ursprüngliche Einheit. Wir teilen durch $n$, weil wir die vollständig erhobene Datenreihe beschreiben (Schreibweise $\sigma_n$) — warum Taschenrechner zusätzlich eine Variante mit $n - 1$ anbieten, klärt die Vertiefung unten.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Standardabweichung Schritt für Schritt</span>
+      <p>Fünf Klausurergebnisse: $7, 9, 10, 11, 13$ Punkte. Mittelwert: $\bar{x} = \frac{7 + 9 + 10 + 11 + 13}{5} = \frac{50}{5} = 10$.</p>
+      <table class="vergleich-tabelle">
+        <caption class="nur-screenreader">Rechentabelle: Werte, Abweichungen vom Mittelwert und quadrierte Abweichungen</caption>
+        <thead>
+          <tr><th scope="col">Wert $x_i$</th><th scope="col">Abweichung $x_i - \bar{x}$</th><th scope="col">Quadrat $(x_i - \bar{x})^2$</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$7$</td><td>$-3$</td><td>$9$</td></tr>
+          <tr><td>$9$</td><td>$-1$</td><td>$1$</td></tr>
+          <tr><td>$10$</td><td>$0$</td><td>$0$</td></tr>
+          <tr><td>$11$</td><td>$1$</td><td>$1$</td></tr>
+          <tr><td>$13$</td><td>$3$</td><td>$9$</td></tr>
+          <tr><th scope="row">Summe</th><td>$0$ ✓</td><td>$20$</td></tr>
+        </tbody>
+      </table>
+      <p class="formel-abgesetzt">$$\sigma = \sqrt{\frac{9 + 1 + 0 + 1 + 9}{5}} = \sqrt{\frac{20}{5}} = \sqrt{4} = 2$$</p>
+      <p>Typischerweise weicht ein Ergebnis also um etwa $2$ Punkte vom Mittelwert ab. Die mittlere Spalte ist zugleich Rechenkontrolle: Die Abweichungen selbst summieren sich immer zu $0$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum quadriert man die Abweichungen?</summary>
+      <div class="check-antwort"><p>Weil sich die rohen Abweichungen <strong>immer</strong> zu $0$ aufheben — positive und negative gleichen sich exakt aus, im Beispiel $(-3) + (-1) + 0 + 1 + 3 = 0$. Das Quadrieren macht alle Beiträge positiv und lässt große Abweichungen stärker zählen als kleine. Damit am Ende wieder die ursprüngliche Einheit herauskommt (Punkte statt Quadrat-Punkte), zieht man zum Schluss die Wurzel.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="bst-boxplot">
+    <h2 id="bst-boxplot">4. Der Boxplot</h2>
+    <p>Fünf Kennzahlen aus Abschnitt 3 — Minimum, $Q_1$, Median, $Q_3$, Maximum — ergeben zusammen ein Bild, das eine ganze Verteilung auf einen Blick zeigt: den <strong>Boxplot</strong>. Für die Klasse A von oben lauten sie $8$, $11$, $13$, $15$ und $18$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Boxplot zeichnen — in vier Schritten</span>
+      <ol>
+        <li>Daten ordnen und die fünf Kennzahlen bestimmen: Minimum, $Q_1$, Median, $Q_3$, Maximum.</li>
+        <li>Über einer Zahlengeraden die <strong>Box</strong> von $Q_1$ bis $Q_3$ zeichnen — sie umfasst die mittleren rund $50\,\%$ der Daten.</li>
+        <li>Den Median als Strich <strong>in</strong> die Box einzeichnen.</li>
+        <li>Die <strong>Antennen</strong> von der Box bis zum Minimum und zum Maximum ergänzen.</li>
+      </ol>
+    </div>
+    <p>So sieht das Ergebnis aus — zusammen mit der Parallelklasse B, deren elf Ergebnisse $5, 7, 9, 9, 12, 13, 15, 17, 17, 19, 20$ lauten (Median $13$, $Q_1 = 9$, $Q_3 = 17$):</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 232" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zwei beschriftete Boxplots über einer gemeinsamen Punkteskala von 0 bis 22. Klasse A: Antennen von 8 bis 11 und von 15 bis 18, Box von 11 bis 15 mit Medianstrich bei 13. Klasse B: Antennen von 5 bis 9 und von 17 bis 20, Box von 9 bis 17 mit Medianstrich ebenfalls bei 13. Beide Mediane liegen auf derselben gestrichelten Linie, die Box der Klasse B ist doppelt so breit wie die der Klasse A.">
+        <text x="210" y="26" font-size="11" fill="var(--text)" text-anchor="middle">Median</text>
+        <line x1="210" y1="32" x2="210" y2="182" stroke="var(--linie)" stroke-width="1" stroke-dasharray="4 4"/>
+        <text x="118" y="40" font-size="11" fill="var(--text-leise)" text-anchor="middle">Antenne</text>
+        <line x1="125" y1="44" x2="150" y2="64" stroke="var(--text-leise)" stroke-width="1"/>
+        <text x="292" y="40" font-size="11" fill="var(--text-leise)" text-anchor="middle">Box: mittlere 50 %</text>
+        <line x1="274" y1="44" x2="243" y2="52" stroke="var(--text-leise)" stroke-width="1"/>
+        <!-- Klasse A: Min 8, Q1 11, Median 13, Q3 15, Max 18 -->
+        <g stroke="var(--mathe)" stroke-width="2" fill="none">
+          <line x1="135" y1="58" x2="135" y2="78"/>
+          <line x1="135" y1="68" x2="180" y2="68"/>
+          <line x1="240" y1="68" x2="285" y2="68"/>
+          <line x1="285" y1="58" x2="285" y2="78"/>
+          <rect x="180" y="50" width="60" height="36" fill="var(--hauch)"/>
+          <line x1="210" y1="50" x2="210" y2="86" stroke-width="3"/>
+        </g>
+        <text x="18" y="72" font-size="12" font-weight="600" fill="var(--text)">Klasse A</text>
+        <g font-size="10" fill="var(--text-leise)" text-anchor="middle">
+          <text x="135" y="100">8</text>
+          <text x="180" y="100">11</text>
+          <text x="210" y="100">13</text>
+          <text x="240" y="100">15</text>
+          <text x="285" y="100">18</text>
+        </g>
+        <!-- Klasse B: Min 5, Q1 9, Median 13, Q3 17, Max 20 -->
+        <g stroke="var(--physik)" stroke-width="2" fill="none">
+          <line x1="90" y1="124" x2="90" y2="144"/>
+          <line x1="90" y1="134" x2="150" y2="134"/>
+          <line x1="270" y1="134" x2="315" y2="134"/>
+          <line x1="315" y1="124" x2="315" y2="144"/>
+          <rect x="150" y="116" width="120" height="36" fill="var(--hauch)"/>
+          <line x1="210" y1="116" x2="210" y2="152" stroke-width="3"/>
+        </g>
+        <text x="18" y="138" font-size="12" font-weight="600" fill="var(--text)">Klasse B</text>
+        <g font-size="10" fill="var(--text-leise)" text-anchor="middle">
+          <text x="90" y="166">5</text>
+          <text x="150" y="166">9</text>
+          <text x="210" y="166">13</text>
+          <text x="270" y="166">17</text>
+          <text x="315" y="166">20</text>
+        </g>
+        <!-- gemeinsame Skala -->
+        <line x1="15" y1="190" x2="348" y2="190" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <g stroke="var(--text-leise)" stroke-width="1">
+          <line x1="15" y1="186" x2="15" y2="194"/>
+          <line x1="90" y1="186" x2="90" y2="194"/>
+          <line x1="165" y1="186" x2="165" y2="194"/>
+          <line x1="240" y1="186" x2="240" y2="194"/>
+          <line x1="315" y1="186" x2="315" y2="194"/>
+        </g>
+        <g font-size="10" fill="var(--text-leise)" text-anchor="middle">
+          <text x="15" y="208">0</text>
+          <text x="90" y="208">5</text>
+          <text x="165" y="208">10</text>
+          <text x="240" y="208">15</text>
+          <text x="315" y="208">20</text>
+        </g>
+        <text x="181" y="226" font-size="11" fill="var(--text-leise)" text-anchor="middle">Punkte im Test</text>
+      </svg>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Zwei Klassen vergleichen</span>
+      <p>Beide Klassen haben den Median $13$ — und sogar dasselbe arithmetische Mittel $13$. Trotzdem unterscheiden sie sich deutlich: In Klasse A liegen die mittleren $50\,\%$ zwischen $11$ und $15$ (Interquartilsabstand $4$), in Klasse B zwischen $9$ und $17$ (Interquartilsabstand $8$); die Spannweiten betragen $10$ und $15$. Klasse A hat also sehr einheitlich abgeschnitten, in Klasse B liegen starke und schwache Ergebnisse weit auseinander. Merke für jeden Vergleich: Jeder der vier Abschnitte eines Boxplots — Antenne, linke Boxhälfte, rechte Boxhälfte, Antenne — enthält rund ein Viertel der Daten, egal wie lang er gezeichnet ist.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="bst-zusammenhaenge">
+    <h2 id="bst-zusammenhaenge">5. Zusammenhänge: Punktwolken und Regressionsgerade</h2>
+    <p>Bisher stand ein einzelnes Merkmal im Mittelpunkt. Oft interessiert aber ein <strong>Zusammenhang</strong> zwischen zweien: Hängt der Getränkeverkauf von der Temperatur ab? Dazu trägt man jedes Beobachtungspaar $(x\,|\,y)$ als Punkt ein — es entsteht ein <strong>Streudiagramm</strong>, anschaulich eine <strong>Punktwolke</strong>:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 140" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Drei kleine Streudiagramme nebeneinander. Im ersten liegen die Punkte eng an einer steigenden Linie: starker positiver Zusammenhang. Im zweiten steigen die Punkte nur grob und streuen breit: schwacher positiver Zusammenhang. Im dritten sind die Punkte regellos verteilt: kein Zusammenhang.">
+        <g fill="none" stroke="var(--linie)" stroke-width="1">
+          <rect x="10" y="15" width="100" height="100"/>
+          <rect x="130" y="15" width="100" height="100"/>
+          <rect x="250" y="15" width="100" height="100"/>
+        </g>
+        <g fill="var(--mathe)">
+          <circle cx="16" cy="106" r="3"/><circle cx="26" cy="97" r="3"/><circle cx="36" cy="89" r="3"/><circle cx="46" cy="80" r="3"/><circle cx="56" cy="73" r="3"/><circle cx="66" cy="61" r="3"/><circle cx="76" cy="53" r="3"/><circle cx="86" cy="44" r="3"/><circle cx="96" cy="35" r="3"/><circle cx="104" cy="24" r="3"/>
+        </g>
+        <g fill="var(--mathe)">
+          <circle cx="136" cy="98" r="3"/><circle cx="148" cy="76" r="3"/><circle cx="156" cy="94" r="3"/><circle cx="166" cy="58" r="3"/><circle cx="176" cy="84" r="3"/><circle cx="186" cy="44" r="3"/><circle cx="196" cy="68" r="3"/><circle cx="206" cy="34" r="3"/><circle cx="214" cy="57" r="3"/><circle cx="224" cy="48" r="3"/>
+        </g>
+        <g fill="var(--mathe)">
+          <circle cx="258" cy="42" r="3"/><circle cx="266" cy="96" r="3"/><circle cx="276" cy="62" r="3"/><circle cx="286" cy="24" r="3"/><circle cx="296" cy="82" r="3"/><circle cx="306" cy="46" r="3"/><circle cx="316" cy="100" r="3"/><circle cx="326" cy="34" r="3"/><circle cx="336" cy="72" r="3"/><circle cx="344" cy="90" r="3"/>
+        </g>
+        <g font-size="11" fill="var(--text-leise)" text-anchor="middle">
+          <text x="60" y="131">stark positiv</text>
+          <text x="180" y="131">schwach positiv</text>
+          <text x="300" y="131">kein Zusammenhang</text>
+        </g>
+      </svg>
+    </div>
+    <p>Die Form der Wolke beschreibt den Zusammenhang qualitativ: Liegen die Punkte eng an einer steigenden Linie, ist er <strong>stark positiv</strong>; steigen sie nur grob mit viel Streuung, <strong>schwach positiv</strong>; ohne erkennbares Muster besteht <strong>kein Zusammenhang</strong>. Fällt die Wolke, heißt der Zusammenhang <strong>negativ</strong> — etwa zwischen Außentemperatur und Heizkosten.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Korrelation ist keine Kausalität</span>
+      <p>Dass zwei Merkmale gemeinsam steigen (<strong>Korrelation</strong>), beweist nicht, dass das eine das andere verursacht (<strong>Kausalität</strong>). Klassiker: An Sommertagen steigen Eisverkauf <em>und</em> Sonnenbrandzahlen — nicht weil Eis der Haut schadet, sondern weil eine dritte Größe beides antreibt: die Sonne. Frage bei jeder Korrelation: Steckt eine <strong>dritte Variable</strong> dahinter? Könnte die Wirkrichtung umgekehrt sein? Oder ist es schlicht Zufall?</p>
+    </div>
+    <p>Zeigt die Punktwolke einen klaren linearen Trend, fasst ihn eine Gerade zusammen: die <strong>Regressionsgerade</strong> $y = a \cdot x + b$. Sie ist die „beste Gerade“ in einem präzisen Sinn: Unter allen Geraden macht sie die Summe der <strong>quadrierten senkrechten Abstände</strong> zu den Datenpunkten am kleinsten — dieselbe Quadrier-Idee wie bei der Standardabweichung. Die Rechnung selbst überlässt du dem CAS: Im ClassPad II beide Datenlisten eingeben, dann <strong>Calc → Regression → Lineare Reg.</strong> aufrufen — das Gerät liefert $a$ und $b$. Mit der Geradengleichung kannst du anschließend Werte <strong>innerhalb</strong> des beobachteten Bereichs prognostizieren.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Gilt die Regressionsgerade auch weit außerhalb?</summary>
+      <div class="check-antwort"><p>Nein — sie fasst nur den beobachteten Bereich zusammen. Eine Gerade, die den Getränkeverkauf zwischen $10$ und $26\,^\circ\text{C}$ gut beschreibt, liefert für $60\,^\circ\text{C}$ zwar eine Zahl, aber keine sinnvolle Aussage: Solche Temperaturen kommen nicht vor, und das Kaufverhalten wäre längst ein anderes. Dieses <strong>Extrapolieren</strong> weit über die Daten hinaus ist die häufigste Fehlanwendung der Regression.</p></div>
+    </details>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Warum teilt man bei Stichproben oft durch n − 1?</summary>
+    <div class="vertiefung-inhalt">
+      <p>Taschenrechner zeigen zwei Standardabweichungen an: $\sigma_n$ mit Division durch $n$ (auf dem ClassPad II als $\sigma x$) und $s_{n-1}$ mit Division durch $n - 1$ (dort $sx$). Welche stimmt? Beide — sie beantworten verschiedene Fragen.</p>
+      <p>Beschreibst du eine <strong>vollständig erhobene</strong> Datenreihe — alle fünf Würfe, alle Klausuren des Kurses —, dann ist $\bar{x}$ der echte Mittelwert dieser Daten und $\sigma_n$ ihre echte Streuung; so rechnet diese Seite. Anders bei einer <strong>Stichprobe</strong>: $50$ zufällig Befragte sollen etwas über <em>alle</em> Jugendlichen verraten. Den wahren Mittelwert der Gesamtheit kennst du nicht und ersetzt ihn durch das Stichprobenmittel $\bar{x}$ — und das schmiegt sich an die eigenen Stichprobenwerte an, es liegt garantiert „mittendrin“. Die gemessenen Abweichungen fallen dadurch systematisch etwas <strong>zu klein</strong> aus: Vom wahren Mittelwert wären die Werte im Schnitt weiter entfernt.</p>
+      <p>Die Division durch das kleinere $n - 1$ vergrößert das Ergebnis gerade so weit, dass dieser Fehler im Mittel ausgeglichen wird. Plausibel wird der Nenner auch so: Weil die Abweichungen vom eigenen Mittelwert stets die Summe $0$ haben, ist die letzte durch die übrigen festgelegt — nur $n - 1$ von ihnen tragen eigene Information. Extremfall $n = 1$: Ein einzelner Messwert hat von seinem eigenen Mittel die Abweichung $0$, verrät über die Streuung aber gar nichts — passend dazu verweigert die Formel mit dem Nenner $n - 1 = 0$ jede Antwort. Für große $n$ ist der Unterschied zwischen $\sigma_n$ und $s_{n-1}$ ohnehin winzig.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — von Häufigkeiten und manipulierten Diagrammen über Lage- und Streumaße bis zu Boxplot und Regressionsgerade — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

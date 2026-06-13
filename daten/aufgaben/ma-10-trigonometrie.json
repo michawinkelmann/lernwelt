@@ -1,0 +1,277 @@
+{
+  "thema": "ma-10-trigonometrie",
+  "fach": "mathematik",
+  "stufe": "klasse-10",
+  "aufgaben": [
+    {
+      "id": "ma-10-tri-001",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Im Dreieck $ABC$ liegt der rechte Winkel bei $C$, der spitze Winkel $\\alpha$ bei $A$. Die Seite $a$ liegt $\\alpha$ gegenüber, die Seite $b$ liegt an $\\alpha$ an, $c$ ist die längste Seite. Welche Aussagen sind richtig?",
+      "optionen": [
+        { "text": "Die Seite $c$ ist die Hypotenuse — sie liegt dem rechten Winkel gegenüber.", "richtig": true, "erklaerung": "Richtig: Die Hypotenuse liegt immer dem rechten Winkel gegenüber und ist die längste Seite." },
+        { "text": "Die Seite $a$ ist die Gegenkathete von $\\alpha$.", "richtig": true, "erklaerung": "Richtig: Sie liegt dem Winkel $\\alpha$ gegenüber — daher der Name Gegenkathete." },
+        { "text": "Die Seite $b$ ist die Gegenkathete von $\\alpha$.", "richtig": false, "erklaerung": "$b$ liegt am Winkel $\\alpha$ an und ist deshalb die Ankathete von $\\alpha$." },
+        { "text": "Gegen- und Ankathete sind für beide spitzen Winkel dieselben Seiten.", "richtig": false, "erklaerung": "Die Namen hängen vom betrachteten Winkel ab: Die Gegenkathete von $\\alpha$ ist die Ankathete von $\\beta$ — und umgekehrt." }
+      ],
+      "tipps": [
+        "Hypotenuse: gegenüber dem rechten Winkel. Gegenkathete: gegenüber dem betrachteten spitzen Winkel.",
+        "Die Ankathete liegt am betrachteten Winkel an — sie ist einer seiner beiden Schenkel.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: $c$ liegt dem rechten Winkel gegenüber (Hypotenuse), $a$ liegt $\\alpha$ gegenüber (Gegenkathete von $\\alpha$). $b$ ist die Ankathete von $\\alpha$, und aus Sicht von $\\beta$ tauschen Gegen- und Ankathete ihre Rollen.",
+      "kc": ["seitenverhaeltnisse"]
+    },
+    {
+      "id": "ma-10-tri-002",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext.",
+      "text": "Der Sinus von α ist das Verhältnis von Gegenkathete zur ___ . Der Kosinus von α vergleicht die ___ mit der Hypotenuse. Beim Tangens von α steht im Nenner die ___ . Für Winkelangaben in Grad muss der Taschenrechner im Modus ___ stehen.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "Hypotenuse", "optionen": ["Hypotenuse", "Ankathete", "Gegenkathete"] },
+        { "art": "dropdown", "antwort": "Ankathete", "optionen": ["Ankathete", "Gegenkathete", "Hypotenuse"] },
+        { "art": "dropdown", "antwort": "Ankathete", "optionen": ["Ankathete", "Hypotenuse", "Gegenkathete"] },
+        { "art": "dropdown", "antwort": "DEG (Grad)", "optionen": ["DEG (Grad)", "RAD (Bogenmaß)", "GRA (Neugrad)"] }
+      ],
+      "tipps": [
+        "Sinus: Gegenkathete durch Hypotenuse — die Hypotenuse steht immer im Nenner.",
+        "Kosinus: Ankathete durch Hypotenuse. Tangens: Gegenkathete durch Ankathete.",
+        "DEG steht für „degree“ (Grad). Schnelltest: sin(30°) muss 0,5 ergeben."
+      ],
+      "loesungsweg": "Hypotenuse — Ankathete — Ankathete — DEG (Grad): Es gilt $\\sin(\\alpha) = \\frac{\\text{Gegenkathete}}{\\text{Hypotenuse}}$, $\\cos(\\alpha) = \\frac{\\text{Ankathete}}{\\text{Hypotenuse}}$ und $\\tan(\\alpha) = \\frac{\\text{Gegenkathete}}{\\text{Ankathete}}$; Winkel in Grad erfordern den DEG-Modus.",
+      "kc": ["sinus-kosinus-tangens"]
+    },
+    {
+      "id": "ma-10-tri-003",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Im rechtwinkligen Dreieck ist $\\alpha = 40^\\circ$ und die Hypotenuse $c = 10\\,\\text{cm}$ lang. Berechne die Länge der Gegenkathete $a$ von $\\alpha$ (auf eine Nachkommastelle).",
+      "eingaben": [
+        { "label": "$a$", "antwort": 6.4, "toleranz": 0.05, "einheit": "cm" }
+      ],
+      "tipps": [
+        "Gegeben: Hypotenuse, gesucht: Gegenkathete — welches Verhältnis verbindet beide?",
+        "$\\sin(40^\\circ) = \\frac{a}{10}$",
+        "$a = 10 \\cdot \\sin(40^\\circ)$ — Taschenrechner auf DEG!"
+      ],
+      "loesungsweg": "$\\sin(40^\\circ) = \\frac{a}{c} = \\frac{a}{10}$, also $a = 10 \\cdot \\sin(40^\\circ) \\approx 10 \\cdot 0{,}643 \\approx 6{,}4\\,\\text{cm}$.",
+      "kc": ["sinus-kosinus-tangens"]
+    },
+    {
+      "id": "ma-10-tri-004",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "In einem rechtwinkligen Dreieck ist die Gegenkathete von $\\alpha$ genau $4{,}2\\,\\text{m}$ und die Ankathete $6{,}0\\,\\text{m}$ lang. Berechne den Winkel $\\alpha$ (auf eine Nachkommastelle).",
+      "eingaben": [
+        { "label": "$\\alpha$", "antwort": 35.0, "toleranz": 0.2, "einheit": "°" }
+      ],
+      "tipps": [
+        "Beide Katheten sind gegeben — das passende Verhältnis ist der Tangens.",
+        "$\\tan(\\alpha) = \\frac{4{,}2}{6{,}0} = 0{,}7$",
+        "Umkehrfunktion anwenden: $\\alpha = \\tan^{-1}(0{,}7)$ (Taste SHIFT + tan)."
+      ],
+      "loesungsweg": "$\\tan(\\alpha) = \\frac{4{,}2}{6{,}0} = 0{,}7$, also $\\alpha = \\tan^{-1}(0{,}7) \\approx 35{,}0^\\circ$.",
+      "kc": ["winkel-berechnen"]
+    },
+    {
+      "id": "ma-10-tri-005",
+      "typ": "zuordnung",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jedem Verhältnis bzw. Wert die passende Beschreibung zu.",
+      "paare": [
+        { "links": "$\\sin(\\alpha)$", "rechts": "Gegenkathete durch Hypotenuse" },
+        { "links": "$\\cos(\\alpha)$", "rechts": "Ankathete durch Hypotenuse" },
+        { "links": "$\\tan(\\alpha)$", "rechts": "Gegenkathete durch Ankathete" },
+        { "links": "$\\sin(30^\\circ)$", "rechts": "hat genau den Wert 0,5" }
+      ],
+      "tipps": [
+        "Sinus und Kosinus haben beide die Hypotenuse im Nenner.",
+        "Beim Kosinus steht die Ankathete im Zähler, beim Sinus die Gegenkathete.",
+        "$\\sin(30^\\circ) = 0{,}5$ ist ein Wert zum Auswendigkennen: Die Gegenkathete ist halb so lang wie die Hypotenuse."
+      ],
+      "loesungsweg": "$\\sin(\\alpha) = \\frac{\\text{Gegenkathete}}{\\text{Hypotenuse}}$, $\\cos(\\alpha) = \\frac{\\text{Ankathete}}{\\text{Hypotenuse}}$, $\\tan(\\alpha) = \\frac{\\text{Gegenkathete}}{\\text{Ankathete}}$ — und $\\sin(30^\\circ) = 0{,}5$.",
+      "kc": ["sinus-kosinus-tangens"]
+    },
+    {
+      "id": "ma-10-tri-006",
+      "typ": "reihenfolge",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "In einem rechtwinkligen Dreieck sind die Gegenkathete von $\\alpha$ ($3\\,\\text{cm}$) und die Hypotenuse ($7\\,\\text{cm}$) bekannt. Bringe die Schritte zur Berechnung von $\\alpha$ in die richtige Reihenfolge.",
+      "elemente": [
+        "Verhältnis wählen: Gegenkathete und Hypotenuse → Sinus",
+        "Einsetzen: $\\sin(\\alpha) = \\frac{3}{7} \\approx 0{,}429$",
+        "Umkehrfunktion anwenden: $\\alpha = \\sin^{-1}\\left(\\frac{3}{7}\\right)$",
+        "Ergebnis runden: $\\alpha \\approx 25{,}4^\\circ$"
+      ],
+      "tipps": [
+        "Zuerst klären, welches Verhältnis die beiden gegebenen Seiten verbindet.",
+        "Erst wird der Sinuswert berechnet, dann die Umkehrfunktion angewendet.",
+        "Gerundet wird ganz zum Schluss."
+      ],
+      "loesungsweg": "Verhältnis wählen (Gegenkathete und Hypotenuse → Sinus), einsetzen ($\\sin(\\alpha) = \\frac{3}{7} \\approx 0{,}429$), Umkehrfunktion anwenden und zum Schluss runden: $\\alpha = \\sin^{-1}\\left(\\frac{3}{7}\\right) \\approx 25{,}4^\\circ$.",
+      "kc": ["winkel-berechnen"],
+      "cas": "<p>Den Winkel mit dem ClassPad II (Gym-Zweig) bestimmen:</p><ol><li>Vorab die Statusleiste prüfen: Dort muss <b>Grad</b> stehen — zeigt sie <b>Bog</b> (Bogenmaß), einmal darauf tippen. Sonst kommt der Winkel im Bogenmaß heraus.</li><li>Im <b>Main</b>-Menü eingeben: <code>solve(sin(x)=3/7,x)</code> und <b>EXE</b>.</li><li>Der ClassPad antwortet mit der allgemeinen Lösung und <code>constn(…)</code> (beliebige ganze Zahl) — für den spitzen Winkel im Dreieck zählt der Wert mit 0: x ≈ 25,38, also α ≈ 25,4°. Gegebenenfalls mit dem Knopf ½↔0,5 von <b>Standard</b> auf <b>Dezimal</b> umschalten.</li><li>Schneller geht es direkt: <code>sin⁻¹(3/7)</code> (Taste <b>sin⁻¹</b> auf der <b>Trig</b>-Tastatur) und <b>EXE</b> liefert sofort 25,376… ≈ 25,4°.</li></ol><p>Im Heft gehören Verhältnis wählen, einsetzen und Umkehrfunktion als Rechenweg notiert — solve ist nur die Kontrolle.</p>"
+    },
+    {
+      "id": "ma-10-tri-007",
+      "typ": "rechenweg",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Lina steht $40\\,\\text{m}$ vom Fuß eines Kirchturms entfernt und peilt die Turmspitze unter dem Höhenwinkel $35^\\circ$ an. Ihre Augenhöhe beträgt $1{,}50\\,\\text{m}$. Wie hoch ist der Turm? (Modell: ebenes Gelände, Turm steht senkrecht.)",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne das Höhenstück $x$ oberhalb der Augenhöhe. Dabei ist $x$ die Gegenkathete des $35^\\circ$-Winkels, die $40\\,\\text{m}$ sind die Ankathete. Runde auf eine Nachkommastelle.",
+          "eingaben": [{ "label": "$x$", "antwort": 28.0, "toleranz": 0.1, "einheit": "m" }],
+          "tipps": ["$x = 40 \\cdot \\tan(35^\\circ)$"]
+        },
+        {
+          "frage": "Schritt 2: Addiere die Augenhöhe und gib die gesamte Turmhöhe $h$ an (auf eine Nachkommastelle).",
+          "eingaben": [{ "label": "$h$", "antwort": 29.5, "toleranz": 0.15, "einheit": "m" }],
+          "tipps": ["$h = x + 1{,}5$"]
+        }
+      ],
+      "tipps": [
+        "Skizze: Augenhöhe, waagerechter Abstand und Turm bilden ein rechtwinkliges Dreieck oberhalb der Augenhöhe.",
+        "Abstand = Ankathete, Höhenstück = Gegenkathete — das verbindet der Tangens.",
+        "Nicht vergessen: Zum Schluss die Augenhöhe addieren."
+      ],
+      "loesungsweg": "Höhenstück über Augenhöhe: $x = 40 \\cdot \\tan(35^\\circ) \\approx 40 \\cdot 0{,}700 = 28{,}0\\,\\text{m}$. Turmhöhe: $h \\approx 28{,}0 + 1{,}5 = 29{,}5\\,\\text{m}$.",
+      "kc": ["anwendungen"]
+    },
+    {
+      "id": "ma-10-tri-008",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Verkehrsschild warnt vor $8\\,\\%$ Steigung: Auf $100\\,\\text{m}$ in waagerechter Richtung steigt die Straße um $8\\,\\text{m}$. Berechne den Steigungswinkel $\\alpha$ (auf eine Nachkommastelle) und den Höhengewinn nach $500\\,\\text{m}$ waagerechter Strecke.",
+      "eingaben": [
+        { "label": "$\\alpha$", "antwort": 4.6, "toleranz": 0.1, "einheit": "°" },
+        { "label": "Höhengewinn", "antwort": 40, "toleranz": 0.5, "einheit": "m" }
+      ],
+      "tipps": [
+        "Die Steigung in Prozent ist genau der Tangens des Steigungswinkels: $\\tan(\\alpha) = 0{,}08$.",
+        "$\\alpha = \\tan^{-1}(0{,}08)$",
+        "Höhengewinn: $8\\,\\%$ von $500\\,\\text{m}$ — oder $500 \\cdot \\tan(\\alpha)$."
+      ],
+      "loesungsweg": "$\\tan(\\alpha) = \\frac{8}{100} = 0{,}08$, also $\\alpha = \\tan^{-1}(0{,}08) \\approx 4{,}6^\\circ$. Höhengewinn nach $500\\,\\text{m}$: $500 \\cdot 0{,}08 = 40\\,\\text{m}$.",
+      "kc": ["anwendungen"],
+      "cas": "<p>Die Steigungsaufgabe mit dem ClassPad II (Gym-Zweig) lösen:</p><ol><li>Winkelmodus zuerst: In der Statusleiste muss <b>Grad</b> stehen — zeigt sie <b>Bog</b> (Bogenmaß), einmal darauf tippen.</li><li>Winkel im <b>Main</b>-Menü: <code>tan⁻¹(0.08)</code> (Taste <b>tan⁻¹</b> auf der <b>Trig</b>-Tastatur, Dezimalpunkt!) und <b>EXE</b> ergibt 4,5739… ≈ 4,6°.</li><li>Alternative: <code>solve(tan(x)=0.08,x)</code> liefert die allgemeine Lösung mit <code>constn(…)</code>, weil der Tangens die Periode 180° hat — gesucht ist der Wert für 0.</li><li>Höhengewinn: <code>500*0.08</code> und <b>EXE</b> ergibt 40 — nach 500 m waagerechter Strecke sind das 40 m Höhe.</li></ol><p>Halte den Ansatz tan(α) = 8/100 schriftlich fest — das CAS bestätigt nur dein Ergebnis.</p>"
+    },
+    {
+      "id": "ma-10-tri-009",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Welche Aussagen über Sinus, Kosinus und Tangens spitzer Winkel sind richtig?",
+      "optionen": [
+        { "text": "Für jeden spitzen Winkel gilt $\\sin(\\alpha) < 1$.", "richtig": true, "erklaerung": "Richtig: Die Gegenkathete ist immer kürzer als die Hypotenuse — der Quotient bleibt unter 1." },
+        { "text": "$\\tan(45^\\circ) = 1$.", "richtig": true, "erklaerung": "Richtig: Bei $45^\\circ$ sind Gegen- und Ankathete gleich lang (gleichschenkliges Dreieck), ihr Quotient ist 1." },
+        { "text": "Je größer der spitze Winkel $\\alpha$, desto größer ist $\\cos(\\alpha)$.", "richtig": false, "erklaerung": "Genau umgekehrt: $\\cos(\\alpha)$ wird kleiner — von $\\cos(0^\\circ) = 1$ bis $\\cos(90^\\circ) = 0$." },
+        { "text": "$\\sin(30^\\circ) + \\cos(30^\\circ) = 1$.", "richtig": false, "erklaerung": "$0{,}5 + 0{,}866 \\approx 1{,}37 \\neq 1$. (Richtig wäre dagegen $\\sin^2(30^\\circ) + \\cos^2(30^\\circ) = 1$.)" }
+      ],
+      "tipps": [
+        "Vergleiche jeweils Zähler und Nenner der Verhältnisse: Welche Seite ist länger?",
+        "Skizziere ein rechtwinkliges Dreieck mit $45^\\circ$: Was fällt an den Katheten auf?",
+        "Teste unsichere Aussagen mit dem Taschenrechner, z. B. $\\sin(30^\\circ)$ und $\\cos(30^\\circ)$."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: $\\sin(\\alpha) < 1$, weil die Gegenkathete stets kürzer als die Hypotenuse ist, und $\\tan(45^\\circ) = 1$, weil dann beide Katheten gleich lang sind. $\\cos(\\alpha)$ wird mit wachsendem Winkel kleiner, und $\\sin(30^\\circ) + \\cos(30^\\circ) \\approx 0{,}5 + 0{,}866 = 1{,}37 \\neq 1$.",
+      "kc": ["sinus-kosinus-tangens"]
+    },
+    {
+      "id": "ma-10-tri-010",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Baum wirft einen $12{,}5\\,\\text{m}$ langen Schatten. Die Sonnenstrahlen treffen unter einem Winkel von $38^\\circ$ zum Boden auf. Berechne die Höhe des Baums (auf eine Nachkommastelle).",
+      "eingaben": [
+        { "label": "Höhe $h$", "antwort": 9.8, "toleranz": 0.1, "einheit": "m" }
+      ],
+      "tipps": [
+        "Baum (senkrecht), Schatten (waagerecht) und Sonnenstrahl bilden ein rechtwinkliges Dreieck.",
+        "Der Schatten ist die Ankathete, die Baumhöhe die Gegenkathete des $38^\\circ$-Winkels — also Tangens.",
+        "$h = 12{,}5 \\cdot \\tan(38^\\circ)$"
+      ],
+      "loesungsweg": "$\\tan(38^\\circ) = \\frac{h}{12{,}5}$, also $h = 12{,}5 \\cdot \\tan(38^\\circ) \\approx 12{,}5 \\cdot 0{,}781 \\approx 9{,}8\\,\\text{m}$.",
+      "kc": ["anwendungen"],
+      "cas": "<p>Seitenberechnung mit dem ClassPad II (Gym-Zweig):</p><ol><li>Statusleiste kontrollieren: <b>Grad</b> muss aktiv sein — steht dort <b>Bog</b> (Bogenmaß), einmal antippen. Sonst liefert tan(38) einen völlig falschen Wert.</li><li>Im <b>Main</b>-Menü eingeben: <code>12.5*tan(38)</code> — Dezimalpunkt statt Komma! — und <b>EXE</b>.</li><li>Ergebnis: 9,766… — gerundet 9,8 m. Den Zwischenwert prüfst du mit <code>tan(38)</code> allein: 0,7813 ≈ 0,781.</li></ol><p>Ansatz tan(38°) = h/12,5 und Antwortsatz gehören trotzdem ins Heft — der ClassPad übernimmt nur das Ausrechnen.</p>"
+    },
+    {
+      "id": "ma-10-tri-011",
+      "typ": "freitext",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Jonas behauptet: „Wenn ich den Winkel verdopple, verdoppelt sich auch der Sinus — $\\sin(60^\\circ)$ ist also doppelt so groß wie $\\sin(30^\\circ)$.“ Widerlege die Behauptung mit konkreten Werten und erkläre, warum der Sinus grundsätzlich nicht über 1 hinauswachsen kann.",
+      "musterloesung": "Gegenbeispiel: $\\sin(30^\\circ) = 0{,}5$, aber $\\sin(60^\\circ) \\approx 0{,}87$ — und nicht $1{,}0 = 2 \\cdot 0{,}5$. Der Sinus wächst mit dem Winkel, aber nicht proportional. Begründung: $\\sin(\\alpha)$ ist das Seitenverhältnis Gegenkathete durch Hypotenuse. Die Hypotenuse ist im rechtwinkligen Dreieck immer die längste Seite, also ist der Quotient für jeden spitzen Winkel kleiner als 1. Würde sich der Sinus bei jeder Winkelverdopplung verdoppeln, müsste z. B. $\\sin(80^\\circ)$ doppelt so groß sein wie $\\sin(40^\\circ) \\approx 0{,}64$, also etwa $1{,}29$ — ein unmögliches Seitenverhältnis.",
+      "tipps": [
+        "Berechne $\\sin(30^\\circ)$ und $\\sin(60^\\circ)$ mit dem Taschenrechner und vergleiche.",
+        "Was bedeutet der Sinus als Seitenverhältnis? Welche Seite steht im Nenner?",
+        "Kann die Gegenkathete jemals länger als die Hypotenuse sein?"
+      ],
+      "loesungsweg": "$\\sin(30^\\circ) = 0{,}5$, aber $\\sin(60^\\circ) \\approx 0{,}87 \\neq 1{,}0$ — die Behauptung ist falsch. Da die Hypotenuse stets die längste Seite ist, gilt $\\sin(\\alpha) < 1$ für alle spitzen Winkel: Ein Verhältnis, das nie über 1 steigt, kann sich nicht bei jeder Verdopplung des Winkels verdoppeln.",
+      "kc": ["sinus-kosinus-tangens"]
+    },
+    {
+      "id": "ma-10-tri-012",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: In einem Dreieck $ABC$ ohne rechten Winkel sind $\\alpha = 48^\\circ$, $\\beta = 75^\\circ$ und $a = 8{,}0\\,\\text{cm}$ gegeben. Berechne mit dem Sinussatz die Seite $c$, die dem Winkel $\\gamma$ gegenüberliegt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne zuerst den dritten Winkel $\\gamma$ über die Winkelsumme im Dreieck.",
+          "eingaben": [{ "label": "$\\gamma$", "antwort": 57, "toleranz": 0, "einheit": "°" }],
+          "tipps": ["$\\gamma = 180^\\circ - 48^\\circ - 75^\\circ$"]
+        },
+        {
+          "frage": "Schritt 2: Wende den Sinussatz an und berechne $c$ (auf eine Nachkommastelle).",
+          "eingaben": [{ "label": "$c$", "antwort": 9.0, "toleranz": 0.1, "einheit": "cm" }],
+          "tipps": ["$c = \\frac{8 \\cdot \\sin(57^\\circ)}{\\sin(48^\\circ)}$"]
+        }
+      ],
+      "tipps": [
+        "Die Winkelsumme im Dreieck beträgt $180^\\circ$ — damit findest du $\\gamma$.",
+        "Sinussatz: $\\frac{a}{\\sin(\\alpha)} = \\frac{c}{\\sin(\\gamma)}$ — das Seite-Winkel-Paar $a$ und $\\alpha$ ist vollständig bekannt.",
+        "Stelle nach $c$ um: $c = \\frac{a \\cdot \\sin(\\gamma)}{\\sin(\\alpha)}$ und setze ein."
+      ],
+      "loesungsweg": "Winkelsumme: $\\gamma = 180^\\circ - 48^\\circ - 75^\\circ = 57^\\circ$. Sinussatz: $\\frac{c}{\\sin(57^\\circ)} = \\frac{8}{\\sin(48^\\circ)}$, also $c = \\frac{8 \\cdot \\sin(57^\\circ)}{\\sin(48^\\circ)} \\approx \\frac{8 \\cdot 0{,}839}{0{,}743} \\approx 9{,}0\\,\\text{cm}$.",
+      "kc": ["sinussatz"]
+    },
+    {
+      "id": "ma-10-tri-013",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Zwei geradlinige Wanderwege starten an derselben Berghütte und schließen einen Winkel von $65^\\circ$ ein. Anna läuft $3{,}0\\,\\text{km}$ auf dem einen Weg, Ben $4{,}5\\,\\text{km}$ auf dem anderen. Berechne mit dem Kosinussatz die Luftlinien-Entfernung $e$ zwischen den beiden (auf eine Nachkommastelle).",
+      "eingaben": [
+        { "label": "$e$", "antwort": 4.2, "toleranz": 0.1, "einheit": "km" }
+      ],
+      "tipps": [
+        "Hütte, Anna und Ben bilden ein Dreieck: zwei Seiten ($3{,}0$ und $4{,}5$) und der eingeschlossene Winkel ($65^\\circ$) sind bekannt — ein Fall für den Kosinussatz.",
+        "$e^2 = 3^2 + 4{,}5^2 - 2 \\cdot 3 \\cdot 4{,}5 \\cdot \\cos(65^\\circ)$",
+        "$e^2 \\approx 29{,}25 - 27 \\cdot 0{,}4226 \\approx 17{,}84$ — zum Schluss die Wurzel ziehen."
+      ],
+      "loesungsweg": "$e^2 = 3^2 + 4{,}5^2 - 2 \\cdot 3 \\cdot 4{,}5 \\cdot \\cos(65^\\circ) = 9 + 20{,}25 - 27 \\cdot \\cos(65^\\circ) \\approx 29{,}25 - 11{,}41 = 17{,}84$. Also $e = \\sqrt{17{,}84} \\approx 4{,}2\\,\\text{km}$ — die beiden trennen gut vier Kilometer Luftlinie.",
+      "kc": ["kosinussatz"]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderation: Physik QP Induktion — Lernbüro (Lehrkraft) — Lernwelt</title>
+<meta name="description" content="Moderationsseite für die Lehrkraft: Stoffverteilung, typische Fehler, Differenzierung und Praxis-Leitfaden zum Selbstlern-Kurs Physik Qualifikationsphase — Induktion.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/selbstlernen.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="lehrkraft">
+<noscript><p class="noscript-hinweis"><a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Moderation: Physik QP — Induktion · Lernbüro</h1>
+  <p class="einleitung">Interne Seite für die Lehrkraft – im Schüler-Flow bewusst <strong>unverlinkt</strong>. Enthält den Praxis-Leitfaden, die Stoffverteilung und je Lektion typische Fehler, Differenzierungs- und Material-Hinweise. Mit „Drucken" als A4-Handzettel ausgebbar. Pilot: <a href="index.html">Schüler-Kursseite öffnen</a>.</p>
+
+  <p class="knopfzeile"><button type="button" class="knopf zweitrangig klein" onclick="window.print()">Drucken</button></p>
+
+  <div class="merkkasten" style="border-left:4px solid var(--ok)"><span class="merk-etikett">Ergänzungsaufgaben (Lernbüro)</span><p>Für dünne Spuren wurden 7 neue Aufgaben erstellt (<code>daten/aufgaben/lernbuero/ph-qp-induktion.json</code>, IDs ph-qp-ind-101 bis -107, Marker <code>ergaenzung:"lernbuero"</code>) — zur fachlichen Prüfung durch die Lehrkraft. Alle numerischen Antwortwerte sind per Skript verifiziert.</p></div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Praxis-Leitfaden Selbstlern-Moderation</span>
+    <p><strong>Gemeinsamer Start (3 min):</strong> Stundenziel nennen, an die Hilfe-Regel erinnern, Wochenplan zeigen.
+    <strong>Hilfe-Regel:</strong> „Erst der Tipp, dann der Partner, dann die Lehrkraft." Erst wenn die drei gestuften Tipps und die Sitznachbarin nicht weiterhelfen, kommt die Lehrkraft.
+    <strong>Stand erfassen:</strong> Es gibt kein Dashboard – nutze die <em>Ampel-Selbsteinschätzung</em> (gruen/gelb/rot am Lektionsende) und das <em>Lerntagebuch</em> (offene Fragen). Im Vorbeigehen zeigen lassen.
+    <strong>Gemeinsamer Abschluss (3 min):</strong> ein bis zwei rote Ampeln gemeinsam klären, Mindestmarke der Woche prüfen.</p>
+  </div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Eingebaute Entscheidungen dieses Kurses</span>
+    <p><strong>Taktung:</strong> Wochenplan mit Mindestmarke (Basis-Spur je Woche). <strong>Checkpoints:</strong> „Sichern" schaltet die nächste Lektion frei; jeder Checkpoint ist per Knopf <em>„Lehrkraft hat freigegeben"</em> ohne Passwort überschreibbar (Vertrauensmodell). <strong>Werkzeuge:</strong> Ampel + Lerntagebuch. <strong>Zweig:</strong> nur Gymnasium (Oberstufe). <strong>Vorwissen:</strong> Lektion 1 setzt Kenntnisse zu Magnetfeldern und Lorentzkraft voraus (ph-qp-mf-001/-002).</p>
+  </div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Fachliche Hinweise zur Oberstufenphysik Induktion</span>
+    <p><strong>Kernformeln ohne KaTeX (Tafelschrift):</strong><br>
+    Magnetischer Fluss: Phi = B · A · cos(alpha), Einheit: Wb = Vs<br>
+    Induktionsgesetz: U_ind = -n · DeltaPhi / Deltat<br>
+    Bewegungsinduktion: U = B · l · v<br>
+    Generator-Scheitelspannung: U_max = n · B · A · omega, mit omega = 2*pi*f<br>
+    Transformator: U1/U2 = n1/n2<br>
+    Selbstinduktion (eA): |U_ind| = L · |DeltaI / Deltat|<br>
+    <strong>Einheiten:</strong> B in T (Tesla), Phi in Wb (Weber), U in V (Volt), L in H (Henry).<br>
+    <strong>Dezimalzeichen:</strong> Komma (deutsche Schreibweise), z. B. 0,25 T statt 0.25 T.<br>
+    <strong>CAS-Hinweise:</strong> Aufgaben ph-qp-ind-011/012/013 enthalten ClassPad-Anleitungen. Winkeleinheit auf Bogenmaß stellen (Statusleiste).</p>
+  </div>
+
+  <h2>Stoffverteilung (KC Physik Niedersachsen GO)</h2>
+  <details class="lb-stoff" open>
+    <summary>Tabelle Lektionen → Thema → KC-Schwerpunkt</summary>
+    <table>
+      <thead><tr><th>Lektionen</th><th>Thema</th><th>Status</th><th>KC-Schwerpunkt</th></tr></thead>
+      <tbody>
+        <tr class="ist-pilot"><td>L1–L5</td><td>Elektromagnetische Induktion — <em>Pilot (5 Lektionen ausgebaut)</em></td><td>in Arbeit</td><td>Elektrizität: Induktion (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Mechanische Schwingungen</td><td>geplant</td><td>Schwingungen und Wellen (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Mechanische Wellen</td><td>geplant</td><td>Schwingungen und Wellen (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Interferenz von Licht</td><td>geplant</td><td>Interferenz (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Quantenobjekte</td><td>geplant</td><td>Quantenobjekte (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Atomhülle</td><td>geplant</td><td>Atomhülle (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Atomkern und Radioaktivität</td><td>geplant</td><td>Atomkern (QP)</td></tr>
+      </tbody>
+    </table>
+  </details>
+  <p class="einleitung">Echte Stundenzahlen nach Stundentafel kalibrieren. Der Pilot baut nur den Induktions-Block aus; die übrigen Blöcke stehen als <code>geplant</code> in <code>daten/kurse/ph-qi.json</code>.</p>
+
+  <h2>Lektionen im Einzelnen</h2>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 1 · Das Phänomen Induktion</span>
+    <p><strong>Ziele:</strong> Bedingungen für Induktion erklären; Einfluss von Geschwindigkeit und Windungszahl beschreiben.<br>
+    <strong>Ankommen:</strong> Vorwissen Magnetfelder/Lorentzkraft (ph-qp-mf-001/-002 aus ph-qp-magnetfelder-und-lorentzkraft).<br>
+    <strong>Typische Fehler:</strong> „Je stärker der Magnet, desto größer die Spannung" (stimmt nur bei Bewegung); Vorzeichen beim Herausziehen vergessen; Phänomen und Formel noch nicht verknüpft.<br>
+    <strong>Differenzierung:</strong> Basis = MC und Zuordnung qualitativ (ind-001/002). Standard = MC Parametervergleich (ind-101, Lernbüro). Plus = Freitext Vergleich zweier Magnete (ind-102, Lernbüro). Sichern = Lückentext Lenz-Vorübung (ind-003).<br>
+    <strong>Hinweis:</strong> Die qualitative Sicherung (ind-003) ist bewusst vor der lenzschen Regel platziert — als erste Begegnung mit dem Richtungsprinzip. Vertiefen in Lektion 4.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 2 · Der magnetische Fluss</span>
+    <p><strong>Ziele:</strong> Phi = B · A · cos(alpha) berechnen; Flächennormale und Winkel verstehen.<br>
+    <strong>Typische Fehler:</strong> cm² nicht in m² umrechnen (Faktor 10^-4, nicht 10^-2); alpha zwischen Feldlinien und Fläche statt Flächennormale gemessen; cos(90°) = 0 vergessen.<br>
+    <strong>Differenzierung:</strong> Basis = Fluss einer Rechteckschleife (ind-004) + Kreisschleife (ind-103, Lernbüro). Standard = Fluss bei zwei Winkeln (ind-005). Plus = geführter Rechenweg Drehung und Induktionsspannung (ind-104, Lernbüro). Sichern = MC Parametervergleich (ind-006, nicht in Üben L2).<br>
+    <strong>Transfer-Frage:</strong> Nahe alpha = 90° liegt Phi nahe null, aber die Änderungsrate dPhi/dt ist dort am grössten (Sinus-Ableitung) — das motiviert die Generator-Formel in Lektion 5.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 3 · Das Induktionsgesetz</span>
+    <p><strong>Ziele:</strong> |U_ind| = n · |DeltaPhi/Deltat| anwenden; U = B · l · v als Spezialfall herleiten.<br>
+    <strong>Stopp-Punkt:</strong> Gemeinsames Gespräch über das Minuszeichen und die Änderungsrate als zentrale Größe empfohlen.<br>
+    <strong>Typische Fehler:</strong> Millisekunden nicht in Sekunden umrechnen; Milliweber nicht in Weber; Windungszahl n vergessen (häufig bei n = 1 Leiterschleife).<br>
+    <strong>Differenzierung:</strong> Basis = einfache Induktionsspannung (ind-105, Lernbüro). Standard = Leiterstab U = B·l·v (ind-008) + geführter Rechenweg Spule (ind-009). Plus = momentane Änderungsrate mit Ableitung (ind-013). Sichern = Reihenfolge Lorentzkraft-Herleitung (ind-007, nicht in Üben L3).<br>
+    <strong>Material:</strong> Simulation Leiterschaukel auf der Erklärseite.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 4 · Die lenzsche Regel</span>
+    <p><strong>Ziele:</strong> Lenzsche Regel formulieren und anwenden; Verbindung zur Energieerhaltung herstellen.<br>
+    <strong>Typische Fehler:</strong> Richtung des Induktionsstroms falsch (Gegenfeld statt Mitlaufen); Unterschied zwischen aufgesägtem und geschlossenem Ring nicht erklärt; Perpetuum-mobile-Argument nicht durchdrungen.<br>
+    <strong>Differenzierung:</strong> Basis = Lückentext Lenz-Begriffe (ind-003, bekannt aus L1-Sichern — hier als eigene Übung). Standard = Freitext Thomssonscher Ring (ind-010). Plus = Freitext Lenzsche Bremse mit Energieerhaltung (ind-106, Lernbüro). Sichern = Zuordnung Formeln (ind-002, nicht in Üben L4).<br>
+    <strong>Hinweis:</strong> Der Freitext ind-010 (Thomssonscher Ring) ist AFB III — Zeit einplanen, ggf. als Partnerarbeit.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 5 · Generator und Transformator</span>
+    <p><strong>Ziele:</strong> Generator erklärt; Windungsverhältnis Transformator anwenden; Sinn der Hochspannungsübertragung erläutern.<br>
+    <strong>Typische Fehler:</strong> Verwechslung Windungsverhältnis (U1/U2 = n1/n2 — nicht umgekehrt); Scheitelspannung ohne omega = 2*pi*f; Frequenz vergessen; Ergebnis in kV nicht in V angegeben.<br>
+    <strong>Differenzierung:</strong> Basis = Lückentext Generator/Transformator Grundbegriffe (ind-107, Lernbüro). Standard = geführter Rechenweg Generator (ind-011, mit CAS-Anleitung ClassPad). Plus = Selbstinduktion (ind-012, eA, mit CAS). Sichern = Reihenfolge Lorentzkraft-Herleitung (ind-007 — Transfer-Querverbindung zur Herleitung U = B·l·v).<br>
+    <strong>Transfer-Frage Sichern:</strong> U2 = U1 · n2/n1 = 230 V · 100/400 = 57,5 V.<br>
+    <strong>CAS-Hinweis:</strong> ind-011 und ind-012 enthalten ClassPad-Schritt-für-Schritt-Anleitungen. Winkeleinheit auf Bogenmaß prüfen. Ergebnisse dokumentieren.</p>
+  </section>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Bekannte Grenzen des Pilots (Rückmeldung erbeten)</span>
+    <p>Der Pilot deckt 5 Lektionen zu den KC-Kernbereichen der Induktion ab. Bewusst weggelassen: Selbstinduktion (nur als Plus-Aufgabe, Lektion 5) und Wirbelströme (nur als Plus-Freitext, Lektion 4) — diese Themen erfordern mehr Aufgaben zur eigenständigen Erarbeitung. Die Lernbüro-Ergänzungsaufgaben (ind-101 bis ind-107) decken die sonst offenen Spuren, sind aber noch nicht im regulären Aufgaben-Pool (t3-Testsuite) registriert.</p>
+  </div>
+
+
+  <h2>Block 2: Bewegung geladener Teilchen</h2>
+  <div class="merkkasten">
+    <span class="merk-etikett">Lektionen L6–L10 im Überblick</span>
+    <p><strong>L6 – Längsfeld: Ladungen beschleunigen.</strong> Kerneinstieg: Energiesatz $W = e U_0$ und $v = \sqrt{2(e/m_e)U_0}$. Typischer Fehler: Verwechslung Energie (linear in $U_0$) und Geschwindigkeit (Wurzel aus $U_0$); Schüler erwarten doppelte Geschwindigkeit bei doppelter Spannung.<br>
+    <strong>L7 – Querfeld: Ladungen ablenken.</strong> Analogie zum waagerechten Wurf — längs gleichförmig, quer gleichmäßig beschleunigt. Typischer Fehler: $v_x$ wird als veränderlich angesehen; Querfeld wirkt auf Längskomponente.<br>
+    <strong>L8 – Die Bahn quantitativ.</strong> Vollständiger Rechenweg $v_0 \to t_1 \to a \to y_1 \to \tan\theta$. Typischer Fehler: Einheiten (cm statt m); $t_1 = L/v_0$ vergessen oder falsch verwendet; $y_1 = \frac{1}{2} a t_1^2$ nicht auf Querbewegung bezogen. <strong>Stopp-Punkt vor L8 empfohlen:</strong> Rechenweg gemeinsam strukturieren.<br>
+    <strong>L9 – Die Schirmformel und ihre Konsequenzen.</strong> $y = U_a L(L/2+s)/(2U_0 d)$ anwenden und umstellen; Herauskürzen von $e/m_e$ begründen. Typischer Fehler: $y \sim U_a$ und $y \sim 1/U_0$ werden vertauscht; $e/m_e$ nicht als Quotient zweier Terme erkannt.<br>
+    <strong>L10 – Anwendungen: Oszilloskop und Tintenstrahldrucker.</strong> Transfer auf technische Kontexte; Unterschied Elektronen- vs. Tintentröpfchen-Beschleunigung. Differenzierung: Plus-Aufgabe bt-013 fordert Abschätzung der Relativitätsgrenze (AFB III).</p>
+  </div>
+  <div class="merkkasten">
+    <span class="merk-etikett">Differenzierung Block 2</span>
+    <p><strong>Basis (niveau 1):</strong> Qualitative MC und Zuordnung (bt-001/002/003) plus Numerik mit Gerüst (bt-101 bis bt-104). <strong>Standard (niveau 2):</strong> Vollständige Rechenwege ohne Gerüst (bt-006/008/010) sowie MC-Analyse (bt-105/106). <strong>Plus (niveau 3):</strong> Freitext-Begründung Herauskürzen $e/m_e$ (bt-011), Proton-Vergleich (bt-012), Relativitätsgrenze (bt-013).<br>
+    <strong>CAS-Hinweis:</strong> Aufgaben bt-008, bt-010 und bt-013 enthalten ClassPad-Anleitungen — Einheit auf Grad prüfen (Statusleiste).</p>
+  </div>
+  <div class="merkkasten" style="border-left:4px solid var(--ok)"><span class="merk-etikett">Ergänzungsaufgaben Block 2 (Lernbüro)</span><p>Für dünne Spuren wurden 6 neue Aufgaben erstellt (<code>daten/aufgaben/lernbuero/ph-qp-bewegung-geladener-teilchen.json</code>, IDs ph-qp-bt-101 bis -106, Marker <code>ergaenzung:"lernbuero"</code>) — zur fachlichen Prüfung durch die Lehrkraft. Alle numerischen Antwortwerte sind per Skript verifiziert.</p></div>
+
+  <p class="einleitung"><a href="index.html">← Zur Schüler-Kursseite</a></p>
+  <p class="knopfzeile"><a class="knopf zweitrangig klein" href="../druck.html?kurs=ph-qi">🖨 Druckmaterial erstellen</a></p>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+</body>
+</html>

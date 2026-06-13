@@ -1,0 +1,800 @@
+{
+  "thema": "in-10-verschluesselung",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben — fachliche Pruefung durch die Lehrkraft ausstehend.",
+  "aufgaben": [
+    {
+      "id": "in-10-vs-101",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen beschreiben den Zweck von Verschluesselung richtig?",
+      "optionen": [
+        {
+          "text": "Verschluesselung stellt sicher, dass nur berechtigte Personen den Inhalt einer Nachricht lesen koennen.",
+          "richtig": true,
+          "erklaerung": "Richtig — genau das nennt man Vertraulichkeit. Selbst wenn jemand die Nachricht abfaengt, bleibt sie ohne Schluesse unlesbar."
+        },
+        {
+          "text": "Verschluesselung macht Nachrichten kleiner, damit sie schneller uebertragen werden.",
+          "richtig": false,
+          "erklaerung": "Das ist Datenkompression, nicht Verschluesselung. Beide sind verschiedene Konzepte."
+        },
+        {
+          "text": "Verschluesselung wird beim Online-Banking, in Messengern und beim Einkaufen im Netz eingesetzt.",
+          "richtig": true,
+          "erklaerung": "Richtig — ueberall dort werden vertrauliche Daten uebertragen, die geschuetzt werden muessen."
+        },
+        {
+          "text": "Eine Nachricht ist nur dann sicher, wenn niemand weiss, dass sie verschickt wurde.",
+          "richtig": false,
+          "erklaerung": "Das beschreibt Steganographie (Verstecken der Nachricht), nicht Verschluesselung. Verschluesselung schuetzt den Inhalt, auch wenn die Uebertragung sichtbar ist."
+        }
+      ],
+      "tipps": [
+        "Denke an ein konkretes Beispiel: Dein Passwort reist vom Browser zur Bank — was soll Verschluesselung dabei leisten?",
+        "Es gibt einen Unterschied zwischen dem Schutz des Inhalts und dem Schutz der Tatsache, dass ueberhaupt etwas uebertragen wird.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussagen 1 und 3: Verschluesselung schuetzt die Vertraulichkeit — nur Berechtigte koennen den Inhalt lesen — und sie wird in Banking, Messenger und Online-Shopping eingesetzt. Das Verkleinern von Daten ist Kompression, nicht Verschluesselung. Und das Verstecken der Existenz einer Nachricht heisst Steganographie.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-102",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ordne jedem Anwendungsfall die passende Schutzeigenschaft zu.",
+      "paare": [
+        {
+          "links": "Nur Empfaengerin und Absender koennen die Nachricht lesen",
+          "rechts": "Vertraulichkeit"
+        },
+        {
+          "links": "Niemand kann die Nachricht heimlich veraendern, ohne dass es auffaellt",
+          "rechts": "Integritaet"
+        },
+        {
+          "links": "Der Absender kann nachtraeglich nicht abstreiten, die Nachricht geschickt zu haben",
+          "rechts": "Verbindlichkeit"
+        },
+        {
+          "links": "Jeder kann den oeffentlichen Schlussel nutzen, um eine Nachricht zu verschluesseln",
+          "rechts": "Asymmetrisches Verfahren"
+        }
+      ],
+      "tipps": [
+        "Vertraulichkeit = nur die richtigen Personen lesen die Nachricht.",
+        "Integritaet = der Inhalt wurde nicht manipuliert.",
+        "Verbindlichkeit = Absender kann Sendung nicht leugnen (vgl. eingeschriebener Brief)."
+      ],
+      "loesungsweg": "Nur der berechtigte Empfaenger kann lesen: Vertraulichkeit. Unveraenderbarkeit erkennbar machen: Integritaet. Absender kann nicht leugnen: Verbindlichkeit. Oeffentlichen Schlussel zum Verschluesseln nutzen: Asymmetrisches Verfahren — das Grundprinzip von RSA und HTTPS.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-103",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Wende die Caesar-Verschluesselung mit Schluessel 4 auf das Wort HAUS an. Fuelle die Luecken mit den richtigen Geheimtext-Buchstaben.",
+      "text": "Schluessel k = 4: H wird zu ___, A wird zu ___, U wird zu ___, S wird zu ___. Der Geheimtext lautet also ___.",
+      "luecken": [
+        {
+          "art": "eingabe",
+          "antwort": "L"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "E"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "Y"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "W"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "LEYW"
+        }
+      ],
+      "tipps": [
+        "Zaehle vom jeweiligen Buchstaben aus genau 4 Stellen im Alphabet weiter: A, B, C, D, E, F, G, H, I, J, K, L ...",
+        "H ist der 8. Buchstabe (Position 7). 7 + 4 = 11, und Position 11 ist L.",
+        "U liegt am Ende des Alphabets: U(20) + 4 = 24 — das ist Y. S(18) + 4 = 22 — das ist W."
+      ],
+      "loesungsweg": "H(7)+4=11 -> L. A(0)+4=4 -> E. U(20)+4=24 -> Y. S(18)+4=22 -> W. Der Geheimtext ist LEYW. Probe: Entschluesseln mit k=4 — L(11)-4=7 -> H, E(4)-4=0 -> A, Y(24)-4=20 -> U, W(22)-4=18 -> S: HAUS. Stimmt.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-104",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Verschluessele das Wort SONNE mit Caesar-Schluessel k = 21 mit der Formel Geheimposition = (Klarposition + k) mod 26. Die Buchstabenpositionen: A=0, B=1, ..., Z=25.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne die Geheimposition fuer S (Position 18): (18 + 21) mod 26.",
+          "eingaben": [
+            {
+              "label": "Geheimposition S",
+              "antwort": 13,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "18 + 21 = 39. 39 geteilt durch 26 gibt Rest 13 (denn 26 * 1 = 26, 39 - 26 = 13). Position 13 = N."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Geheimposition fuer O (Position 14): (14 + 21) mod 26.",
+          "eingaben": [
+            {
+              "label": "Geheimposition O",
+              "antwort": 9,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "14 + 21 = 35. 35 - 26 = 9. Position 9 = J."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne die Geheimposition fuer N (Position 13): (13 + 21) mod 26.",
+          "eingaben": [
+            {
+              "label": "Geheimposition N",
+              "antwort": 8,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "13 + 21 = 34. 34 - 26 = 8. Position 8 = I."
+          ]
+        },
+        {
+          "frage": "Schritt 4: Das zweite N gibt ebenfalls Position 8. Das E (Position 4): (4 + 21) mod 26.",
+          "eingaben": [
+            {
+              "label": "Geheimposition E",
+              "antwort": 25,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "4 + 21 = 25. 25 < 26, also kein Modulo noetig. Position 25 = Z."
+          ]
+        }
+      ],
+      "tipps": [
+        "Rechne zuerst einfach die Summe aus, dann ziehe 26 ab, wenn das Ergebnis >= 26 ist.",
+        "Positionen: S=18, O=14, N=13, E=4. Schluessel: 21.",
+        "Der Geheimtext hat genau so viele Buchstaben wie der Klartext: SONNE wird zu NJIIZ."
+      ],
+      "loesungsweg": "S(18)+21=39 mod 26=13 -> N. O(14)+21=35 mod 26=9 -> J. N(13)+21=34 mod 26=8 -> I. N(13)+21=34 mod 26=8 -> I. E(4)+21=25 mod 26=25 -> Z. Geheimtext: NJIIZ. Probe: N(13)-21+26=18 -> S, J(9)-21+26=14 -> O usw. — SONNE.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-105",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Der Geheimtext THBLY wurde mit Caesar und Schluessel k = 7 verschluesselt. Entschluessele ihn Buchstabe fuer Buchstabe: Klarposition = (Geheimposition - 7 + 26) mod 26.",
+      "text": "T(19) - 7 = ___ -> ___, H(7) - 7 = ___ -> ___, B(1) - 7 + 26 = ___ -> ___, L(11) - 7 = ___ -> ___, Y(24) - 7 = ___ -> ___. Der Klartext lautet: ___.",
+      "luecken": [
+        {
+          "art": "eingabe",
+          "antwort": "12"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "M"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "0"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "A"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "20"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "U"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "4"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "E"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "17"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "R"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "MAUER"
+        }
+      ],
+      "tipps": [
+        "Entschluesseln bedeutet: Schluessel abziehen statt addieren. Bei negativem Ergebnis addiere 26.",
+        "T ist Position 19, minus 7 ergibt 12 — das ist M. H(7)-7=0 — das ist A.",
+        "B(1)-7 = -6, negativ — also +26: -6+26=20. Position 20 ist U."
+      ],
+      "loesungsweg": "T(19)-7=12->M. H(7)-7=0->A. B(1)-7=-6, -6+26=20->U. L(11)-7=4->E. Y(24)-7=17->R. Klartext: MAUER. Probe: M(12)+7=19->T, A(0)+7=7->H, U(20)+7=27 mod 26=1->B, E(4)+7=11->L, R(17)+7=24->Y — THBLY. Stimmt.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-106",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Caesar-Geheimtext wird analysiert. Der haeufigste Buchstabe ist W. Im Deutschen ist E der haeufigste Buchstabe (Position 4). W hat Position 22. Um wie viele Stellen wurde verschoben (Schluessel k)?",
+      "eingaben": [
+        {
+          "label": "Schluessel k",
+          "antwort": 18,
+          "toleranz": 0
+        }
+      ],
+      "tipps": [
+        "Der haeufigste Geheimtext-Buchstabe entspricht sehr wahrscheinlich dem E im Klartext.",
+        "Wenn E zu W geworden ist: W hat Position 22, E hat Position 4. Wie viele Schritte von 4 nach 22?",
+        "22 - 4 = 18. Schluesse: k = 18. Probe: E(4)+18=22->W. Stimmt."
+      ],
+      "loesungsweg": "Annahme: der haeufigste Geheimtext-Buchstabe W steht fuer das E. E hat Position 4, W hat Position 22. Verschiebung: 22 - 4 = 18. Der Schluessel ist k = 18. Probe: E(4)+18=22->W, N(13)+18=31 mod 26=5->F — man wuerde den Text mit k=18 probeentschluesseln und auf lesbares Deutsch pruefen.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-107",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Verschluessele TIGER mit dem Vigenere-Verfahren und dem Schluessewort ABC. Schreibe das Schluessewort wiederholt darunter (A, B, C, A, B) und berechne jeden Buchstaben: Geheimposition = (Klarposition + Schluesselposition) mod 26.",
+      "text": "T + A(0): T(19)+0 = ___ -> T. I + B(1): I(8)+1 = ___ -> ___. G + C(2): G(6)+2 = ___ -> ___. E + A(0): E(4)+0 = ___ -> ___. R + B(1): R(17)+1 = ___ -> ___. Geheimtext: ___.",
+      "luecken": [
+        {
+          "art": "eingabe",
+          "antwort": "19"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "9"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "J"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "8"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "I"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "4"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "E"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "18"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "S"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "TJIES"
+        }
+      ],
+      "tipps": [
+        "A im Schluessewort bedeutet Verschiebung um 0 — der Buchstabe bleibt gleich. B bedeutet Verschiebung um 1.",
+        "I(8) + B(1) = 9 — welcher Buchstabe hat Position 9? Zaehle: A=0, B=1, C=2, D=3, E=4, F=5, G=6, H=7, I=8, J=9.",
+        "Das Schluessewort ABC wird wiederholt: T/A, I/B, G/C, E/A, R/B."
+      ],
+      "loesungsweg": "T(19)+A(0)=19->T. I(8)+B(1)=9->J. G(6)+C(2)=8->I. E(4)+A(0)=4->E. R(17)+B(1)=18->S. Geheimtext: TJIES. Beachte: Das doppelte Vorkommen des Buchstabens E (in TIGER nicht vorhanden, aber das Prinzip gilt) — gleiche Klartextbuchstaben an anderen Positionen werden zu verschiedenen Geheimbuchstaben.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-108",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Entschluessele den Vigenere-Geheimtext PINHM mit dem Schluessewort BEI. Schreibe das Schluessewort wiederholt darunter (B, E, I, B, E) und rechne: Klarposition = (Geheimposition - Schluesselposition + 26) mod 26.",
+      "text": "P(15) - B(1) = ___ -> ___. I(8) - E(4) = ___ -> ___. N(13) - I(8) = ___ -> ___. H(7) - B(1) = ___ -> ___. M(12) - E(4) = ___ -> ___. Klartext: ___.",
+      "luecken": [
+        {
+          "art": "eingabe",
+          "antwort": "14"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "O"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "4"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "E"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "5"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "F"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "6"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "G"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "8"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "I"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "OEFGI"
+        }
+      ],
+      "tipps": [
+        "Entschluesseln bedeutet: Schluesselposition abziehen. Wenn das Ergebnis negativ ist, addiere 26.",
+        "P(15) - B(1) = 14. Position 14 ist O (A=0, B=1, ..., O=14).",
+        "N(13) - I(8) = 5. Position 5 ist F."
+      ],
+      "loesungsweg": "P(15)-B(1)=14->O. I(8)-E(4)=4->E. N(13)-I(8)=5->F. H(7)-B(1)=6->G. M(12)-E(4)=8->I. Klartext: OEFGI. Probe: O(14)+B(1)=15->P, E(4)+E(4)=8->I, F(5)+I(8)=13->N, G(6)+B(1)=7->H, I(8)+E(4)=12->M — PINHM. Stimmt.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-109",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen ueber symmetrische und asymmetrische Verschluesselung sind richtig?",
+      "optionen": [
+        {
+          "text": "Bei symmetrischer Verschluesselung verwenden Absender und Empfaenger denselben Schluessel.",
+          "richtig": true,
+          "erklaerung": "Richtig — genau das macht sie symmetrisch. Caesar und AES sind Beispiele."
+        },
+        {
+          "text": "Bei asymmetrischer Verschluesselung gibt es einen oeffentlichen Schluessel zum Verschluesseln und einen privaten zum Entschluesseln.",
+          "richtig": true,
+          "erklaerung": "Richtig — das Schluesselpaar ist das Kernprinzip: Jeder kann verschluesseln, nur die Empfaengerin kann entschluesseln."
+        },
+        {
+          "text": "AES ist ein asymmetrisches Verfahren mit zwei verschiedenen Schluesseln.",
+          "richtig": false,
+          "erklaerung": "AES ist symmetrisch: Verschluesseln und Entschluesseln nutzen denselben geheimen Schluessel."
+        },
+        {
+          "text": "Ende-zu-Ende-Verschluesselung bedeutet, dass der Dienstbetreiber die Nachrichten mitlesen kann.",
+          "richtig": false,
+          "erklaerung": "Gerade umgekehrt: Bei Ende-zu-Ende-Verschluesselung kann nur das Endgeraet des Empfaengers entschluesseln — der Betreiber sieht nur den Geheimtext."
+        }
+      ],
+      "tipps": [
+        "Symmetrisch = ein Schluessel fuer beide Richtungen. Asymmetrisch = Schluesselpaar (oeffentlich + privat).",
+        "Denke an das Briefkasten-Bild: Einwerfen kann jeder (oeffentlicher Schluessel), herausholen nur die Besitzerin (privater Schluessel).",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Symmetrisch = ein gemeinsamer Schluessel (Caesar, AES); asymmetrisch = Schluesselpaar oeffentlich/privat. AES ist symmetrisch, nicht asymmetrisch. Und Ende-zu-Ende schutzt gerade vor dem Betreiber — er sieht nur den Geheimtext.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-110",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ergaenze den Text zur modernen Verschluesselung.",
+      "text": "Bei der asymmetrischen Verschluesselung gibt es ein Schluesselpaar: den ___ Schluessel, den jeder kennen darf, und den ___ Schluessel, der das Geraet der Empfaengerin nie verlaesst. Mit dem ___ Schluessel kann man eine Nachricht nur verschluesseln; entschluesseln kann sie nur mit dem ___ Schluessel. Moderne Messenger nutzen ___ Verschluesselung, damit selbst der Betreiber des Dienstes die Nachrichten nicht lesen kann.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "oeffentlichen",
+          "optionen": [
+            "oeffentlichen",
+            "privaten",
+            "symmetrischen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "privaten",
+          "optionen": [
+            "oeffentlichen",
+            "privaten",
+            "symmetrischen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "oeffentlichen",
+          "optionen": [
+            "oeffentlichen",
+            "privaten",
+            "symmetrischen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "privaten",
+          "optionen": [
+            "oeffentlichen",
+            "privaten",
+            "symmetrischen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Ende-zu-Ende-",
+          "optionen": [
+            "symmetrische",
+            "Ende-zu-Ende-",
+            "Caesar-"
+          ]
+        }
+      ],
+      "tipps": [
+        "Oeffentlich = jeder darf es wissen. Privat = nur ich kenne es, es verlaesst das Geraet nicht.",
+        "Denke an das Briefkasten-Bild: Einwerfen (verschluesseln) mit dem oeffentlichen Schluessel, herausholen (entschluesseln) nur mit dem privaten.",
+        "Ende-zu-Ende bedeutet: von Geraet zu Geraet — der Server in der Mitte sieht nur Geheimtext."
+      ],
+      "loesungsweg": "Offentlichen Schluessel; privaten Schluessel; oeffentlichen Schluessel; privaten Schluessel; Ende-zu-Ende-Verschluesselung. Das asymmetrische Prinzip loest das Schluesseltausch-Problem: Man muss den oeffentlichen Schluessel nicht geheim halten — nur den privaten.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-111",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussage erklaert am besten, warum Verschluesselung fuer alltaegliche Kommunikation im Internet notwendig ist?",
+      "optionen": [
+        {
+          "text": "Weil Datenpakete im Internet ueber viele Zwischenstationen (Router) geleitet werden, die den Inhalt grundsaetzlich lesen koennten.",
+          "richtig": true,
+          "erklaerung": "Richtig — der Weg einer Nachricht fuehrt ueber zahlreiche Knoten. Verschluesselung stellt sicher, dass nur der berechtigte Empfaenger den Inhalt lesen kann."
+        },
+        {
+          "text": "Weil unverschluesselte Nachrichten automatisch geloescht werden, bevor sie ankommen.",
+          "richtig": false,
+          "erklaerung": "Falsch — unverschluesselte Nachrichten kommen problemlos an; sie koennen nur von Dritten mitgelesen werden."
+        },
+        {
+          "text": "Weil das Passwort beim Login sonst im Klartext uebertragen wuerde und abgefangen werden koennte.",
+          "richtig": true,
+          "erklaerung": "Richtig — ohne HTTPS wuerde das Passwort als reiner Text reisen und waere fuer jeden Zwischenknoten lesbar."
+        },
+        {
+          "text": "Weil Verschluesselung verhindert, dass eine Webseite zu langsam laedt.",
+          "richtig": false,
+          "erklaerung": "Ladegeschwindigkeit haengt von Bandbreite und Serverleistung ab — Verschluesselung hat damit keinen wesentlichen Zusammenhang."
+        }
+      ],
+      "tipps": [
+        "Stelle dir vor, dein Brief wird auf dem Weg von Hand zu Hand weitergegeben: Was koennte passieren, wenn er nicht versiegelt ist?",
+        "Ueberlege: Was passiert mit einem Passwort, das als Klartext uebertragen wird?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussagen 1 und 3: Datenpakete reisen ueber viele Router, die den Inhalt theoretisch lesen koennten — und unverschluesselte Passwoerter waeren fuer jeden Zwischenknoten sichtbar. Die anderen Aussagen beschreiben keine realen Folgen fehlender Verschluesselung.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-112",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Verschluessele WORT mit Caesar-Schluessel k = 9. Trage die Geheimtext-Buchstaben ein.",
+      "text": "W(22) + 9 = ___ -> ___. O(14) + 9 = ___ -> ___. R(17) + 9 = ___ -> ___ (Achtung: Ueber Z hinaus!). T(19) + 9 = ___ -> ___. Geheimtext: ___.",
+      "luecken": [
+        {
+          "art": "eingabe",
+          "antwort": "5"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "F"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "23"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "X"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "0"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "A"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "2"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "C"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "FXAC"
+        }
+      ],
+      "tipps": [
+        "Zaehle von W aus 9 Stellen weiter: W, X, Y, Z, A, B, C, D, E, F — das ist F.",
+        "R(17) + 9 = 26. Aber 26 mod 26 = 0 — das ist A. Springt gerade auf den Anfang zurueck.",
+        "T(19) + 9 = 28. 28 mod 26 = 2 — das ist C."
+      ],
+      "loesungsweg": "W(22)+9=31 mod 26=5->F. O(14)+9=23->X. R(17)+9=26 mod 26=0->A. T(19)+9=28 mod 26=2->C. Geheimtext: FXAC. Probe: F(5)-9=-4+26=22->W, X(23)-9=14->O, A(0)-9=-9+26=17->R, C(2)-9=-7+26=19->T — WORT. Stimmt.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-113",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Angreifer hat einen deutschen Caesar-Geheimtext von 500 Buchstaben. Welche Vorgehensweise ist am schnellsten und zuverlaessigsten?",
+      "optionen": [
+        {
+          "text": "Den haeufigsten Buchstaben im Geheimtext bestimmen und mit E gleichsetzen — dann ist der Schluessel bekannt.",
+          "richtig": true,
+          "erklaerung": "Richtig — bei 500 Buchstaben ist die Haeufigkeitsstatistik zuverlaessig. Den haeufigsten Buchstaben als E anzunehmen liefert den Schluessel in einem einzigen Schritt."
+        },
+        {
+          "text": "Den Text buchstabenweise von Hand mit Schluessel 1 beginnen und bei 25 aufhoeren, bis lesbares Deutsch entsteht.",
+          "richtig": false,
+          "erklaerung": "Das funktioniert, ist aber unnoetig muehsam. Mit Haeufigkeitsanalyse findet man den Schluessel direkt."
+        },
+        {
+          "text": "Einfach alle 25 Schluessel am Computer durchprobieren — das dauert Millisekunden.",
+          "richtig": true,
+          "erklaerung": "Richtig — auch das funktioniert problemlos. Computer brauchen fuer 25 Entschluesselvorgaenge kaum messbare Zeit."
+        },
+        {
+          "text": "Ohne den Schluessel zu kennen ist Caesar-Geheimtext auch fuer Computer praktisch unknackbar.",
+          "richtig": false,
+          "erklaerung": "Falsch — 25 moegliche Schluessel sind trivial wenig. Caesar gilt gerade deshalb als vollkommen unsicher."
+        }
+      ],
+      "tipps": [
+        "Wie viele verschiedene Schluessel gibt es bei Caesar?",
+        "Bei langen Texten gilt: Der haeufigste Buchstabe im Deutschen ist E — und Verschluesselung verschiebt alle gleich.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussagen 1 und 3: Die Haeufigkeitsanalyse liefert den Schluessel direkt aus einem einzigen Buchstaben-Zaehlvorgang, und vollstaendiges Durchprobieren ist bei 25 Kandidaten trivial schnell. Caesar ist fuer keine der beiden Angriffsmethoden ein Hindernis.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-114",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Entschluessele den Vigenere-Geheimtext ZCKNE mit dem Schluessewort ACE. Das Schluessewort wiederholt unter den Geheimtext schreiben: A, C, E, A, C. Rechne: Klarposition = (Geheimposition - Schluesselposition + 26) mod 26.",
+      "text": "Z(25) - A(0) = ___ -> ___. C(2) - C(2) = ___ -> ___. K(10) - E(4) = ___ -> ___. N(13) - A(0) = ___ -> ___. E(4) - C(2) = ___ -> ___. Klartext: ___.",
+      "luecken": [
+        {
+          "art": "eingabe",
+          "antwort": "25"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "Z"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "0"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "A"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "6"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "G"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "13"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "N"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "2"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "C"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "ZAGNC"
+        }
+      ],
+      "tipps": [
+        "A im Schluessewort steht fuer Verschiebung 0 — also aendert sich der Buchstabe nicht.",
+        "C(2) - C(2) = 0 -> A. K(10) - E(4) = 6 -> G.",
+        "Probe: Verschluessele ZAGNC mit ACE und pruefe, ob ZCKNE herauskommt."
+      ],
+      "loesungsweg": "Z(25)-A(0)=25->Z. C(2)-C(2)=0->A. K(10)-E(4)=6->G. N(13)-A(0)=13->N. E(4)-C(2)=2->C. Klartext: ZAGNC. Probe: Z(25)+A(0)=25->Z, A(0)+C(2)=2->C, G(6)+E(4)=10->K, N(13)+A(0)=13->N, C(2)+C(2)=4->E — ZCKNE. Stimmt.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-115",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ordne jedem Verfahren die passende Beschreibung zu.",
+      "paare": [
+        {
+          "links": "Caesar-Verschluesselung",
+          "rechts": "Alle Buchstaben werden um dieselbe feste Zahl verschoben"
+        },
+        {
+          "links": "Vigenere-Verschluesselung",
+          "rechts": "Mehrere Caesar-Verschiebungen wechseln sich nach einem Schluessewort ab"
+        },
+        {
+          "links": "Symmetrisches Verfahren (z. B. AES)",
+          "rechts": "Ver- und Entschluesseln erfolgen mit demselben geheimen Schluessel"
+        },
+        {
+          "links": "Asymmetrisches Verfahren",
+          "rechts": "Verschluesseln mit oeffentlichem Schluessel, Entschluesseln nur mit privatem Schluessel"
+        }
+      ],
+      "tipps": [
+        "Caesar: eine Zahl, alle Buchstaben gleich. Vigenere: ein Wort, viele verschiedene Verschiebungen.",
+        "Symmetrisch = ein Schluessel fuer beide Richtungen.",
+        "Asymmetrisch = zwei verschiedene Schluessel — einer darf oeffentlich sein."
+      ],
+      "loesungsweg": "Caesar = feste Verschiebung aller Buchstaben. Vigenere = wechselnde Verschiebungen nach Schluessewort. Symmetrisch (AES) = ein gemeinsamer Schluessel. Asymmetrisch = Schluesselpaar: oeffentlicher Schluessel verschluesselt, privater Schluessel entschluesselt.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    }
+  ]
+}

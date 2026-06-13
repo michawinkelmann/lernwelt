@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atom- und Kernphysik — Einführungsphase · Physik — Lernwelt</title>
+<meta name="description" content="EF-Wahlmodul Atom- und Kernphysik: Kern-Hülle-Modell und Nuklidschreibweise, Alpha-, Beta- und Gammastrahlung, Zerfallsgesetz und Halbwertszeit mit einfachen Rechnungen, Kernreaktionen mit Massendefekt und E=mc², Anwendungen und Strahlenschutz — mit Beispielen, Verständnis-Checks und Zerfallskurve.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .vergleich-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .vergleich-tabelle th, .vergleich-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: center; }
+  .vergleich-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Atom- und Kernphysik</h1>
+  <p class="einleitung">In jeder Sekunde zerfallen in deinem Körper rund 7000 Kerne — ganz von selbst, ohne dass du etwas davon merkst. Die <strong>Banane</strong> im Pausenbrot strahlt schwach, der <strong>Rauchmelder</strong> an der Decke nutzt eine winzige radioaktive Quelle, und in der <strong>Klinik</strong> macht Strahlung Organe sichtbar oder zerstört gezielt Tumore. Dieses Wahlmodul der Einführungsphase schlägt die Brücke zwischen dem, was du in der Mittelstufe über Atome gelernt hast, und der quantitativen Kernphysik der Qualifikationsphase: Du baust das <strong>Kernmodell</strong> aus, ordnest die drei <strong>Strahlungsarten</strong>, rechnest erstmals mit dem <strong>Zerfallsgesetz</strong> und der Halbwertszeit, verstehst über den <strong>Massendefekt</strong> die Grundidee $E = m\,c^2$ — und wägst <strong>Nutzen und Risiken</strong> sachlich ab.</p>
+
+  <section aria-labelledby="ak-atombau">
+    <h2 id="ak-atombau">1. Atombau und Kernmodell</h2>
+    <p>Aus der Mittelstufe kennst du das <strong>Kern-Hülle-Modell</strong>: Ein Atom besteht aus einem winzigen, positiv geladenen <strong>Kern</strong> und einer großen, fast leeren <strong>Hülle</strong> aus Elektronen. Rutherfords Streuversuch zeigte das eindrucksvoll — fast alle α-Teilchen flogen durch die Goldfolie hindurch, nur wenige prallten am Kern ab. In der Einführungsphase blicken wir genauer in den Kern: Er besteht aus <strong>Nukleonen</strong> — positiv geladenen <strong>Protonen</strong> und ungeladenen <strong>Neutronen</strong>, beide rund 2000-mal schwerer als ein Elektron. Im Kern steckt damit über $99{,}9\,\%$ der Atommasse, obwohl er etwa $10\,000$- bis $100\,000$-mal kleiner ist als das ganze Atom.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Nuklidschreibweise</span>
+      <p>Ein Kern wird durch zwei Zahlen eindeutig beschrieben und als $^{A}_{Z}\text{X}$ notiert. Die <strong>Ordnungszahl</strong> (Protonenzahl) $Z$ steht unten — sie legt das Element fest. Die <strong>Massenzahl</strong> $A = Z + N$ steht oben — sie zählt alle Nukleonen. Die <strong>Neutronenzahl</strong> ergibt sich als Differenz $N = A - Z$. Beispiel: $^{14}_{\,6}\text{C}$ hat $6$ Protonen (also Kohlenstoff) und $14 - 6 = 8$ Neutronen.</p>
+    </div>
+    <p>Kerne mit gleicher Protonenzahl, aber verschiedener Neutronenzahl heißen <strong>Isotope</strong> desselben Elements. Sie verhalten sich chemisch praktisch gleich — die Hülle ist ja identisch —, ihre Kerne aber nicht: Manche sind stabil, andere zerfallen. Warum hält ein Kern überhaupt zusammen, obwohl sich die Protonen elektrisch abstoßen? Dafür sorgt eine eigene, sehr starke Anziehung zwischen allen Nukleonen, die nur auf winzige Abstände wirkt. Bei großen Kernen verliert sie nach und nach gegen die Abstoßung — <strong>ab etwa 83 Protonen ist kein Kern mehr stabil</strong>.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Drei Isotope des Wasserstoffs</span>
+      <p>Wasserstoff kommt als $^{1}_{1}\text{H}$ (1 Proton, 0 Neutronen), als $^{2}_{1}\text{H}$ (Deuterium, 1 Neutron) und als $^{3}_{1}\text{H}$ (Tritium, 2 Neutronen) vor. Alle drei haben $Z = 1$ und sind chemisch Wasserstoff. Tritium ist jedoch radioaktiv, die beiden anderen sind stabil — die Neutronenzahl entscheidet über die Stabilität des Kerns.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Wie viele Protonen und Neutronen hat der Kern $^{238}_{\,92}\text{U}$ — und was unterscheidet ihn von $^{235}_{\,92}\text{U}$?</summary>
+      <div class="check-antwort"><p>$^{238}_{\,92}\text{U}$ hat $Z = 92$ Protonen und $N = 238 - 92 = 146$ Neutronen. $^{235}_{\,92}\text{U}$ hat ebenfalls $92$ Protonen (sonst wäre es kein Uran), aber nur $235 - 92 = 143$ Neutronen. Beide sind also <strong>Isotope des Urans</strong> — sie unterscheiden sich nur in drei Neutronen, verhalten sich kerntechnisch aber sehr verschieden (nur U-235 ist gut spaltbar).</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ak-radioaktivitaet">
+    <h2 id="ak-radioaktivitaet">2. Radioaktivität: α-, β- und γ-Strahlung</h2>
+    <p>Ein instabiler Kern wandelt sich <strong>von selbst</strong> in einen anderen Kern um und sendet dabei <strong>Strahlung</strong> aus — das ist <strong>Radioaktivität</strong>. Entscheidend ist ihr <strong>stochastischer Charakter</strong>: Wann ein bestimmter Kern zerfällt, ist <strong>reiner Zufall</strong> und durch nichts beeinflussbar — kein Erhitzen, kein Druck, keine chemische Reaktion erreicht den Kern. Man unterscheidet drei Strahlungsarten danach, was der Kern aussendet:</p>
+    <ul>
+      <li><strong>α-Strahlung:</strong> schnelle <strong>Heliumkerne</strong> $^{4}_{2}\text{He}$ (2 Protonen + 2 Neutronen), positiv, zweifach geladen. Sehr stark ionisierend, aber geringe Reichweite: wenige Zentimeter in Luft, ein <strong>Blatt Papier</strong> stoppt sie.</li>
+      <li><strong>β-Strahlung:</strong> schnelle <strong>Elektronen</strong> aus dem Kern (dort wandelt sich ein Neutron in ein Proton um), negativ geladen. Reichweite einige Meter Luft; ein <strong>Aluminiumblech</strong> von wenigen Millimetern stoppt sie.</li>
+      <li><strong>γ-Strahlung:</strong> energiereiche <strong>elektromagnetische Strahlung</strong> — wie sichtbares Licht, UV- oder Röntgenstrahlung, nur noch energiereicher; ohne Masse, ohne Ladung. Sehr durchdringend: Selbst dicke <strong>Blei- oder Betonschichten</strong> schwächen sie nur ab.</li>
+    </ul>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 560 312" width="560" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Abschirmung der drei Strahlungsarten: Drei Pfeile laufen von links auf drei Hindernisse zu. Der Alpha-Pfeil endet schon am Blatt Papier. Der Beta-Pfeil durchdringt das Papier, endet aber am Aluminiumblech. Der Gamma-Pfeil durchdringt Papier und Aluminium und läuft hinter der dicken Bleischicht dünner und gestrichelt weiter — Gammastrahlung wird nur abgeschwächt, nie vollständig gestoppt.">
+        <defs>
+          <marker id="ak-pfeil-strahl" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--physik)"/></marker>
+        </defs>
+        <g stroke="var(--physik)" stroke-width="2.2" fill="none">
+          <line x1="88" y1="100" x2="219" y2="100" marker-end="url(#ak-pfeil-strahl)"/>
+          <line x1="88" y1="156" x2="317" y2="156" marker-end="url(#ak-pfeil-strahl)"/>
+          <line x1="88" y1="212" x2="445" y2="212"/>
+        </g>
+        <line x1="448" y1="212" x2="534" y2="212" stroke="var(--physik)" stroke-width="1.4" stroke-dasharray="5 5" marker-end="url(#ak-pfeil-strahl)" fill="none"/>
+        <g font-size="18" font-weight="bold" fill="var(--physik)" text-anchor="middle">
+          <text x="70" y="106">α</text>
+          <text x="70" y="162">β</text>
+          <text x="70" y="218">γ</text>
+        </g>
+        <g fill="var(--text-leise)" stroke="var(--text-leise)" stroke-width="1">
+          <rect x="226" y="66" width="5" height="180" fill-opacity="0.25"/>
+          <rect x="324" y="66" width="11" height="180" fill-opacity="0.45"/>
+          <rect x="418" y="66" width="28" height="180" fill-opacity="0.7"/>
+        </g>
+        <g font-size="13" fill="var(--text)" text-anchor="middle">
+          <text x="228" y="54">Papier</text>
+          <text x="329" y="54">Aluminium</text>
+          <text x="432" y="54">dickes Blei</text>
+        </g>
+        <text x="491" y="196" text-anchor="middle" font-size="12" fill="var(--text-leise)">abgeschwächt</text>
+        <text x="24" y="272" font-size="12.5" fill="var(--text-leise)">α: Heliumkerne · β: schnelle Elektronen · γ: energiereiche elektromagnetische Strahlung</text>
+        <text x="24" y="296" font-size="12.5" fill="var(--text-leise)">Papier stoppt α, Aluminium stoppt β — dickes Blei schwächt γ nur ab (gestrichelt).</text>
+      </svg>
+    </div>
+    <p>Allen drei Arten gemeinsam ist die <strong>ionisierende Wirkung</strong>: Auf ihrem Weg durch Materie schlagen sie Elektronen aus den Atomen heraus. Genau diese Wirkung macht die Strahlung im <strong>Geiger-Müller-Zählrohr</strong> nachweisbar — jedes ionisierende Teilchen löst dort einen kurzen Stromstoß aus, hörbar als <strong>Knacken</strong>; die <strong>Zählrate</strong> (Impulse pro Sekunde) misst, wie viel Strahlung ankommt. Das Zählrohr knackt aber auch ohne Präparat: Diese <strong>Nullrate</strong> stammt von der allgegenwärtigen Umgebungsstrahlung und muss von jedem Messwert abgezogen werden.</p>
+    <p>Die Strahlungsarten lassen sich durch ihre <strong>Ladung</strong> unterscheiden: Im Magnetfeld werden α- und β-Strahlung in entgegengesetzte Richtungen abgelenkt (verschiedene Ladungsvorzeichen), während die ungeladene γ-Strahlung geradeaus weiterläuft.</p>
+    <table class="vergleich-tabelle">
+      <caption class="nur-screenreader">Vergleich der drei Strahlungsarten nach Teilchenart, Ladung, Reichweite in Luft und Abschirmung.</caption>
+      <thead>
+        <tr><th scope="col">Art</th><th scope="col">besteht aus</th><th scope="col">Ladung</th><th scope="col">Reichweite (Luft)</th><th scope="col">gestoppt durch</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>α</td><td>Heliumkerne $^{4}_{2}\text{He}$</td><td>positiv (+2)</td><td>wenige cm</td><td>Blatt Papier</td></tr>
+        <tr><td>β</td><td>schnelle Elektronen</td><td>negativ (−1)</td><td>einige m</td><td>Aluminium (mm)</td></tr>
+        <tr><td>γ</td><td>Photonen (EM-Strahlung)</td><td>keine</td><td>sehr groß</td><td>nur abgeschwächt (Blei, Beton)</td></tr>
+      </tbody>
+    </table>
+    <details class="check">
+      <summary>Verständnis-Check: Eine Strahlung durchdringt Papier mühelos, wird aber von wenigen Millimetern Aluminium gestoppt. Um welche Art handelt es sich — und warum?</summary>
+      <div class="check-antwort"><p>Es ist <strong>β-Strahlung</strong>. α-Teilchen wären schon im Papier hängen geblieben, γ-Strahlung hätte auch das Aluminium weitgehend durchdrungen. Schnelle Elektronen schaffen das Papier mühelos, werden aber von wenigen Millimetern Metall abgefangen — genau das beobachtete Verhalten. Der Test mit verschiedenen Materialien ist die einfachste Methode, die Strahlungsart zu bestimmen.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ak-zerfallsgesetz">
+    <h2 id="ak-zerfallsgesetz">3. Zerfallsgesetz und Halbwertszeit</h2>
+    <p>Ein einzelner Kern ist unberechenbar — aber große Mengen folgen einer verlässlichen Regel, so wie beim Würfeln mit sehr vielen Würfeln ziemlich genau ein Sechstel Sechsen fällt. Schon ein Staubkorn enthält Milliarden Kerne. Der Schlüsselbegriff ist die Halbwertszeit:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Halbwertszeit und Zerfallsgesetz</span>
+      <p>Die <strong>Halbwertszeit</strong> $T$ ist die Zeit, nach der die <strong>Hälfte der noch vorhandenen</strong> instabilen Kerne zerfallen ist. Es wird also immer wieder halbiert: $100\,\% \to 50\,\% \to 25\,\% \to 12{,}5\,\% \to \dots$. Nach $n$ Halbwertszeiten ist noch der Anteil $\left(\frac{1}{2}\right)^{n}$ übrig:</p>
+      <p class="formel-abgesetzt">$$N(t) = N_0 \cdot \left(\frac{1}{2}\right)^{\frac{t}{T}}$$</p>
+      <p>Die <strong>Aktivität</strong> $A$ — die Zahl der Zerfälle pro Sekunde, gemessen in <strong>Becquerel</strong> ($1\,\text{Bq} = 1$ Zerfall pro Sekunde) — ist proportional zur Kernzahl und sinkt im selben Takt: $A(t) = A_0 \cdot \left(\frac{1}{2}\right)^{\frac{t}{T}}$.</p>
+    </div>
+    <p>Solange die Zeit ein <em>ganzes</em> Vielfaches der Halbwertszeit ist, brauchst du nur zu halbieren — ganz ohne Taschenrechner. Jedes Nuklid hat dabei seine eigene, unveränderliche Halbwertszeit, von Sekundenbruchteilen bis zu Milliarden Jahren:</p>
+    <table class="vergleich-tabelle">
+      <caption class="nur-screenreader">Halbwertszeiten von fünf Nukliden: Technetium-99m sechs Stunden, Iod-131 acht Tage, Cäsium-137 dreißig Jahre, Kohlenstoff-14 fünftausendsiebenhundertdreißig Jahre, Uran-238 viereinhalb Milliarden Jahre.</caption>
+      <thead>
+        <tr><th scope="col">Nuklid</th><th scope="col">Halbwertszeit</th><th scope="col">bekannt aus</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Technetium-99m</td><td>6 Stunden</td><td>Nuklearmedizin (Diagnostik)</td></tr>
+        <tr><td>Iod-131</td><td>8 Tage</td><td>Schilddrüsen-Therapie</td></tr>
+        <tr><td>Cäsium-137</td><td>30 Jahre</td><td>Reaktorunfällen</td></tr>
+        <tr><td>Kohlenstoff-14</td><td>5730 Jahre</td><td>Altersbestimmung</td></tr>
+        <tr><td>Uran-238</td><td>4,5 Mrd. Jahre</td><td>Erdkruste, Altersbestimmung</td></tr>
+      </tbody>
+    </table>
+    <p>Trägt man die Restmenge über der Zeit auf, entsteht die typische <strong>Zerfallskurve</strong> — eine fallende Kurve, die sich der Nulllinie immer weiter annähert, ohne sie je zu erreichen:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 620 340" width="620" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zerfallskurve: Die Restmenge instabiler Kerne in Prozent ist über der Zeit in Halbwertszeiten aufgetragen. Eine glatt fallende Kurve startet bei 100 Prozent und erreicht 50 Prozent nach einer Halbwertszeit, 25 Prozent nach zwei, 12,5 Prozent nach drei und etwa 6 Prozent nach vier Halbwertszeiten. Gestrichelte Hilfslinien führen von den markierten Halbierungspunkten zu den Achsen. Die Kurve nähert sich der Nulllinie an, ohne sie zu erreichen.">
+        <defs>
+          <marker id="ak-pfeil-achse" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text-leise)"/></marker>
+        </defs>
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="70" y1="300" x2="600" y2="300" marker-end="url(#ak-pfeil-achse)"/>
+          <line x1="70" y1="300" x2="70" y2="28" marker-end="url(#ak-pfeil-achse)"/>
+        </g>
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="65" y1="40" x2="70" y2="40"/><line x1="65" y1="105" x2="70" y2="105"/><line x1="65" y1="170" x2="70" y2="170"/><line x1="65" y1="235" x2="70" y2="235"/>
+          <line x1="153.3" y1="300" x2="153.3" y2="305"/><line x1="236.7" y1="300" x2="236.7" y2="305"/><line x1="320" y1="300" x2="320" y2="305"/><line x1="403.3" y1="300" x2="403.3" y2="305"/><line x1="486.7" y1="300" x2="486.7" y2="305"/><line x1="570" y1="300" x2="570" y2="305"/>
+        </g>
+        <g fill="var(--text-leise)" font-size="12.5" text-anchor="end">
+          <text x="60" y="44">100</text><text x="60" y="109">75</text><text x="60" y="174">50</text><text x="60" y="239">25</text><text x="60" y="304">0</text>
+        </g>
+        <g fill="var(--text-leise)" font-size="12.5" text-anchor="middle">
+          <text x="70" y="319">0</text><text x="153.3" y="319">1</text><text x="236.7" y="319">2</text><text x="320" y="319">3</text><text x="403.3" y="319">4</text><text x="486.7" y="319">5</text><text x="570" y="319">6</text>
+        </g>
+        <text x="600" y="338" text-anchor="end" font-size="13" fill="var(--text)">Zeit in Halbwertszeiten T</text>
+        <text x="76" y="18" font-size="13" fill="var(--text)">Restmenge in %</text>
+        <g stroke="var(--text-leise)" stroke-width="1" stroke-dasharray="4 4">
+          <line x1="70" y1="170" x2="153.3" y2="170"/><line x1="153.3" y1="170" x2="153.3" y2="300"/>
+          <line x1="70" y1="235" x2="236.7" y2="235"/><line x1="236.7" y1="235" x2="236.7" y2="300"/>
+          <line x1="70" y1="267.5" x2="320" y2="267.5"/><line x1="320" y1="267.5" x2="320" y2="300"/>
+        </g>
+        <polyline fill="none" stroke="var(--physik)" stroke-width="2.5" points="70.0,40.0 90.8,81.4 111.7,116.2 132.5,145.4 153.3,170.0 174.2,190.7 195.0,208.1 215.8,222.7 236.7,235.0 257.5,245.3 278.3,254.0 299.2,261.4 320.0,267.5 340.8,272.7 361.7,277.0 382.5,280.7 403.3,283.8 424.2,286.3 445.0,288.5 465.8,290.3 486.7,291.9 507.5,293.2 528.3,294.3 549.2,295.2 570.0,295.9"/>
+        <circle cx="70" cy="40" r="5" fill="var(--physik)"/>
+        <circle cx="153.3" cy="170" r="5" fill="var(--physik)"/>
+        <circle cx="236.7" cy="235" r="5" fill="var(--physik)"/>
+        <circle cx="320" cy="267.5" r="5" fill="var(--physik)"/>
+        <circle cx="403.3" cy="283.8" r="5" fill="var(--physik)"/>
+        <g fill="var(--text)" font-size="12.5">
+          <text x="84" y="42">100 %</text>
+          <text x="160" y="164">50 %</text>
+          <text x="243" y="229">25 %</text>
+          <text x="328" y="262">12,5 %</text>
+          <text x="411" y="278">6,25 %</text>
+        </g>
+        <text x="24" y="332" font-size="12.5" fill="var(--text-leise)">Nach jeder Halbwertszeit halbiert sich der Rest: 100 → 50 → 25 → 12,5 → 6,25 % → …</text>
+      </svg>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Iod-131 in der Schilddrüsen-Therapie</span>
+      <p>Ein Iod-131-Präparat hat heute die Aktivität $800\,\text{Bq}$, die Halbwertszeit beträgt $T = 8\,\text{Tage}$. Weil die Zeiten ganze Vielfache von $T$ sind, wird einfach halbiert: nach $8$ Tagen $\frac{800}{2} = 400\,\text{Bq}$, nach $16$ Tagen $200\,\text{Bq}$, nach $24$ Tagen $100\,\text{Bq}$. Probe mit der Formel: $A(24\,\text{d}) = 800 \cdot \left(\frac{1}{2}\right)^{\frac{24}{8}} = 800 \cdot \left(\frac{1}{2}\right)^{3} = 800 \cdot \frac{1}{8} = 100\,\text{Bq}$ ✓. Nach gut einem Monat ist kaum noch Aktivität übrig — genau deshalb eignen sich kurzlebige Nuklide für die Medizin.</p>
+    </div>
+    <h3>Zerfall würfeln — probiere es selbst</h3>
+    <p>Ob ein einzelner Kern zerfällt, ist purer Zufall — wie ein Würfelwurf. In der Simulation ist jeder Punkt ein Kern; mit jedem Zerfall verblasst einer, und rechts wächst die Zerfallskurve von allein. Bearbeite dabei die Aufträge unter der Simulation.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/physik/zerfall/index.html?einbettung=1#n0=400&thalb=5"
+        title="Interaktive Simulation: Radioaktiver Zerfall — Halbwertszeit als Zufallsprozess" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/physik/zerfall/index.html#n0=400&thalb=5" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Lies die Halbwertszeit am Graphen ab: Bestimme den Zeitpunkt, zu dem noch $\frac{N_0}{2} = 200$ Kerne übrig sind, und vergleiche mit dem eingestellten $T = 5\,\text{s}$. Prüfe genauso $2 \cdot T$ (noch 100 Kerne) und $3 \cdot T$ (noch 50 Kerne).<br>
+      2. Berechne mit der Formel $N(t) = N_0 \cdot \left(\frac{1}{2}\right)^{t/T}$ den Wert $N(10\,\text{s})$ für $N_0 = 400$ und $T = 5\,\text{s}$. Pausiere den Lauf bei $t \approx 10\,\text{s}$ und vergleiche mit der Anzeige.<br>
+      3. Vergleiche $N_0 = 50$ mit $N_0 = 2000$: Bei welcher Anzahl liegt die zackige Zufallskurve dichter an der glatten Theoriekurve? Je mehr Kerne, desto verlässlicher die Halbierungsregel — deshalb gilt das Zerfallsgesetz schon für ein Staubkorn praktisch exakt.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Präparat hat anfangs $12\,000\,\text{Bq}$ und die Halbwertszeit $T = 5\,\text{min}$. Wie groß ist die Aktivität nach $20\,\text{min}$?</summary>
+      <div class="check-antwort"><p>$20\,\text{min}$ sind $\frac{20}{5} = 4$ Halbwertszeiten — also viermal halbieren: $12\,000 \to 6000 \to 3000 \to 1500 \to \mathbf{750\,Bq}$. Mit der Formel: $A = 12\,000 \cdot \left(\frac{1}{2}\right)^{4} = 12\,000 \cdot \frac{1}{16} = 750\,\text{Bq}$. Nur noch ein Sechzehntel der Anfangsaktivität ist übrig.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ak-kernreaktionen">
+    <h2 id="ak-kernreaktionen">4. Kernreaktionen und Massendefekt</h2>
+    <p>Bei jeder Kernumwandlung gilt eine einfache Buchhaltung: Die <strong>Massenzahl</strong> $A$ und die <strong>Ladungszahl</strong> $Z$ sind in der Summe auf beiden Seiten der Reaktionsgleichung gleich. Mit diesen zwei Erhaltungssätzen kannst du jede Gleichung vervollständigen, ohne Zerfallsreihen auswendig zu kennen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die drei Umwandlungen in Gleichungen</span>
+      <p><strong>α-Zerfall</strong> (Tochterkern: $A-4$, $Z-2$):</p>
+      <p class="formel-abgesetzt">$$^{226}_{\,88}\text{Ra} \;\to\; {}^{222}_{\,86}\text{Rn} + {}^{4}_{2}\text{He}$$</p>
+      <p><strong>β-Zerfall</strong> ($A$ bleibt, $Z+1$, das Elektron trägt die Ladungszahl $-1$):</p>
+      <p class="formel-abgesetzt">$$^{14}_{\,6}\text{C} \;\to\; {}^{14}_{\,7}\text{N} + {}^{\;\,0}_{-1}e$$</p>
+      <p><strong>γ-Übergang</strong> ($A$ und $Z$ unverändert — nur Energie wird abgegeben):</p>
+      <p class="formel-abgesetzt">$$^{60}_{27}\text{Co}^{*} \;\to\; {}^{60}_{27}\text{Co} + \gamma$$</p>
+    </div>
+    <p>Beim Radium stimmt die Bilanz ($226 = 222 + 4$ und $88 = 86 + 2$), beim Kohlenstoff ebenso ($14 = 14$ und $6 = 7 + (-1)$). Oft ist der Tochterkern selbst wieder instabil — es entstehen ganze <strong>Zerfallsreihen</strong>, etwa von Uran-238 über viele Stufen bis zum stabilen Blei-206.</p>
+    <p>Warum wird bei Kernreaktionen so viel Energie frei? Die Antwort liefert eine der berühmtesten Gleichungen der Physik. Wiegt man Kerne sehr genau, zeigt sich: <strong>Ein Kern ist leichter als die Summe seiner einzelnen Bausteine.</strong> Diese fehlende Masse heißt <strong>Massendefekt</strong> $\Delta m$. Nach Einsteins Äquivalenz von Masse und Energie ist sie nicht verschwunden, sondern wurde beim Zusammenbau des Kerns als <strong>Bindungsenergie</strong> frei:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Massendefekt und $E = m\,c^2$</span>
+      <p>Masse und Energie sind ineinander umrechenbar — mit der Lichtgeschwindigkeit $c \approx 3 \cdot 10^{8}\,\frac{\text{m}}{\text{s}}$ als Umrechnungsfaktor:</p>
+      <p class="formel-abgesetzt">$$E = m \cdot c^2 \qquad E_{\text{B}} = \Delta m \cdot c^2$$</p>
+      <p>Weil $c^2$ riesig ist, steckt schon in winziger Masse enorm viel Energie. Bei Kernreaktionen wird ein kleiner Teil der Masse in Energie umgewandelt — das macht Kernprozesse millionenfach energiereicher als chemische Reaktionen wie das Verbrennen von Kohle.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Wie viel Energie steckt in 1 Gramm Masse?</span>
+      <p>Würde man $m = 1\,\text{g} = 0{,}001\,\text{kg}$ vollständig in Energie umwandeln, ergäbe das nach $E = m\,c^2$: $$E = 0{,}001\,\text{kg} \cdot \left(3 \cdot 10^{8}\,\frac{\text{m}}{\text{s}}\right)^2 = 0{,}001 \cdot 9 \cdot 10^{16}\,\text{J} = 9 \cdot 10^{13}\,\text{J}.$$ Das sind $90\,000\,000\,\text{MJ}$ — etwa so viel, wie eine Großstadt an einem Tag verbraucht. Im realen Reaktor wird nur ein winziger Bruchteil der Masse umgesetzt, aber selbst der genügt für gewaltige Energiemengen.</p>
+    </div>
+    <p>Aus dem Verlauf der Bindungsenergie pro Nukleon ergeben sich <strong>zwei Wege, Kernenergie freizusetzen</strong>. Bei der <strong>Kernspaltung</strong> fängt ein Uran-235-Kern ein Neutron ein und zerplatzt in zwei mittelschwere Bruchstücke; dabei werden zwei bis drei neue Neutronen und viel Energie frei — diese Neutronen können weitere Kerne spalten (<strong>Kettenreaktion</strong>, im Reaktor kontrolliert). Bei der <strong>Kernfusion</strong> verschmelzen leichte Kerne wie im Inneren der Sonne zu schwereren. In beiden Fällen sind die Produkte fester gebunden als die Ausgangskerne — die Differenz der Massen wird nach $E = \Delta m\,c^2$ frei. Die quantitative Rechnung mit dem Massendefekt folgt in der <a href="../../qualifikationsphase/atomkern/index.html">Qualifikationsphase</a>.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Polonium-210 ($Z = 84$) ist ein α-Strahler. Welches Nuklid entsteht beim Zerfall von $^{210}_{\,84}\text{Po}$?</summary>
+      <div class="check-antwort"><p>Beim α-Zerfall verliert der Kern $4$ Nukleonen, davon $2$ Protonen: $A = 210 - 4 = 206$ und $Z = 84 - 2 = 82$. Das Element mit $Z = 82$ ist <strong>Blei</strong>. Die Gleichung lautet $^{210}_{\,84}\text{Po} \to {}^{206}_{\,82}\text{Pb} + {}^{4}_{2}\text{He}$. Kontrolle: $210 = 206 + 4$ ✓ und $84 = 82 + 2$ ✓. Blei-206 ist stabil.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ak-anwendungen">
+    <h2 id="ak-anwendungen">5. Anwendungen und Strahlenschutz</h2>
+    <p>Dieselbe Strahlung, vor der man sich schützt, ist vielfach nützlich. In der <strong>Medizin</strong> bekommt der Patient bei der <strong>Szintigrafie</strong> ein schwach strahlendes, kurzlebiges Nuklid (oft Technetium-99m, $T = 6\,\text{h}$) gespritzt, das sich in einem Organ anreichert; eine Kamera misst die γ-Strahlung von außen und macht die Organfunktion sichtbar. Bei der <strong>Strahlentherapie</strong> wird die zerstörerische Wirkung gezielt eingesetzt, um Tumorgewebe abzutöten. Außerhalb der Klinik bestimmt die <strong>C-14-Methode</strong> das Alter archäologischer Funde (etwa der Gletschermumie Ötzi), und in der <strong>Technik</strong> durchleuchtet γ-Strahlung Schweißnähte zerstörungsfrei.</p>
+    <p>Warum überhaupt schützen? Ionisierende Strahlung kann Moleküle in den Zellen verändern — auch das <strong>Erbgut</strong>. Kleine Schäden repariert die Zelle meist selbst; je höher die <strong>Dosis</strong> (gemessen in <strong>Millisievert, mSv</strong>), desto eher bleibt ein Schaden, der später Krebs auslösen kann. In Deutschland kommen pro Jahr rund $2\,\text{mSv}$ aus natürlichen Quellen (vor allem dem Edelgas <strong>Radon</strong> aus dem Untergrund) und noch einmal ähnlich viel aus der Medizin zusammen. Vor dieser unvermeidbaren Grundbelastung muss niemand Angst haben — entscheidend ist, <em>unnötige</em> Strahlung zu vermeiden.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die 3-A-Regel des Strahlenschutzes</span>
+      <p><strong>Abstand</strong> halten — die wirksamste Maßnahme: Beim doppelten Abstand trifft dich nur noch ein Viertel der Strahlung, denn sie verteilt sich auf die vierfache Kugelfläche ($\frac{1}{r^2}$-Gesetz). <strong>Abschirmung</strong> nutzen — je nach Strahlenart Papier, Aluminium, Blei oder Beton. <strong>Aufenthaltsdauer</strong> kurz halten — die Dosis wächst mit der Zeit. Und unbedingt: radioaktive Stoffe <strong>niemals in den Körper aufnehmen</strong>.</p>
+    </div>
+    <p>Bleibt die Frage nach der <strong>Kernkraft</strong>: Aus wenigen Kilogramm Brennstoff entsteht im Reaktor so viel Energie wie aus ganzen Zugladungen Kohle — im Betrieb ohne CO₂. Dem stehen gewichtige Risiken gegenüber: Der <strong>abgebrannte Brennstoff</strong> bleibt wegen langlebiger Nuklide über Jahrtausende gefährlich strahlend, und ein sicheres <strong>Endlager</strong> für solche Zeiträume ist bis heute nirgendwo in Betrieb. Die Unfälle von <strong>Tschernobyl</strong> (1986) und <strong>Fukushima</strong> (2011) zeigten, dass freigesetztes Cäsium-137 (Halbwertszeit $30\,\text{Jahre}$) ganze Landstriche über Generationen belasten kann. Ob eine Gesellschaft Kernkraft nutzen will, ist am Ende eine Abwägung — die Physik liefert dazu die Grundlagen, damit du Risiken realistisch einschätzen und dir ein <strong>eigenes Urteil</strong> bilden kannst.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Warum verwendet man in der medizinischen Diagnostik bevorzugt Nuklide mit <em>kurzer</em> Halbwertszeit?</summary>
+      <div class="check-antwort"><p>Weil ihre Aktivität nach der Untersuchung schnell von selbst abklingt: Bei Technetium-99m ($T = 6\,\text{h}$) ist nach einem Tag ($4$ Halbwertszeiten) nur noch $\frac{1}{16}$ der Strahlung übrig, nach zwei Tagen praktisch nichts mehr. So bekommt der Patient nur eine geringe Gesamtdosis. Ein langlebiges Nuklid würde dagegen über Jahre weiterstrahlen — für eine einmalige Diagnose völlig unangebracht.</p></div>
+    </details>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Wie die C-14-Methode das Alter verrät</summary>
+    <div class="vertiefung-inhalt">
+      <p>Hoch in der Atmosphäre erzeugt die kosmische Strahlung ständig neues <strong>C-14</strong>: Neutronen treffen Stickstoffkerne und wandeln sie um. Das radioaktive C-14 mischt sich als CO₂ unter den gewöhnlichen Kohlenstoff — in der Luft stellt sich ein nahezu konstanter C-14-Anteil ein. Pflanzen bauen ihn per Fotosynthese ein, Tiere fressen die Pflanzen: <strong>Jedes Lebewesen hält im Stoffwechsel denselben C-14-Anteil wie die Atmosphäre.</strong></p>
+      <p>Mit dem Tod endet der Austausch, und die innere Uhr beginnt zu ticken: Das eingebaute C-14 zerfällt mit der Halbwertszeit $5730\,\text{Jahre}$, ohne dass Nachschub kommt. Misst man, welcher Anteil im Vergleich zu frischem Material noch übrig ist, zählt man einfach die Halbierungen: Noch die Hälfte? Eine Halbwertszeit, rund $5700$ Jahre. Noch ein Viertel? Zwei Halbwertszeiten, etwa $11\,500$ Jahre. Bei Ötzi maß man gut $53\,\%$ Rest — knapp eine Halbwertszeit, also rund $5300$ Jahre.</p>
+      <p>Die Methode hat Grenzen: Nach etwa $50\,000$ Jahren (fast neun Halbwertszeiten) ist so wenig C-14 übrig, dass es sich kaum noch messen lässt. Und sie funktioniert nur bei Material, das einmal gelebt hat — Holz, Knochen, Leder, Wolle. Einem Steinbeil sieht sie kein Alter an. Die genaue Rechnung über die Exponentialfunktion lernst du in der Qualifikationsphase.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Atombau über Strahlungsarten und Halbwertszeit bis zu Kernreaktionen und Strahlenschutz, mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+  <p class="zurueck-link"><a href="../index.html">← Zurück zur Übersicht Physik · Einführungsphase</a></p>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

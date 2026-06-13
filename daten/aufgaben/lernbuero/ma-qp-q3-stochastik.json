@@ -1,0 +1,179 @@
+{
+  "thema": "ma-qp-q3-stochastik",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben zum Ueberblick Q3 Stochastik (Gymnasium QP). IDs ma-qp-q3-101 bis ma-qp-q3-105. Fachliche Pruefung durch die Lehrkraft ausstehend.",
+  "aufgaben": [
+    {
+      "id": "ma-qp-q3-101",
+      "typ": "zuordnung",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ordne jedem Begriff die passende Erklaerung zu.",
+      "paare": [
+        {
+          "links": "Bernoulli-Kette",
+          "rechts": "Folge gleichartiger Versuche mit zwei Ausgaengen und konstanter Trefferwahrscheinlichkeit"
+        },
+        {
+          "links": "Erwartungswert $\\\\mu = np$",
+          "rechts": "Durchschnittliche Trefferzahl bei sehr vielen Versuchsreihen"
+        },
+        {
+          "links": "Signifikanzniveau $\\\\alpha$",
+          "rechts": "Maximale tolerierte Irrtumswahrscheinlichkeit beim Hypothesentest"
+        },
+        {
+          "links": "Fehler 1. Art",
+          "rechts": "$H_0$ wird abgelehnt, obwohl sie wahr ist"
+        }
+      ],
+      "tipps": [
+        "Denke daran: Eine Bernoulli-Kette hat vier charakteristische Bedingungen.",
+        "Der Erwartungswert gibt den langfristigen Durchschnitt an -- nicht das genaue Ergebnis einer Versuchsreihe.",
+        "Beim Fehler 1. Art 'liegt man im Unrecht', obwohl $H_0$ stimmte."
+      ],
+      "loesungsweg": "Bernoulli-Kette: gleichartige Versuche, zwei Ausgaenge, konstantes $p$. Erwartungswert $\\\\mu = np$: Durchschnitt bei vielen Wiederholungen. Signifikanzniveau $\\\\alpha$: obere Schranke der Irrtumswahrscheinlichkeit. Fehler 1. Art: $H_0$ abgelehnt, obwohl sie wahr ist.",
+      "kc": ["KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Ueberblick Stochastik"]
+    },
+    {
+      "id": "ma-qp-q3-102",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Zufallsgroesse $X \\\\sim B(8\\\\,;\\\\,0{,}25)$ beschreibt die Anzahl der Treffer. Berechne $P(X = 2)$ (auf 4 Dezimalstellen).",
+      "eingaben": [
+        {
+          "label": "$P(X = 2)$",
+          "antwort": 0.3115,
+          "toleranz": 0.0005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Nutze die Bernoulli-Formel: $P(X = k) = \\\\binom{n}{k} \\\\cdot p^k \\\\cdot (1-p)^{n-k}$.",
+        "Mit $n = 8$, $k = 2$, $p = 0{,}25$: $\\\\binom{8}{2} = 28$.",
+        "$P(X = 2) = 28 \\\\cdot 0{,}25^2 \\\\cdot 0{,}75^6$."
+      ],
+      "loesungsweg": "$P(X = 2) = \\\\binom{8}{2} \\\\cdot 0{,}25^2 \\\\cdot 0{,}75^6 = 28 \\\\cdot 0{,}0625 \\\\cdot 0{,}17798 \\\\approx 0{,}3115$.",
+      "kc": ["KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Ueberblick Stochastik"]
+    },
+    {
+      "id": "ma-qp-q3-103",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Fuer $X \\\\sim B(40\\\\,;\\\\,0{,}45)$ berechne den Erwartungswert $\\\\mu$ und die Standardabweichung $\\\\sigma$ (auf 4 Dezimalstellen). Bestimme ausserdem das ganzzahlige $2\\\\sigma$-Prognoseintervall $[a, b]$.",
+      "eingaben": [
+        {
+          "label": "Erwartungswert $\\\\mu$",
+          "antwort": 18,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "Standardabweichung $\\\\sigma$",
+          "antwort": 3.1464,
+          "toleranz": 0.005,
+          "einheit": ""
+        },
+        {
+          "label": "Untere Grenze $a$ des $2\\\\sigma$-Intervalls",
+          "antwort": 12,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "Obere Grenze $b$ des $2\\\\sigma$-Intervalls",
+          "antwort": 24,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Nutze $\\\\mu = n \\\\cdot p$ und $\\\\sigma = \\\\sqrt{n \\\\cdot p \\\\cdot (1-p)}$.",
+        "Das $2\\\\sigma$-Intervall lautet $[\\\\mu - 2\\\\sigma,\\\\; \\\\mu + 2\\\\sigma]$ -- ganzzahlig runden.",
+        "Untere Grenze aufrunden, obere Grenze abrunden (nur ganze Trefferzahlen sinnvoll)."
+      ],
+      "loesungsweg": "$\\\\mu = 40 \\\\cdot 0{,}45 = 18$. $\\\\sigma = \\\\sqrt{40 \\\\cdot 0{,}45 \\\\cdot 0{,}55} = \\\\sqrt{9{,}9} \\\\approx 3{,}1464$. Da $\\\\sigma \\\\approx 3{,}15 > 3$, ist die Laplace-Bedingung erfuellt. $2\\\\sigma$-Intervall: $[18 - 6{,}29; 18 + 6{,}29] = [11{,}71; 24{,}29]$, ganzzahlig: $[12; 24]$.",
+      "kc": ["KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Ueberblick Stochastik"]
+    },
+    {
+      "id": "ma-qp-q3-104",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Hypothesentest: $n = 50$ Versuche, $H_0\\\\colon p \\\\le 0{,}3$, rechtsseitiger Test, $\\\\alpha = 5\\\\,\\\\%$. (a) Bestimme den kritischen Bereich. (b) Berechne die Wahrscheinlichkeit des Fehlers 2. Art fuer den Fall, dass die wahre Trefferwahrscheinlichkeit $p = 0{,}4$ betraegt (auf 3 Dezimalstellen).",
+      "eingaben": [
+        {
+          "label": "Kritische Grenze $c$ (kleinste Zahl im kritischen Bereich $K = \\\\{c, \\\\ldots, 50\\\\}$)",
+          "antwort": 21,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "Wahrscheinlichkeit Fehler 2. Art $\\\\beta$ (bei $p = 0{,}4$)",
+          "antwort": 0.561,
+          "toleranz": 0.005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Suche die kleinste ganze Zahl $c$ mit $P(X \\\\ge c \\\\mid n = 50,\\\\, p = 0{,}3) \\\\le 0{,}05$.",
+        "Fuer den Fehler 2. Art berechne $P(X \\\\le 20 \\\\mid n = 50,\\\\, p = 0{,}4)$.",
+        "$P(X \\\\ge 21 \\\\mid p = 0{,}3) \\\\approx 4{,}78\\\\,\\\\%$ und $P(X \\\\le 20 \\\\mid p = 0{,}4) \\\\approx 56{,}1\\\\,\\\\%$."
+      ],
+      "loesungsweg": "(a) Gesucht: kleinste Zahl $c$ mit $P(X \\\\ge c \\\\mid p = 0{,}3) \\\\le 0{,}05$. Ergebnis: $c = 21$, $P(X \\\\ge 21 \\\\mid p = 0{,}3) \\\\approx 4{,}78\\\\,\\\\%$. Kritischer Bereich: $K = \\\\{21, 22, \\\\ldots, 50\\\\}$. (b) Fehler 2. Art: $\\\\beta = P(X \\\\le 20 \\\\mid n = 50,\\\\, p = 0{,}4) \\\\approx 0{,}561$. Interpretation: Mit ca. $56{,}1\\\\,\\\\%$ Wahrscheinlichkeit wird die Zunahme uebersehen.",
+      "kc": ["KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Ueberblick Stochastik"]
+    },
+    {
+      "id": "ma-qp-q3-105",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen zur Stochastik der Qualifikationsphase sind richtig? (Mehrere Antworten moeglich.)",
+      "optionen": [
+        {
+          "text": "Eine Normalverteilung kann als Naeherung der Binomialverteilung verwendet werden, wenn die Laplace-Bedingung $\\\\sigma > 3$ erfuellt ist.",
+          "richtig": true,
+          "erklaerung": "Richtig. Die Laplace-Bedingung $\\\\sigma = \\\\sqrt{np(1-p)} > 3$ sichert die Guete der Naeherung."
+        },
+        {
+          "text": "Beim Fehler 1. Art wird $H_0$ beibehalten, obwohl $H_1$ gilt.",
+          "richtig": false,
+          "erklaerung": "Falsch. Das ist der Fehler 2. Art. Beim Fehler 1. Art wird $H_0$ abgelehnt, obwohl sie wahr ist."
+        },
+        {
+          "text": "Das Signifikanzniveau $\\\\alpha$ ist eine obere Schranke fuer die Wahrscheinlichkeit des Fehlers 1. Art.",
+          "richtig": true,
+          "erklaerung": "Richtig. Das Signifikanzniveau $\\\\alpha$ begrenzt den Fehler 1. Art nach oben."
+        },
+        {
+          "text": "Bei stetigen Groessen gilt $P(X = a) > 0$ fuer jeden Wert $a$.",
+          "richtig": false,
+          "erklaerung": "Falsch. Bei stetigen Groessen gilt $P(X = a) = 0$ fuer jeden Einzelwert -- Wahrscheinlichkeiten sind nur als Flaecheninhalte sinnvoll."
+        },
+        {
+          "text": "Die Standardabweichung $\\\\sigma$ der Normalverteilung gibt den Abstand vom Maximum zu den Wendepunkten der Glockenkurve an.",
+          "richtig": true,
+          "erklaerung": "Richtig. Die Wendepunkte liegen genau bei $\\\\mu \\\\pm \\\\sigma$."
+        }
+      ],
+      "tipps": [
+        "Gehe jede Aussage einzeln durch und pruefe, ob sie der gelernten Definition entspricht.",
+        "Fehler 1. Art und Fehler 2. Art werden haeufig verwechselt -- merke: 1. Art = H_0 faelschlicherweise abgelehnt.",
+        "Bei stetigen Groessen sind Punktwahrscheinlichkeiten immer null."
+      ],
+      "loesungsweg": "Richtig: (1) Laplace-Bedingung fuer die Naeherung, (3) alpha als obere Schranke fuer Fehler 1. Art, (5) Wendepunkte bei mu +/- sigma. Falsch: (2) vertauscht Fehler 1. und 2. Art; (4) bei stetigen Groessen gilt P(X=a)=0.",
+      "kc": ["KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Ueberblick Stochastik"]
+    }
+  ]
+}

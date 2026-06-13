@@ -1,0 +1,158 @@
+{
+  "thema": "ma-qp-abstaende-winkel",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben zu Abstände und Winkel im Raum (eA). IDs 101–107. Fachliche Prüfung durch die Lehrkraft ausstehend.",
+  "aufgaben": [
+    {
+      "id": "ma-qp-aw-101",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Berechne das Vektorprodukt $\\vec{a} \\times \\vec{b}$ und seinen Betrag für $$\\vec{a} = \\begin{pmatrix}2\\\\1\\\\0\\end{pmatrix}, \\quad \\vec{b} = \\begin{pmatrix}0\\\\1\\\\3\\end{pmatrix}.$$",
+      "eingaben": [
+        { "label": "1. Komponente von $\\vec{a} \\times \\vec{b}$", "antwort": 3, "toleranz": 0, "einheit": "" },
+        { "label": "2. Komponente von $\\vec{a} \\times \\vec{b}$", "antwort": -6, "toleranz": 0, "einheit": "" },
+        { "label": "3. Komponente von $\\vec{a} \\times \\vec{b}$", "antwort": 2, "toleranz": 0, "einheit": "" },
+        { "label": "Betrag $|\\vec{a} \\times \\vec{b}|$", "antwort": 7, "toleranz": 0.01, "einheit": "" }
+      ],
+      "tipps": [
+        "Das Vektorprodukt: $(a_2 b_3 - a_3 b_2,\\; a_3 b_1 - a_1 b_3,\\; a_1 b_2 - a_2 b_1)$.",
+        "Erste Komponente: $1 \\cdot 3 - 0 \\cdot 1 = 3$. Zweite: $0 \\cdot 0 - 2 \\cdot 3 = -6$.",
+        "Dritte Komponente: $2 \\cdot 1 - 1 \\cdot 0 = 2$. Betrag: $\\sqrt{9 + 36 + 4} = \\sqrt{49} = 7$."
+      ],
+      "loesungsweg": "Komponentenweise: $\\vec{a} \\times \\vec{b} = \\begin{pmatrix}1{\\cdot}3 - 0{\\cdot}1\\\\ 0{\\cdot}0 - 2{\\cdot}3\\\\ 2{\\cdot}1 - 1{\\cdot}0\\end{pmatrix} = \\begin{pmatrix}3\\\\-6\\\\2\\end{pmatrix}$. Betrag: $\\sqrt{3^2 + (-6)^2 + 2^2} = \\sqrt{9 + 36 + 4} = \\sqrt{49} = 7$.",
+      "kc": ["Vektorprodukt berechnen", "Betrag eines Vektors"]
+    },
+    {
+      "id": "ma-qp-aw-102",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben sind die Spannvektoren einer Ebene $E$ sowie ein Aufpunkt. Bestimme einen Normalenvektor von $E$ mithilfe des Vektorprodukts und stelle die Koordinatenform auf. $$\\vec{u} = \\begin{pmatrix}1\\\\-1\\\\0\\end{pmatrix}, \\quad \\vec{v} = \\begin{pmatrix}2\\\\0\\\\1\\end{pmatrix}, \\quad A(1 \\mid 0 \\mid 0)$$",
+      "schritte": [
+        {
+          "frage": "Berechne $\\vec{n} = \\vec{u} \\times \\vec{v}$.",
+          "eingaben": [
+            { "label": "1. Komponente von $\\vec{n}$", "antwort": -1, "toleranz": 0, "einheit": "" },
+            { "label": "2. Komponente von $\\vec{n}$", "antwort": -1, "toleranz": 0, "einheit": "" },
+            { "label": "3. Komponente von $\\vec{n}$", "antwort": 2, "toleranz": 0, "einheit": "" }
+          ],
+          "tipps": [
+            "Vektorprodukt: $(u_2 v_3 - u_3 v_2,\\; u_3 v_1 - u_1 v_3,\\; u_1 v_2 - u_2 v_1)$.",
+            "Erste Komp.: $(-1)(1) - (0)(0) = -1$. Zweite: $(0)(2) - (1)(1) = -1$."
+          ]
+        },
+        {
+          "frage": "Stelle die Koordinatenform $ax + by + cz = d$ auf (setze $A$ ein).",
+          "eingaben": [
+            { "label": "$d = \\vec{n} \\cdot \\vec{OA}$", "antwort": -1, "toleranz": 0, "einheit": "" }
+          ],
+          "tipps": [
+            "$d = \\vec{n} \\cdot A = (-1) \\cdot 1 + (-1) \\cdot 0 + 2 \\cdot 0 = -1$.",
+            "Die Koordinatenform lautet: $-x - y + 2z = -1$, gleichwertig $x + y - 2z = 1$."
+          ]
+        }
+      ],
+      "loesungsweg": "Vektorprodukt: $\\vec{n} = \\vec{u} \\times \\vec{v} = \\begin{pmatrix}-1\\\\-1\\\\2\\end{pmatrix}$. Einsetzen von $A(1|0|0)$: $d = -1 \\cdot 1 + (-1) \\cdot 0 + 2 \\cdot 0 = -1$. Koordinatenform: $-x - y + 2z = -1$ bzw. $x + y - 2z = 1$.",
+      "kc": ["Normalenvektor per Vektorprodukt", "Koordinatenform einer Ebene"]
+    },
+    {
+      "id": "ma-qp-aw-103",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Berechne den Abstand des Punktes $P(3 \\mid 2 \\mid 1)$ von der Ebene $E\\colon 2x + y - 2z = 4$.",
+      "eingaben": [
+        { "label": "Abstand $d(P, E)$", "antwort": 0.667, "toleranz": 0.005, "einheit": "" }
+      ],
+      "tipps": [
+        "Formel: $d(P, E) = \\dfrac{|a x_P + b y_P + c z_P - d|}{\\sqrt{a^2 + b^2 + c^2}}$.",
+        "Zähler: $|2 \\cdot 3 + 1 \\cdot 2 + (-2) \\cdot 1 - 4| = |6 + 2 - 2 - 4| = 2$.",
+        "Nenner: $\\sqrt{4 + 1 + 4} = 3$. Abstand: $\\dfrac{2}{3} \\approx 0{,}67$."
+      ],
+      "loesungsweg": "$d(P, E) = \\dfrac{|2{\\cdot}3 + 1{\\cdot}2 + (-2){\\cdot}1 - 4|}{\\sqrt{4 + 1 + 4}} = \\dfrac{|6 + 2 - 2 - 4|}{3} = \\dfrac{2}{3} \\approx 0{,}67$.",
+      "kc": ["Abstand Punkt–Ebene", "Koordinatenform anwenden"]
+    },
+    {
+      "id": "ma-qp-aw-104",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Berechne den Abstand des Punktes $P(1 \\mid 2 \\mid 4)$ von der Ebene $E\\colon x + 2y - 2z = 9$.",
+      "eingaben": [
+        { "label": "Abstand $d(P, E)$", "antwort": 4, "toleranz": 0.01, "einheit": "" }
+      ],
+      "tipps": [
+        "Nutze die Koordinatenform-Formel: Zähler = $|x_P + 2y_P - 2z_P - 9|$.",
+        "Zähler: $|1 + 4 - 8 - 9| = |-12| = 12$.",
+        "Nenner: $\\sqrt{1 + 4 + 4} = 3$. Abstand $= 12/3 = 4$."
+      ],
+      "loesungsweg": "$d(P, E) = \\dfrac{|1 + 2{\\cdot}2 + (-2){\\cdot}4 - 9|}{\\sqrt{1 + 4 + 4}} = \\dfrac{|1 + 4 - 8 - 9|}{3} = \\dfrac{12}{3} = 4$.",
+      "kc": ["Abstand Punkt–Ebene", "Koordinatenform anwenden"]
+    },
+    {
+      "id": "ma-qp-aw-105",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Berechne den Abstand des Punktes $P(2 \\mid 0 \\mid 1)$ von der Geraden $$g\\colon \\vec{x} = \\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix} + t \\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix}.$$",
+      "eingaben": [
+        { "label": "Abstand $d(P, g)$", "antwort": 1.732, "toleranz": 0.005, "einheit": "" }
+      ],
+      "tipps": [
+        "Methode Vektorprodukt: $d = \\dfrac{|\\overrightarrow{AP} \\times \\vec{d}|}{|\\vec{d}|}$. Hier ist $A = O(0|0|0)$.",
+        "$\\overrightarrow{AP} = (2, 0, 1)$. Kreuzprodukt mit $\\vec{d} = (1, 1, 0)$: $\\begin{pmatrix}0{\\cdot}0-1{\\cdot}1\\\\1{\\cdot}1-2{\\cdot}0\\\\2{\\cdot}1-0{\\cdot}1\\end{pmatrix} = \\begin{pmatrix}-1\\\\1\\\\2\\end{pmatrix}$.",
+        "$|\\overrightarrow{AP} \\times \\vec{d}| = \\sqrt{1+1+4} = \\sqrt{6}$. $|\\vec{d}| = \\sqrt{2}$. $d = \\sqrt{6}/\\sqrt{2} = \\sqrt{3} \\approx 1{,}73$."
+      ],
+      "loesungsweg": "$\\overrightarrow{AP} = \\begin{pmatrix}2\\\\0\\\\1\\end{pmatrix}$, $\\vec{d} = \\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix}$. Kreuzprodukt: $\\begin{pmatrix}-1\\\\1\\\\2\\end{pmatrix}$. $d(P, g) = \\dfrac{\\sqrt{(-1)^2+1^2+2^2}}{\\sqrt{2}} = \\dfrac{\\sqrt{6}}{\\sqrt{2}} = \\sqrt{3} \\approx 1{,}73$.",
+      "kc": ["Abstand Punkt–Gerade", "Vektorprodukt-Methode"]
+    },
+    {
+      "id": "ma-qp-aw-106",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Bestimme den Abstand der windschiefen Geraden $$g_1\\colon \\vec{x} = \\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix} + s \\begin{pmatrix}1\\\\0\\\\0\\end{pmatrix}, \\quad g_2\\colon \\vec{x} = \\begin{pmatrix}0\\\\1\\\\2\\end{pmatrix} + t \\begin{pmatrix}0\\\\1\\\\0\\end{pmatrix}.$$",
+      "eingaben": [
+        { "label": "Abstand $d(g_1, g_2)$", "antwort": 2, "toleranz": 0.01, "einheit": "" }
+      ],
+      "tipps": [
+        "Berechne den gemeinsamen Normalenvektor: $\\vec{n} = \\vec{d_1} \\times \\vec{d_2}$.",
+        "$\\vec{n} = \\begin{pmatrix}1\\\\0\\\\0\\end{pmatrix} \\times \\begin{pmatrix}0\\\\1\\\\0\\end{pmatrix} = \\begin{pmatrix}0\\\\0\\\\1\\end{pmatrix}$.",
+        "$\\overrightarrow{A_1 A_2} = (0,1,2)$. $d = \\dfrac{|\\overrightarrow{A_1 A_2} \\cdot \\vec{n}|}{|\\vec{n}|} = \\dfrac{|0+0+2|}{1} = 2$."
+      ],
+      "loesungsweg": "$\\vec{n} = \\vec{d_1} \\times \\vec{d_2} = \\begin{pmatrix}0\\\\0\\\\1\\end{pmatrix}$. $\\overrightarrow{A_1 A_2} = \\begin{pmatrix}0\\\\1\\\\2\\end{pmatrix}$. $d(g_1, g_2) = \\dfrac{|\\overrightarrow{A_1 A_2} \\cdot \\vec{n}|}{|\\vec{n}|} = \\dfrac{|2|}{1} = 2$.",
+      "kc": ["Abstand windschiefer Geraden", "Vektorprodukt als Normalenvektor"]
+    },
+    {
+      "id": "ma-qp-aw-107",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Berechne den Schnittwinkel $\\alpha$ zwischen der Geraden $g$ mit Richtungsvektor $\\vec{d} = \\begin{pmatrix}2\\\\1\\\\2\\end{pmatrix}$ und der $xy$-Ebene ($z = 0$).",
+      "eingaben": [
+        { "label": "Schnittwinkel $\\alpha$ in Grad (gerundet auf eine Dezimalstelle)", "antwort": 41.8, "toleranz": 0.2, "einheit": "°" }
+      ],
+      "tipps": [
+        "Normalenvektor der $xy$-Ebene: $\\vec{n} = (0, 0, 1)$.",
+        "Formel Winkel Gerade–Ebene: $\\sin(\\alpha) = \\dfrac{|\\vec{d} \\cdot \\vec{n}|}{|\\vec{d}| \\cdot |\\vec{n}|}$.",
+        "$\\sin(\\alpha) = \\dfrac{|2|}{\\sqrt{4+1+4} \\cdot 1} = \\dfrac{2}{3}$. Dann $\\alpha = \\arcsin\\!\\left(\\dfrac{2}{3}\\right) \\approx 41{,}8°$."
+      ],
+      "loesungsweg": "$\\vec{n} = (0,0,1)$, $|\\vec{d}| = \\sqrt{4+1+4} = 3$, $|\\vec{n}| = 1$. $\\sin(\\alpha) = \\dfrac{|\\vec{d}\\cdot\\vec{n}|}{3} = \\dfrac{2}{3}$. $\\alpha = \\arcsin\\!\\left(\\dfrac{2}{3}\\right) \\approx 41{,}8°$.",
+      "kc": ["Schnittwinkel Gerade–Ebene", "Normalenvektor der Koordinatenebene"]
+    }
+  ]
+}

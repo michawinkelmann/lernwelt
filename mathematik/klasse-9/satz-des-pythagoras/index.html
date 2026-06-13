@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Satz des Pythagoras — Klasse 9 · Mathematik — Lernwelt</title>
+<meta name="description" content="Der Satz des Pythagoras: Katheten und Hypotenuse, a² + b² = c² am Kästchenbild, Seiten berechnen, die Umkehrung als Winkeltest und Anwendungen von der Rechteckdiagonale bis zum Fernseher.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Satz des Pythagoras</h1>
+  <p class="einleitung">Passt der 55-Zoll-Fernseher ins Regal? Wie hoch fliegt der Drachen am Ende der Schnur? Und steht die neue Wand wirklich im rechten Winkel? Hinter all diesen Fragen steckt derselbe, über 2500 Jahre alte Zusammenhang im <strong>rechtwinkligen Dreieck</strong> — der wohl berühmteste Satz der Mathematik.</p>
+
+  <section aria-labelledby="py-dreieck">
+    <h2 id="py-dreieck">1. Rechtwinklige Dreiecke</h2>
+    <p>Ein Dreieck mit einem $90^\circ$-Winkel heißt <strong>rechtwinklig</strong>. Seine Seiten haben eigene Namen: Die beiden Seiten, die den rechten Winkel einschließen, heißen <strong>Katheten</strong> — wir beschriften sie mit $a$ und $b$. Die dritte Seite heißt <strong>Hypotenuse</strong> und bekommt den Buchstaben $c$. Sie liegt dem rechten Winkel <strong>gegenüber</strong> und ist immer die längste Seite des Dreiecks.</p>
+    <p>So findest du die Hypotenuse sicher: Sie ist die einzige Seite, die <em>nicht</em> am rechten Winkel anliegt — ganz gleich, wie das Dreieck gedreht ist. Verlasse dich also auf den rechten Winkel, nie auf die Lage im Bild.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Im Dreieck $PQR$ liegt der rechte Winkel bei $Q$. Welche Seite ist die Hypotenuse?</summary>
+      <div class="check-antwort"><p>Die Seite $\overline{PR}$: Sie verbindet $P$ und $R$ und liegt damit dem rechten Winkel bei $Q$ gegenüber. $\overline{PQ}$ und $\overline{QR}$ sind die Katheten — sie schließen den rechten Winkel ein.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="py-satz">
+    <h2 id="py-satz">2. Der Satz</h2>
+    <p>Zeichnet man über jeder Seite eines rechtwinkligen Dreiecks ein Quadrat, zeigt sich ein erstaunlicher Zusammenhang zwischen den drei Flächen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Satz des Pythagoras</span>
+      <p class="formel-abgesetzt">$$a^2 + b^2 = c^2$$</p>
+      <p>In Worten: In jedem rechtwinkligen Dreieck sind die beiden <strong>Kathetenquadrate zusammen</strong> genauso groß wie das <strong>Hypotenusenquadrat</strong>. Dabei ist $c$ immer die Hypotenuse. Und ganz wichtig: Der Satz gilt <strong>nur im rechtwinkligen Dreieck</strong>.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="70 -15 340 360" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Rechtwinkliges Dreieck mit den Katheten 3 und 4 und der Hypotenuse 5. An jede Seite ist ein Quadrat angesetzt: 9 Kästchen an der Kathete 3, 16 Kästchen an der Kathete 4 und 25 Kästchen an der Hypotenuse. 9 plus 16 ergibt 25.">
+        <!-- Kathetenquadrate (9 und 16 Kästchen) -->
+        <rect x="90" y="120" width="90" height="90" fill="var(--mathe)" fill-opacity="0.12" stroke="var(--mathe)" stroke-width="1.5"/>
+        <rect x="180" y="210" width="120" height="120" fill="var(--mathe)" fill-opacity="0.12" stroke="var(--mathe)" stroke-width="1.5"/>
+        <!-- Hypotenusenquadrat (25 Kästchen) -->
+        <polygon points="180,120 300,210 390,90 270,0" fill="var(--mathe)" fill-opacity="0.26" stroke="var(--mathe)" stroke-width="1.5"/>
+        <!-- Kästchenraster -->
+        <g stroke="var(--text-leise)" stroke-width="1" stroke-opacity="0.45" fill="none">
+          <path d="M120 120 V210 M150 120 V210 M90 150 H180 M90 180 H180"/>
+          <path d="M210 210 V330 M240 210 V330 M270 210 V330 M180 240 H300 M180 270 H300 M180 300 H300"/>
+          <path d="M204 138 L294 18 M228 156 L318 36 M252 174 L342 54 M276 192 L366 72 M198 96 L318 186 M216 72 L336 162 M234 48 L354 138 M252 24 L372 114"/>
+        </g>
+        <!-- Dreieck mit Markierung des rechten Winkels -->
+        <polygon points="180,120 180,210 300,210" fill="var(--mathe)" fill-opacity="0.05" stroke="var(--mathe)" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M180 196 H194 V210" fill="none" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <!-- Beschriftung der Quadrate -->
+        <g font-size="15" font-weight="600" fill="var(--mathe)" text-anchor="middle">
+          <text x="135" y="160">b = 3<tspan x="135" dy="20">b² = 9</tspan></text>
+          <text x="240" y="265">a = 4<tspan x="240" dy="20">a² = 16</tspan></text>
+          <text x="285" y="100">c = 5<tspan x="285" dy="20">c² = 25</tspan></text>
+        </g>
+      </svg>
+    </div>
+    <p>Zähle nach: Das kleine Kathetenquadrat enthält $9$ Kästchen, das große $16$ — zusammen sind das $9 + 16 = 25$ Kästchen, exakt der Inhalt des Hypotenusenquadrats. Beim Dreieck mit den Katheten $3$ und $4$ ist die Hypotenuse also $5$, denn $5^2 = 25$.</p>
+    <p>Im Kästchenbild oben ist das Dreieck fest — in der Simulation stellst du die Katheten $a$ und $b$ selbst ein. Beobachte, wie alle drei Quadrate mitwachsen, und bearbeite anschließend die Aufträge darunter.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/pythagoras-quadrate/index.html?einbettung=1#a=3&b=4"
+        title="Interaktive Simulation: Quadrate an den Seiten des rechtwinkligen Dreiecks" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/mathematik/pythagoras-quadrate/index.html#a=3&b=4" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Stelle das Preset „3-4-5“ ein und vergleiche mit dem Kästchenbild oben: Wo findest du die $9$, die $16$ und die $25$ wieder? Schiebe dann auf $a = 6$ und $b = 8$ — welches ganzzahlige Tripel entsteht?<br>
+      2. Stelle $a = 4{,}5$ und $b = 6$ ein und lies die Hypotenuse $c$ ab. Genau dieses Dreieck rechnet das erste Beispiel in Abschnitt 3 Schritt für Schritt vor — stimmt dein abgelesener Wert mit $7{,}5\,\text{cm}$ überein?<br>
+      3. Stelle $a = 1{,}5$ und $b = 2$ ein — das Dreieck aus dem Verständnis-Check in Abschnitt 3 (dass dort Meter statt Zentimeter stehen, ändert an der Gleichung nichts). Prüfe $c = 2{,}5$ und erkläre, warum dieses Dreieck ein geschrumpfter Verwandter des $3$-$4$-$5$-Dreiecks ist.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="py-berechnen">
+    <h2 id="py-berechnen">3. Seiten berechnen</h2>
+    <p>Kennst du zwei Seiten eines rechtwinkligen Dreiecks, liefert der Satz die dritte. Der Fahrplan ist immer gleich: Gleichung aufstellen, nach dem gesuchten Quadrat umstellen, Zahlen einsetzen — und ganz zum Schluss die Wurzel ziehen.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Hypotenuse gesucht</span>
+      <p>Die Katheten sind $a = 4{,}5\,\text{cm}$ und $b = 6\,\text{cm}$ lang:</p>
+      <p class="formel-abgesetzt">$$c = \sqrt{a^2 + b^2} = \sqrt{4{,}5^2 + 6^2} = \sqrt{20{,}25 + 36} = \sqrt{56{,}25} = 7{,}5\,\text{cm}$$</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Kathete gesucht</span>
+      <p>Bekannt sind die Hypotenuse $c = 6{,}5\,\text{m}$ und die Kathete $b = 2{,}5\,\text{m}$. Beim Umstellen wird subtrahiert — das Hypotenusenquadrat ist das größte und steht allein:</p>
+      <p class="formel-abgesetzt">$$a = \sqrt{c^2 - b^2} = \sqrt{6{,}5^2 - 2{,}5^2} = \sqrt{42{,}25 - 6{,}25} = \sqrt{36} = 6\,\text{m}$$</p>
+      <p>Typische Falle: Unter der Wurzel steht <em>immer</em> „Hypotenusenquadrat minus Kathetenquadrat“ — niemals andersherum, sonst würde etwas Negatives herauskommen.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Die Katheten eines rechtwinkligen Dreiecks sind $1{,}5\,\text{m}$ und $2\,\text{m}$ lang. Wie lang ist die Hypotenuse?</summary>
+      <div class="check-antwort"><p>$c = \sqrt{1{,}5^2 + 2^2} = \sqrt{2{,}25 + 4} = \sqrt{6{,}25} = 2{,}5\,\text{m}$ — wieder ein Verwandter des $3$-$4$-$5$-Dreiecks, diesmal mit dem Faktor $0{,}5$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="py-umkehrung">
+    <h2 id="py-umkehrung">4. Die Umkehrung</h2>
+    <p>Der Satz funktioniert auch rückwärts — und wird damit zum <strong>Winkeltest</strong>, der ganz ohne Geodreieck auskommt:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Umkehrung des Satzes</span>
+      <p>Gilt in einem Dreieck $a^2 + b^2 = c^2$ für die <strong>längste</strong> Seite $c$, dann ist das Dreieck rechtwinklig. Der rechte Winkel liegt der Seite $c$ gegenüber.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel und Gegenbeispiel</span>
+      <p>Seiten $5$, $12$, $13$: $\;5^2 + 12^2 = 25 + 144 = 169 = 13^2$ — die Gleichung geht auf ✓, das Dreieck ist rechtwinklig.</p>
+      <p>Seiten $4$, $5$, $6$: $\;4^2 + 5^2 = 16 + 25 = 41$, aber $6^2 = 36$. Wegen $41 \neq 36$ geht die Gleichung nicht auf ✗ — dieses Dreieck ist <em>nicht</em> rechtwinklig.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ist ein Dreieck mit den Seiten $7$, $24$ und $25$ rechtwinklig?</summary>
+      <div class="check-antwort"><p>Ja: $7^2 + 24^2 = 49 + 576 = 625 = 25^2$. Nach der Umkehrung des Satzes ist das Dreieck rechtwinklig — der rechte Winkel liegt der längsten Seite ($25$) gegenüber.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="py-anwendungen">
+    <h2 id="py-anwendungen">5. Anwendungen</h2>
+    <p>Jede Diagonale zerlegt ein Rechteck in zwei rechtwinklige Dreiecke — die Diagonale ist dabei die Hypotenuse. Für ein Rechteck mit den Seiten $l$ und $b$ gilt deshalb $d = \sqrt{l^2 + b^2}$. Ein Bilderrahmen von $24\,\text{cm} \times 18\,\text{cm}$ hat zum Beispiel die Diagonale $d = \sqrt{576 + 324} = \sqrt{900} = 30\,\text{cm}$.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Fernseher im 16:9-Format</span>
+      <p>Fernsehergrößen werden über die <strong>Bildschirmdiagonale in Zoll</strong> angegeben ($1\,\text{Zoll} = 2{,}54\,\text{cm}$). Ein Display ist $80\,\text{cm}$ breit und $45\,\text{cm}$ hoch — wegen $80:45 = 16:9$ ein typisches Breitbild:</p>
+      <p class="formel-abgesetzt">$$d = \sqrt{80^2 + 45^2} = \sqrt{6400 + 2025} = \sqrt{8425} \approx 91{,}8\,\text{cm}$$</p>
+      <p>Umgerechnet: $91{,}8 : 2{,}54 \approx 36{,}1$ — im Handel ist das ein „36-Zoll-Fernseher“. In den Übungen rechnest du nach, wie viel Zoll ein Display mit $121\,\text{cm} \times 68\,\text{cm}$ hat.</p>
+    </div>
+    <p>Nach demselben Muster findest du die Länge einer Leiter an der Wand, die Höhe eines Drachens über dem Boden oder die Diagonale eines Fußballtors — überall versteckt sich ein rechtwinkliges Dreieck.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (Gymnasialzweig): Warum gilt der Satz? Der Ergänzungsbeweis</summary>
+    <div class="vertiefung-inhalt">
+      <p>Lege in ein großes Quadrat mit der Seitenlänge $a + b$ vier gleich große rechtwinklige Dreiecke (Katheten $a$ und $b$, Hypotenuse $c$) so in die Ecken, dass in der Mitte ein schräg liegendes Viereck mit der Seitenlänge $c$ frei bleibt. Dieses innere Viereck ist wirklich ein Quadrat: Alle vier Seiten sind $c$ lang, und an jeder Kante des großen Quadrats ergänzen sich die beiden spitzen Dreieckswinkel zu $90^\circ$ — für den Winkel des inneren Vierecks bleibt dort $180^\circ - 90^\circ = 90^\circ$ übrig.</p>
+      <p>Jetzt die Flächenbilanz: großes Quadrat $=$ inneres Quadrat $+$ vier Dreiecke mit je dem Flächeninhalt $\frac{ab}{2}$:</p>
+      <p class="formel-abgesetzt">$$(a + b)^2 = c^2 + 4 \cdot \frac{ab}{2}$$</p>
+      <p>Links die binomische Formel anwenden, rechts zusammenfassen:</p>
+      <p class="formel-abgesetzt">$$a^2 + 2ab + b^2 = c^2 + 2ab \;\Rightarrow\; a^2 + b^2 = c^2$$</p>
+      <p>Auf beiden Seiten $2ab$ subtrahieren — fertig ist der Beweis. Er funktioniert für <em>jedes</em> rechtwinklige Dreieck, nicht nur für besondere Zahlenbeispiele wie $3$-$4$-$5$.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Hypotenuse-Berechnen über den Winkeltest bis zur Raumdiagonale — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

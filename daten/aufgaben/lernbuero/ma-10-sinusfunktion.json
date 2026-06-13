@@ -1,0 +1,257 @@
+{
+  "thema": "ma-10-sinusfunktion",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben — fachliche Pruefung ausstehend",
+  "aufgaben": [
+    {
+      "id": "ma-10-sf-101",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Was ist der Wert von $\\sin(90^\\circ)$?",
+      "optionen": [
+        {
+          "text": "0",
+          "richtig": false,
+          "erklaerung": "$\\sin(0^\\circ) = 0$. Bei $90^\\circ$ ist der Sinus maximal."
+        },
+        {
+          "text": "1",
+          "richtig": true,
+          "erklaerung": "Am Hochpunkt der Sinuskurve bei $90^\\circ$ gilt $\\sin(90^\\circ) = 1$."
+        },
+        {
+          "text": "-1",
+          "richtig": false,
+          "erklaerung": "$\\sin(270^\\circ) = -1$, nicht $\\sin(90^\\circ)$."
+        },
+        {
+          "text": "0,5",
+          "richtig": false,
+          "erklaerung": "$\\sin(30^\\circ) = 0{,}5$, aber nicht $\\sin(90^\\circ)$."
+        }
+      ],
+      "tipps": [
+        "Schau auf die Sinuskurve: Wo liegt ihr hoechster Punkt?",
+        "Die Amplitude der Grundsinusfunktion ist $1$, der Hochpunkt liegt bei $x = 90^\\circ$.",
+        "$\\sin(90^\\circ) = 1$."
+      ],
+      "loesungsweg": "Der Hochpunkt der Sinusfunktion $y = \\sin(x)$ liegt genau bei $x = 90^\\circ$ mit dem Wert $y = 1$.",
+      "kc": [
+        "Periodische Zusammenhaenge"
+      ],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-sf-102",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Bestimme die Amplitude der Funktion $f(x) = 3 \\cdot \\sin(2x) + 1$.",
+      "eingaben": [
+        {
+          "label": "Amplitude",
+          "antwort": 3,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Bei $f(x) = a \\cdot \\sin(b \\cdot x) + d$ ist die Amplitude $|a|$.",
+        "Welchen Wert hat $a$ in dieser Funktion?",
+        "Die Amplitude ist $|3| = 3$."
+      ],
+      "loesungsweg": "In der Funktion $f(x) = a \\cdot \\sin(b \\cdot x) + d$ mit $a = 3$, $b = 2$, $d = 1$ ist die Amplitude $|a| = 3$.",
+      "kc": [
+        "Periodische Zusammenhaenge"
+      ],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-sf-103",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bestimme die Periode der Funktion $f(x) = \\sin(3x)$ in Grad.",
+      "eingaben": [
+        {
+          "label": "Periode in Grad",
+          "antwort": 120,
+          "toleranz": 0.5,
+          "einheit": "Grad"
+        }
+      ],
+      "tipps": [
+        "Bei $f(x) = \\sin(b \\cdot x)$ ist die Periode $\\frac{360^\\circ}{b}$.",
+        "Hier ist $b = 3$.",
+        "Periode $= \\frac{360^\\circ}{3} = 120^\\circ$."
+      ],
+      "loesungsweg": "Die Periode ergibt sich aus $\\frac{360^\\circ}{b} = \\frac{360^\\circ}{3} = 120^\\circ$. Zwischen $0^\\circ$ und $360^\\circ$ passen drei vollstaendige Wellen.",
+      "kc": [
+        "Periodische Zusammenhaenge"
+      ],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-sf-104",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Gondel am Riesenrad hat die Hoehe $h(t) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot t)$ in Metern ($t$ in Minuten). Berechne die Hoehe nach $t = 3$ Minuten.",
+      "eingaben": [
+        {
+          "label": "Hoehe in m",
+          "antwort": 18,
+          "toleranz": 0.1,
+          "einheit": "m"
+        }
+      ],
+      "tipps": [
+        "Setze $t = 3$ ein: $h(3) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot 3)$.",
+        "Berechne das Argument: $30^\\circ \\cdot 3 = 90^\\circ$.",
+        "$\\sin(90^\\circ) = 1$, also $h(3) = 10 + 8 \\cdot 1 = 18$."
+      ],
+      "loesungsweg": "$h(3) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot 3) = 10 + 8 \\cdot \\sin(90^\\circ) = 10 + 8 \\cdot 1 = 18\\,\\text{m}$. Die Gondel ist nach $3$ Minuten auf ihrer groesstmoeglichen Hoehe.",
+      "kc": [
+        "Periodische Zusammenhaenge"
+      ],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-sf-105",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Das Riesenrad aus der Aufgabe hat $h(t) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot t)$. Bestimme: (a) die Periode, (b) die maximale Hoehe, (c) die minimale Hoehe.",
+      "schritte": [
+        {
+          "frage": "Wie gross ist die Periode in Minuten?",
+          "eingaben": [
+            {
+              "label": "Periode in min",
+              "antwort": 12,
+              "toleranz": 0.1
+            }
+          ]
+        },
+        {
+          "frage": "Wie gross ist die maximale Hoehe in Metern?",
+          "eingaben": [
+            {
+              "label": "Max. Hoehe in m",
+              "antwort": 18,
+              "toleranz": 0.1
+            }
+          ]
+        },
+        {
+          "frage": "Wie gross ist die minimale Hoehe in Metern?",
+          "eingaben": [
+            {
+              "label": "Min. Hoehe in m",
+              "antwort": 2,
+              "toleranz": 0.1
+            }
+          ]
+        }
+      ],
+      "tipps": [
+        "Lies $a = 8$, $b = 30$, $d = 10$ direkt ab. Nutze die Schnellregeln.",
+        "Periode $= \\frac{360^\\circ}{30^\\circ} = 12$ Minuten. Groesstwert $= d + |a| = 10 + 8$.",
+        "Kleinster Wert $= d - |a| = 10 - 8 = 2$."
+      ],
+      "loesungsweg": "Aus $f(t) = a \\cdot \\sin(b \\cdot t) + d$ mit $a = 8$, $b = 30$, $d = 10$: Periode $= \\frac{360^\\circ}{30^\\circ} = 12\\,\\text{min}$. Maximum $= d + |a| = 10 + 8 = 18\\,\\text{m}$. Minimum $= d - |a| = 10 - 8 = 2\\,\\text{m}$.",
+      "kc": [
+        "Periodische Zusammenhaenge"
+      ],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-sf-106",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Lies bei der Funktion $f(x) = 2 \\cdot \\sin(x) + 3$ direkt ab: die Amplitude und die Mittellinie (den $y$-Wert, um den die Kurve schwingt).",
+      "eingaben": [
+        {
+          "label": "Amplitude",
+          "antwort": 2,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "Mittellinie y =",
+          "antwort": 3,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Der Faktor vor dem Sinus ist die Amplitude.",
+        "Die Zahl, die hinten addiert wird, hebt die ganze Kurve an — das ist die Mittellinie $d$.",
+        "Amplitude $= |2| = 2$, Mittellinie $y = 3$."
+      ],
+      "loesungsweg": "Bei $f(x) = a \\cdot \\sin(x) + d$ ist die Amplitude $|a|$ und die Mittellinie $y = d$. Hier ist $a = 2$ und $d = 3$, also Amplitude $2$ und Mittellinie $y = 3$. Die Kurve schwingt zwischen $3 - 2 = 1$ und $3 + 2 = 5$.",
+      "kc": [
+        "Periodische Zusammenhaenge"
+      ],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-sf-107",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Wasserstand in einem Hafen schwankt mit Ebbe und Flut: $w(t) = 4 + 1{,}5 \\cdot \\sin(\\ldots)$ in Metern. Bestimme aus Mittellinie und Amplitude den höchsten und den niedrigsten Wasserstand.",
+      "eingaben": [
+        {
+          "label": "höchster Wasserstand",
+          "antwort": 5.5,
+          "toleranz": 0.01,
+          "einheit": "m"
+        },
+        {
+          "label": "niedrigster Wasserstand",
+          "antwort": 2.5,
+          "toleranz": 0.01,
+          "einheit": "m"
+        }
+      ],
+      "tipps": [
+        "Den Term im Sinus brauchst du nicht — höchster und niedrigster Wert hängen nur von Mittellinie und Amplitude ab.",
+        "Größter Wert $= d + |a|$, kleinster Wert $= d - |a|$.",
+        "Hier $d = 4$ und $|a| = 1{,}5$: höchster $= 4 + 1{,}5$, niedrigster $= 4 - 1{,}5$."
+      ],
+      "loesungsweg": "Der Sinus pendelt zwischen $-1$ und $1$. Damit ist der größte Wasserstand $d + |a| = 4 + 1{,}5 = 5{,}5\\,\\text{m}$ (bei Flut) und der kleinste $d - |a| = 4 - 1{,}5 = 2{,}5\\,\\text{m}$ (bei Ebbe). Mittellinie $4\\,\\text{m}$, Schwankung $1{,}5\\,\\text{m}$ — die Dauer einer vollen Tide steckt im Sinus-Argument und wird hier nicht gebraucht.",
+      "kc": [
+        "Periodische Zusammenhaenge"
+      ],
+      "ergaenzung": "lernbuero"
+    }
+  ]
+}

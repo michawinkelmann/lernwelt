@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stromstärke und Spannung — Klasse 7 · Physik — Lernwelt</title>
+<meta name="description" content="Der Stromkreis als Kreislauf: Stromstärke in Ampere, Spannung in Volt, Reihen- und Parallelschaltung und Sicherheit im Umgang mit Strom — mit Schaubildern, Beispielen und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: Schaltbilder und Vergleichsbilder */
+  .strom-figur { margin: var(--abstand-4) 0; }
+  .strom-figur svg { display: block; width: 100%; height: auto; margin: 0 auto; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); }
+  .strom-figur figcaption { text-align: center; font-size: .9rem; color: var(--text-leise); margin-top: var(--abstand-2); }
+</style>
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Stromstärke und Spannung</h1>
+  <p class="einleitung">Du drückst auf den Lichtschalter — sofort wird es hell. Du steckst das Ladekabel ein — der Akku füllt sich. Elektrischer Strom arbeitet überall um dich herum, aber sehen kannst du ihn nicht. Auf dieser Seite lernst du die zwei wichtigsten Größen kennen, mit denen man Strom beschreibt: die <strong>Stromstärke</strong> $I$ („Wie viel fließt?“) und die <strong>Spannung</strong> $U$ („Wie stark ist der Antrieb?“).</p>
+
+  <section aria-labelledby="str-kreislauf">
+    <h2 id="str-kreislauf">1. Der Stromkreis als Kreislauf</h2>
+    <p>Damit ein Lämpchen leuchtet, brauchst du drei Dinge: eine <strong>elektrische Quelle</strong> (zum Beispiel eine Batterie), <strong>Leitungen</strong> und das Lämpchen selbst — den <strong>Verbraucher</strong>. Meist kommt noch ein <strong>Schalter</strong> dazu. Alles zusammen bildet einen <strong>Stromkreis</strong>. Der Name passt genau: Strom fließt nur, wenn der Kreis <em>geschlossen</em> ist. Eine einzige Unterbrechung — ein offener Schalter, ein lockeres Kabel — und überall im Kreis hört der Strom auf zu fließen.</p>
+    <figure class="strom-figur" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schaltbild eines einfachen Stromkreises: Batterie, geschlossener Schalter und Lämpchen sind durch Leitungen zu einem Ring verbunden. Pfeile auf den Leitungen zeigen, dass der Strom im Kreis fließt — vom Pluspol der Batterie durch Schalter und Lämpchen zurück zum Minuspol.">
+        <defs>
+          <marker id="str-pfeil-strom" markerWidth="11" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M 0 0 L 11 5 L 0 10 Z" style="fill: var(--akzent);"/>
+          </marker>
+        </defs>
+        <!-- Leitungen -->
+        <path d="M 170 128 V 70 H 296" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <path d="M 372 70 H 540 V 108" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <path d="M 540 172 V 210 H 170 V 152" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <!-- Batterie: langer dünner Strich = Pluspol, kurzer dicker Strich = Minuspol -->
+        <line x1="146" y1="128" x2="194" y2="128" style="stroke: var(--akzent); stroke-width: 3;"/>
+        <line x1="158" y1="152" x2="182" y2="152" style="stroke: var(--akzent); stroke-width: 6;"/>
+        <text x="204" y="134" style="font-size: 16px; font-weight: 600; fill: var(--text);">+</text>
+        <text x="204" y="160" style="font-size: 16px; font-weight: 600; fill: var(--text);">−</text>
+        <text x="138" y="134" text-anchor="end" style="font-size: 14px; fill: var(--text);">Batterie</text>
+        <text x="138" y="152" text-anchor="end" style="font-size: 12.5px; fill: var(--text-leise);">(Quelle)</text>
+        <!-- Schalter (geschlossen) -->
+        <line x1="304" y1="70" x2="364" y2="70" style="stroke: var(--text); stroke-width: 2.5;"/>
+        <circle cx="300" cy="70" r="4" style="fill: var(--flaeche); stroke: var(--text); stroke-width: 2;"/>
+        <circle cx="368" cy="70" r="4" style="fill: var(--flaeche); stroke: var(--text); stroke-width: 2;"/>
+        <text x="334" y="40" text-anchor="middle" style="font-size: 14px; fill: var(--text);">Schalter (geschlossen)</text>
+        <!-- Lämpchen: Kreis mit Kreuz -->
+        <circle cx="540" cy="140" r="32" style="fill: var(--hauch); stroke: var(--akzent); stroke-width: 2.5;"/>
+        <line x1="517" y1="117" x2="563" y2="163" style="stroke: var(--akzent); stroke-width: 2.5;"/>
+        <line x1="517" y1="163" x2="563" y2="117" style="stroke: var(--akzent); stroke-width: 2.5;"/>
+        <line x1="567" y1="113" x2="583" y2="97" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <line x1="567" y1="167" x2="583" y2="183" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <text x="584" y="145" style="font-size: 14px; fill: var(--text);">Lämpchen</text>
+        <!-- Stromrichtung -->
+        <path d="M 170 118 V 92" style="fill: none; stroke: var(--akzent); stroke-width: 2.5;" marker-end="url(#str-pfeil-strom)"/>
+        <path d="M 210 70 H 256" style="fill: none; stroke: var(--akzent); stroke-width: 2.5;" marker-end="url(#str-pfeil-strom)"/>
+        <path d="M 430 70 H 476" style="fill: none; stroke: var(--akzent); stroke-width: 2.5;" marker-end="url(#str-pfeil-strom)"/>
+        <path d="M 540 178 V 202" style="fill: none; stroke: var(--akzent); stroke-width: 2.5;" marker-end="url(#str-pfeil-strom)"/>
+        <path d="M 390 210 H 336" style="fill: none; stroke: var(--akzent); stroke-width: 2.5;" marker-end="url(#str-pfeil-strom)"/>
+        <text x="355" y="243" text-anchor="middle" style="font-size: 14px; font-weight: 600; fill: var(--akzent);">Der Strom fließt im Kreis</text>
+      </svg>
+      <figcaption>Ein einfacher Stromkreis: Batterie, Schalter und Lämpchen sind zu einem Ring verbunden. Nur wenn der Schalter geschlossen ist, fließt der Strom — im Kreis, immer weiter.</figcaption>
+    </figure>
+    <p>Was da fließt, kannst du dir gut mit einem Vergleich vorstellen: einem <strong>Wasserkreislauf</strong>. Eine Pumpe drückt Wasser durch Rohre, das strömende Wasser treibt unterwegs ein Wasserrad an — und fließt dann zurück zur Pumpe. Wichtig: Das Wasser wird dabei <em>nicht weniger</em>. Es gibt nur Energie an das Rad ab. Genauso ist es im Stromkreis: Der Strom wird im Lämpchen <strong>nicht verbraucht</strong> — was hineinfließt, fließt auch wieder hinaus. Das Lämpchen wandelt nur <strong>elektrische Energie</strong> in Licht und Wärme um.</p>
+    <figure class="strom-figur" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vergleichsbild Wasserkreislauf: Eine Pumpe, Rohre und ein Wasserrad bilden einen geschlossenen Kreislauf. Pfeile zeigen, wie das Wasser im Kreis strömt. Die Pumpe wirkt wie die Batterie, das Wasserrad wie das Lämpchen.">
+        <defs>
+          <marker id="str-pfeil-wasser" markerWidth="11" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M 0 0 L 11 5 L 0 10 Z" style="fill: var(--mathe);"/>
+          </marker>
+        </defs>
+        <!-- Rohre -->
+        <path d="M 170 104 V 70 H 540 V 106" style="fill: none; stroke: var(--linie); stroke-width: 9;"/>
+        <path d="M 540 174 V 210 H 170 V 176" style="fill: none; stroke: var(--linie); stroke-width: 9;"/>
+        <!-- Wasserströmung -->
+        <path d="M 170 98 V 82" style="fill: none; stroke: var(--mathe); stroke-width: 3;" marker-end="url(#str-pfeil-wasser)"/>
+        <path d="M 230 70 H 280" style="fill: none; stroke: var(--mathe); stroke-width: 3;" marker-end="url(#str-pfeil-wasser)"/>
+        <path d="M 420 70 H 470" style="fill: none; stroke: var(--mathe); stroke-width: 3;" marker-end="url(#str-pfeil-wasser)"/>
+        <path d="M 380 210 H 330" style="fill: none; stroke: var(--mathe); stroke-width: 3;" marker-end="url(#str-pfeil-wasser)"/>
+        <!-- Pumpe -->
+        <circle cx="170" cy="140" r="34" style="fill: var(--hauch); stroke: var(--akzent); stroke-width: 2.5;"/>
+        <text x="170" y="145" text-anchor="middle" style="font-size: 14px; fill: var(--text);">Pumpe</text>
+        <!-- Wasserrad mit Speichen -->
+        <circle cx="540" cy="140" r="32" style="fill: var(--hauch); stroke: var(--akzent); stroke-width: 2.5;"/>
+        <line x1="508" y1="140" x2="572" y2="140" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <line x1="524" y1="112" x2="556" y2="168" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <line x1="524" y1="168" x2="556" y2="112" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <circle cx="540" cy="140" r="4" style="fill: var(--akzent);"/>
+        <text x="584" y="145" style="font-size: 14px; fill: var(--text);">Wasserrad</text>
+        <!-- Beschriftungen -->
+        <text x="355" y="42" text-anchor="middle" style="font-size: 14px; font-weight: 600; fill: var(--mathe);">Das Wasser strömt im Kreis</text>
+        <text x="170" y="246" text-anchor="middle" style="font-size: 13px; fill: var(--text-leise);">wie die Batterie</text>
+        <text x="540" y="246" text-anchor="middle" style="font-size: 13px; fill: var(--text-leise);">wie das Lämpchen</text>
+      </svg>
+      <figcaption>Der Wasserkreislauf als Vergleich: Die Pumpe treibt das Wasser an wie die Batterie den Strom. Das Wasserrad nutzt die Energie des Wassers wie das Lämpchen die des Stroms — und das Wasser wird dabei so wenig verbraucht wie der Strom.</figcaption>
+    </figure>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p><strong>Strom fließt nur im geschlossenen Stromkreis.</strong> Er fließt im Kreis und wird dabei nicht verbraucht. Was das Lämpchen „verbraucht“, ist <strong>elektrische Energie</strong> — sie wird in Licht und Wärme umgewandelt. Die Batterie liefert diese Energie und treibt den Strom an.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Das Lämpchen bleibt dunkel — woran kann es liegen?</summary>
+      <div class="check-antwort"><p>Entweder fehlt der Antrieb — die Batterie ist leer oder falsch eingesetzt — oder der Kreis ist irgendwo unterbrochen: Der Schalter ist offen, ein Kabel sitzt locker, oder das Lämpchen selbst ist durchgebrannt. Dann ist der dünne Draht in seinem Inneren gerissen — auch das ist eine Unterbrechung. Prüfe den Stromkreis am besten Stück für Stück.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="str-stromstaerke">
+    <h2 id="str-stromstaerke">2. Die Stromstärke I — wie viel fließt?</h2>
+    <p>Durch ein Wasserrohr kann viel oder wenig Wasser strömen. Genauso im Stromkreis: Es kann viel oder wenig elektrische Ladung unterwegs sein. Die <strong>Stromstärke</strong> gibt an, <strong>wie viel Ladung in jeder Sekunde</strong> durch die Leitung fließt. Ihr Formelzeichen ist $I$, ihre Einheit das <strong>Ampere</strong> (kurz: A) — benannt nach dem französischen Forscher André-Marie Ampère.</p>
+    <p>Viele Ströme im Alltag sind kleiner als ein Ampere. Dann rechnet man mit <strong>Milliampere</strong> (mA) — „milli“ bedeutet Tausendstel:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Stromstärke</span>
+      <p class="formel-abgesetzt">$$1\,\text{A} = 1000\,\text{mA}$$</p>
+      <p>Von mA nach A: durch $1000$ teilen. Von A nach mA: mal $1000$. Beispiele: $250\,\text{mA} = 0{,}25\,\text{A}$ und $0{,}8\,\text{A} = 800\,\text{mA}$.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Typische Stromstärken</span>
+      <p>Leuchtdiode (LED): etwa $20\,\text{mA}$ · Taschenlampen-Lämpchen: etwa $0{,}3\,\text{A}$ · Handy-Ladegerät: etwa $1$ bis $2\,\text{A}$ · Wasserkocher: etwa $8\,\text{A}$.</p>
+    </div>
+    <p>Gemessen wird die Stromstärke mit dem <strong>Amperemeter</strong> (Strommessgerät). Damit es zählen kann, wie viel hindurchfließt, muss der ganze Strom durch das Messgerät hindurch: Du baust es <strong>in Reihe</strong> in den Stromkreis ein — der Kreis wird an einer Stelle geöffnet, und das Amperemeter füllt die Lücke. Es funktioniert wie eine Wasseruhr, durch die das ganze Wasser hindurchmuss.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Sind 500 mA mehr oder weniger als 1 A?</summary>
+      <div class="check-antwort"><p>Weniger: $500\,\text{mA} = 0{,}5\,\text{A}$ — also genau die Hälfte von $1\,\text{A}$. „Milli“ bedeutet Tausendstel, deshalb teilst du beim Umrechnen in Ampere durch $1000$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="str-spannung">
+    <h2 id="str-spannung">3. Die Spannung U — der Antrieb</h2>
+    <p>Von allein fließt kein Strom. Die Ladungen brauchen einen <strong>Antrieb</strong> — und den liefert die Quelle. Wie stark dieser Antrieb ist, sagt die <strong>Spannung</strong>: Formelzeichen $U$, Einheit <strong>Volt</strong> (kurz: V), benannt nach Alessandro Volta. Im Wasserbild ist die Spannung der <strong>Druck</strong>, den die Pumpe aufbaut: Je größer der Druck, desto kräftiger strömt das Wasser. Genauso gilt am selben Lämpchen: Je größer die Spannung, desto mehr Strom fließt — und desto heller leuchtet es.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Typische Spannungen</span>
+      <p>Mignonzelle (AA-Batterie): $1{,}5\,\text{V}$ · Flachbatterie: $4{,}5\,\text{V}$ · Fahrraddynamo: $6\,\text{V}$ · Autobatterie: $12\,\text{V}$ · Steckdose: $230\,\text{V}$ · Hochspannungsleitung: bis $380\,000\,\text{V}$.</p>
+    </div>
+    <p>In einer Taschenlampe stecken oft zwei Batterien <strong>hintereinander</strong> — Pluspol an Minuspol. Ihre Spannungen <strong>addieren sich</strong> dann: Zwei 1,5-V-Batterien ergeben zusammen $3\,\text{V}$. So kommen Geräte mit wenigen Batterien auf einen kräftigeren Antrieb.</p>
+    <p>Gemessen wird die Spannung mit dem <strong>Voltmeter</strong>. Anders als das Amperemeter wird es <strong>parallel</strong> angeschlossen: Der Stromkreis bleibt geschlossen, und du hältst die beiden Messleitungen zusätzlich an zwei Punkte — zum Beispiel an die beiden Anschlüsse des Lämpchens. Das Voltmeter vergleicht diese zwei Punkte und zeigt an, wie stark der Antrieb <em>zwischen</em> ihnen ist.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p><strong>Stromstärke $I$</strong> in Ampere (A): wie viel Ladung pro Sekunde fließt — Amperemeter <strong>in Reihe</strong>.<br>
+      <strong>Spannung $U$</strong> in Volt (V): wie stark der Antrieb ist — Voltmeter <strong>parallel</strong>.<br>
+      Die Spannung „fließt“ nicht: Sie liegt <strong>zwischen zwei Punkten</strong> an.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="str-schaltungen">
+    <h2 id="str-schaltungen">4. Reihen- und Parallelschaltung</h2>
+    <p>Zwei Lämpchen, eine Batterie — wie verbindest du sie? Es gibt zwei Grundmuster, und sie verhalten sich erstaunlich unterschiedlich.</p>
+    <figure class="strom-figur" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zwei Schaltbilder im Vergleich: Links die Reihenschaltung — zwei Lämpchen liegen hintereinander im selben Stromkreis, es gibt nur einen Stromweg. Rechts die Parallelschaltung — jedes der beiden Lämpchen hat seinen eigenen Zweig zwischen den Leitungen der Batterie, es gibt zwei Stromwege.">
+        <!-- Reihenschaltung (links) -->
+        <text x="180" y="34" text-anchor="middle" style="font-size: 15px; font-weight: 600; fill: var(--text);">Reihenschaltung</text>
+        <text x="180" y="56" text-anchor="middle" style="font-size: 13px; fill: var(--text-leise);">nur ein Stromweg</text>
+        <path d="M 70 80 H 110 M 150 80 H 210 M 250 80 H 290" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <path d="M 70 80 V 235 H 164" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <path d="M 192 235 H 290 V 80" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <circle cx="130" cy="80" r="20" style="fill: var(--hauch); stroke: var(--akzent); stroke-width: 2.5;"/>
+        <line x1="116" y1="66" x2="144" y2="94" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <line x1="116" y1="94" x2="144" y2="66" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <circle cx="230" cy="80" r="20" style="fill: var(--hauch); stroke: var(--akzent); stroke-width: 2.5;"/>
+        <line x1="216" y1="66" x2="244" y2="94" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <line x1="216" y1="94" x2="244" y2="66" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <line x1="170" y1="219" x2="170" y2="251" style="stroke: var(--akzent); stroke-width: 3;"/>
+        <line x1="186" y1="227" x2="186" y2="243" style="stroke: var(--akzent); stroke-width: 6;"/>
+        <text x="178" y="272" text-anchor="middle" style="font-size: 12.5px; fill: var(--text-leise);">Batterie</text>
+        <!-- Parallelschaltung (rechts) -->
+        <text x="520" y="34" text-anchor="middle" style="font-size: 15px; font-weight: 600; fill: var(--text);">Parallelschaltung</text>
+        <text x="520" y="56" text-anchor="middle" style="font-size: 13px; fill: var(--text-leise);">jede Lampe hat ihren eigenen Weg</text>
+        <path d="M 420 80 H 620" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <path d="M 420 235 H 620" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <path d="M 420 80 V 150 M 420 166 V 235" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <path d="M 520 80 V 137 M 520 177 V 235" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <path d="M 620 80 V 137 M 620 177 V 235" style="fill: none; stroke: var(--text); stroke-width: 2.5;"/>
+        <line x1="404" y1="150" x2="436" y2="150" style="stroke: var(--akzent); stroke-width: 3;"/>
+        <line x1="412" y1="166" x2="428" y2="166" style="stroke: var(--akzent); stroke-width: 6;"/>
+        <text x="398" y="162" text-anchor="end" style="font-size: 12.5px; fill: var(--text-leise);">Batterie</text>
+        <circle cx="520" cy="157" r="20" style="fill: var(--hauch); stroke: var(--akzent); stroke-width: 2.5;"/>
+        <line x1="506" y1="143" x2="534" y2="171" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <line x1="506" y1="171" x2="534" y2="143" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <circle cx="620" cy="157" r="20" style="fill: var(--hauch); stroke: var(--akzent); stroke-width: 2.5;"/>
+        <line x1="606" y1="143" x2="634" y2="171" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <line x1="606" y1="171" x2="634" y2="143" style="stroke: var(--akzent); stroke-width: 2;"/>
+        <circle cx="520" cy="80" r="3.5" style="fill: var(--text);"/>
+        <circle cx="520" cy="235" r="3.5" style="fill: var(--text);"/>
+      </svg>
+      <figcaption>Links: Reihenschaltung — der Strom muss nacheinander durch beide Lämpchen. Rechts: Parallelschaltung — der Strom verzweigt sich, jedes Lämpchen hat seinen eigenen Zweig.</figcaption>
+    </figure>
+    <p><strong>Reihenschaltung:</strong> Die Lämpchen liegen <strong>hintereinander</strong> in einem einzigen Kreis — der Strom hat nur einen Weg. Die beiden Lämpchen müssen sich den Antrieb der Batterie <strong>teilen</strong>, darum leuchten sie <strong>dunkler</strong>, als ein einzelnes Lämpchen es würde. Und: Brennt ein Lämpchen durch, ist der Kreis unterbrochen — <strong>alle gehen aus</strong>. So war es bei alten Weihnachtsbaum-Lichterketten: ein defektes Lämpchen, und die ganze Kette blieb dunkel.</p>
+    <p><strong>Parallelschaltung:</strong> Jedes Lämpchen bekommt seinen <strong>eigenen Zweig</strong>, beide hängen direkt an der Batterie. Jedes bekommt den <strong>vollen Antrieb</strong> und leuchtet so hell wie allein. Fällt eines aus, fließt im anderen Zweig weiter Strom — <strong>der Rest leuchtet weiter</strong>. Genau so ist dein Zuhause verkabelt: Alle Steckdosen und Lampen sind <strong>parallel</strong> an die $230\,\text{V}$ des Stromnetzes angeschlossen. Deshalb kannst du den Fernseher ausschalten, ohne dass der Kühlschrank ausgeht.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p><strong>Reihenschaltung:</strong> ein Stromweg — die Lämpchen leuchten dunkler, ein Ausfall legt alles still.<br>
+      <strong>Parallelschaltung:</strong> mehrere Stromwege — volle Helligkeit, die Geräte arbeiten unabhängig voneinander. So ist die Hausinstallation gebaut.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Lämpchen kaputt, ganze Kette aus — warum?</summary>
+      <div class="check-antwort"><p>Die Lämpchen sind in <strong>Reihe</strong> geschaltet: Der Strom hat nur einen einzigen Weg, und der führt durch jedes Lämpchen. Brennt eines durch, ist der Stromkreis an dieser Stelle unterbrochen — und nirgendwo in der Kette kann noch Strom fließen. In einer Parallelschaltung würden die übrigen Lämpchen weiterleuchten.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="str-sicherheit">
+    <h2 id="str-sicherheit">5. Sicherheit im Umgang mit Strom</h2>
+    <p>Strom aus der Steckdose ist ein zuverlässiger Helfer — aber er verlangt Respekt. Gefährlich wird es, wenn Strom durch den <strong>menschlichen Körper</strong> fließt. Unser Körper leitet Strom, denn er besteht zum großen Teil aus salzhaltigem Wasser. Schon Stromstärken ab etwa $30\,\text{mA}$ können das Herz aus dem Takt bringen — das ist weniger Strom, als ein kleines Lämpchen braucht.</p>
+    <p>Warum ist die Steckdose gefährlich, eine Batterie aber nicht? Es liegt an der <strong>Spannung</strong>. Die $1{,}5\,\text{V}$ einer Batterie sind ein viel zu schwacher Antrieb, um durch deinen Körper einen spürbaren Strom zu treiben — eine Batterie kannst du gefahrlos anfassen. Die $230\,\text{V}$ der Steckdose sind dagegen ein so starker Antrieb, dass ein lebensgefährlicher Strom durch den Körper fließen kann. Mit nasser Haut leitet der Körper noch besser — darum sind Wasser und Elektrogeräte eine besonders schlechte Kombination.</p>
+    <p>Zum Glück ist das Stromnetz zu Hause mehrfach geschützt. Die <strong>Sicherung</strong> im Sicherungskasten überwacht die Stromstärke: Fließt zu viel Strom — etwa weil zu viele Geräte an einer Leitung hängen oder ein Defekt vorliegt —, <strong>unterbricht sie den Stromkreis automatisch</strong>, bevor die Leitungen heiß werden. Viele Häuser haben zusätzlich einen <strong>FI-Schutzschalter</strong>: Er bemerkt schon winzige Ströme, die einen falschen Weg nehmen — zum Beispiel durch einen Menschen —, und schaltet blitzschnell ab.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Sicherheitsregeln</span>
+      <p>· Niemals Gegenstände in Steckdosen stecken.<br>
+      · Geräte mit beschädigtem Kabel nicht benutzen — einer erwachsenen Person Bescheid sagen.<br>
+      · Elektrogeräte fern von Badewanne und Waschbecken halten.<br>
+      · Stecker am Gehäuse aus der Steckdose ziehen, nie am Kabel.<br>
+      · Im Unterricht: Experimente nur mit Batterien oder den Netzgeräten der Schule — niemals mit der Steckdose.</p>
+    </div>
+    <p>Mit diesen Regeln ist Elektrizität gut beherrschbar — Millionen Haushalte nutzen sie jeden Tag sicher.</p>
+  <p>Größen, Einheiten und Messgeräte sicher unterscheiden: der <a href="../../../lernspiele/einheiten-sortierer/index.html">Einheiten-Sortierer</a> im Trainingsraum macht daraus ein Tempospiel.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (Gymnasialzweig): Elektronen — und Spannung ohne Strom</summary>
+    <div class="vertiefung-inhalt">
+      <p>Was bewegt sich eigentlich im Draht? In Metallen sind winzige, negativ geladene Teilchen frei beweglich: die <strong>Elektronen</strong>. Die Batterie schiebt sie an — sie wandern vom Minuspol durch den Stromkreis zum Pluspol. Das Erstaunliche: Die Elektronen selbst kommen dabei nur im Schneckentempo voran, oft weniger als einen Millimeter pro Sekunde. Trotzdem leuchtet die Lampe sofort, wenn du den Schalter schließt. Der Grund: Die Leitung ist überall schon voller Elektronen — wie eine Fahrradkette, die komplett um beide Zahnräder gespannt ist. Drückst du vorn aufs Pedal, dreht sich das Hinterrad im selben Moment mit, obwohl kein einzelnes Kettenglied weit gewandert ist. Genauso setzen sich beim Einschalten <em>alle</em> Elektronen im Kreis gleichzeitig in Bewegung.</p>
+      <p>Übrigens: Lange bevor man die Elektronen kannte, hatte man die „technische Stromrichtung“ festgelegt — von Plus nach Minus. Die Elektronen laufen also genau andersherum. Beide Sprechweisen sind bis heute üblich; in Schaltbildern zeigt man meist die technische Stromrichtung.</p>
+      <p>Und warum kann es <strong>Spannung ohne Strom</strong> geben? Denk an einen Wasserturm mit geschlossenem Hahn: Der Wasserdruck ist da — aber nichts fließt. Genauso bei einer Batterie in der Schublade: Zwischen Plus- und Minuspol besteht die volle Spannung von $1{,}5\,\text{V}$, der Antrieb steht bereit. Solange aber kein geschlossener Stromkreis die Pole verbindet, fließt kein Strom. Spannung beschreibt den <em>Antrieb</em>, nicht den <em>Fluss</em>. Umgekehrt geht es nicht: Ohne Spannung kommt kein Strom zustande.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben vom Stromkreis über das Umrechnen von Milliampere bis zur Sicherheit — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

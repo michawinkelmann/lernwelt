@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minenfeld — Pausenraum · Lernwelt</title>
+<meta name="description" content="Minesweeper-Klassiker zum Knobeln: Zahlen lesen, Felder aufdecken, Fahnen setzen — in drei Größen, mit lokaler Bestenliste für das 9×9-Feld.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+<style>
+/* Seitenspezifische Stile fürs Minenfeld (Gerüst-Stile kommen aus main.css) */
+#spiel-wurzel .spiel-flaeche { min-height: 0; }
+.mf-innen { padding: 12px; }
+.mf-wahl { border: 0; padding: 0; margin: 0 0 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; }
+.mf-wahl legend { float: left; padding: 0 8px 0 0; font-weight: 700; }
+.mf-stufe { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; cursor: pointer; }
+.mf-scroll { overflow-x: auto; touch-action: pan-x pan-y; padding-bottom: 4px; }
+.mf-gitter { display: grid; gap: 3px; width: max-content; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.mf-zelle { width: 36px; height: 36px; padding: 0; font: 700 1.05rem/1 var(--schrift); border: 1.5px solid var(--linie); border-radius: 4px; background: var(--hauch); color: var(--text); cursor: pointer; touch-action: manipulation; }
+.mf-zelle:not(:disabled):hover { border-color: var(--akzent); }
+.mf-zelle:focus-visible { outline: 3px solid var(--akzent); outline-offset: 1px; position: relative; z-index: 1; }
+.mf-zelle.mf-offen { background: var(--flaeche); cursor: default; }
+.mf-zelle.mf-offen:disabled { color: var(--text); opacity: 1; } /* Zahlen bleiben kräftig lesbar */
+.mf-zelle.mf-offen[data-z="1"] { color: var(--mathe); }
+.mf-zelle.mf-offen[data-z="2"] { color: var(--ok); }
+.mf-zelle.mf-offen[data-z="3"] { color: var(--fehler); }
+.mf-zelle.mf-offen[data-z="4"] { color: var(--info); }
+.mf-zelle.mf-offen[data-z="5"] { color: var(--physik); }
+.mf-zelle.mf-offen.mf-boom { background: var(--fehler); color: var(--bg); border-color: var(--fehler); }
+.mf-falsch { color: var(--fehler); font-weight: 800; }
+.mf-status { margin: 8px 0 0; font-weight: 600; min-height: 1.4em; }
+@media (prefers-reduced-motion: no-preference) {
+  .mf-anim { animation: mf-wackel 0.45s ease-out 1; }
+  @keyframes mf-wackel { 0% { transform: scale(1); } 35% { transform: scale(1.4); } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
+}
+@media (max-width: 480px) {
+  .mf-innen { padding: 8px 2px; }
+  .mf-gitter { gap: 2px; }
+}
+</style>
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Minenfeld</h1>
+  <p class="einleitung">Die Zahlen verraten, wo die Minen liegen: logisch kombinieren, Felder aufdecken, Fahnen setzen — die Denkpause schlechthin.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <ul>
+        <li>Jede Zahl sagt, wie viele der <b>acht Nachbarfelder</b> eine Mine enthalten. Ein leeres Feld hat keine Minen-Nachbarn — beim Aufdecken öffnet sich die ganze freie Umgebung von selbst.</li>
+        <li><b>Aufdecken:</b> Klick bzw. kurzes Tippen. Keine Sorge: Der allererste Klick ist nie eine Mine — die Minen werden erst danach verteilt, mit Sicherheitsabstand rund um dein Startfeld.</li>
+        <li><b>Fahne setzen:</b> Rechtsklick, langer Druck (ca. eine halbe Sekunde) oder Taste <kbd>F</kbd> auf dem gerade fokussierten Feld. Der Marker wechselt im Kreis: 🚩 (sichere Mine) → ? (unsicher) → leer. Felder mit 🚩 lassen sich nicht versehentlich aufdecken.</li>
+        <li>Oben siehst du den <b>Minenzähler</b> (Minen minus gesetzte Fahnen) und die laufende Zeit. Gewonnen hast du, wenn alle Felder ohne Mine offen sind — die Fahnen müssen dafür nicht stimmen.</li>
+        <li><b>Drei Größen:</b> Klein (9×9, 10 Minen), Mittel (12×12, 22 Minen), Groß (16×16, 40 Minen). Die <b>Bestenliste gibt es nur für Klein</b> — so bleiben die Zeiten vergleichbar. Bei Mittel und Groß zählt der Sieg für dich selbst; auf schmalen Bildschirmen kannst du das große Feld seitlich verschieben.</li>
+        <li>Eine aufgedeckte Mine beendet die Runde (✗) — alle Minen werden gezeigt, und du kannst in Ruhe nachschauen, wo die Logik gehakt hat. Einfach nochmal versuchen!</li>
+      </ul>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+import * as spiel from "./spiel.js";
+starteSpielSeite(spiel);
+</script>
+</body>
+</html>

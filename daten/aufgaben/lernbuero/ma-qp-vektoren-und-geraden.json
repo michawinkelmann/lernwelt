@@ -1,0 +1,230 @@
+{
+  "thema": "ma-qp-vektoren-und-geraden",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben (Praefix ma-qp-vg, ab 101). Zur fachlichen Pruefung durch die Lehrkraft.",
+  "aufgaben": [
+    {
+      "id": "ma-qp-vg-101",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz (eA): Gegeben sind die Eckpunkte eines Dreiecks: $A(0 \\mid 0 \\mid 0)$, $B(3 \\mid 4 \\mid 0)$ und $C(0 \\mid 0 \\mid 5)$. a) Berechne die Länge aller drei Seiten. b) Bestimme den Umfang des Dreiecks (auf zwei Dezimalen).",
+      "eingaben": [
+        {
+          "label": "$|\\overrightarrow{AB}|$",
+          "antwort": 5,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "$|\\overrightarrow{BC}|$",
+          "antwort": 7.07,
+          "toleranz": 0.05,
+          "einheit": ""
+        },
+        {
+          "label": "$|\\overrightarrow{CA}|$",
+          "antwort": 5,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "Umfang",
+          "antwort": 17.07,
+          "toleranz": 0.05,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Berechne zuerst jeden Verbindungsvektor mit „Spitze minus Fuß“: $\\overrightarrow{AB} = B - A$, $\\overrightarrow{BC} = C - B$, $\\overrightarrow{CA} = A - C$.",
+        "Betrag-Formel: $|\\vec v| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Für $\\overrightarrow{AB} = (3 \\mid 4 \\mid 0)$ ergibt sich $\\sqrt{9 + 16 + 0}$.",
+        "$|\\overrightarrow{BC}| = \\sqrt{(-3)^2 + (-4)^2 + 5^2} = \\sqrt{9 + 16 + 25} = \\sqrt{50} = 5\\sqrt{2} \\approx 7{,}07$. Der Umfang ist die Summe aller drei Seiten."
+      ],
+      "loesungsweg": "Verbindungsvektoren: $\\overrightarrow{AB} = (3 \\mid 4 \\mid 0)$, $\\overrightarrow{BC} = (-3 \\mid -4 \\mid 5)$, $\\overrightarrow{CA} = (0 \\mid 0 \\mid -5)$. Beträge: $|\\overrightarrow{AB}| = \\sqrt{9 + 16 + 0} = \\sqrt{25} = 5$, $|\\overrightarrow{BC}| = \\sqrt{9 + 16 + 25} = \\sqrt{50} = 5\\sqrt{2} \\approx 7{,}07$, $|\\overrightarrow{CA}| = \\sqrt{0 + 0 + 25} = 5$. Umfang $= 5 + 5\\sqrt{2} + 5 = 10 + 5\\sqrt{2} \\approx 17{,}07$.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Raumanschauung und Koordinatisierung (QP)"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-102",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Berechne den Mittelpunkt $M$ der Strecke $\\overline{AB}$ mit $A(2 \\mid 4 \\mid 6)$ und $B(8 \\mid 2 \\mid 0)$. Der Mittelpunkt liegt auf halbem Weg von $A$ nach $B$: $\\vec m = \\vec a + \\frac{1}{2} \\cdot \\overrightarrow{AB}$ — oder kürzer: $M = \\frac{A + B}{2}$ komponentenweise.",
+      "eingaben": [
+        {
+          "label": "$x_1$-Koordinate von $M$",
+          "antwort": 5,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "$x_2$-Koordinate von $M$",
+          "antwort": 3,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "$x_3$-Koordinate von $M$",
+          "antwort": 3,
+          "toleranz": 0.01,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Der Mittelpunkt liegt auf halbem Weg: $\\vec m = \\vec a + \\frac{1}{2} \\cdot \\overrightarrow{AB}$.",
+        "Berechne zuerst $\\overrightarrow{AB} = B - A = (6 \\mid -2 \\mid -6)$, dann $\\frac{1}{2} \\cdot \\overrightarrow{AB} = (3 \\mid -1 \\mid -3)$.",
+        "Addiere $\\vec a + \\frac{1}{2} \\cdot \\overrightarrow{AB} = (2 \\mid 4 \\mid 6) + (3 \\mid -1 \\mid -3)$. Oder direkt: $M = \\left(\\frac{2+8}{2} \\mid \\frac{4+2}{2} \\mid \\frac{6+0}{2}\\right)$."
+      ],
+      "loesungsweg": "$\\overrightarrow{AB} = B - A = (6 \\mid -2 \\mid -6)$. Mittelpunkt: $\\vec m = \\vec a + \\frac{1}{2} \\cdot \\overrightarrow{AB} = (2 \\mid 4 \\mid 6) + (3 \\mid -1 \\mid -3) = (5 \\mid 3 \\mid 3)$. Also $M(5 \\mid 3 \\mid 3)$. Probe: $|\\overrightarrow{AM}| = |(3 \\mid -1 \\mid -3)| = \\sqrt{9+1+9} = \\sqrt{19}$ — gleich groß wie $|\\overrightarrow{MB}|$.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Raumanschauung und Koordinatisierung (QP)"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-103",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ergänze die Parameterdarstellung der Geraden durch $P(1 \\mid 2 \\mid 0)$ mit Richtungsvektor $\\vec u = (2 \\mid 0 \\mid 1)$.",
+      "text": "Die Gerade durch $P(1 \\mid 2 \\mid 0)$ mit Richtungsvektor $\\vec u = (2 \\mid 0 \\mid 1)$ hat die Parameterform $\\vec x = \\vec p + t \\cdot \\vec u$. Der Stützvektor ist ___. Der Richtungsvektor ist ___. Der Punkt $Q$ bei $t = 2$ hat die erste Koordinate $x_1 = ___$.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "(1|2|0)",
+          "optionen": [
+            "(1|2|0)",
+            "(2|0|1)",
+            "(0|0|0)"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "(2|0|1)",
+          "optionen": [
+            "(2|0|1)",
+            "(1|2|0)",
+            "(1|0|0)"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "5",
+          "optionen": [
+            "5",
+            "3",
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "tipps": [
+        "Der Stützvektor ist der Ortsvektor des gegebenen Punktes $P$ — er hat dieselben Koordinaten wie $P$.",
+        "Der Richtungsvektor $\\vec u$ steht hinter dem Parameter $t$. Er gibt die Richtung der Geraden an.",
+        "Für $t = 2$: $x_1 = 1 + 2 \\cdot 2 = 5$."
+      ],
+      "loesungsweg": "Der Stützvektor ist $\\vec p = (1 \\mid 2 \\mid 0)$ (Ortsvektor von $P$), der Richtungsvektor $\\vec u = (2 \\mid 0 \\mid 1)$. Parameterform: $\\vec x = (1 \\mid 2 \\mid 0) + t \\cdot (2 \\mid 0 \\mid 1)$. Für $t = 2$: $x_1 = 1 + 2 \\cdot 2 = 5$, $x_2 = 2 + 2 \\cdot 0 = 2$, $x_3 = 0 + 2 \\cdot 1 = 2$. Also $Q(5 \\mid 2 \\mid 2)$.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Raumanschauung und Koordinatisierung (QP)"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-104",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz (eA): Die Gerade $g$ hat die Gleichung $$g\\colon\\; \\vec x = \\begin{pmatrix} 0 \\\\\\\\ 1 \\\\\\\\ 2 \\end{pmatrix} + t \\cdot \\begin{pmatrix} 3 \\\\\\\\ 2 \\\\\\\\ 1 \\end{pmatrix}.$$ a) Bei welchem Parameterwert $t$ hat der Geradenpunkt die dritte Koordinate $x_3 = 5$? b) Wie lauten dann $x_1$ und $x_2$ dieses Punktes?",
+      "eingaben": [
+        {
+          "label": "a) Parameterwert $t$",
+          "antwort": 3,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "b) $x_1$",
+          "antwort": 9,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "b) $x_2$",
+          "antwort": 7,
+          "toleranz": 0.01,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Dritte Koordinate: $x_3 = 2 + t \\cdot 1$. Stelle die Gleichung $2 + t = 5$ auf und löse nach $t$ auf.",
+        "Mit $t = 3$ berechnest du: $x_1 = 0 + 3 \\cdot 3$ und $x_2 = 1 + 3 \\cdot 2$.",
+        "Der gesuchte Punkt ist $R(9 \\mid 7 \\mid 5)$ — prüfe durch Einsetzen in die Geradengleichung."
+      ],
+      "loesungsweg": "Dritte Zeile: $2 + t \\cdot 1 = 5$ liefert $t = 3$. Damit: $x_1 = 0 + 3 \\cdot 3 = 9$ und $x_2 = 1 + 3 \\cdot 2 = 7$. Der Punkt $R(9 \\mid 7 \\mid 5)$ liegt auf $g$ zum Parameterwert $t = 3$. Diese Aufgabe trainiert das „Rückwärts-Lesen“ einer Geradengleichung: statt einen $t$-Wert einzusetzen, liest du aus einer Koordinaten-Bedingung den Parameterwert ab.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Raumanschauung und Koordinatisierung (QP)"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-105",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben sind $$g\\colon\\; \\vec x = \\begin{pmatrix} 0 \\\\\\\\ 0 \\\\\\\\ 0 \\end{pmatrix} + t \\cdot \\begin{pmatrix} 1 \\\\\\\\ 1 \\\\\\\\ 0 \\end{pmatrix} \\qquad \\text{und} \\qquad h\\colon\\; \\vec x = \\begin{pmatrix} 1 \\\\\\\\ 0 \\\\\\\\ 1 \\end{pmatrix} + s \\cdot \\begin{pmatrix} 1 \\\\\\\\ 1 \\\\\\\\ 0 \\end{pmatrix}.$$ Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Richtungsvektoren von $g$ und $h$ sind kollinear.",
+          "richtig": true,
+          "erklaerung": "Richtig: $(1 \\mid 1 \\mid 0) = 1 \\cdot (1 \\mid 1 \\mid 0)$ — die Richtungsvektoren sind identisch, also kollinear."
+        },
+        {
+          "text": "Der Stützpunkt von $h$, also $(1 \\mid 0 \\mid 1)$, liegt auf der Geraden $g$.",
+          "richtig": false,
+          "erklaerung": "Falsch: Einsetzen in $g$ liefert $t = 1$ aus der ersten Zeile, dann $x_2 = 1 \\neq 0$ — Widerspruch. Der Stützpunkt von $h$ liegt nicht auf $g$."
+        },
+        {
+          "text": "$g$ und $h$ sind echt parallel.",
+          "richtig": true,
+          "erklaerung": "Richtig: Kollineare Richtungsvektoren und die Punktprobe schlägt fehl — der Stützpunkt von $h$ liegt nicht auf $g$. Damit sind die Geraden echt parallel."
+        },
+        {
+          "text": "$g$ und $h$ sind windschief.",
+          "richtig": false,
+          "erklaerung": "Falsch: Windschief erfordert nicht-kollineare Richtungsvektoren. Hier sind die Richtungsvektoren kollinear, also kommen nur identisch oder echt parallel in Frage."
+        }
+      ],
+      "tipps": [
+        "Prüfe zuerst: Sind $(1 \\mid 1 \\mid 0)$ und $(1 \\mid 1 \\mid 0)$ Vielfache voneinander?",
+        "Kollineare Richtungsvektoren → nur zwei Lagen möglich: identisch oder echt parallel. Die Punktprobe mit dem Stützpunkt von $h$ in $g$ entscheidet.",
+        "Setze $(1 \\mid 0 \\mid 1)$ für $\\vec x$ in $g$ ein: Aus $x_1 = 1$ folgt $t = 1$; prüfe dann $x_2$ und $x_3$."
+      ],
+      "loesungsweg": "Richtungsvektoren: $(1 \\mid 1 \\mid 0) = 1 \\cdot (1 \\mid 1 \\mid 0)$ — kollinear, also identisch oder echt parallel. Punktprobe: Stützpunkt $H_0(1 \\mid 0 \\mid 1)$ in $g$ einsetzen. Aus $x_1 = 0 + t = 1$ folgt $t = 1$; $x_2 = 0 + 1 = 1 \\neq 0$ — Widerspruch. $H_0$ liegt nicht auf $g$, also sind $g$ und $h$ echt parallel. Richtig sind Aussagen 1 und 3.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Raumanschauung und Koordinatisierung (QP)"
+      ]
+    }
+  ]
+}

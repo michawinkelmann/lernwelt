@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Einheiten-Sortierer — Trainingsraum · Lernwelt</title>
+<meta name="description" content="Volt, Ampere, Newton, Watt: Sortiere Größe, Formelzeichen, Einheit und Messgerät unter Zeitdruck in die richtigen Spalten — Physik-Lernspiel mit Bestenliste.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: Levelwahl, Karte und Spalten des Einheiten-Sortierers */
+  .es-wahl, .es-brett { padding: 14px; }
+  .es-ueberschrift { font-size: 1.15rem; margin: 0 0 6px; }
+  .es-hinweis { color: var(--text-leise); margin: 0 0 10px; }
+  .es-levels { display: grid; gap: 8px; }
+  @media (min-width: 700px) { .es-levels { grid-template-columns: 1fr 1fr; } }
+  .es-level { font: inherit; cursor: pointer; min-height: var(--beruehrziel); border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--text); padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; align-items: flex-start; text-align: left; }
+  .es-level:hover, .es-level:focus-visible { border-color: var(--akzent); }
+  .es-level span { color: var(--text-leise); font-size: .92rem; }
+  .es-karte { min-height: 92px; display: flex; flex-direction: column; gap: 4px; align-items: center; justify-content: center; text-align: center; padding: 10px 14px; border: 2px dashed var(--akzent); border-radius: var(--radius-klein); background: var(--hauch); margin: 0 0 8px; }
+  .es-typ { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text-leise); }
+  .es-text { font-size: 1.3rem; font-weight: 700; overflow-wrap: anywhere; }
+  .es-status { min-height: 1.5em; margin: 0 0 10px; font-weight: 600; }
+  .es-spalten { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  @media (min-width: 700px) { .es-spalten { grid-template-columns: repeat(4, 1fr); } }
+  .es-spalte { font: inherit; cursor: pointer; min-height: 64px; border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--text); padding: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+  .es-spalte:hover, .es-spalte:focus-visible { border-color: var(--akzent); }
+  .es-taste { font-size: .78rem; color: var(--text-leise); border: 1px solid var(--linie); border-radius: 4px; padding: 0 6px; }
+  .es-name { font-weight: 700; overflow-wrap: anywhere; }
+  .es-spalte.es-ok { animation: es-blitz-ok .45s ease-out; }
+  .es-spalte.es-falsch { animation: es-blitz-falsch .45s ease-out; }
+  @keyframes es-blitz-ok { 0%, 70% { border-color: var(--ok); box-shadow: inset 0 0 0 2px var(--ok); } }
+  @keyframes es-blitz-falsch { 0%, 70% { border-color: var(--fehler); box-shadow: inset 0 0 0 2px var(--fehler); } }
+  @media (prefers-reduced-motion: reduce) { .es-spalte.es-ok, .es-spalte.es-falsch { animation: none; } }
+</style>
+</head>
+<body data-seite="spiel" data-fach="physik">
+<noscript><p class="noscript-hinweis">Dieses Lernspiel benötigt JavaScript. <a href="../index.html">Zurück zum Trainingsraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Einheiten-Sortierer</h1>
+  <p class="einleitung">Jede physikalische Größe hat ihr Formelzeichen, ihre Einheit, ihr Messgerät und typische Alltagswerte — und du sortierst sie in 60 Sekunden in die richtigen Spalten. Volt, Ampere und Co. kannst du vorher auf der Themenseite <a href="../../physik/klasse-7/stromstaerke-und-spannung/index.html">Stromstärke und Spannung</a> auffrischen.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert’s</summary>
+    <div class="vertiefung-inhalt">
+      <ul>
+        <li><strong>Levels:</strong> Level 1 übt die Grundgrößen (Länge, Zeit, Masse, Temperatur), Level 2 Bewegung &amp; Energie (Kraft, Energie, Leistung, Geschwindigkeit), Level 3 Elektrik &amp; Druck (Stromstärke, Spannung, Widerstand, Druck) — Level 4 mischt vier zufällige aus allen zwölf Größen.</li>
+        <li><strong>Ablauf:</strong> 60 Sekunden lang erscheint oben eine Karte, z.&nbsp;B. „J (Joule)“ oder „Voltmeter“. Tippe die Spalte der passenden Größe an oder drücke die Taste 1 bis 4.</li>
+        <li><strong>Punkte:</strong> Richtig +10, ab dem dritten Treffer in Serie +12. Daneben −5 (der Punktestand fällt nie unter 0) — und du siehst sofort die richtige Zuordnung zum Mitlernen.</li>
+        <li><strong>Karten:</strong> Keine Wiederholungen, bis alle 16 Karten der Runde einmal dran waren — danach wird neu gemischt.</li>
+        <li><strong>Bestenliste:</strong> Top 10 mit Initialen, nur auf diesem Gerät gespeichert. Alle Level teilen sich eine Liste — Level 4 ist also die Königsdisziplin für die Punktejagd.</li>
+      </ul>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module" src="spiel.js"></script>
+</body>
+</html>

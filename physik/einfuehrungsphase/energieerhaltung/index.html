@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energieerhaltung — Einführungsphase · Physik — Lernwelt</title>
+<meta name="description" content="Energieformen, Energieerhaltungssatz und Energieentwertung: Geschwindigkeiten aus Höhen berechnen, Energiebilanzen mit Reibung aufstellen — mit Beispielen, Pendel-Grafik und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Energieerhaltung</h1>
+  <p class="einleitung">Eine Achterbahn stürzt ins Tal und schießt den nächsten Hügel hinauf, ein Pendel schwingt scheinbar mühelos hin und her: Hinter beidem steckt dieselbe Buchhaltung der Natur. <strong>Energie</strong> wird umgewandelt und übertragen — aber niemals erzeugt oder vernichtet. Dieser eine Satz macht viele Aufgaben verblüffend einfach.</p>
+
+  <section aria-labelledby="ee-energieformen">
+    <h2 id="ee-energieformen">1. Energieformen und Systeme</h2>
+    <p>Aus der Sekundarstufe I kennst du Energie als „gespeicherte Fähigkeit, etwas zu bewirken“. In der Oberstufe wird daraus eine präzise Rechengröße mit der Einheit <strong>Joule</strong> ($1\,\text{J} = 1\,\text{kg} \cdot \frac{\text{m}^2}{\text{s}^2}$). Drei mechanische Energieformen brauchst du immer wieder:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Mechanische Energieformen</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} E_{\text{pot}} = m \cdot g \cdot h \\[4pt] E_{\text{kin}} = \frac{1}{2} \cdot m \cdot v^2 \\[4pt] E_{\text{spann}} = \frac{1}{2} \cdot D \cdot s^2 \end{gathered}$$</p>
+      <p><strong>Lageenergie</strong> $E_{\text{pot}}$ (Höhe $h$ über einem frei gewählten <strong>Nullniveau</strong>), <strong>Bewegungsenergie</strong> $E_{\text{kin}}$ (wächst quadratisch mit dem Tempo!) und <strong>Spannenergie</strong> $E_{\text{spann}}$ einer Feder mit Federkonstante $D$ und Auslenkung $s$. Es gilt $g = 9{,}81\,\frac{\text{m}}{\text{s}^2}$.</p>
+    </div>
+    <p>Bevor du rechnest, brauchst du eine Entscheidung, die in der Oberstufe immer wichtiger wird: die <strong>Systemabgrenzung</strong>. Du legst fest, welche Körper zum betrachteten <strong>System</strong> gehören — etwa „Kugel und Erde“ beim Fall oder „Wagen, Feder und Erde“ an der Federbahn. Alles andere ist <strong>Umgebung</strong>. Erst diese Abgrenzung macht die Frage eindeutig, ob Energie im System bleibt oder die Systemgrenze überquert.</p>
+    <p>Außerdem ist die Lageenergie keine absolute Größe: Sie hängt vom gewählten Nullniveau ab. Üblich (und meistens am bequemsten) ist der tiefste Punkt der Bewegung — dann sind alle Höhen positiv.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel</span>
+      <p>Eine Wanderin ($m = 70\,\text{kg}$) steigt $200\,\text{m}$ auf: $E_{\text{pot}} = 70 \cdot 9{,}81 \cdot 200\,\text{J} \approx 137\,\text{kJ}$. Ein Auto ($m = 1200\,\text{kg}$) bei $100\,\frac{\text{km}}{\text{h}} \approx 27{,}78\,\frac{\text{m}}{\text{s}}$ trägt $E_{\text{kin}} = \frac{1}{2} \cdot 1200 \cdot 27{,}78^2\,\text{J} \approx 463\,\text{kJ}$ — mehr als das Dreifache.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Doppeltes Tempo — was macht die Bewegungsenergie?</summary>
+      <div class="check-antwort"><p>Sie <strong>vervierfacht</strong> sich, denn in $E_{\text{kin}} = \frac{1}{2}\,m\,v^2$ steht das Tempo im Quadrat: $(2v)^2 = 4v^2$. Genau deshalb sind hohe Geschwindigkeiten im Straßenverkehr so gefährlich — die Energie muss beim Bremsen oder beim Aufprall ja irgendwo hin.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ee-erhaltungssatz">
+    <h2 id="ee-erhaltungssatz">2. Der Energieerhaltungssatz</h2>
+    <p>Ein System heißt <strong>abgeschlossen</strong>, wenn keine Energie über die Systemgrenze hinein- oder hinausgelangt — weder durch Kräfte von außen noch durch Reibung und Wärmeabgabe. Für solche Systeme gilt einer der mächtigsten Sätze der Physik:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Energieerhaltungssatz der Mechanik</span>
+      <p class="formel-abgesetzt">$$E_{\text{ges}} = E_{\text{pot}} + E_{\text{kin}} + E_{\text{spann}} = \text{konstant}$$</p>
+      <p>Energie kann <strong>weder erzeugt noch vernichtet</strong>, sondern nur von einer Form in eine andere umgewandelt werden. Vergleicht man zwei Zustände 1 und 2 derselben Bewegung, gilt die <strong>Energiebilanz</strong>:</p>
+      <p class="formel-abgesetzt">$$E_{\text{pot,1}} + E_{\text{kin,1}} = E_{\text{pot,2}} + E_{\text{kin,2}}$$</p>
+    </div>
+    <p>Das ist eine Buchhaltung mit zwei Kontoständen: Du fotografierst die Bewegung an zwei Stellen, listest links und rechts alle Energieformen auf — und setzt beide Summen gleich. Was dazwischen passiert, wie verschlungen der Weg ist, spielt keine Rolle. Genau das macht den Satz so stark.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Turmspringer</span>
+      <p>Ein Turmspringer ($m = 60\,\text{kg}$) lässt sich vom $10\,\text{m}$-Turm fallen. Zustand 1 (oben, in Ruhe): $E_{\text{pot}} = 60 \cdot 9{,}81 \cdot 10\,\text{J} = 5886\,\text{J}$, $E_{\text{kin}} = 0$. Zustand 2 (Wasseroberfläche, Nullniveau): Die kompletten $5886\,\text{J}$ stecken jetzt in der Bewegung. Aus $\frac{1}{2} \cdot 60 \cdot v^2 = 5886\,\text{J}$ folgt $v \approx 14{,}0\,\frac{\text{m}}{\text{s}}$ — gut $50\,\frac{\text{km}}{\text{h}}$.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ee-anwendung">
+    <h2 id="ee-anwendung">3. Anwendung: freier Fall und Fadenpendel</h2>
+    <p>Beim freien Fall aus der Höhe $h$ liefert die Energiebilanz die Aufprallgeschwindigkeit in drei Zeilen — die Masse kürzt sich heraus:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Geschwindigkeit aus der Höhe</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} m \cdot g \cdot h = \frac{1}{2} \cdot m \cdot v^2 \\[4pt] v^2 = 2\,g\,h \\[4pt] v = \sqrt{2\,g\,h} \end{gathered}$$</p>
+      <p>Dasselbe Ergebnis liefert die <a href="../kinematik/index.html">Kinematik</a> über $v = g \cdot t_F$ mit $t_F = \sqrt{\frac{2h}{g}}$ — nur länger. Und die Formel gilt viel allgemeiner: auch für Rutschen, Pendel und Kugelbahnen, solange Reibung keine Rolle spielt.</p>
+    </div>
+    <p>Das zeigt das <strong>Fadenpendel</strong> besonders schön: Seine Bahn ist gekrümmt, die Beschleunigung ändert sich ständig — die Bewegungsgesetze mit konstantem $a$ aus der Kinematik sind hier machtlos. Die Energiebilanz stört das nicht, denn sie fragt nur nach Anfangs- und Endzustand:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 560 332" width="560" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Ein Fadenpendel in drei Positionen: linker Umkehrpunkt, tiefster Punkt und rechter Umkehrpunkt. Unter jeder Position zeigt ein Balkendiagramm Lage- und Bewegungsenergie. An den Umkehrpunkten ist die Lageenergie maximal und die Bewegungsenergie null, am tiefsten Punkt ist die Lageenergie null und die Bewegungsenergie maximal. Die Summe beider Energien ist an allen drei Positionen gleich groß.">
+        <defs>
+          <marker id="ee-pfeil" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--physik)"/></marker>
+        </defs>
+        <!-- Aufhaengung -->
+        <line x1="248" y1="29" x2="312" y2="29" stroke="var(--text)" stroke-width="3"/>
+        <circle cx="280" cy="36" r="4" fill="var(--text)"/>
+        <!-- Bahnbogen -->
+        <path d="M 142 152 A 180 180 0 0 0 418 152" fill="none" stroke="var(--linie)" stroke-width="1.5" stroke-dasharray="3 5"/>
+        <!-- Faeden: Umkehrpunkte gestrichelt, Tiefpunkt durchgezogen -->
+        <line x1="280" y1="36" x2="142" y2="152" stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <line x1="280" y1="36" x2="418" y2="152" stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <line x1="280" y1="36" x2="280" y2="216" stroke="var(--text)" stroke-width="2"/>
+        <!-- Pendelkoerper -->
+        <circle cx="142" cy="152" r="11" fill="var(--physik)" fill-opacity="0.45" stroke="var(--physik)" stroke-width="1.5"/>
+        <circle cx="418" cy="152" r="11" fill="var(--physik)" fill-opacity="0.45" stroke="var(--physik)" stroke-width="1.5"/>
+        <circle cx="280" cy="216" r="11" fill="var(--physik)"/>
+        <!-- Geschwindigkeitspfeil am Tiefpunkt -->
+        <line x1="296" y1="216" x2="344" y2="216" stroke="var(--physik)" stroke-width="2.5" marker-end="url(#ee-pfeil)"/>
+        <text x="352" y="221" fill="var(--physik)" font-size="15" font-style="italic">v</text>
+        <!-- Hoehenmarkierung -->
+        <line x1="129" y1="152" x2="88" y2="152" stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <line x1="88" y1="155" x2="88" y2="224" stroke="var(--text)" stroke-width="1.5"/>
+        <line x1="83" y1="160" x2="88" y2="155" stroke="var(--text)" stroke-width="1.5"/><line x1="93" y1="160" x2="88" y2="155" stroke="var(--text)" stroke-width="1.5"/>
+        <line x1="83" y1="219" x2="88" y2="224" stroke="var(--text)" stroke-width="1.5"/><line x1="93" y1="219" x2="88" y2="224" stroke="var(--text)" stroke-width="1.5"/>
+        <text x="74" y="194" fill="var(--text)" font-size="15" font-style="italic">h</text>
+        <!-- Nullniveau -->
+        <line x1="50" y1="227" x2="510" y2="227" stroke="var(--linie)" stroke-width="1.5" stroke-dasharray="7 5"/>
+        <text x="508" y="220" fill="var(--text-leise)" font-size="13" text-anchor="end">Nullniveau h = 0</text>
+        <!-- Energiebalken: links -->
+        <text x="134" y="249" fill="var(--text-leise)" font-size="12" text-anchor="middle">Umkehrpunkt</text>
+        <rect x="116" y="253" width="13" height="54" fill="var(--akzent)"/>
+        <rect x="116" y="253" width="13" height="54" fill="none" stroke="var(--linie)" stroke-width="1"/>
+        <rect x="134" y="253" width="13" height="54" fill="none" stroke="var(--linie)" stroke-width="1"/>
+        <text x="122" y="321" fill="var(--text-leise)" font-size="11" text-anchor="middle">pot</text>
+        <text x="140" y="321" fill="var(--text-leise)" font-size="11" text-anchor="middle">kin</text>
+        <!-- Energiebalken: Mitte -->
+        <text x="272" y="249" fill="var(--text-leise)" font-size="12" text-anchor="middle">Tiefpunkt</text>
+        <rect x="254" y="253" width="13" height="54" fill="none" stroke="var(--linie)" stroke-width="1"/>
+        <rect x="272" y="253" width="13" height="54" fill="var(--physik)"/>
+        <rect x="272" y="253" width="13" height="54" fill="none" stroke="var(--linie)" stroke-width="1"/>
+        <text x="260" y="321" fill="var(--text-leise)" font-size="11" text-anchor="middle">pot</text>
+        <text x="278" y="321" fill="var(--text-leise)" font-size="11" text-anchor="middle">kin</text>
+        <!-- Energiebalken: rechts -->
+        <text x="410" y="249" fill="var(--text-leise)" font-size="12" text-anchor="middle">Umkehrpunkt</text>
+        <rect x="392" y="253" width="13" height="54" fill="var(--akzent)"/>
+        <rect x="392" y="253" width="13" height="54" fill="none" stroke="var(--linie)" stroke-width="1"/>
+        <rect x="410" y="253" width="13" height="54" fill="none" stroke="var(--linie)" stroke-width="1"/>
+        <text x="398" y="321" fill="var(--text-leise)" font-size="11" text-anchor="middle">pot</text>
+        <text x="416" y="321" fill="var(--text-leise)" font-size="11" text-anchor="middle">kin</text>
+      </svg>
+    </div>
+    <p>An den <strong>Umkehrpunkten</strong> steckt die gesamte Energie in der Lage ($E_{\text{kin}} = 0$), am <strong>tiefsten Punkt</strong> komplett in der Bewegung ($E_{\text{pot}} = 0$) — die Summe bleibt überall gleich. Darum steigt ein reibungsfreies Pendel auf der Gegenseite exakt wieder auf die Starthöhe, nie höher.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel</span>
+      <p>Ein Pendelkörper wird so ausgelenkt, dass er $h = 20\,\text{cm}$ über dem tiefsten Punkt hängt. Am tiefsten Punkt gilt: $v = \sqrt{2 \cdot 9{,}81 \cdot 0{,}20}\,\frac{\text{m}}{\text{s}} = \sqrt{3{,}924}\,\frac{\text{m}}{\text{s}} \approx 1{,}98\,\frac{\text{m}}{\text{s}}$ — ganz ohne Wissen über die gekrümmte Bahn.</p>
+    </div>
+    <p>Auch bei <a href="../wurfbewegungen/index.html">Wurfbewegungen</a> hilft der Energieansatz: Die Aufprallgeschwindigkeit beim waagerechten Wurf folgt aus $\frac{1}{2}\,m\,v^2 = \frac{1}{2}\,m\,v_0^2 + m\,g\,h$ — schneller als jede Komponentenrechnung, solange nicht nach Richtung oder Flugzeit gefragt ist.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Hängt das Tempo am tiefsten Punkt von der Masse ab?</summary>
+      <div class="check-antwort"><p>Nein. In der Bilanz $m\,g\,h = \frac{1}{2}\,m\,v^2$ steht $m$ auf beiden Seiten und kürzt sich: $v = \sqrt{2\,g\,h}$. Ein schwerer Pendelkörper trägt zwar mehr Energie, ist am Tiefpunkt aber genauso schnell wie ein leichter — dieselbe Einsicht wie beim freien Fall.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ee-entwertung">
+    <h2 id="ee-entwertung">4. Energieentwertung: Reibung und nicht-abgeschlossene Systeme</h2>
+    <p>In Wirklichkeit kommt jedes Pendel irgendwann zur Ruhe, und kein Schlitten wird unten so schnell, wie es $v = \sqrt{2\,g\,h}$ verspricht. Schuld ist die <strong>Reibung</strong>: Sie wandelt mechanische Energie in <strong>innere Energie</strong> um — Körper und Umgebung erwärmen sich geringfügig. Das mechanische System ist dann <strong>nicht abgeschlossen</strong>; Energie verlässt es über die Systemgrenze.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Energiebilanz mit Reibung</span>
+      <p class="formel-abgesetzt">$$E_{\text{pot,1}} + E_{\text{kin,1}} = E_{\text{pot,2}} + E_{\text{kin,2}} + W_{\text{Reib}}$$</p>
+      <p>$W_{\text{Reib}}$ ist die längs des Weges in innere Energie umgewandelte Energie. Sie ist <strong>nicht vernichtet</strong> — bezieht man die Umgebung mit ein, stimmt die Gesamtbilanz wieder. Aber sie ist <strong>entwertet</strong>: Als Wärme, fein verteilt an Luft und Boden, lässt sie sich praktisch nicht zurückverwandeln.</p>
+    </div>
+    <p>Diese Unterscheidung ist zentral: Der Energieerhaltungssatz gilt <em>immer</em> — nur die <em>mechanische</em> Energie allein bleibt bei Reibung nicht erhalten. Mit der Bilanz oben kannst du Reibungsverluste sogar berechnen, ohne die Reibungskraft selbst zu kennen.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Rodelhang</span>
+      <p>Kind samt Schlitten ($m = 40\,\text{kg}$) startet in $h = 5{,}0\,\text{m}$ Höhe und kommt unten mit $6{,}0\,\frac{\text{m}}{\text{s}}$ an — reibungsfrei wären es $\sqrt{2 \cdot 9{,}81 \cdot 5{,}0} \approx 9{,}9\,\frac{\text{m}}{\text{s}}$. Bilanz: $E_{\text{pot}} = 40 \cdot 9{,}81 \cdot 5{,}0\,\text{J} = 1962\,\text{J}$, unten $E_{\text{kin}} = \frac{1}{2} \cdot 40 \cdot 6{,}0^2\,\text{J} = 720\,\text{J}$. Also wurden $W_{\text{Reib}} = 1962\,\text{J} - 720\,\text{J} = 1242\,\text{J}$ entwertet — fast zwei Drittel.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Pendel kommt zur Ruhe. Ist Energie vernichtet?</summary>
+      <div class="check-antwort"><p>Nein — vernichtet wird Energie nie. Luftwiderstand und Reibung an der Aufhängung wandeln die mechanische Energie nach und nach in innere Energie um: Luft und Faden werden minimal wärmer. Im erweiterten System „Pendel + Umgebung“ ist die Gesamtenergie unverändert; nutzbar ist sie allerdings nicht mehr — sie wurde entwertet.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ee-strategie">
+    <h2 id="ee-strategie">5. Strategie: Aufgaben mit Energieansatz lösen</h2>
+    <p>Wann rechnest du mit Energie, wann mit den Bewegungsgesetzen? Eine einfache Faustregel: Der Energieansatz glänzt, wenn nur <strong>Anfangs- und Endzustand</strong> interessieren — gesuchte <strong>Geschwindigkeiten oder Höhen</strong>, gern auch auf gekrümmten Bahnen (Rutsche, Pendel, Looping). Sobald nach <strong>Zeiten</strong> oder dem zeitlichen Verlauf gefragt ist, muss die Kinematik ran, denn in der Energiebilanz kommt die Zeit gar nicht vor.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Schrittfolge: Energieansatz</span>
+      <ol>
+        <li><strong>System abgrenzen:</strong> Welche Körper gehören dazu? Darf Reibung vernachlässigt werden?</li>
+        <li><strong>Zwei Zustände wählen</strong> (vorher/nachher) und das <strong>Nullniveau</strong> festlegen.</li>
+        <li>Für beide Zustände alle <strong>Energieformen auflisten</strong>.</li>
+        <li><strong>Bilanz aufstellen:</strong> $E_{\text{ges,1}} = E_{\text{ges,2}}$ — bei Reibung rechts $+\,W_{\text{Reib}}$ ergänzen.</li>
+        <li>Nach der gesuchten Größe <strong>umstellen</strong>, einsetzen, <strong>Einheit prüfen</strong>.</li>
+      </ol>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Wasserrutsche</span>
+      <p>Eine kurvige Wasserrutsche beginnt $4{,}0\,\text{m}$ über dem Becken; Reibung sei klein. Zustände: oben in Ruhe, unten am Beckenrand (Nullniveau). Bilanz: $m\,g\,h = \frac{1}{2}\,m\,v^2$, also $v = \sqrt{2 \cdot 9{,}81 \cdot 4{,}0}\,\frac{\text{m}}{\text{s}} \approx 8{,}9\,\frac{\text{m}}{\text{s}}$. Wie lange die Fahrt dauert, verrät der Energieansatz dagegen nicht — dafür müsste man den genauen Bahnverlauf kennen.</p>
+    </div>
+    <p>Mit dieser Strategie löst du Aufgaben, an denen die Bewegungsgleichungen scheitern würden — und bist vorbereitet auf die Oberstufen-Themen, in denen Energiebilanzen Standard sind, von der Kreisbewegung bis zur Atomphysik.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Senkrechter Wurf — Energieansatz und Kinematik im Vergleich</summary>
+    <div class="vertiefung-inhalt">
+      <p>Ein Ball wird mit $v_0 = 12\,\frac{\text{m}}{\text{s}}$ senkrecht nach oben geworfen. Wie hoch steigt er? Der <strong>Energieansatz</strong> vergleicht Abwurf (nur $E_{\text{kin}}$) und höchsten Punkt (nur $E_{\text{pot}}$, denn dort ist $v = 0$):</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} \frac{1}{2}\,m\,v_0^2 = m\,g\,h \\[4pt] h = \frac{v_0^2}{2\,g} = \frac{144}{19{,}62}\,\text{m} \approx 7{,}34\,\text{m} \end{gathered}$$</p>
+      <p>Die <strong>kinematische Lösung</strong> braucht zwei Schritte: Steigzeit $t_S = \frac{v_0}{g} \approx 1{,}22\,\text{s}$ aus $v(t_S) = 0$, dann einsetzen:</p>
+      <p class="formel-abgesetzt">$$h = v_0 \, t_S - \frac{1}{2}\,g\,t_S^2 \approx 14{,}68\,\text{m} - 7{,}34\,\text{m} = 7{,}34\,\text{m}$$</p>
+      <p>Beide Wege liefern exakt dasselbe Ergebnis — kein Zufall, denn $h = \frac{v_0^2}{2g}$ folgt algebraisch aus den Bewegungsgesetzen. Der Energieansatz ist kürzer und funktioniert auch auf krummen Bahnen; dafür liefert nur die Kinematik die Steigzeit. Beide Werkzeuge zu kennen und gezielt auszuwählen — genau das ist Oberstufen-Physik.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben von der Energieform bis zum Looping — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

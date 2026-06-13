@@ -1,0 +1,261 @@
+{
+  "thema": "ma-ep-funktionen-im-ueberblick",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben — fachliche Prüfung durch die Lehrkraft ausstehend.",
+  "aufgaben": [
+    {
+      "id": "ma-ep-fkt-101",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche der folgenden Aussagen über Funktionen ist richtig?",
+      "optionen": [
+        { "text": "Jedem x-Wert wird genau ein y-Wert zugeordnet.", "richtig": true, "erklaerung": "Das ist die Definition einer Funktion: eindeutige Zuordnung." },
+        { "text": "Einem y-Wert kann nur genau ein x-Wert zugeordnet sein.", "richtig": false, "erklaerung": "Das müsste eine Umkehrfunktion sein. z.B. hat f(x)=x² zwei x-Werte für jeden y > 0." },
+        { "text": "Jede Funktion muss eine Gerade im Koordinatensystem ergeben.", "richtig": false, "erklaerung": "Nur lineare Funktionen sind Geraden. Parabeln, Kurven usw. sind ebenfalls Funktionen." },
+        { "text": "Eine Funktion darf keine negativen Werte annehmen.", "richtig": false, "erklaerung": "Es gibt keine solche Einschränkung — f(x) = −x² ist eine Funktion." }
+      ],
+      "tipps": [
+        "Erinnere dich: Was ist das Grundprinzip einer Funktion?",
+        "Stichwort: Eindeutigkeit. Jeder Eingabewert (x) darf nur einen Ausgabewert (y) haben.",
+        "Überprüfe jede Option mit einem konkreten Beispiel, z.B. f(x) = x²."
+      ],
+      "loesungsweg": "Eine Funktion ordnet jedem x-Wert aus dem Definitionsbereich genau einen y-Wert zu. Mehrere x-Werte können denselben y-Wert liefern (z.B. bei f(x) = x²: f(2) = f(−2) = 4), aber nie umgekehrt.",
+      "kc": ["funktionsbegriff"]
+    },
+    {
+      "id": "ma-ep-fkt-102",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine lineare Funktion hat die Gleichung $f(x) = 2x - 3$. Berechne $f(0)$, $f(4)$ und die Nullstelle.",
+      "eingaben": [
+        { "label": "$f(0)$", "antwort": -3, "toleranz": 0 },
+        { "label": "$f(4)$", "antwort": 5, "toleranz": 0 },
+        { "label": "Nullstelle $x_0$", "antwort": 1.5, "toleranz": 0.01 }
+      ],
+      "tipps": [
+        "Setze die x-Werte direkt in $f(x) = 2x - 3$ ein.",
+        "$f(4) = 2 \\cdot 4 - 3 = ?$ Die Nullstelle liegt dort, wo $f(x) = 0$ ist.",
+        "Nullstelle: Löse $2x - 3 = 0$ nach x auf: $x = \\frac{3}{2}$."
+      ],
+      "loesungsweg": "$f(0) = 2 \\cdot 0 - 3 = -3$. $f(4) = 2 \\cdot 4 - 3 = 8 - 3 = 5$. Nullstelle: $2x - 3 = 0 \\Rightarrow x = \\frac{3}{2} = 1{,}5$.",
+      "kc": ["lineare-funktion"]
+    },
+    {
+      "id": "ma-ep-fkt-103",
+      "typ": "zuordnung",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ordne jedem Funktionstyp die passende Beschreibung zu.",
+      "paare": [
+        { "links": "Potenzfunktion f(x) = xⁿ", "rechts": "Gerade durch den Ursprung (n=1) oder Parabel/Kurve durch den Ursprung" },
+        { "links": "Wurzelfunktion f(x) = √x", "rechts": "Nur für x ≥ 0 definiert, Kurve steigt flacher werdend" },
+        { "links": "Kehrwertfunktion f(x) = 1/x", "rechts": "Zwei Äste im Koordinatensystem, nie die Achsen berührend" },
+        { "links": "Exponentialfunktion f(x) = aˣ", "rechts": "Wächst für a > 1 unbegrenzt, nie negativ" }
+      ],
+      "tipps": [
+        "Zeichne jede Funktion grob: Wie sieht der Graph aus?",
+        "Die Kehrwertfunktion ist eine Hyperbel — sie hat Asymptoten an beiden Achsen.",
+        "Die Exponentialfunktion beginnt bei f(0) = 1 und wächst/fällt dann exponentiell."
+      ],
+      "loesungsweg": "Potenzfunktion: Ursprungsgraph, Form hängt vom Exponenten ab. Wurzelfunktion: nur für x ≥ 0, monoton steigend aber immer flacher. Kehrwertfunktion (Hyperbel): zwei Äste, Asymptoten an x- und y-Achse. Exponentialfunktion: y-Achsenabschnitt bei 1, streng monoton wachsend (a>1).",
+      "kc": ["funktionstypen"]
+    },
+    {
+      "id": "ma-ep-fkt-104",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Parabel hat die Gleichung $f(x) = 2(x - 3)^2 + 1$. Gib den Scheitelpunkt an und berechne $f(5)$.",
+      "eingaben": [
+        { "label": "x-Koordinate des Scheitels", "antwort": 3, "toleranz": 0 },
+        { "label": "y-Koordinate des Scheitels", "antwort": 1, "toleranz": 0 },
+        { "label": "$f(5)$", "antwort": 9, "toleranz": 0 }
+      ],
+      "tipps": [
+        "In der Scheitelpunktform $a(x - d)^2 + e$ liest du den Scheitelpunkt direkt ab: $S(d \\mid e)$.",
+        "Beim Vergleich: $f(x) = 2(x - 3)^2 + 1$ hat $d = 3$ und $e = 1$.",
+        "$f(5) = 2(5-3)^2 + 1 = 2 \\cdot 4 + 1 = 9$."
+      ],
+      "loesungsweg": "Scheitelpunktform: $f(x) = 2(x-3)^2 + 1$. Scheitelpunkt: $S(3 \\mid 1)$. Berechnung: $f(5) = 2 \\cdot (5-3)^2 + 1 = 2 \\cdot 4 + 1 = 9$.",
+      "kc": ["quadratische-funktion", "scheitelpunktform"]
+    },
+    {
+      "id": "ma-ep-fkt-105",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Der Graph von $f(x) = x^2$ wird verschoben und gestreckt zu $g(x) = 3(x+2)^2 - 5$. Bestimme schrittweise den Scheitelpunkt, die Streckung und skizziere, wie sich der Graph gegenüber der Normalparabel verändert hat.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Lies den Scheitelpunkt $S(d \\mid e)$ von $g(x) = 3(x+2)^2 - 5$ ab.",
+          "eingaben": [
+            { "label": "d (x-Koordinate des Scheitels)", "antwort": -2, "toleranz": 0 },
+            { "label": "e (y-Koordinate des Scheitels)", "antwort": -5, "toleranz": 0 }
+          ]
+        },
+        {
+          "frage": "Schritt 2: Um welchen Faktor ist die Parabel gegenüber der Normalparabel $x^2$ in y-Richtung gestreckt?",
+          "eingaben": [
+            { "label": "Streckfaktor", "antwort": 3, "toleranz": 0 }
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne $g(0)$.",
+          "eingaben": [
+            { "label": "$g(0)$", "antwort": 7, "toleranz": 0 }
+          ]
+        }
+      ],
+      "tipps": [
+        "In $a(x-d)^2 + e$: $d$ ist die horizontale, $e$ die vertikale Verschiebung. Achtung: $(x + 2)$ bedeutet Verschiebung um $-2$.",
+        "Schritt 1: Vergleiche mit $a(x - d)^2 + e$: hier ist $d = -2$ und $e = -5$.",
+        "Schritt 3: $g(0) = 3(0+2)^2 - 5 = 3 \\cdot 4 - 5 = 7$."
+      ],
+      "loesungsweg": "Scheitelpunkt: Aus $g(x) = 3(x - (-2))^2 + (-5)$ liest man ab: $d = -2$, $e = -5$, also $S(-2 \\mid -5)$. Streckfaktor $a = 3$: die Parabel ist dreimal so steil wie $x^2$. $g(0) = 3 \\cdot 4 - 5 = 7$. Gegenüber $f(x) = x^2$: nach links um 2 verschoben, um 5 nach unten, und gestreckt mit Faktor 3.",
+      "kc": ["transformation-parabel"]
+    },
+    {
+      "id": "ma-ep-fkt-106",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben ist die Sinusfunktion $f(x) = 2 \\cdot \\sin(x)$. Gib den Maximalwert, den Minimalwert und eine Nullstelle (außer $x = 0$) im Intervall $[0; 2\\pi]$ an.",
+      "eingaben": [
+        { "label": "Maximalwert von $f$", "antwort": 2, "toleranz": 0.01 },
+        { "label": "Minimalwert von $f$", "antwort": -2, "toleranz": 0.01 },
+        { "label": "Nullstelle $x_1$ im Intervall $(0; 2\\pi]$", "antwort": 3.14159, "toleranz": 0.01 }
+      ],
+      "tipps": [
+        "Die Sinusfunktion hat im Intervall $[0; 2\\pi]$ die Werte $\\sin(x) \\in [-1; 1]$. Wie verändert der Faktor 2 das?",
+        "Maximalwert: $\\sin(x)$ wird maximal $1$, also ist $f(x) = 2 \\cdot 1 = 2$.",
+        "Nullstellen von $\\sin(x)$: bei $x = 0$ und $x = \\pi \\approx 3{,}14$."
+      ],
+      "loesungsweg": "Die Amplitude von $f(x) = 2 \\sin(x)$ ist $2$. Maximalwert $= 2$ (bei $x = \\frac{\\pi}{2}$), Minimalwert $= -2$ (bei $x = \\frac{3\\pi}{2}$). Nullstelle im Intervall $(0; 2\\pi]$: $\\sin(\\pi) = 0$, also $x_1 = \\pi$.",
+      "kc": ["sinusfunktion", "amplitude"]
+    },
+    {
+      "id": "ma-ep-fkt-107",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Transformation erhält man, wenn man den Graphen von $f(x) = x^3$ durch $g(x) = -(x-1)^3 + 2$ ersetzt?",
+      "optionen": [
+        { "text": "Verschiebung um 1 nach rechts, um 2 nach oben und Spiegelung an der x-Achse.", "richtig": true, "erklaerung": "Aus (x−1) folgt Verschiebung um +1 (rechts), +2 ist Verschiebung nach oben, das Minus vor der Klammer spiegelt an der x-Achse." },
+        { "text": "Verschiebung um 1 nach links, um 2 nach unten und Spiegelung an der y-Achse.", "richtig": false, "erklaerung": "(x−1) bedeutet Verschiebung nach rechts, nicht links. Das Minus vor dem gesamten Term spiegelt an der x-Achse, nicht der y-Achse." },
+        { "text": "Streckung um den Faktor 3 und Verschiebung um 2 nach oben.", "richtig": false, "erklaerung": "Der Exponent 3 gehört zur Funktion x³, er ist kein Streckfaktor." },
+        { "text": "Keine Transformation, nur eine andere Schreibweise für $f(x) = x^3$.", "richtig": false, "erklaerung": "Durch Ausmultiplizieren sieht man deutlich, dass g(x) sich von f(x) unterscheidet." }
+      ],
+      "tipps": [
+        "Schreibe $g(x) = -(x-1)^3 + 2$. Identifiziere jeden Baustein: Was bewirkt $(x-d)$, was das Minus, was $+e$?",
+        "$(x-1)$: horizontale Verschiebung um $+1$ (nach rechts). Das Minus vor $(x-1)^3$: Spiegelung an der $x$-Achse. $+2$: vertikale Verschiebung um $+2$ (nach oben).",
+        "Merke: Das Vorzeichen in $(x - d)$ wirkt umgekehrt als erwartet — $(x-1)$ schiebt nach rechts."
+      ],
+      "loesungsweg": "Bausteinanalyse: $g(x) = -(x-1)^3 + 2$. $(x-1)$: Verschiebung um 1 nach rechts. Der Faktor $-1$ vor $(x-1)^3$: Spiegelung an der x-Achse. $+2$: Verschiebung um 2 nach oben. Gesamttransformation: rechts 1, Spiegelung x-Achse, oben 2.",
+      "kc": ["graphtransformation"]
+    },
+    {
+      "id": "ma-ep-fkt-108",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Bestimme alle Nullstellen von $f(x) = x^3 - 3x^2 + 2x$ durch Ausklammern und anschließendes Lösen der entstehenden Faktoren.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Klammere $x$ aus. Welcher Term bleibt in der Klammer?",
+          "eingaben": [
+            { "label": "Koeffizient vor $x^2$ in der Klammer", "antwort": 1, "toleranz": 0 },
+            { "label": "Koeffizient vor $x$ in der Klammer", "antwort": -3, "toleranz": 0 },
+            { "label": "Konstanter Term in der Klammer", "antwort": 2, "toleranz": 0 }
+          ],
+          "tipps": [
+            "$x^3 - 3x^2 + 2x = x \\cdot (?)$. Teile jeden Term durch $x$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Löse $x^2 - 3x + 2 = 0$ mit der Lösungsformel oder durch Raten. Wie lauten die beiden Lösungen?",
+          "eingaben": [
+            { "label": "Erste Lösung $x_1$", "antwort": 1, "toleranz": 0 },
+            { "label": "Zweite Lösung $x_2$", "antwort": 2, "toleranz": 0 }
+          ],
+          "tipps": [
+            "Probiere ganze Zahlen: Für welche $x$ gilt $x^2 - 3x + 2 = 0$? Oder nutze $x_{1,2} = \\frac{3 \\pm \\sqrt{9-8}}{2}$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Nenne alle drei Nullstellen von $f(x) = x^3 - 3x^2 + 2x$. Anzahl der Nullstellen:",
+          "eingaben": [
+            { "label": "Anzahl der Nullstellen", "antwort": 3, "toleranz": 0 }
+          ]
+        }
+      ],
+      "tipps": [
+        "Schau dir $f(x) = x^3 - 3x^2 + 2x$ an: Jeder Term enthält den Faktor $x$. Klammere ihn aus.",
+        "Nach dem Ausklammern: $f(x) = x \\cdot (x^2 - 3x + 2)$. Setze jeden Faktor gleich null.",
+        "Die drei Nullstellen sind $x = 0$ (aus dem ausgeklammerten $x$), $x = 1$ und $x = 2$ (aus der Klammer)."
+      ],
+      "loesungsweg": "$f(x) = x^3 - 3x^2 + 2x = x(x^2 - 3x + 2)$. Faktor 1: $x = 0$. Faktor 2: $x^2 - 3x + 2 = 0 \\Rightarrow x_{1,2} = \\frac{3 \\pm \\sqrt{9-8}}{2} = \\frac{3 \\pm 1}{2}$. Also $x_1 = 1$ und $x_2 = 2$. Die drei Nullstellen lauten: $x = 0$, $x = 1$ und $x = 2$.",
+      "kc": ["nullstellen", "faktorisierung"]
+    },
+    {
+      "id": "ma-ep-fkt-109",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben ist $f(x) = x^4$. Berechne $f(2)$, $f(-2)$ und $f(0)$. Was fällt dir an $f(2)$ und $f(-2)$ auf?",
+      "eingaben": [
+        { "label": "$f(2)$", "antwort": 16, "toleranz": 0 },
+        { "label": "$f(-2)$", "antwort": 16, "toleranz": 0 },
+        { "label": "$f(0)$", "antwort": 0, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Setze die x-Werte direkt ein: $f(2) = 2^4 = ?$",
+        "$(-2)^4 = (-2) \\cdot (-2) \\cdot (-2) \\cdot (-2)$. Minus × Minus = Plus.",
+        "Dass $f(2) = f(-2)$ gilt, liegt daran, dass $x^4$ eine achsensymmetrische Funktion ist."
+      ],
+      "loesungsweg": "$f(2) = 2^4 = 16$. $f(-2) = (-2)^4 = 16$. $f(0) = 0^4 = 0$. Beobachtung: $f(2) = f(-2)$, weil $x^4$ für gerades $n$ symmetrisch zur y-Achse ist (achsensymmetrisch). Allgemein: $f(-x) = f(x)$ für geraden Exponenten.",
+      "kc": ["potenzfunktion", "symmetrie"]
+    },
+    {
+      "id": "ma-ep-fkt-110",
+      "typ": "luecke",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ergänze die Lücken zur Exponentialfunktion $f(x) = 2^x$:",
+      "text": "Die Exponentialfunktion $f(x) = 2^x$ hat immer den $y$-Achsenabschnitt ___. Die Funktion ist ___ monoton wachsend. Für sehr große negative $x$-Werte nähert sich der Graph der ___ an (Asymptote). Der Wert $f(3)$ beträgt ___.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "1", "optionen": ["0", "1", "2", "-1"] },
+        { "art": "dropdown", "antwort": "streng", "optionen": ["streng", "nicht", "manchmal"] },
+        { "art": "dropdown", "antwort": "x-Achse", "optionen": ["x-Achse", "y-Achse", "Ursprung"] },
+        { "art": "eingabe", "antwort": "8", "toleranz": 0 }
+      ],
+      "tipps": [
+        "Für jede Exponentialfunktion $a^x$ gilt: $a^0 = 1$. Also ist der $y$-Achsenabschnitt immer 1.",
+        "Für $a > 1$ wächst $f(x) = a^x$ streng monoton. Für sehr kleine x (sehr negative) geht $2^x$ gegen 0.",
+        "$f(3) = 2^3 = 2 \\cdot 2 \\cdot 2 = 8$."
+      ],
+      "loesungsweg": "y-Achsenabschnitt: $f(0) = 2^0 = 1$. Monotonieverhalten: streng monoton wachsend (Basis 2 > 1). Asymptote: die x-Achse (y = 0), da $2^x \\to 0$ für $x \\to -\\infty$. $f(3) = 2^3 = 8$.",
+      "kc": ["exponentialfunktion"]
+    }
+  ]
+}

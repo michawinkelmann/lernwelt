@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SchwarmShell</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="startOverlay" id="startOverlay" role="dialog" aria-modal="true" aria-labelledby="startTitle">
+  <div class="startModal" id="startModal">
+    <h2 id="startTitle">Willkommen bei SchwarmShell</h2>
+    <p id="startDescription">Wie möchtest du starten?</p>
+    <div class="startActions" id="startActions">
+      <button class="btn" id="startNew">Neues Spiel</button>
+      <button class="btn" id="startAutosave">Autosave laden</button>
+      <button class="btn" id="startSavegame">Savegame laden</button>
+    </div>
+    <div class="savegameLoad" id="savegameLoad" hidden>
+      <label for="savegamePassphrase">Passphrase</label>
+      <input id="savegamePassphrase" type="text" autocomplete="off" spellcheck="false" placeholder="SS1...." />
+      <div class="startActions">
+        <button class="btn" id="savegameConfirm">Laden</button>
+        <button class="btn" id="savegameCancel">Zurück</button>
+      </div>
+      <p class="small" id="savegameLoadError" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+
+<div class="cinematicIntroOverlay" id="cinematicIntroOverlay" role="dialog" aria-modal="true" aria-labelledby="cinematicIntroTitle" hidden>
+  <div class="cinematicIntroPanel" id="cinematicIntroPanel">
+    <p class="cinematicIntroKicker">SchwarmShell // Incident Protocol</p>
+    <h2 id="cinematicIntroTitle">SYSTEM BREACH DETECTED</h2>
+    <p class="cinematicIntroText" id="cinematicIntroText" aria-live="polite">—</p>
+    <div class="startActions">
+      <button class="btn" id="cinematicIntroContinue" type="button">Weiter</button>
+      <button class="btn" id="cinematicIntroSkip" type="button">Überspringen</button>
+    </div>
+  </div>
+</div>
+
+<div class="savegameOverlay" id="savegameOverlay" role="dialog" aria-modal="true" aria-labelledby="savegamePanelTitle" hidden>
+  <div class="savegamePanel" id="savegamePanel">
+    <h2 id="savegamePanelTitle">Savegame erstellen</h2>
+    <p class="small">Hier ist deine aktuelle Passphrase. Damit kannst du später exakt an dieser Stelle weiterspielen.</p>
+    <label for="savegamePhraseOutput">Passphrase</label>
+    <textarea id="savegamePhraseOutput" rows="3" readonly></textarea>
+    <p class="small" id="savegamePanelHint" aria-live="polite"></p>
+    <div class="startActions">
+      <button class="btn" id="savegameCopy" type="button">In Zwischenablage kopieren</button>
+      <button class="btn" id="savegameExport" type="button">Als .txt exportieren</button>
+      <button class="btn" id="savegamePanelClose" type="button">Schließen</button>
+    </div>
+  </div>
+</div>
+
+<div class="tutorialOverlay" id="tutorialOverlay" hidden></div>
+<div class="tutorialBubble" id="tutorialBubble" hidden>
+  <p id="tutorialText">—</p>
+  <div class="startActions" style="margin-top:6px;">
+    <button class="btn" id="tutorialBtn">Weiter</button>
+    <button class="btn" id="tutorialSkipBtn" type="button" aria-label="Tutorial überspringen">Tutorial überspringen</button>
+  </div>
+</div>
+
+<div class="toastContainer" id="toastContainer" aria-live="polite" aria-atomic="false"></div>
+
+<div class="conceptOverlay" id="conceptOverlay" role="dialog" aria-modal="true" aria-labelledby="conceptTitle" hidden>
+  <div class="conceptPanel" id="conceptPanel">
+    <p class="conceptKicker" id="conceptKicker">Konzept-Karte</p>
+    <h2 id="conceptTitle">—</h2>
+    <p id="conceptBody">—</p>
+    <code class="conceptExample" id="conceptExample">—</code>
+    <p class="conceptHint" id="conceptHint">—</p>
+    <div class="startActions">
+      <button class="btn" id="conceptDontShowAgain" type="button">Nicht mehr zeigen</button>
+      <button class="btn" id="conceptContinue" type="button">Verstanden, weiter</button>
+    </div>
+  </div>
+</div>
+
+<button class="settingsBtn" id="settingsBtn" type="button" aria-label="Einstellungen" title="Einstellungen">⚙</button>
+<div class="settingsOverlay" id="settingsOverlay" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" hidden>
+  <div class="settingsPanel">
+    <h2 id="settingsTitle">Einstellungen</h2>
+    <div class="settingsGroup">
+      <h3>Schwierigkeit</h3>
+      <p>Bestimmt, wie viel Hilfe das Spiel automatisch anbietet.</p>
+      <div class="settingsRow" role="radiogroup" aria-label="Schwierigkeit">
+        <button class="btn" data-difficulty="story" type="button" aria-pressed="false">Story (viel Hilfe)</button>
+        <button class="btn" data-difficulty="classic" type="button" aria-pressed="true">Klassisch</button>
+        <button class="btn" data-difficulty="hardcore" type="button" aria-pressed="false">Hardcore (keine Hilfen)</button>
+      </div>
+    </div>
+    <div class="settingsGroup">
+      <h3>Sound</h3>
+      <p>Kurze Töne bei Erfolg / Badge / Fehler (Web Audio, kein Download).</p>
+      <div class="settingsRow">
+        <button class="btn" id="settingsAudioToggle" type="button" aria-pressed="true">Sound: an</button>
+      </div>
+    </div>
+    <div class="settingsGroup">
+      <h3>Bewegung</h3>
+      <p>Reduziert Animationen (z.B. wenn dir Bewegungen zu viel sind).</p>
+      <div class="settingsRow">
+        <button class="btn" id="settingsReducedMotion" type="button" aria-pressed="false">Reduzierte Bewegung: aus</button>
+      </div>
+    </div>
+    <div class="settingsGroup">
+      <h3>Konzept-Karten</h3>
+      <p>Beim ersten Auftreten erscheinen kurze Erklärungen zu Pipes, Permissions und Prozessen.</p>
+      <div class="settingsRow">
+        <button class="btn" id="settingsResetConcepts" type="button">Konzept-Karten wieder zeigen</button>
+      </div>
+    </div>
+    <div class="settingsGroup">
+      <h3 id="settingsReplayLabel">Replay</h3>
+      <p id="settingsReplayDesc">Zeigt deine letzten Befehle und Ausgaben als kompakten Spielmitschnitt.</p>
+      <div class="settingsRow">
+        <button class="btn" id="settingsReplay" type="button">Replay anzeigen</button>
+        <button class="btn" id="settingsReplayClear" type="button">Mitschnitt löschen</button>
+      </div>
+    </div>
+    <div class="settingsGroup">
+      <h3 id="settingsLanguageLabel">Sprache</h3>
+      <p id="settingsLanguageDesc">Wechselt die Sprache der Benutzeroberfläche. Spielinhalte bleiben Deutsch.</p>
+      <div class="settingsRow" role="radiogroup" aria-label="Sprache">
+        <button class="btn" data-locale="de" type="button" aria-pressed="true">Deutsch</button>
+        <button class="btn" data-locale="en" type="button" aria-pressed="false">English</button>
+      </div>
+    </div>
+    <div class="startActions">
+      <button class="btn" id="settingsClose" type="button">Schließen</button>
+    </div>
+  </div>
+</div>
+
+<div class="replayOverlay" id="replayOverlay" role="dialog" aria-modal="true" aria-labelledby="replayTitle" hidden>
+  <div class="replayPanel">
+    <h2 id="replayTitle">Replay deines Runs</h2>
+    <p class="small" id="replayMeta">—</p>
+    <div class="replayBody" id="replayBody" aria-live="off">—</div>
+    <div class="startActions">
+      <button class="btn" id="replayCopy" type="button">In Zwischenablage</button>
+      <button class="btn" id="replayClose" type="button">Schließen</button>
+    </div>
+  </div>
+</div>
+
+<div class="editorOverlay" id="editorOverlay" role="dialog" aria-modal="true" aria-labelledby="editorTitle" hidden>
+  <div class="editorPanel">
+    <h2 id="editorTitle">Skript-Editor</h2>
+    <p class="small" id="editorPath">—</p>
+    <textarea id="editorTextarea" rows="14" spellcheck="false" aria-label="Skript-Inhalt"></textarea>
+    <p class="small" id="editorHint">Tipp: Mit Strg/Cmd+S speicherst du · Esc schließt ohne Speichern.</p>
+    <div class="startActions">
+      <button class="btn" id="editorSave" type="button">Speichern</button>
+      <button class="btn" id="editorCancel" type="button">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="brand">
+    <h1 class="title">
+      🎮 SchwarmShell
+      <span class="pill" id="phasePill">Phase: —</span>
+      <span class="warnInline titleHint" id="printStatus">⚠️ Wegen eines System-Glitches können aktuell keine Zeugnisse gedruckt werden.</span>
+      <span class="titleHint" id="phaseStatusInline"></span>
+    </h1>
+  </div>
+</header>
+
+<main>
+  <section class="card storyCard" id="storyPanel">
+    <h2>Ort & Story</h2>
+    <div class="content">
+      <div class="locationImage"><img id="locImg" alt="Ort" /></div>
+      <div class="locTitle">
+        <strong id="locName">—</strong>
+        <span class="tag" id="locTag">—</span>
+      </div>
+      <p class="desc" id="locDesc">—</p>
+      <p class="inlineList" id="locNPCs"></p>
+      <p class="small" id="locExtra">—</p>
+      <div class="hr"></div>
+      <p class="small">
+        Quickstart: <span class="kbd">cat readme.txt</span> (Phase 1) · <span class="kbd">cd /arena</span> (Hub) · <span class="kbd">reset</span> (alles neu)
+      </p>
+      <div class="phaseCommands" id="phaseCommands">
+        <div class="phaseCommandsHeader" id="phaseCommandsTitle">Wichtige Befehle (Phase —)</div>
+        <ul class="phaseCommandsList" id="phaseCommandsList"></ul>
+        <p class="small phaseCommandsHint">Mehr Details: <span class="kbd">man &lt;cmd&gt;</span></p>
+        <div class="nextQuestHint" id="nextQuestHint">Nächstes Quest-Ziel wird geladen…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card terminalCard" id="terminalPanel">
+    <h2 class="terminalCardHeader">
+      <span>Terminal</span>
+      <button class="btn clippyBtn" id="clippyHelperBtn" type="button" aria-expanded="false" aria-controls="clippyTooltip">📎 Clippy Helfer</button>
+      <span class="clippyUsage" id="clippyUsage" aria-live="polite">Nutzungen: 0</span>
+      <span class="clippyStatus" id="clippyStatus" aria-live="polite">Status: bereit</span>
+    </h2>
+    <div class="content terminalWrap">
+      <div class="terminal" id="term" aria-live="polite"></div>
+      <div class="inputBar">
+        <div class="prompt" id="prompt">player@SchwarmShell:~$</div>
+        <div class="inputControls">
+          <input id="cmd" type="text" autocomplete="off" spellcheck="false" placeholder='z.B. ls   oder   grep -n "wort" datei.txt   oder   find / -name "*.log"' />
+          <button class="btn" id="run">Run</button>
+          <button class="btn" id="reset">Reset</button>
+          <button class="btn" id="savegame">Savegame</button>
+        </div>
+      </div>
+      <div class="footerTips">
+        Shortcuts: <span class="kbd">Enter</span> ausführen · <span class="kbd">↑</span>/<span class="kbd">↓</span> Verlauf · <span class="kbd">Tab</span> Autocomplete (mini) ·
+        <span class="kbd">clear</span> Terminal leeren
+      </div>
+    </div>
+  </section>
+
+  <div class="clippyTooltip" id="clippyTooltip" hidden role="dialog" aria-live="polite" aria-label="Clippy Helfer"></div>
+
+  <section class="card sidequestCard" id="sidequestCard" hidden>
+    <h2>Winkelmann Sidequest</h2>
+    <div class="content">
+      <div class="rewards" id="sidequestPanel"></div>
+    </div>
+  </section>
+
+  <section class="card mapCard" id="mapPanel">
+    <h2>Ordnerkarte</h2>
+    <div class="content" aria-label="Ordnerkarte">
+      <div class="mapTools" role="group" aria-label="Kartenfilter und Legende">
+        <label><input type="radio" name="mapFilter" value="active" /> Nur aktive Quest-Orte</label>
+        <label><input type="radio" name="mapFilter" value="all" checked /> Alle Orte</label>
+        <label><input type="radio" name="mapFilter" value="unvisited" /> Unentdeckt</label>
+        <span class="mapLegendItem"><span class="mapLegendDot mapLegendCurrent">◉</span> Aktueller Ort</span>
+        <span class="mapLegendItem"><span class="mapLegendDot mapLegendVisited">●</span> Bereits besucht</span>
+        <span class="mapLegendItem"><span class="mapLegendDot mapLegendQuest">◆</span> Aktive Quest</span>
+        <span class="mapLegendItem"><span class="mapLegendDot mapLegendUnvisited">○</span> Unentdeckt</span>
+      </div>
+      <pre class="mapTree" id="mapTree">Lade Karte…</pre>
+    </div>
+  </section>
+
+  <section class="card rewardsCard" id="rewardsPanel">
+    <h2>Belohnungen</h2>
+    <div class="content">
+      <div class="rewards" id="rewards"></div>
+      <p class="small" style="margin-top:10px;">
+        Autosave ist an. Wenn’s weird wird: <span class="kbd">reset</span> (hard reboot).
+      </p>
+    </div>
+  </section>
+
+  <section class="card objectivesCard" id="objectivesPanel">
+    <h2>Ziele (aktueller Run)</h2>
+    <div class="content objectives" id="objectives"></div>
+  </section>
+</main>
+
+
+<script src="js/boot.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/data/fs.js"></script>
+<script src="js/data/npcs.js"></script>
+<script src="js/data.js"></script>
+<script src="js/core.js"></script>
+<script src="js/state.js"></script>
+<script src="js/fs.js"></script>
+<script src="js/manpages.js"></script>
+<script src="js/npc-dialogs.js"></script>
+<script src="js/quests.js"></script>
+<script src="js/commands.js"></script>
+<script src="js/clippy.js"></script>
+<script src="js/tutorial.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

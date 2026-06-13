@@ -1,0 +1,471 @@
+{
+  "thema": "ma-qp-q1-analysis",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-q1-001",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Semester-Schnellcheck: Welche Aussagen aus der Q1-Analysis sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Ableitung $f'(x_0)$ gibt sowohl die momentane Änderungsrate als auch die Steigung der Tangente an der Stelle $x_0$ an.",
+          "richtig": true,
+          "erklaerung": "Richtig: Beides sind Deutungen derselben Zahl — des Grenzwerts der mittleren Änderungsraten beim Übergang von der Sekante zur Tangente."
+        },
+        {
+          "text": "Die natürliche Exponentialfunktion $f(x) = \\mathrm{e}^x$ stimmt mit ihrer eigenen Ableitung überein.",
+          "richtig": true,
+          "erklaerung": "Richtig: $(\\mathrm{e}^x)' = \\mathrm{e}^x$ — genau diese Eigenschaft macht die Basis $\\mathrm{e}$ für die Analysis so besonders."
+        },
+        {
+          "text": "Gilt $f'(x_0) = 0$, dann besitzt $f$ an der Stelle $x_0$ auf jeden Fall einen Extrempunkt.",
+          "richtig": false,
+          "erklaerung": "$f'(x_0) = 0$ ist nur die notwendige Bedingung: $f(x) = x^3$ erfüllt sie bei $x_0 = 0$, hat dort aber einen Sattelpunkt. Erst $f''(x_0) \\neq 0$ oder ein Vorzeichenwechsel von $f'$ sichern den Extrempunkt."
+        },
+        {
+          "text": "Ein bestimmtes Integral kann niemals einen negativen Wert annehmen.",
+          "richtig": false,
+          "erklaerung": "Das Integral misst den orientierten Flächeninhalt: Verläuft der Graph unterhalb der x-Achse, wird der Integralwert negativ — etwa $\\int_0^1 (-2)\\,\\mathrm{d}x = -2$."
+        }
+      ],
+      "tipps": [
+        "Geh die Aussagen einzeln durch — sie stammen aus vier verschiedenen Q1-Themen. Zu jeder falschen gibt es ein einfaches Gegenbeispiel.",
+        "Denke bei Aussage 3 an $f(x) = x^3$ an der Stelle $0$ und bei Aussage 4 an einen Graphen, der unterhalb der x-Achse verläuft.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Die Ableitung vereint beide Deutungen — momentane Änderungsrate und Tangentensteigung —, und die e-Funktion ist ihre eigene Ableitung. Aussage 3 scheitert am Sattelpunkt: $f(x) = x^3$ erfüllt $f'(0) = 0$, hat bei $x = 0$ aber keinen Extrempunkt; die hinreichende Bedingung fehlt. Aussage 4 verwechselt Integralwert und Flächeninhalt: Unterhalb der x-Achse liefert das Integral negative Beiträge — es bildet eine Vorzeichen-Bilanz.",
+      "kc": ["q1-grundwissen-quer"]
+    },
+    {
+      "id": "ma-qp-q1-002",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bestimme die Extrempunkte von $f(x) = x^3 - 3x^2$ — mit notwendiger und hinreichender Bedingung. Gib die $x$-Koordinate des Hochpunkts sowie beide Koordinaten des Tiefpunkts an.",
+      "eingaben": [
+        {
+          "label": "$x$-Koordinate des Hochpunkts",
+          "antwort": 0,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$x$-Koordinate des Tiefpunkts",
+          "antwort": 2,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$y$-Koordinate des Tiefpunkts",
+          "antwort": -4,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Notwendige Bedingung: $f'(x) = 3x^2 - 6x = 3x(x - 2) = 0$ — die faktorisierte Form verrät beide Kandidaten sofort.",
+        "Hinreichend: $f''(x) = 6x - 6$. Setze beide Kandidaten ein — Minus heißt Hochpunkt, Plus heißt Tiefpunkt.",
+        "Die $y$-Koordinate liefert die Originalfunktion: $f(2) = 8 - 12$."
+      ],
+      "loesungsweg": "$f'(x) = 3x^2 - 6x = 3x(x - 2)$ hat die Nullstellen $x = 0$ und $x = 2$. Hinreichende Bedingung mit $f''(x) = 6x - 6$: Wegen $f''(0) = -6 < 0$ liegt bei $x = 0$ ein Hochpunkt, wegen $f''(2) = 6 > 0$ bei $x = 2$ ein Tiefpunkt. Einsetzen in $f$: $f(0) = 0$ und $f(2) = 8 - 12 = -4$. Ergebnis: Hochpunkt $(0 \\mid 0)$, Tiefpunkt $(2 \\mid -4)$. In der Klausur gehören beide Bedingungen aufs Papier — $f'(x_0) = 0$ allein gibt nicht alle Punkte.",
+      "kc": ["kurvenuntersuchung-extrempunkte"]
+    },
+    {
+      "id": "ma-qp-q1-003",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bestimme die Gleichung der Tangente an den Graphen von $f(x) = x^2 - 3x + 4$ im Punkt $P(2 \\mid f(2))$. Gib die Tangente in der Form $y = mx + b$ an.",
+      "eingaben": [
+        {
+          "label": "Steigung $m$",
+          "antwort": 1,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$y$-Achsenabschnitt $b$",
+          "antwort": 0,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Du brauchst zwei Zutaten: den Funktionswert $f(2)$ für den Berührpunkt und die Ableitung $f'(2)$ für die Steigung.",
+        "$f'(x) = 2x - 3$, also $m = f'(2) = 1$; außerdem ist $f(2) = 4 - 6 + 4 = 2$.",
+        "Punkt-Steigungs-Form: $y = f'(2) \\cdot (x - 2) + f(2)$ — ausmultiplizieren und zusammenfassen."
+      ],
+      "loesungsweg": "Berührpunkt: $f(2) = 4 - 6 + 4 = 2$, also $P(2 \\mid 2)$. Steigung: $f'(x) = 2x - 3$ liefert $m = f'(2) = 1$. Tangentengleichung in Punkt-Steigungs-Form: $y = 1 \\cdot (x - 2) + 2 = x$. Also $m = 1$ und $b = 0$ — die Tangente ist die erste Winkelhalbierende $y = x$. Probe: Sie verläuft durch $(2 \\mid 2)$ und hat dieselbe Steigung wie der Graph an dieser Stelle.",
+      "kc": ["tangentengleichung"]
+    },
+    {
+      "id": "ma-qp-q1-004",
+      "typ": "zuordnung",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Extremwertproblem: Für ein rechteckiges Gehege direkt an einer Hauswand stehen $40\\,\\text{m}$ Zaun zur Verfügung — eingezäunt werden nur die beiden Seiten der Länge $x$ (senkrecht zur Wand) und die Seite der Länge $y$ (parallel zur Wand). Der Flächeninhalt soll maximal werden. Ordne jedem Schritt des Lösungsplans das passende Ergebnis zu.",
+      "paare": [
+        {
+          "links": "Nebenbedingung (40 m Zaun)",
+          "rechts": "2x + y = 40"
+        },
+        {
+          "links": "Zielfunktion nur in x",
+          "rechts": "A(x) = x · (40 − 2x)"
+        },
+        {
+          "links": "Kandidat aus A′(x) = 0",
+          "rechts": "x = 10"
+        },
+        {
+          "links": "Maximaler Flächeninhalt",
+          "rechts": "A = 200 m²"
+        }
+      ],
+      "tipps": [
+        "Die Nebenbedingung zählt das Zaunmaterial: zwei Seiten der Länge $x$ plus eine Seite der Länge $y$ ergeben zusammen $40\\,\\text{m}$.",
+        "Löse die Nebenbedingung nach $y$ auf ($y = 40 - 2x$) und setze sie in $A = x \\cdot y$ ein — das ergibt die Zielfunktion.",
+        "$A(x) = 40x - 2x^2$, also $A'(x) = 40 - 4x$. Nullsetzen, mit $A''$ prüfen, zuletzt $A(10)$ berechnen."
+      ],
+      "loesungsweg": "Nebenbedingung: $2x + y = 40$, also $y = 40 - 2x$. Zielfunktion: $A(x) = x \\cdot (40 - 2x) = 40x - 2x^2$ für $0 < x < 20$. Kandidat: $A'(x) = 40 - 4x = 0$ liefert $x = 10$; wegen $A''(x) = -4 < 0$ liegt ein Maximum vor. Maße: $x = 10\\,\\text{m}$ und $y = 40 - 20 = 20\\,\\text{m}$, maximaler Flächeninhalt $A = 10 \\cdot 20 = 200\\,\\text{m}^2$. Die Randwerte $x = 0$ und $x = 20$ liefern jeweils $A = 0$ — das innere Maximum ist also auch das globale. Antwortsatz nicht vergessen!",
+      "kc": ["extremwertproblem"]
+    },
+    {
+      "id": "ma-qp-q1-005",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 2,
+      "frage": "Berechne mit dem Hauptsatz: a) $\\int_1^3 (3x^2 - 4x + 1)\\,\\mathrm{d}x$ und b) $\\int_0^2 (3x^2 - 2x + 1)\\,\\mathrm{d}x$.",
+      "eingaben": [
+        {
+          "label": "a) Integralwert",
+          "antwort": 12,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "b) Integralwert",
+          "antwort": 6,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Stammfunktionen zuerst: a) $F(x) = x^3 - 2x^2 + x$, b) $F(x) = x^3 - x^2 + x$ — Kontrolle durch Ableiten.",
+        "Klammer-Schreibweise: $\\left[ F(x) \\right]_a^b = F(b) - F(a)$ — erst die obere, dann die untere Grenze einsetzen.",
+        "a) $F(3) = 27 - 18 + 3$ und $F(1) = 1 - 2 + 1$; b) $F(2) = 8 - 4 + 2$ und $F(0) = 0$."
+      ],
+      "loesungsweg": "a) $\\int_1^3 (3x^2 - 4x + 1)\\,\\mathrm{d}x = \\left[ x^3 - 2x^2 + x \\right]_1^3 = (27 - 18 + 3) - (1 - 2 + 1) = 12 - 0 = 12$. b) $\\int_0^2 (3x^2 - 2x + 1)\\,\\mathrm{d}x = \\left[ x^3 - x^2 + x \\right]_0^2 = (8 - 4 + 2) - 0 = 6$. Beide Stammfunktionen lassen sich durch Ableiten kontrollieren — im hilfsmittelfreien Teil der Klausur muss diese Rechnung ohne CAS sitzen.",
+      "kc": ["hauptsatz-bestimmtes-integral"],
+      "cas": "<p>Im CAS-Teil der Klausur kontrolliert der ClassPad II solche Integrale in Sekunden:</p><ol><li>Menü <b>Main</b> öffnen, Software-Tastatur einblenden und auf <b>Math2</b> wechseln.</li><li>Das Integral-Template <b>∫</b> mit Grenzen antippen; untere Grenze 1, obere Grenze 3, Integrand <code>3x^2-4x+1</code>, dahinter die Integrationsvariable <code>x</code>.</li><li><b>EXE</b> liefert 12. Für Teil b) Grenzen 0 und 2 mit dem Term <code>3x^2-2x+1</code>: Ergebnis 6.</li></ol><p>Aufs Papier gehört trotzdem der Weg über die Stammfunktion — das CAS liefert nur die Kontrolle, nicht die Punkte.</p>"
+    },
+    {
+      "id": "ma-qp-q1-006",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Berechne den Inhalt der Fläche, die die Graphen von $f(x) = -x^2 + 4x$ und $g(x) = x$ vollständig einschließen.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Bestimme die Schnittstellen von $f$ und $g$. Gib die rechte (größere) Schnittstelle an.",
+          "eingaben": [
+            {
+              "label": "rechte Schnittstelle $x$",
+              "antwort": 3,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Gleichsetzen: $-x^2 + 4x = x$, dann alles auf eine Seite bringen: $-x^2 + 3x = 0$ — und $x$ ausklammern."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Stelle die Differenzfunktion $d(x) = f(x) - g(x)$ auf und berechne zur Kontrolle $d(1)$.",
+          "eingaben": [
+            {
+              "label": "$d(1)$",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$d(x) = -x^2 + 3x$; zwischen den Schnittstellen ist $d(x) \\ge 0$, weil der Parabelbogen oberhalb der Geraden verläuft."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne die eingeschlossene Fläche $A = \\int_0^3 d(x)\\,\\mathrm{d}x$.",
+          "eingaben": [
+            {
+              "label": "Fläche $A$",
+              "antwort": 4.5,
+              "toleranz": 0.001,
+              "einheit": "FE"
+            }
+          ],
+          "tipps": [
+            "$\\left[ -\\frac{1}{3}x^3 + \\frac{3}{2}x^2 \\right]_0^3 = -9 + 13{,}5$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Fläche zwischen zwei Graphen: erst Schnittstellen bestimmen (Gleichsetzen), dann die Differenzfunktion integrieren.",
+        "Schnittstellen: $-x^2 + 3x = x(3 - x) = 0$ liefert $x = 0$ und $x = 3$ — dazwischen liegt keine weitere, also ist kein Aufteilen nötig.",
+        "Integriert wird die Differenz $f - g$; da $f$ im Intervall oben verläuft, kommt die Fläche direkt positiv heraus."
+      ],
+      "loesungsweg": "Schnittstellen: $-x^2 + 4x = x \\Leftrightarrow -x^2 + 3x = 0 \\Leftrightarrow x(3 - x) = 0$, also $x = 0$ und $x = 3$. Differenzfunktion: $d(x) = f(x) - g(x) = -x^2 + 3x$ mit der Kontrolle $d(1) = 2 > 0$ — zwischen den Schnittstellen verläuft die Parabel oberhalb der Geraden, weitere Schnittstellen gibt es nicht. Fläche: $A = \\int_0^3 (-x^2 + 3x)\\,\\mathrm{d}x = \\left[ -\\frac{1}{3}x^3 + \\frac{3}{2}x^2 \\right]_0^3 = -9 + \\frac{27}{2} = 4{,}5$ Flächeneinheiten. Achtung für den allgemeinen Fall: Läge im Intervall eine weitere Schnittstelle, müsste man dort aufteilen und die Beträge der Teilintegrale addieren.",
+      "kc": ["flaeche-zwischen-graphen"]
+    },
+    {
+      "id": "ma-qp-q1-007",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "In den Wasserspeicher einer Gärtnerei fließt Wasser mit der Rate $r(t) = 6 - 2t$ (in $\\frac{\\text{m}^3}{\\text{h}}$, $t$ in Stunden, $0 \\le t \\le 5$) — negative Werte bedeuten, dass mehr entnommen wird als zufließt. Zu Beginn enthält der Speicher $20\\,\\text{m}^3$. a) Zu welchem Zeitpunkt ist am meisten Wasser im Speicher? Begründe über das Vorzeichen von $r$. b) Wie viel Wasser ist es dann? c) Wie viel Wasser enthält der Speicher am Ende ($t = 5$)?",
+      "eingaben": [
+        {
+          "label": "a) Zeitpunkt maximaler Füllung $t$",
+          "antwort": 3,
+          "toleranz": 0.001,
+          "einheit": "h"
+        },
+        {
+          "label": "b) maximaler Inhalt",
+          "antwort": 29,
+          "toleranz": 0.1,
+          "einheit": "m³"
+        },
+        {
+          "label": "c) Inhalt bei $t = 5$",
+          "antwort": 25,
+          "toleranz": 0.1,
+          "einheit": "m³"
+        }
+      ],
+      "tipps": [
+        "Der Bestand wächst, solange die Rate positiv ist, und fällt, sobald sie negativ wird — der Höchststand liegt am Vorzeichenwechsel von $r$.",
+        "$r(t) = 6 - 2t = 0$ bei $t = 3$. Der Bestand ist $B(t) = 20 + \\int_0^t r(u)\\,\\mathrm{d}u$; eine Stammfunktion des Integranden ist $6t - t^2$.",
+        "b) $B(3) = 20 + (18 - 9)$; c) $B(5) = 20 + (30 - 25)$ — den Anfangsbestand nicht vergessen!"
+      ],
+      "loesungsweg": "a) Die Rate $r(t) = 6 - 2t$ wechselt bei $t = 3$ das Vorzeichen von $+$ nach $-$: Bis dahin nimmt der Inhalt zu, danach ab — der Höchststand liegt also bei $t = 3\\,\\text{h}$ (Kriterium $B' = r$ mit Vorzeichenwechsel, genau wie bei Extrempunkten). b) $B(3) = 20 + \\int_0^3 (6 - 2t)\\,\\mathrm{d}t = 20 + \\left[ 6t - t^2 \\right]_0^3 = 20 + 9 = 29\\,\\text{m}^3$. c) $B(5) = 20 + \\left[ 6t - t^2 \\right]_0^5 = 20 + (30 - 25) = 25\\,\\text{m}^3$ — zwischen $t = 3$ und $t = 5$ gehen netto $4\\,\\text{m}^3$ wieder verloren. Klassische Stolperfalle: Wer den Anfangsbestand $20\\,\\text{m}^3$ unterschlägt, verliert die Punkte von b) und c) trotz richtiger Integrale.",
+      "kc": ["bestandsrekonstruktion"]
+    },
+    {
+      "id": "ma-qp-q1-008",
+      "typ": "luecke",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Klausur-Stolperfallen: Ergänze den Merktext.",
+      "text": "Bei der Flächenberechnung zwischen Graph und x-Achse teilt man das Intervall zuerst an den ___ auf und addiert dann die ___ der Teilintegrale. Ein Integralwert von null bedeutet nur, dass die ___ ausgeglichen ist. Beim Rekonstruieren eines Bestands gehört zum Integral noch der ___. Und für den Nachweis eines Extrempunkts braucht man neben f′(x₀) = 0 zusätzlich die ___ Bedingung.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Nullstellen",
+          "optionen": ["Nullstellen", "Extremstellen", "Wendestellen"]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Beträge",
+          "optionen": ["Beträge", "Quadrate", "Vorzeichen"]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Flächenbilanz",
+          "optionen": ["Flächenbilanz", "Gesamtfläche", "Steigung"]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Anfangsbestand",
+          "optionen": ["Anfangsbestand", "Endbestand", "Mittelwert"]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "hinreichende",
+          "optionen": ["hinreichende", "notwendige", "stetige"]
+        }
+      ],
+      "tipps": [
+        "Unterhalb der x-Achse zählt das Integral negativ — an welchen Stellen wechselt der Graph die Seite, und wie rettet man die Flächenstücke in die Summe?",
+        "Denke an den Wasserspeicher: Das Integral liefert nur die Änderung, nicht den Bestand selbst — was muss dazukommen?",
+        "$f'(x_0) = 0$ erfüllt auch der Sattelpunkt von $x^3$ — welche Bedingung schließt ihn aus?"
+      ],
+      "loesungsweg": "Nullstellen — Beträge — Flächenbilanz — Anfangsbestand — hinreichende: An den Nullstellen wechselt der Graph die Seite der x-Achse; deshalb wird dort aufgeteilt, und die Beträge der Teilintegrale werden addiert. Ein Integralwert von null heißt nur ausgeglichene Flächenbilanz (oberhalb = unterhalb), nicht „keine Fläche“. Beim Rekonstruieren gilt: Bestand = Anfangsbestand + Integral der Rate. Und Extrempunkte verlangen neben der notwendigen Bedingung $f'(x_0) = 0$ auch die hinreichende — $f''(x_0) \\neq 0$ oder ein Vorzeichenwechsel von $f'$.",
+      "kc": ["klausur-stolperfallen"]
+    },
+    {
+      "id": "ma-qp-q1-009",
+      "typ": "reihenfolge",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Löse die Exponentialgleichung $5 \\cdot \\mathrm{e}^{0{,}4x} = 20$: Bringe die Schritte in die richtige Reihenfolge.",
+      "elemente": [
+        "Den e-Term isolieren: durch 5 teilen liefert e^(0,4x) = 4",
+        "Den natürlichen Logarithmus auf beide Seiten anwenden: 0,4x = ln(4)",
+        "Nach x auflösen: x = ln(4)/0,4",
+        "Näherungswert berechnen: x ≈ 3,47",
+        "Probe: 5 · e^(0,4 · 3,47) ≈ 20"
+      ],
+      "tipps": [
+        "Der natürliche Logarithmus knackt die e-Funktion — aber erst, wenn der e-Term allein auf einer Seite steht.",
+        "$\\ln$ und $\\mathrm{e}$ heben sich gegenseitig auf: $\\ln\\left(\\mathrm{e}^{0{,}4x}\\right) = 0{,}4x$ — danach bleibt nur eine lineare Gleichung übrig.",
+        "Der exakte Wert $x = \\frac{\\ln 4}{0{,}4}$ kommt vor dem Runden, die Probe ganz zum Schluss."
+      ],
+      "loesungsweg": "Zuerst wird der e-Term isoliert ($\\mathrm{e}^{0{,}4x} = 4$), denn der Logarithmus hilft nur gegen den nackten e-Term. Dann beide Seiten logarithmieren: $0{,}4x = \\ln 4$. Auflösen liefert den exakten Wert $x = \\frac{\\ln 4}{0{,}4} = 2{,}5 \\cdot \\ln 4 \\approx 3{,}47$, und die Probe $5 \\cdot \\mathrm{e}^{0{,}4 \\cdot 3{,}47} \\approx 20$ bestätigt das Ergebnis. Klausurtipp: den exakten Wert stehen lassen und erst im Antwortsatz runden.",
+      "kc": ["exponentialgleichung-ln"]
+    },
+    {
+      "id": "ma-qp-q1-010",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Tee kühlt in einem Raum mit $20\\,^\\circ\\text{C}$ Umgebungstemperatur ab: $T(t) = 20 + 60 \\cdot \\mathrm{e}^{-0{,}1t}$ ($T$ in $^\\circ\\text{C}$, $t$ in Minuten). a) Welche Temperatur hat der Tee zu Beginn? b) Bestimme die momentane Änderungsrate $T'(0)$. c) Nach welcher Zeit ist der Tee auf $40\\,^\\circ\\text{C}$ abgekühlt?",
+      "eingaben": [
+        {
+          "label": "a) $T(0)$",
+          "antwort": 80,
+          "toleranz": 0.1,
+          "einheit": "°C"
+        },
+        {
+          "label": "b) $T'(0)$",
+          "antwort": -6,
+          "toleranz": 0.1,
+          "einheit": "°C/min"
+        },
+        {
+          "label": "c) Zeitpunkt für 40 °C",
+          "antwort": 10.99,
+          "toleranz": 0.1,
+          "einheit": "min"
+        }
+      ],
+      "tipps": [
+        "a) $t = 0$ einsetzen und $\\mathrm{e}^0 = 1$ nutzen. b) Kettenregel — die innere Ableitung $-0{,}1$ nicht vergessen.",
+        "$T'(t) = 60 \\cdot (-0{,}1) \\cdot \\mathrm{e}^{-0{,}1t} = -6\\,\\mathrm{e}^{-0{,}1t}$ — das Minuszeichen zeigt die Abkühlung an.",
+        "c) $20 + 60\\,\\mathrm{e}^{-0{,}1t} = 40$ nach dem e-Term umstellen ($\\mathrm{e}^{-0{,}1t} = \\frac{1}{3}$) und mit $\\ln$ auflösen."
+      ],
+      "loesungsweg": "a) $T(0) = 20 + 60 \\cdot 1 = 80\\,^\\circ\\text{C}$. b) Kettenregel: $T'(t) = 60 \\cdot (-0{,}1) \\cdot \\mathrm{e}^{-0{,}1t} = -6\\,\\mathrm{e}^{-0{,}1t}$, also $T'(0) = -6$ — zu Beginn verliert der Tee etwa $6\\,^\\circ\\text{C}$ pro Minute. c) $20 + 60\\,\\mathrm{e}^{-0{,}1t} = 40 \\Leftrightarrow \\mathrm{e}^{-0{,}1t} = \\frac{1}{3} \\Leftrightarrow -0{,}1t = \\ln\\frac{1}{3} \\Leftrightarrow t = 10 \\cdot \\ln 3 \\approx 11{,}0$ Minuten. Typisches beschränktes Abklingen: Die Temperatur nähert sich der Umgebungstemperatur $20\\,^\\circ\\text{C}$, erreicht sie aber nie.",
+      "kc": ["e-funktion-abkuehlung"],
+      "cas": "<p>Teil c) prüfst du auf dem ClassPad II mit <code>solve</code>:</p><ol><li>Im <b>Main</b>-Menü eingeben: <code>solve(20+60·e^(-0.1t)=40,t)</code> — den e-Term über die <b>e^</b>-Taste der Software-Tastatur (<b>Math1</b>), nicht als Buchstabe e.</li><li><b>EXE</b> liefert $t = 10 \\cdot \\ln(3) \\approx 10{,}99$.</li><li>Auch die Ableitung kontrolliert das CAS: <code>diff(20+60·e^(-0.1t),t)</code> ergibt $-6\\,\\mathrm{e}^{-0{,}1t}$; Einsetzen von $t = 0$ bestätigt $-6$.</li></ol><p>Im Heft gehört der $\\ln$-Weg dokumentiert — „solve liefert …“ ersetzt die Umformung nur im CAS-Teil, nicht im hilfsmittelfreien Teil.</p>"
+    },
+    {
+      "id": "ma-qp-q1-011",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Steckbriefaufgabe: Der Graph einer ganzrationalen Funktion dritten Grades ist punktsymmetrisch zum Ursprung — der Ansatz lautet deshalb $f(x) = ax^3 + cx$. Der Graph hat den Tiefpunkt $T(2 \\mid -4)$. Bestimme $a$ und $c$.",
+      "eingaben": [
+        {
+          "label": "Koeffizient $a$",
+          "antwort": 0.25,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "Koeffizient $c$",
+          "antwort": -3,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Übersetze den Tiefpunkt in zwei Bedingungen: $f(2) = -4$ (Punkt liegt auf dem Graphen) und $f'(2) = 0$ (waagerechte Tangente).",
+        "Mit $f'(x) = 3ax^2 + c$ entsteht das LGS: $8a + 2c = -4$ und $12a + c = 0$.",
+        "Aus der zweiten Gleichung folgt $c = -12a$; in die erste einsetzen liefert $-16a = -4$."
+      ],
+      "loesungsweg": "Bedingungen übersetzen: $f(2) = -4$ ergibt $8a + 2c = -4$, und $f'(2) = 0$ ergibt mit $f'(x) = 3ax^2 + c$ die Gleichung $12a + c = 0$. Aus der zweiten folgt $c = -12a$; eingesetzt in die erste: $8a - 24a = -4$, also $-16a = -4$ und damit $a = \\frac{1}{4} = 0{,}25$ sowie $c = -3$. Die Funktion lautet $f(x) = 0{,}25x^3 - 3x$. Probe aller Bedingungen: $f(2) = 2 - 6 = -4$ und $f'(2) = 3 - 3 = 0$; wegen $f''(x) = 1{,}5x$ ist $f''(2) = 3 > 0$ — tatsächlich ein Tiefpunkt. Der Steckbrief ist vollständig erfüllt.",
+      "kc": ["steckbriefaufgabe-lgs"]
+    },
+    {
+      "id": "ma-qp-q1-012",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Gegeben ist die Funktionenschar $f_a(x) = x^3 - 3a^2 x$ mit $a > 0$. Untersuche die Tiefpunkte der Schar.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Bestimme die Extremstellen in Abhängigkeit von $a$. Gib die Stelle des Tiefpunkts für $a = 2$ an.",
+          "eingaben": [
+            {
+              "label": "Tiefpunktstelle $x$ für $a = 2$",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$f_a'(x) = 3x^2 - 3a^2 = 0$ liefert $x = \\pm a$; wegen $f_a''(x) = 6x$ liegt der Tiefpunkt bei $x = +a$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die $y$-Koordinate des Tiefpunkts für $a = 2$.",
+          "eingaben": [
+            {
+              "label": "$y$-Koordinate für $a = 2$",
+              "antwort": -16,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Allgemein gilt $f_a(a) = a^3 - 3a^3 = -2a^3$; für $a = 2$ also $-2 \\cdot 8$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Alle Tiefpunkte $(a \\mid -2a^3)$ liegen auf einer Ortskurve der Form $y = c \\cdot x^3$. Gib $c$ an.",
+          "eingaben": [
+            {
+              "label": "Koeffizient $c$",
+              "antwort": -2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Aus $x = a$ folgt $a = x$; das in $y = -2a^3$ einsetzen — der Parameter verschwindet."
+          ]
+        }
+      ],
+      "tipps": [
+        "Rechne mit $a$ wie mit einer festen Zahl: $f_a'(x) = 3x^2 - 3a^2$, die Nullstellen folgen aus $x^2 = a^2$.",
+        "Hinreichende Bedingung: $f_a''(x) = 6x$ — an der Stelle $x = a > 0$ positiv (Tiefpunkt), bei $x = -a$ negativ (Hochpunkt).",
+        "Ortskurve: die Tiefpunkt-Koordinaten $x = a$ und $y = -2a^3$ als kleines Gleichungssystem lesen und den Parameter $a$ eliminieren."
+      ],
+      "loesungsweg": "Schritt 1: $f_a'(x) = 3x^2 - 3a^2 = 0 \\Leftrightarrow x^2 = a^2 \\Leftrightarrow x = \\pm a$. Mit $f_a''(x) = 6x$ gilt $f_a''(a) = 6a > 0$ (Tiefpunkt bei $x = a$) und $f_a''(-a) = -6a < 0$ (Hochpunkt bei $x = -a$); für $a = 2$ liegt der Tiefpunkt also bei $x = 2$. Schritt 2: $f_a(a) = a^3 - 3a^3 = -2a^3$, für $a = 2$: $f_2(2) = 8 - 24 = -16$ — Tiefpunkt $(2 \\mid -16)$. Schritt 3: Alle Tiefpunkte haben die Koordinaten $x = a$ und $y = -2a^3$. Einsetzen von $a = x$ eliminiert den Parameter: $y = -2x^3$, also $c = -2$. Jeder Tiefpunkt der Schar liegt auf dieser Ortskurve — das bestätigt auch die Stichprobe $a = 1$ mit Tiefpunkt $(1 \\mid -2)$.",
+      "kc": ["funktionenschar-ortskurve"],
+      "cas": "<p>Parameter machen dem ClassPad II nichts aus — solange $a$ keinen gespeicherten Wert hat (sonst die Variable vorher löschen):</p><ol><li>Ableitung der Schar: <code>diff(x^3-3a^2·x,x)</code> im <b>Main</b>-Menü eingeben (Template über <b>Math2</b>) — Ergebnis $3x^2 - 3a^2$.</li><li>Extremstellen: <code>solve(3x^2-3a^2=0,x)</code> liefert $x = -a$ und $x = a$ — das CAS rechnet symbolisch mit dem Parameter weiter.</li><li>Kontrolle für $a = 2$: den Term <code>x^3-3·4·x</code> an der Stelle $x = 2$ auswerten — Ergebnis $-16$.</li></ol><p>Für die Klausur gilt: Hinreichende Bedingung und Fallunterscheidung nach dem Vorzeichen von $a$ musst du selbst aufschreiben — das CAS liefert nur die Kandidaten.</p>"
+    },
+    {
+      "id": "ma-qp-q1-013",
+      "typ": "freitext",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Gegeben ist die Funktionenschar $g_t(x) = x^3 + t \\cdot (x^2 - 1)$ mit beliebigem Parameter $t$. Zeige, dass alle Graphen der Schar durch zwei gemeinsame Punkte verlaufen, gib beide Punkte an und beschreibe das allgemeine Verfahren, mit dem man gemeinsame Punkte einer Schar findet.",
+      "musterloesung": "Ein Punkt liegt auf allen Scharkurven, wenn sein Funktionswert nicht vom Parameter abhängt. In $g_t(x) = x^3 + t \\cdot (x^2 - 1)$ steckt $t$ nur im Summanden $t \\cdot (x^2 - 1)$ — er verschwindet genau dort, wo $x^2 - 1 = 0$ gilt, also bei $x = 1$ und $x = -1$. Dort ist $g_t(1) = 1 + t \\cdot 0 = 1$ und $g_t(-1) = -1 + t \\cdot 0 = -1$, unabhängig von $t$: Alle Scharkurven verlaufen durch $P(1 \\mid 1)$ und $Q(-1 \\mid -1)$. Allgemeines Verfahren: Man setzt zwei Scharfunktionen mit verschiedenen Parametern gleich, $g_{t_1}(x) = g_{t_2}(x)$, und vereinfacht — hier bleibt $(t_1 - t_2) \\cdot (x^2 - 1) = 0$. Wegen $t_1 \\neq t_2$ muss der zweite Faktor null sein, was genau die parameterfreien Stellen $x = \\pm 1$ liefert. Kurz gefasst: den Funktionsterm nach dem Parameter sortieren — gemeinsame Punkte liegen dort, wo der parameterabhängige Anteil null wird.",
+      "tipps": [
+        "Sortiere den Funktionsterm nach dem Parameter: Welcher Teil hängt an $t$, welcher nicht?",
+        "Der $t$-Anteil verschwindet, wenn sein Faktor $x^2 - 1$ null wird — ganz gleich, welchen Wert $t$ hat.",
+        "Alternativer Weg: Setze $g_{t_1}(x) = g_{t_2}(x)$ für $t_1 \\neq t_2$ und vereinfache — übrig bleibt $(t_1 - t_2)(x^2 - 1) = 0$."
+      ],
+      "loesungsweg": "Der Parameter steckt nur im Summanden $t \\cdot (x^2 - 1)$. Für $x^2 - 1 = 0$, also $x = \\pm 1$, fällt er weg: $g_t(1) = 1$ und $g_t(-1) = -1$, unabhängig von $t$. Alle Scharkurven gehen also durch $P(1 \\mid 1)$ und $Q(-1 \\mid -1)$. Allgemeines Verfahren: zwei Scharfunktionen mit verschiedenen Parametern gleichsetzen ($g_{t_1} = g_{t_2}$) oder den Term nach dem Parameter sortieren — gemeinsame Punkte liegen genau dort, wo der parameterabhängige Anteil verschwindet.",
+      "kc": ["funktionenschar-gemeinsame-punkte"]
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+{
+  "thema": "ma-qp-normalverteilung",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-nv-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Stetig oder diskret? Welche Aussagen über stetige Zufallsgrößen und ihre Dichtefunktionen sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Füllmenge einer Saftflasche ist eine stetige Zufallsgröße: Zwischen zwei möglichen Werten liegen stets weitere.",
+          "richtig": true,
+          "erklaerung": "Richtig: Messgrößen wie Füllmengen, Längen, Massen und Zeiten können jeden Wert eines Intervalls annehmen — genau das macht sie stetig."
+        },
+        {
+          "text": "Bei einer stetigen Zufallsgröße ist $P(a \\le X \\le b)$ die Fläche unter der Dichtefunktion über dem Intervall $[a;\\ b]$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Bei stetigen Größen übernimmt die Fläche unter der Dichtekurve vollständig die Rolle, die bei diskreten Größen die Säulen des Histogramms spielen."
+        },
+        {
+          "text": "Der Wert der Dichtefunktion an der Stelle $a$ ist die Wahrscheinlichkeit $P(X = a)$.",
+          "richtig": false,
+          "erklaerung": "Die Dichte ist keine Wahrscheinlichkeit: Für jede stetige Zufallsgröße gilt $P(X = a) = 0$. Wahrscheinlichkeiten stecken nur in Flächen über Intervallen — der Dichtewert selbst kann sogar größer als $1$ werden."
+        },
+        {
+          "text": "Die Trefferzahl $X$ beim 50-maligen Münzwurf ist stetig, weil $n$ groß ist.",
+          "richtig": false,
+          "erklaerung": "Auch bei großem $n$ bleibt die Trefferzahl diskret: $X$ nimmt nur die ganzen Zahlen $0$ bis $50$ an — das Histogramm sieht lediglich zunehmend glockenförmig aus."
+        }
+      ],
+      "tipps": [
+        "Stetig heißt: Die Größe kann jeden Wert eines Intervalls annehmen — typisch für Messgrößen, nie für Anzahlen.",
+        "Prüfe Aussage 3 an einer schmalen, hohen Glocke: Der Dichtewert am Maximum kann über 1 liegen — kann das eine Wahrscheinlichkeit sein?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Füllmengen sind Messgrößen und damit stetig, und Wahrscheinlichkeiten stetiger Größen sind Flächen unter der Dichtekurve. Aussage 3 verwechselt Dichte und Wahrscheinlichkeit: Es gilt $P(X = a) = 0$ für jeden Einzelwert, und der Dichtewert selbst kann größer als $1$ werden (schmale, hohe Glocke) — eine Wahrscheinlichkeit kann das nie. Aussage 4 verwechselt „glockenförmig aussehen“ mit „stetig sein“: Trefferzahlen bleiben ganzzahlig und damit diskret, egal wie groß $n$ ist.",
+      "kc": [
+        "stetige-zufallsgroesse"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-002",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Zwei Regler für eine Glocke: Ordne jeder Veränderung bzw. jedem Kurvenmerkmal die passende Beschreibung zu.",
+      "paare": [
+        {
+          "links": "μ wird größer",
+          "rechts": "Glocke wandert nach rechts"
+        },
+        {
+          "links": "σ wird größer",
+          "rechts": "Glocke wird breiter und flacher"
+        },
+        {
+          "links": "σ wird kleiner",
+          "rechts": "Glocke wird schmaler und höher"
+        },
+        {
+          "links": "μ − σ und μ + σ",
+          "rechts": "dort liegen die Wendepunkte"
+        }
+      ],
+      "tipps": [
+        "μ ist der Lageparameter: Er verschiebt die Glocke, ohne ihre Form zu verändern.",
+        "σ ist der Streuungsparameter — und die Gesamtfläche 1 bleibt stets erhalten: Was an Breite dazukommt, geht an Höhe verloren.",
+        "An den Stellen μ − σ und μ + σ wechselt die Kurve vom „Bauch“ in die „Flanke“."
+      ],
+      "loesungsweg": "Wächst $\\mu$, wandert die ganze Glocke nach rechts — die Form bleibt unverändert, denn $\\mu$ ist reiner Lageparameter. $\\sigma$ steuert die Streuung: Ein größeres $\\sigma$ macht die Glocke breiter und flacher, ein kleineres schmaler und höher — die Gesamtfläche $1$ erzwingt diesen Tausch von Breite gegen Höhe. An den Stellen $\\mu - \\sigma$ und $\\mu + \\sigma$ liegen die beiden Wendepunkte: Dort lässt sich $\\sigma$ direkt aus jeder Skizze ablesen.",
+      "kc": [
+        "glockenkurve-parameter"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-003",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zur Gaußschen Glockenkurve.",
+      "text": "Die Glockenkurve hat ihr Maximum an der Stelle ___. Sie ist symmetrisch; deshalb gilt P(X ≤ μ) = ___. Ihre beiden Wendepunkte liegen bei den Stellen ___. Die Gesamtfläche zwischen Kurve und x-Achse beträgt ___.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "x = μ",
+          "optionen": [
+            "x = μ",
+            "x = σ",
+            "x = 0"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "0,5",
+          "optionen": [
+            "0,5",
+            "1",
+            "0"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "μ − σ und μ + σ",
+          "optionen": [
+            "μ − σ und μ + σ",
+            "μ − 2σ und μ + 2σ",
+            "0 und μ"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "1",
+          "optionen": [
+            "1",
+            "0,5",
+            "σ"
+          ]
+        }
+      ],
+      "tipps": [
+        "Werte nahe dem Erwartungswert sind am dichtesten gepackt — dort sitzt der Gipfel.",
+        "Links und rechts der Symmetrieachse liegt je die halbe Gesamtfläche.",
+        "Die Wendepunkte verraten die Standardabweichung: je eine σ-Breite links und rechts vom Gipfel."
+      ],
+      "loesungsweg": "x = μ — 0,5 — μ − σ und μ + σ — 1: Das Maximum sitzt über dem Erwartungswert $\\mu$, und wegen der Symmetrie liegt links von $\\mu$ genau die halbe Fläche: $P(X \\le \\mu) = 0{,}5$. Die Wendepunkte bei $\\mu - \\sigma$ und $\\mu + \\sigma$ machen $\\sigma$ in jeder Skizze ablesbar. Die Gesamtfläche unter jeder Dichtekurve beträgt $1$ — sie sammelt die Wahrscheinlichkeit aller möglichen Werte ein.",
+      "kc": [
+        "glockenkurve-eigenschaften"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-004",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Anlage gießt Schokoladentafeln; die Masse $X$ (in g) ist normalverteilt mit $\\mu = 251$ und $\\sigma = 2$. Berechne $P(249 \\le X \\le 254)$ sowie die Wahrscheinlichkeit, dass eine Tafel leichter als 248 g ist. Runde auf vier Nachkommastellen.",
+      "eingaben": [
+        {
+          "label": "$P(249 \\le X \\le 254)$",
+          "antwort": 0.7745,
+          "toleranz": 0.0005,
+          "einheit": ""
+        },
+        {
+          "label": "$P(X < 248)$",
+          "antwort": 0.0668,
+          "toleranz": 0.0005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Wahrscheinlichkeit = Fläche unter der Glockenkurve: normCDf(untere Grenze, obere Grenze, σ, μ) — erst die Grenzen, dann σ, dann μ.",
+        "Für $P(X < 248)$ ist die untere Grenze $-\\infty$ (über die mth-Tastatur, ersatzweise $-10^{99}$).",
+        "Plausibilität: 248 g liegt 1,5 Standardabweichungen unter μ — selten, aber nicht extrem selten."
+      ],
+      "loesungsweg": "$X$ ist normalverteilt mit $\\mu = 251$ und $\\sigma = 2$. Die Fläche über dem Intervall liefert das CAS: $P(249 \\le X \\le 254) = $ normCDf(249, 254, 2, 251) $\\approx 0{,}7745$ — gut drei Viertel aller Tafeln. Für die zweite Frage ist die Fläche links von 248 gesucht: $P(X < 248) = $ normCDf($-\\infty$, 248, 2, 251) $\\approx 0{,}0668$. Ob mit $<$ oder $\\le$ gerechnet wird, ist egal: Der Einzelwert 248 hat die Wahrscheinlichkeit $0$. Rund $6{,}7\\,\\%$ der Tafeln sind also leichter als 248 g.",
+      "kc": [
+        "normcdf-anwenden"
+      ],
+      "cas": "<p>Flächen unter der Glockenkurve liefert der ClassPad II über die Normalverteilungs-Funktion:</p><ol><li>Im <b>Main</b>-Menü <b>Interactive → Verteilungsfunktionen → normCDf</b> wählen.</li><li>Die <b>Parameterreihenfolge</b> lautet normCDf(untere Grenze, obere Grenze, σ, μ): erst die beiden Grenzen, dann σ und erst <b>danach</b> μ — viele tippen reflexhaft μ zuerst! Hier: <code>normCDf(249,254,2,251)</code> ≈ 0.7745.</li><li>Für $P(X < 248)$ als untere Grenze $-\\infty$ eintragen (mth-Tastatur, ersatzweise <code>-1E99</code>): <code>normCDf(-∞,248,2,251)</code> ≈ 0.0668.</li><li>Dezimalzahlen stets mit Dezimal<b>punkt</b> eingeben (<code>0.5</code>, nicht <code>0,5</code>).</li></ol><p>In der Klausur gehört der Ansatz aufs Papier: $X$ normalverteilt mit $\\mu = 251$, $\\sigma = 2$, gesucht ist die Fläche $P(249 \\le X \\le 254)$ — normCDf liefert nur den Zahlenwert.</p>"
+    },
+    {
+      "id": "ma-qp-nv-005",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Vom Sachtext zur Wahrscheinlichkeit: Bringe die Schritte einer Normalverteilungs-Aufgabe in die richtige Reihenfolge.",
+      "elemente": [
+        "Modell festlegen: X als normalverteilt annehmen, μ und σ aus dem Text entnehmen",
+        "Das gesuchte Ereignis in einen Wahrscheinlichkeits-Term übersetzen, z. B. P(X ≥ 1006)",
+        "Den Term als Fläche unter der Glockenkurve deuten und die Grenzen festlegen (ggf. −∞ oder ∞)",
+        "normCDf(untere Grenze, obere Grenze, σ, μ) im CAS auswerten",
+        "Ergebnis runden, mit den Sigma-Regeln auf Plausibilität prüfen und im Sachzusammenhang deuten"
+      ],
+      "tipps": [
+        "Ohne Modell keine Rechnung: Erst müssen μ und σ feststehen.",
+        "Vor dem CAS-Einsatz muss klar sein, welche Fläche gesucht ist — Übersetzen kommt vor Eintippen.",
+        "Die Sigma-Regeln sind der eingebaute Plausibilitäts-Check am Schluss: Vertauschte σ- und μ-Positionen fallen damit sofort auf."
+      ],
+      "loesungsweg": "Zuerst wird das Modell aufgestellt: $X$ normalverteilt, $\\mu$ und $\\sigma$ aus dem Text. Dann übersetzt man die Sachfrage in einen Term wie $P(X \\ge 1006)$, deutet ihn als Fläche unter der Glockenkurve und legt die Grenzen fest — bei einseitigen Fragen mit $-\\infty$ bzw. $\\infty$. Erst jetzt kommt das CAS: normCDf(untere Grenze, obere Grenze, $\\sigma$, $\\mu$) in genau dieser Parameterreihenfolge. Zum Schluss wird gerundet, mit den Sigma-Regeln auf Plausibilität geprüft und im Sachzusammenhang geantwortet. Diese Reihenfolge trägt durch jede Normalverteilungs-Klausuraufgabe.",
+      "kc": [
+        "normalverteilung-ablauf"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-006",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Punktzahl $X$ eines standardisierten Tests ist normalverteilt mit $\\mu = 100$ und $\\sigma = 15$. Bestimme ohne CAS mithilfe der Sigma-Regeln das symmetrische Intervall um $\\mu$, das rund $95{,}4\\,\\%$ aller Ergebnisse enthält — und die Wahrscheinlichkeit (in Prozent, eine Nachkommastelle) für ein Ergebnis über 130 Punkten.",
+      "eingaben": [
+        {
+          "label": "untere Grenze",
+          "antwort": 70,
+          "toleranz": 0,
+          "einheit": "Punkte"
+        },
+        {
+          "label": "obere Grenze",
+          "antwort": 130,
+          "toleranz": 0,
+          "einheit": "Punkte"
+        },
+        {
+          "label": "$P(X > 130)$",
+          "antwort": 2.3,
+          "toleranz": 0.05,
+          "einheit": "%"
+        }
+      ],
+      "tipps": [
+        "Die 2σ-Umgebung [μ − 2σ; μ + 2σ] enthält rund 95,4 % aller Werte.",
+        "Außerhalb der 2σ-Umgebung liegen rund 4,6 % — und die Glocke ist symmetrisch.",
+        "130 = μ + 2σ: Gesucht ist genau die rechte Hälfte des Außenbereichs."
+      ],
+      "loesungsweg": "Die $2\\sigma$-Umgebung reicht von $100 - 2 \\cdot 15 = 70$ bis $100 + 2 \\cdot 15 = 130$ Punkte — sie enthält rund $95{,}4\\,\\%$ aller Ergebnisse. Außerhalb liegen $4{,}6\\,\\%$, wegen der Symmetrie je zur Hälfte links und rechts: $P(X > 130) \\approx 2{,}3\\,\\%$. Die CAS-Kontrolle normCDf(130, $\\infty$, 15, 100) $\\approx 0{,}0228$ bestätigt die Regel fast auf den Punkt. Mehr als 130 Punkte erreicht nach diesem Modell also nur gut jede vierzigste Person.",
+      "kc": [
+        "sigma-regeln"
+      ],
+      "cas": "<p>„Ohne CAS“ heißt: Die Sigma-Regeln liefern die Antwort — der ClassPad II übernimmt anschließend die Kontrolle:</p><ol><li><b>Interactive → Verteilungsfunktionen → normCDf</b> mit unterer Grenze <code>130</code>, oberer Grenze ∞ (mth-Tastatur, ersatzweise <code>1E99</code>), <b>σ</b> = <code>15</code>, <b>μ</b> = <code>100</code> — Parameterreihenfolge: Grenzen, dann σ, dann μ! <code>normCDf(130,∞,15,100)</code> ≈ 0.0228 bestätigt die 2,3 %.</li><li>Das Intervall selbst: <code>normCDf(70,130,15,100)</code> ≈ 0.9545 — die „rund 95,4 %“ der 2σ-Regel.</li><li>Umkehrweg mit <b>invNormCDf</b>: Im Dialog <b>Tail</b> auf <b>Center</b> stellen (gesucht ist ein symmetrisch um μ liegendes mittleres Intervall), <b>prob</b> = <code>0.954</code>, <b>σ</b> = <code>15</code>, <b>μ</b> = <code>100</code> — Ergebnis ≈ 70.07 und ≈ 129.93, in Rundungsgenauigkeit die Sigma-Grenzen 70 und 130 (die 95,4 % sind selbst gerundet). <b>Left</b> bzw. <b>Right</b> wählst du dagegen, wenn die Fläche links bzw. rechts der gesuchten Grenze gegeben ist.</li></ol><p>In der Klausur zählt der Sigma-Regel-Ansatz (μ ± 2σ) als Begründung — die normCDf-Kontrolle ersetzt ihn nicht.</p>"
+    },
+    {
+      "id": "ma-qp-nv-007",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Füllmenge $X$ (in ml) sei normalverteilt mit $\\mu = 1000$ und $\\sigma = 4$. Welche Aussagen über das Rechnen mit stetigen Zufallsgrößen sind richtig?",
+      "optionen": [
+        {
+          "text": "$P(X < 994) = P(X \\le 994)$ — ob die Grenze dazugehört, spielt keine Rolle.",
+          "richtig": true,
+          "erklaerung": "Richtig: Der Einzelwert 994 hat die Wahrscheinlichkeit $0$ — ihn dazuzunehmen oder wegzulassen ändert die Fläche nicht."
+        },
+        {
+          "text": "$P(X \\ge 1006) = 1 - P(X \\le 1006)$",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Flächen links und rechts von 1006 ergänzen sich exakt zu $1$ — die Grenze darf in beiden Termen auftauchen, weil sie selbst die Wahrscheinlichkeit $0$ hat."
+        },
+        {
+          "text": "Wie bei der Binomialverteilung gilt $P(X \\ge 1006) = 1 - P(X \\le 1005)$.",
+          "richtig": false,
+          "erklaerung": "Das Grenzen-Verrutschen um $1$ stammt aus der diskreten Welt, in der zwischen 1005 und 1006 nichts liegt. Hier ist $X$ stetig: $1 - P(X \\le 1005)$ wäre schlicht eine andere, größere Fläche."
+        },
+        {
+          "text": "$P(996 \\le X \\le 1004)$ lässt sich nur berechnen, wenn man eine Stammfunktion der Dichtefunktion angibt.",
+          "richtig": false,
+          "erklaerung": "Eine elementare Stammfunktion gibt es beweisbar nicht — trotzdem liefert das CAS die Fläche numerisch beliebig genau: normCDf(996, 1004, 4, 1000) $\\approx 0{,}6827$. Kein Zufall: $[996;\\ 1004]$ ist genau die $1\\sigma$-Umgebung."
+        }
+      ],
+      "tipps": [
+        "Bei stetigen Größen gilt für jeden Einzelwert P(X = a) = 0 — was folgt daraus für < und ≤?",
+        "Das Verschieben der Grenze um 1 hatte bei der Binomialverteilung einen Grund: Trefferzahlen sind ganzzahlig. Gilt dieser Grund hier noch?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Weil jeder Einzelwert die Wahrscheinlichkeit $0$ hat, gilt $P(X < b) = P(X \\le b)$, und das Gegenereignis funktioniert ohne Grenzverschiebung: $P(X \\ge a) = 1 - P(X \\le a)$. Aussage 3 überträgt den diskreten Verrutsch-Trick fälschlich auf stetige Größen — zwischen 1005 und 1006 liegt hier ein ganzes Kontinuum möglicher Werte. Aussage 4 ist falsch: Zwar besitzt die Dichtefunktion beweisbar keine elementare Stammfunktion, doch normCDf berechnet die Fläche numerisch — normCDf(996, 1004, 4, 1000) $\\approx 0{,}6827$, die vertraute $1\\sigma$-Wahrscheinlichkeit.",
+      "kc": [
+        "stetig-rechenregeln"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-008",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Dichtefunktion einer normalverteilten Zufallsgröße $X$ hat ihr Maximum an der Stelle $x = 24$; ihre Wendestellen liegen bei $x = 21$ und $x = 27$. Gib $\\mu$ und $\\sigma$ an und berechne $P(X \\le 20)$ (vier Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "$\\mu$",
+          "antwort": 24,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "$\\sigma$",
+          "antwort": 3,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "$P(X \\le 20)$",
+          "antwort": 0.0912,
+          "toleranz": 0.0005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Das Maximum der Glockenkurve sitzt immer über dem Erwartungswert.",
+        "Der Abstand vom Maximum zu jeder Wendestelle beträgt genau σ.",
+        "Mit μ und σ liefert normCDf(−∞, 20, σ, μ) die gesuchte Fläche."
+      ],
+      "loesungsweg": "Das Maximum liegt über dem Erwartungswert: $\\mu = 24$. Die Wendestellen liegen bei $\\mu \\pm \\sigma$, also $\\sigma = 27 - 24 = 3$ (ebenso $24 - 21 = 3$). Damit: $P(X \\le 20) = $ normCDf($-\\infty$, 20, 3, 24) $\\approx 0{,}0912$. Plausibilitätskontrolle mit den Sigma-Regeln: 20 liegt zwischen einer und zwei Standardabweichungen unter $\\mu$, die Wahrscheinlichkeit muss also zwischen $2{,}3\\,\\%$ und $15{,}9\\,\\%$ liegen — passt.",
+      "kc": [
+        "glockenkurve-ablesen"
+      ],
+      "cas": "<p>Sobald μ und σ aus der Kurve abgelesen sind, übernimmt der ClassPad II die Fläche:</p><ol><li><b>Interactive → Verteilungsfunktionen → normCDf</b> wählen — Parameterreihenfolge normCDf(untere Grenze, obere Grenze, σ, μ): erst die Grenzen, dann σ, erst danach μ.</li><li>„Höchstens 20“ hat keine echte untere Grenze: −∞ über die mth-Tastatur eintragen (ersatzweise <code>-1E99</code>): <code>normCDf(-∞,20,3,24)</code> ≈ 0.0912.</li><li>Plausibilität mit den Sigma-Regeln: 20 liegt zwischen ein und zwei Standardabweichungen unter μ = 24, das Ergebnis muss also zwischen ≈ 0.0228 und ≈ 0.1587 liegen — passt.</li></ol><p>Im Heft zuerst begründen, woher μ = 24 (Maximumstelle) und σ = 3 (Abstand zu den Wendestellen) kommen — der normCDf-Aufruf ist nur der letzte Schritt.</p>"
+    },
+    {
+      "id": "ma-qp-nv-009",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Anlage füllt Limonadendosen; die Füllmenge $X$ (in ml) ist normalverteilt mit $\\mu = 330$ und $\\sigma = 4$. Der Hersteller möchte eine Mindestfüllmenge $m$ garantieren, die von $99\\,\\%$ aller Dosen erreicht oder überschritten wird. Bestimme $m$ Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Übersetze die Bedingung „99 % aller Dosen enthalten mindestens m“ in eine Aussage über die Fläche links von $m$: Wie groß muss $P(X \\le m)$ sein?",
+          "eingaben": [
+            {
+              "label": "$P(X \\le m)$",
+              "antwort": 0.01,
+              "toleranz": 0.0001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Wenn rechts von m 99 % der Fläche liegen, bleibt links nur der Rest."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Bestimme die Grenze $m$ mit invNormCDf (auf zwei Nachkommastellen).",
+          "eingaben": [
+            {
+              "label": "$m$",
+              "antwort": 320.69,
+              "toleranz": 0.05,
+              "einheit": "ml"
+            }
+          ],
+          "tipps": [
+            "Im invNormCDf-Dialog: Tail auf „Left“, Wahrscheinlichkeit 0.01, dann σ = 4 und μ = 330."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Kontrolle und Deutung: Wie viel Prozent aller Dosen enthalten weniger als die aufgedruckten 330 ml?",
+          "eingaben": [
+            {
+              "label": "$P(X < 330)$",
+              "antwort": 50,
+              "toleranz": 0.1,
+              "einheit": "%"
+            }
+          ],
+          "tipps": [
+            "330 ist genau der Erwartungswert — denke an die Symmetrie der Glocke."
+          ]
+        }
+      ],
+      "tipps": [
+        "Umkehraufgabe: Gegeben ist die Wahrscheinlichkeit, gesucht ist die Grenze — der Job von invNormCDf.",
+        "„Mindestens m in 99 % der Fälle“ heißt: Rechts von m liegen 99 % der Fläche, links nur 1 %.",
+        "Endkontrolle: m muss deutlich unter μ = 330 liegen — sonst könnte die Garantie nicht für fast alle Dosen gelten."
+      ],
+      "loesungsweg": "Schritt 1: „99 % aller Dosen enthalten mindestens $m$“ bedeutet $P(X \\ge m) = 0{,}99$, also $P(X \\le m) = 0{,}01$. Schritt 2: Gesucht ist die Grenze zur linken Fläche $0{,}01$: invNormCDf liefert $m \\approx 320{,}69$ ml (genauer $320{,}6946$). Schritt 3: Kontrolle: normCDf($320{,}69$, $\\infty$, 4, 330) $\\approx 0{,}99$ ✓. Und weil 330 genau der Erwartungswert ist, enthält die Hälfte aller Dosen weniger als aufgedruckt: $P(X < 330) = 50\\,\\%$ — deshalb setzen Hersteller garantierte Mindestfüllmengen stets ein Stück unterhalb von $\\mu$ an.",
+      "kc": [
+        "invnormcdf-umkehraufgabe"
+      ],
+      "cas": "<p>Umkehraufgaben löst der ClassPad II mit der inversen Normalverteilung:</p><ol><li><b>Interactive → Verteilungsfunktionen → invNormCDf</b> wählen.</li><li>Im Dialog <b>Tail</b> auf <b>Left</b> stellen — gegeben ist die Fläche <em>links</em> der gesuchten Grenze. Dann <b>prob</b> = <code>0.01</code>, <b>σ</b> = <code>4</code>, <b>μ</b> = <code>330</code> eintragen; die Wahrscheinlichkeit mit Dezimal<b>punkt</b> (<code>0.01</code>, nicht <code>0,01</code>!). Ergebnis: $m \\approx 320{,}69$.</li><li>Kontrolle mit normCDf: <code>normCDf(320.69,∞,4,330)</code> ≈ 0.99 ✓ — Parameterreihenfolge normCDf(untere Grenze, obere Grenze, σ, μ) beachten.</li></ol><p>Alternativ führt <b>Tail: Right</b> mit <b>prob</b> = <code>0.99</code> direkt zur selben Grenze — entscheidend ist, dass Flächenseite und Wahrscheinlichkeit zusammenpassen.</p>"
+    },
+    {
+      "id": "ma-qp-nv-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Maschine fertigt Bolzen mit Solldurchmesser 6 mm; brauchbar sind Durchmesser zwischen $5{,}9$ mm und $6{,}1$ mm. Die Maschine ist leicht dejustiert: Der Durchmesser $X$ (in mm) ist normalverteilt mit $\\mu = 6{,}02$ und $\\sigma = 0{,}05$. Berechne den Anteil brauchbarer Bolzen (vier Nachkommastellen) und den Ausschussanteil in Prozent (eine Nachkommastelle).",
+      "eingaben": [
+        {
+          "label": "$P(5{,}9 \\le X \\le 6{,}1)$",
+          "antwort": 0.937,
+          "toleranz": 0.0005,
+          "einheit": ""
+        },
+        {
+          "label": "Ausschuss",
+          "antwort": 6.3,
+          "toleranz": 0.05,
+          "einheit": "%"
+        }
+      ],
+      "tipps": [
+        "Brauchbar = Fläche über dem Toleranzintervall: normCDf(5.9, 6.1, 0.05, 6.02) — Grenzen zuerst, dann σ, dann μ.",
+        "Achtung, die Glocke sitzt nicht mittig im Toleranzintervall: μ = 6,02 liegt rechts der Intervallmitte.",
+        "Ausschuss ist das Gegenereignis: 1 minus Anteil der brauchbaren Bolzen."
+      ],
+      "loesungsweg": "Brauchbar sind Bolzen im Toleranzintervall: $P(5{,}9 \\le X \\le 6{,}1) = $ normCDf(5.9, 6.1, 0.05, 6.02) $\\approx 0{,}9370$. Der Ausschuss ist das Gegenereignis: $1 - 0{,}9370 = 0{,}0630$, also $6{,}3\\,\\%$. Wegen der Dejustierung verteilt er sich ungleich: Unter $5{,}9$ mm liegen nur rund $0{,}8\\,\\%$, über $6{,}1$ mm dagegen rund $5{,}5\\,\\%$. Eine korrekt justierte Maschine ($\\mu = 6$) hätte bei gleichem $\\sigma$ nur rund $4{,}6\\,\\%$ Ausschuss — das Toleranzintervall wäre dann genau die $2\\sigma$-Umgebung.",
+      "kc": [
+        "normcdf-anwenden",
+        "toleranzintervall"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Ein Hersteller modelliert die Lebensdauer $X$ (in Stunden) seiner Glühlampen als normalverteilt mit $\\mu = 1000$ und $\\sigma = 600$. Nimm Stellung: Berechne $P(X < 0)$, erkläre, warum dieser Wert das Modell infrage stellt, und gib an, unter welchen Bedingungen eine Normalverteilung für Lebensdauern trotzdem brauchbar sein kann.",
+      "musterloesung": "Das CAS liefert $P(X < 0) = $ normCDf($-\\infty$, 0, 600, 1000) $\\approx 0{,}0478$: Das Modell behauptet, knapp $4{,}8\\,\\%$ aller Lampen hätten eine negative Lebensdauer — physikalisch unmöglich, denn eine Brenndauer kann nicht unter null liegen. Jede Wahrscheinlichkeit links von $0$ ist also reiner Modellfehler. Die Ursache: Bei $\\sigma = 600$ ist die Streuung im Vergleich zu $\\mu = 1000$ so groß, dass die Glocke weit in den negativen Bereich hineinragt — die $0$ liegt nur $\\frac{1000}{600} \\approx 1{,}7$ Standardabweichungen unter $\\mu$. Hinzu kommt: Lebensdauern sind erfahrungsgemäß oft schief verteilt (viele frühe Ausfälle, wenige Dauerläufer), die Glocke ist aber streng symmetrisch. Brauchbar ist die Normalverteilung, wenn die Streuung klein gegenüber dem Erwartungswert ist — als Faustregel sollte die $3\\sigma$-Umgebung $[\\mu - 3\\sigma;\\ \\mu + 3\\sigma]$ vollständig im positiven Bereich liegen, denn sie enthält $99{,}7\\,\\%$ der Wahrscheinlichkeit. Mit $\\mu = 1000$ und $\\sigma = 100$ etwa reicht sie von $700$ bis $1300$: $P(X < 0)$ ist dann praktisch $0$, und das Modell ist unbedenklich — sofern die Daten auch sonst zur symmetrischen Glockenform passen.",
+      "tipps": [
+        "Berechne normCDf(−∞, 0, 600, 1000) — und überlege, was diese Fläche im Sachzusammenhang bedeutet.",
+        "Wie viele Standardabweichungen liegt die 0 unter dem Erwartungswert? Vergleiche mit den Sigma-Regeln.",
+        "Formuliere eine Bedingung an μ und σ, unter der auf negative Werte praktisch keine Wahrscheinlichkeit entfällt."
+      ],
+      "loesungsweg": "Kernpunkte: $P(X < 0) \\approx 0{,}0478$ — das Modell ordnet knapp $4{,}8\\,\\%$ der Lampen eine unmögliche negative Lebensdauer zu, weil die $0$ nur etwa $1{,}7$ Standardabweichungen unter $\\mu$ liegt. Das stellt das Modell infrage; zusätzlich sind reale Lebensdauern oft schief statt symmetrisch verteilt. Brauchbar wird die Normalverteilung, wenn $\\sigma$ klein gegenüber $\\mu$ ist — Faustregel: Die $3\\sigma$-Umgebung liegt vollständig im Positiven ($\\mu - 3\\sigma > 0$), dann ist $P(X < 0)$ praktisch $0$.",
+      "kc": [
+        "modell-beurteilen"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Bei einer Umfrage werden $n = 400$ Personen unabhängig befragt; jede nennt mit der Wahrscheinlichkeit $p = 0{,}35$ die Partei A. $X$ zählt die A-Antworten und ist binomialverteilt. Berechne $P(130 \\le X \\le 150)$ näherungsweise mit der Normalverteilung — Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne $\\mu$ und $\\sigma$ der Binomialverteilung ($\\sigma$ auf zwei Nachkommastellen) und prüfe damit die Laplace-Bedingung.",
+          "eingaben": [
+            {
+              "label": "$\\mu$",
+              "antwort": 140,
+              "toleranz": 0.001,
+              "einheit": "Antworten"
+            },
+            {
+              "label": "$\\sigma$",
+              "antwort": 9.54,
+              "toleranz": 0.01,
+              "einheit": "Antworten"
+            }
+          ],
+          "tipps": [
+            "$\\mu = n \\cdot p$ und $\\sigma = \\sqrt{n \\cdot p \\cdot (1 - p)} = \\sqrt{91}$ — ist das größer als 3?"
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Näherung mit Stetigkeitskorrektur: normCDf($129{,}5$, $150{,}5$, $\\sqrt{91}$, 140) (vier Nachkommastellen).",
+          "eingaben": [
+            {
+              "label": "mit Korrektur",
+              "antwort": 0.729,
+              "toleranz": 0.0005,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Die Säule zur Trefferzahl k reicht von k − 0,5 bis k + 0,5 — beide Grenzen rutschen um 0,5 nach außen."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne zum Vergleich die Näherung ohne Korrektur: normCDf(130, 150, $\\sqrt{91}$, 140) (vier Nachkommastellen).",
+          "eingaben": [
+            {
+              "label": "ohne Korrektur",
+              "antwort": 0.7055,
+              "toleranz": 0.0005,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Dieselbe Funktion, nur mit den ungeschobenen Grenzen 130 und 150."
+          ]
+        }
+      ],
+      "tipps": [
+        "Erst die Kenngrößen, dann die Laplace-Bedingung σ > 3 — sie entscheidet, ob die Näherung zulässig ist.",
+        "Stetigkeitskorrektur: Aus [130; 150] wird [129,5; 150,5] — je eine halbe Säulenbreite nach außen.",
+        "Zur Einordnung: Die exakte Binomialrechnung liefert 0,7290 — vergleiche beide Näherungen damit."
+      ],
+      "loesungsweg": "Schritt 1: $\\mu = 400 \\cdot 0{,}35 = 140$ und $\\sigma = \\sqrt{400 \\cdot 0{,}35 \\cdot 0{,}65} = \\sqrt{91} \\approx 9{,}54 > 3$ — die Laplace-Bedingung ist erfüllt, die Näherung zulässig. Schritt 2: Mit Stetigkeitskorrektur: $P(130 \\le X \\le 150) \\approx $ normCDf($129{,}5$, $150{,}5$, $\\sqrt{91}$, 140) $\\approx 0{,}7290$. Schritt 3: Ohne Korrektur liefert normCDf(130, 150, $\\sqrt{91}$, 140) nur $\\approx 0{,}7055$. Vergleich mit dem exakten Binomialwert $P(X \\le 150) - P(X \\le 129) \\approx 0{,}7290$: Mit Korrektur stimmt die Näherung auf vier Nachkommastellen — ohne sie fehlen gut zwei Prozentpunkte, weil links und rechts je eine halbe Säule verloren geht.",
+      "kc": [
+        "moivre-laplace",
+        "stetigkeitskorrektur"
+      ],
+      "cas": "<p>Beide Näherungen und die exakte Kontrolle rechnet der ClassPad II:</p><ol><li><b>Interactive → Verteilungsfunktionen → normCDf</b> wählen: untere Grenze <code>129.5</code>, obere Grenze <code>150.5</code>, <b>σ</b> = <code>√91</code> (über die mth-Tastatur, ersatzweise <code>9.539</code>), <b>μ</b> = <code>140</code> — Parameterreihenfolge: Grenzen, dann σ, dann μ! Grenzen mit Dezimal<b>punkt</b> eingeben (<code>129.5</code>, nicht <code>129,5</code>). Ergebnis ≈ 0.7290.</li><li>Ohne Korrektur: <code>normCDf(130,150,√91,140)</code> ≈ 0.7055.</li><li>Exakte Kontrolle über die Binomialverteilung: <code>binomialCDf(150,400,0.35)-binomialCDf(129,400,0.35)</code> ≈ 0.7290.</li></ol><p>Der Dreifach-Vergleich zeigt die Stärke der Stetigkeitskorrektur: Mit ihr trifft die Glocke den exakten Wert auf vier Nachkommastellen, ohne sie gehen am Rand zwei halbe Säulen verloren.</p>"
+    },
+    {
+      "id": "ma-qp-nv-013",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: $Z = \\frac{X - \\mu}{\\sigma}$ standardisiert eine normalverteilte Größe $X$; $\\Phi(z) = P(Z \\le z)$ bezeichnet die Verteilungsfunktion der Standardnormalverteilung ($\\mu = 0$, $\\sigma = 1$). Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Der $z$-Wert gibt an, um wie viele Standardabweichungen $x$ über oder unter dem Erwartungswert liegt.",
+          "richtig": true,
+          "erklaerung": "Richtig: Genau das leistet die Division durch $\\sigma$ — $z = 1{,}5$ heißt „anderthalb Standardabweichungen über $\\mu$“, unabhängig von den konkreten Werten von $\\mu$ und $\\sigma$."
+        },
+        {
+          "text": "Für jede normalverteilte Größe gilt $P(X \\le \\mu + 2\\sigma) = \\Phi(2) \\approx 0{,}9772$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Stelle $\\mu + 2\\sigma$ hat stets den $z$-Wert $2$ — egal welche Werte $\\mu$ und $\\sigma$ haben. Deshalb genügt eine einzige Tabelle für sämtliche Normalverteilungen."
+        },
+        {
+          "text": "Beim Standardisieren ändern sich die Flächenanteile unter der Glockenkurve.",
+          "richtig": false,
+          "erklaerung": "Genau umgekehrt: Verschieben um $\\mu$ und Stauchen um den Faktor $\\sigma$ lassen alle Flächenanteile unverändert — nur deshalb funktioniert der Tabellen-Trick überhaupt."
+        },
+        {
+          "text": "Wegen der Symmetrie der Glocke gilt $\\Phi(-z) = \\Phi(z)$.",
+          "richtig": false,
+          "erklaerung": "Die Symmetrie liefert $\\Phi(-z) = 1 - \\Phi(z)$: Die Fläche links von $-z$ ist so groß wie die Fläche rechts von $z$ — nicht wie die links von $z$. Beispiel: $\\Phi(-2) \\approx 0{,}0228$, aber $\\Phi(2) \\approx 0{,}9772$."
+        }
+      ],
+      "tipps": [
+        "Berechne den z-Wert der Stelle μ + 2σ — was kürzt sich weg?",
+        "Skizziere für die letzte Aussage die Flächen links von −z und links von z: Können die gleich groß sein?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Der $z$-Wert $z = \\frac{x - \\mu}{\\sigma}$ misst Abstände in Standardabweichungen (Aussage 1), und weil die Stelle $\\mu + 2\\sigma$ immer den $z$-Wert $\\frac{(\\mu + 2\\sigma) - \\mu}{\\sigma} = 2$ hat, gilt für jede Normalverteilung $P(X \\le \\mu + 2\\sigma) = \\Phi(2) \\approx 0{,}9772$ (Aussage 2) — die Grundlage dafür, dass eine einzige Tabelle der Standardnormalverteilung genügt. Aussage 3 ist falsch: Standardisieren verschiebt und staucht die Glocke gerade so, dass alle Flächenanteile erhalten bleiben. Aussage 4 verwechselt die Spiegelung: Richtig ist $\\Phi(-z) = 1 - \\Phi(z)$, etwa $\\Phi(-2) \\approx 0{,}0228 = 1 - 0{,}9772$.",
+      "kc": [
+        "standardisierung"
+      ],
+      "cas": "<p>Eine Φ-Tabelle braucht der ClassPad II nicht: Die Standardnormalverteilung ist einfach normCDf mit σ = 1 und μ = 0.</p><ol><li>Φ(2) nachschlagen: <code>normCDf(-∞,2,1,0)</code> ≈ 0.9772 (−∞ über die mth-Tastatur, ersatzweise <code>-1E99</code>).</li><li>Spiegelungsregel prüfen: <code>normCDf(-∞,-2,1,0)</code> ≈ 0.0228 = 1 − 0.9772 — das bestätigt Φ(−z) = 1 − Φ(z) und entlarvt Aussage 4.</li><li>Dass Standardisieren Flächenanteile erhält, zeigt der Direktvergleich: <code>normCDf(-∞,130,15,100)</code> ≈ 0.9772 — exakt dieselbe Fläche wie Φ(2), denn die Stelle 130 = μ + 2σ hat den z-Wert 2.</li></ol><p>Weil normCDf jedes μ und σ direkt verarbeitet, ist das Standardisieren am CAS nie nötig — wird in der Klausur aber die Arbeit mit Φ verlangt, gehört der z-Wert als Ansatz aufs Papier.</p>"
+    }
+  ]
+}

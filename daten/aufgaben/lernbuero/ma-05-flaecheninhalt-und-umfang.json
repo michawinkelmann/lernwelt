@@ -1,0 +1,119 @@
+{
+  "thema": "ma-05-flaecheninhalt-und-umfang",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben für den Kurs ma-05, Block 5 (Flächeninhalt und Umfang). Fachliche Prüfung ausstehend. IDs ab 101.",
+  "aufgaben": [
+    {
+      "id": "ma-05-fu-101",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ein Rechteck ist $5$ cm lang und $3$ cm breit. Berechne den Umfang $u$ und den Flächeninhalt $A$.",
+      "eingaben": [
+        { "label": "Umfang $u$", "antwort": 16, "toleranz": 0, "einheit": "cm" },
+        { "label": "Flächeninhalt $A$", "antwort": 15, "toleranz": 0, "einheit": "cm²" }
+      ],
+      "tipps": [
+        "Umfang: einmal außen herum — $u = 2 \\cdot (a + b)$. Erst die Klammer, dann verdoppeln.",
+        "$u = 2 \\cdot (5 + 3) = 2 \\cdot 8 = ?$",
+        "Flächeninhalt: $A = a \\cdot b = 5 \\cdot 3 = ?$"
+      ],
+      "loesungsweg": "Umfang: $u = 2 \\cdot (5 + 3) = 2 \\cdot 8 = 16$ cm. Flächeninhalt: $A = 5 \\cdot 3 = 15$ cm². Achte auf die Einheiten: Der Umfang ist eine Länge (cm), der Flächeninhalt wird in cm² angegeben.",
+      "kc": ["groessen-und-messen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-05-fu-102",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Rechne um: a) $300$ cm² in dm². b) $2$ m² in dm².",
+      "eingaben": [
+        { "label": "a) $300$ cm²", "antwort": 3, "toleranz": 0, "einheit": "dm²" },
+        { "label": "b) $2$ m²", "antwort": 200, "toleranz": 0, "einheit": "dm²" }
+      ],
+      "tipps": [
+        "Die Umrechnungszahl bei Flächeneinheiten ist $100$ — nicht $10$!",
+        "a) Von cm² zu dm² ist eine Stufe zur größeren Einheit: durch $100$ teilen. $300 : 100 = ?$",
+        "b) Von m² zu dm² ist eine Stufe zur kleineren Einheit: mal $100$. $2 \\cdot 100 = ?$"
+      ],
+      "loesungsweg": "a) $1$ dm² $= 100$ cm², also $300 : 100 = 3$ dm². b) $1$ m² $= 100$ dm², also $2 \\cdot 100 = 200$ dm².",
+      "kc": ["groessen-und-messen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-05-fu-103",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein quadratischer Teppich hat die Seitenlänge $a = 12$ cm. Berechne Umfang $u$ und Flächeninhalt $A$.",
+      "eingaben": [
+        { "label": "Umfang $u$", "antwort": 48, "toleranz": 0, "einheit": "cm" },
+        { "label": "Flächeninhalt $A$", "antwort": 144, "toleranz": 0, "einheit": "cm²" }
+      ],
+      "tipps": [
+        "Beim Quadrat sind alle vier Seiten gleich lang: $u = 4 \\cdot a$.",
+        "$u = 4 \\cdot 12 = ?$",
+        "Flächeninhalt: $A = a \\cdot a = 12 \\cdot 12 = ?$"
+      ],
+      "loesungsweg": "Umfang: $u = 4 \\cdot 12 = 48$ cm. Flächeninhalt: $A = 12 \\cdot 12 = 144$ cm².",
+      "kc": ["groessen-und-messen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-05-fu-104",
+      "typ": "rechenweg",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine L-Figur entsteht aus einem großen Rechteck mit den Maßen $6$ cm mal $5$ cm, aus dem an einer Ecke ein Rechteck von $2$ cm mal $3$ cm ausgeschnitten wird. Berechne den Flächeninhalt der L-Figur Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne den Flächeninhalt des großen Rechtecks ($6$ cm mal $5$ cm).",
+          "eingaben": [{ "label": "großes Rechteck", "antwort": 30, "toleranz": 0, "einheit": "cm²" }],
+          "tipps": ["$A = a \\cdot b = 6 \\cdot 5 = ?$"]
+        },
+        {
+          "frage": "Schritt 2: Berechne den Flächeninhalt des ausgeschnittenen Ecks ($2$ cm mal $3$ cm).",
+          "eingaben": [{ "label": "Ausschnitt", "antwort": 6, "toleranz": 0, "einheit": "cm²" }],
+          "tipps": ["$A = 2 \\cdot 3 = ?$"]
+        },
+        {
+          "frage": "Schritt 3: Berechne den Flächeninhalt der L-Figur.",
+          "eingaben": [{ "label": "L-Figur", "antwort": 24, "toleranz": 0, "einheit": "cm²" }],
+          "tipps": ["Großes Rechteck minus Ausschnitt: $30 - 6 = ?$"]
+        }
+      ],
+      "tipps": [
+        "Strategie: Denke dir das ausgeschnittene Stück dazu — dann hast du ein volles Rechteck.",
+        "Vom vollen Rechteck ziehst du das Ausschnitt-Rechteck wieder ab.",
+        "Kontrolle durch Zerlegen: z. B. zwei Teilrechtecke addieren."
+      ],
+      "loesungsweg": "Schritt 1: $6 \\cdot 5 = 30$ cm². Schritt 2: $2 \\cdot 3 = 6$ cm². Schritt 3: $30 - 6 = 24$ cm². Probe durch Zerlegen: $6 \\cdot 2 = 12$ cm² (unterer Streifen) plus $4 \\cdot 3 = 12$ cm² (oberer Teil) — zusammen ebenfalls $24$ cm². ✓",
+      "kc": ["groessen-und-messen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-05-fu-105",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Ein Teppich für ein rechteckiges Zimmer kostet $12$ € je m². Das Zimmer ist $6$ m lang und $4$ m breit. Wie viel kostet der Teppich insgesamt?",
+      "eingaben": [
+        { "label": "Bodenfläche", "antwort": 24, "toleranz": 0, "einheit": "m²" },
+        { "label": "Gesamtkosten", "antwort": 288, "toleranz": 0, "einheit": "€" }
+      ],
+      "tipps": [
+        "Zuerst die Bodenfläche berechnen: $A = a \\cdot b = 6 \\cdot 4$.",
+        "Dann: Fläche mal Preis je m². $24 \\cdot 12 = ?$",
+        "Rechne $24 \\cdot 12 = 24 \\cdot 10 + 24 \\cdot 2 = 240 + 48$."
+      ],
+      "loesungsweg": "Bodenfläche: $A = 6 \\cdot 4 = 24$ m². Kosten: $24 \\cdot 12 = 288$ €. Rechentrick: $24 \\cdot 12 = 24 \\cdot 10 + 24 \\cdot 2 = 240 + 48 = 288$.",
+      "kc": ["groessen-und-messen"],
+      "ergaenzung": "lernbuero"
+    }
+  ]
+}

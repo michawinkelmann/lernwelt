@@ -1,0 +1,172 @@
+{
+  "thema": "ma-10-exponentialfunktion-und-wachstum",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben zum Füllen dünner Spuren. Zur fachlichen Prüfung durch die Lehrkraft.",
+  "aufgaben": [
+    {
+      "id": "ma-10-exp-101",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Bakterienbestand umfasst zu Beginn $200$ Zellen. Er wächst mit dem Faktor $1{,}5$ pro Stunde – das heißt: nach jeder Stunde ist der Bestand $1{,}5$-mal so groß wie zuvor.<br><strong>(a)</strong> Wie viele Zellen sind es nach <strong>1 Stunde</strong>?<br><strong>(b)</strong> Wie viele Zellen sind es nach <strong>2 Stunden</strong>?",
+      "eingaben": [
+        {
+          "label": "Bestand nach 1 Stunde",
+          "antwort": 300,
+          "toleranz": 0,
+          "einheit": "Zellen"
+        },
+        {
+          "label": "Bestand nach 2 Stunden",
+          "antwort": 450,
+          "toleranz": 0,
+          "einheit": "Zellen"
+        }
+      ],
+      "tipps": [
+        "Für einen Schritt multiplizierst du den Anfangsbestand mit dem Wachstumsfaktor: $200 \\cdot 1{,}5$.",
+        "Für zwei Schritte multiplizierst du zweimal hintereinander mit $1{,}5$: $200 \\cdot 1{,}5 \\cdot 1{,}5$.",
+        "Alternativ nutze den Termaufbau $f(n) = 200 \\cdot 1{,}5^n$: für $n = 1$ gibt das $200 \\cdot 1{,}5 = 300$, für $n = 2$ ergibt sich $200 \\cdot 1{,}5^2 = 200 \\cdot 2{,}25 = 450$."
+      ],
+      "loesungsweg": "Der Funktionsterm lautet $f(n) = 200 \\cdot 1{,}5^n$. Nach $n = 1$ Stunde: $f(1) = 200 \\cdot 1{,}5 = 300$ Zellen. Nach $n = 2$ Stunden: $f(2) = 200 \\cdot 1{,}5^2 = 200 \\cdot 2{,}25 = 450$ Zellen.",
+      "kc": [
+        "KC Mathematik Gym Sek I (Nds. 2015): Funktionaler Zusammenhang – Exponentielle Zusammenhänge, Wachstum berechnen (Klasse 9/10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-102",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zwei Wertetabellen beschreiben jeweils eine Größe, die sich von Schritt zu Schritt verändert:<br><br><strong>Tabelle A</strong><br>$x$: $0 \\mid 1 \\mid 2 \\mid 3$<br>$y$: $5 \\mid 10 \\mid 20 \\mid 40$<br><br><strong>Tabelle B</strong><br>$x$: $0 \\mid 1 \\mid 2 \\mid 3$<br>$y$: $4 \\mid 10 \\mid 16 \\mid 22$<br><br>Entscheide für jede Tabelle: lineares oder exponentielles Wachstum? Begründe rechnerisch.",
+      "schritte": [
+        {
+          "frage": "Untersuche <strong>Tabelle A</strong>: Berechne die aufeinanderfolgenden Quotienten $\\frac{y_{n+1}}{y_n}$ und die aufeinanderfolgenden Differenzen $y_{n+1} - y_n$. Was stellst du fest?",
+          "eingaben": [
+            {
+              "label": "Quotient von Schritt 0 zu Schritt 1 (10 ÷ 5)",
+              "antwort": 2,
+              "toleranz": 0
+            },
+            {
+              "label": "Quotient von Schritt 1 zu Schritt 2 (20 ÷ 10)",
+              "antwort": 2,
+              "toleranz": 0
+            },
+            {
+              "label": "Quotient von Schritt 2 zu Schritt 3 (40 ÷ 20)",
+              "antwort": 2,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Teile immer den nächsten y-Wert durch den vorherigen: $\\frac{10}{5}$, dann $\\frac{20}{10}$, dann $\\frac{40}{20}$.",
+            "Sind die Quotienten alle gleich? Dann liegt ein konstanter Faktor vor.",
+            "Alle drei Quotienten ergeben $2$ – der Faktor ist konstant."
+          ]
+        },
+        {
+          "frage": "Untersuche <strong>Tabelle B</strong>: Berechne die aufeinanderfolgenden Differenzen $y_{n+1} - y_n$. Was stellst du fest?",
+          "eingaben": [
+            {
+              "label": "Differenz von Schritt 0 zu Schritt 1 (10 − 4)",
+              "antwort": 6,
+              "toleranz": 0
+            },
+            {
+              "label": "Differenz von Schritt 1 zu Schritt 2 (16 − 10)",
+              "antwort": 6,
+              "toleranz": 0
+            },
+            {
+              "label": "Differenz von Schritt 2 zu Schritt 3 (22 − 16)",
+              "antwort": 6,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Ziehe immer den vorherigen y-Wert vom nächsten ab: $10 - 4$, dann $16 - 10$, dann $22 - 16$.",
+            "Sind die Differenzen alle gleich? Dann wächst die Größe um einen konstanten Summanden.",
+            "Alle drei Differenzen ergeben $6$ – konstante Differenz, also lineares Wachstum."
+          ]
+        }
+      ],
+      "loesungsweg": "Tabelle A: Die Quotienten aufeinanderfolgender Werte sind $\\frac{10}{5} = 2$, $\\frac{20}{10} = 2$, $\\frac{40}{20} = 2$ – stets der Faktor $2$. Das ist das Kennzeichen exponentiellen Wachstums; der Funktionsterm lautet $f(x) = 5 \\cdot 2^x$. Tabelle B: Die Differenzen betragen $10 - 4 = 6$, $16 - 10 = 6$, $22 - 16 = 6$ – stets $+6$. Konstante Differenz bedeutet lineares Wachstum; der Funktionsterm lautet $f(x) = 4 + 6x$.",
+      "kc": [
+        "KC Mathematik Gym Sek I (Nds. 2015): Funktionaler Zusammenhang – Lineare und Exponentielle Zusammenhänge unterscheiden, Modellieren (Klasse 9/10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-103",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Exponentialfunktion der Form $f(x) = a \\cdot b^x$ verläuft durch die Punkte $P(0 \\mid 3)$ und $Q(2 \\mid 12)$. Bestimme die Werte von $a$ und $b$ und berechne anschließend $f(3)$.",
+      "schritte": [
+        {
+          "frage": "Bestimme den Startwert $a$, indem du $x = 0$ in $f(x) = a \\cdot b^x$ einsetzt.",
+          "eingaben": [
+            {
+              "label": "Startwert a",
+              "antwort": 3,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Setze $x = 0$ ein: $f(0) = a \\cdot b^0$. Was ist $b^0$?",
+            "$b^0 = 1$ für jede Basis $b \\neq 0$. Also gilt $f(0) = a \\cdot 1 = a$.",
+            "Der Punkt $P(0 \\mid 3)$ sagt: $f(0) = 3$, also $a = 3$."
+          ]
+        },
+        {
+          "frage": "Bestimme den Wachstumsfaktor $b$, indem du den Punkt $Q(2 \\mid 12)$ und den bereits gefundenen Wert $a = 3$ verwendest.",
+          "eingaben": [
+            {
+              "label": "Wachstumsfaktor b",
+              "antwort": 2,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Setze $Q(2 \\mid 12)$ in $f(x) = 3 \\cdot b^x$ ein: $12 = 3 \\cdot b^2$.",
+            "Teile beide Seiten durch $3$: $b^2 = 4$.",
+            "$b^2 = 4$ und $b > 0$ ergibt $b = 2$."
+          ]
+        },
+        {
+          "frage": "Berechne $f(3)$ mit dem gefundenen Funktionsterm $f(x) = 3 \\cdot 2^x$.",
+          "eingaben": [
+            {
+              "label": "f(3)",
+              "antwort": 24,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Setze $x = 3$ in $f(x) = 3 \\cdot 2^x$ ein.",
+            "$2^3 = 8$.",
+            "$f(3) = 3 \\cdot 8 = 24$."
+          ]
+        }
+      ],
+      "loesungsweg": "Schritt 1 – Startwert: Aus $P(0 \\mid 3)$ folgt $f(0) = a \\cdot b^0 = a = 3$. Schritt 2 – Wachstumsfaktor: Einsetzen von $Q(2 \\mid 12)$ liefert $12 = 3 \\cdot b^2$, also $b^2 = 4$ und damit $b = 2$ (da $b > 0$). Der Funktionsterm lautet $f(x) = 3 \\cdot 2^x$. Schritt 3 – Funktionswert: $f(3) = 3 \\cdot 2^3 = 3 \\cdot 8 = 24$.",
+      "kc": [
+        "KC Mathematik Gym Sek I (Nds. 2015): Funktionaler Zusammenhang – Exponentialfunktion, Parameter bestimmen, Modellieren (Klasse 9/10)"
+      ]
+    }
+  ]
+}

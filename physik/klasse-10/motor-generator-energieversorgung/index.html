@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motor, Generator und Energieversorgung — Klasse 10 · Physik — Lernwelt</title>
+<meta name="description" content="Elektromotor, Generator und Transformator als Energiewandler: Motorprinzip, Induktion, Trafo-Gleichung und der Weg des Stroms vom Kraftwerk zur Steckdose — mit Beispielen und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Motor, Generator und Energieversorgung</h1>
+  <p class="einleitung">Was brummt da eigentlich im Akkuschrauber? Wie macht ein Windrad aus Drehung Strom? Und warum stehen zwischen Kraftwerk und Steckdose riesige Masten mit 380&nbsp;000 Volt? In diesem Kapitel lernst du die drei wichtigsten elektrischen Maschinen kennen — <strong>Motor</strong>, <strong>Generator</strong> und <strong>Transformator</strong> — und verfolgst die elektrische Energie auf ihrem Weg bis in dein Zimmer.</p>
+
+  <section aria-labelledby="mg-kraft">
+    <h2 id="mg-kraft">1. Strom und Magnetismus gehören zusammen</h2>
+    <p>Aus den letzten Schuljahren weißt du: Um jeden <strong>stromdurchflossenen Leiter</strong> herum entsteht ein Magnetfeld. Eine Kompassnadel neben dem Draht schlägt aus, sobald Strom fließt — und eine Spule mit Eisenkern wird zum <strong>Elektromagneten</strong>, der sich per Schalter ein- und ausschalten lässt und im Schrottplatzkran ganze Autos hebt.</p>
+    <p>Jetzt kommt die Umkehrfrage: Wenn Strom Magnetfelder erzeugt — was macht dann ein Magnetfeld mit einem Strom? Der Versuch dazu ist die <strong>Leiterschaukel</strong>: Ein beweglich aufgehängtes Drahtstück hängt zwischen den Polen eines Hufeisenmagneten. Schaltet man den Strom ein, schwingt die Schaukel zur Seite — auf den Draht wirkt eine Kraft. Polt man den Strom um, schwingt sie zur anderen Seite. Dreht man stattdessen den Magneten um, ebenfalls.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Das Motorprinzip</span>
+      <p>Auf einen <strong>stromdurchflossenen Leiter im Magnetfeld</strong> wirkt eine <strong>Kraft</strong>. Ihre Richtung hängt von der Stromrichtung und der Richtung des Magnetfelds ab: Kehrt man <em>eine</em> von beiden um, kehrt sich die Kraft um — kehrt man <em>beide</em> um, bleibt die Kraftrichtung gleich. Ohne Strom wirkt keine Kraft.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Strom und Magnet gleichzeitig umgepolt?</summary>
+      <div class="check-antwort"><p>Die Leiterschaukel schwingt zur <strong>selben Seite wie vorher</strong>: Das Umpolen des Stroms allein würde die Kraft umkehren, das Umdrehen des Magneten ebenfalls — beides zusammen hebt sich auf. Mit dieser Regel kannst du gleich das Verhalten des Elektromotors verstehen.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="mg-motor">
+    <h2 id="mg-motor">2. Der Elektromotor</h2>
+    <p>Eine Kraft auf einen Draht ist nett — eine <strong>Drehbewegung</strong> ist nützlich. Der Trick des Elektromotors: Man formt den Leiter zu einer <strong>drehbar gelagerten Spule</strong> und hängt sie zwischen die Pole eines <strong>Dauermagneten</strong>. Fließt Strom, läuft er auf der einen Spulenseite auf dich zu und auf der anderen von dir weg. Die beiden Seiten erfahren deshalb <strong>entgegengesetzte Kräfte</strong>: eine nach oben, eine nach unten — ein Kräftepaar, das die Spule dreht.</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 560 336" width="560" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Schema eines Gleichstrommotors im Querschnitt: Zwischen dem Nordpol links und dem Südpol rechts eines Dauermagneten sitzt eine drehbar gelagerte Spule, gezeichnet als zwei Leiterquerschnitte. Im linken Leiter fließt der Strom aus der Bildebene heraus, im rechten hinein. Dadurch wirkt auf den linken Leiter eine Kraft nach oben und auf den rechten eine Kraft nach unten — die Spule dreht sich. Auf ihrer Welle sitzt der Kommutator, ein in zwei Hälften geteilter Ring. Zwei feststehende Kohlebürsten verbinden ihn mit der Stromquelle; nach jeder halben Umdrehung wechseln die Ringhälften die Bürste, und der Strom in der Spule wird umgepolt.">
+        <defs>
+          <marker id="pfeil-feld" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text-leise)"/></marker>
+          <marker id="pfeil-kraft" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--physik)"/></marker>
+          <marker id="pfeil-dreh" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text)"/></marker>
+        </defs>
+        <g stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="6 5">
+          <line x1="106" y1="98" x2="446" y2="98" marker-end="url(#pfeil-feld)"/>
+          <line x1="106" y1="138" x2="446" y2="138" marker-end="url(#pfeil-feld)"/>
+          <line x1="106" y1="178" x2="446" y2="178" marker-end="url(#pfeil-feld)"/>
+        </g>
+        <g fill="var(--hauch)" stroke="var(--linie)" stroke-width="1.5">
+          <rect x="24" y="58" width="78" height="160" rx="6"/>
+          <rect x="458" y="58" width="78" height="160" rx="6"/>
+        </g>
+        <text x="63" y="148" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--text)">N</text>
+        <text x="497" y="148" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--text)">S</text>
+        <g fill="var(--text-leise)" font-size="12.5" text-anchor="middle">
+          <text x="63" y="238">Nordpol</text>
+          <text x="497" y="238">Südpol</text>
+          <text x="140" y="212">Magnetfeld</text>
+        </g>
+        <line x1="280" y1="141" x2="280" y2="231" stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="290" y="224" font-size="12" fill="var(--text-leise)">Welle</text>
+        <line x1="185" y1="185" x2="375" y2="85" stroke="var(--physik)" stroke-width="2.5"/>
+        <circle cx="280" cy="135" r="4" fill="var(--text-leise)"/>
+        <circle cx="185" cy="185" r="12" fill="var(--hauch)" stroke="var(--physik)" stroke-width="2.5"/>
+        <circle cx="185" cy="185" r="3.5" fill="var(--physik)"/>
+        <circle cx="375" cy="85" r="12" fill="var(--hauch)" stroke="var(--physik)" stroke-width="2.5"/>
+        <g stroke="var(--physik)" stroke-width="2.5">
+          <line x1="369" y1="79" x2="381" y2="91"/>
+          <line x1="381" y1="79" x2="369" y2="91"/>
+        </g>
+        <g stroke="var(--physik)" stroke-width="3">
+          <line x1="185" y1="167" x2="185" y2="120" marker-end="url(#pfeil-kraft)"/>
+          <line x1="375" y1="103" x2="375" y2="150" marker-end="url(#pfeil-kraft)"/>
+        </g>
+        <text x="163" y="130" font-size="16" font-weight="bold" font-style="italic" fill="var(--physik)">F</text>
+        <text x="386" y="146" font-size="16" font-weight="bold" font-style="italic" fill="var(--physik)">F</text>
+        <path d="M 312 104 A 48 48 0 0 0 248 104" fill="none" stroke="var(--text)" stroke-width="2.2" marker-end="url(#pfeil-dreh)"/>
+        <text x="280" y="78" text-anchor="middle" font-size="12.5" fill="var(--text)">Drehrichtung</text>
+        <text x="375" y="56" text-anchor="middle" font-size="12.5" fill="var(--physik)">Spule (drehbar)</text>
+        <g stroke="var(--physik)" stroke-width="5" fill="none">
+          <path d="M 283.5 235.3 A 20 20 0 0 1 283.5 274.7"/>
+          <path d="M 276.5 274.7 A 20 20 0 0 1 276.5 235.3"/>
+        </g>
+        <g fill="var(--text-leise)">
+          <rect x="244" y="247" width="14" height="16" rx="2"/>
+          <rect x="302" y="247" width="14" height="16" rx="2"/>
+        </g>
+        <text x="236" y="240" text-anchor="end" font-size="12.5" fill="var(--text)">Kohlebürste</text>
+        <line x1="239" y1="244" x2="249" y2="251" stroke="var(--text-leise)" stroke-width="1"/>
+        <text x="360" y="252" text-anchor="start" font-size="12.5" fill="var(--text)">Kommutator (Polwender)</text>
+        <g stroke="var(--text)" stroke-width="2" fill="none">
+          <path d="M 244 255 L 208 255 L 208 302 L 272 302"/>
+          <path d="M 316 255 L 352 255 L 352 302 L 288 302"/>
+        </g>
+        <line x1="272" y1="288" x2="272" y2="316" stroke="var(--text)" stroke-width="2.5"/>
+        <line x1="288" y1="294" x2="288" y2="310" stroke="var(--text)" stroke-width="6"/>
+        <text x="262" y="285" text-anchor="end" font-size="14" fill="var(--text)">+</text>
+        <text x="298" y="285" text-anchor="start" font-size="14" fill="var(--text)">−</text>
+        <text x="24" y="332" font-size="12.5" fill="var(--text-leise)">⊙ Strom aus der Bildebene heraus&#160;&#160;·&#160;&#160;⊗ Strom in die Bildebene hinein</text>
+      </svg>
+    </div>
+    <p>Ohne einen weiteren Trick wäre nach einer Vierteldrehung Schluss: In der <strong>Querstellung</strong> können die Kräfte die Spule nicht weiterdrehen — und dahinter würden sie sie sogar zurückdrehen. Die Lösung ist der <strong>Kommutator</strong> (Polwender): ein in zwei Hälften geteilter Ring auf der Spulenwelle, an dem zwei feststehende <strong>Kohlebürsten</strong> schleifen. Nach jeder halben Umdrehung wechseln die Ringhälften die Bürste — der Strom in der Spule wird <strong>umgepolt</strong>, die Kräfte zeigen wieder in Drehrichtung, und der Schwung trägt die Spule über den toten Punkt hinweg.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Der Elektromotor</span>
+      <p>Ein Elektromotor wandelt <strong>elektrische Energie in Bewegungsenergie</strong> um. Seine Hauptteile: feststehender Magnet (<strong>Stator</strong>), drehbar gelagerte Spule (<strong>Rotor</strong>, auch Anker genannt), <strong>Kommutator</strong> und <strong>Kohlebürsten</strong>. Der Kommutator polt den Spulenstrom nach jeder halben Umdrehung um, damit die Drehung nicht stockt. Echte Motoren tragen mehrere Spulen auf einem Eisenkern — das macht die Drehung kräftiger und gleichmäßiger.</p>
+    </div>
+    <p>Elektromotoren stecken überall: als winziger Vibrationsmotor im Handy, im Akkuschrauber, im Lüfter des Spielerechners, als Antrieb von E-Scooter, E-Bike und Elektroauto. Praktisch dabei: Polt man die Stromquelle um, läuft der Gleichstrommotor rückwärts — so wechselt der Akkuschrauber zwischen Eindrehen und Herausdrehen.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Was wäre ein Motor ohne Kommutator?</summary>
+      <div class="check-antwort"><p>Kein Motor, sondern höchstens ein Pendel: Die Spule dreht sich bis zur Querstellung, wird dahinter von den Kräften zurückgedreht und schaukelt aus, bis sie quer zum Feld stehen bleibt. Erst der Kommutator polt den Strom im richtigen Moment um, sodass die Kräfte die Drehung immer weiter antreiben.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="mg-generator">
+    <h2 id="mg-generator">3. Der Generator — die Umkehrung</h2>
+    <p>Jetzt drehen wir den Spieß um — wörtlich. Schließt man an eine Spule statt einer Stromquelle ein empfindliches Spannungsmessgerät an und bewegt einen <strong>Stabmagneten in die Spule hinein</strong>, schlägt der Zeiger aus: Es entsteht eine Spannung. Zieht man den Magneten heraus, schlägt er zur anderen Seite aus. Hält man ihn still, zeigt das Gerät — nichts. Diese Erscheinung heißt <strong>elektromagnetische Induktion</strong>.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Induktion (qualitativ)</span>
+      <p>Ändert sich das Magnetfeld in einer Spule — etwa weil sich ein Magnet oder die Spule selbst bewegt —, entsteht zwischen den Spulenenden eine <strong>Induktionsspannung</strong>. Sie ist umso größer, je <strong>schneller</strong> die Änderung erfolgt und je <strong>mehr Windungen</strong> die Spule hat. Ohne Änderung entsteht keine Spannung.</p>
+    </div>
+    <p>Genau das nutzt der <strong>Generator</strong>: Er ist im Aufbau ein Elektromotor — Magnet, drehbar gelagerte Spule —, wird aber andersherum betrieben. Eine Turbine, eine Tretkurbel oder ein Windrad <strong>dreht die Spule im Magnetfeld</strong>, und an ihren Enden entsteht eine Spannung. Weil die Spulenseiten dabei abwechselnd am Nord- und am Südpol vorbeilaufen, wechselt die Spannung regelmäßig ihre Polung: Es entsteht <strong>Wechselspannung</strong>. Unser Stromnetz arbeitet mit Wechselspannung von $230\,\text{V}$, die $50$ vollständige Schwingungen pro Sekunde ausführt (Frequenz $50\,\text{Hz}$).</p>
+    <p>Den kleinsten Generator kennst du vom Fahrrad: Im <strong>Dynamo</strong> dreht sich — umgekehrt zum Motorbild oben — ein Magnet an einer feststehenden Spule vorbei; ein Kommutator ist nicht nötig, denn die Lampe verträgt Wechselspannung. Umsonst gibt es den Strom allerdings nicht: Mit eingeschaltetem Licht tritt sich das Rad spürbar schwerer, denn die elektrische Energie stammt aus deiner Muskelkraft. Und das Prinzip skaliert: Der <strong>Kraftwerksgenerator</strong> arbeitet wie der Dynamo, nur dreht ihn statt deines Reifens eine tonnenschwere Turbine.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Ausblick: Oberstufe</span>
+      <p>Warum genau erzeugt ein sich änderndes Magnetfeld eine Spannung — und wovon hängt ihre Größe im Einzelnen ab? Das untersuchst du in der Qualifikationsphase quantitativ, mit eigenen Formeln und Experimenten: <a href="../../qualifikationsphase/induktion/index.html">Elektromagnetische Induktion (Oberstufe)</a>. Für Klasse 10 reicht die Merkregel oben völlig aus.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="mg-trafo">
+    <h2 id="mg-trafo">4. Der Transformator</h2>
+    <p>Wechselspannung hat einen riesigen Vorteil: Man kann sie mit einem verblüffend einfachen Gerät <strong>vergrößern oder verkleinern</strong>. Ein <strong>Transformator</strong> (kurz: Trafo) besteht nur aus zwei Spulen auf einem gemeinsamen <strong>Eisenkern</strong>: der <strong>Primärspule</strong>, die an der Spannungsquelle hängt, und der <strong>Sekundärspule</strong>, an die das Gerät angeschlossen wird.</p>
+    <p>So funktioniert er: Der Wechselstrom in der Primärspule erzeugt im Eisenkern ein <strong>ständig wechselndes Magnetfeld</strong>. Der Kern leitet dieses Feld durch die Sekundärspule — und dort <strong>induziert</strong> das sich ändernde Feld eine Wechselspannung. Wie groß sie ist, bestimmen allein die <strong>Windungszahlen</strong> der beiden Spulen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Transformator (unbelastet)</span>
+      <p class="formel-abgesetzt">$$\frac{U_1}{U_2} = \frac{n_1}{n_2}$$</p>
+      <p>Die Spannungen verhalten sich wie die Windungszahlen. Hat die Sekundärspule <strong>mehr</strong> Windungen als die Primärspule, wird <strong>hochtransformiert</strong> ($U_2 > U_1$); hat sie <strong>weniger</strong>, wird <strong>heruntertransformiert</strong>. Ein Trafo funktioniert nur mit <strong>Wechselspannung</strong>: Gleichstrom erzeugt ein gleichbleibendes Magnetfeld — und ohne Änderung wird nichts induziert.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel (Gym): Klingeltrafo</span>
+      <p>Eine Türklingel braucht nur wenige Volt. Ihr Trafo hat $n_1 = 4000$ Windungen an $U_1 = 230\,\text{V}$ und $n_2 = 160$ Windungen auf der Sekundärseite:</p>
+      <p class="formel-abgesetzt">$$U_2 = \frac{n_2}{n_1} \cdot U_1 = \frac{160}{4000} \cdot 230\,\text{V} = 9{,}2\,\text{V}$$</p>
+      <p>Eine ungefährliche Kleinspannung — und genau dafür sind Trafos da: Klingeln, Ladegeräte und Modellbahnen transformieren herunter, Kraftwerke hinauf.</p>
+    </div>
+    <p>Und wozu das Hochtransformieren? Wegen der <strong>Leitungsverluste</strong>. Für die übertragene Leistung gilt $P = U \cdot I$ — dieselbe Leistung lässt sich also mit <strong>hoher Spannung und kleinem Strom</strong> oder mit niedriger Spannung und großem Strom übertragen. Ein großer Strom aber heizt die Leitung auf, und diese Wärme ist verlorene Energie.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Zahlenbeispiel: kleiner Strom, kleine Verluste</span>
+      <p>Eine Leitung soll $P = 100\,\text{kW}$ übertragen — so viel, wie etwa 50 Wasserkocher brauchen. Bei $U = 230\,\text{V}$ müsste dafür der Strom</p>
+      <p class="formel-abgesetzt">$$I = \frac{P}{U} = \frac{100\,000\,\text{W}}{230\,\text{V}} \approx 435\,\text{A}$$</p>
+      <p>fließen — ein gewaltiger Strom, der gewöhnliche Leitungen glühen ließe. Bei $U = 23\,\text{kV}$ (dem Hundertfachen) genügen $4{,}35\,\text{A}$: ein Hundertstel des Stroms, völlig harmlos für die Leitung. Deshalb wird vor jeder langen Strecke hochtransformiert.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Funktioniert ein Trafo mit Gleichspannung?</summary>
+      <div class="check-antwort"><p>Nein. Gleichstrom in der Primärspule erzeugt ein <strong>gleichbleibendes</strong> Magnetfeld im Eisenkern — und ohne Änderung des Magnetfelds wird in der Sekundärspule keine Spannung induziert. Nur beim Ein- und Ausschalten, wenn sich das Feld auf- oder abbaut, entsteht kurz ein Spannungsstoß. Für den Dauerbetrieb braucht der Trafo Wechselspannung.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="mg-netz">
+    <h2 id="mg-netz">5. Energieversorgung: vom Kraftwerk zur Steckdose</h2>
+    <p>Jetzt setzen wir alles zusammen. Elektrische Energie wird in dem Moment erzeugt, in dem du sie nutzt — speichern lässt sie sich nur mit Aufwand. Deshalb sind Kraftwerke, Leitungen und Verbraucher in ganz Europa zu einem <strong>Verbundnetz</strong> zusammengeschaltet, das gemeinsam im Takt von $50\,\text{Hz}$ schwingt. Fällt irgendwo ein Kraftwerk aus, springen andere ein — Erzeugung und Verbrauch müssen sich jederzeit die Waage halten.</p>
+    <p>Auf dem Weg zu dir wechselt die elektrische Energie mehrfach die <strong>Spannungsebene</strong>, und an jedem Übergang sitzt ein Transformator:</p>
+    <ul>
+      <li><strong>Höchstspannung ($380\,\text{kV}$ oder $220\,\text{kV}$):</strong> Ferntransport quer durchs Land — hohe Spannung, kleine Verluste.</li>
+      <li><strong>Hochspannung ($110\,\text{kV}$):</strong> Verteilung in die Regionen, an Großindustrie und Bahn.</li>
+      <li><strong>Mittelspannung (etwa $20\,\text{kV}$):</strong> Versorgung von Stadtteilen, Dörfern und Fabriken.</li>
+      <li><strong>Niederspannung ($400\,\text{V}$ bzw. $230\,\text{V}$):</strong> Der Ortsnetztrafo im Wohnviertel liefert die $230\,\text{V}$ für deine Steckdose.</li>
+    </ul>
+    <p>Am Anfang der Kette stehen die <strong>Kraftwerke</strong>. In den meisten dreht — wie beim Dynamo — eine Turbine den Generator, nur der Antrieb unterscheidet sich: In <strong>Wärmekraftwerken</strong> (Kohle, Erdgas, Biomasse) treibt heißer Wasserdampf die Turbine, in <strong>Wasserkraftwerken</strong> strömendes Wasser, und bei <strong>Windenergieanlagen</strong> dreht der Wind die Rotorblätter. Nur die <strong>Photovoltaik</strong> tanzt aus der Reihe: Solarzellen wandeln Licht direkt in elektrische Energie um, ganz ohne Generator — ein Wechselrichter macht daraus netztauglichen Wechselstrom.</p>
+    <p>Jede Technik hat Stärken und Schwächen: Kohle- und Gaskraftwerke liefern planbar Leistung, setzen aber das Treibhausgas CO₂ frei, und ihre Brennstoffe sind endlich. Wind- und Solaranlagen arbeiten im Betrieb emissionsfrei, liefern aber nur, wenn Wind weht oder die Sonne scheint — das Netz braucht deshalb Speicher (etwa Pumpspeicherkraftwerke), flexible Kraftwerke und kluge Steuerung. Der deutsche <strong>Energiemix</strong> verschiebt sich seit Jahren: Erneuerbare Quellen liefern inzwischen mehr als die Hälfte des erzeugten Stroms, die letzten Kernkraftwerke gingen 2023 vom Netz, und der Kohleanteil sinkt.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Vom Kraftwerk zur Steckdose</span>
+      <p>Generator (etwa $10\,\text{kV}$) → Maschinentrafo <strong>hoch</strong> auf $380\,\text{kV}$ → Ferntransport → Umspannwerke <strong>stufenweise herunter</strong> ($110\,\text{kV}$, $20\,\text{kV}$) → Ortsnetztrafo → $230\,\text{V}$ an der Steckdose. Generator und Transformator bilden das Rückgrat der Stromversorgung — und am Ende der Kette wandeln unzählige Elektromotoren die Energie wieder in Bewegung um.</p>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (Gym): Übertragungsverluste berechnen</summary>
+    <div class="vertiefung-inhalt">
+      <p>Wie groß die Leitungsverluste wirklich sind, kannst du mit zwei bekannten Formeln ausrechnen. Der Strom folgt aus der übertragenen Leistung, $I = \frac{P}{U}$, und in einer Leitung mit dem Widerstand $R$ geht die Verlustleistung</p>
+      <p class="formel-abgesetzt">$$P_{\text{V}} = I^2 \cdot R$$</p>
+      <p>als Wärme verloren. Ein Dorf braucht $P = 100\,\text{kW}$; die Zuleitung hat $R = 1\,\Omega$. Würde man direkt mit $400\,\text{V}$ übertragen:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}I = \frac{100\,000\,\text{W}}{400\,\text{V}} = 250\,\text{A}\\[4pt]P_{\text{V}} = (250\,\text{A})^2 \cdot 1\,\Omega = 62\,500\,\text{W}\end{gathered}$$</p>
+      <p>Fast zwei Drittel der Leistung verheizte allein die Leitung! Mit Mittelspannung $20\,\text{kV}$ (dem 50-Fachen) fließt nur ein Fünfzigstel des Stroms:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}I = \frac{100\,000\,\text{W}}{20\,000\,\text{V}} = 5\,\text{A}\\[4pt]P_{\text{V}} = (5\,\text{A})^2 \cdot 1\,\Omega = 25\,\text{W}\end{gathered}$$</p>
+      <p>Weil der Strom <strong>quadratisch</strong> in die Verluste eingeht, sinken sie auf $\frac{1}{50^2} = \frac{1}{2500}$ — von $62{,}5\,\text{kW}$ auf $25\,\text{W}$. Genau dieses $I^2$ ist der Grund für jede Hochspannungsleitung.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Motorprinzip über Trafo-Rechnungen bis zur Hochspannungsleitung, mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

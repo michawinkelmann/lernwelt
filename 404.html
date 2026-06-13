@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seite nicht gefunden — Lernwelt</title>
+<!-- Wichtig: Diese Seite wird von GitHub Pages unter beliebigen Pfaden ausgeliefert.
+     Deshalb KEINE relativen Verweise auf CSS/JS/Fonts — alles inline. -->
+<style>
+  body { margin: 0; font-family: "Source Sans 3", system-ui, sans-serif; background: #f7f3ea; color: #2c2823;
+    background-image: linear-gradient(rgba(125,108,80,.16) 1px, transparent 1px), linear-gradient(90deg, rgba(125,108,80,.16) 1px, transparent 1px);
+    background-size: 24px 24px; display: grid; min-height: 100vh; place-items: center; }
+  main { background: #fffdf6; border: 1px solid #ddd5c4; border-left: 6px double #19599f; border-radius: 6px; padding: 28px 32px; max-width: 34rem; margin: 16px; }
+  h1 { font-family: Georgia, serif; margin: 0 0 8px; }
+  a { color: #19599f; font-weight: 700; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #211d17; color: #ede6d8; background-image: linear-gradient(rgba(237,230,216,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(237,230,216,.07) 1px, transparent 1px); }
+    main { background: #2b2620; border-color: #4a4337; border-left-color: #82b3e8; }
+    a { color: #82b3e8; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Seite nicht gefunden</h1>
+  <p>Die Adresse existiert nicht (mehr) — vielleicht wurde ein Thema verschoben oder der Link enthält einen Tippfehler.</p>
+  <p><a id="start-link" href="/">Zur Startseite</a></p>
+</main>
+<script>
+// Startseiten-Link korrigieren: Auf GitHub Pages liegt die Seite unter /<repo>/,
+// lokal unter /. Heuristik: bei *.github.io das erste Pfadsegment beibehalten.
+(function () {
+  var link = document.getElementById("start-link");
+  if (location.hostname.endsWith("github.io")) {
+    var erstesSegment = location.pathname.split("/")[1] || "";
+    link.href = "/" + (erstesSegment ? erstesSegment + "/" : "");
+  }
+})();
+</script>
+</body>
+</html>

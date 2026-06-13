@@ -1,0 +1,528 @@
+{
+  "thema": "ma-08-binomische-formeln",
+  "fach": "mathematik",
+  "stufe": "klasse-8",
+  "aufgaben": [
+    {
+      "id": "ma-08-bf-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Umformungen sind richtig?",
+      "optionen": [
+        {
+          "text": "$(a+b)^2 = a^2 + 2ab + b^2$",
+          "richtig": true,
+          "erklaerung": "Richtig: die erste binomische Formel — Quadrat, doppeltes Produkt, Quadrat."
+        },
+        {
+          "text": "$(a-b)^2 = a^2 - 2ab + b^2$",
+          "richtig": true,
+          "erklaerung": "Richtig: die zweite binomische Formel — das doppelte Produkt bekommt ein Minus, das hintere Quadrat bleibt positiv."
+        },
+        {
+          "text": "$(a+b)^2 = a^2 + b^2$",
+          "richtig": false,
+          "erklaerung": "Der Klassiker unter den Fehlern: Das doppelte Produkt $2ab$ fehlt. Zahlencheck: $(3+4)^2 = 49$, aber $3^2 + 4^2 = 25$."
+        },
+        {
+          "text": "$(a+b)(a-b) = a^2 + b^2$",
+          "richtig": false,
+          "erklaerung": "Beim Ausmultiplizieren heben sich $+ab$ und $-ab$ auf — es bleibt $a^2 - b^2$, also ein Minus."
+        }
+      ],
+      "tipps": [
+        "Multipliziere im Zweifel aus: $(a+b)^2 = (a+b)(a+b)$ — jeder mit jedem.",
+        "Setze Zahlen ein, z. B. $a = 3$ und $b = 4$: Stimmen linke und rechte Seite überein?",
+        "Zwei Aussagen sind richtig — die falschen unterschlagen das doppelte Produkt oder haben das falsche Vorzeichen."
+      ],
+      "loesungsweg": "Richtig sind die erste und die zweite binomische Formel. $(a+b)^2 = a^2 + b^2$ ist falsch, weil das doppelte Produkt $2ab$ fehlt (Zahlencheck: $(3+4)^2 = 49 \\neq 25 = 3^2 + 4^2$). Und $(a+b)(a-b)$ ergibt $a^2 - b^2$, nicht $a^2 + b^2$.",
+      "kc": [
+        "elementare-termumformungen"
+      ]
+    },
+    {
+      "id": "ma-08-bf-002",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Text zu den binomischen Formeln.",
+      "text": "Eine Summe aus zwei Gliedern wie $a+b$ heißt ___ . In der ersten binomischen Formel lautet das mittlere Glied von $(a+b)^2$ ___ . Das Produkt $(a+b)(a-b)$ ergibt ausmultipliziert ___ .",
+      "luecken": [
+        {
+          "art": "eingabe",
+          "antwort": "Binom"
+        },
+        {
+          "art": "dropdown",
+          "antwort": "2ab",
+          "optionen": [
+            "2ab",
+            "ab",
+            "a²b²"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "a² − b²",
+          "optionen": [
+            "a² − b²",
+            "a² + b²",
+            "a² − 2ab + b²"
+          ]
+        }
+      ],
+      "tipps": [
+        "Das Fachwort für einen zweigliedrigen Term beginnt mit „Bi“ — wie in „Bizeps“ steckt darin das Wort für „zwei“.",
+        "Erste binomische Formel: Quadrat — doppeltes Produkt — Quadrat.",
+        "Bei „Summe mal Differenz“ heben sich die gemischten Glieder auf — übrig bleibt eine Differenz zweier Quadrate."
+      ],
+      "loesungsweg": "Ein zweigliedriger Term wie $a+b$ heißt Binom. Erste binomische Formel: $(a+b)^2 = a^2 + 2ab + b^2$ — das mittlere Glied ist das doppelte Produkt $2ab$. Dritte binomische Formel: $(a+b)(a-b) = a^2 - b^2$.",
+      "kc": [
+        "elementare-termumformungen"
+      ]
+    },
+    {
+      "id": "ma-08-bf-003",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Multipliziere mit der ersten binomischen Formel aus: $(x+5)^2 = x^2 + c \\cdot x + d$. Bestimme die Zahlen $c$ und $d$.",
+      "eingaben": [
+        {
+          "label": "$c$",
+          "antwort": 10,
+          "toleranz": 0
+        },
+        {
+          "label": "$d$",
+          "antwort": 25,
+          "toleranz": 0
+        }
+      ],
+      "tipps": [
+        "Erste binomische Formel mit $a = x$ und $b = 5$.",
+        "Das mittlere Glied ist das doppelte Produkt: $2 \\cdot x \\cdot 5$.",
+        "Das letzte Glied ist $b^2 = 5^2$."
+      ],
+      "loesungsweg": "$(x+5)^2 = x^2 + 2 \\cdot x \\cdot 5 + 5^2 = x^2 + 10x + 25$, also $c = 10$ und $d = 25$.",
+      "kc": [
+        "elementare-termumformungen"
+      ],
+      "cas": "<p>Eigene Umformungen prüfst du mit dem ClassPad II so (Gym-Zweig: ClassPad ab Klasse 8):</p><ol><li>Erst selbst ausmultiplizieren — dann kontrollieren!</li><li>Im <b>Main</b>-Menü <b>Aktion → Umformungen → expand</b> wählen und eingeben: <code>expand((x+5)^2)</code>.</li><li><b>EXE</b> — der ClassPad zeigt <code>x^2+10·x+25</code>. Also c = 10 und d = 25, wie in deiner Rechnung.</li><li>So kannst du jede Klammer testen, zum Beispiel auch <code>expand((x-3)^2)</code>.</li></ol><p>Der Rechenweg von Hand bleibt Pflicht — der ClassPad ist deine Kontrolle.</p>"
+    },
+    {
+      "id": "ma-08-bf-004",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ordne jedem Produkt das ausmultiplizierte Ergebnis zu.",
+      "paare": [
+        {
+          "links": "$(x+3)^2$",
+          "rechts": "x² + 6x + 9"
+        },
+        {
+          "links": "$(x-3)^2$",
+          "rechts": "x² − 6x + 9"
+        },
+        {
+          "links": "$(x+3)(x-3)$",
+          "rechts": "x² − 9"
+        },
+        {
+          "links": "$(x-1)^2$",
+          "rechts": "x² − 2x + 1"
+        }
+      ],
+      "tipps": [
+        "Entscheide zuerst: Welche der drei binomischen Formeln passt jeweils?",
+        "Bei „Summe mal Differenz“ wie $(x+3)(x-3)$ verschwindet das mittlere Glied.",
+        "Bei $(x-3)^2$ bleibt das letzte Glied positiv, denn $(-3)^2 = +9$."
+      ],
+      "loesungsweg": "$(x+3)^2 = x^2 + 6x + 9$ (erste Formel), $(x-3)^2 = x^2 - 6x + 9$ (zweite Formel — am Ende $+9$!), $(x+3)(x-3) = x^2 - 9$ (dritte Formel, kein Mittelglied) und $(x-1)^2 = x^2 - 2x + 1$.",
+      "kc": [
+        "elementare-termumformungen"
+      ]
+    },
+    {
+      "id": "ma-08-bf-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Berechne geschickt im Kopf, indem du die Zahlen als Summe oder Differenz runder Zahlen schreibst — z. B. $99 = 100 - 1$.",
+      "eingaben": [
+        {
+          "label": "$99^2$",
+          "antwort": 9801,
+          "toleranz": 0
+        },
+        {
+          "label": "$102^2$",
+          "antwort": 10404,
+          "toleranz": 0
+        },
+        {
+          "label": "$48 \\cdot 52$",
+          "antwort": 2496,
+          "toleranz": 0
+        }
+      ],
+      "tipps": [
+        "$99^2 = (100-1)^2$ — zweite binomische Formel.",
+        "$102^2 = (100+2)^2 = 100^2 + 2 \\cdot 100 \\cdot 2 + 2^2$.",
+        "$48 \\cdot 52 = (50-2)(50+2)$ — dritte binomische Formel: $50^2 - 2^2$."
+      ],
+      "loesungsweg": "$99^2 = (100-1)^2 = 10000 - 200 + 1 = 9801$. $102^2 = (100+2)^2 = 10000 + 400 + 4 = 10404$. $48 \\cdot 52 = (50-2)(50+2) = 2500 - 4 = 2496$.",
+      "kc": [
+        "elementare-termumformungen"
+      ]
+    },
+    {
+      "id": "ma-08-bf-006",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Multipliziere $(x+4)^2$ mit der ersten binomischen Formel aus. Bringe die Schritte in die richtige Reihenfolge.",
+      "elemente": [
+        "Formel wählen: erste binomische Formel mit $a = x$ und $b = 4$",
+        "Die beiden Quadrate bilden: $a^2 = x^2$ und $b^2 = 16$",
+        "Das doppelte Produkt berechnen: $2ab = 2 \\cdot x \\cdot 4 = 8x$",
+        "Ergebnis zusammensetzen: $(x+4)^2 = x^2 + 8x + 16$"
+      ],
+      "tipps": [
+        "Bevor du rechnest, musst du wissen, welche Formel passt und was $a$ und $b$ sind.",
+        "Erst alle drei Bausteine ($a^2$, $2ab$, $b^2$) berechnen, dann zusammensetzen.",
+        "Das fertige Ergebnis steht ganz am Ende."
+      ],
+      "loesungsweg": "Zuerst Formel und Belegung festlegen ($a = x$, $b = 4$), dann die Quadrate $x^2$ und $16$ bilden, anschließend das doppelte Produkt $8x$ berechnen — und alles zu $(x+4)^2 = x^2 + 8x + 16$ zusammensetzen.",
+      "kc": [
+        "elementare-termumformungen"
+      ]
+    },
+    {
+      "id": "ma-08-bf-007",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Faktorisiere $x^2 + 12x + 36$ in die Form $(x+b)^2$ und mache die Probe.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Bestimme die Zahl $b$.",
+          "eingaben": [
+            {
+              "label": "$b$",
+              "antwort": 6,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Es muss $b^2 = 36$ und zugleich $2 \\cdot b = 12$ gelten — prüfe beides."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Probe an der Stelle $x = 1$: Der Ausgangsterm liefert $1 + 12 + 36 = 49$. Berechne zum Vergleich $(1+b)^2$.",
+          "eingaben": [
+            {
+              "label": "$(1+b)^2$",
+              "antwort": 49,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "$(1+6)^2 = 7^2$"
+          ]
+        }
+      ],
+      "tipps": [
+        "Suche eine Zahl, deren Quadrat $36$ ist.",
+        "Prüfe zusätzlich das mittlere Glied: Ist $2 \\cdot x \\cdot b$ wirklich $12x$?",
+        "Mit dem richtigen $b$ müssen Ausgangsterm und Produktform an jeder Stelle denselben Wert liefern — auch bei $x = 1$."
+      ],
+      "loesungsweg": "Wegen $6^2 = 36$ und $2 \\cdot 6 = 12$ ist $x^2 + 12x + 36 = (x+6)^2$. Probe mit $x = 1$: $(1+6)^2 = 49$ und $1 + 12 + 36 = 49$ ✓.",
+      "kc": [
+        "elementare-termumformungen"
+      ],
+      "cas": "<p>Die Rückrichtung — das Faktorisieren — kann der ClassPad II auch (Gym-Zweig: ClassPad ab Klasse 8):</p><ol><li>Im <b>Main</b>-Menü <b>Aktion → Umformungen → factor</b> wählen und eingeben: <code>factor(x^2+12x+36)</code>.</li><li><b>EXE</b> — der ClassPad zeigt <code>(x+6)^2</code>. Also b = 6, wie in deiner Rechnung.</li><li>Gut zu wissen: Lässt sich ein Term nicht faktorisieren, gibt der ClassPad ihn unverändert zurück — probiere zum Vergleich <code>factor(x^2+16)</code>.</li></ol><p>Der Rechenweg von Hand bleibt Pflicht — der ClassPad ist deine Kontrolle.</p>"
+    },
+    {
+      "id": "ma-08-bf-008",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Welche Terme lassen sich mit einer binomischen Formel faktorisieren?",
+      "optionen": [
+        {
+          "text": "$x^2 - 49$",
+          "richtig": true,
+          "erklaerung": "Richtig: Differenz zweier Quadrate — dritte Formel: $x^2 - 49 = (x+7)(x-7)$."
+        },
+        {
+          "text": "$x^2 - 10x + 25$",
+          "richtig": true,
+          "erklaerung": "Richtig: $25 = 5^2$ und das Mittelglied ist $2 \\cdot 5 \\cdot x = 10x$ — zweite Formel: $(x-5)^2$."
+        },
+        {
+          "text": "$x^2 + 16$",
+          "richtig": false,
+          "erklaerung": "Eine Summe zweier Quadrate ohne Mittelglied passt zu keiner binomischen Formel — die dritte Formel braucht ein Minus."
+        },
+        {
+          "text": "$x^2 + 5x + 25$",
+          "richtig": false,
+          "erklaerung": "Zwar ist $25 = 5^2$, aber das Mittelglied müsste $2 \\cdot 5 \\cdot x = 10x$ sein, nicht $5x$."
+        }
+      ],
+      "tipps": [
+        "Bei drei Gliedern: Sind das erste und das letzte Glied Quadrate — und ist das mittlere genau $2ab$?",
+        "Bei zwei Gliedern hilft nur die dritte Formel — und die braucht eine Differenz.",
+        "Genau zwei Terme lassen sich faktorisieren."
+      ],
+      "loesungsweg": "$x^2 - 49 = (x+7)(x-7)$ (dritte Formel) und $x^2 - 10x + 25 = (x-5)^2$ (zweite Formel, Mittelglied $10x$ ✓). $x^2 + 16$ ist eine Summe ohne Mittelglied — keine Formel passt. Bei $x^2 + 5x + 25$ müsste das Mittelglied $10x$ lauten.",
+      "kc": [
+        "elementare-termumformungen"
+      ]
+    },
+    {
+      "id": "ma-08-bf-009",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Ein quadratisches Mosaik hat die Seitenlänge $7$ cm. Beide Seiten werden um $3$ cm verlängert, sodass wieder ein Quadrat entsteht. Berechne die Fläche des neuen Quadrats — und die Gesamtfläche der beiden gleich großen Rechtecke aus dem Flächenmodell (das doppelte Produkt).",
+      "eingaben": [
+        {
+          "label": "Fläche des neuen Quadrats",
+          "antwort": 100,
+          "toleranz": 0,
+          "einheit": "cm²"
+        },
+        {
+          "label": "Beide Rechtecke zusammen",
+          "antwort": 42,
+          "toleranz": 0,
+          "einheit": "cm²"
+        }
+      ],
+      "tipps": [
+        "Die neue Seitenlänge ist $7 + 3 = 10$ cm.",
+        "Flächenmodell der ersten binomischen Formel: $(a+b)^2 = a^2 + 2ab + b^2$ mit $a = 7$ und $b = 3$.",
+        "Die beiden Rechtecke sind das doppelte Produkt: $2 \\cdot 7 \\cdot 3$."
+      ],
+      "loesungsweg": "Neues Quadrat: $(7+3)^2 = 10^2 = 100$ cm². Zerlegung nach dem Flächenmodell: $7^2 + 2 \\cdot 7 \\cdot 3 + 3^2 = 49 + 42 + 9 = 100$ cm² ✓ — die beiden Rechtecke haben zusammen $2 \\cdot 7 \\cdot 3 = 42$ cm².",
+      "kc": [
+        "elementare-termumformungen",
+        "mathematisch-modellieren"
+      ]
+    },
+    {
+      "id": "ma-08-bf-010",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Vereinfache den Term $(x+5)^2 - (x-5)^2$ so weit wie möglich.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: $(x+5)^2 = x^2 + c_1 \\cdot x + 25$. Bestimme $c_1$.",
+          "eingaben": [
+            {
+              "label": "$c_1$",
+              "antwort": 10,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Erste binomische Formel: $c_1 = 2 \\cdot 5$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: $(x-5)^2 = x^2 - c_2 \\cdot x + 25$. Bestimme $c_2$.",
+          "eingaben": [
+            {
+              "label": "$c_2$",
+              "antwort": 10,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Zweite binomische Formel — gleiches doppeltes Produkt, anderes Vorzeichen."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Die Differenz hat die Form $c_3 \\cdot x$. Bestimme $c_3$.",
+          "eingaben": [
+            {
+              "label": "$c_3$",
+              "antwort": 20,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "$(x^2 + 10x + 25) - (x^2 - 10x + 25)$ — beim Auflösen der Minusklammer drehen sich alle Vorzeichen."
+          ]
+        }
+      ],
+      "tipps": [
+        "Multipliziere beide Quadrate mit der ersten bzw. zweiten binomischen Formel aus.",
+        "Achtung Minusklammer: Beim Auflösen drehen sich alle Vorzeichen der zweiten Klammer um.",
+        "$x^2$ und $25$ heben sich weg — übrig bleibt $10x + 10x$."
+      ],
+      "loesungsweg": "$(x+5)^2 = x^2 + 10x + 25$ und $(x-5)^2 = x^2 - 10x + 25$. Differenz: $(x^2 + 10x + 25) - (x^2 - 10x + 25) = 10x + 10x = 20x$. Kontrolle mit $x = 1$: $6^2 - 4^2 = 36 - 16 = 20$ ✓.",
+      "kc": [
+        "elementare-termumformungen"
+      ]
+    },
+    {
+      "id": "ma-08-bf-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Tim behauptet: „$(a+b)^2$ ist dasselbe wie $a^2 + b^2$.“ Widerlege die Behauptung mit einem Zahlenbeispiel und erkläre mit der ersten binomischen Formel, welcher Summand bei Tim fehlt.",
+      "musterloesung": "Zahlenbeispiel: Mit $a = 3$ und $b = 4$ ist $(3+4)^2 = 7^2 = 49$, aber $3^2 + 4^2 = 9 + 16 = 25$. Beide Seiten sind verschieden — Tims Regel ist also falsch. Die erste binomische Formel zeigt den Grund: $(a+b)^2 = a^2 + 2ab + b^2$. Bei Tim fehlt das doppelte Produkt $2ab$, im Beispiel $2 \\cdot 3 \\cdot 4 = 24$. Tatsächlich gilt $25 + 24 = 49$ ✓. Nur wenn $a = 0$ oder $b = 0$ ist, also $2ab = 0$, liefern beide Terme denselben Wert.",
+      "tipps": [
+        "Setze zwei kleine Zahlen ein, z. B. $a = 3$ und $b = 4$, und berechne beide Seiten.",
+        "Vergleiche: $(3+4)^2 = 49$, aber $9 + 16 = 25$. Wie groß ist der Unterschied?",
+        "Der Unterschied $49 - 25 = 24$ ist genau $2 \\cdot 3 \\cdot 4$ — welcher Summand der binomischen Formel ist das?"
+      ],
+      "loesungsweg": "Ein Gegenbeispiel genügt: $(3+4)^2 = 49 \\neq 25 = 3^2 + 4^2$. Nach der ersten binomischen Formel gilt $(a+b)^2 = a^2 + 2ab + b^2$ — Tim unterschlägt das doppelte Produkt $2ab$ (im Beispiel $24$; Probe: $25 + 24 = 49$ ✓).",
+      "kc": [
+        "elementare-termumformungen",
+        "mathematisch-argumentieren"
+      ]
+    },
+    {
+      "id": "ma-08-bf-012",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 2,
+      "frage": "Zusatz: Berechne ohne Taschenrechner mit der dritten binomischen Formel — einmal vorwärts, einmal rückwärts angewendet.",
+      "eingaben": [
+        {
+          "label": "$97 \\cdot 103$",
+          "antwort": 9991,
+          "toleranz": 0
+        },
+        {
+          "label": "$62^2 - 58^2$",
+          "antwort": 480,
+          "toleranz": 0
+        }
+      ],
+      "tipps": [
+        "$97 \\cdot 103 = (100-3)(100+3)$ — Summe mal Differenz.",
+        "Die dritte Formel rückwärts: $62^2 - 58^2 = (62+58)(62-58)$.",
+        "$(62+58)(62-58) = 120 \\cdot 4$."
+      ],
+      "loesungsweg": "Vorwärts: $97 \\cdot 103 = (100-3)(100+3) = 100^2 - 3^2 = 10000 - 9 = 9991$. Rückwärts (faktorisieren): $62^2 - 58^2 = (62+58)(62-58) = 120 \\cdot 4 = 480$.",
+      "kc": [
+        "elementare-termumformungen"
+      ]
+    },
+    {
+      "id": "ma-08-bf-013",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Gegeben ist der Term $T(x) = (2x+3)^2 - (2x-3)^2$. Vereinfache $T(x)$ und arbeite mit dem Ergebnis weiter.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Vereinfacht hat $T(x)$ die Form $c \\cdot x$. Bestimme $c$.",
+          "eingaben": [
+            {
+              "label": "$c$",
+              "antwort": 24,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "$(2x+3)^2 = 4x^2 + 12x + 9$ und $(2x-3)^2 = 4x^2 - 12x + 9$ — dann die Minusklammer auflösen."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne $T(5)$.",
+          "eingaben": [
+            {
+              "label": "$T(5)$",
+              "antwort": 120,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "$T(5) = 24 \\cdot 5$ — oder zur Kontrolle direkt $13^2 - 7^2 = 169 - 49$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Für welches $x$ gilt $T(x) = 60$?",
+          "eingaben": [
+            {
+              "label": "$x$",
+              "antwort": 2.5,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Löse die Gleichung $24x = 60$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Multipliziere beide Klammern aus — hier ist $a = 2x$ und $b = 3$.",
+        "Beim Subtrahieren heben sich $4x^2$ und $9$ weg; es bleibt $12x + 12x$.",
+        "Eleganter Weg für Profis: dritte Formel mit $A = 2x+3$ und $B = 2x-3$: $T(x) = (A+B)(A-B) = 4x \\cdot 6$."
+      ],
+      "loesungsweg": "$(2x+3)^2 = 4x^2 + 12x + 9$ und $(2x-3)^2 = 4x^2 - 12x + 9$; die Differenz ist $T(x) = 24x$. Damit $T(5) = 120$ (Kontrolle: $13^2 - 7^2 = 169 - 49 = 120$ ✓). Aus $24x = 60$ folgt $x = 2{,}5$.",
+      "kc": [
+        "elementare-termumformungen"
+      ]
+    }
+  ]
+}

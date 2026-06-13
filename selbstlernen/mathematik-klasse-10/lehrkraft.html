@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderation: Mathematik 10 — Lernbüro (Lehrkraft) — Lernwelt</title>
+<meta name="description" content="Moderationsseite für die Lehrkraft: Stoffverteilung, typische Fehler, Differenzierung und Praxis-Leitfaden zum Selbstlern-Kurs Mathematik Klasse 10.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/selbstlernen.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="lehrkraft">
+<noscript><p class="noscript-hinweis"><a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Moderation: Mathematik 10 &middot; Lernbüro</h1>
+  <p class="einleitung">Interne Seite für die Lehrkraft &ndash; im Schüler-Flow bewusst <strong>unverlinkt</strong>. Enthält den Praxis-Leitfaden, die Stoffverteilung und je Lektion typische Fehler, Differenzierungs- und Material-Hinweise. Mit &bdquo;Drucken&ldquo; als A4-Handzettel ausgebbar. Pilot: <a href="index.html">Schüler-Kursseite öffnen</a>.</p>
+
+  <p class="knopfzeile"><button type="button" class="knopf zweitrangig klein" onclick="window.print()">Drucken</button></p>
+
+  <div class="merkkasten" style="border-left:4px solid var(--ok)"><span class="merk-etikett">Aktualisierung (Lücken gefüllt)</span><p>Die früher hier als „Lücke" genannten dünnen Spuren sind inzwischen mit neuen Aufgaben gefüllt (Datei <code>daten/aufgaben/lernbuero/&lt;thema&gt;.json</code>, Marker <code>ergaenzung:&quot;lernbuero&quot;</code>) — zur fachlichen Prüfung. Einzelne Lücken-Hinweise weiter unten können daher veraltet sein.</p></div>
+  <div class="merkkasten">
+    <span class="merk-etikett">Praxis-Leitfaden Selbstlern-Moderation</span>
+    <p><strong>Gemeinsamer Start (3&prime;):</strong> Stundenziel nennen, an die Hilfe-Regel erinnern, Wochenplan zeigen.
+    <strong>Hilfe-Regel:</strong> &bdquo;Erst der Tipp, dann der Partner, dann die Lehrkraft.&ldquo; Erst wenn die drei gestuften Tipps und die Sitznachbarin nicht weiterhelfen, kommt die Lehrkraft.
+    <strong>Stand erfassen:</strong> Es gibt kein Dashboard &ndash; nutze die <em>Ampel-Selbsteinschätzung</em> (🟢🟡🔴 am Lektionsende) und das <em>Lerntagebuch</em> (offene Fragen). Im Vorbeigehen zeigen lassen.
+    <strong>Gemeinsamer Abschluss (3&prime;):</strong> ein bis zwei rote Ampeln gemeinsam klären, Mindestmarke der Woche prüfen.</p>
+  </div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Eingebaute Entscheidungen dieses Kurses</span>
+    <p><strong>Taktung:</strong> Wochenplan mit Mindestmarke (Basis-Spur je Woche). <strong>Checkpoints:</strong> &bdquo;Sichern&ldquo; schaltet die nächste Lektion frei; jeder Checkpoint ist per Knopf <em>&bdquo;Lehrkraft hat freigegeben&ldquo;</em> ohne Passwort überschreibbar (Vertrauensmodell). <strong>Werkzeuge:</strong> Ampel + Lerntagebuch (Hilfe-Signal und Stand-Karte sind im Pilot bewusst weggelassen, später nachrüstbar).</p>
+  </div>
+
+  <h2>Stoffverteilung Halbjahr (KC Mathematik Gym Sek I)</h2>
+  <details class="lb-stoff" open>
+    <summary>Tabelle Woche &rarr; Thema &rarr; KC-Schwerpunkt</summary>
+    <table>
+      <thead><tr><th>Wochen</th><th>Thema</th><th>Lektionen</th><th>KC-Schwerpunkt</th></tr></thead>
+      <tbody>
+        <tr><td>1&ndash;4</td><td>Trigonometrie</td><td>ca. 12</td><td>Funktionaler Zusammenhang: Entdeckungen an rechtwinkligen Dreiecken</td></tr>
+        <tr><td>5&ndash;7</td><td>Sinusfunktion und periodische Vorgänge</td><td>ca. 8</td><td>Funktionaler Zusammenhang: Periodische Zusammenhänge</td></tr>
+        <tr class="ist-pilot"><td>8&ndash;10</td><td>Exponentialfunktion und Wachstum &mdash; <em>Pilot (5 Lektionen ausgebaut)</em></td><td>5 von ca. 10</td><td>Funktionaler Zusammenhang: Exponentielle Zusammenhänge, Modellieren</td></tr>
+        <tr><td>11&ndash;14</td><td>Potenzen und Potenzfunktionen</td><td>ca. 10</td><td>Zahlen und Operationen, Funktionaler Zusammenhang</td></tr>
+        <tr><td>15&ndash;17</td><td>Körperberechnungen</td><td>ca. 9</td><td>Messen: Kreis- und Körperberechnungen</td></tr>
+        <tr><td>18</td><td>Wiederholung + Klassenarbeitstraining</td><td>ca. 3</td><td>Arbeiten-Bereich + Tagesmischung</td></tr>
+      </tbody>
+    </table>
+  </details>
+  <p class="einleitung">Echte Stundenzahlen nach Stundentafel kalibrieren. Der Pilot baut nur den Exponentialfunktion-Block aus; die übrigen Blöcke stehen als <code>geplant</code> in <code>daten/kurse/ma-10.json</code>.</p>
+
+  <h2>Lektionen im Einzelnen</h2>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 1 &middot; Linear oder exponentiell?</span>
+    <p><strong>Ziele:</strong> Lineares und exponentielles Wachstum unterscheiden; erklären, was ein Wachstumsfaktor ist.<br>
+    <strong>Vorwissen (Ankommen):</strong> Prozentwachstum aus Klasse 7 (ma-07-pz-001/-002) &ndash; Bezüge zu Grundwert und Faktor.<br>
+    <strong>Typische Fehler:</strong> Konstante Differenz und konstanter Quotient verwechselt; exponentielle Folgen an falscher Stelle abgelesen; Wachstumsfaktor mit Wachstumsrate verwechselt (b = 1,05 bedeutet 5 %, nicht 105 %).<br>
+    <strong>Differenzierung:</strong> Basis = exp-001 (Multiple-Choice linear/exponentiell) + exp-005 (Zuordnung Faktoren). Standard = exp-004 (Zinseszins-Einführung). <em>Plus-Lücke:</em> Es gibt noch keine AFB-III-Aufgabe zu diesem reinen Erkennungs-Schritt; Schnelle ziehen Plus aus Lektion 5 vor.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 1 (#exp-linear).</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 2 &middot; Die Exponentialfunktion f(x) = a&middot;b^x</span>
+    <p><strong>Ziele:</strong> Startwert a und Wachstumsfaktor b in f(x) = a&middot;b^x benennen; b aus Prozentzahl bestimmen.<br>
+    <strong>Typische Fehler:</strong> a und b vertauscht; b = 1,03 als 103 % statt 3 % Wachstum interpretiert; b = 0,85 nicht als Abnahme um 15 % erkannt (statt: 85 % bleiben übrig); b^0 = 1 nicht genutzt, um Startwert zu erkennen.<br>
+    <strong>Differenzierung:</strong> Basis = exp-002 (Lückentext zu a und b) + exp-003 (Faktor aus Prozent). Standard = exp-006 (Bakterien-Wachstum) + exp-008 (Einwohner-Folge). <em>Plus-Lücke:</em> Kein eigenständiges AFB-III zu f(x)-Struktur; Schnelle ziehen Plus aus Lektion 5 vor.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 2 (#exp-funktion).</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 3 &middot; Exponentielles Wachstum rechnen</span>
+    <p><strong>Ziele:</strong> Wachstumsprobleme mit f(n) = a&middot;b^n berechnen; Zinseszins-Effekt erklären.<br>
+    <strong>Typische Fehler:</strong> Zinseszins linear gerechnet (jedes Jahr denselben Eurobetrag addiert statt den Faktor anzuwenden); n und a vertauscht; Potenz zuletzt berechnet (erst multiplizieren, dann potenzieren statt umgekehrt).<br>
+    <strong>Differenzierung:</strong> <em>Basis-Lücke</em> &ndash; Es gibt keine Niveau-1-Aufgabe zu reinen Wachstums-Berechnungen. Schüler arbeiten das Beispiel aus Abschnitt 3 der Erklärseite durch. Standard = exp-006 + exp-007 + exp-008. Plus = exp-012 (Verdopplungszeit).<br>
+    <strong>Stopp-Punkt empfohlen:</strong> Vor oder nach dieser Lektion lohnt eine kurze Tafel-Demo des Zinseszins-Effekts (linearer vs. exponentieller Verlauf).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 3 (#exp-wachstum).</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 4 &middot; Exponentielle Abnahme</span>
+    <p><strong>Ziele:</strong> Abnahme-Situationen mit 0 &lt; b &lt; 1 modellieren; Halbwertszeit durch systematisches Probieren bestimmen.<br>
+    <strong>Typische Fehler:</strong> Abnahmefaktor falsch berechnet (b = 0,15 statt b = 0,85 für -15 %; Formel b = 1 - p/100 nicht angewendet); Halbwertszeit linear berechnet (Gesamtzeit / 2 statt Tabelle); Abnahme nicht von Wachstum unterschieden, wenn die Situationsbeschreibung mehrdeutig ist.<br>
+    <strong>Differenzierung:</strong> Basis = exp-003 (Faktor-Bestimmung, auch für Abnahme). Standard = exp-007 (Autowert) + exp-009 (Wirkstoff-Abbau, Multiple-Choice) + exp-010 (Halbwertszeit durch Probieren). Plus = exp-013 (Modell aus Messdaten bestimmen).<br>
+    <strong>Stopp-Punkt:</strong> im Player markiert &ndash; kurzes Gespäch: Wird im Modell die Menge jemals null? (Nein &ndash; die Kurve nähert sich der x-Achse nur an.)<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 4 (#exp-abnahme).</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 5 &middot; Modellgrenzen und Vergleich</span>
+    <p><strong>Ziele:</strong> Grenzen eines exponentiellen Modells benennen; lineares und exponentielles Wachstum an Daten unterscheiden und passendes Modell auswählen.<br>
+    <strong>Typische Fehler:</strong> Modell wird als dauerhaft gültig angesehen (kein Bewusstsein für Kapazitätsgrenzen); bei Datentabellen werden Differenzen statt Quotienten geprüft; Seerose-Problem: Tag 15 statt Tag 29 als Halbierungs-Zeitpunkt angegeben.<br>
+    <strong>Differenzierung:</strong> volle Basis/Standard/Plus-Spur vorhanden. Basis = exp-001 + exp-002. Standard = exp-008 + exp-010 + exp-011 (Seerose-Freitext). Plus = exp-012 (Verdopplungszeit) + exp-013 (Modell aus Messdaten).<br>
+    <strong>Hinweis Gym:</strong> exp-012 und exp-013 sind explizit nur für Gym; der Player zeigt sie RS-Schülern nicht an.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 5 (#exp-modell); Tagesmischung Mathematik zur Vorbereitung auf die Klassenarbeit.</p>
+  </section>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Bekannte Grenzen des Pilots (Rückmeldung erbeten)</span>
+    <p>Pro Thema liegen <strong>13 Aufgaben</strong> vor. Auf fünf Lektionen mit je drei Spuren verteilt sind einzelne Spuren dünn &ndash; die <em>Lücken</em> sind im Player ehrlich ausgewiesen (L1 Plus, L2 Plus, L3 Basis). Wichtigste Konsequenz für den Ausbau: <strong>mehr Aufgaben je Thema</strong> (besonders niedrige Niveaus zu Wachstums-Berechnungen und AFB-III zu Einzelbegriffen) machen das Lektionsformat erst voll tragfähig.</p>
+  </div>
+
+  
+  <h2>Block 3: Potenzen und Potenzfunktionen</h2>
+  <section class="merkkasten">
+    <span class="merk-etikett">Potenzen und Potenzfunktionen &middot; 5 Lektionen (L11&ndash;L15) &middot; Gymnasium und Realschule</span>
+    <p><strong>Lektionen:</strong> Die Potenzgesetze; Rationale Exponenten (Wurzeln als Potenzen); Wissenschaftliche Notation; Potenzfunktionen f(x) = x<sup>n</sup>; Wurzel- und Hyperbel-Typ.<br>
+    <strong>Typische Fehler:</strong> $a^m \cdot a^n = a^{m \cdot n}$ statt $a^{m+n}$; Potenz- und Exponentialfunktion verwechseln ($x^3$ vs. $3^x$); Bruchexponenten falsch lesen (Nenner = Wurzel, Z&auml;hler = Potenz); bei wissenschaftlicher Notation die Vorzahl nicht auf &lt;&nbsp;10 normieren.<br>
+    <strong>Differenzierung:</strong> Basis und Standard durchgehend f&uuml;r Gymnasium und Realschule. Lernb&uuml;ro-Erg&auml;nzungsaufgaben in <code>daten/aufgaben/lernbuero/ma-10-potenzen-und-potenzfunktionen.json</code> (5 neue Aufgaben, IDs ma-10-pp-101&hellip;105) &ndash; fachliche Pr&uuml;fung ausstehend. Ausblick Gymnasium: L15 Plus (ma-10-pp-012/-013, nur gym) behandelt Potenzfunktionen mit rationalen Exponenten auf Oberstufenniveau.<br>
+    <strong>Stopp-Punkt:</strong> Vor L14 empfiehlt sich ein kurzes Gespr&auml;ch: Unterschied Potenz- vs. Exponentialfunktion (Basis fest vs. Exponent fest).</p>
+  </section>
+
+  <h2>Block 4: K&ouml;rperberechnungen</h2>
+  <section class="merkkasten">
+    <span class="merk-etikett">K&ouml;rperberechnungen &middot; 5 Lektionen (L16&ndash;L20) &middot; Gymnasium und Realschule</span>
+    <p><strong>Lektionen:</strong> Prisma und Zylinder; Pyramide und Kegel; Die Kugel; Zusammengesetzte K&ouml;rper; K&ouml;rper im Alltag.<br>
+    <strong>Typische Fehler:</strong> Faktor 1/3 bei Pyramide und Kegel vergessen; Radius und Durchmesser verwechseln; Mantellinie $s$ statt H&ouml;he $h$ bei Kegelmantel; bei zusammengesetzten K&ouml;rpern innenliegende Fl&auml;chen zur Oberfl&auml;che z&auml;hlen; Volumen- und Oberfl&auml;chenproblem verwechseln (F&uuml;llmenge vs. Materialbedarf).<br>
+    <strong>Differenzierung:</strong> Basis und Standard durchgehend f&uuml;r Gymnasium und Realschule. Lernb&uuml;ro-Erg&auml;nzungsaufgaben in <code>daten/aufgaben/lernbuero/ma-10-koerperberechnungen.json</code> (5 neue Aufgaben, IDs ma-10-kk-101&hellip;105) &ndash; fachliche Pr&uuml;fung ausstehend. Ausblick Gymnasium: L20 Plus (ma-10-kk-013, nur gym) und zusammengesetzte K&ouml;rper mit Halbkugel (kk-105) auf Oberstufenniveau.<br>
+    <strong>Stopp-Punkt:</strong> Vor L19 kurze Sammlung von Alltagsobjekten aus Grundk&ouml;rpern empfohlen.</p>
+  </section>
+
+  <h2>Block 5: Sinusfunktion und periodische Vorg&auml;nge</h2>
+  <section class="merkkasten">
+    <span class="merk-etikett">Sinusfunktion &middot; 5 Lektionen (L21&ndash;L25) &middot; <strong>Gymnasium und Realschule</strong> (Grundlagen ge&ouml;ffnet)</span>
+    <p><strong>Lektionen:</strong> Vom Dreieck zum Einheitskreis; Die Sinuskurve; Eigenschaften der Sinusfunktion; Die Parameter a, b und d; Sinus als Modell.<br>
+    <strong>Typische Fehler:</strong> Taschenrechner im Bogenmodus statt Gradmodus; Amplitude mit Periode verwechseln; $b$ &auml;ndert die Periode ($rac{360^\circ}{b}$) &mdash; nicht die Amplitude; $d$ als Amplitude interpretieren; Periode aus dem Graphen falsch ablesen (ein Hochpunkt statt volle Welle).<br>
+    <strong>Differenzierung:</strong> Der Block ist jetzt auch f&uuml;r die <strong>Realschule ge&ouml;ffnet</strong>. Grundlagen sind durchg&auml;ngig f&uuml;r Gymnasium UND Realschule: Sinus am Einheitskreis, Sinuskurve, Periode, Amplitude, Mittellinie sowie einfache periodische Modelle (Riesenrad, Tide). In jeder Lektion sind die Pflichtphasen (Ankommen, Basis, Standard, Sichern) so verdrahtet, dass sie nur both-Zweig-Aufgaben referenzieren &ndash; keine RS-Sackgasse. Die <strong>Vertiefung</strong> (Parameter $b$ als Streckung/Frequenz, Periode $\frac{360^\circ}{b}$, Phasen-/Kurvenuntersuchung, AFB III) ist als <em>Ausblick Gymnasium</em> ans Lektionsende verschoben und erscheint f&uuml;r RS freiwillig (nur-gym: sf-005/-006/-007/-008/-010/-012/-013 sowie sf-103/-105). Lernb&uuml;ro-Erg&auml;nzungsaufgaben in <code>daten/aufgaben/lernbuero/ma-10-sinusfunktion.json</code> (jetzt 7 Aufgaben, IDs ma-10-sf-101&hellip;107; sf-106/-107 neu und RS-tauglich: Amplitude/Mittellinie ablesen, H&ouml;chst-/Tiefstwert eines Modells) &ndash; fachliche Pr&uuml;fung ausstehend.<br>
+    <strong>Stopp-Punkt:</strong> Vor L24 kurze Parameter&uuml;bersicht an der Tafel empfohlen.</p>
+  </section>
+
+  <h2>Block 6: Grenzprozesse und N&auml;herungsverfahren</h2>
+  <section class="merkkasten">
+    <span class="merk-etikett">Grenzprozesse &middot; 5 Lektionen (L26&ndash;L30) &middot; <strong>Nur Gymnasialzweig (im Realschulzweig ausgeblendet)</strong></span>
+    <p><strong>Lektionen:</strong> 0,999&hellip;&thinsp;=&thinsp;1 (Verschiebe-Trick); Intervallschachtelung; Das Heron-Verfahren; Archimedes jagt &pi;; Grenzprozesse &uuml;berall.<br>
+    <strong>Typische Fehler:</strong> Grenzwert als &bdquo;Wert, den die Folge irgendwann erreicht&ldquo; missverstehen (stattdessen: beliebig nahe, nie &uuml;berschritten); Heron-Formel mit falscher Division; unendliche Summe mit unendlichem Wert gleichsetzen (Gegenbeispiel: $\frac{1}{2}+\frac{1}{4}+\ldots=1$).<br>
+    <strong>Differenzierung:</strong> Alle Aufgaben dieses Blocks sind ausschlie&szlig;lich f&uuml;r den Gymnasialzweig. Lernb&uuml;ro-Erg&auml;nzungsaufgaben in <code>daten/aufgaben/lernbuero/ma-10-grenzprozesse-und-naeherungen.json</code> (5 neue Aufgaben, IDs ma-10-gn-101&hellip;105) &ndash; fachliche Pr&uuml;fung ausstehend.<br>
+    <strong>Ausblick:</strong> L30 bereitet explizit die Oberstufenanalysis vor (Sekanten-Steigung &rarr; Ableitung). Verbindet sich direkt mit EP-Thema &bdquo;Änderungsraten und Ableitung&ldquo;.</p>
+  </section>
+
+<p class="einleitung"><a href="index.html">&larr; Zur Schüler-Kursseite</a></p>
+  <h2>Block 2: Trigonometrie</h2>
+  <section class="merkkasten">
+    <span class="merk-etikett">Trigonometrie · 5 Lektionen (L6–L10)</span>
+    <p><strong>Lektionen:</strong> Seitenverhältnisse im rechtwinkligen Dreieck; Sinus, Kosinus und Tangens; Seiten und Winkel berechnen; Anwendungen: Steigungen, Vermessung, Schatten; Sinussatz und Kosinussatz.<br>
+    <strong>Typische Fehler:</strong> Gegenkathete und Ankathete vertauschen; Taschenrechner im falschen Winkelmodus (Grad/Bogenmaß); sin/cos/tan dem falschen Seitenverhältnis zuordnen.<br>
+    <strong>Differenzierung:</strong> Basis und Standard durchgehend für Gymnasium UND Realschule; die AFB-III-Zusatzaufgaben erscheinen für RS am Lektionsende im Block „Ausblick Gymnasium“. 5 neue Ergänzungsaufgaben (<code>daten/aufgaben/lernbuero/ma-10-trigonometrie.json</code>) – fachliche Prüfung ausstehend.</p>
+  </section>
+
+  <p class="knopfzeile"><a class="knopf zweitrangig klein" href="../druck.html?kurs=ma-10">🖨 Druckmaterial erstellen</a></p>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+</body>
+</html>

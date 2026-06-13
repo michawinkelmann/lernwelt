@@ -1,0 +1,117 @@
+{
+  "thema": "ma-10-potenzen-und-potenzfunktionen",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben — fachliche Pruefung ausstehend",
+  "aufgaben": [
+    {
+      "id": "ma-10-pp-101",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Berechne $2^5$ ohne Taschenrechner.",
+      "eingaben": [
+        { "label": "Ergebnis", "antwort": 32, "toleranz": 0, "einheit": "" }
+      ],
+      "tipps": [
+        "Schreibe $2^5$ als Produkt: $2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2$.",
+        "Berechne schrittweise: $2 \\cdot 2 = 4$, $4 \\cdot 2 = 8$, $8 \\cdot 2 = 16$, $16 \\cdot 2 = ?$",
+        "$2^5 = 32$."
+      ],
+      "loesungsweg": "$2^5 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2 = 32$.",
+      "kc": ["Zahlen und Operationen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-pp-102",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Was ergibt $3^{-2}$?",
+      "optionen": [
+        { "text": "$-9$", "richtig": false, "erklaerung": "Negative Exponenten erzeugen keine negativen Zahlen, sondern Kehrwerte." },
+        { "text": "$\\frac{1}{9}$", "richtig": true, "erklaerung": "$3^{-2} = \\frac{1}{3^2} = \\frac{1}{9}$." },
+        { "text": "$-\\frac{1}{9}$", "richtig": false, "erklaerung": "Die Basis $3$ ist positiv, also ist auch $3^{-2}$ positiv." },
+        { "text": "$\\frac{1}{6}$", "richtig": false, "erklaerung": "$3^{-2}$ bedeutet Kehrwert von $3^2 = 9$, nicht von $3 \\cdot 2 = 6$." }
+      ],
+      "tipps": [
+        "Das Potenzgesetz fuer negative Exponenten: $a^{-n} = \\frac{1}{a^n}$.",
+        "Berechne zuerst $3^2$, dann bilde den Kehrwert.",
+        "$3^2 = 9$, also $3^{-2} = \\frac{1}{9}$."
+      ],
+      "loesungsweg": "Nach dem Potenzgesetz gilt $3^{-2} = \\frac{1}{3^2} = \\frac{1}{9}$.",
+      "kc": ["Zahlen und Operationen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-pp-103",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Berechne $8^{2/3}$ ohne Taschenrechner. Hinweis: Erst die dritte Wurzel, dann quadrieren.",
+      "eingaben": [
+        { "label": "Ergebnis", "antwort": 4, "toleranz": 0.01, "einheit": "" }
+      ],
+      "tipps": [
+        "Schreibe $8^{2/3} = \\left(\\sqrt[3]{8}\\right)^2$.",
+        "Was ergibt $\\sqrt[3]{8}$? Welche Zahl ergibt mit sich selbst dreimal multipliziert $8$?",
+        "$\\sqrt[3]{8} = 2$, also $8^{2/3} = 2^2 = 4$."
+      ],
+      "loesungsweg": "$8^{2/3} = \\left(\\sqrt[3]{8}\\right)^2 = 2^2 = 4$. Der Nenner des Exponenten ($3$) gibt die Wurzel an, der Zaehler ($2$) die anschliessende Potenz.",
+      "kc": ["Zahlen und Operationen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-pp-104",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Vereinfache mit den Potenzgesetzen: $2^3 \\cdot 2^4$. Gib den Exponenten des Ergebnisses an.",
+      "eingaben": [
+        { "label": "Ergebnis als Zahl", "antwort": 128, "toleranz": 0, "einheit": "" }
+      ],
+      "tipps": [
+        "Bei gleicher Basis gilt: $a^m \\cdot a^n = a^{m+n}$.",
+        "$2^3 \\cdot 2^4 = 2^{3+4} = 2^7$.",
+        "$2^7 = 128$."
+      ],
+      "loesungsweg": "Gleiche Basis, Exponenten addieren: $2^3 \\cdot 2^4 = 2^{3+4} = 2^7 = 128$.",
+      "kc": ["Zahlen und Operationen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-pp-105",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Vereinfache vollstaendig und berechne: $\\frac{(4 \\cdot 10^3) \\cdot (2 \\cdot 10^5)}{10^6}$. Schreibe das Ergebnis in wissenschaftlicher Notation.",
+      "schritte": [
+        {
+          "frage": "Wie lautet das Produkt im Zaehler (Vorzahl und Zehner-Exponent)?",
+          "eingaben": [
+            { "label": "Vorzahl", "antwort": 8, "toleranz": 0 },
+            { "label": "Zehner-Exponent im Zaehler", "antwort": 8, "toleranz": 0 }
+          ]
+        },
+        {
+          "frage": "Wie lautet das Ergebnis nach der Division durch $10^6$ (Vorzahl und Zehner-Exponent)?",
+          "eingaben": [
+            { "label": "Vorzahl", "antwort": 8, "toleranz": 0 },
+            { "label": "Zehner-Exponent", "antwort": 2, "toleranz": 0 }
+          ]
+        }
+      ],
+      "tipps": [
+        "Multipliziere die Vorzahlen ($4 \\cdot 2$) und addiere die Zehnerpotenz-Exponenten ($3 + 5$) getrennt.",
+        "Im Zaehler steht $8 \\cdot 10^8$. Beim Dividieren durch $10^6$ werden die Exponenten subtrahiert.",
+        "$\\frac{8 \\cdot 10^8}{10^6} = 8 \\cdot 10^{8-6} = 8 \\cdot 10^2$."
+      ],
+      "loesungsweg": "Zaehler: $(4 \\cdot 10^3) \\cdot (2 \\cdot 10^5) = (4 \\cdot 2) \\cdot 10^{3+5} = 8 \\cdot 10^8$. Division: $\\frac{8 \\cdot 10^8}{10^6} = 8 \\cdot 10^{8-6} = 8 \\cdot 10^2 = 800$.",
+      "kc": ["Zahlen und Operationen"],
+      "ergaenzung": "lernbuero"
+    }
+  ]
+}

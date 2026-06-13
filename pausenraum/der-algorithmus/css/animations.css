@@ -1,0 +1,86 @@
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(255,46,136,0.6); }
+  100% { box-shadow: 0 0 0 20px rgba(255,46,136,0); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes heart-float {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
+  20%  { opacity: 1; transform: translate(-50%, -90%) scale(1.4); }
+  60%  { opacity: 1; transform: translate(-50%, -180%) scale(1.1); }
+  100% { opacity: 0; transform: translate(-50%, -260%) scale(0.8); }
+}
+
+@keyframes like-pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+@keyframes reply-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.spin { animation: spin 1s linear infinite; }
+.shimmer {
+  background: linear-gradient(90deg, var(--bg-elev) 25%, var(--bg-elev-2) 50%, var(--bg-elev) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s linear infinite;
+}
+
+.heart-floater {
+  position: fixed; z-index: 1000; pointer-events: none;
+  font-size: 28px; color: var(--accent);
+  text-shadow: 0 2px 12px rgba(255, 46, 136, 0.5);
+  animation: heart-float 1.05s cubic-bezier(.2,.7,.2,1) forwards;
+  transform: translate(-50%, -50%);
+}
+
+.action-btn.like-btn.active .action-icon {
+  animation: like-pop 360ms cubic-bezier(.2,.9,.3,1.2);
+  color: var(--accent);
+}
+
+.post-reply.reply-in { animation: reply-in 280ms ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Animationen, die ohne Bewegung störungsfrei sein sollen, bekommen feste
+     End-Zustände. */
+  .heart-floater { display: none; }
+  .lean-dot { box-shadow: 0 0 0 3px rgba(255,255,255,0.2) !important; }
+  .story-bar-fill { width: 100% !important; }
+  .push-banner { transform: translate(-50%, 0) !important; transition: none !important; }
+  .tutorial-spot { box-shadow: 0 0 0 9999px rgba(0,0,0,0.55), 0 0 0 3px var(--accent) !important; }
+}

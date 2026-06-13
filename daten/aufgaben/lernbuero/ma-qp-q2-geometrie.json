@@ -1,0 +1,179 @@
+{
+  "thema": "ma-qp-q2-geometrie",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben zum Q2-Überblick Analytische Geometrie. IDs 101–107. Fachliche Prüfung durch die Lehrkraft ausstehend.",
+  "aufgaben": [
+    {
+      "id": "ma-qp-q2-101",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen zum Überblick über die analytische Geometrie (Q2) sind richtig? Wähle alle zutreffenden aus.",
+      "optionen": [
+        { "text": "Jede Gerade im Raum lässt sich durch Stützvektor und Richtungsvektor in Parameterform schreiben.", "richtig": true, "erklaerung": "Richtig — das ist die grundlegende Darstellungsform einer Geraden im Raum." },
+        { "text": "Eine Ebene in Koordinatenform ax + by + cz = d hat den Normalenvektor (a, b, c).", "richtig": true, "erklaerung": "Richtig — die Koeffizienten (a, b, c) bilden direkt den Normalenvektor." },
+        { "text": "Zwei Geraden mit parallelen Richtungsvektoren sind immer identisch.", "richtig": false, "erklaerung": "Falsch — parallele Richtungsvektoren bedeuten nur, dass die Geraden parallel oder identisch sind; eine Punktprobe entscheidet." },
+        { "text": "Das Vektorprodukt zweier Spannvektoren liefert einen Normalenvektor der Ebene.", "richtig": true, "erklaerung": "Richtig — das Vektorprodukt steht senkrecht auf beiden Spannvektoren und ist daher ein Normalenvektor." },
+        { "text": "Der Abstand eines Punktes P von einer Ebene E: ax+by+cz = d beträgt |aP+bP+cP−d| ohne Nenner.", "richtig": false, "erklaerung": "Falsch — der Nenner sqrt(a²+b²+c²) ist zwingend. Nur bei normierter Ebene (Normalenvektor der Länge 1) entfällt er." }
+      ],
+      "tipps": [
+        "Denke an die drei Themen des Q2-Kurses: Geraden, Ebenen, Abstände und Winkel.",
+        "Prüfe jede Aussage einzeln an einem konkreten Beispiel.",
+        "Besonders Vorsicht bei Aussagen mit 'immer' oder 'nie' — diese sind oft falsch."
+      ],
+      "loesungsweg": "Aussagen 1, 2 und 4 sind richtig. Aussage 3 ist falsch (parallel ≠ identisch, Punktprobe nötig). Aussage 5 ist falsch (Nenner fehlt).",
+      "kc": ["Überblick analytische Geometrie", "Grundbegriffe wiederholen"]
+    },
+    {
+      "id": "ma-qp-q2-102",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben sind die Punkte $A(1 \\mid 2 \\mid 3)$ und $B(4 \\mid 2 \\mid 1)$. Berechne den Verbindungsvektor $\\overrightarrow{AB}$, seinen Betrag sowie den Mittelpunkt $M$ der Strecke $AB$.",
+      "eingaben": [
+        { "label": "1. Komponente von $\\overrightarrow{AB}$", "antwort": 3, "toleranz": 0, "einheit": "" },
+        { "label": "2. Komponente von $\\overrightarrow{AB}$", "antwort": 0, "toleranz": 0, "einheit": "" },
+        { "label": "3. Komponente von $\\overrightarrow{AB}$", "antwort": -2, "toleranz": 0, "einheit": "" },
+        { "label": "$|\\overrightarrow{AB}|$ (gerundet auf 2 Stellen)", "antwort": 3.61, "toleranz": 0.01, "einheit": "" },
+        { "label": "1. Koordinate von $M$", "antwort": 2.5, "toleranz": 0.01, "einheit": "" },
+        { "label": "2. Koordinate von $M$", "antwort": 2, "toleranz": 0.01, "einheit": "" },
+        { "label": "3. Koordinate von $M$", "antwort": 2, "toleranz": 0.01, "einheit": "" }
+      ],
+      "tipps": [
+        "Verbindungsvektor: $\\overrightarrow{AB} = B - A$ (Spitze minus Fuß, komponentenweise).",
+        "$\\overrightarrow{AB} = (4-1,\\; 2-2,\\; 1-3) = (3, 0, -2)$. Betrag: $\\sqrt{9+0+4} = \\sqrt{13} \\approx 3{,}61$.",
+        "Mittelpunkt: $M = \\frac{1}{2}(A + B) = \\left(\\frac{5}{2},\\; 2,\\; 2\\right) = (2{,}5 \\mid 2 \\mid 2)$."
+      ],
+      "loesungsweg": "$\\overrightarrow{AB} = \\begin{pmatrix}3\\\\0\\\\-2\\end{pmatrix}$, $|\\overrightarrow{AB}| = \\sqrt{9+0+4} = \\sqrt{13} \\approx 3{,}61$. $M = \\frac{1}{2}\\begin{pmatrix}5\\\\4\\\\4\\end{pmatrix} = \\begin{pmatrix}2{,}5\\\\2\\\\2\\end{pmatrix}$.",
+      "kc": ["Verbindungsvektor", "Betrag", "Mittelpunkt einer Strecke"]
+    },
+    {
+      "id": "ma-qp-q2-103",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben ist die Ebene $E$ in Parameterform: $$E\\colon \\vec{x} = \\begin{pmatrix}2\\\\0\\\\0\\end{pmatrix} + r \\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix} + s \\begin{pmatrix}0\\\\1\\\\1\\end{pmatrix}.$$ Prüfe, ob $P(4 \\mid 3 \\mid 1)$ in der Ebene liegt. Gib die zugehörigen Parameterwerte an.",
+      "eingaben": [
+        { "label": "Parameterwert $r$", "antwort": 2, "toleranz": 0, "einheit": "" },
+        { "label": "Parameterwert $s$", "antwort": 1, "toleranz": 0, "einheit": "" }
+      ],
+      "tipps": [
+        "Setze $P$ in die Parameterform ein: $(2+r, 0+r+s, 0+s) = (4, 3, 1)$.",
+        "Aus der 3. Gleichung: $s = 1$. Aus der 1. Gleichung: $r = 4 - 2 = 2$.",
+        "Probe in Gleichung 2: $r + s = 2 + 1 = 3$ ✓. Der Punkt liegt in der Ebene."
+      ],
+      "loesungsweg": "Gleichungssystem: $2+r = 4 \\Rightarrow r=2$; $s = 1$; Probe: $r+s = 3$ ✓. Ja, $P$ liegt in $E$ mit $r=2$, $s=1$.",
+      "kc": ["Parameterform Ebene", "Punktprobe Ebene"]
+    },
+    {
+      "id": "ma-qp-q2-104",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Berechne den Abstand des Punktes $P(0 \\mid 5 \\mid 0)$ von der Ebene $E\\colon 3x + 4z = 12$.",
+      "eingaben": [
+        { "label": "Abstand $d(P, E)$", "antwort": 2.4, "toleranz": 0.01, "einheit": "" }
+      ],
+      "tipps": [
+        "Bringe die Ebene in die Form $ax+by+cz=d$: hier $a=3$, $b=0$, $c=4$, $d=12$.",
+        "Zähler: $|3{\\cdot}0 + 0{\\cdot}5 + 4{\\cdot}0 - 12| = |-12| = 12$.",
+        "Nenner: $\\sqrt{9+0+16} = \\sqrt{25} = 5$. Abstand $= 12/5 = 2{,}4$."
+      ],
+      "loesungsweg": "$d(P, E) = \\dfrac{|3{\\cdot}0 + 0{\\cdot}5 + 4{\\cdot}0 - 12|}{\\sqrt{9+0+16}} = \\dfrac{12}{5} = 2{,}4$.",
+      "kc": ["Abstand Punkt–Ebene", "Koordinatenform anwenden"]
+    },
+    {
+      "id": "ma-qp-q2-105",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Klausurvorbereitung — Checkliste: Welche Aussagen zu typischen Klausuraufgaben in der analytischen Geometrie sind richtig?",
+      "optionen": [
+        { "text": "In einer Klausur reicht es, den Schnittpunkt zweier Geraden zu berechnen, ohne eine Probe durchzuführen.", "richtig": false, "erklaerung": "Falsch — die Probe (Einsetzen des Schnittpunkts in beide Geradengleichungen) ist zwingend." },
+        { "text": "Beim Nachweis 'windschief' genügt es zu zeigen, dass das LGS keine Lösung hat.", "richtig": true, "erklaerung": "Richtig — kein Schnittpunkt bei nicht-parallelen Richtungsvektoren bedeutet windschief." },
+        { "text": "Den Abstand eines Punktes von einer Ebene kann man immer mit der Koordinatenform-Formel berechnen.", "richtig": true, "erklaerung": "Richtig — auch wenn die Ebene in Parameterform gegeben ist, rechnet man sie zunächst in Koordinatenform um." },
+        { "text": "Beim Schnittwinkel zweier Ebenen nutzt man immer den Arkuskosinus, beim Schnittwinkel Gerade–Ebene immer den Arkussinus.", "richtig": true, "erklaerung": "Richtig — cos-Formel für Ebene–Ebene (Normalenvektoren), sin-Formel für Gerade–Ebene (Richtungsvektor senkrecht zu Normalem)." },
+        { "text": "Eine Gerade mit Richtungsvektor proportional zum Normalenvektor einer Ebene steht senkrecht auf der Ebene.", "richtig": true, "erklaerung": "Richtig — der Normalenvektor zeigt genau in die Richtung senkrecht zur Ebene." }
+      ],
+      "tipps": [
+        "Gehe jede Aussage durch und überlege: Gibt es ein Gegenbeispiel?",
+        "Proben und Fallunterscheidungen sind zentrale Klausurbestandteile.",
+        "Denke an die Unterschiede zwischen den Winkelformeln für Ebene–Ebene und Gerade–Ebene."
+      ],
+      "loesungsweg": "Aussagen 2, 3, 4 und 5 sind richtig. Aussage 1 ist falsch — die Probe ist Pflicht in der Klausur.",
+      "kc": ["Klausurvorbereitung", "Überblick Verfahren"]
+    },
+    {
+      "id": "ma-qp-q2-106",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Berechne den Schnittwinkel $\\varphi$ der Ebenen $$E_1\\colon x + 2y - 2z = 3 \\quad \\text{und} \\quad E_2\\colon 2x - y + 2z = 1.$$",
+      "eingaben": [
+        { "label": "Schnittwinkel $\\varphi$ in Grad (gerundet auf eine Dezimalstelle)", "antwort": 63.6, "toleranz": 0.2, "einheit": "°" }
+      ],
+      "tipps": [
+        "Normalenvektoren ablesen: $\\vec{n_1} = (1, 2, -2)$, $\\vec{n_2} = (2, -1, 2)$.",
+        "Formel: $\\cos(\\varphi) = \\dfrac{|\\vec{n_1} \\cdot \\vec{n_2}|}{|\\vec{n_1}| \\cdot |\\vec{n_2}|}$.",
+        "$\\vec{n_1}\\cdot\\vec{n_2} = 2-2-4 = -4$. $|\\vec{n_1}| = |\\vec{n_2}| = 3$. $\\cos(\\varphi) = \\frac{4}{9}$. $\\varphi = \\arccos\\!\\left(\\frac{4}{9}\\right) \\approx 63{,}6°$."
+      ],
+      "loesungsweg": "$\\vec{n_1} = \\begin{pmatrix}1\\\\2\\\\-2\\end{pmatrix}$, $\\vec{n_2} = \\begin{pmatrix}2\\\\-1\\\\2\\end{pmatrix}$. $\\vec{n_1}\\cdot\\vec{n_2} = -4$. $|\\vec{n_1}| = |\\vec{n_2}| = 3$. $\\cos(\\varphi) = \\frac{4}{9}$. $\\varphi = \\arccos\\!\\left(\\frac{4}{9}\\right) \\approx 63{,}6°$.",
+      "kc": ["Schnittwinkel zweier Ebenen", "Normalenvektoren"]
+    },
+    {
+      "id": "ma-qp-q2-107",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben sind die Punkte $P(1 \\mid 0 \\mid 2)$ und $Q(3 \\mid 2 \\mid 0)$ sowie die Ebene $E\\colon x + y + z = 4$. Stelle die Gerade $g$ durch $P$ und $Q$ in Parameterform auf und berechne den Durchstoßpunkt $S$ von $g$ mit $E$.",
+      "schritte": [
+        {
+          "frage": "Bestimme den Richtungsvektor $\\vec{d} = \\overrightarrow{PQ}$.",
+          "eingaben": [
+            { "label": "1. Komponente von $\\vec{d}$", "antwort": 2, "toleranz": 0, "einheit": "" },
+            { "label": "2. Komponente von $\\vec{d}$", "antwort": 2, "toleranz": 0, "einheit": "" },
+            { "label": "3. Komponente von $\\vec{d}$", "antwort": -2, "toleranz": 0, "einheit": "" }
+          ],
+          "tipps": [
+            "$\\vec{d} = Q - P = (3-1,\\; 2-0,\\; 0-2) = (2, 2, -2)$."
+          ]
+        },
+        {
+          "frage": "Setze die Parameterform von $g$ in $E$ ein und bestimme den Parameter $t$.",
+          "eingaben": [
+            { "label": "Parameterwert $t$ beim Durchstoßpunkt", "antwort": 0.5, "toleranz": 0.01, "einheit": "" }
+          ],
+          "tipps": [
+            "Einsetzen: $(1+2t) + (0+2t) + (2-2t) = 4 \\Rightarrow 3 + 2t = 4 \\Rightarrow t = 0{,}5$."
+          ]
+        },
+        {
+          "frage": "Berechne den Durchstoßpunkt $S$.",
+          "eingaben": [
+            { "label": "1. Koordinate von $S$", "antwort": 2, "toleranz": 0.01, "einheit": "" },
+            { "label": "2. Koordinate von $S$", "antwort": 1, "toleranz": 0.01, "einheit": "" },
+            { "label": "3. Koordinate von $S$", "antwort": 1, "toleranz": 0.01, "einheit": "" }
+          ],
+          "tipps": [
+            "$S = P + 0{,}5 \\cdot \\vec{d} = (1+1,\\; 0+1,\\; 2-1) = (2,\\; 1,\\; 1)$. Probe: $2+1+1=4$ ✓."
+          ]
+        }
+      ],
+      "loesungsweg": "$\\vec{d} = (2,2,-2)$. $g\\colon \\vec{x} = (1,0,2)^\\top + t(2,2,-2)^\\top$. Einsetzen in $E$: $(1+2t)+(2t)+(2-2t) = 4 \\Rightarrow 3+2t=4 \\Rightarrow t=0{,}5$. $S = (1+1,\\; 0+1,\\; 2-1) = (2\\mid 1\\mid 1)$. Probe: $2+1+1=4$ ✓.",
+      "kc": ["Gerade durch zwei Punkte", "Durchstoßpunkt Gerade–Ebene"]
+    }
+  ]
+}

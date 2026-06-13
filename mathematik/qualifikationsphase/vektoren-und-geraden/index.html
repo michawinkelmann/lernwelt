@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vektoren und Geraden — Qualifikationsphase · Mathematik — Lernwelt</title>
+<meta name="description" content="Vektoren im Raum: Ortsvektoren, Beträge, Skalarprodukt und Winkel, Geraden in Parameterform und die vier Lagebeziehungen zweier Geraden — mit Schrägbildern, Beispielen, Verständnis-Checks und Übungen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Vektoren und Geraden</h1>
+  <p class="einleitung">Zwei Lieferdrohnen überfliegen die Stadt auf geradlinigen Kursen — muss die Flugsicherung eingreifen, weil sich die Bahnen kreuzen, oder gehen sie aneinander vorbei? Solche Fragen spielen im Raum, nicht mehr in der Ebene: Mit diesem Thema beginnt die analytische Geometrie der Qualifikationsphase. Du lernst, Punkte im Raum durch drei Koordinaten festzulegen, Verschiebungen durch <strong>Vektoren</strong> zu beschreiben und ganze <strong>Geraden</strong> in eine einzige Gleichung zu packen. Am Ende kannst du die Drohnen-Frage präzise beantworten — mit einer Systematik, die alle vier möglichen Lagen zweier Geraden unterscheidet.</p>
+
+  <section aria-labelledby="vg-punkte">
+    <h2 id="vg-punkte">1. Punkte und Vektoren im Raum</h2>
+    <p>In der Ebene reichen zwei Koordinaten, im Raum braucht ein Punkt drei: $P(2 \mid 3 \mid 2)$ bedeutet $2$ Einheiten in $x_1$-Richtung (nach vorn), $3$ in $x_2$-Richtung (nach rechts) und $2$ in $x_3$-Richtung (nach oben). Die drei Achsen stehen paarweise senkrecht aufeinander. Auf dem Papier zeichnet man das räumliche Koordinatensystem als <strong>Schrägbild</strong> (Kabinettprojektion): Die $x_1$-Achse zeigt schräg nach vorn unten, eine Einheit auf ihr wird verkürzt als halbe Kästchendiagonale dargestellt.</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 320" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Schrägbild eines räumlichen Koordinatensystems: Die x1-Achse zeigt schräg nach vorn unten links, die x2-Achse nach rechts, die x3-Achse nach oben. Eingezeichnet ist der Punkt P mit den Koordinaten 2, 3 und 2. Ein gestrichelter Weg führt vom Ursprung O zwei Einheiten nach vorn entlang der x1-Achse, dann drei Einheiten nach rechts parallel zur x2-Achse und schließlich zwei Einheiten nach oben zu P. Der Ortsvektor p ist als dicker Pfeil direkt vom Ursprung zu P gezeichnet.">
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="70" y1="230" x2="335" y2="230"/>
+          <line x1="130" y1="290" x2="130" y2="48"/>
+          <line x1="160" y1="200" x2="66" y2="294"/>
+        </g>
+        <path d="M343 230 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M130 40 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <path d="M0 0 l-9 -4 v8 z" fill="var(--text-leise)" transform="translate(60 300) rotate(135)"/>
+        <g font-size="12" fill="var(--text-leise)">
+          <text x="333" y="220" text-anchor="end">x₂</text>
+          <text x="140" y="54">x₃</text>
+          <text x="72" y="312">x₁</text>
+          <text x="122" y="246" text-anchor="end">O</text>
+        </g>
+        <!-- Skalenstriche mit 1 -->
+        <line x1="168" y1="230" x2="168" y2="236" stroke="var(--text-leise)" stroke-width="1"/>
+        <line x1="124" y1="192" x2="130" y2="192" stroke="var(--text-leise)" stroke-width="1"/>
+        <g font-size="11" fill="var(--text-leise)">
+          <text x="168" y="249" text-anchor="middle">1</text>
+          <text x="120" y="196" text-anchor="end">1</text>
+        </g>
+        <!-- gestrichelter Koordinatenweg: 2 nach vorn, 3 nach rechts, 2 nach oben -->
+        <path d="M130 230 L92 268 L206 268 L206 192" fill="none" stroke="var(--akzent)" stroke-width="1.8" stroke-dasharray="5 4"/>
+        <g font-size="12" font-weight="600" fill="var(--akzent)">
+          <text x="97" y="247" text-anchor="end">2</text>
+          <text x="149" y="285" text-anchor="middle">3</text>
+          <text x="213" y="233">2</text>
+        </g>
+        <!-- Ortsvektor von O zu P -->
+        <line x1="130" y1="230" x2="200" y2="195" stroke="var(--mathe)" stroke-width="2.5"/>
+        <path d="M0 0 l-9 -4 v8 z" fill="var(--mathe)" transform="translate(206 192) rotate(-26.6)"/>
+        <g fill="var(--mathe)">
+          <text x="158" y="207" font-size="14" font-style="italic" font-weight="600">p</text>
+          <line x1="154" y1="194" x2="164" y2="194" stroke="var(--mathe)" stroke-width="1.5"/>
+          <path d="M169 194 l-7 -3 v6 z"/>
+        </g>
+        <!-- Punkt P -->
+        <circle cx="206" cy="192" r="3.5" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+        <text x="213" y="186" font-size="13" font-weight="600" fill="var(--text)">P(2 | 3 | 2)</text>
+      </svg>
+    </div>
+    <p>Der gestrichelte Weg im Bild macht die Koordinaten ablesbar: vom Ursprung $O$ aus $2$ nach vorn, $3$ nach rechts, $2$ nach oben. Der dick gezeichnete Pfeil von $O$ direkt zu $P$ ist der <strong>Ortsvektor</strong> $\vec p$ von $P$ — er hat dieselben Koordinaten wie der Punkt, notiert als Spalte. Allgemein beschreibt ein <strong>Vektor</strong> eine Verschiebung im Raum: Alle gleich langen, parallelen und gleich gerichteten Pfeile stehen für denselben Vektor; der Ortsvektor ist nur sein spezieller Vertreter mit Startpunkt $O$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Verbindungsvektor: „Spitze minus Fuß“</span>
+      <p class="formel-abgesetzt">$$\overrightarrow{AB} = \vec b - \vec a = \begin{pmatrix} b_1 - a_1 \\ b_2 - a_2 \\ b_3 - a_3 \end{pmatrix}$$</p>
+      <p>Der Vektor $\overrightarrow{AB}$ verschiebt $A$ nach $B$. Berechnet wird er als Differenz der Ortsvektoren: Zielpunkt minus Startpunkt, kurz „Spitze minus Fuß“. Der Gegenvektor $\overrightarrow{BA} = -\overrightarrow{AB}$ läuft denselben Weg zurück.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Verbindungsvektor</span>
+      <p>Für $A(1 \mid 2 \mid 0)$ und $B(3 \mid {-2} \mid 4)$ gilt:</p>
+      <p class="formel-abgesetzt">$$\overrightarrow{AB} = \begin{pmatrix} 3 - 1 \\ -2 - 2 \\ 4 - 0 \end{pmatrix} = \begin{pmatrix} 2 \\ -4 \\ 4 \end{pmatrix}$$</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Betrag eines Vektors</span>
+      <p class="formel-abgesetzt">$$|\vec v| = \sqrt{v_1^2 + v_2^2 + v_3^2}$$</p>
+      <p>Der <strong>Betrag</strong> ist die Länge des Vektors — als Länge nie negativ. Die Formel ist der <a href="../../klasse-9/satz-des-pythagoras/index.html">Satz des Pythagoras</a>, zweimal angewendet: erst für die Diagonale der Grundfläche, dann für die Raumdiagonale. Der Abstand zweier Punkte ist der Betrag ihres Verbindungsvektors.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Betrag und Abstand</span>
+      <p>$|\overrightarrow{AB}| = \sqrt{2^2 + ({-4})^2 + 4^2} = \sqrt{36} = 6$ — die Punkte $A$ und $B$ aus dem Beispiel oben haben den Abstand $6$. Und der Ortsvektor aus dem Schrägbild: $|\vec p| = \sqrt{2^2 + 3^2 + 2^2} = \sqrt{17} \approx 4{,}1$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Bestimme den Verbindungsvektor und den Abstand für A(0 | 1 | 2) und B(2 | 3 | 1).</summary>
+      <div class="check-antwort"><p>„Spitze minus Fuß“: $\overrightarrow{AB} = (2 \mid 2 \mid {-1})$. Abstand: $|\overrightarrow{AB}| = \sqrt{4 + 4 + 1} = \sqrt{9} = 3$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="vg-rechnen">
+    <h2 id="vg-rechnen">2. Rechnen mit Vektoren</h2>
+    <p>Vektoren werden komponentenweise addiert und mit Zahlen (Skalaren) multipliziert — gerechnet wird in jeder Zeile einzeln:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Addition und S-Multiplikation</span>
+      <p class="formel-abgesetzt">$$\vec a + \vec b = \begin{pmatrix} a_1 + b_1 \\ a_2 + b_2 \\ a_3 + b_3 \end{pmatrix}, \qquad k \cdot \vec a = \begin{pmatrix} k \cdot a_1 \\ k \cdot a_2 \\ k \cdot a_3 \end{pmatrix}$$</p>
+      <p>Geometrisch heißt Addieren <strong>Aneinanderhängen</strong> der Pfeile: erst $\vec a$ laufen, dann $\vec b$. Die S-Multiplikation streckt oder staucht den Pfeil um den Faktor $|k|$; bei negativem $k$ kehrt sich zusätzlich die Richtung um. Ausdrücke wie $2\vec a - 3\vec b$, die beides kombinieren, heißen <strong>Linearkombinationen</strong>.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Linearkombination</span>
+      <p>Für $\vec a$ und $\vec b$ mit den Koordinaten $(1 \mid 0 \mid 2)$ und $(2 \mid 1 \mid {-1})$ gilt:</p>
+      <p class="formel-abgesetzt">$$2\vec a - 3\vec b = \begin{pmatrix} 2 - 6 \\ 0 - 3 \\ 4 + 3 \end{pmatrix} = \begin{pmatrix} -4 \\ -3 \\ 7 \end{pmatrix}$$</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Mittelpunkt einer Strecke</span>
+      <p class="formel-abgesetzt">$$\vec m = \frac{1}{2}\left(\vec a + \vec b\right)$$</p>
+      <p>Der Mittelpunkt $M$ der Strecke $\overline{AB}$ liegt auf halbem Weg: Sein Ortsvektor ist der Mittelwert der beiden Ortsvektoren — jede Koordinate von $M$ ist also der Mittelwert der entsprechenden Koordinaten von $A$ und $B$.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Mittelpunkt</span>
+      <p>Für $A(2 \mid 1 \mid 5)$ und $B(4 \mid 7 \mid 1)$: $\vec m = \frac{1}{2}\,(2+4 \mid 1+7 \mid 5+1)$, also $M(3 \mid 4 \mid 3)$.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Kollinear: gleicher Faktor in allen drei Zeilen</span>
+      <p>Zwei Vektoren $\vec a$ und $\vec b$ (beide nicht der Nullvektor) heißen <strong>kollinear</strong> (zueinander parallel), wenn $\vec b = k \cdot \vec a$ für eine Zahl $k$ gilt. Der Test läuft zeilenweise wie ein Teilbarkeitstest: Liefern $b_1 : a_1$, $b_2 : a_2$ und $b_3 : a_3$ dreimal <em>denselben</em> Faktor $k$, sind die Vektoren kollinear — sonst nicht. Steht in einer Zeile von $\vec a$ eine Null, muss dort auch $\vec b$ eine Null haben. Kollinearität ist der Schlüsseltest für Lagebeziehungen in Abschnitt 5.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Kollinear oder nicht?</span>
+      <p>$({-6} \mid 3 \mid {-9}) = -3 \cdot (2 \mid {-1} \mid 3)$ — in allen drei Zeilen Faktor $k = -3$: kollinear. Dagegen ist $(4 \mid {-2} \mid 5)$ <em>nicht</em> kollinear zu $(2 \mid {-1} \mid 3)$: Die ersten beiden Zeilen liefern $k = 2$, dann müsste die dritte $2 \cdot 3 = 6$ ergeben — dort steht aber $5$.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="vg-skalarprodukt">
+    <h2 id="vg-skalarprodukt">3. Das Skalarprodukt</h2>
+    <p>Addieren und Strecken kannst du Vektoren jetzt — aber wie misst man <em>Winkel</em> zwischen ihnen? Das Werkzeug dafür ist das Skalarprodukt. Sein Name ist Programm: Das Ergebnis ist ein Skalar, also eine Zahl — kein Vektor.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Skalarprodukt</span>
+      <p class="formel-abgesetzt">$$\vec a \cdot \vec b = a_1 b_1 + a_2 b_2 + a_3 b_3$$</p>
+      <p>Komponentenweise multiplizieren, dann alles addieren — übrig bleibt eine einzige Zahl.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Skalarprodukt</span>
+      <p>Für die Koordinaten $(2 \mid 1 \mid {-2})$ und $(1 \mid 4 \mid 3)$: $\vec a \cdot \vec b = 2 \cdot 1 + 1 \cdot 4 + ({-2}) \cdot 3 = 2 + 4 - 6 = 0$.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Orthogonalitätstest</span>
+      <p class="formel-abgesetzt">$$\vec a \cdot \vec b = 0 \quad \Longleftrightarrow \quad \vec a \perp \vec b$$</p>
+      <p>Zwei Vektoren (beide nicht der Nullvektor) stehen genau dann senkrecht — <strong>orthogonal</strong> — aufeinander, wenn ihr Skalarprodukt null ist. Die beiden Vektoren aus dem Beispiel sind also orthogonal, nachgewiesen ganz ohne Zeichnung.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Winkel zwischen Vektoren</span>
+      <p class="formel-abgesetzt">$$\cos\varphi = \frac{\vec a \cdot \vec b}{|\vec a| \cdot |\vec b|}$$</p>
+      <p>Diese Formel liefert den Winkel $\varphi$ zwischen zwei Vektoren ($0^\circ \le \varphi \le 180^\circ$): Ist das Skalarprodukt positiv, ist der Winkel spitz; ist es negativ, stumpf — der Orthogonalfall liegt mit $0$ genau dazwischen. Übrigens: Auf dem ClassPad II gibst du Vektoren als Listen wie <code>[1,2,2]</code> ein; im Menü <strong>Aktion → Vektor</strong> liefern <code>dotP</code>, <code>norm</code> und <code>angle</code> Skalarprodukt, Betrag und Winkel — eine gute Kontrolle der Handrechnung.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Winkel berechnen</span>
+      <p>Für $(1 \mid 2 \mid 2)$ und $(2 \mid 2 \mid 1)$: Skalarprodukt $1 \cdot 2 + 2 \cdot 2 + 2 \cdot 1 = 8$, Beträge $|\vec a| = |\vec b| = \sqrt{9} = 3$. Also:</p>
+      <p class="formel-abgesetzt">$$\cos\varphi = \frac{8}{3 \cdot 3} = \frac{8}{9} \quad\Rightarrow\quad \varphi = \cos^{-1}\!\left(\frac{8}{9}\right) \approx 27{,}3^\circ$$</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Sind die Vektoren mit den Koordinaten (3 | −2 | 1) und (2 | 4 | 2) orthogonal?</summary>
+      <div class="check-antwort"><p>$\vec a \cdot \vec b = 3 \cdot 2 + ({-2}) \cdot 4 + 1 \cdot 2 = 6 - 8 + 2 = 0$ — ja, die beiden Vektoren sind orthogonal.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="vg-geraden">
+    <h2 id="vg-geraden">4. Geraden im Raum</h2>
+    <p>Eine Gerade im Raum lässt sich nicht als $y = mx + b$ schreiben — diese Form gehört in die Ebene. Stattdessen hilft eine Bewegungs-Idee: Stelle dich auf einen Punkt der Geraden und laufe von dort beliebig weit vorwärts oder rückwärts in ihre Richtung. Genau das sagt die Parameterform:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Parameterform einer Geraden</span>
+      <p class="formel-abgesetzt">$$g\colon\; \vec x = \vec p + t \cdot \vec u$$</p>
+      <p>Der <strong>Stützvektor</strong> $\vec p$ ist der Ortsvektor eines beliebigen Geradenpunkts, der <strong>Richtungsvektor</strong> $\vec u$ (nicht der Nullvektor) gibt den Verlauf an, und der <strong>Parameter</strong> $t$ durchläuft alle reellen Zahlen. Jeder $t$-Wert liefert den Ortsvektor eines Geradenpunkts: $t = 0$ den Stützpunkt selbst, $t = 1$ einen Schritt $\vec u$ weiter, $t = -2$ zwei Schritte rückwärts.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 240" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Eine Gerade g verläuft schräg durch das Bild. Vom Ursprung O führt der Stützvektor p als Pfeil zum Punkt P auf der Geraden, der zum Parameterwert t gleich 0 gehört. Von P aus zeigt der Richtungsvektor u entlang der Geraden zum Punkt mit t gleich 1. Ein gestrichelter Pfeil führt vom Ursprung direkt zum Punkt X mit t gleich 2 und veranschaulicht: Der Ortsvektor von X ist p plus 2 mal u.">
+        <!-- Gerade g -->
+        <line x1="78" y1="177" x2="340" y2="72" stroke="var(--mathe)" stroke-width="2.5"/>
+        <text x="340" y="62" font-size="14" font-weight="600" font-style="italic" fill="var(--mathe)" text-anchor="end">g</text>
+        <!-- gestrichelter Summenpfeil O zu X -->
+        <line x1="40" y1="215" x2="271" y2="101" stroke="var(--text-leise)" stroke-width="1.8" stroke-dasharray="5 4"/>
+        <path d="M0 0 l-9 -4 v8 z" fill="var(--text-leise)" transform="translate(280 96) rotate(-26.4)"/>
+        <text x="187" y="173" font-size="12.5" font-style="italic" fill="var(--text-leise)">p + 2·u</text>
+        <!-- Stuetzvektor p -->
+        <line x1="40" y1="215" x2="134" y2="156" stroke="var(--akzent)" stroke-width="2.5"/>
+        <path d="M0 0 l-9 -4 v8 z" fill="var(--akzent)" transform="translate(140 152) rotate(-32.1)"/>
+        <g fill="var(--akzent)">
+          <text x="72" y="196" font-size="14" font-style="italic" font-weight="600">p</text>
+          <line x1="68" y1="183" x2="78" y2="183" stroke="var(--akzent)" stroke-width="1.5"/>
+          <path d="M83 183 l-7 -3 v6 z"/>
+        </g>
+        <!-- Richtungsvektor u -->
+        <line x1="140" y1="152" x2="203" y2="127" stroke="var(--ok)" stroke-width="2.5"/>
+        <path d="M0 0 l-9 -4 v8 z" fill="var(--ok)" transform="translate(210 124) rotate(-21.7)"/>
+        <g fill="var(--ok)">
+          <text x="168" y="122" font-size="14" font-style="italic" font-weight="600">u</text>
+          <line x1="164" y1="109" x2="174" y2="109" stroke="var(--ok)" stroke-width="1.5"/>
+          <path d="M179 109 l-7 -3 v6 z"/>
+        </g>
+        <!-- Punkte -->
+        <circle cx="40" cy="215" r="3" fill="var(--text-leise)"/>
+        <text x="40" y="233" font-size="12" fill="var(--text-leise)" text-anchor="middle">Ursprung O</text>
+        <circle cx="140" cy="152" r="3.5" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+        <text x="131" y="172" font-size="12" font-weight="600" fill="var(--text)" text-anchor="middle">P (t = 0)</text>
+        <circle cx="210" cy="124" r="3.5" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+        <text x="212" y="144" font-size="12" fill="var(--text)" text-anchor="middle">t = 1</text>
+        <circle cx="280" cy="96" r="3.5" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+        <text x="286" y="112" font-size="12" font-weight="600" fill="var(--text)">X (t = 2)</text>
+      </svg>
+    </div>
+    <p>Im Bild erreicht der gestrichelte Pfeil $\vec p + 2\vec u$ den Geradenpunkt $X$ zum Parameterwert $t = 2$: erst mit dem Stützvektor $\vec p$ auf die Gerade, dann zwei Schritte $\vec u$ an ihr entlang.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Gerade durch zwei Punkte</span>
+      <p>Gesucht ist eine Gerade durch $A(1 \mid 0 \mid 2)$ und $B(3 \mid 4 \mid 3)$. Als Stützvektor eignet sich $\vec a$, als Richtungsvektor der Verbindungsvektor $\overrightarrow{AB}$:</p>
+      <p class="formel-abgesetzt">$$g\colon\; \vec x = \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} + t \cdot \begin{pmatrix} 2 \\ 4 \\ 1 \end{pmatrix}$$</p>
+    </div>
+    <p>Liegt ein gegebener Punkt auf der Geraden? Das klärt die <strong>Punktprobe</strong>: Setze seinen Ortsvektor für $\vec x$ ein und prüfe, ob <em>ein einziger</em> $t$-Wert alle drei Zeilen erfüllt.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Punktprobe — einmal ja, einmal nein</span>
+      <p>Liegt $P(5 \mid 8 \mid 4)$ auf $g$ von oben? Die erste Zeile $5 = 1 + 2t$ liefert $t = 2$. Kontrolle in den anderen Zeilen: $0 + 4 \cdot 2 = 8$ passt, $2 + 1 \cdot 2 = 4$ passt — $P$ liegt auf $g$.</p>
+      <p>Und $Q(7 \mid 12 \mid 6)$? Aus $7 = 1 + 2t$ folgt $t = 3$; die zweite Zeile passt ($0 + 4 \cdot 3 = 12$), aber die dritte liefert $2 + 1 \cdot 3 = 5 \neq 6$ — $Q$ liegt <em>nicht</em> auf $g$.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Viele Gleichungen — eine Gerade</span>
+      <p>Die Parameterdarstellung ist nicht eindeutig: Jeder Geradenpunkt darf Stützpunkt sein, und jedes Vielfache (außer Null) des Richtungsvektors taugt als Richtung. $\vec x = (1 \mid 0 \mid 2) + t \cdot (2 \mid 4 \mid 1)$ und $\vec x = (3 \mid 4 \mid 3) + s \cdot ({-4} \mid {-8} \mid {-2})$ beschreiben dieselbe Gerade. Ob zwei Gleichungen dasselbe Objekt meinen, klärt der Lagebeziehungs-Test aus Abschnitt 5.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Liegt Q(7 | 1 | 8) auf der Geraden mit Stützvektor (1 | 3 | 2) und Richtungsvektor (3 | −1 | 3)?</summary>
+      <div class="check-antwort"><p>Erste Zeile: $7 = 1 + 3t$ liefert $t = 2$. Zweite Zeile: $3 + ({-1}) \cdot 2 = 1$ — passt. Dritte Zeile: $2 + 3 \cdot 2 = 8$ — passt. Ja, $Q$ liegt auf der Geraden (Parameterwert $t = 2$).</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="vg-lage">
+    <h2 id="vg-lage">5. Lagebeziehungen zweier Geraden</h2>
+    <p>In der Ebene gibt es für zwei Geraden drei Möglichkeiten: identisch, parallel oder schneidend. Im Raum kommt eine vierte hinzu — zwei Geraden können aneinander vorbeilaufen, ohne parallel zu sein und ohne sich zu schneiden. Solche Geraden heißen <strong>windschief</strong>; sie liegen in keiner gemeinsamen Ebene. Denk an eine Autobahnbrücke über eine Landstraße: kein Schnittpunkt, aber auch nicht parallel.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Entscheidungsbaum: vier Lagen, zwei Fragen</span>
+      <p><strong>Frage 1: Sind die Richtungsvektoren kollinear?</strong></p>
+      <ul>
+        <li><strong>Ja</strong> → Punktprobe: Liegt der Stützpunkt von $h$ auf $g$? <strong>Ja → identisch</strong>, <strong>Nein → echt parallel</strong>.</li>
+        <li><strong>Nein</strong> → <strong>Frage 2: Hat das Gleichungssystem aus $g = h$ eine Lösung?</strong> Zwei Zeilen lösen, die dritte als Probe. <strong>Probe erfüllt → Schnittpunkt</strong>, <strong>Widerspruch → windschief</strong>.</li>
+      </ul>
+      <p>Wichtig beim Gleichsetzen: Beide Geraden brauchen <em>verschiedene</em> Parameterbuchstaben ($t$ und $s$), denn sie erreichen den gemeinsamen Punkt im Allgemeinen bei unterschiedlichen Parameterwerten.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Geraden mit Schnittpunkt — vollständig durchgerechnet</span>
+      <p class="formel-abgesetzt">$$g\colon\; \vec x = \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix} + t \cdot \begin{pmatrix} 2 \\ 1 \\ 1 \end{pmatrix}, \qquad h\colon\; \vec x = \begin{pmatrix} 1 \\ 5 \\ -3 \end{pmatrix} + s \cdot \begin{pmatrix} 1 \\ -1 \\ 2 \end{pmatrix}$$</p>
+      <p>Die Richtungsvektoren sind nicht kollinear (die erste Zeile verlangt den Faktor $\frac{1}{2}$, die zweite $-1$). Also gleichsetzen:</p>
+      <p class="formel-abgesetzt">$$\begin{aligned} \text{I:} \quad 1 + 2t &amp;= 1 + s \\ \text{II:} \quad 2 + t &amp;= 5 - s \\ \text{III:} \quad 0 + t &amp;= -3 + 2s \end{aligned}$$</p>
+      <p>Aus I folgt $s = 2t$; eingesetzt in II: $2 + t = 5 - 2t$, also $t = 1$ und $s = 2$. Jetzt die Probe in III: $1 = -3 + 2 \cdot 2 = 1$ — erfüllt. Die Geraden schneiden sich; Einsetzen von $t = 1$ in $g$ liefert den Schnittpunkt $S(3 \mid 3 \mid 1)$. Kontrolle über $h$ mit $s = 2$: $(1 + 2 \mid 5 - 2 \mid {-3} + 4) = (3 \mid 3 \mid 1)$ — derselbe Punkt.</p>
+    </div>
+    <p>Zum Vergleich der Parallel-Fall: Die Gerade $m$ mit Stützvektor $(0 \mid 0 \mid 1)$ und Richtungsvektor $(4 \mid 2 \mid 2) = 2 \cdot (2 \mid 1 \mid 1)$ hat einen zu $g$ kollinearen Richtungsvektor. Die Punktprobe entscheidet: Aus $0 = 1 + 2t$ folgt $t = -0{,}5$, aber die zweite Zeile liefert dann $2 - 0{,}5 = 1{,}5 \neq 0$ — der Stützpunkt von $m$ liegt nicht auf $g$, die Geraden sind <strong>echt parallel</strong>. (Läge er auf $g$, wären sie <strong>identisch</strong> — so wie die beiden Gleichungen im Merkkasten von Abschnitt 4.)</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel (eA-vertieft): Windschiefe Geraden</span>
+      <p>Untersucht werden $g$ von oben und</p>
+      <p class="formel-abgesetzt">$$h_2\colon\; \vec x = \begin{pmatrix} 2 \\ 0 \\ 3 \end{pmatrix} + s \cdot \begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix}$$</p>
+      <p>Die Richtungsvektoren $(2 \mid 1 \mid 1)$ und $(1 \mid 1 \mid 2)$ sind nicht kollinear. Gleichsetzen:</p>
+      <p class="formel-abgesetzt">$$\begin{aligned} \text{I:} \quad 1 + 2t &amp;= 2 + s \\ \text{II:} \quad 2 + t &amp;= 0 + s \\ \text{III:} \quad 0 + t &amp;= 3 + 2s \end{aligned}$$</p>
+      <p>II in I eingesetzt: $1 + 2t = 2 + (2 + t)$, also $t = 3$ und damit $s = 5$. Probe in III: links $3$, rechts $3 + 2 \cdot 5 = 13$ — Widerspruch. Das Gleichungssystem hat keine Lösung: kein gemeinsamer Punkt, nicht parallel — $g$ und $h_2$ sind <strong>windschief</strong>.</p>
+    </div>
+    <p>Alle vier Begriffe gehören auf grundlegendem wie erhöhtem Anforderungsniveau zum Handwerkszeug; das rechnerische Nachweisen windschiefer Lagen wird vor allem im erhöhten Anforderungsniveau vertieft — dort kommt später auch der <em>Abstand</em> windschiefer Geraden hinzu.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Das Vektorprodukt — der Senkrecht-Lieferant</summary>
+    <div class="vertiefung-inhalt">
+      <p>Das Skalarprodukt <em>prüft</em>, ob zwei Vektoren senkrecht zueinander stehen. Das <strong>Vektorprodukt</strong> (Kreuzprodukt) kann mehr: Es <em>erzeugt</em> zu zwei nicht kollinearen Vektoren $\vec a$ und $\vec b$ einen dritten Vektor, der auf beiden senkrecht steht — und anders als beim Skalarprodukt ist das Ergebnis ein Vektor:</p>
+      <p class="formel-abgesetzt">$$\vec a \times \vec b = \begin{pmatrix} a_2 b_3 - a_3 b_2 \\ a_3 b_1 - a_1 b_3 \\ a_1 b_2 - a_2 b_1 \end{pmatrix}$$</p>
+      <p>Merkschema: Für jede Ergebniszeile hältst du die gleichnamige Zeile von $\vec a$ und $\vec b$ zu und multiplizierst die übrigen vier Zahlen „über Kreuz“ — in der mittleren Zeile dreht sich dabei die Reihenfolge um.</p>
+      <p>Ein Rechenbeispiel mit $\vec a$ und $\vec b$ mit den Koordinaten $(1 \mid 2 \mid 0)$ und $(0 \mid 1 \mid 3)$:</p>
+      <p class="formel-abgesetzt">$$\vec a \times \vec b = \begin{pmatrix} 2 \cdot 3 - 0 \cdot 1 \\ 0 \cdot 0 - 1 \cdot 3 \\ 1 \cdot 1 - 2 \cdot 0 \end{pmatrix} = \begin{pmatrix} 6 \\ -3 \\ 1 \end{pmatrix}$$</p>
+      <p>Die Probe mit dem Skalarprodukt bestätigt das Versprechen: $(6 \mid {-3} \mid 1) \cdot (1 \mid 2 \mid 0) = 6 - 6 + 0 = 0$ und $(6 \mid {-3} \mid 1) \cdot (0 \mid 1 \mid 3) = 0 - 3 + 3 = 0$ — der neue Vektor steht senkrecht auf beiden Ausgangsvektoren.</p>
+      <p>Zwei Eigenschaften machen das Vektorprodukt zum Ausblick auf das nächste Thema: Sein Betrag $|\vec a \times \vec b|$ ist der Flächeninhalt des von $\vec a$ und $\vec b$ aufgespannten Parallelogramms — und vor allem liefert es zu zwei Spannvektoren einer Ebene direkt einen <strong>Normalenvektor</strong>. Genau damit arbeitet das Schwesterthema <a href="../ebenen-im-raum/index.html">Ebenen im Raum</a>. Auf dem ClassPad II heißt der Befehl <code>crossP</code> (Menü <strong>Aktion → Vektor</strong>).</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — von Verbindungsvektoren und Beträgen über Skalarprodukt, Winkel und Punktprobe bis zu Schnittpunkten, windschiefen Geraden und dem Vektorprodukt — mit gestuften Tipps, vollständigen Lösungswegen und CAS-Kontrollen für den ClassPad II.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

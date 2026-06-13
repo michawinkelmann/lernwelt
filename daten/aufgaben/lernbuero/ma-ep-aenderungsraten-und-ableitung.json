@@ -1,0 +1,204 @@
+{
+  "thema": "ma-ep-aenderungsraten-und-ableitung",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben zum Füllen dünner Spuren. Zur fachlichen Prüfung durch die Lehrkraft.",
+  "aufgaben": [
+    {
+      "id": "ma-ep-abl-101",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Eine Solaranlage liefert folgende Ertragswerte (in kWh, $t$ in Stunden): $E(6) = 0$, $E(12) = 18$, $E(16) = 26$. a) Berechne die mittlere Änderungsrate auf $[6; 12]$ und auf $[12; 16]$. b) In welchem Zeitabschnitt ist der Ertragszuwachs pro Stunde größer? c) Begründe, warum die mittlere Änderungsrate hier die Einheit $\\frac{\\text{kWh}}{\\text{h}}$ trägt und was sie physikalisch bedeutet.",
+      "eingaben": [
+        {
+          "label": "Mittlere Änderungsrate auf $[6; 12]$",
+          "antwort": 3,
+          "toleranz": 0.01,
+          "einheit": "kWh/h"
+        },
+        {
+          "label": "Mittlere Änderungsrate auf $[12; 16]$",
+          "antwort": 2,
+          "toleranz": 0.01,
+          "einheit": "kWh/h"
+        }
+      ],
+      "tipps": [
+        "Mittlere Änderungsrate auf $[a; b]$: Differenzenquotient $\\frac{E(b) - E(a)}{b - a}$. Welche Werte setzt du für $a$ und $b$ ein?",
+        "Auf $[6; 12]$: Zähler ist $E(12) - E(6) = 18 - 0 = 18$, Nenner ist $12 - 6 = 6$.",
+        "Auf $[12; 16]$: Zähler ist $E(16) - E(12) = 26 - 18 = 8$, Nenner ist $16 - 12 = 4$. Vergleiche dann die beiden Ergebnisse."
+      ],
+      "loesungsweg": "a) Auf $[6; 12]$: $\\frac{E(12) - E(6)}{12 - 6} = \\frac{18 - 0}{6} = 3\\,\\frac{\\text{kWh}}{\\text{h}}$. Auf $[12; 16]$: $\\frac{E(16) - E(12)}{16 - 12} = \\frac{26 - 18}{4} = 2\\,\\frac{\\text{kWh}}{\\text{h}}$. b) Im Abschnitt $[6; 12]$ ist der Ertragszuwachs pro Stunde mit $3\\,\\frac{\\text{kWh}}{\\text{h}}$ größer als in $[12; 16]$ mit $2\\,\\frac{\\text{kWh}}{\\text{h}}$ — die Anlage liefert am Mittag mehr Leistung als am Nachmittag. c) Die Einheit ergibt sich direkt aus dem Quotienten: Zähler in kWh, Nenner in h; das Ergebnis ist eine Leistung (Energie pro Zeit), gemessen in Kilowattstunden pro Stunde.",
+      "kc": ["aenderungsrate-im-kontext"]
+    },
+    {
+      "id": "ma-ep-abl-102",
+      "typ": "rechenweg",
+      "zweig": ["gym", "rs"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Für $f(x) = x^3$ soll die Ableitung an der Stelle $x_0 = 2$ durch immer kleinere Intervalle angenähert werden. Nutze den Hinweis $(2 + h)^3 = 8 + 12h + 6h^2 + h^3$, um den vereinfachten Ausdruck $m_h$ zu bestimmen, und berechne dann die Sekantensteigungen.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne die Sekantensteigung $m_h = \\frac{(2 + h)^3 - 8}{h}$ für $h = 1$.",
+          "eingaben": [
+            {
+              "label": "$m_1$",
+              "antwort": 19,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$(2 + 1)^3 = 27$; subtrahiere $f(2) = 8$ und teile durch $h = 1$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Sekantensteigung für $h = 0{,}1$.",
+          "eingaben": [
+            {
+              "label": "$m_{0{,}1}$",
+              "antwort": 12.61,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Mit dem Hinweis: $m_h = 12 + 6h + h^2$. Setze $h = 0{,}1$ ein: $12 + 0{,}6 + 0{,}01$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Auf welchen Wert $f'(2)$ streben die Sekantensteigungen für $h \\to 0$?",
+          "eingaben": [
+            {
+              "label": "$f'(2)$",
+              "antwort": 12,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Im vereinfachten Ausdruck $12 + 6h + h^2$ — was bleibt übrig, wenn $h$ gegen $0$ geht? Prüfe mit der Potenzregel: $f'(x) = 3x^2$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Nutze den gegebenen Hinweis: $(2+h)^3 = 8 + 12h + 6h^2 + h^3$. Setze das in den Differenzenquotienten ein und kürze durch $h$.",
+        "Nach dem Kürzen lautet der Differenzenquotient $m_h = 12 + 6h + h^2$. Für $h = 1$ ergibt sich $12 + 6 + 1 = 19$.",
+        "Je kleiner $h$, desto mehr verschwinden die Terme mit $h$ — übrig bleibt der Grenzwert $f'(2) = 12$. Das stimmt mit $f'(x) = 3x^2$ überein: $3 \\cdot 4 = 12$."
+      ],
+      "loesungsweg": "Den Differenzenquotienten vereinfachen: $\\frac{(2+h)^3 - 8}{h} = \\frac{8 + 12h + 6h^2 + h^3 - 8}{h} = \\frac{12h + 6h^2 + h^3}{h} = 12 + 6h + h^2$. Einsetzen: $h = 1$: $12 + 6 + 1 = 19$. $h = 0{,}1$: $12 + 0{,}6 + 0{,}01 = 12{,}61$. Für $h \\to 0$ verschwinden beide $h$-Terme, es bleibt $f'(2) = 12$. Probe mit Potenzregel: $f'(x) = 3x^2 \\Rightarrow f'(2) = 3 \\cdot 4 = 12$ \\checkmark.",
+      "kc": ["h-methode"]
+    },
+    {
+      "id": "ma-ep-abl-103",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben ist $f(x) = x^2$ mit der Ableitungsfunktion $f'(x) = 2x$. a) Berechne den Funktionswert $f(3)$. b) Berechne die Steigung der Tangente an der Stelle $x_0 = 3$, also $f'(3)$.",
+      "eingaben": [
+        {
+          "label": "$f(3)$",
+          "antwort": 9,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "$f'(3)$",
+          "antwort": 6,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$f(3)$ berechnest du, indem du $x = 3$ in die Funktionsgleichung $f(x) = x^2$ einsetzt: $f(3) = 3^2$.",
+        "Die Ableitungsfunktion lautet $f'(x) = 2x$. Setze $x = 3$ ein.",
+        "$f'(3) = 2 \\cdot 3 = 6$. Das bedeutet: Die Tangente an den Parabelgraphen im Punkt $(3 \\mid 9)$ hat die Steigung $6$."
+      ],
+      "loesungsweg": "a) $f(3) = 3^2 = 9$: Der Graphenpunkt lautet $(3 \\mid 9)$. b) Die Ableitung $f'(x) = 2x$ gibt die Tangentensteigung an jeder Stelle an. Einsetzen: $f'(3) = 2 \\cdot 3 = 6$. An der Stelle $x_0 = 3$ steigt der Graph von $f$ mit der Steigung $6$.",
+      "kc": ["ableitung-an-einer-stelle"]
+    },
+    {
+      "id": "ma-ep-abl-104",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Gegeben ist $f(x) = x^3 - 3x^2 + 2$. a) Bestimme die Ableitungsfunktion $f'(x)$ mit der Potenz- und Summenregel. b) Berechne $f'(1)$ und erkläre, was das Vorzeichen über das Verhalten von $f$ bei $x = 1$ aussagt. c) Bestimme alle Stellen, an denen $f'(x) = 0$ gilt, und gib die zugehörigen Funktionswerte $f(x)$ an.",
+      "eingaben": [
+        {
+          "label": "$f'(1)$",
+          "antwort": -3,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "Kleinere Nullstelle von $f'$ (kleineres $x$)",
+          "antwort": 0,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "Größere Nullstelle von $f'$ (größeres $x$)",
+          "antwort": 2,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "$f(0)$",
+          "antwort": 2,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "$f(2)$",
+          "antwort": -2,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Leite Glied für Glied ab: $(x^3)' = 3x^2$, $(-3x^2)' = -6x$, $(2)' = 0$. Also $f'(x) = 3x^2 - 6x$.",
+        "$f'(1) = 3 \\cdot 1 - 6 \\cdot 1$. Ein negatives Ergebnis bedeutet: Die Tangente fällt — $f$ ist an dieser Stelle monoton fallend.",
+        "Für die Nullstellen: $3x^2 - 6x = 0$ lässt sich ausklammern: $3x(x - 2) = 0$. Welche Werte ergeben Null?"
+      ],
+      "loesungsweg": "a) Mit Potenz- und Summenregel: $f'(x) = 3x^2 - 6x$. b) $f'(1) = 3 \\cdot 1^2 - 6 \\cdot 1 = 3 - 6 = -3 < 0$: Die Steigung der Tangente bei $x = 1$ ist negativ, $f$ fällt dort also. c) $f'(x) = 0$: $3x^2 - 6x = 3x(x - 2) = 0$, also $x = 0$ oder $x = 2$. Funktionswerte: $f(0) = 0 - 0 + 2 = 2$ und $f(2) = 8 - 12 + 2 = -2$. An diesen beiden Stellen hat $f$ waagerechte Tangenten — mögliche Hoch- oder Tiefpunkte.",
+      "kc": ["graphisches-ableiten", "ableitungsregeln"]
+    },
+    {
+      "id": "ma-ep-abl-105",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben ist $f(x) = 3x^2 + 2x$. a) Leite $f$ mit der Potenz-, Faktor- und Summenregel ab und gib $f'(x)$ an. b) Berechne $f'(2)$ und $f'(0)$.",
+      "eingaben": [
+        {
+          "label": "$f'(2)$",
+          "antwort": 14,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "$f'(0)$",
+          "antwort": 2,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Leite jeden Summanden einzeln ab: $(3x^2)' = 3 \\cdot 2x = 6x$ und $(2x)' = 2$. Zusammen: $f'(x) = 6x + 2$.",
+        "Für $f'(2)$: Setze $x = 2$ in $f'(x) = 6x + 2$ ein: $6 \\cdot 2 + 2$.",
+        "Für $f'(0)$: Setze $x = 0$ ein: $6 \\cdot 0 + 2 = 2$. Das ist der y-Achsenabschnitt von $f'$."
+      ],
+      "loesungsweg": "Ableitung mit Potenz- und Summenregel: $(3x^2)' = 6x$, $(2x)' = 2$, also $f'(x) = 6x + 2$. Einsetzen: $f'(2) = 6 \\cdot 2 + 2 = 12 + 2 = 14$. An der Stelle $x = 2$ steigt der Graph von $f$ sehr steil. $f'(0) = 6 \\cdot 0 + 2 = 2$: An der Stelle $x = 0$ steigt der Graph mit der Steigung $2$.",
+      "kc": ["ableitungsregeln"]
+    }
+  ]
+}

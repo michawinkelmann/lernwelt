@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atomhülle — Qualifikationsphase · Physik — Lernwelt</title>
+<meta name="description" content="Linienspektren, diskrete Energieniveaus, Franck-Hertz-Versuch, Wasserstoffatom und Atommodelle: Wie die Atomhülle Licht aussendet und verschluckt — mit Termschema, Beispielrechnung zur Balmer-Serie und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Atomhülle</h1>
+  <p class="einleitung">Das warm-gelbe Licht alter Straßenlaternen, das satte Rot einer Leuchtreklame: Leuchtende Gase senden nicht irgendein Licht aus, sondern ganz bestimmte Farben — Natriumdampf zum Beispiel fast ausschließlich eine gelbe Doppellinie bei $589\,\text{nm}$. Warum? Die Antwort führt mitten hinein in den Bau der <strong>Atomhülle</strong>: Sie kann Energie nur in festen Stufen aufnehmen und abgeben. Auf dieser Seite lernst du, wie Linienspektren entstehen, wie der Franck-Hertz-Versuch die Energiestufen ganz ohne Licht nachweist und wie sich das Spektrum des Wasserstoffatoms berechnen lässt. Als Werkzeug brauchst du die Photonenvorstellung $E = h \cdot f$ aus dem Thema <a href="../quantenobjekte/index.html">Quantenobjekte</a>; gemessen werden Spektren mit dem optischen Gitter aus dem Thema <a href="../interferenz-von-licht/index.html">Interferenz von Licht</a>.</p>
+
+  <section aria-labelledby="ah-spektren">
+    <h2 id="ah-spektren">1. Licht als Fingerabdruck — Linienspektren</h2>
+    <p>Schickt man das Licht einer <strong>Glühlampe</strong> durch ein optisches Gitter, entsteht ein <strong>kontinuierliches Spektrum</strong>: ein lückenloses Farbband von Violett bis Rot — der glühende Draht sendet alle Wellenlängen aus. Ganz anders eine <strong>Gasentladungslampe</strong> (Leuchtreklame, Natriumdampflampe, Energiesparlampe): Ihr dünnes, leuchtendes Gas liefert kein Farbband, sondern nur wenige scharfe, farbige <strong>Emissionslinien</strong> auf dunklem Grund.</p>
+    <p>Das Entscheidende: Jedes chemische Element erzeugt sein eigenes, unverwechselbares Linienmuster — die Spektrallinien sind ein <strong>Fingerabdruck</strong> des Elements. Darauf beruht die <strong>Spektralanalyse</strong>: Aus dem Licht einer Flamme, einer Lampe oder eines Sterns lässt sich ablesen, welche Elemente darin leuchten. Ihr spektakulärster Erfolg: Im Sonnenspektrum fand man 1868 Linien, die zu keinem bekannten Element passten — das <strong>Helium</strong> (nach griechisch <em>hélios</em>, Sonne) wurde am Himmel entdeckt, Jahrzehnte bevor man es auf der Erde nachweisen konnte.</p>
+    <p>Auch die Umkehrung funktioniert: Schickt man weißes Licht durch ein <em>kühles</em> Gas, verschluckt dieses genau die Wellenlängen, die es als heißes Gas selbst aussenden würde. Im kontinuierlichen Spektrum erscheinen dunkle <strong>Absorptionslinien</strong> — exakt an den Positionen der Emissionslinien. Joseph von Fraunhofer fand 1814 hunderte solcher dunkler Linien im Sonnenspektrum; aus diesen <strong>Fraunhofer-Linien</strong> liest die Astronomie bis heute die Zusammensetzung von Sternatmosphären ab.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Drei Spektraltypen</span>
+      <p><strong>Kontinuierliches Spektrum:</strong> glühende feste Körper und Flüssigkeiten (Glühdraht) — alle Wellenlängen. <strong>Emissionslinienspektrum:</strong> leuchtende dünne Gase — nur einzelne scharfe Linien, elementtypisch. <strong>Absorptionslinienspektrum:</strong> weißes Licht nach Durchgang durch ein kühles Gas — dunkle Linien bei genau den Wellenlängen, die das Gas auch aussenden kann.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 640 330" width="640" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Vergleich dreier Spektren als waagerechte Farbbänder über einer gemeinsamen Wellenlängenachse von 400 bis 750 Nanometern. Oben das kontinuierliche Spektrum einer Glühlampe: ein lückenloser Farbverlauf von Violett über Blau, Grün, Gelb und Orange bis Rot. In der Mitte das Emissionsspektrum von leuchtendem Wasserstoff: ein dunkles Band mit nur vier farbigen Linien bei 410, 434, 486 und 656 Nanometern. Unten das Absorptionsspektrum: wieder der volle Farbverlauf, aber mit dunklen Linien bei exakt denselben vier Wellenlängen.">
+        <defs>
+          <linearGradient id="ah-verlauf">
+            <stop offset="0%" stop-color="#7c3aed"/>
+            <stop offset="13%" stop-color="#4f46e5"/>
+            <stop offset="24%" stop-color="#22d3ee"/>
+            <stop offset="36%" stop-color="#22c55e"/>
+            <stop offset="50%" stop-color="#eab308"/>
+            <stop offset="62%" stop-color="#f97316"/>
+            <stop offset="76%" stop-color="#ef4444"/>
+            <stop offset="100%" stop-color="#991b1b"/>
+          </linearGradient>
+        </defs>
+        <!-- Band 1: kontinuierlich -->
+        <text x="120" y="40" fill="var(--text)" font-size="14">Glühlampe: kontinuierliches Spektrum</text>
+        <rect x="120" y="48" width="480" height="38" fill="url(#ah-verlauf)" stroke="var(--text-leise)" stroke-width="1"/>
+        <!-- Band 2: Emissionslinien (Wasserstoff, Balmer-Linien) -->
+        <text x="120" y="118" fill="var(--text)" font-size="14">Leuchtender Wasserstoff: Emissionslinien</text>
+        <rect x="120" y="126" width="480" height="38" fill="#0f172a" stroke="var(--text-leise)" stroke-width="1"/>
+        <g stroke-width="4">
+          <line x1="134" y1="126" x2="134" y2="164" stroke="#a855f7"/>
+          <line x1="167" y1="126" x2="167" y2="164" stroke="#6366f1"/>
+          <line x1="238" y1="126" x2="238" y2="164" stroke="#22d3ee"/>
+          <line x1="471" y1="126" x2="471" y2="164" stroke="#ef4444"/>
+        </g>
+        <!-- Band 3: Absorptionslinien -->
+        <text x="120" y="196" fill="var(--text)" font-size="14">Weißes Licht durch kühlen Wasserstoff: Absorptionslinien</text>
+        <rect x="120" y="204" width="480" height="38" fill="url(#ah-verlauf)" stroke="var(--text-leise)" stroke-width="1"/>
+        <g stroke="#0f172a" stroke-width="4">
+          <line x1="134" y1="204" x2="134" y2="242"/>
+          <line x1="167" y1="204" x2="167" y2="242"/>
+          <line x1="238" y1="204" x2="238" y2="242"/>
+          <line x1="471" y1="204" x2="471" y2="242"/>
+        </g>
+        <!-- Wellenlaengenachse -->
+        <line x1="120" y1="254" x2="600" y2="254" stroke="var(--text)" stroke-width="1.5"/>
+        <g stroke="var(--text)" stroke-width="1.5">
+          <line x1="120" y1="254" x2="120" y2="260"/>
+          <line x1="257" y1="254" x2="257" y2="260"/>
+          <line x1="394" y1="254" x2="394" y2="260"/>
+          <line x1="531" y1="254" x2="531" y2="260"/>
+        </g>
+        <g fill="var(--text)" font-size="13" text-anchor="middle">
+          <text x="120" y="276">400</text>
+          <text x="257" y="276">500</text>
+          <text x="394" y="276">600</text>
+          <text x="531" y="276">700</text>
+        </g>
+        <text x="360" y="296" fill="var(--text)" font-size="14" text-anchor="middle">Wellenlänge in nm</text>
+        <text x="320" y="322" fill="var(--text-leise)" font-size="14" text-anchor="middle">Dieselben Wellenlängen: Die Absorptionslinien liegen exakt auf den Emissionslinien des Gases.</text>
+      </svg>
+    </div>
+  </section>
+
+  <section aria-labelledby="ah-niveaus">
+    <h2 id="ah-niveaus">2. Diskrete Energieniveaus</h2>
+    <p>Warum sendet ein Gas nur einzelne Linien aus? Die Deutung ist eine der zentralen Ideen der Quantenphysik: <strong>Die Hülle eines Atoms kann nicht jeden beliebigen Energiewert annehmen, sondern nur ganz bestimmte.</strong> Den tiefsten erlaubten Wert nennt man <strong>Grundzustand</strong> $E_1$, darüber liegen die <strong>angeregten Zustände</strong> $E_2,\,E_3,\,\dots$ — und oberhalb der <strong>Ionisierungsgrenze</strong> ist das Elektron vom Atom getrennt. Zwischen den erlaubten Werten gibt es nichts: keine Zwischenstufen, keine „halben" Anregungen.</p>
+    <p>Springt ein Atom von einem höheren Niveau $E_\text{oben}$ auf ein tieferes $E_\text{unten}$, gibt es die Energiedifferenz als <strong>ein Photon</strong> ab. Umgekehrt kann es ein Photon nur dann verschlucken, wenn dessen Energie <em>exakt</em> zu einer Stufendifferenz passt. Weil nur wenige Differenzen erlaubt sind, gibt es nur wenige Linien — und weil Emission und Absorption dieselben Niveaus benutzen, liegen beide Linienmuster bei denselben Wellenlängen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Photonen und Energieniveaus</span>
+      <p class="formel-abgesetzt">$$\begin{gathered}\Delta E = E_\text{oben} - E_\text{unten} = h \cdot f\\[4pt]\frac{\lambda}{\text{nm}} \approx \frac{1240}{\Delta E\,/\,\text{eV}}\end{gathered}$$</p><p>Jede Spektrallinie gehört zu genau einem Übergang zwischen zwei Energieniveaus. Die zweite Formel ist die praktische Schulversion von $\lambda = \frac{h \cdot c}{\Delta E}$: Energie in Elektronenvolt einsetzen, Wellenlänge in Nanometern ablesen — mit $h \cdot c \approx 1240\,\text{eV}\cdot\text{nm}$.</p>
+    </div>
+    <p>Angeregt werden kann ein Atom auf zwei Wegen. <strong>Durch Licht:</strong> Ein Photon wird nur verschluckt, wenn seine Energie genau passt — alle anderen fliegen ungehindert vorbei. <strong>Durch Stöße:</strong> Ein schnelles Elektron (oder ein anderes Atom) kann beim Zusammenstoß zwar <em>beliebige</em> Teile seiner Bewegungsenergie abgeben — aber das getroffene Atom übernimmt davon nur exakt eine erlaubte Stufendifferenz; den Rest behält der Stoßpartner als Bewegungsenergie. In einer Gasentladungsröhre passiert beides ständig: Stöße regen die Atome an, beim Zurückspringen leuchten sie.</p>
+    <p>Dargestellt werden die erlaubten Energien im <strong>Termschema</strong>: waagerechte Linien für die Niveaus, senkrechte Pfeile für die Übergänge. Nach oben rücken die Niveaus typischerweise immer enger zusammen, bis sie sich an der Ionisierungsgrenze häufen:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 640 430" width="640" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Termschema eines Atoms: Eine senkrechte Energieachse in Elektronenvolt, daneben fünf waagerechte Linien. Ganz unten das Niveau E eins, der Grundzustand; darüber mit immer kleiner werdenden Abständen die angeregten Zustände E zwei, E drei und E vier; ganz oben gestrichelt die Ionisierungsgrenze bei E gleich null. Ein abwärts gerichteter Pfeil von E drei nach E eins symbolisiert die Emission: Dabei verlässt ein als Schlangenlinie gezeichnetes Photon mit der Energie Delta E gleich h mal f das Atom. Ein aufwärts gerichteter Pfeil von E eins nach E zwei symbolisiert die Absorption: Ein ankommendes Photon mit exakt passender Energie wird verschluckt.">
+        <defs>
+          <marker id="ah-pf-achse" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text)"/></marker>
+          <marker id="ah-pf-sprung" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--physik)"/></marker>
+          <marker id="ah-pf-photon" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--akzent)"/></marker>
+        </defs>
+        <!-- Energieachse -->
+        <line x1="90" y1="395" x2="90" y2="52" stroke="var(--text)" stroke-width="1.5" marker-end="url(#ah-pf-achse)"/>
+        <text x="90" y="34" fill="var(--text)" font-size="14" text-anchor="middle">Energie in eV</text>
+        <!-- Niveaulinien -->
+        <g stroke="var(--text)" stroke-width="2.5">
+          <line x1="150" y1="370" x2="480" y2="370"/>
+          <line x1="150" y1="235" x2="480" y2="235"/>
+          <line x1="150" y1="163" x2="480" y2="163"/>
+          <line x1="150" y1="125" x2="480" y2="125"/>
+        </g>
+        <line x1="150" y1="85" x2="480" y2="85" stroke="var(--text-leise)" stroke-width="2" stroke-dasharray="8 6"/>
+        <text x="315" y="74" fill="var(--text-leise)" font-size="14" text-anchor="middle">E = 0: Ionisierungsgrenze (Elektron frei)</text>
+        <text x="315" y="112" fill="var(--text-leise)" font-size="15" text-anchor="middle">⋯</text>
+        <!-- Niveau-Beschriftungen -->
+        <g fill="var(--text)" font-size="14">
+          <text x="492" y="375">E₁ (Grundzustand)</text>
+          <text x="492" y="240">E₂</text>
+          <text x="492" y="168">E₃</text>
+          <text x="492" y="130">E₄</text>
+        </g>
+        <!-- Emission: Sprung E3 -> E1 mit Photon -->
+        <line x1="240" y1="163" x2="240" y2="362" stroke="var(--physik)" stroke-width="2.5" marker-end="url(#ah-pf-sprung)"/>
+        <text x="230" y="268" fill="var(--physik)" font-size="15" text-anchor="end">Emission</text>
+        <path d="M 252 288 q 8 -7 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="var(--akzent)" stroke-width="2" marker-end="url(#ah-pf-photon)"/>
+        <text x="252" y="312" fill="var(--akzent)" font-size="14">Photon, ΔE = h · f</text>
+        <!-- Absorption: Sprung E1 -> E2 mit ankommendem Photon -->
+        <line x1="420" y1="370" x2="420" y2="242" stroke="var(--physik)" stroke-width="2.5" marker-end="url(#ah-pf-sprung)"/>
+        <text x="428" y="300" fill="var(--physik)" font-size="15">Absorption</text>
+        <path d="M 532 322 q -8 -7 -16 0 t -16 0 t -16 0 t -16 0 t -16 0" fill="none" stroke="var(--akzent)" stroke-width="2" marker-end="url(#ah-pf-photon)"/>
+        <text x="492" y="346" fill="var(--akzent)" font-size="13" text-anchor="middle">nur passende Photonen</text>
+        <!-- Bildunterschrift -->
+        <text x="320" y="404" fill="var(--text-leise)" font-size="14" text-anchor="middle">Termschema: erlaubte Energien als waagerechte Linien. Beim Sprung nach unten wird ein Photon</text>
+        <text x="320" y="422" fill="var(--text-leise)" font-size="14" text-anchor="middle">ausgesandt, beim Sprung nach oben eines verschluckt — jeweils mit ΔE = h · f.</text>
+      </svg>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum verschluckt kaltes Natriumgas aus weißem Licht genau die gelbe Doppellinie, die eine Natriumdampflampe aussendet?</summary>
+      <div class="check-antwort"><p>Weil Emission und Absorption dieselben Energieniveaus benutzen. Die gelbe Doppellinie gehört zu zwei (eng benachbarten) Übergängen mit $\Delta E \approx 2{,}1\,\text{eV}$. Beim Leuchten springt das Atom diese Stufe hinunter und sendet das Photon aus; beim Durchstrahlen mit weißem Licht kann es genau die Photonen mit dieser Energie verschlucken und die Stufe hinaufspringen. Gleiche Niveaus → gleiche Energiedifferenzen → gleiche Wellenlängen in beiden Richtungen. Alle anderen Photonen passen auf keine Stufe und fliegen ungehindert hindurch.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ah-franck-hertz">
+    <h2 id="ah-franck-hertz">3. Der Franck-Hertz-Versuch</h2>
+    <p>Linienspektren belegen die Energiestufen über <em>Licht</em>. James Franck und Gustav Hertz gelang 1914 der Nachweis auf einem völlig anderen Weg — mit <em>Elektronenstößen</em>. Der Aufbau: eine Röhre mit etwas <strong>Quecksilberdampf</strong>. Aus einer <strong>Glühkathode</strong> treten Elektronen aus und werden zu einem <strong>Gitter</strong> hin beschleunigt; die Beschleunigungsspannung $U$ ist regelbar. Hinter dem Gitter liegt der <strong>Auffänger</strong>, der gegenüber dem Gitter auf einer kleinen <strong>Gegenspannung</strong> (etwa $0{,}5\,\text{V}$) liegt: Nur Elektronen, die am Gitter noch genügend Bewegungsenergie haben, kommen dort an und tragen zum Strom $I$ bei.</p>
+    <p>Die Messung von $I$ in Abhängigkeit von $U$ liefert eine verblüffende Kennlinie: Der Strom steigt zunächst an, <strong>bricht bei $4{,}9\,\text{V}$ ein</strong>, steigt erneut, bricht bei $9{,}8\,\text{V}$ wieder ein, dann bei $14{,}7\,\text{V}$ — die Einbrüche folgen im immer gleichen Abstand von $4{,}9\,\text{V}$:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 640 360" width="640" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Kennlinie des Franck-Hertz-Versuchs mit Quecksilberdampf: Auffängerstrom I aufgetragen über der Beschleunigungsspannung U in Volt. Die Kurve steigt an, erreicht bei 4,9 Volt ein Maximum und bricht dann steil ein; sie steigt erneut auf ein höheres Maximum bei 9,8 Volt, bricht wieder ein und erreicht ein drittes Maximum bei 14,7 Volt. Gestrichelte senkrechte Linien markieren die drei Maxima; Doppelpfeile zwischen ihnen zeigen den konstanten Abstand von jeweils 4,9 Volt.">
+        <defs>
+          <marker id="ah-pf-fhu" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text)"/></marker>
+        </defs>
+        <text x="345" y="24" fill="var(--text)" font-size="15" text-anchor="middle">Franck-Hertz-Kennlinie (Quecksilberdampf, schematisch)</text>
+        <!-- Achsen -->
+        <line x1="80" y1="300" x2="614" y2="300" stroke="var(--text)" stroke-width="1.5" marker-end="url(#ah-pf-fhu)"/>
+        <line x1="80" y1="300" x2="80" y2="56" stroke="var(--text)" stroke-width="1.5" marker-end="url(#ah-pf-fhu)"/>
+        <text x="608" y="290" fill="var(--text)" font-size="14" text-anchor="end">U in V</text>
+        <text x="92" y="50" fill="var(--text)" font-size="14">Auffängerstrom I</text>
+        <!-- Markierungen der Maxima -->
+        <g stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="5 5">
+          <line x1="242" y1="206" x2="242" y2="300"/>
+          <line x1="403" y1="156" x2="403" y2="300"/>
+          <line x1="565" y1="106" x2="565" y2="300"/>
+        </g>
+        <g fill="var(--text)" font-size="14" text-anchor="middle">
+          <text x="80" y="322">0</text>
+          <text x="242" y="322">4,9</text>
+          <text x="403" y="322">9,8</text>
+          <text x="565" y="322">14,7</text>
+        </g>
+        <!-- Abstandspfeile -->
+        <g stroke="var(--akzent)" stroke-width="2">
+          <line x1="251" y1="285" x2="394" y2="285"/>
+          <line x1="412" y1="285" x2="556" y2="285"/>
+        </g>
+        <g fill="var(--akzent)">
+          <path d="M 244 285 l 9 -4.5 v 9 z"/>
+          <path d="M 401 285 l -9 -4.5 v 9 z"/>
+          <path d="M 405 285 l 9 -4.5 v 9 z"/>
+          <path d="M 563 285 l -9 -4.5 v 9 z"/>
+        </g>
+        <g fill="var(--akzent)" font-size="15" text-anchor="middle">
+          <text x="322" y="277">4,9 V</text>
+          <text x="484" y="277">4,9 V</text>
+        </g>
+        <!-- Kennlinie -->
+        <path d="M 80 300 C 150 297 200 260 230 218 Q 242 200 250 216 C 258 238 263 262 274 267 Q 281 269 290 263 C 320 248 365 210 392 172 Q 403 150 411 168 C 419 195 425 222 436 236 Q 443 239 452 232 C 482 215 520 175 554 126 Q 565 100 573 119 C 580 138 586 152 596 162" fill="none" stroke="var(--physik)" stroke-width="3"/>
+        <text x="320" y="350" fill="var(--text-leise)" font-size="14" text-anchor="middle">Im Abstand von 4,9 V bricht der Strom ein: Die Elektronen geben Energie portionsweise an Hg-Atome ab.</text>
+      </svg>
+    </div>
+    <p>Die Deutung: Solange ein Elektron unterwegs weniger als $4{,}9\,\text{eV}$ gesammelt hat, stößt es mit den Hg-Atomen nur <em>elastisch</em> — wegen des riesigen Massenunterschieds verliert es dabei praktisch keine Energie. Sobald es aber $4{,}9\,\text{eV}$ erreicht, kann es ein Hg-Atom durch einen <strong>unelastischen Stoß</strong> anregen: Das Atom übernimmt <em>exakt</em> $4{,}9\,\text{eV}$ — seine erste Anregungsstufe —, das Elektron ist danach fast stehen geblieben und scheitert an der Gegenspannung: Der Strom bricht ein. Bei höherer Spannung sammelt das Elektron nach dem Stoß erneut Energie und kann <strong>mehrmals nacheinander</strong> stoßen — daher die Einbrüche bei $9{,}8\,\text{V}$, $14{,}7\,\text{V}$, …</p>
+    <p>Und die angeregten Atome? Sie springen in den Grundzustand zurück und senden dabei ultraviolettes Licht mit $\lambda \approx 254\,\text{nm}$ aus — genau passend zur Stufenenergie, denn $\frac{1240}{4{,}9} \approx 253\,\text{nm}$. Damit war zweierlei gezeigt: Atome nehmen Energie <strong>nur in festen Portionen</strong> auf, und zwar auch dann, wenn die Anregung <em>nicht</em> durch Licht erfolgt. Der Franck-Hertz-Versuch ist die von der Spektroskopie unabhängige Bestätigung der Energiestufen — 1925 gab es dafür den Nobelpreis.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Die Beschleunigungsspannung beträgt 12 V. Wie viele unelastische Stöße kann ein Elektron im Hg-Dampf nacheinander ausführen, und welche Energie behält es danach höchstens?</summary>
+      <div class="check-antwort"><p>Das Elektron gewinnt auf dem Weg höchstens $12\,\text{eV}$. Jeder unelastische Stoß kostet exakt $4{,}9\,\text{eV}$: Nach dem ersten bleiben $7{,}1\,\text{eV}$, nach dem zweiten $2{,}2\,\text{eV}$ — für einen dritten reicht es nicht mehr. Also <strong>zwei Stöße</strong>, Restenergie höchstens $2{,}2\,\text{eV}$. Damit überwindet es die kleine Gegenspannung übrigens noch locker — der Strom ist bei $12\,\text{V}$ gerade wieder am Steigen.</p></div>
+    </details>
+  <p>Den Versuch kannst du selbst durchführen: Im Experiment <a href="../../../experimente/physik/franck-hertz/index.html">Franck-Hertz</a> fährst du die Kennlinie ab und bestimmst die Anregungsenergie aus den Minima-Abständen.</p>
+  </section>
+
+  <section aria-labelledby="ah-wasserstoff">
+    <h2 id="ah-wasserstoff">4. Das Wasserstoffatom</h2>
+    <p>Wasserstoff ist das einfachste Atom — ein Proton, ein Elektron — und deshalb der Prüfstein jeder Atomtheorie. Seine Energieniveaus folgen einem bemerkenswert einfachen Gesetz:</p>
+    <p class="formel-abgesetzt">$$E_n = -\frac{13{,}6\,\text{eV}}{n^2} \qquad (n = 1,\,2,\,3,\,\dots)$$</p><p>Die ersten Werte: $E_1 = -13{,}6\,\text{eV}$, $E_2 = -3{,}40\,\text{eV}$, $E_3 = -1{,}51\,\text{eV}$, $E_4 = -0{,}85\,\text{eV}$ — nach oben rücken die Niveaus immer dichter an die Null heran. Das<strong>negative Vorzeichen</strong>bedeutet: Das Elektron ist<em>gebunden</em>; man müsste Energie hineinstecken, um es auf $E = 0$ zu heben, also vom Atom zu trennen. Aus dem Grundzustand sind dafür $13{,}6\,\text{eV}$ nötig — die<strong>Ionisierungsenergie</strong>des Wasserstoffatoms.</p><p>Die Spektrallinien ergeben sich aus allen möglichen Sprüngen. Übergänge, die auf $n = 2$ enden, bilden die<strong>Balmer-Serie</strong>— sie liegt als einzige im sichtbaren Bereich: $\text{H}\alpha$ ($3 \to 2$) leuchtet rot bei $656\,\text{nm}$, $\text{H}\beta$ ($4 \to 2$) türkis bei $486\,\text{nm}$, danach folgen $\text{H}\gamma$ ($434\,\text{nm}$) und $\text{H}\delta$ ($410\,\text{nm}$) im Violetten. Die Sprünge in den Grundzustand (<strong>Lyman-Serie</strong>) sind so energiereich, dass sie komplett im Ultravioletten liegen; die Sprünge auf $n = 3$ (<strong>Paschen-Serie</strong>) sind so energiearm, dass sie ins Infrarote fallen.</p><div class="beispiel"><span class="beispiel-etikett">Beispiel: Die rote Wasserstofflinie Hα</span><p>Gesucht ist die Wellenlänge des Übergangs $3 \to 2$. Energiedifferenz: $$\Delta E = E_3 - E_2 = -1{,}51\,\text{eV} - (-3{,}40\,\text{eV}) = 1{,}89\,\text{eV}$$ Wellenlänge mit der Schulformel: $$\lambda \approx \frac{1240\,\text{nm}}{1{,}89} \approx 656\,\text{nm}$$ — rotes Licht, in perfekter Übereinstimmung mit dem gemessenen Spektrum. Genau diese Linie dominiert die Spektren vieler Sterne und lässt Gasnebel im Weltall rot leuchten: Wasserstoff ist das häufigste Element im Universum, und $\text{H}\alpha$ ist sein hellster sichtbarer Übergang.</p></div><details class="check"><summary>Verständnis-Check: Liegt die Linie des Übergangs 2 → 1 (ΔE = 10,2 eV) im sichtbaren Bereich?</summary><div class="check-antwort"><p>Nein. $\lambda \approx \frac{1240}{10{,}2}\,\text{nm} \approx 122\,\text{nm}$ — das ist fernes Ultraviolett, weit unterhalb der sichtbaren Grenze von etwa $400\,\text{nm}$. Alle Übergänge der Lyman-Serie (auf $n = 1$) sind mindestens so energiereich. Sichtbar wird Wasserstoff erst über die Balmer-Serie, also über Sprünge auf $n = 2$ — historisch wurde sie deshalb als erste entdeckt und vermessen.</p></div></details></section><section aria-labelledby="ah-modelle"><h2 id="ah-modelle">5. Atommodelle im Wandel</h2><p>Die Vorstellung vom Atom hat sich in gut hundert Jahren mehrfach grundlegend gewandelt — jedes Modell erklärte mehr als sein Vorgänger und scheiterte an neuen Messungen:</p><p><strong>Dalton (um 1803):</strong>Atome sind kleinste, unteilbare Kugeln; jedes Element hat seine eigene Sorte. Das erklärt die festen Massenverhältnisse chemischer Reaktionen — aber das Atom hat hier keine innere Struktur, Licht und Elektrizität bleiben unerklärt.</p><p><strong>Thomson (1904):</strong>Nach der Entdeckung des Elektrons (1897) stellte sich Thomson das Atom als positiv geladene Masse vor, in der die Elektronen stecken wie Rosinen im Kuchen. Erstmals hat das Atom Bestandteile — doch der Aufbau ist falsch geraten.</p><p><strong>Rutherford (1911):</strong>Beim Beschuss hauchdünner Goldfolie mit Alphateilchen flogen fast alle ungehindert hindurch, ganz wenige prallten heftig zurück. Schluss: Fast die gesamte Masse sitzt in einem<strong>winzigen, positiv geladenen Kern</strong>; die Hülle ist nahezu leer. Aber das Modell hat einen fatalen Haken: Um den Kern<em>kreisende</em>Elektronen wären beschleunigte Ladungen — sie müssten ständig Energie abstrahlen und binnen Sekundenbruchteilen in den Kern stürzen. Atome dürften gar nicht stabil sein, und Linienspektren erklärt das Modell auch nicht.</p><p><strong>Bohr (1913):</strong>Bohr setzte per Postulat dagegen: Es gibt ausgezeichnete Zustände mit<strong>festen Energien</strong>, in denen das Atom nicht strahlt; Licht entsteht nur beim Sprung zwischen ihnen, mit $\Delta E = h \cdot f$. Damit ließ sich das Wasserstoffspektrum erstmals<em>quantitativ</em>berechnen — die Formel $E_n = -\frac{13{,}6\,\text{eV}}{n^2}$ aus Abschnitt 4 ist Bohrs Ergebnis. Doch der Preis ist hoch: Die postulierten Elektronenbahnen widersprechen der Quantenphysik (Ort und Geschwindigkeit sind nicht gleichzeitig scharf), und schon beim Helium mit zwei Elektronen versagt das Modell.</p><p><strong>Quantenmechanisches Modell (ab 1926):</strong>Das Elektron wird als Quantenobjekt beschrieben — nicht durch eine Bahn, sondern durch<strong>Orbitale</strong>: räumliche Verteilungen der<strong>Aufenthaltswahrscheinlichkeit</strong>, anschaulich verwandt mit stehenden Elektronenwellen um den Kern. Die diskreten Energien ergeben sich dabei von selbst, so wie eine Gitarrensaite nur bestimmte Töne kann. Dieses Modell trägt bis heute — und schlägt den Bogen zurück zum Thema<a href="../quantenobjekte/index.html">Quantenobjekte</a>.</p><div class="merkkasten"><span class="merk-etikett">Modelle sind Werkzeuge</span><p>Kein Atommodell ist „das richtige Bild" — jedes hat einen<strong>Gültigkeitsbereich</strong>. Für Reaktionsgleichungen genügt Daltons Kugel, für Linienspektren braucht es Energiestufen, für chemische Bindungen Orbitale. Guter Stil in der Physik: das<em>einfachste</em>Modell wählen, das die Frage noch trägt — und seine Grenzen kennen.</p></div></section><details class="vertiefung"><summary>Vertiefung (erhöhtes Anforderungsniveau): Der lineare Potentialtopf — Energiestufen aus stehenden Wellen</summary><div class="vertiefung-inhalt"><p>Warum gibt es überhaupt nur bestimmte Energien? Das einfachste Quantenmodell, das das erklärt, ist der<strong>lineare Potentialtopf</strong>: Ein Elektron ist auf eine Strecke der Länge $L$ eingesperrt und kann sie nicht verlassen. Als Quantenobjekt hat es eine de-Broglie-Wellenlänge $\lambda = \frac{h}{p}$ — und wie auf einer beidseitig eingespannten Saite passen in den Topf nur<strong>stehende Wellen</strong>mit Knoten an beiden Rändern: $L = n \cdot \frac{\lambda_n}{2}$, also $\lambda_n = \frac{2L}{n}$. Daraus folgt der Impuls $p_n = \frac{h}{\lambda_n} = \frac{n \cdot h}{2L}$ und mit $E = \frac{p^2}{2m_e}$ die Energieleiter $E_n = \frac{n^2 \cdot h^2}{8 \cdot m_e \cdot L^2}$. Die Quantisierung ist hier kein Postulat, sondern eine zwingende Folge der Wellennatur. Anders als beim Wasserstoffatom rücken die Niveaus mit $n^2$<em>auseinander</em>— und je kleiner der Topf, desto größer alle Energien.</p><p>Zahlenbeispiel: In einem länglichen Farbstoffmolekül können sich bestimmte Elektronen frei entlang der Kette bewegen — ein Potentialtopf mit etwa $L = 0{,}80\,\text{nm}$. Grundzustand: $E_1 = \frac{h^2}{8 m_e L^2} = \frac{(6{,}626 \cdot 10^{-34}\,\text{Js})^2}{8 \cdot 9{,}109 \cdot 10^{-31}\,\text{kg} \cdot (8{,}0 \cdot 10^{-10}\,\text{m})^2} \approx 9{,}4 \cdot 10^{-20}\,\text{J} \approx 0{,}59\,\text{eV}$. Der Übergang $2 \to 1$ liefert $\Delta E = (4 - 1) \cdot E_1 = 3 \cdot E_1 \approx 1{,}76\,\text{eV}$, also $\lambda \approx \frac{1240}{1{,}76}\,\text{nm} \approx 703\,\text{nm}$ — tiefrotes Licht. Das Molekül absorbiert in diesem Bereich und erscheint dadurch farbig.</p><p>Das Modell erklärt einen verblüffenden Trend: Je<strong>länger</strong>das Molekül, desto kleiner $\Delta E$ und desto <strong>langwelliger</strong> (röter) die absorbierte Strahlung — die Farbe eines Farbstoffs hängt direkt von seiner Größe ab. Dasselbe Prinzip steckt in <strong>Quantenpunkten</strong>, Nanokristallen von wenigen Nanometern Durchmesser: Ihre Leuchtfarbe wird allein über die Kristallgröße eingestellt — kleine Punkte leuchten blau, große rot. In QLED-Fernsehern sorgen solche maßgeschneiderten Potentialtöpfe für besonders reine Bildschirmfarben.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen — von Linienspektren über Franck-Hertz und die Balmer-Serie bis zum Potentialtopf.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <title>Streem — Der Algorithmus</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/feed.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/wrapped.css" />
+  <link rel="stylesheet" href="css/extras.css" />
+</head>
+<body>
+  <a href="#feed-root" class="skip-link">Zum Hauptinhalt springen</a>
+  <div id="app">
+    <!-- Start-Bildschirm -->
+    <section id="screen-start" class="screen active">
+      <div class="start-hero">
+        <div class="logo-big">Streem</div>
+        <p class="tagline">Folge dem, was dich bewegt.</p>
+        <div class="start-actions">
+          <button class="btn btn-primary" id="btn-new-game">Neues Spiel</button>
+          <button class="btn btn-ghost" id="btn-quick-start">⚡ Schnellstart (Defaults)</button>
+          <button class="btn btn-ghost" id="btn-continue" hidden>Fortsetzen</button>
+          <button class="btn btn-ghost" id="btn-about">Worum geht's?</button>
+          <button class="btn btn-ghost" id="btn-checklist">Vor dem Klassen-Einsatz</button>
+        </div>
+        <p class="small-note">Lernspiel — Projektwoche „Demokratiebildung" · Kl. 12</p>
+      </div>
+    </section>
+
+    <!-- Lehrkraft-Vorbereitungs-Checkliste -->
+    <section id="screen-checklist" class="screen modal-screen">
+      <div class="weekend-card">
+        <h2>Vor dem Klassen-Einsatz</h2>
+        <p class="muted small">Kurze technische Prüfliste für Lehrkräfte. Geht in 3 Minuten — vermeidet stundenlange Frustration.</p>
+        <div id="checklist-body"></div>
+        <button class="btn btn-primary" id="btn-checklist-close">Schließen</button>
+      </div>
+    </section>
+
+    <!-- Intro / Charakter -->
+    <section id="screen-intro" class="screen">
+      <div class="intro-wrap">
+        <h1>Willkommen bei <span class="accent">Streem</span></h1>
+        <p class="intro-text">Du ziehst gerade von einer kleinen Stadt nach <strong>Greifshafen</strong>. Neue Schule, neues Zimmer, neue Zeitzone im Kopf. Dein Handy ist voll — und ein neues soziales Netzwerk bittet dich, ein Profil anzulegen.</p>
+
+        <div class="char-form">
+          <fieldset class="proto-fieldset">
+            <legend>Wähle deine Spielfigur:</legend>
+            <div class="protagonist-picker" id="protagonist-picker"></div>
+          </fieldset>
+          <label>Wie sollen wir dich nennen?
+            <input type="text" id="inp-name" maxlength="20" placeholder="z.B. Alex" />
+          </label>
+          <label>Pronomen
+            <select id="inp-pronoun">
+              <option value="sie/ihr">sie / ihr</option>
+              <option value="er/ihn">er / ihn</option>
+              <option value="they/them">they / them</option>
+              <option value="keine">keine Angabe</option>
+            </select>
+          </label>
+          <label>Bio <span class="muted small">(optional, 180 Zeichen)</span>
+            <textarea id="inp-bio" maxlength="180" rows="2" placeholder="z.B. "Neu in Greifshafen. Lieblingsplatz: Café Hafen."""></textarea>
+          </label>
+          <div class="char-avatars" id="avatar-picker" aria-label="Avatar wählen"></div>
+          <fieldset>
+            <legend>Wähle 2 – 4 Interessen (nur Start — später ändert sich das):</legend>
+            <div class="interest-grid" id="interest-grid"></div>
+          </fieldset>
+          <button class="btn btn-primary btn-big" id="btn-start-game">Profil anlegen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hauptspiel-Ansicht -->
+    <section id="screen-main" class="screen main-screen">
+      <header class="topbar">
+        <div class="topbar-left">
+          <span class="logo-small">Streem</span>
+          <span class="week-indicator" id="week-indicator">W 1</span>
+        </div>
+        <div class="topbar-right">
+          <button class="iconbtn" id="btn-map" title="Karte" aria-label="Greifshafen-Karte" hidden>🗺️</button>
+          <button class="iconbtn" id="btn-algo-panel" title="Algorithmus" aria-label="Blick hinter den Algorithmus" hidden>🔍</button>
+          <button class="iconbtn" id="btn-guilds" title="Gilden" aria-label="Gilden" hidden>💬</button>
+          <button class="iconbtn" id="btn-profile" title="Profil" aria-label="Profil">👤</button>
+          <button class="iconbtn" id="btn-settings" title="Einstellungen" aria-label="Einstellungen">⚙️</button>
+        </div>
+      </header>
+
+      <main id="feed-root" class="feed-root" tabindex="0"></main>
+
+      <nav class="bottombar">
+        <button class="navbtn active" data-view="feed" aria-label="Feed">
+          <span class="navicon">🏠</span><span>Feed</span>
+        </button>
+        <button class="navbtn" data-view="explore" aria-label="Entdecken">
+          <span class="navicon">🧭</span><span>Entdecken</span>
+        </button>
+        <button class="navbtn" data-view="compose" aria-label="Posten">
+          <span class="navicon">✏️</span><span>Posten</span>
+        </button>
+        <button class="navbtn" data-view="dms" aria-label="Nachrichten">
+          <span class="navicon">✉️</span><span>DMs</span>
+        </button>
+        <button class="navbtn" data-view="notifications" aria-label="Mitteilungen">
+          <span class="navicon">🔔</span><span>Inbox</span>
+        </button>
+      </nav>
+    </section>
+
+    <!-- Wochenrückblick -->
+    <section id="screen-weekend" class="screen modal-screen">
+      <div class="weekend-card">
+        <h2 id="weekend-title">Wochenrückblick</h2>
+        <div class="weekend-stats" id="weekend-stats"></div>
+        <div class="weekend-story" id="weekend-story"></div>
+        <button class="btn btn-primary" id="btn-weekend-next">Weiter</button>
+      </div>
+    </section>
+
+    <!-- Reflexion -->
+    <section id="screen-reflection" class="screen modal-screen">
+      <div class="weekend-card">
+        <h2 id="reflection-title">Kurzer Moment</h2>
+        <p id="reflection-intro" class="muted"></p>
+        <div id="reflection-questions"></div>
+        <button class="btn btn-primary" id="btn-reflection-next">Weiter spielen</button>
+      </div>
+    </section>
+
+    <!-- Algorithmus-Panel -->
+    <section id="screen-algo" class="screen modal-screen">
+      <div class="weekend-card big">
+        <h2>Blick hinter den Algorithmus</h2>
+        <p class="muted">Das „weiß" Streem gerade über dich. Diese Daten bestimmen, was du siehst — und was nicht.</p>
+        <div id="algo-panel-body"></div>
+        <button class="btn btn-primary" id="btn-algo-close">Schließen</button>
+      </div>
+    </section>
+
+    <!-- Gilden / Discord-Mechanik -->
+    <section id="screen-guilds" class="screen modal-screen">
+      <div class="weekend-card big">
+        <h2>Gilden</h2>
+        <p class="muted">Fiktive Gruppen-Chats. Wähle, wo du dich einklinkst.</p>
+        <div id="guilds-body"></div>
+        <button class="btn btn-primary" id="btn-guilds-close">Zurück</button>
+      </div>
+    </section>
+
+    <!-- Wahl-Event -->
+    <section id="screen-election" class="screen modal-screen">
+      <div class="weekend-card big">
+        <h2>Kommunalwahl Greifshafen</h2>
+        <div id="election-body"></div>
+      </div>
+    </section>
+
+    <!-- Jahresrückblick -->
+    <section id="screen-wrapped" class="screen">
+      <div id="wrapped-root"></div>
+    </section>
+
+    <!-- Sandbox -->
+    <section id="screen-sandbox" class="screen">
+      <div class="sandbox-wrap">
+        <header class="sandbox-head">
+          <h2>Dein eigener Algorithmus</h2>
+          <button class="btn btn-ghost" id="btn-sandbox-close">Zurück</button>
+        </header>
+        <div class="sandbox-grid">
+          <aside class="sandbox-sliders" id="sandbox-sliders"></aside>
+          <section class="sandbox-preview">
+            <h3>Vorschau-Feed</h3>
+            <p class="muted small">So würde dein Feed aussehen, wenn diese Regeln gelten.</p>
+            <div id="sandbox-feed" class="feed-list compact"></div>
+            <div id="sandbox-sim-mode" class="sandbox-sim-mode" role="radiogroup" aria-label="Ausgangsbasis für die Simulation">
+              <span class="muted small">Simulation startet von:</span>
+              <label><input type="radio" name="sim-mode" value="fresh" checked /> Start-Profil</label>
+              <label><input type="radio" name="sim-mode" value="current" /> aktuellem Profil</label>
+            </div>
+            <div class="sandbox-actions">
+              <button class="btn btn-primary" id="btn-sim">10 Wochen simulieren</button>
+              <button class="btn btn-ghost" id="btn-battle">Algorithmus-Battle ⚔</button>
+              <button class="btn btn-ghost" id="btn-export-rules">Als Pseudo-Code zeigen</button>
+              <button class="btn btn-ghost" id="btn-sandbox-tour">Geführte Tour starten</button>
+            </div>
+            <div id="sim-result"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manifest -->
+    <section id="screen-manifest" class="screen">
+      <div class="manifest-wrap">
+        <h2>Dein Medien-Manifest</h2>
+        <p class="muted">Fünf Leitsätze — für dich selbst. Kannst du exportieren, drucken, vergessen oder teilen.</p>
+        <div id="manifest-fields"></div>
+        <div class="manifest-actions">
+          <button class="btn btn-primary" id="btn-export-manifest">Als HTML speichern</button>
+          <button class="btn btn-ghost" id="btn-manifest-back">Zurück</button>
+        </div>
+        <div class="help-box">
+          <h3>Wenn dich etwas beschäftigt hat</h3>
+          <ul class="help-links">
+            <li><strong>bpb.de</strong> — Bundeszentrale für politische Bildung</li>
+            <li><strong>klicksafe.de</strong> — Infos für sichere Mediennutzung</li>
+            <li><strong>hateaid.org</strong> — Hilfe bei digitaler Gewalt</li>
+            <li><strong>beratung-gegen-rechtsextremismus.de</strong></li>
+            <li><strong>Telefonseelsorge 0800 111 0 111</strong> (24/7, kostenlos)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Einstellungen -->
+    <section id="screen-settings" class="screen modal-screen">
+      <div class="weekend-card settings-card">
+        <header class="settings-header">
+          <h2>Einstellungen</h2>
+          <button class="btn btn-primary btn-small" id="btn-settings-close-top">Schließen</button>
+        </header>
+        <div class="settings-body">
+          <p class="muted small">Spielstand: automatisch gespeichert.</p>
+
+          <details class="settings-section" open>
+            <summary>Darstellung &amp; Sound</summary>
+            <div class="settings-section-body">
+              <label class="settings-toggle">
+                <input type="checkbox" id="chk-sound" />
+                <span>Sound aktiv (Like-Pop, DM-Ping etc.)</span>
+              </label>
+              <label class="settings-slider">
+                <span>Lautstärke</span>
+                <input type="range" id="rng-volume" min="0" max="100" step="5" />
+                <output id="rng-volume-val" aria-live="polite">60 %</output>
+              </label>
+              <label class="settings-toggle">
+                <input type="checkbox" id="chk-light" />
+                <span>Light-Mode (für Projektor / helle Räume)</span>
+              </label>
+              <label class="settings-toggle">
+                <input type="checkbox" id="chk-contrast" />
+                <span>Hoher Kontrast (für bessere Lesbarkeit)</span>
+              </label>
+              <label class="settings-toggle">
+                <input type="checkbox" id="chk-tts" />
+                <span>Vorlesen aktiv (Stories und Reflexionen — sofern Browser kann)</span>
+              </label>
+              <label class="settings-slider">
+                <span>Schriftgröße</span>
+                <input type="range" id="rng-fontsize" min="85" max="135" step="5" />
+                <output id="rng-fontsize-val" aria-live="polite">100 %</output>
+              </label>
+            </div>
+          </details>
+
+          <details class="settings-section" open>
+            <summary>Spiel &amp; Inhalte</summary>
+            <div class="settings-section-body">
+              <button class="btn btn-ghost" id="btn-help">Hilfe &amp; Tipps</button>
+              <button class="btn btn-ghost" id="btn-glossary">Glossar (Algorithmus, Bot, Filterblase …)</button>
+              <button class="btn btn-ghost" id="btn-concepts">Konzept-Karten (Übersicht)</button>
+              <button class="btn btn-ghost" id="btn-shortcuts">Tastenkürzel anzeigen</button>
+              <button class="btn btn-ghost" id="btn-minigame">Bot-Quiz spielen</button>
+              <button class="btn btn-ghost" id="btn-factcheck">Faktencheck-Sprint spielen</button>
+              <button class="btn btn-ghost" id="btn-headline">Schlagzeile-zu-Studie spielen</button>
+              <button class="btn btn-ghost" id="btn-glossquiz">Begriff-zur-Erklärung spielen</button>
+              <button class="btn btn-ghost" id="btn-replay-tutorial">Tutorial nochmal abspielen</button>
+              <button class="btn btn-ghost" id="btn-replay-week">Letzte Woche nochmal spielen („Was wäre wenn?“)</button>
+              <button class="btn btn-ghost" id="btn-show-wrapped-now">Jahresrückblick jetzt öffnen</button>
+              <button class="btn btn-ghost" id="btn-show-sandbox-now">Sandbox öffnen</button>
+            </div>
+          </details>
+
+          <details class="settings-section">
+            <summary>Lehrkraft-Werkzeuge</summary>
+            <div class="settings-section-body">
+              <button class="btn btn-ghost" id="btn-jump-week">Zu Woche springen …</button>
+              <button class="btn btn-ghost" id="btn-classcompare">Klassen-Vergleich (Saves laden)</button>
+              <button class="btn btn-ghost" id="btn-export-report">Lehr-Bericht exportieren (HTML)</button>
+              <button class="btn btn-ghost" id="btn-export-workshop">3-Tage-Stundenplan exportieren (HTML)</button>
+              <button class="btn btn-ghost" id="btn-export-csv">Stats als CSV (für Excel/Sheets)</button>
+              <button class="btn btn-ghost" id="btn-save-export">Spielstand exportieren (JSON)</button>
+              <button class="btn btn-ghost" id="btn-save-import">Spielstand importieren (JSON)</button>
+              <button class="btn btn-ghost" id="btn-restore-backup">Letztes Backup wiederherstellen</button>
+              <button class="btn btn-ghost" id="btn-save-inspector">Save-Inspector öffnen</button>
+              <input type="file" id="save-import-input" accept=".json,application/json" hidden />
+            </div>
+          </details>
+
+          <details class="settings-section">
+            <summary>Gefahrenzone</summary>
+            <div class="settings-section-body">
+              <button class="btn btn-danger" id="btn-reset">Spielstand löschen</button>
+            </div>
+          </details>
+        </div>
+        <footer class="settings-footer">
+          <button class="btn btn-primary" id="btn-settings-close">Schließen</button>
+        </footer>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="screen-about" class="screen modal-screen">
+      <div class="weekend-card">
+        <h2>Worum geht's?</h2>
+        <p>Du übernimmst den Social-Media-Account einer fiktiven Person und spielst ein simuliertes Halbjahr auf der (erfundenen) Plattform <strong>Streem</strong>.</p>
+        <p>Ein Algorithmus reagiert auf deine Entscheidungen und formt, was du siehst. Am Ende zeigt ein datengestützter Jahresrückblick, wie deine Filterblase entstanden ist — und du kannst in der Sandbox deinen <em>eigenen</em> Algorithmus ausprobieren.</p>
+        <p class="muted small">Das Spiel zeigt auch schwierige Inhalte (Verschwörungsnarrative, rechte Rhetorik, Hass). Alles Fiktion, alles mit Warnhinweis. Niemand wird zu irgendetwas aufgefordert.</p>
+        <button class="btn btn-primary" id="btn-about-close">Alles klar</button>
+      </div>
+    </section>
+
+    <!-- Inhaltswarnung-Overlay -->
+    <div id="tw-overlay" class="tw-overlay" hidden>
+      <div class="tw-box">
+        <h3>Inhaltswarnung</h3>
+        <p id="tw-text">Im folgenden Abschnitt werden Inhalte gezeigt, die …</p>
+        <p class="muted small">Diese Inhalte sind fiktiv, werden aber häufig in solchen Communities verbreitet. Das Spiel billigt sie nicht.</p>
+        <div class="tw-actions">
+          <button class="btn btn-ghost" id="tw-skip">Überspringen</button>
+          <button class="btn btn-primary" id="tw-show">Trotzdem anzeigen</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kommentar-Modal -->
+    <div id="comment-overlay" class="tw-overlay" hidden>
+      <div class="tw-box">
+        <h3>Antworten</h3>
+        <p class="muted small">Wähle eine Reaktion (oder schließe das Fenster, um nichts zu tun).</p>
+        <div id="comment-options"></div>
+        <div class="tw-actions">
+          <button class="btn btn-ghost" id="comment-cancel">Abbrechen</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- "Warum sehe ich das?" -->
+    <div id="why-overlay" class="tw-overlay" hidden>
+      <div class="tw-box">
+        <h3>Warum sehe ich das?</h3>
+        <div id="why-body"></div>
+        <div class="tw-actions">
+          <button class="btn btn-primary" id="why-close">Verstanden</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toasts / Badges -->
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+  </div>
+
+  <!-- file://-kompatibel: klassische scripts statt ES-Module. -->
+  <!-- Bundle neu erstellen mit: python tools/make_bundle.py -->
+  <script src="data/data.bundle.js"></script>
+  <script src="js/app.bundle.js"></script>
+</body>
+</html>

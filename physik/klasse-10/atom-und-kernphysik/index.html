@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atom- und Kernphysik — Klasse 10 · Physik — Lernwelt</title>
+<meta name="description" content="Kern-Hülle-Modell und Rutherfords Streuversuch, Alpha-, Beta- und Gammastrahlung, Halbwertszeit durch fortgesetztes Halbieren, natürliche Strahlenbelastung und Strahlenschutz, Nutzen und Risiken der Kernenergie — anschaulich mit Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .vergleich-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .vergleich-tabelle th, .vergleich-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: center; }
+  .vergleich-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Atom- und Kernphysik</h1>
+  <p class="einleitung">Die Banane im Pausenbrot enthält radioaktives Kalium, Granitfelsen strahlen seit Jahrmillionen, auf dem Flug in den Urlaub trifft dich mehr kosmische Strahlung als am Boden, und in der Arztpraxis durchleuchtet Röntgenstrahlung deinen Zahn: <strong>Radioaktivität und ionisierende Strahlung</strong> sind überall — unsichtbar, aber gut messbar. In diesem Kapitel blickst du ins Innere der Atome: zum <strong>Kern</strong>, zu den drei <strong>Strahlungsarten</strong> und zur <strong>Halbwertszeit</strong>, der inneren Uhr instabiler Kerne. Du erfährst, wie man sich schützt — und wägst am Ende ab, wo Strahlung nützt und wo sie gefährlich wird. Die mathematische Beschreibung mit Exponentialfunktionen folgt in der <a href="../../qualifikationsphase/atomkern/index.html">Qualifikationsphase</a>.</p>
+
+  <section aria-labelledby="akp-atom">
+    <h2 id="akp-atom">1. Ein Blick ins Atom</h2>
+    <p>Alles um dich herum besteht aus <strong>Atomen</strong> — aber wie sieht es in ihnen aus? Um 1910 ging der Physiker Ernest Rutherford dieser Frage mit einem berühmten Experiment nach: Er beschoss eine hauchdünne <strong>Goldfolie</strong> mit <strong>α-Teilchen</strong> — winzigen, positiv geladenen „Geschossen“ aus einem radioaktiven Präparat. Wären Atome massive Kügelchen, müssten die α-Teilchen in der Folie stecken bleiben oder wenigstens kräftig gebremst werden.</p>
+    <p>Das Ergebnis war eine Sensation: <strong>Fast alle α-Teilchen flogen glatt hindurch</strong>, als wäre die Folie gar nicht da. Nur ganz wenige wurden stark abgelenkt — und etwa eines von 8000 prallte sogar zurück. Rutherford verglich das später mit einer Kanonenkugel, die an einem Blatt Seidenpapier abprallt. Die Erklärung: Das Atom ist <strong>fast leer</strong>. Nahezu seine gesamte Masse sitzt in einem winzigen, <strong>positiv geladenen Kern</strong> in der Mitte — nur wer ihn beinahe trifft, wird abgelenkt oder zurückgeworfen.</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 560 368" width="560" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Rutherfords Streuversuch: Aus einer Alpha-Quelle links fliegt ein Fächer von Alpha-Teilchen auf eine hauchdünne Goldfolie in der Bildmitte. Fast alle Bahnen führen geradlinig durch die Folie hindurch. Eine Bahn wird an einem winzigen Atomkern stark nach oben abgelenkt, eine weitere prallt an einem Kern zurück nach links unten. Die Atomkerne sind als kleine Punkte in der Folie eingezeichnet. Folgerung: Die Masse des Atoms konzentriert sich in einem winzigen, positiv geladenen Kern — der größte Teil des Atoms ist leer.">
+        <defs>
+          <marker id="akp-pfeil-streu" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--physik)"/></marker>
+        </defs>
+        <rect x="32" y="142" width="50" height="46" rx="6" fill="none" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <circle cx="57" cy="165" r="5" fill="var(--physik)"/>
+        <text x="57" y="206" text-anchor="middle" font-size="12.5" fill="var(--text-leise)">α-Quelle</text>
+        <g stroke="var(--physik)" stroke-width="2" fill="none">
+          <line x1="82" y1="165" x2="532" y2="75" marker-end="url(#akp-pfeil-streu)"/>
+          <line x1="82" y1="165" x2="532" y2="128" marker-end="url(#akp-pfeil-streu)"/>
+          <line x1="82" y1="165" x2="532" y2="165" marker-end="url(#akp-pfeil-streu)"/>
+          <line x1="82" y1="165" x2="532" y2="205" marker-end="url(#akp-pfeil-streu)"/>
+          <line x1="82" y1="165" x2="532" y2="252" marker-end="url(#akp-pfeil-streu)"/>
+          <line x1="82" y1="165" x2="300" y2="94"/>
+          <line x1="300" y1="94" x2="430" y2="30" marker-end="url(#akp-pfeil-streu)"/>
+          <line x1="82" y1="165" x2="297" y2="228"/>
+          <line x1="297" y1="228" x2="108" y2="296" marker-end="url(#akp-pfeil-streu)"/>
+        </g>
+        <rect x="298" y="40" width="7" height="240" fill="var(--akzent)" fill-opacity="0.3" stroke="var(--akzent)" stroke-width="1"/>
+        <text x="301" y="28" text-anchor="middle" font-size="13" fill="var(--text)">Goldfolie (hauchdünn)</text>
+        <circle cx="302" cy="98" r="3" fill="var(--text)"/>
+        <circle cx="302" cy="232" r="3" fill="var(--text)"/>
+        <circle cx="28" cy="314" r="3" fill="var(--text)"/>
+        <text x="38" y="318" font-size="12.5" fill="var(--text-leise)">Atomkern: winzig, schwer, positiv geladen</text>
+        <text x="24" y="340" font-size="12.5" fill="var(--text-leise)">Rutherfords Streuversuch: Fast alle α-Teilchen durchqueren die Folie ungehindert,</text>
+        <text x="24" y="358" font-size="12.5" fill="var(--text-leise)">ganz wenige prallen an einem Kern ab — das Atom ist fast leer.</text>
+      </svg>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Das Kern-Hülle-Modell</span>
+      <p>Ein Atom besteht aus einem winzigen, positiv geladenen <strong>Kern</strong> und einer großen, fast leeren <strong>Hülle</strong>. Im Kern stecken <strong>Protonen</strong> (positiv geladen) und <strong>Neutronen</strong> (ungeladen) — zusammen tragen sie fast die gesamte Masse des Atoms. In der Hülle bewegen sich die <strong>Elektronen</strong> (negativ geladen, rund 2000-mal leichter als ein Proton); sie bestimmen, wie groß das Atom ist. Größenvergleich: Wäre das Atom so groß wie ein Fußballstadion, wäre der Kern nur ein Kirschkern auf dem Anstoßpunkt.</p>
+    </div>
+    <p>Damit klar ist, von welchem Kern die Rede ist, nutzt die Kernphysik die <strong>Nuklidschreibweise</strong>: Beim Nuklid $^{14}_{\,6}\text{C}$ steht unten die <strong>Ordnungszahl</strong> (6 Protonen — sie macht das Atom zum Kohlenstoff) und oben die <strong>Massenzahl</strong> (14 Kernbausteine insgesamt). Die Neutronenzahl ergibt sich als Differenz: $14 - 6 = 8$.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: C-12 und C-14 — zwei Isotope</span>
+      <p>Gewöhnlicher Kohlenstoff $^{12}_{\,6}\text{C}$ hat 6 Protonen und 6 Neutronen. Das seltene $^{14}_{\,6}\text{C}$ hat ebenfalls 6 Protonen — sonst wäre es kein Kohlenstoff —, aber 8 Neutronen. Kerne mit gleicher Protonenzahl und verschiedener Neutronenzahl heißen <strong>Isotope</strong> desselben Elements. Chemisch verhalten sie sich gleich, ihre Kerne aber nicht: C-12 ist stabil, C-14 ist instabil — und genau das macht ihn später für die Altersbestimmung wertvoll (Abschnitt 5).</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="akp-strahlung">
+    <h2 id="akp-strahlung">2. Radioaktive Strahlung: drei Arten</h2>
+    <p>Instabile Kerne wie C-14 bleiben nicht ewig, wie sie sind: Irgendwann wandeln sie sich <strong>von selbst</strong> in einen anderen Kern um und senden dabei <strong>Strahlung</strong> aus — das nennt man <strong>Radioaktivität</strong>. Wann ein bestimmter Kern „dran“ ist, ist <strong>reiner Zufall</strong>: Man kann es weder vorhersagen noch beeinflussen. Kein Erhitzen, kein Abkühlen, keine chemische Reaktion ändert etwas daran — all das erreicht nur die Hülle, nie den Kern.</p>
+    <p>Je nachdem, was der Kern aussendet, unterscheidet man drei Strahlungsarten:</p>
+    <ul>
+      <li><strong>α-Strahlung:</strong> schnelle <strong>Heliumkerne</strong> ($^{4}_{2}\text{He}$: 2 Protonen + 2 Neutronen), positiv geladen. In Luft kommen sie nur wenige Zentimeter weit — schon ein <strong>Blatt Papier</strong> stoppt sie.</li>
+      <li><strong>β-Strahlung:</strong> schnelle <strong>Elektronen</strong> aus dem Kern (dort wandelt sich ein Neutron in ein Proton um, das Elektron fliegt davon), negativ geladen. Reichweite in Luft: einige Meter; ein <strong>Aluminiumblech</strong> von wenigen Millimetern stoppt sie.</li>
+      <li><strong>γ-Strahlung:</strong> energiereiche Strahlung <strong>wie unsichtbares Licht</strong> — keine Teilchen mit Masse, keine Ladung. Sie ist sehr durchdringend: Selbst eine <strong>dicke Blei- oder Betonschicht</strong> schwächt sie nur ab, stoppt sie aber nie vollständig.</li>
+    </ul>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 560 312" width="560" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Abschirmung der drei Strahlungsarten: Drei Pfeile laufen von links auf drei Hindernisse zu. Der Alpha-Pfeil endet schon am Blatt Papier. Der Beta-Pfeil durchdringt das Papier, endet aber am Aluminiumblech. Der Gamma-Pfeil durchdringt Papier und Aluminium; hinter der dicken Bleischicht läuft er dünner und gestrichelt weiter — Gammastrahlung wird nur abgeschwächt, nie vollständig gestoppt.">
+        <defs>
+          <marker id="akp-pfeil-strahl" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--physik)"/></marker>
+        </defs>
+        <g stroke="var(--physik)" stroke-width="2.2" fill="none">
+          <line x1="88" y1="100" x2="219" y2="100" marker-end="url(#akp-pfeil-strahl)"/>
+          <line x1="88" y1="156" x2="317" y2="156" marker-end="url(#akp-pfeil-strahl)"/>
+          <line x1="88" y1="212" x2="445" y2="212"/>
+        </g>
+        <line x1="448" y1="212" x2="534" y2="212" stroke="var(--physik)" stroke-width="1.4" stroke-dasharray="5 5" marker-end="url(#akp-pfeil-strahl)" fill="none"/>
+        <g font-size="18" font-weight="bold" fill="var(--physik)" text-anchor="middle">
+          <text x="70" y="106">α</text>
+          <text x="70" y="162">β</text>
+          <text x="70" y="218">γ</text>
+        </g>
+        <g fill="var(--text-leise)" stroke="var(--text-leise)" stroke-width="1">
+          <rect x="226" y="66" width="5" height="180" fill-opacity="0.25"/>
+          <rect x="324" y="66" width="11" height="180" fill-opacity="0.45"/>
+          <rect x="418" y="66" width="28" height="180" fill-opacity="0.7"/>
+        </g>
+        <g font-size="13" fill="var(--text)" text-anchor="middle">
+          <text x="228" y="54">Papier</text>
+          <text x="329" y="54">Aluminium</text>
+          <text x="432" y="54">dickes Blei</text>
+        </g>
+        <text x="491" y="196" text-anchor="middle" font-size="12" fill="var(--text-leise)">abgeschwächt</text>
+        <text x="24" y="272" font-size="12.5" fill="var(--text-leise)">α: Heliumkerne · β: schnelle Elektronen · γ: energiereiche Strahlung wie Licht</text>
+        <text x="24" y="296" font-size="12.5" fill="var(--text-leise)">Papier stoppt α, Aluminium stoppt β — dickes Blei schwächt γ nur ab (gestrichelt).</text>
+      </svg>
+    </div>
+    <p>Eines haben alle drei gemeinsam: Auf ihrem Weg durch Materie reißen sie Elektronen aus den Atomen — sie <strong>ionisieren</strong>. Deshalb spricht man von <strong>ionisierender Strahlung</strong>. Genau diese Wirkung macht die Strahlung nachweisbar — und in hoher Dosis biologisch gefährlich (Abschnitt 4).</p>
+    <p>Sehen kann man die Strahlung nicht, wohl aber ihre Spuren: Im <strong>Geiger-Müller-Zählrohr</strong> löst jedes ionisierende Teilchen einen kurzen Stromstoß aus, hörbar als <strong>Knacken</strong>; die <strong>Zählrate</strong> (Impulse pro Sekunde) misst, wie viel Strahlung ankommt. In der <strong>Nebelkammer</strong> hinterlassen die Teilchen sichtbare Spuren wie winzige Kondensstreifen: α-Spuren kurz und kräftig, β-Spuren lang und verschlungen.</p>
+    <p>Und noch etwas zeigt das Zählrohr: Es knackt auch dann ab und zu, wenn gar kein Präparat in der Nähe ist. Diese <strong>Nullrate</strong> stammt von der allgegenwärtigen <strong>Umgebungsstrahlung</strong> aus Boden, Baustoffen, Luft und Weltall — bei jeder Messung muss man sie vom Messwert abziehen.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Strahl durchdringt Papier mühelos, bleibt aber im Aluminiumblech stecken — welche Strahlenart ist das?</summary>
+      <div class="check-antwort"><p>Es ist <strong>β-Strahlung</strong>. α-Teilchen wären schon im Papier stecken geblieben, und γ-Strahlung hätte auch das Aluminiumblech weitgehend durchdrungen. Schnelle Elektronen dagegen schaffen das Papier mühelos, werden aber von wenigen Millimetern Metall abgefangen — genau das beobachtete Verhalten.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="akp-halbwertszeit">
+    <h2 id="akp-halbwertszeit">3. Halbwertszeit: die innere Uhr instabiler Kerne</h2>
+    <p>Ein einzelner instabiler Kern ist völlig unberechenbar: Er kann in der nächsten Sekunde zerfallen oder erst in tausend Jahren. Aber schon ein Staubkorn enthält Milliarden Kerne — und <strong>große Mengen folgen einer verlässlichen Regel</strong>, so wie beim Würfeln mit sehr vielen Würfeln ziemlich genau ein Sechstel aller Würfe eine Sechs zeigt.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Halbwertszeit</span>
+      <p>Die <strong>Halbwertszeit</strong> $T$ ist die Zeit, nach der (im Mittel) die <strong>Hälfte der noch vorhandenen</strong> instabilen Kerne zerfallen ist. Es wird also immer wieder halbiert: 100 % → 50 % → 25 % → 12,5 % → … Die <strong>Aktivität</strong> — die Zahl der Zerfälle pro Sekunde, gemessen in <strong>Becquerel</strong> (1 Bq = 1 Zerfall pro Sekunde) — sinkt im selben Takt.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 560 330" width="560" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zerfallskurve: Die Restmenge instabiler Kerne in Prozent über der Zeit in Halbwertszeiten. Eine glatt fallende Kurve verbindet die markierten Punkte: 100 Prozent am Anfang, 50 Prozent nach einer Halbwertszeit, 25 Prozent nach zwei und 12,5 Prozent nach drei Halbwertszeiten. Gestrichelte Hilfslinien führen von den Punkten zu den Achsen. Die Kurve nähert sich der Nulllinie immer weiter an, ohne sie zu erreichen.">
+        <defs>
+          <marker id="akp-pfeil-achse" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text-leise)"/></marker>
+        </defs>
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="70" y1="260" x2="534" y2="260" marker-end="url(#akp-pfeil-achse)"/>
+          <line x1="70" y1="260" x2="70" y2="28" marker-end="url(#akp-pfeil-achse)"/>
+        </g>
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="65" y1="40" x2="70" y2="40"/><line x1="65" y1="95" x2="70" y2="95"/><line x1="65" y1="150" x2="70" y2="150"/><line x1="65" y1="205" x2="70" y2="205"/>
+          <line x1="180" y1="260" x2="180" y2="265"/><line x1="290" y1="260" x2="290" y2="265"/><line x1="400" y1="260" x2="400" y2="265"/><line x1="510" y1="260" x2="510" y2="265"/>
+        </g>
+        <g fill="var(--text-leise)" font-size="12.5" text-anchor="end">
+          <text x="60" y="44">100</text><text x="60" y="99">75</text><text x="60" y="154">50</text><text x="60" y="209">25</text><text x="60" y="264">0</text>
+        </g>
+        <g fill="var(--text-leise)" font-size="12.5" text-anchor="middle">
+          <text x="70" y="279">0</text><text x="180" y="279">1</text><text x="290" y="279">2</text><text x="400" y="279">3</text><text x="510" y="279">4</text>
+        </g>
+        <text x="534" y="298" text-anchor="end" font-size="13" fill="var(--text)">Zeit in Halbwertszeiten</text>
+        <text x="76" y="18" font-size="13" fill="var(--text)">Restmenge in %</text>
+        <g stroke="var(--text-leise)" stroke-width="1" stroke-dasharray="4 4">
+          <line x1="70" y1="150" x2="180" y2="150"/><line x1="180" y1="150" x2="180" y2="260"/>
+          <line x1="70" y1="205" x2="290" y2="205"/><line x1="290" y1="205" x2="290" y2="260"/>
+          <line x1="70" y1="232.5" x2="400" y2="232.5"/><line x1="400" y1="232.5" x2="400" y2="260"/>
+        </g>
+        <polyline fill="none" stroke="var(--physik)" stroke-width="2.5" points="70,40 97.5,75 125,104.4 152.5,129.2 180,150 207.5,167.5 235,182.2 262.5,194.6 290,205 317.5,213.8 345,221.1 372.5,227.3 400,232.5 427.5,236.9 455,240.6 482.5,243.7 510,246.3"/>
+        <circle cx="70" cy="40" r="5" fill="var(--physik)"/>
+        <circle cx="180" cy="150" r="5" fill="var(--physik)"/>
+        <circle cx="290" cy="205" r="5" fill="var(--physik)"/>
+        <circle cx="400" cy="232.5" r="5" fill="var(--physik)"/>
+        <g fill="var(--text)" font-size="12.5">
+          <text x="84" y="42">100 %</text>
+          <text x="192" y="144">50 %</text>
+          <text x="302" y="199">25 %</text>
+          <text x="412" y="227">12,5 %</text>
+        </g>
+        <text x="24" y="322" font-size="12.5" fill="var(--text-leise)">Nach jeder Halbwertszeit halbiert sich der Rest: 100 % → 50 % → 25 % → 12,5 % → …</text>
+      </svg>
+    </div>
+    <p>Jedes Nuklid hat dabei seine eigene, unveränderliche Halbwertszeit — von Sekundenbruchteilen bis zu Milliarden Jahren:</p>
+    <table class="vergleich-tabelle">
+      <caption class="nur-screenreader">Halbwertszeiten von fünf Nukliden: Iod-131 acht Tage, Cäsium-137 dreißig Jahre, Radium-226 sechzehnhundert Jahre, Kohlenstoff-14 fünftausendsiebenhundertdreißig Jahre, Uran-238 viereinhalb Milliarden Jahre</caption>
+      <thead>
+        <tr><th scope="col">Nuklid</th><th scope="col">Halbwertszeit</th><th scope="col">bekannt aus</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Iod-131</td><td>8 Tage</td><td>Nuklearmedizin</td></tr>
+        <tr><td>Cäsium-137</td><td>30 Jahre</td><td>Reaktorunfällen</td></tr>
+        <tr><td>Radium-226</td><td>1600 Jahre</td><td>Gesteinen</td></tr>
+        <tr><td>Kohlenstoff-14</td><td>5730 Jahre</td><td>Altersbestimmung</td></tr>
+        <tr><td>Uran-238</td><td>4,5 Mrd. Jahre</td><td>Erdkruste</td></tr>
+      </tbody>
+    </table>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Iod-131 klingt ab</span>
+      <p>Ein Iod-131-Präparat aus der Nuklearmedizin hat heute die Aktivität 800 Bq; die Halbwertszeit beträgt 8 Tage. Also wird immer wieder halbiert: nach 8 Tagen noch <strong>400 Bq</strong>, nach 16 Tagen <strong>200 Bq</strong>, nach 24 Tagen <strong>100 Bq</strong>. Nach gut einem Monat ist von der Strahlung kaum noch etwas übrig — genau deshalb eignen sich kurzlebige Nuklide für die Medizin.</p>
+    </div>
+    <h3>Zerfall würfeln — probiere es selbst</h3>
+    <p>Ob ein einzelner Kern zerfällt, ist purer Zufall — wie ein Würfelwurf. In der Simulation siehst du viele Kerne auf einmal: Jeder Punkt ist ein Kern, mit jedem Zerfall verblasst einer, und rechts wächst die Zerfallskurve von ganz allein. Bearbeite dabei die Aufträge unter der Simulation.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/physik/zerfall/index.html?einbettung=1#n0=100&thalb=8"
+        title="Interaktive Simulation: Radioaktiver Zerfall — Halbwertszeit als Zufallsprozess" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/physik/zerfall/index.html#n0=100&thalb=8" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Starte mit 100 Kernen und der Halbwertszeit 8 s — wie beim Iod-131 aus dem Beispiel, nur dass hier 1 Sekunde für 1 Tag steht. Halte den Lauf bei etwa 8 s, 16 s und 24 s an: Wie viele Kerne sind noch übrig? Vergleiche mit der Halbierungsregel 100 → 50 → 25 → …<br>
+      2. Setze zurück und starte denselben Lauf noch einmal. Kommt exakt dasselbe heraus? Notiere, was bei jedem Lauf gleich bleibt und was sich ändert — und erkläre beides mit dem Zufall.<br>
+      3. Stelle 2000 Kerne ein und vergleiche mit 50 Kernen: Wann liegt die zackige Zufallskurve dichter an der glatten Kurve? Je mehr Kerne, desto verlässlicher wird die Halbierungsregel.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Wie viel Prozent einer C-14-Menge sind nach drei Halbwertszeiten noch da — und wie viele Jahre sind das?</summary>
+      <div class="check-antwort"><p>Dreimal halbieren: 100 % → 50 % → 25 % → <strong>12,5 %</strong> — ein Achtel der ursprünglichen Menge ist noch vorhanden. In Jahren: 3 · 5730 Jahre = <strong>17 190 Jahre</strong>. So lange müsste man warten, bis von einer C-14-Menge nur noch ein Achtel übrig ist.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="akp-schutz">
+    <h2 id="akp-schutz">4. Strahlung um uns — messen und schützen</h2>
+    <p>Strahlung ist kein Laborphänomen — sie umgibt uns ständig. Aus dem Untergrund steigt das radioaktive Edelgas <strong>Radon</strong> auf und sammelt sich in schlecht gelüfteten Kellern: Es liefert den größten natürlichen Beitrag zur Strahlenbelastung. Dazu kommt die <strong>kosmische Strahlung</strong> aus dem Weltall — je höher, desto mehr: Im Gebirge und erst recht im Flugzeug ist sie deutlich stärker als im Flachland. Auch <strong>Boden und Baustoffe</strong> (etwa Granit) strahlen schwach, und sogar in der <strong>Nahrung</strong> steckt Radioaktivität — die Banane mit ihrem Kalium-40 ist das berühmteste Beispiel.</p>
+    <p>Wie viel Strahlung ein Mensch abbekommt, beschreibt die <strong>Dosis</strong>, gemessen in <strong>Millisievert (mSv)</strong> — einem Maß für die biologische Wirkung der Strahlung. In Deutschland kommen im Durchschnitt rund <strong>2 mSv pro Jahr aus natürlichen Quellen</strong> zusammen — und noch einmal ähnlich viel aus der <strong>Medizin</strong>, vor allem durch Röntgen- und CT-Untersuchungen. Zum Vergleich: Ein Flug über den Atlantik bringt etwa 0,05 mSv zusätzlich.</p>
+    <p>Warum überhaupt schützen? Ionisierende Strahlung kann Moleküle in den Zellen verändern — auch das <strong>Erbgut</strong>. Kleine Schäden repariert die Zelle meist selbst; je höher die Dosis, desto eher bleibt ein Schaden zurück, der später zum Beispiel Krebs auslösen kann. <strong>Die Dosis macht den Unterschied:</strong> Unnötige Strahlung vermeidet man — vor der unvermeidbaren, allgegenwärtigen Grundbelastung muss niemand Angst haben.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die AAA-Regel des Strahlenschutzes</span>
+      <p><strong>Abstand</strong> halten — die wirksamste Maßnahme: Beim doppelten Abstand trifft dich nur noch ein Viertel der Strahlung. <strong>Abschirmung</strong> nutzen — je nach Strahlenart Papier, Metall, Blei oder Beton. <strong>Aufenthaltsdauer</strong> kurz halten — die Dosis wächst mit der Zeit. Und unbedingt dazu: Radioaktive Stoffe <strong>niemals in den Körper aufnehmen</strong> — im Labor wird deshalb weder gegessen noch getrunken.</p>
+    </div>
+    <p>Praktischer Alltagstipp: Gegen Radon hilft schlicht <strong>regelmäßiges Lüften</strong>, besonders im Keller. In Regionen mit viel Radon im Untergrund werden Neubauten zusätzlich zum Boden hin abgedichtet.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Warum ist Abstandhalten so wirksam?</summary>
+      <div class="check-antwort"><p>Die Strahlung einer kleinen Quelle verteilt sich nach allen Seiten — auf immer größere Kugelflächen. Beim doppelten Abstand verteilt sich dieselbe Strahlung auf die vierfache Fläche: Dich trifft nur noch <strong>ein Viertel</strong>. Dazu kommt die endliche Reichweite: α-Teilchen kommen in Luft nur wenige Zentimeter weit, β-Teilchen einige Meter — ein paar Schritte zurück, und beide erreichen dich gar nicht mehr.</p></div>
+    </details>
+  <p>Warum ist Abstand der beste Strahlenschutz? Im Experiment <a href="../../../experimente/physik/abstandsgesetz/index.html">Abstandsgesetz radioaktiver Strahlung</a> misst du Zählraten mit dem Geiger-Müller-Zählrohr und entdeckst das 1/r²-Gesetz.</p>
+  </section>
+
+  <section aria-labelledby="akp-nutzen">
+    <h2 id="akp-nutzen">5. Nutzen und Risiken — eine Abwägung</h2>
+    <p>Dieselbe Strahlung, vor der man sich schützt, ist in der <strong>Medizin</strong> ein unverzichtbares Werkzeug. Bei der <strong>Szintigrafie</strong> bekommt der Patient ein schwach strahlendes Nuklid gespritzt, das sich in einem bestimmten Organ anreichert — etwa in der Schilddrüse. Eine Kamera misst die Strahlung von außen und zeigt, wie das Organ arbeitet. Der Trick dabei: Man wählt Strahler mit <strong>kurzer Halbwertszeit</strong> — gezielt eingesetzt, und nach wenigen Tagen ist die Aktivität von selbst fast verschwunden. Bei der <strong>Tumorbestrahlung</strong> wird die zerstörerische Wirkung selbst zum Werkzeug: Gebündelte, energiereiche Strahlung zerstört gezielt krankes Gewebe und rettet damit Leben.</p>
+    <p>Auch außerhalb der Klinik leistet Radioaktivität nützliche Dienste: Die <strong>C-14-Methode</strong> bestimmt das Alter archäologischer Funde — von Holzkohle aus der Steinzeit bis zur Gletschermumie Ötzi (mehr dazu in der Vertiefung unten). In der <strong>Technik</strong> durchleuchtet γ-Strahlung Schweißnähte an Pipelines und Brücken wie ein Röntgenbild und deckt verborgene Risse auf, ohne das Bauteil zu zerstören.</p>
+    <p>Und die <strong>Kernkraft</strong>? Ihr Prinzip ist die <strong>Kernspaltung</strong>: Ein Uran-235-Kern fängt ein Neutron ein und zerplatzt in zwei Bruchstücke — dabei wird sehr viel Energie frei, und es entstehen zwei bis drei neue Neutronen. Diese können weitere Kerne spalten: eine <strong>Kettenreaktion</strong>, die im Reaktor kontrolliert abläuft. Die frei werdende Energie erhitzt Wasser, der Dampf treibt Turbinen und Generatoren an. Aus wenigen Kilogramm Brennstoff entsteht so viel Energie wie aus ganzen Zugladungen Kohle — im laufenden Betrieb ohne CO₂-Ausstoß.</p>
+    <p>Dem stehen gewichtige Risiken gegenüber: Der <strong>abgebrannte Brennstoff</strong> bleibt wegen langlebiger Nuklide über Jahrtausende gefährlich strahlend — ein sicheres <strong>Endlager</strong> für solche Zeiträume ist bis heute nirgendwo in Betrieb. Und die Unfälle von <strong>Tschernobyl</strong> (1986) und <strong>Fukushima</strong> (2011) zeigen, dass bei einem Reaktorunglück große Landstriche verstrahlt werden können: Das freigesetzte Cäsium-137 mit seiner Halbwertszeit von 30 Jahren belastet betroffene Gebiete über Generationen.</p>
+    <p>Ob eine Gesellschaft die Kernkraft nutzen will, ist am Ende eine Abwägung — technisch, wirtschaftlich und politisch. Die Physik nimmt dir die Entscheidung nicht ab, aber sie liefert die Grundlagen: Wer Strahlungsarten, Dosis und Halbwertszeiten versteht, kann Risiken realistisch einschätzen — und sich ein <strong>eigenes Urteil</strong> bilden, statt auf Schlagworte angewiesen zu sein.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Wie die C-14-Methode das Alter verrät</summary>
+    <div class="vertiefung-inhalt">
+      <p>Hoch oben in der Atmosphäre prasselt ständig kosmische Strahlung auf die Luft. Dabei entstehen Neutronen, die Stickstoffkerne treffen und sie in radioaktives C-14 verwandeln — frischer Nachschub seit Jahrtausenden in nahezu gleichbleibender Menge. Das C-14 wird wie gewöhnlicher Kohlenstoff in Kohlenstoffdioxid eingebaut; Pflanzen nehmen es bei der Fotosynthese auf, Tiere fressen die Pflanzen. Solange ein Lebewesen lebt, tauscht es im Stoffwechsel ständig Kohlenstoff mit der Umgebung aus — der winzige C-14-Anteil in seinem Körper bleibt dadurch konstant.</p>
+      <p>Mit dem Tod endet der Austausch, und die innere Uhr beginnt zu ticken: Das vorhandene C-14 zerfällt mit der Halbwertszeit 5730 Jahre, ohne dass Nachschub kommt. Misst man im Labor, wie viel C-14 im Vergleich zu frischem Material noch übrig ist, muss man nur die Halbierungen zählen: Noch die Hälfte? Eine Halbwertszeit, also rund 5700 Jahre. Noch ein Viertel? Zwei Halbwertszeiten, also etwa 11 460 Jahre.</p>
+      <p>Berühmtestes Beispiel ist Ötzi, die Gletschermumie aus den Alpen: Sein Gewebe enthält noch gut die Hälfte des ursprünglichen C-14-Anteils — etwas weniger als eine ganze Halbwertszeit ist vergangen, er starb vor rund 5300 Jahren. Die Methode hat aber Grenzen: Nach etwa 50 000 Jahren (fast neun Halbwertszeiten) ist so wenig C-14 übrig, dass es sich kaum noch messen lässt. Und sie funktioniert nur bei Material, das einmal gelebt hat — Holz, Knochen, Leder, Wolle. Einem Steinbeil sieht sie kein Alter an.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Atombau über Strahlungsarten und Halbwertszeit bis zu Strahlenschutz und C-14-Methode, mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

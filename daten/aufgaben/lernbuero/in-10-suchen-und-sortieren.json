@@ -1,0 +1,166 @@
+{
+  "thema": "in-10-suchen-und-sortieren",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben — fachliche Pruefung ausstehend.",
+  "aufgaben": [
+    {
+      "id": "in-10-ss-101",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Liste hat $16$ Eintraege. Du suchst einen Wert mit der linearen Suche und er steht ganz am Ende. Wie viele Vergleiche macht die lineare Suche dann?",
+      "eingaben": [
+        { "label": "Vergleiche", "antwort": 16, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Die lineare Suche prueft die Eintraege der Reihe nach — einen nach dem anderen.",
+        "Im schlechtesten Fall muss sie bis zum letzten Eintrag durchlaufen.",
+        "Wie viele Eintraege hat die Liste insgesamt?"
+      ],
+      "loesungsweg": "Die lineare Suche vergleicht im schlechtesten Fall jeden Eintrag genau einmal: also alle 16. Ergebnis: 16 Vergleiche.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-102",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine sortierte Liste hat $32$ Eintraege. Wie viele Vergleiche braucht die binaere Suche hoechstens?",
+      "eingaben": [
+        { "label": "Vergleiche (hoechstens)", "antwort": 5, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Jeder Vergleich halbiert den Suchbereich.",
+        "Zaehle die Halbierungen: $32 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1$.",
+        "Wie viele Pfeile (Schritte) sind das?"
+      ],
+      "loesungsweg": "$32 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1$: Das sind 5 Halbierungsschritte, also hoechstens 5 Vergleiche. (Probe: $2^5 = 32$.)",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-103",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Bubble Sort soll eine Liste mit $n = 6$ Elementen sortieren. Wie viele Vergleiche macht der Algorithmus im schlechtesten Fall?",
+      "eingaben": [
+        { "label": "Vergleiche", "antwort": 15, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Im ersten Durchlauf werden $n-1 = 5$ Vergleiche gemacht, im zweiten $4$, dann $3$, $2$, $1$.",
+        "Addiere: $5 + 4 + 3 + 2 + 1 = ?$",
+        "Formel: $\\frac{n \\cdot (n-1)}{2}$"
+      ],
+      "loesungsweg": "$5 + 4 + 3 + 2 + 1 = 15$ Vergleiche. Oder mit der Formel: $\\frac{6 \\cdot 5}{2} = 15$.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-104",
+      "typ": "rechenweg",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Bubble Sort sortiert die Liste $[5, 3, 1, 2]$ von Hand. Verfolge den ersten Durchlauf.",
+      "schritte": [
+        {
+          "frage": "Schritt 1a: Vergleiche $5$ und $3$. Wird getauscht? Wie sieht die Liste danach aus? Wie viele Tausche gab es bisher?",
+          "eingaben": [
+            { "label": "Tausche nach Schritt 1a", "antwort": 1, "toleranz": 0 }
+          ],
+          "tipps": ["$5 > 3$: tauschen! Die Liste lautet nun $[3, 5, 1, 2]$."]
+        },
+        {
+          "frage": "Schritt 1b–1c: Verarbeite noch die Paare $(5, 1)$ und $(5, 2)$ — wie viele Tausche insgesamt im ersten Durchlauf?",
+          "eingaben": [
+            { "label": "Tausche gesamt Durchlauf 1", "antwort": 3, "toleranz": 0 }
+          ],
+          "tipps": [
+            "$(5,1)$: $5 > 1$ → Tausch → $[3, 1, 5, 2]$.",
+            "$(5,2)$: $5 > 2$ → Tausch → $[3, 1, 2, 5]$.",
+            "Im ersten Durchlauf gibt es 3 Vergleiche und 3 Tausche."
+          ]
+        },
+        {
+          "frage": "Wie viele Vergleiche und Tausche fallen im gesamten Lauf (alle Durchlaeufe) an?",
+          "eingaben": [
+            { "label": "Vergleiche gesamt", "antwort": 6, "toleranz": 0 },
+            { "label": "Tausche gesamt", "antwort": 5, "toleranz": 0 }
+          ],
+          "tipps": [
+            "D1: $[5,3,1,2] \\to [3,1,2,5]$ (3 V, 3 T).",
+            "D2: $[3,1,2,5] \\to [1,2,3,5]$ (2 V, 2 T).",
+            "D3: $[1,2,3,5]$ — kein Tausch (1 V, 0 T) → fertig."
+          ]
+        }
+      ],
+      "tipps": [
+        "Schreibe die Liste nach jedem Vergleich neu auf.",
+        "Die groesste Zahl (5) wandert im ersten Durchlauf an die letzte Stelle.",
+        "Kontrolle: Am Ende muss $[1, 2, 3, 5]$ dastehen."
+      ],
+      "loesungsweg": "D1: $(5,3)$ T, $(5,1)$ T, $(5,2)$ T → $[3,1,2,5]$ (3 V, 3 T). D2: $(3,1)$ T, $(3,2)$ T → $[1,2,3,5]$ (2 V, 2 T). D3: $(1,2)$ kein T → fertig (1 V, 0 T). Gesamt: 6 Vergleiche, 5 Tausche.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-105",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen zum Aufwand von Bubble Sort und binaerer Suche stimmen?",
+      "optionen": [
+        {
+          "text": "Bubble Sort braucht im schlechtesten Fall etwa $n^2 / 2$ Vergleiche.",
+          "richtig": true,
+          "erklaerung": "Richtig — die Formel $n(n-1)/2$ ist ungefaehr $n^2/2$."
+        },
+        {
+          "text": "Die binaere Suche halbiert bei jedem Vergleich den Suchbereich.",
+          "richtig": true,
+          "erklaerung": "Richtig — genau das macht sie so effizient."
+        },
+        {
+          "text": "Bei $n = 1000$ braucht Bubble Sort im schlechtesten Fall weniger als 1000 Vergleiche.",
+          "richtig": false,
+          "erklaerung": "Nein — bei 1000 Elementen sind es $1000 \\cdot 999 / 2 = 499\\ 500$ Vergleiche."
+        },
+        {
+          "text": "Die binaere Suche funktioniert auch auf unsortierten Listen.",
+          "richtig": false,
+          "erklaerung": "Nein — ohne Sortierung darf man eine Haelfte nicht ausschliessen."
+        }
+      ],
+      "tipps": [
+        "Denke an die Formeln: Bubble Sort $\\sim n^2/2$, binaere Suche $\\sim \\log_2 n$.",
+        "Die binaere Suche setzt Sortierung voraus.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussagen 1 und 2. Falsch: $n = 1000$ ergibt ca. 500 000 Vergleiche (nicht unter 1000). Und die binaere Suche setzt eine sortierte Liste voraus.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-106",
+      "typ": "freitext",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Erklaere, warum es sinnvoll sein kann, eine unsortierte Liste zunaechst mit Bubble Sort zu sortieren und dann die binaere Suche zu verwenden — und nenne eine Situation, in der das keinen Vorteil bringt.",
+      "musterloesung": "Das Sortieren lohnt sich, wenn man dieselbe Liste viele Male durchsucht: Die Sortierung kostet einmalig $O(n^2)$, jede Suche danach aber nur $O(\\log n)$ statt $O(n)$. Kein Vorteil: Wenn man die Liste nur einmal durchsucht und dann wegwirft — dann waere das Sortieren zusaetzliche Arbeit ohne Gewinn.",
+      "tipps": [
+        "Denke daran, wie oft du suchen wirst: einmal oder viele Male?",
+        "Was kostet das Sortieren — und was kostet jede einzelne Suche danach?",
+        "Wann ueberwiegt der Gewinn durch schnelle Suche den einmaligen Sortieraufwand?"
+      ],
+      "loesungsweg": "Sortieraufwand: $O(n^2)$. Danach $k$ binaere Suchen: je $O(\\log n)$. Gesamtaufwand: $O(n^2 + k \\cdot \\log n)$. Bei vielen Suchen ($k$ gross) ist das besser als $k$ lineare Suchen ($O(k \\cdot n)$). Einmalsuche: Sortieren entfaellt, lineare Suche genuegt.",
+      "kc": ["algorithmen"]
+    }
+  ]
+}

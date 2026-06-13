@@ -1,0 +1,101 @@
+#wrapped-root {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  background: radial-gradient(ellipse at top, #2a0b3c 0%, var(--bg) 55%);
+}
+.wrapped-slide {
+  flex: 1; display: none;
+  flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px 24px; text-align: center;
+  animation: fade-in 400ms ease;
+}
+.wrapped-slide.active { display: flex; }
+.wrapped-slide h1 {
+  font-size: clamp(28px, 6vw, 56px);
+  margin: 0 0 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-weight: 900; line-height: 1.1;
+}
+.wrapped-slide h2 {
+  font-size: clamp(22px, 4vw, 36px); margin: 0 0 8px;
+  font-weight: 700;
+}
+.wrapped-slide p { font-size: clamp(16px, 2.4vw, 20px); color: var(--text-dim); max-width: 620px; }
+.wrapped-slide .big-num {
+  font-size: clamp(72px, 18vw, 180px); font-weight: 900; line-height: 1;
+  margin: 20px 0;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: pop 600ms cubic-bezier(.2,.9,.3,1.2);
+}
+.wrapped-slide .big-word {
+  font-size: clamp(40px, 10vw, 96px); font-weight: 900;
+  animation: pop 500ms ease; margin: 20px 0;
+  color: var(--accent);
+}
+.wrapped-nav {
+  display: flex; gap: 10px; justify-content: center; padding: 16px 24px 30px;
+}
+.wrapped-nav .btn { min-width: 120px; }
+.wrapped-dots { display: flex; gap: 6px; justify-content: center; padding: 12px; }
+.wrapped-dots span {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--line);
+}
+.wrapped-dots span.on { background: var(--accent); }
+
+.wrapped-bars {
+  display: flex; flex-direction: column; gap: 10px;
+  max-width: 520px; width: 100%; margin: 20px auto;
+}
+.wrapped-bars .row { display: grid; grid-template-columns: 120px 1fr 50px; gap: 10px; align-items: center; font-size: 14px; }
+.wrapped-bars .row .lbl { color: var(--text-dim); text-transform: capitalize; text-align: right; }
+.wrapped-bars .row .bar { height: 22px; background: var(--bg-elev-2); border-radius: 11px; overflow: hidden; }
+.wrapped-bars .row .bar .fill {
+  height: 100%; background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  animation: grow-bar 900ms cubic-bezier(.2,.8,.2,1);
+}
+@keyframes grow-bar { from { width: 0 !important; } }
+
+.wrapped-pathway {
+  max-width: 640px; margin: 20px auto; padding: 16px;
+  background: rgba(0,0,0,0.25); border-radius: var(--radius);
+}
+.pathway-line { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.pathway-node {
+  background: var(--bg-elev-2); padding: 6px 10px; border-radius: 20px;
+  font-size: 13px; border: 1px solid var(--line);
+  animation: pop 400ms ease;
+}
+.pathway-node.radical { background: rgba(250, 204, 21, 0.15); border-color: var(--warn); color: var(--warn); }
+.pathway-arrow { color: var(--text-dim); }
+
+.wrapped-ads {
+  background: rgba(0,0,0,0.35); padding: 16px; border-radius: var(--radius);
+  max-width: 420px; margin: 20px auto; border: 1px dashed var(--line);
+}
+.wrapped-ads .ad-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.wrapped-ads ul { text-align: left; font-size: 16px; }
+.wrapped-lean {
+  max-width: 420px; width: 100%; margin: 24px auto;
+}
+.wrapped-lean .lean-track { height: 10px; border-radius: 5px; }
+.wrapped-lean .lean-dot {
+  width: 20px; height: 20px; top: -5px;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.2), 0 0 0 8px rgba(255,46,136,0.25);
+  animation: pulse-ring 2s ease-out infinite;
+}
+.wrapped-lean .labels { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-dim); margin-top: 6px; }
+
+.wrapped-missed {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px; max-width: 720px; margin: 16px auto;
+}
+.wrapped-missed .card {
+  background: var(--bg-elev); padding: 12px; border-radius: var(--radius-sm);
+  text-align: left; font-size: 13px; color: var(--text-dim);
+  border: 1px solid var(--line);
+}
+.wrapped-missed .card strong { color: var(--text); font-size: 14px; }
+
+.wrapped-final-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 14px; }

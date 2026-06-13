@@ -1,0 +1,610 @@
+{
+  "thema": "ma-qp-vektoren-und-geraden",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-vg-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über Punkte und Vektoren im Raum sind richtig?",
+      "optionen": [
+        {
+          "text": "Der Verbindungsvektor $\\overrightarrow{AB}$ wird nach dem Prinzip „Spitze minus Fuß“ berechnet: Ortsvektor von $B$ minus Ortsvektor von $A$.",
+          "richtig": true,
+          "erklaerung": "Richtig: $\\overrightarrow{AB} = \\vec b - \\vec a$ — die Koordinaten des Zielpunkts $B$ stehen vorn."
+        },
+        {
+          "text": "Für $A(1 \\mid 1 \\mid 1)$ und $B(3 \\mid 0 \\mid 5)$ gilt $\\overrightarrow{AB} = (2 \\mid {-1} \\mid 4)$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Komponentenweise $B - A$ rechnen: $3 - 1 = 2$, $0 - 1 = -1$, $5 - 1 = 4$."
+        },
+        {
+          "text": "Hat ein Vektor nur negative Koordinaten, ist auch sein Betrag negativ.",
+          "richtig": false,
+          "erklaerung": "Der Betrag ist eine Länge und damit nie negativ: $|({-2} \\mid {-1} \\mid {-2})| = \\sqrt{4 + 1 + 4} = 3$. Beim Quadrieren verschwinden alle Vorzeichen."
+        },
+        {
+          "text": "$\\overrightarrow{AB}$ und $\\overrightarrow{BA}$ bezeichnen denselben Vektor.",
+          "richtig": false,
+          "erklaerung": "$\\overrightarrow{BA} = -\\overrightarrow{AB}$ ist der Gegenvektor: gleiche Länge, aber entgegengesetzte Richtung."
+        }
+      ],
+      "tipps": [
+        "„Spitze minus Fuß“: Beim Verbindungsvektor stehen die Koordinaten der Spitze (des Zielpunkts) vorn.",
+        "Der Betrag $|\\vec v| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$ ist eine Länge — kann eine Länge negativ sein?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Der Verbindungsvektor ist $\\overrightarrow{AB} = \\vec b - \\vec a$ („Spitze minus Fuß“), und für die konkreten Punkte ergibt sich $(3 - 1 \\mid 0 - 1 \\mid 5 - 1) = (2 \\mid {-1} \\mid 4)$. Aussage 3 ist falsch: Im Betrag $\\sqrt{v_1^2 + v_2^2 + v_3^2}$ werden alle Koordinaten quadriert, das Ergebnis ist nie negativ. Aussage 4 ist falsch: $\\overrightarrow{BA}$ ist der Gegenvektor von $\\overrightarrow{AB}$ — gleiche Länge, entgegengesetzte Richtung.",
+      "kc": [
+        "ortsvektor-verbindungsvektor"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-002",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Gegeben sind die Punkte $A(1 \\mid 2 \\mid 0)$ und $B(3 \\mid 5 \\mid 6)$. Bestimme die Koordinaten des Verbindungsvektors $\\overrightarrow{AB}$ und seinen Betrag — also den Abstand der Punkte $A$ und $B$.",
+      "eingaben": [
+        {
+          "label": "$x_1$-Koordinate von $\\overrightarrow{AB}$",
+          "antwort": 2,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$x_2$-Koordinate von $\\overrightarrow{AB}$",
+          "antwort": 3,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$x_3$-Koordinate von $\\overrightarrow{AB}$",
+          "antwort": 6,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "Betrag $|\\overrightarrow{AB}|$",
+          "antwort": 7,
+          "toleranz": 0.01,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "„Spitze minus Fuß“: $\\overrightarrow{AB} = \\vec b - \\vec a$ — jede Koordinate einzeln rechnen.",
+        "$\\overrightarrow{AB} = (3 - 1 \\mid 5 - 2 \\mid 6 - 0)$.",
+        "Betrag: $|\\overrightarrow{AB}| = \\sqrt{2^2 + 3^2 + 6^2}$ — unter der Wurzel entsteht eine Quadratzahl."
+      ],
+      "loesungsweg": "„Spitze minus Fuß“: $$\\overrightarrow{AB} = \\vec b - \\vec a = \\begin{pmatrix} 3 - 1 \\\\ 5 - 2 \\\\ 6 - 0 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 3 \\\\ 6 \\end{pmatrix}$$ Der Betrag ist $|\\overrightarrow{AB}| = \\sqrt{2^2 + 3^2 + 6^2} = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7$. Die Punkte $A$ und $B$ haben also den Abstand $7$.",
+      "kc": [
+        "betrag-vektor"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-003",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jedem Rechenausdruck sein Ergebnis zu. Alle Vektoren sind in der Schreibweise (x₁|x₂|x₃) angegeben.",
+      "paare": [
+        {
+          "links": "(1|2|3) + (2|0|1)",
+          "rechts": "(3|2|4)"
+        },
+        {
+          "links": "3 · (1|0|2)",
+          "rechts": "(3|0|6)"
+        },
+        {
+          "links": "(4|2|5) − (1|2|3)",
+          "rechts": "(3|0|2)"
+        },
+        {
+          "links": "−2 · (1|−1|2)",
+          "rechts": "(−2|2|−4)"
+        }
+      ],
+      "tipps": [
+        "Addition und Subtraktion laufen komponentenweise: erste mit erster, zweite mit zweiter, dritte mit dritter Koordinate.",
+        "Bei der S-Multiplikation wird jede Koordinate mit dem Faktor multipliziert — ein negativer Faktor dreht alle Vorzeichen um.",
+        "Zwei Ergebnisse beginnen mit (3|0|…) — unterscheide sie an der dritten Koordinate."
+      ],
+      "loesungsweg": "Komponentenweise rechnen: $(1 \\mid 2 \\mid 3) + (2 \\mid 0 \\mid 1) = (3 \\mid 2 \\mid 4)$ und $(4 \\mid 2 \\mid 5) - (1 \\mid 2 \\mid 3) = (3 \\mid 0 \\mid 2)$. Bei der S-Multiplikation wird jede Koordinate mit dem Faktor multipliziert: $3 \\cdot (1 \\mid 0 \\mid 2) = (3 \\mid 0 \\mid 6)$ und $-2 \\cdot (1 \\mid {-1} \\mid 2) = ({-2} \\mid 2 \\mid {-4})$ — der negative Faktor kehrt alle Vorzeichen um.",
+      "kc": [
+        "vektor-arithmetik"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-004",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zur Parameterform einer Geraden.",
+      "text": "Eine Gerade g: x = p + t · u im Raum ist festgelegt durch den ___, der vom Ursprung zu einem festen Punkt der Geraden führt, und den ___, der die Richtung der Geraden angibt. Dieser darf nicht der ___ sein. Durchläuft der Parameter t alle reellen Zahlen, ergeben sich die Ortsvektoren ___ Punkte der Geraden.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Stützvektor",
+          "optionen": [
+            "Stützvektor",
+            "Richtungsvektor",
+            "Nullvektor"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Richtungsvektor",
+          "optionen": [
+            "Richtungsvektor",
+            "Stützvektor",
+            "Gegenvektor"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Nullvektor",
+          "optionen": [
+            "Nullvektor",
+            "Einheitsvektor",
+            "Ortsvektor"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "aller",
+          "optionen": [
+            "aller",
+            "einiger",
+            "unendlich vieler, aber nicht aller"
+          ]
+        }
+      ],
+      "tipps": [
+        "Der eine Vektor „stützt“ die Gerade im Raum ab, der andere zeigt, in welche Richtung sie verläuft.",
+        "Welcher Vektor hat die Länge 0 und kann deshalb keine Richtung angeben?",
+        "Jeder Parameterwert t liefert genau einen Geradenpunkt — und jeder Geradenpunkt gehört zu genau einem Parameterwert."
+      ],
+      "loesungsweg": "Stützvektor — Richtungsvektor — Nullvektor — aller: Der Stützvektor $\\vec p$ führt vom Ursprung zu einem festen Punkt der Geraden, der Richtungsvektor $\\vec u$ gibt die Richtung an. $\\vec u$ darf nicht der Nullvektor sein, sonst „bewegt“ man sich nicht von der Stelle. Durchläuft $t$ alle reellen Zahlen, liefert $\\vec x = \\vec p + t \\cdot \\vec u$ die Ortsvektoren aller Punkte der Geraden.",
+      "kc": [
+        "parameterform"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Gegeben sind $\\vec a$ und $\\vec b$ mit den Koordinaten $(2 \\mid 2 \\mid 1)$ und $(2 \\mid {-1} \\mid 2)$. a) Berechne das Skalarprodukt $\\vec a \\cdot \\vec b$. b) Bestimme den Winkel $\\varphi$ zwischen $\\vec a$ und $\\vec b$ (in Grad, auf eine Dezimale). c) Bestimme $r$ so, dass die Vektoren mit den Koordinaten $(3 \\mid r \\mid 2)$ und $(4 \\mid 2 \\mid {-5})$ orthogonal sind.",
+      "eingaben": [
+        {
+          "label": "a) Skalarprodukt $\\vec a \\cdot \\vec b$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "b) Winkel $\\varphi$",
+          "antwort": 63.6,
+          "toleranz": 0.5,
+          "einheit": "°"
+        },
+        {
+          "label": "c) $r$",
+          "antwort": -1,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Skalarprodukt komponentenweise: $\\vec a \\cdot \\vec b = a_1 b_1 + a_2 b_2 + a_3 b_3$ — das Ergebnis ist eine Zahl.",
+        "Winkelformel: $\\cos\\varphi = \\frac{\\vec a \\cdot \\vec b}{|\\vec a| \\cdot |\\vec b|}$ mit $|\\vec a| = |\\vec b| = 3$.",
+        "c) Orthogonal heißt Skalarprodukt $= 0$: Löse $12 + 2r - 10 = 0$."
+      ],
+      "loesungsweg": "a) $\\vec a \\cdot \\vec b = 2 \\cdot 2 + 2 \\cdot ({-1}) + 1 \\cdot 2 = 4 - 2 + 2 = 4$. b) Beträge: $|\\vec a| = \\sqrt{4 + 4 + 1} = 3$ und $|\\vec b| = \\sqrt{4 + 1 + 4} = 3$. Damit $\\cos\\varphi = \\frac{4}{3 \\cdot 3} = \\frac{4}{9}$, also $\\varphi = \\cos^{-1}\\!\\left(\\frac{4}{9}\\right) \\approx 63{,}6^\\circ$ — das Skalarprodukt ist positiv, der Winkel wie erwartet spitz. c) Orthogonalitätsbedingung: $3 \\cdot 4 + r \\cdot 2 + 2 \\cdot ({-5}) = 2r + 2 = 0$, also $r = -1$.",
+      "kc": [
+        "skalarprodukt-winkel"
+      ],
+      "cas": "<p>Vektorrechnung auf dem ClassPad II — Vektoren gibst du als Listen in eckigen Klammern ein:</p><ol><li>Im <b>Main</b>-Menü <code>[2,2,1]</code> und <code>[2,-1,2]</code> verwenden (oder per ⇒ unter <code>a</code> und <code>b</code> speichern).</li><li><b>Aktion → Vektor → dotP</b>: <code>dotP([2,2,1],[2,-1,2])</code> liefert das Skalarprodukt 4.</li><li><b>Aktion → Vektor → norm</b>: <code>norm([2,2,1])</code> und <code>norm([2,-1,2])</code> liefern jeweils 3; im Gradmodus (Statusleiste!) ergibt <code>cos⁻¹(4/9)</code> dann 63,61°. Schneller: <b>Aktion → Vektor → angle</b> mit <code>angle([2,2,1],[2,-1,2])</code>.</li><li>Teil c) als Gleichung: <code>solve(dotP([3,r,2],[4,2,-5])=0,r)</code> liefert r = −1.</li></ol><p>In Klausuren gilt: Das CAS kontrolliert — der Rechenweg über Skalarprodukt und Winkelformel gehört aufs Papier.</p>"
+    },
+    {
+      "id": "ma-qp-vg-006",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Vermessungsdrohne startet im Punkt $A(0 \\mid 10 \\mid 20)$ und fliegt geradlinig: In jeder Minute legt sie den Vektor $\\vec v$ mit den Koordinaten $(30 \\mid 20 \\mid 5)$ zurück (alle Angaben in Metern, $x_3$ ist die Höhe). Ihre Position nach $t$ Minuten beschreibt $\\vec x(t) = \\overrightarrow{OA} + t \\cdot \\vec v$. a) In welcher Höhe fliegt die Drohne nach $4$ Minuten? b) Nach wie vielen Minuten erreicht sie die Höhe $45\\,\\text{m}$? c) Welche Strecke legt die Drohne in einer Minute zurück (auf eine Dezimale)?",
+      "eingaben": [
+        {
+          "label": "a) Höhe nach 4 Minuten",
+          "antwort": 40,
+          "toleranz": 0.01,
+          "einheit": "m"
+        },
+        {
+          "label": "b) Zeit bis zur Höhe 45 m",
+          "antwort": 5,
+          "toleranz": 0.01,
+          "einheit": "min"
+        },
+        {
+          "label": "c) Strecke pro Minute",
+          "antwort": 36.4,
+          "toleranz": 0.2,
+          "einheit": "m"
+        }
+      ],
+      "tipps": [
+        "Die Höhe ist die dritte Koordinate: $x_3(t) = 20 + 5t$.",
+        "b) Löse die Gleichung $20 + 5t = 45$.",
+        "c) Die Strecke pro Minute ist der Betrag des Richtungsvektors: $|\\vec v| = \\sqrt{30^2 + 20^2 + 5^2}$."
+      ],
+      "loesungsweg": "a) $x_3(4) = 20 + 5 \\cdot 4 = 40$ — nach 4 Minuten fliegt die Drohne in $40\\,\\text{m}$ Höhe. b) $20 + 5t = 45$ liefert $t = 5$: nach $5$ Minuten. c) Pro Minute legt die Drohne genau den Vektor $\\vec v$ zurück, also die Strecke $|\\vec v| = \\sqrt{900 + 400 + 25} = \\sqrt{1325} \\approx 36{,}4\\,\\text{m}$. Hinter dem Sachkontext steckt die Parameterform einer Geraden: $\\overrightarrow{OA}$ ist der Stützvektor, $\\vec v$ der Richtungsvektor und die Zeit $t$ der Parameter.",
+      "kc": [
+        "geraden-sachkontext"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-007",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Welche Aussagen über die Parameterform $\\vec x = \\vec p + t \\cdot \\vec u$ einer Geraden sind richtig?",
+      "optionen": [
+        {
+          "text": "Multipliziert man den Richtungsvektor mit $2$, beschreibt die neue Gleichung dieselbe Gerade.",
+          "richtig": true,
+          "erklaerung": "Richtig: Jedes Vielfache des Richtungsvektors (außer dem Nullvektor) zeigt entlang derselben Geraden — nur die „Schrittweite“ pro Parametereinheit ändert sich."
+        },
+        {
+          "text": "Als Stützvektor eignet sich der Ortsvektor jedes beliebigen Punktes der Geraden.",
+          "richtig": true,
+          "erklaerung": "Richtig: Jeder Geradenpunkt kann als Startpunkt dienen — die beschriebene Punktmenge bleibt dieselbe."
+        },
+        {
+          "text": "Zu einer Geraden gibt es genau eine Parameterdarstellung.",
+          "richtig": false,
+          "erklaerung": "Es gibt unendlich viele: Stützpunkt und Richtungsvektor (bis auf Vielfache) sind frei wählbar. Ob zwei Gleichungen dieselbe Gerade beschreiben, klärt der Lagebeziehungs-Test (kollinear + Punktprobe)."
+        },
+        {
+          "text": "Setzt man $t = 0$ ein, erhält man den Ortsvektor des Stützpunkts.",
+          "richtig": true,
+          "erklaerung": "Richtig: $\\vec x = \\vec p + 0 \\cdot \\vec u = \\vec p$."
+        }
+      ],
+      "tipps": [
+        "Stell dir die Gerade als Bewegung vor: Startpunkt wählbar, Schrittlänge wählbar — was bleibt gleich?",
+        "Prüfe Aussage 4 durch stures Einsetzen von $t = 0$.",
+        "Drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1, 2 und 4: Vielfache des Richtungsvektors (Aussage 1) und andere Stützpunkte auf der Geraden (Aussage 2) ändern die beschriebene Punktmenge nicht, und $t = 0$ liefert direkt $\\vec x = \\vec p$ (Aussage 4). Aussage 3 ist deshalb falsch — die Parameterdarstellung einer Geraden ist hochgradig nicht eindeutig: unendlich viele Stützpunkte, unendlich viele Richtungsvektoren.",
+      "kc": [
+        "parameterform-eigenschaften"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-008",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Punktprobe Schritt für Schritt: Liegt der Punkt $P(5 \\mid 5 \\mid {-3})$ auf der Geraden $$g\\colon\\; \\vec x = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} + t \\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ -2 \\end{pmatrix}\\,?$$",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Setze den Ortsvektor von $P$ für $\\vec x$ ein und löse die Gleichung der ersten Koordinate: $5 = 2 + t$.",
+          "eingaben": [
+            {
+              "label": "$t$",
+              "antwort": 3,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Erste Zeile: $5 = 2 + t \\cdot 1$ — nach $t$ auflösen."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne mit diesem $t$ die zweite Koordinate des Geradenpunkts: $-1 + 2t$.",
+          "eingaben": [
+            {
+              "label": "Wert der zweiten Koordinate",
+              "antwort": 5,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$-1 + 2 \\cdot 3$ — und dann mit der zweiten Koordinate von $P$ vergleichen."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne ebenso die dritte Koordinate des Geradenpunkts: $3 - 2t$.",
+          "eingaben": [
+            {
+              "label": "Wert der dritten Koordinate",
+              "antwort": -3,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$3 - 2 \\cdot 3$ — Vergleich mit der dritten Koordinate von $P$: Liegt $P$ auf $g$?"
+          ]
+        }
+      ],
+      "tipps": [
+        "Punktprobe: Ortsvektor von $P$ für $\\vec x$ einsetzen — das ergibt drei Gleichungen mit demselben $t$.",
+        "Aus einer Zeile $t$ bestimmen, mit den beiden anderen Zeilen kontrollieren.",
+        "$P$ liegt genau dann auf $g$, wenn alle drei Zeilen denselben Parameterwert liefern."
+      ],
+      "loesungsweg": "Erste Zeile: $5 = 2 + t$, also $t = 3$. Zweite Zeile mit $t = 3$: $-1 + 2 \\cdot 3 = 5$ — stimmt mit der zweiten Koordinate von $P$ überein. Dritte Zeile: $3 - 2 \\cdot 3 = -3$ — stimmt ebenfalls. Alle drei Koordinaten passen für denselben Parameterwert $t = 3$, also liegt $P$ auf $g$. Hätte auch nur eine Zeile einen anderen Wert geliefert, läge $P$ nicht auf der Geraden.",
+      "kc": [
+        "punktprobe"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-009",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bringe die Schritte zur Untersuchung der Lagebeziehung zweier Geraden $g$ und $h$ in die richtige Reihenfolge.",
+      "elemente": [
+        "Die Richtungsvektoren beider Geraden vergleichen: Sind sie kollinear (Vielfache voneinander)?",
+        "Falls kollinear: Punktprobe — liegt der Stützpunkt der einen Geraden auf der anderen? (identisch oder echt parallel)",
+        "Falls nicht kollinear: Geradengleichungen gleichsetzen und aus zwei der drei Zeilen t und s berechnen",
+        "Die Werte für t und s in die dritte Zeile einsetzen (Probe)",
+        "Ergebnis deuten: Probe erfüllt → Schnittpunkt berechnen; Widerspruch → die Geraden sind windschief"
+      ],
+      "tipps": [
+        "Der Entscheidungsbaum beginnt immer mit dem Vergleich der Richtungsvektoren.",
+        "Kollineare Richtungsvektoren führen zur Punktprobe, nicht kollineare zum Gleichungssystem.",
+        "Die dritte Zeile des Gleichungssystems dient als Probe — erst danach steht das Ergebnis fest."
+      ],
+      "loesungsweg": "Zuerst prüft man, ob die Richtungsvektoren kollinear sind. Falls ja, entscheidet die Punktprobe zwischen identisch und echt parallel. Falls nein, setzt man die Geradengleichungen gleich (verschiedene Parameterbuchstaben!), berechnet $t$ und $s$ aus zwei Zeilen und setzt beide Werte in die dritte Zeile ein: Geht die Probe auf, gibt es einen Schnittpunkt — Einsetzen von $t$ in $g$ liefert ihn. Führt die Probe auf einen Widerspruch, sind die Geraden windschief.",
+      "kc": [
+        "lagebeziehungen-ablauf"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-010",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Untersuche, ob sich die Geraden $$g\\colon\\; \\vec x = \\begin{pmatrix} 2 \\\\ 1 \\\\ 0 \\end{pmatrix} + t \\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ 1 \\end{pmatrix} \\qquad \\text{und} \\qquad h\\colon\\; \\vec x = \\begin{pmatrix} 2 \\\\ 6 \\\\ 1 \\end{pmatrix} + s \\cdot \\begin{pmatrix} 2 \\\\ -1 \\\\ 1 \\end{pmatrix}$$ schneiden. Die Richtungsvektoren sind nicht kollinear; Gleichsetzen liefert das Gleichungssystem I: $2 + t = 2 + 2s$, II: $1 + 2t = 6 - s$, III: $t = 1 + s$.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Aus Zeile I folgt $t = 2s$. Setze das in Zeile III ein und bestimme $s$ und $t$.",
+          "eingaben": [
+            {
+              "label": "$s$",
+              "antwort": 1,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$t$",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$2s = 1 + s$ führt direkt auf $s$; danach $t = 2s$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Probe in Zeile II: Berechne beide Seiten von $1 + 2t = 6 - s$. Welchen gemeinsamen Wert haben sie?",
+          "eingaben": [
+            {
+              "label": "Wert beider Seiten",
+              "antwort": 5,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$1 + 2 \\cdot 2$ und $6 - 1$ — nur wenn beide Seiten übereinstimmen, gibt es einen Schnittpunkt."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne den Schnittpunkt $S$, indem du $t = 2$ in $g$ einsetzt.",
+          "eingaben": [
+            {
+              "label": "$x_1$ von $S$",
+              "antwort": 4,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$x_2$ von $S$",
+              "antwort": 5,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$x_3$ von $S$",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$(2 \\mid 1 \\mid 0) + 2 \\cdot (1 \\mid 2 \\mid 1)$ — komponentenweise rechnen."
+          ]
+        }
+      ],
+      "tipps": [
+        "Gleichsetzen heißt: Beide Geraden beschreiben denselben Punkt — aber mit verschiedenen Parametern $t$ und $s$, die du nicht gleichsetzen darfst!",
+        "Zwei Zeilen lösen das LGS, die dritte Zeile entscheidet als Probe zwischen Schnittpunkt und windschief.",
+        "Kontrolle: Den Schnittpunkt auch über $h$ mit $s = 1$ berechnen — es muss derselbe Punkt herauskommen."
+      ],
+      "loesungsweg": "Aus I folgt $t = 2s$; eingesetzt in III: $2s = 1 + s$, also $s = 1$ und $t = 2$. Probe in II: $1 + 2 \\cdot 2 = 5$ und $6 - 1 = 5$ — die Probe geht auf, die Geraden schneiden sich. Schnittpunkt über $g$ mit $t = 2$: $\\vec x = (2 + 2 \\mid 1 + 4 \\mid 0 + 2)$, also $S(4 \\mid 5 \\mid 2)$. Kontrolle über $h$ mit $s = 1$: $(2 + 2 \\mid 6 - 1 \\mid 1 + 1) = (4 \\mid 5 \\mid 2)$ — derselbe Punkt.",
+      "kc": [
+        "schnittpunkt-geraden"
+      ],
+      "cas": "<p>Das Schnittpunkt-LGS löst der ClassPad II in einem Schritt:</p><ol><li>Im <b>Main</b>-Menü den <b>solve</b>-Befehl mit Mengenklammern verwenden: <code>solve({2+t=2+2s, 1+2t=6-s},{t,s})</code> liefert t = 2 und s = 1.</li><li>Probe von Hand in der dritten Zeile: t = 1 + s wird zu 2 = 2 — erfüllt, also existiert ein Schnittpunkt.</li><li>Schnittpunkt als Vektorrechnung: <code>[2,1,0]+2*[1,2,1]</code> ergibt [4,5,2], also S(4|5|2).</li></ol><p>Achtung: solve mit nur zwei Gleichungen ersetzt die Probe in der dritten Zeile nicht — erst sie unterscheidet „Schnittpunkt“ von „windschief“.</p>"
+    },
+    {
+      "id": "ma-qp-vg-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Mara behauptet: „Die Geraden $$g\\colon\\; \\vec x = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + t \\cdot \\begin{pmatrix} 1 \\\\ -1 \\\\ 2 \\end{pmatrix} \\qquad \\text{und} \\qquad h\\colon\\; \\vec x = \\begin{pmatrix} 2 \\\\ 1 \\\\ 5 \\end{pmatrix} + s \\cdot \\begin{pmatrix} -2 \\\\ 2 \\\\ -4 \\end{pmatrix}$$ sind echt parallel, denn ihre Gleichungen haben verschiedene Stütz- und Richtungsvektoren.“ Prüfe Maras Behauptung rechnerisch und formuliere eine vollständige Begründung.",
+      "musterloesung": "Maras Schluss ist nicht stichhaltig, denn die Parameterdarstellung einer Geraden ist nicht eindeutig — verschiedene Gleichungen können dieselbe Gerade beschreiben. Rechnerische Prüfung in zwei Schritten. Erstens die Richtungsvektoren: $({-2} \\mid 2 \\mid {-4}) = -2 \\cdot (1 \\mid {-1} \\mid 2)$ — sie sind kollinear, also sind $g$ und $h$ entweder echt parallel oder identisch. Zweitens die Punktprobe mit dem Stützpunkt $Q(2 \\mid 1 \\mid 5)$ von $h$ in $g$: Die erste Zeile $2 = 1 + t$ liefert $t = 1$; die zweite Zeile $2 - 1 = 1$ stimmt, die dritte Zeile $3 + 2 \\cdot 1 = 5$ stimmt ebenfalls. $Q$ liegt also auf $g$ — damit sind $g$ und $h$ identisch: ein und dieselbe Gerade, nur unterschiedlich aufgeschrieben. Maras Behauptung ist falsch, und ihr Denkfehler liegt im Kriterium: Aus verschiedenen Stütz- und Richtungsvektoren folgt gar nichts, denn jeder Geradenpunkt darf als Stützpunkt und jedes Vielfache des Richtungsvektors als Richtung dienen. Erst der Test „kollinear + Punktprobe“ entscheidet zwischen identisch und echt parallel.",
+      "tipps": [
+        "Prüfe zuerst die Richtungsvektoren: Ist $({-2} \\mid 2 \\mid {-4})$ ein Vielfaches von $(1 \\mid {-1} \\mid 2)$?",
+        "Kollineare Richtungsvektoren lassen nur zwei Lagen zu: echt parallel oder identisch — die Punktprobe entscheidet.",
+        "Setze den Stützpunkt von $h$ in die Gleichung von $g$ ein und prüfe alle drei Zeilen mit demselben $t$."
+      ],
+      "loesungsweg": "Richtungsvektoren: $({-2} \\mid 2 \\mid {-4}) = -2 \\cdot (1 \\mid {-1} \\mid 2)$ — kollinear, also parallel oder identisch. Punktprobe mit $Q(2 \\mid 1 \\mid 5)$ in $g$: $t = 1$ erfüllt alle drei Zeilen ($2 = 1 + 1$, $1 = 2 - 1$, $5 = 3 + 2$). Also sind $g$ und $h$ identisch — nicht echt parallel. Verschiedene Parameterdarstellungen können dieselbe Gerade beschreiben; Maras Kriterium taugt nicht als Begründung.",
+      "kc": [
+        "lagebeziehung-identisch"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-012",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Gegeben sind $$g\\colon\\; \\vec x = \\begin{pmatrix} 1 \\\\ 0 \\\\ 2 \\end{pmatrix} + t \\cdot \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix} \\qquad \\text{und} \\qquad h\\colon\\; \\vec x = \\begin{pmatrix} 0 \\\\ 3 \\\\ 3 \\end{pmatrix} + s \\cdot \\begin{pmatrix} 2 \\\\ 2 \\\\ 1 \\end{pmatrix}.$$ Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Richtungsvektoren von $g$ und $h$ sind nicht kollinear — identisch und echt parallel scheiden damit aus.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die ersten beiden Zeilen verlangen den Faktor $k = 2$, die dritte aber $1 = k \\cdot 0 = 0$ — es gibt kein gemeinsames $k$."
+        },
+        {
+          "text": "Das Gleichungssystem aus $g = h$ führt auf einen Widerspruch — die Geraden haben keinen gemeinsamen Punkt.",
+          "richtig": true,
+          "erklaerung": "Richtig: Zeile III liefert $2 = 3 + s$, also $s = -1$; Zeile II dann $t = 3 + 2s = 1$. Zeile I verlangt $1 + t = 2s$, also $2 = -2$ — Widerspruch."
+        },
+        {
+          "text": "$g$ und $h$ sind windschief.",
+          "richtig": true,
+          "erklaerung": "Richtig: nicht kollineare Richtungsvektoren und kein gemeinsamer Punkt — genau das ist die Definition von windschief. Es gibt keine Ebene, die beide Geraden enthält."
+        },
+        {
+          "text": "Da $g$ und $h$ sich nicht schneiden, müssen sie parallel sein.",
+          "richtig": false,
+          "erklaerung": "Im Raum gibt es eine vierte Lage: windschief. Anders als in der Ebene folgt aus „kein Schnittpunkt“ nicht „parallel“ — das gälte nur bei kollinearen Richtungsvektoren."
+        }
+      ],
+      "tipps": [
+        "Teste die Richtungsvektoren: Gibt es ein $k$ mit $(2 \\mid 2 \\mid 1) = k \\cdot (1 \\mid 1 \\mid 0)$? Beachte die dritte Zeile.",
+        "Gleichsetzen: Zeile III ($2 = 3 + s$) liefert $s$ sofort; dann Zeile II nach $t$ auflösen und beides in Zeile I prüfen.",
+        "Drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtungsvektoren: $k \\cdot (1 \\mid 1 \\mid 0) = (2 \\mid 2 \\mid 1)$ scheitert an der dritten Zeile ($k \\cdot 0 = 1$ ist unlösbar) — nicht kollinear, Aussage 1 ist richtig. Gleichsetzen liefert I: $1 + t = 2s$, II: $t = 3 + 2s$, III: $2 = 3 + s$. Aus III folgt $s = -1$, aus II $t = 1$; Zeile I verlangt dann $1 + 1 = -2$ — Widerspruch, kein gemeinsamer Punkt (Aussage 2 richtig). Nicht kollinear plus kein Schnittpunkt heißt windschief (Aussage 3 richtig). Aussage 4 überträgt eine Regel aus der Ebene fälschlich in den Raum — dort existiert mit windschief eine vierte Lagebeziehung.",
+      "kc": [
+        "windschief"
+      ]
+    },
+    {
+      "id": "ma-qp-vg-013",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Das Vektorprodukt liefert einen Vektor, der auf beiden Ausgangsvektoren senkrecht steht: $$\\vec a \\times \\vec b = \\begin{pmatrix} a_2 b_3 - a_3 b_2 \\\\ a_3 b_1 - a_1 b_3 \\\\ a_1 b_2 - a_2 b_1 \\end{pmatrix}$$ Berechne $\\vec n = \\vec a \\times \\vec b$ für $\\vec a$ und $\\vec b$ mit den Koordinaten $(2 \\mid 1 \\mid 0)$ und $(1 \\mid 3 \\mid 2)$ und weise die Orthogonalität nach.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne die erste Koordinate $n_1 = a_2 b_3 - a_3 b_2$.",
+          "eingaben": [
+            {
+              "label": "$n_1$",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$n_1 = 1 \\cdot 2 - 0 \\cdot 3$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne $n_2 = a_3 b_1 - a_1 b_3$ und $n_3 = a_1 b_2 - a_2 b_1$.",
+          "eingaben": [
+            {
+              "label": "$n_2$",
+              "antwort": -4,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$n_3$",
+              "antwort": 5,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$n_2 = 0 \\cdot 1 - 2 \\cdot 2$ und $n_3 = 2 \\cdot 3 - 1 \\cdot 1$ — Vorzeichen beachten."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Orthogonalitätsprobe: Berechne das Skalarprodukt $\\vec a \\cdot \\vec n$.",
+          "eingaben": [
+            {
+              "label": "$\\vec a \\cdot \\vec n$",
+              "antwort": 0,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$2 \\cdot 2 + 1 \\cdot ({-4}) + 0 \\cdot 5$ — beim Vektorprodukt muss hier immer $0$ herauskommen."
+          ]
+        }
+      ],
+      "tipps": [
+        "Merkschema: Für jede Ergebniszeile die gleichnamige Zeile von $\\vec a$ und $\\vec b$ zuhalten und die übrigen vier Zahlen über Kreuz multiplizieren.",
+        "Vorzeichen beachten: In der mittleren Zeile dreht sich die Reihenfolge um — $n_2 = a_3 b_1 - a_1 b_3$.",
+        "Zur vollständigen Probe müssen $\\vec a \\cdot \\vec n$ und $\\vec b \\cdot \\vec n$ beide $0$ ergeben."
+      ],
+      "loesungsweg": "Komponentenweise: $n_1 = 1 \\cdot 2 - 0 \\cdot 3 = 2$, $n_2 = 0 \\cdot 1 - 2 \\cdot 2 = -4$ und $n_3 = 2 \\cdot 3 - 1 \\cdot 1 = 5$, also $\\vec n = (2 \\mid {-4} \\mid 5)$. Orthogonalitätsprobe: $\\vec a \\cdot \\vec n = 4 - 4 + 0 = 0$ und $\\vec b \\cdot \\vec n = 2 - 12 + 10 = 0$ — $\\vec n$ steht senkrecht auf beiden Vektoren. Genau diese Eigenschaft macht das Vektorprodukt im Thema „Ebenen im Raum“ zum Werkzeug für Normalenvektoren. Zusatzwissen: $|\\vec a \\times \\vec b| = \\sqrt{4 + 16 + 25} = \\sqrt{45} \\approx 6{,}7$ ist der Flächeninhalt des von $\\vec a$ und $\\vec b$ aufgespannten Parallelogramms.",
+      "kc": [
+        "vektorprodukt"
+      ],
+      "cas": "<p>Das Vektorprodukt rechnet der ClassPad II direkt:</p><ol><li>Im <b>Main</b>-Menü die Vektoren als Listen eingeben: <code>[2,1,0]</code> und <code>[1,3,2]</code>.</li><li><b>Aktion → Vektor → crossP</b>: <code>crossP([2,1,0],[1,3,2])</code> liefert [2,−4,5].</li><li>Orthogonalitätsprobe mit <b>dotP</b>: <code>dotP([2,1,0],[2,-4,5])</code> und <code>dotP([1,3,2],[2,-4,5])</code> ergeben beide 0.</li></ol><p>So bestätigst du Komponentenformel und Senkrecht-Eigenschaft unabhängig voneinander.</p>"
+    }
+  ]
+}

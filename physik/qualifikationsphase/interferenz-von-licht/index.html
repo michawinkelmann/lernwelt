@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interferenz von Licht — Qualifikationsphase · Physik — Lernwelt</title>
+<meta name="description" content="Doppelspalt und optisches Gitter: Gangunterschied, Maxima- und Minimabedingung, Wellenlängenmessung von Licht und Spektren — mit Beispielrechnungen und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Interferenz von Licht</h1>
+  <p class="einleitung">Eine Seifenblase schillert in Regenbogenfarben, eine CD glitzert bunt, und hinter zwei haarfeinen Spalten zerfällt ein Laserstrahl in ein Muster aus hellen und dunklen Streifen. Hinter all dem steckt dasselbe Phänomen: <strong>Interferenz</strong> — die Überlagerung von Lichtwellen. Auf dieser Seite lernst du, wie Thomas Young damit die Wellennatur des Lichts belegte und wie man mit Doppelspalt und Gitter Wellenlängen misst, die tausendmal kleiner sind als ein Millimeter. Die Grundbegriffe zu Überlagerung und Gangunterschied aus dem Thema <a href="../wellen/index.html">Mechanische Wellen</a> solltest du parat haben.</p>
+
+  <section aria-labelledby="ifz-wellennatur">
+    <h2 id="ifz-wellennatur">1. Ist Licht eine Welle?</h2>
+    <p>Ende des 17. Jahrhunderts standen sich zwei Vorstellungen gegenüber. Isaac <strong>Newton</strong> hielt Licht für einen Strom winziger Teilchen („Korpuskeln“) — das erklärte die geradlinige Ausbreitung und scharfe Schatten. Christiaan <strong>Huygens</strong> sah Licht dagegen als Welle: Jeder Punkt einer Wellenfront ist Ausgangspunkt neuer Elementarwellen. Über hundert Jahre blieb der Streit unentschieden — auch, weil kaum jemand Newtons Autorität widersprechen mochte.</p>
+    <p>Die Entscheidung brachte 1802 der Arzt und Physiker Thomas <strong>Young</strong>: Er ließ Licht durch zwei eng benachbarte, sehr schmale Spalte fallen. Wären Lichtteilchen am Werk, müssten auf dem Schirm schlicht zwei helle Streifen erscheinen. Stattdessen zeigt sich ein ganzes Band aus vielen hellen und dunklen Streifen. Entscheidend sind die <em>dunklen</em> Stellen: Dort kommt Licht an, wenn nur <em>ein</em> Spalt geöffnet ist — öffnet man beide, wird es dort dunkel. Licht plus Licht ergibt Dunkelheit? Mit Teilchen ist das nicht zu machen. Wellen dagegen können sich auslöschen: Trifft Wellenberg auf Wellental, heben sich die Auslenkungen auf. Youngs Streifenmuster gilt deshalb als der historische Beleg für die Wellennatur des Lichts.</p>
+    <p>Damit ein stabiles Muster sichtbar wird, müssen die überlagerten Wellen allerdings eine Bedingung erfüllen: Sie brauchen dieselbe Frequenz und eine <strong>feste Phasenbeziehung</strong> — man nennt sie dann <strong>kohärent</strong>. Gewöhnliche Lichtquellen liefern das nicht: In einer Glühlampe senden unzählige Atome unabhängig voneinander kurze Wellenzüge aus, deren Phasen viele Millionen Mal pro Sekunde zufällig springen. Das Interferenzmuster zweier Lampen wechselt ebenso schnell seine Lage — das Auge sieht nur gleichmäßige Helligkeit. Young behalf sich mit einem Trick: ein einzelner schmaler Spalt vor dem Doppelspalt, sodass beide Spalte von derselben Wellenfront beleuchtet werden. Heute nimmt man einen <strong>Laser</strong>: Sein Licht hat nur eine Wellenlänge, eine feste Phase und ist eng gebündelt — die ideale kohärente Quelle. (Aber nie direkt in den Strahl blicken!)</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Kohärenz</span>
+      <p>Zwei Lichtwellen heißen <strong>kohärent</strong>, wenn sie dieselbe Frequenz und eine feste Phasenbeziehung besitzen. Nur kohärente Wellen erzeugen ein stabiles Interferenzmuster: <strong>Maxima</strong>, wo Wellenberg auf Wellenberg trifft, <strong>Minima</strong>, wo Berg auf Tal trifft. Beim Doppelspalt erreicht man Kohärenz, indem beide Spalte von derselben Welle beleuchtet werden — am einfachsten mit einem Laser.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ifz-doppelspalt">
+    <h2 id="ifz-doppelspalt">2. Der Doppelspalt</h2>
+    <p>Der Standardversuch: Ein Laser der Wellenlänge $\lambda$ beleuchtet einen Doppelspalt, dessen Spaltmitten den winzigen Abstand $g$ haben (typisch Zehntelmillimeter). Einige Meter dahinter steht ein Schirm. Nach Huygens wirken beide Spalte als Zentren neuer Elementarwellen — und weil sie von derselben Laserwelle gespeist werden, schwingen sie im Takt. An jedem Schirmpunkt überlagern sich also zwei kohärente Teilwellen; ob dort ein heller oder dunkler Streifen liegt, entscheidet allein der <strong>Gangunterschied</strong> $\Delta s$, der Wegunterschied der beiden Teilwellen.</p>
+    <p>Den Gangunterschied liefert die Geometrie. Weil der Schirm sehr weit entfernt ist ($e \gg g$), laufen die beiden Strahlen zu einem Schirmpunkt $P$ nahezu parallel unter demselben Winkel $\alpha$ zur Mittelachse. Fällt man vom oberen Spalt das Lot auf den unteren Strahl, entsteht ein rechtwinkliges Dreieck: Hypotenuse $g$, und der Winkel am oberen Spalt ist wieder $\alpha$. Der untere Strahl ist deshalb um die Gegenkathete länger:</p>
+    <p class="formel-abgesetzt">$$\Delta s = g \cdot \sin\alpha$$</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 640 400" width="640" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Skizze der Doppelspalt-Geometrie: Kohärentes Laserlicht trifft von links auf eine Wand mit zwei Spalten im Abstand g. Von beiden Spalten laufen parallele Strahlen unter dem Winkel Alpha zur Mittelachse zu einem weit entfernten Schirmpunkt P. Das Lot vom oberen Spalt auf den unteren Strahl bildet ein rechtwinkliges Dreieck mit Hypotenuse g; die Gegenkathete ist der Gangunterschied Delta s gleich g mal Sinus Alpha — um diese Strecke ist der Weg vom unteren Spalt länger.">
+        <defs>
+          <marker id="ifz-pf-licht" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--physik)"/></marker>
+          <marker id="ifz-pf-strahl" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--physik)"/></marker>
+          <marker id="ifz-pf-achse" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text-leise)"/></marker>
+        </defs>
+        <!-- einlaufendes Laserlicht -->
+        <text x="16" y="104" fill="var(--physik)" font-size="15">kohärentes Laserlicht</text>
+        <g stroke="var(--physik)" stroke-width="2" fill="none">
+          <line x1="16" y1="130" x2="64" y2="130" marker-end="url(#ifz-pf-licht)"/>
+          <line x1="16" y1="180" x2="64" y2="180" marker-end="url(#ifz-pf-licht)"/>
+          <line x1="16" y1="230" x2="64" y2="230" marker-end="url(#ifz-pf-licht)"/>
+        </g>
+        <!-- Wand mit zwei Spalten -->
+        <g stroke="var(--text)" stroke-width="5">
+          <line x1="120" y1="40" x2="120" y2="136"/>
+          <line x1="120" y1="152" x2="120" y2="208"/>
+          <line x1="120" y1="224" x2="120" y2="330"/>
+        </g>
+        <text x="120" y="352" fill="var(--text)" font-size="15" text-anchor="middle">Doppelspalt</text>
+        <!-- Masslinie g -->
+        <g stroke="var(--text)" stroke-width="1.5">
+          <line x1="92" y1="144" x2="92" y2="216"/>
+          <line x1="86" y1="144" x2="98" y2="144"/>
+          <line x1="86" y1="216" x2="98" y2="216"/>
+        </g>
+        <text x="78" y="186" fill="var(--text)" font-size="17" font-style="italic" text-anchor="middle">g</text>
+        <!-- Mittelachse und Richtung zu P -->
+        <line x1="120" y1="180" x2="600" y2="180" stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#ifz-pf-achse)"/>
+        <text x="598" y="170" fill="var(--text-leise)" font-size="14" text-anchor="end">Mittelachse (zum 0. Maximum)</text>
+        <line x1="120" y1="180" x2="400" y2="18" stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#ifz-pf-achse)"/>
+        <text x="408" y="24" fill="var(--text)" font-size="15">zum Maximum P</text>
+        <path d="M 180 180 A 60 60 0 0 0 172 150" fill="none" stroke="var(--text)" stroke-width="1.5"/>
+        <text x="190" y="166" fill="var(--text)" font-size="17" font-style="italic">α</text>
+        <!-- parallele Strahlen aus beiden Spalten -->
+        <g stroke="var(--physik)" stroke-width="2.5" fill="none">
+          <line x1="120" y1="144" x2="328" y2="24" marker-end="url(#ifz-pf-strahl)"/>
+          <line x1="120" y1="216" x2="354" y2="81" marker-end="url(#ifz-pf-strahl)"/>
+        </g>
+        <!-- Lot, rechter Winkel, Gangunterschied -->
+        <line x1="120" y1="144" x2="151.2" y2="198" stroke="var(--text)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <path d="M 159 193.5 L 154.5 185.7 L 146.7 190.2" fill="none" stroke="var(--text)" stroke-width="1.2"/>
+        <line x1="120" y1="216" x2="151.2" y2="198" stroke="var(--akzent)" stroke-width="5" stroke-linecap="round"/>
+        <text x="128" y="238" fill="var(--akzent)" font-size="16" font-style="italic">Δs</text>
+        <path d="M 120 174 A 30 30 0 0 0 135 170" fill="none" stroke="var(--text)" stroke-width="1.5"/>
+        <text x="133" y="192" fill="var(--text)" font-size="16" font-style="italic">α</text>
+        <!-- Bildunterschrift -->
+        <text x="320" y="388" fill="var(--text-leise)" font-size="14" text-anchor="middle">Schirm weit entfernt (e ≫ g): Strahlen fast parallel — der untere Weg ist um Δs = g · sin α länger.</text>
+      </svg>
+    </div>
+    <p>Damit stehen die Bedingungen für helle und dunkle Streifen fest. Verstärkung gibt es, wenn der Gangunterschied ein ganzes Vielfaches der Wellenlänge ist — dann trifft Berg auf Berg. Auslöschung gibt es bei halbzahligen Vielfachen — Berg trifft Tal:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Interferenz am Doppelspalt</span>
+      <p class="formel-abgesetzt">$$\text{Maxima:}\quad g \cdot \sin\alpha_k = k \cdot \lambda \qquad (k = 0,\,1,\,2,\,\dots)$$</p>
+      <p class="formel-abgesetzt">$$\text{Minima:}\quad g \cdot \sin\alpha_k = \left(k - \frac{1}{2}\right) \cdot \lambda \qquad (k = 1,\,2,\,\dots)$$</p>
+      <p>Dabei ist $g$ der Abstand der <em>Spaltmitten</em> und $k$ die <strong>Ordnung</strong>: In der Schirmmitte liegt das Maximum 0. Ordnung ($\Delta s = 0$), links und rechts folgen symmetrisch die Maxima 1., 2., … Ordnung.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: An einem Schirmpunkt beträgt der Gangunterschied der beiden Teilwellen genau 2,5 Wellenlängen. Ist dort ein heller oder ein dunkler Streifen?</summary>
+      <div class="check-antwort"><p>Ein dunkler. $\Delta s = 2{,}5\,\lambda$ ist ein halbzahliges Vielfaches: $\Delta s = \left(3 - \frac{1}{2}\right) \lambda$ — die Bedingung für das 3. Minimum. Die zweite Welle kommt um eine halbe Wellenlänge versetzt an (die 2 ganzen Wellenlängen spielen keine Rolle), Wellenberg trifft Wellental: Auslöschung. Helle Streifen gäbe es bei $\Delta s = 2\lambda$ oder $3\lambda$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ifz-schirmbild">
+    <h2 id="ifz-schirmbild">3. Vom Winkel zum Schirmbild</h2>
+    <p>Gemessen werden im Versuch keine Winkel, sondern Strecken auf dem Schirm: der Abstand $a_k$ des $k$-ten Maximums von der Schirmmitte und der Abstand $e$ zwischen Doppelspalt und Schirm. Beide hängen über ein großes rechtwinkliges Dreieck mit dem Beugungswinkel zusammen:</p>
+    <p class="formel-abgesetzt">$$\tan\alpha_k = \frac{a_k}{e}$$</p>
+    <p>Beim Doppelspalt sind die Winkel winzig: $\frac{\lambda}{g}$ liegt in der Größenordnung $10^{-3}$, also bleibt $\alpha$ deutlich unter $1^\circ$. Für so kleine Winkel sind Sinus und Tangens praktisch gleich — das macht die Auswertung bequem:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Kleinwinkelnäherung — der Standardweg</span>
+      <p class="formel-abgesetzt">$$\sin\alpha \approx \tan\alpha = \frac{a_k}{e} \quad \Rightarrow \quad \lambda = \frac{g \cdot a_k}{k \cdot e}$$</p>
+      <p>Die Maxima liegen dann <strong>äquidistant</strong> mit dem Streifenabstand $\Delta a = \frac{\lambda \cdot e}{g}$. <strong>Gültigkeit:</strong> Bis etwa $5^\circ$ unterscheiden sich $\sin\alpha$ und $\tan\alpha$ um weniger als $0{,}4\,\%$ — beim Doppelspalt ($\alpha < 1^\circ$) ist die Näherung also hervorragend. Beim optischen Gitter sind die Winkel dagegen groß: Dort stets exakt mit $\tan$ (Schirm) und $\sin$ (Maximabedingung) rechnen!</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Wellenlängenmessung am Doppelspalt</span>
+      <p>Ein Doppelspalt mit $g = 0{,}20\,\text{mm}$ steht $e = 1{,}50\,\text{m}$ vor dem Schirm. Gemessen wird vom 0. bis zum 4. Maximum die Strecke $a_4 = 19{,}5\,\text{mm}$ (über mehrere Streifen messen macht die Messung genauer). Kleinwinkelnäherung mit $k = 4$: $$\lambda = \frac{g \cdot a_4}{4 \cdot e} = \frac{2{,}0 \cdot 10^{-4}\,\text{m} \cdot 1{,}95 \cdot 10^{-2}\,\text{m}}{4 \cdot 1{,}50\,\text{m}} = 6{,}5 \cdot 10^{-7}\,\text{m} = 650\,\text{nm}$$ — rotes Laserlicht. Kontrolle der Näherung: $\tan\alpha_4 = \frac{19{,}5\,\text{mm}}{1500\,\text{mm}} = 0{,}013$, also $\alpha_4 \approx 0{,}74^\circ$ — der Unterschied zwischen $\sin$ und $\tan$ liegt unter $0{,}01\,\%$. Der Streifenabstand beträgt $\Delta a = \frac{\lambda e}{g} \approx 4{,}9\,\text{mm}$.</p>
+    </div>
+
+    <h3>Das Schirmbild selbst erzeugen</h3>
+    <p>In dieser Simulation stellst du Wellenlänge $\lambda$, Spaltabstand $g$, Schirmabstand $e$ und Spaltbreite $b$ selbst ein: Oben entsteht das Schirmbild, darunter die zugehörige Intensitätskurve. Die gestrichelte <em>Einhüllende</em> stammt von der Beugung am Einzelspalt (mehr dazu in Abschnitt 5) — sie regelt, wie hell die einzelnen Streifen ausfallen. Bearbeite dabei die Aufträge unter der Simulation.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/physik/doppelspalt/index.html?einbettung=1#lambda=633&g=0.25&e=1.5&b=0.05"
+        title="Interaktive Simulation: Interferenz am Doppelspalt — Schirmbild und Intensitätskurve" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/physik/doppelspalt/index.html#lambda=633&g=0.25&e=1.5&b=0.05" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Stelle das Messbeispiel von oben nach: $\lambda = 650\,\text{nm}$, $g = 0{,}20\,\text{mm}$, $e = 1{,}50\,\text{m}$. Vergleiche den angezeigten Streifenabstand mit den berechneten $\Delta a \approx 4{,}9\,\text{mm}$ — und rechne nach, dass das 4. Maximum damit wie gemessen bei $a_4 = 4 \cdot \Delta a = 19{,}5\,\text{mm}$ liegt.<br>
+      2. Ersetze nun den roten Laser durch einen blau-violetten ($\lambda = 405\,\text{nm}$) und verdopple den Schirmabstand auf $e = 3{,}0\,\text{m}$: Wird der Streifenabstand größer oder kleiner? Notiere beide $\Delta a$-Werte und vergleiche dein Ergebnis anschließend mit dem Verständnis-Check darunter.<br>
+      3. Zurück zu den Werten aus Auftrag 1 — sieh dir das Schirmbild genau an: Wegen $g = 4 \cdot b$ (Spaltbreite $b = 0{,}05\,\text{mm}$) fällt das 4. Maximum genau in das erste Minimum der gestrichelten Einhüllenden — der Streifen bei $19{,}5\,\text{mm}$ fehlt! Stelle dann $b = 0{,}04\,\text{mm}$ ein: Jetzt taucht er schwach wieder auf. Warum? (Die Erklärung liefert der Merkkasten zum Einzelspalt in Abschnitt 5.)</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Der rote Laser (650 nm) wird durch einen blau-violetten (405 nm) ersetzt, gleichzeitig wird der Schirmabstand verdoppelt. Wie ändert sich der Streifenabstand?</summary>
+      <div class="check-antwort"><p>Im Streifenabstand $\Delta a = \frac{\lambda \cdot e}{g}$ stecken beide Änderungen als Faktoren: Die kürzere Wellenlänge verkleinert ihn auf $\frac{405}{650} \approx 0{,}62$, der doppelte Schirmabstand verdoppelt ihn. Insgesamt: $\Delta a_\text{neu} = 0{,}62 \cdot 2 \cdot \Delta a \approx 1{,}25 \cdot \Delta a$ — die Streifen rücken also leicht auseinander. Merke die Richtungen: kurzwelliges Licht → engere Streifen, größerer Schirmabstand → weitere Streifen.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ifz-gitter">
+    <h2 id="ifz-gitter">4. Das optische Gitter</h2>
+    <p>Ersetzt man den Doppelspalt durch ein <strong>optisches Gitter</strong> — eine Glasplatte mit hunderten feinster paralleler Spalte pro Millimeter —, ändert sich an der Lage der Maxima nichts: Verstärkung gibt es genau dort, wo <em>benachbarte</em> Spalte den Gangunterschied $k \cdot \lambda$ haben, also wieder bei $g \cdot \sin\alpha_k = k \cdot \lambda$. Dabei ist $g$ jetzt die <strong>Gitterkonstante</strong>, der Abstand benachbarter Spalte. Neu ist die Qualität des Bildes: Statt breiter, weicher Streifen liefern die vielen Spalte gestochen scharfe, helle Maxima, zwischen denen es praktisch dunkel bleibt (warum, klärt die Vertiefung unten). Scharfe Maxima bedeuten präzise messbare Winkel — das Gitter ist deshalb <em>das</em> Messinstrument für Wellenlängen.</p>
+    <p>Auf Gittern ist meist die <strong>Strichzahl</strong> angegeben, etwa „600 Striche pro mm“. Die Gitterkonstante ist ihr Kehrwert:</p>
+    <p class="formel-abgesetzt">$$g = \frac{1}{\text{Strichzahl pro Länge}} = \frac{1}{600\,\text{mm}^{-1}} = \frac{1\,\text{mm}}{600} \approx 1{,}67\,\mu\text{m} = 1670\,\text{nm}$$</p>
+    <p>(Zur Erinnerung: $1\,\text{mm} = 10^3\,\mu\text{m} = 10^6\,\text{nm}$ — bei Interferenzaufgaben lohnt es sich, alle Längen sauber in Nanometer oder Meter umzurechnen.)</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Wellenlängenmessung am Gitter</span>
+      <p>Ein Helium-Neon-Laser beleuchtet ein Gitter mit 600 Strichen pro mm ($g \approx 1{,}667\,\mu\text{m}$); der Schirm steht $e = 1{,}00\,\text{m}$ entfernt. Gemessen: Das Maximum 1. Ordnung liegt $a_1 = 41{,}0\,\text{cm}$ neben der Schirmmitte. Auswertung — exakt, denn der Winkel ist groß: $$\tan\alpha_1 = \frac{0{,}410\,\text{m}}{1{,}00\,\text{m}} = 0{,}410 \;\Rightarrow\; \alpha_1 \approx 22{,}3^\circ \;\Rightarrow\; \sin\alpha_1 \approx 0{,}3794$$ $$\lambda = g \cdot \sin\alpha_1 = 1{,}667\,\mu\text{m} \cdot 0{,}3794 \approx 6{,}32 \cdot 10^{-7}\,\text{m} = 632\,\text{nm}$$ — auf etwa ein Nanometer genau am Literaturwert $632{,}8\,\text{nm}$. Wer hier verbotenerweise die Kleinwinkelnäherung benutzt ($\lambda \approx g \cdot \frac{a_1}{e}$), erhält $683\,\text{nm}$ — gut $8\,\%$ daneben! Das Maximum 2. Ordnung folgt aus $\sin\alpha_2 = \frac{2\lambda}{g} = 0{,}759$ bei $\alpha_2 \approx 49{,}4^\circ$ (auf dem Schirm schon $1{,}17\,\text{m}$ außen); eine 3. Ordnung gibt es nicht, denn $\frac{3\lambda}{g} = 1{,}14 > 1$ — kein Winkel hat einen solchen Sinus.</p>
+    </div>
+    <p>Richtig interessant wird das Gitter mit <strong>weißem Licht</strong>: Es enthält alle Wellenlängen von etwa $400\,\text{nm}$ (Violett) bis $750\,\text{nm}$ (Rot), und jede hat ihre eigenen Maxima-Winkel. Nur in der 0. Ordnung ($\Delta s = 0$ für alle Farben) bleibt das Licht weiß; in jeder höheren Ordnung fächert es zu einem vollständigen <strong>Spektrum</strong> auf — Violett innen, Rot außen:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 640 240" width="640" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Schirmbild bei weißem Licht hinter einem optischen Gitter: In der Mitte ein schmaler weißer Streifen nullter Ordnung. Symmetrisch links und rechts davon je ein Spektrum erster und zweiter Ordnung, jeweils mit Violett innen und Rot außen. Die Spektren zweiter Ordnung liegen weiter außen und sind doppelt so breit gespreizt wie die der ersten Ordnung.">
+        <text x="320" y="20" fill="var(--text)" font-size="15" text-anchor="middle">Schirmbild: weißes Licht hinter einem optischen Gitter (schematisch)</text>
+        <text x="100" y="56" fill="var(--text)" font-size="13" text-anchor="middle">2. Ordnung</text>
+        <text x="210" y="56" fill="var(--text)" font-size="13" text-anchor="middle">1. Ordnung</text>
+        <text x="320" y="56" fill="var(--text)" font-size="13" text-anchor="middle">0.</text>
+        <text x="430" y="56" fill="var(--text)" font-size="13" text-anchor="middle">1. Ordnung</text>
+        <text x="540" y="56" fill="var(--text)" font-size="13" text-anchor="middle">2. Ordnung</text>
+        <rect x="20" y="66" width="600" height="60" rx="4" fill="none" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <!-- 2. Ordnung links (Rot aussen bis Violett innen) -->
+        <g>
+          <rect x="40" y="70" width="20" height="52" fill="#ef4444"/><rect x="60" y="70" width="20" height="52" fill="#f97316"/><rect x="80" y="70" width="20" height="52" fill="#eab308"/><rect x="100" y="70" width="20" height="52" fill="#22c55e"/><rect x="120" y="70" width="20" height="52" fill="#3b82f6"/><rect x="140" y="70" width="20" height="52" fill="#8b5cf6"/>
+        </g>
+        <!-- 1. Ordnung links -->
+        <g>
+          <rect x="180" y="70" width="10" height="52" fill="#ef4444"/><rect x="190" y="70" width="10" height="52" fill="#f97316"/><rect x="200" y="70" width="10" height="52" fill="#eab308"/><rect x="210" y="70" width="10" height="52" fill="#22c55e"/><rect x="220" y="70" width="10" height="52" fill="#3b82f6"/><rect x="230" y="70" width="10" height="52" fill="#8b5cf6"/>
+        </g>
+        <!-- 0. Ordnung: weiss -->
+        <rect x="314" y="70" width="12" height="52" fill="#ffffff" stroke="var(--text)" stroke-width="1"/>
+        <!-- 1. Ordnung rechts (Violett innen bis Rot aussen) -->
+        <g>
+          <rect x="400" y="70" width="10" height="52" fill="#8b5cf6"/><rect x="410" y="70" width="10" height="52" fill="#3b82f6"/><rect x="420" y="70" width="10" height="52" fill="#22c55e"/><rect x="430" y="70" width="10" height="52" fill="#eab308"/><rect x="440" y="70" width="10" height="52" fill="#f97316"/><rect x="450" y="70" width="10" height="52" fill="#ef4444"/>
+        </g>
+        <!-- 2. Ordnung rechts -->
+        <g>
+          <rect x="480" y="70" width="20" height="52" fill="#8b5cf6"/><rect x="500" y="70" width="20" height="52" fill="#3b82f6"/><rect x="520" y="70" width="20" height="52" fill="#22c55e"/><rect x="540" y="70" width="20" height="52" fill="#eab308"/><rect x="560" y="70" width="20" height="52" fill="#f97316"/><rect x="580" y="70" width="20" height="52" fill="#ef4444"/>
+        </g>
+        <text x="320" y="142" fill="var(--text)" font-size="12" text-anchor="middle">weiß</text>
+        <text x="430" y="142" fill="var(--text-leise)" font-size="12" text-anchor="middle">violett innen … rot außen</text>
+        <text x="540" y="142" fill="var(--text-leise)" font-size="12" text-anchor="middle">doppelt so breit</text>
+        <text x="320" y="176" fill="var(--text-leise)" font-size="14" text-anchor="middle">Jede Wellenlänge hat ihren eigenen Beugungswinkel: Rot (großes λ) liegt außen, Violett innen.</text>
+        <text x="320" y="196" fill="var(--text-leise)" font-size="14" text-anchor="middle">Nur die 0. Ordnung bleibt weiß — dort ist der Gangunterschied für alle Farben null.</text>
+      </svg>
+    </div>
+    <p>Auch ein <strong>Prisma</strong> zerlegt weißes Licht — aber nach einem anderen Mechanismus: Dort sorgt die Dispersion der Brechung dafür, dass <em>Violett</em> am stärksten abgelenkt wird, die Farbreihenfolge ist also genau umgekehrt. Und während die Ablenkwinkel des Prismas vom Glasmaterial abhängen, folgen die des Gitters direkt aus der Geometrie: Aus dem Winkel lässt sich die Wellenlänge unmittelbar berechnen. Gitterspektrometer verraten so zum Beispiel, aus welchen Elementen Sterne bestehen — jedes Element hinterlässt sein eigenes Linienmuster im Spektrum.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Warum lässt sich mit dem 600er-Gitter beim He-Ne-Laser (632,8 nm) zwar das Maximum 2. Ordnung beobachten, aber keines 3. Ordnung?</summary>
+      <div class="check-antwort"><p>Die Maximabedingung verlangt $\sin\alpha_k = \frac{k \cdot \lambda}{g}$ — und ein Sinus kann höchstens 1 werden. Mit $g = 1667\,\text{nm}$ gilt $\frac{g}{\lambda} = \frac{1667}{632{,}8} \approx 2{,}63$: Für $k = 2$ ist $\sin\alpha_2 = 0{,}759$ (möglich, $\alpha_2 \approx 49^\circ$), für $k = 3$ müsste $\sin\alpha_3 = 1{,}14$ sein — unmöglich. Die höchste beobachtbare Ordnung ist die Abrundung von $\frac{g}{\lambda}$, hier $k_\text{max} = 2$. Insgesamt sieht man also 5 Maxima: das nullte und je zweimal die 1. und 2. Ordnung.</p></div>
+    </details>
+  <p>Als Praktikum: Im Experiment <a href="../../../experimente/physik/gitter/index.html">Wellenlängenmessung am Gitter</a> misst du die Maxima links und rechts selbst aus — bis zum unbekannten Laser X.</p>
+  </section>
+
+  <section aria-labelledby="ifz-ueberall">
+    <h2 id="ifz-ueberall">5. Interferenz überall</h2>
+    <p><strong>Dünne Schichten.</strong> Die Farben einer Seifenblase oder eines Ölfilms auf nasser Straße entstehen ganz ohne Spalte: Licht wird sowohl an der Oberseite als auch an der Unterseite der hauchdünnen Haut reflektiert. Die beiden reflektierten Teilwellen haben einen Gangunterschied, der von der Schichtdicke und vom Blickwinkel abhängt — für manche Wellenlängen ist er gerade „passend“ für Verstärkung, für andere für Auslöschung. Aus dem weißen Tageslicht wird so an jeder Stelle eine andere Farbe herausgefiltert. Weil die Seifenhaut ständig ihre Dicke ändert, wandern und wabern die Farben. (Die vollständige Rechnung berücksichtigt zusätzlich Phasensprünge bei der Reflexion — das Prinzip bleibt: Interferenz zweier Teilwellen.)</p>
+    <p><strong>Entspiegelung.</strong> Bei Brillengläsern, Kameraobjektiven und Solarzellen will man das Gegenteil: Reflexe loswerden. Dazu wird eine dünne Schicht aufgedampft, deren Dicke so gewählt ist (etwa eine Viertelwellenlänge), dass sich die an Ober- und Unterseite reflektierten Teilwellen gegenseitig auslöschen. Was nicht reflektiert wird, tritt hindurch — die Optik wird lichtstärker. Perfekt klappt die Auslöschung nur für mittlere (grüne) Wellenlängen; der schwache Restreflex schimmert deshalb oft violett-grünlich.</p>
+    <p><strong>CD und DVD.</strong> Die Datenspuren einer CD liegen im Abstand von $1{,}6\,\mu\text{m}$ — die Scheibe wirkt wie ein <strong>Reflexionsgitter</strong>: Auftreffendes Licht wird an den regelmäßigen Spuren in die Gitter-Maxima reflektiert, und weil jede Wellenlänge ihre eigenen Winkel hat, schillert die Scheibe bunt. Eine DVD speichert dichter ($g = 0{,}74\,\mu\text{m}$) und spreizt die Farben deshalb stärker — der direkte Blick aufs Speicherprinzip, ganz ohne Labor.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Beugung am Einzelspalt (eA)</span>
+      <p>Auch ein <em>einzelner</em> Spalt der Breite $b$ erzeugt ein Beugungsmuster: ein breites, helles zentrales Maximum, flankiert von dunklen Stellen und schwachen Nebenmaxima. Die <strong>Minima</strong> liegen bei</p>
+      <p class="formel-abgesetzt">$$b \cdot \sin\alpha_k = k \cdot \lambda \qquad (k = 1,\,2,\,\dots)$$</p>
+      <p>Achtung, beliebte Verwechslung: Beim Einzelspalt beschreiben die <em>ganzzahligen</em> Vielfachen die <em>Minima</em> — nicht die Maxima wie beim Gitter! Das zentrale Maximum ist doppelt so breit wie die Nebenmaxima, und je schmaler der Spalt, desto breiter wird das Muster. Im realen Doppelspaltbild ist die Einzelspaltbeugung übrigens immer mit dabei: Sie bestimmt als „Einhüllende“, wie hell die einzelnen Doppelspaltstreifen ausfallen.</p>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Warum das Gitter so scharfe Maxima liefert</summary>
+    <div class="vertiefung-inhalt">
+      <p>Im <strong>Zeigermodell</strong> wird jede Teilwelle durch einen rotierenden Zeiger dargestellt; die Helligkeit an einem Schirmpunkt ergibt sich aus der Länge des Summenzeigers aller Teilwellen. In Richtung eines Hauptmaximums haben benachbarte Spalte den Gangunterschied $k \cdot \lambda$ — alle $N$ Zeiger zeigen in dieselbe Richtung, der Summenzeiger ist $N$-mal so lang wie ein einzelner, die Intensität wächst sogar mit $N^2$. Deshalb sind die Gittermaxima so hell.</p>
+      <p>Entscheidend ist, was <em>knapp neben</em> dieser Richtung passiert. Beim Doppelspalt stehen nur zwei Zeiger zur Verfügung: Sie löschen sich erst aus, wenn ihr Gangunterschied auf $\frac{\lambda}{2}$ angewachsen ist — dazwischen nimmt die Helligkeit nur allmählich ab, die Streifen sind breit und weich. Beim Gitter mit $N$ Spalten verdrehen sich die $N$ Zeiger schon bei winziger Winkelabweichung gleichmäßig gegeneinander; sobald sich der Gangunterschied zwischen Nachbarspalten nur um $\frac{\lambda}{N}$ vom Maximumswert unterscheidet, verteilen sich die Zeigerrichtungen gleichmäßig über den vollen Kreis: Die Zeigerkette schließt sich zu einem Polygon, der Summenzeiger ist null — Dunkelheit. Die erste Auslöschung liegt also nicht erst bei $\frac{\lambda}{2}$, sondern schon bei $\frac{\lambda}{N}$ Abweichung.</p>
+      <p>Ein typisches Gitter mit 600 Strichen pro mm, von dem ein Laserfleck etwa 5 mm beleuchtet, hat $N \approx 3000$ wirksame Spalte: Seine Maxima sind tausendfach schmaler als Doppelspaltstreifen — haarfeine, helle Linien auf dunklem Grund. Je mehr Striche beleuchtet werden, desto schärfer die Linien und desto besser trennt das Gitter eng benachbarte Wellenlängen (siehe Zusatzaufgabe zur Natrium-Doppellinie in den Übungen).</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen — vom Gangunterschied über Doppelspalt- und Gittermessungen bis zu Einzelspalt und Natrium-Doppellinie.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

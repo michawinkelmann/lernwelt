@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daten und Codierung — Klasse 9 · Informatik — Lernwelt</title>
+<meta name="description" content="Binärsystem, Bits und Bytes, Speichergrößen und Zeichencodierung (ASCII) — mit Verständnis-Checks und Binär-Trainer in den Übungen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="informatik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln und interaktive Elemente. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Daten und Codierung</h1>
+  <p class="einleitung">Ein Foto, ein Song, diese Webseite — im Speicher deines Handys ist alles davon nur eine lange Folge aus Nullen und Einsen. Wie kann das funktionieren? Hier lernst du die Sprache der Computer kennen: <strong>Bits</strong>, das <strong>Binärsystem</strong> und die Frage, wie aus Zahlen am Ende Texte und ganze Dateien werden.</p>
+
+  <section aria-labelledby="dc-bit">
+    <h2 id="dc-bit">1. Alles ist 0 und 1</h2>
+    <p>Computer speichern und verarbeiten alles mit Bauteilen, die nur <strong>zwei Zustände</strong> kennen: Strom an oder Strom aus, geladen oder ungeladen, hohe oder niedrige Spannung. Warum ausgerechnet zwei? Weil sich zwei deutlich getrennte Zustände auch dann noch <strong>zuverlässig unterscheiden</strong> lassen, wenn das Signal etwas schwankt oder gestört wird. Müsste eine Leitung dagegen zehn verschiedene Spannungsstufen für die Ziffern 0 bis 9 auseinanderhalten, würden schon kleine Störungen zu Verwechslungen führen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p>Die kleinste Informationseinheit heißt <strong>Bit</strong> (von englisch <em>binary digit</em>, „Binärziffer“). Ein Bit kann genau zwei Werte annehmen: <strong>0 oder 1</strong>. Alles, was ein Computer speichert, besteht aus Bits.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="dc-binaer">
+    <h2 id="dc-binaer">2. Das Binärsystem: Zahlen aus Nullen und Einsen</h2>
+    <p>Mit einem einzelnen Bit lassen sich nur zwei Werte unterscheiden — für größere Zahlen kombiniert man mehrere Bits zu einer <strong>Binärzahl</strong>. Das funktioniert wie im vertrauten Dezimalsystem, nur dass jede Stelle nicht das Zehnfache, sondern das <strong>Doppelte</strong> der vorigen wert ist. Die Stellenwerte lauten von rechts nach links: $1, 2, 4, 8, 16, 32, \dots$</p>
+    <p>Um eine Binärzahl zu lesen, addierst du einfach die Stellenwerte aller Stellen, an denen eine 1 steht. Beispiel $101101_2$ — die Stellenwerte sind (von links) 32, 16, 8, 4, 2, 1:</p>
+    <p class="formel-abgesetzt">$$101101_2 = 1 \cdot 32 + 0 \cdot 16 + 1 \cdot 8 + 1 \cdot 4 + 0 \cdot 2 + 1 \cdot 1 = 32 + 8 + 4 + 1 = 45$$</p>
+    <p>Die tiefgestellte 2 zeigt an, dass die Ziffernfolge als Binärzahl gemeint ist: $101_2$ ist die Zahl Fünf — nicht hundertundeins.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Welchen Dezimalwert hat $1010_2$?</summary>
+      <div class="check-antwort"><p>Die Stellenwerte sind 8, 4, 2, 1 — Einsen stehen bei der 8 und bei der 2: $1010_2 = 8 + 2 = 10$.</p></div>
+    </details>
+
+    <h3>Probiere es selbst aus</h3>
+    <p>Acht Schalter für ein Byte: Schiebe einen Regler nach rechts, um das Bit auf 1 zu setzen — Dezimalwert und Summenformel reagieren sofort. Bearbeite dabei die Aufträge unter der Simulation.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/informatik/binaer-trainer/index.html?einbettung=1#b7=0&b6=0&b5=0&b4=0&b3=1&b2=0&b1=1&b0=1"
+        title="Interaktiver Binär-Trainer: 8 Bit" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/informatik/binaer-trainer/index.html#b7=0&b6=0&b5=0&b4=0&b3=1&b2=0&b1=1&b0=1" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Beim Start zeigt der Trainer $00001011_2 = 11$. Stelle nun die Zahl $100$ ein — welche Bits brauchst du?<br>
+      2. Welche ist die größte einstellbare Zahl? Triff zuerst eine Vorhersage, prüfe sie dann mit allen acht Schaltern.<br>
+      3. Schalte nacheinander immer genau ein einzelnes Bit an (Bit 0, Bit 1, …, Bit 7): Welche Zahlenfolge entsteht?</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="dc-umwandeln">
+    <h2 id="dc-umwandeln">3. Von dezimal nach binär: fortgesetztes Halbieren</h2>
+    <p>Für den Rückweg gibt es ein einfaches Rezept: Teile die Dezimalzahl immer wieder durch 2 und <strong>notiere jedes Mal den Rest</strong> (0 oder 1), bis das Ergebnis 0 ist. Die Reste — <strong>von unten nach oben</strong> gelesen — ergeben die Binärzahl.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: 19 ins Binärsystem umwandeln</span>
+      <p>$19 : 2 = 9$ Rest $1$<br>
+      $9 : 2 = 4$ Rest $1$<br>
+      $4 : 2 = 2$ Rest $0$<br>
+      $2 : 2 = 1$ Rest $0$<br>
+      $1 : 2 = 0$ Rest $1$<br>
+      Reste von unten nach oben gelesen: $19 = 10011_2$. Probe: $16 + 2 + 1 = 19$ ✓</p>
+    </div>
+    <p>Warum funktioniert das? Der erste Rest verrät, ob die Zahl gerade oder ungerade ist — das ist genau die letzte Binärziffer. Jede weitere Division liefert die nächste Stelle davor.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Wandle 13 ins Binärsystem um.</summary>
+      <div class="check-antwort"><p>$13:2=6$ R $1$; $6:2=3$ R $0$; $3:2=1$ R $1$; $1:2=0$ R $1$. Von unten nach oben: $13 = 1101_2$. Probe: $8 + 4 + 1 = 13$ ✓</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="dc-byte">
+    <h2 id="dc-byte">4. Bits, Bytes und Speichergrößen</h2>
+    <p>Einzelne Bits sind unhandlich — deshalb fasst man je <strong>8 Bit zu einem Byte</strong> zusammen. Ein Byte kann $2^8 = 256$ verschiedene Werte darstellen, denn jede der acht Stellen verdoppelt die Zahl der Möglichkeiten: $2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 2^8$. Als Binärzahl gelesen reicht ein Byte also von 0 bis 255.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die Speicher-Treppe (jede Stufe mal 1000)</span>
+      <p>8 Bit = 1 Byte<br>
+      1 KB (Kilobyte) = 1000 Byte<br>
+      1 MB (Megabyte) = 1000 KB = 1 Million Byte<br>
+      1 GB (Gigabyte) = 1000 MB = 1 Milliarde Byte<br>
+      1 TB (Terabyte) = 1000 GB</p>
+    </div>
+    <p>Damit kannst du Speichergrößen einschätzen: Eine Textnachricht braucht ein paar hundert Byte, ein Foto einige MB, ein Spielfilm mehrere GB. (Manchmal begegnet dir auch eine Rechnung mit dem Faktor $1024 = 2^{10}$ — wir bleiben hier, wie die Speicherkarten-Hersteller, bei glatten Tausendern.)</p>
+  </section>
+
+  <section aria-labelledby="dc-ascii">
+    <h2 id="dc-ascii">5. Zeichen codieren: aus Buchstaben werden Zahlen</h2>
+    <p>Und was ist mit Texten? Die Idee ist verblüffend einfach: Man gibt <strong>jedem Zeichen eine feste Nummer</strong>. Genau das macht der <strong>ASCII-Code</strong> seit den 1960er-Jahren: 'A' hat die Nummer 65, 'B' die 66, 'C' die 67 und so weiter; auch Kleinbuchstaben, Ziffern, Satzzeichen und das Leerzeichen haben feste Nummern.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: „AB“ im Speicher</span>
+      <p>'A' hat den Code $65$, 'B' den Code $66$. Als volle Bytes geschrieben: $65 = 01000001_2$ und $66 = 01000010_2$. Im Speicher steht für „AB“ also die Bitfolge $01000001\,01000010$ — zwei Byte, sechzehn Bit.</p>
+    </div>
+    <p>So schließt sich der Kreis: <strong>Text wird zur Zahlenfolge, jede Zahl zur Bitfolge.</strong> Jede Datei — ob Text, Bild oder Musik — ist am Ende eine lange Kette aus Nullen und Einsen; erst die Codierung legt fest, wie sie zu deuten ist. (Für Umlaute und Emoji reichen die 128 ASCII-Zeichen übrigens nicht — moderne Systeme nutzen den Nachfolger Unicode, der ASCII als Kern enthält.)</p>
+    <details class="check">
+      <summary>Verständnis-Check: Wie viel Speicherplatz belegt das Wort „HALLO“ als ASCII-Text?</summary>
+      <div class="check-antwort"><p>„HALLO“ hat 5 Zeichen, jedes Zeichen belegt 1 Byte: zusammen <strong>5 Byte</strong>, also $5 \cdot 8 = 40$ Bit.</p></div>
+    </details>
+  <p>Was passiert, wenn beim Übertragen ein Bit kippt? Im Experiment <a href="../../../experimente/informatik/paritaet/index.html">Paritätsbit und Fehlererkennung</a> verfolgst du gestörte Übertragungen und prüfst, welche Fehler auffliegen.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Hexadezimal — Bytes kompakt schreiben</summary>
+    <div class="vertiefung-inhalt">
+      <p>Lange Bitfolgen sind mühsam zu lesen. Profis nutzen deshalb das <strong>Hexadezimalsystem</strong> mit der Basis 16: Es hat die Ziffern 0–9 und zusätzlich die Buchstaben A–F für die Werte 10 bis 15. Eine Hex-Ziffer steht für genau 4 Bit — ein Byte lässt sich daher immer mit <strong>genau zwei Hex-Ziffern</strong> schreiben, von $00_{16} = 0$ bis $FF_{16} = 15 \cdot 16 + 15 = 255$.</p>
+      <p>Hexadezimal begegnet dir öfter, als du denkst: Web-Farbcodes wie <code>#ff0000</code> bestehen aus drei Byte-Paaren für Rot, Grün und Blau. <code>#ff0000</code> bedeutet „Rot voll aufgedreht (255), Grün 0, Blau 0“ — ein reines Rot.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen — inklusive Binär-Trainer, der dir immer wieder neue Umwandlungsaufgaben würfelt.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

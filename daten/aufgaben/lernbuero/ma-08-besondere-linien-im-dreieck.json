@@ -1,0 +1,324 @@
+{
+  "thema": "ma-08-besondere-linien-im-dreieck",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben fuer Block 5 (Besondere Linien im Dreieck). Fachliche Pruefung ausstehend.",
+  "aufgaben": [
+    {
+      "id": "ma-08-bl-101",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Punkt $P$ liegt auf der Mittelsenkrechten der Strecke $AB$. Welche Aussagen sind korrekt?",
+      "optionen": [
+        {
+          "text": "$P$ ist gleich weit von $A$ und $B$ entfernt.",
+          "richtig": true,
+          "erklaerung": "Das ist die Grundeigenschaft der Mittelsenkrechten."
+        },
+        {
+          "text": "$P$ ist genau der Mittelpunkt von $AB$.",
+          "richtig": false,
+          "erklaerung": "Der Mittelpunkt ist nur ein einziger Punkt auf der Mittelsenkrechten."
+        },
+        {
+          "text": "Alle Punkte auf der Mittelsenkrechten bilden den geometrischen Ort aller Punkte mit $|PA| = |PB|$.",
+          "richtig": true,
+          "erklaerung": "Genau diese Eigenschaft definiert die Mittelsenkrechte."
+        },
+        {
+          "text": "Die Mittelsenkrechte halbiert den Winkel $\\angle APB$.",
+          "richtig": false,
+          "erklaerung": "Den Winkel halbiert die Winkelhalbierende, nicht die Mittelsenkrechte."
+        }
+      ],
+      "tipps": [
+        "Ueberlege: Was bedeutet 'gleich weit von zwei Punkten entfernt'?",
+        "Zeichne die Mittelsenkrechte und waehle mehrere Punkte auf ihr. Miss die Abstaende.",
+        "Die Mittelsenkrechte steht senkrecht auf $AB$ -- sie enthaelt unendlich viele Punkte, nicht nur den Mittelpunkt."
+      ],
+      "loesungsweg": "Die Mittelsenkrechten-Eigenschaft: $|PA| = |PB|$ fuer alle Punkte $P$ auf ihr. Der Mittelpunkt ist nur ein spezieller Punkt. Den Winkel halbiert die Winkelhalbierende.",
+      "kc": [
+        "KC Mathematik Gym Sek I (2015): Entdeckungen an Dreiecken, besondere Linien (7/8)"
+      ]
+    },
+    {
+      "id": "ma-08-bl-102",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Dreieck $ABC$ hat die Ecken $A(0\\,|\\,0)$, $B(6\\,|\\,0)$, $C(3\\,|\\,4)$. Berechne den Umkreisradius $r$ mit der Formel $r = \\frac{a \\cdot b \\cdot c}{4 \\cdot A_{\\triangle}}$.",
+      "eingaben": [
+        {
+          "label": "Umkreisradius $r$",
+          "antwort": 3.125,
+          "toleranz": 0.01,
+          "einheit": "cm"
+        }
+      ],
+      "tipps": [
+        "Berechne die drei Seitenlaengen: $a = |BC|$, $b = |CA|$, $c = |AB|$.",
+        "$a = \\sqrt{(3-6)^2 + (4-0)^2} = 5$; $b = \\sqrt{(0-3)^2 + (0-4)^2} = 5$; $c = 6$.",
+        "Flaeche $A_{\\triangle} = \\frac{6 \\cdot 4}{2} = 12$. Daher $r = \\frac{5 \\cdot 5 \\cdot 6}{4 \\cdot 12} = \\frac{150}{48} = 3{,}125$."
+      ],
+      "loesungsweg": "$a = 5$, $b = 5$, $c = 6$. $A_{\\triangle} = 12\\,\\text{cm}^2$. $r = \\frac{5 \\cdot 5 \\cdot 6}{4 \\cdot 12} = \\frac{150}{48} = 3{,}125\\,\\text{cm}$.",
+      "kc": [
+        "KC Mathematik Gym Sek I (2015): Entdeckungen an Dreiecken, besondere Linien (7/8)"
+      ]
+    },
+    {
+      "id": "ma-08-bl-103",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ergaenze die Aussagen ueber Winkelhalbierende und Inkreis.",
+      "text": "Die drei Winkelhalbierenden eines Dreiecks schneiden sich im ___, der gleich weit von allen drei ___ entfernt ist. Der Inkreis ___ alle drei Seiten von innen. Der Inkreismittelpunkt liegt immer ___ des Dreiecks.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Inkreismittelpunkt",
+          "optionen": [
+            "Umkreismittelpunkt",
+            "Inkreismittelpunkt",
+            "Schwerpunkt",
+            "Hoehenschnittpunkt"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Seiten",
+          "optionen": [
+            "Ecken",
+            "Seiten",
+            "Winkeln",
+            "Mittelsenkrechten"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "beruehrt",
+          "optionen": [
+            "schneidet",
+            "beruehrt",
+            "halbiert",
+            "verlaengert"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "innerhalb",
+          "optionen": [
+            "innerhalb",
+            "ausserhalb",
+            "auf einer Seite",
+            "auf dem Umkreis"
+          ]
+        }
+      ],
+      "tipps": [
+        "Der Inkreismittelpunkt liegt dort, wo sich alle Winkelhalbierenden treffen.",
+        "Der Inkreis hat genau einen Beruehrpunkt pro Seite -- er beruehrt, schneidet nicht.",
+        "Im Gegensatz zum Umkreismittelpunkt liegt der Inkreismittelpunkt immer innerhalb."
+      ],
+      "loesungsweg": "Inkreismittelpunkt, Seiten, beruehrt, innerhalb.",
+      "kc": [
+        "KC Mathematik Gym Sek I (2015): Entdeckungen an Dreiecken, besondere Linien (7/8)"
+      ]
+    },
+    {
+      "id": "ma-08-bl-104",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Dreieck hat die Ecken $A(0\\,|\\,0)$, $B(9\\,|\\,0)$, $C(3\\,|\\,6)$. Berechne die Koordinaten des Schwerpunkts $S$.",
+      "eingaben": [
+        {
+          "label": "$x_S$",
+          "antwort": 4.0,
+          "toleranz": 0.05,
+          "einheit": ""
+        },
+        {
+          "label": "$y_S$",
+          "antwort": 2.0,
+          "toleranz": 0.05,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Schwerpunktformel: $x_S = \\frac{x_A + x_B + x_C}{3}$ und $y_S = \\frac{y_A + y_B + y_C}{3}$.",
+        "$x_S = \\frac{0 + 9 + 3}{3} = \\frac{12}{3} = 4$.",
+        "$y_S = \\frac{0 + 0 + 6}{3} = \\frac{6}{3} = 2$. Schwerpunkt: $S(4\\,|\\,2)$."
+      ],
+      "loesungsweg": "$x_S = \\frac{0+9+3}{3} = 4$, $y_S = \\frac{0+0+6}{3} = 2$. Schwerpunkt $S(4\\,|\\,2)$.",
+      "kc": [
+        "KC Mathematik Gym Sek I (2015): Entdeckungen an Dreiecken, besondere Linien (7/8)"
+      ]
+    },
+    {
+      "id": "ma-08-bl-105",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ordne jede besondere Linie ihrem Schnittpunkt zu.",
+      "paare": [
+        {
+          "links": "Mittelsenkrechten",
+          "rechts": "Umkreismittelpunkt $M$"
+        },
+        {
+          "links": "Winkelhalbierende",
+          "rechts": "Inkreismittelpunkt $W$"
+        },
+        {
+          "links": "Seitenhalbierende",
+          "rechts": "Schwerpunkt $S$"
+        },
+        {
+          "links": "Hoehenlinien",
+          "rechts": "Hoehenschnittpunkt $H$"
+        }
+      ],
+      "tipps": [
+        "Es gibt vier besondere Linien und vier Schnittpunkte -- jede Linie hat ihren eigenen.",
+        "Merkhilfe: Mittelsenkrechten mit Umkreis (gleiche Abstaende zu Ecken), Winkelhalbierende mit Inkreis (gleiche Abstaende zu Seiten).",
+        "Seitenhalbierende treffen sich im Schwerpunkt, Hoehenlinien im Hoehenschnittpunkt."
+      ],
+      "loesungsweg": "Mittelsenkrechten -- Umkreismittelpunkt; Winkelhalbierende -- Inkreismittelpunkt; Seitenhalbierende -- Schwerpunkt; Hoehenlinien -- Hoehenschnittpunkt.",
+      "kc": [
+        "KC Mathematik Gym Sek I (2015): Entdeckungen an Dreiecken, besondere Linien (7/8)"
+      ]
+    },
+    {
+      "id": "ma-08-bl-106",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen ueber den Hoehenschnittpunkt $H$ sind korrekt?",
+      "optionen": [
+        {
+          "text": "Beim spitzwinkligen Dreieck liegt $H$ innerhalb.",
+          "richtig": true,
+          "erklaerung": "Alle Hoehenlinien treffen sich im Inneren."
+        },
+        {
+          "text": "Beim rechtwinkligen Dreieck liegt $H$ auf dem Umkreis.",
+          "richtig": false,
+          "erklaerung": "$H$ faellt auf die rechte Ecke, nicht auf den Umkreis."
+        },
+        {
+          "text": "Beim rechtwinkligen Dreieck faellt $H$ auf die Ecke mit dem rechten Winkel.",
+          "richtig": true,
+          "erklaerung": "Die Katheten sind selbst Hoehenlinien."
+        },
+        {
+          "text": "Beim stumpfwinkligen Dreieck liegt $H$ ausserhalb.",
+          "richtig": true,
+          "erklaerung": "Zwei Hoehenlinien muessen verlaengert werden."
+        }
+      ],
+      "tipps": [
+        "Zeichne je ein spitz-, recht- und stumpfwinkliges Dreieck und konstruiere $H$.",
+        "Beim Rechtwinkligen: Die Katheten sind senkrecht -- das sind bereits zwei Hoehenlinien.",
+        "Beim Stumpfwinkligen fallen die Hoehenfusspunkte ausserhalb des Dreiecks."
+      ],
+      "loesungsweg": "Richtig: spitzwinklig innen; rechtwinklig auf der rechten Ecke; stumpfwinklig ausserhalb.",
+      "kc": [
+        "KC Mathematik Gym Sek I (2015): Entdeckungen an Dreiecken, besondere Linien (7/8)"
+      ]
+    },
+    {
+      "id": "ma-08-bl-107",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Dreieck mit Ecken $A(2\\,|\\,1)$, $B(8\\,|\\,1)$, $C(5\\,|\\,7)$. Berechne Schwerpunkt und pruefe das $2{:}1$-Verhaeltnis.",
+      "schritte": [
+        {
+          "frage": "Berechne $x_S$ und $y_S$.",
+          "eingaben": [
+            {
+              "label": "$x_S$",
+              "antwort": 5.0,
+              "toleranz": 0.05
+            },
+            {
+              "label": "$y_S$",
+              "antwort": 3.0,
+              "toleranz": 0.05
+            }
+          ]
+        },
+        {
+          "frage": "Mittelpunkt $M_{AB}$ der Seite $AB$: $x_{M} = \\frac{2+8}{2} = 5$, $y_{M} = 1$. Berechne $\\frac{2}{3}$ des Weges von $C(5\\,|\\,7)$ nach $M_{AB}(5\\,|\\,1)$: $y = y_C + \\frac{2}{3}(y_M - y_C)$.",
+          "eingaben": [
+            {
+              "label": "$y$-Koordinate des Pruefpunkts",
+              "antwort": 3.0,
+              "toleranz": 0.05
+            }
+          ]
+        }
+      ],
+      "tipps": [
+        "Schwerpunktformel: Mittelwert aller drei Koordinaten.",
+        "$x_S = \\frac{2+8+5}{3} = 5$, $y_S = \\frac{1+1+7}{3} = 3$.",
+        "Pruefung: $y = 7 + \\frac{2}{3}(1 - 7) = 7 - 4 = 3$ -- stimmt genau mit $y_S$ ueberein."
+      ],
+      "loesungsweg": "$S(5\\,|\\,3)$. Pruefung: $y = 7 + \\frac{2}{3}(1-7) = 3$. Das $2:1$-Verhaeltnis ist bestaetigt.",
+      "kc": [
+        "KC Mathematik Gym Sek I (2015): Entdeckungen an Dreiecken, besondere Linien (7/8)"
+      ]
+    },
+    {
+      "id": "ma-08-bl-108",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Erklaere: Im gleichseitigen Dreieck fallen alle vier besonderen Punkte zusammen. Warum?",
+      "musterloesung": "Im gleichseitigen Dreieck ist jede der vier besonderen Linien (Mittelsenkrechte, Winkelhalbierende, Seitenhalbierende, Hoehe) fuer jede Seite identisch: Sie steht senkrecht auf der Gegenseite, geht durch ihren Mittelpunkt, halbiert den anliegenden Winkel und ist Hoehenabschnitt. Da alle vier Linien zusammenfallen, schneiden sie sich alle im gleichen Punkt.",
+      "tipps": [
+        "Ueberlege: Was gilt fuer alle drei Seiten -- gleiche Laenge, alle Winkel gleich?",
+        "Wenn alle Seiten gleich sind, ist die Verbindung Ecke-Seitenmitte zugleich alle vier Linien.",
+        "Wegen dieser Vierfach-Eigenschaft faellt jeder der vier Schnittpunkte zusammen."
+      ],
+      "loesungsweg": "Volle Dreifach-Symmetrie des gleichseitigen Dreiecks: Alle vier besonderen Linien von jeder Ecke sind identisch, daher fallen ihre Schnittpunkte in einem einzigen Punkt zusammen.",
+      "kc": [
+        "KC Mathematik Gym Sek I (2015): Entdeckungen an Dreiecken, besondere Linien (7/8)"
+      ]
+    }
+  ]
+}

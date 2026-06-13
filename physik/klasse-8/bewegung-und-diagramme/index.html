@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bewegungen und Diagramme — Klasse 8 · Physik — Lernwelt</title>
+<meta name="description" content="Gleichförmige Bewegung, Geschwindigkeit v = s/t, Einheiten m/s und km/h umrechnen, t-s- und t-v-Diagramme lesen und zeichnen — mit interaktiver Simulation, Schaubildern, Beispielen und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: Diagramm-Schaubilder und Tempo-Tabelle */
+  .bd-figur { margin: var(--abstand-4) 0; }
+  .bd-figur svg { display: block; width: 100%; height: auto; margin: 0 auto; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); }
+  .bd-figur figcaption { text-align: center; font-size: .9rem; color: var(--text-leise); margin-top: var(--abstand-2); }
+  .bd-tempo-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; }
+  .bd-tempo-tabelle th, .bd-tempo-tabelle td { border: 1px solid var(--linie); padding: 6px 14px; text-align: left; }
+  .bd-tempo-tabelle th { background: var(--hauch); }
+  .bd-tempo-tabelle td:nth-child(2), .bd-tempo-tabelle td:nth-child(3) { text-align: right; font-variant-numeric: tabular-nums; }
+  .bd-tempo-tabelle caption { caption-side: bottom; font-size: .9rem; color: var(--text-leise); padding-top: var(--abstand-2); }
+</style>
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung und die Simulation. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Bewegungen und Diagramme</h1>
+  <p class="einleitung">Ein ICE rauscht vorbei, du schlenderst zur Bushaltestelle, der Donner eines Gewitters braucht spürbar lange bis zu deinem Ohr: Alles bewegt sich — nur verschieden schnell. Auf dieser Seite lernst du, wie man Bewegungen mit <strong>Weg</strong> und <strong>Zeit</strong> beschreibt, was die <strong>Geschwindigkeit</strong> $v = \frac{s}{t}$ bedeutet, wie man zwischen m/s und km/h umrechnet — und wie du ganze Fahrten in <strong>t-s-</strong> und <strong>t-v-Diagrammen</strong> liest und selbst zeichnest. Eine Simulation zum Ausprobieren ist auch dabei.</p>
+
+  <section aria-labelledby="bd-relativ">
+    <h2 id="bd-relativ">1. Bewegung ist relativ</h2>
+    <p>Du sitzt im fahrenden Zug, neben dir döst dein Sitznachbar. Bewegt er sich? Von deinem Platz aus gesehen: nein — er ruht, der Abstand zwischen euch ändert sich keinen Zentimeter. Vom Bahnsteig aus gesehen: und wie — er rast mitsamt dem Zug mit über $100\,\text{km/h}$ vorbei. Beide Antworten sind richtig! Ob ein Körper „ruht“ oder „sich bewegt“, hängt davon ab, <em>von wo aus</em> man ihn beobachtet — vom gewählten <strong>Bezugspunkt</strong>. Deshalb sagt man: Bewegung ist <strong>relativ</strong>.</p>
+    <p>In der Physik legt man darum zuerst einen Bezugspunkt fest (zum Beispiel: den Bahnsteig) und sagt dann: Ein Körper <strong>bewegt sich</strong>, wenn er seinen Ort gegenüber diesem Bezugspunkt mit der Zeit ändert. Um die Bewegung genau zu beschreiben, braucht man zwei <strong>Messgrößen</strong>: den <strong>Weg</strong> $s$ — die zurückgelegte Strecke, gemessen in Metern (m) oder Kilometern (km) — und die <strong>Zeit</strong> $t$, gemessen in Sekunden (s), Minuten (min) oder Stunden (h).</p>
+    <p>Gemessen wird je nach Situation unterschiedlich: Im Sportunterricht stoppst du die Zeit für eine vorher abgemessene Strecke mit der <strong>Stoppuhr</strong> — dabei schlägt allerdings deine Reaktionszeit als Messfehler zu. Im Physikraum übernehmen <strong>Lichtschranken</strong> das Stoppen: Sie starten und stoppen die Uhr automatisch, sobald etwas den Lichtstrahl durchquert, und sind darum viel genauer. Und unterwegs bestimmt das <strong>GPS</strong> im Handy oder Fahrradcomputer laufend deinen Ort — daraus berechnet es Weg und Tempo gleich mit.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p>Ob ein Körper <strong>ruht</strong> oder <strong>sich bewegt</strong>, hängt vom gewählten <strong>Bezugspunkt</strong> ab. Eine Bewegung beschreibt man mit zwei Messgrößen: dem <strong>Weg</strong> $s$ (in m oder km) und der <strong>Zeit</strong> $t$ (in s, min oder h).</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="bd-geschwindigkeit">
+    <h2 id="bd-geschwindigkeit">2. Die Geschwindigkeit</h2>
+    <p>„Schnell“ heißt: viel Weg in wenig Zeit. Genau das steckt in der <strong>Geschwindigkeit</strong> $v$ (vom englischen <em>velocity</em>): Man teilt den zurückgelegten Weg durch die dafür benötigte Zeit. Das Ergebnis verrät, wie viel Weg in <em>einer</em> Zeiteinheit geschafft wird — zum Beispiel wie viele Meter in jeder Sekunde. Bei einer <strong>gleichförmigen Bewegung</strong> bleibt das Tempo die ganze Zeit gleich: In gleichen Zeiten werden immer gleiche Wege zurückgelegt.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Geschwindigkeit</span>
+      <p class="formel-abgesetzt">$$v = \frac{s}{t}$$</p><p>$v$: Geschwindigkeit in m/s oder km/h · $s$: Weg in m oder km · $t$: Zeit in s oder h.<br>Umgestellt: $s = v \cdot t$ (Weg aus Tempo und Zeit) und $t = s : v$ (Zeit aus Weg und Tempo).</p></div><p>Warum ausgerechnet der Faktor<strong>3,6</strong>beim Umrechnen? Ein Körper mit $1\,\text{m/s}$ legt in jeder Sekunde einen Meter zurück. Eine Stunde hat $60 \cdot 60 = 3600$ Sekunden — in einer Stunde schafft er also $3600\,\text{m} = 3{,}6\,\text{km}$. Darum gilt exakt: $1\,\text{m/s} = 3{,}6\,\text{km/h}$. Von m/s nach km/h wird die Zahl größer (mal 3,6), umgekehrt kleiner (geteilt durch 3,6).</p><div class="merkkasten"><span class="merk-etikett">Umrechnung</span><p>$1\,\text{m/s} = 3{,}6\,\text{km/h}$<br>Von<strong>m/s nach km/h: mal 3,6</strong>· von<strong>km/h nach m/s: geteilt durch 3,6</strong>.</p></div><table class="bd-tempo-tabelle"><caption>Typische Geschwindigkeiten — gut zum Abschätzen und Vergleichen.</caption><thead><tr><th scope="col">Bewegung</th><th scope="col">in m/s</th><th scope="col">in km/h</th></tr></thead><tbody><tr><td>Fußgänger</td><td>≈ 1,5</td><td>≈ 5,4</td></tr><tr><td>Radfahrer</td><td>≈ 5</td><td>≈ 18</td></tr><tr><td>Auto in der Stadt</td><td>≈ 14</td><td>≈ 50</td></tr><tr><td>Schall in Luft</td><td>340</td><td>1224</td></tr></tbody></table><div class="beispiel"><span class="beispiel-etikett">Beispiel: 100-m-Lauf</span><p>Joshua läuft die $100\,\text{m}$ beim Sportfest in $12{,}5\,\text{s}$. Seine Geschwindigkeit:</p><p class="formel-abgesetzt">$$v = \frac{s}{t} = \frac{100\,\text{m}}{12{,}5\,\text{s}} = 8\,\frac{\text{m}}{\text{s}}$$</p><p>In km/h umgerechnet: $8 \cdot 3{,}6 = 28{,}8\,\text{km/h}$ — schneller, als die meisten mit dem Rad unterwegs sind!</p></div><details class="check"><summary>Verständnis-Check: Wie viel m/s sind 72 km/h?</summary><div class="check-antwort"><p>Von km/h nach m/s teilt man durch 3,6: $72 : 3{,}6 = 20\,\text{m/s}$. Kontrolle rückwärts: $20 \cdot 3{,}6 = 72\,\text{km/h}$ — passt. Merkhilfe: In m/s ist die Zahl immer kleiner als in km/h, denn eine Sekunde ist viel kürzer als eine Stunde.</p></div></details></section><section aria-labelledby="bd-ts-diagramm"><h2 id="bd-ts-diagramm">3. Das t-s-Diagramm</h2><p>Zahlenkolonnen aus Messwerten sind unübersichtlich — ein Diagramm zeigt eine ganze Fahrt auf einen Blick. Im<strong>t-s-Diagramm</strong>(Zeit-Weg-Diagramm) trägt man<strong>nach rechts die Zeit $t$</strong>und<strong>nach oben den Weg $s$</strong> auf. Jeder Punkt der Linie beantwortet eine Frage: Wie weit war das Fahrzeug nach dieser Zeit vom Start entfernt?</p>
+    <p>Bewegt sich etwas <strong>gleichförmig</strong>, kommen in gleichen Zeiten gleiche Wege dazu — die Punkte liegen auf einer <strong>Geraden</strong>. Die Steigung verrät dabei das Tempo: <strong>Je steiler die Linie, desto schneller die Bewegung</strong>, denn in derselben Zeit wird mehr Weg geschafft. Verläuft die Linie <strong>waagerecht</strong>, vergeht Zeit, ohne dass Weg dazukommt — <strong>Pause oder Stillstand</strong>. Und <strong>fällt</strong> die Linie, nimmt die Entfernung vom Start wieder ab: <strong>Rückweg</strong>.</p>
+    <figure class="bd-figur" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="t-s-Diagramm einer Radtour mit drei nummerierten Abschnitten. Die Zeitachse reicht von 0 bis 70 Minuten, die Wegachse von 0 bis 8 Kilometer. Abschnitt 1: Von Minute 0 bis 30 steigt die Linie als Gerade von 0 auf 8 Kilometer — der Hinweg. Abschnitt 2: Von Minute 30 bis 45 verläuft die Linie waagerecht bei 8 Kilometern — die Pause. Abschnitt 3: Von Minute 45 bis 65 fällt die Linie steiler, als sie gestiegen ist, zurück auf 0 Kilometer — der schnellere Rückweg.">
+        <defs>
+          <marker id="bd-achspfeil-1" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M 0 0 L 8 4 L 0 8 Z" style="fill: var(--text);"/>
+          </marker>
+        </defs>
+        <text x="370" y="30" text-anchor="middle" style="font-size: 15px; font-weight: 600; fill: var(--text);">t-s-Diagramm einer Radtour</text>
+        <!-- Gitterlinien -->
+        <path d="M 170 330 L 170 60 M 250 330 L 250 60 M 330 330 L 330 60 M 410 330 L 410 60 M 490 330 L 490 60 M 570 330 L 570 60 M 650 330 L 650 60 M 90 270 L 650 270 M 90 210 L 650 210 M 90 150 L 650 150 M 90 90 L 650 90" style="fill: none; stroke: var(--linie); stroke-width: 1; stroke-dasharray: 3 4;"/>
+        <!-- Achsen mit Pfeilen -->
+        <line x1="90" y1="330" x2="668" y2="330" style="stroke: var(--text); stroke-width: 2;" marker-end="url(#bd-achspfeil-1)"/>
+        <line x1="90" y1="330" x2="90" y2="46" style="stroke: var(--text); stroke-width: 2;" marker-end="url(#bd-achspfeil-1)"/>
+        <text x="668" y="366" text-anchor="end" style="font-size: 13.5px; font-weight: 600; fill: var(--text);">t in min</text>
+        <text x="100" y="42" text-anchor="start" style="font-size: 13.5px; font-weight: 600; fill: var(--text);">s in km</text>
+        <!-- Skalenstriche und Werte: Zeitachse -->
+        <path d="M 170 330 L 170 336 M 250 330 L 250 336 M 330 330 L 330 336 M 410 330 L 410 336 M 490 330 L 490 336 M 570 330 L 570 336 M 650 330 L 650 336" style="fill: none; stroke: var(--text); stroke-width: 1.5;"/>
+        <text x="90" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">0</text>
+        <text x="170" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">10</text>
+        <text x="250" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">20</text>
+        <text x="330" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">30</text>
+        <text x="410" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">40</text>
+        <text x="490" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">50</text>
+        <text x="570" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">60</text>
+        <text x="650" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">70</text>
+        <!-- Skalenstriche und Werte: Wegachse -->
+        <path d="M 84 270 L 90 270 M 84 210 L 90 210 M 84 150 L 90 150 M 84 90 L 90 90" style="fill: none; stroke: var(--text); stroke-width: 1.5;"/>
+        <text x="78" y="274" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">2</text>
+        <text x="78" y="214" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">4</text>
+        <text x="78" y="154" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">6</text>
+        <text x="78" y="94" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">8</text>
+        <!-- Graph der Radtour: 8 km in 30 min, 15 min Pause, 8 km zurück in 20 min -->
+        <path d="M 90 330 L 330 90 L 450 90 L 610 330" style="fill: none; stroke: var(--physik); stroke-width: 3.5; stroke-linejoin: round; stroke-linecap: round;"/>
+        <circle cx="90" cy="330" r="4.5" style="fill: var(--physik);"/>
+        <circle cx="330" cy="90" r="4.5" style="fill: var(--physik);"/>
+        <circle cx="450" cy="90" r="4.5" style="fill: var(--physik);"/>
+        <circle cx="610" cy="330" r="4.5" style="fill: var(--physik);"/>
+        <!-- Abschnitts-Nummern -->
+        <circle cx="150" cy="150" r="12" style="fill: var(--flaeche); stroke: var(--physik); stroke-width: 2;"/>
+        <text x="150" y="155" text-anchor="middle" style="font-size: 13px; font-weight: 700; fill: var(--physik);">1</text>
+        <text x="168" y="155" text-anchor="start" style="font-size: 12.5px; fill: var(--text-leise);">Hinweg</text>
+        <circle cx="390" cy="60" r="12" style="fill: var(--flaeche); stroke: var(--physik); stroke-width: 2;"/>
+        <text x="390" y="65" text-anchor="middle" style="font-size: 13px; font-weight: 700; fill: var(--physik);">2</text>
+        <text x="408" y="65" text-anchor="start" style="font-size: 12.5px; fill: var(--text-leise);">Pause</text>
+        <circle cx="560" cy="196" r="12" style="fill: var(--flaeche); stroke: var(--physik); stroke-width: 2;"/>
+        <text x="560" y="201" text-anchor="middle" style="font-size: 13px; font-weight: 700; fill: var(--physik);">3</text>
+        <text x="578" y="201" text-anchor="start" style="font-size: 12.5px; fill: var(--text-leise);">Rückweg</text>
+      </svg>
+      <figcaption>Eine Radtour im t-s-Diagramm. Abschnitt 1: Hinweg — 8 km in 30 min (ansteigende Gerade). Abschnitt 2: Pause — 15 min lang ändert sich der Weg nicht (waagerecht). Abschnitt 3: Rückweg — dieselben 8 km in nur 20 min, darum fällt die Linie steiler, als sie gestiegen ist.</figcaption>
+    </figure>
+    <p>An diesem Diagramm kannst du alles <strong>ablesen</strong>: Auf dem Hinweg (Abschnitt 1) schafft die Radlerin $8\,\text{km}$ in $30\,\text{min}$, also $v = 8\,\text{km} : 0{,}5\,\text{h} = 16\,\text{km/h}$. Dann folgen $15\,\text{min}$ Pause (Abschnitt 2). Der Rückweg (Abschnitt 3) ist mit $8\,\text{km}$ in $20\,\text{min}$ flotter: $24\,\text{km/h}$ — deshalb verläuft die Linie dort steiler. Willst du selbst ein Diagramm <strong>zeichnen</strong>, gehst du so vor: Wertetabelle anlegen, Achsen zeichnen und beschriften, eine gleichmäßige Skala wählen, die Wertepaare als Punkte eintragen, Punkte verbinden — fertig.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">t-s-Diagramm lesen</span>
+      <p>Nach rechts läuft die Zeit $t$, nach oben der Weg $s$. <strong>Gerade</strong> = gleichförmige Bewegung · <strong>steiler</strong> = schneller · <strong>waagerecht</strong> = Pause oder Stillstand · <strong>fallend</strong> = Rückweg zum Start.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Die Linie im t-s-Diagramm verläuft waagerecht — was tut das Fahrzeug?</summary>
+      <div class="check-antwort"><p>Es <strong>steht</strong>. Die Zeit läuft weiter (nach rechts), aber der Weg ändert sich nicht — das Fahrzeug legt nichts zurück: Pause oder Stillstand. Vorsicht: Im t-v-Diagramm bedeutet eine waagerechte Linie etwas ganz anderes — dazu gleich mehr.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="bd-tv-diagramm">
+    <h2 id="bd-tv-diagramm">4. Das t-v-Diagramm und beschleunigte Bewegung</h2>
+    <p>Das t-s-Diagramm verrät, <strong>wo</strong> sich das Fahrzeug zu jeder Zeit befindet. Oft will man aber wissen, <strong>wie schnell</strong> es gerade ist. Dafür gibt es das <strong>t-v-Diagramm</strong>: Nach rechts läuft wieder die Zeit $t$ — nach oben wird jetzt aber die <strong>Geschwindigkeit</strong> $v$ aufgetragen.</p>
+    <p>Bei einer <strong>gleichförmigen Bewegung</strong> ist die Sache einfach: Das Tempo ändert sich nicht, also verläuft die Linie im t-v-Diagramm <strong>waagerecht</strong> — und zwar genau auf der Höhe der Geschwindigkeit. Ein Fahrzeug mit $5\,\text{m/s}$ erzeugt eine waagerechte Linie auf Höhe 5, ein doppelt so schnelles auf Höhe 10. So sieht ein und dieselbe Fahrt in beiden Diagrammen aus:</p>
+    <figure class="bd-figur" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gegenüberstellung zweier Diagramme derselben gleichförmigen Fahrt mit 5 Metern pro Sekunde über 10 Sekunden. Links das t-s-Diagramm: Der Weg wächst als ansteigende Gerade in 10 Sekunden auf 50 Meter. Rechts das t-v-Diagramm: Die Geschwindigkeit bleibt als waagerechte Linie konstant auf der Höhe 5 Meter pro Sekunde.">
+        <defs>
+          <marker id="bd-achspfeil-2" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M 0 0 L 8 4 L 0 8 Z" style="fill: var(--text);"/>
+          </marker>
+        </defs>
+        <!-- Linkes Diagramm: t-s -->
+        <text x="195" y="34" text-anchor="middle" style="font-size: 15px; font-weight: 600; fill: var(--text);">t-s-Diagramm</text>
+        <line x1="60" y1="250" x2="348" y2="250" style="stroke: var(--text); stroke-width: 2;" marker-end="url(#bd-achspfeil-2)"/>
+        <line x1="60" y1="250" x2="60" y2="52" style="stroke: var(--text); stroke-width: 2;" marker-end="url(#bd-achspfeil-2)"/>
+        <text x="348" y="284" text-anchor="end" style="font-size: 13px; font-weight: 600; fill: var(--text);">t in s</text>
+        <text x="70" y="50" text-anchor="start" style="font-size: 13px; font-weight: 600; fill: var(--text);">s in m</text>
+        <path d="M 180 250 L 180 256 M 300 250 L 300 256 M 54 170 L 60 170 M 54 90 L 60 90" style="fill: none; stroke: var(--text); stroke-width: 1.5;"/>
+        <text x="60" y="272" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">0</text>
+        <text x="180" y="272" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">5</text>
+        <text x="300" y="272" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">10</text>
+        <text x="48" y="174" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">25</text>
+        <text x="48" y="94" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">50</text>
+        <path d="M 60 90 L 300 90 M 300 250 L 300 90" style="fill: none; stroke: var(--linie); stroke-width: 1; stroke-dasharray: 3 4;"/>
+        <line x1="60" y1="250" x2="300" y2="90" style="stroke: var(--physik); stroke-width: 3.5; stroke-linecap: round;"/>
+        <circle cx="300" cy="90" r="4.5" style="fill: var(--physik);"/>
+        <text x="195" y="302" text-anchor="middle" style="font-size: 12.5px; fill: var(--text-leise);">Gerade: Der Weg wächst gleichmäßig.</text>
+        <!-- Rechtes Diagramm: t-v -->
+        <text x="535" y="34" text-anchor="middle" style="font-size: 15px; font-weight: 600; fill: var(--text);">t-v-Diagramm</text>
+        <line x1="400" y1="250" x2="688" y2="250" style="stroke: var(--text); stroke-width: 2;" marker-end="url(#bd-achspfeil-2)"/>
+        <line x1="400" y1="250" x2="400" y2="52" style="stroke: var(--text); stroke-width: 2;" marker-end="url(#bd-achspfeil-2)"/>
+        <text x="688" y="284" text-anchor="end" style="font-size: 13px; font-weight: 600; fill: var(--text);">t in s</text>
+        <text x="410" y="50" text-anchor="start" style="font-size: 13px; font-weight: 600; fill: var(--text);">v in m/s</text>
+        <path d="M 520 250 L 520 256 M 640 250 L 640 256 M 394 130 L 400 130" style="fill: none; stroke: var(--text); stroke-width: 1.5;"/>
+        <text x="400" y="272" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">0</text>
+        <text x="520" y="272" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">5</text>
+        <text x="640" y="272" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">10</text>
+        <text x="388" y="134" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">5</text>
+        <line x1="400" y1="130" x2="640" y2="130" style="stroke: var(--physik); stroke-width: 3.5; stroke-linecap: round;"/>
+        <circle cx="640" cy="130" r="4.5" style="fill: var(--physik);"/>
+        <text x="535" y="302" text-anchor="middle" style="font-size: 12.5px; fill: var(--text-leise);">Waagerecht: Das Tempo bleibt 5 m/s.</text>
+      </svg>
+      <figcaption>Dieselbe Fahrt, zwei Diagramme: 10 s lang gleichförmig mit 5 m/s. Links steigt der Weg als Gerade auf 50 m an, rechts bleibt die Geschwindigkeit als waagerechte Linie auf Höhe 5 m/s.</figcaption>
+    </figure>
+    <p>Ändert sich das Tempo, heißt die Bewegung <strong>beschleunigt</strong>. Im t-v-Diagramm siehst du das sofort: Beim <strong>Anfahren</strong> steigt die Linie an (das Tempo wächst), beim <strong>Bremsen</strong> fällt sie ab (das Tempo sinkt). Im t-s-Diagramm wird die Linie dabei immer steiler beziehungsweise immer flacher — sie krümmt sich. Wie man solche Bewegungen genau berechnet, brauchst du hier noch nicht: In Klasse 8 reicht der Blick auf die Form der Linie.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Vorsicht, Verwechslungsgefahr!</span>
+      <p>Eine <strong>waagerechte Linie</strong> bedeutet je nach Diagramm etwas völlig anderes: Im <strong>t-s-Diagramm</strong> heißt sie „der Weg ändert sich nicht“ — das Fahrzeug <strong>steht</strong>. Im <strong>t-v-Diagramm</strong> heißt sie „das Tempo ändert sich nicht“ — das Fahrzeug <strong>fährt gleichmäßig weiter</strong>. Schau deshalb immer zuerst auf die Achsenbeschriftung!</p>
+    </div>
+    <p>Am besten verstehst du beide Diagramme, wenn du sie selbst erzeugst: In der Simulation fährt ein Fahrzeug mit einstellbarer Startgeschwindigkeit $v_0$ und Beschleunigung $a$ — t-s- und t-v-Diagramm entstehen dabei live. Bearbeite anschließend die Aufträge unter der Simulation.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/physik/bewegungsdiagramme/index.html?einbettung=1#v0=5&a=0&tFahr=10"
+        title="Interaktive Simulation: Bewegungsdiagramme — gleichförmige Fahrt" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/physik/bewegungsdiagramme/index.html#v0=5&a=0&tFahr=10" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Starte mit $v_0 = 5\,\text{m/s}$ und $a = 0$: Im t-s-Diagramm entsteht eine Gerade. Verdopple nun $v_0$ auf $10\,\text{m/s}$ — was passiert mit der Steigung der Geraden?<br>
+      2. Stelle $a = 1\,\frac{\text{m}}{\text{s}^2}$ ein: Das Fahrzeug wird jetzt in jeder Sekunde um $1\,\text{m/s}$ schneller. Woran erkennst du im t-s-Diagramm, dass das Fahrzeug schneller wird?<br>
+      3. Bremsung: Wähle $v_0 = 10\,\text{m/s}$ und $a = -1\,\frac{\text{m}}{\text{s}^2}$. Nach wie vielen Sekunden steht das Fahrzeug? Kontrolliere deine Antwort am t-v-Diagramm.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="bd-durchschnitt">
+    <h2 id="bd-durchschnitt">5. Durchschnittstempo und Verkehr</h2>
+    <p>Auf einer echten Fahrt ist das Tempo selten konstant: anfahren, bremsen, an der Ampel stehen, Pause machen. Trotzdem kann man der ganzen Fahrt eine Geschwindigkeit zuordnen — die <strong>Durchschnittsgeschwindigkeit</strong>. Man tut so, als wäre die komplette Strecke mit einem einzigen, gleichbleibenden Tempo gefahren worden, und rechnet: <strong>Gesamtweg geteilt durch Gesamtzeit</strong>. Wichtig: Auch Pausen stecken in der Gesamtzeit — <strong>sie zählen mit</strong> und drücken den Durchschnitt.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Wandertag</span>
+      <p>Eure Klasse wandert $12\,\text{km}$. Reine Gehzeit: $3\,\text{h}$, dazu $1\,\text{h}$ Mittagspause. Durchschnittsgeschwindigkeit der ganzen Tour: $v = 12\,\text{km} : 4\,\text{h} = 3\,\text{km/h}$ — obwohl ihr beim Gehen mit $12\,\text{km} : 3\,\text{h} = 4\,\text{km/h}$ unterwegs wart. Die Pause senkt den Schnitt.</p>
+    </div>
+    <p>Davon zu unterscheiden ist der <strong>Tacho</strong> im Auto oder am E-Scooter: Er zeigt nicht den Durchschnitt, sondern die <strong>Momentangeschwindigkeit</strong> — das Tempo genau in diesem Augenblick. Beim Anfahren klettert die Anzeige, an der roten Ampel fällt sie auf null. Der Durchschnitt einer Stadtfahrt ist deshalb meist deutlich kleiner als das, was der Tacho zwischendurch anzeigt.</p>
+    <p>Warum sich das Umrechnen lohnt, zeigt der Straßenverkehr: $50\,\text{km/h}$ klingen harmlos — umgerechnet sind das aber $50 : 3{,}6 \approx 13{,}9\,\text{m/s}$. Ein Auto in der Stadt legt also <strong>in jeder Sekunde fast 14 Meter</strong> zurück. Wer nur eine Sekunde aufs Handy schaut, fährt diese Strecke im „Blindflug“ — und erst danach beginnt das Auto überhaupt zu bremsen. Die Reaktionszeit kostet Strecke. Tempolimits sind deshalb keine Schikane, sondern gewonnene Meter.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p><strong>Durchschnittsgeschwindigkeit</strong> = Gesamtweg geteilt durch Gesamtzeit — <strong>Pausen zählen mit</strong>. Der Tacho zeigt dagegen die <strong>Momentangeschwindigkeit</strong>: das Tempo genau jetzt.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: 30 km in 2,5 h — wie groß ist die Durchschnittsgeschwindigkeit?</summary>
+      <div class="check-antwort"><p>$v = s : t = 30\,\text{km} : 2{,}5\,\text{h} = 12\,\text{km/h}$. Egal ob unterwegs getrödelt, gespurtet oder pausiert wurde: Für den Durchschnitt zählen nur Gesamtweg und Gesamtzeit.</p></div>
+    </details>
+  <p>Wie lang ist DEINE Schrecksekunde? Der <a href="../../../lernspiele/reaktionszeit-tester/index.html">Reaktionszeit-Tester</a> im Trainingsraum misst sie — und rechnet sie direkt in Meter bei 50 km/h um.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Der Anhalteweg</summary>
+    <div class="vertiefung-inhalt">
+      <p>Eine Gefahr taucht auf — doch ein Auto steht nicht sofort. Zuerst vergeht die <strong>Reaktionszeit</strong>: vom Erkennen der Gefahr bis zum Tritt aufs Bremspedal, bei aufmerksamen Fahrern etwa eine Sekunde. In dieser Zeit fährt das Auto völlig ungebremst weiter und legt den <strong>Reaktionsweg</strong> zurück: Reaktionsweg = Geschwindigkeit mal Reaktionszeit. Bei $50\,\text{km/h} \approx 13{,}9\,\text{m/s}$ und $1\,\text{s}$ Reaktionszeit sind das schon rund $14\,\text{m}$ — „Blindflug“ über mehr als drei Wagenlängen.</p>
+      <p>Erst danach packen die Bremsen zu, und der eigentliche <strong>Bremsweg</strong> beginnt. Reaktionsweg und Bremsweg zusammen ergeben den <strong>Anhalteweg</strong> — die Strecke, die das Auto vom Erkennen der Gefahr bis zum Stillstand wirklich braucht. Genau deshalb gilt vor Schulen oft <strong>Tempo 30</strong>: Bei $30\,\text{km/h} \approx 8{,}3\,\text{m/s}$ beträgt der Reaktionsweg nur noch rund $8\,\text{m}$ statt $14\,\text{m}$ — und der Bremsweg schrumpft sogar noch viel stärker, denn ein langsameres Auto ist viel schneller zum Stehen gebracht.</p>
+      <p>Wie lang der Bremsweg genau ist, hängt davon ab, wie stark das Auto verzögert — dafür braucht man die Formeln der beschleunigten Bewegung. Die lernst du in der <a href="../../einfuehrungsphase/kinematik/index.html">Einführungsphase (Thema Kinematik)</a> kennen: Dort kannst du den Anhalteweg für jedes Tempo exakt ausrechnen.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben vom Bezugspunkt über die Einheiten-Umrechnung bis zum Lesen und Deuten von Diagrammen — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "thema": "ph-ep-newtonsche-gesetze",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben -- Newtonsche Gesetze. Zur fachlichen Pruefung durch die Lehrkraft.",
+  "aufgaben": [
+    {
+      "id": "ph-ep-ng-101",
+      "typ": "freitext",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Eine Raumsonde fliegt im leeren Weltraum mit konstanter Geschwindigkeit. Ihr Antrieb ist abgeschaltet. Der Bordcomputer meldet: Triebwerk ein — 10 Sekunden — Triebwerk aus. Danach fliegt die Sonde wieder mit konstanter, aber höherer Geschwindigkeit weiter. Erkläre diesen Vorgang vollständig mit dem Trägheitsgesetz und dem Wechselwirkungsgesetz. Gehe auf die Rolle des Inertialsystems ein.",
+      "musterloesung": "Solange das Triebwerk aus ist, wirkt keine resultierende Kraft auf die Sonde — nach dem Trägheitsgesetz behält sie ihre Geschwindigkeit (Betrag und Richtung) bei. Während die Triebwerke feuern, stoßen sie heiße Gase nach hinten aus (Wechselwirkungsgesetz: die Sonde drückt die Gase nach hinten, die Gase drücken die Sonde nach vorn mit betragsmäßig gleicher, aber entgegengesetzter Kraft). Diese Kraft ist die resultierende Kraft auf die Sonde: nach der Grundgleichung $F = m \\cdot a$ beschleunigt sie in Fahrtrichtung. Luft oder ein Untergrund zum Abstoßen sind nicht nötig — der Wechselwirkungspartner ist das eigene ausgestoßene Gas. Nach dem Triebwerksabschalten ist die resultierende Kraft wieder null, und die Sonde fliegt mit der neuen, höheren Geschwindigkeit gleichförmig weiter (Trägheitsgesetz). Das alles gilt im Inertialsystem einer ruhenden oder gleichförmig bewegten Beobachterin — einem Bezugssystem, in dem das Trägheitsgesetz gilt.",
+      "tipps": [
+        "Was passiert vor, während und nach dem Triebwerkstoß — welches Gesetz gilt jeweils?",
+        "Womit wechselwirkt die Triebwerkskraft? Welcher Körper erhält die Gegenkraft?",
+        "Warum braucht die Sonde keinen Untergrund, von dem sie sich abstoßen kann?"
+      ],
+      "loesungsweg": "Kernpunkte: (1) Vor und nach dem Triebwerkstoß gilt das Trägheitsgesetz: keine resultierende Kraft, konstante Geschwindigkeit. (2) Das Triebwerk erzeugt die Antriebskraft durch das Wechselwirkungsgesetz: Gas nach hinten — Sonde nach vorn. (3) Grundgleichung $F = m \\cdot a$ beschreibt die Beschleunigung während des Stoßes. (4) Das Trägheitsgesetz gilt nur im Inertialsystem.",
+      "kc": ["dynamik"]
+    },
+    {
+      "id": "ph-ep-ng-102",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Person ($m = 75\\,\\text{kg}$) steht auf einer Personenwaage im Aufzug. Der Aufzug steht still ($g = 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$). Welche Kraft $F_{\\text{N}}$ zeigt die Waage an?",
+      "eingaben": [
+        { "label": "$F_{\\text{N}}$", "antwort": 735.75, "toleranz": 1.0, "einheit": "N" }
+      ],
+      "tipps": [
+        "Im Stand herrscht Kräftegleichgewicht: Die Waage trägt die Person, ohne sie zu beschleunigen.",
+        "Die Anzeige entspricht der Gewichtskraft: $F_{\\text{G}} = m \\cdot g$.",
+        "$F_{\\text{N}} = 75 \\cdot 9{,}81\\,\\text{N}$"
+      ],
+      "loesungsweg": "Im Stand gilt Kräftegleichgewicht: Die resultierende Kraft ist null, also $F_{\\text{N}} = F_{\\text{G}} = m \\cdot g = 75 \\cdot 9{,}81\\,\\text{N} = 735{,}75\\,\\text{N} \\approx 736\\,\\text{N}$. Die Waage zeigt die Normalkraft an — das ist genau die Gewichtskraft, wenn keine Beschleunigung vorliegt.",
+      "kc": ["dynamik"]
+    },
+    {
+      "id": "ph-ep-ng-103",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Ein Schlitten ($m = 12\\,\\text{kg}$) gleitet reibungsfrei einen Hang mit $\\alpha = 30^\\circ$ hinab ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$). (a) Berechne die Hangabtriebskraft $F_{\\text{H}}$. (b) Wie groß ist die Beschleunigung $a$ des Schlittens? (c) Ändert sich deine Antwort in (b), wenn der Schlitten doppelt so schwer ist — $m = 24\\,\\text{kg}$? Begründe kurz.",
+      "eingaben": [
+        { "label": "$F_{\\text{H}}$", "antwort": 58.86, "toleranz": 0.5, "einheit": "N" },
+        { "label": "$a$", "antwort": 4.905, "toleranz": 0.05, "einheit": "m/s²" }
+      ],
+      "tipps": [
+        "Die Hangabtriebskraft ist die hangparallele Komponente der Gewichtskraft: $F_{\\text{H}} = m \\cdot g \\cdot \\sin\\alpha$.",
+        "Reibungsfrei ist $F_{\\text{H}}$ die gesamte resultierende Kraft: $a = \\frac{F_{\\text{H}}}{m}$.",
+        "Prüfe, ob $m$ in der Formel $a = g \\cdot \\sin\\alpha$ überhaupt vorkommt — das beantwortet Teil (c)."
+      ],
+      "loesungsweg": "(a) $F_{\\text{H}} = m \\cdot g \\cdot \\sin\\alpha = 12 \\cdot 9{,}81 \\cdot \\sin 30^\\circ = 12 \\cdot 9{,}81 \\cdot 0{,}5\\,\\text{N} = 58{,}86\\,\\text{N}$. (b) Reibungsfrei liefert allein $F_{\\text{H}}$ die Beschleunigung: $a = \\frac{F_{\\text{H}}}{m} = g \\cdot \\sin\\alpha = 9{,}81 \\cdot 0{,}5\\,\\frac{\\text{m}}{\\text{s}^2} = 4{,}905\\,\\frac{\\text{m}}{\\text{s}^2}$. (c) Die Masse kürzt sich vollständig heraus — die Beschleunigung ist unabhängig von $m$. Doppelte Masse bedeutet doppelte Hangabtriebskraft und doppelte Trägheit, beides in gleichem Maße: $a = g \\cdot \\sin\\alpha$ bleibt $4{,}905\\,\\frac{\\text{m}}{\\text{s}^2}$. Dasselbe Prinzip steckt hinter dem freien Fall.",
+      "kc": ["dynamik"]
+    },
+    {
+      "id": "ph-ep-ng-104",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen zur gleichförmigen Kreisbewegung sind richtig?",
+      "optionen": [
+        { "text": "Bei konstanter Bahngeschwindigkeit ist die Kreisbewegung trotzdem beschleunigt, weil die Richtung der Geschwindigkeit sich ändert.", "richtig": true, "erklaerung": "Richtig — Beschleunigung bedeutet jede Änderung des Geschwindigkeitsvektors, also auch Richtungsänderungen bei konstantem Betrag." },
+        { "text": "Die Zentripetalkraft zeigt immer zum Kreismittelpunkt.", "richtig": true, "erklaerung": "Richtig — zentripetal bedeutet zur Mitte strebend; die Kraft muss genau in diese Richtung zeigen, damit der Körper auf der Kreisbahn bleibt." },
+        { "text": "Reißt die Schnur einer Kreisbewegung, fliegt der Körper radial nach außen (weg vom Mittelpunkt).", "richtig": false, "erklaerung": "Falsch — ohne Zentripetalkraft fliegt der Körper nach dem Trägheitsgesetz tangential geradeaus weiter, nicht radial nach außen." },
+        { "text": "Doppelte Bahngeschwindigkeit bei gleichem Radius bedeutet doppelte Zentripetalkraft.", "richtig": false, "erklaerung": "Falsch — da $F_{\\text{Z}} = m \\cdot \\frac{v^2}{r}$ und $v$ im Quadrat steht, bedeutet doppelte Geschwindigkeit viermal so große Zentripetalkraft." }
+      ],
+      "tipps": [
+        "Beschleunigung bedeutet: Änderung des Geschwindigkeitsvektors — das umfasst auch Richtungsänderungen.",
+        "Was passiert laut Trägheitsgesetz, wenn keine Kraft mehr wirkt?",
+        "In der Formel $F_{\\text{Z}} = m \\cdot \\frac{v^2}{r}$: Wie wirkt sich das Quadrat von $v$ aus, wenn $v$ verdoppelt wird?"
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Die Kreisbewegung ist beschleunigt, weil die Richtung der Geschwindigkeit sich ändert (Trägheitsgesetz verlangt eine Kraft dafür), und die Zentripetalkraft zeigt per Definition zum Mittelpunkt. Falsch sind Aussage 3 (ohne Kraft fliegt der Körper tangential, nicht radial, weiter — Trägheitsgesetz) und Aussage 4 (wegen $v^2$ in $F_{\\text{Z}} = m \\cdot \\frac{v^2}{r}$ vervierfacht sich die Kraft, wenn $v$ verdoppelt wird).",
+      "kc": ["kreisbewegung"]
+    }
+  ]
+}

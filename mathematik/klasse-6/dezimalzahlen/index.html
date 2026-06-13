@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dezimalzahlen — Klasse 6 · Mathematik — Lernwelt</title>
+<meta name="description" content="Dezimalzahlen mit der Stellenwerttafel verstehen, vergleichen, ordnen und runden, schriftlich addieren und subtrahieren, mit Kommaverschiebung multiplizieren und dividieren — und zwischen Bruch und Dezimalzahl umwandeln.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Dezimalzahlen</h1>
+  <p class="einleitung">1,99 € für die Limo, 1,65 m Körpergröße, 14,25 s im Sprint — Dezimalzahlen begegnen dir überall. Hier lernst du, was die Ziffern nach dem Komma bedeuten, wie du Dezimalzahlen vergleichst, rundest und sicher mit ihnen rechnest — und wie eng sie mit den Brüchen verwandt sind.</p>
+
+  <section aria-labelledby="dez-stellenwert">
+    <h2 id="dez-stellenwert">1. Dezimalzahlen verstehen: die Stellenwerttafel</h2>
+    <p>Auf dem Kassenbon steht $3{,}75\,\text{€}$. Das <strong>Komma</strong> trennt die Ganzen ($3$ Euro) von den Teilen eines Ganzen ($75$ Cent). Eine solche Zahl heißt <strong>Dezimalzahl</strong> — „dezimal“ kommt von lateinisch <em>decem</em> = zehn, denn rechts vom Komma wird jedes Ganze immer weiter in zehn gleiche Teile zerlegt.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die Stellen nach dem Komma</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} \text{Zehntel: } 0{,}1 = \frac{1}{10} \\[4pt] \text{Hundertstel: } 0{,}01 = \frac{1}{100} \\[4pt] \text{Tausendstel: } 0{,}001 = \frac{1}{1000} \end{gathered}$$</p>
+      <p>Nach dem Komma kommen der Reihe nach <strong>Zehntel</strong>, <strong>Hundertstel</strong> und <strong>Tausendstel</strong>. Jede Stelle ist zehnmal so viel wert wie ihre rechte Nachbarstelle — genau wie vor dem Komma bei Hundertern, Zehnern und Einern.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 184" width="340" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Stellenwerttafel mit den Spalten Zehner, Einer, Komma, Zehntel, Hundertstel und Tausendstel. Eingetragen sind zwei Dezimalzahlen: 3,75 mit 3 Einern, 7 Zehnteln und 5 Hundertsteln sowie 12,304 mit 1 Zehner, 2 Einern, 3 Zehnteln, 0 Hundertsteln und 4 Tausendsteln.">
+        <!-- Spaltenhintergründe: Nachkommastellen hell getönt, Kopfzeile kräftiger -->
+        <rect x="156" y="24" width="168" height="110" fill="var(--mathe)" fill-opacity="0.07"/>
+        <rect x="20" y="24" width="304" height="34" fill="var(--mathe)" fill-opacity="0.15"/>
+        <!-- Gitterlinien -->
+        <g stroke="var(--mathe)" stroke-width="1.5">
+          <line x1="76" y1="24" x2="76" y2="134"/>
+          <line x1="132" y1="24" x2="132" y2="134"/>
+          <line x1="156" y1="24" x2="156" y2="134"/>
+          <line x1="212" y1="24" x2="212" y2="134"/>
+          <line x1="268" y1="24" x2="268" y2="134"/>
+          <line x1="20" y1="58" x2="324" y2="58"/>
+          <line x1="20" y1="96" x2="324" y2="96"/>
+        </g>
+        <rect x="20" y="24" width="304" height="110" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <!-- Kopfzeile: Stellen -->
+        <g fill="var(--mathe)" text-anchor="middle" font-weight="700" font-size="16">
+          <text x="48" y="47">Z</text>
+          <text x="104" y="47">E</text>
+          <text x="144" y="47">,</text>
+          <text x="184" y="47">z</text>
+          <text x="240" y="47">h</text>
+          <text x="296" y="47">t</text>
+        </g>
+        <!-- Zeile 1: 3,75 -->
+        <g fill="var(--mathe)" text-anchor="middle" font-weight="700" font-size="17">
+          <text x="104" y="83">3</text>
+          <text x="144" y="83">,</text>
+          <text x="184" y="83">7</text>
+          <text x="240" y="83">5</text>
+        </g>
+        <!-- Zeile 2: 12,304 -->
+        <g fill="var(--mathe)" text-anchor="middle" font-weight="700" font-size="17">
+          <text x="48" y="121">1</text>
+          <text x="104" y="121">2</text>
+          <text x="144" y="121">,</text>
+          <text x="184" y="121">3</text>
+          <text x="240" y="121">0</text>
+          <text x="296" y="121">4</text>
+        </g>
+        <!-- Legende -->
+        <g fill="var(--mathe)" text-anchor="middle" font-size="12">
+          <text x="172" y="156">Z Zehner · E Einer · z Zehntel</text>
+          <text x="172" y="174">h Hundertstel · t Tausendstel</text>
+        </g>
+      </svg>
+    </div>
+    <p>Lies aus der Tafel ab: $3{,}75$ besteht aus $3$ Einern, $7$ Zehnteln und $5$ Hundertsteln. Bei $12{,}304$ ist die $0$ unverzichtbar: Als <strong>Platzhalter</strong> zeigt sie, dass die Hundertstelstelle leer ist — ließe man sie weg, entstünde die andere Zahl $12{,}34$.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: eine Dezimalzahl zerlegen</span>
+      <p>Jede Dezimalzahl lässt sich in ihre Stellenwerte auseinandernehmen:</p>
+      <p class="formel-abgesetzt">$$3{,}75 = 3 + \frac{7}{10} + \frac{5}{100} = 3 + 0{,}7 + 0{,}05$$</p>
+      <p>Gesprochen wird „drei Komma sieben fünf“ — die Ziffern nach dem Komma nennst du einzeln.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: An welcher Stelle steht die $7$ in $4{,}372$?</summary>
+      <div class="check-antwort"><p>Nach dem Komma kommen Zehntel, Hundertstel, Tausendstel: Die $3$ sind Zehntel, die $7$ Hundertstel, die $2$ Tausendstel. Die $7$ steht also an der <strong>Hundertstelstelle</strong> und bedeutet $\frac{7}{100} = 0{,}07$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="dez-vergleichen">
+    <h2 id="dez-vergleichen">2. Vergleichen, ordnen und runden</h2>
+    <p>Welche Zahl ist größer — $0{,}8$ oder $0{,}75$? Viele tippen auf $0{,}75$, „weil $75$ mehr ist als $8$“. Doch Dezimalzahlen vergleichst du nie an der Länge, sondern <strong>Stelle für Stelle von links nach rechts</strong>: erst die Ganzen, dann Zehntel, dann Hundertstel …</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Dezimalzahlen vergleichen</span>
+      <p class="formel-abgesetzt">$$0{,}8 = 0{,}80 \gt 0{,}75$$</p>
+      <p>Hänge <strong>Endnullen</strong> an, bis beide Zahlen gleich viele Nachkommastellen haben — das ändert den Wert nicht. Dann siehst du sofort: $80$ Hundertstel sind mehr als $75$ Hundertstel, also ist $0{,}8$ die größere Zahl.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: drei Zahlen ordnen</span>
+      <p>Ordne $3{,}2$, $3{,}18$ und $3{,}205$ der Größe nach. Mit Endnullen auf drei Nachkommastellen bringen, dann vergleichen:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} 3{,}200 \quad 3{,}180 \quad 3{,}205 \\[4pt] 3{,}18 \lt 3{,}2 \lt 3{,}205 \end{gathered}$$</p>
+      <p>Alle drei haben $3$ Ganze. Bei den Zehnteln fällt $3{,}180$ zurück ($1 \lt 2$); $3{,}200$ und $3{,}205$ unterscheiden sich erst an der Tausendstelstelle ($0 \lt 5$).</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Rundungsregel</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} 3{,}449 \approx 3{,}4 \\[4pt] 3{,}451 \approx 3{,}5 \end{gathered}$$</p>
+      <p>Bestimme die Rundungsstelle und schaue nur auf die Ziffer <em>direkt rechts daneben</em>: Bei $0$ bis $4$ wird <strong>abgerundet</strong>, bei $5$ bis $9$ <strong>aufgerundet</strong>. Beide Beispiele sind auf Zehntel gerundet — und Vorsicht: $3{,}449$ wird <em>nicht</em> erst zu $3{,}45$ und dann zu $3{,}5$. Es zählt allein die Hundertstelziffer $4$, also wird abgerundet.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: ein Gewicht runden</span>
+      <p>Eine Wassermelone wiegt $4{,}386\,\text{kg}$:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} \text{auf Hundertstel: } 4{,}386 \approx 4{,}39 \\[4pt] \text{auf Zehntel: } 4{,}386 \approx 4{,}4 \\[4pt] \text{auf Ganze: } 4{,}386 \approx 4 \end{gathered}$$</p>
+      <p>Je nach Rundungsstelle entscheidet eine andere Nachbarziffer: die Tausendstelziffer $6$ (aufrunden), die Hundertstelziffer $8$ (aufrunden) oder die Zehntelziffer $3$ (abrunden).</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Was ist größer — $0{,}9$ oder $0{,}85$?</summary>
+      <div class="check-antwort"><p>$0{,}9 = 0{,}90$, und $90$ Hundertstel sind mehr als $85$ Hundertstel — also ist $0{,}9 \gt 0{,}85$. Mehr Nachkommastellen bedeuten <em>nicht</em> automatisch eine größere Zahl.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="dez-add-sub">
+    <h2 id="dez-add-sub">3. Addieren und Subtrahieren</h2>
+    <p>Dezimalzahlen addierst und subtrahierst du schriftlich wie natürliche Zahlen — mit einer entscheidenden Regel: <strong>Komma unter Komma</strong>. Dann steht automatisch jede Stelle unter der passenden Stelle: Einer unter Einern, Zehntel unter Zehnteln.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Komma unter Komma</span>
+      <p>Schreibe die Zahlen stellengerecht untereinander (Komma unter Komma), ergänze <strong>Endnullen</strong>, bis alle gleich viele Nachkommastellen haben, und setze das Komma im Ergebnis genau darunter.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Einkauf beim Bäcker</span>
+      <p>Mia kauft Brötchen für $2{,}35\,\text{€}$ und einen Saft für $1{,}79\,\text{€}$:</p>
+      <p class="formel-abgesetzt">$$\begin{array}{r} 2{,}35 \\ +\;1{,}79 \\ \hline 4{,}14 \end{array}$$</p>
+      <p>Zusammen kostet der Einkauf $4{,}14\,\text{€}$ — gerechnet wie $235 + 179 = 414$, das Komma steht im Ergebnis direkt unter den anderen Kommas.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Rückgeld — Endnullen ergänzen</span>
+      <p>Mia bezahlt mit einem $10$-€-Schein. Ergänze Endnullen: Aus $10$ wird $10{,}00$ — dann klappt das stellenweise Abziehen:</p>
+      <p class="formel-abgesetzt">$$\begin{array}{r} 10{,}00 \\ -\;4{,}14 \\ \hline 5{,}86 \end{array}$$</p>
+      <p>Mia bekommt $5{,}86\,\text{€}$ zurück. Probe durch Addition: $5{,}86 + 4{,}14 = 10{,}00$. ✓</p>
+    </div>
+    <p>Achtung, häufiger Fehler: Bei $3{,}5 + 1{,}25$ darfst du die Zahlen <em>nicht</em> rechtsbündig untereinanderschreiben wie bei natürlichen Zahlen — sonst landen Zehntel unter Hundertsteln. Mit Endnull stimmt die Ordnung: $3{,}50 + 1{,}25 = 4{,}75$.</p>
+  </section>
+
+  <section aria-labelledby="dez-mal-geteilt">
+    <h2 id="dez-mal-geteilt">4. Multiplizieren und Dividieren</h2>
+    <p>Beim Multiplizieren und Dividieren mit $10$, $100$ oder $1000$ bleiben die Ziffern gleich — nur das Komma <strong>wandert</strong>: pro Null eine Stelle. Malnehmen macht die Zahl größer (Komma nach rechts), Teilen macht sie kleiner (Komma nach links).</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Komma verschieben</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} 3{,}75 \cdot 10 = 37{,}5 \\[4pt] 3{,}75 \cdot 100 = 375 \\[4pt] 42{,}6 : 10 = 4{,}26 \\[4pt] 42{,}6 : 1000 = 0{,}0426 \end{gathered}$$</p>
+      <p>Reichen die Stellen nicht aus, füllst du mit Nullen auf: Bei $42{,}6 : 1000$ wandert das Komma drei Stellen nach links, vorne entstehen $0{,}0\ldots$</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Dezimalzahl mal Dezimalzahl</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} 12 \cdot 35 = 420 \\[4pt] 1{,}2 \cdot 0{,}35 = 0{,}420 = 0{,}42 \end{gathered}$$</p>
+      <p>Rechne zuerst <strong>ohne Kommas</strong>. Das Ergebnis bekommt so viele Nachkommastellen, wie beide Faktoren <em>zusammen</em> haben — hier $1 + 2 = 3$. Endnullen am Schluss darfst du weglassen: $0{,}420 = 0{,}42$.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Division mit Kommaverschiebung</span>
+      <p>Wie viele $0{,}9$-Liter-Flaschen füllst du aus $7{,}2$ Litern Saft? Verschiebe das Komma bei <em>beiden</em> Zahlen gleich weit, bis der Teiler eine natürliche Zahl ist — der Wert des Ergebnisses ändert sich dabei nicht:</p>
+      <p class="formel-abgesetzt">$$7{,}2 : 0{,}9 = 72 : 9 = 8$$</p>
+      <p>Es werden genau $8$ Flaschen voll. Probe: $8 \cdot 0{,}9 = 7{,}2$. ✓</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Überschlag als Komma-Wächter</span>
+      <p>Bevor du $4{,}9 \cdot 2{,}1$ genau ausrechnest, runde grob: $5 \cdot 2 = 10$. Das genaue Ergebnis muss in der Nähe von $10$ liegen:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} 49 \cdot 21 = 1029 \\[4pt] 4{,}9 \cdot 2{,}1 = 10{,}29 \end{gathered}$$</p>
+      <p>Hättest du $1{,}029$ oder $102{,}9$ herausbekommen, würde der Überschlag sofort verraten: Hier sitzt das Komma falsch.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Berechne $0{,}6 \cdot 0{,}4$.</summary>
+      <div class="check-antwort"><p>Ohne Kommas: $6 \cdot 4 = 24$. Beide Faktoren haben zusammen $2$ Nachkommastellen, also $0{,}6 \cdot 0{,}4 = 0{,}24$ — und nicht $2{,}4$. Eine vergessene Nachkommastelle ist hier der häufigste Fehler.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="dez-brueche">
+    <h2 id="dez-brueche">5. Brüche und Dezimalzahlen</h2>
+    <p>Brüche und Dezimalzahlen sind zwei Schreibweisen für denselben Wert: $\frac{3}{4}$ einer Pizza und $0{,}75$ Pizza sind gleich viel. Wie Brüche funktionieren, liest du auf der Seite zur <a href="../brueche/index.html">Bruchrechnung</a> nach.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Vom Bruch zur Dezimalzahl</span>
+      <p class="formel-abgesetzt">$$\frac{3}{4} = \frac{75}{100} = 0{,}75$$</p>
+      <p>Erweitere (oder kürze) den Bruch so, dass der Nenner $10$, $100$ oder $1000$ ist — dann liest du die Dezimalzahl direkt ab. Klappt das nicht, hilft immer die Division, denn der Bruchstrich bedeutet „geteilt durch“: $\frac{3}{4} = 3 : 4 = 0{,}75$.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: von der Dezimalzahl zum Bruch</span>
+      <p>Die letzte Nachkommastelle verrät den Nenner — danach vollständig kürzen:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} 0{,}35 = \frac{35}{100} = \frac{7}{20} \\[4pt] 0{,}8 = \frac{8}{10} = \frac{4}{5} \end{gathered}$$</p>
+      <p>$0{,}35$ endet an der Hundertstelstelle, also Nenner $100$; gekürzt mit $5$ ergibt das $\frac{7}{20}$.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Diese Paare lohnt es sich zu merken</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} \frac{1}{2} = 0{,}5 \quad \frac{1}{4} = 0{,}25 \quad \frac{3}{4} = 0{,}75 \\[4pt] \frac{1}{5} = 0{,}2 \quad \frac{1}{10} = 0{,}1 \quad \frac{1}{8} = 0{,}125 \end{gathered}$$</p>
+      <p>Mit diesen Paaren rechnest du oft blitzschnell: $\frac{1}{4}$ von $60\,\text{€}$ sind $15\,\text{€}$ — und $0{,}25 \cdot 60 = 15$ ebenso.</p>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Wenn das Komma nie endet — periodische Dezimalzahlen</summary>
+    <div class="vertiefung-inhalt">
+      <p>Wandle $\frac{1}{3}$ durch Division um: $1 : 3 = 0{,}333\ldots$ — bei jedem Divisionsschritt bleibt Rest $1$, und die $3$ wiederholt sich ohne Ende. So eine Zahl heißt <strong>periodische Dezimalzahl</strong>. Die sich wiederholende Ziffernfolge (die <strong>Periode</strong>) bekommt einen Strich:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} \frac{1}{3} = 0{,}\overline{3} \\[4pt] \frac{2}{3} = 0{,}\overline{6} \\[4pt] \frac{1}{6} = 0{,}1\overline{6} \end{gathered}$$</p>
+      <p>Ob ein vollständig gekürzter Bruch abbricht oder periodisch wird, entscheidet sein <strong>Nenner</strong>: Enthält er nur die Primfaktoren $2$ und $5$, lässt er sich auf $10$, $100$ oder $1000$ erweitern — die Dezimalzahl bricht ab (z. B. $4 = 2 \cdot 2$ oder $20 = 2 \cdot 2 \cdot 5$). Steckt ein anderer Primfaktor im Nenner, etwa bei $3$, $6 = 2 \cdot 3$ oder $7$, wird die Dezimalzahl periodisch.</p>
+      <p>Probiere $\frac{1}{7}$ mit dem Taschenrechner: $\frac{1}{7} = 0{,}\overline{142857}$ — eine Periode aus sechs Ziffern, die endlos im Kreis läuft.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — von der Stellenwerttafel über Vergleichen und Runden bis zum Rechnen mit Kommazahlen und dem Umwandeln zwischen Bruch und Dezimalzahl — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

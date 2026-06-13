@@ -1,0 +1,522 @@
+{
+  "thema": "ph-ep-wurfbewegungen",
+  "fach": "physik",
+  "stufe": "einfuehrungsphase",
+  "aufgaben": [
+    {
+      "id": "ph-ep-wb-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen zum Unabhängigkeitsprinzip bei Wurfbewegungen sind richtig?",
+      "optionen": [
+        {
+          "text": "Waagerechte und senkrechte Bewegung überlagern sich ungestört.",
+          "richtig": true,
+          "erklaerung": "Richtig — das ist der Kern des Prinzips."
+        },
+        {
+          "text": "Die waagerechte Geschwindigkeit bleibt während des Flugs konstant.",
+          "richtig": true,
+          "erklaerung": "Richtig: In waagerechter Richtung wirkt (ohne Luftwiderstand) keine Kraft."
+        },
+        {
+          "text": "Je schneller ein Körper waagerecht fliegt, desto langsamer fällt er.",
+          "richtig": false,
+          "erklaerung": "Falsche Alltagsvorstellung: Der Fall läuft völlig unabhängig von der waagerechten Bewegung ab."
+        },
+        {
+          "text": "Die Fallbeschleunigung wirkt nur im höchsten Punkt der Bahn.",
+          "richtig": false,
+          "erklaerung": "$g$ wirkt während des gesamten Flugs — durchgehend senkrecht nach unten."
+        }
+      ],
+      "tipps": [
+        "Denke an die zwei Kugeln: rollend vom Tisch und senkrecht fallend.",
+        "Welche Kraft wirkt waagerecht, welche senkrecht?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Die Bewegungen beeinflussen sich nicht, und ohne waagerechte Kraft bleibt $v_x$ konstant; $g$ wirkt ständig.",
+      "kc": [
+        "kinematik"
+      ]
+    },
+    {
+      "id": "ph-ep-wb-002",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jeder Größe des schiefen Wurfs die passende Formel zu (Abwurf auf Bodenhöhe).",
+      "paare": [
+        {
+          "links": "Waagerechte Startgeschwindigkeit",
+          "rechts": "v₀ₓ = v₀ · cos α"
+        },
+        {
+          "links": "Senkrechte Startgeschwindigkeit",
+          "rechts": "v₀ᵧ = v₀ · sin α"
+        },
+        {
+          "links": "Flugzeit",
+          "rechts": "T = 2 · v₀ · sin α / g"
+        },
+        {
+          "links": "Wurfweite",
+          "rechts": "W = v₀² · sin(2α) / g"
+        }
+      ],
+      "tipps": [
+        "Ankathete (waagerecht) gehört zum Kosinus.",
+        "Die Flugzeit ist doppelte Steigzeit: $2 \\cdot \\frac{v_{0y}}{g}$.",
+        "In der Weite steckt der doppelte Winkel."
+      ],
+      "loesungsweg": "$v_{0x} = v_0\\cos\\alpha$ (Ankathete), $v_{0y} = v_0\\sin\\alpha$ (Gegenkathete), $T = 2v_0\\sin\\alpha/g$, $W = v_0^2\\sin(2\\alpha)/g$.",
+      "kc": [
+        "kinematik"
+      ]
+    },
+    {
+      "id": "ph-ep-wb-003",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 2,
+      "frage": "Ein Ball wird mit $v_0 = 20\\,\\frac{\\text{m}}{\\text{s}}$ unter $\\alpha = 30^\\circ$ abgeworfen. Berechne die Geschwindigkeitskomponenten beim Abwurf.",
+      "eingaben": [
+        {
+          "label": "$v_{0x}$",
+          "antwort": 17.32,
+          "toleranz": 0.05,
+          "einheit": "m/s"
+        },
+        {
+          "label": "$v_{0y}$",
+          "antwort": 10,
+          "toleranz": 0.05,
+          "einheit": "m/s"
+        }
+      ],
+      "tipps": [
+        "Zerlege mit Sinus und Kosinus: $v_{0x} = v_0\\cos\\alpha$, $v_{0y} = v_0\\sin\\alpha$.",
+        "$\\cos(30^\\circ) \\approx 0{,}866$ und $\\sin(30^\\circ) = 0{,}5$.",
+        "$v_{0x} = 20 \\cdot 0{,}866$, $v_{0y} = 20 \\cdot 0{,}5$."
+      ],
+      "loesungsweg": "$v_{0x} = 20 \\cdot \\cos(30^\\circ) = 17{,}32\\,\\frac{\\text{m}}{\\text{s}}$; $v_{0y} = 20 \\cdot \\sin(30^\\circ) = 10\\,\\frac{\\text{m}}{\\text{s}}$.",
+      "kc": [
+        "kinematik"
+      ]
+    },
+    {
+      "id": "ph-ep-wb-004",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Text zum waagerechten Wurf.",
+      "text": "Waagerecht bewegt sich der Körper ___ , senkrecht führt er einen freien Fall aus. Die Flugbahn ist eine ___ . Die Fallzeit hängt nur von der ___ ab.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "gleichförmig",
+          "optionen": [
+            "gleichförmig",
+            "gleichmäßig beschleunigt",
+            "gebremst"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Parabel",
+          "optionen": [
+            "Parabel",
+            "Gerade",
+            "Kreisbahn"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Abwurfhöhe",
+          "optionen": [
+            "Abwurfhöhe",
+            "Startgeschwindigkeit",
+            "Masse"
+          ]
+        }
+      ],
+      "tipps": [
+        "Wirkt in waagerechter Richtung eine Kraft?",
+        "Gleichförmig + gleichmäßig beschleunigt überlagert ergibt welche Kurve?",
+        "$t_F = \\sqrt{2h/g}$ — welche Größe steckt darin?"
+      ],
+      "loesungsweg": "Waagerecht gleichförmig, die Bahn ist eine Parabel, die Fallzeit hängt nur von der Abwurfhöhe ab ($t_F = \\sqrt{2h/g}$ — weder $v_0$ noch $m$ kommen vor).",
+      "kc": [
+        "kinematik"
+      ]
+    },
+    {
+      "id": "ph-ep-wb-005",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Ball verlässt eine $h = 20\\,\\text{m}$ hohe Plattform waagerecht mit $v_0 = 15\\,\\frac{\\text{m}}{\\text{s}}$ ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$).",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne die Fallzeit $t_F = \\sqrt{\\frac{2h}{g}}$.",
+          "eingaben": [
+            {
+              "label": "$t_F$",
+              "antwort": 2.02,
+              "toleranz": 0.02,
+              "einheit": "s"
+            }
+          ],
+          "tipps": [
+            "$t_F = \\sqrt{\\frac{40}{9{,}81}} = \\sqrt{4{,}077}$"
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Wurfweite $x_W = v_0 \\cdot t_F$.",
+          "eingaben": [
+            {
+              "label": "$x_W$",
+              "antwort": 30.3,
+              "toleranz": 0.3,
+              "einheit": "m"
+            }
+          ],
+          "tipps": [
+            "$x_W = 15 \\cdot 2{,}02$"
+          ]
+        }
+      ],
+      "tipps": [
+        "Die Fallzeit folgt allein aus der Höhe — die waagerechte Geschwindigkeit spielt dafür keine Rolle.",
+        "Erst fallen lassen (Zeit), dann die Weite aus der gleichförmigen Bewegung.",
+        "Einheitencheck: $\\sqrt{\\text{m} / (\\text{m}/\\text{s}^2)} = \\text{s}$ ✓"
+      ],
+      "loesungsweg": "$t_F = \\sqrt{2 \\cdot 20 / 9{,}81} \\approx 2{,}02\\,\\text{s}$; $x_W = 15 \\cdot 2{,}02 \\approx 30{,}3\\,\\text{m}$.",
+      "kc": [
+        "kinematik"
+      ],
+      "cas": "<p>Fallzeit und Wurfweite liefert der ClassPad II in zwei Zeilen. Er rechnet einheitenfrei — hier sind alle Zahlen in m und s eingesetzt, also kommen $t_F$ in s und $x_W$ in m heraus:</p><ol><li><b>Main</b>-Menü: <code>solve(20=1/2*9.81*t^2,t)</code> und <b>EXE</b> — der Dezimalpunkt in <code>9.81</code> ist Pflicht.</li><li>Von den beiden Lösungen $t \\approx \\pm 2{,}02$ ist nur die positive physikalisch: $t_F \\approx 2{,}02\\,\\text{s}$ (negative Zeiten lägen vor dem Abwurf).</li><li>Wurfweite: <code>15*2.02</code> ergibt ≈ 30.3 — also $x_W \\approx 30{,}3\\,\\text{m}$.</li></ol><p>Dokumentiere im Heft den Weg über $t_F = \\sqrt{\\frac{2h}{g}}$ und $x_W = v_0 \\cdot t_F$ — solve bestätigt deine Rechnung, ersetzt sie aber nicht.</p>"
+    },
+    {
+      "id": "ph-ep-wb-006",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Schiefer Wurf mit $v_0 = 12\\,\\frac{\\text{m}}{\\text{s}}$ und $\\alpha = 45^\\circ$ — die Standardeinstellung der Simulation ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$).",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne $v_{0y} = v_0 \\sin(45^\\circ)$.",
+          "eingaben": [
+            {
+              "label": "$v_{0y}$",
+              "antwort": 8.49,
+              "toleranz": 0.03,
+              "einheit": "m/s"
+            }
+          ],
+          "tipps": [
+            "$\\sin(45^\\circ) \\approx 0{,}7071$"
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Steigzeit $t_S = \\frac{v_{0y}}{g}$.",
+          "eingaben": [
+            {
+              "label": "$t_S$",
+              "antwort": 0.865,
+              "toleranz": 0.01,
+              "einheit": "s"
+            }
+          ],
+          "tipps": [
+            "$t_S = \\frac{8{,}49}{9{,}81}$"
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne die Wurfweite $W = \\frac{v_0^2 \\sin(2\\alpha)}{g}$.",
+          "eingaben": [
+            {
+              "label": "$W$",
+              "antwort": 14.68,
+              "toleranz": 0.05,
+              "einheit": "m"
+            }
+          ],
+          "tipps": [
+            "$\\sin(90^\\circ) = 1$, also $W = \\frac{144}{9{,}81}$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Arbeite die Kette ab: Komponente → Steigzeit → Weite.",
+        "Bei $45^\\circ$ ist $\\sin(2\\alpha) = \\sin(90^\\circ) = 1$ — die Weite wird maximal.",
+        "Kontrolliere alle drei Werte in der Simulation (Standardeinstellung)!"
+      ],
+      "loesungsweg": "$v_{0y} = 12 \\cdot 0{,}7071 = 8{,}49\\,\\frac{\\text{m}}{\\text{s}}$; $t_S = 0{,}865\\,\\text{s}$; $W = \\frac{144 \\cdot 1}{9{,}81} = 14{,}68\\,\\text{m}$ — exakt der Wert aus der Simulation.",
+      "kc": [
+        "kinematik"
+      ],
+      "cas": "<p>Flugzeit und Wurfweite mit dem ClassPad II — einheitenfrei, alle Zahlen in m und s:</p><ol><li>Zuerst den Winkelmodus prüfen: In der Statusleiste muss <b>Grad</b> stehen (Antippen wechselt zwischen Bog und Grad), sonst wird sin(45) im Bogenmaß berechnet.</li><li>Flugzeit aus der Bedingung y(t) = 0. Im <b>Main</b>-Menü: <code>solve(12*sin(45)*t-1/2*9.81*t^2=0,t)</code> und <b>EXE</b> — es erscheinen t = 0 und t ≈ 1.73. Beide stimmen: t = 0 ist der Abwurfmoment, die Flugzeit beträgt T ≈ 1,73 s.</li><li>Wurfweite durch Einsetzen in x(t): <code>12*cos(45)*1.73</code> ergibt ≈ 14.68 — also W ≈ 14,68 m, exakt der Wert aus Lösungsweg und Simulation.</li></ol><p>Die Steigzeit aus dem Lösungsweg ist die halbe Flugzeit: <code>1.73/2</code> ergibt 0.865 (s). Ansatz und Formelumstellung gehören trotzdem ins Heft — solve liefert nur die Zahlen.</p>"
+    },
+    {
+      "id": "ph-ep-wb-007",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Was gilt im höchsten Punkt der Flugbahn eines schiefen Wurfs?",
+      "optionen": [
+        {
+          "text": "Die senkrechte Geschwindigkeitskomponente ist null.",
+          "richtig": true,
+          "erklaerung": "Richtig: Der Übergang von Steigen zu Fallen — $v_y = 0$."
+        },
+        {
+          "text": "Die Gesamtgeschwindigkeit ist gleich der waagerechten Komponente $v_x$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Mit $v_y = 0$ bleibt nur $v_x = v_0\\cos\\alpha$ übrig."
+        },
+        {
+          "text": "Die Geschwindigkeit ist null.",
+          "richtig": false,
+          "erklaerung": "Der Körper fliegt waagerecht weiter — nur $v_y$ ist null."
+        },
+        {
+          "text": "Die Beschleunigung ist null.",
+          "richtig": false,
+          "erklaerung": "$g$ wirkt auch im höchsten Punkt unverändert nach unten — sonst käme der Ball nie wieder herunter."
+        }
+      ],
+      "tipps": [
+        "Zerlege die Geschwindigkeit in ihre Komponenten.",
+        "Was passiert mit $v_y$ beim Übergang vom Steigen zum Fallen?",
+        "Verwechsle nicht Geschwindigkeit und Beschleunigung — zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Im Scheitel ist $v_y = 0$, also $v = v_x = v_0\\cos\\alpha$ (Aussagen 1 und 2). Die Beschleunigung bleibt konstant $g$.",
+      "kc": [
+        "kinematik"
+      ]
+    },
+    {
+      "id": "ph-ep-wb-008",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Messaufgabe: Öffne die <a href=\"../../../simulationen/physik/schiefer-wurf/index.html#v0=10&alpha=45&g=1.62\" target=\"_blank\" rel=\"noopener\">Simulation mit Mond-Einstellung ($v_0 = 10\\,\\frac{\\text{m}}{\\text{s}}$, $\\alpha = 45^\\circ$, $g = 1{,}62\\,\\frac{\\text{m}}{\\text{s}^2}$)</a>, lass den Wurf komplett durchlaufen und lies die Wurfweite ab.",
+      "eingaben": [
+        {
+          "label": "Wurfweite",
+          "antwort": 61.73,
+          "toleranz": 0.5,
+          "einheit": "m"
+        }
+      ],
+      "tipps": [
+        "Starte die Simulation und warte auf die Bilanz.",
+        "Der Wert steht in der Bilanzanzeige „Wurfweite“.",
+        "Zur Kontrolle: $W = \\frac{v_0^2}{g}$ bei $45^\\circ$ — auf dem Mond gut sechsmal weiter als auf der Erde!"
+      ],
+      "loesungsweg": "Die Simulation liefert $61{,}73\\,\\text{m}$. Rechnerisch: $W = \\frac{10^2 \\cdot \\sin(90^\\circ)}{1{,}62} = \\frac{100}{1{,}62} \\approx 61{,}7\\,\\text{m}$.",
+      "kc": [
+        "kinematik"
+      ]
+    },
+    {
+      "id": "ph-ep-wb-009",
+      "typ": "parametrisiert",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "generator": "wurfweite",
+      "frage": "",
+      "tipps": [
+        "Nutze $W = \\frac{v_0^2 \\cdot \\sin(2\\alpha)}{g}$.",
+        "Den Winkel verdoppeln, bevor du den Sinus nimmst!",
+        "Taschenrechner auf Grad (DEG) stellen."
+      ],
+      "loesungsweg": "",
+      "kc": [
+        "kinematik"
+      ]
+    },
+    {
+      "id": "ph-ep-wb-010",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Erkläre anschaulich, warum die Wurfweite bei $45^\\circ$ maximal wird — ohne die Formel nur zu zitieren. Argumentiere mit dem Zusammenspiel von Flugzeit und waagerechter Geschwindigkeit.",
+      "musterloesung": "Die Wurfweite ist das Produkt aus waagerechter Geschwindigkeit und Flugzeit: $W = v_x \\cdot T$. Ein flacher Wurf hat eine große waagerechte Geschwindigkeit, aber eine kurze Flugzeit — der Ball ist zu schnell wieder am Boden. Ein steiler Wurf bleibt lange in der Luft, kommt aber waagerecht kaum voran. Beide Extremfälle ($0^\\circ$ und $90^\\circ$) ergeben die Weite null. Dazwischen muss es ein Optimum geben, bei dem das Produkt aus beiden Faktoren am größten ist — das ist genau bei $45^\\circ$ der Fall, wo keiner der beiden Faktoren zu stark einbricht.",
+      "tipps": [
+        "Schreibe die Weite als Produkt: $W = v_x \\cdot T$.",
+        "Was passiert mit $v_x$ und $T$ bei sehr flachen bzw. sehr steilen Würfen?",
+        "Betrachte die Extremfälle $0^\\circ$ und $90^\\circ$."
+      ],
+      "loesungsweg": "Kern: $W = v_x \\cdot T$; flach = großes $v_x$, kleines $T$; steil = umgekehrt; beide Extreme ergeben null — das Maximum liegt beim Kompromiss $45^\\circ$.",
+      "kc": [
+        "kinematik",
+        "argumentieren"
+      ]
+    },
+    {
+      "id": "ph-ep-wb-011",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Torwart-Abschlag: $v_0 = 25\\,\\frac{\\text{m}}{\\text{s}}$ unter $\\alpha = 40^\\circ$ ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$, ohne Luftwiderstand). Berechne die Wurfweite — und vergleiche anschließend mit dem Preset „Weitschuss“ der Simulation.",
+      "eingaben": [
+        {
+          "label": "$W$",
+          "antwort": 62.73,
+          "toleranz": 0.3,
+          "einheit": "m"
+        }
+      ],
+      "tipps": [
+        "$W = \\frac{v_0^2 \\cdot \\sin(2\\alpha)}{g}$ mit $2\\alpha = 80^\\circ$.",
+        "$\\sin(80^\\circ) \\approx 0{,}985$.",
+        "$W = \\frac{625 \\cdot 0{,}985}{9{,}81}$"
+      ],
+      "loesungsweg": "$W = \\frac{25^2 \\cdot \\sin(80^\\circ)}{9{,}81} = \\frac{625 \\cdot 0{,}9848}{9{,}81} \\approx 62{,}7\\,\\text{m}$. In der Realität verkürzt der Luftwiderstand den Schuss deutlich — Modellgrenze!",
+      "kc": [
+        "kinematik"
+      ]
+    },
+    {
+      "id": "ph-ep-wb-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Mit der Bahngleichung $y(x) = x \\tan(\\alpha) - \\frac{g}{2 v_0^2 \\cos^2(\\alpha)} \\cdot x^2$ — wie hoch fliegt ein Ball ($v_0 = 15\\,\\frac{\\text{m}}{\\text{s}}$, $\\alpha = 50^\\circ$) in $x = 10\\,\\text{m}$ Entfernung?",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne den Anstiegsterm $x \\cdot \\tan(50^\\circ)$.",
+          "eingaben": [
+            {
+              "label": "Term 1",
+              "antwort": 11.92,
+              "toleranz": 0.03,
+              "einheit": "m"
+            }
+          ],
+          "tipps": [
+            "$\\tan(50^\\circ) \\approx 1{,}1918$"
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne den Abzugsterm $\\frac{g \\cdot x^2}{2 v_0^2 \\cos^2(50^\\circ)}$.",
+          "eingaben": [
+            {
+              "label": "Term 2",
+              "antwort": 5.28,
+              "toleranz": 0.03,
+              "einheit": "m"
+            }
+          ],
+          "tipps": [
+            "$\\cos(50^\\circ) \\approx 0{,}6428$, also $\\cos^2 \\approx 0{,}4132$; Nenner: $2 \\cdot 225 \\cdot 0{,}4132 \\approx 185{,}9$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne die Höhe $y(10)$.",
+          "eingaben": [
+            {
+              "label": "$y$",
+              "antwort": 6.64,
+              "toleranz": 0.05,
+              "einheit": "m"
+            }
+          ],
+          "tipps": [
+            "Differenz der beiden Terme."
+          ]
+        }
+      ],
+      "tipps": [
+        "Setze Schritt für Schritt in die Bahngleichung ein.",
+        "Taschenrechner auf Grad (DEG) — der häufigste Fehler hier!",
+        "Kontrolle: Miss in der Simulation mit dem Lineal nach ($v_0 = 15$, $\\alpha = 50^\\circ$)."
+      ],
+      "loesungsweg": "Term 1: $10 \\cdot \\tan(50^\\circ) = 11{,}92\\,\\text{m}$. Term 2: $\\frac{9{,}81 \\cdot 100}{2 \\cdot 225 \\cdot 0{,}4132} = 5{,}28\\,\\text{m}$. Höhe: $y = 11{,}92 - 5{,}28 = 6{,}64\\,\\text{m}$.",
+      "kc": [
+        "kinematik"
+      ],
+      "cas": "<p>Die Bahngleichung kannst du dem ClassPad II als Funktion beibringen — er rechnet einheitenfrei, hier mit allen Längen in m und $v_0$ in m/s:</p><ol><li>Zuerst den Winkelmodus prüfen: In der Statusleiste muss <b>Grad</b> stehen (Antippen wechselt zwischen Bog und Grad), sonst wird $\\tan(50)$ im Bogenmaß berechnet.</li><li>Im <b>Main</b>-Menü definieren: <code>Define f(x)=x*tan(50)-9.81/(2*15^2*cos(50)^2)*x^2</code> (Define findest du unter <b>Interactive → Define</b>).</li><li><code>f(10)</code> und <b>EXE</b> liefert ≈ 6.64 — der Ball ist in $10\\,\\text{m}$ Entfernung also rund $6{,}64\\,\\text{m}$ hoch. Bleibt der Ausdruck symbolisch mit tan und cos stehen, schalte in der Symbolleiste von <b>Standard</b> auf <b>Dezimal</b> (Knopf ½↔0,5).</li><li>Teilterm-Kontrolle wie im Lösungsweg: <code>10*tan(50)</code> ≈ 11.92 und <code>9.81*10^2/(2*15^2*cos(50)^2)</code> ≈ 5.28.</li></ol><p>Die eingesetzte Bahngleichung gehört trotzdem ins Heft — der ClassPad nimmt dir nur das Zahlenrechnen ab.</p>"
+    },
+    {
+      "id": "ph-ep-wb-013",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Zwei Würfe mit gleicher Startgeschwindigkeit, einmal unter $30^\\circ$, einmal unter $60^\\circ$. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Beide Würfe haben dieselbe Wurfweite.",
+          "richtig": true,
+          "erklaerung": "Richtig: $\\sin(60^\\circ) = \\sin(120^\\circ)$ — komplementäre Winkel liefern gleiche Weiten."
+        },
+        {
+          "text": "Der $60^\\circ$-Wurf fliegt länger und höher.",
+          "richtig": true,
+          "erklaerung": "Richtig: Größeres $v_{0y}$ bedeutet längere Flugzeit und größere Gipfelhöhe."
+        },
+        {
+          "text": "Beide Würfe haben dieselbe Flugzeit.",
+          "richtig": false,
+          "erklaerung": "Die Flugzeit hängt von $\\sin(\\alpha)$ ab — bei $60^\\circ$ ist sie deutlich länger."
+        },
+        {
+          "text": "Der $30^\\circ$-Wurf fliegt weiter.",
+          "richtig": false,
+          "erklaerung": "Die Weiten sind exakt gleich — probiere es in der Simulation aus."
+        }
+      ],
+      "tipps": [
+        "Vergleiche $\\sin(2 \\cdot 30^\\circ)$ und $\\sin(2 \\cdot 60^\\circ)$.",
+        "Für Flugzeit und Höhe zählt nur die senkrechte Komponente $v_0 \\sin(\\alpha)$.",
+        "Zwei Aussagen sind richtig — die Simulation zeigt es in einer Minute."
+      ],
+      "loesungsweg": "$\\sin(60^\\circ) = \\sin(120^\\circ)$: gleiche Weite (Aussage 1). Der steilere Wurf hat größeres $v_{0y}$: längere Flugzeit, größere Höhe (Aussage 2).",
+      "kc": [
+        "kinematik"
+      ]
+    }
+  ]
+}

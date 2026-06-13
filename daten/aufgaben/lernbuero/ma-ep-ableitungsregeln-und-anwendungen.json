@@ -1,0 +1,270 @@
+{
+  "thema": "ma-ep-ableitungsregeln-und-anwendungen",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben — erstellt zur Füllung dünner Spuren; fachliche Prüfung durch die Lehrkraft ausstehend.",
+  "aufgaben": [
+    {
+      "id": "ma-ep-ablr-101",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Leite $f(x) = 3x^4 - 2x^2 + 5x - 1$ ab und berechne $f'(1)$ und $f'(-1)$.",
+      "eingaben": [
+        {
+          "label": "$f'(1)$",
+          "antwort": 13,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$f'(-1)$",
+          "antwort": -3,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Summand für Summand: $3x^4 \\to 12x^3$, $-2x^2 \\to -4x$, $5x \\to 5$, $-1 \\to 0$.",
+        "$f'(x) = 12x^3 - 4x + 5$ — jetzt die Werte einsetzen.",
+        "$f'(1) = 12 - 4 + 5$; $f'(-1) = 12 \\cdot (-1)^3 - 4 \\cdot (-1) + 5 = -12 + 4 + 5$."
+      ],
+      "loesungsweg": "Mit Potenz-, Faktor- und Summenregel: $f'(x) = 12x^3 - 4x + 5$ (die Konstante $-1$ fällt weg). Einsetzen: $f'(1) = 12 - 4 + 5 = 13$ — an der Stelle $1$ steigt der Graph steil. $f'(-1) = -12 + 4 + 5 = -3$: Bei $x = -1$ fällt der Graph leicht.",
+      "kc": ["ableitungsregeln"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-ep-ablr-102",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Bestimme für $f(x) = x^2 + 2x - 1$ an der Stelle $x_0 = 1$ die Tangentensteigung $m$ und den $y$-Achsenabschnitt $b$ der Tangente.",
+      "eingaben": [
+        {
+          "label": "Steigung $m$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$y$-Achsenabschnitt $b$",
+          "antwort": -2,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Berechne zuerst den Berührpunkt: $f(1) = 1 + 2 - 1$.",
+        "Die Steigung ist $m = f'(x_0)$ mit $f'(x) = 2x + 2$.",
+        "Punktprobe: $f(1) = m \\cdot 1 + b$ nach $b$ auflösen."
+      ],
+      "loesungsweg": "Berührpunkt: $f(1) = 1 + 2 - 1 = 2$, also $P(1 \\mid 2)$. Ableiten: $f'(x) = 2x + 2$, daher $m = f'(1) = 4$. Punktprobe mit $y = 4x + b$: $2 = 4 \\cdot 1 + b$ liefert $b = -2$. Die Tangente lautet $y = 4x - 2$.",
+      "kc": ["tangente-und-normale"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-ep-ablr-103",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Bestimme für $f(x) = x^2 - 4x + 3$ die Nullstelle von $f'$ und entscheide: Ist der Punkt bei dieser Stelle ein Hoch- oder Tiefpunkt? Berechne auch $f$ an dieser Stelle.",
+      "eingaben": [
+        {
+          "label": "Nullstelle von $f'$",
+          "antwort": 2,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$f$ an dieser Stelle",
+          "antwort": -1,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$f'(x) = 2x - 4$ — gleich null setzen.",
+        "Prüfe mit $f''(x) = 2$: Ist der Wert positiv oder negativ? Was bedeutet das?",
+        "$f(2) = 4 - 8 + 3$."
+      ],
+      "loesungsweg": "$f'(x) = 2x - 4 = 0$ liefert $x = 2$. Mit $f''(x) = 2 > 0$ liegt dort ein Tiefpunkt. $f(2) = 4 - 8 + 3 = -1$. Der Tiefpunkt ist $T(2 \\mid -1)$. Der Graph der Parabel hat genau diesen einen tiefsten Punkt.",
+      "kc": ["monotonie", "extrempunkte"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-ep-ablr-104",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bestimme die Extrempunkte von $f(x) = x^3 - 3x^2 - 9x + 2$.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Löse die notwendige Bedingung $f'(x) = 0$. Gib die kleinere und die größere Lösung an.",
+          "eingaben": [
+            {
+              "label": "kleinere Lösung",
+              "antwort": -1,
+              "toleranz": 0,
+              "einheit": ""
+            },
+            {
+              "label": "größere Lösung",
+              "antwort": 3,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$f'(x) = 3x^2 - 6x - 9 = 3(x^2 - 2x - 3)$ — p-q-Formel oder Faktorisieren."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne $f''(-1)$ und $f''(3)$.",
+          "eingaben": [
+            {
+              "label": "$f''(-1)$",
+              "antwort": -12,
+              "toleranz": 0,
+              "einheit": ""
+            },
+            {
+              "label": "$f''(3)$",
+              "antwort": 12,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$f''(x) = 6x - 6$ — einsetzen."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne die $y$-Koordinaten $f(-1)$ und $f(3)$.",
+          "eingaben": [
+            {
+              "label": "$f(-1)$",
+              "antwort": 7,
+              "toleranz": 0,
+              "einheit": ""
+            },
+            {
+              "label": "$f(3)$",
+              "antwort": -25,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$f(-1) = -1 - 3 + 9 + 2$ und $f(3) = 27 - 27 - 27 + 2$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Notwendig: $f'(x) = 0$ gibt die Kandidaten. Hinreichend: Vorzeichen von $f''$ entscheidet.",
+        "$x^2 - 2x - 3 = (x-3)(x+1)$ — einfach faktorisierbar.",
+        "$f''(-1) < 0$ bedeutet Hochpunkt, $f''(3) > 0$ Tiefpunkt."
+      ],
+      "loesungsweg": "$f'(x) = 3x^2 - 6x - 9 = 3(x^2 - 2x - 3) = 3(x - 3)(x + 1) = 0$ liefert $x = -1$ und $x = 3$. Mit $f''(x) = 6x - 6$: $f''(-1) = -12 < 0$ (Hochpunkt), $f''(3) = 12 > 0$ (Tiefpunkt). $y$-Koordinaten: $f(-1) = -1 - 3 + 9 + 2 = 7$, $f(3) = 27 - 27 - 27 + 2 = -25$. Ergebnis: $H(-1 \\mid 7)$ und $T(3 \\mid -25)$.",
+      "kc": ["extrempunkte"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-ep-ablr-105",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Für $f(x) = x^3 + 3x^2 - 1$ gilt $f''(x) = 6x + 6$. Bestimme die Wendestelle $x_W$ und berechne die Koordinaten des Wendepunkts $W$.",
+      "eingaben": [
+        {
+          "label": "Wendestelle $x_W$",
+          "antwort": -1,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$y$-Koordinate von $W$",
+          "antwort": 1,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Setze $f''(x) = 6x + 6 = 0$ und löse nach $x$ auf.",
+        "Prüfe den Vorzeichenwechsel: $f''(-2) = ?$ und $f''(0) = ?$.",
+        "Berechne $f(-1) = (-1)^3 + 3 \\cdot (-1)^2 - 1$."
+      ],
+      "loesungsweg": "$f''(x) = 6x + 6 = 0$ liefert $x_W = -1$. Vorzeichenprüfung: $f''(-2) = -6 < 0$ und $f''(0) = 6 > 0$ — das Vorzeichen wechselt, es liegt wirklich ein Wendepunkt vor. $y$-Koordinate: $f(-1) = -1 + 3 - 1 = 1$. Der Wendepunkt ist $W(-1 \\mid 1)$.",
+      "kc": ["kruemmung-wendepunkte"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-ep-ablr-106",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ein Hühnergehege soll mit $30\\,\\text{m}$ Zaun eingezäunt werden. Eine Seite wird durch eine Wand gebildet (kein Zaun nötig), die anderen drei Seiten bestehen aus Zaun. Die Breite sei $x$, die Länge $y$. Aus der Nebenbedingung $2x + y = 30$ folgt die Zielfunktion $A(x) = x \\cdot (30 - 2x)$ für $0 < x < 15$. Für welches $x$ wird die Fläche maximal, wie groß ist dann $y$, und wie groß ist die maximale Fläche?",
+      "eingaben": [
+        {
+          "label": "Breite $x$",
+          "antwort": 7.5,
+          "toleranz": 0.01,
+          "einheit": "m"
+        },
+        {
+          "label": "Länge $y$",
+          "antwort": 15,
+          "toleranz": 0.01,
+          "einheit": "m"
+        },
+        {
+          "label": "Maximale Fläche",
+          "antwort": 112.5,
+          "toleranz": 0.01,
+          "einheit": "m²"
+        }
+      ],
+      "tipps": [
+        "Ausmultiplizieren: $A(x) = 30x - 2x^2$ — dann ableiten.",
+        "$A'(x) = 30 - 4x = 0$ lösen und mit $A''(x) = -4 < 0$ das Maximum bestätigen.",
+        "$y$ steckt in der Nebenbedingung: $y = 30 - 2 \\cdot 7{,}5$."
+      ],
+      "loesungsweg": "Zielfunktion: $A(x) = x \\cdot (30 - 2x) = 30x - 2x^2$ für $0 < x < 15$. Ableiten: $A'(x) = 30 - 4x = 0$ liefert $x = 7{,}5\\,\\text{m}$. Wegen $A''(x) = -4 < 0$ liegt ein Maximum vor. Aus der Nebenbedingung: $y = 30 - 2 \\cdot 7{,}5 = 15\\,\\text{m}$. Maximale Fläche: $A(7{,}5) = 7{,}5 \\cdot 15 = 112{,}5\\,\\text{m}^2$.",
+      "kc": ["optimierung"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-ep-ablr-107",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Aus einem quadratischen Stück Pappe mit Seitenlänge $10\\,\\text{cm}$ werden an jeder Ecke Quadrate der Seitenlänge $x$ ausgeschnitten und die Ränder hochgeklappt. Das Volumen ist $V(x) = x \\cdot (10 - 2x)^2$ für $0 < x < 5$. Für welches $x$ wird das Volumen maximal? Runde auf zwei Dezimalstellen.",
+      "eingaben": [
+        {
+          "label": "Seitenlänge $x$",
+          "antwort": 1.67,
+          "toleranz": 0.01,
+          "einheit": "cm"
+        },
+        {
+          "label": "Maximales Volumen",
+          "antwort": 74.07,
+          "toleranz": 0.1,
+          "einheit": "cm³"
+        }
+      ],
+      "tipps": [
+        "Ausmultiplizieren: $V(x) = x(100 - 40x + 4x^2) = 4x^3 - 40x^2 + 100x$.",
+        "$V'(x) = 12x^2 - 80x + 100 = 0$; durch $4$ teilen: $3x^2 - 20x + 25 = 0$ — p-q-Formel.",
+        "Kandidaten $x = 5$ (Rand, $V = 0$) und $x = \\frac{5}{3} \\approx 1{,}67$ — prüfe $V''$ für das Maximum."
+      ],
+      "loesungsweg": "$V(x) = 4x^3 - 40x^2 + 100x$. Ableiten: $V'(x) = 12x^2 - 80x + 100 = 0 \\;\\Leftrightarrow\\; 3x^2 - 20x + 25 = 0$. p-q-Formel: $x = \\frac{20 \\pm \\sqrt{400 - 300}}{6} = \\frac{20 \\pm 10}{6}$, also $x = 5$ (Rand, $V = 0$) und $x = \\frac{5}{3} \\approx 1{,}67$. Hinreichend: $V''(x) = 24x - 80$, $V''\\!\\left(\\frac{5}{3}\\right) = 40 - 80 = -40 < 0$ — Maximum. $V\\!\\left(\\frac{5}{3}\\right) = \\frac{5}{3} \\cdot \\left(\\frac{20}{3}\\right)^2 = \\frac{2000}{27} \\approx 74{,}07\\,\\text{cm}^3$.",
+      "kc": ["optimierung"],
+      "ergaenzung": "lernbuero"
+    }
+  ]
+}

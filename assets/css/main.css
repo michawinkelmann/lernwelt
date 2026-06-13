@@ -1,0 +1,346 @@
+/* main.css — Layout und Komponenten (Designvariante A „Schulheft & Klassik") */
+
+/* ===== Basis ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--schrift);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--karo) 1px, transparent 1px),
+    linear-gradient(90deg, var(--karo) 1px, transparent 1px);
+  background-size: var(--karo-gr) var(--karo-gr);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+h1, h2, h3, h4 { font-family: var(--display); line-height: 1.2; margin: 0 0 var(--abstand-3); }
+h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); }
+h2 { font-size: clamp(1.35rem, 3vw, 1.7rem); }
+h3 { font-size: 1.2rem; }
+p { margin: 0 0 var(--abstand-3); }
+a { color: var(--akzent); }
+a:hover { text-decoration-thickness: 2px; }
+img, svg { max-width: 100%; }
+:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; border-radius: 2px; }
+
+.inhalt { width: 100%; max-width: var(--inhalt-breite); margin: 0 auto; padding: var(--abstand-4) var(--abstand-3) var(--abstand-5); flex: 1; }
+.einleitung { max-width: 62ch; color: var(--text-leise); }
+.nur-screenreader { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.sprung-link { position: absolute; left: -9999px; top: 0; background: var(--flaeche); color: var(--text); padding: 10px 16px; z-index: 100; border: 2px solid var(--akzent); border-radius: var(--radius); }
+.sprung-link:focus { left: 8px; top: 8px; }
+
+.noscript-hinweis { max-width: var(--inhalt-breite); margin: var(--abstand-3) auto; padding: var(--abstand-3); background: var(--hauch); border: 1px solid var(--linie); border-radius: var(--radius); }
+
+/* ===== Kopfzeile ===== */
+.kopfzeile { background: var(--flaeche); border-bottom: 1px solid var(--linie); }
+.kopfzeile-innen { max-width: var(--inhalt-breite); margin: 0 auto; padding: var(--abstand-2) var(--abstand-3); display: flex; flex-wrap: wrap; align-items: center; gap: var(--abstand-2) var(--abstand-3); }
+.marke { display: flex; align-items: baseline; gap: var(--abstand-2); margin-right: auto; text-decoration: none; color: var(--text); }
+.marke b { font-family: var(--display); font-size: 1.3rem; font-weight: 700; }
+.marke span { font-size: .78rem; color: var(--text-leise); }
+
+.hauptnav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 2px; margin: 0; padding: 0; }
+.hauptnav a { display: inline-flex; align-items: center; min-height: var(--beruehrziel); padding: 8px 12px; text-decoration: none; color: var(--text); font-weight: 600; font-size: .98rem; border-radius: var(--radius-klein); }
+.hauptnav a:hover { background: var(--hauch); }
+.hauptnav a[aria-current="true"] { color: var(--akzent); box-shadow: inset 0 -3px 0 var(--akzent); }
+.nav-toggle { display: none; }
+
+.kopf-werkzeuge { display: flex; align-items: center; gap: var(--abstand-2); }
+.zweig { display: flex; border: 1px solid var(--linie); border-radius: 999px; overflow: hidden; background: var(--flaeche); }
+.zweig button { font: inherit; font-size: .85rem; font-weight: 600; border: 0; background: transparent; color: var(--text); padding: 8px 12px; min-height: 38px; cursor: pointer; }
+.zweig button[aria-pressed="true"] { background: var(--text); color: var(--flaeche); }
+.thema-knopf { font: inherit; cursor: pointer; min-width: var(--beruehrziel); min-height: 38px; padding: 6px 10px; border: 1px solid var(--linie); border-radius: 999px; background: var(--flaeche); color: var(--text); font-size: 1rem; }
+.thema-knopf:hover { background: var(--hauch); }
+
+/* ===== Brotkrümel ===== */
+.brotkruemel { max-width: var(--inhalt-breite); margin: 0 auto; padding: var(--abstand-2) var(--abstand-3) 0; font-size: .9rem; }
+.brotkruemel ol { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; color: var(--text-leise); }
+.brotkruemel li + li::before { content: "›"; margin: 0 6px 0 2px; }
+.brotkruemel a { color: var(--text-leise); }
+.brotkruemel [aria-current="page"] { color: var(--text); font-weight: 600; }
+
+/* ===== Held (Startseite) ===== */
+.held { padding: var(--abstand-5) 0 var(--abstand-3); max-width: 62ch; }
+.held h1 mark { background: none; color: var(--akzent); }
+.knopfzeile { display: flex; flex-wrap: wrap; gap: var(--abstand-3); }
+
+/* ===== Knöpfe ===== */
+.knopf { font: inherit; font-weight: 700; cursor: pointer; min-height: var(--beruehrziel); padding: 10px 22px; border-radius: var(--radius); border: 2px solid var(--akzent); background: var(--akzent); color: var(--flaeche); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+html[data-theme="dunkel"] .knopf { color: #1c1812; }
+.knopf.zweitrangig { background: transparent; color: var(--akzent); }
+html[data-theme="dunkel"] .knopf.zweitrangig { color: var(--akzent); }
+.knopf:hover { filter: brightness(1.08); }
+
+/* ===== Kacheln ===== */
+.kacheln { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: var(--abstand-3); margin: var(--abstand-4) 0; }
+.kachel { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); box-shadow: var(--schatten); padding: var(--abstand-3); border-top: 4px solid var(--kachel-farbe, var(--akzent)); display: flex; flex-direction: column; gap: var(--abstand-2); }
+.kachel h2, .kachel h3 { margin: 0; font-size: 1.18rem; }
+.kachel p { margin: 0; font-size: .95rem; color: var(--text-leise); }
+.kachel .kachel-fuss { margin-top: auto; display: flex; flex-wrap: wrap; gap: var(--abstand-2); align-items: center; }
+.kachel a.kachel-link { color: var(--text); text-decoration: none; }
+.kachel a.kachel-link:hover { color: var(--kachel-farbe, var(--akzent)); text-decoration: underline; }
+.kachel.mathe { --kachel-farbe: var(--mathe); }
+.kachel.physik { --kachel-farbe: var(--physik); }
+.kachel.informatik { --kachel-farbe: var(--info); }
+.kachel svg.kachel-bild { width: 100%; height: 60px; display: block; color: var(--kachel-farbe, var(--akzent)); }
+
+/* ===== Abzeichen ===== */
+.abzeichen { display: inline-block; font-size: .74rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; border: 1.5px solid var(--linie); color: var(--text-leise); white-space: nowrap; }
+.abzeichen.sim { border-color: var(--physik); color: var(--physik); }
+.abzeichen.zweig-tag { border-color: var(--mathe); color: var(--mathe); }
+.abzeichen.status-geplant { border-style: dashed; }
+
+/* ===== Merkkasten (Heftkasten mit Doppellinie) ===== */
+.merkkasten { background: var(--flaeche); border: 1px solid var(--linie); border-left: 6px double var(--akzent); border-radius: var(--radius); padding: var(--abstand-3); margin: var(--abstand-4) 0; max-width: 70ch; }
+.merkkasten .merk-etikett { font-family: var(--display); font-weight: 700; color: var(--akzent); display: block; margin-bottom: var(--abstand-1); }
+
+/* ===== Tipp-Kasten ===== */
+.tipp { border-left: 4px solid var(--physik); background: var(--hauch); padding: 10px 14px; border-radius: 0 var(--radius-klein) var(--radius-klein) 0; margin: 0 0 var(--abstand-3); font-size: .98rem; }
+
+/* ===== Formular-Grundlagen ===== */
+input, select, textarea { font: inherit; color: var(--text); background: var(--bg); border: 1.5px solid var(--linie); border-radius: var(--radius-klein); padding: 8px 10px; min-height: var(--beruehrziel); }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--akzent); outline-offset: 1px; border-color: transparent; }
+
+/* ===== Rückmeldungen (nie nur Farbe: immer Zeichen + Text) ===== */
+.rueckmeldung { display: flex; align-items: center; gap: var(--abstand-2); font-weight: 700; }
+.rueckmeldung.ok { color: var(--ok); }
+.rueckmeldung.fehler { color: var(--fehler); }
+.rueckmeldung .zeichen { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; flex: none; color: var(--flaeche); font-size: .9rem; }
+.rueckmeldung.ok .zeichen { background: var(--ok); }
+.rueckmeldung.fehler .zeichen { background: var(--fehler); }
+html[data-theme="dunkel"] .rueckmeldung .zeichen { color: #1c1812; }
+
+/* ===== Aufgaben-Engine ===== */
+.filterleiste { display: flex; flex-wrap: wrap; gap: var(--abstand-2) var(--abstand-3); align-items: center; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: var(--abstand-2) var(--abstand-3); margin: var(--abstand-3) 0; }
+.filterleiste fieldset { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: var(--abstand-1) var(--abstand-2); align-items: center; }
+.filterleiste legend { float: left; font-size: .85rem; font-weight: 700; color: var(--text-leise); margin-right: var(--abstand-2); padding: 0; }
+.filterleiste label { display: inline-flex; align-items: center; gap: 4px; font-size: .92rem; min-height: var(--beruehrziel); }
+.filterleiste input[type="checkbox"] { min-height: 0; width: 18px; height: 18px; accent-color: var(--akzent); }
+.filter-druck { margin-left: auto; }
+
+.fortschrittsbalken { margin: var(--abstand-3) 0; }
+.fortschrittsbalken .balken { height: 10px; background: var(--hauch); border: 1px solid var(--linie); border-radius: 999px; overflow: hidden; }
+.fortschrittsbalken .balken i { display: block; height: 100%; width: 0; background: var(--ok); border-radius: 999px; transition: width .3s; }
+.fortschrittsbalken .balken-text { font-size: .9rem; color: var(--text-leise); }
+
+.aufgabe { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: var(--abstand-3); margin: 0 0 var(--abstand-3); max-width: 75ch; }
+.aufgabe-kopf { display: flex; flex-wrap: wrap; gap: var(--abstand-2); align-items: center; margin-bottom: var(--abstand-2); }
+.aufgabe-nummer { font-family: var(--display); font-weight: 700; font-size: 1.05rem; margin-right: auto; }
+.aufgabe.ist-geloest { border-left: 5px solid var(--ok); }
+.aufgabe .frage { margin: 0 0 var(--abstand-3); }
+.abzeichen.afb { border-color: var(--physik); color: var(--physik); }
+.abzeichen.niveau { border-color: var(--mathe); color: var(--mathe); }
+.abzeichen.fortschritt-tag { border-color: var(--linie); }
+.abzeichen.fortschritt-tag.fertig { border-color: var(--ok); color: var(--ok); }
+.abzeichen.geloest-tag { border-color: var(--ok); color: var(--ok); }
+
+.eingaben { display: flex; flex-wrap: wrap; gap: var(--abstand-2) var(--abstand-3); margin-bottom: var(--abstand-3); }
+.eingaben label { display: inline-flex; align-items: center; gap: 8px; }
+.eingaben input { width: 110px; }
+.eingaben .einheit { color: var(--text-leise); }
+
+.optionen { list-style: none; margin: 0 0 var(--abstand-3); padding: 0; display: grid; gap: var(--abstand-2); }
+.optionen label { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border: 1.5px solid var(--linie); border-radius: var(--radius-klein); cursor: pointer; }
+.optionen label:hover { background: var(--hauch); }
+.optionen input { min-height: 0; width: 20px; height: 20px; margin-top: 2px; flex: none; accent-color: var(--akzent); }
+.optionen .erklaerung { display: block; font-size: .9rem; color: var(--text-leise); margin-top: 4px; }
+.optionen .erklaerung[hidden] { display: none; } /* hidden-Attribut darf nicht von display:block überstimmt werden (Bug: Antworten waren sofort sichtbar) */
+details.loesungsweg.cas { border-left-color: var(--info); }
+details.loesungsweg.cas summary { color: var(--info); }
+.optionen li.richtig-markiert > label { border-color: var(--ok); }
+.optionen li.falsch-markiert > label { border-color: var(--fehler); }
+
+.luecke-eingabe { width: 110px; margin: 0 4px; }
+.luecke-dropdown { margin: 0 4px; }
+
+.spiel-dauer { font-size: .9rem; color: var(--text-leise); margin: 8px 0 0; }
+/* Aufgabenkarten mobil: lange CAS-/Code-Ketten dürfen umbrechen, breite $$-Formeln scrollen im Kasten */
+.aufgabe code { overflow-wrap: anywhere; }
+.katex-display { overflow-x: auto; overflow-y: hidden; max-width: 100%; position: relative; padding: .25em 2px .5em; }
+/* gilt global (Aufgaben, Erklärseiten, Checks, CAS-Werkstatt): horizontales Scrollen bei langen Formeln erlaubt,
+   vertikale Scrollbalken unterbunden (overflow-x:auto erzwingt sonst overflow-y:auto) — Luft oben/unten gegen Abschneiden. */
+.luecke-dropdown { max-width: 100%; }
+.zuordnung { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--abstand-2); margin: 0 0 var(--abstand-3); }
+.zuordnung .paar { display: flex; flex-wrap: wrap; gap: var(--abstand-2); align-items: center; min-width: 0; /* Grid-Item darf nicht auf intrinsische Select-Breite aufgehen (Mobil) */ }
+.zuordnung .paar select { max-width: 100%; min-width: 0; /* lange Optionstexte dürfen das Layout nicht sprengen (Mobil); volle Texte erscheinen im aufgeklappten Dropdown */ }
+.zuordnung .paar > span { min-width: 14ch; }
+
+.reihenfolge { list-style: none; margin: 0 0 var(--abstand-3); padding: 0; display: grid; gap: var(--abstand-2); }
+.reihenfolge li { display: flex; flex-wrap: wrap; gap: var(--abstand-2); align-items: center; padding: 8px 12px; border: 1.5px solid var(--linie); border-radius: var(--radius-klein); }
+
+.freitext-feld { width: 100%; min-height: 110px; resize: vertical; }
+.selbstcheck { display: flex; flex-wrap: wrap; gap: var(--abstand-2); margin-top: var(--abstand-2); }
+
+.schritt { border: 1px dashed var(--linie); border-radius: var(--radius-klein); padding: var(--abstand-2) var(--abstand-3); margin-bottom: var(--abstand-2); }
+.schritt.ist-ok { border-style: solid; border-color: var(--ok); }
+.schritt .schritt-titel { font-weight: 700; font-size: .95rem; }
+.schritt.gesperrt { opacity: .7; /* nicht weniger: WCAG-AA-Kontrast in beiden Themes (hell 5,5:1, dunkel 6,7:1) */ }
+.schritt.gesperrt input, .schritt.gesperrt button { pointer-events: none; }
+
+/* Platzhalter gegen Layout-Spruenge (CLS): solange die Engine die Aufgaben noch laedt,
+   reserviert der leere Container Platz und der Footer bleibt unterhalb des Viewports. */
+#uebungen:empty, #tagesmischung:empty { min-height: 100vh; }
+
+/* Kopfzeilen-Platzhalter: reserviert die Hoehe des nachgeladenen Seitenkopfs, bis
+   komponenten.js ihn einsetzt (CLS). Bewusst NUR auf Themen-/Uebungsseiten —
+   Sim-Seiten laufen auch eingebettet ohne Kopfzeile. Alte Browser ignorieren :has. */
+body[data-seite="thema"]:not(:has(> .kopfzeile))::before,
+body[data-seite="uebungen"]:not(:has(> .kopfzeile))::before { content: ""; display: block; height: 181px; }
+body[data-seite="start"]:not(:has(> .kopfzeile))::before { content: ""; display: block; height: 150px; }
+@media (max-width: 760px) {
+  body[data-seite="thema"]:not(:has(> .kopfzeile))::before,
+  body[data-seite="uebungen"]:not(:has(> .kopfzeile))::before { height: 187px; }
+  body[data-seite="start"]:not(:has(> .kopfzeile))::before { height: 102px; }
+}
+
+/* Startseite: Platzhalter fuer die nachgeladenen Fach-Kacheln (CLS) — Hoehen gemessen */
+#fach-kacheln:empty { min-height: 244px; }
+@media (max-width: 760px) { #fach-kacheln:empty { min-height: 714px; } }
+
+.tipp-bereich { margin: 0 0 var(--abstand-3); }
+.tipp + .tipp { margin-top: var(--abstand-2); }
+
+details.loesungsweg { border: 1px solid var(--linie); border-left: 6px double var(--akzent); border-radius: var(--radius); background: var(--flaeche); padding: 0; margin-top: var(--abstand-3); }
+details.loesungsweg summary { cursor: pointer; font-weight: 700; padding: 10px 14px; color: var(--akzent); min-height: var(--beruehrziel); display: flex; align-items: center; flex-wrap: wrap; /* lange Titel mit KaTeX umbrechen lassen (Mobil) */ }
+details.loesungsweg .loesung-inhalt { padding: 0 14px 12px; }
+
+.aufgabe .rueckmeldung { margin-top: var(--abstand-2); }
+.aufgabe .rueckmeldung[hidden] { display: none; }
+
+.knopf.klein { padding: 6px 14px; min-height: 38px; font-size: .92rem; }
+
+/* ===== Fußzeile ===== */
+.fusszeile { background: var(--flaeche); border-top: 1px solid var(--linie); margin-top: auto; }
+.fusszeile-innen { max-width: var(--inhalt-breite); margin: 0 auto; padding: var(--abstand-3); display: flex; flex-wrap: wrap; gap: var(--abstand-2) var(--abstand-4); font-size: .9rem; align-items: center; }
+.fusszeile a { color: var(--text); }
+.fusszeile .hinweis { color: var(--text-leise); margin: 0; flex-basis: 100%; font-size: .85rem; }
+.fuss-knopf { font: inherit; font-size: .9rem; cursor: pointer; background: none; border: none; padding: 0; min-height: var(--beruehrziel); color: var(--text); text-decoration: underline; }
+.fuss-knopf:hover { color: var(--akzent); }
+.fuss-meldung { font-size: .85rem; color: var(--ok); font-weight: 600; }
+
+/* ===== Mobil ===== */
+@media (max-width: 760px) {
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-weight: 700; cursor: pointer; min-height: var(--beruehrziel); min-width: var(--beruehrziel); padding: 6px 12px; border: 1px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--text); }
+  .hauptnav { flex-basis: 100%; }
+  .hauptnav[hidden] { display: none; }
+  .hauptnav ul { flex-direction: column; padding: var(--abstand-1) 0; }
+  .hauptnav a { width: 100%; }
+  .kacheln { grid-template-columns: 1fr; }
+}
+
+/* ===== Bewegung reduzieren ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ===== Themenseiten (Erklärseiten) ===== */
+.themenseite section { margin-bottom: var(--abstand-5); }
+.themenseite .formel-abgesetzt { margin: var(--abstand-3) 0; overflow-x: auto; overflow-y: hidden; padding-bottom: 2px; position: relative; /* fängt absolut positioniertes KaTeX-MathML ein (Mobil-Überlauf) */ }
+.themenseite .check-antwort, .themenseite .vertiefung-inhalt { overflow-x: auto; overflow-y: hidden; padding-bottom: 2px; position: relative; /* dito: KaTeX-MathML in zugeklappten details darf das Dokument nicht verbreitern */ }
+.beispiel { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: var(--abstand-3); margin: var(--abstand-3) 0; max-width: 70ch; }
+.beispiel .beispiel-etikett { font-weight: 700; color: var(--text-leise); font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; display: block; margin-bottom: var(--abstand-1); }
+
+details.check { background: var(--flaeche); border: 1.5px solid var(--mathe); border-radius: var(--radius); padding: 0; margin: var(--abstand-3) 0; max-width: 70ch; }
+details.check summary { cursor: pointer; font-weight: 700; padding: 12px 14px; min-height: var(--beruehrziel); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; /* lange Titel mit KaTeX umbrechen lassen (Mobil) */ }
+details.check summary::before { content: "?"; flex: none; display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: var(--mathe); color: var(--flaeche); font-size: .9rem; }
+details.check .check-antwort { padding: 0 14px 12px; border-top: 1px dashed var(--linie); padding-top: 10px; }
+html[data-theme="dunkel"] details.check summary::before { color: #1c1812; }
+
+details.vertiefung { border: 1px solid var(--linie); border-left: 6px double var(--info); border-radius: var(--radius); background: var(--flaeche); margin: var(--abstand-4) 0; max-width: 75ch; }
+details.vertiefung summary { cursor: pointer; font-weight: 700; color: var(--info); padding: 12px 14px; min-height: var(--beruehrziel); display: flex; align-items: center; flex-wrap: wrap; /* lange Titel mit KaTeX umbrechen lassen (Mobil) */ }
+details.vertiefung .vertiefung-inhalt { padding: 0 14px 12px; }
+
+.sim-rahmen { border: 1px solid var(--linie); border-radius: var(--radius); overflow: hidden; margin: var(--abstand-3) 0; background: var(--flaeche); }
+.sim-rahmen iframe { display: block; width: 100%; height: 760px; border: 0; }
+.sim-rahmen-fuss { display: flex; flex-wrap: wrap; gap: var(--abstand-2) var(--abstand-3); padding: 8px 12px; border-top: 1px solid var(--linie); font-size: .9rem; }
+
+.weiter-karte { background: var(--flaeche); border: 1px solid var(--linie); border-top: 4px solid var(--akzent); border-radius: var(--radius); padding: var(--abstand-3); margin: var(--abstand-4) 0; display: flex; flex-wrap: wrap; gap: var(--abstand-3); align-items: center; justify-content: space-between; }
+.weiter-karte p { margin: 0; }
+
+/* Einbettung im iframe: kompakt, ohne Chrome */
+body.einbettung { background-image: none; }
+body.einbettung .inhalt { padding: var(--abstand-2); max-width: none; }
+body.einbettung h1 { display: none; }
+body.einbettung .einleitung { display: none; }
+body.einbettung .sim-poe, body.einbettung .sim-beobachtung { display: none; }
+
+/* ===== Suche (Phase 6) ===== */
+.suchformular { margin: 18px 0 10px; }
+.suchformular label { display: block; font-weight: 600; margin-bottom: 6px; }
+#suchfeld { width: 100%; max-width: 560px; font: inherit; font-size: 1.05rem; padding: 10px 14px; border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--text); }
+#suchfeld:focus { outline: 3px solid var(--akzent); outline-offset: 2px; border-color: var(--akzent); }
+.suche-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.suche-chips button { font: inherit; font-size: .85rem; font-weight: 600; border: 1.5px solid var(--linie); border-radius: 999px; background: var(--flaeche); color: var(--text); padding: 6px 12px; min-height: 34px; cursor: pointer; }
+.suche-chips button:hover, .suche-chips button:focus-visible { border-color: var(--akzent); color: var(--akzent); }
+#suche-status { color: var(--text-leise); min-height: 1.4em; margin: 10px 0 0; }
+#suche-einfuehrung p { color: var(--text-leise); }
+.suche-gruppe { margin: 22px 0 6px; }
+.suche-gruppe h2 { font-size: 1.1rem; margin: 0 0 8px; }
+.treffer-zahl { font-weight: 400; color: var(--text-leise); }
+.suche-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.suche-liste li { margin: 0; min-width: 0; }
+.suche-treffer { display: block; border: 1.5px solid var(--linie); border-left: 5px solid var(--kachel-farbe, var(--akzent)); border-radius: var(--radius-klein); background: var(--flaeche); padding: 10px 14px; text-decoration: none; color: var(--text); }
+.suche-treffer:hover, .suche-treffer:focus-visible { border-color: var(--akzent); }
+.suche-treffer.mathematik { --kachel-farbe: var(--mathe); }
+.suche-treffer.physik { --kachel-farbe: var(--physik); }
+.suche-treffer.informatik { --kachel-farbe: var(--info); }
+.treffer-titel { display: block; font-weight: 700; overflow-wrap: anywhere; }
+.treffer-titel mark { background: transparent; color: var(--akzent); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; font-weight: 800; }
+.treffer-abzeichen { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 4px; }
+.treffer-kurz { display: block; color: var(--text-leise); font-size: .92rem; overflow-wrap: anywhere; }
+.treffer-nebenlink { display: inline-block; margin: 4px 0 0 4px; font-size: .88rem; }
+@media print { .suchformular, .suche-chips { display: none; } }
+
+/* ===== Spiel-Gerüst (Trainingsraum + Pausenraum, Runde 18) ===== */
+.spiel-kopf { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; margin: 14px 0 10px; }
+.spiel-info { display: flex; flex-wrap: wrap; gap: 6px 18px; font-weight: 600; }
+.spiel-knoepfe { display: flex; gap: 8px; }
+.spiel-flaeche { position: relative; border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); min-height: 280px; outline-offset: 3px; touch-action: none; }
+.spiel-flaeche:focus-visible { outline: 3px solid var(--akzent); }
+.spiel-flaeche canvas { display: block; width: 100%; height: auto; border-radius: inherit; }
+.spiel-steuerung { color: var(--text-leise); font-size: .92rem; margin: 8px 0 0; }
+.spiel-panel { border: 2px solid var(--akzent); border-radius: var(--radius-klein); background: var(--flaeche); padding: 14px 18px; margin-top: 12px; }
+.spiel-panel h2 { margin: 0 0 8px; font-size: 1.15rem; }
+.sp-endstand { font-size: 1.05rem; }
+.sp-hs-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0; }
+.sp-hs-form input { font: inherit; padding: 6px 10px; border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--bg); color: var(--text); text-transform: uppercase; width: 5em; }
+.sp-panel-knoepfe { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.hs-liste { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 4px; max-width: 420px; }
+.hs-liste li { display: grid; grid-template-columns: 3.5em 1fr auto; gap: 10px; padding: 4px 10px; border: 1.5px solid var(--linie); border-radius: 6px; counter-increment: hs; }
+.hs-liste li::before { content: counter(hs) "."; font-weight: 700; }
+.hs-liste { counter-reset: hs; }
+.hs-name { font-weight: 700; letter-spacing: .08em; }
+.hs-punkte { text-align: right; font-variant-numeric: tabular-nums; }
+.hs-datum { display: none; }
+.hs-leer { color: var(--text-leise); }
+.spiel-touch-tasten { display: grid; grid-template-columns: repeat(3, 56px); gap: 6px; justify-content: center; margin-top: 10px; }
+.spiel-touch-tasten button { font-size: 1.3rem; min-height: var(--beruehrziel); border: 1.5px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--text); }
+@media (min-width: 900px) { .spiel-touch-tasten.nur-touch { display: none; } }
+
+/* ===== Experimente (Runde 19) ===== */
+.exp-phasen { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 12px; }
+.exp-phasen [role="tab"] { font: inherit; font-weight: 600; padding: 8px 14px; min-height: var(--beruehrziel); border: 2px solid var(--linie); border-radius: 999px; background: var(--flaeche); color: var(--text); cursor: pointer; }
+.exp-phasen [role="tab"][aria-selected="true"] { border-color: var(--akzent); color: var(--akzent); }
+.exp-flaeche { display: grid; grid-template-columns: minmax(280px, 400px) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 760px) { .exp-flaeche { grid-template-columns: minmax(0, 1fr); } }
+.exp-links canvas { width: 100%; max-width: 400px; height: auto; border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); display: block; touch-action: none; }
+.exp-rechts h2 { margin-top: 0; }
+.exp-regler { display: grid; gap: 10px; margin: 10px 0; }
+.exp-regler label { font-weight: 600; }
+.exp-regler input[type="range"] { width: 100%; }
+.exp-masseknoepfe, .exp-knopfzeile { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.exp-ablesen { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0; }
+.exp-ablesen input, .exp-eingabe { font: inherit; padding: 6px 10px; border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--bg); color: var(--text); width: 6.5em; }
+.exp-meldung { min-height: 1.4em; font-weight: 600; }
+.exp-tabelle { border-collapse: collapse; margin: 6px 0; max-width: 100%; }
+.exp-tabelle th, .exp-tabelle td { border: 1.5px solid var(--linie); padding: 4px 12px; text-align: right; font-variant-numeric: tabular-nums; }
+.exp-tabelle th { background: var(--hauch); }
+.exp-hinweis { border-left: 4px solid var(--akzent); padding: 6px 10px; background: var(--hauch); border-radius: 6px; }
+.exp-fehler { margin-top: 10px; }
+.exp-diagramm { width: 100%; max-width: 440px; height: auto; border: 1.5px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); }
+select.exp-wahl { font: inherit; padding: 6px 10px; border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--bg); color: var(--text); margin: 4px 0 10px; display: block; max-width: 100%; }

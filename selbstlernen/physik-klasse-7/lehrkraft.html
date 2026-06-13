@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderation: Physik 7 — Lernbüro (Lehrkraft) — Lernwelt</title>
+<meta name="description" content="Moderationsseite für die Lehrkraft: Stoffverteilung, typische Fehler, Differenzierung und Praxis-Leitfaden zum Selbstlern-Kurs Physik Klasse 7.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/selbstlernen.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="lehrkraft">
+<noscript><p class="noscript-hinweis"><a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Moderation: Physik 7 · Lernbüro</h1>
+  <p class="einleitung">Interne Seite für die Lehrkraft – im Schüler-Flow bewusst <strong>unverlinkt</strong>. Enthält den Praxis-Leitfaden, die Stoffverteilung und je Lektion typische Fehler, Differenzierungs- und Material-Hinweise. Mit „Drucken" als A4-Handzettel ausgebbar. Pilot: <a href="index.html">Schüler-Kursseite öffnen</a>.</p>
+
+  <p class="knopfzeile"><button type="button" class="knopf zweitrangig klein" onclick="window.print()">Drucken</button></p>
+
+  <div class="merkkasten" style="border-left:4px solid var(--ok)"><span class="merk-etikett">Alle Spuren vollständig</span><p>Alle Basis- und Standard-Spuren sind lückenlos belegt. Neue Aufgaben liegen in <code>daten/aufgaben/lernbuero/ph-07-stromstaerke-und-spannung.json</code> (Marker <code>ergaenzung:"lernbuero"</code>) — zur fachlichen Prüfung. Präfix: <code>ph-07-str-1xx</code>.</p></div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Praxis-Leitfaden Selbstlern-Moderation</span>
+    <p><strong>Gemeinsamer Start (3 Min.):</strong> Stundenziel nennen, an die Hilfe-Regel erinnern, Wochenplan zeigen.
+    <strong>Hilfe-Regel:</strong> „Erst der Tipp, dann der Partner, dann die Lehrkraft." Erst wenn die drei gestuften Tipps und die Sitznachbarin nicht weiterhelfen, kommt die Lehrkraft.
+    <strong>Stand erfassen:</strong> Kein Dashboard – nutze die Ampel-Selbsteinschätzung (grün/gelb/rot am Lektionsende) und das Lerntagebuch (offene Fragen). Im Vorbeigehen zeigen lassen.
+    <strong>Gemeinsamer Abschluss (3 Min.):</strong> ein bis zwei rote Ampeln gemeinsam klären, Mindestmarke der Woche prüfen.</p>
+  </div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Eingebaute Entscheidungen dieses Kurses</span>
+    <p><strong>Taktung:</strong> Wochenplan mit Mindestmarke (Basis-Spur je Woche). <strong>Checkpoints:</strong> „Sichern" schaltet die nächste Lektion frei; jeder Checkpoint ist per Knopf „Lehrkraft hat freigegeben" ohne Passwort überschreibbar (Vertrauensmodell). <strong>Werkzeuge:</strong> Ampel + Lerntagebuch. <strong>KaTeX:</strong> Kein KaTeX auf dieser Seite – Größen werden als Klartext angegeben (z. B. I in Ampere (A), U in Volt (V)).</p>
+  </div>
+
+  <h2>Stoffverteilung Halbjahr (KC NW Gym Sek I)</h2>
+  <details class="lb-stoff" open>
+    <summary>Tabelle Woche → Thema → KC-Schwerpunkt</summary>
+    <table>
+      <thead><tr><th>Wochen</th><th>Thema</th><th>Lektionen</th><th>KC-Schwerpunkt</th></tr></thead>
+      <tbody>
+        <tr><td>1–3</td><td>Energie und Energieübertragung</td><td>ca. 9</td><td>Einführung des Energiebegriffs (7/8)</td></tr>
+        <tr class="ist-pilot"><td>4–8</td><td>Stromstärke und Spannung — <em>Pilot (5 Lektionen ausgebaut)</em></td><td>5 von ca. 12</td><td>Elektrik I (7/8)</td></tr>
+        <tr><td>9–11</td><td>Licht und Optik</td><td>ca. 8</td><td>Optik I (7/8)</td></tr>
+      </tbody>
+    </table>
+  </details>
+  <p class="einleitung">Echte Stundenzahlen nach Stundentafel kalibrieren. Der Pilot baut nur den Stromstärke-und-Spannung-Block aus; die übrigen Blöcke stehen als <code>geplant</code> in <code>daten/kurse/ph-07.json</code>.</p>
+
+  <h2>Lektionen im Einzelnen</h2>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 1 · Der Stromkreis als Kreislauf</span>
+    <p><strong>Ziele:</strong> Geschlossener Stromkreis als Bedingung für Stromfluss; Wasserkreislauf-Analogie; Strom wird nicht verbraucht, nur Energie wird umgewandelt.<br>
+    <strong>Vorwissen:</strong> ph-05-stromkreise (str-001, str-002 aus Klasse 5) – kurze Auffrischung in Ankommen-Phase.<br>
+    <strong>Typische Fehler:</strong> „Strom wird im Lämpchen aufgebraucht"; Verwechslung von Strom (fließt weiter) und Energie (wird umgewandelt); offener Schalter = kein Strom überall (nicht nur beim Schalter).<br>
+    <strong>Differenzierung:</strong> Basis = Kreislauf (str-001 MC, str-003 Zuordnung), Standard = Messgeräte (str-005 MC). Plus-Spur ist in dieser Lektion bewusst leer – fachlich gibt es keine sinnvolle AFB-III-Aufgabe zum reinen Kreislauf-Begriff; schnelle Schülerinnen beginnen mit Lektion 2.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 1 mit Schaltbild und Wasserkreislauf-Vergleich.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 2 · Die Stromstärke I</span>
+    <p><strong>Ziele:</strong> Stromstärke I in Ampere (A) messen; Amperemeter in Reihe schalten; A und mA umrechnen.<br>
+    <strong>Typische Fehler:</strong> Amperemeter parallel statt in Reihe geschaltet; mA und A verwechselt (Faktor 1000 vergessen); „Strom fließt schneller" statt „Strom ist stärker".<br>
+    <strong>Differenzierung:</strong> Basis = Einheiten/Lücke (str-002, str-004), Standard = Messen (str-007 Reihenfolge, str-008 Numerisch), Plus = str-012 (Sicherung, zwei Teilaufgaben).<br>
+    <strong>Sichern:</strong> str-010 (Sicherheit) gibt einen ersten Ausblick auf Lektion 5 – kein Problem, da der Kontext klar ist.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 2.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 3 · Die Spannung U</span>
+    <p><strong>Ziele:</strong> Spannung U in Volt (V) messen; Voltmeter parallel schalten; typische Spannungswerte einordnen.<br>
+    <strong>Typische Fehler:</strong> Voltmeter in Reihe statt parallel; Spannung als „fließend" vorgestellt statt als Antrieb zwischen zwei Punkten; AA-Batterie und Steckdosen-Spannung nicht aus dem Gedächtnis abrufbar.<br>
+    <strong>Differenzierung:</strong> Basis = Ergänzungsaufgabe str-101 (Spannung-Lücke, neu), Standard = str-011 (Reihenschaltung Spannung, Rechenweg), Plus = str-013 (Freitext nur Gym).<br>
+    <strong>Hinweis str-013:</strong> nur zweig „gym" – RS-Schülerinnen erhalten keinen Plus-Vorschlag und können Lektion 4 vorbereiten.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 3.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 4 · Reihen- und Parallelschaltung</span>
+    <p><strong>Ziele:</strong> Reihen- und Parallelschaltung unterscheiden; Konsequenzen für Helligkeit und Ausfall beschreiben; Hausinstallation einordnen.<br>
+    <strong>Stopp-Punkt:</strong> Vor der Lektion kurzes Klassengespräch: Schaltbild lesen – was ist Reihe, was ist Parallel?<br>
+    <strong>Typische Fehler:</strong> Parallelschaltung mit Reihenschaltung verwechselt; „Beide gehen aus" fälschlicherweise auch der Parallelschaltung zugeordnet; Hausinstallation für Reihe gehalten.<br>
+    <strong>Differenzierung:</strong> Basis = str-102 (MC Schaltungen, neu), Standard = str-009 (MC mit Hausinstallation), Plus = str-103 (Spannung in Reihe/Parallel numerisch, neu).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 4 mit Schaltbildern.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 5 · Sicherheit im Umgang mit Strom</span>
+    <p><strong>Ziele:</strong> Gefährlichkeit von 230 V erklären; Schutzregeln kennen; Funktion der Sicherung verstehen.<br>
+    <strong>Typische Fehler:</strong> Gefährlichkeit mit Strom (A) statt mit Spannung (V) begründet; Sicherung als optional betrachtet; nasse Hände als harmlos eingeschätzt.<br>
+    <strong>Differenzierung:</strong> Basis = str-010 (Lücke Sicherheit), Standard = str-104 (MC Sicherheitsregeln, neu), Plus = str-012 (Sicherung numerisch mit Spielraum). Sichern = str-013 (Freitext, Gym): RS-Schülerinnen können stattdessen den Transfer schriftlich beantworten.<br>
+    <strong>Hinweis str-013:</strong> Freitext nur Gym – die Lehrkraft kann RS-Schülerinnen alternativ eine mündliche Runde machen lassen.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 5.</p>
+  </section>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Aufgaben-Inventar des Piloten</span>
+    <p>Aus der Themen-Datei (<code>ph-07-stromstaerke-und-spannung.json</code>) werden 12 der 13 Aufgaben verwendet (str-001 bis str-012; str-013 zusätzlich in L3 Plus und L5 Sichern). Vier neue Ergänzungsaufgaben (str-101 bis str-104) füllen die Lücken bei Basis/Standard. Alle Spuren sind lückenlos; keine <code>basisLuecke</code>- oder <code>standardLuecke</code>-Felder nötig.</p>
+  </div>
+
+  <p class="einleitung"><a href="index.html">&#8592; Zur Schüler-Kursseite</a></p>
+  <h2>Block 2: Energie und Energieübertragung</h2>
+  <section class="merkkasten">
+    <span class="merk-etikett">Energie und Energieübertragung · 5 Lektionen (L6–L10)</span>
+    <p><strong>Lektionen:</strong> Was Energie ist; Energieformen; Energie wandelt sich um; Energie wird entwertet; Energie übertragen und sparen.<br>
+    <strong>Typische Fehler:</strong> Energie mit Kraft oder Leistung verwechseln; „Energie wird verbraucht“ statt entwertet; Einheiten J, kWh und W durcheinanderbringen.<br>
+    <strong>Differenzierung:</strong> Basis und Standard durchgehend für Gymnasium UND Realschule; die AFB-III-Zusatzaufgaben erscheinen für RS am Lektionsende im Block „Ausblick Gymnasium“. 8 neue Ergänzungsaufgaben (<code>daten/aufgaben/lernbuero/ph-07-energie.json</code>) – fachliche Prüfung ausstehend.</p>
+  </section>
+
+  <p class="knopfzeile"><a class="knopf zweitrangig klein" href="../druck.html?kurs=ph-07">🖨 Druckmaterial erstellen</a></p>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+</body>
+</html>

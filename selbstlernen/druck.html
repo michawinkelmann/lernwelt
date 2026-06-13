@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Druckmaterial erstellen — Lernwelt</title>
+<meta name="description" content="Erzeugt aus einem Lernbüro-Kurs druckbare Arbeitsblätter für die Lehrkraft — wahlweise mit Lösungen (Lehrer-Exemplar).">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+</head>
+<body data-seite="druck">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript. <a href="../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <div class="druck-leiste kein-druck" aria-label="Einstellungen für das Arbeitsblatt">
+    <p class="druck-leiste-titel">Druckmaterial: <span id="kurs-name">Kurs wird geladen …</span></p>
+    <p class="druck-leiste-hinweis">Stelle das Arbeitsblatt zusammen und drucke es. Nichts in dieser Leiste erscheint im Ausdruck.</p>
+
+    <div class="druck-optionen">
+      <fieldset class="druck-feld">
+        <legend>Spuren</legend>
+        <label><input type="radio" name="spuren" value="basis"> nur Basis</label>
+        <label><input type="radio" name="spuren" value="standard" checked> Basis + Standard</label>
+        <label><input type="radio" name="spuren" value="plus"> Basis + Standard + Plus</label>
+      </fieldset>
+
+      <fieldset class="druck-feld">
+        <legend>Inhalt</legend>
+        <label><input type="checkbox" id="opt-sichern"> Sichern-Aufgaben einbeziehen</label>
+        <label><input type="checkbox" id="opt-loesung"> Lösungen anzeigen (Lehrer-Exemplar)</label>
+      </fieldset>
+    </div>
+
+    <p class="knopfzeile">
+      <button type="button" class="knopf" id="knopf-drucken">🖨 Drucken</button>
+      <a class="knopf zweitrangig klein" id="link-zurueck" href="index.html">← Zur Kursübersicht</a>
+    </p>
+  </div>
+
+  <div id="druckbereich" aria-live="polite">
+    <p class="lade-hinweis">Arbeitsblatt wird vorbereitet …</p>
+  </div>
+</main>
+<script type="module" src="../assets/js/selbstlernen/druck.js"></script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+{
+  "thema": "in-09-internet-und-datenschutz",
+  "fach": "informatik",
+  "stufe": "klasse-9",
+  "aufgaben": [
+    {
+      "id": "in-09-net-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über den Aufbau des Internets sind richtig?",
+      "optionen": [
+        {
+          "text": "Ein Server ist ein Computer, der Dienste wie Webseiten oder Videos bereitstellt.",
+          "richtig": true,
+          "erklaerung": "Richtig — Server („Diener“) laufen rund um die Uhr und beantworten die Anfragen der Clients."
+        },
+        {
+          "text": "Das Internet ist ein Verbund aus vielen Netzen ohne zentralen Hauptcomputer.",
+          "richtig": true,
+          "erklaerung": "Richtig: Internet bedeutet „Netz der Netze“ — fällt eine Verbindung aus, finden die Daten meist einen anderen Weg."
+        },
+        {
+          "text": "Dein Browser ist der Server, die Website der Client.",
+          "richtig": false,
+          "erklaerung": "Andersherum: Dein Gerät mit dem Browser ist der Client (fragt an), die Website liegt auf dem Server (antwortet)."
+        },
+        {
+          "text": "Alle Daten im Internet laufen über einen zentralen Großrechner.",
+          "richtig": false,
+          "erklaerung": "Nein — genau das vermeidet das Internet: Es gibt viele Wege und keine Zentrale. Das macht es ausfallsicher."
+        }
+      ],
+      "tipps": [
+        "Client heißt übersetzt „Kunde“, Server „Diener“ — wer fragt an, wer liefert?",
+        "Denke an das Wort Internet: ein Zusammenschluss vieler einzelner Netze.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Server stellen Dienste bereit, und das Internet ist ein dezentraler Verbund vieler Netze. Der Browser auf deinem Gerät ist der Client, nicht der Server — und einen zentralen Großrechner gibt es bewusst nicht.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-002",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Text zu Adressen im Internet.",
+      "text": "Jedes Gerät im Internet braucht eine eindeutige ___. Bei IPv4 besteht sie aus ___ Zahlen zwischen 0 und 255. Damit du dir solche Zahlenfolgen nicht merken musst, übersetzt das ___ Namen wie www.beispielschule.de in Adressen.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "IP-Adresse",
+          "optionen": [
+            "IP-Adresse",
+            "Seriennummer",
+            "Postleitzahl"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "vier",
+          "optionen": [
+            "vier",
+            "zwei",
+            "acht"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "DNS",
+          "optionen": [
+            "DNS",
+            "HTTP",
+            "WLAN"
+          ]
+        }
+      ],
+      "tipps": [
+        "IP steht für Internet Protocol — die Adresse heißt entsprechend.",
+        "Beispiel einer IPv4-Adresse: 192.168.2.107 — zähle die Zahlenblöcke.",
+        "Gesucht ist das „Telefonbuch des Internets“: das Domain Name System."
+      ],
+      "loesungsweg": "Jedes Gerät braucht eine eindeutige IP-Adresse. Eine IPv4-Adresse besteht aus vier Zahlen von 0 bis 255 (z. B. 192.168.2.107) — jede Zahl ist genau ein Byte. Das DNS (Domain Name System) übersetzt Namen in IP-Adressen, wie ein Telefonbuch.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-003",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jedem Baustein des Internets seine Aufgabe zu.",
+      "paare": [
+        {
+          "links": "Client",
+          "rechts": "fragt Dienste an, z. B. dein Browser"
+        },
+        {
+          "links": "Server",
+          "rechts": "stellt Webseiten und Dienste bereit"
+        },
+        {
+          "links": "Router",
+          "rechts": "leitet Datenpakete Richtung Ziel weiter"
+        },
+        {
+          "links": "DNS",
+          "rechts": "übersetzt Namen in IP-Adressen"
+        }
+      ],
+      "tipps": [
+        "Client = Kunde, Server = Diener — die Übersetzung verrät die Rollen.",
+        "Router kommt von englisch route (der Weg): Er wählt den Weg der Pakete.",
+        "Das DNS arbeitet wie ein Telefonbuch: Name rein, Adresse raus."
+      ],
+      "loesungsweg": "Der Client (z. B. dein Browser) fragt an, der Server stellt bereit, Router reichen die Datenpakete Richtung Ziel weiter, und das DNS übersetzt Namen wie www.beispielschule.de in IP-Adressen.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-004",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 1,
+      "frage": "Im Internet gelten feste Regeln — Protokolle. Ordne jedem Protokoll seine Funktion zu.",
+      "paare": [
+        {
+          "links": "IP",
+          "rechts": "adressiert Pakete im Netz"
+        },
+        {
+          "links": "TCP",
+          "rechts": "prüft Pakete auf Vollständigkeit"
+        },
+        {
+          "links": "HTTP",
+          "rechts": "Webprotokoll — unverschlüsselt"
+        },
+        {
+          "links": "HTTPS",
+          "rechts": "Webprotokoll — verschlüsselt"
+        }
+      ],
+      "tipps": [
+        "IP wie Internet Protocol: Es kümmert sich um Adressen — und damit um den Weg.",
+        "TCP ist der „Qualitätsprüfer“: Alles soll vollständig und in der richtigen Reihenfolge ankommen.",
+        "HTTP und HTTPS unterscheiden sich um genau einen Buchstaben — und der steht für Sicherheit."
+      ],
+      "loesungsweg": "IP adressiert die Pakete und bestimmt ihren Weg. TCP nummeriert sie, prüft beim Empfänger auf Vollständigkeit und fordert verlorene Pakete neu an. HTTP ist die (unverschlüsselte) Sprache zwischen Browser und Webserver, HTTPS die verschlüsselte Variante.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-005",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine große Datei wird durchs Internet geschickt. Welche Aussagen über Datenpakete sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Datei wird in viele kleine Pakete zerlegt, die einzeln verschickt werden.",
+          "richtig": true,
+          "erklaerung": "Richtig — so teilen sich viele Übertragungen die Leitungen, und ein Fehler betrifft nur einzelne Pakete."
+        },
+        {
+          "text": "Jedes Paket trägt Absender- und Zieladresse.",
+          "richtig": true,
+          "erklaerung": "Richtig: Nur so können die Router jedes Paket unabhängig in die richtige Richtung weiterleiten."
+        },
+        {
+          "text": "Alle Pakete derselben Datei nehmen immer exakt denselben Weg.",
+          "richtig": false,
+          "erklaerung": "Nein — jedes Paket wird einzeln geleitet. Bei Stau oder Ausfall nehmen Pakete auch unterschiedliche Wege."
+        },
+        {
+          "text": "Geht unterwegs ein Paket verloren, ist die Datei endgültig beschädigt.",
+          "richtig": false,
+          "erklaerung": "Nein: TCP bemerkt das fehlende Paket an seiner Nummer und fordert es einfach neu an."
+        }
+      ],
+      "tipps": [
+        "Stell dir die Datei als Puzzle vor, das in nummerierten Briefumschlägen verschickt wird.",
+        "Was muss auf jedem Umschlag stehen, damit er ankommt — und damit der Empfänger das Puzzle wieder zusammensetzen kann?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Dateien werden in einzeln adressierte Pakete zerlegt. Die Pakete können verschiedene Wege nehmen (Aussage 3 ist falsch), und verlorene Pakete fordert TCP anhand der Nummerierung neu an (Aussage 4 ist falsch).",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-006",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 1,
+      "frage": "Du tippst www.beispielschule.de in den Browser. Bringe die Schritte bis zur fertigen Seite in die richtige Reihenfolge.",
+      "elemente": [
+        "Der Browser fragt beim DNS-Server nach der IP-Adresse von www.beispielschule.de",
+        "Der DNS-Server antwortet mit der IP-Adresse des Webservers",
+        "Der Browser schickt die Seitenanfrage an diese IP-Adresse",
+        "Der Webserver schickt die Seite in Datenpaketen zurück",
+        "Der Browser setzt die Pakete zusammen und zeigt die Seite an"
+      ],
+      "tipps": [
+        "Bevor irgendetwas verschickt werden kann, muss die Adresse des Ziels bekannt sein.",
+        "Erst Adresse besorgen (DNS-Frage und -Antwort), dann anfragen, dann Antwort empfangen.",
+        "Der letzte Schritt passiert komplett auf deinem Gerät."
+      ],
+      "loesungsweg": "Zuerst besorgt der Browser per DNS die IP-Adresse (Frage, dann Antwort). Anschließend schickt er die Seitenanfrage an den Webserver, der Server antwortet mit der Seite in Paketen, und zum Schluss setzt der Browser alles zusammen und zeigt die Seite an.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-007",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Du lädst ein Update von 60 MB über eine Leitung mit 80 Mbit/s. a) Wie groß ist das Update in Mbit (1 Byte = 8 Bit)? b) Wie lange dauert der Download bei voller Geschwindigkeit?",
+      "eingaben": [
+        {
+          "label": "Datenmenge",
+          "antwort": 480,
+          "toleranz": 0,
+          "einheit": "Mbit"
+        },
+        {
+          "label": "Dauer",
+          "antwort": 6,
+          "toleranz": 0,
+          "einheit": "s"
+        }
+      ],
+      "tipps": [
+        "Achtung, zwei verschiedene Einheiten: MB (Megabyte) und Mbit (Megabit). Wegen 1 Byte = 8 Bit gilt 1 MB = 8 Mbit.",
+        "Rechne zuerst die Dateigröße in Mbit um: $60 \\cdot 8$.",
+        "Dauer = Datenmenge geteilt durch Datenrate: $480 : 80$."
+      ],
+      "loesungsweg": "a) $60$ MB $= 60 \\cdot 8 = 480$ Mbit. b) Dauer $= 480 : 80 = 6$ Sekunden. Im Alltag dauert es meist etwas länger, weil die volle Datenrate selten erreicht wird.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-008",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Foto von 3 MB wird für den Versand in Datenpakete mit je 1500 Byte Nutzdaten zerlegt. Wie viele Pakete entstehen?",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Wandle die Dateigröße in Byte um (1 MB = 1000 KB, 1 KB = 1000 Byte).",
+          "eingaben": [
+            {
+              "label": "Dateigröße",
+              "antwort": 3000000,
+              "toleranz": 0,
+              "einheit": "Byte"
+            }
+          ],
+          "tipps": [
+            "Zwei Stufen der Speicher-Treppe hinab: $3 \\cdot 1000 \\cdot 1000$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Teile durch die Nutzdaten pro Paket — wie viele Pakete entstehen?",
+          "eingaben": [
+            {
+              "label": "Pakete",
+              "antwort": 2000,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "$3\\,000\\,000 : 1500 = ?$"
+          ]
+        }
+      ],
+      "tipps": [
+        "Bring zuerst beide Angaben auf dieselbe Einheit (Byte).",
+        "Die Speicher-Treppe: 1 MB = 1000 KB = 1 000 000 Byte.",
+        "Anzahl der Pakete = Gesamtgröße geteilt durch Paketgröße."
+      ],
+      "loesungsweg": "3 MB $= 3 \\cdot 1\\,000\\,000 = 3\\,000\\,000$ Byte. Anzahl der Pakete: $3\\,000\\,000 : 1500 = 2000$. In Wirklichkeit kommt pro Paket noch ein kleiner „Adressaufkleber“ (Header) mit einigen Dutzend Byte dazu.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-009",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Du rufst eine Webseite auf. Welche Aussagen über Datenspuren stimmen?",
+      "optionen": [
+        {
+          "text": "Der Webserver sieht deine IP-Adresse und kann den Aufruf mit Uhrzeit in sein Logbuch schreiben.",
+          "richtig": true,
+          "erklaerung": "Richtig — ohne deine IP-Adresse könnte der Server die Antwort gar nicht zurückschicken. Zeitpunkt und aufgerufene Seite landen üblicherweise im Server-Log."
+        },
+        {
+          "text": "Cookies können dich beim nächsten Besuch derselben Seite wiedererkennen.",
+          "richtig": true,
+          "erklaerung": "Richtig: Genau dafür sind Cookies gemacht — praktisch beim Warenkorb und Login, aber auch die Grundlage für Tracking."
+        },
+        {
+          "text": "Im Inkognito-Modus des Browsers bist du im Internet völlig anonym.",
+          "richtig": false,
+          "erklaerung": "Nein — der Inkognito-Modus löscht nur lokal Verlauf und Cookies. Deine IP-Adresse sehen Server und Anbieter weiterhin."
+        },
+        {
+          "text": "Drittanbieter-Cookies können dein Surfverhalten über viele verschiedene Websites hinweg verfolgen.",
+          "richtig": true,
+          "erklaerung": "Richtig: Steckt dasselbe Werbenetzwerk auf vielen Seiten, erkennt es dich überall am selben Cookie wieder — so entstehen Interessenprofile."
+        }
+      ],
+      "tipps": [
+        "Überlege technisch: Was muss der Server zwingend wissen, um dir überhaupt antworten zu können?",
+        "Der Inkognito-Modus wirkt nur auf deinem Gerät — nicht draußen im Netz.",
+        "Drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind die Aussagen 1, 2 und 4: Server sehen die IP-Adresse und führen Logs, Cookies erkennen Besucher wieder, und Drittanbieter-Cookies verfolgen über viele Websites hinweg. Der Inkognito-Modus macht dagegen nicht anonym — er räumt nur auf dem eigenen Gerät auf.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-010",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ergänze den Text zum Datenschutz.",
+      "text": "Daten, die sich einer bestimmten Person zuordnen lassen, heißen ___ Daten. Bevor eine App solche Daten verarbeiten darf, braucht sie in der Regel deine ___. Das Recht zu erfahren, welche Daten ein Unternehmen über dich gespeichert hat, heißt Recht auf ___.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "personenbezogene",
+          "optionen": [
+            "personenbezogene",
+            "komprimierte",
+            "verschlüsselte"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Einwilligung",
+          "optionen": [
+            "Einwilligung",
+            "IP-Adresse",
+            "E-Mail-Adresse"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Auskunft",
+          "optionen": [
+            "Auskunft",
+            "Löschung",
+            "Werbung"
+          ]
+        }
+      ],
+      "tipps": [
+        "Gesucht ist der Fachbegriff für Daten „mit Personenbezug“ — Name, Adresse, Fotos, Standort.",
+        "Ohne dein Ja geht es in der Regel nicht — wie heißt diese Zustimmung im Datenschutzrecht?",
+        "Auskunft = Antwort auf die Frage „Was wisst ihr über mich?“ — das Recht auf Löschung wäre der mögliche nächste Schritt."
+      ],
+      "loesungsweg": "Daten mit Personenbezug heißen personenbezogene Daten. Ihre Verarbeitung verlangt in der Regel eine Einwilligung, die du auch widerrufen kannst. Das Recht auf Auskunft verpflichtet Unternehmen offenzulegen, welche Daten sie über dich gespeichert haben — zusätzlich gibt dir die DSGVO das Recht auf Löschung.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Eine kostenlose Quiz-App verlangt bei der Installation Zugriff auf deine Kontakte, deinen Standort und das Mikrofon. Beurteile diese Berechtigungen mit dem Grundsatz der Datensparsamkeit und beschreibe, wie du dich verhalten könntest.",
+      "musterloesung": "Datensparsamkeit bedeutet: Es sollen nur die Daten erhoben werden, die für den Zweck wirklich nötig sind. Ein Quiz braucht zum Funktionieren weder Kontakte noch Standort noch Mikrofon — die verlangten Berechtigungen passen also nicht zum Zweck der App und sind unangemessen. Vermutlich finanziert sich die kostenlose App über das Sammeln und Vermarkten von Daten, etwa für personalisierte Werbung. Mögliches Verhalten: die Berechtigungen bei der Installation oder später in den Einstellungen verweigern (viele Apps funktionieren trotzdem), die Datenschutzhinweise und Bewertungen prüfen, eine datensparsamere Alternative wählen — oder die App gar nicht installieren. Grundsatz: erst überlegen, welche Daten der Zweck wirklich erfordert, dann entscheiden.",
+      "tipps": [
+        "Frage dich zuerst: Welche Daten braucht ein Quiz wirklich, um zu funktionieren?",
+        "„Kostenlos“ heißt selten ohne Gegenleistung — womit könnte die App ihr Geld verdienen?",
+        "Berechtigungen lassen sich einzeln verweigern oder später in den Einstellungen wieder entziehen."
+      ],
+      "loesungsweg": "Kernpunkte: (1) Datensparsamkeit = nur die für den Zweck nötigen Daten erheben. (2) Kontakte, Standort und Mikrofon sind für ein Quiz nicht nötig — die App sammelt vermutlich Daten, z. B. für Werbung. (3) Handlungsmöglichkeiten: Berechtigungen verweigern oder entziehen, Alternative wählen, im Zweifel nicht installieren.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-012",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Beim Videostreaming überträgt dein Handy 5 Mbit pro Sekunde. a) Wie viele MB kommen in einer Minute zusammen (1 Byte = 8 Bit)? b) Nach wie vielen Minuten sind 3 GB Datenvolumen aufgebraucht?",
+      "eingaben": [
+        {
+          "label": "Datenmenge pro Minute",
+          "antwort": 37.5,
+          "toleranz": 0.1,
+          "einheit": "MB"
+        },
+        {
+          "label": "Streamingzeit",
+          "antwort": 80,
+          "toleranz": 0,
+          "einheit": "min"
+        }
+      ],
+      "tipps": [
+        "Erst die Datenmenge pro Minute in Mbit: $5 \\cdot 60 = 300$ Mbit — dann in MB umrechnen (durch 8 teilen).",
+        "$300 : 8 = 37{,}5$ MB pro Minute.",
+        "3 GB = 3000 MB. Teile das Datenvolumen durch den Verbrauch pro Minute."
+      ],
+      "loesungsweg": "a) Pro Minute fließen $5 \\cdot 60 = 300$ Mbit. Wegen 1 Byte = 8 Bit sind das $300 : 8 = 37{,}5$ MB pro Minute. b) $3$ GB $= 3000$ MB, also $3000 : 37{,}5 = 80$ Minuten. Danach drosselt der Anbieter meist die Geschwindigkeit.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-09-net-013",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Bei HTTPS sichert ein Schlüsselpaar aus öffentlichem und privatem Schlüssel die Verbindung. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Mit dem öffentlichen Schlüssel kann jeder verschlüsseln, aber nur der Besitzer des privaten Schlüssels kann entschlüsseln.",
+          "richtig": true,
+          "erklaerung": "Richtig — das ist die Kernidee der asymmetrischen Verschlüsselung: wie ein offenes Vorhängeschloss, das jeder zuschnappen lassen kann, aber nur einer öffnet."
+        },
+        {
+          "text": "Router auf dem Weg können bei HTTPS den Inhalt der Pakete nicht im Klartext mitlesen.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Inhalte sind verschlüsselt — Zwischenstationen sehen nur unlesbaren Zeichensalat."
+        },
+        {
+          "text": "HTTPS verbirgt auch, mit welchem Server du verbunden bist.",
+          "richtig": false,
+          "erklaerung": "Nein — die Ziel-IP-Adresse muss lesbar bleiben, sonst könnten die Router das Paket nicht zustellen. Solche Metadaten bleiben sichtbar."
+        },
+        {
+          "text": "Das Schloss-Symbol im Browser garantiert, dass die Inhalte der Website vertrauenswürdig sind.",
+          "richtig": false,
+          "erklaerung": "Nein: Das Schloss bestätigt nur die verschlüsselte Verbindung zu einem geprüften Server. Auch eine Betrugsseite kann HTTPS benutzen."
+        }
+      ],
+      "tipps": [
+        "Denk an das Bild vom offenen Vorhängeschloss: Zuschnappen kann es jeder, öffnen nur, wer den privaten Schlüssel hat.",
+        "Unterscheide Inhalt (verschlüsselbar) und Zieladresse (muss lesbar bleiben, sonst klappt die Zustellung nicht).",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Der öffentliche Schlüssel verschlüsselt, nur der private entschlüsselt — und Zwischenstationen können Inhalte nicht mitlesen. Die Zieladresse bleibt aber sichtbar (Metadaten), und das Schloss-Symbol sagt nichts über die Vertrauenswürdigkeit der Inhalte aus.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    }
+  ]
+}

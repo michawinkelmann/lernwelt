@@ -1,0 +1,111 @@
+{
+  "thema": "in-10-endliche-automaten",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben — fachliche Pruefung ausstehend.",
+  "aufgaben": [
+    {
+      "id": "in-10-ea-101",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Verfolge das Drehkreuz (Zustaende: Gesperrt, Offen; Eingaben: Muenze, Drehen) durch die Sequenz: Muenze, Drehen, Muenze, Muenze.",
+      "text": "Start: Gesperrt. Nach Muenze: ___. Nach Drehen: ___. Nach Muenze: ___. Nach zweiter Muenze: ___.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "Offen",     "optionen": ["Offen", "Gesperrt"] },
+        { "art": "dropdown", "antwort": "Gesperrt",  "optionen": ["Gesperrt", "Offen"] },
+        { "art": "dropdown", "antwort": "Offen",     "optionen": ["Offen", "Gesperrt"] },
+        { "art": "dropdown", "antwort": "Offen",     "optionen": ["Offen", "Gesperrt"] }
+      ],
+      "tipps": [
+        "Muenze im Zustand Gesperrt: Uebergang nach Offen.",
+        "Drehen im Zustand Offen: Uebergang zurueck nach Gesperrt.",
+        "Muenze im Zustand Offen ist ein Selbst-Uebergang — der Zustand aendert sich nicht."
+      ],
+      "loesungsweg": "Start Gesperrt → Muenze → Offen → Drehen → Gesperrt → Muenze → Offen → Muenze (Selbst-Uebergang) → Offen. Die zweite Muenze bleibt ohne Wirkung auf den Zustand.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-102",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein endlicher Automat hat $4$ Zustaende und arbeitet mit dem Alphabet $\\{0, 1\\}$. Wie viele Eintraege hat seine vollstaendige Uebergangstabelle?",
+      "eingaben": [
+        { "label": "Eintraege", "antwort": 8, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Jeder Zustand bekommt eine Zeile, jedes Eingabezeichen eine Spalte.",
+        "4 Zeilen, 2 Spalten — wie viele Zellen gibt das?",
+        "Rechne $4 \\cdot 2$."
+      ],
+      "loesungsweg": "$4 \\text{ Zustaende} \\cdot 2 \\text{ Zeichen} = 8$ Eintraege. Jede Zelle gibt den eindeutigen Folgezustand an.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-103",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Der Wort-Pruefer von der Erklaerseite akzeptiert alle Woerter ueber $\\{a, b\\}$, die auf $b$ enden ($q_0$: Start, $q_1$: akzeptierend; $b \\to q_1$, $a \\to q_0$ aus jedem Zustand). Verfolge das Wort $abba$.",
+      "text": "Start: $q_0$. Nach $a$: ___. Nach $b$: ___. Nach $b$: ___. Nach $a$: ___. Das Wort $abba$ wird ___.",
+      "luecken": [
+        { "art": "eingabe", "antwort": "q0" },
+        { "art": "eingabe", "antwort": "q1" },
+        { "art": "eingabe", "antwort": "q1" },
+        { "art": "eingabe", "antwort": "q0" },
+        { "art": "dropdown", "antwort": "abgelehnt", "optionen": ["akzeptiert", "abgelehnt"] }
+      ],
+      "tipps": [
+        "Lies die Zeichen der Reihe nach: $a$, $b$, $b$, $a$.",
+        "Jedes $b$ fuehrt nach $q_1$, jedes $a$ fuehrt nach $q_0$ — egal, wo du gerade stehst.",
+        "Entscheidend ist der Zustand nach dem letzten Buchstaben."
+      ],
+      "loesungsweg": "$q_0 \\xrightarrow{a} q_0 \\xrightarrow{b} q_1 \\xrightarrow{b} q_1 \\xrightarrow{a} q_0$. Das Wort endet in $q_0$ — nicht akzeptierend. Klar: $abba$ endet auf $a$, nicht auf $b$.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-104",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Der Wort-Pruefer akzeptiert alle Woerter ueber $\\{a, b\\}$, die auf $b$ enden. Welche der folgenden Woerter werden akzeptiert?",
+      "optionen": [
+        { "text": "b",    "richtig": true,  "erklaerung": "Endet auf b — wird akzeptiert." },
+        { "text": "ba",   "richtig": false, "erklaerung": "Endet auf a — wird abgelehnt." },
+        { "text": "abb",  "richtig": true,  "erklaerung": "Endet auf b — wird akzeptiert." },
+        { "text": "baba", "richtig": false, "erklaerung": "Endet auf a — wird abgelehnt." }
+      ],
+      "tipps": [
+        "Schaue nur auf den letzten Buchstaben des Wortes.",
+        "Der Automat akzeptiert genau dann, wenn das Wort auf $b$ endet.",
+        "Zwei Woerter werden akzeptiert."
+      ],
+      "loesungsweg": "Akzeptiert: $b$ (endet auf $b$) und $abb$ (endet auf $b$). Abgelehnt: $ba$ und $baba$ (enden auf $a$).",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-105",
+      "typ": "freitext",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Entwirf einen endlichen Automaten mit dem Alphabet $\\{0, 1\\}$, der genau alle Woerter akzeptiert, die eine gerade Anzahl von Einsen enthalten (also 0, 2, 4, … Einsen). Beschreibe Zustaende, Uebergaenge, Start- und Akzeptanzzustand in Worten oder als Tabelle.",
+      "musterloesung": "Zwei Zustaende: $q_g$ (gerade viele 1en gesehen, Startzustand und akzeptierend) und $q_u$ (ungerade viele 1en gesehen). Uebergaenge: Von $q_g$: bei $0 \\to q_g$, bei $1 \\to q_u$. Von $q_u$: bei $0 \\to q_u$, bei $1 \\to q_g$. Akzeptierender Zustand: $q_g$. Das leere Wort (0 Einsen, gerade) beginnt und endet in $q_g$ — korrekt akzeptiert.",
+      "tipps": [
+        "Du brauchst nur zwei Zustaende: einer fuer gerade, einer fuer ungerade Anzahl von Einsen.",
+        "Eine $0$ aendert die Anzahl der Einsen nicht — welcher Uebergang folgt daraus?",
+        "Eine $1$ wechselt zwischen gerade und ungerade."
+      ],
+      "loesungsweg": "Zustand $q_g$: bisher gerade viele 1en. Zustand $q_u$: bisher ungerade viele 1en. Start und Akzeptanzzustand: $q_g$. Uebergaenge: $q_g \\xrightarrow{0} q_g$, $q_g \\xrightarrow{1} q_u$, $q_u \\xrightarrow{0} q_u$, $q_u \\xrightarrow{1} q_g$.",
+      "kc": ["automaten"]
+    }
+  ]
+}

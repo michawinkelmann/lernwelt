@@ -1,0 +1,488 @@
+{
+  "thema": "ma-10-exponentialfunktion-und-wachstum",
+  "fach": "mathematik",
+  "stufe": "klasse-10",
+  "aufgaben": [
+    {
+      "id": "ma-10-exp-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Eine Größe verändert sich Schritt für Schritt. Welche Aussagen über lineares und exponentielles Wachstum sind richtig?",
+      "optionen": [
+        {
+          "text": "Wächst eine Größe in jedem Schritt um denselben Summanden, ist das Wachstum linear.",
+          "richtig": true,
+          "erklaerung": "Richtig: Linear heißt, pro Schritt kommt immer gleich viel dazu — z. B. $+10$ je Schritt."
+        },
+        {
+          "text": "Wird eine Größe in jedem Schritt mit demselben Faktor multipliziert, wächst sie exponentiell.",
+          "richtig": true,
+          "erklaerung": "Richtig: Der feste Faktor pro Schritt ist das Kennzeichen exponentiellen Wachstums."
+        },
+        {
+          "text": "Die Folge 5, 10, 15, 20 wächst exponentiell.",
+          "richtig": false,
+          "erklaerung": "Hier kommt pro Schritt $+5$ dazu (konstante Differenz) — das ist lineares Wachstum. Exponentiell wäre 5, 10, 20, 40 mit dem Faktor 2."
+        },
+        {
+          "text": "Exponentielles Wachstum verläuft von Anfang an steiler als jedes lineare Wachstum.",
+          "richtig": false,
+          "erklaerung": "Am Anfang kann exponentielles Wachstum sogar flacher verlaufen — aber irgendwann überholt es jedes lineare Wachstum und zieht davon."
+        }
+      ],
+      "tipps": [
+        "Linear: pro Schritt dieselbe Differenz. Exponentiell: pro Schritt derselbe Faktor.",
+        "Prüfe die Folge 5, 10, 15, 20: Sind die Differenzen konstant — oder die Quotienten?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: fester Summand → linear, fester Faktor → exponentiell. Die Folge 5, 10, 15, 20 hat die konstante Differenz 5 und wächst linear. Und exponentielles Wachstum startet oft flacher als lineares — es überholt erst nach einigen Schritten, dann aber endgültig.",
+      "kc": [
+        "linear-oder-exponentiell"
+      ]
+    },
+    {
+      "id": "ma-10-exp-002",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zur Exponentialfunktion.",
+      "text": "In f(x) = a · bˣ ist a der ___ — er gibt den Funktionswert bei x = 0 an. Die Zahl b heißt ___ . Für b > 1 beschreibt die Funktion exponentielles ___ , für 0 < b < 1 exponentielle ___ .",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Startwert",
+          "optionen": [
+            "Startwert",
+            "Wachstumsfaktor",
+            "Exponent"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Wachstumsfaktor",
+          "optionen": [
+            "Wachstumsfaktor",
+            "Startwert",
+            "Summand"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Wachstum",
+          "optionen": [
+            "Wachstum",
+            "Schrumpfen",
+            "Gleichbleiben"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Abnahme",
+          "optionen": [
+            "Abnahme",
+            "Zunahme",
+            "Sättigung"
+          ]
+        }
+      ],
+      "tipps": [
+        "Setze $x = 0$ ein: Wegen $b^0 = 1$ ist $f(0) = a$ — was sagt das über $a$?",
+        "$b$ ist der Faktor, mit dem es pro Schritt weitergeht — sein Name steckt schon im Wort.",
+        "$b = 1{,}2$ bedeutet $+20\\,\\%$ pro Schritt (Wachstum), $b = 0{,}8$ bedeutet $-20\\,\\%$ (Abnahme)."
+      ],
+      "loesungsweg": "Startwert — Wachstumsfaktor — Wachstum — Abnahme: Wegen $b^0 = 1$ ist $f(0) = a$ der Startwert. Der Faktor $b$ heißt Wachstumsfaktor; für $b > 1$ wächst der Bestand mit jedem Schritt, für $0 < b < 1$ nimmt er ab.",
+      "kc": [
+        "exponentialfunktion"
+      ]
+    },
+    {
+      "id": "ma-10-exp-003",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Gib zu jeder Änderung den Wachstumsfaktor $b$ an: a) Wachstum um $4\\,\\%$ pro Jahr, b) Abnahme um $15\\,\\%$ pro Jahr.",
+      "eingaben": [
+        {
+          "label": "$b$ zu a)",
+          "antwort": 1.04,
+          "toleranz": 0.0001,
+          "einheit": ""
+        },
+        {
+          "label": "$b$ zu b)",
+          "antwort": 0.85,
+          "toleranz": 0.0001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Wachstum um $p\\,\\%$: $b = 1 + \\frac{p}{100}$.",
+        "Abnahme um $p\\,\\%$: $b = 1 - \\frac{p}{100}$ — frage dich, wie viel Prozent übrig bleiben.",
+        "Bei $-15\\,\\%$ bleiben $100\\,\\% - 15\\,\\% = 85\\,\\%$ übrig."
+      ],
+      "loesungsweg": "a) $b = 1 + \\frac{4}{100} = 1{,}04$. b) Bei einer Abnahme um $15\\,\\%$ bleiben $85\\,\\%$ des Bestands übrig: $b = 1 - \\frac{15}{100} = 0{,}85$.",
+      "kc": [
+        "prozent-und-faktor"
+      ]
+    },
+    {
+      "id": "ma-10-exp-004",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Oma legt $800\\,\\text{€}$ zu $3\\,\\%$ Zinsen pro Jahr an. Die Zinsen bleiben auf dem Konto und werden mitverzinst (Zinseszins). Berechne das Guthaben nach 5 Jahren (auf Cent genau).",
+      "eingaben": [
+        {
+          "label": "Guthaben",
+          "antwort": 927.42,
+          "toleranz": 0.05,
+          "einheit": "€"
+        }
+      ],
+      "tipps": [
+        "Wachstumsfaktor: $b = 1{,}03$.",
+        "Nach $n$ Jahren gilt: Guthaben $= 800 \\cdot 1{,}03^n$.",
+        "$800 \\cdot 1{,}03^5$ — erst die Potenz berechnen, dann multiplizieren."
+      ],
+      "loesungsweg": "Faktor $b = 1{,}03$. Nach 5 Jahren: $800 \\cdot 1{,}03^5 \\approx 800 \\cdot 1{,}1593 \\approx 927{,}42\\,\\text{€}$. Zum Vergleich: Ohne Zinseszins (jedes Jahr nur $24\\,\\text{€}$ auf den Startbetrag) wären es $920\\,\\text{€}$ — die Differenz ist der Zinseszins-Effekt.",
+      "kc": [
+        "zinseszins"
+      ]
+    },
+    {
+      "id": "ma-10-exp-005",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jeder Situation den passenden Wachstumsfaktor zu.",
+      "paare": [
+        {
+          "links": "Wachstum um 12 % pro Jahr",
+          "rechts": "Faktor 1,12"
+        },
+        {
+          "links": "Abnahme um 12 % pro Jahr",
+          "rechts": "Faktor 0,88"
+        },
+        {
+          "links": "Verdopplung in jedem Schritt",
+          "rechts": "Faktor 2"
+        },
+        {
+          "links": "Halbierung in jedem Schritt",
+          "rechts": "Faktor 0,5"
+        }
+      ],
+      "tipps": [
+        "Wachstum um p %: Faktor 1 + p/100. Abnahme um p %: Faktor 1 − p/100.",
+        "„Abnahme um 12 %“ heißt: 88 % bleiben übrig.",
+        "Verdopplung: Aus 50 werden 100 — mit welchem Faktor wurde multipliziert?"
+      ],
+      "loesungsweg": "Wachstum um $12\\,\\%$ → Faktor $1{,}12$. Abnahme um $12\\,\\%$ → es bleiben $88\\,\\%$, also Faktor $0{,}88$. Verdopplung → Faktor $2$, Halbierung → Faktor $0{,}5$.",
+      "kc": [
+        "prozent-und-faktor"
+      ]
+    },
+    {
+      "id": "ma-10-exp-006",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "In einer Nährlösung verdoppelt sich die Anzahl der Bakterien jede Stunde. Zu Beginn sind es 250 Bakterien. Wie viele sind es nach 8 Stunden?",
+      "eingaben": [
+        {
+          "label": "Anzahl",
+          "antwort": 64000,
+          "toleranz": 0,
+          "einheit": "Bakterien"
+        }
+      ],
+      "tipps": [
+        "Verdopplung heißt Wachstumsfaktor $b = 2$.",
+        "Nach $n$ Stunden: $250 \\cdot 2^n$.",
+        "$2^8 = 256$ — jetzt nur noch mit dem Startwert multiplizieren."
+      ],
+      "loesungsweg": "$f(n) = 250 \\cdot 2^n$. Nach 8 Stunden: $250 \\cdot 2^8 = 250 \\cdot 256 = 64\\,000$ Bakterien.",
+      "kc": [
+        "wachstum-berechnen"
+      ]
+    },
+    {
+      "id": "ma-10-exp-007",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Neuwagen kostet $24\\,000\\,\\text{€}$ und verliert pro Jahr $15\\,\\%$ seines aktuellen Wertes. Berechne den Wert nach 3 Jahren.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Bestimme den Wachstumsfaktor $b$ für eine Abnahme um $15\\,\\%$.",
+          "eingaben": [
+            {
+              "label": "$b$",
+              "antwort": 0.85,
+              "toleranz": 0.0001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Es bleiben $100\\,\\% - 15\\,\\% = 85\\,\\%$ des Wertes übrig."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne den Wert nach 3 Jahren (auf ganze Euro gerundet).",
+          "eingaben": [
+            {
+              "label": "Wert",
+              "antwort": 14739,
+              "toleranz": 1,
+              "einheit": "€"
+            }
+          ],
+          "tipps": [
+            "Wert $= 24\\,000 \\cdot 0{,}85^3$"
+          ]
+        }
+      ],
+      "tipps": [
+        "„Verliert 15 %“ bedeutet: Der Wert wird jedes Jahr mit demselben Faktor unter 1 multipliziert.",
+        "Der Faktor ist $b = 1 - 0{,}15$.",
+        "$0{,}85^3 \\approx 0{,}6141$ — dann mit $24\\,000$ multiplizieren."
+      ],
+      "loesungsweg": "Faktor: $b = 1 - 0{,}15 = 0{,}85$. Wert nach 3 Jahren: $24\\,000 \\cdot 0{,}85^3 = 24\\,000 \\cdot 0{,}614125 \\approx 14\\,739\\,\\text{€}$.",
+      "kc": [
+        "abnahme"
+      ]
+    },
+    {
+      "id": "ma-10-exp-008",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Stadt hat $20\\,000$ Einwohner und wächst um $2\\,\\%$ pro Jahr. Bringe die Schritte zur Berechnung der Einwohnerzahl nach 10 Jahren in die richtige Reihenfolge.",
+      "elemente": [
+        "Wachstumsfaktor bestimmen: $b = 1 + 0{,}02 = 1{,}02$",
+        "Funktionsterm aufstellen: $f(n) = 20\\,000 \\cdot 1{,}02^n$",
+        "Einsetzen: $f(10) = 20\\,000 \\cdot 1{,}02^{10}$",
+        "Ausrechnen und runden: $f(10) \\approx 24\\,380$ Einwohner"
+      ],
+      "tipps": [
+        "Ohne Faktor kein Funktionsterm: Was muss aus den $2\\,\\%$ zuerst werden?",
+        "Erst der allgemeine Term mit $n$, dann das konkrete Einsetzen von $n = 10$.",
+        "Gerundet wird ganz zum Schluss."
+      ],
+      "loesungsweg": "Zuerst den Faktor bilden ($b = 1{,}02$), damit den Term $f(n) = 20\\,000 \\cdot 1{,}02^n$ aufstellen, dann $n = 10$ einsetzen und zum Schluss runden: $f(10) = 20\\,000 \\cdot 1{,}02^{10} \\approx 24\\,380$ Einwohner.",
+      "kc": [
+        "wachstum-berechnen"
+      ]
+    },
+    {
+      "id": "ma-10-exp-009",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Patient bekommt $500\\,\\text{mg}$ eines Wirkstoffs. Der Körper baut pro Stunde $20\\,\\%$ des jeweils vorhandenen Wirkstoffs ab. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Nach einer Stunde sind noch $400\\,\\text{mg}$ vorhanden.",
+          "richtig": true,
+          "erklaerung": "Richtig: $500 \\cdot 0{,}8 = 400\\,\\text{mg}$."
+        },
+        {
+          "text": "Nach zwei Stunden sind noch $300\\,\\text{mg}$ vorhanden.",
+          "richtig": false,
+          "erklaerung": "Es werden nicht stündlich $100\\,\\text{mg}$ abgebaut: $500 \\cdot 0{,}8^2 = 320\\,\\text{mg}$ — der Abbau ist nicht linear."
+        },
+        {
+          "text": "Die Wirkstoffmenge halbiert sich ungefähr alle 3 Stunden.",
+          "richtig": true,
+          "erklaerung": "Richtig: $0{,}8^3 = 0{,}512 \\approx 0{,}5$ — nach 3 Stunden ist jeweils etwa die Hälfte übrig."
+        },
+        {
+          "text": "Nach 5 Stunden ist der Wirkstoff vollständig abgebaut.",
+          "richtig": false,
+          "erklaerung": "$500 \\cdot 0{,}8^5 \\approx 164\\,\\text{mg}$ — im Modell wird die Menge immer kleiner, aber nie exakt null."
+        }
+      ],
+      "tipps": [
+        "„20 % des jeweils Vorhandenen“ heißt: Faktor $0{,}8$ pro Stunde — kein fester Abzug.",
+        "Rechne die Kette durch: $500 \\cdot 0{,}8$, dann $500 \\cdot 0{,}8^2$, dann $500 \\cdot 0{,}8^3$, …",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Pro Stunde wirkt der Faktor $0{,}8$: $500 \\rightarrow 400 \\rightarrow 320 \\rightarrow 256 \\rightarrow \\dots$ Nach einer Stunde sind es $400\\,\\text{mg}$ (richtig), nach zwei Stunden $320\\,\\text{mg}$, nicht $300$. Wegen $0{,}8^3 \\approx 0{,}51$ halbiert sich die Menge etwa alle 3 Stunden (richtig). Vollständig abgebaut wird der Wirkstoff im Modell nie — nach 5 Stunden sind noch rund $164\\,\\text{mg}$ übrig.",
+      "kc": [
+        "abnahme"
+      ],
+      "cas": "<p>Die Halbierungs-Aussage mit dem ClassPad II (Gym-Zweig) prüfen:</p><ol><li>Im <b>Main</b>-Menü eingeben: <code>solve(0.8^x=0.5,x)</code> und <b>EXE</b> — wegen der Dezimalpunkte rechnet der ClassPad gleich dezimal: x ≈ 3,1. Die Wirkstoffmenge halbiert sich also tatsächlich etwa alle 3 Stunden.</li><li>Mit Brüchen eingegeben — <code>solve((4/5)^x=1/2,x)</code> — liefert der <b>Standard</b>-Modus stattdessen einen exakten Logarithmus-Ausdruck; der Knopf ½↔0,5 schaltet auf den Dezimalwert um.</li><li>Auch die anderen Aussagen kannst du prüfen: <code>500*0.8^2</code> ergibt 320 (nicht 300), und <code>500*0.8^5</code> ergibt 163,84 — nach 5 Stunden sind noch rund 164 mg übrig.</li></ol><p>Notiere den Ansatz 0,8^x = 0,5 in deinem Heft — das CAS liefert nur den Zahlenwert, der Rechenweg bleibt deine Aufgabe.</p>"
+    },
+    {
+      "id": "ma-10-exp-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Stoffmenge nimmt pro Tag um $10\\,\\%$ ab (Faktor $0{,}9$). Nach wie vielen ganzen Tagen ist erstmals weniger als die Hälfte der Anfangsmenge übrig? Lege eine Wertetabelle an und probiere systematisch.",
+      "eingaben": [
+        {
+          "label": "Anzahl Tage",
+          "antwort": 7,
+          "toleranz": 0,
+          "einheit": "Tage"
+        }
+      ],
+      "tipps": [
+        "Der übrige Anteil nach $n$ Tagen ist $0{,}9^n$ — gesucht ist das erste $n$ mit $0{,}9^n < 0{,}5$.",
+        "Tabelle: $0{,}9^5 \\approx 0{,}59$, $0{,}9^6 \\approx 0{,}53$, …",
+        "$0{,}9^6 \\approx 0{,}53$ liegt noch über der Hälfte — prüfe den nächsten Tag."
+      ],
+      "loesungsweg": "Anteile: $0{,}9^5 \\approx 0{,}59$, $0{,}9^6 \\approx 0{,}53$, $0{,}9^7 \\approx 0{,}48$. Erst nach 7 Tagen liegt der Anteil zum ersten Mal unter $0{,}5$ — die Halbwertszeit liegt also zwischen 6 und 7 Tagen.",
+      "kc": [
+        "halbwertszeit"
+      ],
+      "cas": "<p>Statt systematischem Probieren geht es auch grafisch mit dem ClassPad II:</p><ol><li><b>Grafik &amp; Tabelle</b>: <b>y1</b> = <code>100*0.9^x</code> und <b>y2</b> = <code>50</code> eingeben (Dezimalzahlen am ClassPad mit <b>Punkt</b>: 0.9!).</li><li>Beide Graphen zeichnen lassen.</li><li><b>Analyse → Grafische Lösung → Schnittpunkt</b> — die x-Koordinate ist die gesuchte Zeit; auf ganze Tage aufrunden.</li></ol>"
+    },
+    {
+      "id": "ma-10-exp-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "In einem Teich verdoppelt sich die von Seerosen bedeckte Fläche jeden Tag. Am Tag 30 ist der Teich vollständig bedeckt. Lena behauptet: „Dann war er am Tag 15 genau zur Hälfte bedeckt.“ Nimm Stellung: Wann war der Teich wirklich halb bedeckt — und warum endet das Modell am Tag 30?",
+      "musterloesung": "Lenas Behauptung ist falsch. Die Fläche verdoppelt sich täglich — rückwärts gedacht war am Tag davor immer genau die Hälfte bedeckt. Halb bedeckt war der Teich also am Tag 29, nicht am Tag 15. Am Tag 15 fehlten noch 15 Verdopplungen, der bedeckte Anteil war erst $\\frac{1}{2^{15}}$ der Teichfläche — rund $0{,}003\\,\\%$, mit bloßem Auge kaum zu sehen. Exponentielles Wachstum verläuft eben nicht gleichmäßig: Fast der gesamte Zuwachs passiert in den letzten Schritten. Am Tag 30 endet das Modell, weil der Teich voll ist — die Seerosen können sich nicht weiter verdoppeln, Platz und Nährstoffe sind aufgebraucht. Ein exponentielles Modell gilt immer nur, solange nichts das Wachstum begrenzt.",
+      "tipps": [
+        "Denke rückwärts: Wie viel war am Tag vor der vollständigen Bedeckung bedeckt?",
+        "Verdopplung vorwärts bedeutet Halbierung rückwärts.",
+        "Welcher winzige Anteil ist 15 Verdopplungen vor dem vollen Teich bedeckt? Und was begrenzt das Wachstum am Ende?"
+      ],
+      "loesungsweg": "Rückwärts gedacht halbiert sich die Fläche pro Tag: Halb bedeckt war der Teich am Tag 29. Am Tag 15 war erst $\\frac{1}{2^{15}} \\approx 0{,}003\\,\\%$ der Fläche bedeckt — exponentielles Wachstum holt fast alles auf den letzten Schritten nach. Am Tag 30 bricht das Modell zusammen: Der Teich ist voll, weiteres Verdoppeln ist unmöglich.",
+      "kc": [
+        "modellgrenzen"
+      ]
+    },
+    {
+      "id": "ma-10-exp-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Ein Guthaben wächst mit $6\\,\\%$ Zinsen pro Jahr (Zinseszins). Bestimme durch systematisches Probieren, nach wie vielen ganzen Jahren sich das Guthaben erstmals mindestens verdoppelt hat.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Gib den jährlichen Wachstumsfaktor $b$ an.",
+          "eingaben": [
+            {
+              "label": "$b$",
+              "antwort": 1.06,
+              "toleranz": 0.0001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$b = 1 + \\frac{6}{100}$"
+          ]
+        },
+        {
+          "frage": "Schritt 2: Suche mit einer Wertetabelle das kleinste ganze $n$, für das $1{,}06^n \\geq 2$ gilt.",
+          "eingaben": [
+            {
+              "label": "$n$",
+              "antwort": 12,
+              "toleranz": 0,
+              "einheit": "Jahre"
+            }
+          ],
+          "tipps": [
+            "$1{,}06^{11} \\approx 1{,}90$ — reicht das schon für die Verdopplung?"
+          ]
+        }
+      ],
+      "tipps": [
+        "Verdopplung heißt: $1{,}06^n$ erreicht den Wert $2$ — der Startbetrag spielt keine Rolle.",
+        "Lege eine Tabelle an: $n = 10, 11, 12, \\dots$ und berechne jeweils $1{,}06^n$.",
+        "$1{,}06^{11} \\approx 1{,}90 < 2$, aber $1{,}06^{12} \\approx 2{,}01$."
+      ],
+      "loesungsweg": "Faktor $b = 1{,}06$. Probieren: $1{,}06^{11} \\approx 1{,}898$ — noch keine Verdopplung. $1{,}06^{12} \\approx 2{,}012$ — nach 12 Jahren hat sich das Guthaben erstmals verdoppelt. Die Frage „$1{,}06$ hoch wie viel ergibt $2$?“ beantwortet in der Oberstufe der Logarithmus.",
+      "kc": [
+        "verdopplungszeit"
+      ],
+      "cas": "<p>Verdopplungszeit mit dem ClassPad II statt Probiertabelle:</p><ol><li>Im <b>Main</b>-Menü eingeben: <code>solve(1.06^x=2,x)</code> (Punkt statt Komma!) und <b>EXE</b>.</li><li>Der ClassPad liefert x ≈ 11,9 — also ist das Guthaben nach 12 vollen Jahren erstmals verdoppelt.</li><li>Grafische Alternative: y1 = <code>1.06^x</code>, y2 = <code>2</code>, dann <b>Analyse → Grafische Lösung → Schnittpunkt</b>.</li></ol>"
+    },
+    {
+      "id": "ma-10-exp-013",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: In einer Petrischale wird die Zellzahl stündlich gemessen: bei $0\\,\\text{h}$: 400, bei $1\\,\\text{h}$: 600, bei $2\\,\\text{h}$: 900, bei $3\\,\\text{h}$: 1350. Entscheide mit Differenzen und Quotienten, ob ein lineares oder ein exponentielles Modell passt, gib den Wachstumsfaktor $b$ an und berechne den Modellwert für $6\\,\\text{h}$ (auf ganze Zellen gerundet).",
+      "eingaben": [
+        {
+          "label": "$b$",
+          "antwort": 1.5,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "Zellzahl nach 6 h",
+          "antwort": 4556.25,
+          "toleranz": 0.75,
+          "einheit": "Zellen"
+        }
+      ],
+      "tipps": [
+        "Differenzen: $200$, $300$, $450$ — nicht konstant. Und die Quotienten?",
+        "$\\frac{600}{400} = \\frac{900}{600} = \\frac{1350}{900} = 1{,}5$ — derselbe Faktor pro Stunde.",
+        "Modell: $f(n) = 400 \\cdot 1{,}5^n$ — jetzt $n = 6$ einsetzen."
+      ],
+      "loesungsweg": "Die Differenzen $200$, $300$, $450$ sind nicht konstant, die Quotienten dagegen alle $1{,}5$ — die Zellzahl wächst exponentiell mit $b = 1{,}5$. Modell: $f(n) = 400 \\cdot 1{,}5^n$, also $f(6) = 400 \\cdot 1{,}5^6 = 400 \\cdot 11{,}390625 \\approx 4556$ Zellen.",
+      "kc": [
+        "modellvergleich"
+      ]
+    }
+  ]
+}

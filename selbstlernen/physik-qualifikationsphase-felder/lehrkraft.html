@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderation: Physik QP Elektrische Felder — Lernbüro (Lehrkraft) — Lernwelt</title>
+<meta name="description" content="Moderationsseite für die Lehrkraft: Stoffverteilung, typische Fehler, Differenzierung und Praxis-Leitfaden zum Selbstlern-Kurs Physik QP Elektrische Felder.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/selbstlernen.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="lehrkraft">
+<noscript><p class="noscript-hinweis"><a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Moderation: Physik QP · Elektrische Felder · Lernbüro</h1>
+  <p class="einleitung">Interne Seite für die Lehrkraft – im Schüler-Flow bewusst <strong>unverlinkt</strong>. Enthält den Praxis-Leitfaden, die Stoffverteilung und je Lektion typische Fehler, Differenzierungs- und Materialhinweise. Mit „Drucken" als A4-Handzettel ausgebbar. Pilot: <a href="index.html">Schüler-Kursseite öffnen</a>.</p>
+
+  <p class="knopfzeile"><button type="button" class="knopf zweitrangig klein" onclick="window.print()">Drucken</button></p>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Praxis-Leitfaden Selbstlern-Moderation</span>
+    <p><strong>Gemeinsamer Start (3 Min.):</strong> Stundenziel nennen, an die Hilfe-Regel erinnern, Wochenplan zeigen.
+    <strong>Hilfe-Regel:</strong> „Erst der Tipp, dann der Partner, dann die Lehrkraft." Erst wenn die drei gestuften Tipps und die Sitznachbarin nicht weiterhelfen, kommt die Lehrkraft.
+    <strong>Stand erfassen:</strong> Es gibt kein Dashboard – nutze die <em>Ampel-Selbsteinschätzung</em> (grün/gelb/rot am Lektionsende) und das <em>Lerntagebuch</em> (offene Fragen). Im Vorbeigehen zeigen lassen.
+    <strong>Gemeinsamer Abschluss (3 Min.):</strong> Ein bis zwei rote Ampeln gemeinsam klären, Mindestmarke der Woche prüfen.</p>
+  </div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Eingebaute Entscheidungen dieses Kurses</span>
+    <p><strong>Taktung:</strong> Wochenplan mit Mindestmarke (Basis-Spur je Woche). <strong>Checkpoints:</strong> „Sichern" schaltet die nächste Lektion frei; jeder Checkpoint ist per Knopf „Lehrkraft hat freigegeben" ohne Passwort überschreibbar (Vertrauensmodell). <strong>Werkzeuge:</strong> Ampel + Lerntagebuch. <strong>Ergänzungsaufgaben:</strong> Neue Aufgaben (ef-101 bis ef-109) liegen in <code>daten/aufgaben/lernbuero/ph-qp-elektrische-felder.json</code>, Marker <code>ergaenzung:"lernbuero"</code> — zur fachlichen Prüfung.</p>
+  </div>
+
+  <h2>Stoffverteilung (KC Physik GO 2022 · Sachgebiet Elektrizität QP)</h2>
+  <details class="lb-stoff" open>
+    <summary>Tabelle Lektionen → Thema → KC-Schwerpunkt</summary>
+    <table>
+      <thead><tr><th>Woche</th><th>Lektionen</th><th>Thema</th><th>KC-Schwerpunkt</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr class="ist-pilot"><td>1</td><td>L1–L3</td><td>Elektrische Felder — <em>Pilot (5 Lektionen ausgebaut)</em></td><td>Feldbegriff, E = F/q, E = U/d, Homogenfeld</td><td>in-arbeit</td></tr>
+        <tr class="ist-pilot"><td>2</td><td>L4–L5</td><td>Elektrische Felder (Energie &amp; Ablenkung)</td><td>W = q·U, v = sqrt(2eU/m), Parabelbahn</td><td>in-arbeit</td></tr>
+        <tr><td>Folge</td><td>geplant</td><td>Bewegung geladener Teilchen im E-Feld</td><td>Ablenkformel, Schirmablenkung</td><td>geplant</td></tr>
+        <tr><td>Folge</td><td>geplant</td><td>Magnetfelder und Lorentzkraft</td><td>Lorentzkraft, Kreisbahn</td><td>geplant</td></tr>
+        <tr><td>Folge</td><td>geplant</td><td>Elektromagnetische Induktion</td><td>Induktionsgesetz, Lenz</td><td>geplant</td></tr>
+        <tr><td>Folge</td><td>geplant</td><td>Schwingungen, Wellen, Licht, Quanten, Atom, Kern</td><td>weitere QP-Sachgebiete</td><td>geplant</td></tr>
+      </tbody>
+    </table>
+  </details>
+  <p class="einleitung">Stundenzahlen nach Stundentafel und Klausurplanung kalibrieren. Der Pilot baut nur den Elektrische-Felder-Block aus; alle weiteren QP-Themen stehen als <code>geplant</code> in <code>daten/kurse/ph-qe.json</code>.</p>
+
+  <h2>Formeln und Einheiten im Überblick</h2>
+  <div class="merkkasten">
+    <span class="merk-etikett">Kernformeln dieses Kurses (ohne KaTeX)</span>
+    <p>
+      <strong>Elektrische Feldstärke:</strong> E = F/q &nbsp;(Einheit: V/m = N/C)<br>
+      <strong>Kraft auf Ladung im Feld:</strong> F = q · E<br>
+      <strong>Homogenfeld Kondensator:</strong> E = U/d<br>
+      <strong>Energie beim Durchlaufen von Spannung:</strong> W = q · U<br>
+      <strong>Endgeschwindigkeit beschleunigtes Teilchen:</strong> v = sqrt(2 · e · U / m)<br>
+      <strong>Ablenkung am Schirm (eA):</strong> y = U_a · L · (L/2 + s) / (2 · U_0 · d)
+    </p>
+    <p>Konstanten: e = 1,602 · 10⁻¹⁹ C &nbsp;|&nbsp; m_e = 9,109 · 10⁻³¹ kg &nbsp;|&nbsp; m_p = 1,673 · 10⁻²⁷ kg &nbsp;|&nbsp; e/m_e = 1,7588 · 10¹¹ C/kg</p>
+  </div>
+
+  <h2>Lektionen im Einzelnen</h2>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 1 · Der Feldbegriff</span>
+    <p><strong>Ziele:</strong> Elektrisches Feld als Raumzustand begreifen; Feldlinienregeln sicher benennen.<br>
+    <strong>Ankommen:</strong> Vorwissen Klasse 7 (ph-07-str-001/002 – Stromstärke und Spannung) als Brücke zur Spannung als Antrieb im Feld.<br>
+    <strong>Typische Fehler:</strong> „Das Feld verschwindet, wenn keine Ladung darin ist." — Die Probeladung macht das Feld nur messbar. Feldlinien werden fälschlich als Teilchenbahnen interpretiert.<br>
+    <strong>Differenzierung:</strong> Basis = mc-Aufgabe Feldlinienregeln (ef-001, N1); Standard = Lückentext Feldbegriff (ef-107, N2, neu); Plus = Freitext E vs. U erklären (ef-011, N2 AFB III). Sichern: Zuordnung der vier Grundformeln (ef-002).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 1 (<code>physik/qualifikationsphase/elektrische-felder/index.html#ue-feldbegriff</code>).</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 2 · Die elektrische Feldstärke</span>
+    <p><strong>Ziele:</strong> E = F/q als Definition verstehen; E, F, q und E = U/d ineinander umrechnen.<br>
+    <strong>Typische Fehler:</strong> Einheit N/C und V/m werden als verschiedene Größen behandelt — explizit zeigen, dass beide aus F/q = qU/(qd) folgen. Plattenabstand wird vergessen, in Meter umzurechnen.<br>
+    <strong>Differenzierung:</strong> Basis = E = U/d Aufgabe (ef-003, N1) + Kraft F = q·E auf Elektron (ef-102, N1, neu); Standard = Kraft auf Elektron im Feld (ef-006, N2); Plus = Mehrschrittaufgabe E, F_el, F_G mit Vergleich (ef-108, N3, neu). Sichern: parametrisierte E = U/d Aufgabe (ef-004).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 2 (<code>#ue-feldstaerke</code>). Hinweis: ef-004 ist vom Typ „parametrisiert" und erzeugt beim Laden andere Zahlenwerte — gut für die Standard-/Plus-Spur als Wiederholung.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 3 · Das homogene Feld im Plattenkondensator</span>
+    <p><strong>Ziele:</strong> Homogenfeld erklären; E = U/d sicher anwenden und nach d und U umstellen.<br>
+    <strong>Typische Fehler:</strong> „Homogen" wird als „stark" missverstanden. Schwebeversuch: Kräfteansatz F_el = F_G wird nicht als qE = mg erkannt.<br>
+    <strong>Differenzierung:</strong> Basis = Lückentext Homogenfeld (ef-005, N1); Standard = Schwebeversuch qE = mg (ef-008, N2); Plus = Analyse verdoppelter Spannung im Schwebeversuch (ef-013, N3). Sichern: U aus E und d berechnen (ef-103, N1, neu).<br>
+    <strong>Stopp-Punkt keiner</strong>, aber Schwebeversuch ist prüfungsrelevant — lohnt ein kurzes gemeinsames Beispiel vor dem Üben.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 3 (<code>#ue-kondensator</code>). Experiment <code>experimente/physik/rc-entladung/</code> als Verknüpfung erwähnenswert.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 4 · Energie im Feld: Ladungen beschleunigen</span>
+    <p><strong>Ziele:</strong> W = q·U als Energieübertrag verstehen; v = sqrt(2eU/m) herleiten und anwenden.<br>
+    <strong>Stopp-Punkt:</strong> Vor dieser Lektion gemeinsam klären, was W = q·U inhaltlich bedeutet (Energie = Ladung mal Spannung analog zu Weg mal Kraft).<br>
+    <strong>Typische Fehler:</strong> sqrt(2eU/m) wird falsch umgestellt; Zehnerpotenz-Fehler bei m_e = 9,109 · 10⁻³¹ kg. Oft wird vergessen, dass die Endgeschwindigkeit nicht vom Plattenabstand abhängt.<br>
+    <strong>Differenzierung:</strong> Basis = W = e·U für U = 500 V (ef-101, N1, neu); Standard = Rechenweg W und v für U = 1000 V (ef-007, N2) + U = 2000 V (ef-105, N2, neu); Plus = Proton vs. Elektron Vergleich (ef-109, N3, neu). Sichern: E = U/d + F = q·E Kombination (ef-104, N2, neu — bewusst Wiederholung L2/L3 als Transferkontrolle).<br>
+    <strong>Hinweis CAS:</strong> ef-007 enthält einen ClassPad-Hinweis für Schülerinnen und Schüler mit Taschenrechner (im Aufgaben-JSON hinterlegt).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 4 (<code>#ue-energie</code>).</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 5 · Elektronen im Querfeld ablenken</span>
+    <p><strong>Ziele:</strong> Parabelbahn im Querfeld erklären; Messwerte der Simulation ablesen und mit ef-012 analytisch vergleichen.<br>
+    <strong>Typische Fehler:</strong> Die Längsgeschwindigkeit wird fälschlich als veränderlich angesehen. Die Analogie waagerechter Wurf wird nicht erkannt. Nach den Platten wird weiter mit Feldkraft gerechnet.<br>
+    <strong>Differenzierung:</strong> Basis = Lückentext Parabelbahn (ef-106, N1, neu); Standard = mc-Aufgabe Querfeldbahn (ef-009, N2); Plus = Schrittweise Ablenkungsberechnung (ef-012, N3). Sichern: Simulationsmessung y am Schirm ablesen (ef-010, N2 — Simulationsaufgabe, braucht Browser).<br>
+    <strong>Hinweis Simulation:</strong> ef-010 und ef-012 verweisen auf die Simulation unter <code>simulationen/physik/plattenkondensator/</code>. Sicherstellen, dass die Schülerinnen und Schüler die Simulation im Verstehen-Schritt geöffnet haben.<br>
+    <strong>Hinweis CAS:</strong> ef-012 enthält einen ClassPad-Hinweis (schrittweise Kette v_0 → t_1 → a → y_1).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 5 (<code>#ue-ablenkung</code>) inkl. eingebetteter Simulation und Beobachtungsaufträgen. Vertiefungsbox zur Ablenkformel (eA) auf der Erklärseite ergänzend nutzbar.</p>
+  </section>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Neue Ergänzungsaufgaben (ef-101 bis ef-109) — zur fachlichen Prüfung</span>
+    <p>Alle neuen Aufgaben liegen in <code>daten/aufgaben/lernbuero/ph-qp-elektrische-felder.json</code>.<br>
+    ef-101 N1: W = e·U, U = 500 V → 8,01 · 10⁻¹⁷ J.<br>
+    ef-102 N1: F = q·E, E = 8000 V/m auf Elektron → 1,28 · 10⁻¹⁵ N.<br>
+    ef-103 N1: U = E·d, E = 2500 V/m, d = 8 cm → 200 V.<br>
+    ef-104 N2: E = U/d + F = q·E, U = 240 V, d = 3 cm → E = 8000 V/m, F = 1,28 · 10⁻¹⁵ N.<br>
+    ef-105 N2 Rechenweg: W = e·U, U = 2000 V → 3,20 · 10⁻¹⁶ J; v → 2,65 · 10⁷ m/s.<br>
+    ef-106 N1 Lücke: Querfeld → senkrecht, Parabel, geradlinig.<br>
+    ef-107 N2 Lücke: Feldbegriff und Feldlinienregeln (Raum, positive Probeladung, + nach −, dichter → größer).<br>
+    ef-108 N3 Rechenweg: E = 6000 V/m, d = 2 cm → U = 120 V; F_el = 9,61 · 10⁻¹⁶ N; F_G = 8,94 · 10⁻³⁰ N.<br>
+    ef-109 N3 Rechenweg: Proton vs. Elektron, U = 10000 V → W = 1,60 · 10⁻¹⁵ J; v_p = 1,38 · 10⁶ m/s; Faktor 42,9.</p>
+  </div>
+
+  <h2>Block 2: Magnetfelder und Lorentzkraft</h2>
+  <div class="merkkasten">
+    <span class="merk-etikett">Überblick Block 2</span>
+    <p><strong>5 Lektionen (L6–L10):</strong> Magnetfeld beschreiben (L6) → Kraft auf Leiter F = B·I·L (L7) → Lorentzkraft F_L = q·v·B (L8) → Kreisbahn r = m·v/(q·B) (L9) → Fadenstrahlrohr / spezifische Ladung e/m_e (L10).<br>
+    <strong>Ergänzungsaufgaben:</strong> <code>daten/aufgaben/lernbuero/ph-qp-magnetfelder-und-lorentzkraft.json</code> (mf-101 bis mf-111, Marker <code>ergaenzung:"lernbuero"</code> — zur fachlichen Prüfung ausstehend).<br>
+    <strong>Erklärseite:</strong> <code>physik/qualifikationsphase/magnetfelder-und-lorentzkraft/index.html</code> — 5 Abschnitte mit Anker-IDs: #mf-beschreiben, #mf-leiter, #mf-lorentz, #mf-kreisbahn, #mf-em.<br>
+    <strong>Hinweis:</strong> Die fachliche Endprüfung der Ergänzungsaufgaben (Numerik, KaTeX, Lösungswege) steht noch aus.</p>
+  </div>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 6 · Das Magnetfeld beschreiben</span>
+    <p><strong>Ziele:</strong> Feldlinienregeln sicher benennen; magnetische Flussdichte $B$ in Tesla einordnen.<br>
+    <strong>Ankommen:</strong> Vorwissen-MC aus den regulären Aufgaben (mf-001, N1); Brücke zur Mittelstufe.<br>
+    <strong>Typische Fehler:</strong> Feldlinien werden als einseitig (nur außen) verstanden — der innere Verlauf fehlt. Flussdichte und Feldstärke werden verwechselt (Tesla vs. V/m).<br>
+    <strong>Differenzierung:</strong> Basis = MC Feldlinienregeln (mf-101, N1, neu); Standard = Lückentext Feldlinien und Dreifingerregel (mf-102, N1, neu); Plus = Vertiefungsaufgabe aus Themenbestand (mf-011, N2 AFB III). Sichern: Zuordnung Formeln und Einheiten (mf-002).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 1 (<code>#mf-beschreiben</code>).</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 7 · Kraft auf stromdurchflossene Leiter</span>
+    <p><strong>Ziele:</strong> F = B·I·L berechnen und nach B umstellen; Dreifingerregel anwenden.<br>
+    <strong>Typische Fehler:</strong> Länge L nicht in Meter umgerechnet. Dreifingerregel wird gespiegelt (linke statt rechte Hand). Die Formel wird nur in einer Richtung angewandt, nicht umgestellt.<br>
+    <strong>Differenzierung:</strong> Basis = F = B·I·L berechnen, B=0,12 T, I=2,5 A, L=8 cm → F=24 mN (mf-103, N1, neu); Standard = B aus F und I·L bestimmen → 80 mT (mf-104, N2, neu); Plus = Mehrschritt aus Themenbestand (mf-004, N2 AFB II/III). Sichern: Leiterkraftaufgabe (mf-005).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 2 (<code>#mf-leiter</code>).</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 8 · Lorentzkraft auf bewegte Ladungen</span>
+    <p><strong>Ziele:</strong> F_L = q·v·B berechnen; erklären, warum die Lorentzkraft keine Arbeit verrichtet.<br>
+    <strong>Stopp-Punkt:</strong> Vor dieser Lektion gemeinsam klären, wie F = B·I·L auf einzelne Ladungsträger übergeht — die Herleitung q·v·B ist prüfungsrelevant.<br>
+    <strong>Typische Fehler:</strong> Elektronenladung ohne Vorzeichen einsetzen (Richtungsfehler). „Senkrecht" als Bedingung wird vergessen — Kraft bei paralleler Bewegung ist null. Die Behauptung „keine Arbeit" wird nicht mit W = F·s·cos(α) begründet.<br>
+    <strong>Differenzierung:</strong> Basis = Lorentzkraft Elektron v=5·10⁶ m/s, B=8 mT → 6,41·10⁻¹⁵ N (mf-105, N1, neu); Standard = MC Proton, drei Richtige (mf-106, N2, neu); Plus = Mehrschritt Lorentzkraft aus Themenbestand (mf-006, N3 AFB III). Sichern: Lorentzkraft/Kreisbahn-Kombination (mf-007).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 3 (<code>#mf-lorentz</code>).</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 9 · Die Kreisbahn im Magnetfeld</span>
+    <p><strong>Ziele:</strong> r = m·v/(q·B) herleiten und berechnen; Umlaufdauer T = 2πm/(qB) anwenden und das v-unabhängige Verhalten erklären.<br>
+    <strong>Typische Fehler:</strong> Bei der Umlaufdauer wird T = 2πr/v verwendet und v eingesetzt — dann sieht es falsch aus; zeigen, dass v sich heraushebt. Masseneinheit m_e = 9,109·10⁻³¹ kg führt zu Zehnerpotenzfehlern.<br>
+    <strong>Differenzierung:</strong> Basis = r berechnen, Elektron v=1,5·10⁷ m/s, B=4 mT → 2,13 cm (mf-107, N1, neu); Standard = Rechenweg: v und T aus r und B (mf-108, N2, neu); Plus = prüfungsrelevante Kreisbahnaufgaben aus Themenbestand (mf-009, mf-010, N2/N3). Sichern: Kombinationsaufgabe (mf-008).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 4 (<code>#mf-kreisbahn</code>) inkl. eingebetteter Simulation und Beobachtungsaufträgen.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 10 · Spezifische Ladung — das Fadenstrahlrohr</span>
+    <p><strong>Ziele:</strong> e/m_e = 2·U₀/(B²·r²) aus der Kombination Beschleunigung + Kreisbahn herleiten und anwenden.<br>
+    <strong>Typische Fehler:</strong> r² und B² werden nicht quadriert. Die Herleitung (v eliminieren) wird übersprungen — auf die Formel allein setzen. Abweichungsberechnung: Division durch Literaturwert vergessen.<br>
+    <strong>Differenzierung:</strong> Basis = r berechnen aus U₀ und B (Literaturwert nutzen): U₀=200 V, B=1,5 mT → r≈3,18 cm (mf-109, N1, neu); Standard = e/m aus gemessenem r bestimmen + Abweichung (mf-110, N2, neu); Plus = B berechnen + Skalierungsanalyse (mf-111, N3, neu). Sichern: e/m-Aufgabe aus Themenbestand (mf-012).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 5 (<code>#mf-em</code>); Experiment <code>experimente/physik/em-bestimmung/index.html</code> als Ergänzung.</p>
+  </section>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Neue Ergänzungsaufgaben Block 2 (mf-101 bis mf-111) — zur fachlichen Prüfung</span>
+    <p>Alle neuen Aufgaben liegen in <code>daten/aufgaben/lernbuero/ph-qp-magnetfelder-und-lorentzkraft.json</code>.<br>
+    mf-101 N1 MC: Feldlinienregeln und Tesla-Definition (2 von 4 richtig).<br>
+    mf-102 N1 Lücke: Feldlinienrichtungen und Dreifingerregel (7 Dropdowns).<br>
+    mf-103 N1: F = B·I·L; B=0,12 T, I=2,5 A, L=8 cm → F=0,024 N.<br>
+    mf-104 N2: B = F/(I·L); F=0,024 N, I=3,0 A, L=10 cm → B=0,080 T.<br>
+    mf-105 N1: F_L = q·v·B; Elektron v=5·10⁶ m/s, B=8 mT → 6,41·10⁻¹⁵ N.<br>
+    mf-106 N2 MC: Proton im Feld; Lorentzkraft, keine Arbeit, Kreisbahn (3 von 4 richtig).<br>
+    mf-107 N1: r = m_e·v/(e·B); v=1,5·10⁷ m/s, B=4 mT → r≈0,0213 m.<br>
+    mf-108 N2 Rechenweg: v aus r und B → 2,0·10⁷ m/s; T aus m_e und B → 7,1 ns.<br>
+    mf-109 N1: r aus U₀=200 V und B=1,5 mT mit Literaturwert → 3,18 cm.<br>
+    mf-110 N2 Rechenweg: e/m aus U₀=250 V, B=1,0 mT, r=5,3 cm → 1,78·10¹¹ C/kg; Abw. 1,2 %.<br>
+    mf-111 N3 Rechenweg: B aus U₀=300 V, r=3,0 cm → 1,95 mT; Skalierungsanalyse r ∝ 1/B.</p>
+  </div>
+
+    <p class="einleitung"><a href="index.html">← Zur Schüler-Kursseite</a></p>
+  <p class="knopfzeile"><a class="knopf zweitrangig klein" href="../druck.html?kurs=ph-qe">🖨 Druckmaterial erstellen</a></p>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+</body>
+</html>

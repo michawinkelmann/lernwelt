@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kreisberechnungen — Klasse 9 · Mathematik — Lernwelt</title>
+<meta name="description" content="Kreisberechnungen: die Kreiszahl π, Umfang u = π·d, Fläche A = π·r², rückwärts rechnen, Kreisbogen und Kreisausschnitt, Kreisring und zusammengesetzte Flächen — mit Beispielen und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Kreisberechnungen</h1>
+  <p class="einleitung">Wie weit rollt dein Fahrrad bei einer Radumdrehung? Lohnt sich die große Pizza — oder doch lieber zwei kleine? Und wie viel Glas braucht ein rundes Bogenfenster? Bei all dem rechnest du am <strong>Kreis</strong>: Umfang, Fläche, Bogen und Ausschnitt. Was Mittelpunkt, Radius und Durchmesser sind und wie man Kreise mit dem Zirkel zeichnet, kennst du aus <a href="../../klasse-6/kreis-und-winkel/index.html">Klasse 6</a> — jetzt kommt das Rechnen dazu. Dabei begegnet dir die wohl berühmteste Zahl der Mathematik.</p>
+
+  <section aria-labelledby="kb-pi">
+    <h2 id="kb-pi">1. Die Kreiszahl π</h2>
+    <p>Starte mit einem Messexperiment: Lege ein Maßband um eine Konservendose, ein Fahrrad-Laufrad und einen runden Blumentopf und miss jeweils den <strong>Umfang</strong> $u$ einmal außen herum. Miss dann den <strong>Durchmesser</strong> $d$ und teile: $u : d$. Das Erstaunliche: Ganz gleich, wie groß der runde Gegenstand ist — heraus kommt immer ungefähr derselbe Wert, etwas mehr als $3{,}14$.</p>
+    <p>Dieses bei jedem Kreis gleiche Verhältnis von Umfang zu Durchmesser heißt <strong>Kreiszahl</strong> $\pi$ (gesprochen „Pi“). Sie ist <strong>irrational</strong>: Ihre Dezimaldarstellung $\pi = 3{,}14159265\ldots$ bricht niemals ab und wird niemals periodisch — genau wie du es von den <a href="../wurzeln-und-reelle-zahlen/index.html">irrationalen Zahlen</a> kennst. Zum Rechnen nimmst du die $\pi$-Taste des Taschenrechners oder die Näherung $3{,}14$. Übrigens: Schon vor über 2200 Jahren schachtelte Archimedes den Kreis zwischen Vielecke mit immer mehr Ecken ein und grenzte $\pi$ so erstaunlich genau ein.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Kreisumfang</span>
+      <p class="formel-abgesetzt">$$u = \pi \cdot d = 2 \cdot \pi \cdot r$$</p><p>Der Umfang ist das $\pi$-Fache des Durchmessers. Wegen $d = 2r$ kannst du genauso gut mit dem Radius rechnen. Faustregel zum Überschlagen: Umfang $\approx$ drei Durchmesser und ein bisschen mehr.</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: Geschenkband um den Blumentopf</span><p>Ein runder Blumentopf hat den Durchmesser $d = 18\,\text{cm}$. Einmal herum braucht das Band $u = \pi \cdot 18 \approx 56{,}5\,\text{cm}$ — plus etwas Reserve für die Schleife.</p></div><details class="check"><summary>Verständnis-Check: Ein Kreis hat den Radius $r = 5\,\text{cm}$. Wie groß ist sein Umfang?</summary><div class="check-antwort"><p>$u = 2 \cdot \pi \cdot r = 2 \cdot \pi \cdot 5 = 10 \cdot \pi \approx 31{,}4\,\text{cm}$. Überschlag zur Kontrolle: gut drei Durchmesser, also etwas mehr als $3 \cdot 10 = 30\,\text{cm}$ ✓.</p></div></details><p>Woher kommt π eigentlich? Im Experiment <a href="../../../experimente/mathematik/pi-messen/index.html">π selbst messen</a> bestimmst du die Kreiszahl mit Maßband und runden Gegenständen — wie die Mathematiker vor 2000 Jahren.</p>
+  </section><section aria-labelledby="kb-flaeche"><h2 id="kb-flaeche">2. Die Kreisfläche</h2><p>Für die Fläche gibt es einen schönen Trick: Zerschneide den Kreis wie eine Torte in zwölf gleich große Stücke und lege sie abwechselnd mit der Spitze nach oben und nach unten aneinander. Es entsteht ein<strong>Fast-Rechteck</strong>: Seine Breite ist der<strong>halbe Umfang</strong>$\pi \cdot r$ (die Bögen oben und unten teilen sich die Kreislinie), seine Höhe ist der<strong>Radius</strong>$r$.</p>
+    <figure class="formel-abgesetzt">
+      <svg id="kb-svg-flaeche" viewBox="0 0 600 268" width="560" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Links ein Kreis, der in zwölf gleich große Tortenstücke zerlegt ist. Rechts sind die zwölf Stücke abwechselnd mit der Spitze nach oben und nach unten zu einem Fast-Rechteck aneinandergelegt. Seine Breite ist der halbe Umfang, also Pi mal r, seine Höhe ist der Radius r.">
+        <g fill="var(--mathe)" stroke="var(--mathe)" stroke-width="1.2" stroke-linejoin="round">
+          <path d="M115 130 L200.0 130.0 A85 85 0 0 1 188.6 172.5 Z" fill-opacity="0.28"/>
+          <path d="M115 130 L188.6 172.5 A85 85 0 0 1 157.5 203.6 Z" fill-opacity="0.10"/>
+          <path d="M115 130 L157.5 203.6 A85 85 0 0 1 115.0 215.0 Z" fill-opacity="0.28"/>
+          <path d="M115 130 L115.0 215.0 A85 85 0 0 1 72.5 203.6 Z" fill-opacity="0.10"/>
+          <path d="M115 130 L72.5 203.6 A85 85 0 0 1 41.4 172.5 Z" fill-opacity="0.28"/>
+          <path d="M115 130 L41.4 172.5 A85 85 0 0 1 30.0 130.0 Z" fill-opacity="0.10"/>
+          <path d="M115 130 L30.0 130.0 A85 85 0 0 1 41.4 87.5 Z" fill-opacity="0.28"/>
+          <path d="M115 130 L41.4 87.5 A85 85 0 0 1 72.5 56.4 Z" fill-opacity="0.10"/>
+          <path d="M115 130 L72.5 56.4 A85 85 0 0 1 115.0 45.0 Z" fill-opacity="0.28"/>
+          <path d="M115 130 L115.0 45.0 A85 85 0 0 1 157.5 56.4 Z" fill-opacity="0.10"/>
+          <path d="M115 130 L157.5 56.4 A85 85 0 0 1 188.6 87.5 Z" fill-opacity="0.28"/>
+          <path d="M115 130 L188.6 87.5 A85 85 0 0 1 200.0 130.0 Z" fill-opacity="0.10"/>
+          <path d="M268.0 130 A85 85 0 0 1 312.5 130 L290.3 215 Z" fill-opacity="0.28"/>
+          <path d="M290.3 215 A85 85 0 0 0 334.8 215 L312.5 130 Z" fill-opacity="0.10"/>
+          <path d="M312.5 130 A85 85 0 0 1 357.0 130 L334.8 215 Z" fill-opacity="0.28"/>
+          <path d="M334.8 215 A85 85 0 0 0 379.3 215 L357.0 130 Z" fill-opacity="0.10"/>
+          <path d="M357.0 130 A85 85 0 0 1 401.5 130 L379.3 215 Z" fill-opacity="0.28"/>
+          <path d="M379.3 215 A85 85 0 0 0 423.8 215 L401.5 130 Z" fill-opacity="0.10"/>
+          <path d="M401.5 130 A85 85 0 0 1 446.0 130 L423.8 215 Z" fill-opacity="0.28"/>
+          <path d="M423.8 215 A85 85 0 0 0 468.3 215 L446.0 130 Z" fill-opacity="0.10"/>
+          <path d="M446.0 130 A85 85 0 0 1 490.5 130 L468.3 215 Z" fill-opacity="0.28"/>
+          <path d="M468.3 215 A85 85 0 0 0 512.8 215 L490.5 130 Z" fill-opacity="0.10"/>
+          <path d="M490.5 130 A85 85 0 0 1 535.0 130 L512.8 215 Z" fill-opacity="0.28"/>
+          <path d="M512.8 215 A85 85 0 0 0 557.3 215 L535.0 130 Z" fill-opacity="0.10"/>
+        </g>
+        <text x="157" y="122" font-size="16" font-style="italic" font-weight="600" fill="var(--mathe)" text-anchor="middle">r</text>
+        <g stroke="var(--text-leise)" stroke-width="1.5" fill="none">
+          <line x1="290.3" y1="232" x2="557.3" y2="232"/>
+          <line x1="290.3" y1="226" x2="290.3" y2="238"/>
+          <line x1="557.3" y1="226" x2="557.3" y2="238"/>
+          <line x1="570" y1="130" x2="570" y2="215"/>
+          <line x1="564" y1="130" x2="576" y2="130"/>
+          <line x1="564" y1="215" x2="576" y2="215"/>
+        </g>
+        <text x="423.8" y="255" font-size="15" font-weight="600" fill="var(--mathe)" text-anchor="middle">halber Umfang (π · r)</text>
+        <text x="586" y="178" font-size="16" font-style="italic" font-weight="600" fill="var(--mathe)" text-anchor="middle">r</text>
+      </svg>
+      <figcaption>Zwölf Tortenstücke, neu angeordnet: ein Fast-Rechteck mit der Breite „halber Umfang“ (π · r) und der Höhe r.</figcaption>
+    </figure>
+    <p>Je feiner du die Stücke schneidest, desto gerader werden die welligen Ränder — und die Figur kommt einem echten Rechteck mit dem Flächeninhalt $\pi r \cdot r = \pi r^2$ beliebig nahe. Eine Figur durch immer feinere Zerlegungen einzufangen, ist eine <strong>Grenzwert-Idee</strong>; im Gymnasialzweig begegnet sie dir in Klasse 10 bei den <a href="../../klasse-10/grenzprozesse-und-naeherungen/index.html">Grenzprozessen und Näherungen</a> wieder.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Kreisfläche</span>
+      <p class="formel-abgesetzt">$$A = \pi \cdot r^2$$</p><p>Wichtig: In dieser Formel steht der<strong>Radius</strong>, und er wird<strong>quadriert</strong>. Ist der Durchmesser gegeben, rechne zuerst $r = \frac{d}{2}$. Und weil $r$ im Quadrat steht: Doppelter Radius bedeutet vierfache Fläche!</p></div><details class="check"><summary>Verständnis-Check: Ein Kreis hat den Durchmesser $d = 10\,\text{cm}$. Wie groß ist seine Fläche?</summary><div class="check-antwort"><p>Vorsicht, beliebte Falle: In die Formel gehört der<strong>Radius</strong>— also zuerst $r = 10 : 2 = 5\,\text{cm}$. Dann $A = \pi \cdot 5^2 = 25 \cdot \pi \approx 78{,}5\,\text{cm}^2$. Wer versehentlich $\pi \cdot 10^2$ rechnet, erhält das Vierfache.</p></div></details></section><section aria-labelledby="kb-rueckwaerts"><h2 id="kb-rueckwaerts">3. Vorwärts und rückwärts rechnen</h2><p>Mit $u = 2\pi r$ und $A = \pi r^2$ rechnest du<strong>vorwärts</strong>: vom Radius zu Umfang und Fläche. Oft ist es aber umgekehrt — das Maßband liefert dir den Umfang eines Baumstamms, ein Artikel nennt nur die Fläche eines runden Sees. Dann werden die Formeln umgestellt und du rechnest<strong>rückwärts</strong>zum Radius:</p><div class="merkkasten"><span class="merk-etikett">Umgestellte Formeln</span><p class="formel-abgesetzt">$$r = \frac{u}{2\pi} \qquad \text{und} \qquad r = \sqrt{\frac{A}{\pi}}$$</p><p>Beim Umstellen der Flächenformel wird zuerst durch $\pi$ geteilt und ganz zum Schluss die Wurzel gezogen.</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: einmal hin, einmal zurück</span><p>Vorwärts: Ein Kreis mit $r = 4\,\text{cm}$ hat den Umfang $u = 2 \cdot \pi \cdot 4 \approx 25{,}1\,\text{cm}$ und die Fläche $A = \pi \cdot 4^2 \approx 50{,}3\,\text{cm}^2$.</p><p>Rückwärts: Aus $u = 25{,}1\,\text{cm}$ folgt $r = \frac{25{,}1}{2\pi} \approx 4{,}0\,\text{cm}$ ✓ — und aus $A = 50{,}3\,\text{cm}^2$ folgt $r = \sqrt{\frac{50{,}3}{\pi}} \approx \sqrt{16{,}0} = 4{,}0\,\text{cm}$ ✓. Beide Wege führen sauber zum Ausgangswert zurück — eine prima Selbstkontrolle.</p></div><p>Achte dabei konsequent auf die<strong>Einheiten</strong>: Längen wie Radius, Umfang und Bogen werden in $\text{cm}$ oder $\text{m}$ gemessen, Flächen in $\text{cm}^2$ oder $\text{m}^2$. Wer einen Umfang in $\text{cm}^2$ angibt, mischt Länge und Fläche — und beim Wurzelziehen aus $\text{cm}^2$ wird wieder die Längeneinheit $\text{cm}$.</p></section><section aria-labelledby="kb-sektor"><h2 id="kb-sektor">4. Kreisbogen und Kreisausschnitt</h2><p>Ein Stück Torte, das Ziffernblatt zwischen zwei Zeigern, ein Sektor im Tortendiagramm: Oft brauchst du nicht den ganzen Kreis, sondern nur einen<strong>Ausschnitt</strong>. Wie groß er ist, bestimmt der<strong>Mittelpunktswinkel</strong>$\alpha$: Der volle Kreis hat $360^\circ$, der Ausschnitt bekommt davon den<strong>Anteil</strong>$\frac{\alpha}{360^\circ}$ — und zwar vom Umfang <em>und</em> von der Fläche.</p>
+    <figure class="formel-abgesetzt">
+      <svg id="kb-svg-sektor" viewBox="0 0 300 300" width="300" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Ein Kreisausschnitt mit dem Mittelpunktswinkel Alpha zwischen zwei Radien der Länge r. Der zum Ausschnitt gehörende Teil der Kreislinie ist der dick gezeichnete Kreisbogen b. Der Rest des Kreises ist gestrichelt angedeutet.">
+        <circle cx="135" cy="170" r="115" fill="none" stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="5 6" opacity="0.7"/>
+        <path d="M135 170 L243.1 130.7 A115 115 0 0 0 155.0 56.7 Z" fill="var(--mathe)" fill-opacity="0.18" stroke="var(--mathe)" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M243.1 130.7 A115 115 0 0 0 155.0 56.7" fill="none" stroke="var(--mathe)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M165.1 159.1 A32 32 0 0 0 140.6 138.5" fill="none" stroke="var(--mathe)" stroke-width="1.8"/>
+        <circle cx="135" cy="170" r="3" fill="var(--mathe)"/>
+        <g font-size="17" font-weight="600" fill="var(--mathe)" text-anchor="middle">
+          <text x="171" y="138" font-style="italic">α</text>
+          <text x="196" y="164" font-style="italic">r</text>
+          <text x="226" y="67" font-style="italic">b</text>
+        </g>
+        <text x="124" y="189" font-size="13" fill="var(--text-leise)" text-anchor="middle">M</text>
+      </svg>
+      <figcaption>Kreisausschnitt (Sektor): Der Mittelpunktswinkel α legt den Bruchteil α/360° des Kreises fest; b ist der zugehörige Kreisbogen.</figcaption>
+    </figure>
+    <div class="merkkasten">
+      <span class="merk-etikett">Kreisbogen und Sektorfläche</span>
+      <p class="formel-abgesetzt">$$b = \frac{\alpha}{360^\circ} \cdot 2\pi r \qquad\qquad A_{\text{Sektor}} = \frac{\alpha}{360^\circ} \cdot \pi r^2$$</p><p>Erst den Anteil $\frac{\alpha}{360^\circ}$ bilden, dann mit dem Umfang bzw. der Fläche des ganzen Kreises multiplizieren.</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: Sektor mit 60°</span><p>Für $r = 6\,\text{cm}$ und $\alpha = 60^\circ$ ist der Anteil $\frac{60^\circ}{360^\circ} = \frac{1}{6}$:</p><p class="formel-abgesetzt">$$b = \frac{1}{6} \cdot 2 \cdot \pi \cdot 6 \approx 6{,}28\,\text{cm} \qquad\qquad A_{\text{Sektor}} = \frac{1}{6} \cdot \pi \cdot 6^2 \approx 18{,}85\,\text{cm}^2$$</p></div><p>Genau so funktionieren<strong>Tortendiagramme</strong>: Ein Anteil von $25\,\%$ bekommt den Mittelpunktswinkel $0{,}25 \cdot 360^\circ = 90^\circ$ — die Sektorfläche zeigt den Anteil dann maßstabsgetreu.</p><details class="check"><summary>Verständnis-Check: Wie lang ist der Bogen eines Viertelkreises mit $r = 4\,\text{cm}$?</summary><div class="check-antwort"><p>Ein Viertelkreis hat $\alpha = 90^\circ$, also den Anteil $\frac{90^\circ}{360^\circ} = \frac{1}{4}$: $b = \frac{1}{4} \cdot 2 \cdot \pi \cdot 4 = 2\pi \approx 6{,}28\,\text{cm}$.</p></div></details></section><section aria-labelledby="kb-ring"><h2 id="kb-ring">5. Zusammengesetzte Flächen und Kreisring</h2><p>Viele Figuren aus dem Alltag sind aus Grundformen<strong>zusammengesetzt</strong>: Ein Bogenfenster ist ein Rechteck mit aufgesetztem Halbkreis, und eine 400-m-Laufbahn im Stadion umschließt ein Rechteck mit zwei angesetzten Halbkreisen — die beiden Halbkreise ergeben zusammen einen vollen Kreis. Die Strategie ist immer dieselbe:<strong>zerlegen</strong>(Teilflächen berechnen und addieren) oder<strong>ergänzen</strong>(zu einer einfachen Figur auffüllen und das Zuviel wieder abziehen).</p><p>Das wichtigste Beispiel fürs Abziehen ist der<strong>Kreisring</strong>— die Fläche zwischen zwei Kreisen mit demselben Mittelpunkt, wie bei einem Dichtungsring oder einer Zielscheibe: große Kreisfläche minus kleine Kreisfläche.</p><div class="merkkasten"><span class="merk-etikett">Kreisring</span><p class="formel-abgesetzt">$$A = \pi \cdot R^2 - \pi \cdot r^2 = \pi \cdot \left(R^2 - r^2\right)$$</p><p>Dabei ist $R$ der Außen- und $r$ der Innenradius. Achtung: $\pi \left(R^2 - r^2\right)$ ist<em>nicht</em>dasselbe wie $\pi \left(R - r\right)^2$ — erst quadrieren, dann subtrahieren!</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: Kreisring</span><p>Für $R = 10\,\text{cm}$ und $r = 6\,\text{cm}$: $A = \pi \cdot (10^2 - 6^2) = \pi \cdot (100 - 36) = 64 \cdot \pi \approx 201{,}1\,\text{cm}^2$.</p></div><p>In den Übungen wartet das Bogenfenster auf dich: Die Fläche setzt sich aus Rechteck und Halbkreis zusammen — und beim Rahmen einmal außen herum zählt die obere Rechteckkante<em>nicht</em>mit, denn sie liegt im Inneren der Figur. Skizziere zusammengesetzte Figuren deshalb immer zuerst und markiere, welche Teilstücke wirklich gebraucht werden.</p></section><details class="vertiefung"><summary>Vertiefung: Das Seil um den Äquator</summary><div class="vertiefung-inhalt"><p>Ein Gedankenexperiment, das seit Jahrhunderten verblüfft: Ein Seil liegt straff um den Äquator — rund $40\,000\,\text{km}$ lang. Nun wird es um nur<strong>einen Meter</strong>verlängert und überall gleich weit vom Boden abgehoben, sodass es wieder einen Kreis bildet. Wie groß ist der Abstand $h$ zum Boden? Passt ein Blatt Papier darunter, eine Maus, eine Katze?</p><p>Die Rechnung ist überraschend kurz. Vorher gilt $u = 2\pi r$, nachher $u + 1 = 2\pi(r + h) = 2\pi r + 2\pi h$. Zieht man die erste Gleichung von der zweiten ab, bleibt $1 = 2\pi h$, also $h = \frac{1}{2\pi}\,\text{m} \approx 0{,}16\,\text{m}$ — rund $16\,\text{cm}$, da schlüpft die Katze bequem hindurch. Das eigentlich Verblüffende: Der Erdradius ist aus der Rechnung<strong>vollständig herausgefallen</strong>. Dieselbe Rechnung für ein Seil um einen Fußball liefert exakt denselben Abstand von rund $16\,\text{cm}$.</p><p>Warum versagt unsere Intuition hier so gründlich? Weil wir den einen Meter gedanklich mit den $40\,000\,\text{km}$ vergleichen und „so gut wie nichts“ erwarten. Aber $h$ hängt gar nicht vom Umfang ab, sondern nur von seinem<strong>Zuwachs</strong>: Radius und Umfang sind über den festen Faktor $2\pi$ aneinander gekoppelt, also wächst der Radius bei<em>jedem</em>Kreis um $\frac{1}{2\pi}$ des Umfangszuwachses — beim Planeten genauso wie beim Fußball. In Zusatzaufgabe 13 rechnest du beides selbst nach.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom π-Steckbrief über Bogen, Sektor und Kreisring bis zum Seil um den Äquator — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dreiecke und Konstruktionen — Klasse 7 · Mathematik — Lernwelt</title>
+<meta name="description" content="Dreiecke beschriften und nach Winkeln und Seiten sortieren, die Winkelsumme von 180 Grad begründen und anwenden, mit der Dreiecksungleichung prüfen, ob drei Seiten ein Dreieck ergeben, die Kongruenzsätze SSS, SWS, WSW und SsW verstehen und Dreiecke Schritt für Schritt konstruieren.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Figuren mit Bildunterschrift (nur diese Seite) */
+  .dk-figur { margin: var(--abstand-4) auto; }
+  .dk-figur svg { display: block; width: 100%; height: auto; }
+  .dk-figur figcaption { text-align: center; font-size: .9rem; color: var(--text-leise); margin-top: var(--abstand-2); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Dreiecke und Konstruktionen</h1>
+  <p class="einleitung">Wirf einen Blick auf Baukräne, Fahrradrahmen oder Strommasten: Überall stecken Dreiecke. Kein Zufall — das Dreieck ist die einzige Vielecksform, die sich nicht verbiegen lässt. In diesem Kapitel lernst du, Dreiecke richtig zu beschriften und zu sortieren, du entdeckst die berühmte Winkelsumme von $180^\circ$, prüfst mit der Dreiecksungleichung, ob drei Seiten überhaupt zusammenpassen — und konstruierst Dreiecke so präzise, dass alle in der Klasse dasselbe Dreieck erhalten.</p>
+
+  <section aria-labelledby="dk-benennen">
+    <h2 id="dk-benennen">1. Dreiecke benennen und sortieren</h2>
+    <p>Damit alle vom selben Dreieck sprechen, gibt es feste Beschriftungsregeln: Die <strong>Ecken</strong> heißen $A$, $B$, $C$ und werden <strong>gegen den Uhrzeigersinn</strong> beschriftet. Jede <strong>Seite</strong> erhält den kleinen Buchstaben der Ecke, der sie <strong>gegenüberliegt</strong> — die Seite $a$ liegt also der Ecke $A$ gegenüber. Die <strong>Winkel</strong> tragen griechische Buchstaben: $\alpha$ (alpha) sitzt an der Ecke $A$, $\beta$ (beta) an $B$ und $\gamma$ (gamma) an $C$.</p>
+    <figure class="dk-figur" style="max-width: 400px;">
+      <svg viewBox="0 0 360 250" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Ein vollständig beschriftetes Dreieck: Die Ecken A, B und C sind gegen den Uhrzeigersinn angeordnet — A unten links, B unten rechts, C oben. In der Mitte zeigt ein gebogener Pfeil den Umlaufsinn gegen den Uhrzeigersinn. Die Seite c verläuft unten von A nach B, die Seite a rechts von B nach C, die Seite b links von C nach A — jede Seite liegt der Ecke mit demselben Buchstaben gegenüber. Winkelbögen markieren Alpha bei A, Beta bei B und Gamma bei C.">
+        <polygon points="50,210 320,210 150,40" fill="var(--mathe)" fill-opacity="0.06" stroke="var(--text)" stroke-width="2"/>
+        <!-- Winkelbögen -->
+        <path d="M 80 210 A 30 30 0 0 0 65.2 184.1" fill="none" stroke="var(--mathe)" stroke-width="2.2"/>
+        <path d="M 290 210 A 30 30 0 0 1 298.8 188.8" fill="none" stroke="var(--mathe)" stroke-width="2.2"/>
+        <path d="M 168.4 58.4 A 26 26 0 0 1 136.8 62.4" fill="none" stroke="var(--mathe)" stroke-width="2.2"/>
+        <!-- Umlaufsinn-Pfeil (gegen den Uhrzeigersinn) -->
+        <path d="M 185 131.2 A 24 24 0 1 0 185 172.8" fill="none" stroke="var(--text-leise)" stroke-width="1.8"/>
+        <polygon points="193.7,167.8 187.3,176.7 182.8,168.9" fill="var(--text-leise)"/>
+        <!-- Eckpunkte -->
+        <g fill="var(--text)">
+          <circle cx="50" cy="210" r="3.5"/><circle cx="320" cy="210" r="3.5"/><circle cx="150" cy="40" r="3.5"/>
+        </g>
+        <!-- Beschriftung -->
+        <g font-size="17" font-weight="700" fill="var(--text)" text-anchor="middle">
+          <text x="38" y="228">A</text><text x="334" y="228">B</text><text x="150" y="26">C</text>
+        </g>
+        <g font-size="16" font-style="italic" fill="var(--text)" text-anchor="middle">
+          <text x="185" y="234">c</text><text x="248" y="116">a</text><text x="84" y="120">b</text>
+        </g>
+        <g font-size="15" fill="var(--mathe)" text-anchor="middle">
+          <text x="95" y="190">α</text><text x="272" y="196">β</text><text x="156" y="92">γ</text>
+        </g>
+      </svg>
+      <figcaption>Abbildung 1: Beschriftung gegen den Uhrzeigersinn — jede Seite trägt den kleinen Buchstaben der gegenüberliegenden Ecke, jeder Winkel den griechischen Buchstaben „seiner“ Ecke.</figcaption>
+    </figure>
+    <div class="merkkasten">
+      <span class="merk-etikett">Beschriftungsregel</span>
+      <p>Ecken $A$, $B$, $C$ <strong>gegen den Uhrzeigersinn</strong>. Gegenüberliegende Stücke tragen zusammengehörige Buchstaben: Seite $a$ gegenüber Ecke $A$, Seite $b$ gegenüber $B$, Seite $c$ gegenüber $C$. Der Winkel $\alpha$ liegt an der Ecke $A$ — eingeschlossen von den Seiten $b$ und $c$.</p>
+    </div>
+    <p>Sortieren kannst du Dreiecke auf zwei Arten. <strong>Nach den Winkeln:</strong></p>
+    <ul>
+      <li><strong>spitzwinklig</strong> — alle drei Winkel sind kleiner als $90^\circ$,</li>
+      <li><strong>rechtwinklig</strong> — genau ein Winkel beträgt genau $90^\circ$,</li>
+      <li><strong>stumpfwinklig</strong> — genau ein Winkel ist größer als $90^\circ$.</li>
+    </ul>
+    <p>Mehr als ein rechter oder stumpfer Winkel ist unmöglich — schon zwei $90^\circ$-Winkel würden die komplette Winkelsumme aufbrauchen, wie du gleich sehen wirst. <strong>Nach den Seiten:</strong> Ein <strong>gleichschenkliges</strong> Dreieck hat zwei gleich lange Seiten, die <strong>Schenkel</strong>. Die dritte Seite heißt <strong>Basis</strong>, die beiden Winkel an der Basis heißen <strong>Basiswinkel</strong> — und sie sind immer <strong>gleich groß</strong>. Gegenüber der Basis liegt die <strong>Spitze</strong>. Ein <strong>gleichseitiges</strong> Dreieck hat sogar drei gleich lange Seiten — und damit drei gleiche Winkel von je $60^\circ$, denn $180^\circ : 3 = 60^\circ$.</p>
+  </section>
+
+  <section aria-labelledby="dk-winkelsumme">
+    <h2 id="dk-winkelsumme">2. Die Winkelsumme</h2>
+    <p>Probiere es aus: Schneide ein beliebiges Dreieck aus Papier aus, <strong>reiße die drei Ecken ab</strong> und lege sie mit den Spitzen an einem Punkt aneinander. Egal wie schief dein Dreieck war — die drei Winkel füllen zusammen immer genau einen <strong>gestreckten Winkel</strong>, also eine halbe Drehung: $180^\circ$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Winkelsummensatz</span>
+      <p class="formel-abgesetzt">$$\alpha + \beta + \gamma = 180^\circ$$</p><p>In jedem Dreieck beträgt die Summe der drei Innenwinkel $180^\circ$. Kennst du zwei Winkel, erhältst du den dritten durch Abziehen von $180^\circ$. Im<strong>gleichschenkligen</strong>Dreieck sind die beiden Basiswinkel gleich groß — dort reicht oft schon ein bekannter Winkel.</p></div><p>Das Abreißen ist ein starkes Indiz, aber noch keine Begründung — vielleicht klappt es ja nur ungefähr? So lässt es sich<strong>begründen</strong>(vor allem im Gymnasialzweig wichtig): Zeichne durch die Spitze $C$ die<strong>Parallele zur Seite $AB$</strong>. An ihr tauchen $\alpha$ und $\beta$ als<strong>Wechselwinkel</strong>noch einmal auf — Wechselwinkel an parallelen Geraden sind gleich groß, das kennst du aus dem Winkel-Kapitel. Bei $C$ liegen nun $\alpha$, $\gamma$ und $\beta$ direkt nebeneinander und füllen zusammen die Gerade: einen gestreckten Winkel von $180^\circ$. Fertig ist die Begründung!</p>
+    <figure class="dk-figur" style="max-width: 430px;">
+      <svg viewBox="0 0 380 250" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Dreieck A B C, durch die Spitze C verläuft eine Parallele zur Grundseite A B. Der Winkel Alpha bei A erscheint als Wechselwinkel links neben C an der Parallelen wieder, der Winkel Beta bei B als Wechselwinkel rechts neben C — gleiche Winkel sind mit gleich vielen Bögen markiert. Zwischen beiden liegt Gamma. Alpha, Gamma und Beta füllen bei C zusammen die Gerade: einen gestreckten Winkel von 180 Grad.">
+        <line x1="70" y1="75" x2="350" y2="75" stroke="var(--text-leise)" stroke-width="1.6"/>
+        <text x="70" y="62" font-size="12" fill="var(--text-leise)">Parallele zu AB</text>
+        <text x="350" y="62" font-size="13" fill="var(--text)" text-anchor="end">α + γ + β = 180°</text>
+        <polygon points="60,215 330,215 185,75" fill="var(--mathe)" fill-opacity="0.06" stroke="var(--text)" stroke-width="2"/>
+        <!-- Alpha bei A: einfacher Bogen -->
+        <path d="M 90 215 A 30 30 0 0 0 80 192.6" fill="none" stroke="var(--mathe)" stroke-width="2.2"/>
+        <!-- Beta bei B: Doppelbogen -->
+        <path d="M 303 215 A 27 27 0 0 1 310.6 196.2" fill="none" stroke="var(--mathe)" stroke-width="2"/>
+        <path d="M 298 215 A 32 32 0 0 1 307 192.8" fill="none" stroke="var(--mathe)" stroke-width="2"/>
+        <!-- Wechselwinkel Alpha bei C: einfacher Bogen -->
+        <path d="M 167.7 94.4 A 26 26 0 0 1 159 75" fill="none" stroke="var(--mathe)" stroke-width="2.2"/>
+        <!-- Gamma bei C -->
+        <path d="M 203.7 93.1 A 26 26 0 0 1 167.7 94.4" fill="none" stroke="var(--text)" stroke-width="2.2"/>
+        <!-- Wechselwinkel Beta bei C: Doppelbogen -->
+        <path d="M 207 75 A 22 22 0 0 1 200.8 90.3" fill="none" stroke="var(--mathe)" stroke-width="2"/>
+        <path d="M 212 75 A 27 27 0 0 1 204.4 93.8" fill="none" stroke="var(--mathe)" stroke-width="2"/>
+        <g font-size="17" font-weight="700" fill="var(--text)" text-anchor="middle">
+          <text x="48" y="233">A</text><text x="342" y="233">B</text><text x="185" y="63">C</text>
+        </g>
+        <g font-size="15" fill="var(--mathe)" text-anchor="middle">
+          <text x="106" y="200">α</text><text x="284" y="201">β</text>
+          <text x="143" y="99">α</text><text x="228" y="97">β</text>
+        </g>
+        <text x="187" y="125" font-size="15" fill="var(--text)" text-anchor="middle">γ</text>
+      </svg>
+      <figcaption>Abbildung 2: Begründung der Winkelsumme — an der Parallelen zu $AB$ durch $C$ erscheinen $\alpha$ und $\beta$ als Wechselwinkel wieder (gleiche Bogenanzahl = gleicher Winkel); zusammen mit $\gamma$ füllen sie den gestreckten Winkel.</figcaption>
+    </figure>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Den dritten Winkel berechnen</span>
+      <p>In einem Dreieck sind $\alpha = 71^\circ$ und $\beta = 44^\circ$ gegeben. Dann ist $\gamma = 180^\circ - 71^\circ - 44^\circ = 65^\circ$. Probe: $71^\circ + 44^\circ + 65^\circ = 180^\circ$ — passt.</p>
+    </div>
+    <p>Zwei Folgerungen brauchst du immer wieder: Im <strong>gleichschenkligen</strong> Dreieck gilt „Spitzenwinkel $= 180^\circ$ minus zweimal Basiswinkel“. Und verlängerst du eine Seite über eine Ecke hinaus, entsteht dort der <strong>Außenwinkel</strong>: Er ergänzt den Innenwinkel zu $180^\circ$.</p>
+    <details class="check">
+      <summary>Verständnis-Check: $\alpha = 63^\circ$ und $\beta = 48^\circ$ — wie groß ist $\gamma$?</summary>
+      <div class="check-antwort"><p>$\gamma = 180^\circ - 63^\circ - 48^\circ = 69^\circ$. Probe: $63^\circ + 48^\circ + 69^\circ = 180^\circ$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="dk-ungleichung">
+    <h2 id="dk-ungleichung">3. Die Dreiecksungleichung</h2>
+    <p>Nicht aus drei beliebigen Längen lässt sich ein Dreieck bauen! Stell dir drei Holzstäbe mit $7\,\text{cm}$, $3\,\text{cm}$ und $3\,\text{cm}$ vor: Legst du den langen Stab hin und lässt die beiden kurzen von seinen Enden aufeinander zuklappen, erreichen sie sich nicht — zusammen messen sie nur $3 + 3 = 6\,\text{cm}$, müssten aber $7\,\text{cm}$ überbrücken. Kein Dreieck, egal wie du es drehst.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Dreiecksungleichung</span>
+      <p class="formel-abgesetzt">$$a + b \gt c \qquad b + c \gt a \qquad a + c \gt b$$</p><p>In jedem Dreieck sind<strong>je zwei Seiten zusammen länger als die dritte</strong>.<strong>Entscheidungsregel:</strong>Es genügt, die<strong>beiden kürzesten</strong>Seiten zu prüfen — sind sie zusammen länger als die längste Seite, passen automatisch alle drei Ungleichungen, und das Dreieck lässt sich bauen.</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: Geht das Dreieck?</span><p>Längen $4\,\text{cm}$, $8\,\text{cm}$, $5\,\text{cm}$: Die beiden kürzesten sind $4$ und $5$, und $4 + 5 = 9 > 8$ — das Dreieck existiert. Längen $2\,\text{cm}$, $9\,\text{cm}$, $5\,\text{cm}$: $2 + 5 = 7 < 9$ — unmöglich. Und im Grenzfall $3$, $4$, $7$ mit $3 + 4 = 7$ klappen die kurzen Stäbe flach auf den langen — es entsteht nur eine Strecke, kein echtes Dreieck. Deshalb steht in der Regel „länger“ ($>$) und nicht „mindestens so lang“ ($\geq$).</p></div><details class="check"><summary>Verständnis-Check: Latten mit $7\,\text{m}$, $3\,\text{m}$ und $3\,\text{m}$ — ist ein Dreieck möglich?</summary><div class="check-antwort"><p>Nein. Die beiden kürzesten Latten messen zusammen $3 + 3 = 6\,\text{m}$ — weniger als die dritte mit $7\,\text{m}$. Die Dreiecksungleichung ist verletzt, die kurzen Latten „reichen nicht herum“.</p></div></details></section><section aria-labelledby="dk-kongruenz"><h2 id="dk-kongruenz">4. Die Kongruenzsätze</h2><p>Zwei Figuren heißen<strong>kongruent</strong>, wenn sie<strong>deckungsgleich</strong>sind: Durch Verschieben, Drehen oder Umklappen (Spiegeln) lassen sie sich exakt aufeinanderlegen. Kongruente Dreiecke stimmen in allen Seiten und allen Winkeln überein. Die spannende Frage lautet: Wie viele Angaben brauchst du, damit ein Dreieck<em>eindeutig</em>feststeht? Die Antwort:<strong>drei passende Stücke</strong>genügen — welche Kombinationen funktionieren, sagen dir die vier Kongruenzsätze.</p><div class="merkkasten"><span class="merk-etikett">Die vier Kongruenzsätze</span><p><strong>SSS:</strong>Zwei Dreiecke sind kongruent, wenn sie in allen<strong>drei Seiten</strong>übereinstimmen.</p><p><strong>SWS:</strong>… wenn sie in<strong>zwei Seiten</strong>und dem von ihnen<strong>eingeschlossenen Winkel</strong>übereinstimmen — der Winkel liegt zwischen den beiden Seiten.</p><p><strong>WSW:</strong>… wenn sie in<strong>einer Seite</strong>und den<strong>beiden anliegenden Winkeln</strong>übereinstimmen.</p><p><strong>SsW:</strong>… wenn sie in<strong>zwei Seiten</strong>und dem Winkel übereinstimmen, der<strong>der größeren Seite gegenüberliegt</strong>.</p></div><p>Eine Lesehilfe für die Kürzel: Die Buchstaben stehen in der Reihenfolge, in der die Stücke am Dreieck<strong>aneinanderliegen</strong>. Bei<strong>SWS</strong>ist der Winkel von den beiden Seiten eingeschlossen, bei<strong>WSW</strong>liegt die Seite zwischen den beiden Winkeln. Das kleine „s“ in<strong>SsW</strong>markiert die kleinere der beiden Seiten — warum der Winkel unbedingt der größeren gegenüberliegen muss, erklärt die Vertiefung am Ende der Seite.</p><p>Und was ist mit<strong>drei Winkeln (WWW)</strong>? Das reicht<strong>nicht</strong>aus. Vergrößerst du ein Dreieck wie mit einem Kopierer auf die doppelte Größe, bleiben alle drei Winkel exakt gleich — aber jede Seite ist doppelt so lang. Gleiche Winkel sichern nur die gleiche<strong>Form</strong>, nicht die gleiche<strong>Größe</strong>: Es gibt beliebig viele verschieden große Dreiecke mit denselben Winkeln. Solche Dreiecke heißen<em>ähnlich</em>— damit beschäftigst du dich in Klasse 9 genauer.</p><p>Wozu das Ganze?<strong>Erstens zum Konstruieren:</strong>Passen drei gegebene Stücke zu einem Kongruenzsatz, ist das Dreieck<strong>eindeutig konstruierbar</strong>(bis auf Spiegelung) — alle in der Klasse erhalten dasselbe Dreieck, und ein Bauteil nach diesen Maßen passt garantiert.<strong>Zweitens zum Begründen:</strong>Findest du in einer Figur zwei kongruente Dreiecke, weißt du sofort, dass auch alle übrigen Seiten und Winkel paarweise übereinstimmen — ein mächtiges Werkzeug, mit dem du später viele geometrische Aussagen beweisen kannst.</p><details class="check"><summary>Verständnis-Check: Warum legt WWW ein Dreieck nicht eindeutig fest?</summary><div class="check-antwort"><p>Drei Winkel legen nur die<strong>Form</strong>fest, nicht die<strong>Größe</strong>: Ein Dreieck und seine vergrößerte Kopie haben dieselben Winkel, sind aber nicht deckungsgleich. Zu drei Winkeln mit Summe $180^\circ$ gibt es deshalb beliebig viele verschieden große Dreiecke.</p></div></details></section><section aria-labelledby="dk-konstruieren"><h2 id="dk-konstruieren">5. Konstruieren Schritt für Schritt</h2><p>Beim<strong>Konstruieren</strong>zählt Werkzeugdisziplin: der<strong>Zirkel</strong>für alle Punkte mit festem Abstand, das<strong>Lineal</strong>für Strecken, das<strong>Geodreieck</strong>zum Antragen von Winkeln. Konstruieren heißt: mit diesen Werkzeugen exakt zeichnen — nicht nach Augenmaß.</p><div class="merkkasten"><span class="merk-etikett">Strategie: Erst Planfigur, dann Konstruktion</span><p>Skizziere das Dreieck zuerst freihändig und markiere farbig, welche Stücke gegeben sind. An der<strong>Planfigur</strong>erkennst du, welcher Kongruenzsatz dahintersteckt — und damit die richtige Reihenfolge der Konstruktionsschritte.</p></div><p>So konstruierst du ein Dreieck aus drei gegebenen Seiten, zum Beispiel $a = 4\,\text{cm}$, $b = 5\,\text{cm}$, $c = 6\,\text{cm}$ (<strong>SSS</strong>):</p><ol><li>Zeichne die Seite $c = \overline{AB}$ mit $6\,\text{cm}$ und beschrifte die Endpunkte $A$ (links) und $B$ (rechts).</li><li>Ziehe einen<strong>Kreisbogen um $A$</strong>mit Radius $b = 5\,\text{cm}$ — auf ihm liegen alle Punkte mit dem richtigen Abstand zu $A$.</li><li>Ziehe einen<strong>Kreisbogen um $B$</strong>mit Radius $a = 4\,\text{cm}$.</li><li>Der<strong>Schnittpunkt</strong>der beiden Bögen hat beide Abstände zugleich: Das ist die Ecke $C$.</li><li>Verbinde $C$ mit $A$ und $B$ — und vergiss die Beschriftung nicht.</li>
+    </ol>
+    <figure class="dk-figur" style="max-width: 430px;">
+      <svg viewBox="0 0 380 260" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="SSS-Konstruktion: Unten liegt die Grundseite c gleich 6 Zentimeter von A nach B. Um A ist ein Zirkelbogen mit Radius b gleich 5 Zentimeter geschlagen, um B ein Zirkelbogen mit Radius a gleich 4 Zentimeter. Die beiden Bögen schneiden sich oben im Punkt C. Die noch zu zeichnenden Seiten von A nach C und von B nach C sind gestrichelt dargestellt.">
+        <line x1="50" y1="225" x2="320" y2="225" stroke="var(--text)" stroke-width="2"/>
+        <!-- Zirkelbögen -->
+        <path d="M 242.9 109.1 A 225 225 0 0 0 188.5 47.7" fill="none" stroke="var(--mathe)" stroke-width="2.2"/>
+        <path d="M 249.7 59.3 A 180 180 0 0 0 190.5 100.0" fill="none" stroke="var(--mathe)" stroke-width="2.2"/>
+        <!-- gestrichelte Dreiecksseiten -->
+        <g stroke="var(--text-leise)" stroke-width="1.8" stroke-dasharray="6 5">
+          <line x1="50" y1="225" x2="218.8" y2="76.2"/>
+          <line x1="320" y1="225" x2="218.8" y2="76.2"/>
+        </g>
+        <circle cx="50" cy="225" r="3.5" fill="var(--text)"/>
+        <circle cx="320" cy="225" r="3.5" fill="var(--text)"/>
+        <circle cx="218.8" cy="76.2" r="4" fill="var(--mathe)"/>
+        <g font-size="17" font-weight="700" fill="var(--text)" text-anchor="middle">
+          <text x="50" y="247">A</text><text x="320" y="247">B</text>
+        </g>
+        <text x="218.8" y="62" font-size="17" font-weight="700" fill="var(--mathe)" text-anchor="middle">C</text>
+        <text x="185" y="243" font-size="13" fill="var(--text)" text-anchor="middle">c = 6 cm</text>
+        <g font-size="13" fill="var(--text-leise)">
+          <text x="120" y="146" text-anchor="end">b = 5 cm</text>
+          <text x="282" y="146">a = 4 cm</text>
+        </g>
+        <g font-size="12.5" fill="var(--mathe)">
+          <text x="186" y="38" text-anchor="middle">Bogen um A</text>
+          <text x="256" y="52">Bogen um B</text>
+        </g>
+      </svg>
+      <figcaption>Abbildung 3: SSS-Konstruktion mit $c = 6\,\text{cm}$, $b = 5\,\text{cm}$ und $a = 4\,\text{cm}$ — die Zirkelbögen um $A$ und $B$ schneiden sich in $C$; die gestrichelten Seiten werden zum Schluss gezogen.</figcaption>
+    </figure>
+    <p>Die beiden Bögen schneiden sich übrigens auch <em>unterhalb</em> von $AB$ — dort entsteht das gespiegelte Dreieck. Genau das meint „eindeutig bis auf Spiegelung“. Und schneiden sich die Bögen gar nicht? Dann war die Dreiecksungleichung verletzt!</p>
+    <p>Die <strong>WSW-Konstruktion</strong> läuft ganz ähnlich, zum Beispiel mit gegebenem $c$, $\alpha$ und $\beta$: Zeichne die Seite $c = \overline{AB}$, trage mit dem Geodreieck an $A$ den Winkel $\alpha$ und an $B$ den Winkel $\beta$ an. Die beiden freien Schenkel schneiden sich in der Ecke $C$ — fertig.</p>
+    <p><strong>Ausblick:</strong> Im Dreieck verstecken sich noch mehr besondere Linien — Mittelsenkrechten, Winkelhalbierende und Co. treffen sich in erstaunlichen Punkten. Das erkundest du in Klasse 8 im Kapitel <a href="../../klasse-8/besondere-linien-im-dreieck/index.html">Besondere Linien im Dreieck</a>.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Warum beim Satz SsW der Winkel der größeren Seite gegenüberliegen muss</summary>
+    <div class="vertiefung-inhalt">
+      <p>Versuche einmal, ein Dreieck aus zwei Seiten und einem <em>nicht</em> eingeschlossenen Winkel zu konstruieren: Gegeben sind die Seite $c = \overline{AB}$, der Winkel $\alpha$ an der Ecke $A$ und die Seite $a$, die $\alpha$ gegenüberliegt. Du zeichnest $c$, trägst an $A$ den Winkel $\alpha$ an — irgendwo auf dem freien Schenkel muss $C$ liegen — und schlägst dann mit dem Zirkel um $B$ einen Bogen mit Radius $a$. Ist $a$ kleiner als $c$, kann dieser Bogen den Schenkel <strong>zweimal</strong> schneiden: Es gibt zwei mögliche Punkte $C_1$ und $C_2$ und damit <strong>zwei verschiedene Dreiecke</strong> mit exakt denselben drei Stücken. Die Angaben legen das Dreieck dann nicht eindeutig fest — als Kongruenzsatz wäre das unbrauchbar.</p>
+      <p>Genau hier greift die Zusatzbedingung: Liegt der gegebene Winkel der <strong>größeren</strong> Seite gegenüber, ist also $a$ größer als $c$, dann ist der Zirkelradius $a$ länger als die Strecke $\overline{AB}$ — der Punkt $A$ liegt damit <em>im Inneren</em> des Kreises um $B$. Eine Halbgerade, die im Inneren eines Kreises startet, verlässt ihn genau <strong>einmal</strong>: Es gibt nur einen Schnittpunkt $C$, das Dreieck ist eindeutig. Deshalb heißt der Satz <strong>SsW</strong>: großes S für die größere Seite, kleines s für die kleinere — und der Winkel liegt der größeren gegenüber.</p>
+      <p>Ein Mini-Beispiel zum Nachkonstruieren: Mit $c = 6\,\text{cm}$, $\alpha = 30^\circ$ und Gegenseite $a = 3{,}5\,\text{cm}$ schneidet der Bogen um $B$ den freien Schenkel zweimal — du erhältst ein Dreieck mit spitzem und eines mit stumpfem Winkel bei $C$, und beide passen zu den Angaben. Wählst du stattdessen $a = 7\,\text{cm}$ (größer als $c$), bleibt nur ein Schnittpunkt übrig: ein einziges, eindeutiges Dreieck — SsW funktioniert.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — von Dreiecksarten und Winkelsumme über die Dreiecksungleichung bis zu Kongruenzsätzen und der SSS-Konstruktion — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

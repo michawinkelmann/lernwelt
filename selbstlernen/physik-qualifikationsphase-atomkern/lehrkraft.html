@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderation: Physik QP Atomkern — Lernbüro (Lehrkraft) — Lernwelt</title>
+<meta name="description" content="Moderationsseite für die Lehrkraft: Stoffverteilung, typische Fehler, Differenzierung und Praxis-Leitfaden zum Selbstlern-Kurs Physik QP Atomkern.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/selbstlernen.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="lehrkraft">
+<noscript><p class="noscript-hinweis"><a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Moderation: Physik QP — Atomkern · Lernbüro</h1>
+  <p class="einleitung">Interne Seite für die Lehrkraft – im Schüler-Flow bewusst <strong>unverlinkt</strong>. Enthält den Praxis-Leitfaden, die Stoffverteilung und je Lektion typische Fehler, Differenzierungs- und Material-Hinweise. Mit „Drucken" als A4-Handzettel ausgebbar. Pilot: <a href="index.html">Schüler-Kursseite öffnen</a>.</p>
+
+  <p class="knopfzeile"><button type="button" class="knopf zweitrangig klein" onclick="window.print()">Drucken</button></p>
+
+  <div class="merkkasten" style="border-left:4px solid var(--ok)"><span class="merk-etikett">Lücken vollständig gefüllt</span><p>Alle Basis- und Standard-Spuren sind mit Aufgaben belegt. Neue Aufgaben liegen in <code>daten/aufgaben/lernbuero/ph-qp-atomkern.json</code> (IDs ph-qp-ak-101…110, Marker <code>ergaenzung:"lernbuero"</code>) – zur fachlichen Prüfung durch die Lehrkraft.</p></div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Praxis-Leitfaden Selbstlern-Moderation</span>
+    <p><strong>Gemeinsamer Start (3–4 min):</strong> Stundenziel nennen, an die Hilfe-Regel erinnern, Wochenplan zeigen.
+    <strong>Hilfe-Regel:</strong> „Erst der Tipp, dann der Partner, dann die Lehrkraft." Erst wenn die drei gestuften Tipps und die Sitznachbarin nicht weiterhelfen, kommt die Lehrkraft.
+    <strong>Stand erfassen:</strong> Kein Dashboard – nutze die <em>Ampel-Selbsteinschätzung</em> (grün/gelb/rot am Lektionsende) und das <em>Lerntagebuch</em> (offene Fragen). Im Vorbeigehen zeigen lassen.
+    <strong>Stopp-Punkt L3:</strong> Vor Lektion 3 lohnt ein gemeinsames Gespräch über die Grundidee des Zerfallsgesetzes (ist im Player als Stopp-Punkt markiert).
+    <strong>Gemeinsamer Abschluss (3 min):</strong> ein bis zwei rote Ampeln gemeinsam klären, Mindestmarke der Woche prüfen.</p>
+  </div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Eingebaute Entscheidungen dieses Kurses</span>
+    <p><strong>Zweig:</strong> Nur Gymnasium (Oberstufe). <strong>Taktung:</strong> Wochenplan mit Mindestmarke (Basis-Spur je Woche). <strong>Checkpoints:</strong> „Sichern" schaltet die nächste Lektion frei; per Knopf „Lehrkraft hat freigegeben" ohne Passwort überschreibbar (Vertrauensmodell). <strong>Werkzeuge:</strong> Ampel + Lerntagebuch. <strong>eA-Lektion:</strong> L5 (Massendefekt) ist als Erweiterungsanforderung gekennzeichnet – nicht für alle Lernenden Pflicht.</p>
+  </div>
+
+  <h2>Stoffverteilung (KC Physik GO Niedersachsen 2022)</h2>
+  <details class="lb-stoff" open>
+    <summary>Tabelle Wochen → Thema → KC-Schwerpunkt</summary>
+    <table>
+      <thead><tr><th>Wochen</th><th>Thema</th><th>Lektionen</th><th>KC-Schwerpunkt</th></tr></thead>
+      <tbody>
+        <tr class="ist-pilot"><td>L1–L3</td><td>Atomkern und Radioaktivität — <em>Pilot (L1–L5 ausgebaut)</em></td><td>3 (Kernaufbau, Umwandlungen, Zerfallsgesetz)</td><td>KC Physik GO 2022: Atomkern und Radioaktivität (QP)</td></tr>
+        <tr class="ist-pilot"><td>L4–L5</td><td>Atomkern und Radioaktivität (Fortsetzung)</td><td>2 (C-14-Altersbestimmung, Massendefekt eA)</td><td>KC Physik GO 2022: Atomkern und Radioaktivität (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Elektromagnetische Induktion</td><td>geplant</td><td>KC Physik GO 2022: Elektrizität (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Mechanische Schwingungen</td><td>geplant</td><td>KC Physik GO 2022: Schwingungen und Wellen (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Mechanische Wellen</td><td>geplant</td><td>KC Physik GO 2022: Schwingungen und Wellen (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Interferenz von Licht</td><td>geplant</td><td>KC Physik GO 2022: Schwingungen und Wellen (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Quantenobjekte</td><td>geplant</td><td>KC Physik GO 2022: Quantenobjekte (QP)</td></tr>
+        <tr><td>Folgeeinheit</td><td>Atomhülle</td><td>geplant</td><td>KC Physik GO 2022: Atomhülle und Atomkern (QP)</td></tr>
+      </tbody>
+    </table>
+  </details>
+  <p class="einleitung">Echte Stundenzahlen nach Stundentafel und Kursheft kalibrieren. Der Pilot baut nur den Atomkern-Block aus; die übrigen Blöcke stehen als <code>geplant</code> in <code>daten/kurse/ph-qk.json</code>.</p>
+
+  <h2>Lektionen im Einzelnen</h2>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 1 · Der Atomkern</span>
+    <p><strong>Ziele:</strong> Nukleonen, Protonenzahl, Massenzahl, Nuklidschreibweise; Isotope; Coulomb- vs. starke Kernkraft.<br>
+    <strong>Ankommen:</strong> Zwei Aufgaben aus ph-10-atom-und-kernphysik (ph-10-akp-001, -002) – Vorwissen aus Klasse 10 aktivieren.<br>
+    <strong>Typische Fehler:</strong> Massenzahl und Protonenzahl verwechselt; Neutronen werden im Kern vergessen; Isotope als chemisch verschieden angenommen.<br>
+    <strong>Differenzierung:</strong> Basis = MC-Aussagen zum Kernaufbau (ak-001) + Zuordnung Zerfallsarten (ak-002). Standard = C-14-Isotop numerisch (ak-101, neu). Plus = Zerfallskette Rn-222 als Rechenweg (ak-102, neu).<br>
+    <strong>Sichern:</strong> Lückentext Zerfallsgesetz (ak-003) als Begriffsklärung – nicht im Üben dieser Lektion.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 1 mit Nuklidkarte-SVG.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 2 · Kernumwandlungen: α, β, γ</span>
+    <p><strong>Ziele:</strong> Drei Zerfallstypen mit Erhaltungssätzen; Umwandlungsgleichungen aufstellen und prüfen.<br>
+    <strong>Ankommen:</strong> Ra-226 alpha-Zerfall (ak-004) aus Lektion 1 – Erhaltungssätze frisch halten.<br>
+    <strong>Typische Fehler:</strong> Beim beta-Zerfall wird A fälschlich auch verändert; gamma als Teilchenemission verstanden; Erhaltungssätze nicht kontrolliert.<br>
+    <strong>Differenzierung:</strong> Basis = Lückentext (ak-003) + Ra-226 numerisch (ak-004). Standard = Co-60 beta-Zerfall numerisch (ak-103, neu). Plus = Freitext Zerfallsreihen (ak-104, neu). Sichern = MC Zerfallsgesetz Eigenschaften (ak-006).<br>
+    <strong>Stopp-Punkt:</strong> Kein expliziter Stopp-Punkt in L2 – aber ein kurzes gemeinsames Klären der drei Zerfallstypen lohnt sich vor dem Üben.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 2 mit Beispielgleichungen.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 3 · Das Zerfallsgesetz</span>
+    <p><strong>Ziele:</strong> N(t) = N0 · e^(-lambda·t); Halbwertszeit und Zerfallskonstante (T = ln2 / lambda); halblogarithmische Darstellung.<br>
+    <strong>Stopp-Punkt (im Player markiert):</strong> Vor dieser Lektion gemeinsam klären: Warum wird aus dem Zufall eines Einzelkerns ein exponentielles Gesetz? Tafelgespräch empfohlen.<br>
+    <strong>Typische Fehler:</strong> „Nach n Halbwertszeiten zerfallen dieselbe Anzahl Kerne" (falsch: es ist derselbe Anteil); lambda und T1/2 nicht ineinander umgerechnet; Einheitenfehler (a statt s bei Aktivitätsrechnung).<br>
+    <strong>Differenzierung:</strong> Basis = P-32 nach 2 HWZ, einfache Anteilsrechnung (ak-105, neu). Standard = Cs-137 lambda + Restanteil (ak-005) + Iod-131 Rechenweg (ak-007). Plus = Freitext Exponentialfunktion und halblogarithmisch (ak-010). Sichern = Sr-90 nach 3 HWZ (ak-109, neu).<br>
+    <strong>ClassPad-Hinweis:</strong> ak-005 und ak-007 enthalten CAS-Anleitungen für den ClassPad II.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 3 mit Zerfallskurve und Halbierungstreppe.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 4 · Altersbestimmung mit C-14</span>
+    <p><strong>Ziele:</strong> Zerfallsgesetz nach t umstellen (logarithmieren); Alter aus Rest-C-14 berechnen; Grenzen der Methode benennen.<br>
+    <strong>Typische Fehler:</strong> N0/N und N/N0 vertauscht beim Logarithmieren; Grenzen der Methode (nur lebende Materie, Kalibrierung, max. ~50 000 a) nicht bekannt.<br>
+    <strong>Differenzierung:</strong> Basis = 50 % Rest-C-14 direkt als Halbwertszeit erkannt (ak-106, neu). Standard = 62 % Rest-C-14 numerisch (ak-008). Plus = 75 % mit Vergleich (ak-107, neu, eA). Sichern = Kettenreaktion Reihenfolge (ak-009) als Transferaufgabe zu einem anderen Anwendungskontext.<br>
+    <strong>ClassPad-Hinweis:</strong> ak-008 enthält CAS-Anleitung für solve.<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 4 mit C-14-Formel und Ötzi-Bezug.</p>
+  </section>
+
+  <section class="merkkasten">
+    <span class="merk-etikett">Lektion 5 · Massendefekt und Kernenergie (eA)</span>
+    <p><strong>Ziele:</strong> Massendefekt Delta_m = Z·mp + N·mn - mKern; Bindungsenergie EB = Delta_m · c^2; 1 u = 931,49 MeV; Bindungsenergiekurve und Folgerungen für Spaltung und Fusion.<br>
+    <strong>eA-Charakter:</strong> Diese Lektion ist als Erweiterungsanforderung markiert – nicht alle Lernenden müssen sie bearbeiten. Im Pilot wird sie allen angeboten.<br>
+    <strong>Typische Fehler:</strong> Massendefekt und Bindungsenergie als gleichwertige Größen verwechselt; 1-u-in-MeV-Umrechnung ohne Formel; Bindungsenergiekurve falsch gelesen (Maximum bei schwersten Kernen).<br>
+    <strong>Differenzierung:</strong> Basis = MC Massendefekt und Bindungsenergiekurve (ak-108, neu). Standard = 1 g Ra-226 Aktivität (ak-011). Plus = He-4 Massendefekt Rechenweg (ak-012) + U-235 Energievergleich (ak-013). Sichern = Energieumrechnung 1 g U-235 in kWh (ak-110, neu).<br>
+    <strong>Material:</strong> Erklärseite Abschnitt 5 mit Bindungsenergiekurve-SVG.</p>
+  </section>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Aufgabenübersicht (alle IDs)</span>
+    <p>
+    <strong>Aus ph-qp-atomkern.json (13 Aufgaben, N1–N3):</strong><br>
+    N1: ak-001 (MC Kernaufbau), ak-002 (Zuordnung Zerfallsarten), ak-003 (Lückentext Zerfall), ak-004 (Ra-226 alpha numerisch)<br>
+    N2: ak-005 (Cs-137 lambda+Restanteil), ak-006 (MC Zerfallsgesetz-Eigenschaften), ak-007 (Iod-131 Rechenweg), ak-008 (C-14 62%), ak-009 (Kettenreaktion Reihenfolge), ak-010 (Freitext Exponentialfunktion), ak-011 (Ra-226 Aktivität)<br>
+    N3: ak-012 (He-4 Massendefekt Rechenweg), ak-013 (U-235 Energievergleich)<br>
+    <strong>Neu in lernbuero/ph-qp-atomkern.json (10 Aufgaben):</strong><br>
+    N1: ak-105 (P-32 nach 2 HWZ), ak-106 (C-14 50%), ak-108 (MC Massendefekt)<br>
+    N2: ak-101 (C-14 Isotop+beta), ak-103 (Co-60 beta), ak-109 (Sr-90 3 HWZ), ak-110 (U-235 kWh)<br>
+    N3: ak-102 (Rn-222 Zerfallskette), ak-104 (Freitext Zerfallsreihen), ak-107 (C-14 75% eA)
+    </p>
+  </div>
+
+  <h2>Block 2: Atomhülle</h2>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Lektionen L6–L10 · Atomhülle</span>
+    <p><strong>L6 — Linienspektren:</strong> Kontinuum vs. Emissionslinien vs. Absorptionslinien; Spektralanalyse; Fraunhofer-Linien. Ankommen über Quantenobjekte-Vorwissen (ph-qp-qo-001/002). Typische Fehler: Absorptions- und Emissionslinien als unterschiedlich positioniert angenommen; Glühlampe fälschlich als Linienspektrum. Differenzierung: Basis = Zuordnung Spektraltypen (ah-101, neu); Standard = Lückentext Niveaus (ah-102, neu); Plus = MC-Aussagen (ah-001, regulär).</p>
+    <p><strong>L7 — Diskrete Energieniveaus:</strong> Termschema, erlaubte Niveaus, Emission/Absorption, Ionisierungsgrenze. Stopp-Punkt empfohlen (im Player markiert). Typische Fehler: Zwischen den Niveaus liegende Energiebeträge als erlaubt angenommen; Vorzeichen in ΔE-Formel; Ionisierungsgrenze mit Grundzustand verwechselt. Differenzierung: Basis = Lückentext Niveaus (ah-003, regulär); Standard = Na-D-Linie ΔE numerisch (ah-103, neu); Plus = MC diskretes Termschema (ah-104, neu).</p>
+    <p><strong>L8 — Franck-Hertz-Versuch:</strong> Aufbau (Kathode, Gitter, Gegenspannung), Kennlinie, Deutung über unelastische Stöße, UV-Licht bei 254 nm. Typische Fehler: Elektronen als „absorbiert" statt als gebremst; Einbruchsabstand als Ionisierungsenergie missverstanden; mehrere Stöße bei höherer Spannung übersehen. Differenzierung: Basis = ΔE und λ Hg-Dampf numerisch (ah-005, regulär); Standard = Stoßanzahl bei 7,4 V numerisch (ah-105, neu); Plus = MC-Deutung Kennlinie (ah-006, regulär). Sichern = MC Balmer-Serie (ah-106, neu).</p>
+    <p><strong>L9 — Wasserstoffatom / Balmer-Serie:</strong> Energieniveauformel E_n = −13,6 eV / n², Balmer- / Lyman- / Paschen-Serie, Hα-Beispiel. Typische Fehler: Vorzeichen der Niveauenergien vergessen; Balmer-Serie mit allen sichtbaren Linien gleichgesetzt (Lyman ist UV!); Lyman-Serie fälschlich ins Sichtbare eingeordnet. Differenzierung: Basis = Hα-Berechnung (ah-004, regulär); Standard = Hγ (5→2) Rechenweg (ah-107, neu); Plus = Ionisierung aus n=2 + Na-Frequenz (ah-008, ah-011, regulär). ClassPad-Aufgaben: ah-007 (Hβ), ah-011 (Na-Frequenz) enthalten CAS-Anleitungen.</p>
+    <p><strong>L10 — Atommodelle im Wandel:</strong> Dalton → Thomson → Rutherford → Bohr → Quantenmechanik; Gültigkeitsbereiche; Schwächen des Bohrschen Modells. Typische Fehler: Reihenfolge der Modelle durcheinandergebracht; Bohrsches Modell als weiterhin gültig angesehen; Orbital mit Bahn verwechselt. Differenzierung: Basis = Reihenfolge Atommodelle (ah-108, neu); Standard = Reihenfolge Modelle regulär (ah-009, regulär); Plus = Freitext Schwächen Bohr (ah-109, neu). eA-Aufgabe: Potentialtopf-Rechenweg (ah-110, neu) für erhöhtes Anforderungsniveau. Sichern = Freitext Linienspektren/Franck-Hertz (ah-010, regulär).</p>
+  </div>
+
+  <div class="merkkasten">
+    <span class="merk-etikett">Ergänzungsaufgaben Block 2 — fachliche Prüfung ausstehend</span>
+    <p>Neue Aufgaben in <code>daten/aufgaben/lernbuero/ph-qp-atomhuelle.json</code> (IDs ph-qp-ah-101…110, Marker <code>ergaenzung:"lernbuero"</code>).<br>
+    <strong>N1 (Basis):</strong> ah-101 (Zuordnung Spektraltypen), ah-102 (Lückentext Linienspektren/Niveaus), ah-103 (Na-D-Linie ΔE numerisch)<br>
+    <strong>N2 (Standard):</strong> ah-104 (MC diskrete Niveaus), ah-105 (Franck-Hertz Stoßanzahl 7,4 V), ah-106 (MC Balmer-Serie), ah-107 (Hγ Rechenweg), ah-108 (Reihenfolge Atommodelle)<br>
+    <strong>N3 (Plus/eA):</strong> ah-109 (Freitext Schwächen Bohrmodell), ah-110 (Potentialtopf L=1,0 nm eA)</p>
+  </div>
+
+  <p class="einleitung"><a href="index.html">← Zur Schüler-Kursseite</a></p>
+  <p class="knopfzeile"><a class="knopf zweitrangig klein" href="../druck.html?kurs=ph-qk">🖨 Druckmaterial erstellen</a></p>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+</body>
+</html>

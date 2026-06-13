@@ -1,0 +1,276 @@
+{
+  "thema": "ma-qp-ebenen-im-raum",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben zum Thema Ebenen im Raum (Qualifikationsphase, Gymnasium). Marker ergaenzung:lernbuero — zur fachlichen Pruefung durch die Lehrkraft ausstehend. IDs ma-qp-eb-101 bis ma-qp-eb-108.",
+  "aufgaben": [
+    {
+      "id": "ma-qp-eb-101",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Ebene $E$ hat die Parameterform $$E\\colon\\; \\vec{x} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + r \\cdot \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix} + s \\cdot \\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\end{pmatrix}$$ Bestimme die Parameter $r$ und $s$, sodass der Punkt $P(3\\,|\\,5\\,|\\,5)$ in $E$ liegt.",
+      "eingaben": [
+        {
+          "label": "$r$",
+          "antwort": 2,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$s$",
+          "antwort": 1,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Setze die Koordinaten von P in die Parameterform ein: Du erhaeltst drei Gleichungen mit den zwei Unbekannten r und s.",
+        "Erste Koordinate: $1 + r = 3$ liefert $r$ direkt — dann r in die zweite und dritte Gleichung einsetzen.",
+        "Aus $r = 2$ folgt in der zweiten Zeile: $2 + 2 + s = 5$, also $s = 1$. Probe in Zeile 3: $3 + 0 + 2 = 5$ \\checkmark."
+      ],
+      "loesungsweg": "Komponentenweise einsetzen liefert drei Gleichungen: $1 + r = 3$ (1. Zeile), $2 + r + s = 5$ (2. Zeile), $3 + 2s = 5$ (3. Zeile). Aus Zeile 1 folgt $r = 2$. Einsetzen in Zeile 2: $2 + 2 + s = 5$, also $s = 1$. Probe in Zeile 3: $3 + 0 + 2 \\cdot 1 = 5$ \\checkmark. Die Parameter sind $r = 2$ und $s = 1$.",
+      "kc": ["parameterform-aufstellen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-qp-eb-102",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Die Punkte $A(0\\,|\\,0\\,|\\,2)$, $B(2\\,|\\,1\\,|\\,2)$ und $C(0\\,|\\,3\\,|\\,0)$ legen eine Ebene fest. Stelle die Parameterform mit Stuetzpunkt $A$ auf und bestimme die Parameter $r$ und $s$, sodass $D(2\\,|\\,4\\,|\\,0)$ in der Ebene liegt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne $\\vec{u} = \\overrightarrow{AB}$ und $\\vec{v} = \\overrightarrow{AC}$ koordinatenweise.",
+          "eingaben": [
+            { "label": "$u_1$", "antwort": 2, "toleranz": 0.001, "einheit": "" },
+            { "label": "$u_2$", "antwort": 1, "toleranz": 0.001, "einheit": "" },
+            { "label": "$u_3$", "antwort": 0, "toleranz": 0.001, "einheit": "" },
+            { "label": "$v_1$", "antwort": 0, "toleranz": 0.001, "einheit": "" },
+            { "label": "$v_2$", "antwort": 3, "toleranz": 0.001, "einheit": "" },
+            { "label": "$v_3$", "antwort": -2, "toleranz": 0.001, "einheit": "" }
+          ],
+          "tipps": [
+            "Spannvektoren: Spitze minus Fuss, also $\\vec{u} = B - A$ und $\\vec{v} = C - A$ koordinatenweise."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Bestimme $r$ und $s$, sodass $D(2\\,|\\,4\\,|\\,0) = A + r \\cdot \\vec{u} + s \\cdot \\vec{v}$.",
+          "eingaben": [
+            { "label": "$r$", "antwort": 1, "toleranz": 0.001, "einheit": "" },
+            { "label": "$s$", "antwort": 1, "toleranz": 0.001, "einheit": "" }
+          ],
+          "tipps": [
+            "Erste Koordinate: $0 + 2r + 0 \\cdot s = 2$ liefert $r = 1$. Dann die zweite Koordinate fuer s ausnutzen."
+          ]
+        }
+      ],
+      "tipps": [
+        "Spannvektoren entstehen durch 'Spitze minus Fuss': $\\vec{u} = B - A$ und $\\vec{v} = C - A$.",
+        "Setze D in die Parameterform ein und lese r aus der einfachsten Koordinate ab — dann s.",
+        "Schritt 1: $\\vec{u} = (2\\,|\\,1\\,|\\,0)$ und $\\vec{v} = (0\\,|\\,3\\,|\\,{-2})$. Schritt 2: Aus $2r = 2$ folgt $r = 1$, aus $r + 3s = 4$ dann $s = 1$."
+      ],
+      "loesungsweg": "Spannvektoren: $\\vec{u} = B - A = (2\\,|\\,1\\,|\\,0)$ und $\\vec{v} = C - A = (0\\,|\\,3\\,|\\,{-2})$. Die Parameterform lautet $E\\colon\\; \\vec{x} = (0\\,|\\,0\\,|\\,2) + r \\cdot (2\\,|\\,1\\,|\\,0) + s \\cdot (0\\,|\\,3\\,|\\,{-2})$. Fuer Punkt $D(2\\,|\\,4\\,|\\,0)$: Zeile 1 liefert $2r = 2$, also $r = 1$; Zeile 2 ergibt $r + 3s = 4$, also $s = 1$; Probe Zeile 3: $2 + 0 - 2 = 0$ \\checkmark. Die Parameter sind $r = 1$ und $s = 1$.",
+      "kc": ["parameterform-aufstellen"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-qp-eb-103",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Eine Ebene hat den Stuetzpunkt $P(1\\,|\\,1\\,|\\,0)$ und die Spannvektoren $$\\vec{u} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 2 \\end{pmatrix} \\quad \\text{und} \\quad \\vec{v} = \\begin{pmatrix} 0 \\\\ 2 \\\\ 1 \\end{pmatrix}$$ Bestimme den Normalenvektor $\\vec{n}$ mit $n_3 = 2$ und schreibe die Normalenform auf. Gib den Wert der rechten Seite $d = \\vec{p} \\cdot \\vec{n}$ an.",
+      "eingaben": [
+        { "label": "$n_1$", "antwort": -4, "toleranz": 0.001, "einheit": "" },
+        { "label": "$n_2$", "antwort": -1, "toleranz": 0.001, "einheit": "" },
+        { "label": "Rechte Seite $d$", "antwort": -5, "toleranz": 0.001, "einheit": "" }
+      ],
+      "tipps": [
+        "Aus $\\vec{u} \\cdot \\vec{n} = 0$ folgt $n_1 + 2n_3 = 0$. Mit $n_3 = 2$ ergibt sich $n_1 = -4$.",
+        "Aus $\\vec{v} \\cdot \\vec{n} = 0$ folgt $2n_2 + n_3 = 0$. Mit $n_3 = 2$ ergibt sich $n_2 = -1$.",
+        "Rechte Seite: $d = \\vec{p} \\cdot \\vec{n} = 1 \\cdot (-4) + 1 \\cdot (-1) + 0 \\cdot 2 = -5$."
+      ],
+      "loesungsweg": "Senkrecht-Bedingungen: $\\vec{u} \\cdot \\vec{n} = n_1 + 2n_3 = 0$ und $\\vec{v} \\cdot \\vec{n} = 2n_2 + n_3 = 0$. Mit $n_3 = 2$: $n_1 = -4$ und $n_2 = -1$. Also $\\vec{n} = (-4\\,|\\,{-1}\\,|\\,2)$. Probe: $\\vec{u} \\cdot \\vec{n} = -4 + 0 + 4 = 0$ und $\\vec{v} \\cdot \\vec{n} = 0 - 2 + 2 = 0$ \\checkmark. Die rechte Seite ist $d = \\vec{p} \\cdot \\vec{n} = (-4) + (-1) + 0 = -5$. Die Normalenform lautet $\\left[\\vec{x} - (1\\,|\\,1\\,|\\,0)\\right] \\cdot (-4\\,|\\,{-1}\\,|\\,2) = 0$, die Koordinatenform $-4x - y + 2z = -5$.",
+      "kc": ["normalenvektor-lgs"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-qp-eb-104",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Die Ebene $E$ lautet in Koordinatenform: $E\\colon\\; x - 2y + 2z = 6$. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Der Normalenvektor von E ist n = (1 | −2 | 2).",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Koeffizienten vor x, y und z in der Koordinatenform sind genau die Koordinaten eines Normalenvektors."
+        },
+        {
+          "text": "Der Punkt P(2 | 0 | 2) liegt in E.",
+          "richtig": true,
+          "erklaerung": "Richtig: Einsetzen ergibt 2 − 0 + 4 = 6 ✓."
+        },
+        {
+          "text": "Der Punkt Q(1 | 1 | 1) liegt in E.",
+          "richtig": false,
+          "erklaerung": "Einsetzen ergibt 1 − 2 + 2 = 1 ≠ 6 — Q liegt nicht in E."
+        },
+        {
+          "text": "Der Betrag des Normalenvektors n = (1 | −2 | 2) ist 3.",
+          "richtig": true,
+          "erklaerung": "Richtig: |n| = √(1 + 4 + 4) = √9 = 3."
+        }
+      ],
+      "tipps": [
+        "Lies den Normalenvektor direkt aus der Koordinatenform ab — fehlt eine Variable, ist ihr Koeffizient null.",
+        "Punktprobe: Koordinaten des Punktes in die Gleichung einsetzen und pruefen, ob beide Seiten gleich sind.",
+        "Drei Aussagen sind richtig. |n|² = 1² + (−2)² + 2² berechnen."
+      ],
+      "loesungsweg": "Normalenvektor: Die Koeffizienten 1, −2, 2 liefern $\\vec{n} = (1\\,|\\,{-2}\\,|\\,2)$ — richtig. Punktprobe P: $2 - 0 + 4 = 6$ — richtig, P liegt in E. Punktprobe Q: $1 - 2 + 2 = 1 \\ne 6$ — falsch, Q liegt nicht in E. Betrag: $|\\vec{n}| = \\sqrt{1 + 4 + 4} = \\sqrt{9} = 3$ — richtig.",
+      "kc": ["koordinatenform-normalenvektor", "punktprobe"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-qp-eb-105",
+      "typ": "zuordnung",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Die Ebene hat die Gleichung $E\\colon\\; x + 2y + 2z = 6$ mit Normalenvektor $\\vec{n} = (1\\,|\\,2\\,|\\,2)$. Ordne jede Gerade ihrer Lagebeziehung zu E zu.",
+      "paare": [
+        {
+          "links": "g₁: Richtung (2 | −1 | 0), Stützpunkt (1 | 1 | 0)",
+          "rechts": "echt parallel zu E"
+        },
+        {
+          "links": "g₂: Richtung (1 | 1 | 1), Stützpunkt (0 | 0 | 0)",
+          "rechts": "schneidet E in einem Punkt"
+        },
+        {
+          "links": "g₃: Richtung (2 | −1 | 0), Stützpunkt (4 | 0 | 1)",
+          "rechts": "liegt vollständig in E"
+        }
+      ],
+      "tipps": [
+        "Schnelltest: Bilde d · n. Ist das Ergebnis ungleich null, schneidet die Gerade die Ebene.",
+        "Ist d · n = 0, muss die Punktprobe entscheiden: Liegt der Stuetzpunkt in E, liegt die ganze Gerade in E.",
+        "g1: d · n = 2 − 2 + 0 = 0; Punktprobe: 1 + 2 + 0 = 3 ≠ 6 — echt parallel."
+      ],
+      "loesungsweg": "Schnelltest mit $\\vec{d} \\cdot \\vec{n}$: g₁ und g₃ haben denselben Richtungsvektor $(2\\,|\\,{-1}\\,|\\,0)$, also $\\vec{d} \\cdot \\vec{n} = 2 - 2 + 0 = 0$ — beide verlaufen parallel zur Ebene. Punktprobe: Stuetzpunkt von g₁ ergibt $1 + 2 + 0 = 3 \\ne 6$ — g₁ ist echt parallel. Stuetzpunkt von g₃ ergibt $4 + 0 + 2 = 6$ — g₃ liegt in E. Fuer g₂: $\\vec{d} \\cdot \\vec{n} = 1 + 2 + 2 = 5 \\ne 0$ — g₂ schneidet E.",
+      "kc": ["lage-gerade-ebene"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-qp-eb-106",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Gerade $$g\\colon\\; \\vec{x} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\end{pmatrix} + t \\cdot \\begin{pmatrix} 2 \\\\ 1 \\\\ 0 \\end{pmatrix}$$ durchstoeßt die Ebene $E\\colon\\; x + 2y + z = 8$. Bestimme den Parameterwert $t$ und den Durchstoßpunkt $S$.",
+      "eingaben": [
+        { "label": "$t$", "antwort": 1, "toleranz": 0.001, "einheit": "" },
+        { "label": "$x$-Koordinate von $S$", "antwort": 2, "toleranz": 0.001, "einheit": "" },
+        { "label": "$y$-Koordinate von $S$", "antwort": 2, "toleranz": 0.001, "einheit": "" },
+        { "label": "$z$-Koordinate von $S$", "antwort": 2, "toleranz": 0.001, "einheit": "" }
+      ],
+      "tipps": [
+        "Lies die Koordinaten der Geradenpunkte ab: $x = 2t$, $y = 1 + t$, $z = 2$. Setze sie in die Ebenengleichung ein.",
+        "$2t + 2(1 + t) + 2 = 8$ vereinfacht sich zu $4t + 4 = 8$.",
+        "Aus $t = 1$ folgt der Durchstoßpunkt: $S(0 + 2\\,|\\,1 + 1\\,|\\,2 + 0) = S(2\\,|\\,2\\,|\\,2)$."
+      ],
+      "loesungsweg": "Geradenpunkte: $x = 2t$, $y = 1 + t$, $z = 2$. Einsetzen in $E$: $2t + 2(1 + t) + 2 = 8$, also $4t + 4 = 8$, d. h. $t = 1$. Einsetzen in die Geradengleichung: $S(2\\,|\\,2\\,|\\,2)$. Probe: $2 + 4 + 2 = 8$ \\checkmark.",
+      "kc": ["durchstosspunkt"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-qp-eb-107",
+      "typ": "multiple-choice",
+      "zweig": ["gym"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Gegeben sind die Ebenen $E_1\\colon\\; x + 2y + z = 4$ und $E_2\\colon\\; 2x + 4y + 2z = 8$ sowie $E_3\\colon\\; x + 2y + z = 7$ und $E_4\\colon\\; 2x - y + z = 3$. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "E₁ und E₂ sind identisch.",
+          "richtig": true,
+          "erklaerung": "Richtig: E₂ geteilt durch 2 ergibt genau E₁ — beide Gleichungen beschreiben dieselbe Punktmenge."
+        },
+        {
+          "text": "E₁ und E₃ sind echt parallel.",
+          "richtig": true,
+          "erklaerung": "Richtig: Beide haben den Normalenvektor (1 | 2 | 1), aber 4 ≠ 7 — keine gemeinsamen Punkte."
+        },
+        {
+          "text": "E₁ und E₃ sind identisch.",
+          "richtig": false,
+          "erklaerung": "Nein: Die rechten Seiten unterscheiden sich (4 ≠ 7). Ein Punkt von E₁, etwa S(4 | 0 | 0), liegt nicht in E₃."
+        },
+        {
+          "text": "E₁ und E₄ schneiden sich in einer Geraden.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Normalenvektoren (1 | 2 | 1) und (2 | −1 | 1) sind keine Vielfachen voneinander — die Ebenen schneiden sich in einer Geraden."
+        }
+      ],
+      "tipps": [
+        "Vergleiche zuerst die Normalenvektoren: Sind sie Vielfache voneinander, sind die Ebenen parallel oder identisch.",
+        "Identisch erkennt man daran, dass die gesamte Gleichung (beide Seiten!) ein Vielfaches der anderen ist.",
+        "Drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "E₁ und E₂: Division von E₂ durch 2 ergibt $x + 2y + z = 4$ = E₁ — identisch, richtig. E₁ und E₃: Normalenvektoren sind beide $(1\\,|\\,2\\,|\\,1)$, aber $4 \\ne 7$ — echt parallel, richtig. Aussage 3 ist falsch: Die Gleichungen sind keine Vielfachen (rechte Seiten $4 \\ne 7$). E₁ und E₄: Normalenvektoren $(1\\,|\\,2\\,|\\,1)$ und $(2\\,|\\,{-1}\\,|\\,1)$ — keine Vielfachen, also Schnittgerade, richtig.",
+      "kc": ["lage-ebene-ebene"],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-qp-eb-108",
+      "typ": "luecke",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Untersuche die Lage der Ebenen $E_1\\colon\\; 3x - 6y + 3z = 9$ und $E_2\\colon\\; x - 2y + z = 3$. Ergaenze den Losungsweg.",
+      "text": "Schritt 1: Teile die Gleichung von E₁ durch ___. Das ergibt auf der linken Seite ___. Rechts steht dann ___. Schritt 2: Vergleich mit E₂: Die linken Seiten sind ___, die rechten Seiten sind ___. Ergebnis: E₁ und E₂ sind ___.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "3",
+          "optionen": ["2", "3", "9"]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "x − 2y + z",
+          "optionen": ["x − 2y + z", "3x − 6y + 3z", "x + 2y + z"]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "3",
+          "optionen": ["1", "3", "9"]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "gleich",
+          "optionen": ["gleich", "verschieden", "Vielfache"]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "gleich",
+          "optionen": ["gleich", "verschieden"]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "identisch",
+          "optionen": ["identisch", "echt parallel", "schneidend"]
+        }
+      ],
+      "tipps": [
+        "Dividiere die gesamte Gleichung von E₁ durch den Koeffizienten vor x — das ist der erste Schritt.",
+        "Vergleiche das Ergebnis mit E₂: Stimmen linke Seite UND rechte Seite ueberein?",
+        "Schritt 1: E₁ durch 3: $x - 2y + z = 3$. Das ist genau E₂ — beide Seiten identisch."
+      ],
+      "loesungsweg": "Schritt 1: $E_1$ durch 3 dividieren: $x - 2y + z = 3$. Schritt 2: Vergleich mit $E_2\\colon\\; x - 2y + z = 3$ — linke Seiten gleich, rechte Seiten gleich. Ergebnis: $E_1$ und $E_2$ sind identisch — sie beschreiben dieselbe Punktmenge. (Kontrolle: Punkt $S(3\\,|\\,0\\,|\\,0)$ erfuellt beide Gleichungen: $3 - 0 + 0 = 3$ \\checkmark und $9 - 0 + 0 = 9$ \\checkmark.)",
+      "kc": ["lage-ebene-ebene"],
+      "ergaenzung": "lernbuero"
+    }
+  ]
+}

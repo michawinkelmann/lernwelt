@@ -1,0 +1,173 @@
+{
+  "thema": "ph-10-thermodynamik-und-kreisprozesse",
+  "hinweis": "Lernbuero-Ergaenzungsaufgaben zum Fuellen duenner Spuren. Zur fachlichen Pruefung durch die Lehrkraft.",
+  "aufgaben": [
+    {
+      "id": "ph-10-td-101",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz (Kelvin-Skala, AFB III): Ein Werbetext behauptet, ein Saunaofen verdopple die Temperatur von $20\\,^\\circ\\text{C}$ auf $40\\,^\\circ\\text{C}$. Erkläre, warum diese Aussage physikalisch falsch ist. Berechne, auf welche Celsius-Temperatur man heizen müsste, um die Temperatur im physikalischen Sinn wirklich zu verdoppeln.",
+      "musterloesung": "Die Aussage ist physikalisch falsch, weil Temperaturverhältnisse nur auf der Kelvin-Skala sinnvoll sind — sie beginnt am echten Nullpunkt ($0\\,\\text{K} = -273{,}15\\,^\\circ\\text{C}$). Auf der Celsius-Skala ist der Nullpunkt willkürlich beim Gefrierpunkt des Wassers gewählt, deshalb darf man Celsius-Werte nicht verdoppeln. Der physikalische Doppelwert: $20\\,^\\circ\\text{C} = 293{,}15\\,\\text{K}$, das Doppelte ist $2 \\cdot 293{,}15\\,\\text{K} = 586{,}30\\,\\text{K}$, entspricht $\\vartheta = 586{,}30 - 273{,}15 = 313{,}15\\,^\\circ\\text{C}$ — das wäre ein glühend heißer Ofen.",
+      "tipps": [
+        "Auf welcher Skala darf man Temperaturen verdoppeln — und warum?",
+        "Rechne $20\\,^\\circ\\text{C}$ in Kelvin um und verdopple dann den Kelvin-Wert.",
+        "Rechne das Ergebnis zurück in Celsius: $\\vartheta = T - 273{,}15$."
+      ],
+      "loesungsweg": "$T_1 = 20 + 273{,}15 = 293{,}15\\,\\text{K}$. Doppelter Wert: $T_2 = 2 \\cdot 293{,}15 = 586{,}30\\,\\text{K}$. Zurück: $\\vartheta_2 = 586{,}30 - 273{,}15 = 313{,}15\\,^\\circ\\text{C}$. Begründung: Nur die Kelvin-Skala beginnt am echten Nullpunkt — deshalb sind Verhältnisse und Verdopplungen nur dort sinnvoll.",
+      "kc": [
+        "thermodynamik-und-kreisprozesse"
+      ]
+    },
+    {
+      "id": "ph-10-td-102",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Aluminiumplatte ($m = 0{,}5\\,\\text{kg}$, spezifische Wärmekapazität $c = 900\\,\\frac{\\text{J}}{\\text{kg} \\cdot \\text{K}}$) wird von $\\vartheta_1 = 20\\,^\\circ\\text{C}$ auf $\\vartheta_2 = 80\\,^\\circ\\text{C}$ erhitzt. Berechne die dafür nötige Wärme $Q$ in Joule.",
+      "eingaben": [
+        {
+          "label": "$Q$",
+          "antwort": 27000,
+          "toleranz": 200,
+          "einheit": "J"
+        }
+      ],
+      "tipps": [
+        "Formel: $Q = c \\cdot m \\cdot \\Delta T$ — erst die Temperaturänderung berechnen.",
+        "$\\Delta T = 80\\,^\\circ\\text{C} - 20\\,^\\circ\\text{C} = 60\\,\\text{K}$; Temperaturunterschiede sind in Kelvin und Celsius gleich groß.",
+        "$Q = 900 \\cdot 0{,}5 \\cdot 60 = ?$"
+      ],
+      "loesungsweg": "$\\Delta T = 80 - 20 = 60\\,\\text{K}$. $Q = c \\cdot m \\cdot \\Delta T = 900\\,\\frac{\\text{J}}{\\text{kg} \\cdot \\text{K}} \\cdot 0{,}5\\,\\text{kg} \\cdot 60\\,\\text{K} = 27\\,000\\,\\text{J}$. Zum Vergleich: Wasser bräuchte für dieselbe Masse und dieselbe Erwärmung mit $c = 4190\\,\\frac{\\text{J}}{\\text{kg} \\cdot \\text{K}}$ fast fünfmal so viel Wärme.",
+      "kc": [
+        "thermodynamik-und-kreisprozesse"
+      ]
+    },
+    {
+      "id": "ph-10-td-103",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gasgesetze im Überblick: Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Im allgemeinen Gasgesetz $\\frac{p \\cdot V}{T} = \\text{konstant}$ muss die Temperatur immer in Kelvin eingesetzt werden.",
+          "richtig": true,
+          "erklaerung": "Richtig — mit Celsius-Werten würde die Formel bei $0\\,^\\circ\\text{C}$ durch null teilen und falsche Ergebnisse liefern."
+        },
+        {
+          "text": "Isotherm bedeutet: Der Druck bleibt konstant.",
+          "richtig": false,
+          "erklaerung": "Falsch — isotherm heißt, die Temperatur bleibt konstant ($T = \\text{konstant}$). Isobar bedeutet konstanter Druck."
+        },
+        {
+          "text": "Bei isochorer Zustandsänderung bleibt das Volumen konstant, und Druck und Kelvin-Temperatur sind proportional.",
+          "richtig": true,
+          "erklaerung": "Richtig — isochor: $V = \\text{konstant}$, also $\\frac{p}{T} = \\text{konstant}$: doppelte Kelvin-Temperatur bedeutet doppelter Druck."
+        },
+        {
+          "text": "Bei isothermer Kompression eines Gases steigt das Volumen, wenn der Druck zunimmt.",
+          "richtig": false,
+          "erklaerung": "Falsch — isotherm gilt $p \\cdot V = \\text{konstant}$: Steigt der Druck, sinkt das Volumen."
+        }
+      ],
+      "tipps": [
+        "iso = gleich: isotherm = gleiche Temperatur, isobar = gleicher Druck, isochor = gleiches Volumen.",
+        "Bei der Isotherme gilt $p \\cdot V = \\text{konstant}$ — Druck und Volumen verhalten sich umgekehrt proportional.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 3. Das allgemeine Gasgesetz erfordert Kelvin-Temperaturen, weil sonst Proportionalität und Nullpunkt fehlen. Isochor ($V$ konstant) ergibt $p \\sim T$ — der Fahrradreifen in der Mittagssonne ist das klassische Beispiel. Falsch sind 2 (isotherm = konstante Temperatur, nicht Druck) und 4 (isotherm: steigt $p$, sinkt $V$).",
+      "kc": [
+        "thermodynamik-und-kreisprozesse"
+      ]
+    },
+    {
+      "id": "ph-10-td-104",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Kreisprozesse: Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Bei einem Kreisprozess kehrt das Arbeitsgas nach jedem Umlauf in denselben Zustand zurück.",
+          "richtig": true,
+          "erklaerung": "Richtig — das ist die Definition: geschlossene Kurve im p-V-Diagramm, Anfangs- und Endzustand sind identisch."
+        },
+        {
+          "text": "Die nutzbare Arbeit eines Kreisprozesses entspricht im p-V-Diagramm der eingeschlossenen Fläche.",
+          "richtig": true,
+          "erklaerung": "Richtig — die eingeschlossene Fläche ist die Netto-Arbeit: $1\\,\\text{Pa} \\cdot \\text{m}^3 = 1\\,\\text{J}$."
+        },
+        {
+          "text": "Ein im Uhrzeigersinn durchlaufener Kreisprozess im p-V-Diagramm nimmt von der Umgebung Arbeit auf.",
+          "richtig": false,
+          "erklaerung": "Falsch — Uhrzeigersinn bedeutet, die Maschine gibt Arbeit ab (Wärmekraftmaschine). Gegen den Uhrzeigersinn nimmt sie Arbeit auf (Wärmepumpe)."
+        },
+        {
+          "text": "Der Stirlingmotor lässt sich nur mit Kraftstoff betreiben, nicht mit Sonnenenergie.",
+          "richtig": false,
+          "erklaerung": "Falsch — der Stirlingmotor erhält seine Wärme von außen und funktioniert mit jeder Wärmequelle: Kerzenflamme, Sonnenlicht oder sogar Körperwärme."
+        }
+      ],
+      "tipps": [
+        "Ein Kreisprozess ist im p-V-Diagramm eine geschlossene Kurve — was bedeutet das für Anfang und Ende?",
+        "Fläche im p-V-Diagramm hat die Einheit Druck mal Volumen — was ist $\\text{Pa} \\cdot \\text{m}^3$?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Der Kreisprozess ist per Definition eine geschlossene Kurve. Die eingeschlossene Fläche entspricht der Netto-Arbeit. Falsch sind 3 (Uhrzeigersinn = Maschine gibt Arbeit ab) und 4 (Stirlingmotor läuft mit jeder Wärmequelle).",
+      "kc": [
+        "thermodynamik-und-kreisprozesse"
+      ]
+    },
+    {
+      "id": "ph-10-td-105",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz (AFB III): Im $p$-$V$-Diagramm durchläuft ein Gas einen dreieckigen Kreisprozess im Uhrzeigersinn mit den Ecken: $Z_1 = (1\\,\\text{dm}^3,\\; 100\\,\\text{kPa})$, $Z_2 = (4\\,\\text{dm}^3,\\; 100\\,\\text{kPa})$, $Z_3 = (4\\,\\text{dm}^3,\\; 400\\,\\text{kPa})$. (a) Berechne die nutzbare Arbeit je Umlauf. Hinweis: Dreiecksfläche $= \\frac{1}{2} \\cdot \\text{Grundlinie} \\cdot \\text{Höhe}$; $1\\,\\text{dm}^3 = 0{,}001\\,\\text{m}^3$; $1\\,\\text{kPa} = 1000\\,\\text{Pa}$; $1\\,\\text{Pa} \\cdot \\text{m}^3 = 1\\,\\text{J}$. (b) Welche Leistung liefert die Maschine bei $10$ Umläufen pro Sekunde?",
+      "eingaben": [
+        {
+          "label": "$W$ (a)",
+          "antwort": 450,
+          "toleranz": 5,
+          "einheit": "J"
+        },
+        {
+          "label": "$P$ (b)",
+          "antwort": 4500,
+          "toleranz": 50,
+          "einheit": "W"
+        }
+      ],
+      "tipps": [
+        "Identifiziere Grundlinie und Höhe des Dreiecks: Grundlinie auf der isobaren Strecke ($p = 100\\,\\text{kPa}$), Höhe ist der Druckunterschied.",
+        "Grundlinie: $\\Delta V = 4 - 1 = 3\\,\\text{dm}^3 = 0{,}003\\,\\text{m}^3$; Höhe: $\\Delta p = 400 - 100 = 300\\,\\text{kPa} = 300\\,000\\,\\text{Pa}$.",
+        "(b) Leistung = Arbeit je Umlauf mal Umläufe pro Sekunde."
+      ],
+      "loesungsweg": "(a) Dreieck: Grundlinie $\\Delta V = 3\\,\\text{dm}^3 = 0{,}003\\,\\text{m}^3$, Höhe $\\Delta p = 300\\,\\text{kPa} = 300\\,000\\,\\text{Pa}$. $W = \\frac{1}{2} \\cdot 0{,}003\\,\\text{m}^3 \\cdot 300\\,000\\,\\text{Pa} = 450\\,\\text{J}$ je Umlauf. (b) $P = 450\\,\\text{J} \\cdot 10\\,\\text{s}^{-1} = 4500\\,\\text{W} = 4{,}5\\,\\text{kW}$.",
+      "kc": [
+        "thermodynamik-und-kreisprozesse"
+      ]
+    }
+  ]
+}

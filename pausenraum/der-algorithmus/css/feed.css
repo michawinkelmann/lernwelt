@@ -1,0 +1,179 @@
+.feed-root {
+  flex: 1; padding: 12px;
+  max-width: 680px; width: 100%; margin: 0 auto;
+}
+.feed-header {
+  padding: 12px 4px 16px;
+}
+.feed-header h2 { margin: 0; font-size: 20px; }
+.feed-header p { color: var(--text-dim); font-size: 14px; margin: 4px 0 0; }
+
+.feed-list {
+  display: flex; flex-direction: column; gap: 14px;
+}
+.feed-list.compact .post-card { font-size: 14px; }
+.feed-list.compact .post-card .avatar { width: 32px; height: 32px; }
+.feed-list.compact .post-card .actions { display: none; }
+
+.post-card {
+  background: var(--bg-elev);
+  border-radius: var(--radius);
+  padding: 14px;
+  border: 1px solid var(--line);
+  animation: card-in 260ms ease;
+  position: relative;
+}
+.post-card.ad {
+  border: 1px solid var(--warn);
+  background: linear-gradient(var(--bg-elev), var(--bg-elev)) padding-box,
+              linear-gradient(135deg, var(--warn), var(--accent)) border-box;
+  border: 1px solid transparent;
+}
+.post-card.ad::before {
+  content: "⚠ Anzeige";
+  position: absolute; top: 8px; right: 12px;
+  font-size: 11px; color: var(--warn);
+  background: rgba(250, 204, 21, 0.12); padding: 2px 8px; border-radius: 10px;
+}
+
+.post-head {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+}
+.avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--bg-elev-2);
+  display: grid; place-items: center; flex-shrink: 0; overflow: hidden;
+}
+.avatar svg { width: 70%; height: 70%; }
+.post-head .name-block { flex: 1; min-width: 0; }
+.post-head .name { font-weight: 600; font-size: 15px; }
+.post-head .meta { font-size: 12px; color: var(--text-dim); }
+.post-head .verified { color: var(--accent-2); font-size: 12px; }
+.post-head .why-btn {
+  background: transparent; color: var(--text-dim); border: 0; cursor: pointer;
+  font-size: 13px; padding: 6px;
+}
+
+.post-body {
+  font-size: 15px; line-height: 1.5;
+  white-space: pre-wrap; word-break: break-word;
+}
+
+.post-media {
+  margin-top: 10px; border-radius: var(--radius-sm); overflow: hidden;
+  background: var(--bg-elev-2); aspect-ratio: 16/10;
+  display: grid; place-items: center;
+}
+.post-media svg { width: 100%; height: 100%; }
+
+.article-card {
+  margin-top: 10px;
+  background: var(--bg-elev-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent-2);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.article-card .article-kicker {
+  text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px;
+  color: var(--accent-2); margin-bottom: 4px; font-weight: 600;
+}
+.article-card .article-title {
+  font-weight: 700; color: var(--text); font-size: 14px; margin-bottom: 6px;
+}
+.article-card .article-excerpt {
+  color: var(--text-dim); white-space: pre-wrap;
+}
+.article-card .article-meta {
+  margin-top: 6px; font-size: 11px; color: var(--text-dim);
+}
+.article-card .article-source { font-weight: 600; }
+
+.post-tw-shield {
+  margin-top: 10px; padding: 20px;
+  background: rgba(250, 204, 21, 0.1); border: 1px dashed var(--warn);
+  border-radius: var(--radius-sm); text-align: center;
+}
+.post-tw-shield .btn { margin-top: 10px; }
+
+.actions {
+  display: flex; gap: 6px; margin-top: 10px;
+  padding-top: 10px; border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.action-btn {
+  flex: 1; min-width: 64px; min-height: 40px;
+  background: transparent; color: var(--text-dim); border: 0;
+  border-radius: var(--radius-sm); cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  font-size: 13px; padding: 8px;
+}
+.action-btn:hover { background: var(--bg-elev-2); color: var(--text); }
+.action-btn.active { color: var(--accent); }
+.action-btn.active.dislike { color: var(--danger); }
+
+.end-of-week {
+  margin: 24px 0; padding: 20px; text-align: center;
+  background: linear-gradient(135deg, rgba(255,46,136,0.15), rgba(34,211,238,0.15));
+  border-radius: var(--radius); border: 1px solid var(--line);
+}
+.end-of-week h3 { margin: 0 0 8px 0; }
+
+/* Event-Karten */
+.event-card {
+  background: linear-gradient(135deg, var(--bg-elev), var(--bg-elev-2));
+  border-left: 3px solid var(--accent-2);
+  padding: 14px; border-radius: var(--radius);
+  margin: 10px 0;
+}
+.event-card h4 { margin: 0 0 6px 0; color: var(--accent-2); }
+
+/* Discord-Einladung */
+.invite-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-left: 3px solid #7289da;
+  padding: 14px; border-radius: var(--radius);
+  margin: 10px 0;
+}
+.invite-card h4 { margin: 0 0 6px 0; }
+.invite-card.radical { border-left-color: var(--warn); }
+
+/* Shitstorm */
+.viral-card {
+  background: linear-gradient(135deg, #7a1f3a, #3a1a1f);
+  padding: 14px; border-radius: var(--radius);
+  margin: 10px 0; color: #fdd;
+  border: 1px solid var(--danger);
+}
+.viral-card.positive { background: linear-gradient(135deg, #1a4a2b, #1b2b1a); border-color: var(--ok); color: #dfd; }
+.viral-card h4 { margin: 0 0 6px 0; }
+
+/* Badges-Pop-up */
+.badge-card {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff; padding: 14px; border-radius: var(--radius);
+  margin: 10px 0; text-align: center; font-weight: 600;
+}
+
+/* Compose */
+.compose-box {
+  background: var(--bg-elev); padding: 14px; border-radius: var(--radius);
+  border: 1px solid var(--line); margin-bottom: 14px;
+}
+.compose-box textarea {
+  width: 100%; background: var(--bg); color: var(--text);
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 10px; font-family: inherit; font-size: 15px; resize: vertical; min-height: 80px;
+}
+.compose-topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 6px; margin: 10px 0; }
+.compose-topic-grid button {
+  all: unset; text-align: center; cursor: pointer;
+  padding: 8px; border-radius: var(--radius-sm);
+  background: var(--bg-elev-2); border: 1px solid var(--line);
+  font-size: 13px; min-height: 40px;
+}
+.compose-topic-grid button.selected { background: rgba(255,46,136,0.15); border-color: var(--accent); color: var(--accent); }
+.compose-row { display: flex; gap: 10px; justify-content: space-between; align-items: center; }

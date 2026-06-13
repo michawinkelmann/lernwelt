@@ -1,0 +1,542 @@
+{
+  "thema": "ma-qp-binomialverteilung",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-bv-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Bernoulli-Kette oder nicht? Bei welchen Zufallsversuchen ist die gezählte Größe $X$ binomialverteilt?",
+      "optionen": [
+        {
+          "text": "Eine faire Münze wird 20-mal geworfen; $X$ zählt, wie oft „Zahl“ fällt.",
+          "richtig": true,
+          "erklaerung": "Richtig: Zwei Ausgänge, $p = 0{,}5$ bleibt in jeder Stufe gleich, die Würfe sind unabhängig, $n = 20$ ist fest — eine Bernoulli-Kette wie aus dem Bilderbuch."
+        },
+        {
+          "text": "Ein Glücksrad mit Gewinnwahrscheinlichkeit $0{,}3$ wird 10-mal gedreht; $X$ zählt die Gewinne.",
+          "richtig": true,
+          "erklaerung": "Richtig: Jede Drehung ist ein Bernoulli-Versuch mit konstantem $p = 0{,}3$, die Drehungen beeinflussen sich nicht — $X$ ist binomialverteilt mit $n = 10$ und $p = 0{,}3$."
+        },
+        {
+          "text": "Aus einem Skatblatt mit 32 Karten werden nacheinander 5 Karten ohne Zurücklegen gezogen; $X$ zählt die Asse.",
+          "richtig": false,
+          "erklaerung": "Beim Ziehen ohne Zurücklegen ändert sich die Trefferwahrscheinlichkeit von Zug zu Zug ($\\frac{4}{32}$, dann $\\frac{3}{31}$ oder $\\frac{4}{31}$) — die Züge sind abhängig, keine Bernoulli-Kette."
+        },
+        {
+          "text": "Ein Würfel wird so lange geworfen, bis zum ersten Mal eine Sechs fällt; $X$ zählt die benötigten Würfe.",
+          "richtig": false,
+          "erklaerung": "Hier fehlt das feste $n$: Die Länge des Versuchs steht vorher nicht fest, und $X$ zählt keine Treffer in einer festen Anzahl von Stufen — $X$ ist nicht binomialverteilt."
+        }
+      ],
+      "tipps": [
+        "Prüfe die Bernoulli-Bedingungen: genau zwei Ausgänge, festes $n$, konstantes $p$, unabhängige Versuche.",
+        "Beim Ziehen ohne Zurücklegen lohnt der Blick auf den zweiten Zug: Ist $p$ dort noch dasselbe wie im ersten?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Münzwurf und Glücksrad erfüllen alle Bedingungen — zwei Ausgänge, festes $n$, konstantes $p$, unabhängige Wiederholungen. Aussage 3 scheitert am Ziehen ohne Zurücklegen: Nach jedem Zug verändert sich der Kartenstapel, also auch die Asswahrscheinlichkeit ($\\frac{4}{32} \\rightarrow \\frac{3}{31}$ bzw. $\\frac{4}{31}$) — die Stufen sind abhängig. Aussage 4 scheitert am fehlenden festen $n$: „Würfeln bis zur ersten Sechs“ hat keine vorab festgelegte Versuchszahl; gezählt wird eine Wartezeit, keine Trefferzahl.",
+      "kc": [
+        "bernoulli-kette-erkennen"
+      ]
+    },
+    {
+      "id": "ma-qp-bv-002",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Eine faire Münze wird 6-mal geworfen; $X$ zählt die „Zahl“-Würfe. Bestimme den Binomialkoeffizienten $\\binom{6}{2}$ (Klartext: C(6;2)) und damit $P(X = 2)$. Runde auf vier Nachkommastellen.",
+      "eingaben": [
+        {
+          "label": "$\\binom{6}{2}$",
+          "antwort": 15,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "$P(X = 2)$",
+          "antwort": 0.2344,
+          "toleranz": 0.0005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$\\binom{6}{2}$ zählt die Pfade mit genau 2 Treffern: $\\binom{6}{2} = \\frac{6 \\cdot 5}{2} = \\frac{6!}{2! \\cdot 4!}$ — oder die nCr-Taste nutzen.",
+        "Bei $p = 0{,}5$ hat jeder einzelne Pfad die Wahrscheinlichkeit $0{,}5^2 \\cdot 0{,}5^4 = 0{,}5^6 = \\frac{1}{64}$.",
+        "Formel von Bernoulli: $P(X = 2) = \\binom{6}{2} \\cdot 0{,}5^6 = \\frac{15}{64}$."
+      ],
+      "loesungsweg": "Der Binomialkoeffizient ist $\\binom{6}{2} = \\frac{6 \\cdot 5}{2 \\cdot 1} = 15$ — so viele Pfade im Baumdiagramm tragen genau 2 Treffer. Jeder dieser Pfade hat die Wahrscheinlichkeit $0{,}5^2 \\cdot (1 - 0{,}5)^4 = 0{,}5^6 = \\frac{1}{64}$. Also liefert die Formel von Bernoulli $P(X = 2) = 15 \\cdot \\frac{1}{64} = \\frac{15}{64} = 0{,}234375 \\approx 0{,}2344$ — nur knapp 23 %, obwohl 2-mal „Zahl“ bei 6 Würfen gar nicht so exotisch klingt.",
+      "kc": [
+        "binomialkoeffizient"
+      ],
+      "cas": "<p>Beide Werte liefert der ClassPad II direkt:</p><ol><li>Binomialkoeffizient: In der <b>Main</b>-Anwendung <code>nCr(6,2)</code> eintippen und <b>EXE</b> drücken — Ergebnis 15.</li><li>Einzelwahrscheinlichkeit „genau 2 Treffer“: <b>Interactive → Verteilungsfunktionen → binomialPDf</b> mit <b>x</b> = <code>2</code>, <b>n</b> = <code>6</code>, <b>p</b> = <code>0.5</code> (Dezimal<b>punkt</b>: <code>0.5</code>, nicht <code>0,5</code>!) liefert P(X = 2) ≈ 0.2344.</li><li>Vorsicht, beliebte Verwechslung: <code>binomialCDf(2,6,0.5)</code> ≈ 0.3438 ist die <em>kumulierte</em> Wahrscheinlichkeit P(X ≤ 2), nicht P(X = 2). Merkregel: PDf = „genau“, CDf = „höchstens“. Als Differenz passt es wieder: <code>binomialCDf(2,6,0.5)-binomialCDf(1,6,0.5)</code> ≈ 0.3438 − 0.1094 = 0.2344.</li></ol><p>In der Klausur gehört die Formel von Bernoulli mit eingesetzten Werten aufs Papier — das CAS bestätigt nur den Zahlenwert.</p>"
+    },
+    {
+      "id": "ma-qp-bv-003",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zur Bernoulli-Kette und zur Formel von Bernoulli.",
+      "text": "Ein Bernoulli-Versuch hat genau ___ mögliche Ausgänge. In einer Bernoulli-Kette ist die Trefferwahrscheinlichkeit p in jeder Stufe ___ und die einzelnen Versuche sind ___. In der Formel von Bernoulli zählt der Binomialkoeffizient C(n;k) die ___ mit genau k Treffern.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "zwei",
+          "optionen": [
+            "zwei",
+            "drei",
+            "beliebig viele"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "gleich groß",
+          "optionen": [
+            "gleich groß",
+            "von Stufe zu Stufe kleiner",
+            "von Stufe zu Stufe größer"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "unabhängig voneinander",
+          "optionen": [
+            "unabhängig voneinander",
+            "abhängig voneinander",
+            "immer gleich ausgegangen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Pfade im Baumdiagramm",
+          "optionen": [
+            "Pfade im Baumdiagramm",
+            "Nieten",
+            "Stufen der Kette"
+          ]
+        }
+      ],
+      "tipps": [
+        "„Bernoulli-Versuch“ heißt: Treffer oder Niete — mehr Ausgänge gibt es nicht.",
+        "Welche zwei Eigenschaften machen aus n wiederholten Bernoulli-Versuchen eine Bernoulli-Kette? Denke an das Skatblatt-Gegenbeispiel: Dort ändert sich p und die Züge beeinflussen sich.",
+        "Im Baumdiagramm hat jeder Pfad mit k Treffern dieselbe Wahrscheinlichkeit — C(n;k) zählt, wie viele es davon gibt."
+      ],
+      "loesungsweg": "zwei — gleich groß — unabhängig voneinander — Pfade im Baumdiagramm: Ein Bernoulli-Versuch kennt nur Treffer und Niete. Eine Bernoulli-Kette verlangt zusätzlich, dass $p$ in jeder Stufe gleich groß bleibt und die Versuche einander nicht beeinflussen. Der Binomialkoeffizient $\\binom{n}{k}$ zählt die Pfade im (gedachten) Baumdiagramm mit genau $k$ Treffern — deshalb steht er als Faktor vor $p^k \\cdot (1-p)^{n-k}$.",
+      "kc": [
+        "bernoulli-begriffe"
+      ]
+    },
+    {
+      "id": "ma-qp-bv-004",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Eine Bernoulli-Kette hat die Länge $n = 15$; $X$ zählt die Treffer. Ordne jeder Formulierung den passenden Wahrscheinlichkeits-Term zu.",
+      "paare": [
+        {
+          "links": "genau 4 Treffer",
+          "rechts": "P(X = 4)"
+        },
+        {
+          "links": "höchstens 4 Treffer",
+          "rechts": "P(X ≤ 4)"
+        },
+        {
+          "links": "mindestens 5 Treffer",
+          "rechts": "1 − P(X ≤ 4)"
+        },
+        {
+          "links": "weniger als 4 Treffer",
+          "rechts": "P(X ≤ 3)"
+        }
+      ],
+      "tipps": [
+        "„Höchstens 4“ schließt die 4 ein: alle Trefferzahlen von 0 bis 4.",
+        "„Weniger als 4“ schließt die 4 aus — die Grenze rutscht auf 3.",
+        "Gegenereignis-Trick: Das Gegenteil von „mindestens 5“ ist „höchstens 4“."
+      ],
+      "loesungsweg": "„Genau 4“ ist die Einzelwahrscheinlichkeit $P(X = 4)$. „Höchstens 4“ ist kumuliert: $P(X \\le 4)$. „Mindestens 5“ wird über das Gegenereignis berechnet: $P(X \\ge 5) = 1 - P(X \\le 4)$ — das Gegenteil von „mindestens 5“ ist „höchstens 4“. „Weniger als 4“ schließt die 4 aus, also $P(X \\le 3)$. Wer die Übersetzungstabelle im Kopf hat, erledigt solche Aufgaben in Sekunden — der häufigste Fehler ist die um 1 verrutschte Grenze.",
+      "kc": [
+        "kumulierte-uebersetzung"
+      ]
+    },
+    {
+      "id": "ma-qp-bv-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Multiple-Choice-Test besteht aus 8 Fragen mit je 4 Antwortmöglichkeiten, genau eine ist jeweils richtig. Paul kreuzt überall rein zufällig an; $X$ zählt seine richtigen Antworten. Berechne $P(X = 2)$ und $P(X = 0)$. Runde auf vier Nachkommastellen.",
+      "eingaben": [
+        {
+          "label": "$P(X = 2)$",
+          "antwort": 0.3115,
+          "toleranz": 0.0005,
+          "einheit": ""
+        },
+        {
+          "label": "$P(X = 0)$",
+          "antwort": 0.1001,
+          "toleranz": 0.0005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Blindes Raten ist eine Bernoulli-Kette mit $n = 8$ und $p = \\frac{1}{4} = 0{,}25$ — jede Frage ist ein eigener, unabhängiger Versuch.",
+        "Formel von Bernoulli: $P(X = 2) = \\binom{8}{2} \\cdot 0{,}25^2 \\cdot 0{,}75^6$ mit $\\binom{8}{2} = 28$.",
+        "Für $P(X = 0)$ gibt es nur einen Pfad (alle 8 falsch): $P(X = 0) = 0{,}75^8$ — der Binomialkoeffizient $\\binom{8}{0} = 1$ verschwindet."
+      ],
+      "loesungsweg": "Raten bei 8 unabhängigen Fragen mit Trefferchance $0{,}25$ ist eine Bernoulli-Kette mit $n = 8$, $p = 0{,}25$. Formel von Bernoulli: $P(X = 2) = \\binom{8}{2} \\cdot 0{,}25^2 \\cdot 0{,}75^6 = 28 \\cdot 0{,}0625 \\cdot 0{,}177978\\ldots \\approx 0{,}3115$. Für null Richtige gibt es nur den einen Pfad „alles falsch“: $P(X = 0) = 0{,}75^8 \\approx 0{,}1001$. Genau 2 Richtige sind mit rund 31 % also das wahrscheinlichste Einzelergebnis ($\\mu = 8 \\cdot 0{,}25 = 2$) — fürs Bestehen reicht das freilich selten.",
+      "kc": [
+        "bernoulli-formel-anwenden"
+      ],
+      "cas": "<p>Einzelwahrscheinlichkeiten $P(X = k)$ liefert der ClassPad II über die binomiale Dichtefunktion:</p><ol><li>Im <b>Main</b>-Menü <b>Interactive → Verteilungsfunktionen → binomialPDf</b> wählen.</li><li>Im Dialog <b>x</b> = <code>2</code>, <b>n</b> = <code>8</code> und <b>p</b> = <code>0.25</code> eintragen — Wahrscheinlichkeiten immer mit Dezimal<b>punkt</b> (<code>0.25</code>, nicht <code>0,25</code>!). <b>OK</b> liefert ≈ 0.3115.</li><li>Für $P(X = 0)$ denselben Dialog mit <b>x</b> = <code>0</code> aufrufen: ≈ 0.1001.</li></ol><p>Das CAS ersetzt die Formel-Begründung nicht: In Klausuren gehört der Ansatz $P(X = 2) = \\binom{8}{2} \\cdot 0{,}25^2 \\cdot 0{,}75^6$ aufs Papier — binomialPDf ist deine Kontrolle.</p>"
+    },
+    {
+      "id": "ma-qp-bv-006",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Glücksrad bleibt mit der Wahrscheinlichkeit $p = 0{,}2$ auf dem Gewinnfeld stehen und wird $n = 5$-mal gedreht; $X$ zählt die Gewinne. Berechne $P(X = 2)$ Schritt für Schritt mit der Formel von Bernoulli.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Wie viele Pfade im Baumdiagramm tragen genau 2 Treffer? Bestimme $\\binom{5}{2}$.",
+          "eingaben": [
+            {
+              "label": "$\\binom{5}{2}$",
+              "antwort": 10,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$\\binom{5}{2} = \\frac{5 \\cdot 4}{2 \\cdot 1}$ — oder mit der nCr-Taste."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Wahrscheinlichkeit eines einzelnen Pfads mit genau 2 Treffern und 3 Nieten: $0{,}2^2 \\cdot 0{,}8^3$ (exakter Wert).",
+          "eingaben": [
+            {
+              "label": "$0{,}2^2 \\cdot 0{,}8^3$",
+              "antwort": 0.02048,
+              "toleranz": 0.0001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Erst die Potenzen: $0{,}2^2 = 0{,}04$ und $0{,}8^3 = 0{,}512$ — dann multiplizieren."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Setze alles zusammen: $P(X = 2) = \\binom{5}{2} \\cdot 0{,}2^2 \\cdot 0{,}8^3$.",
+          "eingaben": [
+            {
+              "label": "$P(X = 2)$",
+              "antwort": 0.2048,
+              "toleranz": 0.0005,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Anzahl der Pfade mal Pfadwahrscheinlichkeit: $10 \\cdot 0{,}02048$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Die Formel von Bernoulli ist ein Bauplan: (Anzahl der Pfade) mal (Wahrscheinlichkeit eines Pfads).",
+        "Jeder Pfad mit genau 2 Treffern und 3 Nieten hat dieselbe Wahrscheinlichkeit — egal in welcher Reihenfolge Treffer und Nieten kommen.",
+        "Am Ende sollte rund ein Fünftel herauskommen — etwa $20{,}5\\,\\%$."
+      ],
+      "loesungsweg": "Schritt 1: $\\binom{5}{2} = \\frac{5 \\cdot 4}{2} = 10$ Pfade tragen genau 2 Treffer. Schritt 2: Ein einzelner solcher Pfad hat die Wahrscheinlichkeit $0{,}2^2 \\cdot 0{,}8^3 = 0{,}04 \\cdot 0{,}512 = 0{,}02048$. Schritt 3: $P(X = 2) = 10 \\cdot 0{,}02048 = 0{,}2048$ — mit gut 20 % sind genau 2 Gewinne bei 5 Drehungen also durchaus plausibel, obwohl im Mittel nur $\\mu = 5 \\cdot 0{,}2 = 1$ Gewinn zu erwarten ist.",
+      "kc": [
+        "bernoulli-formel-schritte"
+      ]
+    },
+    {
+      "id": "ma-qp-bv-007",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Zufallsgröße $X$ ist binomialverteilt mit $n = 20$ und $p = 0{,}25$. Welche Aussagen über kumulierte Wahrscheinlichkeiten sind richtig?",
+      "optionen": [
+        {
+          "text": "$P(X \\ge 5) = 1 - P(X \\le 4)$",
+          "richtig": true,
+          "erklaerung": "Richtig: Das Gegenereignis von „mindestens 5“ ist „höchstens 4“ — die Grenze rutscht um 1 nach unten."
+        },
+        {
+          "text": "$P(X < 3) = P(X \\le 2)$",
+          "richtig": true,
+          "erklaerung": "Richtig: $X$ nimmt nur ganze Zahlen an — „weniger als 3“ heißt also „höchstens 2“."
+        },
+        {
+          "text": "$P(X \\ge 5) = 1 - P(X \\le 5)$",
+          "richtig": false,
+          "erklaerung": "Vorsicht, der klassische Stolperstein: $1 - P(X \\le 5) = P(X \\ge 6)$ — der Fall $X = 5$ wurde versehentlich mit weggeworfen. Richtig wäre $1 - P(X \\le 4)$."
+        },
+        {
+          "text": "$P(X \\le 4)$ ist die Wahrscheinlichkeit, genau 4 Treffer zu erzielen.",
+          "richtig": false,
+          "erklaerung": "$P(X \\le 4)$ ist kumuliert: die Summe $P(X = 0) + P(X = 1) + \\dots + P(X = 4)$. Genau 4 Treffer wären $P(X = 4)$."
+        }
+      ],
+      "tipps": [
+        "Schreibe für jede Aussage in Worten auf, welche Trefferzahlen links und rechts erfasst werden — dann fallen verrutschte Grenzen sofort auf.",
+        "Beim Gegenereignis von „mindestens k“ gilt: Grenze um 1 senken, also $1 - P(X \\le k - 1)$.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Das Gegenereignis von „mindestens 5“ ist „höchstens 4“, also $P(X \\ge 5) = 1 - P(X \\le 4)$; und weil $X$ nur ganzzahlige Werte annimmt, ist „weniger als 3“ dasselbe wie „höchstens 2“. Aussage 3 ist der typische Verrutscher: $1 - P(X \\le 5)$ entfernt auch den Fall $X = 5$ und liefert $P(X \\ge 6)$. Aussage 4 verwechselt kumulierte und einzelne Wahrscheinlichkeit: $P(X \\le 4)$ summiert alle Fälle von 0 bis 4 Treffern.",
+      "kc": [
+        "gegenereignis-trick"
+      ],
+      "cas": "<p>Alle vier Aussagen lassen sich am ClassPad II in Sekunden nachprüfen — X ist binomialverteilt mit n = 20 und p = 0.25:</p><ol><li><b>Interactive → Verteilungsfunktionen → binomialCDf</b> mit <b>x</b> = <code>4</code>, <b>n</b> = <code>20</code>, <b>p</b> = <code>0.25</code> (Dezimal<b>punkt</b>: <code>0.25</code>, nicht <code>0,25</code>!) liefert P(X ≤ 4) ≈ 0.4148. „Mindestens 5“ über das Gegenereignis: <code>1-binomialCDf(4,20,0.25)</code> ≈ 0.5852 — die Grenze rutscht auf x = 4, nicht 5!</li><li>Der Stolperstein aus Aussage 3 wird am CAS sichtbar: <code>1-binomialCDf(5,20,0.25)</code> ≈ 0.3828 — das ist P(X ≥ 6), deutlich weniger, weil der Fall X = 5 versehentlich mit weggeworfen wurde.</li><li>„Weniger als 3“: <code>binomialCDf(2,20,0.25)</code> ≈ 0.0913 — bei ganzzahligem X ist P(X &lt; 3) dasselbe wie P(X ≤ 2).</li></ol><p>In der Klausur zuerst die Umformung notieren (etwa P(X ≥ 5) = 1 − P(X ≤ 4)) und erst dann rechnen — das CAS fängt verrutschte Grenzen nicht ab.</p>"
+    },
+    {
+      "id": "ma-qp-bv-008",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bei der Produktion von LED-Lampen sind erfahrungsgemäß 2 % defekt. Aus der laufenden (sehr großen) Produktion werden 50 Lampen zufällig entnommen; $X$ zählt die defekten Lampen. Berechne $P(X \\le 1)$ und die Wahrscheinlichkeit, dass mindestens 2 Lampen defekt sind. Runde auf vier Nachkommastellen.",
+      "eingaben": [
+        {
+          "label": "$P(X \\le 1)$",
+          "antwort": 0.7358,
+          "toleranz": 0.0005,
+          "einheit": ""
+        },
+        {
+          "label": "$P(X \\ge 2)$",
+          "antwort": 0.2642,
+          "toleranz": 0.0005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$P(X \\le 1)$ hat nur zwei Summanden: $P(X = 0) + P(X = 1)$ — beide mit der Formel von Bernoulli ($n = 50$, $p = 0{,}02$).",
+        "$P(X = 0) = 0{,}98^{50} \\approx 0{,}3642$ und $P(X = 1) = 50 \\cdot 0{,}02 \\cdot 0{,}98^{49} \\approx 0{,}3716$.",
+        "„Mindestens 2“ über das Gegenereignis: $P(X \\ge 2) = 1 - P(X \\le 1)$."
+      ],
+      "loesungsweg": "Die Entnahme aus einer sehr großen Produktion lässt sich als Bernoulli-Kette mit $n = 50$ und $p = 0{,}02$ modellieren ($p$ ändert sich durch die Entnahme praktisch nicht). Dann ist $P(X = 0) = 0{,}98^{50} \\approx 0{,}3642$ und $P(X = 1) = \\binom{50}{1} \\cdot 0{,}02 \\cdot 0{,}98^{49} \\approx 0{,}3716$, zusammen $P(X \\le 1) \\approx 0{,}7358$. Der Gegenereignis-Trick liefert $P(X \\ge 2) = 1 - P(X \\le 1) \\approx 0{,}2642$. In gut einem Viertel aller Stichproben tauchen also mindestens 2 defekte Lampen auf — allein daraus auf eine verschlechterte Produktion zu schließen, wäre voreilig.",
+      "kc": [
+        "kumulierte-wahrscheinlichkeit"
+      ],
+      "cas": "<p>Kumulierte Wahrscheinlichkeiten liefert der ClassPad II direkt:</p><ol><li><b>Interactive → Verteilungsfunktionen → binomialCDf</b> wählen.</li><li>Im Dialog <b>x</b> = <code>1</code>, <b>n</b> = <code>50</code>, <b>p</b> = <code>0.02</code> eintragen (Dezimal<b>punkt</b>: <code>0.02</code>, nicht <code>0,02</code>) — binomialCDf liefert $P(X \\le 1) \\approx 0.7358$.</li><li>„Mindestens 2“ über das Gegenereignis: <code>1-binomialCDf(1,50,0.02)</code> ≈ 0.2642.</li></ol><p>Das CAS ersetzt die Formel-Begründung nicht: Ansatz ($n$, $p$, Übersetzung in $P(X \\le 1)$ bzw. $1 - P(X \\le 1)$) gehört dokumentiert — der Rechner bestätigt nur die Werte.</p>"
+    },
+    {
+      "id": "ma-qp-bv-009",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine „mindestens“-Aufgabe systematisch lösen: Bringe die Schritte zur Berechnung von $P(X \\ge 8)$ bei einer Bernoulli-Kette der Länge $n = 10$ in die richtige Reihenfolge.",
+      "elemente": [
+        "Zufallsgröße und Modell festlegen: X zählt die Treffer, Parameter n = 10 und p angeben, Bernoulli-Bedingungen begründen",
+        "Die Formulierung „mindestens 8“ in einen Term übersetzen: gesucht ist P(X ≥ 8)",
+        "Gegenereignis bilden: P(X ≥ 8) = 1 − P(X ≤ 7)",
+        "P(X ≤ 7) aus der kumulierten Tabelle ablesen oder mit binomialCDf berechnen",
+        "Die Differenz zu 1 bilden und das Ergebnis im Sachzusammenhang deuten"
+      ],
+      "tipps": [
+        "Ohne Modell keine Rechnung: Erst müssen $X$, $n$ und $p$ feststehen.",
+        "Tabellen und binomialCDf liefern immer „höchstens“-Wahrscheinlichkeiten — „mindestens“ braucht deshalb zuerst das Gegenereignis.",
+        "Achte beim Gegenereignis auf die Grenze: Das Gegenteil von „mindestens 8“ ist „höchstens 7“."
+      ],
+      "loesungsweg": "Zuerst wird das Modell aufgestellt ($X$ zählt Treffer, $n = 10$, $p$ bekannt, Bernoulli-Bedingungen geprüft). Dann übersetzt man die Sprache in einen Term ($P(X \\ge 8)$), formt mit dem Gegenereignis um ($1 - P(X \\le 7)$ — Grenze um 1 gesenkt!), besorgt sich $P(X \\le 7)$ aus Tabelle oder CAS und bildet zum Schluss die Differenz zu 1, die im Sachzusammenhang gedeutet wird. Diese Reihenfolge trägt durch praktisch jede Stochastik-Klausuraufgabe.",
+      "kc": [
+        "mindestens-ablauf"
+      ]
+    },
+    {
+      "id": "ma-qp-bv-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Online-Händler weiß aus Erfahrung: 10 % aller Bestellungen werden zurückgeschickt. An einem Tag gehen 200 voneinander unabhängige Bestellungen ein; $X$ zählt die Rücksendungen. Berechne den Erwartungswert $\\mu$ und die Standardabweichung $\\sigma$ (auf zwei Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "$\\mu$",
+          "antwort": 20,
+          "toleranz": 0.001,
+          "einheit": "Rücksendungen"
+        },
+        {
+          "label": "$\\sigma$",
+          "antwort": 4.24,
+          "toleranz": 0.01,
+          "einheit": "Rücksendungen"
+        }
+      ],
+      "tipps": [
+        "Erwartungswert der Binomialverteilung: $\\mu = n \\cdot p$.",
+        "Standardabweichung: $\\sigma = \\sqrt{n \\cdot p \\cdot (1 - p)}$ — hier $\\sqrt{200 \\cdot 0{,}1 \\cdot 0{,}9}$.",
+        "$\\sqrt{18} \\approx 4{,}24$ — und vergleiche mit 3: Ist die Laplace-Bedingung erfüllt?"
+      ],
+      "loesungsweg": "$X$ ist binomialverteilt mit $n = 200$ und $p = 0{,}1$. Erwartungswert: $\\mu = 200 \\cdot 0{,}1 = 20$ Rücksendungen. Standardabweichung: $\\sigma = \\sqrt{200 \\cdot 0{,}1 \\cdot 0{,}9} = \\sqrt{18} \\approx 4{,}24$. Deutung: Im Mittel kommen 20 Pakete zurück, typische Tagesschwankungen liegen bei gut 4 Paketen. Wegen $\\sigma \\approx 4{,}24 > 3$ ist die Laplace-Bedingung erfüllt — die Sigma-Regeln sind anwendbar: An rund 95 % der Tage liegt die Rücksendezahl zwischen $20 - 2 \\cdot 4{,}24 \\approx 12$ und $20 + 2 \\cdot 4{,}24 \\approx 28$.",
+      "kc": [
+        "erwartungswert-standardabweichung"
+      ],
+      "cas": "<p>μ und σ rechnest du schneller von Hand — das CAS lohnt sich für das Prognoseintervall aus dem Lösungsweg:</p><ol><li>Die 2σ-Umgebung exakt nachprüfen, als Differenz zweier kumulierter Werte: <code>binomialCDf(28,200,0.1)-binomialCDf(11,200,0.1)</code> ≈ 0.9561 — P(12 ≤ X ≤ 28), die versprochenen rund 95 % (p mit Dezimal<b>punkt</b>: <code>0.1</code>, nicht <code>0,1</code>!).</li><li>Umkehrfrage „Mit wie vielen Rücksendungen muss der Händler höchstens rechnen, wenn er 95 % der Tage abdecken will?“: <b>Interactive → Verteilungsfunktionen → invBinomialCDf</b> mit <b>prob</b> = <code>0.95</code>, <b>n</b> = <code>200</code>, <b>p</b> = <code>0.1</code> liefert 27.</li><li>Vorsicht Leserichtung: invBinomialCDf gibt das <em>kleinste</em> k aus, für das P(X ≤ k) ≥ 0.95 gilt. Gegenprobe mit binomialCDf: <code>binomialCDf(27,200,0.1)</code> ≈ 0.9566 ≥ 0.95 ✓, aber <code>binomialCDf(26,200,0.1)</code> ≈ 0.9328 &lt; 0.95 — 27 ist also wirklich das erste k, das reicht.</li></ol><p>Auch hier gilt die Dokumentationspflicht: Bedingung (P(X ≤ k) ≥ 0.95) und beide Vergleichswerte hinschreiben — das nackte CAS-Ergebnis 27 begründet nichts.</p>"
+    },
+    {
+      "id": "ma-qp-bv-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Im Pausenverkauf liegen in einer Kiste 40 Brötchen, davon 8 mit Käse. Mia nimmt ohne hinzusehen nacheinander 5 Brötchen heraus (natürlich ohne Zurücklegen); $X$ zählt die Käsebrötchen. Sie rechnet $P(X = 2)$ mit der Binomialverteilung ($n = 5$, $p = \\frac{8}{40} = 0{,}2$). Nimm Stellung: Prüfe die Bernoulli-Bedingungen, erkläre, welche verletzt ist, und beschreibe, in welchen Situationen die Binomialverteilung trotzdem ein brauchbares Näherungsmodell wäre.",
+      "musterloesung": "Zwei der Bedingungen sind erfüllt: Jeder Griff hat genau zwei relevante Ausgänge (Käse oder nicht), und die Anzahl der Versuche $n = 5$ steht fest. Verletzt ist die Bedingung „konstantes $p$, unabhängige Versuche“: Mia zieht ohne Zurücklegen. Erwischt sie im ersten Griff ein Käsebrötchen, sinkt die Trefferwahrscheinlichkeit für den zweiten auf $\\frac{7}{39} \\approx 0{,}179$; sonst steigt sie auf $\\frac{8}{39} \\approx 0{,}205$. Die Züge beeinflussen sich also gegenseitig — es liegt keine Bernoulli-Kette vor, und die Binomialformel ist streng genommen nicht zulässig (exakt rechnet man hier mit Baumdiagramm und Pfadregeln). Als Näherung taugt die Binomialverteilung dann, wenn die Stichprobe klein im Vergleich zur Grundgesamtheit ist — etwa 5 Brötchen aus einer Lieferung von 4000 mit gleichem Käseanteil: Dann ändert jeder Griff $p$ nur unmerklich (von $\\frac{800}{4000} = 0{,}2$ auf schlimmstenfalls $\\frac{799}{3999} \\approx 0{,}1998$), und das Modell ist praktisch exakt. Faustregel: Die Stichprobe sollte höchstens etwa 5 % der Grundgesamtheit ausmachen. Bei Mia sind es $\\frac{5}{40} = 12{,}5\\,\\%$ — die Näherung ist hier also fragwürdig.",
+      "tipps": [
+        "Gehe die Bernoulli-Bedingungen einzeln durch: zwei Ausgänge, festes n, konstantes p, Unabhängigkeit — welche kann man abhaken, welche nicht?",
+        "Berechne die Trefferwahrscheinlichkeit für Mias zweiten Griff in beiden Fällen (erster Griff Käse / kein Käse).",
+        "Vergleiche gedanklich: 5 Brötchen aus 40 — und 5 Brötchen aus 4000. Wo ändert sich p spürbar?"
+      ],
+      "loesungsweg": "Zwei Ausgänge ✓ und festes $n = 5$ ✓ — aber das Ziehen ohne Zurücklegen verletzt die Bedingung des konstanten $p$: Nach dem ersten Griff ist die Käsewahrscheinlichkeit $\\frac{7}{39}$ oder $\\frac{8}{39}$ statt $0{,}2$, die Züge sind abhängig. Keine Bernoulli-Kette, die Binomialformel ist nur eine Näherung. Brauchbar wird sie, wenn die Grundgesamtheit viel größer als die Stichprobe ist (Faustregel: Stichprobe ≤ 5 % der Grundgesamtheit), weil sich $p$ dann praktisch nicht ändert. Bei 5 aus 40 ($12{,}5\\,\\%$) ist Skepsis angebracht.",
+      "kc": [
+        "modell-beurteilen"
+      ]
+    },
+    {
+      "id": "ma-qp-bv-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Ein Glücksrad mit Gewinnwahrscheinlichkeit $p = 0{,}3$ wird $n = 100$-mal gedreht; $X$ zählt die Gewinne. Bestimme die $2\\sigma$-Umgebung des Erwartungswerts — also das Prognoseintervall der Gewinnzahlen, das bei einem intakten Rad in rund 95 % der Fälle zu erwarten ist.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne den Erwartungswert $\\mu$.",
+          "eingaben": [
+            {
+              "label": "$\\mu$",
+              "antwort": 30,
+              "toleranz": 0.001,
+              "einheit": "Gewinne"
+            }
+          ],
+          "tipps": [
+            "$\\mu = n \\cdot p = 100 \\cdot 0{,}3$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Standardabweichung $\\sigma$ (auf zwei Nachkommastellen) und prüfe nebenbei die Laplace-Bedingung.",
+          "eingaben": [
+            {
+              "label": "$\\sigma$",
+              "antwort": 4.58,
+              "toleranz": 0.01,
+              "einheit": "Gewinne"
+            }
+          ],
+          "tipps": [
+            "$\\sigma = \\sqrt{100 \\cdot 0{,}3 \\cdot 0{,}7} = \\sqrt{21}$ — und $\\sqrt{21} > 3$: Laplace-Bedingung erfüllt."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Bestimme die ganzzahligen Grenzen der $2\\sigma$-Umgebung $[\\mu - 2\\sigma;\\ \\mu + 2\\sigma]$ — also die kleinste und die größte Gewinnzahl, die noch im Intervall liegt.",
+          "eingaben": [
+            {
+              "label": "untere Grenze",
+              "antwort": 21,
+              "toleranz": 0,
+              "einheit": "Gewinne"
+            },
+            {
+              "label": "obere Grenze",
+              "antwort": 39,
+              "toleranz": 0,
+              "einheit": "Gewinne"
+            }
+          ],
+          "tipps": [
+            "$30 - 2 \\cdot 4{,}58 = 20{,}83$ und $30 + 2 \\cdot 4{,}58 = 39{,}17$ — als Gewinnzahlen zählen nur die ganzen Zahlen innerhalb des Intervalls."
+          ]
+        }
+      ],
+      "tipps": [
+        "Erst die Kenngrößen $\\mu = n p$ und $\\sigma = \\sqrt{n p (1-p)}$, dann das Intervall $\\mu \\pm 2\\sigma$.",
+        "Trefferzahlen sind ganzzahlig: Runde die untere Intervallgrenze auf, die obere ab.",
+        "Die Sigma-Regel verspricht rund $95{,}4\\,\\%$ — die exakte Binomialrechnung liefert hier $96{,}3\\,\\%$ (Kontrolle siehe CAS-Anleitung)."
+      ],
+      "loesungsweg": "Schritt 1: $\\mu = 100 \\cdot 0{,}3 = 30$. Schritt 2: $\\sigma = \\sqrt{100 \\cdot 0{,}3 \\cdot 0{,}7} = \\sqrt{21} \\approx 4{,}58$; wegen $\\sigma > 3$ ist die Laplace-Bedingung erfüllt, die Sigma-Regeln sind verlässlich. Schritt 3: $\\mu \\pm 2\\sigma$ ergibt $[20{,}83;\\ 39{,}17]$; ganzzahlig liegen die Gewinnzahlen 21 bis 39 im Intervall. Exakte Kontrolle: $P(21 \\le X \\le 39) = P(X \\le 39) - P(X \\le 20) \\approx 0{,}9790 - 0{,}0165 = 0{,}9625$ — nah an den versprochenen $95{,}4\\,\\%$. Deutung: Bei einem intakten Rad sind 21 bis 39 Gewinne „normal“; Ergebnisse außerhalb wecken berechtigte Zweifel an $p = 0{,}3$ — genau diese Idee bauen Hypothesentests aus.",
+      "kc": [
+        "sigma-umgebung",
+        "prognoseintervall"
+      ],
+      "cas": "<p>Die exakte Kontrolle des Prognoseintervalls übernimmt der ClassPad II:</p><ol><li><b>Interactive → Verteilungsfunktionen → binomialCDf</b> mit <b>x</b> = <code>39</code>, <b>n</b> = <code>100</code>, <b>p</b> = <code>0.3</code> liefert $P(X \\le 39) \\approx 0.9790$.</li><li>Erneut mit <b>x</b> = <code>20</code>: $P(X \\le 20) \\approx 0.0165$.</li><li>Die Differenz <code>binomialCDf(39,100,0.3)-binomialCDf(20,100,0.3)</code> ≈ 0.9625 zeigt: Die $2\\sigma$-Umgebung fängt rund 96 % der Fälle ein.</li></ol><p>Auch hier: $p$ mit Dezimal<b>punkt</b> als <code>0.3</code> eingeben — und das CAS ersetzt die Formel-Begründung ($\\mu$, $\\sigma$, Laplace-Bedingung, Intervallgrenzen) nicht, es bestätigt sie nur.</p>"
+    },
+    {
+      "id": "ma-qp-bv-013",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Wie verändern sich Histogramm und Kenngrößen einer Binomialverteilung, wenn man die Parameter $n$ und $p$ variiert? Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Für $p = 0{,}5$ ist das Histogramm symmetrisch: Die Säulen zu $k$ und $n - k$ sind gleich hoch.",
+          "richtig": true,
+          "erklaerung": "Richtig: Wegen $\\binom{n}{k} = \\binom{n}{n-k}$ und $0{,}5^k \\cdot 0{,}5^{n-k} = 0{,}5^n$ liefert die Formel von Bernoulli für $k$ und $n - k$ exakt denselben Wert."
+        },
+        {
+          "text": "Vervierfacht man $n$ bei festem $p$, so verdoppelt sich die Standardabweichung $\\sigma$.",
+          "richtig": true,
+          "erklaerung": "Richtig: $\\sigma = \\sqrt{n p (1-p)}$ wächst mit $\\sqrt{n}$ — aus $n$ wird $4n$, aus $\\sigma$ also $\\sqrt{4} \\cdot \\sigma = 2\\sigma$."
+        },
+        {
+          "text": "Der Erwartungswert liegt unabhängig von $p$ immer in der Mitte bei $\\frac{n}{2}$.",
+          "richtig": false,
+          "erklaerung": "$\\mu = n \\cdot p$ hängt direkt von $p$ ab: Bei $n = 10$ und $p = 0{,}3$ liegt der Gipfel des Histogramms bei 3, nicht bei 5. Nur für $p = 0{,}5$ trifft $\\frac{n}{2}$ zu."
+        },
+        {
+          "text": "Wächst $n$ bei festem $p$, streuen die Trefferzahlen auch relativ zur Versuchszahl immer stärker.",
+          "richtig": false,
+          "erklaerung": "Genau umgekehrt: Der relative Anteil $\\frac{X}{n}$ hat die Streuung $\\frac{\\sigma}{n} = \\sqrt{\\frac{p(1-p)}{n}}$, und die wird mit wachsendem $n$ immer kleiner — deshalb sind große Stichproben so verlässlich."
+        }
+      ],
+      "tipps": [
+        "Für die Symmetrie: Vergleiche in der Formel von Bernoulli die Terme zu $k$ und $n - k$ — was passiert bei $p = 0{,}5$ mit den Potenzen?",
+        "In der Formel $\\sigma = \\sqrt{n p (1-p)}$ steckt $n$ unter der Wurzel — welcher Faktor entsteht beim Vervierfachen?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Zu 1: Bei $p = 0{,}5$ haben alle Pfade die gleiche Wahrscheinlichkeit $0{,}5^n$, und wegen $\\binom{n}{k} = \\binom{n}{n-k}$ sind die Säulen zu $k$ und $n - k$ gleich hoch — das Histogramm ist symmetrisch zur Mitte. Zu 2: $\\sigma = \\sqrt{n p (1-p)}$ wächst nur mit $\\sqrt{n}$; Vervierfachen von $n$ verdoppelt $\\sigma$. Aussage 3 ist falsch, weil $\\mu = n p$ den Gipfel je nach $p$ verschiebt (für $p < 0{,}5$ nach links, für $p > 0{,}5$ nach rechts). Aussage 4 verwechselt absolute und relative Streuung: Absolut wird das Histogramm breiter, aber der Anteil $\\frac{X}{n}$ streut mit $\\sqrt{\\frac{p(1-p)}{n}}$ immer weniger — die Grundlage dafür, dass Prognosen und später Hypothesentests bei großem $n$ so scharf werden.",
+      "kc": [
+        "histogramm-deuten"
+      ]
+    }
+  ]
+}

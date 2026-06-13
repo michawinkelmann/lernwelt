@@ -1,0 +1,579 @@
+{
+  "thema": "ma-qp-integralanwendungen",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-int-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über bestimmte Integrale und Flächeninhalte sind richtig?",
+      "optionen": [
+        {
+          "text": "Verläuft der Graph von $f$ auf $[a; b]$ oberhalb der x-Achse, stimmt $\\int_a^b f(x)\\,dx$ mit dem Inhalt der Fläche zwischen Graph und x-Achse überein.",
+          "richtig": true,
+          "erklaerung": "Richtig: Für $f(x) \\ge 0$ misst das Integral genau diese Fläche — angegeben in Flächeneinheiten."
+        },
+        {
+          "text": "Verläuft der Graph auf dem ganzen Intervall unterhalb der x-Achse, liefert das Integral einen negativen Wert.",
+          "richtig": true,
+          "erklaerung": "Richtig: Das Integral zählt orientiert — Flächen unterhalb der x-Achse gehen mit Minuszeichen in die Bilanz ein."
+        },
+        {
+          "text": "Ein bestimmtes Integral ist nie negativ.",
+          "richtig": false,
+          "erklaerung": "Doch — sobald unterhalb der x-Achse mehr orientierte Fläche zusammenkommt als oberhalb, zum Beispiel $\\int_0^1 (x - 1)\\,dx = -\\frac{1}{2}$."
+        },
+        {
+          "text": "Den Flächeninhalt zwischen Graph und x-Achse erhält man immer, indem man einfach von $a$ bis $b$ integriert.",
+          "richtig": false,
+          "erklaerung": "Nur, wenn $f$ im Intervall das Vorzeichen nicht wechselt! Sonst heben sich Teilflächen gegenseitig auf — erst an den Nullstellen aufteilen, dann die Beträge addieren."
+        }
+      ],
+      "tipps": [
+        "Das Integral misst Flächen orientiert: oberhalb der x-Achse positiv, unterhalb negativ.",
+        "Überlege, was passiert, wenn der Graph im Intervall die x-Achse kreuzt — positive und negative Anteile mischen sich.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Für $f(x) \\ge 0$ ist das Integral der Flächeninhalt, und unterhalb der x-Achse zählt das Integral negativ. Deshalb können bestimmte Integrale sehr wohl negativ sein (Aussage 3 ist falsch). Bei einem Vorzeichenwechsel im Intervall heben sich Teilflächen in der Bilanz teilweise auf — für den Flächeninhalt muss man an den Nullstellen aufteilen und die Beträge der Teilintegrale addieren (Aussage 4 ist falsch).",
+      "kc": [
+        "integral-und-flaeche"
+      ]
+    },
+    {
+      "id": "ma-qp-int-002",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Berechne mit dem Hauptsatz: a) den Inhalt der Fläche zwischen dem Graphen von $f(x) = x^2$ und der x-Achse über $[0; 3]$, b) das bestimmte Integral $\\int_1^4 (2x + 1)\\,dx$.",
+      "eingaben": [
+        {
+          "label": "a) Flächeninhalt",
+          "antwort": 9,
+          "toleranz": 0.01,
+          "einheit": "FE"
+        },
+        {
+          "label": "b) Integralwert",
+          "antwort": 18,
+          "toleranz": 0.01,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "a) $f(x) = x^2$ ist auf $[0; 3]$ nirgends negativ — Fläche und Integral stimmen überein. Stammfunktion: $F(x) = \\frac{1}{3}x^3$.",
+        "a) $F(3) - F(0) = \\frac{27}{3} - 0$.",
+        "b) Eine Stammfunktion ist $G(x) = x^2 + x$ — Grenzen einsetzen: $G(4) - G(1)$."
+      ],
+      "loesungsweg": "a) $\\int_0^3 x^2\\,dx = \\left[\\frac{1}{3}x^3\\right]_0^3 = 9 - 0 = 9$. Da der Graph oberhalb der x-Achse verläuft, ist das zugleich der Flächeninhalt: $9\\ \\text{FE}$. b) $\\int_1^4 (2x + 1)\\,dx = \\left[x^2 + x\\right]_1^4 = 20 - 2 = 18$.",
+      "kc": [
+        "hauptsatz-anwenden"
+      ]
+    },
+    {
+      "id": "ma-qp-int-003",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bestimme Schritt für Schritt den Inhalt der Fläche, die der Graph von $f(x) = x^3$ auf dem Intervall $[-1; 2]$ mit der x-Achse einschließt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Bestimme die Nullstelle von $f$ im Inneren des Intervalls.",
+          "eingaben": [
+            {
+              "label": "Nullstelle $x_0$",
+              "antwort": 0,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$x^3 = 0$ lösen — dort wechselt der Graph die Seite der x-Achse."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne das Teilintegral $\\int_{-1}^{0} x^3\\,dx$.",
+          "eingaben": [
+            {
+              "label": "Teilintegral links",
+              "antwort": -0.25,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Stammfunktion $F(x) = \\frac{1}{4}x^4$: $F(0) - F(-1) = 0 - \\frac{1}{4}$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne das Teilintegral $\\int_{0}^{2} x^3\\,dx$.",
+          "eingaben": [
+            {
+              "label": "Teilintegral rechts",
+              "antwort": 4,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$F(2) - F(0) = \\frac{16}{4} - 0$."
+          ]
+        },
+        {
+          "frage": "Schritt 4: Gib den gesamten Flächeninhalt an.",
+          "eingaben": [
+            {
+              "label": "Fläche $A$",
+              "antwort": 4.25,
+              "toleranz": 0.001,
+              "einheit": "FE"
+            }
+          ],
+          "tipps": [
+            "Beträge addieren: $\\left|-\\frac{1}{4}\\right| + 4$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Auf $[-1; 0]$ verläuft der Graph unterhalb, auf $[0; 2]$ oberhalb der x-Achse — das Integral muss an der Nullstelle aufgeteilt werden.",
+        "Stammfunktion von $x^3$ ist $F(x) = \\frac{1}{4}x^4$. Achtung beim Einsetzen: $(-1)^4 = +1$.",
+        "Der Flächeninhalt ist die Summe der Beträge der Teilintegrale: $\\frac{1}{4} + 4 = 4{,}25$."
+      ],
+      "loesungsweg": "Nullstelle im Intervall: $x_0 = 0$ (dort wechselt $f$ das Vorzeichen). Teilintegrale mit $F(x) = \\frac{1}{4}x^4$: $\\int_{-1}^0 x^3\\,dx = 0 - \\frac{1}{4} = -\\frac{1}{4}$ (Fläche unterhalb der Achse) und $\\int_0^2 x^3\\,dx = 4 - 0 = 4$. Flächeninhalt: $A = \\left|-\\frac{1}{4}\\right| + 4 = 4{,}25\\ \\text{FE}$. Wer dagegen direkt $\\int_{-1}^2 x^3\\,dx = 3{,}75$ rechnet, erhält nur die Bilanz — nicht die Fläche.",
+      "kc": [
+        "flaeche-mit-vorzeichen"
+      ]
+    },
+    {
+      "id": "ma-qp-int-004",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zur Flächenberechnung zwischen zwei Graphen.",
+      "text": "Um die Fläche zwischen den Graphen von f und g zu berechnen, bestimmt man zuerst durch Gleichsetzen die ___ beider Graphen. Zwischen zwei benachbarten dieser Stellen integriert man die Differenz ___. Das Ergebnis ist auch dann der Flächeninhalt, wenn die Fläche unterhalb der ___ liegt. Fällt das Integral negativ aus, war g die obere Funktion — dann nimmt man den ___.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Schnittstellen",
+          "optionen": [
+            "Schnittstellen",
+            "Nullstellen",
+            "Extremstellen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "obere minus untere Funktion",
+          "optionen": [
+            "obere minus untere Funktion",
+            "untere minus obere Funktion",
+            "beider Ableitungen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "x-Achse",
+          "optionen": [
+            "x-Achse",
+            "y-Achse",
+            "Winkelhalbierenden"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Betrag",
+          "optionen": [
+            "Betrag",
+            "Kehrwert",
+            "Mittelwert"
+          ]
+        }
+      ],
+      "tipps": [
+        "Die Integrationsgrenzen sind die Stellen, an denen sich die beiden Graphen schneiden: f(x) = g(x).",
+        "Der Höhenunterschied f(x) − g(x) soll positiv sein — welche Funktion gehört nach vorn?",
+        "Die Differenz bleibt gleich, wenn man beide Graphen gemeinsam verschiebt — die Lage zur x-Achse spielt deshalb keine Rolle."
+      ],
+      "loesungsweg": "Schnittstellen — obere minus untere Funktion — x-Achse — Betrag: Erst $f(x) = g(x)$ lösen; zwischen benachbarten Schnittstellen die Differenz „obere minus untere Funktion“ integrieren. Weil nur der Höhenunterschied zählt, darf die Fläche auch unterhalb der x-Achse liegen. Ein negatives Ergebnis zeigt vertauschte Rollen an — der Betrag liefert den Flächeninhalt.",
+      "kc": [
+        "flaeche-zwischen-graphen"
+      ]
+    },
+    {
+      "id": "ma-qp-int-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Gegeben sind $f(x) = 4 - x^2$ und $g(x) = x + 2$. Bestimme die Schnittstellen der beiden Graphen und den Inhalt der eingeschlossenen Fläche.",
+      "eingaben": [
+        {
+          "label": "kleinere Schnittstelle $x_1$",
+          "antwort": -2,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "größere Schnittstelle $x_2$",
+          "antwort": 1,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "Fläche $A$",
+          "antwort": 4.5,
+          "toleranz": 0.01,
+          "einheit": "FE"
+        }
+      ],
+      "tipps": [
+        "Gleichsetzen: $4 - x^2 = x + 2$ führt auf $x^2 + x - 2 = 0$ — p-q-Formel.",
+        "Differenzfunktion bilden: $f(x) - g(x) = 2 - x - x^2$ (zwischen den Schnittstellen liegt die Parabel oben).",
+        "$\\int_{-2}^{1} (2 - x - x^2)\\,dx = \\left[2x - \\frac{1}{2}x^2 - \\frac{1}{3}x^3\\right]_{-2}^{1}$ — beide Grenzen sorgfältig einsetzen."
+      ],
+      "loesungsweg": "Gleichsetzen: $4 - x^2 = x + 2 \\Leftrightarrow x^2 + x - 2 = 0$, mit der p-q-Formel $x_{1,2} = -\\frac{1}{2} \\pm \\frac{3}{2}$, also $x_1 = -2$ und $x_2 = 1$. Differenzfunktion (Parabel oben): $f(x) - g(x) = 2 - x - x^2$. Integral: $\\left[2x - \\frac{1}{2}x^2 - \\frac{1}{3}x^3\\right]_{-2}^{1} = \\frac{7}{6} - \\left(-\\frac{10}{3}\\right) = \\frac{27}{6} = 4{,}5$. Die eingeschlossene Fläche misst $4{,}5\\ \\text{FE}$.",
+      "kc": [
+        "flaeche-zwischen-graphen"
+      ],
+      "cas": "<p>So löst du die Aufgabe mit dem ClassPad II:</p><ol><li>Schnittstellen: im <b>Main</b>-Menü <code>solve(4-x^2=x+2,x)</code> eingeben und mit <b>EXE</b> bestätigen — liefert x = −2 und x = 1.</li><li>Fläche: Software-Tastatur <b>Math2</b>, das ∫-Template mit Grenzen wählen; untere Grenze −2, obere Grenze 1, Term <code>4-x^2-(x+2)</code> — EXE liefert 9/2.</li><li>Grafisch prüfen: im Menü <b>Grafik &amp; Tabelle</b> beide Funktionen als y1 und y2 eintragen, zeichnen und mit <b>Analyse → G-Solve → Schnittpunkt</b> die Schnittpunkte bestimmen (mit der Pfeiltaste rechts zum zweiten Schnittpunkt wechseln).</li></ol><p>Wichtig in Klausuren: CAS-Ergebnisse ersetzen den dokumentierten Rechenweg nicht — nutze sie zur Kontrolle.</p>"
+    },
+    {
+      "id": "ma-qp-int-006",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Integrale im Sachkontext: Ordne jedem Integral seine Bedeutung zu — die Einheiten verraten es.",
+      "paare": [
+        {
+          "links": "∫ v(t) dt mit v in m/s, t in s",
+          "rechts": "zurückgelegte Strecke in m"
+        },
+        {
+          "links": "∫ z(t) dt mit z in L/min, t in min",
+          "rechts": "zugeflossene Wassermenge in L"
+        },
+        {
+          "links": "∫ P(t) dt mit P in W = J/s, t in s",
+          "rechts": "umgesetzte Energie in J"
+        },
+        {
+          "links": "1/(b−a) · ∫ f(x) dx über [a; b]",
+          "rechts": "Mittelwert von f auf [a; b]"
+        }
+      ],
+      "tipps": [
+        "Einheit des Integrals = Einheit der Funktionswerte mal Einheit der Variablen — wie Höhe mal Breite beim Rechteck.",
+        "m/s mal s ergibt m; L/min mal min ergibt L; J/s mal s ergibt J.",
+        "Der Vorfaktor 1/(b−a) teilt die Fläche durch die Intervalllänge — welche Größe entsteht dabei?"
+      ],
+      "loesungsweg": "Integriert wird stets „Rate mal Zeit“: Geschwindigkeit in $\\frac{\\text{m}}{\\text{s}}$ liefert die Strecke in m, eine Zuflussrate in $\\frac{\\text{L}}{\\text{min}}$ die Wassermenge in L, Leistung in $\\frac{\\text{J}}{\\text{s}}$ die Energie in J. Das Integral mit dem Vorfaktor $\\frac{1}{b-a}$ ist der Mittelwert von $f$ auf $[a; b]$ — die eingeebnete Rechteckhöhe statt der Fläche.",
+      "kc": [
+        "bestand-rekonstruieren",
+        "einheiten-im-sachkontext"
+      ]
+    },
+    {
+      "id": "ma-qp-int-007",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "In einem Regenrückhaltebecken stehen zu Beginn eines Unwetters $10\\,\\text{m}^3$ Wasser. Während des Unwetters fließt Wasser mit der Rate $z(t) = 24 - 4t$ zu ($z$ in $\\frac{\\text{m}^3}{\\text{h}}$, $t$ in Stunden, $0 \\le t \\le 6$). Bestimme schrittweise die Wassermenge am Ende des Zuflusses.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Nach wie vielen Stunden versiegt der Zufluss, d. h. wann gilt $z(t) = 0$?",
+          "eingaben": [
+            {
+              "label": "Zeitpunkt",
+              "antwort": 6,
+              "toleranz": 0,
+              "einheit": "h"
+            }
+          ],
+          "tipps": [
+            "$24 - 4t = 0$ nach $t$ auflösen."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die insgesamt zugeflossene Wassermenge $\\int_0^6 (24 - 4t)\\,dt$.",
+          "eingaben": [
+            {
+              "label": "zugeflossene Menge",
+              "antwort": 72,
+              "toleranz": 0.1,
+              "einheit": "m³"
+            }
+          ],
+          "tipps": [
+            "Stammfunktion: $Z(t) = 24t - 2t^2$; dann $Z(6) - Z(0)$ berechnen."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Bestimme die Wassermenge im Becken am Ende des Zuflusses.",
+          "eingaben": [
+            {
+              "label": "Gesamtmenge",
+              "antwort": 82,
+              "toleranz": 0.1,
+              "einheit": "m³"
+            }
+          ],
+          "tipps": [
+            "Anfangsbestand nicht vergessen: $10 + 72$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Das Integral über die Zuflussrate liefert die Änderung des Bestands — in $\\frac{\\text{m}^3}{\\text{h}} \\cdot \\text{h} = \\text{m}^3$.",
+        "Eine Stammfunktion von $24 - 4t$ ist $24t - 2t^2$.",
+        "Endbestand = Anfangsbestand + zugeflossene Menge."
+      ],
+      "loesungsweg": "Der Zufluss versiegt für $24 - 4t = 0$, also bei $t = 6\\,\\text{h}$. Zugeflossene Menge: $\\int_0^6 (24 - 4t)\\,dt = \\left[24t - 2t^2\\right]_0^6 = 144 - 72 = 72\\,\\text{m}^3$. Mit dem Anfangsbestand: $10 + 72 = 82\\,\\text{m}^3$. Einheitenkontrolle: $\\frac{\\text{m}^3}{\\text{h}} \\cdot \\text{h} = \\text{m}^3$ — das Integral ist tatsächlich eine Wassermenge.",
+      "kc": [
+        "bestand-rekonstruieren"
+      ]
+    },
+    {
+      "id": "ma-qp-int-008",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bringe die Schritte zur Berechnung der Fläche zwischen zwei Graphen in die richtige Reihenfolge.",
+      "elemente": [
+        "Schnittstellen bestimmen: $f(x) = g(x)$ lösen",
+        "Differenzfunktion $d(x) = f(x) - g(x)$ aufstellen",
+        "Stammfunktion $D$ der Differenzfunktion bilden",
+        "$D$ an den Schnittstellen auswerten: $D(b) - D(a)$",
+        "Bei negativem Ergebnis den Betrag nehmen und das Ergebnis in FE angeben"
+      ],
+      "tipps": [
+        "Ohne Integrationsgrenzen kein Integral — welcher Schritt liefert die Grenzen?",
+        "Integriert wird nicht $f$ und $g$ einzeln, sondern ihre Differenz.",
+        "Der Betrag ist die letzte Absicherung, falls versehentlich die untere Funktion vorne stand."
+      ],
+      "loesungsweg": "Zuerst liefern die Schnittstellen ($f(x) = g(x)$) die Integrationsgrenzen. Dann wird die Differenzfunktion $d = f - g$ aufgestellt, ihre Stammfunktion $D$ gebildet und an den Grenzen ausgewertet: $D(b) - D(a)$. Ein negatives Ergebnis bedeutet nur, dass $g$ oben lag — der Betrag ist der gesuchte Flächeninhalt in FE.",
+      "kc": [
+        "flaeche-zwischen-graphen"
+      ]
+    },
+    {
+      "id": "ma-qp-int-009",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Regionalzug bremst mit konstanter Verzögerung; seine Geschwindigkeit wird beschrieben durch $v(t) = 30 - 2t$ ($v$ in $\\frac{\\text{m}}{\\text{s}}$, $t$ in Sekunden seit Bremsbeginn). a) Nach welcher Zeit steht der Zug? b) Wie lang ist der Bremsweg?",
+      "eingaben": [
+        {
+          "label": "a) Zeit bis zum Stillstand",
+          "antwort": 15,
+          "toleranz": 0.1,
+          "einheit": "s"
+        },
+        {
+          "label": "b) Bremsweg",
+          "antwort": 225,
+          "toleranz": 0.5,
+          "einheit": "m"
+        }
+      ],
+      "tipps": [
+        "a) Stillstand heißt $v(t) = 0$.",
+        "b) Der Weg ist das Integral der Geschwindigkeit: $\\int_0^{15} (30 - 2t)\\,dt$ — Einheitenkontrolle: $\\frac{\\text{m}}{\\text{s}} \\cdot \\text{s} = \\text{m}$.",
+        "Stammfunktion: $s(t) = 30t - t^2$; dann $s(15) - s(0)$."
+      ],
+      "loesungsweg": "a) $30 - 2t = 0$ liefert $t = 15\\,\\text{s}$. b) $\\int_0^{15} (30 - 2t)\\,dt = \\left[30t - t^2\\right]_0^{15} = 450 - 225 = 225\\,\\text{m}$. Der Zug rollt also noch $225\\,\\text{m}$ weit. Anschaulich: Die Fläche unter dem Geschwindigkeitsgraphen ist ein Dreieck mit Grundseite $15\\,\\text{s}$ und Höhe $30\\,\\frac{\\text{m}}{\\text{s}}$, also $\\frac{1}{2} \\cdot 15 \\cdot 30 = 225$.",
+      "kc": [
+        "bestand-rekonstruieren"
+      ],
+      "cas": "<p>Kontrolle mit dem ClassPad II:</p><ol><li>Software-Tastatur <b>Math2</b>, das ∫-Template mit Grenzen wählen.</li><li>Untere Grenze 0, obere Grenze 15, Term <code>30-2t</code>, Integrationsvariable <code>t</code> — <b>EXE</b> liefert 225.</li><li>Den Zeitpunkt des Stillstands bestätigt <code>solve(30-2t=0,t)</code> im <b>Main</b>-Menü.</li></ol>"
+    },
+    {
+      "id": "ma-qp-int-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "An einem Frühlingstag wird die Temperatur zwischen 8 und 20 Uhr modelliert durch $T(t) = -\\frac{1}{2}t^2 + 6t + 5$ ($T$ in $^\\circ\\text{C}$, $t$ in Stunden seit 8 Uhr, $0 \\le t \\le 12$). Berechne $\\int_0^{12} T(t)\\,dt$ und daraus die Durchschnittstemperatur in diesem Zeitraum.",
+      "eingaben": [
+        {
+          "label": "Integralwert",
+          "antwort": 204,
+          "toleranz": 0.5,
+          "einheit": ""
+        },
+        {
+          "label": "Durchschnittstemperatur",
+          "antwort": 17,
+          "toleranz": 0.1,
+          "einheit": "°C"
+        }
+      ],
+      "tipps": [
+        "Stammfunktion summandenweise: $-\\frac{1}{2}t^2 \\to -\\frac{1}{6}t^3$, $\\;6t \\to 3t^2$, $\\;5 \\to 5t$.",
+        "$\\left[-\\frac{1}{6}t^3 + 3t^2 + 5t\\right]_0^{12} = -288 + 432 + 60$.",
+        "Mittelwert: den Integralwert durch die Intervalllänge $12$ teilen."
+      ],
+      "loesungsweg": "$\\int_0^{12} T(t)\\,dt = \\left[-\\frac{1}{6}t^3 + 3t^2 + 5t\\right]_0^{12} = -288 + 432 + 60 = 204$. Mittelwert: $\\bar{m} = \\frac{1}{12} \\cdot 204 = 17\\,^\\circ\\text{C}$. Anschaulich: Ein Rechteck der Höhe $17$ über dem 12-Stunden-Intervall hat denselben Flächeninhalt wie die Fläche unter der Temperaturkurve.",
+      "kc": [
+        "mittelwert-einer-funktion"
+      ]
+    },
+    {
+      "id": "ma-qp-int-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Pumpspeicherwerk: $r(t)$ beschreibt den Wasserstrom in das Oberbecken ($r$ in $\\frac{\\text{m}^3}{\\text{h}}$, $t$ in Stunden seit Mitternacht; $r(t) > 0$ bedeutet Zufluss durch Hochpumpen, $r(t) < 0$ Abfluss durch die Turbinen). Für einen Tag gilt $\\int_0^{24} r(t)\\,dt = 0$. Mia folgert: „Dann ist an diesem Tag gar kein Wasser geflossen.“ Beurteile Mias Aussage und erkläre, was der Integralwert $0$ tatsächlich über das Becken aussagt. Beschreibe außerdem, wie man mit dem Anfangsbestand $B_0 = 4000\\,\\text{m}^3$ die Wassermenge um 12 Uhr bestimmen könnte.",
+      "musterloesung": "Mias Schluss ist falsch. Das Integral bildet die Bilanz aus Zu- und Abfluss: Zeiten mit $r(t) > 0$ (Hochpumpen) gehen positiv ein, Zeiten mit $r(t) < 0$ (Turbinenbetrieb) negativ. Der Wert $0$ bedeutet nur, dass sich beides über den Tag genau ausgleicht — es wurde insgesamt so viel Wasser hochgepumpt, wie durch die Turbinen abgeflossen ist. Dabei kann sehr viel Wasser bewegt worden sein; nur die Bilanz ist null. Am Graphen von $r$: Die Flächen oberhalb und unterhalb der t-Achse sind zusammengenommen gleich groß. Die Wassermenge um 12 Uhr erhält man als Anfangsbestand plus aufgelaufene Änderung: $B(12) = 4000 + \\int_0^{12} r(t)\\,dt$ — also das Integral von 0 bis 12 Uhr (orientierte Flächen bis dahin) zum Anfangsbestand addieren.",
+      "tipps": [
+        "Das Integral zählt orientiert: Flächen oberhalb der t-Achse positiv, unterhalb negativ.",
+        "„Bilanz null“ heißt nicht Stillstand — was muss sich über den Tag hinweg ausgleichen?",
+        "Bestand zu einem Zeitpunkt: Anfangsbestand plus Integral der Rate bis zu diesem Zeitpunkt."
+      ],
+      "loesungsweg": "Der Integralwert $0$ ist eine Bilanz: Die hochgepumpte Menge (Flächen oberhalb der Achse) und die abgeflossene Menge (Flächen unterhalb) gleichen sich über den Tag exakt aus — geflossen ist trotzdem fortwährend Wasser. Mias Aussage verwechselt „Bilanz null“ mit „kein Fluss“. Wassermenge um 12 Uhr: $B(12) = 4000 + \\int_0^{12} r(t)\\,dt$.",
+      "kc": [
+        "integral-interpretieren"
+      ]
+    },
+    {
+      "id": "ma-qp-int-012",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Uneigentliche Integrale (erhöhtes Anforderungsniveau). Untersuche die ins Unendliche reichende Fläche unter $f(x) = \\frac{1}{x^2}$ ab $x = 1$: Berechne $\\int_1^b \\frac{1}{x^2}\\,dx$ für $b = 10$ und $b = 100$, gib den Grenzwert $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ an — und anschließend auch $\\int_2^{\\infty} \\frac{1}{x^2}\\,dx$.",
+      "eingaben": [
+        {
+          "label": "Integral bis $b = 10$",
+          "antwort": 0.9,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "Integral bis $b = 100$",
+          "antwort": 0.99,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "Grenzwert ab $x = 1$",
+          "antwort": 1,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "Grenzwert ab $x = 2$",
+          "antwort": 0.5,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Stammfunktion mit der Potenzregel: $\\frac{1}{x^2} = x^{-2}$ hat die Stammfunktion $F(x) = -x^{-1} = -\\frac{1}{x}$.",
+        "$\\int_1^b \\frac{1}{x^2}\\,dx = F(b) - F(1) = 1 - \\frac{1}{b}$ — jetzt $b = 10$ bzw. $b = 100$ einsetzen.",
+        "Für $b \\to \\infty$ verschwindet $\\frac{1}{b}$. Ab der Grenze $2$: $\\int_2^b \\frac{1}{x^2}\\,dx = \\frac{1}{2} - \\frac{1}{b}$."
+      ],
+      "loesungsweg": "Mit $F(x) = -\\frac{1}{x}$ gilt $\\int_1^b \\frac{1}{x^2}\\,dx = -\\frac{1}{b} + 1 = 1 - \\frac{1}{b}$. Für $b = 10$ ergibt das $0{,}9$, für $b = 100$ schon $0{,}99$. Für $b \\to \\infty$ strebt $\\frac{1}{b}$ gegen $0$: $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx = 1$ — die unendlich lange Fläche hat den endlichen Inhalt $1\\ \\text{FE}$. Analog gilt $\\int_2^{\\infty} \\frac{1}{x^2}\\,dx = \\lim\\limits_{b \\to \\infty} \\left(\\frac{1}{2} - \\frac{1}{b}\\right) = \\frac{1}{2}$.",
+      "kc": [
+        "uneigentliches-integral"
+      ],
+      "cas": "<p>Der ClassPad II beherrscht uneigentliche Integrale direkt:</p><ol><li>Software-Tastatur <b>Math2</b>, das ∫-Template mit Grenzen wählen; Term <code>1/x^2</code>, untere Grenze 1.</li><li>Als obere Grenze das Unendlich-Zeichen <b>∞</b> eintragen (ebenfalls auf der Math2-Tastatur) — <b>EXE</b> liefert exakt 1.</li><li>Mit unterer Grenze 2 ergibt sich 1/2. Vergleiche mit deiner Grenzwert-Rechnung über $1 - \\frac{1}{b}$.</li></ol>"
+    },
+    {
+      "id": "ma-qp-int-013",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 2,
+      "frage": "Zusatz: Rotationsvolumen (erhöhtes Anforderungsniveau). Das Innenprofil einer Sektschale wird durch $f(x) = \\sqrt{x}$ auf $[0; 4]$ beschrieben; der Graph rotiert um die x-Achse ($1$ Längeneinheit $= 1\\,\\text{cm}$). Berechne das Volumen $V = \\pi \\int_0^4 (f(x))^2\\,dx$ schrittweise.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Vereinfache den Integranden $(f(x))^2$ und gib seinen Wert an der Stelle $x = 4$ an.",
+          "eingaben": [
+            {
+              "label": "$(f(4))^2$",
+              "antwort": 4,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$(\\sqrt{x})^2 = x$ — Wurzel und Quadrat heben sich auf."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne $\\int_0^4 (f(x))^2\\,dx = \\int_0^4 x\\,dx$.",
+          "eingaben": [
+            {
+              "label": "Integralwert",
+              "antwort": 8,
+              "toleranz": 0.01,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Stammfunktion $\\frac{1}{2}x^2$: $\\frac{16}{2} - 0$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Bestimme das Volumen $V = \\pi \\cdot 8$ (auf zwei Dezimalen gerundet).",
+          "eingaben": [
+            {
+              "label": "$V$",
+              "antwort": 25.13,
+              "toleranz": 0.05,
+              "einheit": "cm³"
+            }
+          ],
+          "tipps": [
+            "$8\\pi \\approx 25{,}13$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Rotationsvolumen: $V = \\pi \\int_a^b (f(x))^2\\,dx$ — erst den Integranden quadrieren, dann integrieren.",
+        "Das Quadrieren macht die Wurzel harmlos: $(\\sqrt{x})^2 = x$.",
+        "$\\int_0^4 x\\,dx = 8$, also $V = 8\\pi\\,\\text{cm}^3 \\approx 25{,}13\\,\\text{cm}^3$."
+      ],
+      "loesungsweg": "Integrand: $(\\sqrt{x})^2 = x$. Integral: $\\int_0^4 x\\,dx = \\left[\\frac{1}{2}x^2\\right]_0^4 = 8$. Volumen: $V = \\pi \\cdot 8 = 8\\pi\\,\\text{cm}^3 \\approx 25{,}13\\,\\text{cm}^3$ — gut $25\\,\\text{mL}$ Fassungsvermögen. Die Scheibenformel funktioniert für jedes Profil: Der Körper besteht gedanklich aus hauchdünnen Kreisscheiben mit Radius $f(x)$ und Querschnittsfläche $\\pi \\cdot (f(x))^2$.",
+      "kc": [
+        "rotationskoerper"
+      ]
+    }
+  ]
+}

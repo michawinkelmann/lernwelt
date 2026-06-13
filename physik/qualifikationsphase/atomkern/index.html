@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atomkern und Radioaktivität — Qualifikationsphase · Physik — Lernwelt</title>
+<meta name="description" content="Atomkern und Radioaktivität quantitativ: Nuklidschreibweise, Kernumwandlungen mit Erhaltungssätzen, Zerfallsgesetz mit e-Funktion, Halbwertszeit, C-14-Altersbestimmung und Massendefekt — mit Beispielrechnungen und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Atomkern und Radioaktivität</h1>
+  <p class="einleitung">Als 1991 die Gletschermumie <strong>Ötzi</strong> gefunden wurde, stand ihr Alter schon nach wenigen Wochen fest: rund 5300 Jahre — gemessen am restlichen Kohlenstoff-14 in Knochen und Gewebe. Dass aus dem Zufallsprozess „radioaktiver Zerfall“ eine so präzise Uhr wird, ist das Thema dieser Seite. Was Strahlenarten qualitativ bedeuten und wie man sich schützt, behandelt die Seite <a href="../../klasse-10/atom-und-kernphysik/index.html">Atom- und Kernphysik (Klasse 10)</a> — hier wird daraus quantitative Physik: Kernumwandlungen mit Erhaltungssätzen, das Zerfallsgesetz mit der e-Funktion, Altersbestimmung mit C-14 und (eA) der Massendefekt als Schlüssel zur Kernenergie.</p>
+
+  <section aria-labelledby="ak-kern">
+    <h2 id="ak-kern">1. Der Atomkern</h2>
+    <p>Der Kern eines Atoms besteht aus <strong>Nukleonen</strong>: positiv geladenen <strong>Protonen</strong> und elektrisch neutralen <strong>Neutronen</strong>. Die <strong>Protonenzahl</strong> (Kernladungszahl) $Z$ legt fest, um welches Element es sich handelt; zusammen mit der Neutronenzahl $N$ ergibt sie die <strong>Massenzahl</strong> $A = Z + N$. In der <strong>Nuklidschreibweise</strong> $^{A}_{Z}X$ stehen beide Zahlen am Elementsymbol: $^{4}_{2}\text{He}$ ist ein Heliumkern aus 2 Protonen und 2 Neutronen, $^{226}_{\,88}\text{Ra}$ ein Radiumkern mit 88 Protonen und $226 - 88 = 138$ Neutronen.</p>
+    <p>Kerne mit gleicher Protonen-, aber verschiedener Neutronenzahl heißen <strong>Isotope</strong> desselben Elements. Wasserstoff kommt als $^{1}_{1}\text{H}$, $^{2}_{1}\text{H}$ (Deuterium) und $^{3}_{1}\text{H}$ (Tritium) vor; Kohlenstoff vor allem als stabiles $^{12}_{\,6}\text{C}$ und in winzigen Spuren als radioaktives $^{14}_{\,6}\text{C}$; Uran als $^{235}_{\,92}\text{U}$ und $^{238}_{\,92}\text{U}$. Chemisch verhalten sich Isotope praktisch gleich — die Hülle hat ja dieselbe Elektronenzahl. Genau das macht C-14 später so nützlich: Der Körper baut es genauso ein wie C-12.</p>
+    <p>Dass Kerne überhaupt zusammenhalten, ist erklärungsbedürftig: Die Protonen stoßen sich durch die <strong>Coulomb-Kraft</strong> gegenseitig ab, und das auf Abständen von Femtometern enorm stark. Dagegen hält die <strong>starke Kernkraft</strong>: Sie wirkt anziehend zwischen allen Nukleonen, ist auf kurze Distanz weit stärker als die elektrische Abstoßung — reicht aber nur etwa von einem Nukleon zum nächsten. Die Coulomb-Abstoßung dagegen wirkt quer durch den ganzen Kern. Schwere Kerne brauchen deshalb einen wachsenden <strong>Neutronenüberschuss</strong>: Neutronen liefern zusätzlichen Zusammenhalt, ohne sich abzustoßen. Ab etwa 84 Protonen — jenseits von Bismut — verliert die Kernkraft den Wettkampf endgültig: Alle so schweren Nuklide sind instabil, sie wandeln sich früher oder später um — sie sind <strong>radioaktiv</strong>.</p>
+    <p>Zur Größenordnung: Ein Kernradius liegt bei wenigen <strong>Femtometern</strong> ($1\,\text{fm} = 10^{-15}\,\text{m}$) — der Kern ist rund 10&#8239;000- bis 100&#8239;000-mal kleiner als sein Atom, vereint aber über 99,9 % von dessen Masse. Kernmaterie ist daher unvorstellbar dicht: Ein einziger Kubikzentimeter davon hätte eine Masse von etwa 250 Millionen Tonnen — so viel wie ein Güterzug, der mehrere Male um die Erde reicht.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Nuklid und Isotop</span>
+      <p>Ein <strong>Nuklid</strong> $^{A}_{Z}X$ ist durch Protonenzahl $Z$ und Massenzahl $A = Z + N$ festgelegt. <strong>Isotope</strong> eines Elements haben gleiches $Z$, aber verschiedenes $N$. Stabil ist ein Kern nur, wenn starke Kernkraft (kurze Reichweite, alle Nukleonen) und Coulomb-Abstoßung (große Reichweite, nur Protonen) im Gleichgewicht sind — schwere stabile Kerne haben deshalb deutlich mehr Neutronen als Protonen, und jenseits von Bismut ($Z = 83$) ist kein Nuklid mehr stabil.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 640 420" width="640" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Schematischer Ausschnitt einer Nuklidkarte: Auf der waagerechten Achse die Neutronenzahl N, auf der senkrechten die Protonenzahl Z. Die stabilen Kerne bilden ein farbig gefülltes Band, das mit wachsender Größe immer weiter in Richtung Neutronenüberschuss abknickt; instabile Kerne liegen als hellere Kästchen ober- und unterhalb des Bandes. Ein Beispielpfeil für den Alpha-Zerfall zeigt zwei Kästchen diagonal nach links unten (Z minus 2, N minus 2), ein Pfeil für den Beta-Minus-Zerfall ein Kästchen nach links oben (N minus 1, Z plus 1).">
+        <defs>
+          <marker id="ak-pf-zerfall" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--akzent)"/></marker>
+          <marker id="ak-pf-achse" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text-leise)"/></marker>
+        </defs>
+        <!-- instabile Kerne (heller) -->
+        <g fill="var(--physik)" opacity="0.22" stroke="var(--text-leise)" stroke-width="0.8">
+          <rect x="81" y="275" width="26" height="26" rx="2"/><rect x="109" y="303" width="26" height="26" rx="2"/><rect x="109" y="247" width="26" height="26" rx="2"/><rect x="137" y="303" width="26" height="26" rx="2"/><rect x="137" y="219" width="26" height="26" rx="2"/><rect x="165" y="275" width="26" height="26" rx="2"/><rect x="165" y="219" width="26" height="26" rx="2"/><rect x="193" y="247" width="26" height="26" rx="2"/><rect x="193" y="191" width="26" height="26" rx="2"/><rect x="221" y="247" width="26" height="26" rx="2"/><rect x="221" y="163" width="26" height="26" rx="2"/><rect x="249" y="219" width="26" height="26" rx="2"/><rect x="249" y="163" width="26" height="26" rx="2"/><rect x="277" y="191" width="26" height="26" rx="2"/><rect x="277" y="135" width="26" height="26" rx="2"/><rect x="305" y="191" width="26" height="26" rx="2"/><rect x="305" y="107" width="26" height="26" rx="2"/><rect x="333" y="163" width="26" height="26" rx="2"/><rect x="333" y="107" width="26" height="26" rx="2"/><rect x="361" y="135" width="26" height="26" rx="2"/><rect x="361" y="79" width="26" height="26" rx="2"/><rect x="389" y="135" width="26" height="26" rx="2"/>
+        </g>
+        <!-- stabile Kerne (Band) -->
+        <g fill="var(--physik)">
+          <rect x="81" y="303" width="26" height="26" rx="2"/><rect x="109" y="275" width="26" height="26" rx="2"/><rect x="137" y="275" width="26" height="26" rx="2"/><rect x="137" y="247" width="26" height="26" rx="2"/><rect x="165" y="247" width="26" height="26" rx="2"/><rect x="193" y="219" width="26" height="26" rx="2"/><rect x="221" y="219" width="26" height="26" rx="2"/><rect x="221" y="191" width="26" height="26" rx="2"/><rect x="249" y="191" width="26" height="26" rx="2"/><rect x="277" y="163" width="26" height="26" rx="2"/><rect x="305" y="163" width="26" height="26" rx="2"/><rect x="305" y="135" width="26" height="26" rx="2"/><rect x="333" y="135" width="26" height="26" rx="2"/><rect x="361" y="107" width="26" height="26" rx="2"/><rect x="389" y="107" width="26" height="26" rx="2"/><rect x="389" y="79" width="26" height="26" rx="2"/>
+        </g>
+        <!-- Beispielpfeile -->
+        <line x1="374" y1="92" x2="322" y2="144" stroke="var(--akzent)" stroke-width="2.5" marker-end="url(#ak-pf-zerfall)"/>
+        <text x="356" y="130" fill="var(--akzent)" font-size="16" font-weight="bold">α</text>
+        <line x1="262" y1="232" x2="238" y2="208" stroke="var(--akzent)" stroke-width="2.5" marker-end="url(#ak-pf-zerfall)"/>
+        <text x="262" y="216" fill="var(--akzent)" font-size="15" font-weight="bold">β⁻</text>
+        <!-- Achsen -->
+        <line x1="62" y1="330" x2="62" y2="66" stroke="var(--text-leise)" stroke-width="1.5" marker-end="url(#ak-pf-achse)"/>
+        <text x="46" y="204" fill="var(--text)" font-size="14" text-anchor="middle" transform="rotate(-90 46 204)">Protonenzahl Z</text>
+        <line x1="80" y1="344" x2="430" y2="344" stroke="var(--text-leise)" stroke-width="1.5" marker-end="url(#ak-pf-achse)"/>
+        <text x="255" y="366" fill="var(--text)" font-size="14" text-anchor="middle">Neutronenzahl N</text>
+        <!-- Legende -->
+        <rect x="446" y="88" width="18" height="18" rx="2" fill="var(--physik)"/>
+        <text x="472" y="102" fill="var(--text)" font-size="14">stabil</text>
+        <rect x="446" y="118" width="18" height="18" rx="2" fill="var(--physik)" opacity="0.22" stroke="var(--text-leise)"/>
+        <text x="472" y="132" fill="var(--text)" font-size="14">instabil (radioaktiv)</text>
+        <line x1="460" y1="158" x2="442" y2="176" stroke="var(--akzent)" stroke-width="2.5" marker-end="url(#ak-pf-zerfall)"/>
+        <text x="472" y="172" fill="var(--text)" font-size="14">α: Z − 2, N − 2</text>
+        <line x1="460" y1="212" x2="442" y2="194" stroke="var(--akzent)" stroke-width="2.5" marker-end="url(#ak-pf-zerfall)"/>
+        <text x="472" y="208" fill="var(--text)" font-size="14">β⁻: Z + 1, N − 1</text>
+        <!-- Bildunterschrift -->
+        <text x="320" y="400" fill="var(--text-leise)" font-size="14" text-anchor="middle">Nuklidkarte (schematisch): α springt zwei Kästchen nach links unten, β⁻ eines nach links oben —</text>
+        <text x="320" y="418" fill="var(--text-leise)" font-size="14" text-anchor="middle">beides führt instabile Kerne Schritt für Schritt zurück zum stabilen Band.</text>
+      </svg>
+    </div>
+  </section>
+
+  <section aria-labelledby="ak-umwandlungen">
+    <h2 id="ak-umwandlungen">2. Kernumwandlungen: α, β, γ</h2>
+    <p>Ein instabiler Kern wandelt sich um — und dabei gilt Buchhaltung: Die <strong>Nukleonenzahl</strong> $A$ und die <strong>Ladungszahl</strong> $Z$ sind in der Summe auf beiden Seiten der Gleichung gleich. Mit diesen zwei Erhaltungssätzen lässt sich jede Umwandlungsgleichung vervollständigen, ohne dass man Zerfallsreihen auswendig wissen muss.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die drei Umwandlungstypen</span>
+      <p><strong>α-Zerfall:</strong> Der Kern stößt einen Heliumkern $^{4}_{2}\text{He}$ aus — der Tochterkern hat $A - 4$ und $Z - 2$.<br>
+      <strong>β⁻-Zerfall:</strong> Im Kern wandelt sich ein Neutron in ein Proton um, $n \to p + e^- + \bar{\nu}$ — das Elektron und (eA) ein Antineutrino verlassen den Kern: $A$ bleibt gleich, $Z$ steigt um 1.<br>
+      <strong>γ-Übergang:</strong> Ein angeregter Kern gibt überschüssige Energie als Photon ab — $A$ und $Z$ bleiben unverändert, es entsteht kein neues Element.</p>
+    </div>
+    <p>Drei Beispiele, jeweils mit Erhaltungs-Kontrolle ($A$-Summe und $Z$-Summe):</p>
+    <p class="formel-abgesetzt">$$^{226}_{\,88}\text{Ra} \;\to\; {}^{222}_{\,86}\text{Rn} + {}^{4}_{2}\text{He}$$ </p> <p class="formel-abgesetzt"> $$^{14}_{\,6}\text{C} \;\to\; {}^{14}_{\,7}\text{N} + e^- + \bar{\nu}$$ </p> <p class="formel-abgesetzt"> $$^{137\text{m}}_{\;\,56}\text{Ba} \;\to\; {}^{137}_{\,56}\text{Ba} + \gamma$$ </p> <p> Beim Radium stimmt die Bilanz ($226 = 222 + 4$, $88 = 86 + 2$), beim C-14 ebenso ($14 = 14$, $6 = 7 - 1$, denn das Elektron trägt die Ladungszahl $-1$). Das dritte Beispiel ist ein reiner γ-Übergang: Das angeregte Barium-137m (das „m“ steht für <em> metastabil</em>) entsteht kurz zuvor beim β⁻-Zerfall von Cäsium-137 und gibt seine Restenergie als γ-Quant ab — Kernsorte unverändert. </p> <p> Oft ist der Tochterkern selbst wieder instabil: Es entstehen <strong> Zerfallsreihen</strong>. Uran-238 etwa wandelt sich über viele α- und β⁻-Stufen bis zum stabilen Blei-206 um. Ein Zwischenglied dieser Reihe ist das Edelgas <strong> Radon-222</strong>: Es entweicht aus Gestein und Baumaterial und kann sich in schlecht gelüfteten Kellern ansammeln — in Radon-Gebieten der größte Beitrag zur natürlichen Strahlenbelastung. </p> <p> Wie weit α-, β- und γ-Strahlung in Materie eindringen, wie man sich abschirmt und wo Radioaktivität nützt — das ist Stoff der Seite <a href="../../klasse-10/atom-und-kernphysik/index.html"> Atom- und Kernphysik (Klasse 10)</a>. Hier geht es weiter mit der Frage, <em> wann </em> Kerne zerfallen. </p> <details class="check"> <summary> Verständnis-Check: Polonium-210 ($Z = 84$) ist ein α-Strahler. Welches Nuklid entsteht beim Zerfall? </summary> <div class="check-antwort"> <p> Blei-206. Der α-Zerfall nimmt 4 Nukleonen mit, davon 2 Protonen: $A = 210 - 4 = 206$ und $Z = 84 - 2 = 82$ — das Element mit $Z = 82$ ist Blei. Die Gleichung lautet $^{210}_{\,84}\text{Po} \to {}^{206}_{\,82}\text{Pb} + {}^{4}_{2}\text{He}$; Pb-206 ist stabil, hier endet die Uran-Radium-Zerfallsreihe. </p> </div> </details> </section> <section aria-labelledby="ak-zerfallsgesetz"> <h2 id="ak-zerfallsgesetz"> 3. Das Zerfallsgesetz </h2> <p> Wann ein <em> einzelner </em> Kern zerfällt, ist prinzipiell nicht vorhersagbar — radioaktiver Zerfall ist echter Zufall. Messbar ist nur eine <strong> Zerfallswahrscheinlichkeit </strong> je Zeitspanne, und die ist für jeden Kern eines Nuklids gleich groß und zeitlich konstant: Kerne „altern“ nicht. Sobald aber sehr viele Kerne im Spiel sind (schon ein Mikrogramm enthält Billiarden), wird aus dem Zufall verlässliche Statistik — wie beim Würfeln, wo unter 6000 Würfen ziemlich genau 1000 Sechsen sind. </p> <p> Die Konsequenz: In jeder gleich langen Zeitspanne zerfällt stets <strong> derselbe Anteil </strong> der noch vorhandenen Kerne — <em> nicht </em> dieselbe Anzahl! Die Zerfallsrate ist also proportional zum Bestand, und genau dieses Änderungsverhalten erzeugt eine Exponentialfunktion. Mit der <strong> Zerfallskonstante </strong> $\lambda$ (dem „Anteil pro Zeit“) gilt für die Anzahl $N$ der noch nicht zerfallenen Kerne: </p> <p class="formel-abgesetzt"> $$N(t) = N_0 \cdot e^{-\lambda \cdot t}$$ </p> <p> Anschaulicher als $\lambda$ ist die <strong> Halbwertszeit </strong> $T_{1/2}$ — die Zeit, nach der die Hälfte des Bestands übrig ist. Der Zusammenhang ergibt sich in zwei Zeilen aus dem Zerfallsgesetz: </p> <p class="formel-abgesetzt"> $$\begin{gathered} N(T_{1/2}) = N_0 \cdot e^{-\lambda \cdot T_{1/2}} = \frac{N_0}{2} \;\;\Rightarrow\;\; e^{-\lambda \cdot T_{1/2}} = \frac{1}{2} \\ \Rightarrow\;\; \lambda \cdot T_{1/2} = \ln 2 \;\;\Rightarrow\;\; T_{1/2} = \frac{\ln 2}{\lambda} \end{gathered}$$ </p> <p> Gemessen wird im Labor nicht $N$ selbst, sondern die <strong> Aktivität </strong> $A$ — die Zahl der Zerfälle je Sekunde, Einheit <strong> Becquerel </strong> ($1\,\text{Bq} = 1$ Zerfall pro Sekunde). Sie ist proportional zum Bestand und nimmt deshalb nach derselben e-Funktion ab. Praktisch wichtig: Trägt man $\ln N$ (oder $\ln A$) über der Zeit auf, wird aus der gekrümmten Kurve eine <strong> Gerade </strong> mit Steigung $-\lambda$ — so prüft man exponentielles Verhalten und liest $\lambda$ direkt ab. </p> <div class="merkkasten"> <span class="merk-etikett"> Zerfallsgesetz </span> <p class="formel-abgesetzt"> $$N(t) = N_0 \cdot e^{-\lambda t} \qquad A(t) = A_0 \cdot e^{-\lambda t}$$ </p> <p class="formel-abgesetzt"> $$T_{1/2} = \frac{\ln 2}{\lambda} \qquad A = \lambda \cdot N$$ </p> <p> Halblogarithmisch ($\ln N$ über $t$) wird das Zerfallsgesetz zur Geraden: $\ln N = \ln N_0 - \lambda \cdot t$. Nach $n$ Halbwertszeiten ist noch der Anteil $\frac{1}{2^n}$ übrig. </p> </div> <div class="beispiel"> <span class="beispiel-etikett"> Beispiel: Iod-131 in der Schilddrüsen-Diagnostik </span> <p> Iod-131 ($T_{1/2} = 8{,}02\,\text{d}$) reichert sich in der Schilddrüse an und macht sie für Messsonden „sichtbar“. Wie viel eines Präparats ist 30 Tage nach der Herstellung noch vorhanden? $$\frac{N}{N_0} = e^{-\lambda t} = e^{-\frac{\ln 2}{8{,}02\,\text{d}} \cdot 30\,\text{d}} = e^{-2{,}59} \approx 0{,}075$$ Nach einem Monat sind also nur noch rund $7{,}5\,\%$ übrig — Kontrolle über Halbwertszeiten: $30\,\text{d} \approx 3{,}74 \cdot T_{1/2}$ und $\frac{1}{2^{3{,}74}} \approx 0{,}075$. Deshalb wird solches Material erst unmittelbar vor der Anwendung geliefert.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 640 360" width="640" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zerfallskurve: Der Restanteil N durch N null ist über der Zeit in Vielfachen der Halbwertszeit aufgetragen. Eine glatte, fallende e-Funktion startet bei 100 Prozent. Eine gestrichelte Halbierungstreppe markiert: nach einer Halbwertszeit 50 Prozent, nach zwei 25 Prozent, nach drei 12,5 Prozent.">
+        <defs>
+          <marker id="ak-pf-zk" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text-leise)"/></marker>
+        </defs>
+        <!-- Achsen -->
+        <line x1="70" y1="40" x2="70" y2="300" stroke="var(--text)" stroke-width="1.5"/>
+        <line x1="70" y1="300" x2="610" y2="300" stroke="var(--text)" stroke-width="1.5" marker-end="url(#ak-pf-zk)"/>
+        <text x="32" y="180" fill="var(--text)" font-size="14" text-anchor="middle" transform="rotate(-90 32 180)">Restanteil N / N₀</text>
+        <text x="600" y="322" fill="var(--text)" font-size="14" text-anchor="end">Zeit t</text>
+        <!-- Halbierungstreppe -->
+        <g stroke="var(--akzent)" stroke-width="1.8" stroke-dasharray="6 5" fill="none">
+          <polyline points="70,180 200,180 200,300"/>
+          <polyline points="70,240 330,240 330,300"/>
+          <polyline points="70,270 460,270 460,300"/>
+        </g>
+        <circle cx="200" cy="180" r="4.5" fill="var(--akzent)"/>
+        <circle cx="330" cy="240" r="4.5" fill="var(--akzent)"/>
+        <circle cx="460" cy="270" r="4.5" fill="var(--akzent)"/>
+        <!-- Zerfallskurve -->
+        <path d="M 70 60 L 102.5 98.2 L 135 130.3 L 167.5 157.3 L 200 180 L 232.5 199.1 L 265 215.1 L 297.5 228.7 L 330 240 L 395 257.6 L 460 270 L 525 278.8 L 590 285" fill="none" stroke="var(--physik)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <!-- Achsenbeschriftungen -->
+        <text x="62" y="65" fill="var(--text)" font-size="14" text-anchor="end">100 %</text>
+        <text x="62" y="185" fill="var(--text)" font-size="14" text-anchor="end">50 %</text>
+        <text x="62" y="245" fill="var(--text)" font-size="14" text-anchor="end">25 %</text>
+        <text x="62" y="275" fill="var(--text)" font-size="13" text-anchor="end">12,5 %</text>
+        <g stroke="var(--text)" stroke-width="1.5">
+          <line x1="200" y1="300" x2="200" y2="306"/>
+          <line x1="330" y1="300" x2="330" y2="306"/>
+          <line x1="460" y1="300" x2="460" y2="306"/>
+          <line x1="590" y1="300" x2="590" y2="306"/>
+        </g>
+        <text x="200" y="322" fill="var(--text)" font-size="14" text-anchor="middle">1·T½</text>
+        <text x="330" y="322" fill="var(--text)" font-size="14" text-anchor="middle">2·T½</text>
+        <text x="460" y="322" fill="var(--text)" font-size="14" text-anchor="middle">3·T½</text>
+        <text x="73" y="322" fill="var(--text)" font-size="14">0</text>
+        <!-- Bildunterschrift -->
+        <text x="320" y="350" fill="var(--text-leise)" font-size="14" text-anchor="middle">N(t) = N₀ · e^(−λt): Nach jeder Halbwertszeit halbiert sich der Bestand — 100 → 50 → 25 → 12,5 %.</text>
+      </svg>
+    </div>
+    <h3>Zerfall als Zufallsprozess — selbst ausprobieren</h3>
+    <p>In dieser Simulation „würfelt“ jeder einzelne Kern in jedem Zeitschritt neu, ob er zerfällt. Die zackige Zufallskurve entsteht live und lässt sich direkt mit der glatten Theoriekurve $N(t) = N_0 \cdot 2^{-t/T_{1/2}}$ vergleichen. Bearbeite dabei die Aufträge unter der Simulation.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/physik/zerfall/index.html?einbettung=1#n0=400&thalb=5"
+        title="Interaktive Simulation: Radioaktiver Zerfall — Zufallskurve und Zerfallsgesetz" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/physik/zerfall/index.html#n0=400&thalb=5" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Lies die Halbwertszeit am Graphen ab: Bestimme den Zeitpunkt, zu dem noch $\frac{N_0}{2} = 200$ Kerne übrig sind, und vergleiche mit dem eingestellten $T_{1/2} = 5\,\text{s}$. Prüfe genauso $2 \cdot T_{1/2}$ (noch 100) und $3 \cdot T_{1/2}$ (noch 50).<br>
+      2. Die Theoriekurve ist die e-Funktion $N(t) = N_0 \cdot e^{-\lambda t}$ mit $\lambda = \frac{\ln 2}{T_{1/2}}$. Berechne $N(12\,\text{s})$ für $N_0 = 400$ und $T_{1/2} = 5\,\text{s}$, pausiere den Lauf bei $t \approx 12\,\text{s}$ und vergleiche mit der Anzeige „Restkerne (Theorie)“.<br>
+      3. Vergleiche $N_0 = 50$ mit $N_0 = 2000$: Bei welcher Anzahl folgt die Zufallskurve der Theorie besser? Erkläre damit, warum das Zerfallsgesetz schon für ein Mikrogramm Substanz (Billiarden Kerne) praktisch exakt gilt — Gesetz der großen Zahlen.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Nach wie vielen ganzen Halbwertszeiten ist die Aktivität eines Präparats erstmals unter 1 % der Anfangsaktivität gesunken?</summary>
+      <div class="check-antwort"><p>Nach 7 Halbwertszeiten. Nach $n$ Halbwertszeiten ist der Anteil $\frac{1}{2^n}$ übrig: $2^6 = 64$ reicht noch nicht ($\frac{1}{64} \approx 1{,}6\,\%$), aber $2^7 = 128$ schafft es ($\frac{1}{128} \approx 0{,}8\,\%$). Exakt mit der e-Funktion: $e^{-\lambda t} = 0{,}01$ liefert $t = \frac{\ln 100}{\lambda} \approx 6{,}64 \cdot T_{1/2}$ — die erste <em>ganze</em> Halbwertszeit danach ist die siebte.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ak-c14">
+    <h2 id="ak-c14">4. Altersbestimmung mit C-14</h2>
+    <p>Hoch in der Atmosphäre erzeugt die kosmische Strahlung ständig neues <strong>C-14</strong>: Neutronen treffen Stickstoffkerne und wandeln sie um. Das radioaktive C-14 oxidiert zu CO₂ und mischt sich unter das gewöhnliche CO₂ — in der Luft stellt sich ein nahezu konstanter C-14-Anteil ein (etwa ein Billionstel des Kohlenstoffs). Pflanzen bauen diesen Kohlenstoff per Fotosynthese ein, Tiere und Menschen essen die Pflanzen: <strong>Jedes Lebewesen hält im Stoffwechsel denselben C-14-Anteil wie die Atmosphäre.</strong> Mit dem Tod endet der Austausch — von da an zerfällt das eingebaute C-14 mit $T_{1/2} = 5730\,\text{a}$, ohne ersetzt zu werden. Der C-14-Anteil einer Probe ist also eine Uhr, die im Todesmoment zu laufen beginnt.</p>
+    <p>Zum Ablesen der Uhr wird das Zerfallsgesetz nach der Zeit aufgelöst — logarithmieren und umstellen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Altersformel der C-14-Methode</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} \frac{N}{N_0} = e^{-\lambda t} \;\;\Rightarrow\;\; \ln\frac{N_0}{N} = \lambda \cdot t \\ \Rightarrow\;\; t = \frac{1}{\lambda} \cdot \ln\frac{N_0}{N} = \frac{T_{1/2}}{\ln 2} \cdot \ln\frac{N_0}{N} \end{gathered}$$ </p> <p> Dabei ist $\frac{N}{N_0}$ der noch vorhandene C-14-Anteil im Vergleich zu frischem Material — messbar über die Aktivität oder durch direktes Zählen der C-14-Atome im Massenspektrometer. </p> </div> <div class="beispiel"> <span class="beispiel-etikett"> Beispiel: Knochenfund mit 70 % Rest-C-14 </span> <p> Ein Knochen enthält noch $70\,\%$ des C-14-Anteils frischer Knochen. Sein Alter: $$t = \frac{T_{1/2}}{\ln 2} \cdot \ln\frac{N_0}{N} = \frac{5730\,\text{a}}{0{,}6931} \cdot \ln\frac{1}{0{,}70} \approx 8267\,\text{a} \cdot 0{,}357 \approx 2950\,\text{a}$$ Der Fund stammt also aus der Zeit um 900 v. Chr. Plausibilität: 70 % liegt zwischen 100 % und 50 %, das Alter muss kleiner als eine Halbwertszeit sein — passt. Bei Ötzi maß man übrigens rund 53 % Rest — gut 5300 Jahre. </p> </div> <p> <strong> Grenzen der Methode: </strong> Nach etwa 50&#8239;000 Jahren (knapp 9 Halbwertszeiten) ist weniger als ein Fünfhundertstel des C-14 übrig — das Signal versinkt im Untergrund, ältere Funde brauchen andere Uhren (etwa Kalium-Argon). Datierbar ist außerdem nur, was einmal <em> gelebt </em> hat und Kohlenstoff ausgetauscht hat: Knochen, Holz, Leder, Stoff — nicht aber Stein oder Metall. Und weil der atmosphärische C-14-Anteil über die Jahrtausende leicht schwankte, werden Rohdaten mit unabhängigen Archiven <strong> kalibriert</strong>, vor allem mit den Jahresringen alter Bäume. </p> </section> <section aria-labelledby="ak-massendefekt"> <h2 id="ak-massendefekt"> 5. Massendefekt und Kernenergie (eA) </h2> <p> Wiegt man Kerne mit höchster Präzision, zeigt sich etwas Verblüffendes: <strong> Ein Kern ist leichter als die Summe seiner Bausteine. </strong> Die Differenz heißt <strong> Massendefekt</strong>: $\Delta m = Z \cdot m_p + N \cdot m_n - m_\text{Kern}$. Nach Einsteins Äquivalenz von Masse und Energie, $E = m \cdot c^2$, ist diese „fehlende“ Masse nichts verschwundenes, sondern die beim Zusammenbau frei gewordene <strong> Bindungsenergie </strong> $E_B = \Delta m \cdot c^2$ — dieselbe Energie, die man aufwenden müsste, um den Kern wieder vollständig zu zerlegen. </p> <p> Kernmassen gibt man in der <strong> atomaren Masseneinheit </strong> $\text{u}$ an ($1\,\text{u} = 1{,}66054 \cdot 10^{-27}\,\text{kg}$, ein Zwölftel der Masse eines C-12-Atoms). Welche Energie in einem u steckt, liefert Einsteins Formel direkt: </p> <p class="formel-abgesetzt"> $$\begin{gathered} E = 1\,\text{u} \cdot c^2 = 1{,}66054 \cdot 10^{-27}\,\text{kg} \cdot \left(2{,}9979 \cdot 10^{8}\,\text{m/s}\right)^2 \\ = 1{,}4924 \cdot 10^{-10}\,\text{J} = \frac{1{,}4924 \cdot 10^{-10}\,\text{J}}{1{,}6022 \cdot 10^{-13}\,\frac{\text{J}}{\text{MeV}}} \approx 931{,}49\,\text{MeV} \end{gathered}$$ </p> <div class="merkkasten"> <span class="merk-etikett"> Massendefekt und Bindungsenergie (eA) </span> <p class="formel-abgesetzt"> $$\Delta m = Z \cdot m_p + N \cdot m_n - m_\text{Kern} \qquad E_B = \Delta m \cdot c^2$$ </p> <p> Praktische Umrechnung: Der Masse $1\,\text{u} = 1{,}66054 \cdot 10^{-27}\,\text{kg}$ entspricht die Energie $931{,}49\,\text{MeV}$. Ein Massendefekt in u, mal $931{,}49$, ergibt also direkt die Bindungsenergie in MeV. </p> </div> <p> Aussagekräftig wird der Vergleich erst <em> pro Baustein</em>: Die <strong> Bindungsenergie je Nukleon </strong> $\frac{E_B}{A}$ steigt von leichten Kernen steil an, erreicht ihr <strong> Maximum bei Eisen </strong> (Fe-56, etwa $8{,}8\,\text{MeV}$) und fällt zu den schwersten Kernen langsam wieder ab. Eisen ist damit der am festesten gebundene Kern — und die Kurve zeigt <strong> zwei Wege, Kernenergie freizusetzen</strong>: Beide laufen auf das Maximum zu. </p> <p> <strong> Spaltung schwerer Kerne: </strong> Fängt ein U-235-Kern ein langsames Neutron ein, wird er instabil und zerplatzt in zwei mittelschwere Bruchstücke; dabei werden 2–3 neue Neutronen und rund $200\,\text{MeV}$ frei, und die frei werdenden Neutronen können weitere Kerne spalten — eine <strong> Kettenreaktion</strong>. Im Reaktor bremst ein <strong> Moderator </strong> (meist Wasser) die schnellen Neutronen ab, denn nur langsame spalten U-235 effektiv, und <strong> Regelstäbe </strong> fangen überzählige Neutronen ein, sodass im Mittel genau eine Folgespaltung pro Spaltung stattfindet. <strong> Fusion leichter Kerne: </strong> Im Inneren der Sonne verschmilzt Wasserstoff über mehrere Stufen zu Helium — pro entstehendem He-4 werden etwa $27\,\text{MeV}$ frei; Forschungsanlagen versuchen, diese Energiequelle auf der Erde nutzbar zu machen. In beiden Fällen sind die Produkte fester gebunden als die Ausgangskerne — die Differenz der Bindungsenergien wird frei.</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 640 350" width="640" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Kurve der Bindungsenergie je Nukleon über der Massenzahl A: steiler Anstieg bei leichten Kernen, Maximum bei Eisen-56 mit etwa 8,8 MeV, danach flacher Abfall bis Uran-238. He-4 liegt als Punkt deutlich über der glatten Kurve. Ein Pfeil Fusion zeigt von links, ein Pfeil Spaltung von rechts in Richtung des Maximums.">
+        <defs>
+          <marker id="ak-pf-eb" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--akzent)"/></marker>
+          <marker id="ak-pf-eba" markerWidth="9" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--text-leise)"/></marker>
+        </defs>
+        <!-- Achsen -->
+        <line x1="70" y1="30" x2="70" y2="280" stroke="var(--text)" stroke-width="1.5"/>
+        <line x1="70" y1="280" x2="615" y2="280" stroke="var(--text)" stroke-width="1.5" marker-end="url(#ak-pf-eba)"/>
+        <text x="30" y="155" fill="var(--text)" font-size="13" text-anchor="middle" transform="rotate(-90 30 155)">E_B je Nukleon in MeV</text>
+        <text x="342" y="318" fill="var(--text)" font-size="14" text-anchor="middle">Massenzahl A</text>
+        <g stroke="var(--text)" stroke-width="1.5">
+          <line x1="64" y1="232" x2="70" y2="232"/><line x1="64" y1="184" x2="70" y2="184"/><line x1="64" y1="136" x2="70" y2="136"/><line x1="64" y1="88" x2="70" y2="88"/>
+          <line x1="180" y1="280" x2="180" y2="286"/><line x1="290" y1="280" x2="290" y2="286"/><line x1="400" y1="280" x2="400" y2="286"/><line x1="510" y1="280" x2="510" y2="286"/>
+        </g>
+        <text x="58" y="237" fill="var(--text)" font-size="13" text-anchor="end">2</text>
+        <text x="58" y="189" fill="var(--text)" font-size="13" text-anchor="end">4</text>
+        <text x="58" y="141" fill="var(--text)" font-size="13" text-anchor="end">6</text>
+        <text x="58" y="93" fill="var(--text)" font-size="13" text-anchor="end">8</text>
+        <text x="180" y="300" fill="var(--text)" font-size="13" text-anchor="middle">50</text>
+        <text x="290" y="300" fill="var(--text)" font-size="13" text-anchor="middle">100</text>
+        <text x="400" y="300" fill="var(--text)" font-size="13" text-anchor="middle">150</text>
+        <text x="510" y="300" fill="var(--text)" font-size="13" text-anchor="middle">200</text>
+        <!-- Fe-56-Markierung -->
+        <line x1="193.2" y1="280" x2="193.2" y2="68.8" stroke="var(--text-leise)" stroke-width="1.2" stroke-dasharray="5 5"/>
+        <!-- Kurve -->
+        <path d="M 72.2 280 L 74.4 253.6 L 76.6 215.2 L 83.2 152.8 L 87.6 131.2 L 92 116.8 L 96.4 102.4 L 105.2 90.4 L 114 88 L 158 74.8 L 193.2 68.8 L 246 71.2 L 334 76 L 422 83.2 L 510 90.4 L 593.6 97.6" fill="none" stroke="var(--physik)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="193.2" cy="68.8" r="5" fill="var(--physik)" stroke="var(--text)" stroke-width="1.5"/>
+        <text x="203" y="60" fill="var(--text)" font-size="14">Fe-56: Maximum (≈ 8,8 MeV)</text>
+        <!-- He-4 als Ausreisser nach oben -->
+        <circle cx="78.8" cy="110.3" r="4.5" fill="var(--akzent)"/>
+        <text x="88" y="114" fill="var(--text)" font-size="13">He-4</text>
+        <text x="598" y="118" fill="var(--text-leise)" font-size="13" text-anchor="end">U-238</text>
+        <!-- Richtungspfeile -->
+        <line x1="96" y1="42" x2="178" y2="42" stroke="var(--akzent)" stroke-width="2.5" marker-end="url(#ak-pf-eb)"/>
+        <text x="96" y="30" fill="var(--akzent)" font-size="14">Fusion</text>
+        <line x1="540" y1="42" x2="212" y2="42" stroke="var(--akzent)" stroke-width="2.5" marker-end="url(#ak-pf-eb)"/>
+        <text x="540" y="30" fill="var(--akzent)" font-size="14" text-anchor="end">Spaltung</text>
+        <!-- Bildunterschrift -->
+        <text x="320" y="344" fill="var(--text-leise)" font-size="14" text-anchor="middle">Beide Wege führen zum Maximum bei Eisen: Produkte fester gebunden — die Differenz wird frei.</text>
+      </svg>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum setzt sowohl die Spaltung schwerer Kerne als auch die Fusion leichter Kerne Energie frei?</summary>
+      <div class="check-antwort"><p>Weil beide Prozesse auf das Maximum der Bindungsenergie je Nukleon bei Eisen zulaufen. Bei der Spaltung von Uran ($\frac{E_B}{A} \approx 7{,}6\,\text{MeV}$) entstehen mittelschwere Bruchstücke mit $\frac{E_B}{A} \approx 8{,}5\,\text{MeV}$, bei der Fusion von Wasserstoff entsteht das viel fester gebundene He-4 ($7{,}07\,\text{MeV}$ statt fast 0). In beiden Fällen sind die Produkte <em>fester gebunden</em> als die Ausgangskerne — die Differenz der Bindungsenergien wird als Bewegungs- und Strahlungsenergie frei. Eisen selbst taugt deshalb weder zum Spalten noch zum Verschmelzen.</p></div>
+    </details>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Die Bindungsenergie von Helium-4 — komplett durchgerechnet</summary>
+    <div class="vertiefung-inhalt">
+      <p>Gegeben sind $m_p = 1{,}007276\,\text{u}$, $m_n = 1{,}008665\,\text{u}$ und die Kernmasse $m_\text{He-4} = 4{,}001506\,\text{u}$. Der Massendefekt: $\Delta m = 2 \cdot 1{,}007276\,\text{u} + 2 \cdot 1{,}008665\,\text{u} - 4{,}001506\,\text{u} = 4{,}031882\,\text{u} - 4{,}001506\,\text{u} = 0{,}030376\,\text{u}$ — rund $0{,}75\,\%$ der Gesamtmasse. Daraus die Bindungsenergie: $E_B = 0{,}030376 \cdot 931{,}49\,\text{MeV} \approx 28{,}3\,\text{MeV}$, also $\frac{E_B}{A} = \frac{28{,}3\,\text{MeV}}{4} \approx 7{,}07\,\text{MeV}$ je Nukleon. Zum Vergleich: Chemische Bindungen liegen bei wenigen <em>Elektronen</em>volt — die Kernbindung ist millionenfach stärker.</p>
+      <p>Mit gut 7 MeV je Nukleon ist He-4 für einen so leichten Kern außergewöhnlich fest gebunden — seine Nachbarn schaffen nicht einmal 3 MeV, und in der $\frac{E_B}{A}$-Kurve sitzt He-4 als markante Spitze über dem glatten Verlauf. Der Grund: Je zwei Protonen und zwei Neutronen füllen die jeweils unterste Energiestufe des Kerns vollständig — eine „abgeschlossene Schale“, ähnlich wie beim Edelgas Helium in der Elektronenhülle. Diese besondere Stabilität erklärt auch, warum schwere Kerne beim Zerfall komplette He-4-Kerne aussenden: Das α-Teilchen ist genau dieses fertig gepackte, energetisch günstige Paket.</p>
+      <p>Wenn Fusion so viel Energie liefert — warum verschmilzt Wasserstoff dann nicht von selbst? Bevor die starke Kernkraft greifen kann, müssen sich die positiv geladenen Kerne bis auf wenige Femtometer nähern — gegen ihre Coulomb-Abstoßung, den sogenannten <strong>Coulombwall</strong> von der Größenordnung MeV. Die nötigen Geschwindigkeiten haben Kerne erst bei Temperaturen um $10^{7}\,\text{K}$, wie sie im Sonnenzentrum herrschen. Selbst dort reicht die mittlere Energie rechnerisch nicht ganz: Erst der quantenmechanische <strong>Tunneleffekt</strong> lässt Protonen den Wall mit kleiner Wahrscheinlichkeit „durchqueren“ — dass die Sonne gemächlich seit Milliarden Jahren brennt statt zu explodieren, verdankt sie genau dieser Unwahrscheinlichkeit.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen — von Kernumwandlungen über das Zerfallsgesetz und die C-14-Datierung bis zu Massendefekt und Kernenergie.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

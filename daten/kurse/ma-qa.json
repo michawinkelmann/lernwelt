@@ -1,0 +1,3240 @@
+{
+  "version": 1,
+  "kurs": "ma-qa",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "titel": "Mathematik · Qualifikationsphase — Analysis",
+  "untertitel": "Lernbüro-Pilot: Stammfunktionen und Hauptsatz als Selbstlern-Einheit",
+  "zweig": [
+    "gym"
+  ],
+  "stand": "2026-06-13",
+  "taktung": "wochenplan",
+  "checkpoints": "freischalten",
+  "werkzeuge": [
+    "ampel",
+    "lerntagebuch"
+  ],
+  "hinweis": "Lektionen verweisen nur auf vorhandene Inhalte. Pilot – fachliche Endprüfung durch die Lehrkraft.",
+  "stoffverteilung": [
+    {
+      "wochen": "1–3",
+      "thema": "Stammfunktionen und Hauptsatz",
+      "lektionen": "5 (Pilot; KC-Richtwert ca. 14)",
+      "kc": "Von der Änderung zum Bestand — Integralrechnung",
+      "status": "in-arbeit"
+    },
+    {
+      "wochen": "4–6",
+      "thema": "Flächen und Integralanwendungen",
+      "lektionen": "6 (L6–L9, L33, L10)",
+      "kc": "Von der Änderung zum Bestand — Integralanwendungen",
+      "status": "in-arbeit"
+    },
+    {
+      "wochen": "7–9",
+      "thema": "Die natürliche Exponentialfunktion",
+      "lektionen": "5 (L11–L15)",
+      "kc": "Die e-Funktion (QP)",
+      "status": "in-arbeit"
+    },
+    {
+      "wochen": "10–11",
+      "thema": "Wachstumsmodelle",
+      "lektionen": "4 (L16–L19)",
+      "kc": "Exponentielles und logistisches Wachstum",
+      "status": "in-arbeit"
+    },
+    {
+      "wochen": "12–13",
+      "thema": "Kurvenanpassung mit ganzrationalen Funktionen",
+      "lektionen": "ca. 8",
+      "kc": "Steckbriefaufgaben, Funktionenscharen",
+      "status": "in-arbeit"
+    },
+    {
+      "wochen": "14–16",
+      "thema": "Vektoren und Geraden / Ebenen im Raum",
+      "lektionen": "ca. 12",
+      "kc": "Raumanschauung und Koordinatisierung",
+      "status": "geplant"
+    },
+    {
+      "wochen": "17–18",
+      "thema": "Binomialverteilung / Stochastik",
+      "lektionen": "ca. 10",
+      "kc": "Daten und Zufall (QP)",
+      "status": "geplant"
+    },
+    {
+      "wochen": "14–15",
+      "thema": "Funktionenscharen",
+      "lektionen": "4 (L24–L27)",
+      "kc": "Kurvenanpassung und Funktionsscharen (eA, QP)",
+      "status": "in-arbeit"
+    },
+    {
+      "wochen": "16–17",
+      "thema": "Q1-Überblick Analysis",
+      "lektionen": "5 (L28–L32)",
+      "kc": "Qualifikationsphase, 1. Schulhalbjahr (Analysis)",
+      "status": "in-arbeit"
+    }
+  ],
+  "wochen": [
+    {
+      "nr": 1,
+      "spanne": "Diese Woche",
+      "lektionen": [
+        "l1",
+        "l2",
+        "l3"
+      ],
+      "mindestmarke": "Basis-Spur von Lektion 1–3 geschafft"
+    },
+    {
+      "nr": 2,
+      "spanne": "Nächste Woche",
+      "lektionen": [
+        "l4",
+        "l5"
+      ],
+      "mindestmarke": "Basis-Spur von Lektion 4–5 geschafft"
+    },
+    {
+      "nr": 3,
+      "spanne": "Woche 3",
+      "lektionen": [
+        "l6",
+        "l7",
+        "l8",
+        "l9",
+        "l33",
+        "l10"
+      ],
+      "mindestmarke": "Basis-Spur von Lektion 6–10 geschafft"
+    }
+  ],
+  "lektionen": [
+    {
+      "id": "l1",
+      "nr": 1,
+      "titel": "Vom Bestand zur Änderung — und zurück",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-stammfunktionen",
+      "themaPfad": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/",
+      "anker": "#stf-motivation",
+      "ziele": [
+        "Ich verstehe, dass Ableiten und Stammfunktion-Bilden entgegengesetzte Operationen sind.",
+        "Ich kann das Grundprinzip des Hauptsatzes in eigenen Worten beschreiben."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 5,
+          "hinweis": "Kurze Auffrischung: Ableitungsregeln aus der Einführungsphase.",
+          "aufgaben": [
+            {
+              "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+              "ids": [
+                "ma-ep-ablr-001",
+                "ma-ep-ablr-002"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#stf-motivation",
+          "text": "Lies den Einstiegsabschnitt — er zeigt, warum das Rückgängigmachen des Ableitens eine eigene Bedeutung hat:",
+          "beobachtung": "Welche Funktion musst du ableiten, um $f(x) = 2x$ zu erhalten? Gibt es genau eine Antwort?",
+          "interaktiv": {
+            "label": "Einstiegs-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/index.html#stf-motivation"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-001"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-005"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-101"
+              ]
+            }
+          ],
+          "partner": "Erkläre deiner Sitznachbarin: Was bedeutet es, dass Ableiten und Stammfunktion-Bilden inverse Operationen sind?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-002"
+              ]
+            }
+          ],
+          "transfer": "$f(x) = 5$ — was ist eine Stammfunktion? Und warum gibt es unendlich viele?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l2",
+      "nr": 2,
+      "titel": "Stammfunktionen",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-stammfunktionen",
+      "themaPfad": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/",
+      "anker": "#stf-stammfunktion",
+      "ziele": [
+        "Ich kann Stammfunktionen mit der Potenzregel rückwärts bestimmen.",
+        "Ich weiß, dass alle Stammfunktionen einer Funktion sich nur um eine Konstante $C$ unterscheiden.",
+        "Ich kann eine Stammfunktion durch Ableiten auf Richtigkeit prüfen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung: Multiple-Choice zu Stammfunktionsbegriff aus Lektion 1.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-001"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#stf-stammfunktion",
+          "text": "Lies den Abschnitt über die Potenzregel rückwärts — merke dir das Rezept: Exponent um 1 erhöhen, durch den neuen Exponenten teilen.",
+          "beobachtung": "Bestimme $\\int x^3\\,dx$ und $\\int 5\\,dx$ im Kopf — was ist die Stammfunktion einer Konstanten?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/index.html#stf-stammfunktion"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-102"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-006",
+                "ma-qp-stf-007"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-107"
+              ]
+            }
+          ],
+          "partner": "Prüft gegenseitig: Einer nennt ein $f(x)$, der andere bildet $F(x)$ — und prüft durch Ableiten."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-003"
+              ]
+            }
+          ],
+          "transfer": "Warum schreibt man $\\int f(x)\\,dx = F(x) + C$? Was bedeutet das $+C$?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l3",
+      "nr": 3,
+      "titel": "Das bestimmte Integral",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-stammfunktionen",
+      "themaPfad": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/",
+      "anker": "#stf-integral",
+      "ziele": [
+        "Ich kann das bestimmte Integral als orientierten Flächeninhalt zwischen Graph und $x$-Achse deuten.",
+        "Ich unterscheide Integralwert (mit Vorzeichen) und Flächeninhalt (immer positiv).",
+        "Ich kenne die Schreibweise $\\int_a^b f(x)\\,dx$ und die Bedeutung von $a$ und $b$."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung Stammfunktionen: Lückentext aus Lektion 2.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-003"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#stf-integral",
+          "text": "Lies den Abschnitt zum bestimmten Integral — achte besonders auf den Unterschied zwischen Integralwert und Flächeninhalt:",
+          "beobachtung": "Bei $\\int_0^2 (x - 1)\\,dx$: Skizziere den Graphen. Welcher Teil liegt oberhalb, welcher unterhalb der $x$-Achse?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/index.html#stf-integral"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-103"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-008",
+                "ma-qp-stf-009"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-108"
+              ]
+            }
+          ],
+          "partner": "Diskutiert: Kann ein bestimmtes Integral den Wert $0$ haben, obwohl der Graph eindeutig Fläche einschließt? Nennt ein Beispiel."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-004"
+              ]
+            }
+          ],
+          "transfer": "$\\int_1^1 f(x)\\,dx = ?$ — ohne Rechnen. Warum?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l4",
+      "nr": 4,
+      "titel": "Der Hauptsatz",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-stammfunktionen",
+      "themaPfad": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/",
+      "anker": "#stf-hauptsatz",
+      "ziele": [
+        "Ich kann bestimmte Integrale mit dem Hauptsatz berechnen: $\\int_a^b f(x)\\,dx = F(b) - F(a)$.",
+        "Ich kenne die Klammer-Schreibweise $\\left[F(x)\\right]_a^b$ und wende sie sicher an.",
+        "Ich kann den Hauptsatz auf Sachkontexte (Rekonstruktion) anwenden."
+      ],
+      "stopppunkt": {
+        "text": "Empfohlener Stopp-Punkt vor dieser Lektion: Klärt gemeinsam, was der Hauptsatz leisten soll — die Verbindung zwischen Stammfunktion und dem Flächen-Problem. Ein kurzes Tafelbeispiel lohnt sich."
+      },
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung: Integralwert berechnen — Aufgabe aus Lektion 3.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-005"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#stf-hauptsatz",
+          "text": "Lies den Hauptsatz-Abschnitt aufmerksam — notiere den Rechenweg mit der Klammer-Schreibweise als Merkregel:",
+          "beobachtung": "Warum darf man beim Hauptsatz eine beliebige Stammfunktion wählen — also $C = 0$ setzen?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/index.html#stf-hauptsatz"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-104"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-106"
+              ]
+            },
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-011"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-012"
+              ]
+            }
+          ],
+          "partner": "Erklärt euch gegenseitig Schritt für Schritt: Hauptsatz am Beispiel $\\int_0^1 (3x^2)\\,dx$ — ohne Taschenrechner."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-006"
+              ]
+            }
+          ],
+          "transfer": "Ein Auto fährt mit der Geschwindigkeit $v(t) = 2t$ (in m/s). Welche Bedeutung hat $\\int_0^5 v(t)\\,dt$?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l5",
+      "nr": 5,
+      "titel": "Integralfunktionen (eA) — Vermischtes & Sicherung",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-stammfunktionen",
+      "themaPfad": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/",
+      "anker": "#stf-integralfunktion",
+      "ziele": [
+        "Ich kenne die Integralfunktion $I(x) = \\int_a^x f(t)\\,dt$ und weiß, warum $I(a) = 0$ gilt.",
+        "Ich kann $I'(x) = f(x)$ nutzen, um Extremstellen von $I$ aus dem Vorzeichen von $f$ abzulesen (eA).",
+        "Ich kann gemischte Aufgaben zum Hauptsatz sicher bearbeiten."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Aufwärmen mit einer Hauptsatz-Anwendung aus Lektion 4.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-008"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#stf-integralfunktion",
+          "text": "Lies den eA-Abschnitt zur Integralfunktion. Kern: $I(x) = \\int_a^x f(t)\\,dt$ sammelt Fläche auf — und $I' = f$.",
+          "beobachtung": "Warum heißt die Integrationsvariable in $I(x) = \\int_a^x f(t)\\,dt$ jetzt $t$ und nicht $x$? Was würde passieren, wenn man $x$ als Integrationsvariable und gleichzeitig als obere Grenze verwenden würde?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/stammfunktionen-und-hauptsatz/index.html#stf-integralfunktion"
+          }
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-105"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-109"
+              ]
+            },
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-010"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-012",
+                "ma-qp-stf-013"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig je eine gemischte Integral-Aufgabe — einer stellt sie, der andere löst vor."
+        },
+        "sichern": {
+          "zeit": 5,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-007"
+              ]
+            }
+          ],
+          "transfer": "Fasse in drei Sätzen zusammen: Was haben Stammfunktion, bestimmtes Integral und Integralfunktion miteinander zu tun?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Zur Vertiefung und Klausurvorbereitung:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l6",
+      "nr": 1,
+      "titel": "Flächen unter Graphen — und die Vorzeichen-Falle",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-integralanwendungen",
+      "themaPfad": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/",
+      "anker": "#int-flaechen",
+      "ziele": [
+        "Ich kann den Flächeninhalt zwischen einem Graphen und der x-Achse mit dem Hauptsatz berechnen.",
+        "Ich erkenne die Vorzeichen-Falle: Ich teile das Integral an den Nullstellen auf und addiere die Beträge der Teilintegrale."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Block 1: Hauptsatz anwenden — eine kurze Auffrischung.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-006",
+                "ma-qp-stf-008"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#int-flaechen",
+          "text": "Lies Abschnitt 1 und das Beispiel zu $f(x) = x^2 - 4$ auf $[0; 3]$ — alles Wichtige steht direkt hier:",
+          "beobachtung": "Das direkte Integral $\\int_0^3 (x^2-4)\\,dx$ liefert $-3$, die korrekte Fläche aber $\\frac{23}{3}$. Wo genau liegt der Unterschied — und welcher Schritt verhindert die Vorzeichen-Falle?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/index.html#int-flaechen"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-101"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-002"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-003"
+              ]
+            }
+          ],
+          "partner": "Prüft gegenseitig: Einer nennt ein $f(x)$ und ein Intervall, der andere entscheidet — muss ich aufteilen oder nicht? Und warum?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-001"
+              ]
+            }
+          ],
+          "transfer": "Ein Mitschüler sagt: „Das Integral von $-2$ bis $2$ über $x^3$ ist $0$, also schließt der Graph keine Fläche ein.“ Was ist daran falsch?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l7",
+      "nr": 2,
+      "titel": "Flächen zwischen zwei Graphen",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-integralanwendungen",
+      "themaPfad": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/",
+      "anker": "#int-zwischen",
+      "ziele": [
+        "Ich kann die Schnittstellen zweier Funktionsgraphen bestimmen und als Integrationsgrenzen verwenden.",
+        "Ich kann den Flächeninhalt zwischen zwei Graphen durch Integration der Differenzfunktion berechnen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Lektion 6: Fläche unter einem Graphen — Vorzeichen-Falle im Blick.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-102"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#int-zwischen",
+          "text": "Lies Abschnitt 2 und das Parabel-Gerade-Beispiel — alles Wichtige steht direkt hier:",
+          "beobachtung": "Die Flächenformel $\\int_a^b (f(x)-g(x))\\,dx$ funktioniert auch, wenn die Fläche unterhalb der x-Achse liegt. Warum ändert sich der Höhenunterschied $f(x)-g(x)$ nicht, wenn man beide Graphen gemeinsam nach oben verschiebt?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/index.html#int-zwischen"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-004"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-005"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-106"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig eine Aufgabe: Einer nennt zwei Funktionen, der andere bestimmt die Schnittstellen und die Fläche. Dann Rollen tauschen."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-008"
+              ]
+            }
+          ],
+          "transfer": "Zwei Graphen schneiden sich an drei Stellen $x_1 < x_2 < x_3$. Wie berechnet man die gesamte eingeschlossene Fläche? Welcher Schritt darf nicht fehlen?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l8",
+      "nr": 3,
+      "titel": "Bestände rekonstruieren",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-integralanwendungen",
+      "themaPfad": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/",
+      "anker": "#int-bestand",
+      "ziele": [
+        "Ich kann aus einer Änderungsrate durch Integration die Bestandsveränderung berechnen.",
+        "Ich weiß, dass das Integral allein nur die Änderung liefert — zum Bestand muss ich den Anfangsbestand addieren."
+      ],
+      "stopppunkt": {
+        "text": "Vor dieser Lektion lohnt ein gemeinsames Gespräch: Was bedeutet es, eine Rate zu integrieren? Sammelt an der Tafel Beispiele für Raten und Bestände (Geschwindigkeit → Strecke, Zufluss → Wasservolumen usw.)."
+      },
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Lektion 7: Fläche zwischen zwei Graphen — eine kurze Auffrischung.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-005"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#int-bestand",
+          "text": "Lies Abschnitt 3 mit den beiden Sachbeispielen (Zisterne und Bremsen) und der Einheitentabelle — alles Wichtige steht direkt hier:",
+          "beobachtung": "Bei der Zisterne gilt $\\text{Bestand}(b) = \\text{Bestand}(a) + \\int_a^b r(t)\\,dt$. Warum liefert das Integral allein noch keinen Pegelstand — welche Information fehlt?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/index.html#int-bestand"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-007"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-009"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-011"
+              ]
+            }
+          ],
+          "partner": "Erklärt euch gegenseitig: Was sagt ein negativer Integralwert über eine Zuflussrate aus — und was folgt daraus für den Bestand?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-006"
+              ]
+            }
+          ],
+          "transfer": "Eine Badeölwanne enthält $120\\,\\text{L}$. Das Wasser läuft mit $v(t) = 3t$ ($\\text{L/min}$) ab. Nach welcher Zeit ist die Wanne leer? Was wäre, wenn $v$ eine Zuflussrate wäre?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l9",
+      "nr": 4,
+      "titel": "Der Mittelwert einer Funktion",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-integralanwendungen",
+      "themaPfad": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/",
+      "anker": "#int-mittelwert",
+      "ziele": [
+        "Ich kann den Mittelwert einer Funktion auf einem Intervall mit $\\bar{m} = \\frac{1}{b-a} \\int_a^b f(x)\\,dx$ berechnen.",
+        "Ich kann den Mittelwert als Rechteckhöhe mit gleicher Fläche deuten und ihn vom Durchschnitt der Randwerte unterscheiden."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Lektion 8: Bestand rekonstruieren — eine kurze Auffrischung.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-007"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#int-mittelwert",
+          "text": "Lies Abschnitt 4 und das Tagesmitteltemperatur-Beispiel — alles Wichtige steht direkt hier:",
+          "beobachtung": "Im Beispiel liegt der Mittelwert bei $14\\,^\\circ\\text{C}$, der einfache Durchschnitt von Anfangs- und Endwert nur bei $8\\,^\\circ\\text{C}$. Warum unterscheiden sich die beiden Werte — und welcher beschreibt den Tagesverlauf besser?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/index.html#int-mittelwert"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-103"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-010"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-104"
+              ]
+            }
+          ],
+          "partner": "Diskutiert: Kann der Mittelwert einer Funktion außerhalb des Wertebereichs liegen, den $f$ auf dem Intervall annimmt? Oder ist er immer zwischen Minimum und Maximum?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-006"
+              ]
+            }
+          ],
+          "transfer": "Eine Heizung arbeitet $12\\,\\text{h}$ lang mit schwankender Leistung $P(t)$. Welche Bedeutung hat $\\frac{1}{12}\\int_0^{12} P(t)\\,dt$ — und worin unterscheidet er sich vom Endwert $P(12)$?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l33",
+      "nr": 5,
+      "titel": "Rotationskörper (eA)",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-integralanwendungen",
+      "themaPfad": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/",
+      "anker": "#int-rotation",
+      "ziele": [
+        "Ich kann die Volumenformel $V = \\pi \\int_a^b (f(x))^2\\,dx$ über die Idee der Kreisscheiben begründen (eA).",
+        "Ich kann das Volumen eines durch Rotation um die x-Achse entstehenden Körpers berechnen und das Ergebnis mit bekannten Körperformeln (Zylinder, Kegel) überprüfen."
+      ],
+      "stopppunkt": {
+        "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Welche Alltagskörper (Glas, Vase, Kegel) entstehen durch Drehen eines Profils? Sammelt an der Tafel und überlegt, wo der Radius eines Querschnitts herkommt."
+      },
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Lektion 9: Mittelwert einer Funktion — eine kurze Auffrischung zum Aufwärmen.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-010"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#int-rotation",
+          "text": "Lies Abschnitt 5 (Rotationskörper, eA) mit der Idee der Kreisscheiben und den beiden durchgerechneten Beispielen (Kegel und Paraboloid) — alles Wichtige steht direkt hier:",
+          "beobachtung": "In der Formel steht $(f(x))^2$, nicht $f(x)$, und davor ein Faktor $\\pi$. Erkläre beides mit einem Satz über die Querschnittsfläche des Körpers an einer Stelle $x$.",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/index.html#int-rotation"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-107",
+                "ma-qp-int-108"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-109",
+                "ma-qp-int-110"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-111"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig eine Aufgabe: Einer nennt eine Funktion $f$ und ein Intervall, der andere berechnet das Rotationsvolumen — und prüft, ob es eine bekannte Körperform (Zylinder, Kegel) ist."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-013"
+              ]
+            }
+          ],
+          "transfer": "Eine Sektschale wird durch $f(x) = \\sqrt{x}$ modelliert. Warum ist das Quadrieren $(\\sqrt{x})^2 = x$ hier so praktisch — und welcher Rechenschritt bliebe ohne diese Vereinfachung schwieriger?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Zur Vertiefung und Klausurvorbereitung:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l10",
+      "nr": 6,
+      "titel": "Uneigentliche Integrale (eA) — Vermischtes & Sicherung",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-integralanwendungen",
+      "themaPfad": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/",
+      "anker": "#int-uneigentlich",
+      "ziele": [
+        "Ich kann ein uneigentliches Integral über einen Grenzwert-Prozess berechnen und entscheiden, ob es konvergiert oder divergiert (eA).",
+        "Ich kann gemischte Aufgaben zu Flächen, Beständen und Mittelwerten sicher bearbeiten."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Aufwärmen mit einer Mittelwert-Aufgabe aus Lektion 9.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-010"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#int-uneigentlich",
+          "text": "Lies Abschnitt 5 — Hinweis: Dieser Abschnitt gehört zum erhöhten Anforderungsniveau (eA). Kern: erst $\\int_1^b f(x)\\,dx$ mit endlicher Grenze, dann Grenzwert $b \\to \\infty$ bilden:",
+          "beobachtung": "$\\int_1^\\infty \\frac{1}{x^2}\\,dx = 1$ (konvergiert), aber $\\int_1^\\infty \\frac{1}{x}\\,dx$ divergiert. Was macht den Unterschied? Schau dir an, wie schnell $\\frac{1}{x^2}$ und $\\frac{1}{x}$ gegen $0$ gehen.",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/flaechen-und-integralanwendungen/index.html#int-uneigentlich"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-005",
+                "ma-qp-int-009"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-003",
+                "ma-qp-int-007"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-012"
+              ]
+            },
+            {
+              "quelle": "lernbuero/ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-105"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig eine gemischte Aufgabe aus dem Block: Fläche, Bestand oder Mittelwert — einer löst, der andere prüft."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-integralanwendungen",
+              "ids": [
+                "ma-qp-int-013"
+              ]
+            }
+          ],
+          "transfer": "Fasse in drei Sätzen zusammen: Was haben Fläche unter einem Graphen, Bestand aus einer Rate und Mittelwert einer Funktion miteinander zu tun — was ist die gemeinsame Idee?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Zur Vertiefung und Klausurvorbereitung:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l11",
+      "nr": 1,
+      "titel": "Die Zahl e und die Exponentialfunktion",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-e-funktion",
+      "themaPfad": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/",
+      "anker": "#ef-basis",
+      "ziele": [
+        "Ich kenne die Zahl $\\mathrm{e} \\approx 2{,}718$ und ihre besondere Eigenschaft als Basis.",
+        "Ich kann $\\mathrm{e}^x$ mit dem Taschenrechner berechnen und einfache Aufgaben lösen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Auffrischung: Rechenregeln für Potenzen und Exponentialfunktionen aus Klasse 10.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-003",
+                "ma-qp-ef-004"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#ef-basis",
+          "text": "Lies Abschnitt 1 — er erklärt, warum die Basis $\\mathrm{e}$ so besonders ist:",
+          "beobachtung": "Berechne $\\left(1 + \\frac{1}{n}\\right)^n$ für $n = 10$, $n = 100$ und $n = 1000$. Was beobachtest du?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/index.html#ef-basis"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-001"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-002"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-101"
+              ]
+            }
+          ],
+          "partner": "Erkläre deiner Sitznachbarin: Warum gilt $\\mathrm{e}^0 = 1$ — und warum hat $\\mathrm{e}^x$ keine Nullstelle?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-105"
+              ]
+            }
+          ],
+          "transfer": "Was liefert $\\ln(\\mathrm{e}^5)$? Und warum? Erkläre ohne Taschenrechner."
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l12",
+      "nr": 2,
+      "titel": "Ableitung der natürlichen Exponentialfunktion",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-e-funktion",
+      "themaPfad": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/",
+      "anker": "#ef-ableitung",
+      "ziele": [
+        "Ich kenne die besondere Eigenschaft: $(\\mathrm{e}^x)' = \\mathrm{e}^x$.",
+        "Ich kann Ableitungen von Vielfachen und Summen mit $\\mathrm{e}^x$ bestimmen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Lektion 11: Was ist $\\mathrm{e}$ und wie rechnet man mit $\\mathrm{e}^x$?",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-101"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#ef-ableitung",
+          "text": "Lies Abschnitt 2 — der entscheidende Satz: Die e-Funktion ist ihre eigene Ableitung.",
+          "beobachtung": "Welche Funktion $F(x)$ hat die Eigenschaft $F'(x) = F(x)$? Kann es eine andere als $c \\cdot \\mathrm{e}^x$ geben?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/index.html#ef-ableitung"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-102"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-005",
+                "ma-qp-ef-006"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-012"
+              ]
+            }
+          ],
+          "partner": "Prüft gegenseitig: Einer gibt eine Funktion mit $\\mathrm{e}^x$, der andere leitet ab — und prüft durch Einsetzen."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-003"
+              ]
+            }
+          ],
+          "transfer": "Warum gilt $(5\\,\\mathrm{e}^x)' = 5\\,\\mathrm{e}^x$? Formuliere die Regel für $f(x) = c \\cdot \\mathrm{e}^x$."
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l13",
+      "nr": 3,
+      "titel": "Der natürliche Logarithmus",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-e-funktion",
+      "themaPfad": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/",
+      "anker": "#ef-ln",
+      "ziele": [
+        "Ich kenne den natürlichen Logarithmus $\\ln$ als Umkehrfunktion von $\\mathrm{e}^x$.",
+        "Ich kann einfache Gleichungen mit $\\mathrm{e}^x$ und $\\ln$ lösen."
+      ],
+      "stopppunkt": {
+        "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Was bedeutet Umkehrfunktion? Wofür brauchen wir den Logarithmus?"
+      },
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung Ableitung $\\mathrm{e}^x$: eine schnelle Aufgabe.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-005"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#ef-ln",
+          "text": "Lies Abschnitt 3 und die Rechenregeln für $\\ln$ — achte besonders auf $\\ln(\\mathrm{e}^x) = x$:",
+          "beobachtung": "Was ist $\\ln(1)$? Was ist $\\ln(\\mathrm{e})$? Erkläre mit der Umkehreigenschaft.",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/index.html#ef-ln"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-105"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-106"
+              ]
+            },
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-008"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-013"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig Gleichungen der Form $\\mathrm{e}^x = c$ und $\\ln(x) = d$ — löst sie und prüft die Lösungen."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-004"
+              ]
+            }
+          ],
+          "transfer": "Löse $\\mathrm{e}^{2x} = 10$ — welcher Schritt ist der entscheidende? Warum gilt $\\ln(\\mathrm{e}^{2x}) = 2x$?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l14",
+      "nr": 4,
+      "titel": "Kettenregel mit der e-Funktion",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-e-funktion",
+      "themaPfad": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/",
+      "anker": "#ef-kettenregel",
+      "ziele": [
+        "Ich kann die Kettenregel auf Funktionen der Form $f(x) = \\mathrm{e}^{g(x)}$ anwenden.",
+        "Ich erkenne die Struktur äußere·innere Ableitung und wende sie sicher an."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Auffrischung Kettenregel aus der Einführungsphase.",
+          "aufgaben": [
+            {
+              "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+              "ids": [
+                "ma-ep-ablr-005",
+                "ma-ep-ablr-006"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#ef-kettenregel",
+          "text": "Lies Abschnitt 4 — Kern: $(\\mathrm{e}^{g(x)})' = g'(x) \\cdot \\mathrm{e}^{g(x)}$:",
+          "beobachtung": "Welche äußere und welche innere Funktion steckt in $\\mathrm{e}^{3x+1}$? Wie lautet die Ableitung?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/index.html#ef-kettenregel"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-103"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-104"
+              ]
+            },
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-009"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-010"
+              ]
+            }
+          ],
+          "partner": "Gebt euch gegenseitig je zwei Kettenregel-Aufgaben mit $\\mathrm{e}^x$ — einer löst, der andere prüft."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-007"
+              ]
+            }
+          ],
+          "transfer": "Leite $f(x) = \\mathrm{e}^{x^2}$ ab. Was ist die innere, was die äußere Funktion?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l15",
+      "nr": 5,
+      "titel": "Kurvenuntersuchung mit e-Funktionen",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-e-funktion",
+      "themaPfad": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/",
+      "anker": "#ef-kurven",
+      "ziele": [
+        "Ich kann e-Funktionen auf Extremstellen, Wendepunkte und Monotonieverhalten untersuchen.",
+        "Ich kann gemischte Aufgaben zur e-Funktion sicher bearbeiten."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Aufwärmen: Kettenregel-Aufgabe aus Lektion 14.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-103"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#ef-kurven",
+          "text": "Lies Abschnitt 5 — Kurvenuntersuchung mit e-Funktionen folgt demselben Schema wie bei ganzrationalen Funktionen:",
+          "beobachtung": "Warum hat $f(x) = \\mathrm{e}^x$ keine Extremstellen? Und $f(x) = x \\cdot \\mathrm{e}^x$ schon — wo liegt der Unterschied?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/natuerliche-exponentialfunktion/index.html#ef-kurven"
+          }
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-107"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-011"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-108"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig eine Kurvenuntersuchungsaufgabe mit $\\mathrm{e}^x$. Einer löst, der andere prüft."
+        },
+        "sichern": {
+          "zeit": 5,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-006"
+              ]
+            }
+          ],
+          "transfer": "Fasse in drei Sätzen zusammen: Was macht Kurvenuntersuchungen mit e-Funktionen besonders — und was ist wie gewohnt?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l16",
+      "nr": 1,
+      "titel": "Exponentielles Wachstum mit der e-Funktion",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-wachstumsmodelle",
+      "themaPfad": "mathematik/qualifikationsphase/wachstumsmodelle/",
+      "anker": "#wm-exp",
+      "ziele": [
+        "Ich kann das Modell $N(t) = N_0 \\cdot \\mathrm{e}^{kt}$ beschreiben und Werte berechnen.",
+        "Ich kenne Verdopplungszeit und Halbwertszeit und kann sie berechnen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Auffrischung: Exponentialfunktion aus Block 3.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-001",
+                "ma-qp-ef-002"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#wm-exp",
+          "text": "Lies Abschnitt 1 — das Modell $N(t) = N_0 \\cdot \\mathrm{e}^{kt}$ beschreibt unbegrenztes Wachstum:",
+          "beobachtung": "Was bedeutet $k > 0$ und $k < 0$ im Modell? Skizziere je einen Graphen.",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/wachstumsmodelle/index.html#wm-exp"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-101"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-003"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-012"
+              ]
+            }
+          ],
+          "partner": "Diskutiert: Was bedeutet es konkret, wenn $k = 0{,}2$? Wie viele Prozent Zuwachs pro Zeiteinheit?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-001"
+              ]
+            }
+          ],
+          "transfer": "Ein Bakterienstamm verdoppelt sich alle 3 Stunden. Schreibe das Modell auf — welchen Wert hat $k$?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l17",
+      "nr": 2,
+      "titel": "Wachstumsgeschwindigkeit: $N'(t) = k \\cdot N(t)$",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-wachstumsmodelle",
+      "themaPfad": "mathematik/qualifikationsphase/wachstumsmodelle/",
+      "anker": "#wm-tempo",
+      "ziele": [
+        "Ich kann $N'(t) = k \\cdot N(t)$ als Eigenschaft des Modells erklären.",
+        "Ich kann die Halbwertszeit und Verdopplungszeit berechnen und interpretieren."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Lektion 16: $N(t)$ berechnen.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-101"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#wm-tempo",
+          "text": "Lies Abschnitt 2 — der Schlüsselsatz: Die Änderungsrate ist proportional zum Bestand:",
+          "beobachtung": "Ableite $N(t) = N_0 \\mathrm{e}^{kt}$ und zeige, dass $N'(t) = k \\cdot N(t)$ gilt.",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/wachstumsmodelle/index.html#wm-tempo"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-102"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-105"
+              ]
+            },
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-106"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-007"
+              ]
+            }
+          ],
+          "partner": "Erklärt euch gegenseitig: Was ist der Unterschied zwischen Wachstumsrate $k$ und Wachstumsgeschwindigkeit $N'(t)$?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-002"
+              ]
+            }
+          ],
+          "transfer": "Wenn eine Substanz mit $k = -0{,}02\\,\\text{h}^{-1}$ zerfällt — wie lange dauert es, bis die Hälfte weg ist?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l18",
+      "nr": 3,
+      "titel": "Begrenztes und logistisches Wachstum",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-wachstumsmodelle",
+      "themaPfad": "mathematik/qualifikationsphase/wachstumsmodelle/",
+      "anker": "#wm-begrenzt",
+      "ziele": [
+        "Ich kann das Modell des begrenzten Wachstums beschreiben und den Grenzwert $G$ erklären.",
+        "Ich kenne das logistische Wachstum und kann seinen S-förmigen Verlauf begründen (eA)."
+      ],
+      "stopppunkt": {
+        "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Warum ist unbegrenztes Wachstum in der Realität nicht dauerhaft möglich? Sammelt Beispiele."
+      },
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung: Halbwertszeit berechnen — Aufgabe aus Lektion 17.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-102"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#wm-begrenzt",
+          "text": "Lies Abschnitt 3 — begrenztes Wachstum nähert sich einem Grenzwert $G$, logistisches Wachstum hat einen S-Bogen:",
+          "beobachtung": "Zeige durch Einsetzen von $t = 0$ und $t \\to \\infty$, dass das begrenzte Modell bei $N_0$ startet und sich $G$ annähert.",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/wachstumsmodelle/index.html#wm-begrenzt"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-103"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-005"
+              ]
+            },
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-104"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-012"
+              ]
+            }
+          ],
+          "partner": "Diskutiert: Kann das logistische Modell den Grenzwert $G$ überschreiten? Warum nicht?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-004"
+              ]
+            }
+          ],
+          "transfer": "Ein Teich fasst maximal 1000 Fische. Erkläre, welches Modell (exponentiell, begrenzt, logistisch) am besten passt — und warum."
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l19",
+      "nr": 4,
+      "titel": "Modell wählen, anpassen und beurteilen",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-wachstumsmodelle",
+      "themaPfad": "mathematik/qualifikationsphase/wachstumsmodelle/",
+      "anker": "#wm-modellwahl",
+      "ziele": [
+        "Ich kann aus einem Sachkontext das passende Wachstumsmodell auswählen und begründen.",
+        "Ich kann Modellparameter aus gegebenen Wertepaaren bestimmen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Aufwärmen: logistisches Wachstum — Grenzwert aus Lektion 18.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-104"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#wm-modellwahl",
+          "text": "Lies Abschnitt 5 — Checkliste zum Modell wählen und beurteilen:",
+          "beobachtung": "Nenne je ein reales Beispiel für exponentielles, begrenztes und logistisches Wachstum. Was unterscheidet die Kurvenformen?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/wachstumsmodelle/index.html#wm-modellwahl"
+          }
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-006"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-009",
+                "ma-qp-wm-010"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-107"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig eine Modellierungsaufgabe: Einer beschreibt einen Sachkontext, der andere wählt das Modell und begründet."
+        },
+        "sichern": {
+          "zeit": 5,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-wachstumsmodelle",
+              "ids": [
+                "ma-qp-wm-008"
+              ]
+            }
+          ],
+          "transfer": "Fasse in drei Sätzen zusammen: Wonach richtet sich die Modellwahl — und welche Grenzen haben alle drei Modelle?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l20",
+      "nr": 1,
+      "titel": "Steckbriefaufgaben: Bedingungen übersetzen",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-kurvenanpassung",
+      "themaPfad": "mathematik/qualifikationsphase/kurvenanpassung-ganzrational/",
+      "anker": "#ka-steckbrief",
+      "ziele": [
+        "Ich kann geometrische Bedingungen (Punkt, Tangente, Extremum) in Gleichungen übersetzen.",
+        "Ich weiß, wie viele Bedingungen ich für eine Funktion vom Grad $n$ benötige."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Auffrischung: Ableitungsregeln und lineare Gleichungssysteme.",
+          "aufgaben": [
+            {
+              "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+              "ids": [
+                "ma-ep-ablr-001",
+                "ma-ep-ablr-002"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#ka-steckbrief",
+          "text": "Lies Abschnitt 1 — der zentrale Schritt: jede Bedingung wird zu einer Gleichung:",
+          "beobachtung": "Welche Gleichung ergibt sich aus der Bedingung: Der Graph berührt die $x$-Achse im Punkt $(2\\,|\\,0)$? (Zwei Bedingungen!)",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/kurvenanpassung-ganzrational/index.html#ka-steckbrief"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-001"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-101"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-102"
+              ]
+            }
+          ],
+          "partner": "Erklärt euch: Warum braucht eine kubische Funktion genau vier Bedingungen? Zählt die Koeffizienten."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-002"
+              ]
+            }
+          ],
+          "transfer": "Ein Graph hat ein Minimum bei $(1\\,|\\,-2)$. Welche zwei Gleichungen ergeben sich aus dieser Bedingung?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l21",
+      "nr": 2,
+      "titel": "LGS aufstellen und lösen",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-kurvenanpassung",
+      "themaPfad": "mathematik/qualifikationsphase/kurvenanpassung-ganzrational/",
+      "anker": "#ka-lgs",
+      "ziele": [
+        "Ich kann das LGS aus den Steckbrief-Bedingungen aufstellen und durch Gleichsetzen oder Substitution lösen.",
+        "Ich kann die gefundene Funktion durch Einsetzen auf Richtigkeit prüfen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Lektion 20: Bedingungen übersetzen.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-101"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#ka-lgs",
+          "text": "Lies Abschnitt 3 — das Wörterbuch übersetzen → LGS aufstellen → lösen → prüfen:",
+          "beobachtung": "Zeige durch Einsetzen: $f(x) = x^2 + x + 1$ mit $f(0) = 1$ ✓ — was prüfst du damit?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/kurvenanpassung-ganzrational/index.html#ka-lgs"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-003"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-104"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-006"
+              ]
+            }
+          ],
+          "partner": "Prüft gegenseitig: Einer löst eine Steckbriefaufgabe, der andere setzt alle Bedingungen ein und prüft."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-004"
+              ]
+            }
+          ],
+          "transfer": "Du erhältst $a = 2$, $b = -3$, $c = 1$ als Lösung. Wie prüfst du, ob alle Steckbrief-Bedingungen erfüllt sind?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l22",
+      "nr": 3,
+      "titel": "Symmetrie und Sonderbedingungen",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-kurvenanpassung",
+      "themaPfad": "mathematik/qualifikationsphase/kurvenanpassung-ganzrational/",
+      "anker": "#ka-symmetrie",
+      "ziele": [
+        "Ich kann Symmetriebedingungen (achsensymmetrisch/punktsymmetrisch) in Koeffizientenbedingungen übersetzen.",
+        "Ich nutze Symmetrie, um das LGS zu vereinfachen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung LGS lösen aus Lektion 21.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-104"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#ka-symmetrie",
+          "text": "Lies Abschnitt 4 — Achsensymmetrie bedeutet: alle ungeraden Potenzen fallen weg:",
+          "beobachtung": "Warum hat eine achsensymmetrische Parabel kein $bx$-Glied? Was folgt daraus für das LGS?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/kurvenanpassung-ganzrational/index.html#ka-symmetrie"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-007"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-103"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-012"
+              ]
+            }
+          ],
+          "partner": "Diskutiert: Warum spart die Symmetriebedingung Rechenarbeit? Gebt ein Beispiel."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-005"
+              ]
+            }
+          ],
+          "transfer": "Eine kubische Funktion ist punktsymmetrisch zum Ursprung. Welche Koeffizienten müssen null sein — und warum?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l23",
+      "nr": 4,
+      "titel": "Modell prüfen — vermischte Steckbriefaufgaben",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-kurvenanpassung",
+      "themaPfad": "mathematik/qualifikationsphase/kurvenanpassung-ganzrational/",
+      "anker": "#ka-pruefen",
+      "ziele": [
+        "Ich kann überprüfen, ob eine Funktion alle Steckbrief-Bedingungen erfüllt.",
+        "Ich kann gemischte Aufgaben zur Kurvenanpassung sicher bearbeiten."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Aufwärmen: Steckbriefaufgabe aus Lektion 22.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-103"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#ka-pruefen",
+          "text": "Lies Abschnitt 5 — Prüfen und Verwerfen: ein Modell, das einer Bedingung widerspricht, ist falsch:",
+          "beobachtung": "Gegeben sei $f(x) = 2x^2 - 4x + 3$. Prüfe, ob $f$ ein lokales Minimum bei $x = 1$ hat.",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/kurvenanpassung-ganzrational/index.html#ka-pruefen"
+          }
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-008"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-009",
+                "ma-qp-ka-010"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-105"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig eine vollständige Steckbriefaufgabe. Einer löst, der andere prüft alle Bedingungen."
+        },
+        "sichern": {
+          "zeit": 5,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-011"
+              ]
+            }
+          ],
+          "transfer": "Fasse in drei Sätzen zusammen: Wie geht man bei einer Steckbriefaufgabe systematisch vor — von der Bedingung bis zur Probe?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l24",
+      "nr": 1,
+      "titel": "Was eine Funktionenschar ist",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-funktionenscharen",
+      "themaPfad": "mathematik/qualifikationsphase/funktionenscharen/",
+      "anker": "#fs-begriff",
+      "ziele": [
+        "Ich kenne den Begriff der Funktionenschar und kann einzelne Scharkurven zeichnen.",
+        "Ich kann den Parameter $a$ einsetzen und die Auswirkungen auf den Graphen beschreiben."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Auffrischung: Steckbriefaufgaben und Kurvenanpassung aus Block 5.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-kurvenanpassung",
+              "ids": [
+                "ma-qp-ka-001",
+                "ma-qp-ka-002"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#fs-begriff",
+          "text": "Lies Abschnitt 1 — eine Funktionenschar ist eine Familie von Funktionen, die durch einen Parameter $a$ gesteuert wird:",
+          "beobachtung": "Zeichne $f_1(x) = x^2$, $f_2(x) = 2x^2$ und $f_{-1}(x) = -x^2$. Was ändert der Parameter, was bleibt gleich?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/funktionenscharen/index.html#fs-begriff"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-001"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-101"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-011"
+              ]
+            }
+          ],
+          "partner": "Erklärt euch: Was ist der Unterschied zwischen einer Funktion und einer Funktionenschar?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-003"
+              ]
+            }
+          ],
+          "transfer": "Was passiert mit dem Graphen von $f_a(x) = a \\cdot x^2$, wenn $a$ gegen null geht? Wenn $a \\to \\infty$?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l25",
+      "nr": 2,
+      "titel": "Extremstellen und gemeinsame Punkte",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-funktionenscharen",
+      "themaPfad": "mathematik/qualifikationsphase/funktionenscharen/",
+      "anker": "#fs-rechnen",
+      "ziele": [
+        "Ich kann Extremstellen einer Funktionenschar in Abhängigkeit von $a$ bestimmen.",
+        "Ich kann gemeinsame Punkte aller Scharkurven berechnen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Lektion 24: Scharkurven berechnen.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-101"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#fs-rechnen",
+          "text": "Lies Abschnitt 2 — Extremstellen als Funktion von $a$ bestimmen:",
+          "beobachtung": "Bei $f_a(x) = x^2 + ax$: Für welchen Wert $a$ liegt das Minimum bei $x = -1$?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/funktionenscharen/index.html#fs-rechnen"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-102"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-005"
+              ]
+            },
+            {
+              "quelle": "lernbuero/ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-103"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-012"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig eine Schar vor — einer bestimmt Extremstellen, der andere gemeinsame Punkte."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-004"
+              ]
+            }
+          ],
+          "transfer": "Kann eine Schar $f_a(x) = x^2 - ax + 1$ für alle $a$ den Punkt $(0\\,|\\,1)$ gemeinsam haben? Prüfe!"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l26",
+      "nr": 3,
+      "titel": "Ortskurven bestimmen",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-funktionenscharen",
+      "themaPfad": "mathematik/qualifikationsphase/funktionenscharen/",
+      "anker": "#fs-ortskurve",
+      "ziele": [
+        "Ich kann die Ortskurve der Extremstellen einer Funktionenschar bestimmen.",
+        "Ich verstehe: Die Ortskurve verbindet alle Extrempunkte der Schar zu einer eigenen Kurve."
+      ],
+      "stopppunkt": {
+        "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Was ist eine Ortskurve? Sammelt Analogien aus der Geometrie (Mittelsenkrechte, Kreislinie als Ort aller Punkte mit gleichem Abstand)."
+      },
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung aus Lektion 25: Extremstellen der Schar.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-102"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#fs-ortskurve",
+          "text": "Lies Abschnitt 4 — Ortskurve: eliminiere den Parameter $a$ aus den Extrempunkt-Koordinaten:",
+          "beobachtung": "Bei $f_a$: Du kennst $x_E(a)$ und $y_E(a)$. Was passiert, wenn du $a$ aus beiden Ausdrücken eliminierst?",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/funktionenscharen/index.html#fs-ortskurve"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-007"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-104"
+              ]
+            },
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-008"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-013"
+              ]
+            }
+          ],
+          "partner": "Erklärt euch Schritt für Schritt: Wie eliminiert man den Parameter $a$? Gebt ein gemeinsames Beispiel."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-006"
+              ]
+            }
+          ],
+          "transfer": "Eine Ortskurve ist eine Parabel. Was sagt das über die Lage der Extrempunkte der Schar aus?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l27",
+      "nr": 4,
+      "titel": "Scharen in Anwendungen — Fallunterscheidung",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-funktionenscharen",
+      "themaPfad": "mathematik/qualifikationsphase/funktionenscharen/",
+      "anker": "#fs-anwendung",
+      "ziele": [
+        "Ich kann Anwendungsaufgaben mit Funktionenscharen bearbeiten und Fallunterscheidungen nach dem Parameter vornehmen.",
+        "Ich kann gemischte Aufgaben zu Funktionenscharen sicher lösen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Aufwärmen: Ortskurve aus Lektion 26.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-104"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#fs-anwendung",
+          "text": "Lies Abschnitt 5 — Fallunterscheidung nach $a$: Das Verhalten der Schar kann sich je nach Vorzeichen von $a$ grundlegend ändern:",
+          "beobachtung": "Für welche $a$ hat $f_a(x) = ax^2 - 2ax + a - 1$ reelle Nullstellen? Diskriminante berechnen.",
+          "interaktiv": {
+            "label": "Verständnis-Check auf der Erklärseite",
+            "href": "mathematik/qualifikationsphase/funktionenscharen/index.html#fs-anwendung"
+          }
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-009"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-010"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-105"
+              ]
+            }
+          ],
+          "partner": "Stellt euch gegenseitig eine Schar-Aufgabe mit Fallunterscheidung. Einer löst, der andere prüft."
+        },
+        "sichern": {
+          "zeit": 5,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-funktionenscharen",
+              "ids": [
+                "ma-qp-fs-002"
+              ]
+            }
+          ],
+          "transfer": "Fasse in drei Sätzen zusammen: Was unterscheidet die Untersuchung einer Schar von der einer einzelnen Funktion?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l28",
+      "nr": 1,
+      "titel": "Nutzung der Überblicksseite und Checkliste",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-q1-analysis",
+      "themaPfad": "mathematik/qualifikationsphase/q1-ueberblick-analysis/",
+      "anker": "#q1a-nutzung",
+      "ziele": [
+        "Ich kenne die Struktur des Q1-Überblicks und weiß, wie ich ihn zur Klausurvorbereitung nutze.",
+        "Ich kann meinen eigenen Lernstand anhand der Checkliste einschätzen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 5,
+          "hinweis": "Kurzes Brainstorming: Welche Themen der Analysis haben wir in Q1 behandelt? Sammelt an der Tafel.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-001"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#q1a-nutzung",
+          "text": "Lies den Einstiegsabschnitt und die Checkliste auf der Überblicksseite aufmerksam durch:",
+          "beobachtung": "Markiere in der Checkliste: Was kannst du bereits sicher? Was musst du noch üben?",
+          "interaktiv": {
+            "label": "Überblicksseite öffnen",
+            "href": "mathematik/qualifikationsphase/q1-ueberblick-analysis/index.html#q1a-nutzung"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-101"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-004",
+                "ma-qp-q1-008"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-012"
+              ]
+            }
+          ],
+          "partner": "Erklärt euch gegenseitig: Welche drei Themen aus Q1 findet ihr am schwierigsten — und warum?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-009"
+              ]
+            }
+          ],
+          "transfer": "Schreibe in einem Satz: Was ist das übergeordnete Ziel der Analysis in der Q1?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l29",
+      "nr": 2,
+      "titel": "Ableiten und Untersuchen — Wiederholung EP",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-q1-analysis",
+      "themaPfad": "mathematik/qualifikationsphase/q1-ueberblick-analysis/",
+      "anker": "#q1a-ableiten",
+      "ziele": [
+        "Ich kann Ableitungsregeln aus der EP sicher anwenden.",
+        "Ich kann Kurvenuntersuchungen (Extrem-, Wende-, Nullstellen) vollständig durchführen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Wiederholung: Ableitungsregeln aus der EP.",
+          "aufgaben": [
+            {
+              "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+              "ids": [
+                "ma-ep-ablr-001",
+                "ma-ep-ablr-002"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#q1a-ableiten",
+          "text": "Lies Abschnitt 2 und die Checkliste zur Kurvenuntersuchung — alles Wichtige auf einen Blick:",
+          "beobachtung": "Welche Schritte der Kurvenuntersuchung kannst du auswendig? Schreibe sie auf, ohne nachzuschauen.",
+          "interaktiv": {
+            "label": "Überblick-Abschnitt öffnen",
+            "href": "mathematik/qualifikationsphase/q1-ueberblick-analysis/index.html#q1a-ableiten"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-101"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-002",
+                "ma-qp-q1-003"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-012"
+              ]
+            }
+          ],
+          "partner": "Führt gemeinsam eine vollständige Kurvenuntersuchung von $f(x) = x^3 - 3x$ durch — wer kann mehr Schritte auswendig?"
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-005"
+              ]
+            }
+          ],
+          "transfer": "Was unterscheidet eine Extremstelle von einer Wendestelle — und wie erkennst du den Unterschied in der Ableitung?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l30",
+      "nr": 3,
+      "titel": "Integrieren — Wiederholung Stammfunktionen und Hauptsatz",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-q1-analysis",
+      "themaPfad": "mathematik/qualifikationsphase/q1-ueberblick-analysis/",
+      "anker": "#q1a-integrieren",
+      "ziele": [
+        "Ich kann Stammfunktionen bestimmen und den Hauptsatz anwenden.",
+        "Ich kann Flächen und Bestände aus einer Rate berechnen."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Aufwärmen: Stammfunktion aus Block 1.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-stammfunktionen",
+              "ids": [
+                "ma-qp-stf-001",
+                "ma-qp-stf-002"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#q1a-integrieren",
+          "text": "Lies Abschnitt 3 — Stammfunktionen, Hauptsatz, Flächen in einer kompakten Übersicht:",
+          "beobachtung": "Was ist der Unterschied zwischen $\\int f(x)\\,dx$ (unbestimmt) und $\\int_a^b f(x)\\,dx$ (bestimmt)?",
+          "interaktiv": {
+            "label": "Überblick-Abschnitt öffnen",
+            "href": "mathematik/qualifikationsphase/q1-ueberblick-analysis/index.html#q1a-integrieren"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-102"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-006",
+                "ma-qp-q1-010"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-105"
+              ]
+            }
+          ],
+          "partner": "Prüft gegenseitig: Einer nennt $f(x)$, der andere bestimmt $F(x)$ und berechnet $\\int_0^2 f(x)\\,dx$."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-011"
+              ]
+            }
+          ],
+          "transfer": "Warum addiert man beim Hauptsatz $+C = 0$? Welchen Unterschied macht die Wahl von $C$?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l31",
+      "nr": 4,
+      "titel": "e-Funktion und Wachstum — Wiederholung",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-q1-analysis",
+      "themaPfad": "mathematik/qualifikationsphase/q1-ueberblick-analysis/",
+      "anker": "#q1a-efunktion",
+      "ziele": [
+        "Ich kann die e-Funktion und Wachstumsmodelle in einer gemischten Aufgabe zusammenführen.",
+        "Ich kann Kurvenanpassung und Funktionenscharen sicher bearbeiten."
+      ],
+      "stopppunkt": null,
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Aufwärmen: e-Funktion und Kettenregel aus Block 3.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-e-funktion",
+              "ids": [
+                "ma-qp-ef-005",
+                "ma-qp-ef-006"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#q1a-efunktion",
+          "text": "Lies Abschnitt 4 — Überblick e-Funktion, Wachstum, Kurvenanpassung, Scharen:",
+          "beobachtung": "Benenne für jedes Thema (e-Funktion / Wachstum / Kurvenanpassung / Scharen) die wichtigste Formel oder Methode.",
+          "interaktiv": {
+            "label": "Überblick-Abschnitt öffnen",
+            "href": "mathematik/qualifikationsphase/q1-ueberblick-analysis/index.html#q1a-efunktion"
+          }
+        },
+        "ueben": {
+          "zeit": 18,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-103"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-007",
+                "ma-qp-q1-009"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-104"
+              ]
+            }
+          ],
+          "partner": "Prüft euch gegenseitig zu je einem Thema: einer fragt, der andere erklärt. Dann Rollen tauschen."
+        },
+        "sichern": {
+          "zeit": 7,
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-002"
+              ]
+            }
+          ],
+          "transfer": "Eine e-Funktion und ein Wachstumsmodell — was haben sie gemeinsam und worin unterscheiden sie sich?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l32",
+      "nr": 5,
+      "titel": "Klausurtraining — typische Aufgaben knacken",
+      "dauer": 45,
+      "status": "online",
+      "thema": "ma-qp-q1-analysis",
+      "themaPfad": "mathematik/qualifikationsphase/q1-ueberblick-analysis/",
+      "anker": "#q1a-klausur",
+      "ziele": [
+        "Ich kann gemischte Q1-Klausuraufgaben (Ableiten, Integrieren, e-Funktion, Modelle) strukturiert bearbeiten.",
+        "Ich kenne typische Klausurfallen und wie ich sie vermeide."
+      ],
+      "stopppunkt": {
+        "text": "Vor dieser Abschluss-Lektion lohnt ein gemeinsames Gespräch: Welche Themen haben die meisten Fragen aufgeworfen? Was soll nochmal an der Tafel erklärt werden?"
+      },
+      "phasen": {
+        "ankommen": {
+          "zeit": 3,
+          "hinweis": "Aufwärmen: gemischte Aufgabe aus dem Q1-Überblick.",
+          "aufgaben": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-001",
+                "ma-qp-q1-008"
+              ]
+            }
+          ]
+        },
+        "verstehen": {
+          "zeit": 12,
+          "anker": "#q1a-klausur",
+          "text": "Lies Abschnitt 5 — typische Klausuraufgaben und wie man sie angeht:",
+          "beobachtung": "Welche der beschriebenen Klausurfallen kennst du aus eigener Erfahrung? Notiere dein persönliches Top-3-Risiko.",
+          "interaktiv": {
+            "label": "Überblick-Abschnitt öffnen",
+            "href": "mathematik/qualifikationsphase/q1-ueberblick-analysis/index.html#q1a-klausur"
+          }
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "lernbuero/ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-101",
+                "ma-qp-q1-102"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-003",
+                "ma-qp-q1-006"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-013"
+              ]
+            }
+          ],
+          "partner": "Erstellt gemeinsam eine Mini-Klausur mit je einer Aufgabe zu Ableiten, Integrieren und e-Funktion. Tauscht aus und löst."
+        },
+        "sichern": {
+          "zeit": 5,
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/ma-qp-q1-analysis",
+              "ids": [
+                "ma-qp-q1-105"
+              ]
+            }
+          ],
+          "transfer": "Fasse in drei Sätzen zusammen: Was sind deine drei größten Lernfortschritte in Q1 Analysis — und was nimmst du als wichtigstes Werkzeug in die Klausur mit?"
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Wenn Zeit bleibt:",
+          "links": [
+            {
+              "label": "Tagesmischung Mathematik",
+              "href": "lernspiele/tagesmischung/index.html"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "bloecke": [
+    {
+      "titel": "Stammfunktionen und Hauptsatz",
+      "thema": "ma-qp-stammfunktionen",
+      "lektionen": [
+        "l1",
+        "l2",
+        "l3",
+        "l4",
+        "l5"
+      ],
+      "mindestmarke": "Basis-Spur des Themas geschafft"
+    },
+    {
+      "titel": "Flächen und Integralanwendungen",
+      "thema": "ma-qp-integralanwendungen",
+      "lektionen": [
+        "l6",
+        "l7",
+        "l8",
+        "l9",
+        "l33",
+        "l10"
+      ],
+      "mindestmarke": "Basis-Spur des Themas geschafft"
+    },
+    {
+      "titel": "Die natürliche Exponentialfunktion",
+      "thema": "ma-qp-e-funktion",
+      "lektionen": [
+        "l11",
+        "l12",
+        "l13",
+        "l14",
+        "l15"
+      ],
+      "mindestmarke": "Basis-Spur des Themas geschafft"
+    },
+    {
+      "titel": "Wachstumsmodelle",
+      "thema": "ma-qp-wachstumsmodelle",
+      "lektionen": [
+        "l16",
+        "l17",
+        "l18",
+        "l19"
+      ],
+      "mindestmarke": "Basis-Spur des Themas geschafft"
+    },
+    {
+      "titel": "Kurvenanpassung mit ganzrationalen Funktionen",
+      "thema": "ma-qp-kurvenanpassung",
+      "lektionen": [
+        "l20",
+        "l21",
+        "l22",
+        "l23"
+      ],
+      "mindestmarke": "Basis-Spur des Themas geschafft"
+    },
+    {
+      "titel": "Funktionenscharen",
+      "thema": "ma-qp-funktionenscharen",
+      "lektionen": [
+        "l24",
+        "l25",
+        "l26",
+        "l27"
+      ],
+      "mindestmarke": "Basis-Spur des Themas geschafft"
+    },
+    {
+      "titel": "Vermischtes / Überblick Analysis Q1",
+      "thema": "ma-qp-q1-analysis",
+      "lektionen": [
+        "l28",
+        "l29",
+        "l30",
+        "l31",
+        "l32"
+      ],
+      "mindestmarke": "Basis-Spur der Überblicksseite geschafft"
+    }
+  ]
+}
