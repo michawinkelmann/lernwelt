@@ -324,6 +324,17 @@
     <p>Dieselbe Grenzwert-Idee erschließt noch mehr: Flächen, die seitlich an eine Definitionslücke heranreichen (etwa unter $\frac{1}{\sqrt{x}}$ bis zur Stelle $0$), behandelt man genauso — Grenze davorsetzen, Grenzwert bilden. Im eA-Abitur begegnen dir uneigentliche Integrale später vor allem im Zusammenspiel mit der e-Funktion.</p>
   </section>
 
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Das uneigentliche Integral der e-Funktion</summary>
+    <div class="vertiefung-inhalt">
+      <p>Das wichtigste uneigentliche Integral im eA-Abitur gehört zur Funktion $f(x) = e^{-x}$. Ihr Graph fällt rechts der $y$-Achse rasch gegen die $x$-Achse — schnell genug, dass die unendlich lange Fläche darunter einen endlichen Inhalt besitzt. Eine Stammfunktion ist $F(x) = -e^{-x}$, denn $\left(-e^{-x}\right)' = e^{-x}$. Mit beweglicher Grenze $b$:</p>
+      <p class="formel-abgesetzt">$$\int_0^b e^{-x}\,dx = \left[-e^{-x}\right]_0^b = -e^{-b} + e^{0} = 1 - e^{-b}$$</p>
+      <p>Für $b \to \infty$ geht $e^{-b}$ gegen $0$ (der Nenner $e^{b}$ wächst über alle Grenzen). Also:</p>
+      <p class="formel-abgesetzt">$$\int_0^{\infty} e^{-x}\,dx = \lim_{b \to \infty}\left(1 - e^{-b}\right) = 1$$</p>
+      <p>Die Fläche unter der Abklingkurve hat exakt den Inhalt $1\ \text{FE}$. Genau diese Eigenschaft macht $e^{-x}$ — allgemeiner $\lambda e^{-\lambda x}$ — zur Grundlage der <strong>Exponentialverteilung</strong> in der Stochastik: Eine Dichtefunktion beschreibt nur dann eine Gesamtwahrscheinlichkeit von $1$, wenn die Fläche unter ihr genau $1$ ergibt. Dieselbe Grenzwert-Technik wie bei $\frac{1}{x^2}$ — nur mit der e-Funktion, die im Abitur am häufigsten vorkommt.</p>
+    </div>
+  </details>
+
   <div class="weiter-karte">
     <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — Vorzeichen-Falle, Flächen zwischen Graphen, Bestände, Mittelwerte und als Zusatz uneigentliche Integrale und ein Rotationskörper — mit gestuften Tipps, CAS-Anleitungen und vollständigen Lösungswegen.</p>
     <a class="knopf" href="uebungen.html">Zu den Übungen</a>

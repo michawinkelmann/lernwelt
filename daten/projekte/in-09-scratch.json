@@ -59,35 +59,35 @@
       "titel": "Figur steuern",
       "status": "online",
       "kc": "Ereignisse, Eingabe",
-      "ziel": "Eine Figur bewegt sich mit den Pfeiltasten. Jede Taste loest ein eigenes Ereignis aus.",
+      "ziel": "Eine Figur bewegt sich mit den Pfeiltasten. Jede Taste löst ein eigenes Ereignis aus.",
       "pflichtbausteine": [
-        "<code>wenn Taste [Pfeil rechts] gedrueckt</code>",
-        "<code>wenn Taste [Pfeil links] gedrueckt</code>",
+        "<code>wenn Taste [Pfeil rechts] gedrückt</code>",
+        "<code>wenn Taste [Pfeil links] gedrückt</code>",
         "<code>gehe 10er-Schritt</code>",
         "<code>drehe dich um 15 Grad</code>"
       ],
       "schritte": [
-        "Oeffne den Scratch-Editor und waehle eine Figur deiner Wahl.",
-        "Zieh vier <code>wenn Taste … gedrueckt</code>-Bloecke (gelb, Kategorie Ereignisse) in den Skriptbereich — einen pro Pfeiltaste.",
-        "Haenge unter <em>Pfeil rechts</em> und <em>Pfeil links</em> je einen <code>drehe dich um 15 Grad</code>-Block.",
-        "Haenge unter <em>Pfeil oben</em> einen <code>gehe 10er-Schritt</code>-Block.",
+        "Öffne den Scratch-Editor und wähle eine Figur deiner Wahl.",
+        "Zieh vier <code>wenn Taste … gedrückt</code>-Blöcke (gelb, Kategorie Ereignisse) in den Skriptbereich — einen pro Pfeiltaste.",
+        "Hänge unter <em>Pfeil rechts</em> und <em>Pfeil links</em> je einen <code>drehe dich um 15 Grad</code>-Block.",
+        "Hänge unter <em>Pfeil oben</em> einen <code>gehe 10er-Schritt</code>-Block.",
         "Teste alle vier Tasten. Passe die Schrittweite an, wenn die Figur zu schnell oder zu langsam ist.",
         "Bonus: Lass die Figur am Rand abprallen (<code>pralle vom Rand ab</code>)."
       ],
       "hilfen": [
-        "Die Ereignis-Bloecke (gelb) reagieren jeder fuer sich — du brauchst also mehrere Startpunkte in einem Skript.",
-        "Fuer Vorwaerts/Rueckwaerts nutze <code>gehe 10er-Schritt</code> bzw. <code>gehe -10er-Schritt</code> (negative Zahl).",
+        "Die Ereignis-Blöcke (gelb) reagieren jeder für sich — du brauchst also mehrere Startpunkte in einem Skript.",
+        "Für Vorwärts/Rückwärts nutze <code>gehe 10er-Schritt</code> bzw. <code>gehe -10er-Schritt</code> (negative Zahl).",
         "Dreht sich die Figur falsch? Klicke auf die Figur und stelle in der Eigenschaftsleiste den Rotations-Stil auf <em>links-rechts</em>."
       ],
       "zeigEs": [
         "Alle vier Pfeiltasten steuern die Figur sichtbar.",
         "Jede Taste ist mit einem eigenen Ereignis-Block verbunden.",
         "Die Figur dreht sich in Fahrtrichtung.",
-        "Erklaere deinem Partner den Unterschied zwischen einem Ereignis und einer Sequenz."
+        "Erkläre deinem Partner den Unterschied zwischen einem Ereignis und einer Sequenz."
       ],
       "plus": [
-        "Fuege eine zweite Figur als Hindernis hinzu, die sich staendig dreht.",
-        "Spiele einen Klang ab, wenn eine Taste gedrueckt wird (<code>starte Klang …</code>)."
+        "Füge eine zweite Figur als Hindernis hinzu, die sich ständig dreht.",
+        "Spiele einen Klang ab, wenn eine Taste gedrückt wird (<code>starte Klang …</code>)."
       ],
       "theorieAnker": {
         "label": "Theorie: Die drei Grundbausteine",
@@ -100,36 +100,36 @@
       "titel": "Verfolgungsspiel",
       "status": "online",
       "kc": "Schleife, Bedingung",
-      "ziel": "Eine Figur verfolgt den Mauszeiger. Sobald sie ihn beruehrt, endet das Spiel.",
+      "ziel": "Eine Figur verfolgt den Mauszeiger. Sobald sie ihn berührt, endet das Spiel.",
       "pflichtbausteine": [
         "<code>wiederhole fortlaufend</code>",
         "<code>gehe zu [Mauszeiger]</code>",
         "<code>falls … dann</code>",
-        "<code>beruehrt [Mauszeiger]?</code>",
+        "<code>berührt [Mauszeiger]?</code>",
         "<code>stoppe [alles]</code>"
       ],
       "schritte": [
-        "Lege eine Figur an (z. B. einen kleinen Kreis) und platziere sie am Rand der Buehne.",
+        "Lege eine Figur an (z. B. einen kleinen Kreis) und platziere sie am Rand der Bühne.",
         "Baue eine <code>wiederhole fortlaufend</code>-Schleife (orange, Steuerung).",
-        "Fuege innerhalb der Schleife <code>gehe zu [Mauszeiger]</code> ein — jetzt folgt die Figur sofort.",
-        "Baue darin eine <code>falls … dann</code>-Bedingung: pruefe <code>beruehrt [Mauszeiger]?</code>.",
+        "Füge innerhalb der Schleife <code>gehe zu [Mauszeiger]</code> ein — jetzt folgt die Figur sofort.",
+        "Baue darin eine <code>falls … dann</code>-Bedingung: prüfe <code>berührt [Mauszeiger]?</code>.",
         "Ist die Bedingung erfuellt, lasse die Figur etwas sagen und dann <code>stoppe [alles]</code>.",
         "Passe die Geschwindigkeit an: Ersetze <code>gehe zu</code> durch <code>gleite … Sekunden zu [Mauszeiger]</code>."
       ],
       "hilfen": [
-        "<code>wiederhole fortlaufend</code> laeuft endlos — das ist die Spielschleife. Ohne sie wuerde die Figur die Maus nur einmal ansteuern.",
-        "Die <code>falls … dann</code>-Bedingung prueft bei jedem Schleifendurchlauf: Beruehre ich den Mauszeiger?",
-        "Zu schwierig mit Mauszeiger? Nutze zunaechst <code>beruehrt [Buehnenrand]?</code> und baue erst danach die Mauszeiger-Abfrage ein."
+        "<code>wiederhole fortlaufend</code> läuft endlos — das ist die Spielschleife. Ohne sie würde die Figur die Maus nur einmal ansteuern.",
+        "Die <code>falls … dann</code>-Bedingung prüft bei jedem Schleifendurchlauf: Berühre ich den Mauszeiger?",
+        "Zu schwierig mit Mauszeiger? Nutze zunächst <code>berührt [Bühnenrand]?</code> und baue erst danach die Mauszeiger-Abfrage ein."
       ],
       "zeigEs": [
         "Die Figur bewegt sich kontinuierlich zum Mauszeiger.",
-        "Das Spiel stoppt, wenn die Figur den Mauszeiger beruehrt.",
-        "Die Schleife laeuft ununterbrochen, bis die Bedingung zutrifft.",
-        "Erklaere deinem Partner, warum man hier eine Schleife und keine einfache Sequenz braucht."
+        "Das Spiel stoppt, wenn die Figur den Mauszeiger berührt.",
+        "Die Schleife läuft ununterbrochen, bis die Bedingung zutrifft.",
+        "Erkläre deinem Partner, warum man hier eine Schleife und keine einfache Sequenz braucht."
       ],
       "plus": [
-        "Fuege einen Punktezaehler ein: Jede Sekunde, die der Spieler ueberlebt, gibt einen Punkt.",
-        "Erhoeye die Geschwindigkeit der Verfolger-Figur nach 10 Sekunden."
+        "Füge einen Punktezähler ein: Jede Sekunde, die der Spieler überlebt, gibt einen Punkt.",
+        "Erhöye die Geschwindigkeit der Verfolger-Figur nach 10 Sekunden."
       ],
       "theorieAnker": {
         "label": "Theorie: Die drei Grundbausteine",
@@ -150,27 +150,27 @@
         "<code>… = …</code> (Operator)"
       ],
       "schritte": [
-        "Waehle eine Figur, die die Quizmaster-Rolle uebernimmt.",
-        "Fuege nach <code>wenn 🏳 angeklickt</code> den Block <code>frage \"Was ist 7 × 8?\" und warte</code> ein.",
-        "Baue eine <code>falls … dann … sonst</code>-Verzweigung: Pruefe mit <code>Antwort = 56</code> (gruener Operator-Block).",
-        "Im <em>dann</em>-Zweig: <code>sage \"Super, richtig!\" fuer 2 Sekunden</code>.",
-        "Im <em>sonst</em>-Zweig: <code>sage \"Leider falsch. Die Antwort ist 56.\" fuer 3 Sekunden</code>.",
-        "Erweitere auf drei Fragen: Wiederhole das Muster fuer jede weitere Frage."
+        "Wähle eine Figur, die die Quizmaster-Rolle übernimmt.",
+        "Füge nach <code>wenn 🏳 angeklickt</code> den Block <code>frage \"Was ist 7 × 8?\" und warte</code> ein.",
+        "Baue eine <code>falls … dann … sonst</code>-Verzweigung: Prüfe mit <code>Antwort = 56</code> (grüner Operator-Block).",
+        "Im <em>dann</em>-Zweig: <code>sage \"Super, richtig!\" für 2 Sekunden</code>.",
+        "Im <em>sonst</em>-Zweig: <code>sage \"Leider falsch. Die Antwort ist 56.\" für 3 Sekunden</code>.",
+        "Erweitere auf drei Fragen: Wiederhole das Muster für jede weitere Frage."
       ],
       "hilfen": [
-        "<code>frage … und warte</code> haelt das Programm an, bis der Nutzer Enter drueckt. Die Eingabe steckt danach automatisch in <code>Antwort</code>.",
-        "Vergleiche mit dem gruenen Operator-Block <code>=</code> — er gibt wahr oder falsch zurueck.",
-        "Noch kein <em>sonst</em>-Zweig? Klicke mit rechts auf den <code>falls … dann</code>-Block und waehle <em>falls … dann … sonst</em>."
+        "<code>frage … und warte</code> hält das Programm an, bis der Nutzer Enter drückt. Die Eingabe steckt danach automatisch in <code>Antwort</code>.",
+        "Vergleiche mit dem grünen Operator-Block <code>=</code> — er gibt wahr oder falsch zurück.",
+        "Noch kein <em>sonst</em>-Zweig? Klicke mit rechts auf den <code>falls … dann</code>-Block und wähle <em>falls … dann … sonst</em>."
       ],
       "zeigEs": [
         "Die Figur stellt mindestens eine Frage und wartet auf Eingabe.",
         "Bei richtiger Antwort erscheint ein positives Feedback.",
         "Bei falscher Antwort erscheint eine Korrektur.",
-        "Erklaere deinem Partner, was eine Verzweigung von einer Schleife unterscheidet."
+        "Erkläre deinem Partner, was eine Verzweigung von einer Schleife unterscheidet."
       ],
       "plus": [
-        "Zaehle die richtigen Antworten in einer Variablen <code>Punkte</code> mit.",
-        "Fuege am Ende eine Auswertung ein: Du hattest X von 3 richtig."
+        "Zähle die richtigen Antworten in einer Variablen <code>Punkte</code> mit.",
+        "Füge am Ende eine Auswertung ein: Du hattest X von 3 richtig."
       ],
       "theorieAnker": {
         "label": "Theorie: Die drei Grundbausteine",
@@ -180,37 +180,37 @@
     {
       "id": "k5",
       "nr": 5,
-      "titel": "Punktezaehler",
+      "titel": "Punktezähler",
       "status": "online",
       "kc": "Variablen, Anzeige",
-      "ziel": "Ein laufender Punktezaehler erscheint auf der Buehne. Jede Aktion des Spielers erhoeht den Wert.",
+      "ziel": "Ein laufender Punktezähler erscheint auf der Bühne. Jede Aktion des Spielers erhöht den Wert.",
       "pflichtbausteine": [
         "<code>setze [Punkte] auf 0</code>",
-        "<code>aendere [Punkte] um 1</code>",
+        "<code>ändere [Punkte] um 1</code>",
         "<code>zeige Variable [Punkte]</code>",
-        "<code>wenn Taste … gedrueckt</code>"
+        "<code>wenn Taste … gedrückt</code>"
       ],
       "schritte": [
         "Erstelle eine Variable: Kategorie Variablen → Neue Variable → Name: Punkte.",
         "Setze zu Beginn (nach <code>wenn 🏳 angeklickt</code>) <code>setze [Punkte] auf 0</code>.",
-        "Sorge dafuer, dass <code>zeige Variable [Punkte]</code> aktiv ist — dann erscheint der Zaehler auf der Buehne.",
-        "Fuege einen zweiten Startblock hinzu: <code>wenn Taste [Leertaste] gedrueckt</code> → <code>aendere [Punkte] um 1</code>.",
-        "Teste: Druecke mehrmals die Leertaste und beobachte den Zaehler.",
-        "Optional: Fuege eine Bedingung ein, die das Spiel beendet, sobald Punkte = 10."
+        "Sorge dafür, dass <code>zeige Variable [Punkte]</code> aktiv ist — dann erscheint der Zähler auf der Bühne.",
+        "Füge einen zweiten Startblock hinzu: <code>wenn Taste [Leertaste] gedrückt</code> → <code>ändere [Punkte] um 1</code>.",
+        "Teste: Drücke mehrmals die Leertaste und beobachte den Zähler.",
+        "Optional: Füge eine Bedingung ein, die das Spiel beendet, sobald Punkte = 10."
       ],
       "hilfen": [
-        "Variablen sind wie beschriftete Kaestchen — du kannst den Wert lesen, setzen oder veraendern.",
-        "<code>setze … auf 0</code> setzt den Wert zurueck; <code>aendere … um 1</code> addiert 1 zum aktuellen Wert.",
-        "Erscheint der Zaehler nicht auf der Buehne? Hake in der Variablen-Liste die Box neben Punkte an."
+        "Variablen sind wie beschriftete Kästchen — du kannst den Wert lesen, setzen oder verändern.",
+        "<code>setze … auf 0</code> setzt den Wert zurück; <code>ändere … um 1</code> addiert 1 zum aktuellen Wert.",
+        "Erscheint der Zähler nicht auf der Bühne? Hake in der Variablen-Liste die Box neben Punkte an."
       ],
       "zeigEs": [
-        "Der Punktestand startet bei 0, wenn die gruene Flagge geklickt wird.",
-        "Die Variable erhoeht sich sichtbar bei jeder Eingabe.",
-        "Der Zaehler ist auf der Buehne zu sehen.",
-        "Erklaere deinem Partner, warum man Variablen braucht und was ohne sie passieren wuerde."
+        "Der Punktestand startet bei 0, wenn die grüne Flagge geklickt wird.",
+        "Die Variable erhöht sich sichtbar bei jeder Eingabe.",
+        "Der Zähler ist auf der Bühne zu sehen.",
+        "Erkläre deinem Partner, warum man Variablen braucht und was ohne sie passieren würde."
       ],
       "plus": [
-        "Baue einen Countdown-Timer: Eine zweite Variable Zeit zaehlt von 30 auf 0 herunter.",
+        "Baue einen Countdown-Timer: Eine zweite Variable Zeit zählt von 30 auf 0 herunter.",
         "Zeige am Ende eine Meldung mit dem erreichten Punktestand."
       ],
       "theorieAnker": {
@@ -224,34 +224,34 @@
       "titel": "Labyrinth",
       "status": "online",
       "kc": "Kollisionserkennung, Farbbedingung",
-      "ziel": "Eine Figur navigiert durch ein Labyrinth. Beruehrt sie die Wand, springt sie zurueck zum Start.",
+      "ziel": "Eine Figur navigiert durch ein Labyrinth. Berührt sie die Wand, springt sie zurück zum Start.",
       "pflichtbausteine": [
-        "<code>wenn Taste [Pfeil …] gedrueckt</code>",
-        "<code>falls wird Farbe … beruehrt? dann</code>",
+        "<code>wenn Taste [Pfeil …] gedrückt</code>",
+        "<code>falls wird Farbe … berührt? dann</code>",
         "<code>gehe zu x: … y: …</code>"
       ],
       "schritte": [
-        "Male ein Labyrinth direkt auf die Buehne (Buehnenbild → Bearbeiten) oder importiere ein Bild. Waehle eine einheitliche Wandfarbe.",
+        "Male ein Labyrinth direkt auf die Bühne (Bühnenbild → Bearbeiten) oder importiere ein Bild. Wähle eine einheitliche Wandfarbe.",
         "Platziere eine kleine Figur an der Startposition. Notiere die x/y-Koordinaten der Startposition.",
-        "Baue die Steuerung mit vier <code>wenn Taste [Pfeil …] gedrueckt</code>-Bloecken (wie in Karte 2).",
-        "Fuege in jeden Steuerungs-Block direkt nach der Bewegung eine Kollisionsabfrage ein: <code>falls wird Farbe [Wandfarbe] beruehrt? dann</code>.",
-        "Im <em>dann</em>-Zweig: <code>gehe zu x: [Startx] y: [Starty]</code> — die Figur springt zurueck.",
-        "Teste: Navigiere absichtlich in eine Wand und pruefe, ob der Ruecksprung funktioniert."
+        "Baue die Steuerung mit vier <code>wenn Taste [Pfeil …] gedrückt</code>-Blöcken (wie in Karte 2).",
+        "Füge in jeden Steuerungs-Block direkt nach der Bewegung eine Kollisionsabfrage ein: <code>falls wird Farbe [Wandfarbe] berührt? dann</code>.",
+        "Im <em>dann</em>-Zweig: <code>gehe zu x: [Startx] y: [Starty]</code> — die Figur springt zurück.",
+        "Teste: Navigiere absichtlich in eine Wand und prüfe, ob der Rücksprung funktioniert."
       ],
       "hilfen": [
-        "Den Farb-Sensor-Block findest du unter Fuehlen (hellblau). Klicke auf das Farbfeld im Block und dann auf die Wandfarbe im Buehnenbild.",
-        "Startkoordinaten ablesen: Schiebe die Figur an die Startposition — x und y werden ueber der Buehne angezeigt.",
-        "Funktioniert der Ruecksprung nicht? Stelle sicher, dass die Wandfarbe im Block exakt mit der Buehnenbild-Farbe uebereinstimmt."
+        "Den Farb-Sensor-Block findest du unter Fühlen (hellblau). Klicke auf das Farbfeld im Block und dann auf die Wandfarbe im Bühnenbild.",
+        "Startkoordinaten ablesen: Schiebe die Figur an die Startposition — x und y werden über der Bühne angezeigt.",
+        "Funktioniert der Rücksprung nicht? Stelle sicher, dass die Wandfarbe im Block exakt mit der Bühnenbild-Farbe übereinstimmt."
       ],
       "zeigEs": [
-        "Die Figur laesst sich durch das Labyrinth steuern.",
-        "Bei Wandkontakt springt sie sofort zurueck zum Start.",
+        "Die Figur lässt sich durch das Labyrinth steuern.",
+        "Bei Wandkontakt springt sie sofort zurück zum Start.",
         "Die Farbabfrage ist sichtbar im Skript vorhanden.",
-        "Erklaere deinem Partner, wie der Computer die Kollision erkennt — was passiert Schritt fuer Schritt?"
+        "Erkläre deinem Partner, wie der Computer die Kollision erkennt — was passiert Schritt für Schritt?"
       ],
       "plus": [
-        "Fuege ein Ziel hinzu (andere Farbe): Beruehrt die Figur das Ziel, erscheint Geschafft! und die Zeit wird gestoppt.",
-        "Baue einen Versuchszaehler ein, der mitzaehlt, wie oft du ins Labyrinth gelaufen bist."
+        "Füge ein Ziel hinzu (andere Farbe): Berührt die Figur das Ziel, erscheint Geschafft! und die Zeit wird gestoppt.",
+        "Baue einen Versuchszähler ein, der mitzählt, wie oft du ins Labyrinth gelaufen bist."
       ],
       "theorieAnker": {
         "label": "Theorie: Vom Problem zum Algorithmus",
@@ -261,38 +261,38 @@
     {
       "id": "k7",
       "nr": 7,
-      "titel": "Wuerfel und Zufall",
+      "titel": "Würfel und Zufall",
       "status": "online",
       "kc": "Zufall, Kostuemwechsel",
-      "ziel": "Ein animierter Wuerfel zeigt beim Klick eine zufaellige Zahl von 1 bis 6 und wechselt das Kostuem passend.",
+      "ziel": "Ein animierter Würfel zeigt beim Klick eine zufällige Zahl von 1 bis 6 und wechselt das Kostüm passend.",
       "pflichtbausteine": [
         "<code>Zufallszahl von 1 bis 6</code>",
         "<code>setze [Wurf] auf …</code>",
-        "<code>wechsle zu Kostuem (…)</code>",
+        "<code>wechsle zu Kostüm (…)</code>",
         "<code>wenn diese Figur angeklickt</code>"
       ],
       "schritte": [
-        "Erstelle oder importiere eine Figur mit 6 Kostuemen (Wuerfelseiten 1–6). Benenne sie wuerfel-1 bis wuerfel-6.",
+        "Erstelle oder importiere eine Figur mit 6 Kostümen (Würfelseiten 1–6). Benenne sie würfel-1 bis würfel-6.",
         "Erstelle eine Variable Wurf.",
         "Starte mit <code>wenn diese Figur angeklickt</code>.",
-        "Setze Wurf auf <code>Zufallszahl von 1 bis 6</code> (gruener Operator-Block).",
-        "Wechsle mit <code>wechsle zu Kostuem (Wurf)</code> zum passenden Kostuem — Scratch verknuepft Zahl und Kostuemname.",
-        "Optional: Fuege eine kurze Shuffle-Animation ein (<code>wiederhole 10 Mal</code> mit schnellem Kostuemwechsel)."
+        "Setze Wurf auf <code>Zufallszahl von 1 bis 6</code> (grüner Operator-Block).",
+        "Wechsle mit <code>wechsle zu Kostüm (Wurf)</code> zum passenden Kostüm — Scratch verknüpft Zahl und Kostümname.",
+        "Optional: Füge eine kurze Shuffle-Animation ein (<code>wiederhole 10 Mal</code> mit schnellem Kostümwechsel)."
       ],
       "hilfen": [
-        "<code>Zufallszahl von 1 bis 6</code> liefert bei jedem Aufruf einen anderen Wert — genau wie ein echter Wuerfel.",
-        "Kostuemname und Variable muessen zusammenpassen: Heisst das Kostuem wuerfel-3, muss die Variable den Wert wuerfel-3 enthalten — oder du nennst die Kostueme einfach 1, 2 … 6.",
-        "Kein Kostuem vorhanden? Male sechs einfache Punkte-Bilder im Kostuem-Editor — das dauert nur wenige Minuten."
+        "<code>Zufallszahl von 1 bis 6</code> liefert bei jedem Aufruf einen anderen Wert — genau wie ein echter Würfel.",
+        "Kostümname und Variable müssen zusammenpassen: Heisst das Kostüm würfel-3, muss die Variable den Wert würfel-3 enthalten — oder du nennst die Kostüme einfach 1, 2 … 6.",
+        "Kein Kostüm vorhanden? Male sechs einfache Punkte-Bilder im Kostüm-Editor — das dauert nur wenige Minuten."
       ],
       "zeigEs": [
-        "Jeder Klick auf die Figur zeigt eine andere Wuerfelseite.",
-        "Die angezeigte Zahl ist zufaellig (nicht immer dieselbe).",
-        "Die Variable Wurf ist auf der Buehne sichtbar und stimmt mit dem Kostuem ueberein.",
-        "Erklaere deinem Partner, was Pseudozufall bedeutet und warum Computer keinen echten Zufall erzeugen."
+        "Jeder Klick auf die Figur zeigt eine andere Würfelseite.",
+        "Die angezeigte Zahl ist zufällig (nicht immer dieselbe).",
+        "Die Variable Wurf ist auf der Bühne sichtbar und stimmt mit dem Kostüm überein.",
+        "Erkläre deinem Partner, was Pseudozufall bedeutet und warum Computer keinen echten Zufall erzeugen."
       ],
       "plus": [
-        "Baue zwei Wuerfel und zeige die Summe in einer dritten Variable Gesamt.",
-        "Fuehre eine Statistik: Zaehle in 6 Variablen, wie oft jede Seite gefallen ist."
+        "Baue zwei Würfel und zeige die Summe in einer dritten Variable Gesamt.",
+        "Führe eine Statistik: Zähle in 6 Variablen, wie oft jede Seite gefallen ist."
       ],
       "theorieAnker": {
         "label": "Theorie: Die drei Grundbausteine",
@@ -309,30 +309,30 @@
       "pflichtbausteine": [
         "<code>erzeuge Klon von [mir selbst]</code>",
         "<code>wenn ich als Klon entstehe</code>",
-        "<code>loesche diesen Klon</code>",
+        "<code>lösche diesen Klon</code>",
         "<code>wiederhole fortlaufend</code>"
       ],
       "schritte": [
-        "Erstelle eine kleine Tropfen-Figur (Kostuem-Editor: ein schmales blaues Oval).",
+        "Erstelle eine kleine Tropfen-Figur (Kostüm-Editor: ein schmales blaues Oval).",
         "Skript 1 (die Fabrik): <code>wenn 🏳 angeklickt</code> → <code>wiederhole fortlaufend</code> → <code>erzeuge Klon von mir selbst</code> → <code>warte 0,2 Sekunden</code>.",
         "Skript 2 (jeder Klon): <code>wenn ich als Klon entstehe</code> → setze x auf <code>Zufallszahl von -240 bis 240</code>, y auf 180.",
-        "Fuege eine <code>wiederhole bis y-Position &lt; -170</code>-Schleife ein, darin: <code>aendere y um -5</code>.",
-        "Nach der Schleife: <code>loesche diesen Klon</code>.",
+        "Füge eine <code>wiederhole bis y-Position &lt; -170</code>-Schleife ein, darin: <code>ändere y um -5</code>.",
+        "Nach der Schleife: <code>lösche diesen Klon</code>.",
         "Teste und passe die Fall-Geschwindigkeit und Erzeugungsrate an."
       ],
       "hilfen": [
-        "Klone sind Kopien der Original-Figur, die unabhaengig voneinander laufen. Das Original bleibt unsichtbar — blende es mit <code>verstecke</code> aus.",
-        "<code>wenn ich als Klon entstehe</code> ist der Startpunkt fuer jeden einzelnen Klon — nicht fuer das Original.",
-        "Zu viele Klone koennen Scratch verlangsamen. Stelle sicher, dass jeder Klon am Ende mit <code>loesche diesen Klon</code> entfernt wird."
+        "Klone sind Kopien der Original-Figur, die unabhängig voneinander laufen. Das Original bleibt unsichtbar — blende es mit <code>verstecke</code> aus.",
+        "<code>wenn ich als Klon entstehe</code> ist der Startpunkt für jeden einzelnen Klon — nicht für das Original.",
+        "Zu viele Klone können Scratch verlangsamen. Stelle sicher, dass jeder Klon am Ende mit <code>lösche diesen Klon</code> entfernt wird."
       ],
       "zeigEs": [
-        "Viele Tropfen fallen gleichzeitig und unabhaengig voneinander.",
-        "Jeder Tropfen erscheint an einer zufaelligen x-Position.",
+        "Viele Tropfen fallen gleichzeitig und unabhängig voneinander.",
+        "Jeder Tropfen erscheint an einer zufälligen x-Position.",
         "Tropfen verschwinden, wenn sie den unteren Rand erreichen.",
-        "Erklaere deinem Partner den Unterschied zwischen Original und Klon und warum Klone nuetzlich sind."
+        "Erkläre deinem Partner den Unterschied zwischen Original und Klon und warum Klone nützlich sind."
       ],
       "plus": [
-        "Lass die Tropfen beim Aufprall auf dem Boden einen kurzen Spritzer-Effekt zeigen (Kostuemwechsel).",
+        "Lass die Tropfen beim Aufprall auf dem Boden einen kurzen Spritzer-Effekt zeigen (Kostümwechsel).",
         "Mache das Regen-Tempo steuerbar: Eine Variable Wartezeit bestimmt die Pause zwischen den Klonen."
       ],
       "theorieAnker": {
@@ -356,24 +356,24 @@
       "schritte": [
         "Schreibe zuerst auf Papier: Was ist das Ziel? Wer oder was bewegt sich? Wann endet das Spiel?",
         "Skizziere den groben Ablauf als Stichwortliste (informeller Pseudocode).",
-        "Baue das Grundgeruest: Startblock, eine Figur, eine Steuerung.",
-        "Fuege schrittweise Spiellogik hinzu: Variable fuer Punkte oder Leben, Bedingung fuer Spielende.",
+        "Baue das Grundgerüst: Startblock, eine Figur, eine Steuerung.",
+        "Füge schrittweise Spiellogik hinzu: Variable für Punkte oder Leben, Bedingung für Spielende.",
         "Teste nach jedem Schritt — repariere Fehler, bevor du weiterbaust.",
-        "Gib deinem Spiel einen Titel auf der Buehne und speichere es."
+        "Gib deinem Spiel einen Titel auf der Bühne und speichere es."
       ],
       "hilfen": [
         "Nicht sicher, was du bauen sollst? Ideen: Fang-Spiel, Ausweich-Spiel, Quiz, Reaktionstest, einfaches Jump &amp; Run.",
-        "Beginne mit dem Einfachsten, das schon funktioniert — fuege dann ein Feature nach dem anderen hinzu.",
+        "Beginne mit dem Einfachsten, das schon funktioniert — füge dann ein Feature nach dem anderen hinzu.",
         "Steckst du fest? Schau dir die Karten 2 bis 8 noch einmal an — dort findest du die meisten Bausteine, die du brauchst."
       ],
       "zeigEs": [
-        "Das Spiel startet mit der gruenen Flagge und hat ein klares Ende.",
-        "Mindestens eine Variable veraendert sich waehrend des Spiels.",
+        "Das Spiel startet mit der grünen Flagge und hat ein klares Ende.",
+        "Mindestens eine Variable verändert sich während des Spiels.",
         "Mindestens eine Bedingung steuert den Spielablauf.",
-        "Erklaere deinem Partner in zwei Saetzen: Was ist die Spielidee, und welcher Baustein war am schwierigsten umzusetzen?"
+        "Erkläre deinem Partner in zwei Sätzen: Was ist die Spielidee, und welcher Baustein war am schwierigsten umzusetzen?"
       ],
       "plus": [
-        "Gestalte Menue und Spielende professionell: Startbildschirm, Game-Over-Bildschirm.",
+        "Gestalte Menü und Spielende professionell: Startbildschirm, Game-Over-Bildschirm.",
         "Baue einen Highscore-Anzeiger, der den besten Wert der aktuellen Sitzung merkt."
       ],
       "theorieAnker": {
@@ -389,31 +389,31 @@
       "kc": "Praesentation, Reflexion, Pseudocode/Flussdiagramm",
       "ziel": "Du stellst dein Programm der Klasse vor und beschreibst den Kernalgorithmus als Pseudocode oder Flussdiagramm.",
       "pflichtbausteine": [
-        "Vorfuehrung des eigenen Programms (live oder als kurzes Video)",
+        "Vorführung des eigenen Programms (live oder als kurzes Video)",
         "Pseudocode oder Flussdiagramm des Hauptablaufs (auf Papier oder digital)",
-        "Mindestens ein konkreter Verbesserungsvorschlag nach dem Feedback der Mitschuelerinnen und Mitschueler"
+        "Mindestens ein konkreter Verbesserungsvorschlag nach dem Feedback der Mitschülerinnen und Mitschüler"
       ],
       "schritte": [
-        "Bereite eine kurze Vorfuehrung vor (2–3 Minuten): Was macht dein Programm? Zeige es live.",
+        "Bereite eine kurze Vorführung vor (2–3 Minuten): Was macht dein Programm? Zeige es live.",
         "Erstelle auf Papier oder am PC einen Pseudocode oder ein Flussdiagramm des wichtigsten Ablaufs in deinem Spiel.",
-        "Stelle vor: Erklaere zuerst die Idee, fuehre dann das Programm vor, zeige dann das Diagramm.",
-        "Hoere auf das Feedback der Klasse: Was gefaellt? Was ist unklar? Was koennte besser sein?",
+        "Stelle vor: Erkläre zuerst die Idee, führe dann das Programm vor, zeige dann das Diagramm.",
+        "Höre auf das Feedback der Klasse: Was gefällt? Was ist unklar? Was könnte besser sein?",
         "Notiere mindestens einen konkreten Verbesserungsvorschlag und setze ihn danach um.",
         "Speichere die finale Version deines Projekts auf deinem Computer."
       ],
       "hilfen": [
-        "Pseudocode muss keine Programmiersprache sein — schreibe auf Deutsch, was das Programm Schritt fuer Schritt macht.",
-        "Flussdiagramm: Rechteck = Aktion, Raute = Entscheidung (ja/nein), Pfeil = Reihenfolge. Drei Symbole reichen fuer den Anfang.",
-        "Nervoes beim Vorstellen? Uebe einmal allein: Rede laut, waehrend du das Programm laufen laesst."
+        "Pseudocode muss keine Programmiersprache sein — schreibe auf Deutsch, was das Programm Schritt für Schritt macht.",
+        "Flussdiagramm: Rechteck = Aktion, Raute = Entscheidung (ja/nein), Pfeil = Reihenfolge. Drei Symbole reichen für den Anfang.",
+        "Nervös beim Vorstellen? Übe einmal allein: Rede laut, während du das Programm laufen lässt."
       ],
       "zeigEs": [
-        "Das Programm laeuft fehlerfrei vor der Klasse.",
+        "Das Programm läuft fehlerfrei vor der Klasse.",
         "Ein Pseudocode oder Flussdiagramm des Hauptablaufs liegt vor.",
         "Mindestens ein Verbesserungsvorschlag wurde notiert.",
-        "Erklaere deinem Partner: Was haettest du beim naechsten Projekt von Anfang an anders gemacht?"
+        "Erkläre deinem Partner: Was hättest du beim nächsten Projekt von Anfang an anders gemacht?"
       ],
       "plus": [
-        "Schreibe eine kurze Reflexion (5–10 Saetze): Was hast du gelernt? Was war schwierig? Was moechtest du als naechstes lernen?",
+        "Schreibe eine kurze Reflexion (5–10 Sätze): Was hast du gelernt? Was war schwierig? Was möchtest du als nächstes lernen?",
         "Lade das Projekt auf scratch.mit.edu hoch und teile den Link mit der Klasse."
       ],
       "theorieAnker": {

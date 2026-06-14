@@ -52,3 +52,12 @@ Stufen-Ordnernamen: `klasse-5` … `klasse-10`, `einfuehrungsphase`, `qualifikat
 ## Arbeitsweise
 
 Aufträge vollständig und eigenständig abschließen (keine halben Gerüste hinterlassen). Bei fachlich-inhaltlichen Entscheidungen (Themenauswahl, Schwerpunkte, Lösungswege) im Zweifel Annahme treffen, klar dokumentieren und am Ende der Session auflisten.
+
+## Klassenarbeiten — Konventionen (ab Welle 2)
+
+Beim Erstellen von Klassenarbeiten mit dem `klassenarbeit`-Skill gilt für dieses Projekt:
+- **Nur Version A** je Arbeit (die Website zeigt pro Thema genau eine Version; keine A/B-Doppelung).
+- **Arbeitszeit:** Klassen 5–7 = 60 Minuten; ab Klasse 8 (inkl. Oberstufe) = 90 Minuten.
+- **Realschulzweig (R):** insgesamt etwas einfacher als Gymnasialzweig — kleinschrittiger, mehr AFB I/II und weniger AFB III, einfachere Kontexte/Zahlen, klarere Sprache.
+- **Layout (Pflicht, Lehren aus Welle 1):** vor dem Speichern `repariere_layout(doc)` aus `werkzeuge/kab_layout_fix.py` aufrufen — bindet Abschnittsüberschriften (Verwendete Operatoren / Erwartungshorizont / Benotung) per keep-with-next an ihre Tabelle, verhindert das Aufspalten von Operatoren- und Benotungstabelle über Seitenumbrüche, hält das Kontrollergebnis bei seiner Teilaufgabe, stellt alle BE-Angaben einheitlich rechtsbündig.
+- **Ablage:** Entwürfe nach `0Ablage/` (gitignored), zur Sichtung durch den Betreiber.

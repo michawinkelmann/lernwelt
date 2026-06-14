@@ -162,6 +162,8 @@ details.loesungsweg.cas summary { color: var(--info); }
 .spiel-dauer { font-size: .9rem; color: var(--text-leise); margin: 8px 0 0; }
 /* Aufgabenkarten mobil: lange CAS-/Code-Ketten dürfen umbrechen, breite $$-Formeln scrollen im Kasten */
 .aufgabe code { overflow-wrap: anywhere; }
+.codebeispiel { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+.bb-tabelle { display: block; overflow-x: auto; max-width: 100%; }  /* breite Daten-Tabelle mobil scrollbar statt Seitenüberlauf */
 .katex-display { overflow-x: auto; overflow-y: hidden; max-width: 100%; position: relative; padding: .25em 2px .5em; }
 /* gilt global (Aufgaben, Erklärseiten, Checks, CAS-Werkstatt): horizontales Scrollen bei langen Formeln erlaubt,
    vertikale Scrollbalken unterbunden (overflow-x:auto erzwingt sonst overflow-y:auto) — Luft oben/unten gegen Abschneiden. */
