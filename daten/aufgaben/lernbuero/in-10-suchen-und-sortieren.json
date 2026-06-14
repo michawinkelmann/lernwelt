@@ -5,13 +5,20 @@
     {
       "id": "in-10-ss-101",
       "typ": "numerisch",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 1,
       "afb": 1,
       "ergaenzung": "lernbuero",
       "frage": "Eine Liste hat $16$ Einträge. Du suchst einen Wert mit der linearen Suche und er steht ganz am Ende. Wie viele Vergleiche macht die lineare Suche dann?",
       "eingaben": [
-        { "label": "Vergleiche", "antwort": 16, "toleranz": 0 }
+        {
+          "label": "Vergleiche",
+          "antwort": 16,
+          "toleranz": 0
+        }
       ],
       "tipps": [
         "Die lineare Suche prüft die Einträge der Reihe nach — einen nach dem anderen.",
@@ -19,18 +26,27 @@
         "Wie viele Einträge hat die Liste insgesamt?"
       ],
       "loesungsweg": "Die lineare Suche vergleicht im schlechtesten Fall jeden Eintrag genau einmal: also alle 16. Ergebnis: 16 Vergleiche.",
-      "kc": ["algorithmen"]
+      "kc": [
+        "algorithmen"
+      ]
     },
     {
       "id": "in-10-ss-102",
       "typ": "numerisch",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 1,
       "afb": 2,
       "ergaenzung": "lernbuero",
       "frage": "Eine sortierte Liste hat $32$ Einträge. Wie viele Vergleiche braucht die binäre Suche höchstens?",
       "eingaben": [
-        { "label": "Vergleiche (höchstens)", "antwort": 5, "toleranz": 0 }
+        {
+          "label": "Vergleiche (höchstens)",
+          "antwort": 5,
+          "toleranz": 0
+        }
       ],
       "tipps": [
         "Jeder Vergleich halbiert den Suchbereich.",
@@ -38,18 +54,27 @@
         "Wie viele Pfeile (Schritte) sind das?"
       ],
       "loesungsweg": "$32 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1$: Das sind 5 Halbierungsschritte, also höchstens 5 Vergleiche. (Probe: $2^5 = 32$.)",
-      "kc": ["algorithmen"]
+      "kc": [
+        "algorithmen"
+      ]
     },
     {
       "id": "in-10-ss-103",
       "typ": "numerisch",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 1,
       "afb": 2,
       "ergaenzung": "lernbuero",
       "frage": "Bubble Sort soll eine Liste mit $n = 6$ Elementen sortieren. Wie viele Vergleiche macht der Algorithmus im schlechtesten Fall?",
       "eingaben": [
-        { "label": "Vergleiche", "antwort": 15, "toleranz": 0 }
+        {
+          "label": "Vergleiche",
+          "antwort": 15,
+          "toleranz": 0
+        }
       ],
       "tipps": [
         "Im ersten Durchlauf werden $n-1 = 5$ Vergleiche gemacht, im zweiten $4$, dann $3$, $2$, $1$.",
@@ -57,12 +82,17 @@
         "Formel: $\\frac{n \\cdot (n-1)}{2}$"
       ],
       "loesungsweg": "$5 + 4 + 3 + 2 + 1 = 15$ Vergleiche. Oder mit der Formel: $\\frac{6 \\cdot 5}{2} = 15$.",
-      "kc": ["algorithmen"]
+      "kc": [
+        "algorithmen"
+      ]
     },
     {
       "id": "in-10-ss-104",
       "typ": "rechenweg",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 2,
       "afb": 2,
       "ergaenzung": "lernbuero",
@@ -71,14 +101,24 @@
         {
           "frage": "Schritt 1a: Vergleiche $5$ und $3$. Wird getauscht? Wie sieht die Liste danach aus? Wie viele Tausche gab es bisher?",
           "eingaben": [
-            { "label": "Tausche nach Schritt 1a", "antwort": 1, "toleranz": 0 }
+            {
+              "label": "Tausche nach Schritt 1a",
+              "antwort": 1,
+              "toleranz": 0
+            }
           ],
-          "tipps": ["$5 > 3$: tauschen! Die Liste lautet nun $[3, 5, 1, 2]$."]
+          "tipps": [
+            "$5 > 3$: tauschen! Die Liste lautet nun $[3, 5, 1, 2]$."
+          ]
         },
         {
           "frage": "Schritt 1b–1c: Verarbeite noch die Paare $(5, 1)$ und $(5, 2)$ — wie viele Tausche insgesamt im ersten Durchlauf?",
           "eingaben": [
-            { "label": "Tausche gesamt Durchlauf 1", "antwort": 3, "toleranz": 0 }
+            {
+              "label": "Tausche gesamt Durchlauf 1",
+              "antwort": 3,
+              "toleranz": 0
+            }
           ],
           "tipps": [
             "$(5,1)$: $5 > 1$ → Tausch → $[3, 1, 5, 2]$.",
@@ -89,8 +129,16 @@
         {
           "frage": "Wie viele Vergleiche und Tausche fallen im gesamten Lauf (alle Durchläufe) an?",
           "eingaben": [
-            { "label": "Vergleiche gesamt", "antwort": 6, "toleranz": 0 },
-            { "label": "Tausche gesamt", "antwort": 5, "toleranz": 0 }
+            {
+              "label": "Vergleiche gesamt",
+              "antwort": 6,
+              "toleranz": 0
+            },
+            {
+              "label": "Tausche gesamt",
+              "antwort": 5,
+              "toleranz": 0
+            }
           ],
           "tipps": [
             "D1: $[5,3,1,2] \\to [3,1,2,5]$ (3 V, 3 T).",
@@ -105,12 +153,17 @@
         "Kontrolle: Am Ende muss $[1, 2, 3, 5]$ dastehen."
       ],
       "loesungsweg": "D1: $(5,3)$ T, $(5,1)$ T, $(5,2)$ T → $[3,1,2,5]$ (3 V, 3 T). D2: $(3,1)$ T, $(3,2)$ T → $[1,2,3,5]$ (2 V, 2 T). D3: $(1,2)$ kein T → fertig (1 V, 0 T). Gesamt: 6 Vergleiche, 5 Tausche.",
-      "kc": ["algorithmen"]
+      "kc": [
+        "algorithmen"
+      ]
     },
     {
       "id": "in-10-ss-105",
       "typ": "multiple-choice",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 2,
       "afb": 2,
       "ergaenzung": "lernbuero",
@@ -143,12 +196,16 @@
         "Zwei Aussagen sind richtig."
       ],
       "loesungsweg": "Richtig sind Aussagen 1 und 2. Falsch: $n = 1000$ ergibt ca. 500 000 Vergleiche (nicht unter 1000). Und die binäre Suche setzt eine sortierte Liste voraus.",
-      "kc": ["algorithmen"]
+      "kc": [
+        "algorithmen"
+      ]
     },
     {
       "id": "in-10-ss-106",
       "typ": "freitext",
-      "zweig": ["gym"],
+      "zweig": [
+        "gym"
+      ],
       "niveau": 3,
       "afb": 3,
       "ergaenzung": "lernbuero",
@@ -159,8 +216,262 @@
         "Was kostet das Sortieren — und was kostet jede einzelne Suche danach?",
         "Wann überwiegt der Gewinn durch schnelle Suche den einmaligen Sortieraufwand?"
       ],
-      "loesungsweg": "Sortieraufwand: $O(n^2)$. Danach $k$ binäre Suchen: je $O(\\log n)$. Gesamtaufwand: $O(n^2 + k \\cdot \\log n)$. Bei vielen Suchen ($k$ gross) ist das besser als $k$ lineare Suchen ($O(k \\cdot n)$). Einmalsuche: Sortieren entfällt, lineare Suche genügt.",
-      "kc": ["algorithmen"]
+      "loesungsweg": "Sortieraufwand: $O(n^2)$. Danach $k$ binäre Suchen: je $O(\\log n)$. Gesamtaufwand: $O(n^2 + k \\cdot \\log n)$. Bei vielen Suchen ($k$ groß) ist das besser als $k$ lineare Suchen ($O(k \\cdot n)$). Einmalsuche: Sortieren entfällt, lineare Suche genügt.",
+      "kc": [
+        "algorithmen"
+      ]
+    },
+    {
+      "id": "in-10-ss-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über die binäre Suche sind richtig?",
+      "optionen": [
+        {
+          "text": "Die binäre Suche funktioniert nur auf einer sortierten Liste.",
+          "richtig": true,
+          "erklaerung": "Nur dann kann man die Hälfte ohne den Wert sicher wegwerfen."
+        },
+        {
+          "text": "Die binäre Suche vergleicht zuerst mit dem Element in der Mitte der Liste.",
+          "richtig": true,
+          "erklaerung": "Je nach Vergleich sucht sie links oder rechts weiter."
+        },
+        {
+          "text": "Die binäre Suche prüft jedes Element der Reihe nach von vorne.",
+          "richtig": false,
+          "erklaerung": "Das ist die lineare Suche."
+        },
+        {
+          "text": "Mit jedem Vergleich halbiert die binäre Suche den noch zu durchsuchenden Bereich.",
+          "richtig": true,
+          "erklaerung": "Deshalb braucht sie nur etwa log2(n) Vergleiche."
+        }
+      ],
+      "tipps": [
+        "Überlege, welche Voraussetzung die binäre Suche an die Liste stellt.",
+        "Die binäre Suche beginnt in der Mitte, nicht am Anfang.",
+        "Drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig: sortierte Liste nötig, Vergleich mit der Mitte, Halbierung des Bereichs pro Schritt. Falsch ist nur die Beschreibung der linearen Suche (jedes Element der Reihe nach).",
+      "kc": [
+        "algorithmen"
+      ]
+    },
+    {
+      "id": "in-10-ss-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine sortierte Liste hat $64$ Einträge. Wie viele Vergleiche braucht die binäre Suche höchstens? (Höchstzahl $= \\lceil \\log_2 n \\rceil$.)",
+      "eingaben": [
+        {
+          "label": "Vergleiche (höchstens)",
+          "antwort": 6,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Frage dich: Wie oft kann man 64 halbieren, bis 1 übrig bleibt?",
+        "$64 \\to 32 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1$.",
+        "Zähle die Halbierungsschritte."
+      ],
+      "loesungsweg": "$\\log_2 64 = 6$, denn $2^6 = 64$. Die binäre Suche halbiert sechsmal: $64 \\to 32 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1$. Höchstens $6$ Vergleiche.",
+      "kc": [
+        "algorithmen"
+      ]
+    },
+    {
+      "id": "in-10-ss-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine sortierte Liste hat $100$ Einträge. Wie viele Vergleiche braucht die binäre Suche höchstens? (Höchstzahl $= \\lceil \\log_2 n \\rceil$, also aufrunden.)",
+      "eingaben": [
+        {
+          "label": "Vergleiche (höchstens)",
+          "antwort": 7,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "$2^6 = 64$ ist zu klein, $2^7 = 128$ ist groß genug.",
+        "Da $64 < 100 \\le 128$, runde auf.",
+        "Die Antwort liegt zwischen 6 und 7."
+      ],
+      "loesungsweg": "Es gilt $2^6 = 64 < 100 \\le 128 = 2^7$. Deshalb $\\lceil \\log_2 100 \\rceil = 7$. Höchstens $7$ Vergleiche.",
+      "kc": [
+        "algorithmen"
+      ]
+    },
+    {
+      "id": "in-10-ss-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Du suchst mit der linearen Suche einen Wert in einer Liste mit $20$ Einträgen. Der Wert kommt gar nicht vor. Wie viele Vergleiche macht die lineare Suche?",
+      "eingaben": [
+        {
+          "label": "Vergleiche",
+          "antwort": 20,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Die lineare Suche prüft Eintrag für Eintrag von vorne.",
+        "Wenn der Wert nicht vorkommt, muss sie bis zum Ende prüfen.",
+        "Wie viele Einträge hat die Liste?"
+      ],
+      "loesungsweg": "Kommt der gesuchte Wert nicht vor, muss die lineare Suche jeden der $20$ Einträge ansehen, bis sie sicher ist. Das sind $20$ Vergleiche (der schlechteste Fall).",
+      "kc": [
+        "algorithmen"
+      ]
+    },
+    {
+      "id": "in-10-ss-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Bubble Sort sortiert eine Liste mit $n = 5$ Elementen. Wie viele vollständige Durchläufe (Durchgänge durch die Liste) macht der klassische Bubble Sort höchstens?",
+      "eingaben": [
+        {
+          "label": "Durchläufe",
+          "antwort": 4,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Nach jedem Durchlauf steht ein weiteres Element sicher am richtigen Platz.",
+        "Für $n$ Elemente braucht man $n-1$ Durchläufe.",
+        "Rechne $5-1$."
+      ],
+      "loesungsweg": "Der klassische Bubble Sort macht $n-1$ Durchläufe, weil nach $n-1$ Durchläufen alle Elemente sortiert sind. Bei $n = 5$ also $4$ Durchläufe.",
+      "kc": [
+        "algorithmen"
+      ]
+    },
+    {
+      "id": "in-10-ss-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Bubble Sort beginnt mit einer Liste von $n = 7$ Elementen. Wie viele Vergleiche benachbarter Elemente macht er im ersten Durchlauf?",
+      "eingaben": [
+        {
+          "label": "Vergleiche im 1. Durchlauf",
+          "antwort": 6,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Im ersten Durchlauf werden alle benachbarten Paare einmal verglichen.",
+        "Bei $n$ Elementen gibt es $n-1$ benachbarte Paare.",
+        "Rechne $7-1$."
+      ],
+      "loesungsweg": "Im ersten Durchlauf vergleicht Bubble Sort jedes benachbarte Paar einmal. Bei $7$ Elementen gibt es $7-1 = 6$ Paare, also $6$ Vergleiche.",
+      "kc": [
+        "algorithmen"
+      ]
+    },
+    {
+      "id": "in-10-ss-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Bubble Sort sortiert eine Liste mit $n = 5$ Elementen. Wie viele Vergleiche macht er im schlechtesten Fall insgesamt? (Formel: $\\frac{n \\cdot (n-1)}{2}$.)",
+      "eingaben": [
+        {
+          "label": "Vergleiche insgesamt",
+          "antwort": 10,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Im 1. Durchlauf $4$ Vergleiche, im 2. Durchlauf $3$, dann $2$, dann $1$.",
+        "Addiere $4 + 3 + 2 + 1$.",
+        "Oder rechne $\\frac{5 \\cdot 4}{2}$."
+      ],
+      "loesungsweg": "Die Vergleiche je Durchlauf werden weniger: $4 + 3 + 2 + 1 = 10$. Mit der Formel: $\\frac{5 \\cdot 4}{2} = 10$. Im schlechtesten Fall also $10$ Vergleiche.",
+      "kc": [
+        "algorithmen"
+      ]
+    },
+    {
+      "id": "in-10-ss-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Vergleich der Suchverfahren.<br>a) Lineare Suche in einer Liste mit $50$ Einträgen: Der gesuchte Wert steht ganz vorne an erster Stelle. Wie viele Vergleiche macht die lineare Suche dann (bester Fall)?<br>b) Binäre Suche in einer sortierten Liste mit $1000$ Einträgen: Wie viele Vergleiche höchstens? ($2^{10} = 1024$.)",
+      "eingaben": [
+        {
+          "label": "a) Vergleiche (bester Fall)",
+          "antwort": 1,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) Vergleiche (höchstens)",
+          "antwort": 10,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "a) Wenn der Wert gleich der erste Eintrag ist, ist die Suche sofort fertig.",
+        "b) $2^9 = 512$ ist zu klein, $2^{10} = 1024 \\ge 1000$.",
+        "b) Runde $\\log_2 1000$ auf."
+      ],
+      "loesungsweg": "a) Steht der Wert ganz vorne, genügt $1$ Vergleich. b) $2^9 = 512 < 1000 \\le 1024 = 2^{10}$, also höchstens $\\lceil \\log_2 1000 \\rceil = 10$ Vergleiche. Das zeigt: Bei großen sortierten Listen ist die binäre Suche enorm viel schneller.",
+      "kc": [
+        "algorithmen"
+      ]
     }
   ]
 }

@@ -242,6 +242,264 @@
       "kc": [
         "KC Mathematik Gym Sek I (2015): Daten und Zufall, ein- und mehrstufige Zufallsversuche (7/8)"
       ]
+    },
+    {
+      "id": "ma-08-mz-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über mehrstufige Zufallsversuche und Baumdiagramme sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Wahrscheinlichkeit eines Pfades berechnet man, indem man die Wahrscheinlichkeiten entlang des Pfades multipliziert (Produktregel).",
+          "richtig": true,
+          "erklaerung": "Richtig – entlang eines Astes wird multipliziert."
+        },
+        {
+          "text": "Gehören zu einem Ereignis mehrere Pfade, so addiert man deren Wahrscheinlichkeiten (Summenregel).",
+          "richtig": true,
+          "erklaerung": "Richtig – verschiedene günstige Pfade werden addiert."
+        },
+        {
+          "text": "An jeder Verzweigung ist die Summe der abgehenden Wahrscheinlichkeiten immer $1$.",
+          "richtig": true,
+          "erklaerung": "Richtig – an jedem Knoten ergänzen sich die Wahrscheinlichkeiten zu $1$."
+        },
+        {
+          "text": "Beim Ziehen ohne Zurücklegen bleiben die Wahrscheinlichkeiten auf der zweiten Stufe gleich.",
+          "richtig": false,
+          "erklaerung": "Falsch – ohne Zurücklegen ändern sich Anzahl und Wahrscheinlichkeiten auf der zweiten Stufe."
+        }
+      ],
+      "tipps": [
+        "Entlang eines Pfades wird multipliziert, zwischen Pfaden wird addiert.",
+        "An jeder Verzweigung müssen sich die Wahrscheinlichkeiten zu $1$ ergänzen.",
+        "Überlege beim letzten Punkt: Was passiert mit der Kugelzahl, wenn nicht zurückgelegt wird?"
+      ],
+      "loesungsweg": "Produktregel (Pfad), Summenregel (mehrere Pfade) und die Knotensumme $1$ stimmen. Falsch ist die letzte Aussage: Ohne Zurücklegen verändern sich Gesamtzahl und Wahrscheinlichkeiten von Stufe zu Stufe.",
+      "kc": [
+        "daten-und-zufall"
+      ]
+    },
+    {
+      "id": "ma-08-mz-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Du wirfst eine faire Münze zweimal. Mit welcher Wahrscheinlichkeit fällt zweimal Zahl? Gib das Ergebnis in Prozent an.",
+      "eingaben": [
+        {
+          "label": "P(zweimal Zahl)",
+          "antwort": 25,
+          "einheit": "%",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Auf jeder Stufe gilt $P(\\text{Zahl}) = \\dfrac{1}{2}$.",
+        "Entlang des Pfades multiplizieren: $\\dfrac{1}{2} \\cdot \\dfrac{1}{2}$.",
+        "$\\dfrac{1}{4}$ in Prozent umrechnen."
+      ],
+      "loesungsweg": "$P(\\text{Zahl, Zahl}) = \\dfrac{1}{2} \\cdot \\dfrac{1}{2} = \\dfrac{1}{4} = 25\\,\\%$.",
+      "kc": [
+        "daten-und-zufall"
+      ]
+    },
+    {
+      "id": "ma-08-mz-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Du würfelst zweimal mit einem fairen Würfel. a) Wie viele Pfade hat das Baumdiagramm insgesamt? b) Mit welcher Wahrscheinlichkeit fällt zweimal eine Sechs? Gib b) als Bruch-Nenner an (also die Zahl unter dem Bruchstrich von $\\frac{1}{?}$).",
+      "eingaben": [
+        {
+          "label": "a) Anzahl Pfade",
+          "antwort": 36,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) Nenner von P(zweimal 6)",
+          "antwort": 36,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "a) Auf jeder Stufe gibt es $6$ Möglichkeiten: $6 \\cdot 6$.",
+        "b) $P(\\text{6, 6}) = \\dfrac{1}{6} \\cdot \\dfrac{1}{6}$.",
+        "b) $\\dfrac{1}{6} \\cdot \\dfrac{1}{6} = \\dfrac{1}{36}$ – der Nenner ist $36$."
+      ],
+      "loesungsweg": "a) $6 \\cdot 6 = 36$ Pfade. b) $P(\\text{6, 6}) = \\dfrac{1}{6} \\cdot \\dfrac{1}{6} = \\dfrac{1}{36}$, der Nenner ist $36$.",
+      "kc": [
+        "daten-und-zufall"
+      ]
+    },
+    {
+      "id": "ma-08-mz-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "In einer Urne liegen $4$ Kugeln, $2$ davon sind rot. Du ziehst zweimal mit Zurücklegen. Mit welcher Wahrscheinlichkeit ziehst du zweimal eine rote Kugel? Gib das Ergebnis in Prozent an.",
+      "eingaben": [
+        {
+          "label": "P(zweimal rot)",
+          "antwort": 25,
+          "einheit": "%",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Mit Zurücklegen bleibt $P(\\text{rot}) = \\dfrac{2}{4} = \\dfrac{1}{2}$ auf beiden Stufen gleich.",
+        "Entlang des Pfades multiplizieren: $\\dfrac{1}{2} \\cdot \\dfrac{1}{2}$.",
+        "$\\dfrac{1}{4}$ in Prozent."
+      ],
+      "loesungsweg": "Mit Zurücklegen: $P(\\text{rot}) = \\dfrac{2}{4} = \\dfrac{1}{2}$ auf jeder Stufe. $P(\\text{rot, rot}) = \\dfrac{1}{2} \\cdot \\dfrac{1}{2} = \\dfrac{1}{4} = 25\\,\\%$.",
+      "kc": [
+        "daten-und-zufall"
+      ]
+    },
+    {
+      "id": "ma-08-mz-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "In einer Urne liegen $4$ rote und $3$ blaue Kugeln (zusammen $7$). Du ziehst zweimal ohne Zurücklegen. Mit welcher Wahrscheinlichkeit ziehst du zwei rote Kugeln? Gib das Ergebnis in Prozent an, gerundet auf zwei Nachkommastellen.",
+      "eingaben": [
+        {
+          "label": "P(beide rot)",
+          "antwort": 28.57,
+          "einheit": "%",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Erste Stufe: $P(\\text{rot}) = \\dfrac{4}{7}$.",
+        "Zweite Stufe ohne Zurücklegen: jetzt nur noch $3$ rote von $6$ Kugeln, also $\\dfrac{3}{6}$.",
+        "Multiplizieren: $\\dfrac{4}{7} \\cdot \\dfrac{3}{6}$, dann in Prozent."
+      ],
+      "loesungsweg": "Ohne Zurücklegen: $P(\\text{rot, rot}) = \\dfrac{4}{7} \\cdot \\dfrac{3}{6} = \\dfrac{12}{42} = \\dfrac{2}{7} \\approx 0{,}2857 = 28{,}57\\,\\%$.",
+      "kc": [
+        "daten-und-zufall"
+      ]
+    },
+    {
+      "id": "ma-08-mz-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Wieder die Urne mit $4$ roten und $3$ blauen Kugeln, zwei Züge ohne Zurücklegen. Mit welcher Wahrscheinlichkeit ziehst du genau eine rote Kugel? Gib das Ergebnis in Prozent an, gerundet auf zwei Nachkommastellen.",
+      "eingaben": [
+        {
+          "label": "P(genau eine rot)",
+          "antwort": 57.14,
+          "einheit": "%",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Genau eine rote: entweder rot-blau oder blau-rot. Beide Pfade getrennt rechnen.",
+        "$P(\\text{rot, blau}) = \\dfrac{4}{7} \\cdot \\dfrac{3}{6}$ und $P(\\text{blau, rot}) = \\dfrac{3}{7} \\cdot \\dfrac{4}{6}$.",
+        "Beide Pfade addieren (Summenregel)."
+      ],
+      "loesungsweg": "$P(\\text{rot, blau}) = \\dfrac{4}{7} \\cdot \\dfrac{3}{6} = \\dfrac{12}{42}$; $P(\\text{blau, rot}) = \\dfrac{3}{7} \\cdot \\dfrac{4}{6} = \\dfrac{12}{42}$. Summe: $\\dfrac{24}{42} = \\dfrac{4}{7} \\approx 0{,}5714 = 57{,}14\\,\\%$.",
+      "kc": [
+        "daten-und-zufall"
+      ]
+    },
+    {
+      "id": "ma-08-mz-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Du wirfst eine faire Münze dreimal. Mit welcher Wahrscheinlichkeit fällt genau zweimal Wappen? Gib das Ergebnis in Prozent an.",
+      "eingaben": [
+        {
+          "label": "P(genau zweimal Wappen)",
+          "antwort": 37.5,
+          "einheit": "%",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Jeder einzelne Pfad hat die Wahrscheinlichkeit $\\left(\\dfrac{1}{2}\\right)^3 = \\dfrac{1}{8}$.",
+        "Zähle die Pfade mit genau zwei Wappen: WWZ, WZW, ZWW – das sind $3$.",
+        "$3 \\cdot \\dfrac{1}{8}$ in Prozent."
+      ],
+      "loesungsweg": "Jeder Pfad hat $\\left(\\dfrac{1}{2}\\right)^3 = \\dfrac{1}{8}$. Genau zwei Wappen liefern die Pfade WWZ, WZW, ZWW ($3$ Stück). $P = 3 \\cdot \\dfrac{1}{8} = \\dfrac{3}{8} = 37{,}5\\,\\%$.",
+      "kc": [
+        "daten-und-zufall"
+      ]
+    },
+    {
+      "id": "ma-08-mz-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Du würfelst zweimal mit einem fairen Würfel. a) Mit welcher Wahrscheinlichkeit fällt keine Sechs? b) Mit welcher Wahrscheinlichkeit fällt mindestens eine Sechs (Gegenereignis-Trick)? Gib beide Ergebnisse in Prozent an, gerundet auf zwei Nachkommastellen.",
+      "eingaben": [
+        {
+          "label": "a) P(keine Sechs)",
+          "antwort": 69.44,
+          "einheit": "%",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) P(mindestens eine Sechs)",
+          "antwort": 30.56,
+          "einheit": "%",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "a) Keine Sechs bedeutet auf jeder Stufe $\\dfrac{5}{6}$: $\\dfrac{5}{6} \\cdot \\dfrac{5}{6}$.",
+        "b) „Mindestens eine Sechs“ ist das Gegenereignis zu „keine Sechs“.",
+        "b) $P(\\text{mind. eine Sechs}) = 1 - P(\\text{keine Sechs})$."
+      ],
+      "loesungsweg": "a) $P(\\text{keine Sechs}) = \\dfrac{5}{6} \\cdot \\dfrac{5}{6} = \\dfrac{25}{36} \\approx 0{,}6944 = 69{,}44\\,\\%$. b) Gegenereignis: $P(\\text{mind. eine Sechs}) = 1 - \\dfrac{25}{36} = \\dfrac{11}{36} \\approx 0{,}3056 = 30{,}56\\,\\%$.",
+      "kc": [
+        "daten-und-zufall"
+      ]
     }
   ]
 }

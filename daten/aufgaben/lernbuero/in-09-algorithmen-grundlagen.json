@@ -189,6 +189,278 @@
       "kc": [
         "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
       ]
+    },
+    {
+      "id": "in-09-alg-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über Algorithmen sind richtig?",
+      "optionen": [
+        {
+          "text": "Ein Algorithmus muss nach endlich vielen Schritten enden.",
+          "richtig": true,
+          "erklaerung": "Richtig – Endlichkeit ist eine Grundeigenschaft jedes Algorithmus."
+        },
+        {
+          "text": "Jeder Schritt muss eindeutig festgelegt sein.",
+          "richtig": true,
+          "erklaerung": "Richtig – nur bei eindeutigen Schritten kommt immer dasselbe Ergebnis heraus."
+        },
+        {
+          "text": "Ein Algorithmus darf Anweisungen wie „mache es ungefähr passend“ enthalten.",
+          "richtig": false,
+          "erklaerung": "Falsch – solche unklaren Anweisungen widersprechen der Eindeutigkeit."
+        },
+        {
+          "text": "Ein Algorithmus funktioniert nur für genau eine einzige Eingabe.",
+          "richtig": false,
+          "erklaerung": "Falsch – ein guter Algorithmus löst eine ganze Klasse von Aufgaben, nicht nur ein Beispiel."
+        }
+      ],
+      "tipps": [
+        "Denk an die drei Eigenschaften: eindeutig, ausführbar, endlich.",
+        "Eine Anleitung mit dem Wort „ungefähr“ ist meistens nicht eindeutig.",
+        "Genau zwei der vier Aussagen treffen zu."
+      ],
+      "loesungsweg": "Ein Algorithmus ist endlich und besteht aus eindeutigen Schritten – beide ersten Aussagen stimmen. Unklare Anweisungen („ungefähr“) verletzen die Eindeutigkeit, und ein Algorithmus soll für viele Eingaben gelten – die beiden letzten Aussagen sind falsch.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+      ]
+    },
+    {
+      "id": "in-09-alg-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Verfolge diesen Ablauf mit dem Schreibtischtest: Setze $\\texttt{summe}=0$. Wiederhole für $i = 1, 2, 3$: addiere $i$ zu $\\texttt{summe}$. Welchen Wert hat $\\texttt{summe}$ am Ende?",
+      "eingaben": [
+        {
+          "label": "summe am Ende",
+          "antwort": 6,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Schreibe nach jedem Durchlauf den neuen Wert von summe auf.",
+        "Nach $i=1$ ist summe $=1$, nach $i=2$ ist summe $=3$.",
+        "Im letzten Durchlauf ($i=3$) wird $3$ addiert: $3 + 3 = 6$."
+      ],
+      "loesungsweg": "Start: $\\texttt{summe}=0$. Durchlauf $i=1$: $0+1=1$. Durchlauf $i=2$: $1+2=3$. Durchlauf $i=3$: $3+3=6$. Also $\\texttt{summe}=6$.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+      ]
+    },
+    {
+      "id": "in-09-alg-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Algorithmus zählt, wie viele Zahlen einer Liste größer als $10$ sind. Die Liste lautet: $12, 7, 15, 3, 20$. Welchen Wert hat der Zähler am Ende?",
+      "eingaben": [
+        {
+          "label": "Zähler am Ende",
+          "antwort": 3,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Gehe die Liste der Reihe nach durch und prüfe jede Zahl einzeln.",
+        "Erhöhe den Zähler nur, wenn die Zahl wirklich größer als $10$ ist (nicht gleich $10$).",
+        "Größer als $10$ sind: $12$, $15$ und $20$."
+      ],
+      "loesungsweg": "Geprüft werden $12$ (>10, Zähler $=1$), $7$ (nein), $15$ (>10, Zähler $=2$), $3$ (nein), $20$ (>10, Zähler $=3$). Am Ende steht der Zähler auf $3$.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+      ]
+    },
+    {
+      "id": "in-09-alg-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Verfolge die Schleife: Setze $\\texttt{wert}=1$. Wiederhole genau $4$-mal: verdopple $\\texttt{wert}$ (also $\\texttt{wert} = \\texttt{wert} \\cdot 2$). Welchen Wert hat $\\texttt{wert}$ nach dem letzten Durchlauf?",
+      "eingaben": [
+        {
+          "label": "wert nach 4 Durchläufen",
+          "antwort": 16,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Verdoppeln heißt: den aktuellen Wert mit $2$ malnehmen.",
+        "Schreibe alle Zwischenwerte auf: $1 \\to 2 \\to 4 \\to \\dots$",
+        "Nach vier Verdopplungen: $1, 2, 4, 8, 16$."
+      ],
+      "loesungsweg": "Start $\\texttt{wert}=1$. 1. Durchlauf: $1 \\cdot 2 = 2$. 2.: $2 \\cdot 2 = 4$. 3.: $4 \\cdot 2 = 8$. 4.: $8 \\cdot 2 = 16$. Nach vier Verdopplungen ist $\\texttt{wert}=16$.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+      ]
+    },
+    {
+      "id": "in-09-alg-205",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Welcher Grundbaustein steckt in der Anweisung „Solange noch schmutziges Geschirr da ist, spüle einen Teller“?",
+      "optionen": [
+        {
+          "text": "Schleife (Wiederholung mit Bedingung)",
+          "richtig": true,
+          "erklaerung": "Richtig – „solange … ist“ wiederholt einen Schritt, bis die Bedingung nicht mehr gilt."
+        },
+        {
+          "text": "Sequenz (Schritte nacheinander)",
+          "richtig": false,
+          "erklaerung": "Falsch – eine reine Sequenz hätte keine Bedingung, die das Wiederholen steuert."
+        },
+        {
+          "text": "Verzweigung (einmalige Wenn-dann-Entscheidung)",
+          "richtig": false,
+          "erklaerung": "Falsch – die Verzweigung entscheidet nur einmal, hier wird aber wiederholt."
+        },
+        {
+          "text": "Hier steckt überhaupt kein Grundbaustein.",
+          "richtig": false,
+          "erklaerung": "Falsch – jeder Algorithmus besteht aus genau diesen Bausteinen, hier ist es die Schleife."
+        }
+      ],
+      "tipps": [
+        "Achte auf das Signalwort am Satzanfang: „Solange …“.",
+        "Wird ein Schritt einmal oder mehrfach ausgeführt?",
+        "Eine Bedingung, die das Wiederholen steuert, gehört zur Schleife."
+      ],
+      "loesungsweg": "Das Wort „Solange“ kennzeichnet eine Schleife: Der Schritt „spüle einen Teller“ wird so oft wiederholt, bis die Bedingung („schmutziges Geschirr da“) nicht mehr erfüllt ist.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+      ]
+    },
+    {
+      "id": "in-09-alg-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Algorithmus berechnet einen Bonus: Setze $\\texttt{bonus}=0$. Gehe die Käufe $40, 90, 60, 120$ durch. Bei jedem Kauf von mehr als $50$ erhöhe $\\texttt{bonus}$ um $5$. Welchen Wert hat $\\texttt{bonus}$ am Ende?",
+      "eingaben": [
+        {
+          "label": "bonus am Ende",
+          "antwort": 15,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Prüfe für jeden Kauf die Bedingung „mehr als $50$“.",
+        "Nur bei erfüllter Bedingung wird $5$ dazugezählt.",
+        "Mehr als $50$ sind die Käufe $90$, $60$ und $120$ – also dreimal $+5$."
+      ],
+      "loesungsweg": "Kauf $40$ (nein), $90$ (ja, $\\texttt{bonus}=5$), $60$ (ja, $\\texttt{bonus}=10$), $120$ (ja, $\\texttt{bonus}=15$). Dreimal wurde die Bedingung erfüllt: $3 \\cdot 5 = 15$.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+      ]
+    },
+    {
+      "id": "in-09-alg-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Algorithmus sucht das Maximum: Setze $\\texttt{max}$ auf das erste Element. Vergleiche dann jedes weitere Element und übernimm es, falls es größer ist. Liste: $4, 9, 2, 9, 7$. a) Welchen Wert hat $\\texttt{max}$ am Ende? b) Wie oft wird der Wert von $\\texttt{max}$ während des Durchlaufs neu gesetzt (das erste Setzen mitgezählt)?",
+      "eingaben": [
+        {
+          "label": "a) max am Ende",
+          "antwort": 9,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "b) Anzahl Zuweisungen an max",
+          "antwort": 2,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Starte mit $\\texttt{max}=4$ (erstes Element) und gehe dann Element für Element weiter.",
+        "Eine Zuweisung passiert beim ersten Setzen und immer dann, wenn ein größeres Element auftaucht.",
+        "Das zweite $9$ ist nicht größer als das bereits gespeicherte $9$ – also keine neue Zuweisung."
+      ],
+      "loesungsweg": "Start $\\texttt{max}=4$ (1. Zuweisung). $9>4 \\Rightarrow \\texttt{max}=9$ (2. Zuweisung). $2$ nein, $9$ ist nicht größer als $9$ (keine Zuweisung), $7$ nein. a) $\\texttt{max}=9$. b) Es gab genau $2$ Zuweisungen.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+      ]
+    },
+    {
+      "id": "in-09-alg-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zwei Variablen sollen ihre Werte tauschen. Start: $a=3$ und $b=8$. Der Algorithmus nutzt eine Hilfsvariable: $\\texttt{temp}=a$; dann $a=b$; dann $b=\\texttt{temp}$. a) Welchen Wert hat $a$ am Ende? b) Welchen Wert hat $b$ am Ende?",
+      "eingaben": [
+        {
+          "label": "a) Wert von a",
+          "antwort": 8,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "b) Wert von b",
+          "antwort": 3,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Die Hilfsvariable $\\texttt{temp}$ merkt sich den alten Wert von $a$, bevor er überschrieben wird.",
+        "Führe die drei Zeilen streng der Reihe nach aus und notiere nach jeder Zeile alle Werte.",
+        "Nach $\\texttt{temp}=a$ gilt $\\texttt{temp}=3$; danach wird $a=b=8$ und schließlich $b=\\texttt{temp}=3$."
+      ],
+      "loesungsweg": "$\\texttt{temp}=a=3$. Dann $a=b=8$. Dann $b=\\texttt{temp}=3$. Am Ende ist $a=8$ und $b=3$ – die Werte wurden getauscht. Ohne die Hilfsvariable würde der erste Wert beim Überschreiben verloren gehen.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+      ]
     }
   ]
 }

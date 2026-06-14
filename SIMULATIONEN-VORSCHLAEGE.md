@@ -2,6 +2,8 @@
 
 _Stand: Juni 2026. Grundlage: Abgleich aller 97 Themen in `daten/themen.json` gegen die 27 vorhandenen Simulationen (`simulationen/`) und 26 virtuellen Experimente (`daten/experimente.json`). Priorisiert nach didaktischem Mehrwert, mit Schwerpunkt auf praktisch-handelnden Themen (Elektrik, Magnetismus), wie gewünscht._
 
+> **✅ VOLLSTÄNDIG UMGESETZT (Juni 2026):** Alle 17 vorgeschlagenen Simulationen sind gebaut, physikalisch/mathematisch geprüft (analytische Prüffälle, `validierung.html` 372/372 grün, Browser- und Mobiltest) und in die Website integriert: im **Sim-Katalog** (nach Fach gegliedert, mit Stufe-Badges — wie bei den Experimenten), per **iframe in den 17 Erklärseiten** und als **Simulations-Link in den zugehörigen Lernbüro-Lektionen**. Die gemeinsame Engine bekam dafür einen optionalen, abwärtskompatiblen Zeiger-Hook (`sim.zeiger`) für Bau-Sims (Stromkreis, Logik-Gatter, Magnetfeld). Verbleibend: nur noch die „zweite Welle" weiter unten.
+
 ## Zwei Produkttypen (zur Einordnung)
 
 - **Simulation** — interaktives Modell über die gemeinsame Engine (`assets/js/sim/`, je Sim `sim.js` mit Manifest + `update()` + `zeichne()`): Parameter erkunden, Modellverhalten beobachten. Drei Modi: kontinuierlich, schrittweise, statisch-interaktiv.
@@ -13,7 +15,7 @@ Beides ist sinnvoll dort, wo im Unterricht real etwas aufgebaut/gemessen wird. N
 
 ## Tier 1 — Elektrik & Magnetismus, Sek I (höchste Priorität, „selbst zusammenbauen")
 
-### 1. Stromkreis-Baukasten · `ph-05-stromkreise` · Simulation (statisch-interaktiv) ★★★
+### 1. ✅ Stromkreis-Baukasten · `ph-05-stromkreise` · Simulation (statisch-interaktiv) ★★★
 Bauteile (Batterie, Schalter, Lämpchen, Kabel, Motor, Summer) auf ein Brett ziehen und verdrahten; Schalter schließen → Lämpchen leuchtet / Motor dreht. Erkennt **offenen Stromkreis** und **Kurzschluss**. Reihen- vs. Parallelschaltung sichtbar machen (zwei Lämpchen: parallel beide hell, in Reihe beide dunkel; eins herausdrehen → in Reihe alles aus, parallel leuchtet das andere weiter). Leiter/Nichtleiter-Test. **Genau der gewünschte „Schaltkreise selbst bauen und testen"-Kern.**
 
 ### 2. Magnetismus-Experimentierfeld · `ph-05-dauermagnete` · Simulation (statisch-interaktiv + kontinuierlich) ★★★
@@ -46,7 +48,7 @@ Sankey-artige Energieflussdiagramme (Kraftwerk, Lampe), Wirkungsgrad ablesbar. A
 
 ## Tier 4 — Mathematik mit hohem Visualisierungswert
 
-### 8. Riemann-Summen · `ma-qp-integralanwendungen` · Simulation ★★★
+### 8. ✅ Riemann-Summen · `ma-qp-integralanwendungen` · Simulation ★★★
 Rechtecke unter der Kurve, Schieberegler n → Konvergenz gegen das Integral; Unter-/Obersumme. Klassiker, sehr anschaulich.
 
 ### 9. Normalverteilung interaktiv · `ma-qp-normalverteilung` · Simulation ★★★

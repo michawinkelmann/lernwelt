@@ -464,6 +464,255 @@
       "kc": [
         "interferenz-von-licht"
       ]
+    },
+    {
+      "id": "ph-qp-ifz-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen zur Interferenz am Doppelspalt und am Gitter sind richtig?",
+      "optionen": [
+        {
+          "text": "Ein helles Maximum entsteht dort, wo der Gangunterschied der beiden Teilwellen ein ganzzahliges Vielfaches der Wellenlänge beträgt: $\\Delta s = k \\cdot \\lambda$.",
+          "richtig": true,
+          "erklaerung": "Richtig — bei ganzzahligem Vielfachen treffen sich die Teilwellen mit gleicher Phase (konstruktive Interferenz), es entsteht ein Maximum."
+        },
+        {
+          "text": "Ein dunkles Minimum entsteht, wenn der Gangunterschied ein ungeradzahliges Vielfaches der halben Wellenlänge ist: $\\Delta s = (2k+1) \\cdot \\frac{\\lambda}{2}$.",
+          "richtig": true,
+          "erklaerung": "Richtig — dann treffen Wellenberg auf Wellental, die Teilwellen löschen sich aus (destruktive Interferenz)."
+        },
+        {
+          "text": "Vergrößert man die Gitterkonstante $g$ (weniger Striche pro Millimeter), so rücken die Maxima bei fester Wellenlänge näher zusammen.",
+          "richtig": true,
+          "erklaerung": "Richtig — aus $\\sin\\alpha = \\frac{k \\cdot \\lambda}{g}$ folgt: größeres $g$ liefert kleinere Beugungswinkel, die Maxima rücken zusammen."
+        },
+        {
+          "text": "Ein optisches Gitter mit vielen Spalten liefert die Maxima unter anderen Winkeln als ein Doppelspalt mit derselben Gitterkonstante.",
+          "richtig": false,
+          "erklaerung": "Falsch — die Maximabedingung $g \\cdot \\sin\\alpha = k \\cdot \\lambda$ ist dieselbe. Die vielen Spalte machen die Maxima nur schärfer und heller, nicht anders gelegen."
+        }
+      ],
+      "tipps": [
+        "Maximum: gleiche Phase, Gangunterschied = ganzes Vielfaches von $\\lambda$. Minimum: Gegenphase, Gangunterschied = halbes Vielfaches von $\\lambda$.",
+        "Schau auf $\\sin\\alpha = \\frac{k \\cdot \\lambda}{g}$: Wie wirkt sich ein größeres $g$ auf den Winkel aus?",
+        "Drei Aussagen sind richtig — die letzte verwechselt Schärfe mit Lage der Maxima."
+      ],
+      "loesungsweg": "Richtig sind die ersten drei Aussagen. Maxima liegen bei $\\Delta s = k \\cdot \\lambda$ (konstruktiv), Minima bei $\\Delta s = (2k+1)\\frac{\\lambda}{2}$ (destruktiv). Ein größeres $g$ verkleinert wegen $\\sin\\alpha = \\frac{k\\lambda}{g}$ die Beugungswinkel, die Maxima rücken zusammen. Falsch ist die letzte Aussage: Doppelspalt und Gitter mit gleichem $g$ erzeugen ihre Maxima unter denselben Winkeln — viele Spalte machen die Streifen nur schmaler und heller.",
+      "kc": [
+        "interferenz-von-licht"
+      ]
+    },
+    {
+      "id": "ph-qp-ifz-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein optisches Gitter trägt 250 Striche pro Millimeter. Berechne die Gitterkonstante $g$ (Abstand benachbarter Spalte) in Mikrometern.",
+      "eingaben": [
+        {
+          "label": "$g$",
+          "antwort": 4.0,
+          "toleranz": 0.05,
+          "einheit": "µm"
+        }
+      ],
+      "tipps": [
+        "Die Gitterkonstante ist der Kehrwert der Strichzahl pro Länge: $g = \\frac{1}{250\\,\\text{mm}^{-1}}$.",
+        "$\\frac{1}{250}\\,\\text{mm} = \\frac{1000}{250}\\,\\mu\\text{m}$ — ein Millimeter sind $1000$ Mikrometer.",
+        "$\\frac{1000}{250} = 4{,}0$ — das Ergebnis ist die Gitterkonstante in Mikrometern."
+      ],
+      "loesungsweg": "Die Gitterkonstante ist der Abstand benachbarter Spaltmitten, also der Kehrwert der Strichzahl pro Länge: $g = \\frac{1}{250\\,\\text{mm}^{-1}} = \\frac{1}{250}\\,\\text{mm} = \\frac{1000}{250}\\,\\mu\\text{m} = 4{,}0\\,\\mu\\text{m}$. Je mehr Striche pro Millimeter, desto kleiner ist die Gitterkonstante.",
+      "kc": [
+        "interferenz-von-licht"
+      ]
+    },
+    {
+      "id": "ph-qp-ifz-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Doppelspalt ($g = 0{,}30\\,\\text{mm}$) steht $e = 2{,}50\\,\\text{m}$ vor dem Schirm. Rotes Licht ($\\lambda = 600\\,\\text{nm}$) erzeugt ein Streifenmuster. Berechne den Streifenabstand $\\Delta a$ zweier benachbarter Maxima mit der Kleinwinkelnäherung in Millimetern.",
+      "eingaben": [
+        {
+          "label": "$\\Delta a$",
+          "antwort": 5.0,
+          "toleranz": 0.1,
+          "einheit": "mm"
+        }
+      ],
+      "tipps": [
+        "Kleinwinkelnäherung: $\\Delta a = \\frac{\\lambda \\cdot e}{g}$ — alle Längen in Metern einsetzen.",
+        "Wandle die Einheiten um: $g = 3{,}0 \\cdot 10^{-4}\\,\\text{m}$, $\\lambda = 6{,}0 \\cdot 10^{-7}\\,\\text{m}$.",
+        "$\\Delta a = \\frac{6{,}0 \\cdot 10^{-7}\\,\\text{m} \\cdot 2{,}50\\,\\text{m}}{3{,}0 \\cdot 10^{-4}\\,\\text{m}}$ — Ergebnis in Millimeter umrechnen."
+      ],
+      "loesungsweg": "Kleinwinkelnäherung: $\\Delta a = \\frac{\\lambda \\cdot e}{g} = \\frac{6{,}0 \\cdot 10^{-7}\\,\\text{m} \\cdot 2{,}50\\,\\text{m}}{3{,}0 \\cdot 10^{-4}\\,\\text{m}} = 5{,}0 \\cdot 10^{-3}\\,\\text{m} = 5{,}0\\,\\text{mm}$. Beim Doppelspalt sind die Winkel winzig — die Näherung $\\sin\\alpha \\approx \\tan\\alpha$ ist hier ausgezeichnet erfüllt.",
+      "kc": [
+        "interferenz-von-licht"
+      ]
+    },
+    {
+      "id": "ph-qp-ifz-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Doppelspalt ($g = 0{,}50\\,\\text{mm}$) steht $e = 3{,}00\\,\\text{m}$ vor dem Schirm. Blaues Licht ($\\lambda = 480\\,\\text{nm}$) erzeugt ein Streifenmuster. Berechne (a) den Streifenabstand $\\Delta a$ und (b) den Abstand $a_2$ des 2. Maximums von der Schirmmitte (Kleinwinkelnäherung).",
+      "eingaben": [
+        {
+          "label": "(a) $\\Delta a$",
+          "antwort": 2.88,
+          "toleranz": 0.08,
+          "einheit": "mm"
+        },
+        {
+          "label": "(b) $a_2$",
+          "antwort": 5.76,
+          "toleranz": 0.15,
+          "einheit": "mm"
+        }
+      ],
+      "tipps": [
+        "(a) Kleinwinkelnäherung: $\\Delta a = \\frac{\\lambda \\cdot e}{g}$ — alle Längen in Metern.",
+        "(b) Das $k$-te Maximum liegt bei $a_k = k \\cdot \\Delta a$; hier $a_2 = 2 \\cdot \\Delta a$.",
+        "(a) $\\Delta a = \\frac{4{,}8 \\cdot 10^{-7}\\,\\text{m} \\cdot 3{,}00\\,\\text{m}}{5{,}0 \\cdot 10^{-4}\\,\\text{m}}$."
+      ],
+      "loesungsweg": "(a) $\\Delta a = \\frac{\\lambda \\cdot e}{g} = \\frac{4{,}8 \\cdot 10^{-7}\\,\\text{m} \\cdot 3{,}00\\,\\text{m}}{5{,}0 \\cdot 10^{-4}\\,\\text{m}} = 2{,}88 \\cdot 10^{-3}\\,\\text{m} = 2{,}88\\,\\text{mm}$. (b) Das 2. Maximum liegt bei $a_2 = 2 \\cdot \\Delta a = 2 \\cdot 2{,}88\\,\\text{mm} = 5{,}76\\,\\text{mm}$. Kontrolle der Näherung: $\\tan\\alpha_2 = \\frac{5{,}76\\,\\text{mm}}{3000\\,\\text{mm}} \\approx 0{,}0019$ — ein winziger Winkel, die Näherung ist hervorragend.",
+      "kc": [
+        "interferenz-von-licht"
+      ]
+    },
+    {
+      "id": "ph-qp-ifz-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Gitter mit 300 Strichen pro Millimeter ($g = 3{,}33\\,\\mu\\text{m}$) wird von Laserlicht beleuchtet. Auf einem Schirm im Abstand $e = 1{,}30\\,\\text{m}$ liegt das Maximum 1. Ordnung bei $a_1 = 23{,}3\\,\\text{cm}$ von der Mitte. Bestimme die Wellenlänge — ohne Kleinwinkelnäherung, da der Winkel groß ist.",
+      "eingaben": [
+        {
+          "label": "$\\lambda$",
+          "antwort": 588,
+          "toleranz": 8,
+          "einheit": "nm"
+        }
+      ],
+      "tipps": [
+        "Beim Gitter sind die Winkel groß — die Kleinwinkelnäherung ist unzulässig. Bestimme zuerst den Winkel exakt: $\\tan\\alpha_1 = \\frac{a_1}{e}$.",
+        "$\\tan\\alpha_1 = \\frac{0{,}233\\,\\text{m}}{1{,}30\\,\\text{m}} = 0{,}1792$, dann $\\alpha_1 = \\arctan(0{,}1792)$.",
+        "Wellenlänge aus der Maximabedingung 1. Ordnung: $\\lambda = g \\cdot \\sin\\alpha_1$."
+      ],
+      "loesungsweg": "Winkel exakt aus der Schirmgeometrie: $\\tan\\alpha_1 = \\frac{a_1}{e} = \\frac{23{,}3\\,\\text{cm}}{130\\,\\text{cm}} = 0{,}1792$, also $\\alpha_1 \\approx 10{,}2^\\circ$. Wellenlänge aus $g \\cdot \\sin\\alpha_1 = 1 \\cdot \\lambda$: $\\lambda = g \\cdot \\sin\\alpha_1 = 3{,}33\\,\\mu\\text{m} \\cdot \\sin 10{,}2^\\circ \\approx 3{,}33\\,\\mu\\text{m} \\cdot 0{,}1767 \\approx 588\\,\\text{nm}$ — gelbes Licht (Natrium-D-Linie). Wichtig: $\\tan\\alpha$ gehört zur Schirmgeometrie, $\\sin\\alpha$ in die Gitterbedingung — nicht verwechseln.",
+      "kc": [
+        "interferenz-von-licht"
+      ]
+    },
+    {
+      "id": "ph-qp-ifz-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Helium-Neon-Laser ($\\lambda = 632{,}8\\,\\text{nm}$) beleuchtet ein Gitter mit 350 Strichen pro Millimeter ($g = 2{,}857\\,\\mu\\text{m}$). Unter welchem Winkel $\\alpha_2$ erscheint das Maximum 2. Ordnung?",
+      "eingaben": [
+        {
+          "label": "$\\alpha_2$",
+          "antwort": 26.3,
+          "toleranz": 0.5,
+          "einheit": "°"
+        }
+      ],
+      "tipps": [
+        "Maximabedingung: $g \\cdot \\sin\\alpha_2 = 2 \\cdot \\lambda$, also $\\sin\\alpha_2 = \\frac{2 \\cdot \\lambda}{g}$.",
+        "Einsetzen: $\\sin\\alpha_2 = \\frac{2 \\cdot 632{,}8\\,\\text{nm}}{2857\\,\\text{nm}}$ — beide Längen in derselben Einheit.",
+        "$\\sin\\alpha_2 = 0{,}4430$, dann $\\alpha_2 = \\arcsin(0{,}4430)$."
+      ],
+      "loesungsweg": "Maximabedingung 2. Ordnung: $g \\cdot \\sin\\alpha_2 = 2 \\cdot \\lambda$, also $\\sin\\alpha_2 = \\frac{2 \\cdot \\lambda}{g} = \\frac{2 \\cdot 632{,}8\\,\\text{nm}}{2857\\,\\text{nm}} = 0{,}4430$. Damit $\\alpha_2 = \\arcsin(0{,}4430) \\approx 26{,}3^\\circ$. Bei diesem großen Winkel wäre die Kleinwinkelnäherung deutlich daneben — beim Gitter rechnet man immer mit dem Sinus.",
+      "kc": [
+        "interferenz-von-licht"
+      ]
+    },
+    {
+      "id": "ph-qp-ifz-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein grüner Laser ($\\lambda = 532\\,\\text{nm}$) beleuchtet ein Gitter mit 550 Strichen pro Millimeter ($g = 1{,}818\\,\\mu\\text{m}$). Bestimme, wie viele Hauptmaxima insgesamt auf dem Schirm sichtbar sind (das 0. Maximum mitgezählt).",
+      "eingaben": [
+        {
+          "label": "Anzahl Hauptmaxima",
+          "antwort": 7,
+          "toleranz": 0
+        }
+      ],
+      "tipps": [
+        "Ein Sinus kann höchstens $1$ werden. Aus $\\sin\\alpha_k = \\frac{k \\cdot \\lambda}{g} \\le 1$ folgt die größte mögliche Ordnung: $k_\\text{max} \\le \\frac{g}{\\lambda}$.",
+        "$\\frac{g}{\\lambda} = \\frac{1818\\,\\text{nm}}{532\\,\\text{nm}} \\approx 3{,}42$ — auf die nächste ganze Zahl abrunden.",
+        "Es gibt das 0. Maximum sowie je $k_\\text{max}$ Maxima links und rechts: insgesamt $2 \\cdot k_\\text{max} + 1$."
+      ],
+      "loesungsweg": "Die größte sichtbare Ordnung folgt aus $\\sin\\alpha_k = \\frac{k \\lambda}{g} \\le 1$, also $k \\le \\frac{g}{\\lambda} = \\frac{1818\\,\\text{nm}}{532\\,\\text{nm}} \\approx 3{,}42$. Abrunden ergibt $k_\\text{max} = 3$; für $k = 4$ wäre $\\sin\\alpha_4 = \\frac{4 \\cdot 532}{1818} \\approx 1{,}17 > 1$ — unmöglich. Sichtbar sind das 0. Maximum sowie die Ordnungen $\\pm 1, \\pm 2, \\pm 3$, zusammen $2 \\cdot 3 + 1 = 7$ Hauptmaxima.",
+      "kc": [
+        "interferenz-von-licht"
+      ]
+    },
+    {
+      "id": "ph-qp-ifz-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Im Doppelspaltversuch ($g = 0{,}20\\,\\text{mm}$, Schirmabstand $e = 2{,}20\\,\\text{m}$) misst man vom 0. bis zum 5. Maximum den Abstand $a_5 = 35{,}75\\,\\text{mm}$. Berechne (a) die Wellenlänge des Lichts und (b) den Streifenabstand $\\Delta a$ zweier benachbarter Maxima (jeweils Kleinwinkelnäherung).",
+      "eingaben": [
+        {
+          "label": "(a) $\\lambda$",
+          "antwort": 650,
+          "toleranz": 8,
+          "einheit": "nm"
+        },
+        {
+          "label": "(b) $\\Delta a$",
+          "antwort": 7.15,
+          "toleranz": 0.15,
+          "einheit": "mm"
+        }
+      ],
+      "tipps": [
+        "(a) Kleinwinkelnäherung mit dem 5. Maximum: $\\lambda = \\frac{g \\cdot a_5}{5 \\cdot e}$ — alle Längen in Metern.",
+        "(a) $\\lambda = \\frac{2{,}0 \\cdot 10^{-4}\\,\\text{m} \\cdot 3{,}575 \\cdot 10^{-2}\\,\\text{m}}{5 \\cdot 2{,}20\\,\\text{m}}$, Ergebnis in Nanometer.",
+        "(b) Der Streifenabstand ist $\\Delta a = \\frac{a_5}{5}$ — oder gleichwertig $\\Delta a = \\frac{\\lambda \\cdot e}{g}$."
+      ],
+      "loesungsweg": "(a) Über fünf Maxima messen und durch $k = 5$ teilen verkleinert den Ablesefehler: $\\lambda = \\frac{g \\cdot a_5}{5 \\cdot e} = \\frac{2{,}0 \\cdot 10^{-4}\\,\\text{m} \\cdot 3{,}575 \\cdot 10^{-2}\\,\\text{m}}{5 \\cdot 2{,}20\\,\\text{m}} \\approx 6{,}5 \\cdot 10^{-7}\\,\\text{m} = 650\\,\\text{nm}$ — rotes Licht. (b) Der Streifenabstand ist $\\Delta a = \\frac{a_5}{5} = \\frac{35{,}75\\,\\text{mm}}{5} = 7{,}15\\,\\text{mm}$; zur Kontrolle: $\\Delta a = \\frac{\\lambda \\cdot e}{g} = \\frac{6{,}5 \\cdot 10^{-7}\\,\\text{m} \\cdot 2{,}20\\,\\text{m}}{2{,}0 \\cdot 10^{-4}\\,\\text{m}} \\approx 7{,}15\\,\\text{mm}$ — beide Wege stimmen überein.",
+      "kc": [
+        "interferenz-von-licht"
+      ]
     }
   ]
 }

@@ -53,7 +53,7 @@ function alleQuellen() {
 async function ladeQuellen() {
   await Promise.all(alleQuellen().map(async q => {
     try {
-      const a = await fetch(url("daten/aufgaben/" + q + ".json"));
+      const a = await fetch(url("daten/aufgaben/" + q + ".json"), { cache: "no-store" });
       if (!a.ok) return;
       const liste = (await a.json()).aufgaben || [];
       AUFGABEN.set(q, new Map(liste.map(x => [x.id, x])));
@@ -231,7 +231,7 @@ function baueLektionsKarte(l, index, reihenfolge) {
   const stand = holeLektionStand(KURS_ID, l.id);
   const frei = istLektionFrei(KURS_ID, reihenfolge, index);
   const fertig = stand.checkpoint === true;
-  const phasenGesamt = PHASEN.length;
+  const phasenGesamt = PHASEN.filter(([k]) => l.phasen[k]).length;
   const phasenDone = PHASEN.filter(([k]) => stand.phasen[k]).length;
   const basisGroups = l.phasen.ueben?.basis || [];
   const sockel = alleGeloest(basisGroups);

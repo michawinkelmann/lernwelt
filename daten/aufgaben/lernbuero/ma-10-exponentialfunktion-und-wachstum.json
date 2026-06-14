@@ -167,6 +167,264 @@
       "kc": [
         "KC Mathematik Gym Sek I (Nds. 2015): Funktionaler Zusammenhang – Exponentialfunktion, Parameter bestimmen, Modellieren (Klasse 9/10)"
       ]
+    },
+    {
+      "id": "ma-10-exp-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über exponentielles Wachstum und Abnahme sind richtig?",
+      "optionen": [
+        {
+          "text": "Bei exponentiellem Wachstum wird mit jedem Schritt mit demselben Faktor $b>1$ multipliziert.",
+          "richtig": true,
+          "erklaerung": "Genau das kennzeichnet exponentielles Wachstum: gleicher Faktor pro Schritt."
+        },
+        {
+          "text": "Eine Abnahme um $8\\,\\%$ pro Schritt entspricht dem Faktor $b=0{,}92$.",
+          "richtig": true,
+          "erklaerung": "$100\\,\\%-8\\,\\%=92\\,\\%$, also $b=0{,}92$."
+        },
+        {
+          "text": "Eine Zunahme um $6\\,\\%$ pro Schritt entspricht dem Faktor $b=6$.",
+          "richtig": false,
+          "erklaerung": "Falsch: $+6\\,\\%$ bedeutet $b=1{,}06$, nicht $6$."
+        },
+        {
+          "text": "Bei exponentieller Abnahme gilt $0<b<1$.",
+          "richtig": true,
+          "erklaerung": "Ein Faktor zwischen $0$ und $1$ verkleinert den Wert in jedem Schritt."
+        }
+      ],
+      "tipps": [
+        "Wachstumsfaktor: $b=1+\\frac{p}{100}$ bei Zunahme, $b=1-\\frac{p}{100}$ bei Abnahme.",
+        "Prüfe jede Prozentangabe: Wird der Wert größer ($b>1$) oder kleiner ($0<b<1$)?",
+        "Drei Aussagen sind richtig, eine verwechselt Prozentsatz und Faktor."
+      ],
+      "loesungsweg": "Exponentielles Wachstum bedeutet: pro Schritt mal demselben Faktor $b$. $-8\\,\\%\\Rightarrow b=0{,}92$ und $0<b<1$ bei Abnahme sind richtig. Falsch ist nur $+6\\,\\%\\Rightarrow b=6$ (richtig wäre $b=1{,}06$).",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gib zu jeder Änderung den Wachstumsfaktor $b$ an: a) Zunahme um $6\\,\\%$ pro Jahr, b) Abnahme um $8\\,\\%$ pro Jahr.",
+      "eingaben": [
+        {
+          "label": "a) Faktor bei +6 %",
+          "antwort": 1.06,
+          "einheit": "",
+          "toleranz": 0.001
+        },
+        {
+          "label": "b) Faktor bei -8 %",
+          "antwort": 0.92,
+          "einheit": "",
+          "toleranz": 0.001
+        }
+      ],
+      "tipps": [
+        "Zunahme: $b=1+\\frac{p}{100}$.",
+        "Abnahme: $b=1-\\frac{p}{100}$.",
+        "a) $1+0{,}06$  b) $1-0{,}08$"
+      ],
+      "loesungsweg": "a) $b=1+\\frac{6}{100}=1{,}06$. b) $b=1-\\frac{8}{100}=0{,}92$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Pflanzenkultur startet mit $50$ Pflanzen und wächst pro Woche mit dem Faktor $1{,}2$. Wie viele Pflanzen sind es nach $3$ Wochen? Runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Anzahl nach 3 Wochen",
+          "antwort": 86.4,
+          "einheit": "",
+          "toleranz": 0.2
+        }
+      ],
+      "tipps": [
+        "Setze in $f(t)=a\\cdot b^t$ ein mit $a=50$ und $b=1{,}2$.",
+        "Nach $3$ Wochen: $t=3$, also $50\\cdot 1{,}2^3$.",
+        "$1{,}2^3=1{,}728$, dann mal $50$."
+      ],
+      "loesungsweg": "$f(3)=50\\cdot 1{,}2^3=50\\cdot 1{,}728=86{,}4$. Es sind etwa $86{,}4$ Pflanzen (gerundet $86$).",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Guthaben von $1200\\,\\text{€}$ wird mit $4\\,\\%$ Zinsen pro Jahr angelegt; die Zinsen bleiben auf dem Konto (Zinseszins). Wie viel Guthaben ist nach $5$ Jahren vorhanden? Runde auf Cent.",
+      "eingaben": [
+        {
+          "label": "Guthaben nach 5 Jahren",
+          "antwort": 1459.98,
+          "einheit": "€",
+          "toleranz": 0.05
+        }
+      ],
+      "tipps": [
+        "Wachstumsfaktor: $b=1{,}04$.",
+        "$f(t)=1200\\cdot 1{,}04^t$.",
+        "Setze $t=5$ ein: $1200\\cdot 1{,}04^5$."
+      ],
+      "loesungsweg": "$b=1+\\frac{4}{100}=1{,}04$. $f(5)=1200\\cdot 1{,}04^5=1200\\cdot 1{,}21665\\ldots\\approx 1459{,}98\\,\\text{€}$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Patient erhält $600\\,\\text{mg}$ eines Wirkstoffs. Der Körper baut pro Stunde $25\\,\\%$ des jeweils vorhandenen Wirkstoffs ab (Faktor $0{,}75$). Wie viel Wirkstoff ist nach $4$ Stunden noch vorhanden? Runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Wirkstoff nach 4 h",
+          "antwort": 189.8,
+          "einheit": "mg",
+          "toleranz": 0.2
+        }
+      ],
+      "tipps": [
+        "Abnahme um $25\\,\\%$ bedeutet Faktor $b=0{,}75$.",
+        "$f(t)=600\\cdot 0{,}75^t$.",
+        "Setze $t=4$ ein: $600\\cdot 0{,}75^4$."
+      ],
+      "loesungsweg": "$b=1-0{,}25=0{,}75$. $f(4)=600\\cdot 0{,}75^4=600\\cdot 0{,}31640625\\approx 189{,}8\\,\\text{mg}$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Stadt hat $50\\,000$ Einwohner und wächst pro Jahr um $3\\,\\%$. Wie viele Einwohner sind es nach $10$ Jahren? Runde auf ganze Personen.",
+      "eingaben": [
+        {
+          "label": "Einwohner nach 10 Jahren",
+          "antwort": 67196,
+          "einheit": "",
+          "toleranz": 5
+        }
+      ],
+      "tipps": [
+        "Wachstumsfaktor: $b=1{,}03$.",
+        "$f(t)=50000\\cdot 1{,}03^t$.",
+        "Setze $t=10$ ein und runde am Ende."
+      ],
+      "loesungsweg": "$b=1{,}03$. $f(10)=50000\\cdot 1{,}03^{10}=50000\\cdot 1{,}34392\\ldots\\approx 67\\,196$ Einwohner.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein radioaktiver Stoff zerfällt pro Jahr um $12\\,\\%$ (Faktor $0{,}88$). Nach wie vielen ganzen Jahren ist erstmals weniger als die Hälfte der Anfangsmenge vorhanden?",
+      "eingaben": [
+        {
+          "label": "Anzahl Jahre",
+          "antwort": 6,
+          "einheit": "Jahre",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Gesucht ist das kleinste ganze $n$ mit $0{,}88^n<0{,}5$.",
+        "Probiere systematisch: $0{,}88^1, 0{,}88^2, \\ldots$",
+        "Bei $n=5$ ist $0{,}88^5\\approx 0{,}528$ (noch über der Hälfte), bei $n=6$ darunter."
+      ],
+      "loesungsweg": "Gesucht: kleinstes $n$ mit $0{,}88^n<0{,}5$. $0{,}88^5\\approx 0{,}528>0{,}5$, aber $0{,}88^6\\approx 0{,}464<0{,}5$. Also nach $6$ Jahren.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Neuwagen kostet $18\\,000\\,\\text{€}$ und verliert pro Jahr $14\\,\\%$ seines jeweiligen Wertes (Faktor $0{,}86$). a) Welchen Wert hat er nach $3$ Jahren? b) Welchen Wert nach $6$ Jahren? Runde jeweils auf Cent.",
+      "eingaben": [
+        {
+          "label": "a) Wert nach 3 Jahren",
+          "antwort": 11449.01,
+          "einheit": "€",
+          "toleranz": 0.5
+        },
+        {
+          "label": "b) Wert nach 6 Jahren",
+          "antwort": 7282.21,
+          "einheit": "€",
+          "toleranz": 0.5
+        }
+      ],
+      "tipps": [
+        "Abnahme um $14\\,\\%$: Faktor $b=0{,}86$, also $f(t)=18000\\cdot 0{,}86^t$.",
+        "a) $t=3$: $18000\\cdot 0{,}86^3$.",
+        "b) $t=6$: $18000\\cdot 0{,}86^6$."
+      ],
+      "loesungsweg": "$b=1-0{,}14=0{,}86$, $f(t)=18000\\cdot 0{,}86^t$. a) $f(3)=18000\\cdot 0{,}86^3=18000\\cdot 0{,}636056\\approx 11\\,449{,}01\\,\\text{€}$. b) $f(6)=18000\\cdot 0{,}86^6=18000\\cdot 0{,}404567\\approx 7282{,}21\\,\\text{€}$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
     }
   ]
 }

@@ -1,220 +1,525 @@
 {
-  "thema": "ph-qp-quantenobjekte",
-  "hinweis": "Lernbüro-Ergänzungsaufgaben für den Kurs ph-qq. Zur fachlichen Prüfung durch die Lehrkraft.",
-  "aufgaben": [
+ "thema": "ph-qp-quantenobjekte",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben für den Kurs ph-qq. Zur fachlichen Prüfung durch die Lehrkraft.",
+ "aufgaben": [
+  {
+   "id": "ph-qp-qo-101",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Caesiumphotozelle ($W_\\text{A} = 1{,}94\\,\\text{eV}$) wird mit grunem Licht der Wellenlänge $\\lambda = 500\\,\\text{nm}$ bestrahlt. Berechne (a) die Photonenenergie in Elektronvolt und (b) die Gegenspannung $U_0$, bei der der Photostrom gerade abreisst.",
+   "eingaben": [
     {
-      "id": "ph-qp-qo-101",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 2,
-      "ergaenzung": "lernbuero",
-      "frage": "Eine Caesiumphotozelle ($W_\\text{A} = 1{,}94\\,\\text{eV}$) wird mit grunem Licht der Wellenlänge $\\lambda = 500\\,\\text{nm}$ bestrahlt. Berechne (a) die Photonenenergie in Elektronvolt und (b) die Gegenspannung $U_0$, bei der der Photostrom gerade abreisst.",
-      "eingaben": [
-        {
-          "label": "(a) $E_\\text{Ph}$",
-          "antwort": 2.48,
-          "toleranz": 0.03,
-          "einheit": "eV"
-        },
-        {
-          "label": "(b) $U_0$",
-          "antwort": 0.54,
-          "toleranz": 0.02,
-          "einheit": "V"
-        }
-      ],
-      "tipps": [
-        "(a) Nutze die Merkformel: $\\frac{E_\\text{Ph}}{\\text{eV}} \\approx \\frac{1240}{\\lambda / \\text{nm}}$.",
-        "(b) Einstein-Gleichung: $E_\\text{kin,max} = E_\\text{Ph} - W_\\text{A}$ — beide Energien in Elektronvolt einsetzen.",
-        "(b) Wegen $e \\cdot U_0 = E_\\text{kin,max}$ ist der Zahlenwert von $U_0$ in Volt gleich dem von $E_\\text{kin,max}$ in Elektronvolt."
-      ],
-      "loesungsweg": "(a) Merkformel: $E_\\text{Ph} \\approx \\frac{1240}{500}\\,\\text{eV} = 2{,}48\\,\\text{eV}$. (b) Einstein-Gleichung: $E_\\text{kin,max} = 2{,}48\\,\\text{eV} - 1{,}94\\,\\text{eV} = 0{,}54\\,\\text{eV}$. Wegen $e \\cdot U_0 = E_\\text{kin,max}$ folgt $U_0 = 0{,}54\\,\\text{V}$ — der eV-Zahlenwert wandert direkt in die Volt-Angabe, was das Rechnen in Elektronvolt so bequem macht.",
-      "kc": ["KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"]
+     "label": "(a) $E_\\text{Ph}$",
+     "antwort": 2.48,
+     "toleranz": 0.03,
+     "einheit": "eV"
     },
     {
-      "id": "ph-qp-qo-102",
-      "typ": "multiple-choice",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "ergaenzung": "lernbuero",
-      "frage": "Welche Aussagen beschreiben den Unterschied zwischen dem klassischen Wellen- und dem Quantenobjekt-Modell richtig?",
-      "optionen": [
-        {
-          "text": "Im Wellenmodell verteilt sich die Energie kontinuierlich uber die gesamte Wellenfront; im Photonenmodell wird sie in unteilbaren Portionen $E = h \\cdot f$ ubertragen.",
-          "richtig": true,
-          "erklaerung": "Richtig — genau diese Portionierung durch das Plancksche Wirkungsquantum ist das Kernelement des Photonenmodells und erklart den Photoeffekt."
-        },
-        {
-          "text": "Das Wellenmodell kann die Grenzfrequenz beim Photoeffekt problemlos erklaren, wenn man die Wellenintensitat richtig berucksichtigt.",
-          "richtig": false,
-          "erklaerung": "Nein — das Wellenmodell scheitert gerade an der Grenzfrequenz. Unterhalb davon liefert selbst sehr helle Strahlung kein einziges Elektron, obwohl die Welle viel Energie ubertragt."
-        },
-        {
-          "text": "Photonen und Materiewellen sind Quantenobjekte — sie zeigen je nach Experiment Wellen- oder Teilchenaspekte.",
-          "richtig": true,
-          "erklaerung": "Richtig — das ist der Kern des Welle-Teilchen-Dualismus: Quantenobjekte passen in kein klassisches Bild allein."
-        },
-        {
-          "text": "Im Photonenmodell konnen mehrere Photonen ihre Energie auf ein einziges Elektron ubertragen, wenn man lange genug wartet.",
-          "richtig": false,
-          "erklaerung": "Nein — genau das ist im Photonenmodell ausgeschlossen. Jedes Photon gibt seine Energie an genau ein Elektron ab; ein Ansparen findet nicht statt."
-        }
-      ],
-      "tipps": [
-        "Uberlege, was die vier Befunde des Photoeffekts dem Wellenmodell schwer machen — Grenzfrequenz, Energie, Intensitat, Zeit.",
-        "Das Photonenmodell: Energie kommt in Portionen $E = h \\cdot f$, jede Portion gehort einem Photon und geht an genau ein Elektron.",
-        "Zwei Aussagen sind richtig."
-      ],
-      "loesungsweg": "Richtig sind Aussage 1 und 3: Das Wellenmodell verteilt Energie kontinuierlich — das Photonenmodell portioniert sie mit $E = h \\cdot f$. Und beide, Photonen wie Elektronen, sind Quantenobjekte mit Welle-Teilchen-Dualismus. Aussage 2 ist falsch, weil das Wellenmodell keine Grenzfrequenz erzeugt. Aussage 4 beschreibt genau das, was das Photonenmodell ausschliesst: Energieansparen gibt es nicht.",
-      "kc": ["KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"]
-    },
-    {
-      "id": "ph-qp-qo-103",
-      "typ": "luecke",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "ergaenzung": "lernbuero",
-      "frage": "Erganze den Text zur Elektronenbeugung und zur de-Broglie-Hypothese.",
-      "text": "De Broglie schlug 1924 vor, dass auch Materie ___ besitzt. Die Wellenlänge eines Teilchens hangt von seinem ___ ab: $\\lambda = \\frac{h}{p}$. Bei einem Elektronenbeugungsexperiment wirkt das Kristallgitter als ___ , und auf dem Leuchtschirm erscheinen charakteristische ___. Dieser Befund zeigt, dass Elektronen Wellenaspekte besitzen — sie sind wie Photonen ___.",
-      "luecken": [
-        {
-          "art": "dropdown",
-          "antwort": "Welleneigenschaften",
-          "optionen": ["Welleneigenschaften", "elektrische Ladung", "einen festen Radius"]
-        },
-        {
-          "art": "dropdown",
-          "antwort": "Impuls",
-          "optionen": ["Impuls", "Ort", "Spin"]
-        },
-        {
-          "art": "dropdown",
-          "antwort": "Beugungsgitter",
-          "optionen": ["Beugungsgitter", "Spiegel", "Prisma"]
-        },
-        {
-          "art": "dropdown",
-          "antwort": "Beugungsringe",
-          "optionen": ["Beugungsringe", "Helligkeitsflecken", "gerade Linien"]
-        },
-        {
-          "art": "dropdown",
-          "antwort": "Quantenobjekte",
-          "optionen": ["Quantenobjekte", "Wellen", "Teilchen"]
-        }
-      ],
-      "tipps": [
-        "De Broglies Kernidee: Was Photonen konnen — Wellen-Eigenschaften zeigen — soll auch fur Materie gelten.",
-        "Die de-Broglie-Formel $\\lambda = \\frac{h}{p}$ verbindet Wellenlänge mit dem Impuls $p = m \\cdot v$.",
-        "Im Kristallgitter haben die Atomabstande ahnliche Grosse wie die de-Broglie-Wellenlänge — das ist die Voraussetzung fur Beugung."
-      ],
-      "loesungsweg": "De Broglie schlug vor, dass Materie Welleneigenschaften besitzt. Die Wellenlänge hangt vom Impuls $p$ ab: $\\lambda = \\frac{h}{p}$. Im Elektronenbeugungsexperiment wirkt das Kristallgitter als Beugungsgitter, und die Beugungsringe auf dem Leuchtschirm bestatigen den Wellencharakter. Elektronen sind damit wie Photonen Quantenobjekte — sie zeigen je nach Experiment Wellen- oder Teilchenaspekte.",
-      "kc": ["KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"]
-    },
-    {
-      "id": "ph-qp-qo-104",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 2,
-      "ergaenzung": "lernbuero",
-      "frage": "Eine UV-C-Lampe sendet Licht der Wellenlänge $\\lambda = 254\\,\\text{nm}$ aus. Berechne die Energie eines einzelnen Photons in Elektronvolt.",
-      "eingaben": [
-        {
-          "label": "$E_\\text{Ph}$",
-          "antwort": 4.88,
-          "toleranz": 0.05,
-          "einheit": "eV"
-        }
-      ],
-      "tipps": [
-        "Nutze die Merkformel $\\frac{E_\\text{Ph}}{\\text{eV}} \\approx \\frac{1240}{\\lambda / \\text{nm}}$.",
-        "Einsetzen: $\\frac{1240}{254} \\approx ?$ — rechne den Quotienten aus.",
-        "$\\frac{1240}{254} \\approx 4{,}88$ — das Ergebnis direkt in Elektronvolt ablesen."
-      ],
-      "loesungsweg": "Merkformel: $E_\\text{Ph} \\approx \\frac{1240}{254}\\,\\text{eV} \\approx 4{,}88\\,\\text{eV}$. UV-C-Licht (100–280 nm) tragt damit deutlich mehr Energie pro Photon als sichtbares Licht (rund 1{,}7–3{,}1 eV) — das macht es biologisch wirksam (keimtotend) und erklart, warum es selbst Metalloberflachen mit grosser Austrittsarbeit beleuchten kann.",
-      "kc": ["KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"]
-    },
-    {
-      "id": "ph-qp-qo-105",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "ergaenzung": "lernbuero",
-      "frage": "Eine Zinkphotozelle ($W_\\text{A} = 4{,}34\\,\\text{eV}$) wird mit UV-Licht der Wellenlänge $\\lambda = 230\\,\\text{nm}$ bestrahlt. Berechne (a) die Photonenenergie in Elektronvolt und (b) die Gegenspannung $U_0$.",
-      "eingaben": [
-        {
-          "label": "(a) $E_\\text{Ph}$",
-          "antwort": 5.39,
-          "toleranz": 0.03,
-          "einheit": "eV"
-        },
-        {
-          "label": "(b) $U_0$",
-          "antwort": 1.05,
-          "toleranz": 0.03,
-          "einheit": "V"
-        }
-      ],
-      "tipps": [
-        "(a) Merkformel: $E_\\text{Ph} \\approx \\frac{1240}{\\lambda / \\text{nm}}$.",
-        "(b) Einstein-Gleichung: $E_\\text{kin,max} = E_\\text{Ph} - W_\\text{A}$ — beide Werte in Elektronvolt.",
-        "(b) $U_0$ in Volt hat denselben Zahlenwert wie $E_\\text{kin,max}$ in Elektronvolt — wegen $e \\cdot U_0 = E_\\text{kin,max}$."
-      ],
-      "loesungsweg": "(a) $E_\\text{Ph} \\approx \\frac{1240}{230}\\,\\text{eV} \\approx 5{,}39\\,\\text{eV}$. Exakt: $E_\\text{Ph} = \\frac{h \\cdot c}{\\lambda} = \\frac{6{,}626 \\cdot 10^{-34}\\,\\text{Js} \\cdot 2{,}998 \\cdot 10^8\\,\\text{m/s}}{230 \\cdot 10^{-9}\\,\\text{m}} \\approx 8{,}64 \\cdot 10^{-19}\\,\\text{J} = 5{,}39\\,\\text{eV}$. (b) Einstein-Gleichung: $E_\\text{kin,max} = 5{,}39\\,\\text{eV} - 4{,}34\\,\\text{eV} = 1{,}05\\,\\text{eV}$, also $U_0 = 1{,}05\\,\\text{V}$. Zur Einordnung: Die Grenzwellenlänge von Zink liegt bei ca. 286 nm (aus Aufgabe 011 bekannt) — 230 nm liegt deutlich daruber, der Photoeffekt setzt also ein.",
-      "kc": ["KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"]
-    },
-    {
-      "id": "ph-qp-qo-106",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "ergaenzung": "lernbuero",
-      "frage": "In einer Elektronenbeugungsröhre werden Elektronen mit der Spannung $U_\\text{B} = 5{,}0\\,\\text{kV}$ beschleunigt. Berechne ihre de-Broglie-Wellenlänge in Pikometern.",
-      "eingaben": [
-        {
-          "label": "$\\lambda$",
-          "antwort": 17.3,
-          "toleranz": 0.4,
-          "einheit": "pm"
-        }
-      ],
-      "tipps": [
-        "Fur beschleunigte Elektronen gilt $\\lambda = \\frac{h}{\\sqrt{2 \\cdot m_\\text{e} \\cdot e \\cdot U_\\text{B}}}$ — die Spannung in Volt einsetzen.",
-        "Erst den Impuls berechnen: $p = \\sqrt{2 \\cdot 9{,}109 \\cdot 10^{-31}\\,\\text{kg} \\cdot 1{,}602 \\cdot 10^{-19}\\,\\text{C} \\cdot 5000\\,\\text{V}}$.",
-        "$\\lambda = \\frac{6{,}626 \\cdot 10^{-34}\\,\\text{Js}}{p}$ — Ergebnis in Pikometer umrechnen ($1\\,\\text{pm} = 10^{-12}\\,\\text{m}$)."
-      ],
-      "loesungsweg": "Die Beschleunigungsarbeit wird vollstandig kinetische Energie: $e \\cdot U_\\text{B} = \\frac{1}{2} m_\\text{e} v^2$. Impuls: $p = \\sqrt{2 \\cdot m_\\text{e} \\cdot e \\cdot U_\\text{B}} = \\sqrt{2 \\cdot 9{,}109 \\cdot 10^{-31} \\cdot 1{,}602 \\cdot 10^{-19} \\cdot 5000}\\,\\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}} \\approx 3{,}82 \\cdot 10^{-23}\\,\\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}}$. Dann $\\lambda = \\frac{6{,}626 \\cdot 10^{-34}}{3{,}82 \\cdot 10^{-23}}\\,\\text{m} \\approx 1{,}73 \\cdot 10^{-11}\\,\\text{m} = 17{,}3\\,\\text{pm}$. Im Vergleich: Bei $2{,}5\\,\\text{kV}$ war $\\lambda \\approx 24{,}5\\,\\text{pm}$ (Aufgabe 008) — hohere Spannung liefert schnellere Elektronen mit kleinerem Impuls in der Wellenlängenformel: $\\lambda \\propto \\frac{1}{\\sqrt{U_\\text{B}}}$.",
-      "kc": ["KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"]
-    },
-    {
-      "id": "ph-qp-qo-107",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "ergaenzung": "lernbuero",
-      "frage": "Ein roter Laserpointer hat die Wellenlänge $\\lambda = 650\\,\\text{nm}$ und die Leistung $P = 2{,}0\\,\\text{mW}$. Berechne, wie viele Photonen der Laser pro Sekunde aussendet.",
-      "eingaben": [
-        {
-          "label": "$N$",
-          "antwort": 6.54,
-          "toleranz": 0.15,
-          "einheit": "·10¹⁵ s⁻¹"
-        }
-      ],
-      "tipps": [
-        "Berechne zunachst die Energie eines einzelnen Photons: $E_\\text{Ph} = \\frac{h \\cdot c}{\\lambda}$.",
-        "Die Leistung ist Energie pro Zeit: In einer Sekunde sendet der Laser die Energie $E = P \\cdot 1\\,\\text{s} = 2{,}0 \\cdot 10^{-3}\\,\\text{J}$ aus.",
-        "Die Anzahl der Photonen pro Sekunde: $N = \\frac{P}{E_\\text{Ph}}$ — beides in SI-Einheiten einsetzen."
-      ],
-      "loesungsweg": "Photonenenergie: $E_\\text{Ph} = \\frac{h \\cdot c}{\\lambda} = \\frac{6{,}626 \\cdot 10^{-34}\\,\\text{Js} \\cdot 2{,}998 \\cdot 10^8\\,\\text{m/s}}{650 \\cdot 10^{-9}\\,\\text{m}} \\approx 3{,}06 \\cdot 10^{-19}\\,\\text{J}$. Photonenrate: $N = \\frac{P}{E_\\text{Ph}} = \\frac{2{,}0 \\cdot 10^{-3}\\,\\text{J/s}}{3{,}06 \\cdot 10^{-19}\\,\\text{J}} \\approx 6{,}54 \\cdot 10^{15}\\,\\text{s}^{-1}$. Auch der schwache rote Laserpointer sendet also uber sechs Billiarden Photonen pro Sekunde — bei dieser Photonendichte verhalt sich Licht im Alltag vollkommen kontinuierlich.",
-      "kc": ["KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"]
+     "label": "(b) $U_0$",
+     "antwort": 0.54,
+     "toleranz": 0.02,
+     "einheit": "V"
     }
-  ]
+   ],
+   "tipps": [
+    "(a) Nutze die Merkformel: $\\frac{E_\\text{Ph}}{\\text{eV}} \\approx \\frac{1240}{\\lambda / \\text{nm}}$.",
+    "(b) Einstein-Gleichung: $E_\\text{kin,max} = E_\\text{Ph} - W_\\text{A}$ — beide Energien in Elektronvolt einsetzen.",
+    "(b) Wegen $e \\cdot U_0 = E_\\text{kin,max}$ ist der Zahlenwert von $U_0$ in Volt gleich dem von $E_\\text{kin,max}$ in Elektronvolt."
+   ],
+   "loesungsweg": "(a) Merkformel: $E_\\text{Ph} \\approx \\frac{1240}{500}\\,\\text{eV} = 2{,}48\\,\\text{eV}$. (b) Einstein-Gleichung: $E_\\text{kin,max} = 2{,}48\\,\\text{eV} - 1{,}94\\,\\text{eV} = 0{,}54\\,\\text{eV}$. Wegen $e \\cdot U_0 = E_\\text{kin,max}$ folgt $U_0 = 0{,}54\\,\\text{V}$ — der eV-Zahlenwert wandert direkt in die Volt-Angabe, was das Rechnen in Elektronvolt so bequem macht.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-102",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Aussagen beschreiben den Unterschied zwischen dem klassischen Wellen- und dem Quantenobjekt-Modell richtig?",
+   "optionen": [
+    {
+     "text": "Im Wellenmodell verteilt sich die Energie kontinuierlich uber die gesamte Wellenfront; im Photonenmodell wird sie in unteilbaren Portionen $E = h \\cdot f$ ubertragen.",
+     "richtig": true,
+     "erklaerung": "Richtig — genau diese Portionierung durch das Plancksche Wirkungsquantum ist das Kernelement des Photonenmodells und erklart den Photoeffekt."
+    },
+    {
+     "text": "Das Wellenmodell kann die Grenzfrequenz beim Photoeffekt problemlos erklaren, wenn man die Wellenintensitat richtig berucksichtigt.",
+     "richtig": false,
+     "erklaerung": "Nein — das Wellenmodell scheitert gerade an der Grenzfrequenz. Unterhalb davon liefert selbst sehr helle Strahlung kein einziges Elektron, obwohl die Welle viel Energie ubertragt."
+    },
+    {
+     "text": "Photonen und Materiewellen sind Quantenobjekte — sie zeigen je nach Experiment Wellen- oder Teilchenaspekte.",
+     "richtig": true,
+     "erklaerung": "Richtig — das ist der Kern des Welle-Teilchen-Dualismus: Quantenobjekte passen in kein klassisches Bild allein."
+    },
+    {
+     "text": "Im Photonenmodell konnen mehrere Photonen ihre Energie auf ein einziges Elektron ubertragen, wenn man lange genug wartet.",
+     "richtig": false,
+     "erklaerung": "Nein — genau das ist im Photonenmodell ausgeschlossen. Jedes Photon gibt seine Energie an genau ein Elektron ab; ein Ansparen findet nicht statt."
+    }
+   ],
+   "tipps": [
+    "Uberlege, was die vier Befunde des Photoeffekts dem Wellenmodell schwer machen — Grenzfrequenz, Energie, Intensitat, Zeit.",
+    "Das Photonenmodell: Energie kommt in Portionen $E = h \\cdot f$, jede Portion gehort einem Photon und geht an genau ein Elektron.",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussage 1 und 3: Das Wellenmodell verteilt Energie kontinuierlich — das Photonenmodell portioniert sie mit $E = h \\cdot f$. Und beide, Photonen wie Elektronen, sind Quantenobjekte mit Welle-Teilchen-Dualismus. Aussage 2 ist falsch, weil das Wellenmodell keine Grenzfrequenz erzeugt. Aussage 4 beschreibt genau das, was das Photonenmodell ausschliesst: Energieansparen gibt es nicht.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-103",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Erganze den Text zur Elektronenbeugung und zur de-Broglie-Hypothese.",
+   "text": "De Broglie schlug 1924 vor, dass auch Materie ___ besitzt. Die Wellenlänge eines Teilchens hangt von seinem ___ ab: $\\lambda = \\frac{h}{p}$. Bei einem Elektronenbeugungsexperiment wirkt das Kristallgitter als ___ , und auf dem Leuchtschirm erscheinen charakteristische ___. Dieser Befund zeigt, dass Elektronen Wellenaspekte besitzen — sie sind wie Photonen ___.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Welleneigenschaften",
+     "optionen": [
+      "Welleneigenschaften",
+      "elektrische Ladung",
+      "einen festen Radius"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Impuls",
+     "optionen": [
+      "Impuls",
+      "Ort",
+      "Spin"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Beugungsgitter",
+     "optionen": [
+      "Beugungsgitter",
+      "Spiegel",
+      "Prisma"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Beugungsringe",
+     "optionen": [
+      "Beugungsringe",
+      "Helligkeitsflecken",
+      "gerade Linien"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Quantenobjekte",
+     "optionen": [
+      "Quantenobjekte",
+      "Wellen",
+      "Teilchen"
+     ]
+    }
+   ],
+   "tipps": [
+    "De Broglies Kernidee: Was Photonen konnen — Wellen-Eigenschaften zeigen — soll auch fur Materie gelten.",
+    "Die de-Broglie-Formel $\\lambda = \\frac{h}{p}$ verbindet Wellenlänge mit dem Impuls $p = m \\cdot v$.",
+    "Im Kristallgitter haben die Atomabstande ahnliche Große wie die de-Broglie-Wellenlänge — das ist die Voraussetzung fur Beugung."
+   ],
+   "loesungsweg": "De Broglie schlug vor, dass Materie Welleneigenschaften besitzt. Die Wellenlänge hangt vom Impuls $p$ ab: $\\lambda = \\frac{h}{p}$. Im Elektronenbeugungsexperiment wirkt das Kristallgitter als Beugungsgitter, und die Beugungsringe auf dem Leuchtschirm bestatigen den Wellencharakter. Elektronen sind damit wie Photonen Quantenobjekte — sie zeigen je nach Experiment Wellen- oder Teilchenaspekte.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-104",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine UV-C-Lampe sendet Licht der Wellenlänge $\\lambda = 254\\,\\text{nm}$ aus. Berechne die Energie eines einzelnen Photons in Elektronvolt.",
+   "eingaben": [
+    {
+     "label": "$E_\\text{Ph}$",
+     "antwort": 4.88,
+     "toleranz": 0.05,
+     "einheit": "eV"
+    }
+   ],
+   "tipps": [
+    "Nutze die Merkformel $\\frac{E_\\text{Ph}}{\\text{eV}} \\approx \\frac{1240}{\\lambda / \\text{nm}}$.",
+    "Einsetzen: $\\frac{1240}{254} \\approx ?$ — rechne den Quotienten aus.",
+    "$\\frac{1240}{254} \\approx 4{,}88$ — das Ergebnis direkt in Elektronvolt ablesen."
+   ],
+   "loesungsweg": "Merkformel: $E_\\text{Ph} \\approx \\frac{1240}{254}\\,\\text{eV} \\approx 4{,}88\\,\\text{eV}$. UV-C-Licht (100–280 nm) tragt damit deutlich mehr Energie pro Photon als sichtbares Licht (rund 1{,}7–3{,}1 eV) — das macht es biologisch wirksam (keimtotend) und erklart, warum es selbst Metalloberflachen mit großer Austrittsarbeit beleuchten kann.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-105",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Zinkphotozelle ($W_\\text{A} = 4{,}34\\,\\text{eV}$) wird mit UV-Licht der Wellenlänge $\\lambda = 230\\,\\text{nm}$ bestrahlt. Berechne (a) die Photonenenergie in Elektronvolt und (b) die Gegenspannung $U_0$.",
+   "eingaben": [
+    {
+     "label": "(a) $E_\\text{Ph}$",
+     "antwort": 5.39,
+     "toleranz": 0.03,
+     "einheit": "eV"
+    },
+    {
+     "label": "(b) $U_0$",
+     "antwort": 1.05,
+     "toleranz": 0.03,
+     "einheit": "V"
+    }
+   ],
+   "tipps": [
+    "(a) Merkformel: $E_\\text{Ph} \\approx \\frac{1240}{\\lambda / \\text{nm}}$.",
+    "(b) Einstein-Gleichung: $E_\\text{kin,max} = E_\\text{Ph} - W_\\text{A}$ — beide Werte in Elektronvolt.",
+    "(b) $U_0$ in Volt hat denselben Zahlenwert wie $E_\\text{kin,max}$ in Elektronvolt — wegen $e \\cdot U_0 = E_\\text{kin,max}$."
+   ],
+   "loesungsweg": "(a) $E_\\text{Ph} \\approx \\frac{1240}{230}\\,\\text{eV} \\approx 5{,}39\\,\\text{eV}$. Exakt: $E_\\text{Ph} = \\frac{h \\cdot c}{\\lambda} = \\frac{6{,}626 \\cdot 10^{-34}\\,\\text{Js} \\cdot 2{,}998 \\cdot 10^8\\,\\text{m/s}}{230 \\cdot 10^{-9}\\,\\text{m}} \\approx 8{,}64 \\cdot 10^{-19}\\,\\text{J} = 5{,}39\\,\\text{eV}$. (b) Einstein-Gleichung: $E_\\text{kin,max} = 5{,}39\\,\\text{eV} - 4{,}34\\,\\text{eV} = 1{,}05\\,\\text{eV}$, also $U_0 = 1{,}05\\,\\text{V}$. Zur Einordnung: Die Grenzwellenlänge von Zink liegt bei ca. 286 nm (aus Aufgabe 011 bekannt) — 230 nm liegt deutlich daruber, der Photoeffekt setzt also ein.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-106",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "In einer Elektronenbeugungsröhre werden Elektronen mit der Spannung $U_\\text{B} = 5{,}0\\,\\text{kV}$ beschleunigt. Berechne ihre de-Broglie-Wellenlänge in Pikometern.",
+   "eingaben": [
+    {
+     "label": "$\\lambda$",
+     "antwort": 17.3,
+     "toleranz": 0.4,
+     "einheit": "pm"
+    }
+   ],
+   "tipps": [
+    "Fur beschleunigte Elektronen gilt $\\lambda = \\frac{h}{\\sqrt{2 \\cdot m_\\text{e} \\cdot e \\cdot U_\\text{B}}}$ — die Spannung in Volt einsetzen.",
+    "Erst den Impuls berechnen: $p = \\sqrt{2 \\cdot 9{,}109 \\cdot 10^{-31}\\,\\text{kg} \\cdot 1{,}602 \\cdot 10^{-19}\\,\\text{C} \\cdot 5000\\,\\text{V}}$.",
+    "$\\lambda = \\frac{6{,}626 \\cdot 10^{-34}\\,\\text{Js}}{p}$ — Ergebnis in Pikometer umrechnen ($1\\,\\text{pm} = 10^{-12}\\,\\text{m}$)."
+   ],
+   "loesungsweg": "Die Beschleunigungsarbeit wird vollstandig kinetische Energie: $e \\cdot U_\\text{B} = \\frac{1}{2} m_\\text{e} v^2$. Impuls: $p = \\sqrt{2 \\cdot m_\\text{e} \\cdot e \\cdot U_\\text{B}} = \\sqrt{2 \\cdot 9{,}109 \\cdot 10^{-31} \\cdot 1{,}602 \\cdot 10^{-19} \\cdot 5000}\\,\\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}} \\approx 3{,}82 \\cdot 10^{-23}\\,\\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}}$. Dann $\\lambda = \\frac{6{,}626 \\cdot 10^{-34}}{3{,}82 \\cdot 10^{-23}}\\,\\text{m} \\approx 1{,}73 \\cdot 10^{-11}\\,\\text{m} = 17{,}3\\,\\text{pm}$. Im Vergleich: Bei $2{,}5\\,\\text{kV}$ war $\\lambda \\approx 24{,}5\\,\\text{pm}$ (Aufgabe 008) — hohere Spannung liefert schnellere Elektronen mit kleinerem Impuls in der Wellenlängenformel: $\\lambda \\propto \\frac{1}{\\sqrt{U_\\text{B}}}$.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-107",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein roter Laserpointer hat die Wellenlänge $\\lambda = 650\\,\\text{nm}$ und die Leistung $P = 2{,}0\\,\\text{mW}$. Berechne, wie viele Photonen der Laser pro Sekunde aussendet.",
+   "eingaben": [
+    {
+     "label": "$N$",
+     "antwort": 6.54,
+     "toleranz": 0.15,
+     "einheit": "·10¹⁵ s⁻¹"
+    }
+   ],
+   "tipps": [
+    "Berechne zunachst die Energie eines einzelnen Photons: $E_\\text{Ph} = \\frac{h \\cdot c}{\\lambda}$.",
+    "Die Leistung ist Energie pro Zeit: In einer Sekunde sendet der Laser die Energie $E = P \\cdot 1\\,\\text{s} = 2{,}0 \\cdot 10^{-3}\\,\\text{J}$ aus.",
+    "Die Anzahl der Photonen pro Sekunde: $N = \\frac{P}{E_\\text{Ph}}$ — beides in SI-Einheiten einsetzen."
+   ],
+   "loesungsweg": "Photonenenergie: $E_\\text{Ph} = \\frac{h \\cdot c}{\\lambda} = \\frac{6{,}626 \\cdot 10^{-34}\\,\\text{Js} \\cdot 2{,}998 \\cdot 10^8\\,\\text{m/s}}{650 \\cdot 10^{-9}\\,\\text{m}} \\approx 3{,}06 \\cdot 10^{-19}\\,\\text{J}$. Photonenrate: $N = \\frac{P}{E_\\text{Ph}} = \\frac{2{,}0 \\cdot 10^{-3}\\,\\text{J/s}}{3{,}06 \\cdot 10^{-19}\\,\\text{J}} \\approx 6{,}54 \\cdot 10^{15}\\,\\text{s}^{-1}$. Auch der schwache rote Laserpointer sendet also uber sechs Billiarden Photonen pro Sekunde — bei dieser Photonendichte verhalt sich Licht im Alltag vollkommen kontinuierlich.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Aussagen zum Welle-Teilchen-Dualismus und zum Photoeffekt sind richtig?",
+   "optionen": [
+    {
+     "text": "Erhöht man bei festgehaltener Frequenz nur die Lichtintensität, so steigt die Zahl der ausgelösten Elektronen, nicht aber ihre maximale kinetische Energie.",
+     "richtig": true,
+     "erklaerung": "Richtig — mehr Intensität bedeutet mehr Photonen pro Sekunde, also mehr Elektronen. Die Energie jedes einzelnen Photons $E = h \\cdot f$ bleibt jedoch gleich, deshalb ändert sich $E_\\text{kin,max}$ nicht."
+    },
+    {
+     "text": "Liegt die Frequenz unterhalb der Grenzfrequenz, fließt selbst bei sehr hoher Intensität kein Photostrom.",
+     "richtig": true,
+     "erklaerung": "Richtig — ein einzelnes Photon mit $h \\cdot f < W_\\text{A}$ kann kein Elektron auslösen, und Energie aus mehreren Photonen lässt sich nicht ansparen."
+    },
+    {
+     "text": "Im Doppelspaltversuch mit einzelnen Photonen baut sich das Interferenzmuster erst nach und nach aus vielen punktförmigen Einschlägen auf.",
+     "richtig": true,
+     "erklaerung": "Richtig — jedes Photon wird als punktförmiges Ereignis nachgewiesen; erst die Häufigkeitsverteilung vieler Einschläge ergibt das Interferenzmuster. Das ist der Kern des Dualismus."
+    },
+    {
+     "text": "Ein Photon mit größerer Wellenlänge trägt mehr Energie als eines mit kleinerer Wellenlänge.",
+     "richtig": false,
+     "erklaerung": "Falsch — wegen $E = \\frac{h \\cdot c}{\\lambda}$ ist die Energie umgekehrt proportional zur Wellenlänge: Größere Wellenlänge bedeutet weniger Energie."
+    }
+   ],
+   "tipps": [
+    "Trenne sauber: Intensität steuert die Anzahl der Photonen, die Frequenz steuert die Energie jedes einzelnen Photons.",
+    "Unterhalb der Grenzfrequenz reicht die Energie eines einzelnen Photons nicht aus — und Photonenenergie lässt sich nicht aufsummieren.",
+    "Drei Aussagen sind richtig; prüfe die letzte mit $E = \\frac{h \\cdot c}{\\lambda}$."
+   ],
+   "loesungsweg": "Richtig sind die ersten drei Aussagen. Mehr Intensität liefert mehr Photonen und damit mehr Elektronen, aber kein einzelnes Photon wird energiereicher — $E_\\text{kin,max}$ bleibt gleich. Unterhalb der Grenzfrequenz fließt nie ein Photostrom, weil ein Photon mit $h \\cdot f < W_\\text{A}$ kein Elektron lösen kann. Im Einzelphotonen-Doppelspalt entsteht das Muster erst aus vielen Einzeleinschlägen. Falsch ist die letzte Aussage: Wegen $E = \\frac{h \\cdot c}{\\lambda}$ trägt langwelliges Licht weniger Energie pro Photon.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Das gelbe Licht einer Natriumdampflampe hat die Wellenlänge $\\lambda = 589\\,\\text{nm}$ (Natrium-D-Linie). Berechne die Energie eines einzelnen Photons in Elektronvolt.",
+   "eingaben": [
+    {
+     "label": "$E_\\text{Ph}$",
+     "antwort": 2.11,
+     "toleranz": 0.04,
+     "einheit": "eV"
+    }
+   ],
+   "tipps": [
+    "Nutze die Merkformel $\\frac{E_\\text{Ph}}{\\text{eV}} \\approx \\frac{1240}{\\lambda / \\text{nm}}$.",
+    "Setze ein: $\\frac{1240}{589} \\approx ?$ — rechne den Quotienten aus.",
+    "$\\frac{1240}{589} \\approx 2{,}11$ — das Ergebnis direkt in Elektronvolt ablesen."
+   ],
+   "loesungsweg": "Merkformel: $E_\\text{Ph} \\approx \\frac{1240}{589}\\,\\text{eV} \\approx 2{,}11\\,\\text{eV}$. Exakt: $E_\\text{Ph} = \\frac{h \\cdot c}{\\lambda} = \\frac{6{,}626 \\cdot 10^{-34}\\,\\text{J}\\cdot\\text{s} \\cdot 3{,}0 \\cdot 10^8\\,\\text{m/s}}{589 \\cdot 10^{-9}\\,\\text{m}} \\approx 3{,}37 \\cdot 10^{-19}\\,\\text{J} = 2{,}11\\,\\text{eV}$. Gelbes Licht liegt damit energetisch in der Mitte des sichtbaren Bereichs (rund $1{,}7$ bis $3{,}1\\,\\text{eV}$).",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Kalium hat die Austrittsarbeit $W_\\text{A} = 2{,}30\\,\\text{eV}$. Berechne die Grenzwellenlänge $\\lambda_\\text{G}$, oberhalb derer kein Photoeffekt mehr auftritt, in Nanometern.",
+   "eingaben": [
+    {
+     "label": "$\\lambda_\\text{G}$",
+     "antwort": 539,
+     "toleranz": 6,
+     "einheit": "nm"
+    }
+   ],
+   "tipps": [
+    "An der Grenze gilt $E_\\text{Ph} = W_\\text{A}$, also $\\frac{h \\cdot c}{\\lambda_\\text{G}} = W_\\text{A}$.",
+    "Bequem mit der Merkformel: $\\frac{\\lambda_\\text{G}}{\\text{nm}} \\approx \\frac{1240}{W_\\text{A} / \\text{eV}}$.",
+    "$\\frac{1240}{2{,}30} \\approx 539$ — das Ergebnis ist die Grenzwellenlänge in Nanometern."
+   ],
+   "loesungsweg": "An der Grenze trägt das Photon gerade die Austrittsarbeit: $\\frac{h \\cdot c}{\\lambda_\\text{G}} = W_\\text{A}$, also $\\lambda_\\text{G} = \\frac{h \\cdot c}{W_\\text{A}}$. Mit der Merkformel: $\\lambda_\\text{G} \\approx \\frac{1240}{2{,}30}\\,\\text{nm} \\approx 539\\,\\text{nm}$ (grünes Licht). Längeres Licht — also Gelb, Orange, Rot — kann bei Kalium keinen Photoeffekt mehr auslösen, kürzeres (Blau, Violett, UV) dagegen schon.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Natrium-Photozelle ($W_\\text{A} = 2{,}28\\,\\text{eV}$) wird mit blauem Licht der Wellenlänge $\\lambda = 450\\,\\text{nm}$ bestrahlt. Berechne (a) die maximale kinetische Energie der Photoelektronen in Elektronvolt und (b) die zugehörige Gegenspannung $U_0$.",
+   "eingaben": [
+    {
+     "label": "(a) $E_\\text{kin,max}$",
+     "antwort": 0.48,
+     "toleranz": 0.03,
+     "einheit": "eV"
+    },
+    {
+     "label": "(b) $U_0$",
+     "antwort": 0.48,
+     "toleranz": 0.03,
+     "einheit": "V"
+    }
+   ],
+   "tipps": [
+    "(a) Berechne zuerst die Photonenenergie mit der Merkformel $E_\\text{Ph} \\approx \\frac{1240}{\\lambda / \\text{nm}}$.",
+    "(a) Einstein-Gleichung: $E_\\text{kin,max} = E_\\text{Ph} - W_\\text{A}$ — beide Energien in Elektronvolt.",
+    "(b) Wegen $e \\cdot U_0 = E_\\text{kin,max}$ ist der Zahlenwert von $U_0$ in Volt gleich dem von $E_\\text{kin,max}$ in Elektronvolt."
+   ],
+   "loesungsweg": "(a) Photonenenergie: $E_\\text{Ph} \\approx \\frac{1240}{450}\\,\\text{eV} \\approx 2{,}76\\,\\text{eV}$. Einstein-Gleichung: $E_\\text{kin,max} = E_\\text{Ph} - W_\\text{A} = 2{,}76\\,\\text{eV} - 2{,}28\\,\\text{eV} \\approx 0{,}48\\,\\text{eV}$. (b) Aus $e \\cdot U_0 = E_\\text{kin,max}$ folgt $U_0 = 0{,}48\\,\\text{V}$ — der eV-Zahlenwert wandert direkt in die Volt-Angabe.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Elektron bewegt sich mit der Geschwindigkeit $v = 3{,}5 \\cdot 10^6\\,\\text{m/s}$. Berechne seine de-Broglie-Wellenlänge in Pikometern. ($m_\\text{e} = 9{,}109 \\cdot 10^{-31}\\,\\text{kg}$)",
+   "eingaben": [
+    {
+     "label": "$\\lambda$",
+     "antwort": 208,
+     "toleranz": 5,
+     "einheit": "pm"
+    }
+   ],
+   "tipps": [
+    "De-Broglie-Wellenlänge: $\\lambda = \\frac{h}{p}$ mit dem Impuls $p = m_\\text{e} \\cdot v$.",
+    "Berechne zuerst den Impuls: $p = 9{,}109 \\cdot 10^{-31}\\,\\text{kg} \\cdot 3{,}5 \\cdot 10^6\\,\\text{m/s}$.",
+    "$\\lambda = \\frac{6{,}626 \\cdot 10^{-34}\\,\\text{J}\\cdot\\text{s}}{p}$ — Ergebnis in Pikometer umrechnen ($1\\,\\text{pm} = 10^{-12}\\,\\text{m}$)."
+   ],
+   "loesungsweg": "Impuls: $p = m_\\text{e} \\cdot v = 9{,}109 \\cdot 10^{-31}\\,\\text{kg} \\cdot 3{,}5 \\cdot 10^6\\,\\text{m/s} \\approx 3{,}19 \\cdot 10^{-24}\\,\\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}}$. De-Broglie-Wellenlänge: $\\lambda = \\frac{h}{p} = \\frac{6{,}626 \\cdot 10^{-34}}{3{,}19 \\cdot 10^{-24}}\\,\\text{m} \\approx 2{,}08 \\cdot 10^{-10}\\,\\text{m} = 208\\,\\text{pm}$. Das liegt in der Größenordnung typischer Atomabstände in Kristallen — deshalb zeigen so schnelle Elektronen Beugung am Kristallgitter.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Wolfram hat die Austrittsarbeit $W_\\text{A} = 4{,}55\\,\\text{eV}$. Berechne die Grenzfrequenz $f_\\text{G}$ des Photoeffekts. ($1\\,\\text{eV} = 1{,}602 \\cdot 10^{-19}\\,\\text{J}$)",
+   "eingaben": [
+    {
+     "label": "$f_\\text{G}$",
+     "antwort": 1.1,
+     "toleranz": 0.03,
+     "einheit": "·10¹⁵ Hz"
+    }
+   ],
+   "tipps": [
+    "An der Grenze gilt $h \\cdot f_\\text{G} = W_\\text{A}$, also $f_\\text{G} = \\frac{W_\\text{A}}{h}$.",
+    "Rechne $W_\\text{A}$ zuerst in Joule um: $4{,}55\\,\\text{eV} \\cdot 1{,}602 \\cdot 10^{-19}\\,\\frac{\\text{J}}{\\text{eV}}$.",
+    "$f_\\text{G} = \\frac{W_\\text{A}}{h} = \\frac{7{,}29 \\cdot 10^{-19}\\,\\text{J}}{6{,}626 \\cdot 10^{-34}\\,\\text{J}\\cdot\\text{s}}$."
+   ],
+   "loesungsweg": "An der Grenzfrequenz trägt das Photon gerade die Austrittsarbeit: $h \\cdot f_\\text{G} = W_\\text{A}$. Umrechnung: $W_\\text{A} = 4{,}55\\,\\text{eV} \\cdot 1{,}602 \\cdot 10^{-19}\\,\\frac{\\text{J}}{\\text{eV}} \\approx 7{,}29 \\cdot 10^{-19}\\,\\text{J}$. Damit $f_\\text{G} = \\frac{W_\\text{A}}{h} = \\frac{7{,}29 \\cdot 10^{-19}\\,\\text{J}}{6{,}626 \\cdot 10^{-34}\\,\\text{J}\\cdot\\text{s}} \\approx 1{,}10 \\cdot 10^{15}\\,\\text{Hz}$. Das entspricht einer Grenzwellenlänge von etwa $273\\,\\text{nm}$ — nur UV-Licht kann bei Wolfram Elektronen auslösen.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Photon hat die Wellenlänge $\\lambda = 600\\,\\text{nm}$. Ein Elektron soll dieselbe de-Broglie-Wellenlänge besitzen. Berechne die Geschwindigkeit, mit der sich dieses Elektron bewegen muss. ($m_\\text{e} = 9{,}109 \\cdot 10^{-31}\\,\\text{kg}$)",
+   "eingaben": [
+    {
+     "label": "$v$",
+     "antwort": 1.21,
+     "toleranz": 0.04,
+     "einheit": "·10³ m/s"
+    }
+   ],
+   "tipps": [
+    "Gleiche Wellenlänge bedeutet gleichen Impuls: Sowohl für das Photon ($p = \\frac{h}{\\lambda}$) als auch für das Elektron ($p = m_\\text{e} \\cdot v$) gilt $p = \\frac{h}{\\lambda}$.",
+    "Berechne zuerst den Impuls aus $\\lambda$: $p = \\frac{h}{\\lambda} = \\frac{6{,}626 \\cdot 10^{-34}}{600 \\cdot 10^{-9}}\\,\\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}}$.",
+    "Dann löse $m_\\text{e} \\cdot v = p$ nach $v$ auf: $v = \\frac{p}{m_\\text{e}}$."
+   ],
+   "loesungsweg": "Gleiche de-Broglie-Wellenlänge heißt gleicher Impuls. Impuls: $p = \\frac{h}{\\lambda} = \\frac{6{,}626 \\cdot 10^{-34}\\,\\text{J}\\cdot\\text{s}}{600 \\cdot 10^{-9}\\,\\text{m}} \\approx 1{,}10 \\cdot 10^{-27}\\,\\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}}$. Für das Elektron gilt $p = m_\\text{e} \\cdot v$, also $v = \\frac{p}{m_\\text{e}} = \\frac{1{,}10 \\cdot 10^{-27}}{9{,}109 \\cdot 10^{-31}}\\,\\frac{\\text{m}}{\\text{s}} \\approx 1{,}21 \\cdot 10^{3}\\,\\frac{\\text{m}}{\\text{s}}$. Das Elektron ist also vergleichsweise langsam — wegen seiner winzigen Masse genügt schon eine geringe Geschwindigkeit, um den gleichen Impuls wie ein sichtbares Photon zu erreichen.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  },
+  {
+   "id": "ph-qp-qo-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Die UV-Linie einer Quecksilberdampflampe ($\\lambda = 365\\,\\text{nm}$) trifft auf eine Kalium-Photozelle ($W_\\text{A} = 2{,}30\\,\\text{eV}$). Berechne (a) die maximale kinetische Energie der Photoelektronen in Elektronvolt und (b) die maximale Geschwindigkeit der Elektronen. ($m_\\text{e} = 9{,}109 \\cdot 10^{-31}\\,\\text{kg}$, $1\\,\\text{eV} = 1{,}602 \\cdot 10^{-19}\\,\\text{J}$)",
+   "eingaben": [
+    {
+     "label": "(a) $E_\\text{kin,max}$",
+     "antwort": 1.1,
+     "toleranz": 0.04,
+     "einheit": "eV"
+    },
+    {
+     "label": "(b) $v_\\text{max}$",
+     "antwort": 6.21,
+     "toleranz": 0.15,
+     "einheit": "·10⁵ m/s"
+    }
+   ],
+   "tipps": [
+    "(a) Photonenenergie mit Merkformel $E_\\text{Ph} \\approx \\frac{1240}{\\lambda / \\text{nm}}$, dann Einstein-Gleichung $E_\\text{kin,max} = E_\\text{Ph} - W_\\text{A}$.",
+    "(b) Wandle $E_\\text{kin,max}$ in Joule um: $1{,}10\\,\\text{eV} \\cdot 1{,}602 \\cdot 10^{-19}\\,\\frac{\\text{J}}{\\text{eV}}$.",
+    "(b) Aus $E_\\text{kin,max} = \\frac{1}{2} m_\\text{e} v_\\text{max}^2$ folgt $v_\\text{max} = \\sqrt{\\frac{2 \\cdot E_\\text{kin,max}}{m_\\text{e}}}$."
+   ],
+   "loesungsweg": "(a) Photonenenergie: $E_\\text{Ph} \\approx \\frac{1240}{365}\\,\\text{eV} \\approx 3{,}40\\,\\text{eV}$. Einstein-Gleichung: $E_\\text{kin,max} = 3{,}40\\,\\text{eV} - 2{,}30\\,\\text{eV} = 1{,}10\\,\\text{eV}$. (b) In Joule: $E_\\text{kin,max} = 1{,}10\\,\\text{eV} \\cdot 1{,}602 \\cdot 10^{-19}\\,\\frac{\\text{J}}{\\text{eV}} \\approx 1{,}76 \\cdot 10^{-19}\\,\\text{J}$. Mit $E_\\text{kin,max} = \\frac{1}{2} m_\\text{e} v_\\text{max}^2$ folgt $v_\\text{max} = \\sqrt{\\frac{2 \\cdot 1{,}76 \\cdot 10^{-19}\\,\\text{J}}{9{,}109 \\cdot 10^{-31}\\,\\text{kg}}} \\approx 6{,}21 \\cdot 10^{5}\\,\\frac{\\text{m}}{\\text{s}}$. Das sind rund $0{,}2\\,\\%$ der Lichtgeschwindigkeit — die nichtrelativistische Rechnung ist hier noch gut gerechtfertigt.",
+   "kc": [
+    "KC Physik GO (2022): Sachgebiet Quantenobjekte (QP)"
+   ]
+  }
+ ]
 }

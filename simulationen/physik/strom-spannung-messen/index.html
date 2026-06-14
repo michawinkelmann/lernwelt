@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spannung und Stromstärke messen — Simulation — Lernwelt</title>
+<meta name="description" content="Wo schließt man Amperemeter und Voltmeter an? Amperemeter in Reihe, Voltmeter parallel zum Bauteil — Strom I und Spannung U ablesen und über das ohmsche Gesetz verstehen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/sim.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="simulation" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Simulation benötigt JavaScript. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Spannung und Stromstärke messen</h1>
+  <p class="einleitung">Wo schließt man die Messgeräte an? Das <strong>Amperemeter</strong> kommt <strong>in Reihe</strong> in den Stromweg und misst die Stromstärke I, das <strong>Voltmeter</strong> wird <strong>parallel</strong> zum Bauteil angeschlossen und misst die Spannung U. Wähle die Schaltung (Reihe oder parallel), verschiebe das Voltmeter über R₁, R₂ oder die Quelle und lies I und U direkt an den Geräten ab — der Zusammenhang folgt dem ohmschen Gesetz U = R·I.</p>
+  <div id="sim"></div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSimulation } from "../../../assets/js/sim/engine.js";
+  import * as sim from "./sim.js";
+  starteSimulation(sim, document.getElementById("sim"));
+</script>
+</body>
+</html>

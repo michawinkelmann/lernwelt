@@ -471,6 +471,316 @@
         "interpretation",
         "heterogenitaet"
       ]
+    },
+    {
+      "id": "ma-ep-bst-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über die Kenngrößen eines Datensatzes sind richtig?",
+      "optionen": [
+        {
+          "text": "Der Median ist gegenüber Ausreißern robuster als der Mittelwert.",
+          "richtig": true,
+          "erklaerung": "Der Median hängt nur von der Lage in der Mitte ab, einzelne sehr große oder kleine Werte verändern ihn kaum."
+        },
+        {
+          "text": "Die Spannweite ist die Differenz aus größtem und kleinstem Wert.",
+          "richtig": true,
+          "erklaerung": "Spannweite = Maximum minus Minimum."
+        },
+        {
+          "text": "Eine Standardabweichung von 0 bedeutet, dass alle Werte gleich sind.",
+          "richtig": true,
+          "erklaerung": "Wenn keine Abweichung vom Mittelwert auftritt, sind alle Datenwerte identisch."
+        },
+        {
+          "text": "Der Mittelwert ist immer einer der Werte aus dem Datensatz.",
+          "richtig": false,
+          "erklaerung": "Der Mittelwert kann ein Zwischenwert sein, der gar nicht in den Daten vorkommt, z. B. 2{,}5."
+        }
+      ],
+      "tipps": [
+        "Überlege bei jeder Aussage, wie stark einzelne Extremwerte die Kenngröße beeinflussen.",
+        "Spannweite, Mittelwert, Median und Standardabweichung messen unterschiedliche Dinge.",
+        "Drei Aussagen sind richtig, eine ist falsch."
+      ],
+      "loesungsweg": "Richtig: Median ist robuster als der Mittelwert, Spannweite = Max − Min, und $s=0$ bedeutet lauter gleiche Werte. Falsch: Der Mittelwert muss kein Datenwert sein.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Daten und Zufall"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben ist die Datenliste (erreichte Punkte): $4,\\ 6,\\ 8,\\ 4,\\ 10,\\ 6,\\ 6,\\ 8,\\ 12,\\ 6$. Berechne den Mittelwert, den Median und den Modalwert.",
+      "eingaben": [
+        {
+          "label": "Mittelwert",
+          "antwort": 7,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "Median",
+          "antwort": 6,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "Modalwert",
+          "antwort": 6,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Mittelwert: alle Werte addieren und durch die Anzahl teilen.",
+        "Für den Median erst sortieren; bei 10 Werten ist es der Durchschnitt der beiden mittleren.",
+        "Der Modalwert ist der am häufigsten vorkommende Wert."
+      ],
+      "loesungsweg": "Summe $=70$, also Mittelwert $=70:10=7$. Sortiert: $4,4,6,6,6,6,8,8,10,12$; die mittleren Werte sind $6$ und $6$, der Median ist $6$. Der Wert $6$ kommt viermal vor, also Modalwert $=6$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Daten und Zufall"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Woche lang werden die Tageslesezeiten (in Minuten) notiert: $9,\\ 12,\\ 14,\\ 15,\\ 17,\\ 18,\\ 20$. Bestimme den Mittelwert, den Median und die Spannweite.",
+      "eingaben": [
+        {
+          "label": "Mittelwert (in min)",
+          "antwort": 15,
+          "einheit": "min",
+          "toleranz": 0.01
+        },
+        {
+          "label": "Median (in min)",
+          "antwort": 15,
+          "einheit": "min",
+          "toleranz": 0.01
+        },
+        {
+          "label": "Spannweite (in min)",
+          "antwort": 11,
+          "einheit": "min",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Die Liste ist bereits sortiert.",
+        "Bei 7 Werten ist der Median der vierte Wert.",
+        "Spannweite $=$ größter $-$ kleinster Wert."
+      ],
+      "loesungsweg": "Summe $=105$, Mittelwert $=105:7=15$. Bei 7 Werten ist der mittlere (vierte) Wert der Median: $15$. Spannweite $=20-9=11$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Daten und Zufall"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Für den Datensatz $2,\\ 4,\\ 6,\\ 6,\\ 7,\\ 7,\\ 8,\\ 8$ berechne a) den Mittelwert $\\bar{x}$, b) die Varianz $s^2=\\frac{1}{n}\\sum (x_i-\\bar{x})^2$ und c) die Standardabweichung $s$.",
+      "eingaben": [
+        {
+          "label": "a) Mittelwert",
+          "antwort": 6,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) Varianz",
+          "antwort": 3.75,
+          "einheit": "",
+          "toleranz": 0.02
+        },
+        {
+          "label": "c) Standardabweichung",
+          "antwort": 1.936,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Erst den Mittelwert bestimmen: alle 8 Werte addieren und durch 8 teilen.",
+        "Dann jede Abweichung $x_i-\\bar{x}$ quadrieren, aufsummieren und durch $n=8$ teilen.",
+        "Die Standardabweichung ist die Wurzel aus der Varianz: $s=\\sqrt{s^2}$."
+      ],
+      "loesungsweg": "Summe $=48$, also $\\bar{x}=6$. Quadrierte Abweichungen: $16,4,0,0,1,1,4,4$, Summe $=30$. Varianz $s^2=30:8=3{,}75$. Standardabweichung $s=\\sqrt{3{,}75}\\approx 1{,}94$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Daten und Zufall"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Für den sortierten Datensatz $3,\\ 5,\\ 7,\\ 8,\\ 10,\\ 12,\\ 14,\\ 18$ bestimme das untere Quartil $Q_1$, den Median $Q_2$ und das obere Quartil $Q_3$.",
+      "eingaben": [
+        {
+          "label": "Q_1",
+          "antwort": 6,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "Median Q_2",
+          "antwort": 9,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "Q_3",
+          "antwort": 13,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Bei 8 Werten ist der Median der Durchschnitt der beiden mittleren Werte.",
+        "$Q_1$ ist der Median der unteren Hälfte $3,5,7,8$, $Q_3$ der Median der oberen Hälfte $10,12,14,18$.",
+        "Median zweier Werte: deren Mittelwert, z. B. $\\frac{5+7}{2}$."
+      ],
+      "loesungsweg": "Median $Q_2=\\frac{8+10}{2}=9$. Untere Hälfte $3,5,7,8 \\Rightarrow Q_1=\\frac{5+7}{2}=6$. Obere Hälfte $10,12,14,18 \\Rightarrow Q_3=\\frac{12+14}{2}=13$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Daten und Zufall"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Für den sortierten Datensatz $5,\\ 7,\\ 8,\\ 9,\\ 11,\\ 13,\\ 15,\\ 16,\\ 20$ (9 Werte) sollen die fünf Kennwerte des Boxplots bestimmt werden. Gib das Minimum, den Median und das Maximum an.",
+      "eingaben": [
+        {
+          "label": "Minimum",
+          "antwort": 5,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "Median",
+          "antwort": 11,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "Maximum",
+          "antwort": 20,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Minimum und Maximum sind der kleinste und der größte Wert.",
+        "Bei 9 Werten ist der Median der genau mittlere, also der fünfte Wert.",
+        "Zähle ab: der fünfte Wert der sortierten Liste."
+      ],
+      "loesungsweg": "Minimum $=5$, Maximum $=20$. Bei 9 Werten ist der fünfte Wert der Median: $11$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Daten und Zufall"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Untersuche, ob der Wert $40$ im sortierten Datensatz $8,\\ 10,\\ 11,\\ 12,\\ 13,\\ 14,\\ 15,\\ 16,\\ 18,\\ 40$ ein Ausreißer nach der IQR-Methode ist. Bestimme den Quartilsabstand $\\text{IQR}=Q_3-Q_1$ und die obere Ausreißergrenze $Q_3+1{,}5\\cdot \\text{IQR}$.",
+      "eingaben": [
+        {
+          "label": "IQR",
+          "antwort": 5,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "obere Ausreißergrenze",
+          "antwort": 23.5,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Bei 10 Werten ist die untere Hälfte $8,10,11,12,13$, die obere $14,15,16,18,40$.",
+        "$Q_1$ ist der Median der unteren Hälfte (mittlerer Wert), $Q_3$ der Median der oberen Hälfte.",
+        "Obere Grenze $=Q_3+1{,}5\\cdot \\text{IQR}$; liegt $40$ darüber, ist es ein Ausreißer."
+      ],
+      "loesungsweg": "Untere Hälfte $8,10,11,12,13 \\Rightarrow Q_1=11$. Obere Hälfte $14,15,16,18,40 \\Rightarrow Q_3=16$. $\\text{IQR}=16-11=5$. Obere Grenze $=16+1{,}5\\cdot 5=23{,}5$. Da $40>23{,}5$, ist $40$ ein Ausreißer.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Daten und Zufall"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "In einer Sportstunde werden fünf Weitsprung-Ergebnisse (in Metern) gemessen: $16,\\ 18,\\ 20,\\ 22,\\ 24$ (gemessen in Dezimetern). a) Berechne den Mittelwert. b) Berechne die Standardabweichung $s=\\sqrt{\\frac{1}{n}\\sum (x_i-\\bar{x})^2}$.",
+      "eingaben": [
+        {
+          "label": "a) Mittelwert (in dm)",
+          "antwort": 20,
+          "einheit": "dm",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) Standardabweichung (in dm)",
+          "antwort": 2.828,
+          "einheit": "dm",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Mittelwert: die fünf Werte addieren und durch 5 teilen.",
+        "Abweichungen vom Mittelwert: $-4,-2,0,2,4$; diese quadrieren.",
+        "Summe der Quadrate durch $n=5$ teilen, dann die Wurzel ziehen."
+      ],
+      "loesungsweg": "a) Summe $=100$, Mittelwert $=100:5=20$. b) Quadrierte Abweichungen: $16,4,0,4,16$, Summe $=40$. Varianz $=40:5=8$, Standardabweichung $s=\\sqrt{8}\\approx 2{,}83$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Daten und Zufall"
+      ]
     }
   ]
 }

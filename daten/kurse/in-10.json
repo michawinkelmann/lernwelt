@@ -1966,6 +1966,10 @@
           "interaktiv": {
             "label": "Verständnis-Check auf der Erklärseite",
             "href": "informatik/klasse-10/automatisierung-und-ki/index.html#ki-alltag"
+          },
+          "sim": {
+            "pfad": "simulationen/informatik/klassifikator/index.html",
+            "titel": "Klassifikator (Perzeptron)"
           }
         },
         "ueben": {
@@ -2413,6 +2417,10 @@
           "interaktiv": {
             "label": "Verständnis-Check auf der Erklärseite",
             "href": "informatik/klasse-10/steuern-und-regeln/index.html#sr-eva"
+          },
+          "sim": {
+            "pfad": "simulationen/informatik/regelkreis/index.html",
+            "titel": "Zweipunktregler (Regelkreis)"
           }
         },
         "ueben": {
@@ -2825,6 +2833,480 @@
           ]
         }
       }
+    },
+    {
+      "id": "l5b",
+      "nr": 6,
+      "titel": "Üben & Anwenden: Programmieren",
+      "dauer": 45,
+      "status": "online",
+      "thema": "in-10-programmieren",
+      "themaPfad": "informatik/klasse-10/programmieren/",
+      "ziele": [
+        "Ich kann einfache Programme im Schreibtischtest Schritt für Schritt verfolgen.",
+        "Ich verstehe, wie Bedingungen, Schleifen und Funktionen den Ablauf eines Programms steuern."
+      ],
+      "phasen": {
+        "ankommen": {
+          "zeit": 5,
+          "hinweis": "Kurzer Aufwärmer zu Schleifen und Bedingungen, dann verfolgst du Programme im Schreibtischtest und wendest alles an.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-programmieren",
+              "ids": [
+                "in-10-prog-201"
+              ]
+            }
+          ]
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "lernbuero/in-10-programmieren",
+              "ids": [
+                "in-10-prog-202",
+                "in-10-prog-203"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/in-10-programmieren",
+              "ids": [
+                "in-10-prog-204",
+                "in-10-prog-205",
+                "in-10-prog-206"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/in-10-programmieren",
+              "ids": [
+                "in-10-prog-207"
+              ]
+            }
+          ],
+          "partner": "Erklärt euch gegenseitig an einem selbst gewählten Mini-Programm, in welcher Reihenfolge die Zeilen ausgeführt werden und wie sich die Variablen dabei ändern."
+        },
+        "sichern": {
+          "zeit": 15,
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-programmieren",
+              "ids": [
+                "in-10-prog-208"
+              ]
+            }
+          ],
+          "transfer": "Beim Schreibtischtest gehst du immer Zeile für Zeile vor und notierst nach jedem Schritt die Werte aller Variablen in einer Tabelle. So findest du sicher heraus, was ein Programm ausgibt."
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Zum Vertiefen kannst du eigene kleine Programme von Hand durchspielen und die Variablen mitschreiben."
+        }
+      }
+    },
+    {
+      "id": "l10b",
+      "nr": 6,
+      "titel": "Üben & Anwenden: Verschlüsselung",
+      "dauer": 45,
+      "status": "online",
+      "thema": "in-10-verschluesselung",
+      "themaPfad": "informatik/klasse-10/verschluesselung/",
+      "ziele": [
+        "Ich kann mit der Caesar-Verschlüsselung Buchstaben ver- und entschlüsseln.",
+        "Ich verstehe, warum Caesar leicht zu knacken ist und wie das Vigenère-Verfahren das verbessert."
+      ],
+      "phasen": {
+        "ankommen": {
+          "zeit": 5,
+          "hinweis": "Kurzer Aufwärmer zum Schlüssel, dann rechnest du Caesar- und Vigenère-Beispiele und wendest die Häufigkeitsanalyse an.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-verschluesselung",
+              "ids": [
+                "in-10-vs-201"
+              ]
+            }
+          ]
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "lernbuero/in-10-verschluesselung",
+              "ids": [
+                "in-10-vs-202",
+                "in-10-vs-203"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/in-10-verschluesselung",
+              "ids": [
+                "in-10-vs-204",
+                "in-10-vs-205",
+                "in-10-vs-206"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/in-10-verschluesselung",
+              "ids": [
+                "in-10-vs-207"
+              ]
+            }
+          ],
+          "partner": "Verschlüsselt euch gegenseitig ein kurzes Wort mit einem geheimen Caesar-Schlüssel und lasst den anderen es durch Ausprobieren der 25 Schlüssel knacken."
+        },
+        "sichern": {
+          "zeit": 15,
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-verschluesselung",
+              "ids": [
+                "in-10-vs-208"
+              ]
+            }
+          ],
+          "transfer": "Rechne bei Caesar mit Positionen: A=0 bis Z=25. Verschlüsseln heißt (Position + Schlüssel) mod 26, Entschlüsseln (Position − Schlüssel + 26) mod 26. Das +26 verhindert negative Zahlen."
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Zum Vertiefen:",
+          "links": [
+            {
+              "label": "Simulation: Caesar-Scheibe zum Ver- und Entschlüsseln",
+              "href": "simulationen/informatik/caesar-scheibe/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l15b",
+      "nr": 6,
+      "titel": "Üben & Anwenden: Suchen und Sortieren",
+      "dauer": 45,
+      "status": "online",
+      "thema": "in-10-suchen-und-sortieren",
+      "themaPfad": "informatik/klasse-10/suchen-und-sortieren/",
+      "ziele": [
+        "Ich kann den Aufwand von linearer und binärer Suche vergleichen und berechnen.",
+        "Ich verstehe, wie Bubble Sort sortiert und wie viele Vergleiche er braucht."
+      ],
+      "phasen": {
+        "ankommen": {
+          "zeit": 5,
+          "hinweis": "Kurzer Aufwärmer zur binären Suche, dann berechnest du Vergleiche und Schritte für Suchen und Sortieren.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-suchen-und-sortieren",
+              "ids": [
+                "in-10-ss-201"
+              ]
+            }
+          ]
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "lernbuero/in-10-suchen-und-sortieren",
+              "ids": [
+                "in-10-ss-202",
+                "in-10-ss-203"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/in-10-suchen-und-sortieren",
+              "ids": [
+                "in-10-ss-204",
+                "in-10-ss-205",
+                "in-10-ss-206"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/in-10-suchen-und-sortieren",
+              "ids": [
+                "in-10-ss-207"
+              ]
+            }
+          ],
+          "partner": "Sucht zu zweit eine Zahl in einer sortierten Liste: einer nutzt die lineare, der andere die binäre Suche – und zählt die nötigen Vergleiche."
+        },
+        "sichern": {
+          "zeit": 15,
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-suchen-und-sortieren",
+              "ids": [
+                "in-10-ss-208"
+              ]
+            }
+          ],
+          "transfer": "Für die binäre Suche zählst du, wie oft man die Liste halbieren kann: höchstens ⌈log₂ n⌉ Vergleiche. Bei Bubble Sort werden die Vergleiche pro Durchlauf von oben her weniger."
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Zum Vertiefen:",
+          "links": [
+            {
+              "label": "Simulation: Bubble Sort Schritt für Schritt",
+              "href": "simulationen/informatik/sortieren/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l20b",
+      "nr": 6,
+      "titel": "Üben & Anwenden: Endliche Automaten",
+      "dauer": 45,
+      "status": "online",
+      "thema": "in-10-endliche-automaten",
+      "themaPfad": "informatik/klasse-10/endliche-automaten/",
+      "ziele": [
+        "Ich kann einen endlichen Automaten durch eine Eingabe verfolgen und entscheiden, ob ein Wort akzeptiert wird.",
+        "Ich kann die Größe einer Übergangstabelle aus Zuständen und Alphabet bestimmen."
+      ],
+      "phasen": {
+        "ankommen": {
+          "zeit": 5,
+          "hinweis": "Kurzer Aufwärmer zu den Bausteinen eines Automaten, dann verfolgst du Eingaben und prüfst, welche Wörter akzeptiert werden.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-endliche-automaten",
+              "ids": [
+                "in-10-ea-201"
+              ]
+            }
+          ]
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "lernbuero/in-10-endliche-automaten",
+              "ids": [
+                "in-10-ea-202",
+                "in-10-ea-203"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/in-10-endliche-automaten",
+              "ids": [
+                "in-10-ea-204",
+                "in-10-ea-205",
+                "in-10-ea-206"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/in-10-endliche-automaten",
+              "ids": [
+                "in-10-ea-207"
+              ]
+            }
+          ],
+          "partner": "Zeichnet zu zweit einen kleinen Automaten und gebt euch gegenseitig Wörter vor, die der andere durchspielen und als akzeptiert oder abgelehnt einstufen soll."
+        },
+        "sichern": {
+          "zeit": 15,
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-endliche-automaten",
+              "ids": [
+                "in-10-ea-208"
+              ]
+            }
+          ],
+          "transfer": "Folge bei einem Automaten immer vom Startzustand aus Zeichen für Zeichen den Pfeilen. Endet die Eingabe in einem akzeptierenden Zustand, wird das Wort akzeptiert."
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Zum Vertiefen:",
+          "links": [
+            {
+              "label": "Simulation: Endlicher Automat prüft Wörter",
+              "href": "simulationen/informatik/endlicher-automat/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l25b",
+      "nr": 6,
+      "titel": "Üben & Anwenden: Automatisierung und KI",
+      "dauer": 45,
+      "status": "online",
+      "thema": "in-10-automatisierung-und-ki",
+      "themaPfad": "informatik/klasse-10/automatisierung-und-ki/",
+      "ziele": [
+        "Ich kann die Genauigkeit und Fehlerrate eines KI-Modells berechnen.",
+        "Ich verstehe, wie ein Entscheidungsbaum aufgebaut ist und warum man Modelle mit Testdaten prüft."
+      ],
+      "phasen": {
+        "ankommen": {
+          "zeit": 5,
+          "hinweis": "Kurzer Aufwärmer zum Entscheidungsbaum, dann berechnest du Genauigkeiten und denkst über die Güte von KI-Modellen nach.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-automatisierung-und-ki",
+              "ids": [
+                "in-10-ki-201"
+              ]
+            }
+          ]
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "lernbuero/in-10-automatisierung-und-ki",
+              "ids": [
+                "in-10-ki-202",
+                "in-10-ki-203"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/in-10-automatisierung-und-ki",
+              "ids": [
+                "in-10-ki-204",
+                "in-10-ki-205",
+                "in-10-ki-206"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/in-10-automatisierung-und-ki",
+              "ids": [
+                "in-10-ki-207"
+              ]
+            }
+          ],
+          "partner": "Überlegt euch gemeinsam einen kleinen Entscheidungsbaum (z. B. Welches Tier ist das?) mit drei Ja/Nein-Fragen und probiert ihn an Beispielen aus."
+        },
+        "sichern": {
+          "zeit": 15,
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-automatisierung-und-ki",
+              "ids": [
+                "in-10-ki-208"
+              ]
+            }
+          ],
+          "transfer": "Die Genauigkeit ist der Anteil richtiger Entscheidungen: richtige geteilt durch alle. Prüfe ein Modell immer mit neuen Testdaten – sonst merkst du nicht, ob es nur auswendig gelernt hat."
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Zum Vertiefen:",
+          "links": [
+            {
+              "label": "Simulation: Klassifikator lernt eine Trennlinie",
+              "href": "simulationen/informatik/klassifikator/index.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l30b",
+      "nr": 6,
+      "titel": "Üben & Anwenden: Steuern und Regeln (Mikrocontroller)",
+      "dauer": 45,
+      "status": "online",
+      "thema": "in-10-steuern-und-regeln",
+      "themaPfad": "informatik/klasse-10/steuern-und-regeln/",
+      "ziele": [
+        "Ich kann anhand eines Schwellwerts entscheiden, wann ein Aktor schaltet.",
+        "Ich verstehe den Ablauf Sensor lesen – vergleichen – Aktor schalten in einem Regelkreis."
+      ],
+      "phasen": {
+        "ankommen": {
+          "zeit": 5,
+          "hinweis": "Kurzer Aufwärmer zum Schwellwert, dann wertest du Messreihen aus und entscheidest, wann Sensoren Aktoren schalten.",
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-steuern-und-regeln",
+              "ids": [
+                "in-10-sr-201"
+              ]
+            }
+          ]
+        },
+        "ueben": {
+          "zeit": 20,
+          "basis": [
+            {
+              "quelle": "lernbuero/in-10-steuern-und-regeln",
+              "ids": [
+                "in-10-sr-202",
+                "in-10-sr-203"
+              ]
+            }
+          ],
+          "standard": [
+            {
+              "quelle": "lernbuero/in-10-steuern-und-regeln",
+              "ids": [
+                "in-10-sr-204",
+                "in-10-sr-205",
+                "in-10-sr-206"
+              ]
+            }
+          ],
+          "plus": [
+            {
+              "quelle": "lernbuero/in-10-steuern-und-regeln",
+              "ids": [
+                "in-10-sr-207"
+              ]
+            }
+          ],
+          "partner": "Denkt euch zu zweit ein Gerät mit Sensor und Aktor aus (z. B. eine automatische Lampe) und legt fest, bei welchem Schwellwert es schalten soll."
+        },
+        "sichern": {
+          "zeit": 15,
+          "aufgaben": [
+            {
+              "quelle": "lernbuero/in-10-steuern-und-regeln",
+              "ids": [
+                "in-10-sr-208"
+              ]
+            }
+          ],
+          "transfer": "Ein Mikrocontroller wiederholt ständig: Sensor lesen, Wert mit dem Schwellwert vergleichen, je nach Ergebnis den Aktor ein- oder ausschalten. Eine Hysterese verhindert dabei ständiges Umschalten."
+        },
+        "extra": {
+          "zeit": 5,
+          "text": "Zum Vertiefen:",
+          "links": [
+            {
+              "label": "Simulation: Zweipunktregler (Thermostat)",
+              "href": "simulationen/informatik/regelkreis/index.html"
+            }
+          ]
+        }
+      }
     }
   ],
   "bloecke": [
@@ -2836,7 +3318,8 @@
         "l2",
         "l3",
         "l4",
-        "l5"
+        "l5",
+        "l5b"
       ],
       "mindestmarke": "Basis-Spur des Themas geschafft"
     },
@@ -2848,7 +3331,8 @@
         "l7",
         "l8",
         "l9",
-        "l10"
+        "l10",
+        "l10b"
       ],
       "mindestmarke": "Basis-Spur des Themas geschafft"
     },
@@ -2860,7 +3344,8 @@
         "l12",
         "l13",
         "l14",
-        "l15"
+        "l15",
+        "l15b"
       ],
       "mindestmarke": "Basis-Spur des Themas geschafft"
     },
@@ -2872,7 +3357,8 @@
         "l17",
         "l18",
         "l19",
-        "l20"
+        "l20",
+        "l20b"
       ],
       "mindestmarke": "Basis-Spur des Themas geschafft"
     },
@@ -2884,7 +3370,8 @@
         "l22",
         "l23",
         "l24",
-        "l25"
+        "l25",
+        "l25b"
       ],
       "mindestmarke": "Basis-Spur des Themas geschafft"
     },
@@ -2896,7 +3383,8 @@
         "l27",
         "l28",
         "l29",
-        "l30"
+        "l30",
+        "l30b"
       ],
       "mindestmarke": "Basis-Spur des Themas geschafft"
     }

@@ -393,6 +393,304 @@
         "stetigkeitskorrektur"
       ],
       "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-qp-nv-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine stetige Zufallsgröße $X$ ist normalverteilt mit $\\mu = 200$ und $\\sigma = 4$. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Glockenkurve ist symmetrisch zur senkrechten Geraden $x = 200$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Symmetrieachse liegt bei $x = \\mu = 200$."
+        },
+        {
+          "text": "Es gilt $P(X = 200) = 0$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Bei stetigen Größen ist die Wahrscheinlichkeit für einen einzelnen Wert immer null."
+        },
+        {
+          "text": "Die Wendepunkte der Dichtekurve liegen bei $x = 196$ und $x = 204$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Wendepunkte liegen bei $\\mu \\pm \\sigma = 200 \\pm 4$."
+        },
+        {
+          "text": "Je größer $\\sigma$, desto höher und schmaler wird die Glocke.",
+          "richtig": false,
+          "erklaerung": "Falsch: Größeres $\\sigma$ macht die Glocke flacher und breiter; die Gesamtfläche bleibt stets 1."
+        }
+      ],
+      "tipps": [
+        "Die Symmetrieachse einer Normalverteilung liegt bei $x = \\mu$.",
+        "Bei stetigen Zufallsgrößen werden Wahrscheinlichkeiten als Flächen berechnet — ein einzelner Punkt hat die Fläche null.",
+        "Die Wendepunkte liegen bei $\\mu \\pm \\sigma$; größeres $\\sigma$ macht die Glocke breiter."
+      ],
+      "loesungsweg": "Richtig sind die ersten drei Aussagen: Symmetrieachse bei $x = 200$, $P(X = 200) = 0$ (stetige Größe) und Wendepunkte bei $200 \\pm 4$. Falsch ist die vierte Aussage: Größeres $\\sigma$ macht die Glocke flacher und breiter, nicht höher und schmaler.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Kaffeeautomat füllt Becher; die Füllmenge $X$ (in ml) ist normalverteilt mit $\\mu = 200$ und $\\sigma = 4$. Berechne $P(196 \\leq X \\leq 205)$ und $P(X < 195)$ (je vier Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "$P(196 \\leq X \\leq 205)$",
+          "antwort": 0.7357,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$P(X < 195)$",
+          "antwort": 0.1056,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Verwende normCDf mit den Parametern: untere Grenze, obere Grenze, dann $\\sigma = 4$, dann $\\mu = 200$.",
+        "$P(196 \\leq X \\leq 205) = \\Phi\\!\\left(\\frac{205 - 200}{4}\\right) - \\Phi\\!\\left(\\frac{196 - 200}{4}\\right)$.",
+        "$P(X < 195)$ berechnest du als normCDf von $-\\infty$ (sehr kleine Zahl) bis $195$ — keine Grenzverschiebung nötig, da $X$ stetig ist."
+      ],
+      "loesungsweg": "$P(196 \\leq X \\leq 205) = \\text{normCDf}(196;\\,205;\\,4;\\,200) \\approx 0{,}7357$. $P(X < 195) = \\text{normCDf}(-10^{99};\\,195;\\,4;\\,200) \\approx 0{,}1056$.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Die Masse $X$ (in g) von Äpfeln einer Sorte ist normalverteilt mit $\\mu = 85$ und $\\sigma = 8$. Berechne $P(X > 90)$ und $P(80 \\leq X \\leq 95)$ (je vier Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "$P(X > 90)$",
+          "antwort": 0.266,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$P(80 \\leq X \\leq 95)$",
+          "antwort": 0.6284,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$P(X > 90) = 1 - P(X \\leq 90)$, oder direkt normCDf von $90$ bis $+\\infty$.",
+        "Bei stetigen Größen gilt $P(X > 90) = P(X \\geq 90)$ — die Grenze muss nicht verschoben werden.",
+        "$P(80 \\leq X \\leq 95) = \\text{normCDf}(80;\\,95;\\,8;\\,85)$."
+      ],
+      "loesungsweg": "$P(X > 90) = 1 - \\text{normCDf}(-10^{99};\\,90;\\,8;\\,85) \\approx 1 - 0{,}7340 = 0{,}2660$. $P(80 \\leq X \\leq 95) = \\text{normCDf}(80;\\,95;\\,8;\\,85) \\approx 0{,}6284$.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Die Laufzeit $X$ (in Stunden) eines Akkus ist normalverteilt mit $\\mu = 18$ und $\\sigma = 1{,}5$. Berechne $P(X \\geq 20)$, $P(16 \\leq X \\leq 19)$ und $P(X < 15)$ (je vier Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "$P(X \\geq 20)$",
+          "antwort": 0.0912,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$P(16 \\leq X \\leq 19)$",
+          "antwort": 0.6563,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$P(X < 15)$",
+          "antwort": 0.0228,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$P(X \\geq 20) = 1 - P(X \\leq 20)$ — oder direkt normCDf von $20$ bis $+\\infty$.",
+        "Achte auf $\\sigma = 1{,}5$ als drittes Argument in normCDf.",
+        "$P(X < 15) = \\text{normCDf}(-10^{99};\\,15;\\,1{,}5;\\,18)$; der Wert $15$ liegt genau $2\\sigma$ unter $\\mu$."
+      ],
+      "loesungsweg": "$P(X \\geq 20) = 1 - \\text{normCDf}(-10^{99};\\,20;\\,1{,}5;\\,18) \\approx 0{,}0912$. $P(16 \\leq X \\leq 19) = \\text{normCDf}(16;\\,19;\\,1{,}5;\\,18) \\approx 0{,}6563$. $P(X < 15) = \\text{normCDf}(-10^{99};\\,15;\\,1{,}5;\\,18) \\approx 0{,}0228$ (das ist die Hälfte der $4{,}6\\,\\%$ außerhalb der $2\\sigma$-Umgebung).",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Die Körpergröße $X$ (in cm) erwachsener Frauen einer Region ist normalverteilt mit $\\mu = 168$ und $\\sigma = 7$. Gib die ganzzahligen Grenzen $a$ und $b$ der $1\\sigma$-Umgebung um $\\mu$ an und berechne $P(X > 175)$ (auf vier Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "untere Grenze $a$",
+          "antwort": 161,
+          "toleranz": 0,
+          "einheit": "cm"
+        },
+        {
+          "label": "obere Grenze $b$",
+          "antwort": 175,
+          "toleranz": 0,
+          "einheit": "cm"
+        },
+        {
+          "label": "$P(X > 175)$",
+          "antwort": 0.1587,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Die $1\\sigma$-Umgebung ist $[\\mu - \\sigma;\\ \\mu + \\sigma] = [168 - 7;\\ 168 + 7]$.",
+        "Nach den Sigma-Regeln liegen rund $68{,}3\\,\\%$ der Werte in der $1\\sigma$-Umgebung.",
+        "Der Wert $175 = \\mu + \\sigma$ ist die obere $1\\sigma$-Grenze; $P(X > \\mu + \\sigma) = \\frac{1 - 0{,}683}{2} \\approx 0{,}1587$."
+      ],
+      "loesungsweg": "$1\\sigma$-Umgebung: $[168 - 7;\\ 168 + 7] = [161;\\ 175]$, also $a = 161$, $b = 175$. $175$ liegt genau $1\\sigma$ über $\\mu$. Außerhalb der $1\\sigma$-Umgebung liegen $1 - 0{,}683 = 0{,}317$, je zur Hälfte oben und unten: $P(X > 175) = \\text{normCDf}(175;\\,10^{99};\\,7;\\,168) \\approx 0{,}1587$.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Die Punktzahl $X$ eines standardisierten Tests ist normalverteilt mit $\\mu = 500$ und $\\sigma = 100$. a) Bestimme mit invNormCDf die Punktzahl $x$, die von höchstens $90\\,\\%$ der Teilnehmenden erreicht wird (also $P(X \\leq x) = 0{,}90$). b) Bestimme die Grenze $g$, ab der die besten $5\\,\\%$ liegen (also $P(X \\geq g) = 0{,}05$). Runde jeweils auf zwei Nachkommastellen.",
+      "eingaben": [
+        {
+          "label": "a) $x$ mit $P(X \\leq x) = 0{,}90$",
+          "antwort": 628.16,
+          "toleranz": 0.2,
+          "einheit": "Punkte"
+        },
+        {
+          "label": "b) Grenze $g$ der besten $5\\,\\%$",
+          "antwort": 664.49,
+          "toleranz": 0.2,
+          "einheit": "Punkte"
+        }
+      ],
+      "tipps": [
+        "invNormCDf liefert zu einer Wahrscheinlichkeit $\\alpha$ die Stelle $x$ mit $P(X \\leq x) = \\alpha$.",
+        "a) Setze $\\alpha = 0{,}90$, $\\sigma = 100$, $\\mu = 500$ ein.",
+        "b) „Beste $5\\,\\%$“ heißt $P(X \\geq g) = 0{,}05$, also $P(X \\leq g) = 0{,}95$ — nutze $\\alpha = 0{,}95$."
+      ],
+      "loesungsweg": "a) $x = \\text{invNormCDf}(0{,}90;\\,100;\\,500) \\approx 628{,}16$ Punkte. b) Beste $5\\,\\%$: $P(X \\leq g) = 0{,}95$, also $g = \\text{invNormCDf}(0{,}95;\\,100;\\,500) \\approx 664{,}49$ Punkte.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Die Reißfestigkeit $X$ (in N) eines Garns ist normalverteilt mit $\\mu = 70$ und $\\sigma = 4$. a) Standardisiere den Wert $x = 78$, berechne also den $z$-Wert $z = \\frac{x - \\mu}{\\sigma}$. b) Bestimme mit $\\Phi$ die Wahrscheinlichkeit $P(X > 78)$ (auf vier Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "a) $z$-Wert von $x = 78$",
+          "antwort": 2,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "b) $P(X > 78)$",
+          "antwort": 0.0228,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$z = \\frac{x - \\mu}{\\sigma} = \\frac{78 - 70}{4}$.",
+        "Es gilt $P(X > 78) = P(Z > z) = 1 - \\Phi(z)$.",
+        "$\\Phi(2) \\approx 0{,}9772$ ist ein Tabellenwert der Standardnormalverteilung."
+      ],
+      "loesungsweg": "a) $z = \\frac{78 - 70}{4} = \\frac{8}{4} = 2$. b) $P(X > 78) = 1 - \\Phi(2) \\approx 1 - 0{,}9772 = 0{,}0228$. Das entspricht der Hälfte der $4{,}6\\,\\%$ außerhalb der $2\\sigma$-Umgebung.",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+      ]
+    },
+    {
+      "id": "ma-qp-nv-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Zufallsgröße $X$ ist binomialverteilt mit $n = 400$ und $p = 0{,}45$. a) Berechne $\\mu$ und $\\sigma$ (auf zwei Nachkommastellen) und prüfe die Laplace-Bedingung. b) Berechne $P(X \\leq 190)$ näherungsweise mit der Normalverteilung und Stetigkeitskorrektur (auf vier Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "a) $\\mu$",
+          "antwort": 180,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "a) $\\sigma$",
+          "antwort": 9.95,
+          "toleranz": 0.02,
+          "einheit": ""
+        },
+        {
+          "label": "b) $P(X \\leq 190)$ (Näherung)",
+          "antwort": 0.8544,
+          "toleranz": 0.0015,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$\\mu = n \\cdot p = 400 \\cdot 0{,}45$ und $\\sigma = \\sqrt{n \\cdot p \\cdot (1 - p)}$; Laplace-Bedingung: $\\sigma > 3$.",
+        "Stetigkeitskorrektur: Für $P(X \\leq 190)$ rechnest du mit der oberen Grenze $190{,}5$.",
+        "$P(X \\leq 190) \\approx \\Phi\\!\\left(\\frac{190{,}5 - \\mu}{\\sigma}\\right) = \\text{normCDf}(-10^{99};\\,190{,}5;\\,\\sigma;\\,\\mu)$."
+      ],
+      "loesungsweg": "a) $\\mu = 400 \\cdot 0{,}45 = 180$. $\\sigma = \\sqrt{400 \\cdot 0{,}45 \\cdot 0{,}55} = \\sqrt{99} \\approx 9{,}95$. Wegen $\\sigma \\approx 9{,}95 > 3$ ist die Laplace-Bedingung erfüllt. b) Mit Stetigkeitskorrektur: $P(X \\leq 190) \\approx \\text{normCDf}(-10^{99};\\,190{,}5;\\,9{,}95;\\,180) \\approx 0{,}8544$ (der exakte Binomialwert ist $\\approx 0{,}8543$).",
+      "kc": [
+        "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+      ]
     }
   ]
 }

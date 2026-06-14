@@ -261,6 +261,21 @@ export function starteSimulation(sim, halter) {
   });
   verbinde('[data-aktion="stoppuhr"]', () => { if (werkzeuge) werkzeuge.stoppuhr(zustand.t); });
 
+  // Optionaler Zeiger-Hook fuer statisch-interaktive Sims: direktes Antippen/Klicken auf
+  // der Flaeche (z. B. Bauteile schalten). Nur aktiv, wenn die Sim sim.zeiger(...) anbietet
+  // und zurueckmeldet, ob sich etwas geaendert hat. Alle uebrigen Simulationen bleiben unberuehrt.
+  if (typeof sim.zeiger === "function") {
+    ui.canvas.style.touchAction = "none";
+    ui.canvas.style.cursor = "pointer";
+    ui.canvas.addEventListener("pointerdown", ev => {
+      ev.preventDefault();
+      const r = ui.canvas.getBoundingClientRect();
+      const x = welt.weltX(ev.clientX - r.left);
+      const y = welt.weltY(ev.clientY - r.top);
+      if (sim.zeiger({ typ: "klick", x, y, zustand, werte })) zeigeStand();
+    });
+  }
+
   // Parameter-Slider: Wert ändern → Anzeige aktualisieren, Sim neu aufsetzen, Hash schreiben
   manifest.parameter.forEach(p => {
     const eingabe = halter.querySelector(`[data-parameter="${p.id}"] input`);

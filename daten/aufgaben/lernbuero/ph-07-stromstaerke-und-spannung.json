@@ -214,6 +214,294 @@
       "kc": [
         "stromstaerke-und-spannung"
       ]
+    },
+    {
+      "id": "ph-07-str-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Zwei gleiche Lämpchen sind in Reihe an einer Batterie geschaltet. Welche Aussagen über die Stromstärke $I$ und die Spannung $U$ sind richtig? Wähle alle richtigen Antworten aus.",
+      "optionen": [
+        {
+          "text": "Die Stromstärke $I$ ist an jeder Stelle der Reihenschaltung gleich groß.",
+          "richtig": true,
+          "erklaerung": "Richtig: In der Reihenschaltung gibt es nur einen Stromweg, deshalb fließt überall dieselbe Stromstärke."
+        },
+        {
+          "text": "Die Teilspannungen an den beiden Lämpchen addieren sich zur Spannung der Batterie.",
+          "richtig": true,
+          "erklaerung": "Richtig: In der Reihenschaltung gilt $U = U_1 + U_2$ — die Batteriespannung teilt sich auf die Lämpchen auf."
+        },
+        {
+          "text": "Hinter dem zweiten Lämpchen ist die Stromstärke kleiner, weil der Strom „verbraucht“ wurde.",
+          "richtig": false,
+          "erklaerung": "Falsch: Strom wird nicht verbraucht. Die Stromstärke ist vor und hinter den Lämpchen gleich."
+        },
+        {
+          "text": "An jedem Lämpchen liegt die volle Batteriespannung an.",
+          "richtig": false,
+          "erklaerung": "Falsch: Das gilt nur in der Parallelschaltung. In Reihe teilt sich die Spannung auf."
+        }
+      ],
+      "tipps": [
+        "Reihenschaltung = nur ein Stromweg. Was bedeutet das für die Stromstärke an verschiedenen Stellen?",
+        "Für die Spannung gilt in Reihe: Die einzelnen Teilspannungen ergeben zusammen die Quellenspannung.",
+        "Zwei Aussagen sind richtig — eine zur Stromstärke, eine zur Spannung."
+      ],
+      "loesungsweg": "In der Reihenschaltung gibt es genau einen Stromweg, daher ist die Stromstärke $I$ überall gleich (Aussage 1 richtig, Aussage 3 falsch). Die Spannung teilt sich auf: $U = U_1 + U_2$ (Aussage 2 richtig, Aussage 4 falsch — die volle Spannung an jedem Bauteil gibt es nur parallel).",
+      "kc": [
+        "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+      ]
+    },
+    {
+      "id": "ph-07-str-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Rechne zwischen Ampere und Milliampere um. (a) Durch einen Ladestecker fließen $1200\\,\\text{mA}$ — gib die Stromstärke in $\\text{A}$ an. (b) Eine LED braucht $0{,}65\\,\\text{A}$ — gib die Stromstärke in $\\text{mA}$ an.",
+      "eingaben": [
+        {
+          "label": "a) $I$ (Ladestecker)",
+          "antwort": 1.2,
+          "toleranz": 0.001,
+          "einheit": "A"
+        },
+        {
+          "label": "b) $I$ (LED)",
+          "antwort": 650,
+          "toleranz": 0.5,
+          "einheit": "mA"
+        }
+      ],
+      "tipps": [
+        "Es gilt: $1\\,\\text{A} = 1000\\,\\text{mA}$.",
+        "Von mA nach A: durch $1000$ teilen. Von A nach mA: mit $1000$ malnehmen.",
+        "a) $1200 : 1000$  b) $0{,}65 \\cdot 1000$"
+      ],
+      "loesungsweg": "(a) $1200\\,\\text{mA} : 1000 = 1{,}2\\,\\text{A}$. (b) $0{,}65\\,\\text{A} \\cdot 1000 = 650\\,\\text{mA}$.",
+      "kc": [
+        "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+      ]
+    },
+    {
+      "id": "ph-07-str-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "In einer Reihenschaltung addieren sich die Teilspannungen zur Gesamtspannung: $U = U_1 + U_2$. (a) An zwei Lämpchen liegen $U_1 = 4\\,\\text{V}$ und $U_2 = 5\\,\\text{V}$. Wie groß ist die Spannung $U$ der Batterie? (b) Eine $12\\,\\text{V}$-Batterie versorgt zwei Lämpchen in Reihe. Am ersten Lämpchen werden $7\\,\\text{V}$ gemessen. Wie groß ist die Spannung am zweiten Lämpchen?",
+      "eingaben": [
+        {
+          "label": "a) Spannung $U$ der Batterie",
+          "antwort": 9,
+          "toleranz": 0.01,
+          "einheit": "V"
+        },
+        {
+          "label": "b) Spannung am 2. Lämpchen",
+          "antwort": 5,
+          "toleranz": 0.01,
+          "einheit": "V"
+        }
+      ],
+      "tipps": [
+        "In Reihe gilt: $U = U_1 + U_2$.",
+        "a) Beide Teilspannungen zusammenzählen.",
+        "b) Stelle die Gleichung um: $U_2 = U - U_1 = 12\\,\\text{V} - 7\\,\\text{V}$."
+      ],
+      "loesungsweg": "(a) $U = U_1 + U_2 = 4\\,\\text{V} + 5\\,\\text{V} = 9\\,\\text{V}$. (b) $U_2 = U - U_1 = 12\\,\\text{V} - 7\\,\\text{V} = 5\\,\\text{V}$.",
+      "kc": [
+        "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+      ]
+    },
+    {
+      "id": "ph-07-str-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "In einer Reihenschaltung aus drei Lämpchen misst ein Amperemeter direkt hinter der Batterie $0{,}6\\,\\text{A}$. (a) Welche Stromstärke zeigt ein zweites Amperemeter, das zwischen dem zweiten und dem dritten Lämpchen sitzt? (b) Gib diesen Wert in $\\text{mA}$ an.",
+      "eingaben": [
+        {
+          "label": "a) $I$ (zwischen Lämpchen 2 und 3)",
+          "antwort": 0.6,
+          "toleranz": 0.001,
+          "einheit": "A"
+        },
+        {
+          "label": "b) $I$ in mA",
+          "antwort": 600,
+          "toleranz": 0.5,
+          "einheit": "mA"
+        }
+      ],
+      "tipps": [
+        "In der Reihenschaltung gibt es nur einen Stromweg.",
+        "Deshalb ist die Stromstärke an jeder Stelle gleich — egal, wo das Amperemeter sitzt.",
+        "b) Umrechnen: $0{,}6\\,\\text{A} \\cdot 1000$."
+      ],
+      "loesungsweg": "(a) In der Reihenschaltung ist die Stromstärke überall gleich, also auch zwischen Lämpchen 2 und 3: $I = 0{,}6\\,\\text{A}$. (b) $0{,}6\\,\\text{A} \\cdot 1000 = 600\\,\\text{mA}$.",
+      "kc": [
+        "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+      ]
+    },
+    {
+      "id": "ph-07-str-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "In einer Parallelschaltung teilt sich der Strom auf die Zweige auf: Die Zweigströme addieren sich zum Gesamtstrom $I = I_1 + I_2$. Durch den ersten Zweig fließen $I_1 = 0{,}2\\,\\text{A}$, durch den zweiten Zweig $I_2 = 0{,}35\\,\\text{A}$. (a) Wie groß ist der Gesamtstrom $I$ in der Hauptleitung? (b) Gib diesen Wert in $\\text{mA}$ an.",
+      "eingaben": [
+        {
+          "label": "a) Gesamtstrom $I$",
+          "antwort": 0.55,
+          "toleranz": 0.001,
+          "einheit": "A"
+        },
+        {
+          "label": "b) $I$ in mA",
+          "antwort": 550,
+          "toleranz": 0.5,
+          "einheit": "mA"
+        }
+      ],
+      "tipps": [
+        "In der Parallelschaltung addieren sich die Zweigströme: $I = I_1 + I_2$.",
+        "a) Beide Zweigströme zusammenzählen.",
+        "b) $0{,}55\\,\\text{A} \\cdot 1000$."
+      ],
+      "loesungsweg": "(a) $I = I_1 + I_2 = 0{,}2\\,\\text{A} + 0{,}35\\,\\text{A} = 0{,}55\\,\\text{A}$. (b) $0{,}55\\,\\text{A} \\cdot 1000 = 550\\,\\text{mA}$.",
+      "kc": [
+        "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+      ]
+    },
+    {
+      "id": "ph-07-str-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Drei gleiche Lämpchen sind in Reihe an einer $12\\,\\text{V}$-Batterie geschaltet. Die Spannung teilt sich gleichmäßig auf alle drei Lämpchen auf. (a) Welche Spannung liegt an einem einzelnen Lämpchen an? (b) Welche Spannung misst man zusammen über zwei benachbarten Lämpchen?",
+      "eingaben": [
+        {
+          "label": "a) Spannung an einem Lämpchen",
+          "antwort": 4,
+          "toleranz": 0.01,
+          "einheit": "V"
+        },
+        {
+          "label": "b) Spannung über zwei Lämpchen",
+          "antwort": 8,
+          "toleranz": 0.01,
+          "einheit": "V"
+        }
+      ],
+      "tipps": [
+        "Drei gleiche Lämpchen teilen sich die Gesamtspannung zu gleichen Teilen.",
+        "a) $12\\,\\text{V}$ durch $3$ teilen.",
+        "b) Zwei Teilspannungen addieren: $2 \\cdot 4\\,\\text{V}$."
+      ],
+      "loesungsweg": "(a) Die Spannung verteilt sich gleichmäßig: $U_1 = 12\\,\\text{V} : 3 = 4\\,\\text{V}$ je Lämpchen. (b) Über zwei Lämpchen: $U = 2 \\cdot 4\\,\\text{V} = 8\\,\\text{V}$.",
+      "kc": [
+        "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+      ]
+    },
+    {
+      "id": "ph-07-str-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz – Parallelschaltung untersuchen: In der Hauptleitung einer Parallelschaltung aus zwei Zweigen fließt ein Gesamtstrom von $I = 0{,}9\\,\\text{A}$. Im ersten Zweig misst man $I_1 = 0{,}55\\,\\text{A}$. (a) Welche Stromstärke fließt im zweiten Zweig? (b) Der zweite Zweig wird nun unterbrochen (Schalter offen). Welche Stromstärke zeigt jetzt das Amperemeter in der Hauptleitung an?",
+      "eingaben": [
+        {
+          "label": "a) Stromstärke $I_2$ (2. Zweig)",
+          "antwort": 0.35,
+          "toleranz": 0.001,
+          "einheit": "A"
+        },
+        {
+          "label": "b) $I$ (Hauptleitung, 2. Zweig offen)",
+          "antwort": 0.55,
+          "toleranz": 0.001,
+          "einheit": "A"
+        }
+      ],
+      "tipps": [
+        "In der Parallelschaltung gilt $I = I_1 + I_2$. Stelle nach $I_2$ um.",
+        "a) $I_2 = I - I_1 = 0{,}9\\,\\text{A} - 0{,}55\\,\\text{A}$.",
+        "b) Ist ein Zweig unterbrochen, fließt nur noch der Strom des verbliebenen Zweigs durch die Hauptleitung."
+      ],
+      "loesungsweg": "(a) $I_2 = I - I_1 = 0{,}9\\,\\text{A} - 0{,}55\\,\\text{A} = 0{,}35\\,\\text{A}$. (b) Bei offenem zweitem Zweig fließt nur noch der Strom des ersten Zweigs durch die Hauptleitung: $I = I_1 = 0{,}55\\,\\text{A}$. Der erste Zweig leuchtet unverändert weiter — typisch für die Parallelschaltung.",
+      "kc": [
+        "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+      ]
+    },
+    {
+      "id": "ph-07-str-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Anwendung – Stromrechnung: Ein elektrischer Heizlüfter hat eine Leistung von $2\\,\\text{kW}$. An kalten Tagen läuft er $1{,}5$ Stunden pro Tag, einen ganzen Monat lang ($30$ Tage). Eine Kilowattstunde kostet $0{,}40\\,\\text{Euro}$. (a) Wie viel Energie verbraucht der Heizlüfter in dem Monat? (b) Wie viel kostet dieser Stromverbrauch?",
+      "eingaben": [
+        {
+          "label": "a) Energie im Monat",
+          "antwort": 90,
+          "toleranz": 0.1,
+          "einheit": "kWh"
+        },
+        {
+          "label": "b) Kosten",
+          "antwort": 36,
+          "toleranz": 0.01,
+          "einheit": "Euro"
+        }
+      ],
+      "tipps": [
+        "Energie in Kilowattstunden: $E = P \\cdot t$, mit $P$ in $\\text{kW}$ und $t$ in Stunden.",
+        "a) Gesamtzeit: $1{,}5\\,\\text{h} \\cdot 30 = 45\\,\\text{h}$. Dann $E = 2\\,\\text{kW} \\cdot 45\\,\\text{h}$.",
+        "b) Kosten $=$ Energie $\\cdot$ Preis je kWh $= 90\\,\\text{kWh} \\cdot 0{,}40\\,\\frac{\\text{Euro}}{\\text{kWh}}$."
+      ],
+      "loesungsweg": "Gesamtlaufzeit: $t = 1{,}5\\,\\text{h} \\cdot 30 = 45\\,\\text{h}$. (a) $E = P \\cdot t = 2\\,\\text{kW} \\cdot 45\\,\\text{h} = 90\\,\\text{kWh}$. (b) Kosten $= 90\\,\\text{kWh} \\cdot 0{,}40\\,\\frac{\\text{Euro}}{\\text{kWh}} = 36\\,\\text{Euro}$.",
+      "kc": [
+        "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+      ]
     }
   ]
 }

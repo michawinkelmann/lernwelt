@@ -1,166 +1,424 @@
 {
-  "thema": "ma-09-vierfeldertafel-und-baumdiagramme",
-  "hinweis": "Lernbüro-Ergänzungsaufgaben -- zur fachlichen Prüfung (ergänzung:lernbüro). IDs ma-09-vb-101 ff.",
-  "aufgaben": [
+ "thema": "ma-09-vierfeldertafel-und-baumdiagramme",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben -- zur fachlichen Prüfung (ergänzung:lernbüro). IDs ma-09-vb-101 ff.",
+ "aufgaben": [
+  {
+   "id": "ma-09-vb-101",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "In einer Klasse von 30 Schülerinnen und Schülern spielen 18 ein Instrument. Wie groß ist die relative Häufigkeit des Merkmals 'spielt Instrument'? (Dezimalzahl, z. B. 0,6.)",
+   "eingaben": [
     {
-      "id": "ma-09-vb-101",
-      "typ": "numerisch",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 1,
-      "afb": 1,
-      "ergaenzung": "lernbuero",
-      "frage": "In einer Klasse von 30 Schülerinnen und Schülern spielen 18 ein Instrument. Wie gross ist die relative Häufigkeit des Merkmals 'spielt Instrument'? (Dezimalzahl, z. B. 0,6.)",
-      "eingaben": [
-        {
-          "label": "Relative Häufigkeit",
-          "antwort": 0.6,
-          "toleranz": 0.005
-        }
-      ],
-      "tipps": [
-        "Relative Häufigkeit = absolute Häufigkeit geteilt durch Gesamtzahl.",
-        "$\\frac{18}{30} = ?$",
-        "$\\frac{18}{30} = 0{,}6$."
-      ],
-      "loesungsweg": "$\\frac{18}{30} = 0{,}6$. Also spielen $60\\,\\%$ der Klasse ein Instrument.",
-      "kc": [
-        "Daten und Zufall: relative Haeufigkeiten"
-      ]
-    },
-    {
-      "id": "ma-09-vb-102",
-      "typ": "numerisch",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 1,
-      "afb": 1,
-      "ergaenzung": "lernbuero",
-      "frage": "Eine Vierfeldertafel zeigt: Von 100 Befragten sind 40 weiblich und Sportler, 20 weiblich aber kein Sportler, 30 männlich und Sportler, 10 männlich und kein Sportler. Wie viele Personen sind insgesamt Sportler?",
-      "eingaben": [
-        {
-          "label": "Anzahl Sportler",
-          "antwort": 70,
-          "toleranz": 0
-        }
-      ],
-      "tipps": [
-        "Addiere alle Felder mit dem Merkmal 'Sportler'.",
-        "Weiblich und Sportler: 40; männlich und Sportler: 30.",
-        "$40 + 30 = 70$."
-      ],
-      "loesungsweg": "Randsumme Sportler: $40 + 30 = 70$ Personen.",
-      "kc": [
-        "Daten und Zufall: Vierfeldertafel"
-      ]
-    },
-    {
-      "id": "ma-09-vb-103",
-      "typ": "numerisch",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 2,
-      "afb": 2,
-      "ergaenzung": "lernbuero",
-      "frage": "In einem Baumdiagramm gilt: $P(A) = 0{,}4$ und $P(B|A) = 0{,}3$. Berechne $P(A \\cap B)$.",
-      "eingaben": [
-        {
-          "label": "P(A und B)",
-          "antwort": 0.12,
-          "toleranz": 0.005
-        }
-      ],
-      "tipps": [
-        "Beim Baumdiagramm multipliziert man die Wahrscheinlichkeiten entlang eines Pfades.",
-        "$P(A \\cap B) = P(A) \\cdot P(B|A)$.",
-        "$0{,}4 \\cdot 0{,}3 = 0{,}12$."
-      ],
-      "loesungsweg": "$P(A \\cap B) = P(A) \\cdot P(B|A) = 0{,}4 \\cdot 0{,}3 = 0{,}12$.",
-      "kc": [
-        "Daten und Zufall: Baumdiagramm, bedingte Wahrscheinlichkeit"
-      ]
-    },
-    {
-      "id": "ma-09-vb-104",
-      "typ": "numerisch",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 2,
-      "afb": 2,
-      "ergaenzung": "lernbuero",
-      "frage": "In einer Vierfeldertafel sind 200 Personen erfasst. Von den 80 Frauen sind 60 berufstätig. Von den 120 Männern sind 90 berufstätig. Wie gross ist die relative Häufigkeit der Berufstätigkeit unter den Frauen? (Dezimalzahl.)",
-      "eingaben": [
-        {
-          "label": "P(berufstätig | Frau)",
-          "antwort": 0.75,
-          "toleranz": 0.005
-        }
-      ],
-      "tipps": [
-        "Bedingte relative Häufigkeit: Anzahl der Frauen mit Merkmal geteilt durch Gesamtzahl der Frauen.",
-        "$\\frac{60}{80} = ?$",
-        "$\\frac{60}{80} = 0{,}75$."
-      ],
-      "loesungsweg": "$P(\\text{berufstätig}|\\text{Frau}) = \\frac{60}{80} = 0{,}75$, also $75\\,\\%$ der Frauen sind berufstätig.",
-      "kc": [
-        "Daten und Zufall: bedingte Wahrscheinlichkeit"
-      ]
-    },
-    {
-      "id": "ma-09-vb-105",
-      "typ": "multiple-choice",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 3,
-      "afb": 3,
-      "ergaenzung": "lernbuero",
-      "frage": "Welche Aussagen über bedingte Wahrscheinlichkeiten sind richtig? (Mehrere Antworten möglich.)",
-      "optionen": [
-        {
-          "text": "P(B|A) = P(A|B) gilt nur, wenn A und B gleich wahrscheinlich sind.",
-          "richtig": false,
-          "erklaerung": "Das stimmt nicht - die Gleichheit hängt von den Einzelwahrscheinlichkeiten ab, nicht nur von gleicher Häufigkeit."
-        },
-        {
-          "text": "Im Baumdiagramm werden Pfadwahrscheinlichkeiten durch Multiplikation berechnet.",
-          "richtig": true,
-          "erklaerung": "Ja, entlang eines Pfades werden die Einzelwahrscheinlichkeiten multipliziert."
-        },
-        {
-          "text": "Die Summe aller Pfadwahrscheinlichkeiten ergibt immer 1.",
-          "richtig": true,
-          "erklaerung": "Richtig - alle möglichen Ausgänge zusammen decken das gesamte Ereignis ab."
-        },
-        {
-          "text": "Wenn A und B unabhängig sind, gilt P(B|A) = P(B).",
-          "richtig": true,
-          "erklaerung": "Bei stochastischer Unabhängigkeit hat das Eintreten von A keinen Einfluss auf B."
-        },
-        {
-          "text": "Eine Vierfeldertafel kann immer durch ein Baumdiagramm ersetzt werden - und umgekehrt.",
-          "richtig": true,
-          "erklaerung": "Beide Darstellungen zeigen dieselbe Situation, nur in anderer Form."
-        }
-      ],
-      "tipps": [
-        "Denke an die Multiplikationsregel beim Baumdiagramm.",
-        "Was bedeutet stochastische Unabhängigkeit für P(B|A)?",
-        "Überprüfe die Summe aller Pfade am Schluss des Baums."
-      ],
-      "loesungsweg": "Richtig: Pfadprodukte, Summe = 1, Unabhängigkeit P(B|A)=P(B), Äquivalenz Tafel/Baum. Falsch: P(B|A) = P(A|B) gilt allgemein nicht.",
-      "kc": [
-        "Daten und Zufall: Baumdiagramm, Vierfeldertafel"
-      ]
+     "label": "Relative Häufigkeit",
+     "antwort": 0.6,
+     "toleranz": 0.005
     }
-  ]
+   ],
+   "tipps": [
+    "Relative Häufigkeit = absolute Häufigkeit geteilt durch Gesamtzahl.",
+    "$\\frac{18}{30} = ?$",
+    "$\\frac{18}{30} = 0{,}6$."
+   ],
+   "loesungsweg": "$\\frac{18}{30} = 0{,}6$. Also spielen $60\\,\\%$ der Klasse ein Instrument.",
+   "kc": [
+    "Daten und Zufall: relative Haeufigkeiten"
+   ]
+  },
+  {
+   "id": "ma-09-vb-102",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Vierfeldertafel zeigt: Von 100 Befragten sind 40 weiblich und Sportler, 20 weiblich aber kein Sportler, 30 männlich und Sportler, 10 männlich und kein Sportler. Wie viele Personen sind insgesamt Sportler?",
+   "eingaben": [
+    {
+     "label": "Anzahl Sportler",
+     "antwort": 70,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Addiere alle Felder mit dem Merkmal 'Sportler'.",
+    "Weiblich und Sportler: 40; männlich und Sportler: 30.",
+    "$40 + 30 = 70$."
+   ],
+   "loesungsweg": "Randsumme Sportler: $40 + 30 = 70$ Personen.",
+   "kc": [
+    "Daten und Zufall: Vierfeldertafel"
+   ]
+  },
+  {
+   "id": "ma-09-vb-103",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "In einem Baumdiagramm gilt: $P(A) = 0{,}4$ und $P(B|A) = 0{,}3$. Berechne $P(A \\cap B)$.",
+   "eingaben": [
+    {
+     "label": "P(A und B)",
+     "antwort": 0.12,
+     "toleranz": 0.005
+    }
+   ],
+   "tipps": [
+    "Beim Baumdiagramm multipliziert man die Wahrscheinlichkeiten entlang eines Pfades.",
+    "$P(A \\cap B) = P(A) \\cdot P(B|A)$.",
+    "$0{,}4 \\cdot 0{,}3 = 0{,}12$."
+   ],
+   "loesungsweg": "$P(A \\cap B) = P(A) \\cdot P(B|A) = 0{,}4 \\cdot 0{,}3 = 0{,}12$.",
+   "kc": [
+    "Daten und Zufall: Baumdiagramm, bedingte Wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-09-vb-104",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "In einer Vierfeldertafel sind 200 Personen erfasst. Von den 80 Frauen sind 60 berufstätig. Von den 120 Männern sind 90 berufstätig. Wie groß ist die relative Häufigkeit der Berufstätigkeit unter den Frauen? (Dezimalzahl.)",
+   "eingaben": [
+    {
+     "label": "P(berufstätig | Frau)",
+     "antwort": 0.75,
+     "toleranz": 0.005
+    }
+   ],
+   "tipps": [
+    "Bedingte relative Häufigkeit: Anzahl der Frauen mit Merkmal geteilt durch Gesamtzahl der Frauen.",
+    "$\\frac{60}{80} = ?$",
+    "$\\frac{60}{80} = 0{,}75$."
+   ],
+   "loesungsweg": "$P(\\text{berufstätig}|\\text{Frau}) = \\frac{60}{80} = 0{,}75$, also $75\\,\\%$ der Frauen sind berufstätig.",
+   "kc": [
+    "Daten und Zufall: bedingte Wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-09-vb-105",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Aussagen über bedingte Wahrscheinlichkeiten sind richtig? (Mehrere Antworten möglich.)",
+   "optionen": [
+    {
+     "text": "P(B|A) = P(A|B) gilt nur, wenn A und B gleich wahrscheinlich sind.",
+     "richtig": false,
+     "erklaerung": "Das stimmt nicht - die Gleichheit hängt von den Einzelwahrscheinlichkeiten ab, nicht nur von gleicher Häufigkeit."
+    },
+    {
+     "text": "Im Baumdiagramm werden Pfadwahrscheinlichkeiten durch Multiplikation berechnet.",
+     "richtig": true,
+     "erklaerung": "Ja, entlang eines Pfades werden die Einzelwahrscheinlichkeiten multipliziert."
+    },
+    {
+     "text": "Die Summe aller Pfadwahrscheinlichkeiten ergibt immer 1.",
+     "richtig": true,
+     "erklaerung": "Richtig - alle möglichen Ausgänge zusammen decken das gesamte Ereignis ab."
+    },
+    {
+     "text": "Wenn A und B unabhängig sind, gilt P(B|A) = P(B).",
+     "richtig": true,
+     "erklaerung": "Bei stochastischer Unabhängigkeit hat das Eintreten von A keinen Einfluss auf B."
+    },
+    {
+     "text": "Eine Vierfeldertafel kann immer durch ein Baumdiagramm ersetzt werden - und umgekehrt.",
+     "richtig": true,
+     "erklaerung": "Beide Darstellungen zeigen dieselbe Situation, nur in anderer Form."
+    }
+   ],
+   "tipps": [
+    "Denke an die Multiplikationsregel beim Baumdiagramm.",
+    "Was bedeutet stochastische Unabhängigkeit für P(B|A)?",
+    "Überprüfe die Summe aller Pfade am Schluss des Baums."
+   ],
+   "loesungsweg": "Richtig: Pfadprodukte, Summe = 1, Unabhängigkeit P(B|A)=P(B), Äquivalenz Tafel/Baum. Falsch: P(B|A) = P(A|B) gilt allgemein nicht.",
+   "kc": [
+    "Daten und Zufall: Baumdiagramm, Vierfeldertafel"
+   ]
+  },
+  {
+   "id": "ma-09-vb-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Aussagen über Baumdiagramme und Vierfeldertafeln sind richtig?",
+   "optionen": [
+    {
+     "text": "Entlang eines Pfades im Baumdiagramm werden die Wahrscheinlichkeiten multipliziert.",
+     "richtig": true,
+     "erklaerung": "Die Pfadregel besagt: Pfadwahrscheinlichkeit = Produkt der Äste."
+    },
+    {
+     "text": "Die Wahrscheinlichkeiten der Äste, die von einem Knoten ausgehen, ergeben zusammen $1$.",
+     "richtig": true,
+     "erklaerung": "An jeder Verzweigung ergänzen sich die Wahrscheinlichkeiten zu $1$."
+    },
+    {
+     "text": "In einer Vierfeldertafel ist die Summe aller vier inneren Felder gleich $0$.",
+     "richtig": false,
+     "erklaerung": "Die vier inneren Felder ergeben zusammen die Gesamtzahl (bzw. $1$ bei Wahrscheinlichkeiten), nicht $0$."
+    },
+    {
+     "text": "Um die Wahrscheinlichkeit mehrerer Pfade mit gleichem Ergebnis zu erhalten, addiert man die Pfadwahrscheinlichkeiten.",
+     "richtig": true,
+     "erklaerung": "Das ist die zweite Pfadregel (Summenregel)."
+    }
+   ],
+   "tipps": [
+    "Denke an die beiden Pfadregeln: entlang eines Pfades multiplizieren, mehrere Pfade addieren.",
+    "An jeder Verzweigung ergänzen sich die Wahrscheinlichkeiten zu $1$.",
+    "Drei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind die Multiplikationsregel entlang eines Pfades, die Ergänzung der Äste zu $1$ an jedem Knoten und die Additionsregel für mehrere Pfade. Falsch ist, dass die inneren Felder einer Vierfeldertafel zusammen $0$ ergeben — sie ergeben die Gesamtzahl.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Daten und Zufall, mehrstufige Zufallsexperimente (Klasse 9)"
+   ]
+  },
+  {
+   "id": "ma-09-vb-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "In einer Klasse mit $25$ Schülerinnen und Schülern tragen $15$ eine Brille. Wie groß ist die Wahrscheinlichkeit, dass eine zufällig ausgewählte Person eine Brille trägt? Gib das Ergebnis als Dezimalzahl an.",
+   "eingaben": [
+    {
+     "label": "Wahrscheinlichkeit",
+     "antwort": 0.6,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Die Wahrscheinlichkeit ist Anzahl der günstigen durch Anzahl aller Fälle.",
+    "Rechne $\\frac{15}{25}$.",
+    "$\\frac{15}{25} = \\frac{3}{5}$."
+   ],
+   "loesungsweg": "$P(\\text{Brille}) = \\dfrac{15}{25} = \\dfrac{3}{5} = 0{,}6$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Daten und Zufall, mehrstufige Zufallsexperimente (Klasse 9)"
+   ]
+  },
+  {
+   "id": "ma-09-vb-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "In einem Baumdiagramm gilt $P(A) = 0{,}6$ und $P(B|A) = 0{,}5$. Berechne die Pfadwahrscheinlichkeit $P(A \\cap B)$.",
+   "eingaben": [
+    {
+     "label": "P(A ∩ B)",
+     "antwort": 0.3,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Entlang eines Pfades werden die Wahrscheinlichkeiten multipliziert (Pfadregel).",
+    "Es gilt $P(A \\cap B) = P(A) \\cdot P(B|A)$.",
+    "Rechne $0{,}6 \\cdot 0{,}5$."
+   ],
+   "loesungsweg": "Nach der Pfadregel gilt $P(A \\cap B) = P(A) \\cdot P(B|A) = 0{,}6 \\cdot 0{,}5 = 0{,}3$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Daten und Zufall, mehrstufige Zufallsexperimente (Klasse 9)"
+   ]
+  },
+  {
+   "id": "ma-09-vb-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "In einer Vierfeldertafel sind $250$ Personen erfasst. Von den $150$ Frauen treiben $90$ regelmäßig Sport. Berechne die bedingte Wahrscheinlichkeit $P(\\text{Sport} | \\text{Frau})$, dass eine Frau Sport treibt. Gib das Ergebnis als Dezimalzahl an.",
+   "eingaben": [
+    {
+     "label": "P(Sport | Frau)",
+     "antwort": 0.6,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Bei einer bedingten Wahrscheinlichkeit betrachtest du nur die Gruppe der Frauen.",
+    "Rechne $\\frac{\\text{Frauen mit Sport}}{\\text{alle Frauen}} = \\frac{90}{150}$.",
+    "$\\frac{90}{150} = \\frac{3}{5}$."
+   ],
+   "loesungsweg": "$P(\\text{Sport} | \\text{Frau}) = \\dfrac{90}{150} = \\dfrac{3}{5} = 0{,}6$. (Es zählt nur die Gruppe der $150$ Frauen.)",
+   "kc": [
+    "KC Mathematik Sek I (2015): Daten und Zufall, mehrstufige Zufallsexperimente (Klasse 9)"
+   ]
+  },
+  {
+   "id": "ma-09-vb-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "In einer Urne liegen $5$ rote und $3$ blaue Kugeln. Es werden nacheinander zwei Kugeln ohne Zurücklegen gezogen. Wie groß ist die Wahrscheinlichkeit, dass beide Kugeln rot sind? Runde auf zwei Dezimalstellen.",
+   "eingaben": [
+    {
+     "label": "P(beide rot)",
+     "antwort": 0.36,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Zeichne ein Baumdiagramm. Beim ersten Zug sind $5$ von $8$ Kugeln rot.",
+    "Ohne Zurücklegen sind beim zweiten Zug nur noch $4$ rote von $7$ Kugeln übrig.",
+    "Multipliziere entlang des Pfades: $\\frac{5}{8} \\cdot \\frac{4}{7}$."
+   ],
+   "loesungsweg": "$P(\\text{beide rot}) = \\dfrac{5}{8} \\cdot \\dfrac{4}{7} = \\dfrac{20}{56} = \\dfrac{5}{14} \\approx 0{,}36$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Daten und Zufall, mehrstufige Zufallsexperimente (Klasse 9)"
+   ]
+  },
+  {
+   "id": "ma-09-vb-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Vierfeldertafel erfasst $200$ Personen. Davon sind $120$ männlich, und $70$ Männer sind Raucher. Insgesamt gibt es $100$ Raucher. Berechne die Wahrscheinlichkeit $P(\\text{Raucher} | \\text{weiblich})$, dass eine weibliche Person raucht. Gib das Ergebnis als Dezimalzahl an.",
+   "eingaben": [
+    {
+     "label": "P(Raucher | weiblich)",
+     "antwort": 0.375,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Bestimme zuerst die Anzahl der Frauen: $200 - 120 = 80$.",
+    "Bestimme die Anzahl der rauchenden Frauen: $100 - 70 = 30$.",
+    "Rechne $\\frac{30}{80}$."
+   ],
+   "loesungsweg": "Frauen: $200 - 120 = 80$. Rauchende Frauen: $100 - 70 = 30$. Also $P(\\text{Raucher} | \\text{weiblich}) = \\dfrac{30}{80} = \\dfrac{3}{8} = 0{,}375$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Daten und Zufall, mehrstufige Zufallsexperimente (Klasse 9)"
+   ]
+  },
+  {
+   "id": "ma-09-vb-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Krankheit tritt bei $2\\,\\%$ aller Personen auf. Ein Test erkennt eine kranke Person mit Wahrscheinlichkeit $95\\,\\%$ (positiv). Bei einer gesunden Person zeigt der Test mit $5\\,\\%$ fälschlich positiv an. a) Wie groß ist die Wahrscheinlichkeit, dass der Test bei einer zufällig ausgewählten Person positiv ausfällt? b) Wenn der Test positiv ist: Wie groß ist die Wahrscheinlichkeit, dass die Person wirklich krank ist? Runde jeweils auf zwei Dezimalstellen.",
+   "eingaben": [
+    {
+     "label": "a) P(Test positiv)",
+     "antwort": 0.07,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) P(krank | positiv)",
+     "antwort": 0.28,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "a) Es gibt zwei Pfade zu „positiv“: krank und positiv ($0{,}02 \\cdot 0{,}95$) oder gesund und positiv ($0{,}98 \\cdot 0{,}05$). Addiere beide.",
+    "b) Bedingte Wahrscheinlichkeit: $P(\\text{krank}|\\text{positiv}) = \\frac{P(\\text{krank und positiv})}{P(\\text{positiv})}$.",
+    "b) Setze ein: $\\frac{0{,}02 \\cdot 0{,}95}{P(\\text{positiv})}$."
+   ],
+   "loesungsweg": "a) $P(\\text{positiv}) = 0{,}02 \\cdot 0{,}95 + 0{,}98 \\cdot 0{,}05 = 0{,}019 + 0{,}049 = 0{,}068 \\approx 0{,}07$. b) $P(\\text{krank}|\\text{positiv}) = \\dfrac{0{,}019}{0{,}068} \\approx 0{,}28$. (Trotz positivem Test ist die Person also nur zu etwa $28\\,\\%$ wirklich krank.)",
+   "kc": [
+    "KC Mathematik Sek I (2015): Daten und Zufall, mehrstufige Zufallsexperimente (Klasse 9)"
+   ]
+  },
+  {
+   "id": "ma-09-vb-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Lena fährt an $60\\,\\%$ der Schultage mit dem Bus, sonst mit dem Rad. Mit dem Bus kommt sie zu $90\\,\\%$ pünktlich, mit dem Rad zu $80\\,\\%$. a) Wie groß ist die Wahrscheinlichkeit, dass Lena an einem zufälligen Tag pünktlich ist? b) Lena war heute pünktlich. Wie groß ist die Wahrscheinlichkeit, dass sie den Bus genommen hat? Runde jeweils auf zwei Dezimalstellen.",
+   "eingaben": [
+    {
+     "label": "a) P(pünktlich)",
+     "antwort": 0.86,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) P(Bus | pünktlich)",
+     "antwort": 0.63,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "a) Zeichne einen Baum mit erster Stufe Bus/Rad und zweiter Stufe pünktlich/nicht. Addiere die beiden Pfade zu „pünktlich“.",
+    "a) $P(\\text{pünktlich}) = 0{,}6 \\cdot 0{,}9 + 0{,}4 \\cdot 0{,}8$.",
+    "b) Bedingte Wahrscheinlichkeit: $\\frac{0{,}6 \\cdot 0{,}9}{P(\\text{pünktlich})}$."
+   ],
+   "loesungsweg": "a) $P(\\text{pünktlich}) = 0{,}6 \\cdot 0{,}9 + 0{,}4 \\cdot 0{,}8 = 0{,}54 + 0{,}32 = 0{,}86$. b) $P(\\text{Bus}|\\text{pünktlich}) = \\dfrac{0{,}54}{0{,}86} \\approx 0{,}63$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Daten und Zufall, mehrstufige Zufallsexperimente (Klasse 9)"
+   ]
+  }
+ ]
 }

@@ -287,6 +287,258 @@
       "kc": [
         "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
       ]
+    },
+    {
+      "id": "in-10-prog-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über Schleifen und Bedingungen sind richtig?",
+      "optionen": [
+        {
+          "text": "Eine <code>while</code>-Schleife wiederholt ihren Rumpf, solange die Bedingung wahr ist.",
+          "richtig": true,
+          "erklaerung": "Genau so: Vor jedem Durchlauf wird die Bedingung geprüft."
+        },
+        {
+          "text": "Ein <code>if</code> ohne passendes <code>else</code> ist immer ein Fehler.",
+          "richtig": false,
+          "erklaerung": "Ein <code>if</code> darf allein stehen; <code>else</code> ist freiwillig."
+        },
+        {
+          "text": "<code>for i in range(1, 4)</code> durchläuft die Werte 1, 2, 3.",
+          "richtig": true,
+          "erklaerung": "Die obere Grenze 4 gehört nicht mehr dazu."
+        },
+        {
+          "text": "Eine <code>while</code>-Schleife läuft immer genau einmal.",
+          "richtig": false,
+          "erklaerung": "Ist die Bedingung von Anfang an falsch, läuft der Rumpf gar nicht."
+        }
+      ],
+      "tipps": [
+        "<code>range(a, b)</code> zählt von a bis einschließlich b minus 1.",
+        "Bei <code>while</code> wird die Bedingung vor jedem Durchlauf neu geprüft.",
+        "Genau zwei Aussagen stimmen."
+      ],
+      "loesungsweg": "Richtig sind die Aussagen zur <code>while</code>-Wiederholung und zu <code>range(1, 4)</code> = 1, 2, 3. Falsch: <code>if</code> braucht kein <code>else</code>, und eine <code>while</code>-Schleife läuft bei anfangs falscher Bedingung null Mal.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Schreibtischtest – welchen Wert gibt dieses Programm aus?<br><code>x = 10</code><br><code>y = x - 3</code><br><code>x = y + x</code><br><code>print(x)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 17,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Lies Zeile für Zeile von oben nach unten.",
+        "Nach Zeile 2 ist y = 10 minus 3 = 7. x ist noch 10.",
+        "Zeile 3: x = 7 plus 10."
+      ],
+      "loesungsweg": "Zeile 1: x = 10. Zeile 2: y = 10 minus 3 = 7. Zeile 3: x = y plus x = 7 plus 10 = 17. Ausgabe: 17.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Schreibtischtest – welchen Wert hat <code>preis</code> am Ende? Eingabe: <code>alter = 14</code>.<br><code>if alter < 6:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;preis = 0</code><br><code>elif alter < 16:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;preis = 5</code><br><code>else:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;preis = 9</code>",
+      "eingaben": [
+        {
+          "label": "preis",
+          "antwort": 5,
+          "einheit": "Euro",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Prüfe die Bedingungen der Reihe nach von oben.",
+        "Ist 14 < 6? Nein. Ist 14 < 16? Ja.",
+        "Sobald ein Zweig zutrifft, werden die anderen übersprungen."
+      ],
+      "loesungsweg": "14 < 6 ist falsch. 14 < 16 ist wahr, also wird preis = 5 gesetzt und der else-Zweig übersprungen. Ergebnis: 5.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Schreibtischtest einer <code>while</code>-Schleife. Welchen Wert gibt das Programm aus?<br><code>count = 0</code><br><code>total = 0</code><br><code>while count < 5:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;total = total + count</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1</code><br><code>print(total)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 10,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Führe eine Tabelle mit count und total.",
+        "Die Schleife läuft für count = 0, 1, 2, 3, 4.",
+        "Addiere 0 + 1 + 2 + 3 + 4."
+      ],
+      "loesungsweg": "Die Schleife läuft, solange count < 5. Es werden die Werte 0, 1, 2, 3, 4 zur Summe addiert: 0 + 1 + 2 + 3 + 4 = 10. Bei count = 5 endet die Schleife. Ausgabe: 10.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Schreibtischtest mit Schrittweite. Welchen Wert gibt das Programm aus?<br><code>summe = 0</code><br><code>for i in range(2, 11, 2):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + i</code><br><code>print(summe)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 30,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Die dritte Zahl in <code>range</code> ist die Schrittweite.",
+        "<code>range(2, 11, 2)</code> liefert 2, 4, 6, 8, 10.",
+        "Addiere diese geraden Zahlen."
+      ],
+      "loesungsweg": "<code>range(2, 11, 2)</code> durchläuft 2, 4, 6, 8, 10 (11 gehört nicht dazu). Summe: 2 + 4 + 6 + 8 + 10 = 30. Ausgabe: 30.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Bedingung in der Schleife. Wie oft wird <code>treffer</code> erhöht?<br><code>treffer = 0</code><br><code>for n in range(1, 11):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;if n % 3 == 0:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;treffer = treffer + 1</code><br><code>print(treffer)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 3,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "<code>n % 3</code> ist der Rest beim Teilen durch 3.",
+        "Die Bedingung ist wahr, wenn n durch 3 teilbar ist.",
+        "Welche Zahlen von 1 bis 10 sind durch 3 teilbar?"
+      ],
+      "loesungsweg": "<code>range(1, 11)</code> liefert 1 bis 10. <code>n % 3 == 0</code> ist wahr für 3, 6 und 9. Also wird treffer dreimal erhöht. Ausgabe: 3.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Funktion mit Schleife und Rückgabe. Die Funktion bildet die Quersumme einer Zahl. Welchen Wert hat <code>a + b</code>?<br><code>def quersumme(z):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;s = 0</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;while z > 0:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = s + z % 10</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z = z // 10</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;return s</code><br><code>a = quersumme(123)</code><br><code>b = quersumme(405)</code>",
+      "eingaben": [
+        {
+          "label": "a + b",
+          "antwort": 15,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "<code>z % 10</code> liefert die letzte Ziffer, <code>z // 10</code> schneidet sie ab.",
+        "quersumme(123) addiert 3, 2, 1.",
+        "quersumme(405) addiert 5, 0, 4."
+      ],
+      "loesungsweg": "quersumme(123): 3 + 2 + 1 = 6. quersumme(405): 5 + 0 + 4 = 9. Also a + b = 6 + 9 = 15.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zwei kurze Programme zum Schreibtischtest.<br><br>a) Wie viele Zeichen enthält <code>muster</code> am Ende?<br><code>muster = \"\"</code><br><code>k = 4</code><br><code>while k > 0:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;muster = muster + \"*\"</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;k = k - 1</code><br><br>b) Welchen Wert gibt dieses Programm aus?<br><code>produkt = 1</code><br><code>for i in range(1, 6):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;if i % 2 == 1:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;produkt = produkt * i</code><br><code>print(produkt)</code>",
+      "eingaben": [
+        {
+          "label": "a) Anzahl Zeichen",
+          "antwort": 4,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) Ausgabe",
+          "antwort": 15,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "a) Die Schleife läuft, solange k > 0: für k = 4, 3, 2, 1.",
+        "b) <code>i % 2 == 1</code> ist wahr für ungerade i.",
+        "b) Multipliziere nur die ungeraden Werte aus 1 bis 5."
+      ],
+      "loesungsweg": "a) Die Schleife hängt viermal ein Sternchen an (k = 4, 3, 2, 1), also 4 Zeichen. b) range(1, 6) liefert 1 bis 5; ungerade sind 1, 3, 5. produkt = 1 mal 1 mal 3 mal 5 = 15. Ausgabe: 15.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
     }
   ]
 }

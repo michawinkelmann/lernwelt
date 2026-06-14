@@ -1,257 +1,533 @@
 {
-  "thema": "ma-10-sinusfunktion",
-  "hinweis": "Lernbüro-Ergänzungsaufgaben — fachliche Prüfung ausstehend",
-  "aufgaben": [
+ "thema": "ma-10-sinusfunktion",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben — fachliche Prüfung ausstehend",
+ "aufgaben": [
+  {
+   "id": "ma-10-sf-101",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Was ist der Wert von $\\sin(90^\\circ)$?",
+   "optionen": [
     {
-      "id": "ma-10-sf-101",
-      "typ": "multiple-choice",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Was ist der Wert von $\\sin(90^\\circ)$?",
-      "optionen": [
-        {
-          "text": "0",
-          "richtig": false,
-          "erklaerung": "$\\sin(0^\\circ) = 0$. Bei $90^\\circ$ ist der Sinus maximal."
-        },
-        {
-          "text": "1",
-          "richtig": true,
-          "erklaerung": "Am Hochpunkt der Sinuskurve bei $90^\\circ$ gilt $\\sin(90^\\circ) = 1$."
-        },
-        {
-          "text": "-1",
-          "richtig": false,
-          "erklaerung": "$\\sin(270^\\circ) = -1$, nicht $\\sin(90^\\circ)$."
-        },
-        {
-          "text": "0,5",
-          "richtig": false,
-          "erklaerung": "$\\sin(30^\\circ) = 0{,}5$, aber nicht $\\sin(90^\\circ)$."
-        }
-      ],
-      "tipps": [
-        "Schau auf die Sinuskurve: Wo liegt ihr höchster Punkt?",
-        "Die Amplitude der Grundsinusfunktion ist $1$, der Hochpunkt liegt bei $x = 90^\\circ$.",
-        "$\\sin(90^\\circ) = 1$."
-      ],
-      "loesungsweg": "Der Hochpunkt der Sinusfunktion $y = \\sin(x)$ liegt genau bei $x = 90^\\circ$ mit dem Wert $y = 1$.",
-      "kc": [
-        "Periodische Zusammenhaenge"
-      ],
-      "ergaenzung": "lernbuero"
+     "text": "0",
+     "richtig": false,
+     "erklaerung": "$\\sin(0^\\circ) = 0$. Bei $90^\\circ$ ist der Sinus maximal."
     },
     {
-      "id": "ma-10-sf-102",
-      "typ": "numerisch",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Bestimme die Amplitude der Funktion $f(x) = 3 \\cdot \\sin(2x) + 1$.",
-      "eingaben": [
-        {
-          "label": "Amplitude",
-          "antwort": 3,
-          "toleranz": 0,
-          "einheit": ""
-        }
-      ],
-      "tipps": [
-        "Bei $f(x) = a \\cdot \\sin(b \\cdot x) + d$ ist die Amplitude $|a|$.",
-        "Welchen Wert hat $a$ in dieser Funktion?",
-        "Die Amplitude ist $|3| = 3$."
-      ],
-      "loesungsweg": "In der Funktion $f(x) = a \\cdot \\sin(b \\cdot x) + d$ mit $a = 3$, $b = 2$, $d = 1$ ist die Amplitude $|a| = 3$.",
-      "kc": [
-        "Periodische Zusammenhaenge"
-      ],
-      "ergaenzung": "lernbuero"
+     "text": "1",
+     "richtig": true,
+     "erklaerung": "Am Hochpunkt der Sinuskurve bei $90^\\circ$ gilt $\\sin(90^\\circ) = 1$."
     },
     {
-      "id": "ma-10-sf-103",
-      "typ": "numerisch",
-      "zweig": [
-        "gym"
-      ],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Bestimme die Periode der Funktion $f(x) = \\sin(3x)$ in Grad.",
-      "eingaben": [
-        {
-          "label": "Periode in Grad",
-          "antwort": 120,
-          "toleranz": 0.5,
-          "einheit": "Grad"
-        }
-      ],
-      "tipps": [
-        "Bei $f(x) = \\sin(b \\cdot x)$ ist die Periode $\\frac{360^\\circ}{b}$.",
-        "Hier ist $b = 3$.",
-        "Periode $= \\frac{360^\\circ}{3} = 120^\\circ$."
-      ],
-      "loesungsweg": "Die Periode ergibt sich aus $\\frac{360^\\circ}{b} = \\frac{360^\\circ}{3} = 120^\\circ$. Zwischen $0^\\circ$ und $360^\\circ$ passen drei vollständige Wellen.",
-      "kc": [
-        "Periodische Zusammenhaenge"
-      ],
-      "ergaenzung": "lernbuero"
+     "text": "-1",
+     "richtig": false,
+     "erklaerung": "$\\sin(270^\\circ) = -1$, nicht $\\sin(90^\\circ)$."
     },
     {
-      "id": "ma-10-sf-104",
-      "typ": "numerisch",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Eine Gondel am Riesenrad hat die Höhe $h(t) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot t)$ in Metern ($t$ in Minuten). Berechne die Höhe nach $t = 3$ Minuten.",
-      "eingaben": [
-        {
-          "label": "Höhe in m",
-          "antwort": 18,
-          "toleranz": 0.1,
-          "einheit": "m"
-        }
-      ],
-      "tipps": [
-        "Setze $t = 3$ ein: $h(3) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot 3)$.",
-        "Berechne das Argument: $30^\\circ \\cdot 3 = 90^\\circ$.",
-        "$\\sin(90^\\circ) = 1$, also $h(3) = 10 + 8 \\cdot 1 = 18$."
-      ],
-      "loesungsweg": "$h(3) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot 3) = 10 + 8 \\cdot \\sin(90^\\circ) = 10 + 8 \\cdot 1 = 18\\,\\text{m}$. Die Gondel ist nach $3$ Minuten auf ihrer größtmöglichen Höhe.",
-      "kc": [
-        "Periodische Zusammenhaenge"
-      ],
-      "ergaenzung": "lernbuero"
-    },
-    {
-      "id": "ma-10-sf-105",
-      "typ": "rechenweg",
-      "zweig": [
-        "gym"
-      ],
-      "niveau": 3,
-      "afb": 3,
-      "frage": "Das Riesenrad aus der Aufgabe hat $h(t) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot t)$. Bestimme: (a) die Periode, (b) die maximale Höhe, (c) die minimale Höhe.",
-      "schritte": [
-        {
-          "frage": "Wie gross ist die Periode in Minuten?",
-          "eingaben": [
-            {
-              "label": "Periode in min",
-              "antwort": 12,
-              "toleranz": 0.1
-            }
-          ]
-        },
-        {
-          "frage": "Wie gross ist die maximale Höhe in Metern?",
-          "eingaben": [
-            {
-              "label": "Max. Höhe in m",
-              "antwort": 18,
-              "toleranz": 0.1
-            }
-          ]
-        },
-        {
-          "frage": "Wie gross ist die minimale Höhe in Metern?",
-          "eingaben": [
-            {
-              "label": "Min. Höhe in m",
-              "antwort": 2,
-              "toleranz": 0.1
-            }
-          ]
-        }
-      ],
-      "tipps": [
-        "Lies $a = 8$, $b = 30$, $d = 10$ direkt ab. Nutze die Schnellregeln.",
-        "Periode $= \\frac{360^\\circ}{30^\\circ} = 12$ Minuten. Größtwert $= d + |a| = 10 + 8$.",
-        "Kleinster Wert $= d - |a| = 10 - 8 = 2$."
-      ],
-      "loesungsweg": "Aus $f(t) = a \\cdot \\sin(b \\cdot t) + d$ mit $a = 8$, $b = 30$, $d = 10$: Periode $= \\frac{360^\\circ}{30^\\circ} = 12\\,\\text{min}$. Maximum $= d + |a| = 10 + 8 = 18\\,\\text{m}$. Minimum $= d - |a| = 10 - 8 = 2\\,\\text{m}$.",
-      "kc": [
-        "Periodische Zusammenhaenge"
-      ],
-      "ergaenzung": "lernbuero"
-    },
-    {
-      "id": "ma-10-sf-106",
-      "typ": "numerisch",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Lies bei der Funktion $f(x) = 2 \\cdot \\sin(x) + 3$ direkt ab: die Amplitude und die Mittellinie (den $y$-Wert, um den die Kurve schwingt).",
-      "eingaben": [
-        {
-          "label": "Amplitude",
-          "antwort": 2,
-          "toleranz": 0,
-          "einheit": ""
-        },
-        {
-          "label": "Mittellinie y =",
-          "antwort": 3,
-          "toleranz": 0,
-          "einheit": ""
-        }
-      ],
-      "tipps": [
-        "Der Faktor vor dem Sinus ist die Amplitude.",
-        "Die Zahl, die hinten addiert wird, hebt die ganze Kurve an — das ist die Mittellinie $d$.",
-        "Amplitude $= |2| = 2$, Mittellinie $y = 3$."
-      ],
-      "loesungsweg": "Bei $f(x) = a \\cdot \\sin(x) + d$ ist die Amplitude $|a|$ und die Mittellinie $y = d$. Hier ist $a = 2$ und $d = 3$, also Amplitude $2$ und Mittellinie $y = 3$. Die Kurve schwingt zwischen $3 - 2 = 1$ und $3 + 2 = 5$.",
-      "kc": [
-        "Periodische Zusammenhaenge"
-      ],
-      "ergaenzung": "lernbuero"
-    },
-    {
-      "id": "ma-10-sf-107",
-      "typ": "numerisch",
-      "zweig": [
-        "gym",
-        "rs"
-      ],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Der Wasserstand in einem Hafen schwankt mit Ebbe und Flut: $w(t) = 4 + 1{,}5 \\cdot \\sin(\\ldots)$ in Metern. Bestimme aus Mittellinie und Amplitude den höchsten und den niedrigsten Wasserstand.",
-      "eingaben": [
-        {
-          "label": "höchster Wasserstand",
-          "antwort": 5.5,
-          "toleranz": 0.01,
-          "einheit": "m"
-        },
-        {
-          "label": "niedrigster Wasserstand",
-          "antwort": 2.5,
-          "toleranz": 0.01,
-          "einheit": "m"
-        }
-      ],
-      "tipps": [
-        "Den Term im Sinus brauchst du nicht — höchster und niedrigster Wert hängen nur von Mittellinie und Amplitude ab.",
-        "Größter Wert $= d + |a|$, kleinster Wert $= d - |a|$.",
-        "Hier $d = 4$ und $|a| = 1{,}5$: höchster $= 4 + 1{,}5$, niedrigster $= 4 - 1{,}5$."
-      ],
-      "loesungsweg": "Der Sinus pendelt zwischen $-1$ und $1$. Damit ist der größte Wasserstand $d + |a| = 4 + 1{,}5 = 5{,}5\\,\\text{m}$ (bei Flut) und der kleinste $d - |a| = 4 - 1{,}5 = 2{,}5\\,\\text{m}$ (bei Ebbe). Mittellinie $4\\,\\text{m}$, Schwankung $1{,}5\\,\\text{m}$ — die Dauer einer vollen Tide steckt im Sinus-Argument und wird hier nicht gebraucht.",
-      "kc": [
-        "Periodische Zusammenhaenge"
-      ],
-      "ergaenzung": "lernbuero"
+     "text": "0,5",
+     "richtig": false,
+     "erklaerung": "$\\sin(30^\\circ) = 0{,}5$, aber nicht $\\sin(90^\\circ)$."
     }
-  ]
+   ],
+   "tipps": [
+    "Schau auf die Sinuskurve: Wo liegt ihr höchster Punkt?",
+    "Die Amplitude der Grundsinusfunktion ist $1$, der Hochpunkt liegt bei $x = 90^\\circ$.",
+    "$\\sin(90^\\circ) = 1$."
+   ],
+   "loesungsweg": "Der Hochpunkt der Sinusfunktion $y = \\sin(x)$ liegt genau bei $x = 90^\\circ$ mit dem Wert $y = 1$.",
+   "kc": [
+    "Periodische Zusammenhaenge"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-sf-102",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Bestimme die Amplitude der Funktion $f(x) = 3 \\cdot \\sin(2x) + 1$.",
+   "eingaben": [
+    {
+     "label": "Amplitude",
+     "antwort": 3,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Bei $f(x) = a \\cdot \\sin(b \\cdot x) + d$ ist die Amplitude $|a|$.",
+    "Welchen Wert hat $a$ in dieser Funktion?",
+    "Die Amplitude ist $|3| = 3$."
+   ],
+   "loesungsweg": "In der Funktion $f(x) = a \\cdot \\sin(b \\cdot x) + d$ mit $a = 3$, $b = 2$, $d = 1$ ist die Amplitude $|a| = 3$.",
+   "kc": [
+    "Periodische Zusammenhaenge"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-sf-103",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Bestimme die Periode der Funktion $f(x) = \\sin(3x)$ in Grad.",
+   "eingaben": [
+    {
+     "label": "Periode in Grad",
+     "antwort": 120,
+     "toleranz": 0.5,
+     "einheit": "Grad"
+    }
+   ],
+   "tipps": [
+    "Bei $f(x) = \\sin(b \\cdot x)$ ist die Periode $\\frac{360^\\circ}{b}$.",
+    "Hier ist $b = 3$.",
+    "Periode $= \\frac{360^\\circ}{3} = 120^\\circ$."
+   ],
+   "loesungsweg": "Die Periode ergibt sich aus $\\frac{360^\\circ}{b} = \\frac{360^\\circ}{3} = 120^\\circ$. Zwischen $0^\\circ$ und $360^\\circ$ passen drei vollständige Wellen.",
+   "kc": [
+    "Periodische Zusammenhaenge"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-sf-104",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Eine Gondel am Riesenrad hat die Höhe $h(t) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot t)$ in Metern ($t$ in Minuten). Berechne die Höhe nach $t = 3$ Minuten.",
+   "eingaben": [
+    {
+     "label": "Höhe in m",
+     "antwort": 18,
+     "toleranz": 0.1,
+     "einheit": "m"
+    }
+   ],
+   "tipps": [
+    "Setze $t = 3$ ein: $h(3) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot 3)$.",
+    "Berechne das Argument: $30^\\circ \\cdot 3 = 90^\\circ$.",
+    "$\\sin(90^\\circ) = 1$, also $h(3) = 10 + 8 \\cdot 1 = 18$."
+   ],
+   "loesungsweg": "$h(3) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot 3) = 10 + 8 \\cdot \\sin(90^\\circ) = 10 + 8 \\cdot 1 = 18\\,\\text{m}$. Die Gondel ist nach $3$ Minuten auf ihrer größtmöglichen Höhe.",
+   "kc": [
+    "Periodische Zusammenhaenge"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-sf-105",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Das Riesenrad aus der Aufgabe hat $h(t) = 10 + 8 \\cdot \\sin(30^\\circ \\cdot t)$. Bestimme: (a) die Periode, (b) die maximale Höhe, (c) die minimale Höhe.",
+   "schritte": [
+    {
+     "frage": "Wie groß ist die Periode in Minuten?",
+     "eingaben": [
+      {
+       "label": "Periode in min",
+       "antwort": 12,
+       "toleranz": 0.1
+      }
+     ]
+    },
+    {
+     "frage": "Wie groß ist die maximale Höhe in Metern?",
+     "eingaben": [
+      {
+       "label": "Max. Höhe in m",
+       "antwort": 18,
+       "toleranz": 0.1
+      }
+     ]
+    },
+    {
+     "frage": "Wie groß ist die minimale Höhe in Metern?",
+     "eingaben": [
+      {
+       "label": "Min. Höhe in m",
+       "antwort": 2,
+       "toleranz": 0.1
+      }
+     ]
+    }
+   ],
+   "tipps": [
+    "Lies $a = 8$, $b = 30$, $d = 10$ direkt ab. Nutze die Schnellregeln.",
+    "Periode $= \\frac{360^\\circ}{30^\\circ} = 12$ Minuten. Größtwert $= d + |a| = 10 + 8$.",
+    "Kleinster Wert $= d - |a| = 10 - 8 = 2$."
+   ],
+   "loesungsweg": "Aus $f(t) = a \\cdot \\sin(b \\cdot t) + d$ mit $a = 8$, $b = 30$, $d = 10$: Periode $= \\frac{360^\\circ}{30^\\circ} = 12\\,\\text{min}$. Maximum $= d + |a| = 10 + 8 = 18\\,\\text{m}$. Minimum $= d - |a| = 10 - 8 = 2\\,\\text{m}$.",
+   "kc": [
+    "Periodische Zusammenhaenge"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-sf-106",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Lies bei der Funktion $f(x) = 2 \\cdot \\sin(x) + 3$ direkt ab: die Amplitude und die Mittellinie (den $y$-Wert, um den die Kurve schwingt).",
+   "eingaben": [
+    {
+     "label": "Amplitude",
+     "antwort": 2,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "Mittellinie y =",
+     "antwort": 3,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Der Faktor vor dem Sinus ist die Amplitude.",
+    "Die Zahl, die hinten addiert wird, hebt die ganze Kurve an — das ist die Mittellinie $d$.",
+    "Amplitude $= |2| = 2$, Mittellinie $y = 3$."
+   ],
+   "loesungsweg": "Bei $f(x) = a \\cdot \\sin(x) + d$ ist die Amplitude $|a|$ und die Mittellinie $y = d$. Hier ist $a = 2$ und $d = 3$, also Amplitude $2$ und Mittellinie $y = 3$. Die Kurve schwingt zwischen $3 - 2 = 1$ und $3 + 2 = 5$.",
+   "kc": [
+    "Periodische Zusammenhaenge"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-sf-107",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Der Wasserstand in einem Hafen schwankt mit Ebbe und Flut: $w(t) = 4 + 1{,}5 \\cdot \\sin(\\ldots)$ in Metern. Bestimme aus Mittellinie und Amplitude den höchsten und den niedrigsten Wasserstand.",
+   "eingaben": [
+    {
+     "label": "höchster Wasserstand",
+     "antwort": 5.5,
+     "toleranz": 0.01,
+     "einheit": "m"
+    },
+    {
+     "label": "niedrigster Wasserstand",
+     "antwort": 2.5,
+     "toleranz": 0.01,
+     "einheit": "m"
+    }
+   ],
+   "tipps": [
+    "Den Term im Sinus brauchst du nicht — höchster und niedrigster Wert hängen nur von Mittellinie und Amplitude ab.",
+    "Größter Wert $= d + |a|$, kleinster Wert $= d - |a|$.",
+    "Hier $d = 4$ und $|a| = 1{,}5$: höchster $= 4 + 1{,}5$, niedrigster $= 4 - 1{,}5$."
+   ],
+   "loesungsweg": "Der Sinus pendelt zwischen $-1$ und $1$. Damit ist der größte Wasserstand $d + |a| = 4 + 1{,}5 = 5{,}5\\,\\text{m}$ (bei Flut) und der kleinste $d - |a| = 4 - 1{,}5 = 2{,}5\\,\\text{m}$ (bei Ebbe). Mittellinie $4\\,\\text{m}$, Schwankung $1{,}5\\,\\text{m}$ — die Dauer einer vollen Tide steckt im Sinus-Argument und wird hier nicht gebraucht.",
+   "kc": [
+    "Periodische Zusammenhaenge"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-sf-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Funktion $f(x)=a\\cdot\\sin(b\\cdot x)$ (mit $a,b>0$) entsteht aus der Sinuskurve. Welche Aussagen über die Parameter sind richtig?",
+   "optionen": [
+    {
+     "text": "$a$ ist die Amplitude und gibt an, wie weit die Kurve nach oben und unten ausschlägt.",
+     "richtig": true,
+     "erklaerung": "Die Amplitude $a$ streckt die Kurve in $y$-Richtung."
+    },
+    {
+     "text": "Die Periode beträgt $\\dfrac{360^\\circ}{b}$.",
+     "richtig": true,
+     "erklaerung": "Größeres $b$ staucht die Kurve, die Periode wird kürzer."
+    },
+    {
+     "text": "Der größte Funktionswert von $f$ ist $a$.",
+     "richtig": true,
+     "erklaerung": "Da $\\sin$ höchstens $1$ wird, ist der Maximalwert $a\\cdot 1=a$."
+    },
+    {
+     "text": "Ein größeres $b$ vergrößert die Periode.",
+     "richtig": false,
+     "erklaerung": "Falsch: Größeres $b$ verkleinert die Periode ($\\frac{360^\\circ}{b}$)."
+    }
+   ],
+   "tipps": [
+    "$a$ wirkt in $y$-Richtung (Höhe), $b$ in $x$-Richtung (Periode).",
+    "Periode $=\\dfrac{360^\\circ}{b}$: Wird $b$ größer, wird der Bruch kleiner.",
+    "Eine Aussage dreht den Zusammenhang zwischen $b$ und Periode um."
+   ],
+   "loesungsweg": "Richtig: $a$ ist die Amplitude, der Maximalwert ist $a$ und die Periode ist $\\frac{360^\\circ}{b}$. Falsch ist nur, dass größeres $b$ die Periode vergrößert — es verkleinert sie.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, periodische Vorgänge und Sinusfunktion (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-sf-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Bestimme die Amplitude der Funktion $f(x)=4\\cdot\\sin(3x)+2$.",
+   "eingaben": [
+    {
+     "label": "Amplitude",
+     "antwort": 4,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Die Amplitude ist der Faktor direkt vor dem Sinus.",
+    "Bei $a\\cdot\\sin(b x)+c$ ist $a$ die Amplitude.",
+    "Hier steht $4$ vor dem Sinus."
+   ],
+   "loesungsweg": "In $f(x)=4\\cdot\\sin(3x)+2$ ist der Faktor vor dem Sinus $a=4$. Die Amplitude ist $4$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, periodische Vorgänge und Sinusfunktion (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-sf-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Bestimme die Periode der Funktion $f(x)=\\sin(4x)$ in Grad.",
+   "eingaben": [
+    {
+     "label": "Periode",
+     "antwort": 90,
+     "einheit": "°",
+     "toleranz": 0.5
+    }
+   ],
+   "tipps": [
+    "Periode $=\\dfrac{360^\\circ}{b}$.",
+    "Hier ist $b=4$.",
+    "$\\dfrac{360^\\circ}{4}$."
+   ],
+   "loesungsweg": "Periode $=\\dfrac{360^\\circ}{b}=\\dfrac{360^\\circ}{4}=90^\\circ$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, periodische Vorgänge und Sinusfunktion (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-sf-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Gegeben ist $f(x)=3\\cdot\\sin(2x)$. a) Gib die Amplitude an. b) Bestimme die Periode in Grad.",
+   "eingaben": [
+    {
+     "label": "a) Amplitude",
+     "antwort": 3,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) Periode",
+     "antwort": 180,
+     "einheit": "°",
+     "toleranz": 0.5
+    }
+   ],
+   "tipps": [
+    "a) Amplitude = Faktor vor dem Sinus.",
+    "b) Periode $=\\dfrac{360^\\circ}{b}$ mit $b=2$.",
+    "b) $\\dfrac{360^\\circ}{2}$."
+   ],
+   "loesungsweg": "a) Amplitude $=3$. b) Periode $=\\dfrac{360^\\circ}{2}=180^\\circ$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, periodische Vorgänge und Sinusfunktion (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-sf-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Gegeben ist $f(x)=5\\cdot\\sin(x)+3$. a) Bestimme den größten Funktionswert. b) Bestimme den kleinsten Funktionswert.",
+   "eingaben": [
+    {
+     "label": "a) größter Wert",
+     "antwort": 8,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) kleinster Wert",
+     "antwort": -2,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Der Sinus schwankt zwischen $-1$ und $+1$.",
+    "Größter Wert: $5\\cdot 1+3$.",
+    "Kleinster Wert: $5\\cdot(-1)+3$."
+   ],
+   "loesungsweg": "$\\sin(x)$ liegt zwischen $-1$ und $1$. a) Maximum: $5\\cdot 1+3=8$. b) Minimum: $5\\cdot(-1)+3=-2$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, periodische Vorgänge und Sinusfunktion (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-sf-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Gegeben ist $f(x)=2\\cdot\\sin(3x)$. Der erste Hochpunkt (für $x>0$) liegt dort, wo $\\sin$ den Wert $1$ annimmt. a) Bei welchem $x$ liegt der erste Hochpunkt? b) Welchen $y$-Wert hat er?",
+   "eingaben": [
+    {
+     "label": "a) x-Stelle des Hochpunkts",
+     "antwort": 30,
+     "einheit": "°",
+     "toleranz": 0.5
+    },
+    {
+     "label": "b) y-Wert des Hochpunkts",
+     "antwort": 2,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "$\\sin$ wird zuerst $1$ bei $90^\\circ$ — hier muss das Innere $b x=90^\\circ$ sein.",
+    "a) $3x=90^\\circ\\Rightarrow x=\\dfrac{90^\\circ}{3}$.",
+    "b) Der größte Wert ist die Amplitude $a=2$."
+   ],
+   "loesungsweg": "$\\sin$ ist erstmals $1$, wenn $3x=90^\\circ$, also $x=\\dfrac{90^\\circ}{3}=30^\\circ$. Dort gilt $f(30^\\circ)=2\\cdot 1=2$. Hochpunkt: $(30^\\circ\\mid 2)$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, periodische Vorgänge und Sinusfunktion (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-sf-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Funktion $f(x)=a\\cdot\\sin(b\\cdot x)$ (mit $a,b>0$) hat ihren ersten Hochpunkt bei $(30^\\circ\\mid 5)$. a) Bestimme die Amplitude $a$. b) Bestimme den Parameter $b$.",
+   "eingaben": [
+    {
+     "label": "a) Amplitude a",
+     "antwort": 5,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) Parameter b",
+     "antwort": 3,
+     "einheit": "",
+     "toleranz": 0.05
+    }
+   ],
+   "tipps": [
+    "Der $y$-Wert des Hochpunkts ist die Amplitude $a$.",
+    "Beim ersten Hochpunkt gilt $b\\cdot x=90^\\circ$.",
+    "b) $b\\cdot 30^\\circ=90^\\circ\\Rightarrow b=\\dfrac{90^\\circ}{30^\\circ}$."
+   ],
+   "loesungsweg": "a) Der größte Wert ist die Amplitude, also $a=5$. b) Der erste Hochpunkt liegt bei $b\\cdot x=90^\\circ$. Mit $x=30^\\circ$: $b=\\dfrac{90^\\circ}{30^\\circ}=3$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, periodische Vorgänge und Sinusfunktion (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-sf-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "An einem Riesenrad wird die Höhe einer Gondel über dem Boden durch $h(t)=12+7\\cdot\\sin(30^\\circ\\cdot t)$ beschrieben ($t$ in Minuten, $h$ in Metern). a) Welche Höhe hat die Gondel nach $t=3\\,\\text{min}$? b) Wie lange dauert eine volle Umdrehung (die Periode in Minuten)? Runde a) auf eine Nachkommastelle.",
+   "eingaben": [
+    {
+     "label": "a) Höhe nach 3 min",
+     "antwort": 19.0,
+     "einheit": "m",
+     "toleranz": 0.1
+    },
+    {
+     "label": "b) Dauer einer Umdrehung",
+     "antwort": 12,
+     "einheit": "min",
+     "toleranz": 0.1
+    }
+   ],
+   "tipps": [
+    "a) Setze $t=3$ ein: $30^\\circ\\cdot 3=90^\\circ$, und $\\sin(90^\\circ)=1$.",
+    "a) $h(3)=12+7\\cdot 1$.",
+    "b) Periode $=\\dfrac{360^\\circ}{b}$ mit $b=30^\\circ$ pro Minute."
+   ],
+   "loesungsweg": "a) $h(3)=12+7\\cdot\\sin(90^\\circ)=12+7\\cdot 1=19{,}0\\,\\text{m}$. b) Periode $=\\dfrac{360^\\circ}{30^\\circ}=12\\,\\text{min}$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, periodische Vorgänge und Sinusfunktion (Klasse 10)"
+   ]
+  }
+ ]
 }

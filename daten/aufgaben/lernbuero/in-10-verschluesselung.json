@@ -795,6 +795,258 @@
       "kc": [
         "daten-und-ihre-spuren"
       ]
+    },
+    {
+      "id": "in-10-vs-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über den Schlüssel bei der Caesar-Verschlüsselung sind richtig?",
+      "optionen": [
+        {
+          "text": "Der Schlüssel gibt an, um wie viele Stellen jeder Buchstabe im Alphabet verschoben wird.",
+          "richtig": true,
+          "erklaerung": "Genau das ist die Verschiebung k."
+        },
+        {
+          "text": "Ohne den passenden Schlüssel lässt sich ein Caesar-Text grundsätzlich nie entschlüsseln.",
+          "richtig": false,
+          "erklaerung": "Bei nur 25 möglichen Schlüsseln kann man alle durchprobieren."
+        },
+        {
+          "text": "Sender und Empfänger müssen denselben Schlüssel kennen.",
+          "richtig": true,
+          "erklaerung": "Caesar ist symmetrisch: derselbe Schlüssel für Ver- und Entschlüsseln."
+        },
+        {
+          "text": "Ein größerer Schlüssel macht das Verfahren grundsätzlich viel sicherer.",
+          "richtig": false,
+          "erklaerung": "Es gibt nur 25 sinnvolle Schlüssel – die Größe ändert an der Schwäche nichts."
+        }
+      ],
+      "tipps": [
+        "Der Schlüssel ist die Verschiebezahl k.",
+        "Bei Caesar gibt es nur 25 mögliche Verschiebungen.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig: Der Schlüssel ist die Verschiebung, und beide Seiten brauchen denselben Schlüssel (symmetrisch). Falsch: Man kann alle 25 Schlüssel durchprobieren, und ein größerer Schlüssel hilft nicht, weil es nur 25 Möglichkeiten gibt.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Caesar-Verschlüsselung, A=0, B=1, C=2, ..., Z=25. Verschlüssele den Klarbuchstaben G (Position 6) mit dem Schlüssel k = 5. Berechne die Geheimposition mit Geheimposition = (Klarposition + k) mod 26.",
+      "eingaben": [
+        {
+          "label": "Geheimposition",
+          "antwort": 11,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "G hat die Position 6.",
+        "Rechne 6 + 5.",
+        "Das Ergebnis ist kleiner als 26, also bleibt es so stehen."
+      ],
+      "loesungsweg": "Geheimposition = (6 + 5) mod 26 = 11 mod 26 = 11. (Das entspricht dem Buchstaben L.)",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Caesar-Entschlüsselung, A=0, B=1, C=2, ..., Z=25. Der Geheimbuchstabe T (Position 19) wurde mit k = 4 verschlüsselt. Berechne die Klarposition mit Klarposition = (Geheimposition − k + 26) mod 26.",
+      "eingaben": [
+        {
+          "label": "Klarposition",
+          "antwort": 15,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "T hat die Position 19.",
+        "Rechne 19 − 4.",
+        "Das Ergebnis ist nicht negativ, also bleibt es so stehen."
+      ],
+      "loesungsweg": "Klarposition = (19 − 4 + 26) mod 26 = 41 mod 26 = 15. (Das entspricht dem Buchstaben P.)",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Caesar-Verschlüsselung des Wortes KATZE mit k = 7, A=0, B=1, C=2, ..., Z=25. Verschlüssele jeden Buchstaben und gib die Geheimposition des Buchstabens E (Position 4) an.",
+      "eingaben": [
+        {
+          "label": "Geheimposition von E",
+          "antwort": 11,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "E hat die Position 4.",
+        "Rechne (4 + 7) mod 26.",
+        "Das ganze Geheimwort lautet RHAGL – E wird zu L."
+      ],
+      "loesungsweg": "Für E: (4 + 7) mod 26 = 11. Das ganze Wort wird zu RHAGL (K→R, A→H, T→A, Z→G, E→L). Die Geheimposition von E ist 11.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Bei einer Caesar-Verschlüsselung wird der Klarbuchstabe M (Position 12) zum Geheimbuchstaben R (Position 17). Welcher Schlüssel k wurde verwendet? Berechne k = (Geheimposition − Klarposition + 26) mod 26, A=0, B=1, C=2, ..., Z=25.",
+      "eingaben": [
+        {
+          "label": "Schlüssel k",
+          "antwort": 5,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "M hat Position 12, R hat Position 17.",
+        "Der Schlüssel ist die Differenz der Positionen.",
+        "Rechne 17 − 12."
+      ],
+      "loesungsweg": "k = (17 − 12 + 26) mod 26 = 5. Der Schlüssel ist 5 (denn 12 + 5 = 17).",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Häufigkeitsanalyse: In einem deutschen Caesar-Geheimtext ist K (Position 10) der häufigste Buchstabe. Im Deutschen ist E (Position 4) am häufigsten. Bestimme den vermuteten Schlüssel k = (Geheimposition − Klarposition + 26) mod 26, A=0, B=1, C=2, ..., Z=25.",
+      "eingaben": [
+        {
+          "label": "Schlüssel k",
+          "antwort": 6,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Nimm an, dass E auf den häufigsten Geheimbuchstaben K abgebildet wurde.",
+        "K hat Position 10, E hat Position 4.",
+        "Rechne 10 − 4."
+      ],
+      "loesungsweg": "Annahme: E (4) wurde zu K (10). Dann ist k = (10 − 4 + 26) mod 26 = 6. So lässt sich Caesar ohne Schlüssel knacken.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Vigenère-Verschlüsselung, A=0, B=1, C=2, ..., Z=25. Verschlüssele den Klarbuchstaben H (Position 7) mit dem Schlüsselbuchstaben D (Position 3). Berechne die Geheimposition mit Geheimposition = (Klarposition + Schlüsselposition) mod 26.",
+      "eingaben": [
+        {
+          "label": "Geheimposition",
+          "antwort": 10,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Beim Vigenère-Verfahren addierst du die Position des Schlüsselbuchstabens.",
+        "H hat Position 7, D hat Position 3.",
+        "Rechne (7 + 3) mod 26."
+      ],
+      "loesungsweg": "Geheimposition = (7 + 3) mod 26 = 10. (Das entspricht dem Buchstaben K.) Anders als bei Caesar ändert sich die Verschiebung von Buchstabe zu Buchstabe je nach Schlüsselbuchstabe.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
+    },
+    {
+      "id": "in-10-vs-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Caesar mit k = 10, A=0, B=1, C=2, ..., Z=25.<br>a) Verschlüssele den Klarbuchstaben S (Position 18). Gib die Geheimposition an: (18 + 10) mod 26.<br>b) Entschlüssele den Geheimbuchstaben B (Position 1). Gib die Klarposition an: (1 − 10 + 26) mod 26.",
+      "eingaben": [
+        {
+          "label": "a) Geheimposition",
+          "antwort": 2,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) Klarposition",
+          "antwort": 17,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "a) 18 + 10 = 28, dann mod 26.",
+        "b) 1 − 10 ist negativ, deshalb + 26 addieren.",
+        "a) ergibt C, b) ergibt R."
+      ],
+      "loesungsweg": "a) (18 + 10) mod 26 = 28 mod 26 = 2 (Buchstabe C). b) (1 − 10 + 26) mod 26 = 17 mod 26 = 17 (Buchstabe R). Das Plus 26 sorgt dafür, dass man nicht ins Negative rutscht.",
+      "kc": [
+        "daten-und-ihre-spuren"
+      ]
     }
   ]
 }

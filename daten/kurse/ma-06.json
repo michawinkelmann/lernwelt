@@ -1,2780 +1,3266 @@
 {
-  "version": 1,
-  "kurs": "ma-06",
-  "fach": "mathematik",
-  "stufe": "klasse-6",
-  "titel": "Mathematik · Klasse 6",
-  "untertitel": "Lernbüro-Pilot: Bruchrechnung als Selbstlern-Einheit",
-  "zweig": [
-    "gym",
-    "rs"
-  ],
-  "stand": "2026-06-13",
-  "taktung": "wochenplan",
-  "checkpoints": "freischalten",
-  "werkzeuge": [
-    "ampel",
-    "lerntagebuch"
-  ],
-  "hinweis": "Lektionen verweisen nur auf vorhandene Inhalte. Pilot – fachliche Endprüfung durch die Lehrkraft.",
-  "stoffverteilung": [
-    {
-      "wochen": "1–5",
-      "thema": "Bruchrechnung",
-      "lektionen": "5 (Pilot; KC-Richtwert ca. 18)",
-      "kc": "Zahlen & Operationen: Brüche, Rechnen mit Brüchen",
-      "status": "in-arbeit"
+ "version": 1,
+ "kurs": "ma-06",
+ "fach": "mathematik",
+ "stufe": "klasse-6",
+ "titel": "Mathematik · Klasse 6",
+ "untertitel": "Lernbüro-Pilot: Bruchrechnung als Selbstlern-Einheit",
+ "zweig": [
+  "gym",
+  "rs"
+ ],
+ "stand": "2026-06-13",
+ "taktung": "wochenplan",
+ "checkpoints": "freischalten",
+ "werkzeuge": [
+  "ampel",
+  "lerntagebuch"
+ ],
+ "hinweis": "Lektionen verweisen nur auf vorhandene Inhalte. Pilot – fachliche Endprüfung durch die Lehrkraft.",
+ "stoffverteilung": [
+  {
+   "wochen": "1–5",
+   "thema": "Bruchrechnung",
+   "lektionen": "5 (Pilot; KC-Richtwert ca. 18)",
+   "kc": "Zahlen & Operationen: Brüche, Rechnen mit Brüchen",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "6–9",
+   "thema": "Dezimalzahlen",
+   "lektionen": "ca. 12",
+   "kc": "Zahlen & Operationen: Dezimalzahlen, Umrechnen",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "10–12",
+   "thema": "Teilbarkeit und Primzahlen",
+   "lektionen": "ca. 8",
+   "kc": "Zahlen & Operationen: Teilbarkeit, ggT, kgV",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "13–15",
+   "thema": "Kreis und Winkel",
+   "lektionen": "ca. 9",
+   "kc": "Raum und Form: Winkel, Kreisumfang und -fläche",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "16–17",
+   "thema": "Körper und Volumen",
+   "lektionen": "ca. 7",
+   "kc": "Raum und Form: Prismen, Volumen und Oberfläche",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "18",
+   "thema": "Statistische Kennwerte",
+   "lektionen": "ca. 5",
+   "kc": "Daten und Zufall: Mittelwert, Median, Häufigkeit",
+   "status": "in-arbeit"
+  }
+ ],
+ "wochen": [
+  {
+   "nr": 1,
+   "spanne": "Diese Woche",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 1–3 geschafft"
+  },
+  {
+   "nr": 2,
+   "spanne": "Nächste Woche",
+   "lektionen": [
+    "l4",
+    "l5"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 4–5 geschafft"
+  }
+ ],
+ "lektionen": [
+  {
+   "id": "l1",
+   "nr": 1,
+   "titel": "Was ein Bruch bedeutet",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-brueche",
+   "themaPfad": "mathematik/klasse-6/brueche/",
+   "anker": "#br-bedeutung",
+   "ziele": [
+    "Ich kann erklären, was Zähler und Nenner eines Bruchs bedeuten.",
+    "Ich kann den Bruchteil einer Größe berechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Kurze Auffrischung aus Klasse 5 – natürliche Zahlen und Teilen.",
+     "aufgaben": [
+      {
+       "quelle": "ma-05-natuerliche-zahlen",
+       "ids": [
+        "ma-05-nz-001",
+        "ma-05-nz-002"
+       ]
+      }
+     ]
     },
-    {
-      "wochen": "6–9",
-      "thema": "Dezimalzahlen",
-      "lektionen": "ca. 12",
-      "kc": "Zahlen & Operationen: Dezimalzahlen, Umrechnen",
-      "status": "in-arbeit"
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#br-bedeutung",
+     "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
+     "beobachtung": "Schreibe den Bruch $\\frac{3}{4}$ in Worten und erkläre, was Zähler und Nenner bedeuten. Was ergibt $\\frac{4}{4}$?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/brueche/index.html#br-bedeutung"
+     },
+     "sim": {
+      "pfad": "simulationen/mathematik/bruch-werkstatt/index.html",
+      "titel": "Bruch-Werkstatt"
+     }
     },
-    {
-      "wochen": "10–12",
-      "thema": "Teilbarkeit und Primzahlen",
-      "lektionen": "ca. 8",
-      "kc": "Zahlen & Operationen: Teilbarkeit, ggT, kgV",
-      "status": "in-arbeit"
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-001",
+        "ma-06-br-004"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-brueche",
+       "ids": [
+        "ma-06-br-101"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin: Was ist der Unterschied zwischen Zähler und Nenner? Nenne je ein Beispiel."
     },
-    {
-      "wochen": "13–15",
-      "thema": "Kreis und Winkel",
-      "lektionen": "ca. 9",
-      "kc": "Raum und Form: Winkel, Kreisumfang und -fläche",
-      "status": "in-arbeit"
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-002"
+       ]
+      }
+     ],
+     "transfer": "Welchen Bruch des Tages hast du schon erlebt – z. B. $\\frac{1}{2}$ Stunde oder $\\frac{3}{4}$ Liter? Was bedeuten Zähler und Nenner dabei?"
     },
-    {
-      "wochen": "16–17",
-      "thema": "Körper und Volumen",
-      "lektionen": "ca. 7",
-      "kc": "Raum und Form: Prismen, Volumen und Oberfläche",
-      "status": "in-arbeit"
-    },
-    {
-      "wochen": "18",
-      "thema": "Statistische Kennwerte",
-      "lektionen": "ca. 5",
-      "kc": "Daten und Zufall: Mittelwert, Median, Häufigkeit",
-      "status": "in-arbeit"
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Bruch-Paare im Trainingsraum",
+       "href": "lernspiele/bruch-paare/index.html"
+      }
+     ]
     }
-  ],
-  "wochen": [
-    {
-      "nr": 1,
-      "spanne": "Diese Woche",
-      "lektionen": [
-        "l1",
-        "l2",
-        "l3"
-      ],
-      "mindestmarke": "Basis-Spur von Lektion 1–3 geschafft"
+   }
+  },
+  {
+   "id": "l2",
+   "nr": 2,
+   "titel": "Erweitern und Kürzen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-brueche",
+   "themaPfad": "mathematik/klasse-6/brueche/",
+   "anker": "#br-erweitern-kuerzen",
+   "ziele": [
+    "Ich kann einen Bruch vollständig kürzen.",
+    "Ich kann Brüche durch Erweitern gleichnamig machen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Bruchbedeutung aus Lektion 1.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-001"
+       ]
+      }
+     ]
     },
-    {
-      "nr": 2,
-      "spanne": "Nächste Woche",
-      "lektionen": [
-        "l4",
-        "l5"
-      ],
-      "mindestmarke": "Basis-Spur von Lektion 4–5 geschafft"
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#br-erweitern-kuerzen",
+     "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
+     "beobachtung": "Warum verändert Kürzen den Wert eines Bruchs nicht? Erkläre es am Beispiel $\\frac{8}{12} = \\frac{2}{3}$.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/brueche/index.html#br-erweitern-kuerzen"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-002",
+        "ma-06-br-003"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-011"
+       ]
+      }
+     ],
+     "partner": "Prüft gegenseitig: Kürzt $\\frac{18}{24}$ so weit wie möglich. Seid ihr auf demselben Weg?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-004"
+       ]
+      }
+     ],
+     "transfer": "$\\frac{6}{9}$ und $\\frac{10}{15}$ – sind das gleichwertige Brüche? Wie kannst du das schnell prüfen?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Bruch-Paare im Trainingsraum",
+       "href": "lernspiele/bruch-paare/index.html"
+      }
+     ]
     }
-  ],
-  "lektionen": [
-    {
-      "id": "l1",
-      "nr": 1,
-      "titel": "Was ein Bruch bedeutet",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-brueche",
-      "themaPfad": "mathematik/klasse-6/brueche/",
-      "anker": "#br-bedeutung",
-      "ziele": [
-        "Ich kann erklären, was Zähler und Nenner eines Bruchs bedeuten.",
-        "Ich kann den Bruchteil einer Größe berechnen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Kurze Auffrischung aus Klasse 5 – natürliche Zahlen und Teilen.",
-          "aufgaben": [
-            {
-              "quelle": "ma-05-natuerliche-zahlen",
-              "ids": [
-                "ma-05-nz-001",
-                "ma-05-nz-002"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#br-bedeutung",
-          "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
-          "beobachtung": "Schreibe den Bruch $\\frac{3}{4}$ in Worten und erkläre, was Zähler und Nenner bedeuten. Was ergibt $\\frac{4}{4}$?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/brueche/index.html#br-bedeutung"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-001",
-                "ma-06-br-004"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-005"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-brueche",
-              "ids": [
-                "ma-06-br-101"
-              ]
-            }
-          ],
-          "partner": "Erkläre deiner Sitznachbarin: Was ist der Unterschied zwischen Zähler und Nenner? Nenne je ein Beispiel."
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-002"
-              ]
-            }
-          ],
-          "transfer": "Welchen Bruch des Tages hast du schon erlebt – z. B. $\\frac{1}{2}$ Stunde oder $\\frac{3}{4}$ Liter? Was bedeuten Zähler und Nenner dabei?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Bruch-Paare im Trainingsraum",
-              "href": "lernspiele/bruch-paare/index.html"
-            }
-          ]
-        }
+   }
+  },
+  {
+   "id": "l3",
+   "nr": 3,
+   "titel": "Brüche vergleichen und ordnen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-brueche",
+   "themaPfad": "mathematik/klasse-6/brueche/",
+   "anker": "#br-vergleichen",
+   "ziele": [
+    "Ich kann Brüche durch Gleichnamigmachen vergleichen.",
+    "Ich kann mehrere Brüche der Größe nach ordnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Erweitern aus Lektion 2.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-003"
+       ]
       }
+     ]
     },
-    {
-      "id": "l2",
-      "nr": 2,
-      "titel": "Erweitern und Kürzen",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-brueche",
-      "themaPfad": "mathematik/klasse-6/brueche/",
-      "anker": "#br-erweitern-kuerzen",
-      "ziele": [
-        "Ich kann einen Bruch vollständig kürzen.",
-        "Ich kann Brüche durch Erweitern gleichnamig machen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Bruchbedeutung aus Lektion 1.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-001"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#br-erweitern-kuerzen",
-          "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
-          "beobachtung": "Warum verändert Kürzen den Wert eines Bruchs nicht? Erkläre es am Beispiel $\\frac{8}{12} = \\frac{2}{3}$.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/brueche/index.html#br-erweitern-kuerzen"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-002",
-                "ma-06-br-003"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-005"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-011"
-              ]
-            }
-          ],
-          "partner": "Prüft gegenseitig: Kürzt $\\frac{18}{24}$ so weit wie möglich. Seid ihr auf demselben Weg?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-004"
-              ]
-            }
-          ],
-          "transfer": "$\\frac{6}{9}$ und $\\frac{10}{15}$ – sind das gleichwertige Brüche? Wie kannst du das schnell prüfen?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Bruch-Paare im Trainingsraum",
-              "href": "lernspiele/bruch-paare/index.html"
-            }
-          ]
-        }
-      }
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#br-vergleichen",
+     "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
+     "beobachtung": "Warum kann man $\\frac{3}{8}$ und $\\frac{1}{2}$ erst vergleichen, wenn man sie gleichnamig gemacht hat? Welcher Bruch ist größer?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/brueche/index.html#br-vergleichen"
+     }
     },
-    {
-      "id": "l3",
-      "nr": 3,
-      "titel": "Brüche vergleichen und ordnen",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-brueche",
-      "themaPfad": "mathematik/klasse-6/brueche/",
-      "anker": "#br-vergleichen",
-      "ziele": [
-        "Ich kann Brüche durch Gleichnamigmachen vergleichen.",
-        "Ich kann mehrere Brüche der Größe nach ordnen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Erweitern aus Lektion 2.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-003"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#br-vergleichen",
-          "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
-          "beobachtung": "Warum kann man $\\frac{3}{8}$ und $\\frac{1}{2}$ erst vergleichen, wenn man sie gleichnamig gemacht hat? Welcher Bruch ist größer?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/brueche/index.html#br-vergleichen"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-005"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-010"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-brueche",
-              "ids": [
-                "ma-06-br-102"
-              ]
-            }
-          ],
-          "partner": "Stellt euch gegenseitig je zwei Brüche vor – wer findet schneller den Hauptnenner?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-008"
-              ]
-            }
-          ],
-          "transfer": "Ordne $\\frac{1}{3}$, $\\frac{1}{2}$, $\\frac{2}{5}$ der Größe nach. Wie bist du vorgegangen?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Bruch-Paare im Trainingsraum",
-              "href": "lernspiele/bruch-paare/index.html"
-            }
-          ]
-        }
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-005"
+       ]
       }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-010"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-brueche",
+       "ids": [
+        "ma-06-br-102"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig je zwei Brüche vor – wer findet schneller den Hauptnenner?"
     },
-    {
-      "id": "l4",
-      "nr": 4,
-      "titel": "Addieren und Subtrahieren",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-brueche",
-      "themaPfad": "mathematik/klasse-6/brueche/",
-      "anker": "#br-add-sub",
-      "ziele": [
-        "Ich kann gleichnamige Brüche addieren und subtrahieren.",
-        "Ich kann ungleichnamige Brüche durch Gleichnamigmachen addieren und subtrahieren."
-      ],
-      "stopppunkt": {
-        "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Warum kann man Brüche nicht einfach Nenner plus Nenner addieren? Sammelt an der Tafel, was ‘gleichnamig machen‘ bedeutet."
-      },
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Vergleichen aus Lektion 3.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-005"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#br-add-sub",
-          "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
-          "beobachtung": "Warum ist $\\frac{1}{2} + \\frac{1}{3} \\neq \\frac{2}{5}$? Zeige den richtigen Rechenweg für dieses Beispiel.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/brueche/index.html#br-add-sub"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-004"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-006",
-                "ma-06-br-007"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-012"
-              ]
-            }
-          ],
-          "partner": "Erkläre: Warum bleibt der Nenner beim Addieren gleich, sobald die Brüche gleichnamig sind?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-009"
-              ]
-            }
-          ],
-          "transfer": "Ein Rezept braucht $\\frac{3}{4}\\,\\text{l}$ Milch, du hast $\\frac{1}{2}\\,\\text{l}$ – wie viel fehlt noch? Rechne im Kopf."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Bruch-Paare im Trainingsraum",
-              "href": "lernspiele/bruch-paare/index.html"
-            }
-          ]
-        }
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-008"
+       ]
       }
+     ],
+     "transfer": "Ordne $\\frac{1}{3}$, $\\frac{1}{2}$, $\\frac{2}{5}$ der Größe nach. Wie bist du vorgegangen?"
     },
-    {
-      "id": "l5",
-      "nr": 5,
-      "titel": "Multiplizieren und Dividieren",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-brueche",
-      "themaPfad": "mathematik/klasse-6/brueche/",
-      "anker": "#br-mal-geteilt",
-      "ziele": [
-        "Ich kann Brüche miteinander multiplizieren.",
-        "Ich kann durch einen Bruch dividieren, indem ich mit dem Kehrwert multipliziere."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Aufwärmen mit einer Additions-Aufgabe.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-006"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#br-mal-geteilt",
-          "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
-          "beobachtung": "Warum ergibt $3 : \\frac{1}{2} = 6$? Erkläre anschaulich: ‘Wie oft passt $\\frac{1}{2}$ in $3$?‘",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/brueche/index.html#br-mal-geteilt"
-          }
-        },
-        "ueben": {
-          "zeit": 20,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-brueche",
-              "ids": [
-                "ma-06-br-103"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-008",
-                "ma-06-br-009"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-011",
-                "ma-06-br-013"
-              ]
-            }
-          ],
-          "partner": "Stellt euch gegenseitig je eine Aufgabe – eine zum Multiplizieren, eine zum Dividieren durch einen Bruch."
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-012"
-              ]
-            }
-          ],
-          "transfer": "Welcher Rechenweg fällt dir noch schwer – Multiplizieren oder Dividieren durch einen Bruch? Notiere eine offene Frage für das Lerntagebuch."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Bruch-Paare im Trainingsraum",
-              "href": "lernspiele/bruch-paare/index.html"
-            }
-          ]
-        }
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Bruch-Paare im Trainingsraum",
+       "href": "lernspiele/bruch-paare/index.html"
       }
-    },
-    {
-      "id": "l6",
-      "nr": 1,
-      "titel": "Dezimalzahlen verstehen: Stellenwerttafel",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-dezimalzahlen",
-      "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
-      "anker": "#dez-stellenwert",
-      "ziele": [
-        "Ich kann erklären, was die Ziffern nach dem Komma bedeuten (Zehntel, Hundertstel, Tausendstel).",
-        "Ich kann eine Dezimalzahl in ihre Stellenwerte zerlegen und in der Stellenwerttafel einordnen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Auffrischung aus dem Thema Brüche — Brüche und ihre Bedeutung.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-brueche",
-              "ids": [
-                "ma-06-br-001",
-                "ma-06-br-002"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#dez-stellenwert",
-          "text": "Lies den Abschnitt und sieh dir die Stellenwerttafel an — alles Wichtige steht direkt hier:",
-          "beobachtung": "Trage die Zahl $3{,}75$ in eine eigene Stellenwerttafel ein. Was bedeutet die $7$ nach dem Komma? Was bedeutet die $5$?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-stellenwert"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-001",
-                "ma-06-dez-002"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-101"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-102"
-              ]
-            }
-          ],
-          "partner": "Diktiere deiner Sitznachbarin eine Dezimalzahl mit drei Nachkommastellen. Sie ordnet die Ziffern in die Stellenwerttafel ein — dann tauscht ihr."
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-108"
-              ]
-            }
-          ],
-          "transfer": "Erkläre: Warum ist die $0$ in $12{,}304$ so wichtig? Was passiert, wenn man sie weglässt?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l7",
-      "nr": 2,
-      "titel": "Dezimalzahlen vergleichen, ordnen und runden",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-dezimalzahlen",
-      "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
-      "anker": "#dez-vergleichen",
-      "ziele": [
-        "Ich kann Dezimalzahlen stellenweise vergleichen und der Größe nach ordnen.",
-        "Ich kann Dezimalzahlen auf eine bestimmte Stelle runden."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Stellenwerttafel aus Lektion 6.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-001"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#dez-vergleichen",
-          "text": "Lies den Abschnitt — besonders den Trick mit den Endnullen:",
-          "beobachtung": "Warum ist $0{,}8$ größer als $0{,}75$, obwohl $75$ als natürliche Zahl größer als $8$ ist? Erkläre den Vergleich mit Endnullen.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-vergleichen"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-103"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-006",
-                "ma-06-dez-007"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-104"
-              ]
-            }
-          ],
-          "partner": "Stellt euch gegenseitig je drei Dezimalzahlen vor. Wer ordnet sie schneller der Größe nach?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-109"
-              ]
-            }
-          ],
-          "transfer": "Ein Sprung ist $7{,}284\\,\\text{m}$ weit. Runde auf Zehntel und auf ganze Meter. Welche Angabe würdest du im Alltag verwenden?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l8",
-      "nr": 3,
-      "titel": "Dezimalzahlen addieren und subtrahieren",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-dezimalzahlen",
-      "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
-      "anker": "#dez-add-sub",
-      "ziele": [
-        "Ich kann Dezimalzahlen schriftlich addieren und subtrahieren (Komma unter Komma).",
-        "Ich kann Ergebnisse mit einem Überschlag auf Plausibilität prüfen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Vergleichen aus Lektion 7.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-006"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#dez-add-sub",
-          "text": "Lies den Abschnitt — die wichtigste Regel ist: Komma unter Komma:",
-          "beobachtung": "Warum muss beim schriftlichen Addieren das Komma genau untereinander stehen? Zeige am Beispiel $2{,}5 + 0{,}38$, was passiert, wenn man die Kommas nicht ausrichtet.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-add-sub"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-003"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-008"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-105"
-              ]
-            }
-          ],
-          "partner": "Rechnet je eine Additions- und eine Subtraktionsaufgabe und prüft das Ergebnis durch Überschlag."
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-110"
-              ]
-            }
-          ],
-          "transfer": "Du kaufst etwas für $3{,}78\\,\\text{€}$ und bezahlst mit $5\\,\\text{€}$. Erkläre im Kopf, wie du das Wechselgeld schnell berechnest."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l9",
-      "nr": 4,
-      "titel": "Dezimalzahlen multiplizieren und dividieren",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-dezimalzahlen",
-      "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
-      "anker": "#dez-mal-geteilt",
-      "ziele": [
-        "Ich kann Dezimalzahlen miteinander multiplizieren (Nachkommastellen zählen).",
-        "Ich kann Dezimalzahlen dividieren, indem ich das Komma bei beiden Zahlen verschiebt."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Aufwärmen mit einer Add/Sub-Aufgabe.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-003"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#dez-mal-geteilt",
-          "text": "Lies den Abschnitt — merke dir die Kommaverschiebung beim Multiplizieren und Dividieren:",
-          "beobachtung": "Wie viele Nachkommastellen hat das Ergebnis von $0{,}3 \\cdot 0{,}7$? Erkläre die Regel. Und wie machst du aus $3{,}6 : 0{,}4$ eine einfache Division mit natürlichen Zahlen?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-mal-geteilt"
-          }
-        },
-        "ueben": {
-          "zeit": 20,
-          "basis": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-004"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-009",
-                "ma-06-dez-010"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-012",
-                "ma-06-dez-011"
-              ]
-            }
-          ],
-          "partner": "Erkläre der Sitznachbarin: Warum ist $0{,}3 \\cdot 0{,}4 = 0{,}12$ und nicht $1{,}2$?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-111"
-              ]
-            }
-          ],
-          "transfer": "Nenne eine Alltagssituation, in der du eine Dezimalzahl multiplizieren oder durch eine Dezimalzahl dividieren musst. Was berechnest du?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l10",
-      "nr": 5,
-      "titel": "Brüche und Dezimalzahlen",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-dezimalzahlen",
-      "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
-      "anker": "#dez-brueche",
-      "ziele": [
-        "Ich kann einfache Brüche in Dezimalzahlen umwandeln und umgekehrt.",
-        "Ich kann erklären, wann eine Dezimalzahl abbricht und wann sie periodisch wird."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Mul/Div aus Lektion 9.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-004"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#dez-brueche",
-          "text": "Lies den Abschnitt — beide Richtungen sind wichtig: Bruch zu Dezimalzahl und zurück:",
-          "beobachtung": "Wandle $\\frac{3}{4}$ in eine Dezimalzahl um. Welcher Bruch ergibt $0{,}2$? Wie gehst du vor?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-brueche"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-106"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-005"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-107"
-              ]
-            },
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-013"
-              ]
-            }
-          ],
-          "partner": "Nennt euch gegenseitig einen Bruch. Wer kann ihn als Dezimalzahl schreiben — und erklären, warum er abbricht oder nicht?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-112"
-              ]
-            }
-          ],
-          "transfer": "Schreibe $\\frac{1}{5}$, $\\frac{1}{3}$ und $\\frac{1}{4}$ als Dezimalzahlen. Welcher bricht nicht ab? Was sagt dir der Nenner darüber?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l11",
-      "nr": 1,
-      "titel": "Teiler und Vielfache",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-teilbarkeit-und-primzahlen",
-      "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
-      "anker": "#tp-teiler-vielfache",
-      "ziele": [
-        "Ich kann bestimmen, ob eine Zahl Teiler einer anderen ist.",
-        "Ich kann die Teilermenge einer Zahl vollständig bestimmen.",
-        "Ich kann Vielfache einer Zahl aufzählen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Kurze Auffrischung aus Klasse 5 – natürliche Zahlen und Teilen.",
-          "aufgaben": [
-            {
-              "quelle": "ma-05-natuerliche-zahlen",
-              "ids": [
-                "ma-05-nz-001",
-                "ma-05-nz-002"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#tp-teiler-vielfache",
-          "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
-          "beobachtung": "Erkläre mit eigenen Worten: Wann heißt $a$ ein Teiler von $b$? Bestimme $T(12)$ mithilfe von Teiler-Paaren.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-teiler-vielfache"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-001",
-                "ma-06-tp-002"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-004",
-                "ma-06-tp-008"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-011"
-              ]
-            }
-          ],
-          "partner": "Sucht gemeinsam alle Teiler von $48$ durch Teiler-Paare. Vergleicht eure Ergebnisse."
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-101"
-              ]
-            }
-          ],
-          "transfer": "Nenne drei Alltagssituationen, in denen du prüfst, ob eine Zahl durch eine andere teilbar ist – z.B. beim Verteilen, beim Messen oder beim Kacheln."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l12",
-      "nr": 2,
-      "titel": "Teilbarkeitsregeln",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-teilbarkeit-und-primzahlen",
-      "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
-      "anker": "#tp-regeln",
-      "ziele": [
-        "Ich kann die Teilbarkeitsregeln für 2, 3, 4, 5, 9 und 10 anwenden.",
-        "Ich kann bei einer gegebenen Zahl mehrere Teilbarkeitseigenschaften auf einmal bestimmen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Teiler und Vielfache aus Lektion 11.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-002"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#tp-regeln",
-          "text": "Lies den Abschnitt und lerne die Teilbarkeitsregeln – die Quersumme ist dabei der wichtigste Begriff:",
-          "beobachtung": "Welche Teilbarkeitsregel gilt für die $3$? Berechne die Quersumme von $612$ und prüfe, ob $612$ durch $3$, durch $9$ und durch $2$ teilbar ist.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-regeln"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-003"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-005"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-102"
-              ]
-            }
-          ],
-          "partner": "Nennt euch gegenseitig vierstellige Zahlen – wer schafft es, alle Teilbarkeiten auf einmal zu nennen?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-103"
-              ]
-            }
-          ],
-          "transfer": "Erkläre, warum die Quersumme verrät, ob eine Zahl durch $9$ teilbar ist. Nutze die Idee der $99$er- und $9$er-Pakete aus dem Erklärtext."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l13",
-      "nr": 3,
-      "titel": "Primzahlen",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-teilbarkeit-und-primzahlen",
-      "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
-      "anker": "#tp-primzahlen",
-      "ziele": [
-        "Ich kann erklären, was eine Primzahl ist, und Primzahlen von anderen Zahlen unterscheiden.",
-        "Ich kann mit dem Sieb des Eratosthenes Primzahlen in einem Zahlenbereich finden."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Teilbarkeitsregeln aus Lektion 12.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-003"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#tp-primzahlen",
-          "text": "Lies den Abschnitt – besonders das Sieb des Eratosthenes:",
-          "beobachtung": "Warum ist die $1$ keine Primzahl? Und warum ist die $2$ die einzige gerade Primzahl? Prüfe außerdem: Ist $91$ eine Primzahl?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-primzahlen"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-104"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-006"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-013"
-              ]
-            }
-          ],
-          "partner": "Erklärt euch gegenseitig das Sieb des Eratosthenes. Wer kann das Prinzip in zwei Sätzen erklären?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-105"
-              ]
-            }
-          ],
-          "transfer": "Nennt eine Primzahl größer als $50$ und erklärt, wie ihr geprüft habt, dass sie wirklich prim ist."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l14",
-      "nr": 4,
-      "titel": "Primfaktorzerlegung",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-teilbarkeit-und-primzahlen",
-      "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
-      "anker": "#tp-primfaktoren",
-      "ziele": [
-        "Ich kann eine Zahl vollständig in ihre Primfaktoren zerlegen (mit Zerlegungsbaum oder Stufendivision).",
-        "Ich kann das Ergebnis als Produkt von Primzahlpotenzen schreiben."
-      ],
-      "stopppunkt": {
-        "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Was bedeutet es, eine Zahl in ihre 'Bausteine' zu zerlegen? Sammelt an der Tafel Beispiele für Zerlegungsbäume."
-      },
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Primzahlen aus Lektion 13.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-006"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#tp-primfaktoren",
-          "text": "Lies den Abschnitt und lerne den Zerlegungsbaum kennen:",
-          "beobachtung": "Zerlege $60$ in einem Zerlegungsbaum. Schreibe das Ergebnis als Produkt von Primzahlpotenzen. Vergleiche mit dem Beispiel im Text.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-primfaktoren"
-          }
-        },
-        "ueben": {
-          "zeit": 20,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-106"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-007"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-107"
-              ]
-            }
-          ],
-          "partner": "Vergleicht eure Zerlegungsbäume für $60$. Kommt ihr auf dasselbe Ergebnis – egal in welcher Reihenfolge ihr vorgeht?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-108"
-              ]
-            }
-          ],
-          "transfer": "Was hat die Primfaktorzerlegung mit dem Kürzen von Brüchen zu tun? Erkläre am Beispiel $\\frac{12}{18}$."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l15",
-      "nr": 5,
-      "titel": "ggT und kgV",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-teilbarkeit-und-primzahlen",
-      "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
-      "anker": "#tp-ggt-kgv",
-      "ziele": [
-        "Ich kann den größten gemeinsamen Teiler (ggT) zweier Zahlen bestimmen.",
-        "Ich kann das kleinste gemeinsame Vielfache (kgV) zweier Zahlen bestimmen.",
-        "Ich kann ggT und kgV für Alltagsprobleme (Fliesen, Busfahrplan) nutzen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Primfaktorzerlegung aus Lektion 14.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-007"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#tp-ggt-kgv",
-          "text": "Lies den Abschnitt – lerne den Unterschied zwischen ggT (größter gemeinsamer Teiler) und kgV (kleinstes gemeinsames Vielfaches):",
-          "beobachtung": "Erkläre den Unterschied: Wofür brauchst du den ggT, wofür das kgV? Nenne je ein Alltagsbeispiel.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-ggt-kgv"
-          }
-        },
-        "ueben": {
-          "zeit": 20,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-109"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-009",
-                "ma-06-tp-010"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-012"
-              ]
-            }
-          ],
-          "partner": "Sucht zusammen ggT und kgV von $18$ und $24$. Wer nutzt den Primfaktorweg, wer die Listen-Methode?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
-              "ids": [
-                "ma-06-tp-110"
-              ]
-            }
-          ],
-          "transfer": "Bei welchen Alltagsaufgaben hilft dir der ggT, und bei welchen das kgV? Gib je ein konkretes Beispiel aus deinem Alltag."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l16",
-      "nr": 1,
-      "titel": "Der Kreis: Radius, Durchmesser und Kreisfiguren",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-kreis-und-winkel",
-      "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
-      "anker": "#kw-kreis",
-      "ziele": [
-        "Ich kann Radius, Durchmesser und Mittelpunkt eines Kreises benennen und berechnen.",
-        "Ich kann einfache Kreisfiguren mit dem Zirkel zeichnen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Auffrischung aus Klasse 5: Grundbegriffe geometrischer Figuren.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-001"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#kw-kreis",
-          "text": "Lies den Abschnitt und lerne die Grundbegriffe des Kreises – alles Wichtige steht direkt hier:",
-          "beobachtung": "Erkläre in eigenen Worten: Was ist der Unterschied zwischen Radius und Durchmesser? Zeichne einen Kreis und trage beide ein.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-kreis"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-101",
-                "ma-06-kw-102"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-004"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-012"
-              ]
-            }
-          ],
-          "partner": "Nennt euch gegenseitig einen Durchmesser – wer rechnet den Radius schneller?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-002"
-              ]
-            }
-          ],
-          "transfer": "Wo begegnest du Kreisen im Alltag? Nenne drei Beispiele und schätze jeweils, ob dir Radius oder Durchmesser bekannter ist."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l17",
-      "nr": 2,
-      "titel": "Winkel und Winkelarten",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-kreis-und-winkel",
-      "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
-      "anker": "#kw-winkelarten",
-      "ziele": [
-        "Ich kann spitze, rechte, stumpfe und gestreckte Winkel unterscheiden.",
-        "Ich kann Winkel in Figuren und Alltagsgegenständen erkennen und benennen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Kreis-Grundbegriffe aus Lektion 16.",
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-101"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#kw-winkelarten",
-          "text": "Lies den Abschnitt und merke dir die vier Winkelarten – alles Wichtige steht direkt hier:",
-          "beobachtung": "Erkläre den Unterschied zwischen einem spitzen und einem stumpfen Winkel. Welcher ist kleiner als 90°, welcher größer?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-winkelarten"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-103"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-006"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-013"
-              ]
-            }
-          ],
-          "partner": "Nennt euch gegenseitig Winkelmaße – wer kann die Winkelart sofort benennen?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-007"
-              ]
-            }
-          ],
-          "transfer": "Welche Winkelart findest du in einem Zimmer am häufigsten? Schau dich um und nenne drei Beispiele."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l18",
-      "nr": 3,
-      "titel": "Winkel messen und zeichnen",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-kreis-und-winkel",
-      "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
-      "anker": "#kw-messen",
-      "ziele": [
-        "Ich kann mit dem Geodreieck Winkel messen.",
-        "Ich kann Winkel einer vorgegebenen Größe zeichnen und dabei die richtige Skala wählen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Winkelarten aus Lektion 17.",
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-103"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#kw-messen",
-          "text": "Lies den Abschnitt – die häufigste Fehlerquelle ist die falsche Skala beim Geodreieck:",
-          "beobachtung": "Erkläre: Warum hat das Geodreieck zwei Skalen? Wann nimmst du die innere, wann die äußere?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-messen"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-003"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "lernbuero/ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-105"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-008"
-              ]
-            }
-          ],
-          "partner": "Zeichnet je einen Winkel auf Papier – wer misst den anderen Winkel richtig?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-005"
-              ]
-            }
-          ],
-          "transfer": "Was ist der häufigste Fehler beim Winkelmessen? Erkläre, wie du ihn vermeidest."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l19",
-      "nr": 4,
-      "titel": "Winkelsummen in Dreiecken und Vierecken",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-kreis-und-winkel",
-      "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
-      "anker": "#kw-winkel",
-      "ziele": [
-        "Ich kenne die Winkelsumme im Dreieck (180°) und im Viereck (360°) und kann sie anwenden.",
-        "Ich kann fehlende Winkel in Dreiecken und Vierecken berechnen."
-      ],
-      "stopppunkt": {
-        "text": "Vor dieser Lektion: Sammelt an der Tafel, was Schülerinnen und Schüler über die Winkelsumme bereits wissen. Zeigt experimentell: Ecken eines Papier-Dreiecks abreißen und zusammenlegen."
-      },
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Winkelarten aus Lektion 17.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-006"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#kw-winkel",
-          "text": "Lies den Abschnitt über Winkelsummen – merke dir die beiden Zahlen 180° und 360°:",
-          "beobachtung": "Ein Dreieck hat zwei Winkel: 65° und 75°. Wie groß ist der dritte? Erkläre deinen Weg.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-winkel"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-104"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "lernbuero/ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-106"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-009"
-              ]
-            }
-          ],
-          "partner": "Gebt euch gegenseitig zwei Winkel eines Dreiecks – wer berechnet den dritten schneller?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-010"
-              ]
-            }
-          ],
-          "transfer": "Warum beträgt die Winkelsumme im Viereck 360° und nicht 180°? Erkläre mit dem Trick: Zwei Dreiecke."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l20",
-      "nr": 5,
-      "titel": "Winkel im Alltag: Uhrzeiger und Kreisaufteilung",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-kreis-und-winkel",
-      "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
-      "anker": "#kw-figuren",
-      "ziele": [
-        "Ich kann Kreisaufteilungen und Winkel in Alltagssituationen berechnen.",
-        "Ich kann Kreisfiguren und Muster mit Zirkel und Geodreieck konstruieren."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Winkelsumme aus Lektion 19.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-009"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#kw-figuren",
-          "text": "Lies den Abschnitt zu Kreisfiguren – denke dabei auch an Uhren und Kreisdiagramme:",
-          "beobachtung": "Ein Kreis hat 360°. Wie groß ist der Winkel zwischen zwei benachbarten Stunden auf dem Zifferblatt? Erkläre.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-figuren"
-          }
-        },
-        "ueben": {
-          "zeit": 20,
-          "basis": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-004",
-                "ma-06-kw-005"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-011"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-107"
-              ]
-            }
-          ],
-          "partner": "Stellt euch gegenseitig eine Uhrzeit – wer berechnet den Winkel zwischen den Zeigern?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-kreis-und-winkel",
-              "ids": [
-                "ma-06-kw-012"
-              ]
-            }
-          ],
-          "transfer": "Erkläre, wie du aus einem Kreisdiagramm die Winkel für einzelne Abschnitte berechnen könntest. Was brauchst du dafür?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l21",
-      "nr": 1,
-      "titel": "Rauminhalt: Was ist ein Volumen?",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-koerper-und-volumen",
-      "themaPfad": "mathematik/klasse-6/koerper-und-volumen/",
-      "anker": "#kv-rauminhalt",
-      "ziele": [
-        "Ich kann erklären, was Volumen bedeutet, und es von Fläche und Oberfläche unterscheiden.",
-        "Ich kann Volumen durch Auszählen von Einheitswürfeln bestimmen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Auffrischung aus Klasse 5: Flächen und Rauminhalt.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-001"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#kv-rauminhalt",
-          "text": "Lies den Abschnitt und kläre: Was beantwortet das Volumen, was beantwortet die Fläche?",
-          "beobachtung": "Ein Quader wird aus kleinen Würfeln aufgebaut. Wie viele Würfel passen in einen Quader von 3 × 2 × 2? Erkläre.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/koerper-und-volumen/index.html#kv-rauminhalt"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-101"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-003"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-012"
-              ]
-            }
-          ],
-          "partner": "Erkläre deiner Sitznachbarin: Warum passt die Einheit cm² nicht zum Volumen – was ist der Unterschied?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-002"
-              ]
-            }
-          ],
-          "transfer": "Nenne je ein Alltagsbeispiel, bei dem Volumen wichtig ist, und eines, bei dem Fläche wichtig ist. Was fragt man in jedem Fall?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l22",
-      "nr": 2,
-      "titel": "Volumen berechnen: Quader und Würfel",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-koerper-und-volumen",
-      "themaPfad": "mathematik/klasse-6/koerper-und-volumen/",
-      "anker": "#kv-formel",
-      "ziele": [
-        "Ich kann das Volumen von Quadern und Würfeln mit der Formel $V = l \\cdot b \\cdot h$ berechnen.",
-        "Ich kann eine unbekannte Kantenlänge aus dem Volumen zurückrechnen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Volumen-Begriff aus Lektion 21.",
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-101"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#kv-formel",
-          "text": "Lies den Abschnitt und lerne die Volumenformel – achte auf die Einheit cm³:",
-          "beobachtung": "Berechne das Volumen einer Stiftebox: $8\\,\\text{cm}$ lang, $5\\,\\text{cm}$ breit, $2\\,\\text{cm}$ hoch. Was bedeutet das Ergebnis?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/koerper-und-volumen/index.html#kv-formel"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-102"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-004",
-                "ma-06-kv-005"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-104"
-              ]
-            }
-          ],
-          "partner": "Gebt euch gegenseitig drei Maße – wer rechnet das Volumen schneller? Prüft das Ergebnis."
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-006"
-              ]
-            }
-          ],
-          "transfer": "Ein Würfel hat das Volumen $125\\,\\text{cm}^3$. Wie lang ist seine Kantenlänge? Wie gehst du vor?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l23",
-      "nr": 3,
-      "titel": "Volumeneinheiten und Liter",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-koerper-und-volumen",
-      "themaPfad": "mathematik/klasse-6/koerper-und-volumen/",
-      "anker": "#kv-einheiten",
-      "ziele": [
-        "Ich kann Volumeneinheiten (mm³, cm³, dm³, m³) ineinander umrechnen.",
-        "Ich kann den Zusammenhang zwischen Kubikdezimeter und Liter nutzen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Volumenformel aus Lektion 22.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-004"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#kv-einheiten",
-          "text": "Lies den Abschnitt – die wichtigste Zahl beim Umrechnen ist 1000:",
-          "beobachtung": "Wie viele cm³ passen in einen dm³? Und wie viele Liter sind $2500\\,\\text{cm}^3$? Erkläre beide Umrechnungen.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/koerper-und-volumen/index.html#kv-einheiten"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-103"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-007",
-                "ma-06-kv-008"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-013"
-              ]
-            }
-          ],
-          "partner": "Nennt euch Volumen in verschiedenen Einheiten – wer rechnet sie am schnellsten um?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-009"
-              ]
-            }
-          ],
-          "transfer": "Ein Aquarium fasst $54\\,\\text{l}$. Wie viele dm³ und wie viele cm³ sind das? Erkläre den Weg."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l24",
-      "nr": 4,
-      "titel": "Oberflächeninhalt, Netze und Schrägbilder",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-koerper-und-volumen",
-      "themaPfad": "mathematik/klasse-6/koerper-und-volumen/",
-      "anker": "#kv-oberflaeche",
-      "ziele": [
-        "Ich kann den Oberflächeninhalt eines Quaders mit der Formel $O = 2(lb + lh + bh)$ berechnen.",
-        "Ich kann Körper aus Netzen erkennen und einfache Netze zeichnen."
-      ],
-      "stopppunkt": {
-        "text": "Vor dieser Lektion: Bringt aufgeklappte Kartons mit. Schülerinnen und Schüler erkennen die sechs Flächen als Netz und verbinden das mit der Formel."
-      },
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Volumenformel und Einheiten aus Lektion 23.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-005"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#kv-oberflaeche",
-          "text": "Lies den Abschnitt – lerne den Unterschied: Volumen füllt, Oberfläche bedeckt:",
-          "beobachtung": "Ein Quader $5 \\times 4 \\times 3\\,\\text{cm}$: Berechne Volumen und Oberfläche. Welche Frage beantwortet jede Größe?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/koerper-und-volumen/index.html#kv-oberflaeche"
-          }
-        },
-        "ueben": {
-          "zeit": 20,
-          "basis": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-003",
-                "ma-06-kv-004"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "lernbuero/ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-105"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-106"
-              ]
-            }
-          ],
-          "partner": "Berechnet gemeinsam Volumen und Oberfläche desselben Quaders. Erklärt, warum es verschiedene Einheiten gibt."
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-koerper-und-volumen",
-              "ids": [
-                "ma-06-kv-011"
-              ]
-            }
-          ],
-          "transfer": "Du möchtest einen Karton bekleben. Brauchst du das Volumen oder den Oberflächeninhalt? Erkläre, wofür du welche Größe nimmst."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l25",
-      "nr": 1,
-      "titel": "Daten sammeln und das arithmetische Mittel",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-statistische-kennwerte",
-      "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
-      "anker": "#sk-blick",
-      "ziele": [
-        "Ich kann das arithmetische Mittel einer Datenreihe berechnen.",
-        "Ich kann das Mittel anschaulich als 'gerechte Verteilung' aller Werte erklären."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Auffrischung: Dezimalzahlen addieren und dividieren.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-dezimalzahlen",
-              "ids": [
-                "ma-06-dez-003"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#sk-blick",
-          "text": "Lies den Abschnitt und lerne das arithmetische Mittel kennen – alles Wichtige steht direkt hier:",
-          "beobachtung": "Erkläre in eigenen Worten: Was bedeutet es, den Durchschnitt zu berechnen? Zeige es am Beispiel 0, 2, 4.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-blick"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-101"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-004"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-012"
-              ]
-            }
-          ],
-          "partner": "Diktiert euch gegenseitig fünf Zahlen. Wer berechnet den Mittelwert schneller?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-001"
-              ]
-            }
-          ],
-          "transfer": "Erkläre: Kann das arithmetische Mittel auch eine Zahl sein, die gar nicht in der Datenreihe vorkommt? Gib ein Beispiel."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l26",
-      "nr": 2,
-      "titel": "Der Median",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-statistische-kennwerte",
-      "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
-      "anker": "#sk-median",
-      "ziele": [
-        "Ich kann den Median einer Datenreihe bestimmen – zuerst sortieren!",
-        "Ich kann den Median auch bei einer geraden Anzahl von Werten berechnen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung arithmetisches Mittel aus Lektion 25.",
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-101"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#sk-median",
-          "text": "Lies den Abschnitt – der wichtigste Schritt beim Median ist das Sortieren:",
-          "beobachtung": "Warum muss man immer zuerst sortieren? Was passiert, wenn man das vergisst? Zeige ein Gegenbeispiel.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-median"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-102"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-005"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-013"
-              ]
-            }
-          ],
-          "partner": "Einer diktiert eine Datenreihe, der andere bestimmt den Median – dann tauscht ihr."
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-002"
-              ]
-            }
-          ],
-          "transfer": "Erkläre: Bei gerader Anzahl von Werten bildet man das Mittel der beiden mittleren. Warum macht das Sinn?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l27",
-      "nr": 3,
-      "titel": "Spannweite und Streuung",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-statistische-kennwerte",
-      "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
-      "anker": "#sk-spannweite",
-      "ziele": [
-        "Ich kann die Spannweite einer Datenreihe berechnen.",
-        "Ich kann erklären, was die Spannweite über die Streuung der Daten aussagt."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Median aus Lektion 26.",
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-102"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#sk-spannweite",
-          "text": "Lies den Abschnitt – lerne, was Spannweite über die Streuung verrät:",
-          "beobachtung": "Zwei Klassen haben denselben Mittelwert, aber unterschiedliche Spannweiten. Was sagt dir das?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-spannweite"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "lernbuero/ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-103"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "lernbuero/ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-104"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-011"
-              ]
-            }
-          ],
-          "partner": "Messt eure Schuhgrößen in der Gruppe. Berechnet Mittelwert und Spannweite. Was fällt auf?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-003"
-              ]
-            }
-          ],
-          "transfer": "Nenne ein Beispiel, bei dem eine große Spannweite problematisch ist, und eines, bei dem sie unproblematisch ist."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l28",
-      "nr": 4,
-      "titel": "Mittel oder Median? Der Ausreißer-Effekt",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-statistische-kennwerte",
-      "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
-      "anker": "#sk-ausreisser",
-      "ziele": [
-        "Ich kann erklären, warum ein Ausreißer das arithmetische Mittel stark verändern kann.",
-        "Ich kann entscheiden, wann Mittelwert und wann Median geeigneter ist."
-      ],
-      "stopppunkt": {
-        "text": "Vor dieser Lektion: Diskussion – was ist 'typisch'? Beispiel Gehalt: Mittelwert vs. Median in einer Firma mit einem Millionärschef."
-      },
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Spannweite aus Lektion 27.",
-          "aufgaben": [
-            {
-              "quelle": "lernbuero/ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-103"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#sk-ausreisser",
-          "text": "Lies den Abschnitt – verstehe, warum ein einzelner Wert das Mittel verzerren kann:",
-          "beobachtung": "Fünf Freunde haben Taschengeld 5, 5, 6, 7, 7 €. Dann kommt jemand mit 30 €. Berechne das neue Mittel und den neuen Median. Was verrät jeder Kennwert?",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-ausreisser"
-          }
-        },
-        "ueben": {
-          "zeit": 18,
-          "basis": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-006"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "lernbuero/ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-105"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-008"
-              ]
-            }
-          ],
-          "partner": "Erfindet eine Datenreihe, bei der Mittelwert und Median sehr verschieden sind. Zeigt sie euch gegenseitig."
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-007"
-              ]
-            }
-          ],
-          "transfer": "In einer Zeitung steht: 'Das mittlere Einkommen in unserer Stadt ist 3200 €.' Überlege, ob hier Mittelwert oder Median gemeint sein sollte."
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "l29",
-      "nr": 5,
-      "titel": "Kennwerte und Diagramme kritisch lesen",
-      "dauer": 45,
-      "status": "online",
-      "thema": "ma-06-statistische-kennwerte",
-      "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
-      "anker": "#sk-kritisch",
-      "ziele": [
-        "Ich kann statistische Kennwerte aus Diagrammen ablesen und berechnen.",
-        "Ich kann Diagramme und Kennwerte kritisch hinterfragen und Fehler erkennen."
-      ],
-      "stopppunkt": null,
-      "phasen": {
-        "ankommen": {
-          "zeit": 3,
-          "hinweis": "Wiederholung Ausreißer-Effekt aus Lektion 28.",
-          "aufgaben": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-005"
-              ]
-            }
-          ]
-        },
-        "verstehen": {
-          "zeit": 12,
-          "anker": "#sk-kritisch",
-          "text": "Lies den Abschnitt – Diagramme können täuschen, wenn man sie nicht kritisch liest:",
-          "beobachtung": "Ein Diagramm beginnt nicht bei 0. Was kann das bewirken? Nenne ein Alltagsbeispiel.",
-          "interaktiv": {
-            "label": "Verständnis-Check auf der Erklärseite",
-            "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-kritisch"
-          }
-        },
-        "ueben": {
-          "zeit": 20,
-          "basis": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-009"
-              ]
-            }
-          ],
-          "standard": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-010",
-                "ma-06-sk-011"
-              ]
-            }
-          ],
-          "plus": [
-            {
-              "quelle": "lernbuero/ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-106"
-              ]
-            }
-          ],
-          "partner": "Sucht in einer Zeitung oder Werbung ein Diagramm. Welche Kennwerte könnt ihr ablesen? Wirkt etwas verdächtig?"
-        },
-        "sichern": {
-          "zeit": 7,
-          "aufgaben": [
-            {
-              "quelle": "ma-06-statistische-kennwerte",
-              "ids": [
-                "ma-06-sk-004"
-              ]
-            }
-          ],
-          "transfer": "Erkläre: Warum reicht ein einziger Kennwert oft nicht aus, um Daten vollständig zu beschreiben?"
-        },
-        "extra": {
-          "zeit": 5,
-          "text": "Wenn Zeit bleibt:",
-          "links": [
-            {
-              "label": "Tagesmischung Mathematik",
-              "href": "lernspiele/tagesmischung/index.html"
-            }
-          ]
-        }
-      }
+     ]
     }
-  ],
-  "bloecke": [
-    {
-      "titel": "Bruchrechnung",
-      "thema": "ma-06-brueche",
-      "lektionen": [
-        "l1",
-        "l2",
-        "l3",
-        "l4",
-        "l5"
-      ],
-      "mindestmarke": "Basis-Spur des Themas geschafft"
+   }
+  },
+  {
+   "id": "l4",
+   "nr": 4,
+   "titel": "Addieren und Subtrahieren",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-brueche",
+   "themaPfad": "mathematik/klasse-6/brueche/",
+   "anker": "#br-add-sub",
+   "ziele": [
+    "Ich kann gleichnamige Brüche addieren und subtrahieren.",
+    "Ich kann ungleichnamige Brüche durch Gleichnamigmachen addieren und subtrahieren."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Warum kann man Brüche nicht einfach Nenner plus Nenner addieren? Sammelt an der Tafel, was ‘gleichnamig machen‘ bedeutet."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Vergleichen aus Lektion 3.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-005"
+       ]
+      }
+     ]
     },
-    {
-      "titel": "Dezimalzahlen",
-      "thema": "ma-06-dezimalzahlen",
-      "lektionen": [
-        "l6",
-        "l7",
-        "l8",
-        "l9",
-        "l10"
-      ],
-      "mindestmarke": "Basis-Spur des Themas geschafft"
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#br-add-sub",
+     "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
+     "beobachtung": "Warum ist $\\frac{1}{2} + \\frac{1}{3} \\neq \\frac{2}{5}$? Zeige den richtigen Rechenweg für dieses Beispiel.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/brueche/index.html#br-add-sub"
+     }
     },
-    {
-      "titel": "Teilbarkeit und Primzahlen",
-      "thema": "ma-06-teilbarkeit-und-primzahlen",
-      "lektionen": [
-        "l11",
-        "l12",
-        "l13",
-        "l14",
-        "l15"
-      ],
-      "mindestmarke": "Basis-Spur des Themas geschafft"
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-004"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-006",
+        "ma-06-br-007"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-012"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Warum bleibt der Nenner beim Addieren gleich, sobald die Brüche gleichnamig sind?"
     },
-    {
-      "titel": "Kreis und Winkel",
-      "thema": "ma-06-kreis-und-winkel",
-      "lektionen": [
-        "l16",
-        "l17",
-        "l18",
-        "l19",
-        "l20"
-      ],
-      "mindestmarke": "Basis-Spur des Themas geschafft"
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-009"
+       ]
+      }
+     ],
+     "transfer": "Ein Rezept braucht $\\frac{3}{4}\\,\\text{l}$ Milch, du hast $\\frac{1}{2}\\,\\text{l}$ – wie viel fehlt noch? Rechne im Kopf."
     },
-    {
-      "titel": "Körper und Volumen",
-      "thema": "ma-06-koerper-und-volumen",
-      "lektionen": [
-        "l21",
-        "l22",
-        "l23",
-        "l24"
-      ],
-      "mindestmarke": "Basis-Spur des Themas geschafft"
-    },
-    {
-      "titel": "Statistische Kennwerte",
-      "thema": "ma-06-statistische-kennwerte",
-      "lektionen": [
-        "l25",
-        "l26",
-        "l27",
-        "l28",
-        "l29"
-      ],
-      "mindestmarke": "Basis-Spur des Themas geschafft"
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Bruch-Paare im Trainingsraum",
+       "href": "lernspiele/bruch-paare/index.html"
+      }
+     ]
     }
-  ]
+   }
+  },
+  {
+   "id": "l5",
+   "nr": 5,
+   "titel": "Multiplizieren und Dividieren",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-brueche",
+   "themaPfad": "mathematik/klasse-6/brueche/",
+   "anker": "#br-mal-geteilt",
+   "ziele": [
+    "Ich kann Brüche miteinander multiplizieren.",
+    "Ich kann durch einen Bruch dividieren, indem ich mit dem Kehrwert multipliziere."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Aufwärmen mit einer Additions-Aufgabe.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-006"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#br-mal-geteilt",
+     "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
+     "beobachtung": "Warum ergibt $3 : \\frac{1}{2} = 6$? Erkläre anschaulich: ‘Wie oft passt $\\frac{1}{2}$ in $3$?‘",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/brueche/index.html#br-mal-geteilt"
+     }
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-brueche",
+       "ids": [
+        "ma-06-br-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-008",
+        "ma-06-br-009"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-011",
+        "ma-06-br-013"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig je eine Aufgabe – eine zum Multiplizieren, eine zum Dividieren durch einen Bruch."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-012"
+       ]
+      }
+     ],
+     "transfer": "Welcher Rechenweg fällt dir noch schwer – Multiplizieren oder Dividieren durch einen Bruch? Notiere eine offene Frage für das Lerntagebuch."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Bruch-Paare im Trainingsraum",
+       "href": "lernspiele/bruch-paare/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l6",
+   "nr": 1,
+   "titel": "Dezimalzahlen verstehen: Stellenwerttafel",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-dezimalzahlen",
+   "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
+   "anker": "#dez-stellenwert",
+   "ziele": [
+    "Ich kann erklären, was die Ziffern nach dem Komma bedeuten (Zehntel, Hundertstel, Tausendstel).",
+    "Ich kann eine Dezimalzahl in ihre Stellenwerte zerlegen und in der Stellenwerttafel einordnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung aus dem Thema Brüche — Brüche und ihre Bedeutung.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-brueche",
+       "ids": [
+        "ma-06-br-001",
+        "ma-06-br-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#dez-stellenwert",
+     "text": "Lies den Abschnitt und sieh dir die Stellenwerttafel an — alles Wichtige steht direkt hier:",
+     "beobachtung": "Trage die Zahl $3{,}75$ in eine eigene Stellenwerttafel ein. Was bedeutet die $7$ nach dem Komma? Was bedeutet die $5$?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-stellenwert"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-001",
+        "ma-06-dez-002"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-101"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-102"
+       ]
+      }
+     ],
+     "partner": "Diktiere deiner Sitznachbarin eine Dezimalzahl mit drei Nachkommastellen. Sie ordnet die Ziffern in die Stellenwerttafel ein — dann tauscht ihr."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-108"
+       ]
+      }
+     ],
+     "transfer": "Erkläre: Warum ist die $0$ in $12{,}304$ so wichtig? Was passiert, wenn man sie weglässt?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l7",
+   "nr": 2,
+   "titel": "Dezimalzahlen vergleichen, ordnen und runden",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-dezimalzahlen",
+   "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
+   "anker": "#dez-vergleichen",
+   "ziele": [
+    "Ich kann Dezimalzahlen stellenweise vergleichen und der Größe nach ordnen.",
+    "Ich kann Dezimalzahlen auf eine bestimmte Stelle runden."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Stellenwerttafel aus Lektion 6.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#dez-vergleichen",
+     "text": "Lies den Abschnitt — besonders den Trick mit den Endnullen:",
+     "beobachtung": "Warum ist $0{,}8$ größer als $0{,}75$, obwohl $75$ als natürliche Zahl größer als $8$ ist? Erkläre den Vergleich mit Endnullen.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-vergleichen"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-006",
+        "ma-06-dez-007"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-104"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig je drei Dezimalzahlen vor. Wer ordnet sie schneller der Größe nach?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-109"
+       ]
+      }
+     ],
+     "transfer": "Ein Sprung ist $7{,}284\\,\\text{m}$ weit. Runde auf Zehntel und auf ganze Meter. Welche Angabe würdest du im Alltag verwenden?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l8",
+   "nr": 3,
+   "titel": "Dezimalzahlen addieren und subtrahieren",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-dezimalzahlen",
+   "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
+   "anker": "#dez-add-sub",
+   "ziele": [
+    "Ich kann Dezimalzahlen schriftlich addieren und subtrahieren (Komma unter Komma).",
+    "Ich kann Ergebnisse mit einem Überschlag auf Plausibilität prüfen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Vergleichen aus Lektion 7.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-006"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#dez-add-sub",
+     "text": "Lies den Abschnitt — die wichtigste Regel ist: Komma unter Komma:",
+     "beobachtung": "Warum muss beim schriftlichen Addieren das Komma genau untereinander stehen? Zeige am Beispiel $2{,}5 + 0{,}38$, was passiert, wenn man die Kommas nicht ausrichtet.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-add-sub"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-003"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-105"
+       ]
+      }
+     ],
+     "partner": "Rechnet je eine Additions- und eine Subtraktionsaufgabe und prüft das Ergebnis durch Überschlag."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-110"
+       ]
+      }
+     ],
+     "transfer": "Du kaufst etwas für $3{,}78\\,\\text{€}$ und bezahlst mit $5\\,\\text{€}$. Erkläre im Kopf, wie du das Wechselgeld schnell berechnest."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l9",
+   "nr": 4,
+   "titel": "Dezimalzahlen multiplizieren und dividieren",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-dezimalzahlen",
+   "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
+   "anker": "#dez-mal-geteilt",
+   "ziele": [
+    "Ich kann Dezimalzahlen miteinander multiplizieren (Nachkommastellen zählen).",
+    "Ich kann Dezimalzahlen dividieren, indem ich das Komma bei beiden Zahlen verschiebt."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Aufwärmen mit einer Add/Sub-Aufgabe.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#dez-mal-geteilt",
+     "text": "Lies den Abschnitt — merke dir die Kommaverschiebung beim Multiplizieren und Dividieren:",
+     "beobachtung": "Wie viele Nachkommastellen hat das Ergebnis von $0{,}3 \\cdot 0{,}7$? Erkläre die Regel. Und wie machst du aus $3{,}6 : 0{,}4$ eine einfache Division mit natürlichen Zahlen?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-mal-geteilt"
+     }
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-004"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-009",
+        "ma-06-dez-010"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-012",
+        "ma-06-dez-011"
+       ]
+      }
+     ],
+     "partner": "Erkläre der Sitznachbarin: Warum ist $0{,}3 \\cdot 0{,}4 = 0{,}12$ und nicht $1{,}2$?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-111"
+       ]
+      }
+     ],
+     "transfer": "Nenne eine Alltagssituation, in der du eine Dezimalzahl multiplizieren oder durch eine Dezimalzahl dividieren musst. Was berechnest du?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l10",
+   "nr": 5,
+   "titel": "Brüche und Dezimalzahlen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-dezimalzahlen",
+   "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
+   "anker": "#dez-brueche",
+   "ziele": [
+    "Ich kann einfache Brüche in Dezimalzahlen umwandeln und umgekehrt.",
+    "Ich kann erklären, wann eine Dezimalzahl abbricht und wann sie periodisch wird."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Mul/Div aus Lektion 9.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-004"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#dez-brueche",
+     "text": "Lies den Abschnitt — beide Richtungen sind wichtig: Bruch zu Dezimalzahl und zurück:",
+     "beobachtung": "Wandle $\\frac{3}{4}$ in eine Dezimalzahl um. Welcher Bruch ergibt $0{,}2$? Wie gehst du vor?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/dezimalzahlen/index.html#dez-brueche"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-106"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-107"
+       ]
+      },
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-013"
+       ]
+      }
+     ],
+     "partner": "Nennt euch gegenseitig einen Bruch. Wer kann ihn als Dezimalzahl schreiben — und erklären, warum er abbricht oder nicht?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-112"
+       ]
+      }
+     ],
+     "transfer": "Schreibe $\\frac{1}{5}$, $\\frac{1}{3}$ und $\\frac{1}{4}$ als Dezimalzahlen. Welcher bricht nicht ab? Was sagt dir der Nenner darüber?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l11",
+   "nr": 1,
+   "titel": "Teiler und Vielfache",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-teilbarkeit-und-primzahlen",
+   "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
+   "anker": "#tp-teiler-vielfache",
+   "ziele": [
+    "Ich kann bestimmen, ob eine Zahl Teiler einer anderen ist.",
+    "Ich kann die Teilermenge einer Zahl vollständig bestimmen.",
+    "Ich kann Vielfache einer Zahl aufzählen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Kurze Auffrischung aus Klasse 5 – natürliche Zahlen und Teilen.",
+     "aufgaben": [
+      {
+       "quelle": "ma-05-natuerliche-zahlen",
+       "ids": [
+        "ma-05-nz-001",
+        "ma-05-nz-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#tp-teiler-vielfache",
+     "text": "Lies den Abschnitt und sieh dir die Beispiele an – alles Wichtige steht direkt hier:",
+     "beobachtung": "Erkläre mit eigenen Worten: Wann heißt $a$ ein Teiler von $b$? Bestimme $T(12)$ mithilfe von Teiler-Paaren.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-teiler-vielfache"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-001",
+        "ma-06-tp-002"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-004",
+        "ma-06-tp-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-011"
+       ]
+      }
+     ],
+     "partner": "Sucht gemeinsam alle Teiler von $48$ durch Teiler-Paare. Vergleicht eure Ergebnisse."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-101"
+       ]
+      }
+     ],
+     "transfer": "Nenne drei Alltagssituationen, in denen du prüfst, ob eine Zahl durch eine andere teilbar ist – z.B. beim Verteilen, beim Messen oder beim Kacheln."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l12",
+   "nr": 2,
+   "titel": "Teilbarkeitsregeln",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-teilbarkeit-und-primzahlen",
+   "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
+   "anker": "#tp-regeln",
+   "ziele": [
+    "Ich kann die Teilbarkeitsregeln für 2, 3, 4, 5, 9 und 10 anwenden.",
+    "Ich kann bei einer gegebenen Zahl mehrere Teilbarkeitseigenschaften auf einmal bestimmen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Teiler und Vielfache aus Lektion 11.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#tp-regeln",
+     "text": "Lies den Abschnitt und lerne die Teilbarkeitsregeln – die Quersumme ist dabei der wichtigste Begriff:",
+     "beobachtung": "Welche Teilbarkeitsregel gilt für die $3$? Berechne die Quersumme von $612$ und prüfe, ob $612$ durch $3$, durch $9$ und durch $2$ teilbar ist.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-regeln"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-003"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-102"
+       ]
+      }
+     ],
+     "partner": "Nennt euch gegenseitig vierstellige Zahlen – wer schafft es, alle Teilbarkeiten auf einmal zu nennen?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-103"
+       ]
+      }
+     ],
+     "transfer": "Erkläre, warum die Quersumme verrät, ob eine Zahl durch $9$ teilbar ist. Nutze die Idee der $99$er- und $9$er-Pakete aus dem Erklärtext."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l13",
+   "nr": 3,
+   "titel": "Primzahlen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-teilbarkeit-und-primzahlen",
+   "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
+   "anker": "#tp-primzahlen",
+   "ziele": [
+    "Ich kann erklären, was eine Primzahl ist, und Primzahlen von anderen Zahlen unterscheiden.",
+    "Ich kann mit dem Sieb des Eratosthenes Primzahlen in einem Zahlenbereich finden."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Teilbarkeitsregeln aus Lektion 12.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#tp-primzahlen",
+     "text": "Lies den Abschnitt – besonders das Sieb des Eratosthenes:",
+     "beobachtung": "Warum ist die $1$ keine Primzahl? Und warum ist die $2$ die einzige gerade Primzahl? Prüfe außerdem: Ist $91$ eine Primzahl?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-primzahlen"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-104"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-006"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-013"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig das Sieb des Eratosthenes. Wer kann das Prinzip in zwei Sätzen erklären?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-105"
+       ]
+      }
+     ],
+     "transfer": "Nennt eine Primzahl größer als $50$ und erklärt, wie ihr geprüft habt, dass sie wirklich prim ist."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l14",
+   "nr": 4,
+   "titel": "Primfaktorzerlegung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-teilbarkeit-und-primzahlen",
+   "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
+   "anker": "#tp-primfaktoren",
+   "ziele": [
+    "Ich kann eine Zahl vollständig in ihre Primfaktoren zerlegen (mit Zerlegungsbaum oder Stufendivision).",
+    "Ich kann das Ergebnis als Produkt von Primzahlpotenzen schreiben."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Was bedeutet es, eine Zahl in ihre 'Bausteine' zu zerlegen? Sammelt an der Tafel Beispiele für Zerlegungsbäume."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Primzahlen aus Lektion 13.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-006"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#tp-primfaktoren",
+     "text": "Lies den Abschnitt und lerne den Zerlegungsbaum kennen:",
+     "beobachtung": "Zerlege $60$ in einem Zerlegungsbaum. Schreibe das Ergebnis als Produkt von Primzahlpotenzen. Vergleiche mit dem Beispiel im Text.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-primfaktoren"
+     }
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-106"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-007"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-107"
+       ]
+      }
+     ],
+     "partner": "Vergleicht eure Zerlegungsbäume für $60$. Kommt ihr auf dasselbe Ergebnis – egal in welcher Reihenfolge ihr vorgeht?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-108"
+       ]
+      }
+     ],
+     "transfer": "Was hat die Primfaktorzerlegung mit dem Kürzen von Brüchen zu tun? Erkläre am Beispiel $\\frac{12}{18}$."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l15",
+   "nr": 5,
+   "titel": "ggT und kgV",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-teilbarkeit-und-primzahlen",
+   "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
+   "anker": "#tp-ggt-kgv",
+   "ziele": [
+    "Ich kann den größten gemeinsamen Teiler (ggT) zweier Zahlen bestimmen.",
+    "Ich kann das kleinste gemeinsame Vielfache (kgV) zweier Zahlen bestimmen.",
+    "Ich kann ggT und kgV für Alltagsprobleme (Fliesen, Busfahrplan) nutzen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Primfaktorzerlegung aus Lektion 14.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-007"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#tp-ggt-kgv",
+     "text": "Lies den Abschnitt – lerne den Unterschied zwischen ggT (größter gemeinsamer Teiler) und kgV (kleinstes gemeinsames Vielfaches):",
+     "beobachtung": "Erkläre den Unterschied: Wofür brauchst du den ggT, wofür das kgV? Nenne je ein Alltagsbeispiel.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/teilbarkeit-und-primzahlen/index.html#tp-ggt-kgv"
+     }
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-109"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-009",
+        "ma-06-tp-010"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-012"
+       ]
+      }
+     ],
+     "partner": "Sucht zusammen ggT und kgV von $18$ und $24$. Wer nutzt den Primfaktorweg, wer die Listen-Methode?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-110"
+       ]
+      }
+     ],
+     "transfer": "Bei welchen Alltagsaufgaben hilft dir der ggT, und bei welchen das kgV? Gib je ein konkretes Beispiel aus deinem Alltag."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l16",
+   "nr": 1,
+   "titel": "Der Kreis: Radius, Durchmesser und Kreisfiguren",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-kreis-und-winkel",
+   "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
+   "anker": "#kw-kreis",
+   "ziele": [
+    "Ich kann Radius, Durchmesser und Mittelpunkt eines Kreises benennen und berechnen.",
+    "Ich kann einfache Kreisfiguren mit dem Zirkel zeichnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung aus Klasse 5: Grundbegriffe geometrischer Figuren.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#kw-kreis",
+     "text": "Lies den Abschnitt und lerne die Grundbegriffe des Kreises – alles Wichtige steht direkt hier:",
+     "beobachtung": "Erkläre in eigenen Worten: Was ist der Unterschied zwischen Radius und Durchmesser? Zeichne einen Kreis und trage beide ein.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-kreis"
+     },
+     "sim": {
+      "pfad": "simulationen/mathematik/winkel-messen/index.html",
+      "titel": "Winkel messen und Winkelarten"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-101",
+        "ma-06-kw-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-004"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-012"
+       ]
+      }
+     ],
+     "partner": "Nennt euch gegenseitig einen Durchmesser – wer rechnet den Radius schneller?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-002"
+       ]
+      }
+     ],
+     "transfer": "Wo begegnest du Kreisen im Alltag? Nenne drei Beispiele und schätze jeweils, ob dir Radius oder Durchmesser bekannter ist."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l17",
+   "nr": 2,
+   "titel": "Winkel und Winkelarten",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-kreis-und-winkel",
+   "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
+   "anker": "#kw-winkelarten",
+   "ziele": [
+    "Ich kann spitze, rechte, stumpfe und gestreckte Winkel unterscheiden.",
+    "Ich kann Winkel in Figuren und Alltagsgegenständen erkennen und benennen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Kreis-Grundbegriffe aus Lektion 16.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-101"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#kw-winkelarten",
+     "text": "Lies den Abschnitt und merke dir die vier Winkelarten – alles Wichtige steht direkt hier:",
+     "beobachtung": "Erkläre den Unterschied zwischen einem spitzen und einem stumpfen Winkel. Welcher ist kleiner als 90°, welcher größer?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-winkelarten"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-006"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-013"
+       ]
+      }
+     ],
+     "partner": "Nennt euch gegenseitig Winkelmaße – wer kann die Winkelart sofort benennen?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-007"
+       ]
+      }
+     ],
+     "transfer": "Welche Winkelart findest du in einem Zimmer am häufigsten? Schau dich um und nenne drei Beispiele."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l18",
+   "nr": 3,
+   "titel": "Winkel messen und zeichnen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-kreis-und-winkel",
+   "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
+   "anker": "#kw-messen",
+   "ziele": [
+    "Ich kann mit dem Geodreieck Winkel messen.",
+    "Ich kann Winkel einer vorgegebenen Größe zeichnen und dabei die richtige Skala wählen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Winkelarten aus Lektion 17.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-103"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#kw-messen",
+     "text": "Lies den Abschnitt – die häufigste Fehlerquelle ist die falsche Skala beim Geodreieck:",
+     "beobachtung": "Erkläre: Warum hat das Geodreieck zwei Skalen? Wann nimmst du die innere, wann die äußere?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-messen"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-003"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-105"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-008"
+       ]
+      }
+     ],
+     "partner": "Zeichnet je einen Winkel auf Papier – wer misst den anderen Winkel richtig?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-005"
+       ]
+      }
+     ],
+     "transfer": "Was ist der häufigste Fehler beim Winkelmessen? Erkläre, wie du ihn vermeidest."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l19",
+   "nr": 4,
+   "titel": "Winkelsummen in Dreiecken und Vierecken",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-kreis-und-winkel",
+   "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
+   "anker": "#kw-winkel",
+   "ziele": [
+    "Ich kenne die Winkelsumme im Dreieck (180°) und im Viereck (360°) und kann sie anwenden.",
+    "Ich kann fehlende Winkel in Dreiecken und Vierecken berechnen."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion: Sammelt an der Tafel, was Schülerinnen und Schüler über die Winkelsumme bereits wissen. Zeigt experimentell: Ecken eines Papier-Dreiecks abreißen und zusammenlegen."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Winkelarten aus Lektion 17.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-006"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#kw-winkel",
+     "text": "Lies den Abschnitt über Winkelsummen – merke dir die beiden Zahlen 180° und 360°:",
+     "beobachtung": "Ein Dreieck hat zwei Winkel: 65° und 75°. Wie groß ist der dritte? Erkläre deinen Weg.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-winkel"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-104"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-106"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-009"
+       ]
+      }
+     ],
+     "partner": "Gebt euch gegenseitig zwei Winkel eines Dreiecks – wer berechnet den dritten schneller?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-010"
+       ]
+      }
+     ],
+     "transfer": "Warum beträgt die Winkelsumme im Viereck 360° und nicht 180°? Erkläre mit dem Trick: Zwei Dreiecke."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l20",
+   "nr": 5,
+   "titel": "Winkel im Alltag: Uhrzeiger und Kreisaufteilung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-kreis-und-winkel",
+   "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
+   "anker": "#kw-figuren",
+   "ziele": [
+    "Ich kann Kreisaufteilungen und Winkel in Alltagssituationen berechnen.",
+    "Ich kann Kreisfiguren und Muster mit Zirkel und Geodreieck konstruieren."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Winkelsumme aus Lektion 19.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-009"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#kw-figuren",
+     "text": "Lies den Abschnitt zu Kreisfiguren – denke dabei auch an Uhren und Kreisdiagramme:",
+     "beobachtung": "Ein Kreis hat 360°. Wie groß ist der Winkel zwischen zwei benachbarten Stunden auf dem Zifferblatt? Erkläre.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/kreis-und-winkel/index.html#kw-figuren"
+     }
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-004",
+        "ma-06-kw-005"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-011"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-107"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig eine Uhrzeit – wer berechnet den Winkel zwischen den Zeigern?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-012"
+       ]
+      }
+     ],
+     "transfer": "Erkläre, wie du aus einem Kreisdiagramm die Winkel für einzelne Abschnitte berechnen könntest. Was brauchst du dafür?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l21",
+   "nr": 1,
+   "titel": "Rauminhalt: Was ist ein Volumen?",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-koerper-und-volumen",
+   "themaPfad": "mathematik/klasse-6/koerper-und-volumen/",
+   "anker": "#kv-rauminhalt",
+   "ziele": [
+    "Ich kann erklären, was Volumen bedeutet, und es von Fläche und Oberfläche unterscheiden.",
+    "Ich kann Volumen durch Auszählen von Einheitswürfeln bestimmen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung aus Klasse 5: Flächen und Rauminhalt.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#kv-rauminhalt",
+     "text": "Lies den Abschnitt und kläre: Was beantwortet das Volumen, was beantwortet die Fläche?",
+     "beobachtung": "Ein Quader wird aus kleinen Würfeln aufgebaut. Wie viele Würfel passen in einen Quader von 3 × 2 × 2? Erkläre.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/koerper-und-volumen/index.html#kv-rauminhalt"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-003"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-012"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin: Warum passt die Einheit cm² nicht zum Volumen – was ist der Unterschied?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-002"
+       ]
+      }
+     ],
+     "transfer": "Nenne je ein Alltagsbeispiel, bei dem Volumen wichtig ist, und eines, bei dem Fläche wichtig ist. Was fragt man in jedem Fall?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l22",
+   "nr": 2,
+   "titel": "Volumen berechnen: Quader und Würfel",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-koerper-und-volumen",
+   "themaPfad": "mathematik/klasse-6/koerper-und-volumen/",
+   "anker": "#kv-formel",
+   "ziele": [
+    "Ich kann das Volumen von Quadern und Würfeln mit der Formel $V = l \\cdot b \\cdot h$ berechnen.",
+    "Ich kann eine unbekannte Kantenlänge aus dem Volumen zurückrechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Volumen-Begriff aus Lektion 21.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-101"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#kv-formel",
+     "text": "Lies den Abschnitt und lerne die Volumenformel – achte auf die Einheit cm³:",
+     "beobachtung": "Berechne das Volumen einer Stiftebox: $8\\,\\text{cm}$ lang, $5\\,\\text{cm}$ breit, $2\\,\\text{cm}$ hoch. Was bedeutet das Ergebnis?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/koerper-und-volumen/index.html#kv-formel"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-004",
+        "ma-06-kv-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-104"
+       ]
+      }
+     ],
+     "partner": "Gebt euch gegenseitig drei Maße – wer rechnet das Volumen schneller? Prüft das Ergebnis."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-006"
+       ]
+      }
+     ],
+     "transfer": "Ein Würfel hat das Volumen $125\\,\\text{cm}^3$. Wie lang ist seine Kantenlänge? Wie gehst du vor?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l23",
+   "nr": 3,
+   "titel": "Volumeneinheiten und Liter",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-koerper-und-volumen",
+   "themaPfad": "mathematik/klasse-6/koerper-und-volumen/",
+   "anker": "#kv-einheiten",
+   "ziele": [
+    "Ich kann Volumeneinheiten (mm³, cm³, dm³, m³) ineinander umrechnen.",
+    "Ich kann den Zusammenhang zwischen Kubikdezimeter und Liter nutzen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Volumenformel aus Lektion 22.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-004"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#kv-einheiten",
+     "text": "Lies den Abschnitt – die wichtigste Zahl beim Umrechnen ist 1000:",
+     "beobachtung": "Wie viele cm³ passen in einen dm³? Und wie viele Liter sind $2500\\,\\text{cm}^3$? Erkläre beide Umrechnungen.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/koerper-und-volumen/index.html#kv-einheiten"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-007",
+        "ma-06-kv-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-013"
+       ]
+      }
+     ],
+     "partner": "Nennt euch Volumen in verschiedenen Einheiten – wer rechnet sie am schnellsten um?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-009"
+       ]
+      }
+     ],
+     "transfer": "Ein Aquarium fasst $54\\,\\text{l}$. Wie viele dm³ und wie viele cm³ sind das? Erkläre den Weg."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l24",
+   "nr": 4,
+   "titel": "Oberflächeninhalt, Netze und Schrägbilder",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-koerper-und-volumen",
+   "themaPfad": "mathematik/klasse-6/koerper-und-volumen/",
+   "anker": "#kv-oberflaeche",
+   "ziele": [
+    "Ich kann den Oberflächeninhalt eines Quaders mit der Formel $O = 2(lb + lh + bh)$ berechnen.",
+    "Ich kann Körper aus Netzen erkennen und einfache Netze zeichnen."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion: Bringt aufgeklappte Kartons mit. Schülerinnen und Schüler erkennen die sechs Flächen als Netz und verbinden das mit der Formel."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Volumenformel und Einheiten aus Lektion 23.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-005"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#kv-oberflaeche",
+     "text": "Lies den Abschnitt – lerne den Unterschied: Volumen füllt, Oberfläche bedeckt:",
+     "beobachtung": "Ein Quader $5 \\times 4 \\times 3\\,\\text{cm}$: Berechne Volumen und Oberfläche. Welche Frage beantwortet jede Größe?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/koerper-und-volumen/index.html#kv-oberflaeche"
+     }
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-003",
+        "ma-06-kv-004"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-105"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-106"
+       ]
+      }
+     ],
+     "partner": "Berechnet gemeinsam Volumen und Oberfläche desselben Quaders. Erklärt, warum es verschiedene Einheiten gibt."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-011"
+       ]
+      }
+     ],
+     "transfer": "Du möchtest einen Karton bekleben. Brauchst du das Volumen oder den Oberflächeninhalt? Erkläre, wofür du welche Größe nimmst."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l25",
+   "nr": 1,
+   "titel": "Daten sammeln und das arithmetische Mittel",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-statistische-kennwerte",
+   "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
+   "anker": "#sk-blick",
+   "ziele": [
+    "Ich kann das arithmetische Mittel einer Datenreihe berechnen.",
+    "Ich kann das Mittel anschaulich als 'gerechte Verteilung' aller Werte erklären."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung: Dezimalzahlen addieren und dividieren.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#sk-blick",
+     "text": "Lies den Abschnitt und lerne das arithmetische Mittel kennen – alles Wichtige steht direkt hier:",
+     "beobachtung": "Erkläre in eigenen Worten: Was bedeutet es, den Durchschnitt zu berechnen? Zeige es am Beispiel 0, 2, 4.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-blick"
+     },
+     "sim": {
+      "pfad": "simulationen/mathematik/mittelwert-median/index.html",
+      "titel": "Mittelwert und Median"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-004"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-012"
+       ]
+      }
+     ],
+     "partner": "Diktiert euch gegenseitig fünf Zahlen. Wer berechnet den Mittelwert schneller?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-001"
+       ]
+      }
+     ],
+     "transfer": "Erkläre: Kann das arithmetische Mittel auch eine Zahl sein, die gar nicht in der Datenreihe vorkommt? Gib ein Beispiel."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l26",
+   "nr": 2,
+   "titel": "Der Median",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-statistische-kennwerte",
+   "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
+   "anker": "#sk-median",
+   "ziele": [
+    "Ich kann den Median einer Datenreihe bestimmen – zuerst sortieren!",
+    "Ich kann den Median auch bei einer geraden Anzahl von Werten berechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung arithmetisches Mittel aus Lektion 25.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-101"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#sk-median",
+     "text": "Lies den Abschnitt – der wichtigste Schritt beim Median ist das Sortieren:",
+     "beobachtung": "Warum muss man immer zuerst sortieren? Was passiert, wenn man das vergisst? Zeige ein Gegenbeispiel.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-median"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-013"
+       ]
+      }
+     ],
+     "partner": "Einer diktiert eine Datenreihe, der andere bestimmt den Median – dann tauscht ihr."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-002"
+       ]
+      }
+     ],
+     "transfer": "Erkläre: Bei gerader Anzahl von Werten bildet man das Mittel der beiden mittleren. Warum macht das Sinn?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l27",
+   "nr": 3,
+   "titel": "Spannweite und Streuung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-statistische-kennwerte",
+   "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
+   "anker": "#sk-spannweite",
+   "ziele": [
+    "Ich kann die Spannweite einer Datenreihe berechnen.",
+    "Ich kann erklären, was die Spannweite über die Streuung der Daten aussagt."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Median aus Lektion 26.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-102"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#sk-spannweite",
+     "text": "Lies den Abschnitt – lerne, was Spannweite über die Streuung verrät:",
+     "beobachtung": "Zwei Klassen haben denselben Mittelwert, aber unterschiedliche Spannweiten. Was sagt dir das?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-spannweite"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-104"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-011"
+       ]
+      }
+     ],
+     "partner": "Messt eure Schuhgrößen in der Gruppe. Berechnet Mittelwert und Spannweite. Was fällt auf?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-003"
+       ]
+      }
+     ],
+     "transfer": "Nenne ein Beispiel, bei dem eine große Spannweite problematisch ist, und eines, bei dem sie unproblematisch ist."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l28",
+   "nr": 4,
+   "titel": "Mittel oder Median? Der Ausreißer-Effekt",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-statistische-kennwerte",
+   "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
+   "anker": "#sk-ausreisser",
+   "ziele": [
+    "Ich kann erklären, warum ein Ausreißer das arithmetische Mittel stark verändern kann.",
+    "Ich kann entscheiden, wann Mittelwert und wann Median geeigneter ist."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion: Diskussion – was ist 'typisch'? Beispiel Gehalt: Mittelwert vs. Median in einer Firma mit einem Millionärschef."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Spannweite aus Lektion 27.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-103"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#sk-ausreisser",
+     "text": "Lies den Abschnitt – verstehe, warum ein einzelner Wert das Mittel verzerren kann:",
+     "beobachtung": "Fünf Freunde haben Taschengeld 5, 5, 6, 7, 7 €. Dann kommt jemand mit 30 €. Berechne das neue Mittel und den neuen Median. Was verrät jeder Kennwert?",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-ausreisser"
+     }
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-006"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-105"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-008"
+       ]
+      }
+     ],
+     "partner": "Erfindet eine Datenreihe, bei der Mittelwert und Median sehr verschieden sind. Zeigt sie euch gegenseitig."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-007"
+       ]
+      }
+     ],
+     "transfer": "In einer Zeitung steht: 'Das mittlere Einkommen in unserer Stadt ist 3200 €.' Überlege, ob hier Mittelwert oder Median gemeint sein sollte."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l29",
+   "nr": 5,
+   "titel": "Kennwerte und Diagramme kritisch lesen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-statistische-kennwerte",
+   "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
+   "anker": "#sk-kritisch",
+   "ziele": [
+    "Ich kann statistische Kennwerte aus Diagrammen ablesen und berechnen.",
+    "Ich kann Diagramme und Kennwerte kritisch hinterfragen und Fehler erkennen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Ausreißer-Effekt aus Lektion 28.",
+     "aufgaben": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-005"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#sk-kritisch",
+     "text": "Lies den Abschnitt – Diagramme können täuschen, wenn man sie nicht kritisch liest:",
+     "beobachtung": "Ein Diagramm beginnt nicht bei 0. Was kann das bewirken? Nenne ein Alltagsbeispiel.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/klasse-6/statistische-kennwerte/index.html#sk-kritisch"
+     }
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-009"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-010",
+        "ma-06-sk-011"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-106"
+       ]
+      }
+     ],
+     "partner": "Sucht in einer Zeitung oder Werbung ein Diagramm. Welche Kennwerte könnt ihr ablesen? Wirkt etwas verdächtig?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-004"
+       ]
+      }
+     ],
+     "transfer": "Erkläre: Warum reicht ein einziger Kennwert oft nicht aus, um Daten vollständig zu beschreiben?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l5b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Bruchrechnung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-brueche",
+   "themaPfad": "mathematik/klasse-6/brueche/",
+   "ziele": [
+    "Ich rechne mit Brüchen (kürzen, addieren, subtrahieren, multiplizieren, dividieren) sicher.",
+    "Ich wende Bruchrechnung auf Sachaufgaben an und denke auch rückwärts."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema Bruchrechnung an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-brueche",
+       "ids": [
+        "ma-06-br-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-brueche",
+       "ids": [
+        "ma-06-br-202",
+        "ma-06-br-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-brueche",
+       "ids": [
+        "ma-06-br-204",
+        "ma-06-br-205",
+        "ma-06-br-206"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-brueche",
+       "ids": [
+        "ma-06-br-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einem selbst gewählten Beispiel, wie man zwei Brüche addiert und warum man sie dafür gleichnamig macht."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-brueche",
+       "ids": [
+        "ma-06-br-208"
+       ]
+      }
+     ],
+     "transfer": "Bei Bruch-Sachaufgaben überlegst du zuerst: Geht es um einen Anteil eines Ganzen (mal nehmen) oder soll ich vom Anteil aufs Ganze zurückrechnen (teilen)? Erst dann rechnest du."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Bruch-Werkstatt – Brüche legen, erweitern und vergleichen",
+       "href": "simulationen/mathematik/bruch-werkstatt/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l10b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Dezimalzahlen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-dezimalzahlen",
+   "themaPfad": "mathematik/klasse-6/dezimalzahlen/",
+   "ziele": [
+    "Ich rechne mit Dezimalzahlen sicher (Stellenwert, runden, Grundrechenarten).",
+    "Ich löse Sachaufgaben mit Geld und Größen und prüfe mein Ergebnis."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema Dezimalzahlen an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-202",
+        "ma-06-dez-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-204",
+        "ma-06-dez-205",
+        "ma-06-dez-206"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einem Kassenzettel-Beispiel, wie man Dezimalzahlen stellengerecht addiert und sinnvoll rundet."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-dezimalzahlen",
+       "ids": [
+        "ma-06-dez-208"
+       ]
+      }
+     ],
+     "transfer": "Bei Geld- und Größenaufgaben schreibst du die Zahlen stellengerecht (Komma unter Komma), rechnest und prüfst am Ende, ob das Ergebnis zur Größenordnung passt."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen: Wiederhole zuerst die Aufgaben, bei denen du heute unsicher warst, und erkläre einer Mitschülerin oder einem Mitschüler einen Lösungsweg in eigenen Worten."
+    }
+   }
+  },
+  {
+   "id": "l15b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Teilbarkeit und Primzahlen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-teilbarkeit-und-primzahlen",
+   "themaPfad": "mathematik/klasse-6/teilbarkeit-und-primzahlen/",
+   "ziele": [
+    "Ich nutze Teilbarkeitsregeln, Primfaktoren, ggT und kgV sicher.",
+    "Ich wende ggT und kgV auf Sachaufgaben an (Fliesen, Stücke, gemeinsame Vielfache)."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema Teilbarkeit und Primzahlen an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-202",
+        "ma-06-tp-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-204",
+        "ma-06-tp-205",
+        "ma-06-tp-206"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einem selbst gewählten Beispiel, wie man ggT und kgV mit Primfaktorzerlegung bestimmt."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-teilbarkeit-und-primzahlen",
+       "ids": [
+        "ma-06-tp-208"
+       ]
+      }
+     ],
+     "transfer": "Bei Aufteilungs-Aufgaben entscheidest du zuerst: Suche ich ein gemeinsames Maß möglichst groß (ggT) oder den nächsten gemeinsamen Zeitpunkt (kgV)? Erst dann rechnest du."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen: Wiederhole zuerst die Aufgaben, bei denen du heute unsicher warst, und erkläre einer Mitschülerin oder einem Mitschüler einen Lösungsweg in eigenen Worten."
+    }
+   }
+  },
+  {
+   "id": "l20b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Kreis und Winkel",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-kreis-und-winkel",
+   "themaPfad": "mathematik/klasse-6/kreis-und-winkel/",
+   "ziele": [
+    "Ich unterscheide Kreis-Begriffe und Winkelarten und rechne mit Radius und Durchmesser.",
+    "Ich berechne fehlende Winkel an gestreckten Winkeln, Vollwinkeln und in Vielecken."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema Kreis und Winkel an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-202",
+        "ma-06-kw-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-204",
+        "ma-06-kw-205",
+        "ma-06-kw-206"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einer Skizze, woran man spitze, rechte und stumpfe Winkel erkennt."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-kreis-und-winkel",
+       "ids": [
+        "ma-06-kw-208"
+       ]
+      }
+     ],
+     "transfer": "Bei Winkelaufgaben überlegst du zuerst, welcher Gesamtwinkel gilt: gestreckt ($180^\\circ$), voll ($360^\\circ$) oder die Winkelsumme im Dreieck bzw. Viereck. Dann ziehst du die bekannten Winkel ab."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Winkel messen mit dem Geodreieck",
+       "href": "simulationen/mathematik/winkel-messen/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l24b",
+   "nr": 5,
+   "titel": "Üben & Anwenden: Körper und Volumen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-körper-und-volumen",
+   "themaPfad": "mathematik/klasse-6/koerper-und-volumen/",
+   "ziele": [
+    "Ich berechne Volumen und Oberfläche von Quader und Würfel sicher.",
+    "Ich rechne Volumeneinheiten um und wende das Wissen auf Sachaufgaben an."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema Körper und Volumen an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-202",
+        "ma-06-kv-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-204",
+        "ma-06-kv-205",
+        "ma-06-kv-206"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einem Karton, worin sich Volumen und Oberfläche unterscheiden."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-koerper-und-volumen",
+       "ids": [
+        "ma-06-kv-208"
+       ]
+      }
+     ],
+     "transfer": "Bei Körper-Aufgaben fragst du zuerst: Geht es um den Rauminhalt (Volumen, Einheit hoch $3$) oder um die Hülle (Oberfläche, Einheit hoch $2$)? Dann wählst du die passende Formel."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Quader füllen – Volumen als gestapelte Einheitswürfel",
+       "href": "simulationen/mathematik/quader-fuellen/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l29b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Statistische Kennwerte",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-06-statistische-kennwerte",
+   "themaPfad": "mathematik/klasse-6/statistische-kennwerte/",
+   "ziele": [
+    "Ich bestimme arithmetisches Mittel, Median und Spannweite sicher.",
+    "Ich erkenne den Einfluss von Ausreißern und wähle den passenden Kennwert."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema statistische Kennwerte an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-202",
+        "ma-06-sk-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-204",
+        "ma-06-sk-205",
+        "ma-06-sk-206"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einer kleinen Datenliste, wann Mittel und wann Median das typische Ergebnis besser beschreibt."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-06-statistische-kennwerte",
+       "ids": [
+        "ma-06-sk-208"
+       ]
+      }
+     ],
+     "transfer": "Bei Datenaufgaben fragst du zuerst: Will ich den Durchschnitt (Mittel) oder den robusten mittleren Wert (Median)? Gibt es Ausreißer, ist der Median oft aussagekräftiger."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Mittelwert und Median im Vergleich",
+       "href": "simulationen/mathematik/mittelwert-median/index.html"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "bloecke": [
+  {
+   "titel": "Bruchrechnung",
+   "thema": "ma-06-brueche",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l5b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Dezimalzahlen",
+   "thema": "ma-06-dezimalzahlen",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10",
+    "l10b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Teilbarkeit und Primzahlen",
+   "thema": "ma-06-teilbarkeit-und-primzahlen",
+   "lektionen": [
+    "l11",
+    "l12",
+    "l13",
+    "l14",
+    "l15",
+    "l15b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Kreis und Winkel",
+   "thema": "ma-06-kreis-und-winkel",
+   "lektionen": [
+    "l16",
+    "l17",
+    "l18",
+    "l19",
+    "l20",
+    "l20b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Körper und Volumen",
+   "thema": "ma-06-koerper-und-volumen",
+   "lektionen": [
+    "l21",
+    "l22",
+    "l23",
+    "l24",
+    "l24b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Statistische Kennwerte",
+   "thema": "ma-06-statistische-kennwerte",
+   "lektionen": [
+    "l25",
+    "l26",
+    "l27",
+    "l28",
+    "l29",
+    "l29b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  }
+ ]
 }

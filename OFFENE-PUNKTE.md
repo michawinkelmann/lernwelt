@@ -66,6 +66,16 @@ Zu schließen:
 
 **Arbeitsweise-Hinweis für die Umsetzung:** Jede neue Erklärseite den bestehenden folgen lassen (Aufbau, Anker-IDs, eingebettete interaktive Elemente, eigene SVG statt fremder Bilder). Danach reguläre Aufgaben (Standard „13 je Thema" wahren, damit die Browser-Testsuite konsistent bleibt) und erst zum Schluss den Lernbüro-Block (ein Agent pro Kurs, kollisionsfrei). Zentrale Verifikation wie gehabt: generischer Validator (Anker/IDs/Dubletten/Zweig), `werkzeuge/check-website.py`, Server-Smoke.
 
+## TODO (vorgemerkt, Juni 2026) — nach Bestätigung des Lernbüro-Piloten
+
+### A) Lernbüro: „Üben & Anwenden"-Blöcke vollständig ausrollen
+- **Pilot fertig** in `daten/kurse/ma-07.json`: drei Konsolidierungs-Lektionen `l10b` (Zuordnungen), `l15b` (Terme & Gleichungen), `l20b` (Rationale Zahlen) — je am Blockende, ohne Verstehen-Phase, mit verschränktem Übungs-Mix (vorhandene Aufgaben quer durch den Block), Anwendungsteil (Sachaufgaben aus `daten/aufgaben/lernbuero/`) und Sim/Lernspiel-Link in „Extra". Renderer-Anpassung: `kurs.js` zählt `phasenGesamt` jetzt nur vorhandene Phasen.
+- **Nach Freigabe durch den Betreiber:** dasselbe Muster auf alle Kurse/Blöcke ausweiten, die noch keine Festigungslektion haben (Blöcke, die NICHT schon mit „Vermischtes/Klassenarbeitstraining" enden). **Wichtig (Lehre aus dem Pilot):** Der Aufgabenpool je Thema ist von den regulären Lektionen meist KOMPLETT aufgebraucht — die Festigungslektion braucht daher **eigene, frische Aufgaben** (neue Zahlen/Kontexte, verschränkt + Anwendung) in `daten/aufgaben/lernbuero/`, NICHT bloß ein Remix der schon bearbeiteten Aufgaben (das fällt den Schülern auf). Im Pilot ma-07 sind dafür je 8 neue Aufgaben (IDs 201–208) entstanden, Überschneidung mit den Vorlektionen = 0.
+
+### B) Fehlende RS-Klassenarbeiten ergänzen (vom Betreiber ausdrücklich gewünscht)
+- **Befund:** Im RS-Filter erscheinen kaum/keine Arbeiten, weil die meisten Sek-I-KAs nur mit `zweig:["gym"]` getaggt sind. Stand: Mathematik Sek I 37× gym / **0× rs**; Informatik Sek I 10× gym / **0× rs**; Physik Sek I 12× gym / 10× rs (Lücken). Oberstufe ist korrekt gym-only.
+- **Auftrag:** Für **alle** RS-relevanten Sek-I-Themen RS-Versionen (Version A, gemäß CLAUDE.md „insgesamt etwas einfacher": kleinschrittiger, mehr AFB I/II, einfachere Zahlen/Kontexte, klarere Sprache) mit dem `klassenarbeit`-Skill erzeugen — Mathematik (Schwerpunkt), Informatik, plus Physik-Lücken auffüllen. Ablauf wie gehabt: `repariere_layout(doc)`, Ablage in `0Ablage/`, dann Eintrag in `daten/klassenarbeiten.json` (zweig `["rs"]`). Wellenweise mit zentraler QA.
+
 ## Wiedereinstieg in einer neuen Session
 
 1. `STATUS.md` lesen (oberster Eintrag = neuester Stand).

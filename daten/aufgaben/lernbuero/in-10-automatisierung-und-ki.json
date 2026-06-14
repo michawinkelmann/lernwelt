@@ -5,16 +5,31 @@
     {
       "id": "in-10-ki-101",
       "typ": "zuordnung",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 1,
       "afb": 1,
       "ergaenzung": "lernbuero",
       "frage": "Ordne jedem Beispiel den richtigen Baustein (Sensor, Verarbeitung oder Aktor) zu.",
       "paare": [
-        { "links": "Temperaturfühler eines Thermostats", "rechts": "Sensor" },
-        { "links": "Heizventil, das sich öffnet",         "rechts": "Aktor" },
-        { "links": "Wenn-Dann-Regel im Steuerchip",        "rechts": "Verarbeitung" },
-        { "links": "Kamera einer Einparkhilfe",            "rechts": "Sensor" }
+        {
+          "links": "Temperaturfühler eines Thermostats",
+          "rechts": "Sensor"
+        },
+        {
+          "links": "Heizventil, das sich öffnet",
+          "rechts": "Aktor"
+        },
+        {
+          "links": "Wenn-Dann-Regel im Steuerchip",
+          "rechts": "Verarbeitung"
+        },
+        {
+          "links": "Kamera einer Einparkhilfe",
+          "rechts": "Sensor"
+        }
       ],
       "tipps": [
         "Sensor: misst eine Größe der Umgebung.",
@@ -22,18 +37,27 @@
         "Verarbeitung: entscheidet anhand von Regeln oder Modellen."
       ],
       "loesungsweg": "Temperaturfühler und Kamera messen — sie sind Sensoren. Das Heizventil handelt — es ist ein Aktor. Die Wenn-Dann-Regel entscheidet — sie gehört zur Verarbeitung.",
-      "kc": ["automatisierung"]
+      "kc": [
+        "automatisierung"
+      ]
     },
     {
       "id": "in-10-ki-102",
       "typ": "numerisch",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 1,
       "afb": 1,
       "ergaenzung": "lernbuero",
-      "frage": "Ein KI-Modell wird mit 100 Bildern trainiert und an 80 davon noch nie gesehenen Testbildern geprüft. Es klassifiziert 72 Testbilder richtig. Wie gross ist seine Genauigkeit in Prozent?",
+      "frage": "Ein KI-Modell wird mit 100 Bildern trainiert und an 80 davon noch nie gesehenen Testbildern geprüft. Es klassifiziert 72 Testbilder richtig. Wie groß ist seine Genauigkeit in Prozent?",
       "eingaben": [
-        { "label": "Genauigkeit in %", "antwort": 90, "toleranz": 0 }
+        {
+          "label": "Genauigkeit in %",
+          "antwort": 90,
+          "toleranz": 0
+        }
       ],
       "tipps": [
         "Genauigkeit = richtige Vorhersagen geteilt durch alle Testfälle.",
@@ -41,22 +65,55 @@
         "$72 \\div 80 = ?$"
       ],
       "loesungsweg": "$\\frac{72}{80} = 0{,}9 = 90\\,\\%$. Wichtig: Gezählt werden nur die Testbilder — nicht die Trainingsbilder.",
-      "kc": ["modellguete"]
+      "kc": [
+        "modellguete"
+      ]
     },
     {
       "id": "in-10-ki-103",
       "typ": "luecke",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 2,
       "afb": 2,
       "ergaenzung": "lernbuero",
       "frage": "Ergänze den Text zu Trainings- und Testdaten.",
       "text": "Beim maschinellen Lernen teilt man die Daten in ___ und ___ auf. Das Modell sieht während des Trainings nur die ___ Daten. Die Genauigkeit wird an den ___ Daten gemessen, damit das Ergebnis nicht beschönigt wird.",
       "luecken": [
-        { "art": "dropdown", "antwort": "Trainingsdaten", "optionen": ["Trainingsdaten", "Testdaten"] },
-        { "art": "dropdown", "antwort": "Testdaten",      "optionen": ["Testdaten", "Trainingsdaten"] },
-        { "art": "dropdown", "antwort": "Trainings",      "optionen": ["Trainings", "Test"] },
-        { "art": "dropdown", "antwort": "Test",           "optionen": ["Test", "Trainings"] }
+        {
+          "art": "dropdown",
+          "antwort": "Trainingsdaten",
+          "optionen": [
+            "Trainingsdaten",
+            "Testdaten"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Testdaten",
+          "optionen": [
+            "Testdaten",
+            "Trainingsdaten"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Trainings",
+          "optionen": [
+            "Trainings",
+            "Test"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Test",
+          "optionen": [
+            "Test",
+            "Trainings"
+          ]
+        }
       ],
       "tipps": [
         "Das Modell lernt an einem Teil der Daten — welchem?",
@@ -64,12 +121,17 @@
         "Wäre die Prüfung an den Trainingsdaten fair?"
       ],
       "loesungsweg": "Aufteilung in Trainingsdaten (zum Lernen) und Testdaten (zur Prüfung). Das Modell sieht im Training nur die Trainingsdaten. Gemessen wird an den Testdaten — sonst könnten die Ergebnisse durch auswendig Lernen beschönigt sein.",
-      "kc": ["modellguete"]
+      "kc": [
+        "modellguete"
+      ]
     },
     {
       "id": "in-10-ki-104",
       "typ": "multiple-choice",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 2,
       "afb": 2,
       "ergaenzung": "lernbuero",
@@ -102,12 +164,16 @@
         "Zwei Aussagen sind richtig."
       ],
       "loesungsweg": "Richtig sind Aussage 1 (Bias aus Daten) und 4 (Transparenz). Falsch: Hohe Genauigkeit kann täuschen (2), und Verantwortung trägt immer der Mensch, nicht das Modell (3).",
-      "kc": ["ki-bewertung"]
+      "kc": [
+        "ki-bewertung"
+      ]
     },
     {
       "id": "in-10-ki-105",
       "typ": "freitext",
-      "zweig": ["gym"],
+      "zweig": [
+        "gym"
+      ],
       "niveau": 3,
       "afb": 3,
       "ergaenzung": "lernbuero",
@@ -119,7 +185,275 @@
         "Wer trägt die Verantwortung — und was folgt daraus für den Einsatz?"
       ],
       "loesungsweg": "Siehe Musterlösung. Kernideen: Chancen = Geschwindigkeit + Unterstützung; Risiken = Falschklassifikation + Bias; Massnahmen = Modell als Hilfsmittel, nicht als Entscheidungsinstanz.",
-      "kc": ["ki-bewertung"]
+      "kc": [
+        "ki-bewertung"
+      ]
+    },
+    {
+      "id": "in-10-ki-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über einen Entscheidungsbaum sind richtig?",
+      "optionen": [
+        {
+          "text": "Ein Entscheidungsbaum trifft eine Entscheidung über eine Folge von Ja/Nein-Fragen.",
+          "richtig": true,
+          "erklaerung": "An jedem Knoten wird eine Frage gestellt und je nach Antwort verzweigt."
+        },
+        {
+          "text": "Die Blätter (Enden) eines Entscheidungsbaums enthalten das Ergebnis bzw. die Klasse.",
+          "richtig": true,
+          "erklaerung": "Am Ende eines Pfades steht die Entscheidung."
+        },
+        {
+          "text": "Ein Entscheidungsbaum kann nur dann Entscheidungen treffen, wenn ein Mensch jede Frage neu beantwortet.",
+          "richtig": false,
+          "erklaerung": "Die Antworten ergeben sich aus den Daten, der Baum läuft selbstständig durch."
+        },
+        {
+          "text": "Jeder innere Knoten verzweigt anhand einer Bedingung weiter.",
+          "richtig": true,
+          "erklaerung": "Genau so entsteht die Baumstruktur."
+        }
+      ],
+      "tipps": [
+        "Stell dir ein Frage-Antwort-Spiel vor, das sich verzweigt.",
+        "Überlege, was am Ende eines Astes steht.",
+        "Genau drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig: Folge von Ja/Nein-Fragen, Blätter enthalten das Ergebnis, innere Knoten verzweigen über Bedingungen. Falsch: Der Baum braucht keinen Menschen, der jede Frage beantwortet – er wertet die vorliegenden Daten automatisch aus.",
+      "kc": [
+        "automatisierung"
+      ]
+    },
+    {
+      "id": "in-10-ki-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein KI-Modell wird an $50$ neuen Testbildern geprüft und klassifiziert $45$ davon richtig. Wie groß ist seine Genauigkeit (Trefferquote) in Prozent?",
+      "eingaben": [
+        {
+          "label": "Genauigkeit",
+          "antwort": 90,
+          "einheit": "%",
+          "toleranz": 0.5
+        }
+      ],
+      "tipps": [
+        "Genauigkeit = richtige Bilder geteilt durch alle Bilder.",
+        "Rechne $45 : 50$.",
+        "Das Ergebnis als Prozentzahl: mit 100 multiplizieren."
+      ],
+      "loesungsweg": "Genauigkeit $= \\frac{45}{50} = 0{,}9 = 90\\,\\%$. Das Modell liegt bei $90$ von $100$ Bildern richtig.",
+      "kc": [
+        "modellguete"
+      ]
+    },
+    {
+      "id": "in-10-ki-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Spam-Filter prüft $40$ E-Mails und ordnet $30$ davon richtig ein. Wie groß ist seine Genauigkeit in Prozent?",
+      "eingaben": [
+        {
+          "label": "Genauigkeit",
+          "antwort": 75,
+          "einheit": "%",
+          "toleranz": 0.5
+        }
+      ],
+      "tipps": [
+        "Genauigkeit = richtige Einordnungen geteilt durch alle.",
+        "Rechne $30 : 40$.",
+        "$30 : 40 = 0{,}75$."
+      ],
+      "loesungsweg": "Genauigkeit $= \\frac{30}{40} = 0{,}75 = 75\\,\\%$.",
+      "kc": [
+        "modellguete"
+      ]
+    },
+    {
+      "id": "in-10-ki-204",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Modell erreicht auf den Trainingsdaten $99\\,\\%$ Genauigkeit, auf neuen Testdaten aber nur $60\\,\\%$. Welche Aussagen passen dazu?",
+      "optionen": [
+        {
+          "text": "Das Modell hat die Trainingsdaten eher auswendig gelernt, statt eine allgemeine Regel zu finden.",
+          "richtig": true,
+          "erklaerung": "Das nennt man Überanpassung (Overfitting)."
+        },
+        {
+          "text": "Auf Testdaten zeigt sich, wie gut das Modell wirklich verallgemeinert.",
+          "richtig": true,
+          "erklaerung": "Deshalb prüft man immer mit ungesehenen Daten."
+        },
+        {
+          "text": "Ein großer Unterschied zwischen Training und Test ist immer ein gutes Zeichen.",
+          "richtig": false,
+          "erklaerung": "Im Gegenteil – er deutet auf Überanpassung hin."
+        },
+        {
+          "text": "Mehr und vielfältigere Trainingsdaten können das Problem verringern.",
+          "richtig": true,
+          "erklaerung": "Vielfältige Daten helfen dem Modell, allgemeine Muster zu lernen."
+        }
+      ],
+      "tipps": [
+        "Wenn Training viel besser ist als Test, hat das Modell schlecht verallgemeinert.",
+        "Der Fachbegriff dafür ist Überanpassung.",
+        "Genau drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig: Das Modell hat auswendig gelernt (Überanpassung), Testdaten zeigen die echte Leistung, und mehr/vielfältigere Daten helfen. Falsch: Ein großer Training-Test-Unterschied ist kein gutes, sondern ein Warnzeichen.",
+      "kc": [
+        "modellguete"
+      ]
+    },
+    {
+      "id": "in-10-ki-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Entscheidungsbaum stellt nacheinander Ja/Nein-Fragen. Jede Frage verzweigt in zwei Äste. Wie viele Blätter (Endpunkte) hat ein vollständiger Baum mit der Tiefe $3$ (also $3$ Fragen hintereinander)?",
+      "eingaben": [
+        {
+          "label": "Blätter",
+          "antwort": 8,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Nach jeder Frage verdoppelt sich die Anzahl der Äste.",
+        "Tiefe 1: 2 Äste, Tiefe 2: 4 Äste, Tiefe 3: ?",
+        "Rechne $2 \\cdot 2 \\cdot 2$."
+      ],
+      "loesungsweg": "Bei jeder Ja/Nein-Frage verdoppeln sich die Wege: $2^3 = 8$. Ein vollständiger Baum mit Tiefe $3$ hat $8$ Blätter.",
+      "kc": [
+        "automatisierung"
+      ]
+    },
+    {
+      "id": "in-10-ki-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Entscheidungsbaum stellt $3$ Ja/Nein-Fragen hintereinander. Wie viele verschiedene Antwortwege (Kombinationen aus Ja und Nein) sind insgesamt möglich?",
+      "eingaben": [
+        {
+          "label": "Antwortwege",
+          "antwort": 8,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Jede Frage hat 2 mögliche Antworten.",
+        "Bei mehreren Fragen multiplizieren sich die Möglichkeiten.",
+        "Rechne $2 \\cdot 2 \\cdot 2$."
+      ],
+      "loesungsweg": "Jede der $3$ Fragen kann mit Ja oder Nein beantwortet werden: $2 \\cdot 2 \\cdot 2 = 2^3 = 8$ verschiedene Wege.",
+      "kc": [
+        "automatisierung"
+      ]
+    },
+    {
+      "id": "in-10-ki-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Bilderkennungs-Modell wird an $200$ Testbildern geprüft und klassifiziert $170$ richtig. Wie groß ist seine Fehlerrate in Prozent? (Fehlerrate = falsche Bilder geteilt durch alle Bilder.)",
+      "eingaben": [
+        {
+          "label": "Fehlerrate",
+          "antwort": 15,
+          "einheit": "%",
+          "toleranz": 0.5
+        }
+      ],
+      "tipps": [
+        "Falsche Bilder: $200 - 170$.",
+        "Teile die falschen Bilder durch alle $200$.",
+        "$\\frac{30}{200} = 0{,}15$."
+      ],
+      "loesungsweg": "Falsch sind $200 - 170 = 30$ Bilder. Fehlerrate $= \\frac{30}{200} = 0{,}15 = 15\\,\\%$. (Die Genauigkeit wäre $85\\,\\%$.)",
+      "kc": [
+        "modellguete"
+      ]
+    },
+    {
+      "id": "in-10-ki-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Schule testet eine KI, die Aufsätze automatisch bewertet.<br>a) Von $100$ Aufsätzen bewertet die KI $80$ genauso wie die Lehrkraft. Wie groß ist die Genauigkeit in Prozent?<br>b) Die KI nutzt einen Entscheidungsbaum mit der Tiefe $2$ (zwei Ja/Nein-Fragen hintereinander). Wie viele Blätter hat dieser Baum?",
+      "eingaben": [
+        {
+          "label": "a) Genauigkeit",
+          "antwort": 80,
+          "einheit": "%",
+          "toleranz": 0.5
+        },
+        {
+          "label": "b) Blätter",
+          "antwort": 4,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "a) Genauigkeit = $80 : 100$, als Prozent.",
+        "b) Bei Tiefe 2 verdoppeln sich die Äste zweimal.",
+        "b) Rechne $2 \\cdot 2$."
+      ],
+      "loesungsweg": "a) Genauigkeit $= \\frac{80}{100} = 80\\,\\%$. b) Bei Tiefe $2$: $2^2 = 4$ Blätter. Wichtig: Auch bei $80\\,\\%$ irrt die KI bei jedem fünften Aufsatz – die Lehrkraft sollte das Ergebnis prüfen.",
+      "kc": [
+        "ki-bewertung"
+      ]
     }
   ]
 }

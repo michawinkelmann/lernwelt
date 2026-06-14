@@ -179,6 +179,268 @@
       "kc": [
         "KC Physik gymnasiale Oberstufe (2022), EF-Wahlmodul Atom-/Kernphysik"
       ]
+    },
+    {
+      "id": "ph-ep-ak-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über radioaktive Zerfälle und den Kernaufbau sind richtig?",
+      "optionen": [
+        {
+          "text": "Beim α-Zerfall sendet der Kern einen Heliumkern $^{4}_{2}\\text{He}$ aus; die Massenzahl sinkt um 4, die Kernladungszahl um 2.",
+          "richtig": true,
+          "erklaerung": "Richtig: Ein α-Teilchen besteht aus 2 Protonen und 2 Neutronen, deshalb $A \\to A-4$ und $Z \\to Z-2$."
+        },
+        {
+          "text": "Beim β⁻-Zerfall wandelt sich ein Neutron in ein Proton um; die Kernladungszahl steigt um 1, die Massenzahl bleibt gleich.",
+          "richtig": true,
+          "erklaerung": "Richtig: Ein Neutron wird zu Proton + Elektron, daher $Z \\to Z+1$ bei gleicher Massenzahl $A$."
+        },
+        {
+          "text": "Bei der γ-Strahlung ändern sich Massenzahl und Kernladungszahl des Kerns.",
+          "richtig": false,
+          "erklaerung": "Falsch: γ-Strahlung ist energiereiche elektromagnetische Strahlung; der angeregte Kern gibt nur Energie ab, $A$ und $Z$ bleiben unverändert."
+        },
+        {
+          "text": "Die Nukleonenzahl (Massenzahl) ist die Anzahl der Protonen im Kern.",
+          "richtig": false,
+          "erklaerung": "Falsch: Die Massenzahl $A$ ist die Summe aus Protonen und Neutronen; die Protonenzahl allein ist die Kernladungszahl $Z$."
+        }
+      ],
+      "tipps": [
+        "Ein α-Teilchen ist ein Heliumkern mit 2 Protonen und 2 Neutronen.",
+        "Bei γ-Strahlung gibt der Kern nur Energie ab.",
+        "Massenzahl $A$ = Protonen + Neutronen. Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 (α-Zerfall: $A-4$, $Z-2$) und Aussage 2 (β⁻-Zerfall: $Z+1$, $A$ gleich). Bei γ-Strahlung bleiben $A$ und $Z$ unverändert, und die Massenzahl $A$ ist die Summe aus Protonen und Neutronen, nicht nur die Protonenzahl.",
+      "kc": [
+        "KC Physik gymnasiale Oberstufe Niedersachsen (2022), Einführungsphase: Atom- und Kernphysik (Wahlmodul)"
+      ]
+    },
+    {
+      "id": "ph-ep-ak-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Probe enthält zu Beginn $N_0 = 8000$ radioaktive Kerne. Die Halbwertszeit beträgt $T = 8{,}0\\,\\text{Tage}$. Wie viele Kerne sind nach $t = 24\\,\\text{Tagen}$ noch nicht zerfallen?",
+      "eingaben": [
+        {
+          "label": "$N$",
+          "antwort": 1000.0,
+          "toleranz": 5.0,
+          "einheit": "Kerne"
+        }
+      ],
+      "tipps": [
+        "Bestimme die Anzahl der Halbwertszeiten: $n = \\frac{t}{T} = \\frac{24}{8{,}0}$.",
+        "Verwende $N(t) = N_0 \\cdot \\left(\\frac{1}{2}\\right)^{t/T}$.",
+        "$N = 8000 \\cdot \\left(\\frac{1}{2}\\right)^3$."
+      ],
+      "loesungsweg": "Anzahl Halbwertszeiten: $n = \\frac{t}{T} = \\frac{24\\,\\text{d}}{8{,}0\\,\\text{d}} = 3$. Damit $N = N_0 \\cdot \\left(\\frac{1}{2}\\right)^3 = 8000 \\cdot \\frac{1}{8} = 1000$ Kerne.",
+      "kc": [
+        "KC Physik gymnasiale Oberstufe Niedersachsen (2022), Einführungsphase: Atom- und Kernphysik (Wahlmodul)"
+      ]
+    },
+    {
+      "id": "ph-ep-ak-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Iod-131 hat die Halbwertszeit $T = 8{,}0\\,\\text{Tage}$. (a) Wie viel Prozent einer Probe sind nach $16\\,\\text{Tagen}$ noch vorhanden? (b) Wie viel Prozent sind bis dahin zerfallen?",
+      "eingaben": [
+        {
+          "label": "Anteil vorhanden",
+          "antwort": 25.0,
+          "toleranz": 0.5,
+          "einheit": "%"
+        },
+        {
+          "label": "Anteil zerfallen",
+          "antwort": 75.0,
+          "toleranz": 0.5,
+          "einheit": "%"
+        }
+      ],
+      "tipps": [
+        "$16\\,\\text{Tage}$ entsprechen $n = \\frac{16}{8{,}0} = 2$ Halbwertszeiten.",
+        "Nach jeder Halbwertszeit halbiert sich der Anteil: $\\left(\\frac{1}{2}\\right)^2$.",
+        "Der zerfallene Anteil ist $100\\,\\% -$ vorhandener Anteil."
+      ],
+      "loesungsweg": "(a) $n = \\frac{16\\,\\text{d}}{8{,}0\\,\\text{d}} = 2$, also vorhandener Anteil $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4} = 25\\,\\%$. (b) Zerfallen: $100\\,\\% - 25\\,\\% = 75\\,\\%$.",
+      "kc": [
+        "KC Physik gymnasiale Oberstufe Niedersachsen (2022), Einführungsphase: Atom- und Kernphysik (Wahlmodul)"
+      ]
+    },
+    {
+      "id": "ph-ep-ak-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Kohlenstoff-14 ($^{14}_{\\,6}\\text{C}$) zerfällt durch β⁻-Zerfall zu Stickstoff. (a) Welche Kernladungszahl $Z$ hat der entstehende Stickstoffkern? (b) Wie viele Neutronen hat er?",
+      "eingaben": [
+        {
+          "label": "$Z$ (Stickstoff)",
+          "antwort": 7,
+          "toleranz": 0,
+          "einheit": "Protonen"
+        },
+        {
+          "label": "$N$ (Neutronen)",
+          "antwort": 7,
+          "toleranz": 0,
+          "einheit": "Neutronen"
+        }
+      ],
+      "tipps": [
+        "Beim β⁻-Zerfall wird ein Neutron zu einem Proton: $Z$ steigt um 1, $A$ bleibt gleich.",
+        "(a) $Z = 6 + 1$. Die Massenzahl bleibt $A = 14$.",
+        "(b) Neutronen: $N = A - Z = 14 - 7$."
+      ],
+      "loesungsweg": "β⁻-Zerfall: $Z \\to Z+1 = 7$ (Stickstoff), Massenzahl bleibt $A = 14$. Neutronenzahl: $N = A - Z = 14 - 7 = 7$. Die Gleichung lautet $^{14}_{\\,6}\\text{C} \\to {}^{14}_{\\,7}\\text{N} + {}^{\\;\\;0}_{-1}\\text{e}$.",
+      "kc": [
+        "KC Physik gymnasiale Oberstufe Niedersachsen (2022), Einführungsphase: Atom- und Kernphysik (Wahlmodul)"
+      ]
+    },
+    {
+      "id": "ph-ep-ak-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Probe enthält zu Beginn $N_0 = 1{,}2 \\cdot 10^{6}$ radioaktive Kerne mit der Halbwertszeit $T = 5{,}0\\,\\text{min}$. Wie viele Kerne sind nach $t = 15\\,\\text{min}$ noch vorhanden?",
+      "eingaben": [
+        {
+          "label": "$N$",
+          "antwort": 150000.0,
+          "toleranz": 1000.0,
+          "einheit": "Kerne"
+        }
+      ],
+      "tipps": [
+        "Anzahl Halbwertszeiten: $n = \\frac{t}{T} = \\frac{15}{5{,}0} = 3$.",
+        "$N = N_0 \\cdot \\left(\\frac{1}{2}\\right)^{n}$.",
+        "$N = 1{,}2 \\cdot 10^{6} \\cdot \\left(\\frac{1}{2}\\right)^3$."
+      ],
+      "loesungsweg": "$n = \\frac{t}{T} = \\frac{15\\,\\text{min}}{5{,}0\\,\\text{min}} = 3$. Damit $N = N_0 \\cdot \\left(\\frac{1}{2}\\right)^3 = 1{,}2 \\cdot 10^{6} \\cdot \\frac{1}{8} = 1{,}5 \\cdot 10^{5} = 150\\,000$ Kerne.",
+      "kc": [
+        "KC Physik gymnasiale Oberstufe Niedersachsen (2022), Einführungsphase: Atom- und Kernphysik (Wahlmodul)"
+      ]
+    },
+    {
+      "id": "ph-ep-ak-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Polonium-210 ($^{210}_{\\,84}\\text{Po}$) zerfällt durch α-Zerfall zu Blei. (a) Welche Massenzahl $A$ hat der entstehende Bleikern? (b) Wie viele Neutronen hat er?",
+      "eingaben": [
+        {
+          "label": "$A$ (Blei)",
+          "antwort": 206,
+          "toleranz": 0,
+          "einheit": "Nukleonen"
+        },
+        {
+          "label": "$N$ (Neutronen)",
+          "antwort": 124,
+          "toleranz": 0,
+          "einheit": "Neutronen"
+        }
+      ],
+      "tipps": [
+        "Beim α-Zerfall fliegt ein Heliumkern $^{4}_{2}\\text{He}$ weg: $A$ sinkt um 4, $Z$ um 2.",
+        "(a) $A = 210 - 4$. Die Kernladungszahl wird $Z = 84 - 2 = 82$ (Blei).",
+        "(b) Neutronen: $N = A - Z = 206 - 82$."
+      ],
+      "loesungsweg": "α-Zerfall: $A = 210 - 4 = 206$ und $Z = 84 - 2 = 82$ (Blei). Neutronenzahl: $N = A - Z = 206 - 82 = 124$. Die Gleichung lautet $^{210}_{\\,84}\\text{Po} \\to {}^{206}_{\\,82}\\text{Pb} + {}^{4}_{2}\\text{He}$.",
+      "kc": [
+        "KC Physik gymnasiale Oberstufe Niedersachsen (2022), Einführungsphase: Atom- und Kernphysik (Wahlmodul)"
+      ]
+    },
+    {
+      "id": "ph-ep-ak-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Bei einer Messung sinkt die Anzahl unzerfallener Kerne in $t = 30\\,\\text{min}$ von $N_0 = 4{,}0 \\cdot 10^{8}$ auf $N = 5{,}0 \\cdot 10^{7}$. Berechne die Halbwertszeit.",
+      "eingaben": [
+        {
+          "label": "$T$",
+          "antwort": 10.0,
+          "toleranz": 0.3,
+          "einheit": "min"
+        }
+      ],
+      "tipps": [
+        "Berechne zuerst, um welchen Faktor die Kernzahl gesunken ist: $\\frac{N_0}{N} = \\frac{4{,}0 \\cdot 10^{8}}{5{,}0 \\cdot 10^{7}}$.",
+        "Der Faktor $8 = 2^3$ bedeutet, dass genau $3$ Halbwertszeiten vergangen sind.",
+        "$T = \\frac{t}{n} = \\frac{30\\,\\text{min}}{3}$."
+      ],
+      "loesungsweg": "Faktor: $\\frac{N_0}{N} = \\frac{4{,}0 \\cdot 10^{8}}{5{,}0 \\cdot 10^{7}} = 8 = 2^3$, also sind $n = 3$ Halbwertszeiten vergangen. Damit $T = \\frac{t}{n} = \\frac{30\\,\\text{min}}{3} = 10\\,\\text{min}$.",
+      "kc": [
+        "KC Physik gymnasiale Oberstufe Niedersachsen (2022), Einführungsphase: Atom- und Kernphysik (Wahlmodul)"
+      ]
+    },
+    {
+      "id": "ph-ep-ak-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Cäsium-137 hat die Halbwertszeit $T = 30\\,\\text{Jahre}$. Eine Probe enthält zu Beginn $N_0 = 6{,}0 \\cdot 10^{10}$ Kerne. (a) Wie viele Kerne sind nach $90\\,\\text{Jahren}$ noch vorhanden? (b) Nach wie vielen vollen Halbwertszeiten ist die Kernzahl erstmals unter $1{,}0 \\cdot 10^{9}$ gesunken?",
+      "eingaben": [
+        {
+          "label": "$N$ (nach 90 a)",
+          "antwort": 7500000000.0,
+          "toleranz": 50000000.0,
+          "einheit": "Kerne"
+        },
+        {
+          "label": "Anzahl Halbwertszeiten",
+          "antwort": 6,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "(a) $90\\,\\text{Jahre}$ sind $n = \\frac{90}{30} = 3$ Halbwertszeiten: $N = N_0 \\cdot \\left(\\frac{1}{2}\\right)^3$.",
+        "(b) Probiere Halbwertszeiten durch: nach $k$ Halbwertszeiten gilt $N = N_0 \\cdot \\left(\\frac{1}{2}\\right)^k$.",
+        "Nach 5 Halbwertszeiten: $6{,}0 \\cdot 10^{10} : 32 = 1{,}875 \\cdot 10^{9}$ (noch zu hoch); nach 6: $: 64$."
+      ],
+      "loesungsweg": "(a) $n = \\frac{90}{30} = 3$, also $N = 6{,}0 \\cdot 10^{10} \\cdot \\left(\\frac{1}{2}\\right)^3 = 6{,}0 \\cdot 10^{10} : 8 = 7{,}5 \\cdot 10^{9}$ Kerne. (b) Nach 5 Halbwertszeiten: $6{,}0 \\cdot 10^{10} : 32 = 1{,}875 \\cdot 10^{9}$ (noch über $10^{9}$); nach 6 Halbwertszeiten: $6{,}0 \\cdot 10^{10} : 64 = 9{,}375 \\cdot 10^{8} < 1{,}0 \\cdot 10^{9}$. Also nach $6$ Halbwertszeiten.",
+      "kc": [
+        "KC Physik gymnasiale Oberstufe Niedersachsen (2022), Einführungsphase: Atom- und Kernphysik (Wahlmodul)"
+      ]
     }
   ]
 }

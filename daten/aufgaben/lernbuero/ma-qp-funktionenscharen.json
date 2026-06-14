@@ -172,6 +172,268 @@
       "kc": [
         "Funktionenschar: Fallunterscheidung nach Parameter"
       ]
+    },
+    {
+      "id": "ma-qp-fs-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über Funktionenscharen sind richtig?",
+      "optionen": [
+        {
+          "text": "Eine Funktionenschar $f_a$ ist eine ganze Familie von Funktionen; jeder Wert des Parameters $a$ liefert eine einzelne Funktion.",
+          "richtig": true,
+          "erklaerung": "Genau so ist eine Schar definiert: Der Parameter wählt eine konkrete Funktion aus der Familie aus."
+        },
+        {
+          "text": "Beim Ableiten einer Scharfunktion nach $x$ wird der Parameter $a$ wie eine Konstante behandelt.",
+          "richtig": true,
+          "erklaerung": "Richtig: $a$ ist beim Ableiten nach $x$ eine feste Zahl, kein Veränderlicher."
+        },
+        {
+          "text": "Ein gemeinsamer Punkt einer Schar ist ein Punkt, durch den jede Kurve der Schar verläuft — unabhängig von $a$.",
+          "richtig": true,
+          "erklaerung": "Richtig: An einem gemeinsamen Punkt ist der Funktionswert von $a$ unabhängig."
+        },
+        {
+          "text": "Die Ortskurve verbindet die Extrempunkte verschiedener Scharkurven und hängt selbst noch vom Parameter $a$ ab.",
+          "richtig": false,
+          "erklaerung": "Falsch: Bei der Ortskurve wird $a$ gerade eliminiert; sie ist parameterfrei."
+        }
+      ],
+      "tipps": [
+        "Der Parameter wählt aus einer Familie genau eine Funktion aus.",
+        "Beim Ableiten nach $x$ ist der Parameter eine Konstante.",
+        "Eine Ortskurve enthält keinen Parameter mehr."
+      ],
+      "loesungsweg": "Richtig sind die Aussagen 1, 2 und 3. Falsch ist Aussage 4: In der Ortskurve wird der Parameter $a$ eliminiert, sie ist parameterfrei.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, Funktionenscharen (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben ist die Funktionenschar $f_a(x)=a\\cdot x^{2}-3x$. Berechne $f_2(2)$, also den Funktionswert für $a=2$ an der Stelle $x=2$.",
+      "eingaben": [
+        {
+          "label": "$f_2(2)=$",
+          "antwort": 2,
+          "einheit": "",
+          "toleranz": 0.001
+        }
+      ],
+      "tipps": [
+        "Setze zuerst $a=2$ ein: $f_2(x)=2x^{2}-3x$.",
+        "Dann setze $x=2$ ein.",
+        "$f_2(2)=2\\cdot 2^{2}-3\\cdot 2$."
+      ],
+      "loesungsweg": "Mit $a=2$: $f_2(x)=2x^{2}-3x$. Einsetzen von $x=2$: $f_2(2)=2\\cdot 4-3\\cdot 2=8-6=2$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, Funktionenscharen, Funktionswerte (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben ist die Schar $f_a(x)=x^{2}-4a\\,x$. An welcher Stelle $x$ liegt die Extremstelle für $a=3$?",
+      "eingaben": [
+        {
+          "label": "$x_E=$",
+          "antwort": 6,
+          "einheit": "",
+          "toleranz": 0.001
+        }
+      ],
+      "tipps": [
+        "Notwendige Bedingung: $f_a'(x)=0$. Der Parameter $a$ bleibt beim Ableiten stehen.",
+        "Es gilt $f_a'(x)=2x-4a$. Allgemein liegt die Extremstelle bei $x=2a$.",
+        "Setze $a=3$ ein."
+      ],
+      "loesungsweg": "Ableiten: $f_a'(x)=2x-4a$. Nullsetzen: $2x-4a=0$, also $x=2a$. Für $a=3$: $x_E=2\\cdot 3=6$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, Extremstellen von Scharen (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Alle Kurven der Schar $f_a(x)=x^{2}+a\\,x-2a$ verlaufen durch einen gemeinsamen Punkt. Bestimme dessen $x$- und $y$-Koordinate.",
+      "eingaben": [
+        {
+          "label": "$x$-Koordinate",
+          "antwort": 2,
+          "einheit": "",
+          "toleranz": 0.001
+        },
+        {
+          "label": "$y$-Koordinate",
+          "antwort": 4,
+          "einheit": "",
+          "toleranz": 0.001
+        }
+      ],
+      "tipps": [
+        "Sortiere die Funktion nach dem Parameter: $f_a(x)=x^{2}+a\\,(x-2)$.",
+        "Damit der Wert unabhängig von $a$ ist, muss der Faktor bei $a$ null sein: $x-2=0$.",
+        "Setze dieses $x$ in die Funktion ein, um $y$ zu erhalten."
+      ],
+      "loesungsweg": "Umsortieren nach $a$: $f_a(x)=x^{2}+a\\,(x-2)$. Der Term mit $a$ verschwindet, wenn $x-2=0$, also $x=2$. Einsetzen: $y=2^{2}+a\\cdot 0=4$. Gemeinsamer Punkt: $(2\\mid 4)$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, gemeinsame Punkte von Scharen (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Die Schar $f_a(x)=x^{2}-2a\\,x+5$ besitzt für jedes $a$ genau einen Tiefpunkt. Gib für $a=3$ die $x$- und $y$-Koordinate des Tiefpunktes an.",
+      "eingaben": [
+        {
+          "label": "$x$-Koordinate",
+          "antwort": 3,
+          "einheit": "",
+          "toleranz": 0.001
+        },
+        {
+          "label": "$y$-Koordinate",
+          "antwort": -4,
+          "einheit": "",
+          "toleranz": 0.001
+        }
+      ],
+      "tipps": [
+        "Ableiten und nullsetzen: $f_a'(x)=2x-2a=0$ liefert allgemein $x=a$.",
+        "Für $a=3$ ist die Tiefpunktstelle also $x=3$.",
+        "Setze $x=3$ in $f_3(x)=x^{2}-6x+5$ ein."
+      ],
+      "loesungsweg": "Ableiten: $f_a'(x)=2x-2a$. Nullsetzen: $x=a$, für $a=3$ also $x=3$. Funktionswert: $f_3(3)=3^{2}-2\\cdot 3\\cdot 3+5=9-18+5=-4$. Tiefpunkt $(3\\mid -4)$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, parameterabhängige Extrempunkte (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Die Tiefpunkte der Schar $f_a(x)=x^{2}-2a\\,x+5$ liegen alle auf einer Ortskurve. Bestimme die Funktionsgleichung der Ortskurve und gib ihren $y$-Wert an der Stelle $x=2$ an.",
+      "eingaben": [
+        {
+          "label": "Ortskurve $y$ bei $x=2$",
+          "antwort": 1,
+          "einheit": "",
+          "toleranz": 0.001
+        }
+      ],
+      "tipps": [
+        "Die Tiefpunkte haben die Koordinaten $(a\\mid 5-a^{2})$ (Stelle $x=a$, Wert $f_a(a)=5-a^{2}$).",
+        "Ersetze in $y=5-a^{2}$ den Parameter durch $a=x$: Ortskurve $y=5-x^{2}$.",
+        "Setze $x=2$ in die Ortskurve ein."
+      ],
+      "loesungsweg": "Tiefpunkt: $x=a$, $y=f_a(a)=a^{2}-2a\\cdot a+5=5-a^{2}$. Mit $a=x$ folgt die Ortskurve $y=5-x^{2}$. An der Stelle $x=2$: $y=5-2^{2}=5-4=1$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, Ortskurven (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Gegeben ist die Schar $f_a(x)=x^{3}-3a^{2}\\,x$ mit $a>0$. Für $a=2$ besitzt der Graph einen Hochpunkt. Gib dessen $x$-Koordinate und den zugehörigen Funktionswert an.",
+      "eingaben": [
+        {
+          "label": "$x$-Koordinate des Hochpunkts",
+          "antwort": -2,
+          "einheit": "",
+          "toleranz": 0.001
+        },
+        {
+          "label": "Funktionswert",
+          "antwort": 16,
+          "einheit": "",
+          "toleranz": 0.001
+        }
+      ],
+      "tipps": [
+        "Ableiten: $f_a'(x)=3x^{2}-3a^{2}$. Nullsetzen liefert $x=\\pm a$.",
+        "Über $f_a''(x)=6x$ erkennst du: bei $x=-a$ ist $f_a''<0$, dort liegt der Hochpunkt.",
+        "Setze $a=2$ und $x=-2$ in $f_a(x)$ ein."
+      ],
+      "loesungsweg": "Ableiten: $f_a'(x)=3x^{2}-3a^{2}=0$ liefert $x=\\pm a$. Zweite Ableitung $f_a''(x)=6x$: bei $x=-a$ ist sie negativ, also Hochpunkt. Für $a=2$ liegt der Hochpunkt bei $x=-2$, der Wert ist $f_2(-2)=(-2)^{3}-3\\cdot 4\\cdot(-2)=-8+24=16$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, Funktionenscharen, parameterabhängige Extrema (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Reihe von Springbrunnen wird durch die Schar $f_a(x)=-a\\,x^{2}+4a\\,x$ beschrieben ($x$ und $f_a$ in Metern, $a>0$). Jeder Wasserstrahl beginnt bei $x=0$ und trifft bei $x=4$ wieder auf den Boden. a) Welche maximale Höhe erreicht der Strahl für $a=0{,}5$? b) Welcher Parameter $a$ gehört zu einem Strahl mit einer maximalen Höhe von $4{,}5\\,\\text{m}$?",
+      "eingaben": [
+        {
+          "label": "a) maximale Höhe bei $a=0{,}5$",
+          "antwort": 2,
+          "einheit": "m",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) Parameter $a$ für 4,5 m",
+          "antwort": 1.125,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Der Scheitel liegt aus Symmetriegründen in der Mitte zwischen den Nullstellen $0$ und $4$, also bei $x=2$.",
+        "Die maximale Höhe ist $f_a(2)=-a\\cdot 4+4a\\cdot 2=4a$.",
+        "a) Setze $a=0{,}5$ in $4a$ ein. b) Löse $4a=4{,}5$ nach $a$ auf."
+      ],
+      "loesungsweg": "Der Scheitel liegt bei $x=2$ (Mitte zwischen $0$ und $4$). Maximale Höhe: $f_a(2)=-a\\cdot 2^{2}+4a\\cdot 2=-4a+8a=4a$. a) Für $a=0{,}5$: $4\\cdot 0{,}5=2\\,\\text{m}$. b) $4a=4{,}5$ liefert $a=\\dfrac{4{,}5}{4}=1{,}125$.",
+      "kc": [
+        "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, Funktionenscharen in Anwendungen (Qualifikationsphase)"
+      ]
     }
   ]
 }

@@ -279,6 +279,9 @@ else if (seite === "experimente") {
   // Experimente-Übersicht erst bei Bedarf laden
   import("./experimente.js").then(m => m.rendereExperimente());
 }
+else if (seite === "simulationen" || seite === "sim-fach") {
+  import("./simulationen.js").then(m => m.rendereSimulationen());
+}
 else if (seite === "lernspiele") {
   // Trainingsraum-Übersicht erst bei Bedarf laden
   import("./lernspiele.js").then(m => m.rendereLernspiele());

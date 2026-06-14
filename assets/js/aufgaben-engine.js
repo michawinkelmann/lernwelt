@@ -405,7 +405,9 @@ function baueNumerischeFelder(eingaben, ziel) {
   kasten.className = "eingaben";
   eingaben.forEach((e, i) => {
     const label = document.createElement("label");
+    const hatGleich = String(e.label || "").includes("=");   // Label enthaelt schon ein "=" -> keins doppeln
     label.innerHTML = `<span class="feld-label">${e.label || "Ergebnis"}</span>
+      ${hatGleich ? "" : `<span class="feld-gleich" aria-hidden="true">=</span>`}
       <input type="text" inputmode="decimal" autocomplete="off" data-index="${i}" aria-label="Antwortfeld ${i + 1}">
       ${e.einheit ? `<span class="einheit">${esc(e.einheit)}</span>` : ""}`;
     kasten.append(label);

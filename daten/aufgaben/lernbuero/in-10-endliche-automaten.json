@@ -5,17 +5,48 @@
     {
       "id": "in-10-ea-101",
       "typ": "luecke",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 1,
       "afb": 1,
       "ergaenzung": "lernbuero",
       "frage": "Verfolge das Drehkreuz (Zustände: Gesperrt, Offen; Eingaben: Münze, Drehen) durch die Sequenz: Münze, Drehen, Münze, Münze.",
       "text": "Start: Gesperrt. Nach Münze: ___. Nach Drehen: ___. Nach Münze: ___. Nach zweiter Münze: ___.",
       "luecken": [
-        { "art": "dropdown", "antwort": "Offen",     "optionen": ["Offen", "Gesperrt"] },
-        { "art": "dropdown", "antwort": "Gesperrt",  "optionen": ["Gesperrt", "Offen"] },
-        { "art": "dropdown", "antwort": "Offen",     "optionen": ["Offen", "Gesperrt"] },
-        { "art": "dropdown", "antwort": "Offen",     "optionen": ["Offen", "Gesperrt"] }
+        {
+          "art": "dropdown",
+          "antwort": "Offen",
+          "optionen": [
+            "Offen",
+            "Gesperrt"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Gesperrt",
+          "optionen": [
+            "Gesperrt",
+            "Offen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Offen",
+          "optionen": [
+            "Offen",
+            "Gesperrt"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Offen",
+          "optionen": [
+            "Offen",
+            "Gesperrt"
+          ]
+        }
       ],
       "tipps": [
         "Münze im Zustand Gesperrt: Übergang nach Offen.",
@@ -23,18 +54,27 @@
         "Münze im Zustand Offen ist ein Selbst-Übergang — der Zustand ändert sich nicht."
       ],
       "loesungsweg": "Start Gesperrt → Münze → Offen → Drehen → Gesperrt → Münze → Offen → Münze (Selbst-Übergang) → Offen. Die zweite Münze bleibt ohne Wirkung auf den Zustand.",
-      "kc": ["automaten"]
+      "kc": [
+        "automaten"
+      ]
     },
     {
       "id": "in-10-ea-102",
       "typ": "numerisch",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 1,
       "afb": 1,
       "ergaenzung": "lernbuero",
       "frage": "Ein endlicher Automat hat $4$ Zustände und arbeitet mit dem Alphabet $\\{0, 1\\}$. Wie viele Einträge hat seine vollständige Übergangstabelle?",
       "eingaben": [
-        { "label": "Einträge", "antwort": 8, "toleranz": 0 }
+        {
+          "label": "Einträge",
+          "antwort": 8,
+          "toleranz": 0
+        }
       ],
       "tipps": [
         "Jeder Zustand bekommt eine Zeile, jedes Eingabezeichen eine Spalte.",
@@ -42,23 +82,47 @@
         "Rechne $4 \\cdot 2$."
       ],
       "loesungsweg": "$4 \\text{ Zustände} \\cdot 2 \\text{ Zeichen} = 8$ Einträge. Jede Zelle gibt den eindeutigen Folgezustand an.",
-      "kc": ["automaten"]
+      "kc": [
+        "automaten"
+      ]
     },
     {
       "id": "in-10-ea-103",
       "typ": "luecke",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 2,
       "afb": 2,
       "ergaenzung": "lernbuero",
       "frage": "Der Wort-Prüfer von der Erklärseite akzeptiert alle Wörter über $\\{a, b\\}$, die auf $b$ enden ($q_0$: Start, $q_1$: akzeptierend; $b \\to q_1$, $a \\to q_0$ aus jedem Zustand). Verfolge das Wort $abba$.",
       "text": "Start: $q_0$. Nach $a$: ___. Nach $b$: ___. Nach $b$: ___. Nach $a$: ___. Das Wort $abba$ wird ___.",
       "luecken": [
-        { "art": "eingabe", "antwort": "q0" },
-        { "art": "eingabe", "antwort": "q1" },
-        { "art": "eingabe", "antwort": "q1" },
-        { "art": "eingabe", "antwort": "q0" },
-        { "art": "dropdown", "antwort": "abgelehnt", "optionen": ["akzeptiert", "abgelehnt"] }
+        {
+          "art": "eingabe",
+          "antwort": "q0"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "q1"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "q1"
+        },
+        {
+          "art": "eingabe",
+          "antwort": "q0"
+        },
+        {
+          "art": "dropdown",
+          "antwort": "abgelehnt",
+          "optionen": [
+            "akzeptiert",
+            "abgelehnt"
+          ]
+        }
       ],
       "tipps": [
         "Lies die Zeichen der Reihe nach: $a$, $b$, $b$, $a$.",
@@ -66,21 +130,42 @@
         "Entscheidend ist der Zustand nach dem letzten Buchstaben."
       ],
       "loesungsweg": "$q_0 \\xrightarrow{a} q_0 \\xrightarrow{b} q_1 \\xrightarrow{b} q_1 \\xrightarrow{a} q_0$. Das Wort endet in $q_0$ — nicht akzeptierend. Klar: $abba$ endet auf $a$, nicht auf $b$.",
-      "kc": ["automaten"]
+      "kc": [
+        "automaten"
+      ]
     },
     {
       "id": "in-10-ea-104",
       "typ": "multiple-choice",
-      "zweig": ["gym", "rs"],
+      "zweig": [
+        "gym",
+        "rs"
+      ],
       "niveau": 2,
       "afb": 2,
       "ergaenzung": "lernbuero",
       "frage": "Der Wort-Prüfer akzeptiert alle Wörter über $\\{a, b\\}$, die auf $b$ enden. Welche der folgenden Wörter werden akzeptiert?",
       "optionen": [
-        { "text": "b",    "richtig": true,  "erklaerung": "Endet auf b — wird akzeptiert." },
-        { "text": "ba",   "richtig": false, "erklaerung": "Endet auf a — wird abgelehnt." },
-        { "text": "abb",  "richtig": true,  "erklaerung": "Endet auf b — wird akzeptiert." },
-        { "text": "baba", "richtig": false, "erklaerung": "Endet auf a — wird abgelehnt." }
+        {
+          "text": "b",
+          "richtig": true,
+          "erklaerung": "Endet auf b — wird akzeptiert."
+        },
+        {
+          "text": "ba",
+          "richtig": false,
+          "erklaerung": "Endet auf a — wird abgelehnt."
+        },
+        {
+          "text": "abb",
+          "richtig": true,
+          "erklaerung": "Endet auf b — wird akzeptiert."
+        },
+        {
+          "text": "baba",
+          "richtig": false,
+          "erklaerung": "Endet auf a — wird abgelehnt."
+        }
       ],
       "tipps": [
         "Schaue nur auf den letzten Buchstaben des Wortes.",
@@ -88,12 +173,16 @@
         "Zwei Wörter werden akzeptiert."
       ],
       "loesungsweg": "Akzeptiert: $b$ (endet auf $b$) und $abb$ (endet auf $b$). Abgelehnt: $ba$ und $baba$ (enden auf $a$).",
-      "kc": ["automaten"]
+      "kc": [
+        "automaten"
+      ]
     },
     {
       "id": "in-10-ea-105",
       "typ": "freitext",
-      "zweig": ["gym"],
+      "zweig": [
+        "gym"
+      ],
       "niveau": 3,
       "afb": 3,
       "ergaenzung": "lernbuero",
@@ -105,7 +194,275 @@
         "Eine $1$ wechselt zwischen gerade und ungerade."
       ],
       "loesungsweg": "Zustand $q_g$: bisher gerade viele 1en. Zustand $q_u$: bisher ungerade viele 1en. Start und Akzeptanzzustand: $q_g$. Übergänge: $q_g \\xrightarrow{0} q_g$, $q_g \\xrightarrow{1} q_u$, $q_u \\xrightarrow{0} q_u$, $q_u \\xrightarrow{1} q_g$.",
-      "kc": ["automaten"]
+      "kc": [
+        "automaten"
+      ]
+    },
+    {
+      "id": "in-10-ea-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über endliche Automaten sind richtig?",
+      "optionen": [
+        {
+          "text": "Ein endlicher Automat hat genau einen Startzustand.",
+          "richtig": true,
+          "erklaerung": "Von dort beginnt die Verarbeitung der Eingabe."
+        },
+        {
+          "text": "Ein endlicher Automat kann mehrere akzeptierende (Endzustände) haben.",
+          "richtig": true,
+          "erklaerung": "Es darf keinen, einen oder mehrere akzeptierende Zustände geben."
+        },
+        {
+          "text": "Bei einem deterministischen Automaten führt jede Eingabe in einem Zustand zu genau einem Folgezustand.",
+          "richtig": true,
+          "erklaerung": "Das ist die Bedeutung von deterministisch."
+        },
+        {
+          "text": "Ein endlicher Automat kann sich beliebig viele frühere Eingaben einzeln merken.",
+          "richtig": false,
+          "erklaerung": "Er hat nur endlich viele Zustände – das ist seine Beschränkung."
+        }
+      ],
+      "tipps": [
+        "Überlege, womit ein Automat startet.",
+        "Deterministisch bedeutet: keine Wahl, immer ein eindeutiger Folgezustand.",
+        "Genau drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig: genau ein Startzustand, mehrere Endzustände möglich, je Eingabe genau ein Folgezustand (deterministisch). Falsch: Ein Automat hat nur endlich viele Zustände und kann sich nicht beliebig viel merken.",
+      "kc": [
+        "automaten"
+      ]
+    },
+    {
+      "id": "in-10-ea-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein endlicher Automat hat $5$ Zustände und arbeitet mit dem Alphabet $\\{a, b, c\\}$. Wie viele Einträge hat seine vollständige Übergangstabelle?",
+      "eingaben": [
+        {
+          "label": "Einträge",
+          "antwort": 15,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Für jeden Zustand muss zu jedem Eingabezeichen ein Folgezustand stehen.",
+        "Das Alphabet hat $3$ Zeichen.",
+        "Rechne Zustände mal Zeichen, also $5 \\cdot 3$."
+      ],
+      "loesungsweg": "Pro Zustand gibt es für jedes der $3$ Eingabezeichen einen Eintrag. Bei $5$ Zuständen: $5 \\cdot 3 = 15$ Einträge.",
+      "kc": [
+        "automaten"
+      ]
+    },
+    {
+      "id": "in-10-ea-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Automat soll mitzählen, ob die Anzahl der bisher gelesenen Einsen durch $3$ teilbar ist (also Rest 0, 1 oder 2 beim Teilen durch 3). Wie viele Zustände braucht er mindestens?",
+      "eingaben": [
+        {
+          "label": "Zustände",
+          "antwort": 3,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Der Automat muss sich nur den Rest beim Teilen durch 3 merken.",
+        "Welche Reste sind beim Teilen durch 3 möglich?",
+        "Reste: 0, 1, 2 – also drei Fälle."
+      ],
+      "loesungsweg": "Beim Teilen durch $3$ gibt es genau die Reste $0$, $1$ und $2$. Für jeden Rest ein Zustand, also $3$ Zustände. Der Zustand für Rest $0$ ist der Start- und akzeptierende Zustand.",
+      "kc": [
+        "automaten"
+      ]
+    },
+    {
+      "id": "in-10-ea-204",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Automat über $\\{0, 1\\}$ akzeptiert genau die Wörter, bei denen die Anzahl der Einsen durch $3$ teilbar ist (auch $0$ Einsen zählt als teilbar). Welche der folgenden Wörter werden akzeptiert?",
+      "optionen": [
+        {
+          "text": "$111$",
+          "richtig": true,
+          "erklaerung": "Drei Einsen, $3$ ist durch $3$ teilbar – akzeptiert."
+        },
+        {
+          "text": "$11$",
+          "richtig": false,
+          "erklaerung": "Zwei Einsen, $2$ ist nicht durch $3$ teilbar."
+        },
+        {
+          "text": "$0$",
+          "richtig": true,
+          "erklaerung": "Null Einsen, $0$ ist durch $3$ teilbar – akzeptiert."
+        },
+        {
+          "text": "$111111$",
+          "richtig": true,
+          "erklaerung": "Sechs Einsen, $6$ ist durch $3$ teilbar – akzeptiert."
+        }
+      ],
+      "tipps": [
+        "Zähle in jedem Wort nur die Einsen, die Nullen sind egal.",
+        "Prüfe, ob diese Anzahl durch 3 teilbar ist.",
+        "Beachte: $0$ Einsen gilt als teilbar."
+      ],
+      "loesungsweg": "Einsen zählen und durch $3$ teilen: $111$ hat $3$ (teilbar, akzeptiert), $11$ hat $2$ (nicht teilbar), $0$ hat $0$ (teilbar, akzeptiert), $111111$ hat $6$ (teilbar, akzeptiert). Akzeptiert werden also $111$, $0$ und $111111$.",
+      "kc": [
+        "automaten"
+      ]
+    },
+    {
+      "id": "in-10-ea-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Automat über $\\{a, b\\}$ prüft, ob das Teilwort $ab$ vorkommt. Zustände: $q_0$ (Start, noch kein passendes a), $q_1$ (zuletzt ein a gesehen), $q_2$ (das Teilwort $ab$ wurde gefunden, akzeptierend, bleibt dort). Übergänge: aus $q_0$: $a \\to q_1$, $b \\to q_0$; aus $q_1$: $a \\to q_1$, $b \\to q_2$; aus $q_2$ bleibt der Automat in $q_2$. Verarbeite die Eingabe $a, a, b, a$. In welchem Zustand $q_?$ endet der Automat? Gib die Nummer an (0, 1 oder 2).",
+      "eingaben": [
+        {
+          "label": "Endzustand (Nummer)",
+          "antwort": 2,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Starte in $q_0$ und folge Zeichen für Zeichen den Übergängen.",
+        "Nach dem ersten $a$ bist du in $q_1$, ein weiteres $a$ hält dich in $q_1$.",
+        "Sobald nach einem a ein b kommt, springst du nach $q_2$ und bleibst dort."
+      ],
+      "loesungsweg": "$q_0 \\xrightarrow{a} q_1 \\xrightarrow{a} q_1 \\xrightarrow{b} q_2 \\xrightarrow{a} q_2$. Der Automat endet in $q_2$ – die Eingabe enthält das Teilwort $ab$ und wird akzeptiert. Antwort: $2$.",
+      "kc": [
+        "automaten"
+      ]
+    },
+    {
+      "id": "in-10-ea-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein deterministischer Automat hat $3$ Zustände und das Alphabet $\\{0, 1\\}$. Wie viele Übergangspfeile muss er insgesamt haben, damit er vollständig ist (also in jedem Zustand für jedes Zeichen einen Übergang besitzt)?",
+      "eingaben": [
+        {
+          "label": "Übergangspfeile",
+          "antwort": 6,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Jeder Zustand braucht einen Pfeil für die 0 und einen für die 1.",
+        "Das sind 2 Pfeile pro Zustand.",
+        "Rechne $3 \\cdot 2$."
+      ],
+      "loesungsweg": "Pro Zustand gibt es einen Übergang für $0$ und einen für $1$, also $2$ pro Zustand. Bei $3$ Zuständen: $3 \\cdot 2 = 6$ Übergangspfeile.",
+      "kc": [
+        "automaten"
+      ]
+    },
+    {
+      "id": "in-10-ea-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Automat über $\\{0, 1\\}$ akzeptiert genau die Wörter mit einer geraden Anzahl von Einsen (auch $0$ Einsen ist gerade). Wird die Eingabe $1011010$ akzeptiert? Gib $1$ für ja (akzeptiert) und $0$ für nein an.",
+      "eingaben": [
+        {
+          "label": "Akzeptiert (1 = ja, 0 = nein)",
+          "antwort": 1,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Zähle nur die Einsen im Wort $1011010$.",
+        "Prüfe, ob diese Anzahl gerade ist.",
+        "Eine gerade Anzahl bedeutet: akzeptiert, also $1$."
+      ],
+      "loesungsweg": "Das Wort $1011010$ enthält die Einsen an vier Stellen, also $4$ Einsen. $4$ ist gerade, deshalb akzeptiert der Automat das Wort. Antwort: $1$.",
+      "kc": [
+        "automaten"
+      ]
+    },
+    {
+      "id": "in-10-ea-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Der Automat über $\\{a, b\\}$ aus Aufgabe 5 akzeptiert genau die Wörter, die das Teilwort $ab$ enthalten (in dieser Reihenfolge, direkt hintereinander).<br>a) Wird $baab$ akzeptiert? Gib $1$ für ja und $0$ für nein an.<br>b) Wird $bba$ akzeptiert? Gib $1$ für ja und $0$ für nein an.",
+      "eingaben": [
+        {
+          "label": "a) baab (1 = ja, 0 = nein)",
+          "antwort": 1,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) bba (1 = ja, 0 = nein)",
+          "antwort": 0,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Suche im Wort die Stelle, an der direkt nach einem a ein b steht.",
+        "a) $baab$: nach dem zweiten $a$ folgt ein $b$.",
+        "b) $bba$: nach dem $a$ kommt kein b mehr."
+      ],
+      "loesungsweg": "a) In $baab$ steht an den letzten beiden Stellen $a$ dann $b$, also kommt $ab$ vor – akzeptiert ($1$). b) In $bba$ endet das Wort mit $a$, nach dem $a$ folgt kein $b$, also kommt $ab$ nicht vor – nicht akzeptiert ($0$).",
+      "kc": [
+        "automaten"
+      ]
     }
   ]
 }

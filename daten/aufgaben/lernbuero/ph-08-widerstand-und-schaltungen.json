@@ -1,167 +1,641 @@
 {
-  "thema": "ph-08-widerstand-und-schaltungen",
-  "hinweis": "Lernbüro-Ergänzungsaufgaben — zur fachlichen Prüfung durch die Lehrkraft vor dem Unterrichtseinsatz. Marker: ergänzung:lernbüro.",
-  "aufgaben": [
+ "thema": "ph-08-widerstand-und-schaltungen",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben — zur fachlichen Prüfung durch die Lehrkraft vor dem Unterrichtseinsatz. Marker: ergänzung:lernbüro.",
+ "aufgaben": [
+  {
+   "id": "ph-08-wid-101",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Durch eine Glühbirne fließen bei einer Spannung von $9\\,\\text{V}$ genau $0{,}3\\,\\text{A}$. Berechne den Widerstand der Glühbirne.",
+   "eingaben": [
     {
-      "id": "ph-08-wid-101",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Durch eine Glühbirne fließen bei einer Spannung von $9\\,\\text{V}$ genau $0{,}3\\,\\text{A}$. Berechne den Widerstand der Glühbirne.",
-      "eingaben": [
-        { "label": "$R$", "antwort": 30, "toleranz": 0.5, "einheit": "Ω" }
-      ],
-      "tipps": [
-        "Der Widerstand lässt sich direkt aus Spannung und Stromstärke berechnen.",
-        "Formel: $R = \\frac{U}{I}$ — teile die Spannung durch die Stromstärke.",
-        "$9\\,\\text{V} \\div 0{,}3\\,\\text{A}$ — wie oft passt $0{,}3$ in $9$?"
-      ],
-      "loesungsweg": "$R = \\frac{U}{I} = \\frac{9\\,\\text{V}}{0{,}3\\,\\text{A}} = 30\\,\\Omega$. Der Widerstand der Glühbirne beträgt $30\\,\\Omega$.",
-      "kc": ["widerstand-und-schaltungen"],
-      "ergaenzung": "lernbuero"
-    },
-    {
-      "id": "ph-08-wid-102",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "$R_1 = 20\\,\\Omega$ und $R_2 = 30\\,\\Omega$ liegen in Reihe an einer Spannung von $U = 15\\,\\text{V}$. Berechne (a) den Gesamtwiderstand, (b) die Stromstärke, (c) die Teilspannungen $U_1$ und $U_2$.",
-      "eingaben": [
-        { "label": "$R_\\text{ges}$", "antwort": 50, "toleranz": 0.5, "einheit": "Ω" },
-        { "label": "$I$", "antwort": 0.3, "toleranz": 0.005, "einheit": "A" },
-        { "label": "$U_1$", "antwort": 6, "toleranz": 0.1, "einheit": "V" },
-        { "label": "$U_2$", "antwort": 9, "toleranz": 0.1, "einheit": "V" }
-      ],
-      "tipps": [
-        "In der Reihenschaltung addieren sich die Widerstände: $R_\\text{ges} = R_1 + R_2$.",
-        "Die Stromstärke berechnet sich aus Gesamtspannung und Gesamtwiderstand: $I = \\frac{U}{R_\\text{ges}}$.",
-        "Für die Teilspannungen gilt $U_1 = R_1 \\cdot I$ und $U_2 = R_2 \\cdot I$ — durch beide fließt derselbe Strom. Kontrolle: $U_1 + U_2$ muss $15\\,\\text{V}$ ergeben."
-      ],
-      "loesungsweg": "(a) $R_\\text{ges} = 20\\,\\Omega + 30\\,\\Omega = 50\\,\\Omega$. (b) $I = \\frac{15\\,\\text{V}}{50\\,\\Omega} = 0{,}3\\,\\text{A}$. (c) $U_1 = 20\\,\\Omega \\cdot 0{,}3\\,\\text{A} = 6\\,\\text{V}$; $U_2 = 30\\,\\Omega \\cdot 0{,}3\\,\\text{A} = 9\\,\\text{V}$. Kontrolle: $6\\,\\text{V} + 9\\,\\text{V} = 15\\,\\text{V}$ — passt.",
-      "kc": ["widerstand-und-schaltungen"],
-      "ergaenzung": "lernbuero"
-    },
-    {
-      "id": "ph-08-wid-103",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "$R_1 = 30\\,\\Omega$ und $R_2 = 60\\,\\Omega$ liegen parallel an $U = 12\\,\\text{V}$. Berechne (a) die Zweigströme $I_1$ und $I_2$, (b) die Gesamtstromstärke $I$, (c) den Gesamtwiderstand $R_\\text{ges}$.",
-      "eingaben": [
-        { "label": "$I_1$", "antwort": 0.4, "toleranz": 0.005, "einheit": "A" },
-        { "label": "$I_2$", "antwort": 0.2, "toleranz": 0.005, "einheit": "A" },
-        { "label": "$I$", "antwort": 0.6, "toleranz": 0.01, "einheit": "A" },
-        { "label": "$R_\\text{ges}$", "antwort": 20, "toleranz": 0.5, "einheit": "Ω" }
-      ],
-      "tipps": [
-        "In der Parallelschaltung liegt an beiden Widerständen die volle Spannung $12\\,\\text{V}$.",
-        "Jeden Zweig einzeln rechnen: $I_1 = \\frac{U}{R_1}$, $I_2 = \\frac{U}{R_2}$. Dann addieren: $I = I_1 + I_2$.",
-        "Den Gesamtwiderstand erhältst du aus $R_\\text{ges} = \\frac{U}{I}$. Er muss kleiner als $30\\,\\Omega$ sein — das ist die Probe."
-      ],
-      "loesungsweg": "(a) $I_1 = \\frac{12\\,\\text{V}}{30\\,\\Omega} = 0{,}4\\,\\text{A}$; $I_2 = \\frac{12\\,\\text{V}}{60\\,\\Omega} = 0{,}2\\,\\text{A}$. (b) $I = 0{,}4\\,\\text{A} + 0{,}2\\,\\text{A} = 0{,}6\\,\\text{A}$. (c) $R_\\text{ges} = \\frac{12\\,\\text{V}}{0{,}6\\,\\text{A}} = 20\\,\\Omega$ — wie erwartet kleiner als jeder Einzelwiderstand.",
-      "kc": ["widerstand-und-schaltungen"],
-      "ergaenzung": "lernbuero"
-    },
-    {
-      "id": "ph-08-wid-104",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "In einem Haushaltsstromkreis hängen ein Heizlüfter ($I_1 = 5{,}0\\,\\text{A}$) und eine LED-Lampe ($I_2 = 0{,}1\\,\\text{A}$) parallel. Wie groß ist die Gesamtstromstärke $I$?",
-      "eingaben": [
-        { "label": "$I$", "antwort": 5.1, "toleranz": 0.05, "einheit": "A" }
-      ],
-      "tipps": [
-        "In der Parallelschaltung addieren sich die Zweigströme.",
-        "Rechne $I_1 + I_2$.",
-        "$5{,}0\\,\\text{A} + 0{,}1\\,\\text{A}$."
-      ],
-      "loesungsweg": "$I = I_1 + I_2 = 5{,}0\\,\\text{A} + 0{,}1\\,\\text{A} = 5{,}1\\,\\text{A}$. Die Gesamtstromstärke beträgt $5{,}1\\,\\text{A}$ — die Leitungen müssen diesen ganzen Strom führen, weshalb die Sicherung auf einen sicheren Grenzwert eingestellt ist.",
-      "kc": ["widerstand-und-schaltungen"],
-      "ergaenzung": "lernbuero"
-    },
-    {
-      "id": "ph-08-wid-105",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Ein Spannungsteiler besteht aus $R_1 = 10\\,\\Omega$ und $R_2 = 40\\,\\Omega$ in Reihe an $U = 10\\,\\text{V}$. Berechne die Spannung $U_2$ an $R_2$.",
-      "eingaben": [
-        { "label": "$U_2$", "antwort": 8, "toleranz": 0.1, "einheit": "V" }
-      ],
-      "tipps": [
-        "Berechne zunächst den Gesamtwiderstand: $R_\\text{ges} = R_1 + R_2$.",
-        "Bestimme dann die Stromstärke: $I = \\frac{U}{R_\\text{ges}}$.",
-        "Dann: $U_2 = R_2 \\cdot I$. Der größere Widerstand bekommt den größeren Spannungsanteil."
-      ],
-      "loesungsweg": "$R_\\text{ges} = 10\\,\\Omega + 40\\,\\Omega = 50\\,\\Omega$. $I = \\frac{10\\,\\text{V}}{50\\,\\Omega} = 0{,}2\\,\\text{A}$. $U_2 = 40\\,\\Omega \\cdot 0{,}2\\,\\text{A} = 8\\,\\text{V}$. An $R_2$ liegen $8\\,\\text{V}$, an $R_1$ nur $2\\,\\text{V}$ — das Verhältnis stimmt mit den Widerstandswerten $(1:4)$ überein.",
-      "kc": ["widerstand-und-schaltungen"],
-      "ergaenzung": "lernbuero"
-    },
-    {
-      "id": "ph-08-wid-106",
-      "typ": "luecke",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Ergänze den Merktext zu Reihenschaltung und Parallelschaltung.",
-      "text": "In der Reihenschaltung ist die Stromstärke ___ gleich. Die Spannungen ___ sich zur Gesamtspannung. In der Parallelschaltung liegt an jedem Zweig die ___ Quellenspannung. Die Zweigströme ___ sich zur Gesamtstromstärke.",
-      "luecken": [
-        { "art": "dropdown", "antwort": "überall", "optionen": ["überall", "nirgends", "manchmal"] },
-        { "art": "dropdown", "antwort": "addieren", "optionen": ["addieren", "subtrahieren", "multiplizieren"] },
-        { "art": "dropdown", "antwort": "volle", "optionen": ["volle", "halbe", "keine"] },
-        { "art": "dropdown", "antwort": "addieren", "optionen": ["addieren", "subtrahieren", "teilen"] }
-      ],
-      "tipps": [
-        "In der Reihenschaltung gibt es nur einen Weg — was heißt das für den Strom?",
-        "In der Parallelschaltung hängt jeder Zweig direkt an beiden Polen der Quelle.",
-        "Am Knoten gilt: Was hineingeht, kommt auch wieder heraus — also addieren sich die Ströme."
-      ],
-      "loesungsweg": "Reihenschaltung: Die Stromstärke ist überall gleich (ein Weg, kein Verbrauch). Die Spannungen addieren sich zur Gesamtspannung. Parallelschaltung: An jedem Zweig liegt die volle Quellenspannung. Die Zweigströme addieren sich zur Gesamtstromstärke.",
-      "kc": ["widerstand-und-schaltungen"],
-      "ergaenzung": "lernbuero"
-    },
-    {
-      "id": "ph-08-wid-107",
-      "typ": "rechenweg",
-      "zweig": ["gym"],
-      "niveau": 3,
-      "afb": 3,
-      "frage": "$R_1 = 10\\,\\Omega$, $R_2 = 20\\,\\Omega$ und $R_3 = 30\\,\\Omega$ liegen in Reihe an $U = 12\\,\\text{V}$. Berechne Gesamtwiderstand, Stromstärke und alle drei Teilspannungen.",
-      "schritte": [
-        {
-          "frage": "Schritt 1: Berechne den Gesamtwiderstand $R_\\text{ges} = R_1 + R_2 + R_3$.",
-          "eingaben": [{ "label": "$R_\\text{ges}$", "antwort": 60, "toleranz": 0.5, "einheit": "Ω" }],
-          "tipps": ["Alle drei Widerstände addieren: $10 + 20 + 30$."]
-        },
-        {
-          "frage": "Schritt 2: Berechne die Stromstärke $I = \\frac{U}{R_\\text{ges}}$.",
-          "eingaben": [{ "label": "$I$", "antwort": 0.2, "toleranz": 0.005, "einheit": "A" }],
-          "tipps": ["$12\\,\\text{V} \\div 60\\,\\Omega$."]
-        },
-        {
-          "frage": "Schritt 3: Berechne die Teilspannungen $U_1 = R_1 \\cdot I$, $U_2 = R_2 \\cdot I$, $U_3 = R_3 \\cdot I$. Kontrolliere: $U_1 + U_2 + U_3 = 12\\,\\text{V}$.",
-          "eingaben": [
-            { "label": "$U_1$", "antwort": 2, "toleranz": 0.05, "einheit": "V" },
-            { "label": "$U_2$", "antwort": 4, "toleranz": 0.05, "einheit": "V" },
-            { "label": "$U_3$", "antwort": 6, "toleranz": 0.05, "einheit": "V" }
-          ],
-          "tipps": ["$10 \\cdot 0{,}2$; $20 \\cdot 0{,}2$; $30 \\cdot 0{,}2$ — die Summe muss $12\\,\\text{V}$ ergeben."]
-        }
-      ],
-      "tipps": [
-        "Bei drei Widerständen in Reihe: Alle drei addieren — dasselbe Prinzip wie bei zwei.",
-        "Die Stromstärke ist in der ganzen Reihe gleich.",
-        "Der größte Widerstand bekommt die größte Teilspannung — hier $R_3$."
-      ],
-      "loesungsweg": "$R_\\text{ges} = 10 + 20 + 30 = 60\\,\\Omega$. $I = \\frac{12\\,\\text{V}}{60\\,\\Omega} = 0{,}2\\,\\text{A}$. $U_1 = 10 \\cdot 0{,}2 = 2\\,\\text{V}$; $U_2 = 20 \\cdot 0{,}2 = 4\\,\\text{V}$; $U_3 = 30 \\cdot 0{,}2 = 6\\,\\text{V}$. Kontrolle: $2 + 4 + 6 = 12\\,\\text{V}$ — stimmt.",
-      "kc": ["widerstand-und-schaltungen"],
-      "ergaenzung": "lernbuero"
+     "label": "$R$",
+     "antwort": 30,
+     "toleranz": 0.5,
+     "einheit": "Ω"
     }
-  ]
+   ],
+   "tipps": [
+    "Der Widerstand lässt sich direkt aus Spannung und Stromstärke berechnen.",
+    "Formel: $R = \\frac{U}{I}$ — teile die Spannung durch die Stromstärke.",
+    "$9\\,\\text{V} \\div 0{,}3\\,\\text{A}$ — wie oft passt $0{,}3$ in $9$?"
+   ],
+   "loesungsweg": "$R = \\frac{U}{I} = \\frac{9\\,\\text{V}}{0{,}3\\,\\text{A}} = 30\\,\\Omega$. Der Widerstand der Glühbirne beträgt $30\\,\\Omega$.",
+   "kc": [
+    "widerstand-und-schaltungen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ph-08-wid-102",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "$R_1 = 20\\,\\Omega$ und $R_2 = 30\\,\\Omega$ liegen in Reihe an einer Spannung von $U = 15\\,\\text{V}$. Berechne (a) den Gesamtwiderstand, (b) die Stromstärke, (c) die Teilspannungen $U_1$ und $U_2$.",
+   "eingaben": [
+    {
+     "label": "$R_\\text{ges}$",
+     "antwort": 50,
+     "toleranz": 0.5,
+     "einheit": "Ω"
+    },
+    {
+     "label": "$I$",
+     "antwort": 0.3,
+     "toleranz": 0.005,
+     "einheit": "A"
+    },
+    {
+     "label": "$U_1$",
+     "antwort": 6,
+     "toleranz": 0.1,
+     "einheit": "V"
+    },
+    {
+     "label": "$U_2$",
+     "antwort": 9,
+     "toleranz": 0.1,
+     "einheit": "V"
+    }
+   ],
+   "tipps": [
+    "In der Reihenschaltung addieren sich die Widerstände: $R_\\text{ges} = R_1 + R_2$.",
+    "Die Stromstärke berechnet sich aus Gesamtspannung und Gesamtwiderstand: $I = \\frac{U}{R_\\text{ges}}$.",
+    "Für die Teilspannungen gilt $U_1 = R_1 \\cdot I$ und $U_2 = R_2 \\cdot I$ — durch beide fließt derselbe Strom. Kontrolle: $U_1 + U_2$ muss $15\\,\\text{V}$ ergeben."
+   ],
+   "loesungsweg": "(a) $R_\\text{ges} = 20\\,\\Omega + 30\\,\\Omega = 50\\,\\Omega$. (b) $I = \\frac{15\\,\\text{V}}{50\\,\\Omega} = 0{,}3\\,\\text{A}$. (c) $U_1 = 20\\,\\Omega \\cdot 0{,}3\\,\\text{A} = 6\\,\\text{V}$; $U_2 = 30\\,\\Omega \\cdot 0{,}3\\,\\text{A} = 9\\,\\text{V}$. Kontrolle: $6\\,\\text{V} + 9\\,\\text{V} = 15\\,\\text{V}$ — passt.",
+   "kc": [
+    "widerstand-und-schaltungen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ph-08-wid-103",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "$R_1 = 30\\,\\Omega$ und $R_2 = 60\\,\\Omega$ liegen parallel an $U = 12\\,\\text{V}$. Berechne (a) die Zweigströme $I_1$ und $I_2$, (b) die Gesamtstromstärke $I$, (c) den Gesamtwiderstand $R_\\text{ges}$.",
+   "eingaben": [
+    {
+     "label": "$I_1$",
+     "antwort": 0.4,
+     "toleranz": 0.005,
+     "einheit": "A"
+    },
+    {
+     "label": "$I_2$",
+     "antwort": 0.2,
+     "toleranz": 0.005,
+     "einheit": "A"
+    },
+    {
+     "label": "$I$",
+     "antwort": 0.6,
+     "toleranz": 0.01,
+     "einheit": "A"
+    },
+    {
+     "label": "$R_\\text{ges}$",
+     "antwort": 20,
+     "toleranz": 0.5,
+     "einheit": "Ω"
+    }
+   ],
+   "tipps": [
+    "In der Parallelschaltung liegt an beiden Widerständen die volle Spannung $12\\,\\text{V}$.",
+    "Jeden Zweig einzeln rechnen: $I_1 = \\frac{U}{R_1}$, $I_2 = \\frac{U}{R_2}$. Dann addieren: $I = I_1 + I_2$.",
+    "Den Gesamtwiderstand erhältst du aus $R_\\text{ges} = \\frac{U}{I}$. Er muss kleiner als $30\\,\\Omega$ sein — das ist die Probe."
+   ],
+   "loesungsweg": "(a) $I_1 = \\frac{12\\,\\text{V}}{30\\,\\Omega} = 0{,}4\\,\\text{A}$; $I_2 = \\frac{12\\,\\text{V}}{60\\,\\Omega} = 0{,}2\\,\\text{A}$. (b) $I = 0{,}4\\,\\text{A} + 0{,}2\\,\\text{A} = 0{,}6\\,\\text{A}$. (c) $R_\\text{ges} = \\frac{12\\,\\text{V}}{0{,}6\\,\\text{A}} = 20\\,\\Omega$ — wie erwartet kleiner als jeder Einzelwiderstand.",
+   "kc": [
+    "widerstand-und-schaltungen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ph-08-wid-104",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "In einem Haushaltsstromkreis hängen ein Heizlüfter ($I_1 = 5{,}0\\,\\text{A}$) und eine LED-Lampe ($I_2 = 0{,}1\\,\\text{A}$) parallel. Wie groß ist die Gesamtstromstärke $I$?",
+   "eingaben": [
+    {
+     "label": "$I$",
+     "antwort": 5.1,
+     "toleranz": 0.05,
+     "einheit": "A"
+    }
+   ],
+   "tipps": [
+    "In der Parallelschaltung addieren sich die Zweigströme.",
+    "Rechne $I_1 + I_2$.",
+    "$5{,}0\\,\\text{A} + 0{,}1\\,\\text{A}$."
+   ],
+   "loesungsweg": "$I = I_1 + I_2 = 5{,}0\\,\\text{A} + 0{,}1\\,\\text{A} = 5{,}1\\,\\text{A}$. Die Gesamtstromstärke beträgt $5{,}1\\,\\text{A}$ — die Leitungen müssen diesen ganzen Strom führen, weshalb die Sicherung auf einen sicheren Grenzwert eingestellt ist.",
+   "kc": [
+    "widerstand-und-schaltungen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ph-08-wid-105",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ein Spannungsteiler besteht aus $R_1 = 10\\,\\Omega$ und $R_2 = 40\\,\\Omega$ in Reihe an $U = 10\\,\\text{V}$. Berechne die Spannung $U_2$ an $R_2$.",
+   "eingaben": [
+    {
+     "label": "$U_2$",
+     "antwort": 8,
+     "toleranz": 0.1,
+     "einheit": "V"
+    }
+   ],
+   "tipps": [
+    "Berechne zunächst den Gesamtwiderstand: $R_\\text{ges} = R_1 + R_2$.",
+    "Bestimme dann die Stromstärke: $I = \\frac{U}{R_\\text{ges}}$.",
+    "Dann: $U_2 = R_2 \\cdot I$. Der größere Widerstand bekommt den größeren Spannungsanteil."
+   ],
+   "loesungsweg": "$R_\\text{ges} = 10\\,\\Omega + 40\\,\\Omega = 50\\,\\Omega$. $I = \\frac{10\\,\\text{V}}{50\\,\\Omega} = 0{,}2\\,\\text{A}$. $U_2 = 40\\,\\Omega \\cdot 0{,}2\\,\\text{A} = 8\\,\\text{V}$. An $R_2$ liegen $8\\,\\text{V}$, an $R_1$ nur $2\\,\\text{V}$ — das Verhältnis stimmt mit den Widerstandswerten $(1:4)$ überein.",
+   "kc": [
+    "widerstand-und-schaltungen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ph-08-wid-106",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ergänze den Merktext zu Reihenschaltung und Parallelschaltung.",
+   "text": "In der Reihenschaltung ist die Stromstärke ___ gleich. Die Spannungen ___ sich zur Gesamtspannung. In der Parallelschaltung liegt an jedem Zweig die ___ Quellenspannung. Die Zweigströme ___ sich zur Gesamtstromstärke.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "überall",
+     "optionen": [
+      "überall",
+      "nirgends",
+      "manchmal"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "addieren",
+     "optionen": [
+      "addieren",
+      "subtrahieren",
+      "multiplizieren"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "volle",
+     "optionen": [
+      "volle",
+      "halbe",
+      "keine"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "addieren",
+     "optionen": [
+      "addieren",
+      "subtrahieren",
+      "teilen"
+     ]
+    }
+   ],
+   "tipps": [
+    "In der Reihenschaltung gibt es nur einen Weg — was heißt das für den Strom?",
+    "In der Parallelschaltung hängt jeder Zweig direkt an beiden Polen der Quelle.",
+    "Am Knoten gilt: Was hineingeht, kommt auch wieder heraus — also addieren sich die Ströme."
+   ],
+   "loesungsweg": "Reihenschaltung: Die Stromstärke ist überall gleich (ein Weg, kein Verbrauch). Die Spannungen addieren sich zur Gesamtspannung. Parallelschaltung: An jedem Zweig liegt die volle Quellenspannung. Die Zweigströme addieren sich zur Gesamtstromstärke.",
+   "kc": [
+    "widerstand-und-schaltungen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ph-08-wid-107",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "$R_1 = 10\\,\\Omega$, $R_2 = 20\\,\\Omega$ und $R_3 = 30\\,\\Omega$ liegen in Reihe an $U = 12\\,\\text{V}$. Berechne Gesamtwiderstand, Stromstärke und alle drei Teilspannungen.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Berechne den Gesamtwiderstand $R_\\text{ges} = R_1 + R_2 + R_3$.",
+     "eingaben": [
+      {
+       "label": "$R_\\text{ges}$",
+       "antwort": 60,
+       "toleranz": 0.5,
+       "einheit": "Ω"
+      }
+     ],
+     "tipps": [
+      "Alle drei Widerstände addieren: $10 + 20 + 30$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Berechne die Stromstärke $I = \\frac{U}{R_\\text{ges}}$.",
+     "eingaben": [
+      {
+       "label": "$I$",
+       "antwort": 0.2,
+       "toleranz": 0.005,
+       "einheit": "A"
+      }
+     ],
+     "tipps": [
+      "$12\\,\\text{V} \\div 60\\,\\Omega$."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Berechne die Teilspannungen $U_1 = R_1 \\cdot I$, $U_2 = R_2 \\cdot I$, $U_3 = R_3 \\cdot I$. Kontrolliere: $U_1 + U_2 + U_3 = 12\\,\\text{V}$.",
+     "eingaben": [
+      {
+       "label": "$U_1$",
+       "antwort": 2,
+       "toleranz": 0.05,
+       "einheit": "V"
+      },
+      {
+       "label": "$U_2$",
+       "antwort": 4,
+       "toleranz": 0.05,
+       "einheit": "V"
+      },
+      {
+       "label": "$U_3$",
+       "antwort": 6,
+       "toleranz": 0.05,
+       "einheit": "V"
+      }
+     ],
+     "tipps": [
+      "$10 \\cdot 0{,}2$; $20 \\cdot 0{,}2$; $30 \\cdot 0{,}2$ — die Summe muss $12\\,\\text{V}$ ergeben."
+     ]
+    }
+   ],
+   "tipps": [
+    "Bei drei Widerständen in Reihe: Alle drei addieren — dasselbe Prinzip wie bei zwei.",
+    "Die Stromstärke ist in der ganzen Reihe gleich.",
+    "Der größte Widerstand bekommt die größte Teilspannung — hier $R_3$."
+   ],
+   "loesungsweg": "$R_\\text{ges} = 10 + 20 + 30 = 60\\,\\Omega$. $I = \\frac{12\\,\\text{V}}{60\\,\\Omega} = 0{,}2\\,\\text{A}$. $U_1 = 10 \\cdot 0{,}2 = 2\\,\\text{V}$; $U_2 = 20 \\cdot 0{,}2 = 4\\,\\text{V}$; $U_3 = 30 \\cdot 0{,}2 = 6\\,\\text{V}$. Kontrolle: $2 + 4 + 6 = 12\\,\\text{V}$ — stimmt.",
+   "kc": [
+    "widerstand-und-schaltungen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ph-08-wid-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ohmsches Gesetz und Schaltungen — welche Aussagen sind richtig?",
+   "optionen": [
+    {
+     "text": "Der Widerstand berechnet sich als $R = \\frac{U}{I}$ und hat die Einheit Ohm.",
+     "richtig": true,
+     "erklaerung": "Richtig: $R = \\frac{U}{I}$, Einheit $\\Omega$ (Ohm)."
+    },
+    {
+     "text": "In der Reihenschaltung ist die Stromstärke an jeder Stelle gleich groß.",
+     "richtig": true,
+     "erklaerung": "Richtig: In der Reihenschaltung fließt überall derselbe Strom."
+    },
+    {
+     "text": "In der Parallelschaltung ist der Gesamtwiderstand größer als jeder Einzelwiderstand.",
+     "richtig": false,
+     "erklaerung": "Falsch: In der Parallelschaltung ist der Gesamtwiderstand kleiner als jeder Einzelwiderstand."
+    },
+    {
+     "text": "Bei gleicher Spannung fließt durch einen größeren Widerstand mehr Strom.",
+     "richtig": false,
+     "erklaerung": "Falsch: Je größer $R$, desto kleiner $I$ (wegen $I = \\frac{U}{R}$)."
+    }
+   ],
+   "tipps": [
+    "Erinnere dich an $R = \\frac{U}{I}$ und $I = \\frac{U}{R}$.",
+    "Reihe: gleicher Strom überall. Parallel: Gesamtwiderstand wird kleiner.",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig: $R = \\frac{U}{I}$ (Einheit Ohm) und in der Reihenschaltung ist der Strom überall gleich. In der Parallelschaltung ist der Gesamtwiderstand kleiner als jeder Einzelwiderstand, und bei gleicher Spannung fließt durch den größeren Widerstand weniger Strom.",
+   "kc": [
+    "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+   ]
+  },
+  {
+   "id": "ph-08-wid-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Berechne jeweils den Widerstand mit $R = \\frac{U}{I}$. (a) Durch ein Bauteil fließen bei $U = 12\\,\\text{V}$ genau $I = 0{,}4\\,\\text{A}$. (b) Durch einen Draht fließen bei $U = 4{,}5\\,\\text{V}$ genau $I = 0{,}3\\,\\text{A}$.",
+   "eingaben": [
+    {
+     "label": "(a) $R$",
+     "antwort": 30,
+     "einheit": "Ω",
+     "toleranz": 0.1
+    },
+    {
+     "label": "(b) $R$",
+     "antwort": 15,
+     "einheit": "Ω",
+     "toleranz": 0.1
+    }
+   ],
+   "tipps": [
+    "Nutze $R = \\frac{U}{I}$.",
+    "Setze Spannung in Volt und Stromstärke in Ampere ein.",
+    "(a) $12 : 0{,}4$  (b) $4{,}5 : 0{,}3$"
+   ],
+   "loesungsweg": "(a) $R = \\frac{U}{I} = \\frac{12\\,\\text{V}}{0{,}4\\,\\text{A}} = 30\\,\\Omega$. (b) $R = \\frac{4{,}5\\,\\text{V}}{0{,}3\\,\\text{A}} = 15\\,\\Omega$.",
+   "kc": [
+    "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+   ]
+  },
+  {
+   "id": "ph-08-wid-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Stelle das ohmsche Gesetz passend um. (a) Ein Widerstand von $R = 25\\,\\Omega$ liegt an $U = 10\\,\\text{V}$. Berechne die Stromstärke. (b) Durch einen Widerstand von $R = 80\\,\\Omega$ fließt $I = 0{,}25\\,\\text{A}$. Berechne die Spannung.",
+   "eingaben": [
+    {
+     "label": "(a) $I$",
+     "antwort": 0.4,
+     "einheit": "A",
+     "toleranz": 0.005
+    },
+    {
+     "label": "(b) $U$",
+     "antwort": 20,
+     "einheit": "V",
+     "toleranz": 0.1
+    }
+   ],
+   "tipps": [
+    "(a) $I = \\frac{U}{R}$.",
+    "(b) $U = R \\cdot I$.",
+    "(a) $10 : 25$  (b) $80 \\cdot 0{,}25$"
+   ],
+   "loesungsweg": "(a) $I = \\frac{U}{R} = \\frac{10\\,\\text{V}}{25\\,\\Omega} = 0{,}4\\,\\text{A}$. (b) $U = R \\cdot I = 80\\,\\Omega \\cdot 0{,}25\\,\\text{A} = 20\\,\\text{V}$.",
+   "kc": [
+    "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+   ]
+  },
+  {
+   "id": "ph-08-wid-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Widerstände $R_1 = 25\\,\\Omega$ und $R_2 = 35\\,\\Omega$ liegen in Reihe an einem Netzgerät mit $U = 18\\,\\text{V}$. Berechne (a) den Gesamtwiderstand, (b) die Stromstärke und (c) die Teilspannung $U_1$ an $R_1$.",
+   "eingaben": [
+    {
+     "label": "(a) $R_\\text{ges}$",
+     "antwort": 60,
+     "einheit": "Ω",
+     "toleranz": 0.1
+    },
+    {
+     "label": "(b) $I$",
+     "antwort": 0.3,
+     "einheit": "A",
+     "toleranz": 0.005
+    },
+    {
+     "label": "(c) $U_1$",
+     "antwort": 7.5,
+     "einheit": "V",
+     "toleranz": 0.05
+    }
+   ],
+   "tipps": [
+    "Reihe: $R_\\text{ges} = R_1 + R_2$.",
+    "Gesamtstrom: $I = \\frac{U}{R_\\text{ges}}$ — er fließt durch beide Widerstände.",
+    "Teilspannung: $U_1 = R_1 \\cdot I$"
+   ],
+   "loesungsweg": "(a) $R_\\text{ges} = R_1 + R_2 = 25\\,\\Omega + 35\\,\\Omega = 60\\,\\Omega$. (b) $I = \\frac{U}{R_\\text{ges}} = \\frac{18\\,\\text{V}}{60\\,\\Omega} = 0{,}3\\,\\text{A}$. (c) $U_1 = R_1 \\cdot I = 25\\,\\Omega \\cdot 0{,}3\\,\\text{A} = 7{,}5\\,\\text{V}$.",
+   "kc": [
+    "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+   ]
+  },
+  {
+   "id": "ph-08-wid-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Widerstände $R_1 = 20\\,\\Omega$ und $R_2 = 60\\,\\Omega$ liegen parallel an $U = 12\\,\\text{V}$. Berechne (a) die Zweigströme $I_1$ und $I_2$, (b) die Gesamtstromstärke $I$ und (c) den Gesamtwiderstand $R_\\text{ges}$.",
+   "eingaben": [
+    {
+     "label": "(a) $I_1$",
+     "antwort": 0.6,
+     "einheit": "A",
+     "toleranz": 0.005
+    },
+    {
+     "label": "(a) $I_2$",
+     "antwort": 0.2,
+     "einheit": "A",
+     "toleranz": 0.005
+    },
+    {
+     "label": "(b) $I$",
+     "antwort": 0.8,
+     "einheit": "A",
+     "toleranz": 0.005
+    },
+    {
+     "label": "(c) $R_\\text{ges}$",
+     "antwort": 15,
+     "einheit": "Ω",
+     "toleranz": 0.1
+    }
+   ],
+   "tipps": [
+    "Parallel: An beiden Widerständen liegt dieselbe Spannung $U$. Berechne jeden Zweigstrom mit $I = \\frac{U}{R}$.",
+    "Der Gesamtstrom ist die Summe: $I = I_1 + I_2$.",
+    "Gesamtwiderstand: $R_\\text{ges} = \\frac{U}{I}$"
+   ],
+   "loesungsweg": "(a) $I_1 = \\frac{U}{R_1} = \\frac{12\\,\\text{V}}{20\\,\\Omega} = 0{,}6\\,\\text{A}$ und $I_2 = \\frac{12\\,\\text{V}}{60\\,\\Omega} = 0{,}2\\,\\text{A}$. (b) $I = I_1 + I_2 = 0{,}8\\,\\text{A}$. (c) $R_\\text{ges} = \\frac{U}{I} = \\frac{12\\,\\text{V}}{0{,}8\\,\\text{A}} = 15\\,\\Omega$.",
+   "kc": [
+    "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+   ]
+  },
+  {
+   "id": "ph-08-wid-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Zwei Widerstände $R_1 = 40\\,\\Omega$ und $R_2 = 60\\,\\Omega$ liegen in Reihe an $U = 24\\,\\text{V}$. Berechne (a) den Gesamtwiderstand, (b) die Stromstärke und (c) die Teilspannung $U_2$ an $R_2$.",
+   "eingaben": [
+    {
+     "label": "(a) $R_\\text{ges}$",
+     "antwort": 100,
+     "einheit": "Ω",
+     "toleranz": 0.1
+    },
+    {
+     "label": "(b) $I$",
+     "antwort": 0.24,
+     "einheit": "A",
+     "toleranz": 0.005
+    },
+    {
+     "label": "(c) $U_2$",
+     "antwort": 14.4,
+     "einheit": "V",
+     "toleranz": 0.1
+    }
+   ],
+   "tipps": [
+    "Reihe: $R_\\text{ges} = R_1 + R_2$.",
+    "$I = \\frac{U}{R_\\text{ges}}$, danach $U_2 = R_2 \\cdot I$.",
+    "(c) $U_2 = 60 \\cdot 0{,}24$"
+   ],
+   "loesungsweg": "(a) $R_\\text{ges} = 40\\,\\Omega + 60\\,\\Omega = 100\\,\\Omega$. (b) $I = \\frac{24\\,\\text{V}}{100\\,\\Omega} = 0{,}24\\,\\text{A}$. (c) $U_2 = R_2 \\cdot I = 60\\,\\Omega \\cdot 0{,}24\\,\\text{A} = 14{,}4\\,\\text{V}$.",
+   "kc": [
+    "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+   ]
+  },
+  {
+   "id": "ph-08-wid-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz — gemischte Schaltung: $R_1 = 10\\,\\Omega$ liegt in Reihe mit einer Parallelschaltung aus zwei gleichen Widerständen $R_2 = R_3 = 40\\,\\Omega$. Die Quelle liefert $U = 12\\,\\text{V}$. Berechne (a) den Ersatzwiderstand der Parallelschaltung, (b) den Gesamtwiderstand und (c) die Gesamtstromstärke.",
+   "eingaben": [
+    {
+     "label": "(a) $R_\\text{parallel}$",
+     "antwort": 20,
+     "einheit": "Ω",
+     "toleranz": 0.1
+    },
+    {
+     "label": "(b) $R_\\text{ges}$",
+     "antwort": 30,
+     "einheit": "Ω",
+     "toleranz": 0.1
+    },
+    {
+     "label": "(c) $I$",
+     "antwort": 0.4,
+     "einheit": "A",
+     "toleranz": 0.005
+    }
+   ],
+   "tipps": [
+    "Zwei gleiche Widerstände parallel: $R_\\text{parallel} = \\frac{R}{2}$.",
+    "Dann liegt $R_1$ in Reihe dazu: $R_\\text{ges} = R_1 + R_\\text{parallel}$.",
+    "(c) $I = \\frac{U}{R_\\text{ges}}$"
+   ],
+   "loesungsweg": "(a) Zwei gleiche Widerstände parallel: $R_\\text{parallel} = \\frac{40\\,\\Omega}{2} = 20\\,\\Omega$. (b) $R_\\text{ges} = R_1 + R_\\text{parallel} = 10\\,\\Omega + 20\\,\\Omega = 30\\,\\Omega$. (c) $I = \\frac{U}{R_\\text{ges}} = \\frac{12\\,\\text{V}}{30\\,\\Omega} = 0{,}4\\,\\text{A}$.",
+   "kc": [
+    "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+   ]
+  },
+  {
+   "id": "ph-08-wid-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Anwendung — zwei Lampen im Haushalt: Zwei gleiche Lampen mit je $R = 50\\,\\Omega$ hängen parallel an der Spannung $U = 10\\,\\text{V}$. (a) Berechne die Gesamtstromstärke $I$, die aus der Quelle fließt. (b) Berechne den Gesamtwiderstand $R_\\text{ges}$ der Parallelschaltung.",
+   "eingaben": [
+    {
+     "label": "(a) $I$",
+     "antwort": 0.4,
+     "einheit": "A",
+     "toleranz": 0.005
+    },
+    {
+     "label": "(b) $R_\\text{ges}$",
+     "antwort": 25,
+     "einheit": "Ω",
+     "toleranz": 0.1
+    }
+   ],
+   "tipps": [
+    "An jeder Lampe liegt dieselbe Spannung. Berechne erst jeden Zweigstrom mit $I = \\frac{U}{R}$.",
+    "(a) Der Gesamtstrom ist die Summe beider Zweigströme.",
+    "(b) Zwei gleiche Widerstände parallel ergeben den halben Wert: $R_\\text{ges} = \\frac{R}{2}$, oder $R_\\text{ges} = \\frac{U}{I}$."
+   ],
+   "loesungsweg": "Jeder Zweigstrom: $\\frac{U}{R} = \\frac{10\\,\\text{V}}{50\\,\\Omega} = 0{,}2\\,\\text{A}$. (a) $I = 0{,}2\\,\\text{A} + 0{,}2\\,\\text{A} = 0{,}4\\,\\text{A}$. (b) $R_\\text{ges} = \\frac{U}{I} = \\frac{10\\,\\text{V}}{0{,}4\\,\\text{A}} = 25\\,\\Omega$ (gleichwertig: $\\frac{50\\,\\Omega}{2} = 25\\,\\Omega$).",
+   "kc": [
+    "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
+   ]
+  }
+ ]
 }
