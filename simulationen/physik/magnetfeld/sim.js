@@ -85,15 +85,13 @@ export const manifest = {
   raster: false,
   werkzeuge: false,
   parameter: [
-    { id: "zweiterMagnet", label: "Zweiter Magnet (0 = aus, 1 = an)", einheit: "", min: 0, max: 1, schritt: 1, start: 0 },
-    { id: "magnet2x",      label: "Position 2. Magnet (x)",            einheit: "", min: 5, max: 7, schritt: 1, start: 6 },
-    { id: "magnet2flip",   label: "2. Magnet umdrehen (0/1)",          einheit: "", min: 0, max: 1, schritt: 1, start: 0 },
-    { id: "feldlinien",    label: "Feldlinien (0 = aus, 1 = an)",      einheit: "", min: 0, max: 1, schritt: 1, start: 1 }
+    { id: "zweiterMagnet", label: "Zweiter Magnet",            typ: "toggle", min: 0, max: 1, schritt: 1, start: 0 },
+    { id: "magnet2x",      label: "Position 2. Magnet",        einheit: "", min: 5, max: 13, schritt: 1, start: 8 },
+    { id: "magnet2flip",   label: "Zweiten Magnet umdrehen",   typ: "toggle", min: 0, max: 1, schritt: 1, start: 0 },
+    { id: "feldlinien",    label: "Feldlinien anzeigen",       typ: "toggle", min: 0, max: 1, schritt: 1, start: 1 }
   ],
-  anzeigen: [
-    { id: "B_betrag_mitte", label: "|B| am Punkt (0|0)", einheit: "", stellen: 3 },
-    { id: "winkel_mitte",   label: "Kompasswinkel bei (0|0)", einheit: "°", stellen: 0 }
-  ],
+  anzeigen: [],   // keine Zahlen-Messwerte (Kl. 5): stattdessen der ziehbare Kompass in der Flaeche
+
   presets: [
     { name: "Ein Stabmagnet",       werte: { zweiterMagnet: 0, magnet2x: 6, magnet2flip: 0, feldlinien: 1 } },
     { name: "Zwei Magnete anziehen",werte: { zweiterMagnet: 1, magnet2x: 6, magnet2flip: 1, feldlinien: 0 } },
@@ -102,13 +100,13 @@ export const manifest = {
   vorhersage: {
     frage: "Du hältst zwei Stabmagnete so, dass zwei Nordpole direkt zueinander zeigen. Ziehen sie sich an oder stoßen sie sich ab?",
     optionen: ["Sie ziehen sich an", "Sie stoßen sich ab", "Sie spüren nichts voneinander"],
-    aufloesung: "Sie stoßen sich ab. Gleiche Pole stoßen sich immer ab, ungleiche Pole ziehen sich an — wie bei elektrischen Ladungen. Dreh in der Simulation den zweiten Magneten um (anklicken oder Regler „umdrehen“): Sobald sich Nord- und Südpol gegenüberstehen, kippt der Kraftpfeil und aus „abstoßen“ wird „anziehen“."
+    aufloesung: "Sie stoßen sich ab. Gleiche Pole stoßen sich immer ab, ungleiche Pole ziehen sich an — wie bei elektrischen Ladungen. Schalte in der Simulation „Zweiten Magnet umdrehen“ ein: Sobald sich Nord- und Südpol gegenüberstehen, kippt der Kraftpfeil und aus „abstoßen“ wird „anziehen“."
   },
   beobachtung: [
     "Schalte die Feldlinien ein: Jede Kompassnadel liegt genau auf einer Feldlinie. Die rote Nadelspitze (Nordsuchend) zeigt überall in Feldrichtung — außerhalb des Magneten vom Nordpol weg zum Südpol hin.",
     "Vergleiche die Nadeln dicht an einem Pol mit denen am Rand: Nahe den Polen sind die Pfeile am längsten — dort ist das Feld am stärksten. Mit wachsendem Abstand wird |B| schnell kleiner (1/r²).",
-    "Schalte den zweiten Magneten ein und verschiebe ihn mit dem Regler. Beobachte den Kraftpfeil und den Text: Bei gleichen Polen zueinander steht „abstoßen“, bei ungleichen „anziehen“.",
-    "Klicke auf den zweiten Magneten, um ihn umzudrehen. Verfolge, wie sich die Feldlinien zwischen den Magneten neu ordnen — sie verbinden immer einen Nord- mit einem Südpol (N → S)."
+    "Schalte den zweiten Magneten mit dem Schalter ein und vergrößere den Abstand: Beobachte, wie sich die Feldlinien zwischen den beiden Magneten ausbilden, und was der Kraftpfeil sagt (anziehen/abstoßen).",
+    "Drehe den zweiten Magneten mit dem Schalter um und ziehe den Kompass zwischen die Magnete: Wohin zeigt seine rote Nadel? Vergleiche anziehende und abstoßende Stellung."
   ],
   modellgrenzen: "Idealisiertes Polmodell: Wir tun so, als säßen an den Magnetenden zwei punktförmige „magnetische Ladungen“ (Coulomb-artig, |B| ∝ 1/r²). Das beschreibt die Form des Außenfeldes gut, ist aber ein Modell — echte Stabmagnete sind Dipole, deren Feld aus den ausgerichteten Elementarmagneten im Inneren entsteht. Einzelne magnetische Pole (Monopole) gibt es nicht: Zersägt man einen Magneten, hat jedes Stück wieder Nord und Süd. Gezeigt wird außerdem nur ein ebener Schnitt (2D); das reale Feld ist räumlich. Direkt auf einem Pol wird der Wert künstlich begrenzt (sonst unendlich).",
   bilanz: {
@@ -123,9 +121,11 @@ export function init(p) {
   return {
     t: 0,
     zweiterMagnet: (p.zweiterMagnet ?? 0) ? 1 : 0,
-    magnet2x: p.magnet2x ?? 6,
+    magnet2x: p.magnet2x ?? 8,
     magnet2flip: (p.magnet2flip ?? 0) ? 1 : 0,
-    feldlinien: (p.feldlinien ?? 1) ? 1 : 0
+    feldlinien: (p.feldlinien ?? 1) ? 1 : 0,
+    kompass: { x: 0, y: -3.2 },   // frei verschiebbarer Kompass (Startposition unter Magnet 1)
+    ziehtKompass: false
   };
 }
 
@@ -148,30 +148,31 @@ export function bilanz(z) {
   return { Bx0: a.bx, By0: a.by, Bx2: b.bx, By2: b.by };
 }
 
-export function weltBereich() {
-  return { xMin: -6, xMax: 10, yMin: -5, yMax: 5 };
+export function weltBereich(werte, zustand) {
+  // Ein Magnet: kompakt & zentriert. Zwei Magnete: so breit, dass der zweite (rechts) samt der
+  // Feldlinien dazwischen Platz hat — je groesser der Abstand, desto breiter der Ausschnitt.
+  const an = (zustand && zustand.zweiterMagnet) || (werte && werte.zweiterMagnet);
+  if (!an) return { xMin: -6, xMax: 6, yMin: -5, yMax: 5 };
+  const x = (zustand && zustand.magnet2x) || (werte && werte.magnet2x) || 8;
+  return { xMin: -6, xMax: x + 3, yMin: -5, yMax: 5 };
 }
 
-// ---------- Zeiger: Klick auf den zweiten Magneten dreht ihn um ----------
-// Liegt der Klick im Rechteck des zweiten Magneten (falls eingeschaltet), wird magnet2flip
-// umgeschaltet. Ein Klick weit weg von den Magneten schaltet den zweiten Magneten zu bzw. ab,
-// damit man die Sim auch ganz ohne Regler bedienen kann.
-export function zeiger({ x, y, zustand: z }) {
-  // Treffer auf Magnet 2?
-  if (z.zweiterMagnet) {
-    const links = z.magnet2x - M2_HALB - 0.7, rechts = z.magnet2x + M2_HALB + 0.7;
-    if (x >= links && x <= rechts && Math.abs(y - M2Y) <= 0.8) {
-      z.magnet2flip = z.magnet2flip ? 0 : 1;
-      return true;
-    }
-  }
-  // Treffer auf Magnet 1? -> nur Hinweis-frei ignorieren (Magnet 1 ist fest)
-  if (x >= M1.sx - 0.7 && x <= M1.nx + 0.7 && Math.abs(y - M1.ny) <= 0.8) {
+// ---------- Ziehen: frei verschiebbarer Kompass ----------
+// Der Kompass wird angefasst (start, wenn der Zeiger nah genug ist) und mit dem Zeiger gezogen
+// (move). Seine Nadel richtet sich an der Stelle entlang des Magnetfeldes aus (siehe zeichneKompass).
+export function zieh({ phase, x, y, zustand: z }) {
+  if (phase === "ende") { z.ziehtKompass = false; return true; }
+  if (phase === "start") {
+    if (Math.hypot(x - z.kompass.x, y - z.kompass.y) <= 1.1) { z.ziehtKompass = true; return true; }
     return false;
   }
-  // Klick ins freie Feld: zweiten Magneten an-/abschalten
-  z.zweiterMagnet = z.zweiterMagnet ? 0 : 1;
-  return true;
+  if (phase === "move" && z.ziehtKompass) {
+    const b = weltBereich(null, z);
+    z.kompass.x = Math.max(b.xMin + 0.6, Math.min(b.xMax - 0.6, x));
+    z.kompass.y = Math.max(b.yMin + 0.6, Math.min(b.yMax - 0.6, y));
+    return true;
+  }
+  return false;
 }
 
 // ---------- Zeichnen ----------
@@ -197,11 +198,14 @@ export function zeichne({ ctx, welt, zustand: z, stil }) {
   if (z.zweiterMagnet) {
     // Magnet 2: Nordseite je nach flip links oder rechts
     const nordRechts = z.magnet2flip === 0 ? false : true;
-    zeichneMagnet(ctx, welt, W, z.magnet2x - M2_HALB, z.magnet2x + M2_HALB, M2Y, nordRechts ? false : true, stil, farbeN, farbeS, true);
+    zeichneMagnet(ctx, welt, W, z.magnet2x - M2_HALB, z.magnet2x + M2_HALB, M2Y, nordRechts ? false : true, stil, farbeN, farbeS, false);
   }
 
   // --- Kraftpfeil + Text bei zwei Magneten ---
   if (z.zweiterMagnet) zeichneKraft(ctx, welt, z, stil, W);
+
+  // --- Frei verschiebbarer Kompass ---
+  zeichneKompass(ctx, welt, z, polliste, stil, W, farbeN, farbeS);
 
   ctx.restore();
 }
@@ -360,6 +364,39 @@ function zeichneKraft(ctx, welt, z, stil, W) {
   ctx.textBaseline = "bottom";
   ctx.fillText("Kraft auf Magnet 2: " + text, cx, welt.py(M2Y + 2.2));
   ctx.font = stil.schrift;
+}
+
+// Frei verschiebbarer Kompass: Gehaeuse + Nadel, die sich am lokalen Feld B(kompass) ausrichtet.
+function zeichneKompass(ctx, welt, z, polliste, stil, W, farbeN, farbeS) {
+  const { bx, by } = feld(z.kompass.x, z.kompass.y, polliste);
+  const betrag = Math.hypot(bx, by) || 1;
+  const ux = bx / betrag, uy = by / betrag;
+  const cx = welt.px(z.kompass.x), cy = welt.py(z.kompass.y);
+  const R = Math.max(16, welt.laenge(0.95));
+  ctx.save();
+  // Gehaeuse
+  ctx.fillStyle = stil.flaeche; ctx.strokeStyle = stil.text; ctx.lineWidth = stil.linienstaerke;
+  ctx.beginPath(); ctx.arc(cx, cy, R, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+  // Himmelsrichtungen N/S
+  ctx.fillStyle = stil.beschriftung; ctx.font = `${Math.max(9, Math.round(R * 0.3))}px sans-serif`;
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText("N", cx, cy - R * 0.78); ctx.fillText("S", cx, cy + R * 0.78);
+  // Nadel entlang B (py: +uy zeigt nach unten -> Spitze cx+ux*nl, cy-uy*nl); Nordspitze rot
+  const nl = R * 0.78;
+  const tx = cx + ux * nl, ty = cy - uy * nl, sx = cx - ux * nl, sy = cy + uy * nl;
+  ctx.lineWidth = Math.max(3, stil.linienstaerke + 1);
+  ctx.strokeStyle = farbeS; ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(cx, cy); ctx.stroke();
+  ctx.strokeStyle = farbeN; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(tx, ty); ctx.stroke();
+  const fl = Math.max(6, R * 0.24), w = Math.atan2(ty - cy, tx - cx);
+  ctx.fillStyle = farbeN; ctx.beginPath(); ctx.moveTo(tx, ty);
+  ctx.lineTo(tx - fl * Math.cos(w - 0.5), ty - fl * Math.sin(w - 0.5));
+  ctx.lineTo(tx - fl * Math.cos(w + 0.5), ty - fl * Math.sin(w + 0.5));
+  ctx.closePath(); ctx.fill();
+  // Drehpunkt + Beschriftung
+  ctx.fillStyle = stil.text; ctx.beginPath(); ctx.arc(cx, cy, Math.max(2, R * 0.08), 0, 2 * Math.PI); ctx.fill();
+  ctx.fillStyle = stil.beschriftung; ctx.textBaseline = "top"; ctx.font = stil.schrift;
+  ctx.fillText("Kompass ziehen", cx, cy + R + 3);
+  ctx.restore();
 }
 
 // ---------- Prueffaelle (Polmodell B(P)=Σ s_i (P-P_i)/|P-P_i|³, k = 1) ----------

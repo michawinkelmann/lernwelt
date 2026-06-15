@@ -62,12 +62,7 @@ export function baueOberflaeche(manifest, halter) {
     <div class="sim-unten">
       <section class="sim-parameter" aria-label="Parameter">
         <h2 class="sim-abschnitt-titel">Parameter</h2>
-        ${manifest.parameter.map(p => `
-          <label class="sim-regler" data-parameter="${p.id}">
-            <span class="sim-regler-kopf"><span>${p.label}</span>
-              <output>${formatGroesse(p.start, p.einheit, dezimalstellen(p.schritt))}</output></span>
-            <input type="range" min="${p.min}" max="${p.max}" step="${p.schritt}" value="${p.start}" aria-label="${p.label}${p.einheit ? " in " + p.einheit : ""}">
-          </label>`).join("")}
+        ${manifest.parameter.map(steuerelementHtml).join("")}
         ${manifest.presets && manifest.presets.length ? `
         <div class="sim-presets" role="group" aria-label="Voreinstellungen">
           ${manifest.presets.map((v, i) => `<button type="button" class="knopf zweitrangig klein" data-preset="${i}">${v.name}</button>`).join("")}
@@ -75,6 +70,7 @@ export function baueOberflaeche(manifest, halter) {
         ${manifest.modellgrenzen ? `<p class="sim-modellgrenzen"><strong>Modell:</strong> ${manifest.modellgrenzen}</p>` : ""}
       </section>
 
+      ${(manifest.anzeigen.length || (manifest.diagramme || []).length || mitMessreihe) ? `
       <section class="sim-messung" aria-label="Messwerte">
         <h2 class="sim-abschnitt-titel">Messwerte</h2>
         <dl class="sim-anzeigen">
@@ -95,7 +91,7 @@ export function baueOberflaeche(manifest, halter) {
           <summary>Messtabelle anzeigen</summary>
           <div class="sim-tabelle-inhalt" tabindex="0"></div>
         </details>` : ""}
-      </section>
+      </section>` : ""}
     </div>
 
     ${manifest.beobachtung && manifest.beobachtung.length ? `
@@ -115,6 +111,33 @@ export function baueOberflaeche(manifest, halter) {
   };
 }
 
+// Baut das passende Steuerelement: Toggle (an/aus), Auswahl (segmentierte Knöpfe) oder Schieberegler.
+function steuerelementHtml(p) {
+  if (p.typ === "toggle") {
+    const an = !!p.start;
+    return `<div class="sim-regler sim-toggle" data-parameter="${p.id}">
+        <span class="sim-regler-kopf"><span>${p.label}</span></span>
+        <button type="button" class="sim-schalter" role="switch" aria-checked="${an ? "true" : "false"}" data-toggle aria-label="${p.label}">
+          <span class="sim-schalter-spur"><span class="sim-schalter-knauf"></span></span>
+          <span class="sim-schalter-text">${an ? "an" : "aus"}</span>
+        </button>
+      </div>`;
+  }
+  if (p.typ === "auswahl") {
+    return `<div class="sim-regler sim-auswahl" data-parameter="${p.id}">
+        <span class="sim-regler-kopf"><span>${p.label}</span></span>
+        <div class="sim-segment" role="group" aria-label="${p.label}">
+          ${(p.optionen || []).map(o => `<button type="button" data-wert="${o.wert}" aria-pressed="${o.wert === p.start ? "true" : "false"}">${o.label}</button>`).join("")}
+        </div>
+      </div>`;
+  }
+  return `<label class="sim-regler" data-parameter="${p.id}">
+      <span class="sim-regler-kopf"><span>${p.label}</span>
+        <output>${formatGroesse(p.start, p.einheit, dezimalstellen(p.schritt))}</output></span>
+      <input type="range" min="${p.min}" max="${p.max}" step="${p.schritt}" value="${p.start}" aria-label="${p.label}${p.einheit ? " in " + p.einheit : ""}">
+    </label>`;
+}
+
 export function dezimalstellen(schritt) {
   const text = String(schritt);
   return text.includes(".") ? Math.min(3, text.split(".")[1].length) : 0;
@@ -125,9 +148,20 @@ export function zeigeReglerWert(halter, manifest, werte) {
   manifest.parameter.forEach(p => {
     const regler = halter.querySelector(`[data-parameter="${p.id}"]`);
     if (!regler) return;
-    regler.querySelector("output").textContent = formatGroesse(werte[p.id], p.einheit, dezimalstellen(p.schritt));
+    if (p.typ === "toggle") {
+      const b = regler.querySelector("[data-toggle]");
+      const an = !!werte[p.id];
+      b.setAttribute("aria-checked", an ? "true" : "false");
+      const t = b.querySelector(".sim-schalter-text"); if (t) t.textContent = an ? "an" : "aus";
+      return;
+    }
+    if (p.typ === "auswahl") {
+      regler.querySelectorAll("[data-wert]").forEach(btn => btn.setAttribute("aria-pressed", String(+btn.dataset.wert === werte[p.id])));
+      return;
+    }
+    const out = regler.querySelector("output"); if (out) out.textContent = formatGroesse(werte[p.id], p.einheit, dezimalstellen(p.schritt));
     const eingabe = regler.querySelector("input");
-    if (Math.abs(+eingabe.value - werte[p.id]) > 1e-9) eingabe.value = werte[p.id];
+    if (eingabe && Math.abs(+eingabe.value - werte[p.id]) > 1e-9) eingabe.value = werte[p.id];
   });
 }
 
@@ -141,6 +175,7 @@ export function zeigeAnzeigen(halter, manifest, messwerte) {
 
 // Endbilanz (z. B. Wurfweite) einblenden; Bilanzwerte kommen in SI und werden hier skaliert
 export function zeigeBilanz(bilanzKnoten, manifest, werte) {
+  if (!bilanzKnoten) return;
   if (!werte) { bilanzKnoten.hidden = true; bilanzKnoten.innerHTML = ""; return; }
   const def = manifest.bilanz || {};
   bilanzKnoten.innerHTML = Object.keys(def).map(id => `

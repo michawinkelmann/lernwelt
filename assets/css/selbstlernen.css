@@ -263,3 +263,9 @@
 
 /* Nur in der Druckausgabe sichtbar (Lehrkraft-Handzettel; siehe print.css) */
 .nur-druck { display: none; }
+
+/* Tabellen auf Lehrkraft-Seiten klar mit Linien (z. B. Phasen-Tabelle „Deine Rolle") */
+body[data-seite="lehrkraft"] table { width: 100%; border-collapse: collapse; margin: var(--abstand-2) 0 var(--abstand-3); font-size: .95rem; }
+body[data-seite="lehrkraft"] th, body[data-seite="lehrkraft"] td { border: 1px solid var(--linie); padding: .5rem .7rem; text-align: left; vertical-align: top; }
+body[data-seite="lehrkraft"] thead th { background: var(--hauch); }
+body[data-seite="lehrkraft"] tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--hauch) 55%, transparent); }

@@ -407,6 +407,11 @@ export function starteExperiment() {
 
       <h3>1 · Von der Halbwertszeit zur Zeitkonstante</h3>
       <p>Berechne je Zeile τ = T<sub>h</sub> / ln 2 (ln 2 ≈ 0,693) und vergleiche mit Methode 2 (direkte Ablesung bei U₀/e).</p>
+      <details class="exp-hilfe" open><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Teilschritt:</strong> Nimm aus der Tabelle dein abgelesenes T<sub>h</sub> (die Zeit, bei der die Spur 3,00 V erreicht) und teile es durch ln 2 ≈ 0,693. Das ergibt die Zeitkonstante τ derselben Zeile.</p>
+        <p><strong>Rechenbeispiel (erfundene Zahlen!):</strong> Liest du bei 10 kΩ etwa T<sub>h</sub> = 4 s ab, dann ist τ = 4 s ∕ 0,693 ≈ 5,8 s. Tippe also 5,8 ins Feld. Mach das für alle drei Zeilen mit deinen eigenen T<sub>h</sub>-Werten.</p>
+        <p><strong>Kontrolle:</strong> Dein τ muss immer etwas größer sein als dein T<sub>h</sub> (weil du durch eine Zahl kleiner als 1 teilst). Vergleiche das Ergebnis mit deinem direkt abgelesenen τ aus Methode 2 — beide Werte sollten dicht beieinanderliegen.</p>
+      </details>
       <form id="exp-f1" class="exp-ablesen">
         ${WIDERSTAENDE.map(x => Number.isFinite(a.tau[x.id]) ? "" : `<label for="exp-tau-${x.id}">τ bei ${esc(x.label)} in s:</label><input id="exp-tau-${x.id}" inputmode="decimal" autocomplete="off">`).join("")}
         ${alleTau ? "" : '<button class="knopf">Prüfen</button>'}
@@ -417,6 +422,11 @@ export function starteExperiment() {
       ${alleTau ? `
       <h3>2 · Kapazität bestimmen: C = τ / R</h3>
       <p>τ in s, R in Ω → C in F; mal 10<sup>6</sup> → µF. Nimm dein τ aus der Spalte „τ = T<sub>h</sub>/ln 2“.</p>
+      <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Teilschritt:</strong> Stelle τ = R · C nach C um: <strong>C = τ ∕ R</strong>. Setze dein τ in Sekunden und R in Ohm ein (10 kΩ = 10000 Ω, 22 kΩ = 22000 Ω, 47 kΩ = 47000 Ω).</p>
+        <p><strong>Einheiten-Trick:</strong> So kommt C zuerst in Farad heraus — eine winzige Zahl wie 0,0005 F. Multipliziere mit 10<sup>6</sup> (Komma um 6 Stellen nach rechts), dann steht da der handliche Wert in Mikrofarad (µF).</p>
+        <p><strong>Rechenbeispiel (erfundene Zahlen!):</strong> Wäre τ = 5,8 s und R = 10000 Ω, dann C = 5,8 ∕ 10000 = 0,00058 F = 580 µF. In dein Feld kommt also 580. Der Aufdruck „470 µF“ ist nur grob — dein Messwert darf deutlich davon abweichen.</p>
+      </details>
       <form id="exp-f2" class="exp-ablesen">
         ${WIDERSTAENDE.map(x => Number.isFinite(a.c[x.id]) ? "" : `<label for="exp-cwert-${x.id}">C aus ${esc(x.label)} in µF:</label><input id="exp-cwert-${x.id}" inputmode="decimal" autocomplete="off">`).join("")}
         ${alleC ? "" : '<button class="knopf">Prüfen</button>'}
@@ -427,6 +437,10 @@ export function starteExperiment() {
       ${alleC ? `
       <h3>3 · Konsistenz-Check</h3>
       <p>Von 10 kΩ auf 22 kΩ wächst R um den Faktor 2,2 — und τ? Berechne τ(22 kΩ) / τ(10 kΩ) aus deiner Tabelle:</p>
+      <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Teilschritt:</strong> Such in deiner Tabelle die beiden Zeitkonstanten für 22 kΩ und für 10 kΩ heraus und teile die größere durch die kleinere: Faktor = τ(22 kΩ) ∕ τ(10 kΩ).</p>
+        <p><strong>Rechenbeispiel (erfundene Zahlen!):</strong> Stünde dort τ(22 kΩ) = 12,8 s und τ(10 kΩ) = 5,8 s, dann ist der Faktor 12,8 ∕ 5,8 ≈ 2,2 — genau so viel, wie auch R größer geworden ist. Das ist kein Zufall: In τ = R · C steckt dasselbe C, also wächst τ im selben Verhältnis wie R.</p>
+      </details>
       <form id="exp-f3" class="exp-ablesen">
         ${zustand.auswertung.faktor !== null
           ? `<p>✓ Faktor ${komma(zustand.auswertung.faktor, 2)} — τ wächst (fast) exakt mit R, denn τ = R·C und C bleibt dasselbe. Theoretisch: genau 2,2.</p>`

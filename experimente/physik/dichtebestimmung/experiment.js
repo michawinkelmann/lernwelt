@@ -377,6 +377,11 @@ export function starteExperiment() {
     } else if (zustand.schritt === "ablesen") {
       oben = `
         <p>Das Wasser ist gestiegen! Lies den neuen Stand ab — auf Augenhöhe, am tiefsten Punkt des Wasserbogens (Meniskus). Jeder kleine Strich ist 1 ml.</p>
+        <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+          <p><strong>So liest du ab:</strong> Geh mit den Augen auf die Höhe der Wasseroberfläche. Such die nächste beschriftete Zahl (z. B. 60) und zähle von dort die kleinen Striche weiter — jeder Strich ist 1 ml. Tippe genau diesen Stand ins Feld.</p>
+          <p><strong>Was zählt:</strong> Hier trägst du nur den abgelesenen Wasserstand ein. Das Volumen des Körpers rechnet das Experiment danach selbst aus: V = neuer Stand − 50,0 ml (so viel Wasser hat der Körper zur Seite geschoben).</p>
+          <p><strong>Beispiel (erfundene Zahl!):</strong> Steht das Wasser jetzt bei 63 ml, dann hat der Körper 63 − 50 = 13 ml verdrängt, also V = 13 cm³ (denn 1 ml = 1 cm³).</p>
+        </details>
         <form id="exp-stand" class="exp-ablesen">
           <label for="exp-ml">Wasserstand:</label>
           <input id="exp-ml" inputmode="decimal" autocomplete="off" size="7"> ml
@@ -399,6 +404,11 @@ export function starteExperiment() {
       oben = `
         <p>✓ Stand mit Stahlmutter allein: <strong>${komma(zustand.senkAblesung, 1)} ml</strong> — gemerkt.</p>
         <p>Jetzt hängt das Holz an der Stahlmutter, beide sind ganz unter Wasser. Lies den neuen Stand ab:</p>
+        <details class="exp-hilfe" open><summary>Hilfe: Schritt für Schritt</summary>
+          <p><strong>So liest du ab:</strong> Lies wieder den Wasserstand auf Augenhöhe am untersten Punkt der Oberfläche ab und tippe ihn ein. Jetzt sind Stahlmutter und Holz zusammen unter Wasser.</p>
+          <p><strong>Warum der Trick funktioniert:</strong> Die Stahlmutter war beim ersten Stand schon dabei. Wenn du den ersten Stand (nur Mutter) vom zweiten Stand (Mutter + Holz) abziehst, fällt die Mutter heraus und übrig bleibt allein das Holz-Volumen: V(Holz) = Stand (beide) − Stand (nur Mutter).</p>
+          <p><strong>Beispiel (erfundene Zahlen!):</strong> Stand nur Mutter = 55 ml, Stand mit Holz + Mutter = 78 ml → V(Holz) = 78 − 55 = 23 cm³. Das Experiment rechnet diese Differenz gleich für dich aus.</p>
+        </details>
         <form id="exp-stand" class="exp-ablesen">
           <label for="exp-ml">Stand mit Holz + Mutter:</label>
           <input id="exp-ml" inputmode="decimal" autocomplete="off" size="7"> ml
@@ -475,6 +485,11 @@ export function starteExperiment() {
     panel.innerHTML = `
       <h2>Auswertung</h2>
       <p>Rechne für jede Zeile die <strong>Dichte</strong> aus: <strong>ρ = m ÷ V</strong>. Runde auf 2 Stellen nach dem Komma und trag dein Ergebnis ein (Taschenrechner erlaubt):</p>
+      <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Teilschritt:</strong> Nimm aus einer Zeile die Masse m (in g) und das Volumen V (in cm³) und teile m durch V. Das Ergebnis ist die Dichte ρ in g/cm³ — trag sie in das Feld dieser Zeile ein.</p>
+        <p><strong>Beispiel (erfundene Zahlen!):</strong> Stünde in der Zeile m = 50 g und V = 20 cm³, dann ρ = 50 ÷ 20 = 2,50 g/cm³. Tippe also 2,50 ein. Mach das Zeile für Zeile mit deinen eigenen Werten.</p>
+        <p><strong>Tipp zum Runden:</strong> Zwei Stellen nach dem Komma reichen. Zeigt der Taschenrechner z. B. 2,4975, schreibst du 2,50.</p>
+      </details>
       <table class="exp-tabelle">
         <thead><tr><th>Körper</th><th>m in g</th><th>V in cm³</th><th>ρ in g/cm³</th><th></th></tr></thead>
         <tbody>${zeilen.map((z, i) => `<tr><td>${esc(z.name)}</td><td>${komma(z.m, 1)}</td><td>${komma(z.v, 1)}</td><td><input class="exp-eingabe" data-zeile="${i}" inputmode="decimal" autocomplete="off" aria-label="Dichte von ${esc(z.name)} in Gramm pro Kubikzentimeter"></td><td data-status="${i}"></td></tr>`).join("")}</tbody>

@@ -439,7 +439,11 @@ export function starteExperiment() {
           <input id="exp-sl" inputmode="decimal" autocomplete="off" size="7"> m
           <button class="knopf">Notieren</button>
         </form>
-        <p>Runde auf 3 Stellen nach dem Komma (Taschenrechner erlaubt).</p>`;
+        <p>Runde auf 3 Stellen nach dem Komma (Taschenrechner erlaubt).</p>
+        <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+          <p><strong>Teilschritt:</strong> Eine Strecke von genau 20,00 m hast du in einer bestimmten Anzahl Schritte zurückgelegt. Ein einzelner Schritt ist also genau so lang wie die Strecke geteilt durch die Schrittzahl: Schrittlänge = 20,00 m ÷ Schrittzahl.</p>
+          <p>Beispiel mit erfundener Zahl: Wären es 27 Schritte, rechnest du 20,00 ÷ 27 ≈ 0,741 m pro Schritt. Setze deine echte gezählte Schrittzahl ein und runde auf 3 Stellen.</p>
+        </details>`;
     } else if (!kalibriert()) {
       kalib += `
         <p>Entfernungen misst du gleich mit deinen <strong>Schritten</strong> — dafür musst du wissen, wie lang einer ist. Auf dem Schulhof ist eine Strecke von <strong>genau 20,00 m</strong> abgemessen. Geh sie in normalem Tempo ab und zähle mit!</p>
@@ -569,6 +573,11 @@ export function starteExperiment() {
     panel.innerHTML = `
       <h2>Auswertung</h2>
       <p>Am ✓-Punkt gilt: <strong>Höhe über Augenhöhe = Entfernung</strong>. Es bleibt eine Addition: <strong>h = Entfernung + 1,60 m</strong>. Rechne und trag ein:</p>
+      <details class="exp-hilfe" open><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Warum diese Verhältnisgleichung?</strong> Am ✓-Punkt steigt der Peilstrahl unter 45° an. Im großen Geländedreieck (Auge → Punkt auf Augenhöhe am Objekt → Spitze) sind dann die waagerechte Seite (die Entfernung e) und die senkrechte Seite (das Stück Höhe <em>über</em> deiner Augenhöhe) <strong>gleich lang</strong> — Verhältnis 1 : 1. Deshalb: Höhe über Augenhöhe = e.</p>
+        <p><strong>Augenhöhe addieren:</strong> Die Entfernung e misst nur das Stück <em>oberhalb</em> deiner Augen. Vom Boden bis zu deinen Augen sind es noch 1,60 m. Beide Stücke zusammen ergeben die ganze Höhe: h = e + 1,60 m.</p>
+        <p><strong>So rechnest du eine Zeile:</strong> Nimm die Entfernung aus der Spalte links und addiere 1,60. Beispiel mit erfundener Zahl: e = 22,5 m ergäbe h = 22,5 + 1,60 = 24,1 m. Trag deinen echten Wert ins Feld ein.</p>
+      </details>
       <table class="exp-tabelle">
         <thead><tr><th>Objekt</th><th>Entfernung in m</th><th>h = Entfernung + 1,60 m</th><th></th></tr></thead>
         <tbody>${zeilen.map((m, i) => `<tr><td>${esc(m.name)}</td><td>${komma(m.entfernung, 1)}</td><td><input class="exp-eingabe" data-zeile="${i}" inputmode="decimal" autocomplete="off" aria-label="Höhe ${esc(m.name)} in Metern"> m</td><td data-status="${i}"></td></tr>`).join("")}</tbody>

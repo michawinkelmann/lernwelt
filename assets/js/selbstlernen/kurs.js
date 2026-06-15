@@ -181,7 +181,7 @@ function rendereLandkarte() {
     In „Üben“ wählst du deine Spur: <strong>Basis</strong> ist Pflicht, <strong>Standard</strong> und <strong>Plus</strong> für mehr.
     Wenn du die Sichern-Aufgaben schaffst, wird die nächste Lektion frei. Keine Noten – dein Stand bleibt auf diesem Gerät.</p></div>`));
 
-  const reihenfolge = KURS.lektionen.map(l => l.id);
+  const reihenfolge = (KURS.bloecke || KURS.wochen || []).flatMap(b => b.lektionen);
   const lektionVon = new Map(KURS.lektionen.map(l => [l.id, l]));
 
   // Themenblöcke (Lernlandkarte gruppiert nach Thema; Rückfall auf wochen)
@@ -270,6 +270,8 @@ function baueLektionsKarte(l, index, reihenfolge) {
 function rendereLektion(lektionId) {
   const index = KURS.lektionen.findIndex(l => l.id === lektionId);
   const l = KURS.lektionen[index];
+  const reihenfolge = (KURS.bloecke || KURS.wochen || []).flatMap(b => b.lektionen);
+  const posR = reihenfolge.indexOf(lektionId);
   HALTER.innerHTML = "";
   const wrap = document.createElement("div");
   wrap.className = "lernbuero";
@@ -281,7 +283,7 @@ function rendereLektion(lektionId) {
   wrap.append(zurueck);
 
   // Gesperrt?
-  if (!istLektionFrei(KURS_ID, KURS.lektionen.map(x => x.id), index)) {
+  if (!istLektionFrei(KURS_ID, reihenfolge, posR)) {
     const sperre = el(`<div class="lb-checkpoint"><div class="lb-checkpoint-text">
       <strong>Diese Lektion ist noch gesperrt.</strong>
       Schließe zuerst die vorige Lektion ab (Sichern-Aufgaben) – oder die Lehrkraft gibt frei.</div></div>`);
@@ -328,6 +330,24 @@ function rendereLektion(lektionId) {
   // Dezentes Schüler-Feedback (standardmäßig zugeklappt; nur auf Bitte der Lehrkraft)
   wrap.append(baueFeedback(l));
 
+  // Weiter zur nächsten Lektion (in Landkarten-/Block-Reihenfolge; klickbar, sobald abgeschlossen)
+  const nextId = posR >= 0 && posR < reihenfolge.length - 1 ? reihenfolge[posR + 1] : null;
+  const weiter = el(`<div class="lb-weiter"></div>`);
+  let weiterKnopf = null, weiterHinweis = null;
+  if (nextId) {
+    const next = KURS.lektionen.find(x => x.id === nextId) || {};
+    weiterHinweis = el(`<p class="lb-weiter-hinweis"></p>`);
+    weiterKnopf = el(`<button type="button" class="knopf lb-weiter-knopf" disabled>Zur nächsten Lektion →</button>`);
+    weiterKnopf.dataset.titel = (next.nr ? "Lektion " + next.nr + ": " : "") + (next.titel || "");
+    weiterKnopf.addEventListener("click", () => gehe("#lektion-" + nextId));
+    weiter.append(weiterHinweis, weiterKnopf);
+  } else {
+    const zurLk = el(`<a class="knopf zweitrangig" href="#">Zur Lernlandkarte</a>`);
+    zurLk.addEventListener("click", e => { e.preventDefault(); gehe(""); });
+    weiter.append(el(`<p class="lb-weiter-hinweis">Das war die letzte Lektion dieses Kurses – stark!</p>`), zurLk);
+  }
+  wrap.append(weiter);
+
   HALTER.append(wrap);
   rendereMathe(wrap);
   fokussiere(wrap);
@@ -337,6 +357,12 @@ function rendereLektion(lektionId) {
     const bestanden = alleGeloest(l.phasen.sichern?.aufgaben) || holeLektionStand(KURS_ID, l.id).checkpoint;
     if (bestanden && holeLektionStand(KURS_ID, l.id).checkpoint !== true) setzeCheckpoint(KURS_ID, l.id, true);
     zeichneCheckpoint(cp, l);
+    if (weiterKnopf) {
+      weiterKnopf.disabled = !bestanden;
+      weiterHinweis.textContent = bestanden
+        ? "Geschafft! Weiter mit " + weiterKnopf.dataset.titel
+        : "Schließe die Sichern-Aufgaben ab, um direkt weiterzumachen.";
+    }
   };
   aktualisiereCheckpoint();
   HALTER._cpHandler = aktualisiereCheckpoint;

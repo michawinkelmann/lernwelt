@@ -452,6 +452,11 @@ export function starteExperiment() {
       <canvas id="exp-diagramm" class="exp-diagramm" width="440" height="300" aria-label="Diagramm: Laufzeit Delta-t in Millisekunden über dem Abstand d in Metern mit deinen Messpunkten und der Regressionsgeraden."></canvas>
       <h3>Schritt 1: Steigung ablesen</h3>
       <p>Wähle zwei weit auseinanderliegende Stellen <em>auf der Geraden</em> (nicht auf einzelnen Punkten!) und bilde k = Δ(Δt) / Δd — hier praktisch in <strong>ms/m</strong>.</p>
+      <details class="exp-hilfe" open><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Teilschritt:</strong> Such dir zwei Stellen weit links und weit rechts <em>auf der gestrichelten Geraden</em> (nicht auf einem Messpunkt, der zufällig daneben liegt). Lies bei jeder Stelle den d-Wert (unten) und den dazugehörigen Δt-Wert (links) ab.</p>
+        <p><strong>So rechnest du die Steigung:</strong> k = (Δt<sub>rechts</sub> − Δt<sub>links</sub>) ∕ (d<sub>rechts</sub> − d<sub>links</sub>). Oben Zeit in ms, unten Strecke in m → die Steigung hat die Einheit ms/m.</p>
+        <p><strong>Rechenbeispiel (erfundene Zahlen!):</strong> Liest du bei d = 2 m etwa Δt = 6 ms und bei d = 10 m etwa Δt = 30 ms ab, dann ist k = (30 − 6) ms ∕ (10 − 2) m = 24 ∕ 8 = 3 ms/m. Nimm bewusst zwei weit entfernte Punkte — über die große Strecke fällt ein kleiner Ablesefehler kaum ins Gewicht.</p>
+      </details>
       <form id="exp-k-form" class="exp-ablesen">
         <label for="exp-k">k in ms/m:</label>
         <input id="exp-k" inputmode="decimal" autocomplete="off" size="7" ${a.kOk ? "disabled" : ""} value="${a.kOk ? komma(a.kEingabe, 2) : ""}">
@@ -461,6 +466,11 @@ export function starteExperiment() {
       ${a.kOk ? `
       <h3>Schritt 2: c berechnen</h3>
       <p>Aus k = 1/c folgt c = 1/k. Dein k ist in ms/m — also <strong>c = 1000 / k in m/s</strong>. Rechne mit deinem k = ${komma(a.kEingabe, 2)} ms/m.</p>
+      <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Teilschritt:</strong> Die Steigung ist der Kehrwert der Geschwindigkeit: k = 1 ∕ c, also c = 1 ∕ k. Tippe in den Taschenrechner 1 geteilt durch dein k.</p>
+        <p><strong>Warum die 1000?</strong> Dein k steht in ms/m. 1 ms ist eine tausendstel Sekunde, deshalb wird aus 1 ∕ k erst eine Geschwindigkeit in m/ms — und 1 m/ms sind 1000 m/s. Kurz: rechne einfach <strong>c = 1000 ∕ k</strong>, dann steht das Ergebnis gleich in m/s.</p>
+        <p><strong>Rechenbeispiel (erfundene Zahlen!):</strong> Wäre k = 3 ms/m, dann c = 1000 ∕ 3 ≈ 333 m/s.</p>
+      </details>
       <form id="exp-c-form" class="exp-ablesen">
         <label for="exp-c">c in m/s:</label>
         <input id="exp-c" inputmode="decimal" autocomplete="off" size="7" ${a.cOk ? "disabled" : ""} value="${a.cOk ? komma(a.cEingabe, 0) : ""}">

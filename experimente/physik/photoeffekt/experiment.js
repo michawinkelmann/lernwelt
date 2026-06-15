@@ -464,6 +464,10 @@ export function starteExperiment() {
     const schritt2 = `
       <h3>Schritt 2: h berechnen</h3>
       <p>Aus m = h/e folgt <strong>h = e·m</strong>. Gegeben: e = 1,602·10⁻¹⁹ C. Achtung Einheiten: m in V/10¹⁴ Hz = 10⁻¹⁴ V·s.</p>
+      <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+        <p>Setze in <strong>h = e · m</strong> ein: e = 1,602·10⁻¹⁹ C und deine Steigung m.</p>
+        <p>Rechenweg mit den Zehnerpotenzen: h = 1,602·10⁻¹⁹ · (m · 10⁻¹⁴) Js = (1,602 · m) · 10⁻³³ Js. Weil 10⁻³³ = 10 · 10⁻³⁴ ist, lautet die Zahl im Feld <strong>16,02 · m</strong> (also 1,602 · m, Komma eine Stelle nach rechts).</p>
+      </details>
       <form class="exp-ablesen" id="exp-form-h">
         <label for="exp-h">h in 10⁻³⁴ Js:</label>
         <input id="exp-h" inputmode="decimal" autocomplete="off" size="7" ${a.hOk ? "disabled" : ""}>
@@ -473,6 +477,11 @@ export function starteExperiment() {
     const schritt3 = `
       <h3>Schritt 3: Austrittsarbeit der Kathode</h3>
       <p>Verlängere die Gerade nach links bis f = 0 (gestrichelt im Diagramm): Sie schneidet die U₀-Achse bei −W<sub>A</sub>/e. Lies den Achsenabschnitt ab — oder rechne mit einem Messpunkt: W<sub>A</sub>/e = m·f − U₀.</p>
+      <details class="exp-hilfe" open><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Weg A – ablesen:</strong> Folge der gestrichelten Geraden nach links bis zur senkrechten Achse (f = 0). Dort schneidet sie bei einem <em>negativen</em> Wert b. Es gilt b = −W<sub>A</sub>/e, also W<sub>A</sub>/e = −b (eine positive Spannung in Volt).</p>
+        <p><strong>Von Volt zu eV:</strong> 1 eV ist genau die Energie, die ein Elektron beim Durchlaufen von 1 V gewinnt. Darum ist die Zahl für W<sub>A</sub> in eV <em>dieselbe</em> wie W<sub>A</sub>/e in Volt. Beispiel: Liest du b = −1,8 V ab, trägst du 1,8 (eV) ein.</p>
+        <p><strong>Weg B – rechnen statt ablesen:</strong> Nimm einen Messpunkt (f, U₀) aus deiner Tabelle und deine Steigung m aus Schritt 1: <strong>W<sub>A</sub> (in eV) = m · f − U₀</strong>. (m·f ist in Volt, also kommt die Zahl direkt in eV heraus.)</p>
+      </details>
       <form class="exp-ablesen" id="exp-form-wa">
         <label for="exp-wa">W<sub>A</sub> in eV:</label>
         <input id="exp-wa" inputmode="decimal" autocomplete="off" size="7" ${a.waOk ? "disabled" : ""}>
@@ -494,6 +503,10 @@ export function starteExperiment() {
       <canvas id="exp-diagramm" class="exp-diagramm" width="460" height="330" aria-label="Diagramm: Grenzspannung U Null über der Frequenz f mit Messpunkten, Regressionsgerade, Steigungsdreieck und gestrichelter Verlängerung bis zur U-Null-Achse."></canvas>
       <h3>Schritt 1: Steigung bestimmen</h3>
       <p>Lies die Steigung am gestrichelten Steigungsdreieck ab: m = ΔU₀/Δf.</p>
+      <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+        <p>Im Diagramm ist ein <strong>Steigungsdreieck</strong> eingezeichnet. Lies seine waagerechte Seite Δf (in 10¹⁴ Hz) und seine senkrechte Seite ΔU₀ (in V) ab.</p>
+        <p>Teile dann: <strong>m = ΔU₀ ∕ Δf</strong>. Nimm das eingezeichnete Dreieck (nicht zwei beliebige Messpunkte) — so triffst du die Steigung am genauesten.</p>
+      </details>
       <form class="exp-ablesen" id="exp-form-m">
         <label for="exp-m">m in V/10¹⁴ Hz:</label>
         <input id="exp-m" inputmode="decimal" autocomplete="off" size="7" ${a.mOk ? "disabled" : ""}>

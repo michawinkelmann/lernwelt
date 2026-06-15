@@ -15,6 +15,7 @@ export class Messreihe {
   leeren() { this.zeilen = []; this.naechsteZeit = 0; }
   // nimmt nur ca. alle abtastDt Sekunden Modellzeit einen Messpunkt auf
   erfasse(werte) {
+    if (!this.spalten.length) return;   // statisch ohne Anzeigen: nichts aufzeichnen
     const t = werte[this.spalten[0].id];
     if (t + 1e-9 < this.naechsteZeit) return;
     this.naechsteZeit = t + this.abtastDt;

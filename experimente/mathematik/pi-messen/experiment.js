@@ -564,6 +564,10 @@ export function starteExperiment() {
         <p>✓ Steigung m ≈ <strong>${komma(m, 3)}</strong> — schon wieder π! Und lässt man die Gerade frei (nicht durch null gezwungen), liefert die Regression als Achsenabschnitt b ≈ ${komma(frei.b, 2)} cm: praktisch null. Die Gerade <em>will</em> durch den Ursprung.</p>
         <p class="exp-hinweis"><strong>Kernsatz:</strong> π ist keine Erfindung des Messens und kein Zufall deiner Objekte — <strong>in jedem Kreis steckt dieselbe Zahl:</strong> u = π · d. Bei der Münze genauso wie beim Riesenrad.</p>` : `
         <p>Bestimme die Steigung der Geraden: <strong>Steigung = Δu ÷ Δd</strong>. Nimm das gestrichelte Steigungsdreieck im Diagramm zu Hilfe.</p>
+        <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+          <p><strong>Teilschritt 1 – Dreieck ablesen:</strong> Im Diagramm ist ein gestricheltes <strong>Steigungsdreieck</strong> eingezeichnet. Die waagerechte Seite ist Δd (eine Strecke nach rechts, in cm), die senkrechte Seite ist Δu (das Stück nach oben, in cm). Beide Werte stehen am Dreieck.</p>
+          <p><strong>Teilschritt 2 – teilen:</strong> Rechne Steigung = Δu ÷ Δd. Beispiel mit erfundenen Zahlen: Wäre Δd = 20 cm und Δu = 65 cm, ergäbe das 65 ÷ 20 = 3,25. Setz deine echten Dreieckswerte ein; die Steigung ist die Zahl, die du schon aus Spalte „u ÷ d“ kennst.</p>
+        </details>
         <form id="exp-m" class="exp-ablesen">
           <label for="exp-wert-m">Steigung =</label>
           <input id="exp-wert-m" inputmode="decimal" autocomplete="off" size="7">

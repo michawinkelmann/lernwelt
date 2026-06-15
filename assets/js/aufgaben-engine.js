@@ -417,6 +417,8 @@ function baueNumerischeFelder(eingaben, ziel) {
 }
 
 function pruefeNumerischeFelder(eingaben, kasten) {
+  // Schutz: ein Schritt/eine Aufgabe ohne Eingabefelder darf nicht automatisch als richtig gelten
+  if (!Array.isArray(eingaben) || eingaben.length === 0) return false;
   let alleOk = true;
   eingaben.forEach((e, i) => {
     const feld = kasten.querySelector(`input[data-index="${i}"]`);
@@ -486,7 +488,10 @@ function baueMultipleChoice(kontext) {
       const richtig = !!optionen[i].richtig;
       li.classList.remove("richtig-markiert", "falsch-markiert");
       if (gewaehlt !== richtig) ok = false;
-      if (gewaehlt && !richtig) {
+      if (gewaehlt && richtig) {
+        // Richtig angekreuzte Option sofort gruen bestaetigen, auch wenn noch etwas fehlt.
+        li.classList.add("richtig-markiert");
+      } else if (gewaehlt && !richtig) {
         li.classList.add("falsch-markiert");
         const erkl = li.querySelector(".erklaerung");
         if (erkl) { erkl.hidden = false; rendereMathe(erkl); }
@@ -752,7 +757,10 @@ function baueParametrisiert(kontext) {
   neuKnopf.type = "button";
   neuKnopf.className = "knopf zweitrangig klein";
   neuKnopf.textContent = "Neue Aufgabe";
-  neuKnopf.addEventListener("click", () => { zaehler++; neuErzeugen(); });
+  neuKnopf.addEventListener("click", async () => {
+    zaehler++;
+    await neuErzeugen();
+  });
   kontext.knoepfe.append(neuKnopf);
 
   neuErzeugen();

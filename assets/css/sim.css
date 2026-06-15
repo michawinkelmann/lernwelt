@@ -67,3 +67,19 @@ body.sim-beamer .knopf.klein { font-size: 1.05rem; padding: 10px 20px; }
 @media (max-width: 760px) {
   .sim-unten { grid-template-columns: 1fr; }
 }
+
+/* ===== Toggle-Schalter (an/aus) & Auswahl-Segmente in den Sim-Parametern ===== */
+.sim-toggle, .sim-auswahl { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.sim-toggle .sim-regler-kopf, .sim-auswahl .sim-regler-kopf { margin: 0; }
+.sim-schalter { display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; cursor: pointer; padding: 2px; }
+.sim-schalter-spur { width: 42px; height: 24px; border-radius: 999px; background: var(--linie); position: relative; transition: background .15s; flex: 0 0 auto; }
+.sim-schalter-knauf { position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.3); transition: left .15s; }
+.sim-schalter[aria-checked="true"] .sim-schalter-spur { background: var(--akzent); }
+.sim-schalter[aria-checked="true"] .sim-schalter-knauf { left: 20px; }
+.sim-schalter-text { font-size: .85rem; color: var(--text-leise); min-width: 1.8em; text-align: left; }
+.sim-schalter:focus-visible { outline: 2px solid var(--akzent); outline-offset: 2px; border-radius: 6px; }
+.sim-segment { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--linie); border-radius: 8px; overflow: hidden; }
+.sim-segment button { border: 0; background: var(--flaeche); color: var(--text); padding: 6px 12px; cursor: pointer; font: inherit; border-left: 1px solid var(--linie); }
+.sim-segment button:first-child { border-left: 0; }
+.sim-segment button[aria-pressed="true"] { background: var(--akzent); color: #fff; }
+.sim-segment button:focus-visible { outline: 2px solid var(--akzent); outline-offset: -2px; }

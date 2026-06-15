@@ -15,12 +15,19 @@
       "frage": "Zusatz – Rechteck-Diagonale: Ein Rechteck hat die Seiten $a = 5\\,\\text{cm}$ und $b = 12\\,\\text{cm}$. <strong>(1)</strong> Berechne die Länge der Diagonale $d$. <strong>(2)</strong> Begründe mit der Umkehrung des Satzes des Pythagoras, dass das Dreieck, das durch eine Diagonale entsteht, tatsächlich rechtwinklig ist.",
       "schritte": [
         {
-          "frage": "Schritt 1 – Hypotenuse bestimmen: Welche Seite des entstehenden Dreiecks ist die Hypotenuse?",
-          "eingaben": [],
+          "frage": "Schritt 1 – Hypotenuse und Quadrate: Im Rechteck liegt die Diagonale dem rechten Winkel zwischen $a$ und $b$ gegenüber – sie ist die Hypotenuse. Berechne zunächst $a^2 + b^2$.",
+          "eingaben": [
+            {
+              "label": "$a^2 + b^2$",
+              "antwort": 169,
+              "toleranz": 0,
+              "einheit": "cm²"
+            }
+          ],
           "tipps": [
-            "Zeichne das Rechteck und ziehe eine Diagonale – welches Dreieck entsteht dabei?",
-            "Im Rechteck ist jeder Innenwinkel $90°$. Der Winkel zwischen den Seiten $a$ und $b$ ist also ein rechter Winkel.",
-            "Die Diagonale $d$ liegt dem rechten Winkel gegenüber – sie ist die Hypotenuse."
+            "Die Diagonale liegt dem rechten Winkel gegenüber, ist also die Hypotenuse. Für die beiden Katheten gilt $a = 5\\,\\text{cm}$ und $b = 12\\,\\text{cm}$.",
+            "Quadriere beide Katheten: $a^2 = 5^2 = 25$ und $b^2 = 12^2 = 144$.",
+            "Addiere die Quadrate: $a^2 + b^2 = 25 + 144 = 169$ (in $\\text{cm}^2$)."
           ]
         },
         {
@@ -34,18 +41,25 @@
             }
           ],
           "tipps": [
-            "Wende den Satz des Pythagoras an: $d^2 = a^2 + b^2$.",
-            "Setze ein: $d^2 = 5^2 + 12^2 = 25 + 144 = 169$.",
-            "Ziehe die Wurzel: $d = \\sqrt{169} = 13$."
+            "Es gilt $d^2 = a^2 + b^2$ – setze dein Ergebnis aus Schritt 1 ein: $d^2 = 169$.",
+            "Ziehe die Wurzel: $d = \\sqrt{169}$.",
+            "$d = \\sqrt{169} = 13\\,\\text{cm}$."
           ]
         },
         {
-          "frage": "Schritt 3 – Begründung: Prüfe mit der Umkehrung, ob das Dreieck mit den Seiten $5\\,\\text{cm}$, $12\\,\\text{cm}$ und $13\\,\\text{cm}$ rechtwinklig ist. Wie lautet die vollständige Gleichung?",
-          "eingaben": [],
+          "frage": "Schritt 3 – Umkehrung prüfen: Die längste Seite des Dreiecks ist $c = 13\\,\\text{cm}$. Berechne $c^2$ und vergleiche mit $a^2 + b^2$ aus Schritt 1.",
+          "eingaben": [
+            {
+              "label": "$c^2$",
+              "antwort": 169,
+              "toleranz": 0,
+              "einheit": "cm²"
+            }
+          ],
           "tipps": [
-            "Umkehrung: Gilt $a^2 + b^2 = c^2$ mit $c$ als längster Seite, so ist das Dreieck rechtwinklig.",
-            "Größte Seite ist $c = 13\\,\\text{cm}$. Prüfe: $5^2 + 12^2 = 25 + 144 = 169$ und $13^2 = 169$.",
-            "Da $25 + 144 = 169$ gilt, folgt aus der Umkehrung: Das Dreieck ist rechtwinklig."
+            "Quadriere die längste Seite: $c^2 = 13^2$.",
+            "$13^2 = 169$ (in $\\text{cm}^2$).",
+            "Da $c^2 = 169 = a^2 + b^2$ gilt, ist das Dreieck nach der Umkehrung des Satzes des Pythagoras rechtwinklig."
           ]
         }
       ],

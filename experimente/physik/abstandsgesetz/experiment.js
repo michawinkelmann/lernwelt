@@ -584,6 +584,11 @@ export function starteExperiment() {
       <h2>Auswertung</h2>
       <h3>1 · Nullrate abziehen, Produkt bilden</h3>
       <p>Deine Nullrate: <strong>R<sub>null</sub> = ${komma(rNull, 2)} Imp/s</strong>. Rechne jede Zeile fertig: erst <strong>R<sub>korr</sub> = R − R<sub>null</sub></strong>, dann das Produkt <strong>R<sub>korr</sub>·r²</strong> (mit r in m; r² = r·r). Komma oder Punkt — beides geht.</p>
+      <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Teilschritt 1 – Nullrate abziehen:</strong> Nimm aus einer Zeile den Wert R (Spalte „R in Imp/s“) und ziehe deine Nullrate ab: R<sub>korr</sub> = R − R<sub>null</sub>. Beispiel (erfundene Zahlen): R = 12,5 Imp/s und R<sub>null</sub> = 0,2 Imp/s ergeben R<sub>korr</sub> = 12,3 Imp/s.</p>
+        <p><strong>Teilschritt 2 – Produkt bilden:</strong> Nimm das r derselben Zeile (in Metern!), quadriere es (r² = r·r) und multipliziere: R<sub>korr</sub>·r². Beispiel mit r = 0,18 m: r² = 0,18·0,18 = 0,0324 m², also R<sub>korr</sub>·r² = 12,3·0,0324 ≈ 0,40 Imp·m²/s.</p>
+        <p>Wenn das 1/r²-Gesetz gilt, kommt in der letzten Spalte für <em>jede</em> Zeile (fast) dieselbe Zahl heraus — auf die echten Werte aus deiner Tabelle kommt es an, nicht auf das Beispiel hier.</p>
+      </details>
       <form id="exp-auswform">
         <table class="exp-tabelle"><thead><tr><th>r in m</th><th>T in s</th><th>N</th><th>R in Imp/s</th><th>R<sub>korr</sub> in Imp/s</th><th>R<sub>korr</sub>·r² in Imp·m²/s</th></tr></thead>
         <tbody>${zeilen.map((m, i) => `<tr>
@@ -596,6 +601,10 @@ export function starteExperiment() {
       <p id="exp-ausw-meldung" class="exp-meldung" aria-live="polite"></p>
       <h3>2 · Schnell-Check: Abstand verdoppeln</h3>
       <p>Vergleiche r = 0,10 m mit r = 0,20 m (nimm deine eigenen Zeilen, wenn du beide hast): Auf welchen Bruchteil fällt R<sub>korr</sub> beim Verdoppeln des Abstands? Gib den Faktor als Dezimalzahl an.</p>
+      <details class="exp-hilfe"><summary>Hilfe: Schritt für Schritt</summary>
+        <p><strong>Teilschritt:</strong> Such in der Tabelle oben die R<sub>korr</sub>-Werte zu r = 0,10 m und zu r = 0,20 m heraus. Teile dann den Wert beim <em>größeren</em> Abstand durch den beim kleineren: R<sub>korr</sub>(0,20 m) ÷ R<sub>korr</sub>(0,10 m).</p>
+        <p>So bildest du einen Bruchteil: Steht z. B. (erfundene Zahlen) 30 Imp/s bei 0,10 m und 7,4 Imp/s bei 0,20 m, rechnest du 7,4 ÷ 30 ≈ 0,25 — die Rate ist also auf etwa ein Viertel gefallen. Setze deine echten Zeilenwerte ein.</p>
+      </details>
       <form id="exp-doppelform" class="exp-ablesen">
         <label for="exp-doppel">R<sub>korr</sub>(2r) / R<sub>korr</sub>(r) ≈</label>
         <input id="exp-doppel" inputmode="decimal" autocomplete="off" size="6">

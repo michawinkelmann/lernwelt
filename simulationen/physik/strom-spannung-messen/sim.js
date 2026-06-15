@@ -57,8 +57,8 @@ export const manifest = {
     { id: "R1",        label: "Widerstand R₁",       einheit: "Ω", min: 5, max: 50, schritt: 5, start: 10 },
     { id: "R2",        label: "Widerstand R₂",       einheit: "Ω", min: 5, max: 50, schritt: 5, start: 20 },
     // Diskrete Schalter als ganzzahlige Slider; im Canvas mit Klartext beschriftet
-    { id: "topologie", label: "Schaltung (0 = Reihe · 1 = Parallel)", einheit: "", min: 0, max: 1, schritt: 1, start: 0 },
-    { id: "voltmeter", label: "Voltmeter an (0 = R₁ · 1 = R₂ · 2 = Quelle)", einheit: "", min: 0, max: 2, schritt: 1, start: 0 }
+    { id: "topologie", label: "Schaltung", typ: "auswahl", optionen: [{ wert: 0, label: "Reihe" }, { wert: 1, label: "Parallel" }], min: 0, max: 1, schritt: 1, start: 0 },
+    { id: "voltmeter", label: "Voltmeter misst", typ: "auswahl", optionen: [{ wert: 0, label: "R₁" }, { wert: 1, label: "R₂" }, { wert: 2, label: "Quelle" }], min: 0, max: 2, schritt: 1, start: 0 }
   ],
   anzeigen: [
     { id: "I_ampere", label: "Amperemeter zeigt I",  einheit: "A", stellen: 3 },

@@ -76,7 +76,7 @@ export const manifest = {
   werkzeuge: false,
   welt: { xMin: 0, xMax: 10, yMin: 0, yMax: 7.2 },
   parameter: [
-    { id: "automat", label: "Automat (1–3)",  einheit: "", min: 1, max: 3, schritt: 1, start: 1 },
+    { id: "automat", label: "Automat", typ: "auswahl", optionen: [{ wert: 1, label: "1" }, { wert: 2, label: "2" }, { wert: 3, label: "3" }], min: 1, max: 3, schritt: 1, start: 1 },
     { id: "wort",    label: "Wort (Nr. 1–6)", einheit: "", min: 1, max: 6, schritt: 1, start: 1 }
   ],
   anzeigen: [

@@ -10,7 +10,8 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const { COLS, ROWS, CELL } = CONFIG;
 canvas.width = COLS * CELL;
-canvas.height = ROWS * CELL;
+const PADY = 18;                 // oberer Randstreifen, damit die oberste Reihe (Tuerme/Gegner) nicht abgeschnitten wird
+canvas.height = ROWS * CELL + PADY;
 
 const $ = (id) => document.getElementById(id);
 const ui = {
@@ -170,7 +171,7 @@ function drawEmoji(emoji, x, y, px) {
 
 /* ---------- Terrain (pro Karte gerendert) ---------- */
 const terrain = document.createElement('canvas');
-terrain.width = canvas.width; terrain.height = canvas.height;
+terrain.width = COLS * CELL; terrain.height = ROWS * CELL;
 
 function renderTerrain(map) {
   const t = terrain.getContext('2d');
@@ -1274,10 +1275,13 @@ function drawGhost() {
 const sceneList = [];
 function draw() {
   ctx.save();
+  ctx.fillStyle = '#f6f1e2';                 // Hintergrund inkl. oberem Randstreifen (Heft-Oberrand)
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (S.shakeT > 0) {
     const m = S.shakeT * 14;
     ctx.translate((Math.random() - 0.5) * m, (Math.random() - 0.5) * m);
   }
+  ctx.translate(0, PADY);                     // Spielfeld nach unten schieben -> oben Platz fuer Tuerme/Gegner
   ctx.drawImage(terrain, 0, 0);
   if (S.running || S.wave > 0) {
     S.routes.forEach((r, i) => drawRoute(r, ROUTE_COLORS[i % ROUTE_COLORS.length]));
@@ -1612,7 +1616,7 @@ function hideTooltip() { ui.tooltip.hidden = true; }
 /* ---------- Eingabe (Maus + Touch) ---------- */
 function canvasPos(ev) {
   const r = canvas.getBoundingClientRect();
-  return { x: (ev.clientX - r.left) * (canvas.width / r.width), y: (ev.clientY - r.top) * (canvas.height / r.height) };
+  return { x: (ev.clientX - r.left) * (canvas.width / r.width), y: (ev.clientY - r.top) * (canvas.height / r.height) - PADY };
 }
 
 canvas.addEventListener('mousemove', (ev) => {

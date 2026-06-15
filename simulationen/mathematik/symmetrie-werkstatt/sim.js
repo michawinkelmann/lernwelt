@@ -27,7 +27,7 @@ export const manifest = {
   raster: false,     // eigenes Gitter mit Achsenkreuz (abstrakte Ebene, kein "m")
   werkzeuge: false,  // Werte stehen in der Anzeige; Lineal/Winkelmesser nicht nötig
   parameter: [
-    { id: "modus",   label: "Modus (0 = Spiegelung · 1 = n-Eck)", einheit: "", min: 0, max: 1, schritt: 1, start: 0 },
+    { id: "modus",   label: "Modus", typ: "auswahl", optionen: [{ wert: 0, label: "Spiegelung" }, { wert: 1, label: "n-Eck" }], min: 0, max: 1, schritt: 1, start: 0 },
     { id: "achse_s", label: "Spiegelachse x = s (nur Modus 0)",   einheit: "", min: -3, max: 3, schritt: 0.5, start: 0 },
     { id: "ecken_n", label: "Eckenzahl n des Vielecks (nur Modus 1)", einheit: "", min: 3, max: 8, schritt: 1, start: 5 }
   ],

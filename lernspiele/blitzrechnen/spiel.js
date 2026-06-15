@@ -185,6 +185,7 @@ export function starte(api) {
     let punkte = 0, serie = 0, besteSerie = 0, richtige = 0, versuche = 0;
     let rest = SPRINT_SEKUNDEN, gesperrt = false, fertig = false;
     let aufgabe = null, sperrTimer = 0;
+    let letzteTexte = [];   // zuletzt gezeigte Aufgaben (gegen Wiederholungen)
 
     api.setzePunkte(0);
     api.setzeZeit(`${SPRINT_SEKUNDEN} s`);
@@ -208,7 +209,14 @@ export function starte(api) {
 
     function naechste() {
       if (fertig) return;
-      aufgabe = erzeugeAufgabe(level);
+      // Keine direkte/baldige Wiederholung: erzeuge neu, bis die Aufgabe nicht im jüngsten Fenster liegt.
+      // Fenster level-abhängig (Level 1 hat weniger mögliche Aufgaben -> kleineres Fenster).
+      const fenster = level === 1 ? 12 : 18;
+      let neu, n = 0;
+      do { neu = erzeugeAufgabe(level); n++; } while (letzteTexte.includes(neu.text) && n < 25);
+      aufgabe = neu;
+      letzteTexte.push(neu.text);
+      if (letzteTexte.length > fenster) letzteTexte.shift();
       frageEl.textContent = aufgabe.text;
       eingabe.value = "";
       gesperrt = false;

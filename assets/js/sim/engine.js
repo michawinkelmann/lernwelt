@@ -264,27 +264,48 @@ export function starteSimulation(sim, halter) {
   // Optionaler Zeiger-Hook fuer statisch-interaktive Sims: direktes Antippen/Klicken auf
   // der Flaeche (z. B. Bauteile schalten). Nur aktiv, wenn die Sim sim.zeiger(...) anbietet
   // und zurueckmeldet, ob sich etwas geaendert hat. Alle uebrigen Simulationen bleiben unberuehrt.
-  if (typeof sim.zeiger === "function") {
+  // Zusätzlich optional: ziehbare Objekte über sim.zieh({phase:"start"|"move"|"ende", x, y, ...}).
+  // Beim pointerdown wird zuerst „start" angeboten; greift es (true) -> Ziehmodus, sonst „klick".
+  if (typeof sim.zeiger === "function" || typeof sim.zieh === "function") {
     ui.canvas.style.touchAction = "none";
     ui.canvas.style.cursor = "pointer";
+    let zieht = false;
+    const pos = ev => { const r = ui.canvas.getBoundingClientRect(); return { x: welt.weltX(ev.clientX - r.left), y: welt.weltY(ev.clientY - r.top) }; };
     ui.canvas.addEventListener("pointerdown", ev => {
       ev.preventDefault();
-      const r = ui.canvas.getBoundingClientRect();
-      const x = welt.weltX(ev.clientX - r.left);
-      const y = welt.weltY(ev.clientY - r.top);
-      if (sim.zeiger({ typ: "klick", x, y, zustand, werte })) zeigeStand();
+      const { x, y } = pos(ev);
+      if (typeof sim.zieh === "function" && sim.zieh({ phase: "start", x, y, zustand, werte })) {
+        zieht = true;
+        try { ui.canvas.setPointerCapture(ev.pointerId); } catch (_e) {}
+        zeigeStand();
+        return;
+      }
+      if (typeof sim.zeiger === "function" && sim.zeiger({ typ: "klick", x, y, zustand, werte })) zeigeStand();
     });
+    ui.canvas.addEventListener("pointermove", ev => {
+      if (!zieht) return;
+      const { x, y } = pos(ev);
+      if (sim.zieh({ phase: "move", x, y, zustand, werte })) zeigeStand();
+    });
+    const ziehEnde = () => { if (zieht) { zieht = false; if (typeof sim.zieh === "function") sim.zieh({ phase: "ende", zustand, werte }); } };
+    ui.canvas.addEventListener("pointerup", ziehEnde);
+    ui.canvas.addEventListener("pointercancel", ziehEnde);
   }
 
   // Parameter-Slider: Wert ändern → Anzeige aktualisieren, Sim neu aufsetzen, Hash schreiben
   manifest.parameter.forEach(p => {
-    const eingabe = halter.querySelector(`[data-parameter="${p.id}"] input`);
-    eingabe.addEventListener("input", () => {
-      werte[p.id] = parseFloat(eingabe.value);
-      zeigeReglerWert(halter, manifest, werte);
-      schreibeHash(manifest, werte, beamer);
-      zuruecksetzen();
-    });
+    const wrap = halter.querySelector(`[data-parameter="${p.id}"]`);
+    if (!wrap) return;
+    const aend = () => { zeigeReglerWert(halter, manifest, werte); schreibeHash(manifest, werte, beamer); zuruecksetzen(); };
+    if (p.typ === "toggle") {
+      const b = wrap.querySelector("[data-toggle]");
+      b.addEventListener("click", () => { werte[p.id] = werte[p.id] ? 0 : 1; aend(); });
+    } else if (p.typ === "auswahl") {
+      wrap.querySelectorAll("[data-wert]").forEach(btn => btn.addEventListener("click", () => { werte[p.id] = parseFloat(btn.dataset.wert); aend(); }));
+    } else {
+      const eingabe = wrap.querySelector("input");
+      if (eingabe) eingabe.addEventListener("input", () => { werte[p.id] = parseFloat(eingabe.value); aend(); });
+    }
   });
 
   // Presets
