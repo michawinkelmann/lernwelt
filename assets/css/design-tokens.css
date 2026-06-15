@@ -53,6 +53,11 @@
   --mathe: #19599f;
   --physik: #a3570e;
   --info: #6b3fa0;
+  /* QR-Ecke: immer helle Papierflaeche (sichere Scanbarkeit), dezent fachfarbig getoent */
+  --qr-bg: #eceff3;          /* neutraler heller Ton (Fallback ohne Fach) */
+  --qr-mod: #14233b;         /* dunkle Module */
+  --qr-rand: rgba(0,0,0,.12);
+  --qr-text: #5b6675;
 
   /* Funktionsfarben */
   --ok: #2c7029;
@@ -80,6 +85,10 @@
 body[data-fach="mathematik"] { --akzent: var(--mathe); }
 body[data-fach="physik"] { --akzent: var(--physik); }
 body[data-fach="informatik"] { --akzent: var(--info); }
+/* QR-Hintergrund dezent in Fachfarbe (heller Ton, gilt auch im Dunkelmodus -> QR bleibt scannbar) */
+body[data-fach="mathematik"] { --qr-bg: #e7eef7; }
+body[data-fach="physik"]     { --qr-bg: #f6ece1; }
+body[data-fach="informatik"] { --qr-bg: #efe9f7; }
 
 /* ===== Dunkles Thema ===== */
 /* a) explizit gewählt */

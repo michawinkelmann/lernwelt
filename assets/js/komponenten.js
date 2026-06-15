@@ -315,4 +315,10 @@ else if (seite === "uebungen") {
   import("./aufgaben-engine.js").then(m => m.starteUebungsseite());
 }
 
+// QR-Code oben rechts auf inhaltlichen Unterseiten (Lernbüro-Landkarte/Lektionen, Übungen, Erklärseiten …),
+// verlinkt aufs aktuelle Verzeichnis. Start (eigener Hero-QR) und reine Canvas-Seiten ausgenommen.
+if (seite && !["start", "lehrkraft", "simulation", "experiment", "lernspiel"].includes(seite)) {
+  import("./qr-ecke.js").then(m => m.zeigeQrEcke());
+}
+
 } // Ende Lehrkraft-Guard

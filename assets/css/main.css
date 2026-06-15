@@ -347,3 +347,15 @@ body.einbettung .sim-poe, body.einbettung .sim-beobachtung { display: none; }
 .exp-fehler { margin-top: 10px; }
 .exp-diagramm { width: 100%; max-width: 440px; height: auto; border: 1.5px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); }
 select.exp-wahl { font: inherit; padding: 6px 10px; border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--bg); color: var(--text); margin: 4px 0 10px; display: block; max-width: 100%; }
+
+
+/* ===== QR-Ecke (kompakter QR-Code oben rechts auf Unterseiten, verlinkt aufs aktuelle Verzeichnis) ===== */
+.inhalt { position: relative; }
+.qr-ecke { position: absolute; top: 6px; right: 6px; z-index: 5; margin: 0; width: 140px;
+  background: var(--qr-bg); border: 1px solid var(--qr-rand); border-radius: 10px;
+  padding: 8px 8px 5px; box-shadow: 0 1px 3px rgba(0,0,0,.12); text-align: center; }
+.qr-ecke a { display: block; }
+.qr-ecke svg { display: block; width: 124px; height: 124px; margin: 0 auto; }
+.qr-ecke figcaption { margin-top: 3px; font-size: .62rem; line-height: 1.1; color: var(--qr-text); }
+@media (max-width: 820px) { .qr-ecke { display: none; } }   /* platzsparend: nur wo oben rechts Freiflaeche ist */
+@media print { .qr-ecke { display: none; } }

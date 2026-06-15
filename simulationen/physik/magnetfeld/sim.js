@@ -14,8 +14,8 @@ const M1 = { nx: 2, ny: 0, sx: -2, sy: 0 };
 
 // Magnet 2: waagerecht bei y = 3, Mittelpunkt verschiebbar ueber magnet2x; die beiden Pole
 // liegen bei (magnet2x ∓ 1, 3). Die Orientierung (welcher Pol Nord ist) haengt von magnet2flip ab.
-const M2Y = 3;          // feste Hoehe des zweiten Magneten
-const M2_HALB = 1;      // halbe Magnetlaenge -> Pole bei x ± 1
+const M2Y = 0;          // gleiche Linie wie Magnet 1 (nebeneinander, nicht uebereinander)
+const M2_HALB = 2;      // halbe Magnetlaenge = wie Magnet 1 (Pole bei x ± 2) -> gleich gross
 const POL_RADIUS = 0.55;// Mindestabstand zur numerischen Stabilitaet (Feld am Pol nicht unendlich)
 
 // Liste aller Polquellen {x, y, s} fuer den aktuellen Zustand zusammenstellen.
@@ -86,7 +86,7 @@ export const manifest = {
   werkzeuge: false,
   parameter: [
     { id: "zweiterMagnet", label: "Zweiter Magnet (0 = aus, 1 = an)", einheit: "", min: 0, max: 1, schritt: 1, start: 0 },
-    { id: "magnet2x",      label: "Position 2. Magnet (x)",            einheit: "", min: -4, max: 4, schritt: 1, start: 0 },
+    { id: "magnet2x",      label: "Position 2. Magnet (x)",            einheit: "", min: 5, max: 7, schritt: 1, start: 6 },
     { id: "magnet2flip",   label: "2. Magnet umdrehen (0/1)",          einheit: "", min: 0, max: 1, schritt: 1, start: 0 },
     { id: "feldlinien",    label: "Feldlinien (0 = aus, 1 = an)",      einheit: "", min: 0, max: 1, schritt: 1, start: 1 }
   ],
@@ -95,9 +95,9 @@ export const manifest = {
     { id: "winkel_mitte",   label: "Kompasswinkel bei (0|0)", einheit: "°", stellen: 0 }
   ],
   presets: [
-    { name: "Ein Stabmagnet",       werte: { zweiterMagnet: 0, magnet2x: 0, magnet2flip: 0, feldlinien: 1 } },
-    { name: "Zwei Magnete anziehen",werte: { zweiterMagnet: 1, magnet2x: 0, magnet2flip: 1, feldlinien: 0 } },
-    { name: "Zwei Magnete abstoßen",werte: { zweiterMagnet: 1, magnet2x: 0, magnet2flip: 0, feldlinien: 0 } }
+    { name: "Ein Stabmagnet",       werte: { zweiterMagnet: 0, magnet2x: 6, magnet2flip: 0, feldlinien: 1 } },
+    { name: "Zwei Magnete anziehen",werte: { zweiterMagnet: 1, magnet2x: 6, magnet2flip: 1, feldlinien: 0 } },
+    { name: "Zwei Magnete abstoßen",werte: { zweiterMagnet: 1, magnet2x: 6, magnet2flip: 0, feldlinien: 0 } }
   ],
   vorhersage: {
     frage: "Du hältst zwei Stabmagnete so, dass zwei Nordpole direkt zueinander zeigen. Ziehen sie sich an oder stoßen sie sich ab?",
@@ -123,7 +123,7 @@ export function init(p) {
   return {
     t: 0,
     zweiterMagnet: (p.zweiterMagnet ?? 0) ? 1 : 0,
-    magnet2x: p.magnet2x ?? 0,
+    magnet2x: p.magnet2x ?? 6,
     magnet2flip: (p.magnet2flip ?? 0) ? 1 : 0,
     feldlinien: (p.feldlinien ?? 1) ? 1 : 0
   };
@@ -149,7 +149,7 @@ export function bilanz(z) {
 }
 
 export function weltBereich() {
-  return { xMin: -6, xMax: 6, yMin: -5, yMax: 5 };
+  return { xMin: -6, xMax: 10, yMin: -5, yMax: 5 };
 }
 
 // ---------- Zeiger: Klick auf den zweiten Magneten dreht ihn um ----------
@@ -334,53 +334,37 @@ function integriereLinie(ctx, welt, polliste, x0, y0, richtung) {
 function zeichneKraft(ctx, welt, z, stil, W) {
   const k = kraftAufMagnet2(z);
   if (!k) return;
-  const betrag = Math.hypot(k.fx, k.fy);
-  const cx = welt.px(z.magnet2x), cy = welt.py(M2Y + 0.9);
-  // Ist die Kraft zu Magnet 1 hin (nach unten) gerichtet -> anziehen, sonst abstoßen.
-  const anziehen = k.fy < 0;
+  const betrag = Math.abs(k.fx);
+  // Magnet 1 liegt links von Magnet 2: Kraft nach links (fx < 0) = anziehen, nach rechts = abstoßen.
+  const anziehen = k.fx < 0;
   const text = anziehen ? "anziehen" : "abstoßen";
+  const cx = welt.px(z.magnet2x), cy = welt.py(M2Y + 1.4);
   if (betrag > 1e-6) {
-    const ux = k.fx / betrag, uy = k.fy / betrag;
-    const lpx = Math.min(W(1.4), 60);   // feste Pfeillaenge in Pixel (qualitativ)
-    const x1 = cx + ux * lpx, y1 = cy - uy * lpx;
+    const ux = anziehen ? -1 : 1;
+    const lpx = Math.min(W(1.8), 70);
+    const x1 = cx + ux * lpx, y1 = cy;
     ctx.strokeStyle = stil.ok;
     ctx.fillStyle = stil.ok;
     ctx.lineWidth = stil.linienstaerke + 1;
     ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x1, y1); ctx.stroke();
-    const winkel = Math.atan2(y1 - cy, x1 - cx);
     const fl = Math.max(7, W(0.32));
     ctx.beginPath();
     ctx.moveTo(x1, y1);
-    ctx.lineTo(x1 - fl * Math.cos(winkel - 0.45), y1 - fl * Math.sin(winkel - 0.45));
-    ctx.lineTo(x1 - fl * Math.cos(winkel + 0.45), y1 - fl * Math.sin(winkel + 0.45));
+    ctx.lineTo(x1 - ux * fl, y1 - fl * 0.55);
+    ctx.lineTo(x1 - ux * fl, y1 + fl * 0.55);
     ctx.closePath(); ctx.fill();
   }
   ctx.fillStyle = stil.text;
   ctx.font = (stil.linienstaerke > 3 ? "bold 18px" : "bold 14px") + " sans-serif";
   ctx.textAlign = "center";
   ctx.textBaseline = "bottom";
-  ctx.fillText("Kraft auf Magnet 2: " + text, welt.px(z.magnet2x), welt.py(M2Y + 1.5));
+  ctx.fillText("Kraft auf Magnet 2: " + text, cx, welt.py(M2Y + 2.2));
   ctx.font = stil.schrift;
 }
 
-// ---------- Prueffaelle (analytisch von Hand nachgerechnet, k = 1) ----------
-// Polmodell B(P) = Σ s_i (P-P_i)/|P-P_i|³. By-Komponenten sind aus Symmetrie exakt 0 und werden
-// als Sollwert 0 absolut geprueft (validierung.html: Soll = 0 -> absolute Schranke).
-//
-// Fall 1 (nur Magnet 1: N(2,0), S(-2,0)):
-//   (0,0): zu N (P-N)=(-2,0), r³=8 -> (-0.25,0); zu S -1·(2,0)/8=(-0.25,0); Summe (-0.5,0).
-//   (0,2): zu N (P-N)=(-2,2), r=2,8284, r³=22,627 -> (-0.08839, 0.08839);
-//          zu S -1·(2,2)/22,627 = (-0.08839,-0.08839); Summe (-0.17678, 0).
-// Fall 2 (Magnet 1 + Magnet 2 bei x=0, flip=0 -> Pole N(-1,3), S(1,3)):
-//   (0,0): m1=(-0.5,0); m2: zu N (1,-3), r³=10√10=31,6228 -> (0.031623,-0.094868);
-//          zu S -1·(-1,-3)/31,6228=(0.031623,0.094868); m2-Summe (0.063246,0);
-//          gesamt (-0.436754, 0).
-//   (0,2): m1=(-0.176777,0); m2: zu N (1,-1), r³=2√2=2,82843 -> (0.353553,-0.353553);
-//          zu S -1·(-1,-1)/2,82843=(0.353553,0.353553); m2-Summe (0.707107,0);
-//          gesamt (0.530330, 0).
-// Fall 3 (Magnet 1 + Magnet 2 bei x=0, flip=1 -> alle m2-Vorzeichen umgedreht):
-//   (0,0): (-0.5 - 0.063246, 0) = (-0.563246, 0).
-//   (0,2): (-0.176777 - 0.707107, 0) = (-0.883883, 0).
+// ---------- Prueffaelle (Polmodell B(P)=Σ s_i (P-P_i)/|P-P_i|³, k = 1) ----------
+// Beide Magnete liegen auf y = 0 (nebeneinander). Magnet 1: N(2,0), S(-2,0). Magnet 2 (Mitte x=6,
+// Halblaenge 2): flip=0 -> N(4,0), S(8,0); flip=1 -> S(4,0), N(8,0). Werte unten aus feld() berechnet.
 export const pruefFaelle = [
   {
     name: "Nur Magnet 1 (N bei 2|0, S bei −2|0)",
@@ -389,15 +373,15 @@ export const pruefFaelle = [
     soll: { Bx0: -0.5, By0: 0, Bx2: -0.17678, By2: 0 }
   },
   {
-    name: "Magnet 1 + Magnet 2 (x = 0, flip = 0)",
-    parameter: { zweiterMagnet: 1, magnet2x: 0, magnet2flip: 0 },
+    name: "Magnet 1 + Magnet 2 (x = 6, flip = 0, gleiche Pole zueinander)",
+    parameter: { zweiterMagnet: 1, magnet2x: 6, magnet2flip: 0 },
     toleranzProzent: 1,
-    soll: { Bx0: -0.43675, By0: 0, Bx2: 0.53033, By2: 0 }
+    soll: { Bx0: -0.54688, By0: 0, Bx2: -0.20723, By2: 0.01879 }
   },
   {
-    name: "Magnet 1 + Magnet 2 (x = 0, flip = 1)",
-    parameter: { zweiterMagnet: 1, magnet2x: 0, magnet2flip: 1 },
+    name: "Magnet 1 + Magnet 2 (x = 6, flip = 1, ungleiche Pole zueinander)",
+    parameter: { zweiterMagnet: 1, magnet2x: 6, magnet2flip: 1 },
     toleranzProzent: 1,
-    soll: { Bx0: -0.56325, By0: 0, Bx2: -0.88388, By2: 0 }
+    soll: { Bx0: -0.45312, By0: 0, Bx2: -0.14632, By2: -0.01879 }
   }
 ];

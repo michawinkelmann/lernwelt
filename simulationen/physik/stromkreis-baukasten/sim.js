@@ -183,21 +183,38 @@ export function zeichne({ ctx, welt, zustand: z, stil }) {
     draht(14.0, lp[1].y - 0.62, 14.0, L.b, an);
   }
 
-  // --- Elektronen-Fluss (nur wenn Strom fliesst; respektiert prefers-reduced-motion) ---
+  // --- Elektronen-Fluss: nur durch tatsaechlich leitende Zweige (leere Fassung = kein Fluss) ---
   if (a.fluss) {
     const reduce = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const poly = [[L.l, L.t], [L.r, L.t], [L.r, L.b], [L.l, L.b], [L.l, L.t]];
-    let segLen = [], total = 0;
-    for (let i = 0; i < poly.length - 1; i++) { const d = Math.hypot(poly[i + 1][0] - poly[i][0], poly[i + 1][1] - poly[i][1]); segLen.push(d); total += d; }
-    const N = 26, phase = reduce ? 0 : (typeof performance !== "undefined" ? performance.now() : Date.now()) / 1100 % 1;
+    // Welche vertikalen Zweige fuehren Strom? In der Parallelschaltung nur die mit eingedrehter Lampe.
+    let zweige;
+    if (z.topologie === 2) {
+      zweige = [];
+      if (a.lampen[0] > 0) zweige.push(14.0);   // Zweig mit Lampe 1 (aussen rechts)
+      if (a.lampen[1] > 0) zweige.push(11.4);   // Zweig mit Lampe 2 (innen)
+      if (!zweige.length) zweige = [14.0];       // Fallback (bei a.fluss faktisch nie leer)
+    } else {
+      zweige = [14.0];                           // 1 Lampe / Reihe: einziger rechter Zweig (x = 14)
+    }
+    const xMain = Math.max(...zweige);
+    // Hauptschleife ueber den aeussersten leitenden Zweig; weitere leitende Zweige als Vertikal-Segment.
+    const pfade = [[[L.l, L.t], [xMain, L.t], [xMain, L.b], [L.l, L.b], [L.l, L.t]]];
+    for (const bx of zweige) if (bx !== xMain) pfade.push([[bx, L.t], [bx, L.b]]);
+    const phase = reduce ? 0 : (typeof performance !== "undefined" ? performance.now() : Date.now()) / 1100 % 1;
+    const dichte = 26 / (2 * (L.r - L.l) + 2 * (L.t - L.b));   // Elektronen pro Welteinheit (wie zuvor)
     ctx.fillStyle = stil.akzent;
-    for (let k = 0; k < N; k++) {
-      let s = ((k / N + phase) % 1) * total, i = 0;
-      while (s > segLen[i]) { s -= segLen[i]; i++; }
-      const f = s / segLen[i];
-      const wx = poly[i][0] + (poly[i + 1][0] - poly[i][0]) * f;
-      const wy = poly[i][1] + (poly[i + 1][1] - poly[i][1]) * f;
-      ctx.beginPath(); ctx.arc(welt.px(wx), welt.py(wy), Math.max(2.5, W(0.07)), 0, 2 * Math.PI); ctx.fill();
+    for (const poly of pfade) {
+      let segLen = [], total = 0;
+      for (let i = 0; i < poly.length - 1; i++) { const d = Math.hypot(poly[i + 1][0] - poly[i][0], poly[i + 1][1] - poly[i][1]); segLen.push(d); total += d; }
+      const N = Math.max(2, Math.round(total * dichte));
+      for (let k = 0; k < N; k++) {
+        let s = ((k / N + phase) % 1) * total, i = 0;
+        while (s > segLen[i]) { s -= segLen[i]; i++; }
+        const f = s / segLen[i];
+        const wx = poly[i][0] + (poly[i + 1][0] - poly[i][0]) * f;
+        const wy = poly[i][1] + (poly[i + 1][1] - poly[i][1]) * f;
+        ctx.beginPath(); ctx.arc(welt.px(wx), welt.py(wy), Math.max(2.5, W(0.07)), 0, 2 * Math.PI); ctx.fill();
+      }
     }
   }
 

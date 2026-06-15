@@ -4,34 +4,21 @@ Ziel: Für **jede** Sek-I-Gym-Klassenarbeit eine gleichwertige **Realschul-Varia
 erzeugen und auf der Website einbinden. Stand siehe unten.
 
 ## Stand (Pause)
-**Fertig & eingebunden (29 RS-Arbeiten Mathematik, inkl. Pilot):**
+**Fertig & eingebunden (31 RS-Arbeiten Mathematik, inkl. Pilot):**
 - Pilot: Mathe Kl. 6 Bruchrechnung
 - Mathe Klasse 5 (6): natuerliche-zahlen, groessen-und-einheiten, koerper-und-figuren, symmetrien, flaecheninhalt-und-umfang, daten-erheben-und-darstellen
 - Mathe Klasse 6 (6): brueche(=Pilot), dezimalzahlen, koerper-und-volumen, kreis-und-winkel, statistische-kennwerte, teilbarkeit-und-primzahlen
 - Mathe Klasse 7 (6): dreiecke-und-konstruktionen, prozent-und-zinsrechnung, rationale-zahlen, terme-und-umformungen, zufall-und-wahrscheinlichkeit, zuordnungen
+- Mathe Klasse 8 (6): besondere-linien-im-dreieck, flaechen-und-rauminhalte, lineare-funktionen, lineare-gleichungssysteme, mehrstufige-zufallsexperimente, terme-und-binome
+- Mathe Klasse 9 (7): aehnlichkeit, pythagoras, quadratische-funktionen, quadratische-gleichungen, quadratwurzeln, trigonometrie, vierfeldertafeln
 
 Alle in `daten/klassenarbeiten.json` registriert (zweig `["rs"]`), PDFs in `klassenarbeiten/pdf/ma-0X-rs-*.pdf`,
 ODT-Quellen + Generator-Skripte in `0Ablage/`. check-website grün. (Physik hatte schon 10 RS-Arbeiten.)
 
-## NOCH ZU BAUEN — 35 RS-Arbeiten
+## NOCH ZU BAUEN — 22 RS-Arbeiten
 Vorgehen je Arbeit: Gym-Eintrag spiegeln (fach/stufe/titel/nr/thema EXAKT übernehmen), id/datei `-gym-`→`-rs-`,
 zweig `["rs"]`. Arbeitszeit: Kl. 5–7 = 60 min, **ab Kl. 8 = 90 min**.
 
-### Mathematik Klasse 8 (6) — 90 min
-- ka-ma-08-gym-besondere-linien-im-dreieck
-- ka-ma-08-gym-flaechen-und-rauminhalte
-- ka-ma-08-gym-lineare-funktionen
-- ka-ma-08-gym-lineare-gleichungssysteme
-- ka-ma-08-gym-mehrstufige-zufallsexperimente
-- ka-ma-08-gym-terme-und-binome
-### Mathematik Klasse 9 (7) — 90 min
-- ka-ma-09-gym-aehnlichkeit
-- ka-ma-09-gym-pythagoras
-- ka-ma-09-gym-quadratische-funktionen
-- ka-ma-09-gym-quadratische-gleichungen
-- ka-ma-09-gym-quadratwurzeln
-- ka-ma-09-gym-trigonometrie
-- ka-ma-09-gym-vierfeldertafeln
 ### Mathematik Klasse 10 (6) — 90 min
 - ka-ma-10-gym-exponentielle-zusammenhaenge
 - ka-ma-10-gym-koerperberechnungen
