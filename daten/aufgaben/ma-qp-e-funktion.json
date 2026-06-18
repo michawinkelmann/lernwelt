@@ -1,0 +1,567 @@
+{
+  "thema": "ma-qp-e-funktion",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-ef-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über die natürliche Exponentialfunktion $f(x) = e^x$ sind richtig?",
+      "optionen": [
+        {
+          "text": "Der Graph verläuft durch den Punkt $(0 \\mid 1)$.",
+          "richtig": true,
+          "erklaerung": "Richtig: $e^0 = 1$ — wie bei jeder Exponentialfunktion liegt der Punkt $(0 \\mid 1)$ auf dem Graphen."
+        },
+        {
+          "text": "Es gilt $f'(x) = e^x$ — die e-Funktion stimmt mit ihrer eigenen Ableitung überein.",
+          "richtig": true,
+          "erklaerung": "Richtig: Genau diese Eigenschaft zeichnet die Basis $e$ aus. An jeder Stelle ist die Tangentensteigung gleich dem Funktionswert."
+        },
+        {
+          "text": "Für negative $x$ nimmt $f$ auch negative Werte an.",
+          "richtig": false,
+          "erklaerung": "$e^x$ ist für alle $x$ positiv: Für $x \\to -\\infty$ nähert sich der Graph der x-Achse nur an, ohne sie je zu erreichen — $e^{-1} = \\frac{1}{e} \\approx 0{,}37$ ist zum Beispiel positiv."
+        },
+        {
+          "text": "Der Graph hat bei $x = 1$ eine Nullstelle.",
+          "richtig": false,
+          "erklaerung": "Die e-Funktion hat gar keine Nullstellen. Bei $x = 1$ liegt der Funktionswert $f(1) = e \\approx 2{,}72$ vor."
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Der <strong>Exponent</strong> ist die Hochzahl – in $2^5$ ist $5$ der Exponent.",
+        "Setze testweise ein: Was ergibt $e^0$? Und welches Vorzeichen hat $e^{-1} = \\frac{1}{e}$?",
+        "Die Basis $e$ wurde genau so gewählt, dass Ableiten die Funktion nicht verändert.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Wegen $e^0 = 1$ läuft der Graph durch $(0 \\mid 1)$, und die e-Funktion ist ihre eigene Ableitung — das ist die definierende Eigenschaft der Basis $e$. Aussage 3 ist falsch, denn $e^x > 0$ gilt für alle $x$; negative Exponenten liefern kleine, aber positive Werte wie $e^{-1} \\approx 0{,}37$. Aussage 4 ist falsch: Nullstellen gibt es nicht, und $f(1) = e \\approx 2{,}72$.",
+      "kc": [
+        "eigenschaften-e-funktion"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-002",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Für $f(x) = e^x$ gilt $f'(x) = e^x$. Berechne mit dem Taschenrechner $f(2)$ (auf drei Dezimalen) und gib die Tangentensteigungen $f'(2)$ und $f'(0)$ an.",
+      "eingaben": [
+        {
+          "label": "$f(2)$",
+          "antwort": 7.389,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "$f'(2)$",
+          "antwort": 7.389,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "$f'(0)$",
+          "antwort": 1,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Eine <strong>Tangente</strong> ist eine Gerade, die den Graphen in einem Punkt berührt.",
+        "Nutze die e-Taste deines Taschenrechners: $f(2) = e^2$.",
+        "Die e-Funktion ist ihre eigene Ableitung — was bedeutet das für $f'(2)$ im Vergleich zu $f(2)$?",
+        "$f'(0) = e^0$ — eine Potenz mit Exponent $0$."
+      ],
+      "loesungsweg": "$f(2) = e^2 \\approx 7{,}389$. Wegen $f' = f$ ist die Tangentensteigung an jeder Stelle gleich dem Funktionswert: $f'(2) = e^2 \\approx 7{,}389$ und $f'(0) = e^0 = 1$. Im Punkt $(0 \\mid 1)$ steigt der Graph also genau mit Steigung $1$ — das ist die Tangente $y = x + 1$ von der Erklärseite.",
+      "kc": [
+        "ableitung-e-funktion"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-003",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zur Eulerschen Zahl und zur e-Funktion.",
+      "text": "Die Eulersche Zahl beträgt ungefähr e ≈ ___ . Die natürliche Exponentialfunktion f(x) = eˣ ist die einzige Exponentialfunktion, die mit ihrer eigenen ___ übereinstimmt. Ihr Graph verläuft durch den Punkt ___ und hat dort genau die Steigung ___ .",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "2,71828",
+          "optionen": [
+            "2,71828",
+            "3,14159",
+            "2,50000"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Ableitung",
+          "optionen": [
+            "Ableitung",
+            "Umkehrfunktion",
+            "Nullstelle"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "(0 | 1)",
+          "optionen": [
+            "(0 | 1)",
+            "(1 | 0)",
+            "(0 | 0)"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "1",
+          "optionen": [
+            "1",
+            "0",
+            "e"
+          ]
+        }
+      ],
+      "tipps": [
+        "3,14159 gehört zu einer anderen berühmten Zahl — dem Kreis.",
+        "Die Umkehrfunktion der e-Funktion ist der natürliche Logarithmus, nicht die e-Funktion selbst.",
+        "Steigung im Schnittpunkt mit der y-Achse: Funktionswert und Tangentensteigung sind bei der e-Funktion gleich — und e⁰ = 1."
+      ],
+      "loesungsweg": "2,71828 — Ableitung — (0 | 1) — 1: Die Eulersche Zahl ist $e \\approx 2{,}71828$. Die e-Funktion ist die einzige Exponentialfunktion mit $f' = f$. Wegen $e^0 = 1$ verläuft ihr Graph durch $(0 \\mid 1)$, und weil dort der Funktionswert $1$ ist, hat die Tangente in diesem Punkt die Steigung $1$.",
+      "kc": [
+        "zahl-e"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-004",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Bestimme ohne Taschenrechner mit den Umkehr-Beziehungen und ln-Regeln: a) $\\ln\\left(e^3\\right)$, b) $e^{\\ln 4}$, c) $\\ln 1$.",
+      "eingaben": [
+        {
+          "label": "a) $\\ln\\left(e^3\\right)$",
+          "antwort": 3,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "b) $e^{\\ln 4}$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "c) $\\ln 1$",
+          "antwort": 0,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "ln und e-Funktion sind Umkehrfunktionen: Nacheinander angewendet heben sie sich auf.",
+        "a) $\\ln\\left(e^x\\right) = x$ — hier mit $x = 3$. b) $e^{\\ln c} = c$ — hier mit $c = 4$.",
+        "c) $\\ln 1$ beantwortet die Frage: e hoch was ergibt 1?"
+      ],
+      "loesungsweg": "a) $\\ln\\left(e^3\\right) = 3$, denn $\\ln$ macht die e-Potenz rückgängig. b) $e^{\\ln 4} = 4$ — andersherum genauso. c) $\\ln 1 = 0$, denn $e^0 = 1$. Diese drei Beziehungen ($\\ln(e^x) = x$, $e^{\\ln c} = c$, $\\ln 1 = 0$) brauchst du beim Lösen jeder Exponentialgleichung.",
+      "kc": [
+        "ln-rechenregeln"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-005",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Welche Umformungen sind für positive Zahlen $u$ und $v$ richtig?",
+      "optionen": [
+        {
+          "text": "$\\ln(u \\cdot v) = \\ln u + \\ln v$",
+          "richtig": true,
+          "erklaerung": "Richtig: Der Logarithmus macht aus Produkten Summen — geerbt vom Potenzgesetz $e^a \\cdot e^b = e^{a+b}$."
+        },
+        {
+          "text": "$\\ln(u + v) = \\ln u \\cdot \\ln v$",
+          "richtig": false,
+          "erklaerung": "Für Summen gibt es keine ln-Regel! Gegenbeispiel: $\\ln(1 + 1) = \\ln 2 \\approx 0{,}69$, aber $\\ln 1 \\cdot \\ln 1 = 0$."
+        },
+        {
+          "text": "$\\ln\\left(u^5\\right) = 5 \\cdot \\ln u$",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Potenzregel des Logarithmus — der Exponent darf als Faktor vor den $\\ln$ gezogen werden."
+        },
+        {
+          "text": "$\\ln e = 0$",
+          "richtig": false,
+          "erklaerung": "$\\ln e = 1$, denn $e^1 = e$. Der Wert $0$ gehört zu $\\ln 1 = 0$, denn $e^0 = 1$."
+        }
+      ],
+      "tipps": [
+        "Die ln-Regeln spiegeln die Potenzgesetze: Aus „Exponenten addieren bei Produkten“ wird „ln-Werte addieren“.",
+        "Teste verdächtige Regeln mit konkreten Zahlen, z. B. $u = v = 1$.",
+        "$\\ln e$ beantwortet die Frage: e hoch was ergibt e?"
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 3: $\\ln(u \\cdot v) = \\ln u + \\ln v$ (Produkte werden zu Summen) und $\\ln\\left(u^5\\right) = 5 \\cdot \\ln u$ (Exponent springt nach vorn). Aussage 2 ist falsch — für Summen existiert keine Vereinfachungsregel, wie das Gegenbeispiel $u = v = 1$ zeigt. Aussage 4 verwechselt die Spezialwerte: $\\ln e = 1$ und $\\ln 1 = 0$.",
+      "kc": [
+        "ln-rechenregeln"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-006",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Löse die Gleichungen und runde auf drei Dezimalen: a) $e^x = 5$, b) $e^x = 1$, c) $e^{2x} = 10$.",
+      "eingaben": [
+        {
+          "label": "a) $x$",
+          "antwort": 1.609,
+          "toleranz": 0.005,
+          "einheit": ""
+        },
+        {
+          "label": "b) $x$",
+          "antwort": 0,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "c) $x$",
+          "antwort": 1.151,
+          "toleranz": 0.005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Wende auf beiden Seiten den natürlichen Logarithmus an: Aus $e^x = c$ wird $x = \\ln c$.",
+        "b) geht ohne Taschenrechner: e hoch was ergibt 1?",
+        "c) Logarithmieren liefert zunächst $2x = \\ln 10$ — danach noch durch $2$ teilen."
+      ],
+      "loesungsweg": "a) $e^x = 5 \\Rightarrow x = \\ln 5 \\approx 1{,}609$. b) $e^x = 1 \\Rightarrow x = \\ln 1 = 0$, denn $e^0 = 1$. c) $e^{2x} = 10 \\Rightarrow 2x = \\ln 10 \\Rightarrow x = \\frac{\\ln 10}{2} \\approx \\frac{2{,}303}{2} \\approx 1{,}151$. Probe jeweils durch Einsetzen, z. B. $e^{1{,}609} \\approx 5{,}00$.",
+      "kc": [
+        "exponentialgleichungen"
+      ],
+      "cas": "<p>So löst du Teil a) mit dem ClassPad II:</p><ol><li>Software-Tastatur einblenden und im Register <b>Math1</b> das Template <code>e^□</code> wählen — nicht den Buchstaben e eintippen, sonst rechnet der ClassPad mit einer Variablen e!</li><li>Im <b>Main</b>-Menü eingeben: <code>solve(e^x=5,x)</code> und <b>EXE</b> — Ergebnis: <code>x=ln(5)</code>.</li><li>Für den Näherungswert in der Symbolleiste von <b>Standard</b> auf <b>Dezimal</b> umschalten (Knopf ½↔0,5): x ≈ 1,609.</li></ol><p>Teil c) entsprechend mit <code>solve(e^(2x)=10,x)</code> — der ClassPad liefert <code>x=ln(10)/2</code>.</p>"
+    },
+    {
+      "id": "ma-qp-ef-007",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Gleichung $3 \\cdot e^{-2x} = 0{,}6$ soll gelöst werden. Bringe die Schritte in die richtige Reihenfolge.",
+      "elemente": [
+        "Gleichung notieren: $3 \\cdot e^{-2x} = 0{,}6$",
+        "Durch $3$ teilen: $e^{-2x} = 0{,}2$",
+        "$\\ln$ anwenden: $-2x = \\ln(0{,}2)$",
+        "Durch $-2$ teilen: $x = \\frac{\\ln(0{,}2)}{-2}$",
+        "Näherungswert berechnen: $x \\approx 0{,}80$"
+      ],
+      "tipps": [
+        "Bevor du logarithmieren darfst, muss die e-Potenz allein auf einer Seite stehen.",
+        "$\\ln$ holt den kompletten Exponenten $-2x$ herunter — danach ist es nur noch eine lineare Gleichung.",
+        "Der Zahlenwert kommt ganz zum Schluss: $\\ln(0{,}2) \\approx -1{,}609$, geteilt durch $-2$ ergibt etwa $0{,}80$."
+      ],
+      "loesungsweg": "Erst wird die e-Potenz freigestellt (Division durch $3$): $e^{-2x} = 0{,}2$. Dann logarithmieren: $-2x = \\ln(0{,}2)$. Division durch $-2$ liefert $x = \\frac{\\ln(0{,}2)}{-2}$, und der Taschenrechner ergibt $x \\approx \\frac{-1{,}609}{-2} \\approx 0{,}80$. Beachte: Logarithmieren vor dem Freistellen wäre falsch, denn $\\ln$ wirkt immer auf die ganze Seite.",
+      "kc": [
+        "exponentialgleichungen"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-008",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 1,
+      "frage": "Ordne jeder Funktion ihre Ableitung zu.",
+      "paare": [
+        {
+          "links": "f(x) = e^x",
+          "rechts": "e^x"
+        },
+        {
+          "links": "f(x) = e^(3x)",
+          "rechts": "3·e^(3x)"
+        },
+        {
+          "links": "f(x) = 5·e^x",
+          "rechts": "5·e^x"
+        },
+        {
+          "links": "f(x) = e^(−x)",
+          "rechts": "−e^(−x)"
+        }
+      ],
+      "tipps": [
+        "Die e-Funktion selbst bleibt beim Ableiten unverändert — ein konstanter Vorfaktor bleibt einfach stehen.",
+        "Kettenregel bei e^(kx): Der Faktor k aus dem Exponenten springt vor die Funktion.",
+        "Bei e^(−x) ist die innere Ableitung −1 — das Vorzeichen kippt."
+      ],
+      "loesungsweg": "$\\left(e^x\\right)' = e^x$ (die e-Funktion ist ihre eigene Ableitung). $\\left(e^{3x}\\right)' = 3 \\cdot e^{3x}$ (Kettenregel: innere Ableitung $3$). $\\left(5 \\cdot e^x\\right)' = 5 \\cdot e^x$ (Faktorregel: Vorfaktor bleibt). $\\left(e^{-x}\\right)' = -e^{-x}$ (innere Ableitung $-1$).",
+      "kc": [
+        "kettenregel-lineare-innere-funktion"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-009",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Leite mit der Kettenregel ab und berechne: a) $f(x) = 3 \\cdot e^{-2x}$ — gib $f'(0)$ an. b) $g(x) = e^{0{,}5x}$ — gib $g'(2)$ auf drei Dezimalen an.",
+      "eingaben": [
+        {
+          "label": "a) $f'(0)$",
+          "antwort": -6,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "b) $g'(2)$",
+          "antwort": 1.359,
+          "toleranz": 0.005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Erst die Ableitungsfunktion bilden: Bei $e^{kx}$ springt der Faktor $k$ nach vorn.",
+        "a) $f'(x) = 3 \\cdot (-2) \\cdot e^{-2x} = -6 \\cdot e^{-2x}$ — jetzt $x = 0$ einsetzen und $e^0 = 1$ nutzen.",
+        "b) $g'(x) = 0{,}5 \\cdot e^{0{,}5x}$, also $g'(2) = 0{,}5 \\cdot e^1$."
+      ],
+      "loesungsweg": "a) Kettenregel: $f'(x) = 3 \\cdot (-2) \\cdot e^{-2x} = -6 \\cdot e^{-2x}$. Einsetzen: $f'(0) = -6 \\cdot e^0 = -6$ — der Graph fällt an der Stelle $0$ steil. b) $g'(x) = 0{,}5 \\cdot e^{0{,}5x}$, also $g'(2) = 0{,}5 \\cdot e^1 = 0{,}5 \\cdot 2{,}71828 \\approx 1{,}359$.",
+      "kc": [
+        "kettenregel-lineare-innere-funktion"
+      ],
+      "cas": "<p>Ableitungs-Kontrolle mit dem ClassPad II:</p><ol><li>Im <b>Main</b>-Menü eingeben: <code>diff(3×e^(-2x),x)</code> und <b>EXE</b> — das e-Template wieder über <b>Math1</b>, den diff-Befehl findest du unter <b>Aktion → Berechnungen → diff</b>.</li><li>Der ClassPad zeigt <code>-6·e^(-2x)</code> — vergleiche mit deiner Handrechnung.</li><li>Den Wert an der Stelle 0 liefert <code>diff(3×e^(-2x),x)|x=0</code> (senkrechter „with“-Strich aus dem Register <b>Math3</b>).</li></ol>"
+    },
+    {
+      "id": "ma-qp-ef-010",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bestimme Schritt für Schritt die Gleichung der Tangente an den Graphen von $f(x) = e^x$ im Punkt $P(1 \\mid e)$. Runde auf drei Dezimalen.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne den Funktionswert $f(1)$.",
+          "eingaben": [
+            {
+              "label": "$f(1)$",
+              "antwort": 2.718,
+              "toleranz": 0.005,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$f(1) = e^1$ — die Eulersche Zahl selbst."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Gib die Tangentensteigung $m = f'(1)$ an.",
+          "eingaben": [
+            {
+              "label": "$m$",
+              "antwort": 2.718,
+              "toleranz": 0.005,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Die e-Funktion ist ihre eigene Ableitung — Steigung gleich Funktionswert."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Bestimme den y-Achsenabschnitt $b$ der Tangente $y = mx + b$ durch Punktprobe mit $P$.",
+          "eingaben": [
+            {
+              "label": "$b$",
+              "antwort": 0,
+              "toleranz": 0.01,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$e = e \\cdot 1 + b$ — was bleibt für $b$ übrig?"
+          ]
+        }
+      ],
+      "tipps": [
+        "Eine Tangente ist eine Gerade $y = mx + b$: Du brauchst die Steigung an der Berührstelle und einen Punkt.",
+        "Bei der e-Funktion gilt $f'(1) = f(1) = e$ — beide Werte sind gleich.",
+        "Punktprobe: $P(1 \\mid e)$ in $y = e \\cdot x + b$ einsetzen und nach $b$ auflösen."
+      ],
+      "loesungsweg": "Schritt 1: $f(1) = e \\approx 2{,}718$. Schritt 2: Wegen $f'(x) = e^x$ ist $m = f'(1) = e \\approx 2{,}718$. Schritt 3: Punktprobe $e = e \\cdot 1 + b$ liefert $b = 0$. Die Tangente lautet $y = e \\cdot x \\approx 2{,}718x$ — sie verläuft genau durch den Ursprung. Das ist kein Zufall, sondern eine Besonderheit der e-Funktion an der Stelle $1$.",
+      "kc": [
+        "tangente-e-funktion"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Jemand behauptet: „Die Gleichung $e^x = -2$ löst man einfach mit dem Taschenrechner: $x = \\ln(-2)$.“ Nimm Stellung: Hat die Gleichung eine Lösung? Begründe mit den Eigenschaften der e-Funktion und erkläre, warum der Taschenrechner bei $\\ln(-2)$ eine Fehlermeldung anzeigt.",
+      "musterloesung": "Die Gleichung hat keine Lösung. Die e-Funktion nimmt ausschließlich positive Werte an: $e^x > 0$ für alle $x$. Ihr Graph verläuft vollständig oberhalb der x-Achse — für $x \\to -\\infty$ nähert er sich ihr nur asymptotisch. Der Wert $-2$ wird also nie erreicht; graphisch gesehen schneidet die waagerechte Gerade $y = -2$ den Graphen von $e^x$ nicht. Der natürliche Logarithmus ist die Umkehrfunktion der e-Funktion: $\\ln c$ beantwortet die Frage „$e$ hoch was ergibt $c$?“. Da $e^x$ nur positive Ergebnisse liefert, hat diese Frage nur für $c > 0$ eine Antwort — $\\ln$ ist deshalb nur für positive Zahlen definiert, und der Taschenrechner quittiert $\\ln(-2)$ mit einer Fehlermeldung. Die Behauptung verwechselt also das mechanische Anwenden einer Umformung mit der Frage, ob die Umformung überhaupt erlaubt ist.",
+      "tipps": [
+        "Welche Werte kann $e^x$ überhaupt annehmen? Denke an den Verlauf des Graphen.",
+        "Skizziere $y = e^x$ und die Gerade $y = -2$: Schneiden sich die beiden?",
+        "Für welche Zahlen $c$ ist $\\ln c$ definiert — und warum hängt das mit dem Wertebereich der e-Funktion zusammen?"
+      ],
+      "loesungsweg": "Kernpunkte: (1) $e^x > 0$ für alle $x$, der Wert $-2$ liegt nicht im Wertebereich — die Gleichung ist unlösbar. (2) Graphisch: $y = -2$ verläuft unterhalb der x-Achse und schneidet den Graphen von $e^x$ nicht. (3) $\\ln$ ist als Umkehrfunktion der e-Funktion nur für positive Zahlen definiert, daher die Fehlermeldung bei $\\ln(-2)$.",
+      "kc": [
+        "wertebereich-e-funktion"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (erhöhtes Anforderungsniveau): Untersuche $f(x) = x \\cdot e^{-x}$. Mit Produkt- und Kettenregel erhält man $f'(x) = (1 - x) \\cdot e^{-x}$ und $f''(x) = (x - 2) \\cdot e^{-x}$ — rechne das zunächst auf einem Zettel nach. Bestimme dann Nullstelle, Hochpunkt und Wendestelle ($y$-Wert auf zwei Dezimalen).",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Bestimme die Nullstelle von $f$.",
+          "eingaben": [
+            {
+              "label": "$x_0$",
+              "antwort": 0,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Ein Produkt ist null, wenn ein Faktor null ist — und $e^{-x}$ ist nie null."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Bestimme die Extremstelle aus $f'(x) = 0$.",
+          "eingaben": [
+            {
+              "label": "$x_E$",
+              "antwort": 1,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$(1 - x) \\cdot e^{-x} = 0$ — nur der erste Faktor kann null werden."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne die y-Koordinate des Hochpunkts, also $f(1)$ (zwei Dezimalen).",
+          "eingaben": [
+            {
+              "label": "$f(1)$",
+              "antwort": 0.37,
+              "toleranz": 0.01,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$f(1) = 1 \\cdot e^{-1} = \\frac{1}{e}$"
+          ]
+        },
+        {
+          "frage": "Schritt 4: Bestimme die Wendestelle aus $f''(x) = 0$.",
+          "eingaben": [
+            {
+              "label": "$x_W$",
+              "antwort": 2,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$(x - 2) \\cdot e^{-x} = 0$ — wieder zählt nur der Klammerfaktor."
+          ]
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Eine <strong>Extremstelle</strong> ist ein x-Wert mit einem Hoch- oder Tiefpunkt.",
+        "Nutze überall den gleichen Trick: $e^{-x} > 0$, also entscheiden allein die Klammerfaktoren über Nullstellen.",
+        "Produktregel für $f'$: $u = x$, $v = e^{-x}$, also $f' = 1 \\cdot e^{-x} + x \\cdot (-e^{-x})$ — dann $e^{-x}$ ausklammern.",
+        "Hochpunkt-Nachweis: $f''(1) = (1 - 2) \\cdot e^{-1} < 0$. Für die Wendestelle wechselt $f''$ bei $x = 2$ das Vorzeichen."
+      ],
+      "loesungsweg": "Nullstelle: $x \\cdot e^{-x} = 0 \\Rightarrow x_0 = 0$, denn $e^{-x} \\neq 0$. Extremum: $f'(x) = (1 - x) \\cdot e^{-x} = 0 \\Rightarrow x_E = 1$; wegen $f''(1) = -e^{-1} < 0$ ein Hochpunkt mit $f(1) = e^{-1} \\approx 0{,}37$, also $H(1 \\mid 0{,}37)$. Wendestelle: $f''(x) = (x - 2) \\cdot e^{-x} = 0 \\Rightarrow x_W = 2$ mit Vorzeichenwechsel von $-$ nach $+$, Wendepunkt $W(2 \\mid 2e^{-2}) \\approx W(2 \\mid 0{,}27)$. Ränder: Für $x \\to \\infty$ strebt $f(x) \\to 0$ (die e-Funktion gewinnt gegen $x$), für $x \\to -\\infty$ fällt $f$ unbeschränkt.",
+      "kc": [
+        "kurvenuntersuchung-e-funktion",
+        "produktregel"
+      ]
+    },
+    {
+      "id": "ma-qp-ef-013",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (erhöhtes Anforderungsniveau): Gegeben ist $f(x) = x \\cdot e^{-2x}$. Bestimme $f'(x)$ mit Produkt- und Kettenregel und berechne damit $f'(0)$, die Extremstelle $x_E$ sowie den Funktionswert $f\\left(x_E\\right)$ (auf drei Dezimalen).",
+      "eingaben": [
+        {
+          "label": "$f'(0)$",
+          "antwort": 1,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$x_E$",
+          "antwort": 0.5,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$f\\left(x_E\\right)$",
+          "antwort": 0.184,
+          "toleranz": 0.005,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Produktregel mit $u = x$ und $v = e^{-2x}$ — beim Ableiten von $v$ nicht das Nachdifferenzieren mit $-2$ vergessen!",
+        "$f'(x) = 1 \\cdot e^{-2x} + x \\cdot (-2) \\cdot e^{-2x} = (1 - 2x) \\cdot e^{-2x}$ — jetzt $x = 0$ einsetzen bzw. null setzen.",
+        "Extremstelle: $1 - 2x = 0$. Den Funktionswert liefert $f(0{,}5) = 0{,}5 \\cdot e^{-1}$."
+      ],
+      "loesungsweg": "Produkt- und Kettenregel: $f'(x) = 1 \\cdot e^{-2x} + x \\cdot (-2) \\cdot e^{-2x} = (1 - 2x) \\cdot e^{-2x}$. Damit $f'(0) = 1 \\cdot e^0 = 1$. Extremstelle: $(1 - 2x) \\cdot e^{-2x} = 0$ erzwingt $x_E = 0{,}5$ (die e-Potenz ist nie null); links davon ist $f' > 0$, rechts $f' < 0$ — ein Hochpunkt. Funktionswert: $f(0{,}5) = 0{,}5 \\cdot e^{-1} \\approx 0{,}184$, also $H(0{,}5 \\mid 0{,}184)$.",
+      "kc": [
+        "produktregel",
+        "kettenregel-lineare-innere-funktion"
+      ],
+      "cas": "<p>Kontrolle mit dem ClassPad II:</p><ol><li><code>diff(x×e^(-2x),x)</code> und <b>EXE</b> — der ClassPad liefert die Ableitung, ggf. in der Form <code>-(2x-1)·e^(-2x)</code>. Klammere selbst um und vergleiche: Das ist genau <code>(1-2x)·e^(-2x)</code>.</li><li>Extremstelle direkt prüfen: <code>solve(diff(x×e^(-2x),x)=0,x)</code> ergibt <code>x=1/2</code>.</li><li>Denke daran, e stets über das Template im Register <b>Math1</b> einzugeben — der getippte Buchstabe e ist nur eine Variable.</li></ol>"
+    }
+  ]
+}

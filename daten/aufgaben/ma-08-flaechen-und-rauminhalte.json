@@ -1,0 +1,286 @@
+{
+  "thema": "ma-08-flaechen-und-rauminhalte",
+  "fach": "mathematik",
+  "stufe": "klasse-8",
+  "aufgaben": [
+    {
+      "id": "ma-08-fl-001",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über Flächenformeln und Höhen sind richtig?",
+      "optionen": [
+        { "text": "Für jedes Parallelogramm gilt $A = g \\cdot h$.", "richtig": true, "erklaerung": "Richtig: Grundseite mal zugehörige Höhe — denn jedes Parallelogramm lässt sich in ein flächengleiches Rechteck mit den Seiten $g$ und $h$ umbauen." },
+        { "text": "Die Höhe steht senkrecht auf der Grundseite.", "richtig": true, "erklaerung": "Richtig: Die Höhe ist der senkrechte Abstand — sie bildet mit der Grundseite immer einen rechten Winkel." },
+        { "text": "Statt der Höhe darf man auch die schräge Seite des Parallelogramms nehmen.", "richtig": false, "erklaerung": "Die schräge Seite ist immer länger als die Höhe — mit ihr käme eine zu große Fläche heraus. Nur im Rechteck fallen Seite und Höhe zusammen." },
+        { "text": "Ein Dreieck hat genau eine Höhe.", "richtig": false, "erklaerung": "Jede der drei Seiten kann Grundseite sein, und zu jeder gehört eine eigene Höhe — ein Dreieck hat also drei Höhen." }
+      ],
+      "tipps": [
+        "Denk an den Umbau-Trick: Dreieck abschneiden, verschieben — aus dem Parallelogramm wird ein Rechteck mit den Seiten $g$ und $h$.",
+        "Die Höhe erkennst du am kleinen rechten Winkel in der Skizze — sie ist meist keine Seite der Figur.",
+        "Zwei Aussagen sind richtig — die falschen verwechseln Höhe und Seitenlänge oder vergessen, dass jede Seite Grundseite sein kann."
+      ],
+      "loesungsweg": "Richtig sind die Aussagen 1 und 2: Das Parallelogramm hat den Flächeninhalt $A = g \\cdot h$, und die Höhe steht senkrecht auf der Grundseite. Falsch: Die schräge Seite ist länger als die Höhe und darf sie nicht ersetzen ($g \\cdot b$ wäre zu groß). Und ein Dreieck hat drei Höhen — eine zu jeder Grundseite.",
+      "kc": ["flaechen-und-rauminhalte"]
+    },
+    {
+      "id": "ma-08-fl-002",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Text zu den Flächenformeln.",
+      "text": "Ein Dreieck ist ein ___ Parallelogramm — deshalb gilt $A = \\frac{1}{2} \\cdot g \\cdot h$. Die Höhe steht immer ___ auf der Grundseite. Für das Trapez gilt $A$ = ___ .",
+      "luecken": [
+        { "art": "dropdown", "antwort": "halbes", "optionen": ["halbes", "doppeltes", "gedrehtes"] },
+        { "art": "eingabe", "antwort": "senkrecht" },
+        { "art": "dropdown", "antwort": "½·(a+c)·h", "optionen": ["½·(a+c)·h", "(a+c)·h", "½·a·c·h"] }
+      ],
+      "tipps": [
+        "Legt man an ein Dreieck eine um $180^\\circ$ gedrehte Kopie, entsteht ein Parallelogramm — das Dreieck ist ein Teil davon.",
+        "Höhe und Grundseite bilden zusammen einen rechten Winkel — wie heißt diese Lage?",
+        "Im Trapez werden die beiden parallelen Seiten $a$ und $c$ erst addiert — und am Ende wird halbiert."
+      ],
+      "loesungsweg": "Ein Dreieck ist ein halbes Parallelogramm (gedrehte Kopie anlegen!), daher der Faktor $\\frac{1}{2}$. Die Höhe steht senkrecht auf der Grundseite. Trapez: $A = \\frac{1}{2} \\cdot (a+c) \\cdot h$ — Mittelwert der parallelen Seiten mal Höhe.",
+      "kc": ["flaechen-und-rauminhalte"]
+    },
+    {
+      "id": "ma-08-fl-003",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Berechne die Flächeninhalte: ein Parallelogramm mit $g = 8$ cm und $h = 4{,}5$ cm sowie ein Dreieck mit $g = 7{,}5$ cm und $h = 6$ cm.",
+      "eingaben": [
+        { "label": "Parallelogramm", "antwort": 36, "toleranz": 0, "einheit": "cm²" },
+        { "label": "Dreieck", "antwort": 22.5, "toleranz": 0.1, "einheit": "cm²" }
+      ],
+      "tipps": [
+        "Parallelogramm: $A = g \\cdot h$ — einfach multiplizieren.",
+        "Dreieck: $A = \\frac{1}{2} \\cdot g \\cdot h$ — erst multiplizieren, dann halbieren.",
+        "$8 \\cdot 4{,}5 = 36$ und $7{,}5 \\cdot 6 = 45$ — davon noch die Hälfte."
+      ],
+      "loesungsweg": "Parallelogramm: $A = g \\cdot h = 8 \\cdot 4{,}5 = 36\\,\\text{cm}^2$. Dreieck: $A = \\frac{1}{2} \\cdot g \\cdot h = \\frac{1}{2} \\cdot 7{,}5 \\cdot 6 = \\frac{1}{2} \\cdot 45 = 22{,}5\\,\\text{cm}^2$.",
+      "kc": ["flaechen-und-rauminhalte"]
+    },
+    {
+      "id": "ma-08-fl-004",
+      "typ": "zuordnung",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ordne jeder Figur ihren Flächeninhalt zu.",
+      "paare": [
+        { "links": "Parallelogramm: $g = 6$ cm, $h = 4$ cm", "rechts": "24 cm²" },
+        { "links": "Dreieck: $g = 6$ cm, $h = 4$ cm", "rechts": "12 cm²" },
+        { "links": "Trapez: $a = 8$ cm, $c = 4$ cm, $h = 3$ cm", "rechts": "18 cm²" },
+        { "links": "Dreieck: $g = 8$ cm, $h = 5$ cm", "rechts": "20 cm²" }
+      ],
+      "tipps": [
+        "Parallelogramm: $g \\cdot h$ · Dreieck: $\\frac{1}{2} \\cdot g \\cdot h$ · Trapez: $\\frac{1}{2} \\cdot (a+c) \\cdot h$.",
+        "Gleiche Grundseite und gleiche Höhe: Das Dreieck hat genau die halbe Parallelogrammfläche.",
+        "Trapez: erst $a + c = 12$ bilden, dann mal $h = 3$, dann halbieren."
+      ],
+      "loesungsweg": "Parallelogramm: $6 \\cdot 4 = 24\\,\\text{cm}^2$. Dreieck mit denselben Maßen: $\\frac{1}{2} \\cdot 6 \\cdot 4 = 12\\,\\text{cm}^2$ — die Hälfte. Trapez: $\\frac{1}{2} \\cdot (8+4) \\cdot 3 = \\frac{1}{2} \\cdot 36 = 18\\,\\text{cm}^2$. Zweites Dreieck: $\\frac{1}{2} \\cdot 8 \\cdot 5 = 20\\,\\text{cm}^2$.",
+      "kc": ["flaechen-und-rauminhalte"]
+    },
+    {
+      "id": "ma-08-fl-005",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Grundstück hat die Form eines Trapezes: Die beiden parallelen Seiten sind $24$ m und $18$ m lang, ihr Abstand beträgt $15$ m. Berechne den Flächeninhalt.",
+      "eingaben": [
+        { "label": "$A$", "antwort": 315, "toleranz": 0, "einheit": "m²" }
+      ],
+      "tipps": [
+        "Trapezformel: $A = \\frac{1}{2} \\cdot (a+c) \\cdot h$ — der Abstand der parallelen Seiten ist die Höhe.",
+        "Erst die Klammer: $a + c = 24 + 18 = 42$.",
+        "$\\frac{1}{2} \\cdot 42 \\cdot 15 = 21 \\cdot 15$."
+      ],
+      "loesungsweg": "$A = \\frac{1}{2} \\cdot (24 + 18) \\cdot 15 = \\frac{1}{2} \\cdot 42 \\cdot 15 = 21 \\cdot 15 = 315\\,\\text{m}^2$. Kontrolle über die Durchschnittsbreite: Im Mittel ist das Grundstück $21$ m breit und $15$ m tief.",
+      "kc": ["flaechen-und-rauminhalte", "mathematisch-modellieren"]
+    },
+    {
+      "id": "ma-08-fl-006",
+      "typ": "reihenfolge",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Du sollst den Flächeninhalt einer L-förmigen Figur durch Zerlegen bestimmen. Bringe die Arbeitsschritte in eine sinnvolle Reihenfolge.",
+      "elemente": [
+        "Skizze anfertigen und die Figur mit einer Hilfslinie in zwei Rechtecke zerlegen",
+        "Fehlende Seitenlängen aus den gegebenen Maßen berechnen",
+        "Die Flächeninhalte der beiden Rechtecke einzeln berechnen",
+        "Teilflächen addieren und das Ergebnis mit Einheit angeben"
+      ],
+      "tipps": [
+        "Ohne Skizze mit Hilfslinie weißt du nicht, welche Teilfiguren entstehen — sie kommt zuerst.",
+        "Rechnen kannst du erst, wenn alle Seitenlängen der Teilrechtecke bekannt sind.",
+        "Ganz am Ende steht das Gesamtergebnis — mit Einheit."
+      ],
+      "loesungsweg": "Zuerst die Skizze mit Hilfslinie (sie legt die Zerlegung fest), dann die fehlenden Maße aus den gegebenen Längen bestimmen, anschließend beide Teilflächen berechnen — und zum Schluss addieren und die Einheit angeben.",
+      "kc": ["flaechen-und-rauminhalte"]
+    },
+    {
+      "id": "ma-08-fl-007",
+      "typ": "rechenweg",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein L-förmiger Wohnraum entsteht, wenn man aus einem Rechteck von $12$ m $\\times$ $9$ m an einer Ecke ein Rechteck von $5$ m $\\times$ $4$ m herausschneidet. Berechne den Flächeninhalt mit der Ergänzungsstrategie.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne die Fläche des großen Rechtecks.",
+          "eingaben": [{ "label": "$A_1$ in m²", "antwort": 108, "toleranz": 0 }],
+          "tipps": ["$A_1 = 12 \\cdot 9$"]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Fläche des herausgeschnittenen Eckstücks.",
+          "eingaben": [{ "label": "$A_2$ in m²", "antwort": 20, "toleranz": 0 }],
+          "tipps": ["$A_2 = 5 \\cdot 4$"]
+        },
+        {
+          "frage": "Schritt 3: Berechne die Fläche des L-förmigen Wohnraums.",
+          "eingaben": [{ "label": "$A$ in m²", "antwort": 88, "toleranz": 0 }],
+          "tipps": ["Ergänzen heißt: großes Rechteck minus fehlende Ecke — $108 - 20$."]
+        }
+      ],
+      "tipps": [
+        "Ergänzungsstrategie: Stell dir das vollständige große Rechteck vor und ziehe das fehlende Stück wieder ab.",
+        "Beide Rechtecksflächen mit $A = a \\cdot b$ berechnen.",
+        "Zur Kontrolle kannst du das L auch zerlegen: $12 \\cdot 5 + 7 \\cdot 4$ muss dasselbe ergeben."
+      ],
+      "loesungsweg": "Großes Rechteck: $A_1 = 12 \\cdot 9 = 108\\,\\text{m}^2$. Eckstück: $A_2 = 5 \\cdot 4 = 20\\,\\text{m}^2$. L-Form: $A = 108 - 20 = 88\\,\\text{m}^2$. Kontrolle durch Zerlegen: $12 \\cdot 5 + 7 \\cdot 4 = 60 + 28 = 88\\,\\text{m}^2$ ✓.",
+      "kc": ["flaechen-und-rauminhalte", "mathematisch-modellieren"]
+    },
+    {
+      "id": "ma-08-fl-008",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Dachboden eines Hauses ist ein liegendes dreiseitiges Prisma: Das Giebeldreieck ist $9$ m breit und $4$ m hoch, das Haus ist $12$ m lang. Berechne die Grundfläche $G$ (das Giebeldreieck) und das Volumen $V$ des Dachbodens.",
+      "eingaben": [
+        { "label": "$G$", "antwort": 18, "toleranz": 0, "einheit": "m²" },
+        { "label": "$V$", "antwort": 216, "toleranz": 0, "einheit": "m³" }
+      ],
+      "tipps": [
+        "Das Giebeldreieck ist die Grundfläche des Prismas: $G = \\frac{1}{2} \\cdot g \\cdot h$.",
+        "$G = \\frac{1}{2} \\cdot 9 \\cdot 4$.",
+        "Prisma: $V = G \\cdot h_{\\text{K}}$ — die Körperhöhe ist hier die Hauslänge $12$ m."
+      ],
+      "loesungsweg": "Grundfläche (Giebeldreieck): $G = \\frac{1}{2} \\cdot 9 \\cdot 4 = 18\\,\\text{m}^2$. Volumen: $V = G \\cdot h_{\\text{K}} = 18 \\cdot 12 = 216\\,\\text{m}^3$. Beim liegenden Prisma ist die Hauslänge die Körperhöhe.",
+      "kc": ["flaechen-und-rauminhalte", "mathematisch-modellieren"]
+    },
+    {
+      "id": "ma-08-fl-009",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Aquarium ist ein Quader: $80$ cm lang, $35$ cm breit und $40$ cm hoch. Berechne das Volumen in cm³ und gib an, wie viele Liter Wasser hineinpassen, wenn es randvoll gefüllt wird ($1$ l $= 1000$ cm³).",
+      "eingaben": [
+        { "label": "$V$", "antwort": 112000, "toleranz": 0, "einheit": "cm³" },
+        { "label": "Füllmenge", "antwort": 112, "toleranz": 0, "einheit": "l" }
+      ],
+      "tipps": [
+        "Quader: $V = a \\cdot b \\cdot c$ — alle drei Kantenlängen multiplizieren.",
+        "$80 \\cdot 35 = 2800$, dann noch mal $40$.",
+        "Von cm³ zu Litern: durch $1000$ teilen, denn $1$ l $= 1\\,\\text{dm}^3 = 1000\\,\\text{cm}^3$."
+      ],
+      "loesungsweg": "$V = 80 \\cdot 35 \\cdot 40 = 112\\,000\\,\\text{cm}^3$. Umrechnung: $112\\,000 : 1000 = 112$, also passen $112$ Liter Wasser hinein.",
+      "kc": ["flaechen-und-rauminhalte", "mathematisch-modellieren"]
+    },
+    {
+      "id": "ma-08-fl-010",
+      "typ": "freitext",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Mia behauptet: „Wenn ich bei einem Dreieck die Grundseite und die Höhe beide verdopple, verdoppelt sich der Flächeninhalt.“ Prüfe die Behauptung an einem Zahlenbeispiel und begründe mit der Formel, was wirklich passiert.",
+      "musterloesung": "Zahlenbeispiel: Ein Dreieck mit $g = 4$ cm und $h = 3$ cm hat $A = \\frac{1}{2} \\cdot 4 \\cdot 3 = 6\\,\\text{cm}^2$. Nach dem Verdoppeln ist $g = 8$ cm und $h = 6$ cm, also $A = \\frac{1}{2} \\cdot 8 \\cdot 6 = 24\\,\\text{cm}^2$ — das ist das Vierfache von $6\\,\\text{cm}^2$, nicht das Doppelte. Mias Behauptung ist also falsch. Begründung mit der Formel: $\\frac{1}{2} \\cdot (2g) \\cdot (2h) = 2 \\cdot 2 \\cdot \\frac{1}{2} \\cdot g \\cdot h = 4A$. Beide Faktoren werden verdoppelt, deshalb vervierfacht sich das Produkt. Verdoppelt man dagegen nur eine der beiden Größen (nur $g$ oder nur $h$), verdoppelt sich der Flächeninhalt tatsächlich.",
+      "tipps": [
+        "Wähle ein konkretes Dreieck, z. B. $g = 4$ cm und $h = 3$ cm, und berechne den Flächeninhalt vor und nach dem Verdoppeln.",
+        "Vergleiche: $6\\,\\text{cm}^2$ vorher — wie viel ist es nachher? Welcher Faktor steckt dazwischen?",
+        "Setze in die Formel $2g$ und $2h$ ein: $\\frac{1}{2} \\cdot (2g) \\cdot (2h)$ — wie viele Zweien lassen sich vorziehen?"
+      ],
+      "loesungsweg": "Beispiel: $g = 4$ cm, $h = 3$ cm liefert $A = 6\\,\\text{cm}^2$; nach dem Verdoppeln liefert $g = 8$ cm, $h = 6$ cm aber $A = 24\\,\\text{cm}^2$ — das Vierfache. Allgemein: $\\frac{1}{2} \\cdot (2g) \\cdot (2h) = 4 \\cdot \\frac{1}{2} \\cdot g \\cdot h = 4A$. Die Fläche vervierfacht sich; nur beim Verdoppeln einer einzigen Größe verdoppelt sie sich.",
+      "kc": ["flaechen-und-rauminhalte", "mathematisch-argumentieren"]
+    },
+    {
+      "id": "ma-08-fl-011",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 1,
+      "frage": "Welche Aussagen über Einheiten sind richtig?",
+      "optionen": [
+        { "text": "$1\\,\\text{dm}^3 = 1$ l", "richtig": true, "erklaerung": "Richtig: Ein Würfel mit $10$ cm $= 1$ dm Kantenlänge fasst genau einen Liter." },
+        { "text": "$1\\,\\text{m}^3 = 1000$ l", "richtig": true, "erklaerung": "Richtig: In einen Kubikmeter passen $10 \\cdot 10 \\cdot 10 = 1000$ Würfel mit $1$ dm Kantenlänge — also $1000$ Liter." },
+        { "text": "$1\\,\\text{m}^2 = 100\\,\\text{cm}^2$", "richtig": false, "erklaerung": "Bei Flächen wird der Umrechnungsfaktor quadriert: $1\\,\\text{m}^2 = 100 \\cdot 100\\,\\text{cm}^2 = 10\\,000\\,\\text{cm}^2$." },
+        { "text": "$1\\,\\text{cm}^3 = 10\\,\\text{mm}^3$", "richtig": false, "erklaerung": "Bei Volumen wird der Faktor dreimal angewendet: $1\\,\\text{cm}^3 = 10 \\cdot 10 \\cdot 10\\,\\text{mm}^3 = 1000\\,\\text{mm}^3$." }
+      ],
+      "tipps": [
+        "Stell dir Würfel vor: Wie viele kleine Würfel füllen einen großen?",
+        "Flächeneinheiten: Faktor zum Quadrat ($100^2$). Volumeneinheiten: Faktor hoch drei ($10^3$).",
+        "Die Liter-Brücke: $1$ l $= 1\\,\\text{dm}^3$ — daraus folgt auch die Aussage über den Kubikmeter."
+      ],
+      "loesungsweg": "Richtig sind die ersten beiden Aussagen: $1\\,\\text{dm}^3 = 1$ l und $1\\,\\text{m}^3 = 1000\\,\\text{dm}^3 = 1000$ l. Falsch: $1\\,\\text{m}^2 = 10\\,000\\,\\text{cm}^2$ (Faktor $100$ quadriert) und $1\\,\\text{cm}^3 = 1000\\,\\text{mm}^3$ (Faktor $10$ hoch drei).",
+      "kc": ["flaechen-und-rauminhalte"]
+    },
+    {
+      "id": "ma-08-fl-012",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Eine Scheune besteht aus einem quaderförmigen Unterbau ($10$ m lang, $6$ m breit, $4$ m hoch) und einem aufgesetzten Dach in Form eines liegenden dreiseitigen Prismas: Das Giebeldreieck ist $6$ m breit und $2$ m hoch, das Dach ist ebenfalls $10$ m lang. Berechne das Volumen des Dachs und das Gesamtvolumen der Scheune.",
+      "eingaben": [
+        { "label": "Dach", "antwort": 60, "toleranz": 0, "einheit": "m³" },
+        { "label": "Scheune gesamt", "antwort": 300, "toleranz": 0, "einheit": "m³" }
+      ],
+      "tipps": [
+        "Zerlege den Körper: Quader und Dachprisma getrennt berechnen, dann addieren.",
+        "Dach: Grundfläche ist das Giebeldreieck $G = \\frac{1}{2} \\cdot 6 \\cdot 2$, Körperhöhe ist die Länge $10$ m.",
+        "Quader: $V = 10 \\cdot 6 \\cdot 4 = 240\\,\\text{m}^3$ — jetzt fehlt nur noch die Summe."
+      ],
+      "loesungsweg": "Dach: $G = \\frac{1}{2} \\cdot 6 \\cdot 2 = 6\\,\\text{m}^2$, also $V_{\\text{Dach}} = G \\cdot h_{\\text{K}} = 6 \\cdot 10 = 60\\,\\text{m}^3$. Unterbau: $V = 10 \\cdot 6 \\cdot 4 = 240\\,\\text{m}^3$. Gesamtvolumen: $240 + 60 = 300\\,\\text{m}^3$ — die Zerlegungsidee funktioniert bei Körpern genauso wie bei Flächen.",
+      "kc": ["flaechen-und-rauminhalte", "mathematisch-modellieren"]
+    },
+    {
+      "id": "ma-08-fl-013",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Ein Trapez hat den Flächeninhalt $A = 42\\,\\text{cm}^2$; seine parallelen Seiten sind $a = 8$ cm und $c = 6$ cm lang. Arbeite rückwärts — und steige danach ins Prisma um.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne die Summe der parallelen Seiten.",
+          "eingaben": [{ "label": "$a + c$ in cm", "antwort": 14, "toleranz": 0 }],
+          "tipps": ["$8 + 6$"]
+        },
+        {
+          "frage": "Schritt 2: Stelle $A = \\frac{1}{2} \\cdot (a+c) \\cdot h$ nach $h$ um und berechne die Höhe des Trapezes.",
+          "eingaben": [{ "label": "$h$ in cm", "antwort": 6, "toleranz": 0 }],
+          "tipps": ["Erst mit $2$ multiplizieren: $2A = (a+c) \\cdot h$, also $h = 84 : 14$."]
+        },
+        {
+          "frage": "Schritt 3: Ein Prisma mit diesem Trapez als Grundfläche hat das Volumen $V = 378\\,\\text{cm}^3$. Berechne die Körperhöhe.",
+          "eingaben": [{ "label": "$h_{\\text{K}}$ in cm", "antwort": 9, "toleranz": 0 }],
+          "tipps": ["Aus $V = G \\cdot h_{\\text{K}}$ folgt $h_{\\text{K}} = V : G = 378 : 42$."]
+        }
+      ],
+      "tipps": [
+        "Rückwärtsaufgabe: Die Formeln gelten weiter — diesmal ist aber die Höhe unbekannt.",
+        "Trapezformel nach $h$ umstellen: $h = 2A : (a+c)$.",
+        "Beim Prisma steckt die gesuchte Höhe in $V = G \\cdot h_{\\text{K}}$ — durch die Grundfläche teilen."
+      ],
+      "loesungsweg": "Schritt 1: $a + c = 8 + 6 = 14$ cm. Schritt 2: Aus $42 = \\frac{1}{2} \\cdot 14 \\cdot h = 7h$ folgt $h = 6$ cm. Schritt 3: $h_{\\text{K}} = V : G = 378 : 42 = 9$ cm. Probe: $\\frac{1}{2} \\cdot 14 \\cdot 6 = 42\\,\\text{cm}^2$ ✓ und $42 \\cdot 9 = 378\\,\\text{cm}^3$ ✓.",
+      "kc": ["flaechen-und-rauminhalte"]
+    }
+  ]
+}

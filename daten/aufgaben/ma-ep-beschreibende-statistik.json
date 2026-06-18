@@ -1,0 +1,542 @@
+{
+  "thema": "ma-ep-beschreibende-statistik",
+  "fach": "mathematik",
+  "stufe": "einfuehrungsphase",
+  "aufgaben": [
+    {
+      "id": "ma-ep-bst-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "In einer Umfrage im Jahrgang werden das Lieblingsfach, die Körpergröße und die Anzahl der Geschwister erhoben. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "„Lieblingsfach“ ist ein qualitatives (kategoriales) Merkmal.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Ausprägungen (Mathe, Deutsch, Sport, …) sind Kategorien — mit ihnen kann man nicht rechnen, nur zählen."
+        },
+        {
+          "text": "„Anzahl der Geschwister“ ist ein quantitatives, diskretes Merkmal.",
+          "richtig": true,
+          "erklaerung": "Richtig: Es kommen nur einzelne Zahlenwerte $0, 1, 2, \\dots$ infrage — zählbar, also diskret."
+        },
+        {
+          "text": "Die relative Häufigkeit einer Ausprägung kann größer als $1$ sein.",
+          "richtig": false,
+          "erklaerung": "Die relative Häufigkeit $h = \\frac{H}{n}$ ist ein Anteil — und ein Teil ist nie größer als das Ganze: $0 \\le h \\le 1$."
+        },
+        {
+          "text": "Für das Lieblingsfach lässt sich ein arithmetisches Mittel berechnen.",
+          "richtig": false,
+          "erklaerung": "Aus „Mathe“ und „Sport“ kann man keinen Durchschnitt bilden. Für kategoriale Merkmale eignet sich als Lagemaß nur der Modalwert."
+        }
+      ],
+      "tipps": [
+        "Qualitativ = Kategorien (nur zählen), quantitativ = Zahlen (auch rechnen).",
+        "Diskret heißt: Nur einzelne Werte sind möglich, keine beliebigen Zwischenwerte.",
+        "Die relative Häufigkeit ist ein Anteil am Ganzen — welche Werte kann ein Anteil annehmen?"
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Das Lieblingsfach hat Kategorien als Ausprägungen — qualitativ. Die Geschwisterzahl ist eine Zählgröße mit den möglichen Werten $0, 1, 2, \\dots$ — quantitativ und diskret. Die relative Häufigkeit $h = \\frac{H}{n}$ liegt immer zwischen $0$ und $1$, denn die absolute Häufigkeit $H$ kann die Gesamtzahl $n$ nicht übersteigen. Und ein Mittelwert aus Schulfächern ist sinnlos — mit Kategorien lässt sich nicht rechnen; hier hilft nur der Modalwert (die häufigste Nennung).",
+      "kc": [
+        "merkmalstypen",
+        "haeufigkeiten"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-002",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zu den drei Lagemaßen.",
+      "text": "Das ___ nutzt alle Werte, reagiert aber empfindlich auf Ausreißer. Der ___ ist der mittlere Wert der geordneten Liste und bleibt von Ausreißern weitgehend unbeeinflusst. Der ___ ist die häufigste Ausprägung und als einziges Lagemaß auch für kategoriale Merkmale geeignet. Für die Datenreihe 3, 5, 8, 9, 12 ist der Median ___ .",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "arithmetische Mittel",
+          "optionen": [
+            "arithmetische Mittel",
+            "Median",
+            "Modalwert"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Median",
+          "optionen": [
+            "Median",
+            "arithmetische Mittel",
+            "Modalwert"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Modalwert",
+          "optionen": [
+            "Modalwert",
+            "Median",
+            "Quartilsabstand"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "8",
+          "optionen": [
+            "8",
+            "7,4",
+            "9"
+          ]
+        }
+      ],
+      "tipps": [
+        "In das arithmetische Mittel geht jeder einzelne Wert ein — auch ein Ausreißer.",
+        "„Median“ kommt von „Mitte“: der mittlere Wert nach dem Ordnen.",
+        "Die Liste 3, 5, 8, 9, 12 ist schon geordnet — welcher Wert steht in der Mitte?"
+      ],
+      "loesungsweg": "arithmetische Mittel — Median — Modalwert — 8: Das arithmetische Mittel verrechnet alle Werte und wandert deshalb mit jedem Ausreißer mit. Der Median ist der mittlere Wert der geordneten Liste; bei 3, 5, 8, 9, 12 ist das der dritte von fünf Werten, also $8$. Die Zahl $7{,}4$ wäre das arithmetische Mittel ($\\frac{37}{5} = 7{,}4$) — eine beliebte Verwechslung. Der Modalwert als häufigste Ausprägung funktioniert sogar bei Kategorien wie dem Lieblingsfach.",
+      "kc": [
+        "lagemasse"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-003",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Von $25$ Befragten kommen $8$ mit dem Bus, $12$ mit dem Fahrrad und $5$ zu Fuß zur Schule. Gib die relative Häufigkeit des Fahrrads in Prozent an und berechne den Mittelpunktswinkel des Bus-Sektors im Kreisdiagramm.",
+      "eingaben": [
+        {
+          "label": "Anteil Fahrrad",
+          "antwort": 48,
+          "toleranz": 0.1,
+          "einheit": "%"
+        },
+        {
+          "label": "Winkel Bus",
+          "antwort": 115.2,
+          "toleranz": 0.1,
+          "einheit": "°"
+        }
+      ],
+      "tipps": [
+        "Relative Häufigkeit: absolute Häufigkeit geteilt durch die Gesamtzahl, $h = \\frac{H}{25}$.",
+        "$\\frac{12}{25} = 0{,}48$ — für die Prozentangabe mit $100$ multiplizieren.",
+        "Kreisdiagramm: $\\alpha = h \\cdot 360^\\circ$, hier also $\\frac{8}{25} \\cdot 360^\\circ$."
+      ],
+      "loesungsweg": "Relative Häufigkeit Fahrrad: $h = \\frac{12}{25} = 0{,}48 = 48\\,\\%$. Winkel des Bus-Sektors: $\\alpha = \\frac{8}{25} \\cdot 360^\\circ = 0{,}32 \\cdot 360^\\circ = 115{,}2^\\circ$. Kontrolle über alle drei Sektoren: $115{,}2^\\circ + 172{,}8^\\circ + 72^\\circ = 360^\\circ$ — der Kreis ist vollständig, ebenso wie die relativen Häufigkeiten $0{,}32 + 0{,}48 + 0{,}20 = 1$.",
+      "kc": [
+        "haeufigkeiten",
+        "kreisdiagramm"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-004",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Sieben Jugendliche zählen, wie viele Nachrichten sie gestern verschickt haben: $12$, $15$, $15$, $18$, $20$, $22$, $38$. Berechne das arithmetische Mittel $\\bar{x}$ und den Median.",
+      "eingaben": [
+        {
+          "label": "$\\bar{x}$",
+          "antwort": 20,
+          "toleranz": 0.001,
+          "einheit": "Nachrichten"
+        },
+        {
+          "label": "Median",
+          "antwort": 18,
+          "toleranz": 0,
+          "einheit": "Nachrichten"
+        }
+      ],
+      "tipps": [
+        "Für $\\bar{x}$ alle sieben Werte addieren und durch $7$ teilen — die Summe ist $140$.",
+        "Die Liste ist bereits geordnet: Der Median ist bei $7$ Werten der $4.$ Wert.",
+        "Wundere dich nicht, dass $\\bar{x}$ über dem Median liegt — der Ausreißer $38$ zieht das Mittel nach oben."
+      ],
+      "loesungsweg": "Arithmetisches Mittel: $\\bar{x} = \\frac{12 + 15 + 15 + 18 + 20 + 22 + 38}{7} = \\frac{140}{7} = 20$. Median: Die Liste ist geordnet, der mittlere ($4.$) von $7$ Werten ist $18$. Der Ausreißer $38$ hebt das Mittel über den Median — fünf der sieben Werte liegen unter $\\bar{x} = 20$. Nebenbei: Der Modalwert ist $15$, die einzige doppelt vorkommende Ausprägung.",
+      "kc": [
+        "lagemasse"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-005",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Welche Kennzahl passt? Ordne jeder Situation das geeignete Maß zu.",
+      "paare": [
+        {
+          "links": "beliebteste Snack-Sorte ermitteln",
+          "rechts": "Modalwert"
+        },
+        {
+          "links": "mittleres Gehalt trotz Ausreißer",
+          "rechts": "Median"
+        },
+        {
+          "links": "Durchschnitt aller Klausurpunkte",
+          "rechts": "arithmetisches Mittel"
+        },
+        {
+          "links": "Abstand von Minimum zu Maximum",
+          "rechts": "Spannweite"
+        }
+      ],
+      "tipps": [
+        "Snack-Sorten sind Kategorien — welches Lagemaß funktioniert ganz ohne Rechnen?",
+        "Bei Gehältern verzerren wenige Großverdiener das arithmetische Mittel.",
+        "Die Spannweite ist das einzige Streumaß in der Liste — sie misst keinen „mittleren“ Wert."
+      ],
+      "loesungsweg": "Snack-Sorten sind ein kategoriales Merkmal — nur der Modalwert (häufigste Nennung) ist möglich. Bei Gehältern macht ein Ausreißer das arithmetische Mittel irreführend, der robuste Median beschreibt das „mittlere Gehalt“ besser. Der Klausur-Durchschnitt ist genau das arithmetische Mittel: Summe aller Punkte durch Anzahl. Und der Abstand vom kleinsten zum größten Wert ist die Spannweite — ein Streumaß, kein Lagemaß.",
+      "kc": [
+        "lagemasse",
+        "streumasse"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-006",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Elf Schülerinnen und Schüler notieren, wie viele Bücher sie im letzten Jahr gelesen haben: $4$, $9$, $2$, $11$, $7$, $3$, $9$, $6$, $14$, $4$, $8$. Bestimme Median, Quartile, Interquartilsabstand und Spannweite.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Ordne die Daten der Größe nach und bestimme den Median.",
+          "eingaben": [
+            {
+              "label": "Median",
+              "antwort": 7,
+              "toleranz": 0,
+              "einheit": "Bücher"
+            }
+          ],
+          "tipps": [
+            "Geordnet: 2, 3, 4, 4, 6, 7, 8, 9, 9, 11, 14 — bei $11$ Werten ist der $6.$ Wert der mittlere."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Bestimme das untere Quartil $Q_1$ (Median der unteren Hälfte) und das obere Quartil $Q_3$ (Median der oberen Hälfte). Der Median selbst zählt zu keiner Hälfte.",
+          "eingaben": [
+            {
+              "label": "$Q_1$",
+              "antwort": 4,
+              "toleranz": 0,
+              "einheit": "Bücher"
+            },
+            {
+              "label": "$Q_3$",
+              "antwort": 9,
+              "toleranz": 0,
+              "einheit": "Bücher"
+            }
+          ],
+          "tipps": [
+            "Untere Hälfte: 2, 3, 4, 4, 6 — obere Hälfte: 8, 9, 9, 11, 14. Jeweils der mittlere Wert."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne den Interquartilsabstand $Q_3 - Q_1$ und die Spannweite.",
+          "eingaben": [
+            {
+              "label": "Interquartilsabstand",
+              "antwort": 5,
+              "toleranz": 0,
+              "einheit": "Bücher"
+            },
+            {
+              "label": "Spannweite",
+              "antwort": 12,
+              "toleranz": 0,
+              "einheit": "Bücher"
+            }
+          ],
+          "tipps": [
+            "$Q_3 - Q_1 = 9 - 4$ und Spannweite $= 14 - 2$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Ohne Ordnen geht nichts: Schreibe die elf Werte zuerst der Größe nach auf.",
+        "Bei $11$ Werten: Median ist der $6.$ Wert; die Hälften haben je $5$ Werte.",
+        "Interquartilsabstand = Breite der mittleren $50\\,\\%$, Spannweite = Maximum minus Minimum."
+      ],
+      "loesungsweg": "Geordnete Liste: $2, 3, 4, 4, 6, 7, 8, 9, 9, 11, 14$. Median: der $6.$ von $11$ Werten, also $7$. Untere Hälfte $2, 3, 4, 4, 6$ hat den Median $Q_1 = 4$; obere Hälfte $8, 9, 9, 11, 14$ hat den Median $Q_3 = 9$. Interquartilsabstand: $Q_3 - Q_1 = 9 - 4 = 5$ — so breit streuen die mittleren $50\\,\\%$. Spannweite: $14 - 2 = 12$. Damit sind alle fünf Kennzahlen für einen Boxplot beisammen: $2$, $4$, $7$, $9$, $14$.",
+      "kc": [
+        "quartile",
+        "streumasse"
+      ],
+      "cas": "<p>Kennwerte mit dem ClassPad II bestimmen:</p><ol><li>Menü <b>Statistik</b> öffnen und die elf Werte in <code>list1</code> eintippen (jeden mit <b>EXE</b> bestätigen).</li><li><b>Calc → Eine Variable</b> wählen, XList: <code>list1</code>, Freq: <code>1</code> — mit <b>OK</b> bestätigen.</li><li>In der Ergebnisliste nach unten blättern und ablesen: <code>minX = 2</code>, <code>Q1 = 4</code>, <code>Med = 7</code>, <code>Q3 = 9</code>, <code>maxX = 14</code>. Daraus im Kopf: Interquartilsabstand $9 - 4 = 5$, Spannweite $14 - 2 = 12$.</li></ol>"
+    },
+    {
+      "id": "ma-ep-bst-007",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Papierflieger landet bei fünf Würfen nach $4$, $6$, $7$, $8$ und $10$ Metern. Berechne das arithmetische Mittel $\\bar{x}$ und die Standardabweichung $\\sigma$. Die fünf Würfe sind die vollständige Datenreihe — teile also durch $n = 5$.",
+      "eingaben": [
+        {
+          "label": "$\\bar{x}$",
+          "antwort": 7,
+          "toleranz": 0.001,
+          "einheit": "m"
+        },
+        {
+          "label": "$\\sigma$",
+          "antwort": 2,
+          "toleranz": 0.01,
+          "einheit": "m"
+        }
+      ],
+      "tipps": [
+        "Zuerst $\\bar{x}$: Die Summe der fünf Weiten ist $35$.",
+        "Abweichungen vom Mittel: $-3$, $-1$, $0$, $1$, $3$ — jetzt quadrieren und addieren.",
+        "$\\sigma = \\sqrt{\\frac{9 + 1 + 0 + 1 + 9}{5}}$ — unter der Wurzel steht eine Quadratzahl."
+      ],
+      "loesungsweg": "Mittelwert: $\\bar{x} = \\frac{4 + 6 + 7 + 8 + 10}{5} = \\frac{35}{5} = 7$. Abweichungen: $-3, -1, 0, 1, 3$ (Summe $0$ — Kontrolle), Quadrate: $9, 1, 0, 1, 9$ mit Summe $20$. Da die fünf Würfe vollständig erhoben sind und nur diese Datenreihe beschrieben wird, teilen wir durch $n = 5$: $\\sigma = \\sqrt{\\frac{20}{5}} = \\sqrt{4} = 2$. Ein Wurf weicht also typischerweise um etwa $2$ Meter von der mittleren Weite ab. (Die Stichproben-Variante $s$ mit Division durch $n - 1$ ergäbe $\\sqrt{5} \\approx 2{,}24$.)",
+      "kc": [
+        "standardabweichung"
+      ],
+      "cas": "<p>Kontrolle mit dem ClassPad II:</p><ol><li>Im Menü <b>Statistik</b> die Werte <code>4, 6, 7, 8, 10</code> in <code>list1</code> eingeben.</li><li><b>Calc → Eine Variable</b>, XList: <code>list1</code>, Freq: <code>1</code> — <b>OK</b>.</li><li>Ablesen: <code>x̄ = 7</code> und <code>σx = 2</code>. Achtung: <code>σx</code> teilt durch $n$ und ist hier gesucht; das ebenfalls angezeigte <code>sx ≈ 2.236</code> teilt durch $n - 1$ (Stichproben-Rechnung). Dezimalzahlen zeigt der ClassPad mit Punkt statt Komma an.</li></ol>"
+    },
+    {
+      "id": "ma-ep-bst-008",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Ein Verein wirbt mit einem Säulendiagramm: Mitglieder 2023: $1020$, Mitglieder 2024: $1080$ — die $y$-Achse beginnt aber erst bei $1000$. Beurteile die Darstellung. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Säule für 2024 wirkt etwa viermal so hoch wie die für 2023.",
+          "richtig": true,
+          "erklaerung": "Richtig: Sichtbar sind nur die Anteile oberhalb von $1000$, also $20$ gegenüber $80$ Einheiten — ein Verhältnis von $1:4$."
+        },
+        {
+          "text": "Tatsächlich beträgt der Zuwachs nur knapp $6\\,\\%$.",
+          "richtig": true,
+          "erklaerung": "Richtig: $\\frac{60}{1020} \\approx 0{,}059$ — die Mitgliederzahl ist um rund $5{,}9\\,\\%$ gewachsen."
+        },
+        {
+          "text": "Die Grafik enthält falsche Zahlenwerte.",
+          "richtig": false,
+          "erklaerung": "Beide Werte stimmen. Manipuliert wird nicht über die Zahlen, sondern über den optischen Eindruck der abgeschnittenen Achse."
+        },
+        {
+          "text": "Mit Achsenbeginn bei $0$ wäre der Unterschied genauso dramatisch zu sehen.",
+          "richtig": false,
+          "erklaerung": "Bei Achsenbeginn $0$ verhalten sich die Säulenhöhen wie $1020:1080$ — sie wären fast gleich hoch, der dramatische Eindruck verschwände."
+        }
+      ],
+      "tipps": [
+        "Sichtbar ist nur der Teil der Säulen oberhalb von $1000$ — wie hoch sind diese Stücke?",
+        "Für den echten Zuwachs: Differenz $60$ durch den Ausgangswert $1020$ teilen.",
+        "Stell dir dieselben Säulen mit Achse ab $0$ vor: $1020$ und $1080$ von insgesamt etwa $1100$."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Oberhalb des Achsenbeginns $1000$ bleiben Säulenstücke von $20$ und $80$ Einheiten — das Auge sieht eine Vervierfachung. Tatsächlich wuchs der Verein um $\\frac{1080 - 1020}{1020} = \\frac{60}{1020} \\approx 5{,}9\\,\\%$. Die Zahlen selbst sind korrekt (Aussage 3 falsch) — gerade das macht solche Diagramme tückisch. Und mit Achsenbeginn bei $0$ wären die Säulen nahezu gleich hoch (Aussage 4 falsch). Fazit: Bei Säulendiagrammen immer zuerst auf den Achsenbeginn schauen.",
+      "kc": [
+        "diagramme",
+        "manipulation"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-009",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Bringe die Schritte zum Zeichnen eines Boxplots in die richtige Reihenfolge.",
+      "elemente": [
+        "Daten der Größe nach ordnen",
+        "Median der geordneten Liste bestimmen",
+        "Quartile Q1 und Q3 bestimmen",
+        "Box von Q1 bis Q3 zeichnen, Median einzeichnen",
+        "Antennen bis Minimum und Maximum ergänzen"
+      ],
+      "tipps": [
+        "Ohne geordnete Liste lassen sich weder Median noch Quartile finden.",
+        "Die Quartile sind die Mediane der beiden Hälften — sie brauchen den Median zuerst.",
+        "Gezeichnet wird erst, wenn alle fünf Kennzahlen feststehen: erst die Box, dann die Antennen."
+      ],
+      "loesungsweg": "Zuerst die Daten ordnen — alles Weitere baut darauf auf. Dann den Median als mittleren Wert bestimmen, anschließend die Quartile $Q_1$ und $Q_3$ als Mediane der unteren und oberen Hälfte. Jetzt kann gezeichnet werden: die Box von $Q_1$ bis $Q_3$ mit dem Median als Strich darin, zum Schluss die Antennen von der Box bis zum Minimum und zum Maximum.",
+      "kc": [
+        "boxplot"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-010",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Zwei Klassen schreiben denselben Test. Boxplot der 10a: Minimum $4$, $Q_1 = 8$, Median $11$, $Q_3 = 13$, Maximum $19$. Boxplot der 10b: Minimum $7$, $Q_1 = 9$, Median $11$, $Q_3 = 15$, Maximum $17$. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Beide Klassen haben denselben Median.",
+          "richtig": true,
+          "erklaerung": "Richtig: In beiden Boxplots liegt der Medianstrich bei $11$ Punkten."
+        },
+        {
+          "text": "Die Spannweite ist in der 10a größer als in der 10b.",
+          "richtig": true,
+          "erklaerung": "Richtig: $19 - 4 = 15$ gegenüber $17 - 7 = 10$ — die Extremwerte der 10a liegen weiter auseinander."
+        },
+        {
+          "text": "Auch der Interquartilsabstand ist in der 10a größer.",
+          "richtig": false,
+          "erklaerung": "Nein: 10a: $13 - 8 = 5$, 10b: $15 - 9 = 6$. Die Box der 10b ist breiter — Spannweite und Interquartilsabstand können gegenläufig sein."
+        },
+        {
+          "text": "In der Box liegen immer genau $25\\,\\%$ der Werte.",
+          "richtig": false,
+          "erklaerung": "Die Box von $Q_1$ bis $Q_3$ enthält rund $50\\,\\%$ der Werte; je rund $25\\,\\%$ entfallen auf jede Antenne und jede Boxhälfte."
+        }
+      ],
+      "tipps": [
+        "Spannweite: Maximum minus Minimum — für beide Klassen einzeln rechnen.",
+        "Interquartilsabstand: $Q_3 - Q_1$ — Vorsicht, das Ergebnis kann anders ausfallen als bei der Spannweite.",
+        "Antenne, linke Boxhälfte, rechte Boxhälfte, Antenne: je rund ein Viertel der Daten."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Beide Mediane liegen bei $11$. Spannweiten: 10a: $19 - 4 = 15$, 10b: $17 - 7 = 10$ — die 10a hat die extremeren Randwerte. Beim Interquartilsabstand dreht sich das Bild: 10a: $13 - 8 = 5$, 10b: $15 - 9 = 6$ — die mittleren $50\\,\\%$ streuen in der 10b breiter. Das zeigt: Spannweite und Interquartilsabstand messen Verschiedenes. Und die Box enthält stets rund die Hälfte der Daten, nicht ein Viertel.",
+      "kc": [
+        "boxplot"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "An Sommertagen steigen sowohl der Eisverkauf als auch die Zahl der Sonnenbrände — die Punktwolke beider Merkmale zeigt einen starken positiven Zusammenhang. Eine Schülerzeitung folgert: „Eisessen verursacht Sonnenbrand!“ Nimm Stellung und erkläre dabei den Unterschied zwischen Korrelation und Kausalität.",
+      "musterloesung": "Die Schlussfolgerung ist nicht haltbar. Die Punktwolke belegt nur eine Korrelation: An Tagen mit hohem Eisverkauf gibt es auch viele Sonnenbrände. Kausalität — Eisessen führt zu Sonnenbrand — folgt daraus nicht. Die plausible Erklärung ist eine dritte Variable: starke Sonneneinstrahlung bei heißem Wetter. Sie treibt beide Merkmale gleichzeitig an — mehr Menschen kaufen Eis, und mehr Menschen sind ungeschützt in der Sonne. Allgemein gilt: Eine Korrelation kann durch eine gemeinsame Ursache entstehen, die Wirkrichtung kann umgekehrt sein als vermutet, oder der Zusammenhang ist zufällig. Um Kausalität zu belegen, müsste man die dritte Variable kontrollieren — etwa Tage mit gleicher Sonneneinstrahlung vergleichen: Dann dürfte zwischen Eisverkauf und Sonnenbränden kein Zusammenhang mehr übrig bleiben.",
+      "tipps": [
+        "Welche dritte Größe könnte an heißen Tagen beide Merkmale gleichzeitig nach oben treiben?",
+        "Korrelation: Zwei Merkmale verändern sich gemeinsam. Kausalität: Das eine verursacht das andere.",
+        "Wie könnte man prüfen, ob das Eis wirklich schuld ist? Denke an Tage mit gleicher Sonneneinstrahlung."
+      ],
+      "loesungsweg": "Kernpunkte: (1) Die Daten zeigen nur eine Korrelation — gemeinsames Steigen zweier Merkmale. (2) Daraus folgt keine Kausalität: Hier wirkt eine dritte Variable, die Sonneneinstrahlung, als gemeinsame Ursache für Eisverkauf und Sonnenbrände. (3) Mögliche Prüfung: Tage mit ähnlicher Sonneneinstrahlung vergleichen — verschwindet der Zusammenhang, war das Eis nie die Ursache. Wer Korrelationen als Beweise liest, fällt auf Schlagzeilen wie die der Schülerzeitung herein.",
+      "kc": [
+        "korrelation"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Für einen Kurs mit $10$ Klausuren zeigt das Notenprogramm den Mittelwert $\\bar{x} = 7{,}5$ Punkte an. Dann fällt auf: Ein Ergebnis wurde versehentlich als $3$ statt richtig $12$ Punkte erfasst. Korrigiere den Mittelwert, ohne die übrigen Einzelwerte zu kennen.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne aus $\\bar{x} = 7{,}5$ die Summe aller zehn erfassten Punktzahlen.",
+          "eingaben": [
+            {
+              "label": "Summe",
+              "antwort": 75,
+              "toleranz": 0,
+              "einheit": "Punkte"
+            }
+          ],
+          "tipps": [
+            "$\\bar{x} = \\frac{\\text{Summe}}{10}$ — rückwärts gelesen: Summe $= 10 \\cdot \\bar{x}$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Ersetze den falschen Wert durch den richtigen und berechne den korrigierten Mittelwert.",
+          "eingaben": [
+            {
+              "label": "$\\bar{x}$ neu",
+              "antwort": 8.4,
+              "toleranz": 0.001,
+              "einheit": "Punkte"
+            }
+          ],
+          "tipps": [
+            "Korrigierte Summe: $75 - 3 + 12 = 84$ — dann wieder durch $10$ teilen."
+          ]
+        }
+      ],
+      "tipps": [
+        "Der Mittelwert verrät die Summe: Beides ist über $\\bar{x} = \\frac{\\text{Summe}}{n}$ verknüpft.",
+        "Vom falschen zum richtigen Datensatz ändert sich die Summe um $12 - 3 = 9$.",
+        "Kurzweg: $\\bar{x}$ wächst um $\\frac{9}{10} = 0{,}9$ Punkte."
+      ],
+      "loesungsweg": "Aus $\\bar{x} = \\frac{\\text{Summe}}{10} = 7{,}5$ folgt Summe $= 75$. Die Korrektur ersetzt $3$ durch $12$, die Summe wächst also um $9$ auf $84$, und der neue Mittelwert ist $\\bar{x} = \\frac{84}{10} = 8{,}4$ Punkte. Eleganter Kurzweg: Der Mittelwert steigt um $\\frac{9}{10} = 0{,}9$. Bemerkenswert: Für diese Korrektur braucht man die Einzelwerte nicht — beim Median wäre das anders: Er hängt von der Lage aller Werte in der geordneten Liste ab und ließe sich ohne die vollständige Liste nicht neu bestimmen.",
+      "kc": [
+        "lagemasse"
+      ]
+    },
+    {
+      "id": "ma-ep-bst-013",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Ein Schulkiosk notiert an fünf Tagen die Mittagstemperatur $x$ (in $^\\circ\\text{C}$) und die Zahl $y$ der verkauften Kaltgetränke: $(10\\,|\\,28)$, $(14\\,|\\,30)$, $(18\\,|\\,41)$, $(22\\,|\\,44)$, $(26\\,|\\,52)$. Bestimme — etwa mit dem CAS — die Regressionsgerade $y = a \\cdot x + b$ und berechne die Prognose für $20\\,^\\circ\\text{C}$.",
+      "eingaben": [
+        {
+          "label": "$a$",
+          "antwort": 1.55,
+          "toleranz": 0.01,
+          "einheit": ""
+        },
+        {
+          "label": "$b$",
+          "antwort": 11.1,
+          "toleranz": 0.05,
+          "einheit": ""
+        },
+        {
+          "label": "Prognose für 20 °C",
+          "antwort": 42.1,
+          "toleranz": 0.2,
+          "einheit": "Getränke"
+        }
+      ],
+      "tipps": [
+        "Mit dem CAS: beide Listen eingeben und die lineare Regression aufrufen — sie liefert $a$ und $b$ direkt.",
+        "Zur Kontrolle: Die Regressionsgerade läuft durch den Schwerpunkt $(\\bar{x}\\,|\\,\\bar{y}) = (18\\,|\\,39)$, also $b = 39 - 18a$.",
+        "Prognose: $x = 20$ in $y = 1{,}55 \\cdot x + 11{,}1$ einsetzen."
+      ],
+      "loesungsweg": "CAS-Ergebnis: $a = 1{,}55$ und $b = 11{,}1$. Von Hand bestätigt man das über die Mittelwerte $\\bar{x} = 18$ und $\\bar{y} = 39$: Die Produkte der Abweichungen $(x_i - \\bar{x})(y_i - \\bar{y})$ ergeben $88 + 36 + 0 + 20 + 104 = 248$, die quadrierten $x$-Abweichungen $64 + 16 + 0 + 16 + 64 = 160$; damit $a = \\frac{248}{160} = 1{,}55$ und $b = 39 - 1{,}55 \\cdot 18 = 11{,}1$. Prognose: $y(20) = 1{,}55 \\cdot 20 + 11{,}1 = 42{,}1$, also rund $42$ Getränke — eine zulässige Aussage, denn $20\\,^\\circ\\text{C}$ liegt mitten im beobachteten Temperaturbereich. Pro Grad mehr verkauft der Kiosk laut Modell etwa $1{,}55$ Getränke zusätzlich.",
+      "kc": [
+        "regression",
+        "korrelation"
+      ],
+      "cas": "<p>Lineare Regression mit dem ClassPad II:</p><ol><li>Menü <b>Statistik</b>: die Temperaturen in <code>list1</code>, die Verkaufszahlen in <code>list2</code> eingeben (Dezimalzahlen stets mit Punkt statt Komma).</li><li><b>Calc → Regression → Lineare Reg.</b> wählen, XList: <code>list1</code>, YList: <code>list2</code> — <b>OK</b>.</li><li>Ablesen: <code>a = 1.55</code> (Steigung) und <code>b = 11.1</code> ($y$-Achsenabschnitt); das zusätzlich angezeigte <code>r ≈ 0.98</code> bestätigt einen starken positiven Zusammenhang.</li><li>Prognose im <b>Main</b>-Menü: <code>1.55*20+11.1</code> mit <b>EXE</b> ergibt $42{,}1$.</li></ol>"
+    }
+  ]
+}

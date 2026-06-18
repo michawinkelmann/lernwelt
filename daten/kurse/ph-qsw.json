@@ -1,0 +1,2083 @@
+{
+ "version": 1,
+ "kurs": "ph-qsw",
+ "fach": "physik",
+ "stufe": "qualifikationsphase",
+ "titel": "Physik · Qualifikationsphase — Schwingungen",
+ "untertitel": "Lernbüro-Pilot: Mechanische Schwingungen als Selbstlern-Einheit",
+ "zweig": [
+  "gym"
+ ],
+ "stand": "2026-06-13",
+ "taktung": "wochenplan",
+ "checkpoints": "freischalten",
+ "werkzeuge": [
+  "ampel",
+  "lerntagebuch"
+ ],
+ "hinweis": "Lektionen verweisen nur auf vorhandene Inhalte. Pilot – fachliche Endprüfung durch die Lehrkraft.",
+ "stoffverteilung": [
+  {
+   "wochen": "L1–L3",
+   "thema": "Mechanische Schwingungen",
+   "lektionen": "3 (Beschreibung, Feder-Masse-Pendel, Fadenpendel)",
+   "kc": "KC Physik GO (2022): Sachgebiet Schwingungen und Wellen (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/schwingungen/"
+  },
+  {
+   "wochen": "L4–L5",
+   "thema": "Mechanische Schwingungen (Fortsetzung)",
+   "lektionen": "2 (Harmonische Schwingung mathematisch, Energie/Dämpfung/Resonanz)",
+   "kc": "KC Physik GO (2022): Sachgebiet Schwingungen und Wellen (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/schwingungen/"
+  },
+  {
+   "wochen": "L6–L10",
+   "thema": "Mechanische Wellen",
+   "lektionen": "5 (Entstehung, Kenngrößen, Überlagerung, Stehende Wellen, Schall)",
+   "kc": "KC Physik GO (2022): Sachgebiet Schwingungen und Wellen (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/wellen/"
+  }
+ ],
+ "wochen": [
+  {
+   "nr": 1,
+   "spanne": "Diese Woche",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 1–3 geschafft"
+  },
+  {
+   "nr": 2,
+   "spanne": "Nächste Woche",
+   "lektionen": [
+    "l4",
+    "l5"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 4–5 geschafft"
+  },
+  {
+   "nr": 3,
+   "spanne": "Wellen-Block",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 6–10 geschafft"
+  }
+ ],
+ "lektionen": [
+  {
+   "id": "l1",
+   "nr": 1,
+   "titel": "Schwingungen beschreiben",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-schwingungen",
+   "themaPfad": "physik/qualifikationsphase/schwingungen/",
+   "anker": "#sw-beschreiben",
+   "ziele": [
+    "Ich kann die Begriffe Elongation, Amplitude, Periodendauer und Frequenz erklären.",
+    "Ich kann Frequenz und Periodendauer ineinander umrechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Kurze Auffrischung aus Klasse 10 – Sinusfunktion.",
+     "aufgaben": [
+      {
+       "quelle": "ma-10-sinusfunktion",
+       "ids": [
+        "ma-10-sf-001",
+        "ma-10-sf-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#sw-beschreiben",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch die Grundgrößen — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-beschreiben"
+     },
+     "schritte": [
+      {
+       "titel": "Was ist eine Schwingung?",
+       "html": "<p>Eine <strong>mechanische Schwingung</strong> ist eine zeitlich periodische Bewegung um eine <strong>Ruhelage</strong>. Der Körper kehrt nach jeder vollen Hin- und Herbewegung in denselben Bewegungszustand zurück. Voraussetzung ist eine <strong>rücktreibende Kraft</strong>, die ihn immer zur Ruhelage zurückzieht, und eine <strong>Trägheit</strong>, die ihn über die Ruhelage hinausschießen lässt.</p>",
+       "check": {
+        "frage": "Was treibt einen schwingenden Körper immer wieder zur Ruhelage zurück?",
+        "antwort": "Eine rücktreibende Kraft, die zur Ruhelage hin gerichtet ist. Wegen seiner Trägheit schießt der Körper jedoch über die Ruhelage hinaus, sodass er weiterschwingt."
+       }
+      },
+      {
+       "titel": "Elongation und Amplitude",
+       "html": "<p>Die <strong>Elongation</strong> $s(t)$ (auch Auslenkung) ist der momentane Abstand von der Ruhelage — sie ändert sich ständig und kann positiv oder negativ sein. Der <strong>größte</strong> Wert der Elongation heißt <strong>Amplitude</strong> $\\hat{s}$ (oder $A$). Die Amplitude ist also fest, die Elongation veränderlich.</p>",
+       "check": {
+        "frage": "Worin unterscheiden sich Elongation und Amplitude?",
+        "antwort": "Die Elongation ist die momentane Auslenkung und ändert sich ständig (mit Vorzeichen). Die Amplitude ist ihr größter Betrag — ein fester Maximalwert."
+       }
+      },
+      {
+       "titel": "Periodendauer und Frequenz",
+       "html": "<p>Die <strong>Periodendauer</strong> $T$ ist die Zeit für <em>eine vollständige</em> Schwingung (Einheit Sekunde). Die <strong>Frequenz</strong> $f$ gibt an, wie viele Schwingungen pro Sekunde stattfinden; ihre Einheit ist das Hertz: $1\\,\\text{Hz} = 1\\,\\frac{1}{\\text{s}}$. Beide hängen über $f = \\dfrac{1}{T}$ zusammen.</p>",
+       "check": {
+        "frage": "Was bedeutet eine Frequenz von $5\\,\\text{Hz}$?",
+        "antwort": "Der Körper führt 5 vollständige Schwingungen pro Sekunde aus. Die Periodendauer beträgt dann $T = \\frac{1}{5\\,\\text{Hz}} = 0{,}2\\,\\text{s}$."
+       }
+      },
+      {
+       "titel": "Umrechnen von $f$ und $T$",
+       "html": "<p>Weil $f$ und $T$ Kehrwerte sind, gilt $f = \\dfrac{1}{T}$ und ebenso $T = \\dfrac{1}{f}$. Großes $T$ bedeutet kleine Frequenz (langsame Schwingung), kleines $T$ bedeutet hohe Frequenz. Beispiel: Schlägt ein Kolibri $50$-mal pro Sekunde, so ist $f = 50\\,\\text{Hz}$ und $T = \\dfrac{1}{50\\,\\text{Hz}} = 0{,}02\\,\\text{s}$.</p>",
+       "check": {
+        "frage": "Eine Schwingung dauert $T = 0{,}25\\,\\text{s}$. Wie groß ist die Frequenz?",
+        "antwort": "$f = \\frac{1}{T} = \\frac{1}{0{,}25\\,\\text{s}} = 4\\,\\text{Hz}$ — also 4 Schwingungen pro Sekunde."
+       }
+      }
+     ],
+     "merksatz": "Eine Schwingung ist eine periodische Bewegung um eine Ruhelage. Die <strong>Elongation</strong> $s(t)$ ist die momentane Auslenkung, ihr Maximum die <strong>Amplitude</strong> $\\hat{s}$. <strong>Periodendauer</strong> $T$ und <strong>Frequenz</strong> $f$ sind Kehrwerte: $f = \\dfrac{1}{T}$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Periodendauer eines Pendels messen",
+       "material": "Eine kleine Masse (z. B. Schlüsselbund) an einer etwa $1\\,\\text{m}$ langen Schnur, eine Stoppuhr (Handy), ein Lineal.",
+       "vorhersage": "Schätze, wie lange dein Pendel für <em>eine</em> volle Hin- und Herbewegung braucht. Notiere die Vermutung in Sekunden, <em>bevor</em> du misst.",
+       "auftraege": [
+        "Lenke das Pendel um wenige Zentimeter aus und stoppe die Zeit für 10 volle Schwingungen. Teile durch 10 — das ist die Periodendauer $T$. Warum ist das genauer, als nur eine Schwingung zu stoppen?",
+        "Berechne aus deinem Messwert die Frequenz $f = \\frac{1}{T}$ und prüfe deine Vorhersage.",
+        "Lenke das Pendel einmal weit und einmal nur leicht aus, miss jeweils $T$. Ändert sich die Periodendauer mit der Amplitude?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Nenne die vier Grundgrößen einer Schwingung mit ihren Einheiten.",
+       "antwort": "Elongation $s$ und Amplitude $\\hat{s}$ in Metern, Periodendauer $T$ in Sekunden, Frequenz $f$ in Hertz ($1\\,\\text{Hz} = 1/\\text{s}$)."
+      },
+      {
+       "frage": "Ein Lautsprecher schwingt mit $f = 200\\,\\text{Hz}$. Wie groß ist die Periodendauer?",
+       "antwort": "$T = \\frac{1}{f} = \\frac{1}{200\\,\\text{Hz}} = 0{,}005\\,\\text{s} = 5\\,\\text{ms}$."
+      },
+      {
+       "frage": "Hängt die Amplitude mit der Frequenz zusammen?",
+       "antwort": "Nein. Amplitude (Stärke der Auslenkung) und Frequenz (Anzahl Schwingungen pro Sekunde) sind voneinander unabhängige Größen."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-001",
+        "ph-qp-sw-002"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-102"
+       ]
+      }
+     ],
+     "plus": [],
+     "partner": "Erkläre deiner Sitznachbarin: Was ist der Unterschied zwischen Elongation und Amplitude?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-003"
+       ]
+      }
+     ],
+     "transfer": "Ein Pendel schwingt mit $T = 0{,}4\\,\\text{s}$. Wie viele Schwingungen schafft es in einer Minute?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst die Größen Elongation, Amplitude, Periodendauer und Frequenz und ordnest jeder ihre Einheit zu."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du liest Periodendauer und Amplitude aus einem Zeit-Elongation-Diagramm ab und schließt daraus auf die Frequenz."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du beschreibst einen Schwingungsvorgang mit der Fachsprache und rechnest Frequenz und Periodendauer korrekt ineinander um."
+    }
+   ]
+  },
+  {
+   "id": "l2",
+   "nr": 2,
+   "titel": "Das Feder-Masse-Pendel",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-schwingungen",
+   "themaPfad": "physik/qualifikationsphase/schwingungen/",
+   "anker": "#sw-federpendel",
+   "ziele": [
+    "Ich kann erklären, warum das Feder-Masse-Pendel harmonisch schwingt.",
+    "Ich kann die Periodenformel $T = 2\\pi\\sqrt{m/D}$ anwenden und interpretieren."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Periodendauer und Frequenz aus Lektion 1.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-101"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 18,
+     "anker": "#sw-federpendel",
+     "text": "Lies den Abschnitt zur Federkraft und zur Periodenformel und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-federpendel"
+     },
+     "schritte": [
+      {
+       "titel": "Die rücktreibende Kraft",
+       "html": "<p>Hängt eine Masse $m$ an einer Feder, so übt die Feder bei Auslenkung um $s$ die Rückstellkraft $F = -D \\cdot s$ aus (Hookesches Gesetz). $D$ ist die <strong>Federkonstante</strong> (Einheit $\\frac{\\text{N}}{\\text{m}}$). Das Minuszeichen zeigt: Die Kraft ist immer <strong>entgegen</strong> der Auslenkung zur Ruhelage hin gerichtet.</p>",
+       "check": {
+        "frage": "Wohin zeigt die Federkraft, wenn die Masse nach unten ausgelenkt ist?",
+        "antwort": "Nach oben, also zur Ruhelage hin. Die Rückstellkraft ist stets der Auslenkung entgegengerichtet — das drückt das Minuszeichen in $F = -D\\,s$ aus."
+       }
+      },
+      {
+       "titel": "Warum harmonisch?",
+       "html": "<p>Eine Schwingung heißt <strong>harmonisch</strong>, wenn die Rückstellkraft <strong>proportional</strong> zur Auslenkung ist: $F \\sim -s$. Genau das leistet die Feder. Deshalb verläuft die Elongation zeitlich nach einer <strong>Sinusfunktion</strong>, und die Periodendauer hängt <strong>nicht</strong> von der Amplitude ab.</p>",
+       "check": {
+        "frage": "Welche Bedingung muss die Rückstellkraft erfüllen, damit die Schwingung harmonisch ist?",
+        "antwort": "Sie muss proportional zur Auslenkung und ihr entgegengerichtet sein: $F = -D\\,s$. Dann ist die Schwingung harmonisch (sinusförmig)."
+       }
+      },
+      {
+       "titel": "Die Periodenformel",
+       "html": "<p>Für das Feder-Masse-Pendel gilt $T = 2\\pi\\sqrt{\\dfrac{m}{D}}$. Eine <strong>größere Masse</strong> macht das System träger → längere Periodendauer. Eine <strong>steifere Feder</strong> (großes $D$) zieht stärker zurück → kürzere Periodendauer. Beides geht nur unter der Wurzel ein.</p>",
+       "check": {
+        "frage": "Wie wirkt sich eine steifere Feder (größeres $D$) auf $T$ aus?",
+        "antwort": "Die Periodendauer wird kleiner: $D$ steht im Nenner unter der Wurzel. Eine stärkere Rückstellkraft beschleunigt die Masse schneller zur Ruhelage."
+       }
+      },
+      {
+       "titel": "Die Wurzel verstehen",
+       "html": "<p>Weil $m$ und $D$ unter einer <strong>Wurzel</strong> stehen, wirkt sich eine Vervierfachung nur als <strong>Verdopplung</strong> aus: Vervierfacht man $m$, so wird $T$ doppelt so groß ($\\sqrt{4}=2$). Vervierfacht man $D$, halbiert sich $T$.</p>",
+       "check": {
+        "frage": "Die Masse wird vervierfacht. Um welchen Faktor ändert sich $T$?",
+        "antwort": "$T$ verdoppelt sich, denn $\\sqrt{4} = 2$. (Vervierfacht man $D$, halbiert sich $T$.)"
+       }
+      }
+     ],
+     "merksatz": "Das Feder-Masse-Pendel schwingt <strong>harmonisch</strong>, weil die Federkraft $F = -D\\,s$ proportional zur Auslenkung ist. Es gilt $T = 2\\pi\\sqrt{\\dfrac{m}{D}}$: große Masse → träger (größer $T$), steife Feder → schneller (kleiner $T$); beide nur unter der Wurzel.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Masse und Federkonstante variieren",
+       "material": "Eine Schraubenfeder, ein Stativ, mehrere gleiche Massestücke (z. B. $50\\,\\text{g}$), eine Stoppuhr.",
+       "vorhersage": "Du verdoppelst die angehängte Masse. Wird die Periodendauer doppelt so groß, mehr oder weniger? Notiere deine Vermutung, bevor du misst.",
+       "auftraege": [
+        "Hänge eine Masse an, lenke leicht aus und miss $T$ über 10 Schwingungen. Verdopple dann die Masse und miss erneut. Vergleiche mit deiner Vorhersage und mit dem Faktor $\\sqrt{2}\\approx 1{,}41$.",
+        "Hänge zwei gleiche Federn parallel — die effektive Federkonstante verdoppelt sich. Wie ändert sich $T$? Deute es mit der Formel.",
+        "Lenke dieselbe Masse einmal weit, einmal nur wenig aus. Bleibt $T$ gleich? Was sagt das über die Amplitudenunabhängigkeit?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Warum schwingt das Feder-Masse-Pendel harmonisch?",
+       "antwort": "Weil die Federkraft $F = -D\\,s$ proportional zur Auslenkung und ihr entgegengerichtet ist — die Bedingung für eine harmonische Schwingung."
+      },
+      {
+       "frage": "Eine Masse von $0{,}5\\,\\text{kg}$ hängt an einer Feder mit $D = 20\\,\\frac{\\text{N}}{\\text{m}}$. Wie groß ist $T$?",
+       "antwort": "$T = 2\\pi\\sqrt{\\frac{0{,}5\\,\\text{kg}}{20\\,\\text{N/m}}} = 2\\pi\\sqrt{0{,}025\\,\\text{s}^2} \\approx 0{,}99\\,\\text{s}$."
+      },
+      {
+       "frage": "Hängt die Periodendauer des Federpendels von der Amplitude ab?",
+       "antwort": "Nein. Bei einer harmonischen Schwingung ist $T$ unabhängig von der Amplitude — nur $m$ und $D$ bestimmen sie."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-005",
+        "ph-qp-sw-006"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-012"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Warum schwingt dasselbe Federpendel auf dem Mond genauso schnell wie auf der Erde?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-004"
+       ]
+      }
+     ],
+     "transfer": "Eine Feder-Masse-System schwingt mit $T = 1\\,\\text{s}$. Wie ändert sich $T$, wenn man die Federkonstante $D$ verdoppelt?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du begründest mit dem Hookeschen Gesetz, warum das Feder-Masse-Pendel harmonisch schwingt."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du untersuchst, wie Periodendauer von Masse und Federkonstante abhängt, und deutest die Wurzelabhängigkeit."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du wendest die Formel $T = 2\\pi\\sqrt{m/D}$ an und interpretierst, welche Größe sich wie auswirkt."
+    }
+   ]
+  },
+  {
+   "id": "l3",
+   "nr": 3,
+   "titel": "Das Fadenpendel",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-schwingungen",
+   "themaPfad": "physik/qualifikationsphase/schwingungen/",
+   "anker": "#sw-fadenpendel",
+   "ziele": [
+    "Ich kann die Periodenformel $T = 2\\pi\\sqrt{l/g}$ anwenden.",
+    "Ich kann den Unterschied zum Feder-Masse-Pendel erklären (Rolle von $g$, Masseunabhängigkeit)."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Feder-Masse-Formel aus Lektion 2.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#sw-fadenpendel",
+     "text": "Lies den Abschnitt zum Fadenpendel und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-fadenpendel"
+     },
+     "schritte": [
+      {
+       "titel": "Die rücktreibende Kraft beim Fadenpendel",
+       "html": "<p>Beim Fadenpendel ist die <strong>Rückstellkraft</strong> die Hangabtriebskomponente der Gewichtskraft: $F = -m\\,g\\,\\sin\\varphi$. Für <strong>kleine Winkel</strong> gilt näherungsweise $\\sin\\varphi \\approx \\varphi$, sodass die Kraft proportional zur Auslenkung wird — erst dann schwingt das Pendel <strong>harmonisch</strong>.</p>",
+       "check": {
+        "frage": "Warum schwingt ein Fadenpendel nur bei kleinen Auslenkungen harmonisch?",
+        "antwort": "Nur für kleine Winkel gilt $\\sin\\varphi \\approx \\varphi$. Dann ist die Rückstellkraft proportional zur Auslenkung — die Bedingung für eine harmonische Schwingung. Bei großen Winkeln stimmt die Näherung nicht mehr."
+       }
+      },
+      {
+       "titel": "Die Periodenformel",
+       "html": "<p>Für kleine Auslenkungen gilt $T = 2\\pi\\sqrt{\\dfrac{l}{g}}$. Dabei ist $l$ die Pendellänge und $g$ der Ortsfaktor ($g \\approx 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$). Ein <strong>längeres</strong> Pendel schwingt langsamer (größeres $T$), an einem Ort mit <strong>größerem</strong> $g$ schneller.</p>",
+       "check": {
+        "frage": "Wie ändert sich die Periodendauer, wenn man die Pendellänge vervierfacht?",
+        "antwort": "$T$ verdoppelt sich, denn $l$ steht unter der Wurzel: $\\sqrt{4}=2$."
+       }
+      },
+      {
+       "titel": "Unabhängigkeit von der Masse",
+       "html": "<p>In der Formel $T = 2\\pi\\sqrt{\\dfrac{l}{g}}$ kommt die <strong>Masse nicht vor</strong>. Grund: Die rücktreibende Kraft ist proportional zu $m$ (über $g$), die Trägheit aber ebenfalls — beide $m$ kürzen sich heraus. Eine schwere und eine leichte Kugel gleicher Fadenlänge schwingen <strong>gleich schnell</strong>.</p>",
+       "check": {
+        "frage": "Eine Bleikugel und eine Holzkugel hängen an gleich langen Fäden. Welche schwingt schneller?",
+        "antwort": "Beide schwingen gleich schnell. Die Periodendauer hängt nicht von der Masse ab — die Masse kürzt sich aus rücktreibender Kraft und Trägheit heraus."
+       }
+      },
+      {
+       "titel": "Vergleich mit dem Federpendel",
+       "html": "<p>Beide Pendel schwingen harmonisch und haben dieselbe Bauform $T = 2\\pi\\sqrt{\\text{Trägheit}/\\text{Rückstellung}}$. Beim <strong>Federpendel</strong> ($T=2\\pi\\sqrt{m/D}$) zählt die Masse, beim <strong>Fadenpendel</strong> ($T=2\\pi\\sqrt{l/g}$) nicht. Dafür ist das Fadenpendel nur näherungsweise harmonisch (kleine Winkel) und hängt von $g$, also vom Ort ab.</p>",
+       "check": {
+        "frage": "Worin unterscheiden sich Faden- und Federpendel hinsichtlich der Masse?",
+        "antwort": "Beim Federpendel geht die Masse in $T$ ein, beim Fadenpendel nicht. Beim Fadenpendel hängt $T$ dafür vom Ortsfaktor $g$ ab."
+       }
+      }
+     ],
+     "merksatz": "Für kleine Auslenkungen schwingt das Fadenpendel harmonisch mit $T = 2\\pi\\sqrt{\\dfrac{l}{g}}$. Die Periodendauer hängt von Länge und Ortsfaktor ab, <strong>nicht</strong> von der Masse.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Fadenpendel untersuchen",
+       "material": "Eine Schnur, verschiedene kleine Massen (z. B. Mutter, Stein), ein Maßband, eine Stoppuhr.",
+       "vorhersage": "Welche Pendellänge brauchst du ungefähr, damit eine volle Schwingung genau $1\\,\\text{s}$ dauert? Schätze zuerst, dann rechne mit der Formel nach.",
+       "auftraege": [
+        "Stelle die berechnete Länge ein und überprüfe durch Messen (10 Schwingungen, durch 10 teilen), ob $T \\approx 1\\,\\text{s}$ herauskommt.",
+        "Hänge nacheinander eine leichte und eine schwere Masse an dieselbe Fadenlänge. Bestätigt die Messung die Massenunabhängigkeit?",
+        "Lenke das Pendel einmal nur wenige Grad, einmal weit (über $30^\\circ$) aus. Beobachte, ob $T$ bei großer Auslenkung merklich abweicht — und erkläre es mit der Kleinwinkelnäherung."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wovon hängt die Periodendauer eines Fadenpendels ab, wovon nicht?",
+       "antwort": "Sie hängt von der Pendellänge $l$ und vom Ortsfaktor $g$ ab, nicht aber von der Masse und (bei kleinen Winkeln) nicht von der Amplitude."
+      },
+      {
+       "frage": "Berechne $T$ für ein Pendel der Länge $l = 1{,}0\\,\\text{m}$ ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$).",
+       "antwort": "$T = 2\\pi\\sqrt{\\frac{1{,}0\\,\\text{m}}{9{,}81\\,\\text{m/s}^2}} \\approx 2{,}0\\,\\text{s}$."
+      },
+      {
+       "frage": "Warum gilt die Formel nur für kleine Auslenkungen?",
+       "antwort": "Nur dann gilt $\\sin\\varphi \\approx \\varphi$, sodass die Rückstellkraft proportional zur Auslenkung und die Schwingung harmonisch ist."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-104"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-007",
+        "ph-qp-sw-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-013"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-302"
+       ]
+      }
+     ],
+     "partner": "Vergleicht die beiden Formeln: Was steht im Zähler, was im Nenner unter der Wurzel – und was bedeutet das physikalisch?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-001"
+       ]
+      }
+     ],
+     "transfer": "Auf dem Mond ist $g \\approx 1{,}6\\,\\frac{\\text{m}}{\\text{s}^2}$. Um welchen Faktor ändert sich die Periodendauer des Fadenpendels?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du wendest die Formel $T = 2\\pi\\sqrt{l/g}$ an und benennst, von welchen Größen $T$ abhängt."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du begründest, warum die Periodendauer des Fadenpendels nicht von der Masse abhängt, und erkennst die Grenze kleiner Auslenkungen."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du vergleichst Faden- und Feder-Masse-Pendel und erklärst die Rolle des Ortsfaktors $g$."
+    }
+   ]
+  },
+  {
+   "id": "l4",
+   "nr": 4,
+   "titel": "Die harmonische Schwingung mathematisch",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-schwingungen",
+   "themaPfad": "physik/qualifikationsphase/schwingungen/",
+   "anker": "#sw-mathematisch",
+   "ziele": [
+    "Ich kann den Sinusansatz $s(t) = A \\cdot \\sin(\\omega t)$ benennen und erklären.",
+    "Ich kann Maximalgeschwindigkeit und Maximalbeschleunigung aus Amplitude und Kreisfrequenz berechnen."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein gemeinsames Gespräch: Was bedeutet es, eine Schwingung durch eine Sinusfunktion zu beschreiben? Sammelt an der Tafel, welche Größen darin vorkommen."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Fadenpendel-Formel aus Lektion 3.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-101"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 18,
+     "anker": "#sw-mathematisch",
+     "text": "Lies den Abschnitt zur Sinusbeschreibung und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-mathematisch"
+     },
+     "schritte": [
+      {
+       "titel": "Der Sinusansatz",
+       "html": "<p>Startet die Schwingung in der Ruhelage, so beschreibt $s(t) = \\hat{s}\\cdot\\sin(\\omega t)$ die Elongation. Dabei ist $\\hat{s}$ die <strong>Amplitude</strong> und $\\omega$ die <strong>Kreisfrequenz</strong> mit $\\omega = 2\\pi f = \\dfrac{2\\pi}{T}$ (Einheit $\\frac{1}{\\text{s}}$). $\\omega$ gibt an, wie schnell das Argument des Sinus mit der Zeit wächst.</p>",
+       "check": {
+        "frage": "Wie hängt die Kreisfrequenz $\\omega$ mit der Periodendauer $T$ zusammen?",
+        "antwort": "$\\omega = \\frac{2\\pi}{T} = 2\\pi f$. In einer Periodendauer durchläuft das Sinusargument genau $2\\pi$."
+       }
+      },
+      {
+       "titel": "Geschwindigkeit durch Ableiten",
+       "html": "<p>Die Geschwindigkeit ist die zeitliche Ableitung der Elongation: $v(t) = \\dot{s}(t) = \\hat{s}\\,\\omega\\,\\cos(\\omega t)$. Wo $s$ ein Sinus ist, ist $v$ ein <strong>Kosinus</strong> — beide sind um eine Viertelperiode <strong>phasenverschoben</strong>. Die Maximalgeschwindigkeit beträgt $v_{\\max} = \\hat{s}\\,\\omega$.</p>",
+       "check": {
+        "frage": "An welcher Stelle der Schwingung ist die Geschwindigkeit am größten?",
+        "antwort": "In der Ruhelage ($s=0$). Dort hat der Kosinus seinen Maximalbetrag, also $v_{\\max} = \\hat{s}\\,\\omega$. An den Umkehrpunkten ist $v = 0$."
+       }
+      },
+      {
+       "titel": "Beschleunigung durch nochmaliges Ableiten",
+       "html": "<p>Die Beschleunigung ist die Ableitung der Geschwindigkeit: $a(t) = \\dot{v}(t) = -\\hat{s}\\,\\omega^2\\,\\sin(\\omega t) = -\\omega^2\\,s(t)$. Sie ist also <strong>proportional zur Auslenkung</strong> und ihr entgegengerichtet — genau die Bedingung der harmonischen Schwingung. Der Maximalbetrag ist $a_{\\max} = \\hat{s}\\,\\omega^2$.</p>",
+       "check": {
+        "frage": "Wo erreicht die Beschleunigung ihren größten Betrag?",
+        "antwort": "An den Umkehrpunkten ($s = \\pm\\hat{s}$). Dort ist die Auslenkung und damit auch $|a| = \\omega^2|s|$ maximal: $a_{\\max} = \\hat{s}\\,\\omega^2$. In der Ruhelage ist $a = 0$."
+       }
+      },
+      {
+       "titel": "Phasenlage von $s$, $v$, $a$",
+       "html": "<p>Auslenkung, Geschwindigkeit und Beschleunigung sind gegeneinander verschoben: In der Ruhelage ist $|v|$ maximal und $a=0$; am Umkehrpunkt ist $v=0$ und $|a|$ maximal. Die Beschleunigung ist der Auslenkung stets entgegengesetzt ($a = -\\omega^2 s$).</p>",
+       "check": {
+        "frage": "Warum ist am Umkehrpunkt die Geschwindigkeit null, aber die Beschleunigung maximal?",
+        "antwort": "Am Umkehrpunkt kehrt die Bewegung um — die Geschwindigkeit ist gerade null. Die Auslenkung ist dort maximal, und wegen $a=-\\omega^2 s$ ist auch die rücktreibende Beschleunigung maximal."
+       }
+      }
+     ],
+     "merksatz": "Harmonische Schwingung: $s(t)=\\hat{s}\\sin(\\omega t)$, $v(t)=\\hat{s}\\,\\omega\\cos(\\omega t)$, $a(t)=-\\hat{s}\\,\\omega^2\\sin(\\omega t)=-\\omega^2 s$. Es gilt $v_{\\max}=\\hat{s}\\,\\omega$ (in der Ruhelage) und $a_{\\max}=\\hat{s}\\,\\omega^2$ (am Umkehrpunkt) mit $\\omega = 2\\pi f$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Auslenkung und Geschwindigkeit vergleichen",
+       "material": "Ein Federpendel (Masse an Feder am Stativ), eine Handy-Kamera für eine Zeitlupenaufnahme (Slow-Motion).",
+       "vorhersage": "An welcher Stelle der Bewegung — Ruhelage oder Umkehrpunkt — ist die Masse am schnellsten? Notiere deine Vermutung vor der Aufnahme.",
+       "auftraege": [
+        "Filme die schwingende Masse in Zeitlupe. Spiele die Aufnahme Bild für Bild ab: Wo bewegt sich die Masse zwischen zwei Bildern am weitesten (= schnellste Stelle)?",
+        "Suche die Umkehrpunkte: Dort steht die Masse kurz still. Stimmt das mit $v=0$ am Umkehrpunkt überein?",
+        "Beschreibe in eigenen Worten, wie sich die Geschwindigkeit von der Ruhelage zum Umkehrpunkt ändert — und verknüpfe es mit $v(t)=\\hat{s}\\,\\omega\\cos(\\omega t)$."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Eine Schwingung hat $\\hat{s}=0{,}10\\,\\text{m}$ und $T = 0{,}50\\,\\text{s}$. Wie groß ist $v_{\\max}$?",
+       "antwort": "$\\omega = \\frac{2\\pi}{T} = \\frac{2\\pi}{0{,}5\\,\\text{s}} \\approx 12{,}6\\,\\frac{1}{\\text{s}}$, also $v_{\\max} = \\hat{s}\\,\\omega = 0{,}10\\,\\text{m}\\cdot 12{,}6\\,\\frac{1}{\\text{s}} \\approx 1{,}26\\,\\frac{\\text{m}}{\\text{s}}$."
+      },
+      {
+       "frage": "Wie entsteht aus $s(t)$ die Beschleunigung $a(t)$?",
+       "antwort": "Durch zweimaliges Ableiten nach der Zeit: $a(t)=\\ddot{s}(t)=-\\hat{s}\\,\\omega^2\\sin(\\omega t) = -\\omega^2 s(t)$."
+      },
+      {
+       "frage": "Was bedeutet das Minuszeichen in $a = -\\omega^2 s$?",
+       "antwort": "Die Beschleunigung ist der Auslenkung stets entgegengerichtet — sie wirkt rücktreibend zur Ruhelage. Das ist das Kennzeichen der harmonischen Schwingung."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-106",
+        "ph-qp-sw-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-012"
+       ]
+      }
+     ],
+     "partner": "Erkläre Schritt für Schritt, wie man aus $s(t) = A \\cdot \\sin(\\omega t)$ durch Ableiten $v_\\text{max} = A \\cdot \\omega$ erhält."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-011"
+       ]
+      }
+     ],
+     "transfer": "Warum ist $a_\\text{max} = A \\cdot \\omega^2$ an den Umkehrpunkten maximal – und nicht in der Gleichgewichtslage?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du benennst den Sinusansatz $s(t)=\\hat{s}\\cdot\\sin(\\omega t)$ und ordnest Amplitude und Kreisfrequenz den Größen $\\hat{s}$ und $\\omega$ zu."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du leitest $v(t)$ und $a(t)$ durch Ableiten ab und begründest die Phasenlage von Auslenkung, Geschwindigkeit und Beschleunigung."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du berechnest Maximalgeschwindigkeit und Maximalbeschleunigung aus $\\hat{s}$ und $\\omega$ und deutest sie physikalisch."
+    }
+   ]
+  },
+  {
+   "id": "l5",
+   "nr": 5,
+   "titel": "Energie, Dämpfung und Resonanz",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-schwingungen",
+   "themaPfad": "physik/qualifikationsphase/schwingungen/",
+   "anker": "#sw-energie",
+   "ziele": [
+    "Ich kann die Energieumwandlung im Schwingungsvorgang mit dem Energieerhaltungssatz erklären.",
+    "Ich kann die Begriffe Eigenfrequenz, erzwungene Schwingung, Resonanz und Dämpfung erklären und an Beispielen belegen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung: Maximalgeschwindigkeit und harmonische Schwingung aus Lektion 4.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-103"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 18,
+     "anker": "#sw-energie",
+     "text": "Lies den Abschnitt zu Energie, Dämpfung und Resonanz und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-energie"
+     },
+     "schritte": [
+      {
+       "titel": "Energieumwandlung in der Schwingung",
+       "html": "<p>Während der Schwingung wandeln sich <strong>kinetische</strong> und <strong>potenzielle</strong> Energie fortlaufend ineinander um. Am <strong>Umkehrpunkt</strong> ist die gesamte Energie potenziell (Spann- bzw. Lageenergie), in der <strong>Ruhelage</strong> vollständig kinetisch. Ohne Reibung bleibt die Gesamtenergie konstant (Energieerhaltung).</p>",
+       "check": {
+        "frage": "Wo ist die kinetische Energie am größten, wo die potenzielle?",
+        "antwort": "Die kinetische Energie ist in der Ruhelage maximal (dort ist die Geschwindigkeit am größten), die potenzielle am Umkehrpunkt (dort steht der Körper kurz still). Die Summe bleibt ohne Reibung konstant."
+       }
+      },
+      {
+       "titel": "Dämpfung",
+       "html": "<p>In Wirklichkeit entzieht <strong>Reibung</strong> (Luft, innere Reibung) dem System Energie. Die <strong>Amplitude nimmt ab</strong>, die Schwingung klingt aus — sie ist <strong>gedämpft</strong>. Die Periodendauer bleibt dabei nahezu unverändert; verloren geht Energie, nicht der Takt.</p>",
+       "check": {
+        "frage": "Was passiert bei einer gedämpften Schwingung mit Amplitude und Energie?",
+        "antwort": "Beide nehmen mit der Zeit ab: Reibung wandelt mechanische Energie in Wärme um, die Amplitude wird immer kleiner, bis die Schwingung zur Ruhe kommt."
+       }
+      },
+      {
+       "titel": "Eigenfrequenz und erzwungene Schwingung",
+       "html": "<p>Jedes schwingungsfähige System hat eine <strong>Eigenfrequenz</strong> $f_0$, mit der es frei schwingt. Regt man es von außen periodisch an (<strong>erzwungene Schwingung</strong>), so schwingt es mit der <strong>Erregerfrequenz</strong>. Die Amplitude hängt davon ab, wie nah die Erregerfrequenz an $f_0$ liegt.</p>",
+       "check": {
+        "frage": "Mit welcher Frequenz schwingt ein System im eingeschwungenen Zustand bei erzwungener Schwingung?",
+        "antwort": "Mit der Erregerfrequenz (Frequenz des Antriebs), nicht mit seiner Eigenfrequenz. Die Eigenfrequenz bestimmt aber, wie groß die Amplitude wird."
+       }
+      },
+      {
+       "titel": "Resonanz",
+       "html": "<p>Stimmt die Erregerfrequenz mit der Eigenfrequenz überein, wird in jeder Periode „im richtigen Takt“ Energie zugeführt: Die Amplitude wächst stark an — das ist <strong>Resonanz</strong>. Bei schwacher Dämpfung kann das <strong>nützlich</strong> sein (Schaukel anschubsen, Musikinstrument) oder <strong>gefährlich</strong> (Bauwerke, Maschinen können zerstört werden — „Resonanzkatastrophe“).</p>",
+       "check": {
+        "frage": "Warum reichen kleine, gut getimte Anstöße aus, um eine Schaukel hoch zu bringen?",
+        "antwort": "Weil man im Takt der Eigenfrequenz anschubst (Resonanz). In jeder Periode wird ein wenig Energie passend zugeführt, sodass sich die Amplitude aufschaukelt."
+       }
+      }
+     ],
+     "merksatz": "In der Schwingung wandeln sich kinetische und potenzielle Energie um; ohne Reibung bleibt die Summe erhalten. <strong>Dämpfung</strong> verringert die Amplitude. Bei <strong>Resonanz</strong> (Erregerfrequenz $\\approx$ Eigenfrequenz $f_0$) wächst die Amplitude stark an — nützlich oder gefährlich, je nach Dämpfung.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Resonanz mit gekoppelten Pendeln zeigen",
+       "material": "Zwei gleich lange Fadenpendel und ein bis zwei unterschiedlich lange, alle an einer gespannten waagerechten Schnur aufgehängt.",
+       "vorhersage": "Du regst eines der gleich langen Pendel an. Welches der anderen Pendel wird am stärksten mitschwingen? Notiere deine Vermutung.",
+       "auftraege": [
+        "Hänge mehrere Pendel an die gemeinsame Schnur. Stoße eines der gleich langen an und beobachte über eine Minute, welches Pendel die größte Amplitude aufbaut.",
+        "Erkläre mit den Begriffen Eigenfrequenz und Resonanz, warum gerade das gleich lange Pendel mitschwingt und die anderen kaum.",
+        "Dämpfe das mitschwingende Pendel leicht mit dem Finger an. Wie ändert sich die aufgebaute Amplitude — und was bedeutet das für reale Bauwerke (Stoßdämpfer)?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Beschreibe die Energieumwandlung beim Federpendel von der Ruhelage zum Umkehrpunkt.",
+       "antwort": "In der Ruhelage ist die Energie ganz kinetisch. Auf dem Weg zum Umkehrpunkt wird sie in Spannenergie der Feder (potenzielle Energie) umgewandelt; am Umkehrpunkt ist sie vollständig potenziell."
+      },
+      {
+       "frage": "Was unterscheidet eine gedämpfte von einer ungedämpften Schwingung?",
+       "antwort": "Bei der gedämpften Schwingung nimmt die Amplitude durch Energieverluste (Reibung) ab; die ungedämpfte behält ihre Amplitude. Die Periodendauer ändert sich kaum."
+      },
+      {
+       "frage": "Nenne je ein Beispiel für nützliche und für gefährliche Resonanz.",
+       "antwort": "Nützlich: Schaukel im Takt anschubsen, Klangkörper eines Instruments. Gefährlich: eine Brücke, die durch Wind oder Schritte in Resonanz gerät (Resonanzkatastrophe)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-107"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-009",
+        "ph-qp-sw-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-010",
+        "ph-qp-sw-013"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-301"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Was passiert mit der Resonanzamplitude, wenn man mehr Dämpfung einbaut – und warum?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-108"
+       ]
+      }
+     ],
+     "transfer": "Ein Pendel hat am Umkehrpunkt $E_\\text{ges} = 0{,}05\\,\\text{J}$. Wie groß ist die kinetische Energie in der Gleichgewichtslage?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Zur Vertiefung und Klassenarbeitsvorbereitung:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du beschreibst die ständige Umwandlung zwischen kinetischer und potenzieller Energie im Schwingungsvorgang."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du untersuchst, wie Dämpfung die Amplitude verringert und wie sich erzwungene Schwingungen bei Annäherung an die Eigenfrequenz verhalten."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du beurteilst an Beispielen (Schaukel, Brücke, Stoßdämpfer), wann Resonanz nützlich und wann sie gefährlich ist."
+    }
+   ]
+  },
+  {
+   "id": "l5b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Mechanische Schwingungen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-schwingungen",
+   "themaPfad": "physik/qualifikationsphase/schwingungen/",
+   "ziele": [
+    "Ich wende die Formeln für Feder- und Fadenpendel sowie für die harmonische Schwingung sicher an.",
+    "Ich verknüpfe Periodendauer, Frequenz, Kreisfrequenz und Schwingungsenergie miteinander."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zum Einordnen, danach mischst und wendest du den ganzen Schwingungs-Block an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-202",
+        "ph-qp-sw-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-204",
+        "ph-qp-sw-205",
+        "ph-qp-sw-206",
+        "ph-qp-sw-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-207",
+        "ph-qp-sw-304"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig, welche Größen in $T = 2\\pi\\sqrt{m/D}$ und $T = 2\\pi\\sqrt{l/g}$ unter der Wurzel im Zähler bzw. Nenner stehen — und was das physikalisch bedeutet."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-208",
+        "ph-qp-sw-302"
+       ]
+      }
+     ],
+     "transfer": "Entscheide bei jeder Aufgabe zuerst: Federpendel (Masse und Federkonstante), Fadenpendel (Länge und Ortsfaktor) oder harmonische Schwingung (Amplitude und Kreisfrequenz)? Erst dann wählst du die passende Formel."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen und für die Klassenarbeitsvorbereitung:",
+     "links": [
+      {
+       "label": "Simulation: Feder-Masse-Pendel",
+       "href": "simulationen/physik/federpendel/index.html"
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "text": "Bevor du loslegst, verschaffe dir den Überblick: Diese Lektion mischt den gesamten Schwingungs-Block. Sortiere die Werkzeuge, dann wendest du sie sicher an.",
+     "schritte": [
+      {
+       "titel": "Die drei Periodenformeln auf einen Blick",
+       "html": "<p>Alle harmonischen Schwinger haben die Bauform $T = 2\\pi\\sqrt{\\dfrac{\\text{Trägheit}}{\\text{Rückstellung}}}$. Konkret: <strong>Federpendel</strong> $T = 2\\pi\\sqrt{\\dfrac{m}{D}}$ (Masse, Federkonstante) und <strong>Fadenpendel</strong> $T = 2\\pi\\sqrt{\\dfrac{l}{g}}$ (Länge, Ortsfaktor). Beim Fadenpendel kommt die Masse nicht vor.</p>",
+       "check": {
+        "frage": "Du sollst $T$ eines schwingenden Massestücks an einer Feder berechnen. Welche Formel nimmst du?",
+        "antwort": "Die Federpendel-Formel $T = 2\\pi\\sqrt{m/D}$ — gebraucht werden Masse $m$ und Federkonstante $D$."
+       }
+      },
+      {
+       "titel": "Frequenz, Kreisfrequenz und Energie verknüpfen",
+       "html": "<p>Aus $T$ folgt $f = \\dfrac{1}{T}$ und $\\omega = 2\\pi f = \\dfrac{2\\pi}{T}$. Für die harmonische Schwingung gilt $v_{\\max} = \\hat{s}\\,\\omega$ und $a_{\\max} = \\hat{s}\\,\\omega^2$. Die Gesamtenergie lässt sich über den Maximalwert der kinetischen Energie $E = \\frac{1}{2}m\\,v_{\\max}^2$ in der Ruhelage berechnen.</p>",
+       "check": {
+        "frage": "Du kennst $T$ und sollst die Kreisfrequenz angeben. Wie gehst du vor?",
+        "antwort": "$\\omega = \\frac{2\\pi}{T}$. Aus $\\omega$ folgen dann $v_{\\max}=\\hat{s}\\,\\omega$ und $a_{\\max}=\\hat{s}\\,\\omega^2$."
+       }
+      },
+      {
+       "titel": "Erst zuordnen, dann rechnen",
+       "html": "<p>Gehe bei jeder Aufgabe in dieser Reihenfolge vor: <strong>(1)</strong> Um welchen Schwinger geht es (Feder, Faden, allgemein harmonisch)? <strong>(2)</strong> Welche Größen sind gegeben, welche gesucht? <strong>(3)</strong> Welche Formel verbindet sie? Prüfe am Ende die <strong>Einheit</strong> und ob die Größenordnung plausibel ist.</p>",
+       "check": {
+        "frage": "Warum lohnt es sich, vor dem Rechnen den Schwingertyp zu bestimmen?",
+        "antwort": "Weil davon abhängt, welche Formel und welche Größen man braucht. Federpendel verlangt $m$ und $D$, Fadenpendel $l$ und $g$ — Verwechslung führt zu falschen Ergebnissen."
+       }
+      }
+     ],
+     "merksatz": "Erst <strong>zuordnen</strong> (Feder $\\to m,D$ · Faden $\\to l,g$ · harmonisch $\\to \\hat{s},\\omega$), dann die passende Formel wählen, rechnen und Einheit prüfen. $f=\\frac{1}{T}$, $\\omega=2\\pi f$, $v_{\\max}=\\hat{s}\\,\\omega$, $a_{\\max}=\\hat{s}\\,\\omega^2$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Schwingertyp am Realobjekt bestimmen",
+       "material": "Verschiedene schwingungsfähige Gegenstände aus dem Alltag (z. B. Lineal über Tischkante, Schlüssel an Band, Gummiband mit Gewicht).",
+       "vorhersage": "Suche dir drei Gegenstände und notiere vorab, welcher sich eher wie ein Federpendel und welcher wie ein Fadenpendel verhält.",
+       "auftraege": [
+        "Bringe jeden Gegenstand zum Schwingen und ordne ihn begründet einem Typ zu (Feder- oder Fadenpendel-ähnlich).",
+        "Miss bei einem Gegenstand die Periodendauer (10 Schwingungen) und berechne daraus $f$ und $\\omega$.",
+        "Prüfe an einem federartigen Schwinger: Wird $T$ größer, wenn du mehr Masse anhängst? Passt das zur Formel $T = 2\\pi\\sqrt{m/D}$?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Woran erkennst du, ob du die Feder- oder die Fadenpendelformel brauchst?",
+       "antwort": "An den gegebenen Größen: Sind Masse und Federkonstante genannt, ist es das Federpendel; sind Länge und Ortsfaktor genannt und die Masse irrelevant, das Fadenpendel."
+      },
+      {
+       "frage": "Wie kommst du von der Periodendauer $T$ zur Maximalgeschwindigkeit einer harmonischen Schwingung?",
+       "antwort": "Über $\\omega = \\frac{2\\pi}{T}$ und dann $v_{\\max} = \\hat{s}\\,\\omega$."
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du wählst aus Feder-Masse-Pendel, Fadenpendel und harmonischer Schwingung gezielt die passende Formel aus."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du verknüpfst Periodendauer, Frequenz, Kreisfrequenz und Schwingungsenergie miteinander und prüfst Zwischenergebnisse auf Plausibilität."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du begründest deinen Lösungsweg und benennst, welche Größe in jeder Formel unter der Wurzel steht."
+    }
+   ]
+  },
+  {
+   "id": "l6",
+   "nr": 1,
+   "titel": "Wie eine Welle entsteht",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-wellen",
+   "themaPfad": "physik/qualifikationsphase/wellen/",
+   "anker": "#we-entstehung",
+   "ziele": [
+    "Ich kann erklären, wie aus gekoppelten Oszillatoren eine mechanische Welle entsteht.",
+    "Ich kann Transversal- und Longitudinalwellen unterscheiden und Beispiele nennen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Auffrischung: Amplitude, Periodendauer und Frequenz aus dem Schwingungsblock.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-schwingungen",
+       "ids": [
+        "ph-qp-sw-001",
+        "ph-qp-sw-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#we-entstehung",
+     "text": "Lies den Abschnitt zur Entstehung der Welle und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/wellen/index.html#we-entstehung"
+     },
+     "schritte": [
+      {
+       "titel": "Gekoppelte Oszillatoren",
+       "html": "<p>Man stelle sich viele Pendel (Oszillatoren) vor, die durch Federn miteinander <strong>gekoppelt</strong> sind. Lenkt man das erste aus, zieht es über die Kopplung das nächste mit — aber erst etwas <strong>später</strong>. So setzt sich die Schwingung von Teilchen zu Teilchen fort.</p>",
+       "check": {
+        "frage": "Wieso schwingt das zweite Teilchen erst nach dem ersten?",
+        "antwort": "Weil die Kopplung die Auslenkung mit einer kleinen Zeitverzögerung weitergibt. Jedes Teilchen wird vom Nachbarn angeregt — daher pflanzt sich die Bewegung mit endlicher Geschwindigkeit fort."
+       }
+      },
+      {
+       "titel": "Was ist eine Welle?",
+       "html": "<p>Eine <strong>mechanische Welle</strong> ist die Ausbreitung einer Schwingung im Raum durch ein Medium. Wichtig: Es wird <strong>Energie</strong> (und Impuls) transportiert, <strong>nicht aber Materie</strong> — jedes Teilchen schwingt nur um seine Ruhelage und wandert nicht mit.</p>",
+       "check": {
+        "frage": "Was wird bei einer Welle transportiert — und was nicht?",
+        "antwort": "Transportiert werden Energie und Impuls. Die Teilchen des Mediums schwingen nur um ihre Ruhelage; sie wandern nicht mit der Welle mit."
+       }
+      },
+      {
+       "titel": "Transversal- und Longitudinalwellen",
+       "html": "<p>Bei der <strong>Transversalwelle</strong> schwingen die Teilchen <strong>senkrecht</strong> zur Ausbreitungsrichtung (z. B. Welle auf einem Seil, Wasseroberfläche). Bei der <strong>Longitudinalwelle</strong> schwingen sie <strong>längs</strong> der Ausbreitungsrichtung — es entstehen Verdichtungen und Verdünnungen (z. B. Schall in Luft).</p>",
+       "check": {
+        "frage": "Ist Schall in Luft eine Transversal- oder eine Longitudinalwelle?",
+        "antwort": "Eine Longitudinalwelle: Die Luftteilchen schwingen längs der Ausbreitungsrichtung, es entstehen Verdichtungen und Verdünnungen."
+       }
+      },
+      {
+       "titel": "Warum kein Schall im Vakuum?",
+       "html": "<p>Eine mechanische Welle braucht ein <strong>Medium</strong> aus schwingungsfähigen, gekoppelten Teilchen. Im <strong>Vakuum</strong> gibt es keine Teilchen, die die Schwingung weitergeben könnten — deshalb breitet sich Schall dort nicht aus. Die Explosion im Weltraum-Film wäre in Wirklichkeit lautlos.</p>",
+       "check": {
+        "frage": "Warum hört man im Weltraum keinen Knall?",
+        "antwort": "Schall ist eine mechanische Welle und braucht ein Medium. Im Vakuum fehlen Teilchen, die die Schwingung weitergeben könnten — es kann sich kein Schall ausbreiten."
+       }
+      }
+     ],
+     "merksatz": "Eine mechanische Welle entsteht, wenn gekoppelte Oszillatoren ihre Schwingung <strong>zeitversetzt</strong> weitergeben. Sie transportiert <strong>Energie, nicht Materie</strong>, und braucht ein <strong>Medium</strong>. Schwingen die Teilchen quer zur Ausbreitung, ist sie <strong>transversal</strong>, längs dazu <strong>longitudinal</strong>.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wellen am Seil und an einer Feder erzeugen",
+       "material": "Ein langes Seil oder eine lange Schraubenfeder (z. B. Slinky), eine zweite Person oder ein fester Befestigungspunkt.",
+       "vorhersage": "Wandert ein Punkt des Seils mit der Welle mit, oder bleibt er an seinem Ort? Notiere deine Vermutung vor dem Versuch.",
+       "auftraege": [
+        "Spanne das Seil locker und erzeuge durch eine schnelle Hand­bewegung quer zur Seilrichtung eine einzelne Welle. Markiere mit einem Klebeband einen Punkt: Wandert er mit oder schwingt er nur auf und ab? (Transversalwelle)",
+        "Schiebe die Feder kurz in Längsrichtung an: Es läuft eine Verdichtung entlang. Vergleiche diese Longitudinalwelle mit der Seilwelle.",
+        "Überlege: Du transportierst mit der Welle Energie ans andere Ende — aber kein Material. Wie zeigt das dein markierter Punkt?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie entsteht aus einzelnen Oszillatoren eine Welle?",
+       "antwort": "Die Oszillatoren sind gekoppelt und geben ihre Schwingung zeitversetzt an die Nachbarn weiter. So pflanzt sich die Schwingung mit endlicher Geschwindigkeit im Medium fort."
+      },
+      {
+       "frage": "Nenne je ein Beispiel für eine Transversal- und eine Longitudinalwelle.",
+       "antwort": "Transversal: Welle auf einem Seil oder einer Wasseroberfläche. Longitudinal: Schallwelle in Luft (Verdichtungen und Verdünnungen)."
+      },
+      {
+       "frage": "Transportiert eine Welle Materie?",
+       "antwort": "Nein. Sie transportiert Energie und Impuls; die Teilchen schwingen nur um ihre Ruhelage und wandern nicht mit."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-103",
+        "ph-qp-we-105"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-010"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin: Was reichen die Oszillatoren in einer Welle weiter – die Teilchen selbst oder ihren Schwingungszustand?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-001"
+       ]
+      }
+     ],
+     "transfer": "Eine La-Ola-Welle läuft durchs Stadion. Kein Fan verlässt seinen Platz – was wandert dann wirklich?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst, wie aus gekoppelten Oszillatoren durch zeitversetztes Mitschwingen eine mechanische Welle entsteht."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du unterscheidest Transversal- und Longitudinalwellen anhand der Schwingungsrichtung relativ zur Ausbreitungsrichtung."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du beurteilst, warum sich mechanische Wellen (z. B. Schall) nicht im Vakuum ausbreiten können."
+    }
+   ]
+  },
+  {
+   "id": "l7",
+   "nr": 2,
+   "titel": "Kenngrößen und die Grundgleichung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-wellen",
+   "themaPfad": "physik/qualifikationsphase/wellen/",
+   "anker": "#we-kenngroessen",
+   "ziele": [
+    "Ich kann Wellenlänge $\\lambda$, Frequenz $f$ und Ausbreitungsgeschwindigkeit $c$ erklären und ineinander umrechnen.",
+    "Ich kann die Grundgleichung $c = \\lambda \\cdot f$ anwenden."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 6: Was transportiert eine Welle — und was ist der Unterschied zwischen Transversal- und Longitudinalwelle?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-104"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#we-kenngroessen",
+     "text": "Lies den Abschnitt zu den Kenngrößen und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/wellen/index.html#we-kenngroessen"
+     },
+     "schritte": [
+      {
+       "titel": "Zwei Bilder einer Welle",
+       "html": "<p>Eine Welle kann man zeitlich (ein Teilchen über die Zeit → <strong>Periodendauer</strong> $T$) oder räumlich (Momentaufnahme entlang des Weges → <strong>Wellenlänge</strong> $\\lambda$) betrachten. Die Wellenlänge $\\lambda$ ist der Abstand zwischen zwei <strong>gleichphasigen</strong> Punkten, z. B. von Berg zu Berg.</p>",
+       "check": {
+        "frage": "Was beschreibt die Wellenlänge $\\lambda$?",
+        "antwort": "Den räumlichen Abstand zweier benachbarter gleichphasiger Punkte der Welle — etwa von einem Wellenberg zum nächsten."
+       }
+      },
+      {
+       "titel": "Die Ausbreitungsgeschwindigkeit",
+       "html": "<p>Die <strong>Ausbreitungsgeschwindigkeit</strong> $c$ gibt an, wie schnell sich ein bestimmter Wellenzustand (z. B. ein Berg) im Raum fortbewegt. Sie ist eine Eigenschaft des <strong>Mediums</strong> — in Luft ist $c \\approx 343\\,\\frac{\\text{m}}{\\text{s}}$ für Schall, in Wasser deutlich größer.</p>",
+       "check": {
+        "frage": "Wovon hängt die Ausbreitungsgeschwindigkeit einer Welle hauptsächlich ab?",
+        "antwort": "Vom Medium, in dem sie sich ausbreitet (und dessen Zustand, z. B. Temperatur). In festeren bzw. dichteren Medien ist $c$ oft größer."
+       }
+      },
+      {
+       "titel": "Die Grundgleichung herleiten",
+       "html": "<p>In genau <strong>einer Periodendauer</strong> $T$ rückt die Welle um <strong>eine Wellenlänge</strong> $\\lambda$ vor. Geschwindigkeit ist Weg pro Zeit: $c = \\dfrac{\\lambda}{T}$. Mit $f = \\dfrac{1}{T}$ folgt die <strong>Grundgleichung</strong> $c = \\lambda \\cdot f$.</p>",
+       "check": {
+        "frage": "Wie kommt man von $c=\\frac{\\lambda}{T}$ auf $c=\\lambda\\cdot f$?",
+        "antwort": "In einer Periode legt die Welle eine Wellenlänge zurück: $c=\\frac{\\lambda}{T}$. Wegen $f=\\frac{1}{T}$ ist $\\frac{1}{T}=f$, also $c=\\lambda\\cdot f$."
+       }
+      },
+      {
+       "titel": "Frequenz bleibt, Wellenlänge ändert sich",
+       "html": "<p>Geht eine Welle von einem Medium in ein anderes über, bleibt die <strong>Frequenz</strong> gleich (sie wird vom Sender vorgegeben). Ändert sich $c$, so ändert sich nach $\\lambda = \\dfrac{c}{f}$ die <strong>Wellenlänge</strong>. Beispiel: Der Kammerton $a^1$ mit $f=440\\,\\text{Hz}$ hat in Luft ($c=343\\,\\frac{\\text{m}}{\\text{s}}$) die Wellenlänge $\\lambda = \\dfrac{343}{440}\\,\\text{m} \\approx 0{,}78\\,\\text{m}$.</p>",
+       "check": {
+        "frage": "Was bleibt beim Übergang in ein anderes Medium gleich — Frequenz oder Wellenlänge?",
+        "antwort": "Die Frequenz bleibt gleich (vom Sender vorgegeben). Weil sich $c$ ändert, ändert sich über $\\lambda = c/f$ die Wellenlänge."
+       }
+      }
+     ],
+     "merksatz": "Wellenlänge $\\lambda$ (Abstand gleichphasiger Punkte), Frequenz $f$ und Ausbreitungsgeschwindigkeit $c$ hängen über die <strong>Grundgleichung</strong> $c = \\lambda \\cdot f$ zusammen. Beim Mediumwechsel bleibt $f$ gleich; $c$ und damit $\\lambda$ ändern sich.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wellenlänge auf der Wasseroberfläche schätzen",
+       "material": "Eine flache Schale oder Wasserschüssel mit Wasser, ein Lineal, ein Handy für eine Videoaufnahme.",
+       "vorhersage": "Wenn du schneller mit dem Finger tippst (höhere Frequenz), werden die Wellen­berge enger oder weiter auseinander liegen? Notiere deine Vermutung.",
+       "auftraege": [
+        "Tippe regelmäßig langsam mit dem Finger ins Wasser und filme die Wellen. Schätze mit dem Lineal den Abstand benachbarter Wellenberge (die Wellenlänge).",
+        "Tippe nun schneller (höhere Frequenz). Vergleiche die Wellenlänge mit dem ersten Versuch — passt das zu $\\lambda = c/f$ bei gleichem $c$?",
+        "Überlege: Die Ausbreitungsgeschwindigkeit auf dem Wasser blieb etwa gleich. Warum muss dann bei höherer Frequenz die Wellenlänge kleiner werden?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Berechne die Wellenlänge eines Tons mit $f=170\\,\\text{Hz}$ in Luft ($c=343\\,\\frac{\\text{m}}{\\text{s}}$).",
+       "antwort": "$\\lambda = \\frac{c}{f} = \\frac{343\\,\\text{m/s}}{170\\,\\text{Hz}} \\approx 2{,}0\\,\\text{m}$."
+      },
+      {
+       "frage": "Was ist die Wellenlänge anschaulich?",
+       "antwort": "Der räumliche Abstand zwischen zwei benachbarten gleichphasigen Punkten der Welle, z. B. von Wellenberg zu Wellenberg."
+      },
+      {
+       "frage": "Ein Ton geht von Luft in Wasser über. Welche Größen ändern sich?",
+       "antwort": "Die Frequenz bleibt gleich. Die Ausbreitungsgeschwindigkeit $c$ ist im Wasser größer, daher wird über $\\lambda=c/f$ auch die Wellenlänge größer."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-113"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-005"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Wechselt eine Schallwelle von Luft in Wasser — was ändert sich: Frequenz, Wellenlänge oder beides?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-004"
+       ]
+      }
+     ],
+     "transfer": "Ein Ton mit $f = 686\\,\\text{Hz}$ breitet sich in Luft aus ($c = 343\\,\\frac{\\text{m}}{\\text{s}}$). Wie weit liegen die Verdichtungszonen auseinander?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst Wellenlänge $\\lambda$, Frequenz $f$ und Ausbreitungsgeschwindigkeit $c$ und ordnest jeder ihre Einheit zu."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du leitest aus „in einer Periode rückt die Welle um eine Wellenlänge vor“ die Grundgleichung $c=\\lambda\\cdot f$ her."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du rechnest mit $c=\\lambda\\cdot f$ und begründest, warum die Frequenz beim Übergang in ein anderes Medium gleich bleibt."
+    }
+   ]
+  },
+  {
+   "id": "l8",
+   "nr": 3,
+   "titel": "Reflexion und Überlagerung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-wellen",
+   "themaPfad": "physik/qualifikationsphase/wellen/",
+   "anker": "#we-ueberlagerung",
+   "ziele": [
+    "Ich kann das Superpositionsprinzip erklären und anwenden.",
+    "Ich kann konstruktive und destruktive Interferenz anhand des Gangunterschieds $\\Delta s$ unterscheiden."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes gemeinsames Gespräch: Was passiert, wenn zwei Wellen am selben Ort aufeinandertreffen — prallen sie ab oder durchdringen sie sich?"
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 7: Grundgleichung und Wellenlänge.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-103"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#we-ueberlagerung",
+     "text": "Lies den Abschnitt zum Superpositionsprinzip und zur Interferenz und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/wellen/index.html#we-ueberlagerung"
+     },
+     "schritte": [
+      {
+       "titel": "Das Superpositionsprinzip",
+       "html": "<p>Treffen zwei Wellen aufeinander, so ist die <strong>resultierende Auslenkung</strong> an jeder Stelle die <strong>Summe</strong> der Einzelauslenkungen: $s = s_1 + s_2$. Danach laufen beide Wellen <strong>ungestört</strong> weiter, als wäre nichts geschehen. Das nennt man <strong>Superpositionsprinzip</strong>.</p>",
+       "check": {
+        "frage": "Was geschieht mit zwei Wellenbergen, die sich an einem Punkt treffen?",
+        "antwort": "Ihre Auslenkungen addieren sich an diesem Punkt zu einem größeren Berg. Anschließend laufen beide Wellen unverändert weiter."
+       }
+      },
+      {
+       "titel": "Konstruktive Interferenz",
+       "html": "<p>Treffen zwei Wellen <strong>gleichphasig</strong> zusammen (Berg auf Berg, Tal auf Tal), verstärken sie sich — die Amplitude wird maximal. Das ist <strong>konstruktive Interferenz</strong>. Sie tritt auf, wenn der Gangunterschied ein <strong>ganzzahliges Vielfaches</strong> der Wellenlänge ist: $\\Delta s = k\\,\\lambda$ mit $k = 0, 1, 2, \\dots$</p>",
+       "check": {
+        "frage": "Bei welchem Gangunterschied verstärken sich zwei gleichartige Wellen?",
+        "antwort": "Wenn $\\Delta s = k\\,\\lambda$ (ganzzahliges Vielfaches der Wellenlänge), treffen sie gleichphasig zusammen — konstruktive Interferenz, maximale Amplitude."
+       }
+      },
+      {
+       "titel": "Destruktive Interferenz",
+       "html": "<p>Treffen die Wellen <strong>gegenphasig</strong> zusammen (Berg auf Tal), schwächen sie sich — bei gleicher Amplitude löschen sie sich ganz aus. Das ist <strong>destruktive Interferenz</strong>. Sie tritt bei einem Gangunterschied von einem <strong>ungeraden Vielfachen der halben</strong> Wellenlänge auf: $\\Delta s = (k+\\frac{1}{2})\\,\\lambda$.</p>",
+       "check": {
+        "frage": "Was beobachtest du an einem Punkt mit Gangunterschied $\\Delta s = 1{,}5\\,\\lambda$?",
+        "antwort": "$1{,}5\\,\\lambda = (1+\\frac{1}{2})\\,\\lambda$ ist ein ungerades Vielfaches der halben Wellenlänge — die Wellen treffen gegenphasig zusammen, es herrscht destruktive Interferenz (Auslöschung bzw. minimale Amplitude)."
+       }
+      },
+      {
+       "titel": "Reflexion",
+       "html": "<p>Trifft eine Welle auf ein Hindernis, wird sie <strong>reflektiert</strong>. Am <strong>festen Ende</strong> kehrt sich die Auslenkung um (Phasensprung), am <strong>losen Ende</strong> nicht. Die hin- und die rücklaufende Welle überlagern sich — diese Überlagerung führt später zu stehenden Wellen.</p>",
+       "check": {
+        "frage": "Was passiert mit der Auslenkung bei Reflexion am festen Ende?",
+        "antwort": "Sie kehrt sich um: Aus einem Berg wird ein Tal (Phasensprung um eine halbe Wellenlänge). Am losen Ende bleibt die Auslenkung dagegen erhalten."
+       }
+      }
+     ],
+     "merksatz": "<strong>Superposition:</strong> Auslenkungen addieren sich, danach laufen die Wellen ungestört weiter. <strong>Konstruktiv</strong> (Verstärkung) bei $\\Delta s = k\\,\\lambda$, <strong>destruktiv</strong> (Auslöschung) bei $\\Delta s = (k+\\frac{1}{2})\\,\\lambda$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Überlagerung am Seil zeigen",
+       "material": "Ein langes Seil und zwei Personen (eine an jedem Ende).",
+       "vorhersage": "Zwei Personen schicken gleichzeitig je einen Wellenberg von beiden Enden aufeinander zu. Was passiert in dem Moment, in dem sie sich in der Mitte treffen? Notiere deine Vermutung.",
+       "auftraege": [
+        "Schickt von beiden Seiten gleichzeitig einen Berg (gleiche Seite) los. Beobachtet die Mitte: Verstärken sich die Auslenkungen kurz? Laufen die Berge danach unverändert weiter? (Superposition, konstruktiv)",
+        "Schickt nun einen Berg von der einen und ein Tal (Auslenkung nach unten) von der anderen Seite. Was geschieht in der Mitte? (destruktive Interferenz)",
+        "Bindet ein Seilende fest und schickt einen Berg darauf zu. Kommt er als Berg oder als Tal zurück? Erklärt es mit dem Phasensprung am festen Ende."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Formuliere das Superpositionsprinzip in einem Satz.",
+       "antwort": "Überlagern sich Wellen, so addieren sich ihre Auslenkungen an jedem Punkt; danach laufen die Wellen ungestört weiter."
+      },
+      {
+       "frage": "Bei welchem Gangunterschied tritt destruktive Interferenz auf?",
+       "antwort": "Bei $\\Delta s = (k+\\frac{1}{2})\\,\\lambda$, also einem ungeraden Vielfachen der halben Wellenlänge (z. B. $0{,}5\\,\\lambda$, $1{,}5\\,\\lambda$). Die Wellen treffen gegenphasig zusammen."
+      },
+      {
+       "frage": "Bei $\\Delta s = 2\\,\\lambda$ — was beobachtest du?",
+       "antwort": "$2\\,\\lambda = k\\,\\lambda$ mit $k=2$: konstruktive Interferenz, die Wellen verstärken sich (maximale Amplitude)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-109"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-110"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-006"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-301"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Zwei Lautsprecher spielen denselben Ton. Warum gibt es an bestimmten Punkten im Raum dauerhaft leise Stellen?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-002"
+       ]
+      }
+     ],
+     "transfer": "Was unterscheidet den Gangunterschied $\\Delta s = 2\\lambda$ von $\\Delta s = 2{,}5\\lambda$ – und welches Muster ergibt sich jeweils?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du formulierst das Superpositionsprinzip und wendest es auf die Überlagerung zweier Wellen an."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du unterscheidest konstruktive und destruktive Interferenz über den Gangunterschied $\\Delta s$."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du begründest mit der Bedingung $\\Delta s = k\\,\\lambda$ bzw. $\\Delta s = (k+\\frac{1}{2})\\,\\lambda$, was an einem Punkt beobachtet wird."
+    }
+   ]
+  },
+  {
+   "id": "l9",
+   "nr": 4,
+   "titel": "Stehende Wellen und Eigenschwingungen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-wellen",
+   "themaPfad": "physik/qualifikationsphase/wellen/",
+   "anker": "#we-stehende",
+   "ziele": [
+    "Ich kann erklären, wie stehende Wellen entstehen, und die Begriffe Knoten und Bauch verwenden.",
+    "Ich kann die Eigenfrequenzen einer beidseitig eingespannten Saite berechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 8: Superpositionsprinzip und Interferenzbedingungen.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-105"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#we-stehende",
+     "text": "Lies den Abschnitt zu stehenden Wellen und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/wellen/index.html#we-stehende"
+     },
+     "schritte": [
+      {
+       "titel": "Wie eine stehende Welle entsteht",
+       "html": "<p>Überlagern sich zwei <strong>gegenläufige</strong> Wellen gleicher Frequenz und Amplitude (z. B. eine Welle und ihre Reflexion), entsteht eine <strong>stehende Welle</strong>. Sie wandert nicht — bestimmte Stellen stehen dauernd still (<strong>Knoten</strong>), andere schwingen maximal (<strong>Bäuche</strong>).</p>",
+       "check": {
+        "frage": "Wodurch entsteht eine stehende Welle?",
+        "antwort": "Durch Überlagerung zweier gegenläufiger Wellen gleicher Frequenz und Amplitude — meist einer hinlaufenden Welle und ihrer Reflexion am Ende."
+       }
+      },
+      {
+       "titel": "Knoten und Bäuche",
+       "html": "<p>An den <strong>Knoten</strong> löschen sich die Wellen ständig aus, die Auslenkung ist dort immer null. An den <strong>Bäuchen</strong> verstärken sie sich, die Auslenkung schwingt maximal. Der Abstand zweier benachbarter Knoten (bzw. Bäuche) beträgt eine <strong>halbe</strong> Wellenlänge: $\\dfrac{\\lambda}{2}$.</p>",
+       "check": {
+        "frage": "Wie groß ist der Abstand zweier benachbarter Knoten?",
+        "antwort": "Eine halbe Wellenlänge, also $\\frac{\\lambda}{2}$. Zwischen zwei Knoten liegt jeweils ein Bauch."
+       }
+      },
+      {
+       "titel": "Die Randbedingung der Saite",
+       "html": "<p>Eine beidseitig <strong>eingespannte</strong> Saite ist an beiden Enden fest — dort muss ein <strong>Knoten</strong> liegen. Deshalb passt nur dann eine stehende Welle auf die Saitenlänge $l$, wenn $l$ ein <strong>ganzzahliges Vielfaches</strong> von $\\dfrac{\\lambda}{2}$ ist: $l = n\\cdot\\dfrac{\\lambda_n}{2}$, also $\\lambda_n = \\dfrac{2l}{n}$ mit $n = 1, 2, 3, \\dots$</p>",
+       "check": {
+        "frage": "Warum passen nur bestimmte Wellenlängen auf eine eingespannte Saite?",
+        "antwort": "Weil an beiden festen Enden ein Knoten liegen muss. Das geht nur, wenn die Saitenlänge ein ganzzahliges Vielfaches von $\\lambda/2$ ist: $\\lambda_n = \\frac{2l}{n}$."
+       }
+      },
+      {
+       "titel": "Eigenfrequenzen, Grundton und Obertöne",
+       "html": "<p>Mit $f = \\dfrac{c}{\\lambda}$ folgt für die Eigenfrequenzen $f_n = n\\cdot\\dfrac{c}{2l}$. Für $n=1$ ergibt sich der <strong>Grundton</strong> $f_1 = \\dfrac{c}{2l}$, für $n=2,3,\\dots$ die <strong>Obertöne</strong> (ganzzahlige Vielfache des Grundtons). Greift man die Saite in der Mitte ab, halbiert man $l$ — der Grundton steigt um eine Oktave.</p>",
+       "check": {
+        "frage": "Wie ändert sich der Grundton, wenn du eine Saite genau in der Mitte abgreifst?",
+        "antwort": "Die schwingende Länge halbiert sich ($l \\to l/2$), daher verdoppelt sich der Grundton $f_1 = \\frac{c}{2l}$ — der Ton steigt um eine Oktave."
+       }
+      }
+     ],
+     "merksatz": "Stehende Wellen entstehen aus gegenläufigen Wellen; sie haben ortsfeste <strong>Knoten</strong> (Auslöschung) und <strong>Bäuche</strong> (Verstärkung) im Abstand $\\lambda/2$. Eine beidseitig eingespannte Saite hat $\\lambda_n = \\dfrac{2l}{n}$ und Eigenfrequenzen $f_n = n\\cdot\\dfrac{c}{2l}$ (Grundton + Obertöne).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Stehende Wellen auf einer Saite hören und sehen",
+       "material": "Ein gespanntes Gummiband oder eine einzelne Gitarren-/Saiteninstrument-Saite, optional ein Lineal zum Abgreifen.",
+       "vorhersage": "Du greifst die Saite an verschiedenen Stellen ab und zupfst. Bei welcher abgegriffenen Länge wird der Ton höher? Notiere deine Vermutung.",
+       "auftraege": [
+        "Zupfe die volle Saite — das ist der Grundton. Greife sie genau in der Mitte ab und zupfe die Hälfte: Höre, dass der Ton um eine Oktave steigt (Frequenz verdoppelt).",
+        "Greife bei $1/3$ und $2/3$ der Länge ab und vergleiche die Tonhöhen. Wie passt das zu $f_n \\sim 1/l$?",
+        "Erzeuge (z. B. mit Tonband oder vorsichtigem Anregen) am gespannten Gummiband eine stehende Welle mit zwei Bäuchen. Wo liegen die Knoten? Stimmt der Knotenabstand $\\lambda/2$?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was sind Knoten und Bäuche einer stehenden Welle?",
+       "antwort": "Knoten sind ortsfeste Stellen, an denen die Auslenkung stets null ist (ständige Auslöschung). Bäuche sind Stellen maximaler Auslenkung (ständige Verstärkung). Ihr Abstand ist jeweils $\\lambda/2$."
+      },
+      {
+       "frage": "Berechne den Grundton einer Saite mit $l = 0{,}65\\,\\text{m}$ und $c = 260\\,\\frac{\\text{m}}{\\text{s}}$.",
+       "antwort": "$f_1 = \\frac{c}{2l} = \\frac{260\\,\\text{m/s}}{2\\cdot 0{,}65\\,\\text{m}} = 200\\,\\text{Hz}$."
+      },
+      {
+       "frage": "In welchem Verhältnis stehen die Eigenfrequenzen einer eingespannten Saite?",
+       "antwort": "Sie sind ganzzahlige Vielfache des Grundtons: $f_n = n\\cdot f_1$ ($f_1, 2f_1, 3f_1, \\dots$) — Grundton und Obertöne."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-111"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-106",
+        "ph-qp-we-107"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-009"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-302"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch: Warum kann eine Saite nicht mit beliebigen Frequenzen schwingen – was erzwingt die Auswahl?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-108"
+       ]
+      }
+     ],
+     "transfer": "Eine Saite schwingt mit dem Grundton $f_1 = 200\\,\\text{Hz}$. Mit welcher Frequenz erklingt die zweite Oberschwingung ($k = 3$)?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst die Entstehung stehender Wellen durch Überlagerung hin- und rücklaufender Wellen und verwendest die Begriffe Knoten und Bauch."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du leitest aus der Randbedingung „Knoten an beiden Enden“ die möglichen Wellenlängen und Eigenfrequenzen einer Saite her."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du berechnest die Eigenfrequenzen einer beidseitig eingespannten Saite und ordnest Grundton und Obertöne zu."
+    }
+   ]
+  },
+  {
+   "id": "l10",
+   "nr": 5,
+   "titel": "Schall, Ultraschall und Anwendungen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-wellen",
+   "themaPfad": "physik/qualifikationsphase/wellen/",
+   "anker": "#we-schall",
+   "ziele": [
+    "Ich kann Tonhöhe und Lautstärke mit Frequenz und Amplitude verknüpfen.",
+    "Ich kann das Echolot-Prinzip erklären und Laufzeitaufgaben lösen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 9: Eigenfrequenzen einer Saite.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-114"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#we-schall",
+     "text": "Lies den Abschnitt zu Schall und seinen Anwendungen und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/wellen/index.html#we-schall"
+     },
+     "schritte": [
+      {
+       "titel": "Schall als Longitudinalwelle",
+       "html": "<p>Schall ist eine <strong>longitudinale</strong> Druckwelle: Eine schwingende Quelle (Lautsprecher, Stimmbänder) erzeugt abwechselnd <strong>Verdichtungen und Verdünnungen</strong> der Luft, die sich als Welle ausbreiten. Das menschliche Ohr nimmt Frequenzen von etwa $16\\,\\text{Hz}$ bis $20\\,000\\,\\text{Hz}$ wahr.</p>",
+       "check": {
+        "frage": "Welche Art von Welle ist Schall in Luft?",
+        "antwort": "Eine Longitudinalwelle (Druckwelle): Die Luftteilchen schwingen längs der Ausbreitungsrichtung und erzeugen Verdichtungen und Verdünnungen."
+       }
+      },
+      {
+       "titel": "Tonhöhe und Lautstärke",
+       "html": "<p>Die <strong>Tonhöhe</strong> hängt von der <strong>Frequenz</strong> ab: hohe Frequenz → hoher Ton. Die <strong>Lautstärke</strong> hängt von der <strong>Amplitude</strong> ab: große Amplitude → laut. Frequenz und Amplitude sind unabhängig — ein Ton kann hoch und leise oder tief und laut sein.</p>",
+       "check": {
+        "frage": "Welche Größe bestimmt, ob ein Ton hoch oder tief klingt?",
+        "antwort": "Die Frequenz: hohe Frequenz ergibt einen hohen Ton, niedrige Frequenz einen tiefen. Die Lautstärke hängt dagegen von der Amplitude ab."
+       }
+      },
+      {
+       "titel": "Stehende Wellen in Pfeifen",
+       "html": "<p>In Blasinstrumenten bilden sich stehende Schallwellen. Eine <strong>beidseitig offene</strong> Pfeife der Länge $l$ hat den Grundton $f = \\dfrac{c}{2l}$, eine <strong>einseitig gedackte</strong> (geschlossene) Pfeife dagegen $f = \\dfrac{c}{4l}$. Bei gleicher Länge klingt die gedackte Pfeife daher eine <strong>Oktave tiefer</strong>.</p>",
+       "check": {
+        "frage": "Warum klingt eine gedackte Pfeife eine Oktave tiefer als eine gleich lange offene?",
+        "antwort": "Bei der gedackten Pfeife passt in dieselbe Länge nur ein Viertel der Wellenlänge ($f=\\frac{c}{4l}$) statt einer halben ($f=\\frac{c}{2l}$). Die halbe Frequenz bedeutet eine Oktave tiefer."
+       }
+      },
+      {
+       "titel": "Echolot und Ultraschall",
+       "html": "<p><strong>Ultraschall</strong> ($> 20\\,000\\,\\text{Hz}$) nutzt man zur Abstandsmessung: Ein kurzer Puls wird ausgesandt, am Hindernis reflektiert und nach der Laufzeit $t$ wieder empfangen. Da der Schall die Strecke <strong>hin und zurück</strong> durchläuft, gilt $d = \\dfrac{c\\cdot t}{2}$. So arbeiten Echolot (Wassertiefe) und medizinische Sonografie.</p>",
+       "check": {
+        "frage": "Warum steht in der Echolot-Formel $d = \\frac{c\\cdot t}{2}$ der Faktor $\\frac{1}{2}$?",
+        "antwort": "Weil der Schall in der Laufzeit $t$ die Strecke zum Hindernis und wieder zurück durchläuft — also den doppelten Abstand. Daher ist der Abstand die halbe Laufstrecke."
+       }
+      }
+     ],
+     "merksatz": "Schall ist eine Longitudinalwelle. <strong>Tonhöhe ↔ Frequenz</strong>, <strong>Lautstärke ↔ Amplitude</strong>. Beim <strong>Echolot</strong> mit Laufzeit $t$ gilt $d = \\dfrac{c\\cdot t}{2}$ (Hin- und Rückweg).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Schallgeschwindigkeit über ein Echo abschätzen",
+       "material": "Eine große, glatte Wand im Freien (mind. $30\\,\\text{m}$ entfernt), zwei Holzbretter oder die eigenen Hände zum Klatschen, eine Stoppuhr.",
+       "vorhersage": "Schätze, wie lange das Echo von der Wand zu dir zurückbraucht, wenn die Wand etwa $50\\,\\text{m}$ entfernt ist. Notiere deine Vermutung in Sekunden.",
+       "auftraege": [
+        "Klatsche in regelmäßigem Takt so, dass jeder neue Klatsch genau mit dem zurückkommenden Echo zusammenfällt. Miss mit der Stoppuhr die Zeit für 10 Klatsch-Echo-Abstände und teile durch 10 — das ist die Laufzeit $t$ für Hin- und Rückweg.",
+        "Miss (oder schätze) die Entfernung $d$ zur Wand und berechne die Schallgeschwindigkeit $c = \\frac{2d}{t}$. Vergleiche mit $343\\,\\frac{\\text{m}}{\\text{s}}$.",
+        "Erkläre, warum in der Formel der Faktor 2 steht — und wie ein Echolot mit demselben Prinzip die Wassertiefe bestimmt."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie hängen Tonhöhe und Lautstärke mit Frequenz und Amplitude zusammen?",
+       "antwort": "Die Tonhöhe wird durch die Frequenz bestimmt (hoch ↔ hohe Frequenz), die Lautstärke durch die Amplitude (laut ↔ große Amplitude). Beide sind unabhängig voneinander."
+      },
+      {
+       "frage": "Ein Echolot empfängt das Echo nach $t = 0{,}4\\,\\text{s}$ ($c_{\\text{Wasser}} = 1500\\,\\frac{\\text{m}}{\\text{s}}$). Wie tief ist das Wasser?",
+       "antwort": "$d = \\frac{c\\cdot t}{2} = \\frac{1500\\,\\text{m/s}\\cdot 0{,}4\\,\\text{s}}{2} = 300\\,\\text{m}$."
+      },
+      {
+       "frage": "Nenne zwei technische oder medizinische Anwendungen des Ultraschalls.",
+       "antwort": "Zum Beispiel Echolot zur Bestimmung der Wassertiefe, Abstands- und Einparksensoren im Auto sowie die Sonografie (Ultraschalluntersuchung) in der Medizin."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-113",
+        "ph-qp-we-201"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-011"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-115"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Warum können Fledermäuse mit Ultraschall ihre Beute orten, obwohl die Beute kleiner als ein Meter ist?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-003"
+       ]
+      }
+     ],
+     "transfer": "Ein Echolot sendet einen Impuls aus und empfängt das Echo nach $t = 0{,}40\\,\\text{s}$. Was ist die Wassertiefe ($c = 1500\\,\\frac{\\text{m}}{\\text{s}}$)?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Zur Vertiefung und Klassenarbeitsvorbereitung:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du verknüpfst die Tonhöhe mit der Frequenz und die Lautstärke mit der Amplitude einer Schallwelle."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du wertest Laufzeitmessungen aus und berechnest mit dem Echolot-Prinzip Entfernungen."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du beurteilst den Nutzen von Ultraschall in Technik und Medizin (z. B. Abstandsmessung, Sonografie)."
+    }
+   ]
+  },
+  {
+   "id": "l10b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Wellen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-wellen",
+   "themaPfad": "physik/qualifikationsphase/wellen/",
+   "ziele": [
+    "Ich wende die Grundgleichung $c = \\lambda \\cdot f$ und die Bedingungen für stehende Wellen sicher an.",
+    "Ich unterscheide konstruktive und destruktive Interferenz und beschreibe die Schwebung."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zum Einordnen, danach mischst und wendest du den ganzen Wellen-Block an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-202"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-101",
+        "ph-qp-we-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-204",
+        "ph-qp-we-205",
+        "ph-qp-we-206",
+        "ph-qp-we-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-207",
+        "ph-qp-we-301",
+        "ph-qp-we-302"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig: Woran erkennt man am Gangunterschied $\\Delta s$, ob an einem Punkt konstruktive (laut) oder destruktive (leise) Interferenz auftritt?"
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-wellen",
+       "ids": [
+        "ph-qp-we-208",
+        "ph-qp-we-304"
+       ]
+      }
+     ],
+     "transfer": "Frage dich bei jeder Aufgabe: Geht es um die freie Ausbreitung ($c = \\lambda \\cdot f$), um eine stehende Welle (Knotenabstand $= \\lambda/2$, Eigenfrequenzen) oder um die Überlagerung zweier Wellen (Gangunterschied, Schwebung)?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen und für die Klassenarbeitsvorbereitung:",
+     "links": [
+      {
+       "label": "Simulation: Stehende Welle",
+       "href": "simulationen/physik/stehende-welle/index.html"
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "text": "Bevor du loslegst, verschaffe dir den Überblick: Diese Lektion mischt den gesamten Wellen-Block. Ordne die Werkzeuge den drei Situationen zu, dann wendest du sie sicher an.",
+     "schritte": [
+      {
+       "titel": "Drei Situationen, drei Werkzeuge",
+       "html": "<p>Wellenaufgaben gehören meist zu einer von drei Situationen: <strong>(1) freie Ausbreitung</strong> einer Welle → Grundgleichung $c = \\lambda\\cdot f$; <strong>(2) stehende Welle</strong> (z. B. Saite, Pfeife) → Knotenabstand $\\lambda/2$ und Eigenfrequenzen $f_n = n\\cdot\\dfrac{c}{2l}$; <strong>(3) Überlagerung</strong> zweier Wellen → Gangunterschied $\\Delta s$ und Interferenz.</p>",
+       "check": {
+        "frage": "Du sollst die Wellenlänge eines frei laufenden Tons aus $f$ und $c$ bestimmen. Welche Beziehung nimmst du?",
+        "antwort": "Die Grundgleichung $c=\\lambda\\cdot f$, umgestellt zu $\\lambda = c/f$."
+       }
+      },
+      {
+       "titel": "Konstruktiv oder destruktiv?",
+       "html": "<p>Bei der Überlagerung entscheidet der <strong>Gangunterschied</strong>: $\\Delta s = k\\,\\lambda$ ergibt <strong>konstruktive</strong> Interferenz (Verstärkung, laut), $\\Delta s = (k+\\frac{1}{2})\\,\\lambda$ ergibt <strong>destruktive</strong> Interferenz (Auslöschung, leise). Drücke den gegebenen Gangunterschied immer als Vielfaches von $\\lambda$ aus, dann ist die Entscheidung eindeutig.</p>",
+       "check": {
+        "frage": "An einem Punkt ist $\\Delta s = 2{,}5\\,\\lambda$. Laut oder leise?",
+        "antwort": "$2{,}5\\,\\lambda = (2+\\frac{1}{2})\\,\\lambda$ ist ein ungerades Vielfaches der halben Wellenlänge → destruktive Interferenz, also leise (Auslöschung)."
+       }
+      },
+      {
+       "titel": "Die Schwebung",
+       "html": "<p>Überlagern sich zwei Töne mit <strong>leicht verschiedenen</strong> Frequenzen $f_1$ und $f_2$, schwankt die Lautstärke periodisch — eine <strong>Schwebung</strong>. Die <strong>Schwebungsfrequenz</strong> ist die Differenz der Frequenzen: $f_{\\text{S}} = |f_1 - f_2|$. Musiker nutzen das zum Stimmen: Verschwindet die Schwebung, sind die Töne gleich.</p>",
+       "check": {
+        "frage": "Zwei Saiten klingen mit $440\\,\\text{Hz}$ und $443\\,\\text{Hz}$. Wie oft pro Sekunde schwillt der Ton an und ab?",
+        "antwort": "$f_{\\text{S}} = |443 - 440|\\,\\text{Hz} = 3\\,\\text{Hz}$ — der Ton schwankt dreimal pro Sekunde in der Lautstärke."
+       }
+      }
+     ],
+     "merksatz": "Ordne jede Wellenaufgabe einer von drei Situationen zu: <strong>freie Ausbreitung</strong> ($c=\\lambda f$), <strong>stehende Welle</strong> ($\\lambda/2$-Knotenabstand, $f_n=n\\frac{c}{2l}$) oder <strong>Überlagerung</strong> ($\\Delta s$ entscheidet konstruktiv/destruktiv; Schwebung $f_{\\text{S}}=|f_1-f_2|$).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Schwebung zweier Töne hören",
+       "material": "Zwei gleiche Stimmgabeln (oder zwei Tongeneratoren / Handy-Apps), bei einer Stimmgabel ein kleines Gewicht (z. B. ein Stück Knete) an einem Zinken.",
+       "vorhersage": "Wenn beide Stimmgabeln fast, aber nicht ganz gleich klingen — wie verändert sich der Gesamtklang über die Zeit? Notiere deine Vermutung.",
+       "auftraege": [
+        "Lass zuerst beide identischen Stimmgabeln gleichzeitig klingen: Du hörst einen gleichmäßigen Ton.",
+        "Beschwere einen Zinken einer Gabel leicht (das senkt ihre Frequenz minimal) und schlage beide erneut an: Höre das periodische An- und Abschwellen — die Schwebung.",
+        "Überlege: Je größer der Frequenzunterschied, desto schneller die Schwebung ($f_{\\text{S}}=|f_1-f_2|$). Wie könnten Musiker damit zwei Instrumente exakt aufeinander stimmen?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Woran erkennst du, welche Beziehung eine Wellenaufgabe verlangt?",
+       "antwort": "An der Situation: freie Ausbreitung → $c=\\lambda f$; eingespannte Saite/Pfeife → stehende Welle mit $\\lambda/2$-Knotenabstand und $f_n=n\\frac{c}{2l}$; zwei sich treffende Wellen → Gangunterschied und Interferenz."
+      },
+      {
+       "frage": "Was ist eine Schwebung und wie groß ist ihre Frequenz?",
+       "antwort": "Das periodische An- und Abschwellen der Lautstärke bei Überlagerung zweier Töne fast gleicher Frequenz. Die Schwebungsfrequenz ist $f_{\\text{S}} = |f_1 - f_2|$."
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du wählst gezielt zwischen freier Ausbreitung ($c=\\lambda f$), stehender Welle und Überlagerung die passende Beziehung aus."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du unterscheidest konstruktive und destruktive Interferenz und beschreibst die Entstehung einer Schwebung."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du begründest deinen Lösungsweg und prüfst Ergebnisse über Einheiten und Größenordnung."
+    }
+   ]
+  }
+ ],
+ "bloecke": [
+  {
+   "titel": "Mechanische Schwingungen",
+   "thema": "ph-qp-schwingungen",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l5b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Wellen",
+   "thema": "ph-qp-wellen",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10",
+    "l10b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  }
+ ]
+}

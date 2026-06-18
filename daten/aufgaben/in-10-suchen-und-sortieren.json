@@ -1,0 +1,278 @@
+{
+  "thema": "in-10-suchen-und-sortieren",
+  "fach": "informatik",
+  "stufe": "klasse-10",
+  "aufgaben": [
+    {
+      "id": "in-10-ss-001",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über lineare und binäre Suche sind richtig?",
+      "optionen": [
+        { "text": "Die lineare Suche prüft die Einträge der Reihe nach.", "richtig": true, "erklaerung": "Richtig — vom ersten bis (schlimmstenfalls) zum letzten Eintrag." },
+        { "text": "Die binäre Suche funktioniert nur auf sortierten Listen.", "richtig": true, "erklaerung": "Richtig: Nur dann darf man nach dem Mittenvergleich eine Hälfte ausschließen." },
+        { "text": "Die binäre Suche ist auf jeder Liste schneller als die lineare Suche.", "richtig": false, "erklaerung": "Auf unsortierten Listen funktioniert sie gar nicht — erst sortieren kostet zusätzlich." },
+        { "text": "Die lineare Suche braucht immer genau n Vergleiche.", "richtig": false, "erklaerung": "Nur im schlechtesten Fall; steht der Eintrag vorne, reicht schon ein Vergleich." }
+      ],
+      "tipps": [
+        "Welche Voraussetzung braucht das Halbieren des Suchbereichs?",
+        "„Immer“ und „jeder“ sind starke Wörter — suche Gegenbeispiele.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Die binäre Suche setzt Sortierung voraus; die lineare Suche kann auch nach einem Vergleich fertig sein.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-002",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 2,
+      "frage": "Eine sortierte Liste enthält $1000$ Einträge. Wie viele Vergleiche braucht die binäre Suche höchstens?",
+      "eingaben": [
+        { "label": "Vergleiche (höchstens)", "antwort": 10, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Jeder Vergleich halbiert den Suchbereich.",
+        "Zähle die Halbierungen: 1000 → 500 → 250 → …",
+        "$1000 \\to 500 \\to 250 \\to 125 \\to 63 \\to 32 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1$"
+      ],
+      "loesungsweg": "Nach jedem Vergleich halbiert sich der Bereich: 1000, 500, 250, 125, 63, 32, 16, 8, 4, 2, 1 — das sind 10 Halbierungsschritte, also höchstens 10 Vergleiche (denn $2^{10} = 1024 \\geq 1000$).",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-003",
+      "typ": "zuordnung",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jedem Begriff aus dem Bubble Sort die passende Beschreibung zu.",
+      "paare": [
+        { "links": "Vergleich", "rechts": "Zwei benachbarte Elemente werden angesehen" },
+        { "links": "Tausch", "rechts": "Zwei Elemente wechseln die Plätze" },
+        { "links": "Durchlauf", "rechts": "Ein kompletter Gang durch den unsortierten Teil" },
+        { "links": "Sortierter Bereich", "rechts": "Die bereits endgültig platzierten Elemente am Ende" }
+      ],
+      "tipps": [
+        "Ein Durchlauf besteht aus vielen Vergleichen.",
+        "Getauscht wird nur, wenn das linke Element größer ist.",
+        "Nach jedem Durchlauf wächst der sortierte Bereich am rechten Rand."
+      ],
+      "loesungsweg": "Vergleich = zwei Nachbarn ansehen; Tausch = Plätze wechseln; Durchlauf = ein Gang durch den unsortierten Teil; sortierter Bereich = die fixierten Elemente hinten.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-004",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Text zum Bubble Sort.",
+      "text": "Bubble Sort vergleicht immer ___ Elemente. Nach dem ersten Durchlauf steht das ___ Element ganz rechts. Der Algorithmus endet, wenn ein Durchlauf ohne ___ bleibt.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "benachbarte", "optionen": ["benachbarte", "beliebige", "die äußersten"] },
+        { "art": "dropdown", "antwort": "größte", "optionen": ["größte", "kleinste", "mittlere"] },
+        { "art": "dropdown", "antwort": "Tausch", "optionen": ["Tausch", "Vergleich", "Fehler"] }
+      ],
+      "tipps": [
+        "Die „Blase“ steigt beim Vergleichen benachbarter Elemente auf.",
+        "Was sammelt sich am rechten Ende der Liste?",
+        "Woran erkennt der Algorithmus, dass alles sortiert ist?"
+      ],
+      "loesungsweg": "Bubble Sort vergleicht benachbarte Elemente; das größte wandert pro Durchlauf nach rechts; ein tauschfreier Durchlauf beendet das Verfahren.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-005",
+      "typ": "reihenfolge",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bubble Sort sortiert die Liste $[3, 1, 2]$. Bringe die Schritte in die richtige Reihenfolge.",
+      "elemente": [
+        "Vergleiche 3 und 1 → Tausch: [1, 3, 2]",
+        "Vergleiche 3 und 2 → Tausch: [1, 2, 3]",
+        "Durchlauf 2: Vergleiche 1 und 2 → kein Tausch",
+        "Durchlauf ohne Tausch → fertig sortiert"
+      ],
+      "tipps": [
+        "Der erste Durchlauf beginnt ganz links: bei 3 und 1.",
+        "Im ersten Durchlauf wandert die 3 bis ans Ende.",
+        "Zum Schluss bestätigt ein tauschfreier Durchlauf die Sortierung."
+      ],
+      "loesungsweg": "Durchlauf 1: (3,1) → Tausch → [1,3,2]; (3,2) → Tausch → [1,2,3]. Durchlauf 2: (1,2) → kein Tausch → der Algorithmus endet.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-006",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Wie viele Vergleiche braucht Bubble Sort im schlechtesten Fall (absteigend sortierte Liste) bei $n = 10$ Elementen?",
+      "eingaben": [
+        { "label": "Vergleiche", "antwort": 45, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Erster Durchlauf: 9 Vergleiche, zweiter: 8, dritter: 7, …",
+        "Summe: $9 + 8 + 7 + \\dots + 1$",
+        "Formel: $\\frac{n \\cdot (n-1)}{2}$"
+      ],
+      "loesungsweg": "$9 + 8 + \\dots + 1 = \\frac{10 \\cdot 9}{2} = 45$ Vergleiche. Prüfe es mit dem Preset „Absteigend“ in der Simulation nach!",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-007",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Welche Aussagen über den besten und schlechtesten Fall von Bubble Sort (mit Abbruch bei tauschfreiem Durchlauf) sind richtig?",
+      "optionen": [
+        { "text": "Bester Fall: Die Liste ist bereits aufsteigend sortiert.", "richtig": true, "erklaerung": "Richtig: Ein Durchlauf mit n−1 Vergleichen, kein Tausch — fertig." },
+        { "text": "Schlechtester Fall: Die Liste ist absteigend sortiert.", "richtig": true, "erklaerung": "Richtig: Jedes Paar muss getauscht werden, alle Durchläufe sind nötig." },
+        { "text": "Im besten Fall braucht der Algorithmus null Vergleiche.", "richtig": false, "erklaerung": "Auch eine sortierte Liste muss einmal geprüft werden: n−1 Vergleiche." },
+        { "text": "Die Zahl der Tausche ist in jedem Fall gleich der Zahl der Vergleiche.", "richtig": false, "erklaerung": "Getauscht wird nur bei falscher Reihenfolge — im besten Fall gar nicht." }
+      ],
+      "tipps": [
+        "Wann bricht der Algorithmus frühestens ab?",
+        "Kann er wissen, dass sortiert ist, ohne zu vergleichen?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Auch im besten Fall sind $n-1$ Vergleiche nötig; Tausche gibt es nur bei Fehlstellungen.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-008",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Messaufgabe: Öffne die <a href=\"../../../simulationen/informatik/sortieren/index.html#n=10&anordnung=7\" target=\"_blank\" rel=\"noopener\">Simulation mit $n = 10$ und Anordnung 7</a>, lass sie komplett durchlaufen (Automatik) und lies ab: Wie viele Tausche waren nötig?",
+      "eingaben": [
+        { "label": "Tausche", "antwort": 23, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Stelle das Tempo höher (z. B. 10 Schritte/s) und starte die Automatik.",
+        "Der Wert steht nach dem Ende in der Bilanz und in der Anzeige „Tausche“.",
+        "Übrigens: Die Tauschzahl ist genau die Zahl der „Fehlstellungs-Paare“ der Startliste."
+      ],
+      "loesungsweg": "Die Simulation endet bei 45 Vergleichen und 23 Tauschen. Die Tauschzahl entspricht der Anzahl der Paare, die in der Startanordnung in falscher Reihenfolge standen (Inversionen).",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-009",
+      "typ": "rechenweg",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bubble Sort sortiert die Liste $[4, 2, 5, 1]$ von Hand. Verfolge das Verfahren schrittweise.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Wie viele Tausche passieren im ersten Durchlauf (3 Vergleiche)?",
+          "eingaben": [{ "label": "Tausche", "antwort": 2, "toleranz": 0 }],
+          "tipps": ["(4,2): Tausch → [2,4,5,1]; (4,5): kein Tausch; (5,1): Tausch → [2,4,1,5]"]
+        },
+        {
+          "frage": "Schritt 2: Wie viele Vergleiche braucht der gesamte Lauf bis zum Ende?",
+          "eingaben": [{ "label": "Vergleiche gesamt", "antwort": 6, "toleranz": 0 }],
+          "tipps": ["Durchlauf 1: 3 Vergleiche, Durchlauf 2: 2, Durchlauf 3: 1 — danach ist die Grenze erreicht."]
+        },
+        {
+          "frage": "Schritt 3: Wie viele Tausche waren es insgesamt?",
+          "eingaben": [{ "label": "Tausche gesamt", "antwort": 4, "toleranz": 0 }],
+          "tipps": ["Durchlauf 1: 2 Tausche; Durchlauf 2: (2,4) nein, (4,1) ja → [2,1,4,5]; Durchlauf 3: (2,1) ja → [1,2,4,5]."]
+        }
+      ],
+      "tipps": [
+        "Schreibe die Liste nach jedem Vergleich neu auf.",
+        "Durchlauf 1 geht über 3 Paare, Durchlauf 2 über 2, Durchlauf 3 über 1.",
+        "Kontrolle: Am Ende muss [1, 2, 4, 5] dastehen."
+      ],
+      "loesungsweg": "D1: [4,2,5,1] → [2,4,5,1] → [2,4,1,5] (3 V, 2 T). D2: [2,4,1,5] → [2,1,4,5] (2 V, 1 T). D3: [2,1,4,5] → [1,2,4,5] (1 V, 1 T). Gesamt: 6 Vergleiche, 4 Tausche.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-010",
+      "typ": "parametrisiert",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "generator": "binaere-suche",
+      "frage": "",
+      "tipps": [
+        "Jeder Vergleich halbiert den Suchbereich.",
+        "Zähle, wie oft du halbieren kannst, bis nur 1 Element übrig ist.",
+        "Bei $2^k$ Einträgen sind es $k$ Halbierungen plus der letzte Vergleich."
+      ],
+      "loesungsweg": "",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-011",
+      "typ": "freitext",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Begründe: Warum steht nach dem ersten Durchlauf von Bubble Sort das größte Element der Liste sicher ganz rechts?",
+      "musterloesung": "Der Durchlauf vergleicht jedes Nachbarpaar von links nach rechts. Sobald der Vergleich das größte Element erreicht, ist es größer als jeder rechte Nachbar — es wird also bei jedem folgenden Vergleich weitergetauscht und „wandert“ bis zum rechten Ende mit. Kein anderes Element kann es dabei überholen, denn dazu müsste es größer sein. Deshalb steht das Maximum nach dem ersten Durchlauf sicher an der letzten Position — und muss in späteren Durchläufen nicht mehr betrachtet werden.",
+      "tipps": [
+        "Verfolge gedanklich, was passiert, wenn der Vergleich das größte Element erreicht.",
+        "Gewinnt das größte Element jeden Vergleich mit seinem rechten Nachbarn?",
+        "Argumentiere, warum es bis zum Ende „mitgenommen“ wird."
+      ],
+      "loesungsweg": "Kern: Ab dem Moment, in dem der Vergleichszeiger das Maximum erreicht, gewinnt es jeden Vergleich und wird bis ganz nach rechts durchgetauscht.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-012",
+      "typ": "rechenweg",
+      "zweig": ["gym", "rs"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Ein Computer schafft eine Million Vergleiche pro Sekunde. Er soll $n = 100\\,000$ Einträge mit Bubble Sort sortieren (schlechtester Fall).",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Wie viele Vergleiche sind nötig? Gib das Ergebnis in Milliarden an ($\\frac{n(n-1)}{2}$, gerundet auf eine Nachkommastelle).",
+          "eingaben": [{ "label": "Vergleiche", "antwort": 5.0, "toleranz": 0.05, "einheit": "Milliarden" }],
+          "tipps": ["$\\frac{100\\,000 \\cdot 99\\,999}{2} \\approx \\frac{10^{10}}{2} = 5 \\cdot 10^9$"]
+        },
+        {
+          "frage": "Schritt 2: Wie lange dauert das bei $10^6$ Vergleichen pro Sekunde — in Minuten (gerundet)?",
+          "eingaben": [{ "label": "Dauer", "antwort": 83.3, "toleranz": 0.5, "einheit": "min" }],
+          "tipps": ["$\\frac{5 \\cdot 10^9}{10^6} = 5000\\,\\text{s}$, dann durch 60 teilen."]
+        }
+      ],
+      "tipps": [
+        "Nutze die Formel für den schlechtesten Fall: $\\frac{n(n-1)}{2}$.",
+        "Zeit = Vergleiche geteilt durch Vergleiche pro Sekunde.",
+        "Zum Staunen: Mergesort bräuchte für dieselbe Liste nur etwa 1,7 Sekunden."
+      ],
+      "loesungsweg": "$\\frac{100\\,000 \\cdot 99\\,999}{2} \\approx 5{,}0$ Milliarden Vergleiche. Bei $10^6$ Vergleichen/s: $5000\\,\\text{s} \\approx 83{,}3$ Minuten. Quadratischer Aufwand wird bei großen $n$ schnell unpraktisch.",
+      "kc": ["algorithmen"]
+    },
+    {
+      "id": "in-10-ss-013",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Ein Online-Lexikon mit etwa einer Million sortierter Einträge. Welche Aussagen stimmen?",
+      "optionen": [
+        { "text": "Die binäre Suche findet jeden Eintrag mit höchstens etwa 20 Vergleichen.", "richtig": true, "erklaerung": "Richtig: $2^{20} = 1\\,048\\,576 \\geq 10^6$ — 20 Halbierungen genügen." },
+        { "text": "Die lineare Suche braucht im Durchschnitt etwa 500 000 Vergleiche.", "richtig": true, "erklaerung": "Richtig: im Mittel die halbe Liste." },
+        { "text": "Verdoppelt sich das Lexikon auf 2 Millionen Einträge, braucht die binäre Suche doppelt so viele Vergleiche.", "richtig": false, "erklaerung": "Nur einen einzigen Vergleich mehr (21 statt 20) — das ist die Stärke des Halbierens." },
+        { "text": "Für eine einzige Suche in einer unsortierten Liste lohnt es sich immer, vorher zu sortieren.", "richtig": false, "erklaerung": "Sortieren kostet weit mehr als eine lineare Suche — es lohnt sich erst bei vielen Suchanfragen." }
+      ],
+      "tipps": [
+        "Wie viele Zweierpotenzen braucht man bis zu einer Million? ($2^{10} \\approx 1000$)",
+        "Was kostet eine Verdopplung der Listengröße bei der binären Suche?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2 ($2^{20} > 10^6$; Durchschnitt = halbe Liste). Verdopplung kostet bei binärer Suche nur +1 Vergleich; Sortieren lohnt sich erst bei vielen Suchen.",
+      "kc": ["algorithmen"]
+    }
+  ]
+}

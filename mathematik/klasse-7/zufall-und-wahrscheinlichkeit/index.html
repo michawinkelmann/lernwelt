@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zufall und Wahrscheinlichkeit — Klasse 7 · Mathematik — Lernwelt</title>
+<meta name="description" content="Einstufige Zufallsversuche untersuchen: Ergebnis und Ereignis unterscheiden, relative Häufigkeiten und das Gesetz der großen Zahlen nutzen, Laplace-Wahrscheinlichkeiten berechnen, mit dem Gegenereignis rechnen — und typische Denkfallen des Zufalls durchschauen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: Abbildungen mit Bildunterschrift */
+  .zw-figur { margin: var(--abstand-4) auto; max-width: 560px; }
+  .zw-figur svg { display: block; width: 100%; height: auto; margin: 0 auto; }
+  .zw-figur figcaption { text-align: center; font-size: .9rem; color: var(--text-leise); margin-top: var(--abstand-2); }
+  .zw-figur-schmal { max-width: 300px; }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Zufall und Wahrscheinlichkeit</h1>
+  <p class="einleitung">Regnet es morgen? Fällt beim Spieleabend endlich die Sechs? Und lohnt sich das Los an der Bude wirklich? Den Ausgang eines einzelnen Zufallsversuchs kann niemand vorhersagen — und trotzdem steckt im Zufall erstaunlich viel Ordnung. In diesem Kapitel lernst du, Wahrscheinlichkeiten zu berechnen oder durch Experimente zu schätzen, mit dem Gegenereignis abzukürzen und die bekanntesten Denkfallen des Zufalls zu durchschauen.</p>
+
+  <section aria-labelledby="zw-zufallsversuche">
+    <h2 id="zw-zufallsversuche">1. Zufallsversuche</h2>
+    <p>Beim Würfeln weißt du vorher nicht, welche Augenzahl fällt. Beim Münzwurf weißt du nicht, ob Wappen oder Zahl oben liegt, und beim Glücksrad nicht, auf welchem Feld der Zeiger stehen bleibt. Solche Vorgänge heißen <strong>Zufallsversuche</strong>: Man kennt alle möglichen Ausgänge, kann aber nicht vorhersagen, welcher davon eintritt — und man kann den Versuch unter gleichen Bedingungen beliebig oft wiederholen.</p>
+    <p>Jeder einzelne mögliche Ausgang heißt <strong>Ergebnis</strong>. Alle Ergebnisse zusammen bilden die <strong>Ergebnismenge</strong> — beim Würfel ist das $\{1;\,2;\,3;\,4;\,5;\,6\}$. Oft interessiert aber gar nicht ein einzelnes Ergebnis, sondern eine ganze Gruppe: „Ich gewinne, wenn eine <em>gerade Zahl</em> fällt.“ Eine solche Zusammenfassung von Ergebnissen heißt <strong>Ereignis</strong>.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Ergebnis, Ergebnismenge, Ereignis</span>
+      <p>Ein <strong>Ergebnis</strong> ist ein einzelner möglicher Ausgang eines Zufallsversuchs. Die <strong>Ergebnismenge</strong> enthält alle möglichen Ergebnisse. Ein <strong>Ereignis</strong> fasst ein oder mehrere Ergebnisse zusammen — es <em>tritt ein</em>, wenn eines seiner Ergebnisse fällt.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Ereignisse beim Würfelwurf</span>
+      <p>Das Ereignis $E$: „gerade Zahl“ besteht aus den Ergebnissen $2$, $4$ und $6$. Fällt die $4$, ist $E$ eingetreten. Weitere Ereignisse: „mindestens eine $5$“ besteht aus $\{5;\,6\}$, „keine $6$“ aus $\{1;\,2;\,3;\,4;\,5\}$. Auch ein einzelnes Ergebnis wie „die $6$“ kann man als Ereignis auffassen.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="zw-haeufigkeit">
+    <h2 id="zw-haeufigkeit">2. Relative Häufigkeit und das Gesetz der großen Zahlen</h2>
+    <p>Bei Würfel und Münze ahnt man die Chancen. Aber bei einer <strong>Reißzwecke</strong>? Sie kann mit der Spitze nach oben landen oder schräg in Seitenlage — und niemand kann diese Chancen „ausrechnen“, denn die beiden Lagen sind offensichtlich nicht gleichberechtigt. Nicht jeder Zufallsversuch ist fair berechenbar. Hier hilft nur eines: ausprobieren, und zwar oft! Wie groß der Anteil der Treffer war, sagt die <strong>relative Häufigkeit</strong>:</p>
+    <p class="formel-abgesetzt">$$h = \frac{\text{Trefferzahl}}{\text{Versuchszahl}}$$</p>
+    <p>Lena wirft eine Reißzwecke $200$-mal; $124$-mal landet sie mit der Spitze oben. Die relative Häufigkeit ist $h = \frac{124}{200} = 0{,}62$. Spannend wird es, wenn man die relative Häufigkeit nach jedem Wurf neu berechnet und aufzeichnet:</p>
+    <figure class="zw-figur">
+      <svg id="zw-diagramm-haeufigkeit" viewBox="0 0 380 250" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Liniendiagramm: relative Häufigkeit des Ereignisses Spitze oben beim Reißzweckenwurf, aufgetragen über der Anzahl der Würfe von 0 bis 200. Bei wenigen Würfen springt die Kurve stark zwischen Werten von etwa 0,5 und 1. Mit wachsender Wurfzahl wird sie immer ruhiger und pendelt sich nahe der gestrichelt markierten Linie bei 0,62 ein.">
+        <!-- Gitterlinien -->
+        <g stroke="var(--linie)" stroke-width="1" stroke-dasharray="3 3">
+          <line x1="50" y1="115" x2="340" y2="115"/>
+          <line x1="50" y1="25" x2="340" y2="25"/>
+        </g>
+        <!-- gestrichelte Linie beim Schätzwert 0,62 -->
+        <line x1="50" y1="93.4" x2="340" y2="93.4" stroke="var(--mathe)" stroke-width="1.5" stroke-dasharray="7 5" opacity="0.65"/>
+        <text x="344" y="97.5" font-size="13" font-weight="700" fill="var(--mathe)">0,62</text>
+        <!-- zackige Kurve der relativen Häufigkeit -->
+        <polyline points="51.5,25 52.9,115 54.4,85 57.3,97 61.6,70 67.4,100.6 73.2,80.8 81.9,106 93.5,84.4 108,101.5 129.8,87.1 151.5,99.5 180.5,89.1 209.5,96.1 238.5,90.2 267.5,94.8 296.5,92 318.3,93.9 340,93.2" fill="none" stroke="var(--mathe)" stroke-width="2" stroke-linejoin="round"/>
+        <!-- Achsen mit Pfeilen und Skalenstrichen -->
+        <g stroke="var(--text)" stroke-width="1.5">
+          <line x1="42" y1="205" x2="352" y2="205"/>
+          <line x1="50" y1="213" x2="50" y2="15"/>
+          <line x1="122.5" y1="202" x2="122.5" y2="208"/>
+          <line x1="195" y1="202" x2="195" y2="208"/>
+          <line x1="267.5" y1="202" x2="267.5" y2="208"/>
+          <line x1="340" y1="202" x2="340" y2="208"/>
+          <line x1="47" y1="115" x2="53" y2="115"/>
+          <line x1="47" y1="25" x2="53" y2="25"/>
+        </g>
+        <polygon points="360,205 348,200 348,210" fill="var(--text)"/>
+        <polygon points="50,8 45,20 55,20" fill="var(--text)"/>
+        <g font-size="13" fill="var(--text)" text-anchor="middle">
+          <text x="50" y="222">0</text>
+          <text x="122.5" y="222">50</text>
+          <text x="195" y="222">100</text>
+          <text x="267.5" y="222">150</text>
+          <text x="340" y="222">200</text>
+        </g>
+        <g font-size="13" fill="var(--text)" text-anchor="end">
+          <text x="42" y="119">0,5</text>
+          <text x="42" y="29">1</text>
+        </g>
+        <text x="352" y="238" font-size="12" fill="var(--text-leise)" text-anchor="end">Anzahl der Würfe</text>
+        <text x="60" y="18" font-size="12" fill="var(--text-leise)">relative Häufigkeit „Spitze oben“</text>
+      </svg>
+      <figcaption>Reißzwecken-Experiment: Mit wachsender Wurfzahl beruhigt sich die relative Häufigkeit von „Spitze oben“ und pendelt sich nahe 0,62 ein — dem Schätzwert für die Wahrscheinlichkeit.</figcaption>
+    </figure>
+    <p>Am Anfang springt die Kurve wild hin und her — ein einzelner Wurf verändert den Anteil noch stark. Doch je mehr Würfe dazukommen, desto ruhiger wird sie und pendelt sich in der Nähe eines festen Wertes ein. Diese Beobachtung macht man bei jedem Zufallsversuch, und sie ist so wichtig, dass sie einen eigenen Namen trägt:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Empirisches Gesetz der großen Zahlen</span>
+      <p>Wiederholt man einen Zufallsversuch sehr oft, so stabilisiert sich die relative Häufigkeit eines Ereignisses meist in der Nähe eines festen Wertes. Diesen Wert nennt man die <strong>Wahrscheinlichkeit</strong> $P$ des Ereignisses. Die relative Häufigkeit aus vielen Versuchen ist also ein <strong>Schätzwert</strong> für $P$ — ein Beweis ist sie nicht, und über den nächsten einzelnen Versuch sagt sie nichts aus.</p>
+    </div>
+    <p>Probiere es selbst aus — ganz ohne $200$-mal werfen zu müssen: Im Glücksrad unten drehst du einzeln oder lässt die Automatik viele hundert Drehungen übernehmen. Die zackige Kurve zeigt die relative Häufigkeit nach jeder Drehung, die gestrichelte Linie die Wahrscheinlichkeit $P$. Bearbeite dabei die Aufträge unter der Simulation.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/gluecksrad/index.html?einbettung=1#felder=10&gewinn=3&proSchritt=10"
+        title="Interaktive Simulation: Glücksrad — relative Häufigkeit und Gesetz der großen Zahlen" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/mathematik/gluecksrad/index.html#felder=10&gewinn=3&proSchritt=10" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Drehe das Rad mit „Weiter“ genau $10$-mal. Wie weit liegt deine relative Häufigkeit von $P = 0{,}3$ entfernt? Lass dann die Automatik bis über $1000$ Drehungen laufen: Was passiert mit dem Abstand — und was hat das mit Lenas Reißzwecke zu tun?<br>
+      2. Suche in der Kurve eine „Pechsträhne“, in der die relative Häufigkeit deutlich unter $0{,}3$ rutscht. Holt das Rad die fehlenden Gewinne danach gezielt nach? Beobachte, wodurch sich die Kurve trotzdem wieder $P$ nähert.<br>
+      3. Drücke „Zurücksetzen“ und lass das Rad noch einmal genauso lange laufen. Die Kurve sieht am Anfang völlig anders aus als beim ersten Durchlauf — wo landet sie am Ende? Erkläre das mit dem Gesetz der großen Zahlen.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: $100$ Münzwürfe, $37$-mal Wappen — wie groß ist die relative Häufigkeit?</summary>
+      <div class="check-antwort"><p>$h = \frac{37}{100} = 0{,}37$. Das ist ein Schätzwert für die Wahrscheinlichkeit — und er weicht von $0{,}5$ ab. Ein Beweis, dass die Münze unfair ist, ist das aber nicht: Bei nur $100$ Würfen sind solche Abweichungen ganz normal. Erst sehr viele weitere Würfe würden zeigen, wo sich die relative Häufigkeit wirklich einpendelt.</p></div>
+    </details>
+  <p>Das Gesetz der großen Zahlen kannst du selbst erleben: Im Experiment <a href="../../../experimente/mathematik/buffon/index.html">Buffons Nadelversuch</a> wirfst du Nadeln auf Linien — und schätzt damit sogar die Kreiszahl π.</p>
+  </section>
+
+  <section aria-labelledby="zw-laplace">
+    <h2 id="zw-laplace">3. Laplace-Wahrscheinlichkeit</h2>
+    <p>Beim idealen Würfel braucht niemand $200$ Würfe: Er ist vollkommen symmetrisch, also sind alle sechs Ergebnisse <strong>gleichwahrscheinlich</strong>. Zufallsversuche mit lauter gleichwahrscheinlichen Ergebnissen heißen <strong>Laplace-Versuche</strong> (nach dem Mathematiker Pierre-Simon Laplace). Bei ihnen genügt geschicktes Zählen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Laplace-Wahrscheinlichkeit</span>
+      <p class="formel-abgesetzt">$$P(E) = \frac{\text{Anzahl der günstigen Ergebnisse}}{\text{Anzahl der möglichen Ergebnisse}}$$</p>
+      <p><strong>Voraussetzung:</strong> Alle Ergebnisse sind gleichwahrscheinlich. <em>Günstig</em> heißen die Ergebnisse, bei denen das Ereignis $E$ eintritt. Jede Wahrscheinlichkeit liegt zwischen $0$ und $1$, also zwischen $0\,\%$ und $100\,\%$.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Würfeln</span>
+      <p>Eine Sechs zu würfeln gelingt bei einem der sechs gleichwahrscheinlichen Ergebnisse: $P(6) = \frac{1}{6}$. Für das Ereignis „gerade Zahl“ sind $2$, $4$ und $6$ günstig — drei von sechs: $P(\text{gerade Zahl}) = \frac{3}{6} = \frac{1}{2}$.</p>
+    </div>
+    <p>Wahrscheinlichkeiten kannst du als <strong>Bruch</strong>, als <strong>Dezimalzahl</strong> oder in <strong>Prozent</strong> angeben — alle drei Schreibweisen bedeuten dasselbe: $\frac{1}{2} = 0{,}5 = 50\,\%$. Auch das Glücksrad ist ein Laplace-Versuch, solange alle Felder gleich groß sind:</p>
+    <figure class="zw-figur zw-figur-schmal">
+      <svg id="zw-gluecksrad" viewBox="0 0 220 220" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Glücksrad mit zehn gleich großen Sektoren und einem festen Zeiger oben. Drei der zehn Sektoren sind farbig markiert, die übrigen sieben hell. Die Wahrscheinlichkeit, dass der Zeiger auf einem markierten Sektor stehen bleibt, beträgt drei Zehntel, also 30 Prozent.">
+        <g stroke="var(--flaeche)" stroke-width="2">
+          <path d="M110 120 L110 30 A90 90 0 0 1 162.9 47.2 Z" fill="var(--mathe)"/>
+          <path d="M110 120 L162.9 47.2 A90 90 0 0 1 195.6 92.2 Z" fill="var(--hauch)"/>
+          <path d="M110 120 L195.6 92.2 A90 90 0 0 1 195.6 147.8 Z" fill="var(--hauch)"/>
+          <path d="M110 120 L195.6 147.8 A90 90 0 0 1 162.9 192.8 Z" fill="var(--hauch)"/>
+          <path d="M110 120 L162.9 192.8 A90 90 0 0 1 110 210 Z" fill="var(--mathe)"/>
+          <path d="M110 120 L110 210 A90 90 0 0 1 57.1 192.8 Z" fill="var(--hauch)"/>
+          <path d="M110 120 L57.1 192.8 A90 90 0 0 1 24.4 147.8 Z" fill="var(--hauch)"/>
+          <path d="M110 120 L24.4 147.8 A90 90 0 0 1 24.4 92.2 Z" fill="var(--mathe)"/>
+          <path d="M110 120 L24.4 92.2 A90 90 0 0 1 57.1 47.2 Z" fill="var(--hauch)"/>
+          <path d="M110 120 L57.1 47.2 A90 90 0 0 1 110 30 Z" fill="var(--hauch)"/>
+        </g>
+        <circle cx="110" cy="120" r="90" fill="none" stroke="var(--text-leise)" stroke-width="2"/>
+        <circle cx="110" cy="120" r="5" fill="var(--text)"/>
+        <polygon points="110,36 100,12 120,12" fill="var(--text)"/>
+      </svg>
+      <figcaption>Glücksrad mit 10 gleich großen Feldern, 3 davon rot: P(rot) = 3/10 = 0,3 = 30 %.</figcaption>
+    </figure>
+    <p>Drei der zehn gleich großen Felder sind rot, also gilt $P(\text{rot}) = \frac{3}{10} = 30\,\%$. <strong>Aber Vorsicht:</strong> Die Laplace-Formel darfst du nur benutzen, wenn wirklich alle Ergebnisse gleichwahrscheinlich sind. Bei der Reißzwecke ist das verletzt — „Spitze oben“ und „Seitenlage“ sind nicht gleichberechtigt. Auch ein <strong>gezinkter Würfel</strong>, in dem ein verstecktes Gewicht eine Seite bevorzugt, ist kein Laplace-Würfel. In solchen Fällen bleibt nur das Schätzen über viele Versuche aus Abschnitt 2.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Wie wahrscheinlich ist es, mit einem Würfel eine Primzahl zu werfen?</summary>
+      <div class="check-antwort"><p>Die Primzahlen auf dem Würfel sind $2$, $3$ und $5$ — drei günstige von sechs möglichen Ergebnissen. Also gilt $P(\text{Primzahl}) = \frac{3}{6} = \frac{1}{2} = 50\,\%$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="zw-rechnen">
+    <h2 id="zw-rechnen">4. Mit Ereignissen rechnen</h2>
+    <p>Zwei Ereignisse sind Extremfälle. Das <strong>sichere Ereignis</strong> tritt bei jedem Versuch ein — beim Würfeln etwa „Augenzahl unter $7$“. Seine Wahrscheinlichkeit ist $P = 1$. Das <strong>unmögliche Ereignis</strong> kann nie eintreten — etwa „eine $7$ würfeln“ — und hat die Wahrscheinlichkeit $P = 0$. Alle anderen Ereignisse liegen dazwischen.</p>
+    <p>Außerdem gilt: Addiert man die Wahrscheinlichkeiten <strong>aller</strong> Ergebnisse eines Zufallsversuchs, kommt immer genau $1$ heraus — irgendein Ergebnis tritt schließlich sicher ein. Beim Würfel: $\frac{1}{6} + \frac{1}{6} + \frac{1}{6} + \frac{1}{6} + \frac{1}{6} + \frac{1}{6} = 1$. Das ist praktisch, wenn eine Wahrscheinlichkeit fehlt: Man ergänzt einfach zur $1$.</p>
+    <p>Genauso nützlich ist das <strong>Gegenereignis</strong>: Zu jedem Ereignis $A$ gehört das Ereignis „nicht $A$“, das genau dann eintritt, wenn $A$ ausbleibt. Eines von beiden tritt sicher ein — zusammen haben sie also die Wahrscheinlichkeit $1$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Gegenereignis</span>
+      <p class="formel-abgesetzt">$$P(\text{nicht } A) = 1 - P(A)$$</p>
+      <p>Beispiel Würfel: $P(\text{keine } 6) = 1 - \frac{1}{6} = \frac{5}{6}$. Oft ist das Gegenereignis viel leichter zu zählen als das Ereignis selbst — besonders bei <strong>„mindestens“-Fragen</strong>. Bei den mehrstufigen Versuchen in Klasse 8 wird dieser Trick richtig wertvoll.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Die fehlende Farbe</span>
+      <p>In einer Urne liegen rote, blaue und grüne Kugeln. Bekannt ist $P(\text{rot}) = 0{,}4$ und $P(\text{blau}) = 0{,}35$. Da die Summe aller Wahrscheinlichkeiten $1$ ergibt, folgt $P(\text{grün}) = 1 - 0{,}4 - 0{,}35 = 0{,}25$ — ganz ohne die Kugeln zu zählen.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="zw-alltag">
+    <h2 id="zw-alltag">5. Zufall im Alltag — und typische Denkfallen</h2>
+    <p><strong>Wetterbericht richtig lesen:</strong> „Regenwahrscheinlichkeit $35\,\%$“ bedeutet <em>nicht</em>, dass es $35\,\%$ des Tages regnet oder auf $35\,\%$ der Fläche. Gemeint ist: Bei dieser Wetterlage hat es erfahrungsgemäß in etwa $35$ von $100$ Fällen am Vorhersageort geregnet — in etwa $65$ von $100$ Fällen blieb es trocken. Die Angabe ist eine Wahrscheinlichkeit, kein Versprechen für den einzelnen Tag.</p>
+    <p><strong>„Die $6$ ist überfällig!“</strong> Zehn Würfe lang keine Sechs — jetzt muss sie doch endlich kommen? Diese Überlegung fühlt sich richtig an, ist aber falsch. Der Würfel hat kein Gedächtnis: Bei jedem Wurf gilt aufs Neue $P(6) = \frac{1}{6}$, völlig egal, was vorher gefallen ist. Das Gesetz der großen Zahlen gleicht Serien nicht durch „Nachholen“ aus — es wirkt, weil viele weitere Würfe alte Ausreißer immer weniger ins Gewicht fallen lassen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Der Zufall hat kein Gedächtnis</span>
+      <p>Bei jeder Wiederholung eines Zufallsversuchs gelten dieselben Wahrscheinlichkeiten wie zuvor — frühere Ergebnisse ändern daran nichts. „Überfällige“ Zahlen, „Glückssträhnen mit Garantie“ oder „ausgleichende Gerechtigkeit“ des Zufalls gibt es nicht.</p>
+    </div>
+    <p><strong>Faire und unfaire Spiele:</strong> An Losbuden und in Lotterien zahlst du einen festen Einsatz und bekommst nur mit einer gewissen Wahrscheinlichkeit etwas zurück. Ob sich das lohnt, zeigt der Vergleich zwischen Einsatz und <em>durchschnittlichem Gewinn auf lange Sicht</em> — und der fällt fast immer zugunsten des Anbieters aus. <strong>Fair</strong> hieße: Auf lange Sicht bekommt man im Mittel genau seinen Einsatz zurück. Wie man das konkret nachrechnet, zeigt die Vertiefung am Ende der Seite.</p>
+    <p><strong>Ausblick:</strong> Bisher hast du <em>einstufige</em> Zufallsversuche untersucht — einmal würfeln, einmal drehen, einmal ziehen. Richtig spannend wird es, wenn mehrere Stufen zusammenkommen: zwei Würfel, zweimal ziehen, Wurf auf Wurf. Wie man solche Versuche mit Baumdiagrammen durchschaut, lernst du in Klasse 8 im Thema <a href="../../klasse-8/mehrstufige-zufallsversuche/index.html">Mehrstufige Zufallsversuche</a>.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Fünfmal hintereinander Wappen — ist beim sechsten Wurf „Zahl“ wahrscheinlicher?</summary>
+      <div class="check-antwort"><p>Nein. Die Münze hat kein Gedächtnis: Auch nach fünfmal Wappen gilt beim nächsten Wurf wieder $P(\text{Zahl}) = \frac{1}{2}$. Lange Serien sind beim Zufall völlig normal — sie ändern die Wahrscheinlichkeit des nächsten Wurfs nicht.</p></div>
+    </details>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Ist dieses Spiel fair?</summary>
+    <div class="vertiefung-inhalt">
+      <p>An einer Losbude kostet ein Dreh am Glücksrad $1\,\text{€}$. Das Rad hat $5$ gleich große Felder; genau eines ist das Gewinnfeld und zahlt $4\,\text{€}$ aus, die übrigen vier zahlen nichts. Klingt verlockend — der Gewinn ist immerhin das Vierfache des Einsatzes. Rechnen wir nach: $P(\text{Gewinn}) = \frac{1}{5} = 0{,}2$. Auf lange Sicht gewinnt man also bei etwa einem Fünftel der Spiele. Pro Spiel zahlt man $1\,\text{€}$ ein und bekommt im Mittel $0{,}2 \cdot 4\,\text{€} = 0{,}80\,\text{€}$ zurück — unterm Strich verliert man durchschnittlich $0{,}20\,\text{€}$ pro Spiel. Fair wäre das Spiel erst, wenn das Gewinnfeld $5\,\text{€}$ auszahlen würde.</p>
+      <p>„Auf lange Sicht“ — dahinter steckt genau das Gesetz der großen Zahlen aus Abschnitt 2. Bei drei oder vier Spielen kann alles passieren: Vielleicht gewinnst du zweimal hintereinander und gehst mit Plus nach Hause. Doch je öfter gespielt wird, desto zuverlässiger pendelt sich der Anteil der Gewinne bei $0{,}2$ ein — und damit der mittlere Verlust bei $0{,}20\,\text{€}$ pro Spiel. Wer $100$-mal dreht, zahlt $100\,\text{€}$ und erhält im Mittel nur rund $80\,\text{€}$ zurück. Der Zufall entscheidet das einzelne Spiel, aber die Mathematik entscheidet die Bilanz.</p>
+      <p>Nach demselben Prinzip funktionieren Lotterien, Spielautomaten und Wettbüros: Die Auszahlungen sind stets so festgelegt, dass die mittlere Auszahlung kleiner ist als der Einsatz. Einzelne Glückliche gewinnen — sonst würde niemand mitspielen —, doch über die riesige Zahl aller Spiele gewinnt verlässlich der Anbieter. Genau deshalb kann eine Lotterie Werbung, Personal und Jackpots bezahlen. Wer das durchschaut hat, kann Glücksspielversprechen gelassen prüfen, statt auf den „sicheren Gewinn“ hereinzufallen.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Unterscheiden von Ergebnis und Ereignis über relative Häufigkeiten und Laplace-Wahrscheinlichkeiten bis zum Fairness-Check an der Losbude — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

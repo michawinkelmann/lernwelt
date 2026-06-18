@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flächen- und Rauminhalte — Klasse 8 · Mathematik — Lernwelt</title>
+<meta name="description" content="Flächeninhalt von Parallelogramm, Dreieck und Trapez berechnen, zusammengesetzte Flächen durch Zerlegen oder Ergänzen bestimmen und Volumen und Oberfläche von Prismen ermitteln — vom L-förmigen Grundstück bis zum Dachboden.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Flächen- und Rauminhalte</h1>
+  <p class="einleitung">Wie groß ist das L-förmige Grundstück hinter dem Haus? Und wie viel Luft passt in den Dachboden? Solche Fragen führen weg vom braven Rechteck — hin zu <strong>Parallelogramm, Dreieck und Trapez</strong> und in die dritte Dimension zu den <strong>Prismen</strong>. Das Beste daran: Du brauchst kaum neue Ideen. Ein einziger Trick — geschicktes <strong>Zerlegen und neu Zusammensetzen</strong> — führt alle neuen Formeln auf das gute alte Rechteck zurück.</p>
+
+  <section aria-labelledby="fr-parallelogramm">
+    <h2 id="fr-parallelogramm">1. Das Parallelogramm</h2>
+    <p>Aus den früheren Klassen kennst du den Flächeninhalt des Rechtecks: $A = a \cdot b$. Ein <strong>Parallelogramm</strong> ist ein Viereck, bei dem die gegenüberliegenden Seiten parallel sind — sozusagen ein „schräg gestelltes Rechteck“. Seine Fläche findest du mit einem Umbau-Trick: Schneide links ein rechtwinkliges Dreieck ab und setze es rechts wieder an. Dabei geht kein Stückchen Fläche verloren — und heraus kommt ein Rechteck!</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 400 235" width="340" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Parallelogramm mit Grundseite g unten und schräger Seite b rechts. Die Höhe h steht senkrecht auf der Grundseite. Links ist ein rechtwinkliges Dreieck farbig markiert; ein Pfeil zeigt, wie es nach rechts verschoben und dort gestrichelt wieder angesetzt wird. So entsteht ein flächengleiches Rechteck mit den Seiten g und h.">
+        <!-- Parallelogramm -->
+        <polygon points="50,190 230,190 280,70 100,70" fill="var(--mathe)" fill-opacity="0.12" stroke="var(--mathe)" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- abgeschnittenes Dreieck (links) -->
+        <polygon points="50,190 100,190 100,70" fill="var(--akzent)" fill-opacity="0.22" stroke="var(--akzent)" stroke-width="1.5" stroke-linejoin="round"/>
+        <!-- verschobenes Dreieck (rechts, gestrichelt) -->
+        <polygon points="230,190 280,190 280,70" fill="var(--akzent)" fill-opacity="0.07" stroke="var(--akzent)" stroke-width="1.5" stroke-dasharray="6 5" stroke-linejoin="round"/>
+        <!-- Verschiebe-Pfeil -->
+        <line x1="130" y1="115" x2="235" y2="115" stroke="var(--akzent)" stroke-width="2"/>
+        <polygon points="235,109 247,115 235,121" fill="var(--akzent)"/>
+        <!-- Höhe mit rechtem Winkel -->
+        <line x1="100" y1="70" x2="100" y2="190" stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="5 5"/>
+        <path d="M100 176 H114 V190" fill="none" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <!-- Beschriftung -->
+        <g fill="var(--text)" font-size="17" text-anchor="middle">
+          <text x="150" y="214">g</text>
+          <text x="86" y="136">h</text>
+          <text x="272" y="138">b</text>
+        </g>
+      </svg>
+    </div>
+    <p>Das Rechteck hat dieselbe Grundseite $g$ und als zweite Seite die <strong>Höhe</strong> $h$ — den <em>senkrechten</em> Abstand zwischen den beiden parallelen Seiten. Also gilt:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Flächeninhalt des Parallelogramms</span>
+      <p class="formel-abgesetzt">$$A = g \cdot h$$</p>
+      <p>Dabei ist $g$ eine Grundseite und $h$ die <strong>zugehörige Höhe</strong>. Sie steht senkrecht auf der Grundseite — erkennbar am kleinen rechten Winkel in der Skizze.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Parallelogramm mit Extra-Angabe</span>
+      <p>Ein Parallelogramm hat die Grundseite $g = 8\,\text{cm}$, die Höhe $h = 4{,}5\,\text{cm}$ und die schräge Seite $b = 6\,\text{cm}$.</p>
+      <p class="formel-abgesetzt">$$A = g \cdot h = 8 \cdot 4{,}5 = 36\,\text{cm}^2$$</p>
+      <p>Die schräge Seite $b$ wird <strong>nicht</strong> gebraucht — sie steckt nur als Ablenkung in der Aufgabe.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Achtung, beliebte Falle!</span>
+      <p>Die <strong>Höhe ist keine Seitenlänge</strong>. Die schräge Seite ist immer <em>länger</em> als die Höhe — wer mit $g \cdot b$ rechnet, bekommt eine zu große Fläche. Nur beim Rechteck fallen Seite und Höhe zusammen.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Parallelogramm mit $g = 7$ cm, $h = 4$ cm, $b = 5$ cm — $A$?</summary>
+      <div class="check-antwort"><p>$A = g \cdot h = 7 \cdot 4 = 28\,\text{cm}^2$. Die schräge Seite $b = 5\,\text{cm}$ geht nicht in die Rechnung ein — $7 \cdot 5 = 35$ wäre falsch.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="fr-dreieck">
+    <h2 id="fr-dreieck">2. Das Dreieck</h2>
+    <p>Für das Dreieck brauchst du wieder keinen Neuanfang: Lege an ein beliebiges Dreieck eine <strong>um $180^\circ$ gedrehte Kopie</strong> — zusammen ergeben beide ein Parallelogramm mit derselben Grundseite $g$ und derselben Höhe $h$. Das Dreieck ist also genau ein <strong>halbes Parallelogramm</strong>:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 500 230" width="380" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Dreieck mit Grundseite g und gestrichelt eingezeichneter Höhe h, die senkrecht auf der Grundseite steht. Rechts ist eine um 180 Grad gedrehte Kopie des Dreiecks gestrichelt angesetzt, sodass insgesamt ein Parallelogramm entsteht. Das Dreieck ist genau die Hälfte dieses Parallelogramms.">
+        <!-- gedrehte Kopie (gestrichelt) -->
+        <polygon points="300,185 460,45 200,45" fill="var(--mathe)" fill-opacity="0.05" stroke="var(--mathe)" stroke-width="1.5" stroke-dasharray="6 5" stroke-linejoin="round"/>
+        <text x="320" y="120" font-size="13" fill="var(--text-leise)" text-anchor="middle">gedrehte Kopie</text>
+        <!-- Dreieck -->
+        <polygon points="40,185 300,185 200,45" fill="var(--mathe)" fill-opacity="0.14" stroke="var(--mathe)" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- Höhe mit rechtem Winkel -->
+        <line x1="200" y1="45" x2="200" y2="185" stroke="var(--akzent)" stroke-width="2" stroke-dasharray="5 5"/>
+        <path d="M200 171 H214 V185" fill="none" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <!-- Beschriftung -->
+        <g fill="var(--text)" font-size="17" text-anchor="middle">
+          <text x="150" y="209">g</text>
+          <text x="186" y="124">h</text>
+        </g>
+      </svg>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Flächeninhalt des Dreiecks</span>
+      <p class="formel-abgesetzt">$$A = \frac{1}{2} \cdot g \cdot h$$</p>
+      <p>Grundseite mal Höhe — und davon die <strong>Hälfte</strong>, weil das Dreieck nur ein halbes Parallelogramm ist.</p>
+    </div>
+    <p>Wichtig: <strong>Jede</strong> der drei Seiten kann Grundseite sein. Zu jeder gehört eine eigene Höhe — das ist der senkrechte Abstand zur gegenüberliegenden Ecke. Alle drei Paare liefern denselben Flächeninhalt. Nimm in Aufgaben immer das Paar, von dem <em>beide</em> Werte bekannt sind.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: dreieckiges Verkehrsschild-Design</span>
+      <p>Ein Dreieck hat die Grundseite $g = 12\,\text{cm}$ und die zugehörige Höhe $h = 5\,\text{cm}$:</p>
+      <p class="formel-abgesetzt">$$A = \frac{1}{2} \cdot 12 \cdot 5 = \frac{1}{2} \cdot 60 = 30\,\text{cm}^2$$</p>
+      <p>Die Längen der beiden schrägen Seiten spielen keine Rolle.</p>
+    </div>
+    <p><strong>Ausblick:</strong> In Klasse 8 sind die Höhen in den Aufgaben angegeben oder werden gemessen. Wie man eine fehlende Höhe aus den Seitenlängen <em>berechnet</em>, lernst du in Klasse 9 mit dem <a href="../../klasse-9/satz-des-pythagoras/index.html">Satz des Pythagoras</a>.</p>
+  </section>
+
+  <section aria-labelledby="fr-trapez">
+    <h2 id="fr-trapez">3. Das Trapez</h2>
+    <p>Ein <strong>Trapez</strong> ist ein Viereck mit (mindestens) einem Paar paralleler Seiten. Die beiden parallelen Seiten heißen $a$ und $c$, ihr senkrechter Abstand ist die Höhe $h$; die beiden anderen Seiten nennt man <strong>Schenkel</strong>. Viele Alltagsformen sind Trapeze: Grundstücke, Böschungen, Lampenschirme.</p>
+    <p>Auch hier hilft ein Verwandlungstrick — diesmal der <strong>Verdopplungstrick</strong>: Lege an das Trapez eine um $180^\circ$ gedrehte Kopie. Zusammen entsteht ein Parallelogramm mit der Grundseite $a + c$ und der Höhe $h$. Das Trapez ist die Hälfte davon:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Flächeninhalt des Trapezes</span>
+      <p class="formel-abgesetzt">$$A = \frac{1}{2} \cdot (a + c) \cdot h$$</p>
+      <p>In Worten: <strong>Mittelwert der beiden parallelen Seiten mal Höhe</strong>. Warum die Formel auf zwei ganz verschiedenen Wegen begründet werden kann, zeigt die Vertiefung unten.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Trapez Schritt für Schritt</span>
+      <p>Ein Trapez hat die parallelen Seiten $a = 9\,\text{cm}$ und $c = 5\,\text{cm}$ sowie die Höhe $h = 4\,\text{cm}$:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} A = \frac{1}{2} \cdot (9 + 5) \cdot 4 \\[4pt] = \frac{1}{2} \cdot 14 \cdot 4 = 28\,\text{cm}^2 \end{gathered}$$</p>
+      <p>Erst die Klammer ausrechnen, dann multiplizieren — und die Hälfte nicht vergessen.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Trapez mit $a = 6$ cm, $c = 4$ cm, $h = 3$ cm — berechne $A$.</summary>
+      <div class="check-antwort"><p>$A = \frac{1}{2} \cdot (6 + 4) \cdot 3 = \frac{1}{2} \cdot 10 \cdot 3 = 15\,\text{cm}^2$. Kontrolle mit dem Mittelwert: Die „Durchschnittsbreite“ ist $5\,\text{cm}$, mal Höhe $3\,\text{cm}$ ergibt ebenfalls $15\,\text{cm}^2$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="fr-zusammengesetzt">
+    <h2 id="fr-zusammengesetzt">4. Zusammengesetzte Flächen</h2>
+    <p>Grundstücke, Zimmer oder Logos sind selten „reine“ Grundformen. Für solche Figuren gibt es zwei Strategien, die beide auf den bekannten Formeln aufbauen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Strategie für zusammengesetzte Flächen</span>
+      <p>1. <strong>Skizze</strong> anfertigen und Hilfslinien einzeichnen.<br>
+      2. Entscheiden: <strong>Zerlegen</strong> (Figur in Rechtecke, Dreiecke, Trapeze aufteilen und Teilflächen <em>addieren</em>) oder <strong>Ergänzen</strong> (zur großen Figur auffüllen und das Fehlende <em>subtrahieren</em>).<br>
+      3. <strong>Fehlende Maße</strong> aus den gegebenen Längen berechnen.<br>
+      4. Teilflächen berechnen, zusammenrechnen — und die <strong>Einheit</strong> angeben.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: L-förmiges Grundstück — beide Wege</span>
+      <p>Ein L-förmiges Grundstück entsteht, wenn man aus einem Rechteck von $25\,\text{m} \times 18\,\text{m}$ an einer Ecke ein Rechteck von $10\,\text{m} \times 8\,\text{m}$ herausschneidet.</p>
+      <p><strong>Weg 1 — Ergänzen:</strong> großes Rechteck minus fehlende Ecke:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} A = 25 \cdot 18 - 10 \cdot 8 \\[4pt] = 450 - 80 = 370\,\text{m}^2 \end{gathered}$$</p>
+      <p><strong>Weg 2 — Zerlegen:</strong> Eine Hilfslinie teilt das L in einen unteren Streifen ($25\,\text{m} \times 10\,\text{m}$) und ein oberes Reststück ($15\,\text{m} \times 8\,\text{m}$):</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} A = 25 \cdot 10 + 15 \cdot 8 \\[4pt] = 250 + 120 = 370\,\text{m}^2 \end{gathered}$$</p>
+      <p>Beide Wege liefern dasselbe Ergebnis — eine eingebaute <strong>Kontrolle</strong>, die du in Klassenarbeiten nutzen kannst.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Formel-Werkzeugkasten</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} A_{\text{Parallelogramm}} = g \cdot h \\[4pt] A_{\text{Dreieck}} = \frac{1}{2} \cdot g \cdot h \\[4pt] A_{\text{Trapez}} = \frac{1}{2} \cdot (a + c) \cdot h \end{gathered}$$</p>
+      <p>Mit diesen drei Formeln (plus Rechteck und Quadrat) lässt sich jede geradlinig begrenzte Figur berechnen. Krumm begrenzte Flächen wie der Kreis folgen in Klasse 9.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="fr-prismen">
+    <h2 id="fr-prismen">5. Prismen: Volumen und Oberfläche</h2>
+    <p>Jetzt in die dritte Dimension: Ein <strong>Prisma</strong> ist ein Körper mit zwei deckungsgleichen, parallelen <strong>Grundflächen</strong> (Grund- und Deckfläche), die durch Rechtecke verbunden sind. Eine Toblerone-Packung ist ein Prisma mit Dreiecks-Grundfläche, ein Quader eines mit Rechteck-Grundfläche. Stell dir vor, die Grundfläche wird „in die Höhe gestapelt“ — dann ist klar:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Volumen und Oberfläche eines Prismas</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} V = G \cdot h_{\text{K}} \\[4pt] O = 2 \cdot G + M \\[4pt] M = u \cdot h_{\text{K}} \end{gathered}$$</p>
+      <p>Dabei ist $G$ der Flächeninhalt der Grundfläche, $h_{\text{K}}$ die <strong>Körperhöhe</strong> (Abstand von Grund- und Deckfläche), $u$ der Umfang der Grundfläche und $M$ die <strong>Mantelfläche</strong> — alle Seitenrechtecke zusammen, wie ein abgerolltes Etikett.</p>
+    </div>
+    <p>Volumen misst man in $\text{cm}^3$, $\text{dm}^3$ oder $\text{m}^3$. Die Brücke zu den Litern: $1\,\text{dm}^3 = 1\,\text{l}$ — ein Würfel mit $10\,\text{cm}$ Kantenlänge fasst genau einen Liter. Und $1\,\text{m}^3 = 1000\,\text{l}$.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Dachboden als dreieckiges Prisma</span>
+      <p>Ein Spitzdach-Dachboden ist ein liegendes Prisma: Das Giebeldreieck ist $8\,\text{m}$ breit und $3\,\text{m}$ hoch, das Haus ist $10\,\text{m}$ lang.</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} G = \frac{1}{2} \cdot 8 \cdot 3 = 12\,\text{m}^2 \\[4pt] V = G \cdot h_{\text{K}} = 12 \cdot 10 = 120\,\text{m}^3 \end{gathered}$$</p>
+      <p>Das Giebeldreieck ist die Grundfläche, die Hauslänge die Körperhöhe — $120\,\text{m}^3$ Luft, umgerechnet $120\,000$ Liter.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Oberfläche eines Dreiecksprismas</span>
+      <p>Die Grundfläche eines Prismas ist ein rechtwinkliges Dreieck mit den Katheten $3\,\text{cm}$ und $4\,\text{cm}$ und der dritten Seite $5\,\text{cm}$; das Prisma ist $10\,\text{cm}$ lang.</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} G = \frac{1}{2} \cdot 4 \cdot 3 = 6\,\text{cm}^2 \\[4pt] u = 3 + 4 + 5 = 12\,\text{cm} \\[4pt] M = 12 \cdot 10 = 120\,\text{cm}^2 \\[4pt] O = 2 \cdot 6 + 120 = 132\,\text{cm}^2 \end{gathered}$$</p>
+      <p>Bei den Katheten $3$ und $4$ ist eine die Grundseite und die andere die Höhe — praktisch!</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Quader mit Kanten $5$ dm, $4$ dm, $6$ dm — wie viele Liter?</summary>
+      <div class="check-antwort"><p>$V = 5 \cdot 4 \cdot 6 = 120\,\text{dm}^3$. Wegen $1\,\text{dm}^3 = 1\,\text{l}$ fasst der Quader $120$ Liter. (Der Quader ist ein Prisma: Grundfläche $5 \cdot 4 = 20\,\text{dm}^2$ mal Körperhöhe $6\,\text{dm}$.)</p></div>
+    </details>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (Gymnasialzweig): Warum die Trapezformel stimmt — zwei Wege</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Weg 1 — Verdoppeln:</strong> Lege an das Trapez eine um $180^\circ$ gedrehte Kopie, sodass beide an einem Schenkel zusammenstoßen. Oben liegt nun neben dem kurzen $c$ das lange $a$ der Kopie, unten neben dem langen $a$ das kurze $c$ — beide Gesamtseiten sind gleich lang, nämlich $a + c$, und parallel. Es entsteht also ein Parallelogramm mit Grundseite $a + c$ und Höhe $h$ und dem Flächeninhalt $(a+c) \cdot h$. Das Trapez ist genau die Hälfte:</p>
+      <p class="formel-abgesetzt">$$A = \frac{1}{2} \cdot (a + c) \cdot h$$</p>
+      <p><strong>Weg 2 — Mittellinie:</strong> Die <strong>Mittellinie</strong> $m$ verbindet die Mittelpunkte der beiden Schenkel; sie ist die „Durchschnittsbreite“ des Trapezes: $m = \frac{a+c}{2}$. Schneide das Trapez entlang der Mittellinie auf halber Höhe durch und drehe den oberen Streifen um $180^\circ$ um den Mittelpunkt eines Schenkels. Er passt lückenlos an den unteren Streifen — es entsteht ein Parallelogramm mit Grundseite $a + c$ und der halben Höhe $\frac{h}{2}$:</p>
+      <p class="formel-abgesetzt">$$A = (a + c) \cdot \frac{h}{2} = m \cdot h$$</p>
+      <p>Beide Wege führen auf dieselbe Formel — ein schönes Beispiel dafür, dass es in der Mathematik oft mehrere gleichwertige Begründungen gibt. Die Kurzform $A = m \cdot h$ („Durchschnittsbreite mal Höhe“) ist zugleich eine starke Merkhilfe: Sie erklärt, warum in der Trapezformel der <em>Mittelwert</em> von $a$ und $c$ steckt.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Parallelogramm über L-förmige Grundstücke bis zum Volumen von Dachboden und Scheune — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

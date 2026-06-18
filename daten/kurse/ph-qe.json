@@ -1,0 +1,1991 @@
+{
+ "version": 1,
+ "kurs": "ph-qe",
+ "fach": "physik",
+ "stufe": "qualifikationsphase",
+ "titel": "Physik · Qualifikationsphase — Elektrische Felder",
+ "untertitel": "Lernbüro-Pilot: Elektrische Felder als Selbstlern-Einheit",
+ "zweig": [
+  "gym"
+ ],
+ "stand": "2026-06-13",
+ "taktung": "wochenplan",
+ "checkpoints": "freischalten",
+ "werkzeuge": [
+  "ampel",
+  "lerntagebuch"
+ ],
+ "hinweis": "Lektionen verweisen nur auf vorhandene Inhalte. Pilot – fachliche Endprüfung durch die Lehrkraft.",
+ "stoffverteilung": [
+  {
+   "wochen": "L1–L3",
+   "thema": "Elektrische Felder",
+   "lektionen": "3 (Feldbegriff, Feldstärke, Kondensator)",
+   "kc": "KC Physik GO (2022): Sachgebiet Elektrizität (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/"
+  },
+  {
+   "wochen": "L4–L5",
+   "thema": "Elektrische Felder (Fortsetzung)",
+   "lektionen": "2 (Energie, Ablenkung)",
+   "kc": "KC Physik GO (2022): Sachgebiet Elektrizität (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/"
+  },
+  {
+   "wochen": "L6–L11",
+   "thema": "Magnetfelder und Lorentzkraft",
+   "lektionen": "5 (Magnetfeld beschreiben, Leiterkraft, Lorentzkraft, Kreisbahn, Fadenstrahlrohr)",
+   "kc": "KC Physik GO (2022): Sachgebiet Elektrizität (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/"
+  }
+ ],
+ "wochen": [
+  {
+   "nr": 1,
+   "spanne": "Diese Woche",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 1–3 geschafft"
+  },
+  {
+   "nr": 2,
+   "spanne": "Nächste Woche",
+   "lektionen": [
+    "l4",
+    "l5"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 4–5 geschafft"
+  },
+  {
+   "nr": 3,
+   "spanne": "Block 2 — Woche 1",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 6–8 geschafft"
+  },
+  {
+   "nr": 4,
+   "spanne": "Block 2 — Woche 2",
+   "lektionen": [
+    "l9",
+    "l10"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 9–10 geschafft"
+  }
+ ],
+ "lektionen": [
+  {
+   "id": "l1",
+   "nr": 1,
+   "titel": "Der Feldbegriff",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-feldbegriff",
+   "ziele": [
+    "Ich kann erklären, was ein elektrisches Feld ist.",
+    "Ich kann Feldlinienbilder lesen und die Regeln für Feldlinien benennen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Kurze Auffrischung aus Klasse 7 – Stromstärke und Spannung.",
+     "aufgaben": [
+      {
+       "quelle": "ph-07-stromstaerke-und-spannung",
+       "ids": [
+        "ph-07-str-001",
+        "ph-07-str-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ue-feldbegriff",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/elektrische-felder/index.html#ue-feldbegriff"
+     },
+     "schritte": [
+      {
+       "titel": "Was ist ein elektrisches Feld?",
+       "html": "<p>Eine elektrische Ladung verändert den Raum um sich herum: An jeder Stelle herrscht eine gerichtete Wirkung, die auf andere Ladungen eine Kraft ausübt. Diesen Zustand des Raumes nennt man <strong>elektrisches Feld</strong>. Es ist real und vermittelt die Kraft, ohne dass sich die Ladungen berühren (Nahwirkung statt Fernwirkung).</p>",
+       "check": {
+        "frage": "Existiert das elektrische Feld auch dort, wo gerade keine zweite Ladung sitzt?",
+        "antwort": "Ja. Das Feld ist eine Eigenschaft des Raumes um die felderzeugende Ladung. Es ist auch ohne Probeladung vorhanden — die Probeladung macht es nur spürbar."
+       }
+      },
+      {
+       "titel": "Feldlinien lesen",
+       "html": "<p>Feldlinien veranschaulichen das Feld: Ihre <strong>Tangente</strong> gibt an jeder Stelle die Kraftrichtung auf eine positive Probeladung an, ihre <strong>Dichte</strong> die Stärke des Feldes. Sie beginnen an positiven und enden an negativen Ladungen.</p>",
+       "check": {
+        "frage": "Wie erkennst du an einem Feldlinienbild, wo das Feld besonders stark ist?",
+        "antwort": "Dort, wo die Feldlinien besonders dicht beieinander liegen, ist das Feld am stärksten."
+       }
+      },
+      {
+       "titel": "Die Feldlinienregeln",
+       "html": "<p>Es gilt: Feldlinien verlaufen <strong>von Plus nach Minus</strong>, sie <strong>schneiden sich nie</strong> (an jeder Stelle gibt es nur eine Kraftrichtung) und sie treffen <strong>senkrecht</strong> auf eine Leiteroberfläche. Ein gleichmäßiger, paralleler Verlauf bedeutet ein homogenes Feld.</p>",
+       "check": {
+        "frage": "Warum können sich zwei Feldlinien nicht kreuzen?",
+        "antwort": "An einem Schnittpunkt gäbe es zwei verschiedene Kraftrichtungen für dieselbe Probeladung — das ist unmöglich. An jeder Stelle ist die Feldrichtung eindeutig."
+       }
+      }
+     ],
+     "merksatz": "Das <strong>elektrische Feld</strong> ist der Zustand des Raumes um eine Ladung, der auf andere Ladungen eine Kraft ausübt. <strong>Feldlinien</strong> sind nur ein Modell: Ihre Tangente zeigt die Kraftrichtung, ihre Dichte die Stärke — sie verlaufen von Plus nach Minus und schneiden sich nie.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Feldlinien sichtbar machen",
+       "material": "Zwei Elektroden an einer Hochspannungsquelle, eine flache Schale mit Rizinusöl und feinem Grieß (Hartfaserkrümel) — alternativ als Gedankenexperiment.",
+       "vorhersage": "Skizziere, wie sich die Grießkrümel zwischen zwei entgegengesetzt geladenen Elektroden anordnen werden. Notiere deine Vermutung, bevor du weiterliest.",
+       "auftraege": [
+        "Beschreibe das Muster zwischen zwei punktförmigen Elektroden (Plus und Minus): Wo laufen die Linien zusammen?",
+        "Vergleiche es mit zwei gleichnamigen Ladungen — wie sieht das Bild dort aus?",
+        "Erkläre, warum sich die länglichen Krümel entlang der Feldrichtung ausrichten."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was ist der Unterschied zwischen dem elektrischen Feld und einer Feldlinie?",
+       "antwort": "Das Feld ist die physikalische Wirkung im Raum (an jeder Stelle vorhanden). Eine Feldlinie ist nur eine gezeichnete Hilfslinie, die Richtung und — über ihre Dichte — Stärke des Feldes veranschaulicht."
+      },
+      {
+       "frage": "In welche Richtung zeigt die Kraft auf eine positive Probeladung?",
+       "antwort": "In Richtung der Feldlinie (Tangente), also vom Pluspol zum Minuspol des Feldes."
+      },
+      {
+       "frage": "Was bedeuten parallele, gleich dichte Feldlinien?",
+       "antwort": "Ein homogenes Feld — Betrag und Richtung der Feldstärke sind überall gleich, z. B. im Inneren eines Plattenkondensators."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-001"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-107"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-011"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin: Existiert das elektrische Feld auch dann, wenn keine Probeladung darin sitzt?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-002"
+       ]
+      }
+     ],
+     "transfer": "Nenne zwei Alltagssituationen, in denen elektrische Felder eine Rolle spielen – ohne Kondensator."
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du beschreibst das elektrische Feld als Eigenschaft des Raumes um eine Ladung und unterscheidest es vom Feldlinienbild als Darstellungsmittel."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du liest Feldlinienbilder und begründest die Feldlinienregeln (von + nach −, keine Schnitte, Dichte zeigt Stärke)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du erkennst, dass Feldlinien ein Modell sind, und benennst seine Grenzen."
+    }
+   ]
+  },
+  {
+   "id": "l2",
+   "nr": 2,
+   "titel": "Die elektrische Feldstärke",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-feldstaerke",
+   "ziele": [
+    "Ich kann die elektrische Feldstärke als Kraft pro Ladung definieren.",
+    "Ich kann $E$, $F$ und $q$ ineinander umrechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Feldlinien aus Lektion 1.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-004"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ue-feldstaerke",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/elektrische-felder/index.html#ue-feldstaerke"
+     },
+     "schritte": [
+      {
+       "titel": "Feldstärke als Kraft pro Ladung",
+       "html": "<p>Um das Feld zu messen, bringt man eine kleine positive <strong>Probeladung</strong> $q$ hinein und misst die Kraft $F$ auf sie. Die <strong>elektrische Feldstärke</strong> ist definiert als $$E=\\frac{F}{q}.$$ Sie ist ein Vektor und zeigt in Richtung der Kraft auf eine positive Ladung.</p>",
+       "check": {
+        "frage": "Welche Einheit hat die Feldstärke nach dieser Definition?",
+        "antwort": "$\\text{N/C}$ (Newton pro Coulomb). Später zeigt sich, dass das gleichbedeutend mit $\\text{V/m}$ ist."
+       }
+      },
+      {
+       "titel": "Warum E nicht von q abhängt",
+       "html": "<p>Verdoppelt man die Probeladung $q$, so verdoppelt sich auch die Kraft $F$ — der Quotient $E=F/q$ bleibt gleich. Die Feldstärke beschreibt also das <strong>Feld selbst</strong>, nicht die hineingebrachte Ladung. Die Probeladung muss nur klein genug sein, um das Feld nicht merklich zu stören.</p>",
+       "check": {
+        "frage": "Du misst mit einer doppelt so großen Probeladung. Ändert sich der gemessene Wert von $E$?",
+        "antwort": "Nein. Kraft und Ladung verdoppeln sich gemeinsam, der Quotient $E=F/q$ bleibt unverändert."
+       }
+      },
+      {
+       "titel": "Umstellen und rechnen",
+       "html": "<p>Aus $E=\\frac{F}{q}$ folgt die Kraft auf eine beliebige Ladung im Feld: $$F=q\\cdot E.$$ Beispiel: Ein Elektron ($q=1{,}6\\cdot10^{-19}\\,\\text{C}$) in einem Feld $E=500\\,\\frac{\\text{N}}{\\text{C}}$ erfährt $F=q\\cdot E=8{,}0\\cdot10^{-17}\\,\\text{N}$ — entgegen der Feldrichtung, weil es negativ ist.</p>",
+       "check": {
+        "frage": "In welche Richtung wirkt die Kraft auf ein Elektron im Feld?",
+        "antwort": "Entgegengesetzt zur Feldrichtung, weil das Elektron negativ geladen ist. Die Feldrichtung ist als Kraftrichtung auf eine positive Ladung festgelegt."
+       }
+      }
+     ],
+     "merksatz": "Die <strong>elektrische Feldstärke</strong> ist die Kraft pro Probeladung: $E=\\frac{F}{q}$ (Einheit $\\text{N/C}=\\text{V/m}$). Sie beschreibt das Feld unabhängig von der Probeladung. Die Kraft auf eine Ladung ist $F=q\\cdot E$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Probeladung im Feld",
+       "material": "Geladene Kunststoffkugel an einem Faden (Pendelkörper), ein geladener Stab oder eine Plattenanordnung — als Real- oder Gedankenexperiment.",
+       "vorhersage": "Was passiert mit der Auslenkung der Pendelkugel, wenn du ihre Ladung verdoppelst, das äußere Feld aber gleich lässt? Notiere deine Vermutung.",
+       "auftraege": [
+        "Bringe die geladene Kugel ins Feld und beobachte die Richtung, in die sie ausgelenkt wird.",
+        "Überlege, wie sich die Kraft (Auslenkung) ändert, wenn du die Kugelladung erhöhst.",
+        "Begründe, warum die berechnete Feldstärke $E=F/q$ trotzdem gleich bleibt."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Definiere die elektrische Feldstärke in Worten und als Formel.",
+       "antwort": "Feldstärke = Kraft pro Probeladung, $E=\\frac{F}{q}$. Sie ist ein Vektor in Richtung der Kraft auf eine positive Probeladung."
+      },
+      {
+       "frage": "Auf eine Ladung $q=2{,}0\\cdot10^{-8}\\,\\text{C}$ wirkt im Feld die Kraft $F=6{,}0\\cdot10^{-6}\\,\\text{N}$. Wie groß ist $E$?",
+       "antwort": "$E=\\frac{F}{q}=\\frac{6{,}0\\cdot10^{-6}\\,\\text{N}}{2{,}0\\cdot10^{-8}\\,\\text{C}}=300\\,\\frac{\\text{N}}{\\text{C}}$."
+      },
+      {
+       "frage": "Warum darf die Probeladung nicht zu groß sein?",
+       "antwort": "Eine zu große Ladung würde das zu messende Feld selbst verändern (z. B. Ladungen auf den Elektroden verschieben). Die Probeladung soll das Feld nur abtasten, nicht stören."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-003"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-006"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-108"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Warum hat die Feldstärke die Einheit V/m – und gleichzeitig auch N/C?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-005"
+       ]
+      }
+     ],
+     "transfer": "Ein Feld hat $E = 10000\\,\\text{V/m}$. Welche Kraft wirkt auf eine Ladung von $q = 2\\,\\text{nC}$?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du definierst die elektrische Feldstärke als Kraft pro Ladung $E=\\frac{F}{q}$ und gibst ihre Einheit N/C an."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du begründest, warum $E$ nicht von der Größe der Probeladung abhängt."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du rechnest sicher zwischen $E$, $F$ und $q$ um und gibst Ergebnisse mit Einheit an."
+    }
+   ]
+  },
+  {
+   "id": "l3",
+   "nr": 3,
+   "titel": "Das homogene Feld im Plattenkondensator",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-kondensator",
+   "ziele": [
+    "Ich kann erklären, warum das Feld im Plattenkondensator homogen ist.",
+    "Ich kann $E$, $U$ und $d$ mit $E = U/d$ berechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung $F = qE$ aus Lektion 2.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ue-kondensator",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/elektrische-felder/index.html#ue-kondensator"
+     },
+     "schritte": [
+      {
+       "titel": "Warum das Feld homogen ist",
+       "html": "<p>Zwischen zwei parallelen, eng stehenden Platten verlaufen die Feldlinien (außer am Rand) <strong>gerade, parallel und gleich dicht</strong> von der positiven zur negativen Platte. Betrag und Richtung der Feldstärke sind dort überall gleich — das Feld ist <strong>homogen</strong>.</p>",
+       "check": {
+        "frage": "Woran erkennst du am Feldlinienbild, dass das Feld homogen ist?",
+        "antwort": "Die Feldlinien sind gerade, parallel und überall gleich dicht. Das bedeutet gleicher Betrag und gleiche Richtung der Feldstärke an jeder Stelle."
+       }
+      },
+      {
+       "titel": "Die Beziehung E = U/d",
+       "html": "<p>Im homogenen Feld hängen Feldstärke $E$, Spannung $U$ und Plattenabstand $d$ einfach zusammen: $$E=\\frac{U}{d}.$$ Daraus folgt auch die Einheit: $\\frac{\\text{V}}{\\text{m}}$ — sie ist gleichwertig mit $\\frac{\\text{N}}{\\text{C}}$ aus der Definition $E=F/q$.</p>",
+       "check": {
+        "frage": "Welche Einheit der Feldstärke liest du direkt aus $E=U/d$ ab?",
+        "antwort": "Volt pro Meter, $\\text{V/m}$. Das ist dieselbe Größe wie $\\text{N/C}$."
+       }
+      },
+      {
+       "titel": "Abhängigkeiten durchdenken",
+       "html": "<p>Bei <strong>fester Spannung</strong> wird das Feld schwächer, wenn man die Platten weiter auseinanderzieht ($E\\sim 1/d$). Bei <strong>festem Abstand</strong> wächst $E$ proportional zur Spannung. Verdoppelt man $d$, halbiert sich $E$; verdoppelt man $U$, verdoppelt sich $E$.</p>",
+       "check": {
+        "frage": "Du verdoppelst den Plattenabstand bei gleicher Spannung. Was passiert mit $E$?",
+        "antwort": "Die Feldstärke halbiert sich, denn $E=U/d$ und $U$ bleibt konstant."
+       }
+      }
+     ],
+     "merksatz": "Im <strong>Plattenkondensator</strong> ist das Feld <strong>homogen</strong> (Feldlinien gerade, parallel, gleich dicht). Es gilt $E=\\frac{U}{d}$ mit der Einheit $\\text{V/m}=\\text{N/C}$: $E$ wächst mit der Spannung und sinkt mit dem Plattenabstand.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Spannung und Abstand am Kondensator",
+       "material": "Plattenkondensator mit verstellbarem Abstand, regelbare Hochspannungsquelle, Feldstärkemessgerät oder eine an einem Faden hängende Probeladung — als Real- oder Gedankenexperiment.",
+       "vorhersage": "Du verdoppelst zuerst die Spannung, danach (zurück am Anfang) den Plattenabstand. Wie ändert sich jeweils die Feldstärke? Notiere beide Vermutungen.",
+       "auftraege": [
+        "Halte den Abstand fest und erhöhe die Spannung schrittweise — wie verändert sich die abgelesene Feldstärke?",
+        "Halte die Spannung fest und vergrößere den Abstand — was beobachtest du?",
+        "Prüfe, ob $E\\cdot d$ bei fester Spannung konstant bleibt, und vergleiche mit $E=U/d$."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Berechne $E$ für $U=600\\,\\text{V}$ und $d=2{,}0\\,\\text{cm}$.",
+       "antwort": "$E=\\frac{U}{d}=\\frac{600\\,\\text{V}}{0{,}020\\,\\text{m}}=3{,}0\\cdot10^{4}\\,\\frac{\\text{V}}{\\text{m}}$."
+      },
+      {
+       "frage": "Warum ist das Feld am Plattenrand nicht mehr homogen?",
+       "antwort": "Am Rand wölben sich die Feldlinien nach außen (Streufeld); sie sind dort nicht mehr parallel und gleich dicht. $E=U/d$ gilt streng nur im Inneren."
+      },
+      {
+       "frage": "Wie hängt $E$ vom Plattenabstand ab, wenn die Spannung konstant bleibt?",
+       "antwort": "Umgekehrt proportional: $E\\sim 1/d$. Doppelter Abstand bedeutet halbe Feldstärke."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-001"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-013"
+       ]
+      }
+     ],
+     "partner": "Prüft gegenseitig: Was verändert sich am Feld, wenn man bei fester Spannung die Platten weiter auseinanderschiebt?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-103"
+       ]
+      }
+     ],
+     "transfer": "$E = U/d$ — stelle die Formel nach $d$ um. Was sagt dir das Ergebnis physikalisch?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du begründest, warum das Feld im Plattenkondensator homogen ist, und berechnest $E$ mit $E=\\frac{U}{d}$."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du untersuchst, wie $E$ von Spannung und Plattenabstand abhängt, und leitest die Einheit V/m her."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du gibst Feldstärken mit korrekter Einheit an und unterscheidest homogenes von inhomogenem Feld."
+    }
+   ]
+  },
+  {
+   "id": "l4",
+   "nr": 4,
+   "titel": "Energie im Feld: Ladungen beschleunigen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-energie",
+   "ziele": [
+    "Ich kann die Energieübertragung $W = q \\cdot U$ auf eine Ladung berechnen.",
+    "Ich kann die Endgeschwindigkeit eines beschleunigten Elektrons bestimmen."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein gemeinsames Gespräch: Was bedeutet es, dass eine Spannung Energie überträgt? Sammelt an der Tafel, was $W = q \\cdot U$ inhaltlich aussagt."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Feldstärke und Schwebeversuch aus Lektion 3.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-005"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ue-energie",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/elektrische-felder/index.html#ue-energie"
+     },
+     "schritte": [
+      {
+       "titel": "Energie aus der Spannung",
+       "html": "<p>Durchläuft eine Ladung $q$ die Spannung $U$, so verrichtet das Feld an ihr die Arbeit $$W=q\\cdot U.$$ Diese Energie wird der Ladung zugeführt — unabhängig vom Weg, den sie nimmt. Für ein Elektron gilt $q=e=1{,}6\\cdot10^{-19}\\,\\text{C}$.</p>",
+       "check": {
+        "frage": "Wovon hängt die übertragene Energie ab — von der Spannung oder vom Plattenabstand?",
+        "antwort": "Nur von der durchlaufenen Spannung $U$ und der Ladung $q$: $W=q\\cdot U$. Der Plattenabstand geht nicht direkt ein."
+       }
+      },
+      {
+       "titel": "Energie wird Bewegung",
+       "html": "<p>Startet das Elektron in Ruhe, so wird die zugeführte Energie vollständig in <strong>kinetische Energie</strong> umgewandelt: $$q\\cdot U=\\frac{1}{2}m v^2.$$ Das ist der Energieerhaltungssatz für das beschleunigte Teilchen.</p>",
+       "check": {
+        "frage": "Welche Energieform wandelt das Feld beim beschleunigten Elektron um?",
+        "antwort": "Die elektrische Energie $q\\cdot U$ wird in kinetische Energie $\\frac{1}{2}mv^2$ des Elektrons umgewandelt."
+       }
+      },
+      {
+       "titel": "Endgeschwindigkeit berechnen",
+       "html": "<p>Aufgelöst nach $v$ ergibt sich $$v=\\sqrt{\\frac{2\\,q\\,U}{m}}.$$ Da nur $q$, $U$ und $m$ vorkommen, hängt die Endgeschwindigkeit <strong>nicht</strong> vom Plattenabstand ab: Ein größerer Abstand bedeutet ein schwächeres Feld, aber einen längeren Beschleunigungsweg — beides hebt sich auf.</p>",
+       "check": {
+        "frage": "Zwei Kondensatoren haben gleiche Spannung, aber verschiedenen Plattenabstand. Bei welchem ist das Elektron am Ende schneller?",
+        "antwort": "Bei beiden gleich schnell. Die Endgeschwindigkeit hängt nur von $U$ (und $q$, $m$) ab, nicht vom Abstand."
+       }
+      }
+     ],
+     "merksatz": "Beim Durchlaufen der Spannung $U$ erhält eine Ladung die Energie $W=q\\cdot U$. Startet sie in Ruhe, wird daraus kinetische Energie: $q\\,U=\\frac{1}{2}mv^2$, also $v=\\sqrt{\\frac{2qU}{m}}$. Die Endgeschwindigkeit hängt nur von der Spannung ab, nicht vom Plattenabstand.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Beschleunigung im Gedankenexperiment",
+       "material": "Vorstellung einer Elektronenkanone: Glühkathode, Beschleunigungsspannung $U$, Loch in der Anode — als Gedankenexperiment (reale Bauform in einer Braunschen Röhre).",
+       "vorhersage": "Du verdoppelst die Beschleunigungsspannung. Verdoppelt sich dadurch die Endgeschwindigkeit des Elektrons? Notiere deine Vermutung und begründe sie kurz.",
+       "auftraege": [
+        "Stelle den Energieansatz $qU=\\frac{1}{2}mv^2$ auf und löse ihn nach $v$ auf.",
+        "Prüfe rechnerisch: Wie ändert sich $v$, wenn $U$ vervierfacht wird?",
+        "Begründe mit Feldstärke und Weg, warum der Plattenabstand bei fester Spannung keine Rolle spielt."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche Energie nimmt ein Elektron auf, das $U=200\\,\\text{V}$ durchläuft?",
+       "antwort": "$W=e\\cdot U=1{,}6\\cdot10^{-19}\\,\\text{C}\\cdot200\\,\\text{V}=3{,}2\\cdot10^{-17}\\,\\text{J}$."
+      },
+      {
+       "frage": "Wie hängt die Endgeschwindigkeit von der Spannung ab?",
+       "antwort": "$v=\\sqrt{\\frac{2qU}{m}}$, also $v\\sim\\sqrt{U}$. Vierfache Spannung ergibt doppelte Geschwindigkeit."
+      },
+      {
+       "frage": "Warum ist der Plattenabstand für die Endgeschwindigkeit egal?",
+       "antwort": "Größerer Abstand = schwächeres Feld, aber längerer Weg. Die Arbeit $W=qU$ bleibt gleich, also auch $v$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-007"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-105"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-109",
+        "ph-qp-ef-301"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Warum ist ein Elektron nach der Beschleunigung durch $U = 1000\\,\\text{V}$ schon auf über 6 % der Lichtgeschwindigkeit?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-104"
+       ]
+      }
+     ],
+     "transfer": "Ein Elektron durchläuft $U = 500\\,\\text{V}$. Ein zweites durchläuft $U = 2000\\,\\text{V}$. Um welchen Faktor ist das zweite schneller?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die im Feld auf eine Ladung übertragene Energie mit $W=q\\cdot U$."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du bestimmst die Endgeschwindigkeit eines beschleunigten Elektrons aus dem Energieansatz und begründest die Unabhängigkeit vom Plattenabstand."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du führst die Rechnung über den Energieerhaltungssatz nachvollziehbar und mit Einheiten durch."
+    }
+   ]
+  },
+  {
+   "id": "l5",
+   "nr": 5,
+   "titel": "Elektronen im Querfeld ablenken",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-ablenkung",
+   "ziele": [
+    "Ich kann erklären, warum ein Elektron im Querfeld eine Parabel durchläuft.",
+    "Ich kann Messwerte aus der Simulation ablesen und mit der Theorie vergleichen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Aufwärmen: Energie aus Lektion 4.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-102"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ue-ablenkung",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Simulation: Plattenkondensator mit Elektronenstrahl öffnen",
+      "href": "physik/qualifikationsphase/elektrische-felder/index.html#ue-ablenkung"
+     },
+     "schritte": [
+      {
+       "titel": "Zwei Bewegungen überlagern sich",
+       "html": "<p>Tritt ein Elektron mit der Geschwindigkeit $v_0$ parallel zu den Platten ein, behält es diese <strong>gleichförmige</strong> Bewegung in x-Richtung bei. Quer dazu wirkt die konstante Feldkraft $F=eE$, die es <strong>gleichmäßig beschleunigt</strong> (y-Richtung). Beide Bewegungen sind unabhängig.</p>",
+       "check": {
+        "frage": "Ändert das Querfeld die Geschwindigkeit in Flugrichtung ($x$)?",
+        "antwort": "Nein. Die Feldkraft wirkt nur quer (in $y$). In $x$-Richtung bleibt die Geschwindigkeit $v_0$ konstant."
+       }
+      },
+      {
+       "titel": "Warum eine Parabel entsteht",
+       "html": "<p>In x-Richtung gilt $x=v_0 t$, in y-Richtung $y=\\frac{1}{2}a t^2$ mit $a=\\frac{eE}{m}$. Setzt man $t=x/v_0$ ein, folgt $$y=\\frac{eE}{2m v_0^2}\\,x^2.$$ Das ist eine <strong>Parabel</strong> — dieselbe Mathematik wie beim waagerechten Wurf.</p>",
+       "check": {
+        "frage": "Welcher Bewegung aus der Mechanik entspricht der Elektronenflug im Querfeld?",
+        "antwort": "Dem waagerechten Wurf: gleichförmige Bewegung in eine Richtung, gleichmäßig beschleunigte Bewegung senkrecht dazu — die Bahn ist eine Parabel."
+       }
+      },
+      {
+       "titel": "Wovon die Ablenkung abhängt",
+       "html": "<p>Die Ablenkung am Plattenende wächst mit der Ablenkspannung $U_a$ (über $E=U_a/d$) und sinkt, je schneller das Elektron eintritt: $y\\sim U_a$ und $y\\sim 1/v_0^2$. Eine größere Eintrittsenergie (größeres $U_0$) macht die Ablenkung also kleiner.</p>",
+       "check": {
+        "frage": "Du verdoppelst die Ablenkspannung $U_a$ bei gleichem $v_0$. Wie ändert sich die Ablenkung $y$?",
+        "antwort": "Sie verdoppelt sich, denn $y\\sim E\\sim U_a$ bei festem Plattenabstand und festem $v_0$."
+       }
+      }
+     ],
+     "merksatz": "Im transversalen Feld überlagern sich eine <strong>gleichförmige</strong> Bewegung längs ($x=v_0 t$) und eine <strong>beschleunigte</strong> quer ($y=\\frac{1}{2}at^2$). Daraus folgt die <strong>Parabel</strong> $y=\\frac{eE}{2mv_0^2}x^2$ — wie beim waagerechten Wurf. Die Ablenkung wächst mit $U_a$ und sinkt mit $v_0^2$.",
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Plattenkondensator: Ablenkung von Elektronen",
+       "pfad": "simulationen/physik/plattenkondensator/index.html",
+       "vorhersage": "Halte Plattenabstand und Plattenlänge fest und verdopple die Ablenkspannung $U_a$ — was passiert mit der Ablenkung? Verdopple stattdessen die Beschleunigungsspannung $U_0$ — was ändert sich? Notiere beide Vermutungen.",
+       "auftraege": [
+        "Lass den Strahl laufen und beschreibe die Form der Bahnkurve im Feld.",
+        "Verdopple $U_a$ und vergleiche die abgelesene Ablenkung mit deiner Vorhersage.",
+        "Erhöhe $U_0$ (also $v_0$) und beobachte, wie sich die Ablenkung ändert — passt das zu $y\\sim 1/v_0^2$?",
+        "Lies einen Messwert ab und prüfe ihn mit $y=\\frac{eE}{2mv_0^2}x^2$ nach."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Warum bleibt die Geschwindigkeit in Flugrichtung konstant?",
+       "antwort": "Die Feldkraft wirkt nur senkrecht zur Flugrichtung. In Flugrichtung gibt es keine Kraftkomponente, also keine Beschleunigung — $v_0$ bleibt konstant."
+      },
+      {
+       "frage": "Welche Bahnform durchläuft das Elektron im Querfeld?",
+       "antwort": "Eine Parabel, $y=\\frac{eE}{2mv_0^2}x^2$ — die Überlagerung einer gleichförmigen und einer gleichmäßig beschleunigten Bewegung."
+      },
+      {
+       "frage": "Wie wirkt sich eine größere Eintrittsgeschwindigkeit auf die Ablenkung aus?",
+       "antwort": "Die Ablenkung wird kleiner, und zwar mit $1/v_0^2$. Schnellere Elektronen sind kürzer im Feld und werden weniger abgelenkt."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-106"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-009"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-012"
+       ]
+      }
+     ],
+     "partner": "Vergleicht eure Messwerte aus der Simulation – stimmen die abgelesenen Ablenkungen überein? Woher könnten kleine Unterschiede kommen?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-010"
+       ]
+      }
+     ],
+     "transfer": "Nenne einen technischen Einsatz, bei dem Elektronen im elektrischen Querfeld abgelenkt werden."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Vertiefung und Klassenarbeitsvorbereitung:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst, warum ein Elektron im transversalen Feld eine Parabelbahn durchläuft (gleichförmige Längs-, beschleunigte Querbewegung)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du liest Messwerte aus der Simulation ab und vergleichst die Ablenkung mit der Theorie."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du beschreibst die Bewegung als Überlagerung zweier unabhängiger Teilbewegungen."
+    }
+   ]
+  },
+  {
+   "id": "l5b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Elektrische Felder",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "ziele": [
+    "Ich rechne sicher mit Feldstärke, Kraft, Spannung und Plattenabstand im Kondensator.",
+    "Ich wende Kapazität, gespeicherte Ladung und Energie des Kondensators auf Anwendungen an."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zum Plattenkondensator — danach mischst und vertiefst du das ganze Thema.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-202",
+        "ph-qp-ef-203",
+        "ph-qp-ef-304"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-204",
+        "ph-qp-ef-205",
+        "ph-qp-ef-206",
+        "ph-qp-ef-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einem selbst gewählten Beispiel den Unterschied zwischen der Feldstärke $E = U/d$ und der Kapazität $C = \\varepsilon_0 \\cdot A/d$ — beide enthalten den Plattenabstand, beschreiben aber Verschiedenes."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-208"
+       ]
+      }
+     ],
+     "transfer": "Merke dir die Kette für den geladenen Kondensator: aus Fläche und Abstand folgt die Kapazität $C = \\varepsilon_0 A/d$, daraus mit der Spannung die Ladung $Q = C \\cdot U$ und die gespeicherte Energie $E = \\frac{1}{2} C U^2$."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Plattenkondensator mit Elektronenstrahl",
+       "href": "simulationen/physik/plattenkondensator/index.html"
+      }
+     ]
+    },
+    "verstehen": {
+     "text": "Bevor du übst, ordne die Werkzeuge dieses Kapitels noch einmal kurz — dann weißt du bei jeder Aufgabe, welche Formel passt.",
+     "schritte": [
+      {
+       "titel": "Welche Formel wann?",
+       "html": "<p>Drei Werkzeuge decken fast alle Aufgaben ab: <strong>Feld im Kondensator</strong> $E=\\frac{U}{d}$, <strong>Kraft auf eine Ladung</strong> $F=qE$ und <strong>Energie/Geschwindigkeit</strong> $qU=\\frac{1}{2}mv^2$. Frage dich zuerst: Wird etwas <em>beschleunigt</em> (Energie) oder geht es um <em>Feldstärke/Kraft</em>?</p>",
+       "check": {
+        "frage": "Eine Aufgabe fragt nach der Endgeschwindigkeit eines Elektrons. Welcher Ansatz?",
+        "antwort": "Der Energieansatz $qU=\\frac{1}{2}mv^2$, aufgelöst zu $v=\\sqrt{2qU/m}$."
+       }
+      },
+      {
+       "titel": "Einheiten im Blick behalten",
+       "html": "<p>Rechne konsequent in SI-Einheiten: Abstände in Metern, Spannungen in Volt, Ladungen in Coulomb. Die Feldstärke kommt dann in $\\text{V/m}$ heraus, Kräfte in Newton, Energien in Joule. Ein häufiger Fehler ist, den Plattenabstand in Zentimetern stehen zu lassen.</p>",
+       "check": {
+        "frage": "Du hast $d=2{,}5\\,\\text{cm}$. Womit rechnest du in $E=U/d$?",
+        "antwort": "Mit $d=0{,}025\\,\\text{m}$, sonst ist die Feldstärke um den Faktor 100 falsch."
+       }
+      }
+     ],
+     "merksatz": "Drei Werkzeuge für das Kondensatorkapitel: $E=\\frac{U}{d}$ (Feld), $F=qE$ (Kraft), $qU=\\frac{1}{2}mv^2$ (Energie/Geschwindigkeit). Immer in SI-Einheiten rechnen — Abstände in Metern.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Lösungsweg planen statt drauflosrechnen",
+       "material": "Nur Stift und Papier — ein kurzes Strategie-Training vor den Aufgaben.",
+       "vorhersage": "Überlege bei einer Beispielaufgabe zuerst: Welche Größe ist gesucht, welche Formel verbindet sie mit den gegebenen Größen? Schreibe den Plan auf, bevor du rechnest.",
+       "auftraege": [
+        "Notiere zu einer selbst gewählten Aufgabe zuerst Gegeben/Gesucht.",
+        "Wähle die passende Formel und stelle sie nach der gesuchten Größe um.",
+        "Prüfe am Ende die Einheit und die Größenordnung des Ergebnisses."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welcher Ansatz passt zu 'Feldstärke aus Spannung und Abstand'?",
+       "antwort": "$E=\\frac{U}{d}$."
+      },
+      {
+       "frage": "Welcher Ansatz passt zu 'Geschwindigkeit eines beschleunigten Elektrons'?",
+       "antwort": "$qU=\\frac{1}{2}mv^2$, also $v=\\sqrt{2qU/m}$."
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du rechnest sicher mit Feldstärke, Kraft, Spannung und Plattenabstand im Kondensator."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du wählst zu jeder Aufgabe den passenden Ansatz ($E=U/d$, $W=qU$, Parabelbahn) und prüfst Ergebnisse auf Plausibilität."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du dokumentierst Lösungswege nachvollziehbar mit Einheiten."
+    }
+   ]
+  },
+  {
+   "id": "l6",
+   "nr": 1,
+   "titel": "Das Magnetfeld beschreiben",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-beschreiben",
+   "ziele": [
+    "Ich kann Magnetfelder mithilfe von Feldlinien beschreiben und die Regeln benennen.",
+    "Ich kann die magnetische Flussdichte $B$ in Tesla einordnen und typische Größenordnungen vergleichen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Kurze Auffrischung aus der Mittelstufe: Nordpol, Südpol, Kompass — was weißt du noch über Magnetfelder?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#mf-beschreiben",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/index.html#mf-beschreiben"
+     },
+     "schritte": [
+      {
+       "titel": "Magnetfeld und Feldlinien",
+       "html": "<p>Um Magnete und stromdurchflossene Leiter herrscht ein <strong>Magnetfeld</strong>. Es wird durch Feldlinien dargestellt: Ihre Tangente gibt die Richtung an, in die ein kleiner Kompass (Nordpol) zeigt, ihre Dichte die Stärke. Außerhalb eines Magneten verlaufen sie von <strong>Nord nach Süd</strong>.</p>",
+       "check": {
+        "frage": "In welche Richtung zeigt eine Kompassnadel im Magnetfeld?",
+        "antwort": "Ihr Nordpol zeigt entlang der Feldlinie, also (außerhalb des Magneten) in Richtung Süd-Pol des Feldes."
+       }
+      },
+      {
+       "titel": "Geschlossene Feldlinien",
+       "html": "<p>Anders als beim elektrischen Feld haben magnetische Feldlinien <strong>keinen Anfang und kein Ende</strong>: Sie sind stets <strong>geschlossen</strong> und laufen im Magneten von Süd nach Nord weiter. Es gibt keine einzelnen magnetischen Ladungen (keine Monopole).</p>",
+       "check": {
+        "frage": "Was ist der zentrale Unterschied zwischen elektrischen und magnetischen Feldlinien?",
+        "antwort": "Elektrische Feldlinien beginnen und enden an Ladungen; magnetische Feldlinien sind immer geschlossen, weil es keine magnetischen Einzelpole gibt."
+       }
+      },
+      {
+       "titel": "Flussdichte B in Tesla",
+       "html": "<p>Die Stärke des Magnetfeldes ist die <strong>magnetische Flussdichte</strong> $B$, Einheit <strong>Tesla</strong> ($\\text{T}$). Größenordnungen: Erdmagnetfeld $\\approx 50\\,\\mu\\text{T}$, Hufeisenmagnet $\\approx 0{,}1\\,\\text{T}$, MRT $\\approx 1{-}3\\,\\text{T}$.</p>",
+       "check": {
+        "frage": "Um welchen Faktor ist ein MRT-Feld ($3\\,\\text{T}$) stärker als das Erdmagnetfeld ($50\\,\\mu\\text{T}$)?",
+        "antwort": "$\\frac{3\\,\\text{T}}{50\\cdot10^{-6}\\,\\text{T}}=6\\cdot10^{4}$ — etwa 60 000-fach stärker."
+       }
+      }
+     ],
+     "merksatz": "Magnetfelder werden durch <strong>geschlossene Feldlinien</strong> dargestellt (außen von Nord nach Süd); es gibt keine magnetischen Monopole. Die Stärke ist die <strong>Flussdichte</strong> $B$ in <strong>Tesla</strong> — vom Erdfeld ($50\\,\\mu\\text{T}$) bis zum MRT ($\\sim 3\\,\\text{T}$).",
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Magnetfeld eines Stabmagneten",
+       "pfad": "simulationen/physik/magnetfeld/index.html",
+       "vorhersage": "Wo werden die Feldlinien am dichtesten liegen — an den Polen oder in der Mitte des Magneten? Und wie ändert sich das Bild, wenn du den Messpunkt weiter weg schiebst? Notiere deine Vermutung.",
+       "auftraege": [
+        "Bewege die Sonde um den Magneten und beschreibe, wo das Feld am stärksten ist.",
+        "Verfolge eine Feldlinie und prüfe, dass sie außen von Nord nach Süd läuft und geschlossen ist.",
+        "Beobachte, wie schnell die Flussdichte mit der Entfernung vom Pol abnimmt."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Warum sind magnetische Feldlinien immer geschlossen?",
+       "antwort": "Weil es keine magnetischen Monopole (einzelne Nord- oder Südladungen) gibt, an denen sie beginnen oder enden könnten. Sie laufen durch den Magneten hindurch weiter."
+      },
+      {
+       "frage": "Nenne die Einheit der Flussdichte und eine typische Größenordnung.",
+       "antwort": "Die Einheit ist Tesla ($\\text{T}$). Typisch: Erdmagnetfeld $\\approx 50\\,\\mu\\text{T}$, ein starker Permanentmagnet $\\approx 0{,}1{-}1\\,\\text{T}$."
+      },
+      {
+       "frage": "Wie liest du die Feldstärke aus einem Feldlinienbild ab?",
+       "antwort": "An der Dichte der Linien: Wo sie dicht beieinander liegen (z. B. an den Polen), ist die Flussdichte groß."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-102"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-011"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin in einem Satz: Warum hat eine magnetische Feldlinie weder Anfang noch Ende?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-002"
+       ]
+      }
+     ],
+     "transfer": "Ein Schulhufeisenmagnet hat $B \\approx 0{,}1\\,\\text{T}$. Schätze ab: Wie viele solcher Magnete bräuchtest du, um die Flussdichte eines MRT-Geräts ($3\\,\\text{T}$) zu erreichen?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du beschreibst Magnetfelder mit Feldlinien und benennst die Feldlinienregeln (von Nord nach Süd, geschlossen)."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du ordnest die magnetische Flussdichte $B$ in Tesla ein und vergleichst typische Größenordnungen."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du machst Magnetfelder mit einer Kompassnadel oder Eisenspänen sichtbar und deutest das Muster."
+    }
+   ]
+  },
+  {
+   "id": "l7",
+   "nr": 2,
+   "titel": "Kraft auf stromdurchflossene Leiter",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-leiter",
+   "ziele": [
+    "Ich kann die Kraft $F = B \\cdot I \\cdot L$ auf einen Leiter berechnen.",
+    "Ich kann die Dreifingerregel anwenden und die Kraftrichtung bestimmen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 6: Feldlinienregeln und Einheit der Flussdichte.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#mf-leiter",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/index.html#mf-leiter"
+     },
+     "schritte": [
+      {
+       "titel": "Kraft auf den Leiter",
+       "html": "<p>Ein stromdurchflossener Leiter im Magnetfeld erfährt eine Kraft. Steht der Leiter <strong>senkrecht</strong> zum Feld, gilt $$F=B\\cdot I\\cdot L,$$ mit Flussdichte $B$, Stromstärke $I$ und der im Feld liegenden Leiterlänge $L$. Diese Kraft treibt z. B. jeden Elektromotor an.</p>",
+       "check": {
+        "frage": "Du verdoppelst die Stromstärke im Leiter. Wie ändert sich die Kraft?",
+        "antwort": "Sie verdoppelt sich, denn $F=B\\cdot I\\cdot L$ ist proportional zu $I$."
+       }
+      },
+      {
+       "titel": "Richtung mit der Dreifingerregel",
+       "html": "<p>Die Kraftrichtung steht senkrecht auf Strom und Feld. Mit der <strong>linken Hand</strong> (Bewegungsrichtung der Elektronen, also von − nach +): Daumen = Elektronenrichtung, Zeigefinger = Feld $B$, Mittelfinger = Kraft. Hinweis: Mit der technischen Stromrichtung (von + nach −) gilt dieselbe Regel mit der rechten Hand.</p>",
+       "check": {
+        "frage": "Welche drei Größen ordnest du Daumen, Zeigefinger und Mittelfinger zu (linke Hand)?",
+        "antwort": "Daumen = Elektronen-Bewegungsrichtung, Zeigefinger = Magnetfeld $B$, Mittelfinger = Kraft $F$. Alle drei stehen senkrecht zueinander."
+       }
+      },
+      {
+       "titel": "Tesla als Messdefinition",
+       "html": "<p>Stellt man $B=\\frac{F}{I\\cdot L}$ um, erhält man die <strong>Messvorschrift</strong> für die Flussdichte. Ein Feld ist genau $1\\,\\text{T}$ stark, wenn auf einen Leiter von $1\\,\\text{m}$ Länge bei $1\\,\\text{A}$ Stromstärke die Kraft $1\\,\\text{N}$ wirkt.</p>",
+       "check": {
+        "frage": "Wann ist ein Magnetfeld genau $1\\,\\text{T}$ stark?",
+        "antwort": "Wenn auf $L=1\\,\\text{m}$ Leiterlänge bei $I=1\\,\\text{A}$ die Kraft $F=1\\,\\text{N}$ wirkt: $1\\,\\text{T}=1\\,\\frac{\\text{N}}{\\text{A}\\cdot\\text{m}}$."
+       }
+      }
+     ],
+     "merksatz": "Auf einen senkrecht zum Feld liegenden, stromdurchflossenen Leiter wirkt $F=B\\cdot I\\cdot L$. Die Richtung folgt aus der <strong>Dreifingerregel</strong> (linke Hand für die Elektronenrichtung − nach +). Umgestellt ist $B=\\frac{F}{IL}$ die Messdefinition von Tesla.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Leiterschaukel im Hufeisenmagnet",
+       "material": "Hufeisenmagnet, eine als Schaukel aufgehängte Leiterstange, regelbare Stromquelle, Amperemeter — als Real- oder Gedankenexperiment.",
+       "vorhersage": "In welche Richtung schwingt die Leiterstange aus, wenn du den Strom einschaltest? Was passiert, wenn du den Strom umpolst? Notiere beide Vorhersagen.",
+       "auftraege": [
+        "Schalte den Strom ein und beobachte die Auslenkung — stimmt sie mit der Dreifingerregel überein?",
+        "Polung des Stroms umkehren: Wie ändert sich die Kraftrichtung?",
+        "Erhöhe die Stromstärke und beschreibe, wie sich die Auslenkung (die Kraft) ändert."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Berechne die Kraft auf einen Leiter mit $L=0{,}10\\,\\text{m}$, $I=4{,}0\\,\\text{A}$ in $B=0{,}25\\,\\text{T}$.",
+       "antwort": "$F=B\\cdot I\\cdot L=0{,}25\\,\\text{T}\\cdot4{,}0\\,\\text{A}\\cdot0{,}10\\,\\text{m}=0{,}10\\,\\text{N}$."
+      },
+      {
+       "frage": "Was passiert mit der Kraftrichtung, wenn du die Stromrichtung umkehrst?",
+       "antwort": "Die Kraft kehrt sich ebenfalls um (sie zeigt in die Gegenrichtung), weil sie von der Stromrichtung abhängt."
+      },
+      {
+       "frage": "Warum verschwindet die Kraft, wenn der Leiter parallel zum Feld liegt?",
+       "antwort": "$F=BIL$ gilt für einen Leiter senkrecht zum Feld. Liegt er parallel, gibt es keine Querkomponente — die Kraft wird null."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-104"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-004"
+       ]
+      }
+     ],
+     "partner": "Gebt euch gegenseitig eine Aufgabe: Einer nennt $B$, $I$ und $L$ — der andere berechnet $F$ und zeigt mit der Dreifingerregel die Richtung."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-005"
+       ]
+      }
+     ],
+     "transfer": "Auf welchem Prinzip beruht ein Elektromotor? Welche Rolle spielen $F = B \\cdot I \\cdot L$ und die Dreifingerregel dabei?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die Kraft auf einen stromdurchflossenen Leiter mit $F=B\\cdot I\\cdot L$ (Leiter senkrecht zum Feld)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du bestimmst die Kraftrichtung mit der Dreifingerregel und deutest die Definition von Tesla als Messvorschrift."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du gibst Richtung und Betrag der Kraft begründet an und beachtest die technische Stromrichtung."
+    }
+   ]
+  },
+  {
+   "id": "l8",
+   "nr": 3,
+   "titel": "Lorentzkraft auf bewegte Ladungen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-lorentz",
+   "ziele": [
+    "Ich kann die Lorentzkraft mit $F_L = q \\cdot v \\cdot B$ berechnen.",
+    "Ich kann erklären, warum die Lorentzkraft keine Arbeit verrichtet."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Wie hängen Strom und Bewegung von Ladungen zusammen? Was passiert, wenn man $F = B \\cdot I \\cdot L$ auf einzelne Ladungsträger überträgt?"
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 7: Kraft auf den Leiter — und was passiert, wenn der Leiter parallel zu den Feldlinien liegt?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#mf-lorentz",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/index.html#mf-lorentz"
+     },
+     "schritte": [
+      {
+       "titel": "Von F=BIL zu F=qvB",
+       "html": "<p>Der Strom im Leiter ist nichts anderes als bewegte Ladungen. Aus $F=B\\cdot I\\cdot L$ folgt für ein einzelnes Teilchen die <strong>Lorentzkraft</strong> $$F_L=q\\cdot v\\cdot B$$ (Geschwindigkeit $v$ senkrecht zum Feld $B$). Sie wirkt auf jede bewegte Ladung im Magnetfeld.</p>",
+       "check": {
+        "frage": "Wirkt die Lorentzkraft auch auf eine ruhende Ladung?",
+        "antwort": "Nein. $F_L=qvB$ ist proportional zu $v$. Eine ruhende Ladung ($v=0$) erfährt keine Lorentzkraft."
+       }
+      },
+      {
+       "titel": "Immer senkrecht zur Geschwindigkeit",
+       "html": "<p>Die Lorentzkraft steht stets <strong>senkrecht</strong> sowohl auf $v$ als auch auf $B$. Sie ändert deshalb nur die <strong>Richtung</strong> der Bewegung, nicht den Betrag der Geschwindigkeit. Die Richtung findet man mit der Dreifingerregel der linken Hand (für Elektronen die Bewegungsrichtung von − nach +).</p>",
+       "check": {
+        "frage": "Warum ändert die Lorentzkraft nicht den Betrag der Geschwindigkeit?",
+        "antwort": "Weil sie immer senkrecht zur Geschwindigkeit steht. Eine Kraft senkrecht zur Bewegung lenkt nur ab, beschleunigt aber nicht in Bewegungsrichtung."
+       }
+      },
+      {
+       "titel": "Keine Arbeit",
+       "html": "<p>Da die Kraft senkrecht zur Bewegungsrichtung wirkt, ist die verrichtete Arbeit $W=F\\cdot s\\cdot\\cos 90^\\circ=0$. Die Lorentzkraft <strong>verrichtet keine Arbeit</strong> und ändert die kinetische Energie nicht — sie kann ein Teilchen nur auf eine gekrümmte Bahn zwingen.</p>",
+       "check": {
+        "frage": "Kann ein Magnetfeld ein Elektron schneller machen?",
+        "antwort": "Nein. Die Lorentzkraft verrichtet keine Arbeit (sie steht senkrecht zur Bewegung). Das Magnetfeld ändert nur die Richtung, nicht die Geschwindigkeit."
+       }
+      }
+     ],
+     "merksatz": "Auf eine bewegte Ladung wirkt die <strong>Lorentzkraft</strong> $F_L=q\\cdot v\\cdot B$ (für $v\\perp B$). Sie steht stets senkrecht zu $v$ und $B$, <strong>verrichtet keine Arbeit</strong> und ändert nur die Bewegungsrichtung. Richtung: Dreifingerregel der linken Hand (Elektronenrichtung).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Elektronenstrahl im Magnetfeld",
+       "material": "Vorstellung einer Elektronenstrahlröhre zwischen den Polen eines Magneten (oder zwischen Spulen) — als Gedankenexperiment; real im Fadenstrahlrohr.",
+       "vorhersage": "Was passiert mit dem geraden Elektronenstrahl, wenn du quer dazu ein Magnetfeld einschaltest? Wird er schneller, langsamer oder nur abgelenkt? Notiere deine Vermutung.",
+       "auftraege": [
+        "Schalte (in Gedanken) das Querfeld ein und beschreibe, wie sich der Strahl krümmt.",
+        "Bestimme mit der Dreifingerregel, in welche Richtung der Strahl abgelenkt wird (Vorzeichen der Elektronenladung beachten).",
+        "Begründe, warum der Leuchtfleck nicht heller/dunkler, sondern nur verschoben erscheint (keine Energieänderung)."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie groß ist die Lorentzkraft auf ein Elektron mit $v=2{,}0\\cdot10^{7}\\,\\frac{\\text{m}}{\\text{s}}$ in $B=0{,}010\\,\\text{T}$?",
+       "antwort": "$F_L=q\\,v\\,B=1{,}6\\cdot10^{-19}\\,\\text{C}\\cdot2{,}0\\cdot10^{7}\\,\\frac{\\text{m}}{\\text{s}}\\cdot0{,}010\\,\\text{T}=3{,}2\\cdot10^{-14}\\,\\text{N}$."
+      },
+      {
+       "frage": "Warum verrichtet die Lorentzkraft keine Arbeit?",
+       "antwort": "Sie steht immer senkrecht zur Geschwindigkeit, also ist $W=F\\,s\\,\\cos 90^\\circ=0$. Die kinetische Energie bleibt konstant."
+      },
+      {
+       "frage": "Wovon hängt der Betrag der Lorentzkraft ab?",
+       "antwort": "Von Ladung $q$, Geschwindigkeit $v$ und Flussdichte $B$: $F_L=qvB$ (für $v$ senkrecht zu $B$). Bei $v=0$ ist sie null."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-106",
+        "ph-qp-mf-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-006"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-301"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Warum wird ein Elektron, das sich parallel zu den Feldlinien bewegt, von der Lorentzkraft überhaupt nicht abgelenkt?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-007"
+       ]
+      }
+     ],
+     "transfer": "Die Lorentzkraft verrichtet keine Arbeit. Was bedeutet das für die Geschwindigkeit eines Teilchens auf der Kreisbahn — wird es schneller, langsamer oder bleibt $|v|$ konstant?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die Lorentzkraft auf eine bewegte Ladung mit $F_L=q\\cdot v\\cdot B$ (Bewegung senkrecht zum Feld)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du begründest, warum die Lorentzkraft keine Arbeit verrichtet, und leitest $F_L=qvB$ aus $F=BIL$ her."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du bestimmst die Richtung der Lorentzkraft mit der Dreifingerregel und beachtest das Vorzeichen der Ladung."
+    }
+   ]
+  },
+  {
+   "id": "l9",
+   "nr": 4,
+   "titel": "Die Kreisbahn im Magnetfeld",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-kreisbahn",
+   "ziele": [
+    "Ich kann den Kreisbahnradius mit $r = \\frac{m \\cdot v}{q \\cdot B}$ berechnen.",
+    "Ich kann erklären, warum die Umlaufdauer $T = \\frac{2\\pi m}{qB}$ nicht von der Geschwindigkeit abhängt."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 8: Lorentzkraft und warum sie keine Arbeit verrichtet.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-005"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#mf-kreisbahn",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Simulation Kreisbahn auf der Erklärseite öffnen",
+      "href": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/index.html#mf-kreisbahn"
+     },
+     "schritte": [
+      {
+       "titel": "Lorentzkraft als Zentripetalkraft",
+       "html": "<p>Tritt eine Ladung senkrecht in ein homogenes Magnetfeld, zwingt die stets senkrecht wirkende Lorentzkraft sie auf eine <strong>Kreisbahn</strong>. Die Lorentzkraft ist dabei die <strong>Zentripetalkraft</strong>: $$F_L=F_Z\\;\\Rightarrow\\; q\\,v\\,B=\\frac{m\\,v^2}{r}.$$</p>",
+       "check": {
+        "frage": "Welche Rolle spielt die Lorentzkraft bei der Kreisbewegung?",
+        "antwort": "Sie ist die Zentripetalkraft: Sie zeigt zum Kreismittelpunkt und hält das Teilchen auf der Kreisbahn, ohne es schneller zu machen."
+       }
+      },
+      {
+       "titel": "Der Radius",
+       "html": "<p>Aufgelöst nach $r$ ergibt sich $$r=\\frac{m\\,v}{q\\,B}.$$ Der Radius wächst also mit der Geschwindigkeit und der Masse, und er sinkt mit größerer Ladung oder stärkerem Feld. Schnellere Teilchen laufen auf <strong>größeren</strong> Kreisen.</p>",
+       "check": {
+        "frage": "Du verdoppelst die Geschwindigkeit. Wie ändert sich der Radius?",
+        "antwort": "Er verdoppelt sich, denn $r=\\frac{mv}{qB}$ ist proportional zu $v$ (bei festem $B$)."
+       }
+      },
+      {
+       "titel": "Umlaufdauer unabhängig von v",
+       "html": "<p>Für die Umlaufdauer gilt $T=\\frac{2\\pi r}{v}$. Setzt man $r=\\frac{mv}{qB}$ ein, kürzt sich $v$ heraus: $$T=\\frac{2\\pi m}{q\\,B}.$$ Die Umlaufdauer hängt also <strong>nicht</strong> von der Geschwindigkeit ab — schnelle Teilchen laufen größere Kreise, aber genauso lange pro Umlauf.</p>",
+       "check": {
+        "frage": "Zwei Elektronen haben verschiedene Geschwindigkeiten im selben Feld. Wer braucht länger für einen Umlauf?",
+        "antwort": "Beide brauchen gleich lange. $T=\\frac{2\\pi m}{qB}$ hängt nicht von $v$ ab — der größere Kreis des schnelleren Teilchens gleicht die höhere Geschwindigkeit aus."
+       }
+      }
+     ],
+     "merksatz": "Im homogenen Magnetfeld ist die Lorentzkraft die Zentripetalkraft: $qvB=\\frac{mv^2}{r}$, also $r=\\frac{m\\,v}{q\\,B}$. Die Umlaufdauer $T=\\frac{2\\pi m}{qB}$ hängt <strong>nicht</strong> von der Geschwindigkeit ab.",
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Elektron auf Kreisbahn (Fadenstrahlrohr)",
+       "pfad": "simulationen/physik/teilchen-kreisbahn/index.html",
+       "vorhersage": "Du verdoppelst zuerst die Geschwindigkeit, danach stattdessen die Flussdichte $B$. Wie ändert sich jeweils der Bahnradius? Passt das zu $r=\\frac{mv}{qB}$? Notiere beide Vermutungen.",
+       "auftraege": [
+        "Verdopple die Geschwindigkeit und vergleiche den abgelesenen Radius mit deiner Vorhersage.",
+        "Verdopple stattdessen die Flussdichte $B$ und beschreibe, wie sich der Radius ändert.",
+        "Lies einen Radius ab und prüfe ihn rechnerisch mit $r=\\frac{mv}{qB}$ nach.",
+        "Beobachte die Umlaufdauer bei verschiedenen Geschwindigkeiten — bleibt sie wirklich gleich?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Aus welchem Ansatz folgt die Radiusformel?",
+       "antwort": "Aus 'Lorentzkraft = Zentripetalkraft': $qvB=\\frac{mv^2}{r}$. Auflösen nach $r$ ergibt $r=\\frac{mv}{qB}$."
+      },
+      {
+       "frage": "Wie wirkt sich ein stärkeres Magnetfeld auf den Radius aus?",
+       "antwort": "Der Radius wird kleiner: $r\\sim 1/B$. Doppelte Flussdichte ergibt halben Radius."
+      },
+      {
+       "frage": "Warum ist die Umlaufdauer geschwindigkeitsunabhängig?",
+       "antwort": "Weil sich in $T=\\frac{2\\pi r}{v}$ mit $r\\sim v$ die Geschwindigkeit herauskürzt: $T=\\frac{2\\pi m}{qB}$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-107"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-108"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-009",
+        "ph-qp-mf-010"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch: Warum können im Zyklotron immer schneller werdende Teilchen trotzdem mit einem fest getakteten Wechselfeld beschleunigt werden?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-008"
+       ]
+      }
+     ],
+     "transfer": "Ein Proton kreist im selben Feld wie ein Elektron mit gleicher Geschwindigkeit. Welches hat den größeren Radius — und um welchen Faktor? (Tipp: $m_p / m_e \\approx 1836$.)"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest den Kreisbahnradius einer Ladung im Magnetfeld mit $r=\\frac{m\\cdot v}{q\\cdot B}$."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du leitest den Radius aus dem Kräfteansatz $F_L=F_Z$ her und begründest, warum die Umlaufdauer nicht von $v$ abhängt."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du wertest die Kreisbahn in der Simulation aus und vergleichst Messung und Formel."
+    }
+   ]
+  },
+  {
+   "id": "l10",
+   "nr": 5,
+   "titel": "Spezifische Ladung: das Fadenstrahlrohr",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-em",
+   "ziele": [
+    "Ich kann erklären, wie das Fadenstrahlrohr $e/m_e$ bestimmt.",
+    "Ich kann die Formel $e/m_e = 2U_0 / (B^2 r^2)$ anwenden und auswerten."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Aufwärmen mit einer Kreisbahn-Aufgabe aus Lektion 9.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-006"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#mf-em",
+     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/index.html#mf-em"
+     },
+     "schritte": [
+      {
+       "titel": "Zwei Gleichungen kombinieren",
+       "html": "<p>Im Fadenstrahlrohr werden Elektronen erst durch $U_0$ beschleunigt ($eU_0=\\frac{1}{2}m_e v^2$) und dann im Magnetfeld auf eine Kreisbahn gezwungen ($r=\\frac{m_e v}{eB}$). Eliminiert man die unbekannte Geschwindigkeit $v$, erhält man die <strong>spezifische Ladung</strong>.</p>",
+       "check": {
+        "frage": "Welche Größe wird beim Kombinieren der beiden Gleichungen eliminiert?",
+        "antwort": "Die Geschwindigkeit $v$ der Elektronen — sie lässt sich nicht direkt messen und wird deshalb herausgekürzt."
+       }
+      },
+      {
+       "titel": "Die Auswerteformel",
+       "html": "<p>Setzt man die Geschwindigkeit aus der Kreisbahn in den Energieansatz ein, folgt $$\\frac{e}{m_e}=\\frac{2\\,U_0}{B^2\\,r^2}.$$ Alle Größen auf der rechten Seite sind messbar oder einstellbar — damit ist $e/m_e\\approx 1{,}76\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$ bestimmbar.</p>",
+       "check": {
+        "frage": "Welche Größen brauchst du, um $e/m_e$ zu berechnen?",
+        "antwort": "Die Beschleunigungsspannung $U_0$, die Flussdichte $B$ und den Bahnradius $r$. $U_0$ und $B$ stellst du ein, $r$ misst du."
+       }
+      },
+      {
+       "titel": "Messen und Einstellen unterscheiden",
+       "html": "<p>Wichtig für die Praxis: $U_0$ und $B$ (über den Spulenstrom) <strong>stellst du selbst ein</strong>, den <strong>Radius $r$ misst du</strong> am leuchtenden Kreis. Das Leuchten entsteht, weil die Elektronen Gasatome anregen — deshalb wird die Bahn sichtbar.</p>",
+       "check": {
+        "frage": "Welche Größe liest du am leuchtenden Strahl ab?",
+        "antwort": "Den Bahnradius $r$ des Kreises. $U_0$ und $B$ werden dagegen am Gerät eingestellt."
+       }
+      }
+     ],
+     "merksatz": "Das <strong>Fadenstrahlrohr</strong> kombiniert Beschleunigung ($eU_0=\\frac{1}{2}m_e v^2$) und Kreisbahn ($r=\\frac{m_e v}{eB}$) zu $\\frac{e}{m_e}=\\frac{2U_0}{B^2 r^2}$. Man stellt $U_0$ und $B$ ein und misst den Radius $r$ — Ergebnis: $e/m_e\\approx 1{,}76\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Auswertung im Fadenstrahlrohr",
+       "material": "Vorstellung des Fadenstrahlrohrs (Glaskolben mit Gasrest, Elektronenkanone, Helmholtz-Spulenpaar) und ein Beispiel-Messsatz $U_0$, $B$, $r$ — als Auswertungs-Gedankenexperiment.",
+       "vorhersage": "Du verdoppelst die Beschleunigungsspannung $U_0$ bei gleichem Feld $B$. Wird der Leuchtkreis größer oder kleiner? Begründe mit $r=\\frac{m_e v}{eB}$ und $v\\sim\\sqrt{U_0}$. Notiere deine Vorhersage.",
+       "auftraege": [
+        "Überlege, welche zwei Größen du einstellst und welche eine du misst.",
+        "Setze einen Beispiel-Messsatz in $\\frac{e}{m_e}=\\frac{2U_0}{B^2 r^2}$ ein und berechne $e/m_e$.",
+        "Vergleiche dein Ergebnis mit dem Literaturwert $1{,}76\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$ und nenne mögliche Messunsicherheiten."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche zwei physikalischen Vorgänge werden im Fadenstrahlrohr verknüpft?",
+       "antwort": "Die Beschleunigung der Elektronen durch die Spannung $U_0$ und ihre Ablenkung auf eine Kreisbahn durch das Magnetfeld."
+      },
+      {
+       "frage": "Gib die Auswerteformel an und nenne die Messgrößen.",
+       "antwort": "$\\frac{e}{m_e}=\\frac{2U_0}{B^2 r^2}$. Eingestellt werden $U_0$ und $B$, gemessen wird der Radius $r$."
+      },
+      {
+       "frage": "Warum kann man das Elektron im Rohr überhaupt sehen?",
+       "antwort": "Die schnellen Elektronen regen die wenigen Gasatome im Rohr zum Leuchten an, sodass die Kreisbahn als leuchtender Faden sichtbar wird."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-109"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-110"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-111"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Im Fadenstrahlrohr kürzt sich die unbekannte Geschwindigkeit $v$ heraus. Zeigt einander die Herleitung — Schritt für Schritt."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-012"
+       ]
+      }
+     ],
+     "transfer": "Thomson bestimmte 1897 $e/m_e$ und erkannte: Die Kathodenstrahlen bestehen aus winzigen, immer gleichen Teilchen. Was brauchte er zusätzlich (neben diesem Versuch), um dann $m_e$ selbst zu berechnen?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Vertiefung und Klausurvorbereitung:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst, wie das Fadenstrahlrohr die spezifische Ladung $e/m_e$ des Elektrons bestimmt."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du kombinierst Beschleunigung und Kreisbahn zu $\\frac{e}{m_e}=\\frac{2U_0}{B^2 r^2}$ und wertest Messungen aus."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du ordnest das Experiment historisch ein und beurteilst die Bedeutung der spezifischen Ladung."
+    }
+   ]
+  },
+  {
+   "id": "l10b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Magnetfelder und Lorentzkraft",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "ziele": [
+    "Ich berechne sicher die Kraft auf stromdurchflossene Leiter und die Lorentzkraft auf bewegte Ladungen.",
+    "Ich wende Kreisbahnradius, Umlaufdauer und Geschwindigkeitsfilter auf Anwendungen geladener Teilchen an."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zur Dreifingerregel — danach mischst und vertiefst du das ganze Thema.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-202",
+        "ph-qp-mf-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-204",
+        "ph-qp-mf-205",
+        "ph-qp-mf-206",
+        "ph-qp-mf-303",
+        "ph-qp-mf-304"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig, warum sich beim Kreisbahnradius $r = \\frac{m v}{q B}$ die Geschwindigkeit auswirkt, bei der Umlaufdauer $T = \\frac{2\\pi m}{q B}$ aber nicht."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-208"
+       ]
+      }
+     ],
+     "transfer": "Merke dir die Brücke vom Leiter zum Teilchen: aus $F = B I L$ wird für einzelne Ladungen die Lorentzkraft $F_L = q v B$; wirkt sie als Zentripetalkraft, ergibt sich die Kreisbahn mit $r = \\frac{m v}{q B}$."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: geladenes Teilchen auf der Kreisbahn",
+       "href": "simulationen/physik/teilchen-kreisbahn/index.html"
+      }
+     ]
+    },
+    "verstehen": {
+     "text": "Bevor du übst, sortiere die Formeln dieses Kapitels — dann findest du bei jeder Aufgabe schnell den richtigen Ansatz.",
+     "schritte": [
+      {
+       "titel": "Welche Formel wann?",
+       "html": "<p>Kräfte: $F=B I L$ (Leiter) und $F_L=q v B$ (bewegte Ladung). Kreisbahn: $r=\\frac{mv}{qB}$ und $T=\\frac{2\\pi m}{qB}$. Frage zuerst: Geht es um einen <em>Leiter mit Strom</em> oder um ein <em>einzelnes Teilchen</em>? Und ist die Bahn <em>gerade</em> (Kraft) oder <em>gekrümmt</em> (Radius)?</p>",
+       "check": {
+        "frage": "Eine Aufgabe fragt nach dem Bahnradius eines Protons im Magnetfeld. Welcher Ansatz?",
+        "antwort": "$r=\\frac{mv}{qB}$ aus dem Kräfteansatz Lorentzkraft = Zentripetalkraft."
+       }
+      },
+      {
+       "titel": "Der Geschwindigkeitsfilter",
+       "html": "<p>Im <strong>Geschwindigkeitsfilter</strong> (Wien-Filter) wirken elektrisches und magnetisches Feld gegeneinander. Nur Teilchen, bei denen sich die Kräfte aufheben ($qE=qvB$), fliegen geradeaus durch: $$v=\\frac{E}{B}.$$ Das filtert eine bestimmte Geschwindigkeit heraus — unabhängig von Ladung und Masse.</p>",
+       "check": {
+        "frage": "Welche Bedingung erfüllt ein Teilchen, das den Geschwindigkeitsfilter unabgelenkt durchquert?",
+        "antwort": "Elektrische und magnetische Kraft sind gleich groß: $qE=qvB$, also $v=E/B$. Nur diese eine Geschwindigkeit kommt geradeaus durch."
+       }
+      }
+     ],
+     "merksatz": "Werkzeugkasten Magnetfelder: $F=BIL$ (Leiter), $F_L=qvB$ (Teilchen), $r=\\frac{mv}{qB}$ und $T=\\frac{2\\pi m}{qB}$ (Kreisbahn). Im <strong>Geschwindigkeitsfilter</strong> gilt $qE=qvB$, also $v=\\frac{E}{B}$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Ansatz vor der Rechnung wählen",
+       "material": "Stift und Papier — ein kurzes Strategie-Training für Teilchen-im-Feld-Aufgaben.",
+       "vorhersage": "Überlege bei einer Aufgabe zuerst: Geht es um Kraft, Radius, Umlaufdauer oder Filterbedingung? Schreibe den Ansatz auf, bevor du Zahlen einsetzt.",
+       "auftraege": [
+        "Ordne einer selbst gewählten Aufgabe einen der vier Ansätze zu.",
+        "Stelle die Formel nach der gesuchten Größe um, bevor du einsetzt.",
+        "Prüfe Einheit und Größenordnung des Ergebnisses auf Plausibilität."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche Formel verbindet Geschwindigkeit, Feld und Bahnradius eines Teilchens?",
+       "antwort": "$r=\\frac{mv}{qB}$."
+      },
+      {
+       "frage": "Wie bestimmt der Geschwindigkeitsfilter die durchgelassene Geschwindigkeit?",
+       "antwort": "Aus dem Gleichgewicht $qE=qvB$ folgt $v=\\frac{E}{B}$ — unabhängig von Ladung und Masse."
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest sicher die Kraft auf stromdurchflossene Leiter ($F=BIL$) und die Lorentzkraft auf bewegte Ladungen ($F_L=qvB$)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du wendest Kreisbahnradius, Umlaufdauer und das Prinzip des Geschwindigkeitsfilters auf Anwendungen geladener Teilchen an."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du wählst den passenden Ansatz und stellst Lösungswege mit Einheiten nachvollziehbar dar."
+    }
+   ]
+  }
+ ],
+ "bloecke": [
+  {
+   "titel": "Elektrische Felder",
+   "thema": "ph-qp-elektrische-felder",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l5b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Magnetfelder und Lorentzkraft",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10",
+    "l10b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  }
+ ]
+}

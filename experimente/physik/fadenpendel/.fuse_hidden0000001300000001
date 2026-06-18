@@ -1,0 +1,456 @@
+// experiment.js — Interaktives Experiment: Fadenpendel (Einführungsphase).
+// Realitätsnahe Messpraxis statt idealer Simulation: Die Fadenlänge wird am
+// Maßband (Lupe!) SELBST abgelesen, zehn Schwingungen werden von Hand
+// gestoppt — mit Reaktionszeit-Streuung bei Start und Stopp. Aus dem
+// T²-l-Diagramm liefert die Steigung k der Regressionsgeraden g = 4π²/k.
+// Alle Streuungen sind deterministisch geseedet → TESTS laufen in Node.
+
+import {
+  streuung, parseDezimal, komma, ablesungOk, esc, regression,
+  farbe, reduzierteBewegung, bauePhasen, csvHerunterladen
+} from "../../../assets/js/experiment/helfer.js";
+
+// ---------- Modell & Messlogik (rein, Node-testbar) ----------
+export const G_LITERATUR = 9.81;          // m/s² — der "Literaturwert"
+export const L_MIN = 0.30, L_MAX = 1.50;  // einstellbare Fadenlänge in m
+export const MIN_MESSUNGEN = 6;           // mindestens 6 verschiedene Längen
+
+export const LAENGEN_TOLERANZ = 0.01;     // m  — Ablesung am Maßband
+export const STOPPUHR_TOLERANZ = 0.005;   // s  — t exakt von der Anzeige übertragen
+export const STEIGUNG_TOLERANZ = 0.05;    // relativ — abgelesene Steigung k
+export const G_TOLERANZ = 0.15;           // m/s² — berechnetes g (gegen 4π²/k)
+
+// Längen-Schlüssel: Slider-Schritt ist 0,01 m → auf 2 Stellen normieren,
+// damit die geseedete Streuung nicht an Gleitkomma-Resten hängt.
+export function laengenKey(l) { return Number(l).toFixed(2); }
+
+// Modell (harmonische Näherung, kleine Auslenkung): T = 2π·√(l/g)
+export function periode(l) { return 2 * Math.PI * Math.sqrt(l / G_LITERATUR); }
+
+// Tatsächliche Fadenlänge bis zur KUGELMITTE: Die eingestellte Länge trifft
+// man beim Abbinden nie exakt — das Maßband zeigt die Wahrheit (±5 mm).
+export function bandLaenge(l) { return l + streuung("l:" + laengenKey(l), 0.01); }
+
+// Handstoppung über 10 Schwingungen: Start- und Stopp-Eingriff streuen je
+// ±0,12 s (Reaktionszeit). Ohne kleine Auslenkung (< 10°) schwingt das Pendel
+// messbar langsamer — alle Zeiten sind dann um +1 % verfälscht.
+export function zeitZehn(l, kleineAuslenkung) {
+  const k = laengenKey(l);
+  const t = 10 * periode(bandLaenge(l))
+    + streuung("start:" + k, 0.24) + streuung("stopp:" + k, 0.24);
+  return kleineAuslenkung ? t : t * 1.01;
+}
+
+// Digitalanzeige der Stoppuhr: 0,01 s
+export function runde2(x) { return Math.round(x * 100) / 100; }
+
+// Auswertung: Steigung k des T²-l-Diagramms → g = 4π²/k
+export function gAusSteigung(k) { return 4 * Math.PI * Math.PI / k; }
+export function steigungOk(eingabe, k) {
+  return Number.isFinite(eingabe) && k > 0 && Math.abs(eingabe - k) / k <= STEIGUNG_TOLERANZ;
+}
+export function bewertungG(g) {
+  const abw = Math.abs(g - G_LITERATUR) / G_LITERATUR * 100;
+  if (abw <= 1) return { stufe: "sehr gut", abw };
+  if (abw <= 3) return { stufe: "gut", abw };
+  return { stufe: "nochmal prüfen — da steckt wohl ein systematischer Fehler drin", abw };
+}
+
+// ---------- TESTS (Node: DOM-frei auf Modulebene) ----------
+const L_RASTER = [0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 1.00, 1.10, 1.20, 1.30, 1.40, 1.50];
+const REIHE6 = [0.40, 0.60, 0.80, 1.00, 1.20, 1.40];
+function reihePerfekt() { return L_RASTER.map(l => ({ x: l, y: periode(l) ** 2 })); }
+function reiheReal(klein) { return REIHE6.map(l => ({ x: bandLaenge(l), y: (zeitZehn(l, klein) / 10) ** 2 })); }
+
+export const TESTS = [
+  { name: "T-Kontrollwert: T(1 m) = 2,006 s", ok: () => Math.abs(periode(1) - 2.006) < 0.001 },
+  { name: "T ∝ √l: T(0,25 m) = T(1 m)/2", ok: () => Math.abs(periode(0.25) - periode(1) / 2) < 1e-12 },
+  { name: "Maßband: |Band − l| ≤ 5 mm, deterministisch", ok: () => L_RASTER.every(l => Math.abs(bandLaenge(l) - l) <= 0.005) && bandLaenge(0.7) === bandLaenge(0.7) },
+  { name: "Streugrenze Stoppung: |t − 10T| ≤ 0,24 s", ok: () => L_RASTER.every(l => Math.abs(zeitZehn(l, true) - 10 * periode(bandLaenge(l))) <= 0.24 + 1e-12) },
+  { name: "Winkel-Malus: t(groß) = 1,01 · t(klein)", ok: () => L_RASTER.every(l => Math.abs(zeitZehn(l, false) - 1.01 * zeitZehn(l, true)) < 1e-12) },
+  { name: "perfekte Reihe → k = 4π²/9,81 (= 4,0245)", ok: () => { const r = regression(reihePerfekt()); return Math.abs(r.m - 4 * Math.PI ** 2 / G_LITERATUR) < 1e-9 && Math.abs(r.b) < 1e-9; } },
+  { name: "perfekte Reihe → g exakt 9,81", ok: () => Math.abs(gAusSteigung(regression(reihePerfekt()).m) - G_LITERATUR) < 1e-9 },
+  { name: "reale 6er-Reihe → g auf ±0,15 genau", ok: () => Math.abs(gAusSteigung(regression(reiheReal(true)).m) - G_LITERATUR) <= G_TOLERANZ },
+  { name: "Winkel vergessen → g rund 2 % zu klein", ok: () => { const g = gAusSteigung(regression(reiheReal(false)).m); return g < G_LITERATUR - 0.1 && g > G_LITERATUR * 0.96; } },
+  { name: "Stoppuhr-Anzeige rundet auf 0,01 s", ok: () => runde2(20.0649) === 20.06 && runde2(20.065000001) === 20.07 },
+  { name: "parseDezimal & Ablese-Toleranzen", ok: () => parseDezimal("0,75") === 0.75 && parseDezimal("0.75") === 0.75 && Number.isNaN(parseDezimal("abc")) && ablesungOk(0.503, 0.498, LAENGEN_TOLERANZ) && !ablesungOk(0.52, 0.498, LAENGEN_TOLERANZ) && !ablesungOk(NaN, 0.5, LAENGEN_TOLERANZ) },
+  { name: "Steigungs-/g-Prüfung ±5 % bzw. ±0,15", ok: () => { const k = 4 * Math.PI ** 2 / G_LITERATUR; return steigungOk(k * 1.04, k) && !steigungOk(k * 1.06, k) && Math.abs(gAusSteigung(k) - 9.81) < 1e-9; } }
+];
+
+// ======================================================================
+// Browser-Teil
+// ======================================================================
+export function starteExperiment() {
+  const wurzel = document.getElementById("experiment-wurzel");
+  if (!wurzel) return;
+  const reduziert = reduzierteBewegung();
+
+  const zustand = {
+    l: 0.80,                  // Slider-Einstellung in m
+    klein: false,             // Checkbox „kleine Auslenkung (< 10°)" — bewusst aus!
+    laengeOk: false, lMess: NaN, // Maßband korrekt abgelesen + notierter Wert
+    tAnzeige: NaN,            // Stoppuhr-Anzeige in s (NaN = noch nicht gestoppt)
+    misst: false,             // Handstoppung läuft gerade (Timeout aktiv)
+    kleinBeiMessung: false,   // Checkbox-Stand beim Druck auf „stoppen"
+    laeuft: false,            // Pendel schwingt (Animation)
+    messungen: [],            // {key, lMess, t, T, T2, klein}
+    auswertung: { kEingabe: NaN, kOk: false, gEingabe: NaN, gOk: false },
+    info: "",                 // letzte Erfolgsmeldung (überlebt das Neuzeichnen)
+    timeout: 0, animStart: 0
+  };
+
+  wurzel.innerHTML = "";
+  const wechslePhase = bauePhasen(wurzel, [
+    { id: "aufbau", label: "Aufbau" },
+    { id: "messen", label: "Durchführung" },
+    { id: "auswerten", label: "Auswertung" }
+  ], id => {
+    if (id === "aufbau") panelAufbau();
+    if (id === "messen") panelMessen();
+    if (id === "auswerten") panelAuswerten();
+  });
+
+  const flaeche = document.createElement("div");
+  flaeche.className = "exp-flaeche";
+  flaeche.innerHTML = `
+    <div class="exp-links">
+      <canvas id="exp-canvas" width="380" height="660" aria-label="Versuchsaufbau: Stativ mit Fadenpendel und Kugel; rechts ein Maßband mit Lupenausschnitt, an dem die Fadenlänge bis zur Kugelmitte abgelesen wird."></canvas>
+    </div>
+    <div class="exp-rechts" id="exp-panel"></div>`;
+  wurzel.appendChild(flaeche);
+
+  const canvas = flaeche.querySelector("#exp-canvas");
+  const ctx = canvas.getContext("2d");
+  const panel = flaeche.querySelector("#exp-panel");
+
+  // ---------- Zeichnung ----------
+  function zeichne(now = performance.now()) {
+    const w = canvas.width, h = canvas.height;
+    const cText = farbe("--text"), cLeise = farbe("--text-leise"),
+          cAkzent = farbe("--akzent"), cFlaeche = farbe("--flaeche");
+    ctx.clearRect(0, 0, w, h);
+    ctx.font = "13px system-ui, sans-serif";
+
+    // Stativ
+    ctx.fillStyle = cText;
+    ctx.fillRect(24, 36, 140, 8);   // Ausleger
+    ctx.fillRect(20, 36, 10, 584);  // Stange
+    ctx.fillRect(8, 612, 130, 10);  // Fuß
+
+    const px = 150, py = 44;        // Aufhängepunkt
+    const S = 360;                  // Maßstab: 1 m = 360 px
+    const lB = bandLaenge(zustand.l);
+    const T = periode(lB);
+    const thetaMax = (zustand.klein ? 7 : 16) * Math.PI / 180;
+    let theta = 0;
+    if (zustand.laeuft) {
+      theta = reduziert ? thetaMax * 0.6
+        : thetaMax * Math.cos(2 * Math.PI * (now - zustand.animStart) / (T * 1000));
+    }
+    const L = lB * S;
+    const kx = px + Math.sin(theta) * L, ky = py + Math.cos(theta) * L;
+
+    // Maßband (0 am Aufhängepunkt, bis 1,50 m) — hinter dem Pendel
+    const mbX = 300;
+    ctx.fillStyle = cFlaeche; ctx.fillRect(mbX, py - 8, 52, L_MAX * S + 16);
+    ctx.strokeStyle = cLeise; ctx.lineWidth = 1; ctx.strokeRect(mbX, py - 8, 52, L_MAX * S + 16);
+    for (let cm = 0; cm <= 150; cm += 5) {
+      const v = cm / 100, y = py + v * S;
+      ctx.strokeStyle = cm % 10 === 0 ? cText : cLeise;
+      ctx.beginPath(); ctx.moveTo(mbX, y); ctx.lineTo(mbX + (cm % 10 === 0 ? 16 : 9), y); ctx.stroke();
+      if (cm % 10 === 0) { ctx.fillStyle = cText; ctx.fillText(komma(v, 1), mbX + 20, y + 4); }
+    }
+    ctx.fillStyle = cText;
+    ctx.fillText("m", mbX + 20, py - 14);
+    ctx.fillText("Maßband", mbX - 14, 644);
+
+    // Faden + Kugel
+    ctx.strokeStyle = cText; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(kx, ky); ctx.stroke();
+    ctx.beginPath(); ctx.arc(kx, ky, 13, 0, 7);
+    ctx.fillStyle = cAkzent; ctx.fill();
+    ctx.strokeStyle = cText; ctx.lineWidth = 2; ctx.stroke();
+    if (zustand.laeuft && reduziert) { ctx.fillStyle = cText; ctx.fillText("schwingt …", kx + 20, ky + 4); }
+
+    // Lupe: vergrößerter Maßband-Ausschnitt (±2 cm um die Kugelmitte)
+    const lup = { x: 196, y: 60, w: 168, h: 176 };
+    ctx.fillStyle = cFlaeche; ctx.fillRect(lup.x, lup.y, lup.w, lup.h);
+    ctx.strokeStyle = cText; ctx.lineWidth = 1.5; ctx.strokeRect(lup.x, lup.y, lup.w, lup.h);
+    ctx.fillStyle = cText; ctx.fillText("Lupe: Maßband (m)", lup.x, lup.y - 8);
+    const ppm = lup.h / 0.04, cy = lup.y + lup.h / 2;
+    ctx.save(); ctx.beginPath(); ctx.rect(lup.x, lup.y, lup.w, lup.h); ctx.clip();
+    for (let mm = Math.ceil((lB - 0.02) * 1000); mm <= Math.floor((lB + 0.02) * 1000); mm++) {
+      const v = mm / 1000, y = cy + (v - lB) * ppm;
+      ctx.strokeStyle = mm % 10 === 0 ? cText : cLeise; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(lup.x + 6, y); ctx.lineTo(lup.x + 6 + (mm % 10 === 0 ? 26 : mm % 5 === 0 ? 16 : 9), y); ctx.stroke();
+      if (mm % 10 === 0) { ctx.fillStyle = cText; ctx.fillText(komma(v, 2), lup.x + 40, y + 4); }
+    }
+    ctx.strokeStyle = cAkzent; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(lup.x + 6, cy); ctx.lineTo(lup.x + lup.w - 6, cy); ctx.stroke();
+    ctx.fillStyle = cAkzent; ctx.fillText("Kugelmitte", lup.x + 86, cy - 6);
+    ctx.restore();
+  }
+
+  let rafId = 0;
+  function tick(now) { zeichne(now); if (zustand.laeuft && !reduziert) rafId = requestAnimationFrame(tick); }
+  function starteAnimation() {
+    cancelAnimationFrame(rafId);
+    zustand.animStart = performance.now();
+    if (zustand.laeuft && !reduziert) rafId = requestAnimationFrame(tick);
+    else zeichne();
+  }
+
+  // ---------- Panels ----------
+  function panelAufbau() {
+    panel.innerHTML = `
+      <h2>Aufbau und Geräte</h2>
+      <p>Am Stativ hängt eine Stahlkugel an einem dünnen Faden. Daneben hängt ein <strong>Maßband</strong>: Die Pendellänge <em>l</em> wird vom Aufhängepunkt bis zur <strong>Kugelmitte</strong> gemessen — die <strong>Lupe</strong> zeigt dir diese Stelle vergrößert. Gestoppt wird von Hand mit einer <strong>Digital-Stoppuhr</strong> (Anzeige auf 0,01 s).</p>
+      <p><strong>Plan:</strong> Stelle mindestens ${MIN_MESSUNGEN} verschiedene Fadenlängen zwischen ${komma(L_MIN, 2)} m und ${komma(L_MAX, 2)} m ein. Lies <em>l</em> jeweils am Maßband ab, stoppe die Zeit für <strong>10 Schwingungen</strong> und übertrage sie von der Anzeige. In der Auswertung trägst du T² über l auf und bestimmst aus der Steigung die Erdbeschleunigung g.</p>
+      <p class="exp-hinweis">⚠ Wie im echten Versuch gilt: Faden straff halten, ganze Schwingungen zählen (hin <em>und</em> zurück = 1 Schwingung) — und beim Loslassen nicht schubsen.</p>
+      <button class="knopf" id="exp-weiter1">Zur Durchführung</button>`;
+    panel.querySelector("#exp-weiter1").addEventListener("click", () => wechslePhase("messen"));
+  }
+
+  function panelMessen() {
+    const a = zustand;
+    const stoppText = a.misst ? "läuft …" : (Number.isFinite(a.tAnzeige) ? komma(a.tAnzeige, 2) + " s" : "– –,– – s");
+    panel.innerHTML = `
+      <h2>Durchführung</h2>
+      <div class="exp-regler">
+        <label for="exp-laenge">Fadenlänge einstellen: <strong id="exp-l-wert">${komma(a.l, 2)} m</strong></label>
+        <input type="range" id="exp-laenge" min="${L_MIN}" max="${L_MAX}" step="0.01" value="${a.l}">
+      </div>
+      <p><label><input type="checkbox" id="exp-klein" ${a.klein ? "checked" : ""}> kleine Auslenkung (&lt; 10°)</label></p>
+      <form id="exp-l-form" class="exp-ablesen">
+        <label for="exp-l-mess">1 · Lies die Lupe ab — l bis zur Kugelmitte in m:</label>
+        <input id="exp-l-mess" inputmode="decimal" autocomplete="off" size="7" value="${a.laengeOk ? komma(a.lMess, 3) : ""}">
+        <button class="knopf">Länge notieren</button>
+      </form>
+      <p id="exp-l-meldung" class="exp-meldung" aria-live="polite">${a.laengeOk ? "✓ Länge notiert." : ""}</p>
+      <div class="exp-knopfzeile">
+        <button class="knopf" id="exp-stoppen" ${a.laengeOk && !a.misst && !Number.isFinite(a.tAnzeige) ? "" : "disabled"}>2 · 10 Schwingungen stoppen</button>
+      </div>
+      <p>Stoppuhr: <strong id="exp-stoppuhr" style="font-variant-numeric: tabular-nums">${stoppText}</strong></p>
+      <form id="exp-t-form" class="exp-ablesen">
+        <label for="exp-t">3 · Übertrage die Anzeige — t in s:</label>
+        <input id="exp-t" inputmode="decimal" autocomplete="off" size="7" ${Number.isFinite(a.tAnzeige) ? "" : "disabled"}>
+        <button class="knopf" ${Number.isFinite(a.tAnzeige) ? "" : "disabled"}>In die Tabelle</button>
+      </form>
+      <p id="exp-t-meldung" class="exp-meldung" aria-live="polite">${esc(a.info)}</p>
+      <h3>Messtabelle</h3>
+      <table class="exp-tabelle"><thead><tr><th>l in m</th><th>t in s</th><th>T = t/10 in s</th><th>T² in s²</th></tr></thead>
+      <tbody>${a.messungen.map(z => `<tr><td>${komma(z.lMess, 3)}</td><td>${komma(z.t, 2)}</td><td>${komma(z.T, 3)}</td><td>${komma(z.T2, 3)}</td></tr>`).join("") || '<tr><td colspan="4">noch leer</td></tr>'}</tbody></table>
+      <p>${a.messungen.length} von mindestens ${MIN_MESSUNGEN} Messungen — jede Länge nur einmal.</p>
+      <button class="knopf" id="exp-weiter2" ${a.messungen.length >= MIN_MESSUNGEN ? "" : "disabled"}>Zur Auswertung</button>`;
+
+    const slider = panel.querySelector("#exp-laenge");
+    slider.addEventListener("input", () => {
+      clearTimeout(zustand.timeout);
+      zustand.misst = false; zustand.laeuft = false;
+      zustand.l = parseDezimal(slider.value);
+      zustand.laengeOk = false; zustand.lMess = NaN; zustand.tAnzeige = NaN; zustand.info = "";
+      panel.querySelector("#exp-l-wert").textContent = komma(zustand.l, 2) + " m";
+      panel.querySelector("#exp-stoppen").disabled = true;
+      starteAnimation();
+    });
+    slider.addEventListener("change", () => { panelMessen(); panel.querySelector("#exp-laenge").focus(); });
+
+    panel.querySelector("#exp-klein").addEventListener("change", ev => {
+      zustand.klein = ev.target.checked;
+      if (zustand.laeuft) zustand.animStart = performance.now();
+      zeichne();
+    });
+
+    panel.querySelector("#exp-l-form").addEventListener("submit", ev => {
+      ev.preventDefault();
+      const meldung = panel.querySelector("#exp-l-meldung");
+      if (zustand.messungen.some(z => z.key === laengenKey(zustand.l))) {
+        meldung.textContent = "Für diese Länge hast du schon gemessen — stell mit dem Regler eine andere ein.";
+        return;
+      }
+      const eingabe = parseDezimal(panel.querySelector("#exp-l-mess").value);
+      if (!ablesungOk(eingabe, bandLaenge(zustand.l), LAENGEN_TOLERANZ)) {
+        meldung.textContent = "✗ Schau in die Lupe: Wo liegt die Kugelmitte auf dem Maßband? (Auf 1 cm genau reicht, z. B. 0,80.)";
+        return;
+      }
+      zustand.laengeOk = true; zustand.lMess = eingabe; zustand.tAnzeige = NaN; zustand.info = "";
+      panelMessen();
+    });
+
+    panel.querySelector("#exp-stoppen").addEventListener("click", () => {
+      if (!zustand.laengeOk || zustand.misst) return;
+      zustand.misst = true; zustand.laeuft = true; zustand.tAnzeige = NaN;
+      zustand.kleinBeiMessung = zustand.klein;
+      const lJetzt = zustand.l;
+      starteAnimation();
+      panelMessen();
+      zustand.timeout = setTimeout(() => {
+        zustand.misst = false;
+        zustand.tAnzeige = runde2(zeitZehn(lJetzt, zustand.kleinBeiMessung));
+        panelMessen();
+        panel.querySelector("#exp-t").focus();
+      }, reduziert ? 500 : 2200);
+    });
+
+    panel.querySelector("#exp-t-form").addEventListener("submit", ev => {
+      ev.preventDefault();
+      if (!Number.isFinite(zustand.tAnzeige)) return;
+      const meldung = panel.querySelector("#exp-t-meldung");
+      const eingabe = parseDezimal(panel.querySelector("#exp-t").value);
+      if (!ablesungOk(eingabe, zustand.tAnzeige, STOPPUHR_TOLERANZ)) {
+        meldung.textContent = "✗ Übertrage genau, was die Stoppuhr zeigt — mit beiden Nachkommastellen (z. B. 17,85).";
+        return;
+      }
+      const T = eingabe / 10, T2 = T * T;
+      zustand.messungen.push({ key: laengenKey(zustand.l), lMess: zustand.lMess, t: eingabe, T, T2, klein: zustand.kleinBeiMessung });
+      zustand.auswertung = { kEingabe: NaN, kOk: false, gEingabe: NaN, gOk: false };
+      zustand.info = `✓ Eingetragen. Das System rechnet vor: T = t/10 = ${komma(T, 3)} s → T² = ${komma(T2, 3)} s². Stell jetzt eine andere Länge ein.`;
+      zustand.laengeOk = false; zustand.lMess = NaN; zustand.tAnzeige = NaN; zustand.laeuft = false;
+      starteAnimation();
+      panelMessen();
+    });
+
+    panel.querySelector("#exp-weiter2").addEventListener("click", () => wechslePhase("auswerten"));
+  }
+
+  function bewertungHtml(g, betroffen, n) {
+    const bew = bewertungG(g);
+    let s = `<p><strong>Bewertung:</strong> Literaturwert g = 9,81 m/s². Dein Wert: <strong>${komma(g, 2)} m/s²</strong> — Abweichung ${komma(bew.abw, 1)} %: <strong>${esc(bew.stufe)}</strong>.</p>`;
+    if (betroffen > 0) {
+      s += `<p class="exp-hinweis"><strong>Auflösung:</strong> Bei ${betroffen} von ${n} Messungen war die Checkbox „kleine Auslenkung (&lt; 10°)“ nicht gesetzt — das Pendel schwang weit aus. Dann ist es <em>langsamer</em>, als T = 2π·√(l/g) verspricht: Alle Zeiten +1 %, T² damit rund +2 % — und dein g fällt rund 2 % zu klein aus. So entstehen <strong>systematische Fehler</strong>: Sie verstecken sich nicht im Streuen der Punkte, sondern verschieben alle gemeinsam. Miss noch einmal mit gesetzter Checkbox!</p>`;
+    } else {
+      s += `<p>Du hast durchgehend mit kleiner Auslenkung (&lt; 10°) gemessen — gut so: Nur dafür gilt T = 2π·√(l/g).</p>`;
+    }
+    return s;
+  }
+
+  function panelAuswerten() {
+    zustand.laeuft = false; starteAnimation();
+    const zeilen = zustand.messungen;
+    if (zeilen.length < MIN_MESSUNGEN) {
+      panel.innerHTML = `
+        <h2>Auswertung</h2>
+        <p>Du hast erst ${zeilen.length} von ${MIN_MESSUNGEN} Messungen. Für eine belastbare Gerade brauchst du mehr Punkte — zurück zur Durchführung!</p>
+        <button class="knopf" id="exp-zurueck">Weiter messen</button>`;
+      panel.querySelector("#exp-zurueck").addEventListener("click", () => wechslePhase("messen"));
+      return;
+    }
+    const punkte = zeilen.map(z => ({ x: z.lMess, y: z.T2 }));
+    const reg = regression(punkte);
+    const a = zustand.auswertung;
+    const betroffen = zeilen.filter(z => !z.klein).length;
+    panel.innerHTML = `
+      <h2>Auswertung</h2>
+      <p>Aus T = 2π·√(l/g) folgt durch Quadrieren: <strong>T² = (4π²/g) · l</strong>. Trägt man T² über l auf, liegt also eine Ursprungsgerade mit der Steigung k = 4π²/g vor — und g = 4π²/k.</p>
+      <canvas id="exp-diagramm" class="exp-diagramm" width="440" height="300" aria-label="Diagramm: T-Quadrat über der Pendellänge l mit deinen Messpunkten und der Regressionsgeraden."></canvas>
+      <h3>Schritt 1: Steigung ablesen</h3>
+      <p>Wähle zwei weit auseinanderliegende Stellen <em>auf der Geraden</em> (nicht auf einzelnen Punkten!) und bilde k = ΔT²/Δl.</p>
+      <form id="exp-k-form" class="exp-ablesen">
+        <label for="exp-k">k in s²/m:</label>
+        <input id="exp-k" inputmode="decimal" autocomplete="off" size="7" ${a.kOk ? "disabled" : ""} value="${a.kOk ? komma(a.kEingabe, 2) : ""}">
+        <button class="knopf" ${a.kOk ? "disabled" : ""}>Prüfen</button>
+      </form>
+      <p id="exp-k-meldung" class="exp-meldung" aria-live="polite">${a.kOk ? "✓ Gut abgelesen." : ""}</p>
+      ${a.kOk ? `
+      <h3>Schritt 2: g berechnen</h3>
+      <p>Stelle k = 4π²/g nach g um: <strong>g = 4π²/k</strong>. Rechne mit deinem k = ${komma(a.kEingabe, 2)} s²/m.</p>
+      <form id="exp-g-form" class="exp-ablesen">
+        <label for="exp-g">g in m/s²:</label>
+        <input id="exp-g" inputmode="decimal" autocomplete="off" size="7" ${a.gOk ? "disabled" : ""} value="${a.gOk ? komma(a.gEingabe, 2) : ""}">
+        <button class="knopf" ${a.gOk ? "disabled" : ""}>Prüfen</button>
+      </form>
+      <p id="exp-g-meldung" class="exp-meldung" aria-live="polite">${a.gOk ? "✓ Richtig gerechnet." : ""}</p>` : ""}
+      ${a.gOk ? bewertungHtml(a.gEingabe, betroffen, zeilen.length) : ""}
+      <details class="exp-fehler"><summary>Warum 10 Schwingungen statt einer?</summary>
+        <p>Deine Hand stoppt nur auf etwa ±0,1 s genau — egal, ob du eine oder zehn Schwingungen misst. Bei <strong>einer</strong> Schwingung sitzt dieser Stoppfehler voll auf T. Bei <strong>zehn</strong> verteilt er sich: T = t/10, der Fehler an T schrumpft auf ein Zehntel. Noch mehr Schwingungen wären noch besser — irgendwann begrenzt aber die Dämpfung das Zählen.</p>
+      </details>
+      <details class="exp-fehler"><summary>Fehlerbetrachtung — was begrenzt die Genauigkeit?</summary>
+        <ul>
+          <li><strong>Reaktionszeit:</strong> Start- und Stopp-Druck streuen je um etwa ±0,1 s. Tipp: vorher im Takt mitzählen („drei — zwei — eins — jetzt“) und immer am Umkehrpunkt drücken.</li>
+          <li><strong>Längenmessung:</strong> l zählt vom Aufhängepunkt bis zur <strong>Kugelmitte</strong> — wer nur bis zum Knoten misst, bekommt ein zu kleines l und damit ein zu kleines g.</li>
+          <li><strong>Auslenkwinkel:</strong> T = 2π·√(l/g) gilt nur für kleine Winkel (&lt; 10°); bei großer Auslenkung schwingt das Pendel langsamer.</li>
+          <li><strong>Modellgrenzen:</strong> Faden masselos, Kugel punktförmig, keine Luftreibung — hier eingebaut, im Klassenraum nie ganz erfüllt.</li>
+        </ul>
+      </details>
+      <h3>Deine Messreihe</h3>
+      <table class="exp-tabelle"><thead><tr><th>l in m</th><th>t in s</th><th>T in s</th><th>T² in s²</th></tr></thead>
+      <tbody>${zeilen.map(z => `<tr><td>${komma(z.lMess, 3)}</td><td>${komma(z.t, 2)}</td><td>${komma(z.T, 3)}</td><td>${komma(z.T2, 3)}</td></tr>`).join("")}</tbody></table>
+      <div class="exp-knopfzeile">
+        <button class="knopf zweitrangig" id="exp-csv">Messung als CSV</button>
+        <button class="knopf zweitrangig" id="exp-zurueck">Mehr Messungen</button>
+        <button class="knopf" id="exp-neustart">Neues Experiment</button>
+      </div>`;
+
+    panel.querySelector("#exp-k-form").addEventListener("submit", ev => {
+      ev.preventDefault();
+      const eingabe = parseDezimal(panel.querySelector("#exp-k").value);
+      if (steigungOk(eingabe, reg.m)) {
+        zustand.auswertung.kEingabe = eingabe; zustand.auswertung.kOk = true;
+        panelAuswerten();
+      } else {
+        panel.querySelector("#exp-k-meldung").textContent = "✗ Das passt noch nicht zur Geraden. Nimm zwei Gitterstellen auf der Geraden (z. B. bei l = 0,4 m und l = 1,4 m) und teile ΔT² durch Δl.";
+      }
+    });
+    panel.querySelector("#exp-g-form")?.addEventListener("submit", ev => {
+      ev.preventDefault();
+      const eingabe = parseDezimal(panel.querySelector("#exp-g").value);
+      if (Number.isFinite(eingabe) && Math.abs(eingabe - gAusSteigung(zustand.auswertung.kEingabe)) <= G_TOLERANZ) {
+        zustand.auswertung.gEingabe = eingabe; zustand.auswertung.gOk = true;
+        panelAuswerten();
+      } else {
+        panel.querySelector("#exp-g-meldung").textContent = `✗ Rechne g = 4π²/k mit deinem k = ${komma(zustand.auswertung.kEingabe, 2)} s²/m — Taschenrechner: 4·π² ÷ k.`;
+      }
+    });
+    panel.querySelector("#exp-csv").addEventListener("click", () =>
+      csvHerunterladen("fadenpendel-messung.csv", ["l in m", "t in s", "T in s", "T² in s²"], zeilen.map(z => [z.lMess, z.t, z.T, z.T2])));
+    panel.querySelector("#exp-zurueck").addEventListener("click", () => wechslePhase("messen"));
+    panel.querySelector("#exp-neustart").addEventListener("click", () => {
+      clearTimeout(zustand.timeout);
+      Object.assign(zustand, {
+        l: 0.80, klein: false, laengeOk: false, lMess: NaN, tAnzeige: NaN, misst: false,
+        laeuft: false, messungen: [], auswertung: { kEingabe: NaN, kOk: false, gEingabe: NaN, gOk: false }, info: ""
+      });
+      starteAnimation();
+      wechslePhase("aufbau");
+    });
+    zeichneDiagramm(punkte, reg);
+  }
+
+  function zeichneDiagramm(punkte, reg) {
+    const dia = panel.querySelector("#exp-diagramm");
+    if (!dia || !punkte.length) return;
+    const c = dia.getContext("2d");
+    const cText = farbe("--text"), cLeise = farbe("--text-leise"), cAkzent = farbe("--akzent");
+    const W = dia.width, H = dia.height, L0 = 52, U = H - 38, R = W - 14, O = 16;
+    const xMax = 1.6;
+    const yMax = Math.max(2, Math.ceil(Math.max(...punkte.map(p => p.y)) * 1.15));
+    const X = v => L0 + v / xMax * (R - L0);
+    const Y = v => U - v / yMax * (U - O);
+    c.clearRect(0, 0, W, H);
+    c.font = "12px system-ui, sans-serif";
+    c.lineWidth = 1;
+    for (let v = 0.2; v <= xMax + 1e-9; v += 0.2) {
+      c.strokeStyle = cLeise; c.globalAlpha = 0.4;
+      c.beginPath(); c.moveTo(X(v), U); c.lineTo(X(v), O); c.stroke(); c.globalAlpha = 1;
+      c.fillStyle = cText; c.fillText(komma(v, 1), X(v) - 10, U + 16);
+    }
+    for (let v = 1; v <= yMax; v += 1) {
+      c.strokeStyle = cLeise; c.globalAlpha = 0.4;
+      c.beginPath(); c.moveTo(L0, Y(v)); c.lineTo(R, Y(v)); c.stroke(); c.globalAlpha = 1;
+      c.fillStyle = cText; c.fillText(String(v), L0 - 18, Y(v) + 4);
+    }
+    c.strokeStyle = cText; c.lineWidth = 1.5;
+    c.beginPath(); c.moveTo(L0, O - 4); c.lineTo(L0, U); c.lineTo(R, U); c.stroke();
+    c.fillStyle = cText;
+    c.fillText("T² in s²", L0 - 44, 12); c.fillText("l in m", R - 36, U + 30); c.fillText("0", L0 - 12, U + 16);
+    if (Number.isFinite(reg.m) && reg.m > 0) {
+      const x2 = Math.min(xMax, (yMax - reg.b) / reg.m);
+      c.strokeStyle = cText; c.setLineDash([7, 5]); c.lineWidth = 1.5;
+      c.beginPath(); c.moveTo(X(0), Y(reg.b)); c.lineTo(X(x2), Y(reg.m * x2 + reg.b)); c.stroke(); c.setLineDash([]);
+    }
+    for (const p of punkte) { c.fillStyle = cAkzent; c.beginPath(); c.arc(X(p.x), Y(p.y), 5, 0, 7); c.fill(); }
+  }
+
+  starteAnimation();
+  wechslePhase("aufbau");
+}

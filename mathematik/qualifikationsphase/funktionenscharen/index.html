@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funktionenscharen — Qualifikationsphase · Mathematik — Lernwelt</title>
+<meta name="description" content="Funktionenscharen (eA): mit dem Parameter t rechnen, Extrempunkte und Nullstellen in Abhängigkeit von t bestimmen, gemeinsame Punkte aller Scharkurven finden und Ortskurven aufstellen — mit Beispielen, Verständnis-Checks und Übungen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .werte-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .werte-tabelle th, .werte-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: center; }
+  .werte-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Funktionenscharen</h1>
+  <p class="einleitung">Eine Brückenplanerin zeichnet nicht <em>einen</em> Bogen, sondern gleich eine ganze Mappe voller Varianten: flacher, steiler, gespiegelt — alle nach demselben Bauplan, nur ein Stellrad unterscheidet sie. Genau das leistet in der Analysis eine <strong>Funktionenschar</strong>: Ein Parameter $t$ im Funktionsterm fasst unendlich viele Funktionen zu einer Familie zusammen. Du lernst, mit $t$ zu rechnen wie mit einer Zahl, Extrempunkte in Abhängigkeit von $t$ zu bestimmen, gemeinsame Punkte aller Scharkurven aufzuspüren und mit <strong>Ortskurven</strong> die Bahnen zu beschreiben, auf denen die Extrempunkte wandern. Dieses Thema gehört vollständig zum <strong>erhöhten Anforderungsniveau (eA)</strong>. Voraussetzung ist sicheres Ableiten (<a href="../../einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html">Ableitungsregeln und Anwendungen</a>); die Vertiefung greift zusätzlich auf den <a href="../stammfunktionen-und-hauptsatz/index.html">Hauptsatz</a> zurück.</p>
+
+  <section aria-labelledby="fs-begriff">
+    <h2 id="fs-begriff">1. Was eine Funktionenschar ist</h2>
+    <p>Bisher galt: ein Funktionsterm, eine Funktion, ein Graph. Jetzt taucht im Term ein zweiter Buchstabe auf — etwa in $f_t(x) = x^2 + t$. Das kleine, tiefgestellte $t$ ist <em>keine</em> zweite Variable, sondern ein <strong>Parameter</strong>: ein von außen gewählter, dann aber fester Wert. Für jede Wahl entsteht eine eigene Funktion: $f_0(x) = x^2$, $f_1(x) = x^2 + 1$, $f_{-2}(x) = x^2 - 2$, …</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Funktionenschar</span>
+      <p class="formel-abgesetzt">$$f_t(x) = \ldots \quad \text{mit Parameter } t$$</p>
+      <p>Enthält ein Funktionsterm neben der Variablen $x$ einen Parameter $t$, dann gehört zu <em>jedem</em> $t$-Wert eine eigene Funktion $f_t$. Die Gesamtheit aller dieser Funktionen heißt <strong>Funktionenschar</strong>, ihre Graphen heißen <strong>Scharkurven</strong>. Sofern nichts anderes angegeben ist, darf $t$ jede reelle Zahl sein — die Schar besteht dann aus unendlich vielen Funktionen, von denen man stets nur einige Vertreter zeichnet.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Zwei Scharen im Vergleich — was bewirkt t?</span>
+      <p>Ob als Summand oder als Faktor: Derselbe Buchstabe kann ganz Verschiedenes anrichten. Bei $f_t(x) = x^2 + t$ wird zu jedem Funktionswert der Normalparabel die Zahl $t$ addiert — alle Scharkurven sind <strong>deckungsgleich</strong> und nur in y-Richtung verschoben. Bei $g_t(x) = t \cdot x^2$ wird dagegen jeder Funktionswert mit $t$ <strong>vervielfacht</strong>: Für $t > 1$ ist die Parabel gestreckt (steiler), für $0 < t < 1$ gestaucht (flacher), für $t < 0$ nach unten geöffnet — und für $t = 0$ entartet die Kurve zur x-Achse, denn $g_0(x) = 0$.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 300" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Koordinatensystem mit drei Scharkurven der Schar g t von x gleich t mal x Quadrat für die Parameterwerte t gleich 0,5, t gleich 1 und t gleich 2. Alle drei Parabeln öffnen nach oben und verlaufen durch den markierten Ursprung. Je größer t ist, desto steiler beziehungsweise schmaler ist die Parabel. Jede Kurve ist mit ihrem t-Wert beschriftet.">
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="24" y1="260" x2="344" y2="260"/>
+          <line x1="180" y1="272" x2="180" y2="26"/>
+        </g>
+        <path d="M352 260 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M180 18 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <text x="344" y="278" font-size="12" fill="var(--text-leise)" text-anchor="end">x</text>
+        <text x="190" y="24" font-size="12" fill="var(--text-leise)">y</text>
+        <!-- Skalenstriche -->
+        <line x1="230" y1="260" x2="230" y2="265" stroke="var(--text-leise)" stroke-width="1"/>
+        <text x="230" y="277" font-size="11" fill="var(--text-leise)" text-anchor="middle">1</text>
+        <line x1="175" y1="225" x2="180" y2="225" stroke="var(--text-leise)" stroke-width="1"/>
+        <text x="171" y="229" font-size="11" fill="var(--text-leise)" text-anchor="end">1</text>
+        <!-- Titel der Schar -->
+        <text x="24" y="38" font-size="13" font-weight="600" fill="var(--text)">Schar gₜ(x) = t · x²</text>
+        <!-- drei Scharkurven: t = 2, t = 1, t = 0,5 -->
+        <g fill="none" stroke="var(--mathe)" stroke-width="2.5">
+          <path d="M 92.5 45.6 Q 180 474.4 267.5 45.6"/>
+          <path d="M 65 74.9 Q 180 445.2 295 74.9"/>
+          <path d="M 55 150.6 Q 180 369.4 305 150.6"/>
+        </g>
+        <!-- t-Beschriftungen -->
+        <g font-size="13" font-weight="600" fill="var(--mathe)">
+          <text x="273" y="43">t = 2</text>
+          <text x="301" y="72">t = 1</text>
+          <text x="309" y="148">t = 0,5</text>
+        </g>
+        <!-- gemeinsamer Punkt (0|0) -->
+        <circle cx="180" cy="260" r="3.5" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+      </svg>
+    </div>
+    <p>Drei Vertreter der Schar $g_t(x) = t \cdot x^2$: Je größer $t$, desto steiler steigt die Parabel. Und ein Detail lohnt den zweiten Blick: <em>Alle</em> Kurven laufen durch den Ursprung — egal, welches $t$ man wählt. Solche t-unabhängigen Punkte sind kein Zufall, sondern haben System (Abschnitt 3).</p>
+  </section>
+
+  <section aria-labelledby="fs-rechnen">
+    <h2 id="fs-rechnen">2. Mit dem Parameter rechnen</h2>
+    <p>Die gute Nachricht: Für Scharen brauchst du keine einzige neue Rechenregel. Alles, was du an Kurvenuntersuchung kennst — Nullstellen, Ableitungen, Extrempunkte —, funktioniert wie gewohnt. Es gilt nur eine goldene Regel:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">t wie eine Zahl behandeln</span>
+      <p class="formel-abgesetzt">$$f_t(x) = x^2 - 2t \cdot x \;\rightarrow\; f_t'(x) = 2x - 2t$$</p>
+      <p>Beim Einsetzen, beim Ableiten nach $x$ und beim Lösen von Gleichungen nach $x$ ist der Parameter $t$ eine <strong>Konstante</strong> — genauso, als stünde dort eine $5$. Der Summand $-2t \cdot x$ ist linear in $x$ mit dem festen Faktor $-2t$, seine Ableitung also $-2t$. Ergebnisse dürfen $t$ enthalten: Eine Nullstelle „$x = 2t$“ ist eine Formel, die für <em>alle</em> Scharkurven gleichzeitig gilt.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Vollständig durchgerechnet — Tiefpunkte von fₜ(x) = x² − 2t·x</span>
+      <p><strong>Nullstellen:</strong> $x^2 - 2t x = x \cdot (x - 2t) = 0$ liefert $x_1 = 0$ und $x_2 = 2t$ — für $t = 0$ fallen beide zu einer doppelten Nullstelle zusammen.</p>
+      <p><strong>Extrempunkt:</strong> Mit $f_t'(x) = 2x - 2t$ und $f_t''(x) = 2$ ergibt die notwendige Bedingung $f_t'(x) = 0$ die Gleichung $2x - 2t = 0$, also $x = t$. Wegen $f_t''(t) = 2 > 0$ liegt dort für jedes $t$ ein Tiefpunkt. y-Koordinate:</p>
+      <p class="formel-abgesetzt">$$f_t(t) = t^2 - 2t \cdot t = -t^2 \quad\Rightarrow\quad T_t(t \mid -t^2)$$</p>
+      <p><strong>Probe mit konkretem t:</strong> Für $t = 3$ ist $f_3(x) = x^2 - 6x = (x - 3)^2 - 9$ — Scheitel $(3 \mid -9)$, und tatsächlich gilt $(t \mid -t^2) = (3 \mid -9)$. Eine solche Stichprobe mit einem festen $t$-Wert ist die beste Kontrolle jeder Schar-Rechnung.</p>
+    </div>
+    <p>Das Ergebnis $T_t(t \mid -t^2)$ ist eine Art Formelsammlung für unendlich viele Funktionen auf einen Schlag: $t = -1$ liefert den Tiefpunkt $(-1 \mid -1)$, $t = 2$ den Tiefpunkt $(2 \mid -4)$. Genau diese Effizienz macht Scharen im erhöhten Anforderungsniveau so wichtig.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Gib fₜ′(x) und fₜ″(x) für fₜ(x) = x³ − t·x² an.</summary>
+      <div class="check-antwort"><p>$t$ ist beim Ableiten nach $x$ eine Konstante: $f_t'(x) = 3x^2 - 2t \cdot x$ und $f_t''(x) = 6x - 2t$. Der Faktor $t$ bleibt also einfach stehen — abgeleitet wird nur nach $x$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="fs-gemeinsam">
+    <h2 id="fs-gemeinsam">3. Gemeinsame Punkte aller Scharkurven</h2>
+    <p>Im Schaubild von Abschnitt 1 liefen alle Scharkurven durch den Ursprung. Wie findet man solche gemeinsamen Punkte systematisch? Die Grundidee: Ein Punkt gehört genau dann zu <em>allen</em> Scharkurven, wenn sein Funktionswert <strong>nicht von $t$ abhängt</strong>. Dafür gibt es zwei gleichwertige Ansätze.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">t-unabhängige Punkte finden</span>
+      <p><strong>Weg 1 — zwei Scharkurven schneiden:</strong> Setze $f_{t_1}(x) = f_{t_2}(x)$ für zwei <em>verschiedene</em> Parameterwerte $t_1 \neq t_2$ an. Die Lösungen $x$, die für beliebige $t_1, t_2$ herauskommen, sind die gesuchten Stellen.</p>
+      <p><strong>Weg 2 — nach t sortieren:</strong> Bringe den Term in die Form $f_t(x) = t \cdot (\ldots) + \text{Rest}$. An den Stellen, an denen die Klammer null wird, hat $t$ keinen Einfluss mehr — der Funktionswert ist der t-freie Rest.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Vollständig durchgerechnet — fₜ(x) = t·x² − 4t + 3</span>
+      <p><strong>Weg 1:</strong> Aus $t_1 x^2 - 4t_1 + 3 = t_2 x^2 - 4t_2 + 3$ wird durch Sortieren $t_1(x^2 - 4) = t_2(x^2 - 4)$, also $(t_1 - t_2)(x^2 - 4) = 0$. Wegen $t_1 \neq t_2$ muss $x^2 - 4 = 0$ gelten: $x = -2$ oder $x = 2$.</p>
+      <p><strong>Weg 2:</strong> $f_t(x) = t \cdot (x^2 - 4) + 3$ — die Klammer wird bei $x = \pm 2$ null, übrig bleibt der Wert $3$.</p>
+      <p>Beide Wege liefern dieselben gemeinsamen Punkte $P_1(-2 \mid 3)$ und $P_2(2 \mid 3)$. <strong>Kontrolle</strong> mit konkreten Parameterwerten: $f_1(2) = 4 - 4 + 3 = 3$ und $f_{-2}(2) = -8 + 8 + 3 = 3$ — passt.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Durch welchen Punkt laufen alle Kurven der Schar gₜ(x) = x² + t·x?</summary>
+      <div class="check-antwort"><p>Nach $t$ sortiert: $g_t(x) = t \cdot x + x^2$. Die „Klammer“ ist hier einfach $x$ — sie wird nur bei $x = 0$ null, dort gilt $g_t(0) = 0$ für jedes $t$. Gemeinsamer Punkt: $(0 \mid 0)$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="fs-ortskurve">
+    <h2 id="fs-ortskurve">4. Ortskurven</h2>
+    <p>Zurück zu den Tiefpunkten $T_t(t \mid -t^2)$ aus Abschnitt 2. Wenn $t$ wandert, wandert der Tiefpunkt mit — aber nicht irgendwie, sondern auf einer festen Bahn:</p>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Tiefpunkte der Schar f t von x gleich x Quadrat minus 2 t x für vier Parameterwerte</caption>
+      <thead>
+        <tr><th scope="col">t</th><th scope="col">−1</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Tiefpunkt</th><td>(−1 | −1)</td><td>(0 | 0)</td><td>(1 | −1)</td><td>(2 | −4)</td></tr>
+      </tbody>
+    </table>
+    <p>Die y-Koordinate ist stets das negative Quadrat der x-Koordinate — die Tiefpunkte scheinen auf der Parabel $y = -x^2$ zu liegen. Diese Bahn heißt <strong>Ortskurve</strong>, und man findet sie, indem man den Parameter aus den Koordinaten <strong>eliminiert</strong>:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Ortskurve bestimmen — in drei Schritten</span>
+      <p>1. Den Extrempunkt in Abhängigkeit von $t$ bestimmen: $x = \ldots$ und $y = \ldots$ (beide Gleichungen enthalten $t$).</p>
+      <p>2. Die x-Gleichung nach $t$ auflösen.</p>
+      <p>3. Das Ergebnis in die y-Gleichung einsetzen — übrig bleibt eine Gleichung $y = \ldots$ ganz ohne $t$: die <strong>Ortskurve</strong>.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Ortskurve der Tiefpunkte Tₜ(t | −t²)</span>
+      <p>Aus dem Tiefpunkt liest man die beiden Gleichungen $x = t$ und $y = -t^2$ ab. Schritt 2: $x = t$ ist bereits nach $t$ aufgelöst, $t = x$. Schritt 3: Einsetzen in $y = -t^2$ liefert</p>
+      <p class="formel-abgesetzt">$$y = -x^2$$</p>
+      <p><strong>Probe:</strong> Für $t = 2$ liegt der Tiefpunkt bei $(2 \mid -4)$, und die Ortskurve liefert $y = -2^2 = -4$ — der Punkt liegt auf der Bahn.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 330" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Koordinatensystem mit drei deckungsgleichen, nach oben geöffneten Parabeln der Schar f t von x gleich x Quadrat minus 2 t x für t gleich minus 1, t gleich 0 und t gleich 1. Die markierten Tiefpunkte liegen bei minus 1 und minus 1, im Ursprung sowie bei 1 und minus 1. Durch alle Tiefpunkte verläuft gestrichelt die nach unten geöffnete Ortskurve y gleich minus x Quadrat.">
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="24" y1="150" x2="344" y2="150"/>
+          <line x1="180" y1="312" x2="180" y2="26"/>
+        </g>
+        <path d="M352 150 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M180 18 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <text x="334" y="142" font-size="12" fill="var(--text-leise)" text-anchor="end">x</text>
+        <text x="190" y="24" font-size="12" fill="var(--text-leise)">y</text>
+        <!-- Skalenstriche -->
+        <line x1="232" y1="150" x2="232" y2="155" stroke="var(--text-leise)" stroke-width="1"/>
+        <text x="240" y="166" font-size="11" fill="var(--text-leise)">1</text>
+        <line x1="175" y1="190" x2="180" y2="190" stroke="var(--text-leise)" stroke-width="1"/>
+        <text x="171" y="194" font-size="11" fill="var(--text-leise)" text-anchor="end">−1</text>
+        <!-- Titel der Schar -->
+        <text x="24" y="38" font-size="13" font-weight="600" fill="var(--text)">Schar fₜ(x) = x² − 2t·x</text>
+        <!-- Ortskurve y = −x² (gestrichelt) -->
+        <path d="M 89 272.5 Q 180 27.5 271 272.5" fill="none" stroke="var(--akzent)" stroke-width="2" stroke-dasharray="6 5"/>
+        <text x="271" y="292" font-size="13" font-weight="600" fill="var(--akzent)" text-anchor="middle">Ortskurve y = −x²</text>
+        <!-- drei Scharkurven: t = −1, 0, 1 -->
+        <g fill="none" stroke="var(--mathe)" stroke-width="2.5">
+          <path d="M 52.6 105.9 Q 128 274.1 203.4 105.9"/>
+          <path d="M 104.6 65.9 Q 180 234.1 255.4 65.9"/>
+          <path d="M 156.6 105.9 Q 232 274.1 307.4 105.9"/>
+        </g>
+        <!-- t-Beschriftungen -->
+        <g font-size="13" font-weight="600" fill="var(--mathe)" text-anchor="middle">
+          <text x="52.6" y="94">t = −1</text>
+          <text x="255.4" y="54">t = 0</text>
+          <text x="307.4" y="94">t = 1</text>
+        </g>
+        <!-- Tiefpunkte -->
+        <g fill="var(--bg)" stroke="var(--text)" stroke-width="1.8">
+          <circle cx="128" cy="190" r="3.5"/>
+          <circle cx="180" cy="150" r="3.5"/>
+          <circle cx="232" cy="190" r="3.5"/>
+        </g>
+      </svg>
+    </div>
+    <p>Drei Scharkurven für $t = -1$, $t = 0$ und $t = 1$ — ihre Tiefpunkte (Punkte) liegen exakt auf der gestrichelten Ortskurve $y = -x^2$. Genau genommen gehören zur Ortskurve nur die Punkte, die wirklich von einem Tiefpunkt erreicht werden; da $t$ hier alle reellen Zahlen durchläuft und $x = t$ gilt, ist das die komplette Parabel.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Die Schar fₜ(x) = (x − t)² + 2t hat die Tiefpunkte (t | 2t). Bestimme die Ortskurve.</summary>
+      <div class="check-antwort"><p>Aus $x = t$ und $y = 2t$ wird durch Einsetzen von $t = x$ sofort $y = 2x$. Die Ortskurve ist hier also eine <em>Gerade</em> — Ortskurven können Geraden, Parabeln oder ganz andere Kurven sein.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="fs-anwendung">
+    <h2 id="fs-anwendung">5. Scharen in Anwendungen — Fallunterscheidung nach t</h2>
+    <p>Im Sachkontext ist der Parameter das <strong>Stellrad des Designs</strong>: Abwurfwinkel einer Flugbahn, Krümmung eines Brückenbogens, Dosierung in einem Medikamentenmodell. Eine Schar beantwortet dann alle Designfragen auf einmal — wenn man sauber unterscheidet, welche $t$-Werte überhaupt sinnvoll sind.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Brückenbogen mit Designparameter</span>
+      <p>Ein Planungsbüro beschreibt Bogenformen über einer $8\,\text{m}$ breiten Durchfahrt durch die Schar $f_t(x) = t \cdot x \cdot (8 - x)$ mit $0 \le x \le 8$ ($x$ und $f_t(x)$ in Metern). Die Nullstellen $x = 0$ und $x = 8$ sind die Auflagepunkte — sie sind t-unabhängig, die Spannweite steht also fest. Aus Symmetriegründen liegt der Scheitel in der Mitte bei $x = 4$ mit der Höhe $f_t(4) = t \cdot 4 \cdot 4 = 16t$. Soll die Durchfahrt in der Mitte $4\,\text{m}$ hoch sein, führt $16t = 4$ auf den Designwert $t = 0{,}25$.</p>
+    </div>
+    <p>Welche Form der Graph hat, hängt allerdings vom <em>Vorzeichen</em> von $t$ ab — ausmultipliziert ist $f_t(x) = -t x^2 + 8t x$, und der Koeffizient $-t$ vor $x^2$ bestimmt die Öffnungsrichtung. Solche Fragen klärt man systematisch mit den drei Fällen $t > 0$, $t = 0$ und $t < 0$:</p>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Fallunterscheidung für den Brückenbogen f t von x gleich t mal x mal Klammer 8 minus x nach dem Vorzeichen des Parameters t</caption>
+      <thead>
+        <tr><th scope="col">Fall</th><th scope="col">Graph</th><th scope="col">Bedeutung im Kontext</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>t &gt; 0</td><td>nach unten geöffnete Parabel</td><td>Bogen über der Fahrbahn, Scheitelhöhe 16t</td></tr>
+        <tr><td>t = 0</td><td>f₀(x) = 0 — die x-Achse</td><td>entartet: kein Bogen, nur die Fahrbahnlinie</td></tr>
+        <tr><td>t &lt; 0</td><td>nach oben geöffnete Parabel</td><td>„Bogen“ hängt unter die Fahrbahn durch — unbrauchbar</td></tr>
+      </tbody>
+    </table>
+    <p>Auch beim Rechnen selbst lauert der Fall $t = 0$: Die Scheitelstelle folgt aus $f_t'(x) = t \cdot (8 - 2x) = 0$, und durch $t$ <strong>teilen</strong> darf man nur für $t \neq 0$ — im Fall $t = 0$ ist die Gleichung für jedes $x$ erfüllt, es gibt gar keinen Scheitel.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Wann ist eine Fallunterscheidung nötig?</span>
+      <p>Immer dann, wenn der Wert von $t$ den Charakter des Ergebnisses ändert: wenn du durch $t$ <strong>teilst</strong> (Fall $t = 0$ gesondert prüfen), wenn das <strong>Vorzeichen</strong> von $t$ über Öffnungsrichtung oder Hoch-/Tiefpunkt entscheidet (etwa bei $f_t'' = 2t$), oder wenn ein Term wie $\sqrt{t}$ nur für bestimmte $t$ definiert ist. Arbeite die Fälle $t > 0$, $t = 0$ und $t < 0$ einzeln ab und notiere zu jedem Fall das Ergebnis — so übersieht man keinen Sonderfall.</p>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Integrale über Scharen — wenn die Fläche von t abhängt</summary>
+    <div class="vertiefung-inhalt">
+      <p>Die goldene Regel „$t$ wie eine Zahl behandeln“ trägt noch weiter: Auch <strong>integrieren</strong> kann man eine Schar, und sogar die Grenzen dürfen $t$ enthalten. Das Ergebnis ist dann keine Zahl, sondern eine Formel in $t$ — eine Flächenbilanz für jede Scharkurve gleichzeitig.</p>
+      <p>Beispiel: Die Schar $f_t(x) = x^2 - 2t \cdot x$ aus Abschnitt 2 hat die Nullstellen $0$ und $2t$. Für $t > 0$ verläuft der Graph dazwischen unterhalb der x-Achse. Mit der Stammfunktion $F(x) = \frac{1}{3}x^3 - t x^2$ (auch hier: $t$ ist beim Aufleiten nach $x$ konstant) liefert der Hauptsatz:</p>
+      <p class="formel-abgesetzt">$$\int_0^{2t} \left( x^2 - 2t x \right) \mathrm{d}x = \left[ \frac{1}{3}x^3 - t x^2 \right]_0^{2t} = \frac{8t^3}{3} - 4t^3 = -\frac{4}{3}t^3$$</p>
+      <p>Das Integral ist negativ, weil die Fläche unter der Achse liegt; der eingeschlossene Flächeninhalt ist der Betrag $A(t) = \frac{4}{3}t^3$. <strong>Stichprobe</strong> mit $t = 1$: $\int_0^2 (x^2 - 2x)\,\mathrm{d}x = \left[ \frac{1}{3}x^3 - x^2 \right]_0^2 = \frac{8}{3} - 4 = -\frac{4}{3}$ — die Formel stimmt.</p>
+      <p>Jetzt lassen sich Designfragen rückwärts stellen: Für welches $t > 0$ schließt die Kurve mit der x-Achse genau $36$ Flächeneinheiten ein? Aus $\frac{4}{3}t^3 = 36$ folgt $t^3 = 27$, also $t = 3$. Diese Kombination — Schar plus Integral mit parameterabhängigen Grenzen — ist in eA-Klausuren ein Dauergast und genau deshalb Gegenstand der Zusatzaufgabe in den Übungen.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Rechnen mit dem Parameter über gemeinsame Punkte, Fallunterscheidungen und Ortskurven bis zum Integral über eine Schar — mit gestuften Tipps, vollständigen Lösungswegen und CAS-Kontrollen für den ClassPad II.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

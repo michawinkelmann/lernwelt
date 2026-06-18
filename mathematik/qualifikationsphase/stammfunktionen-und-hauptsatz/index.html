@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stammfunktionen und Hauptsatz — Qualifikationsphase · Mathematik — Lernwelt</title>
+<meta name="description" content="Stammfunktionen bilden, das bestimmte Integral als Grenzwert von Produktsummen verstehen und mit dem Hauptsatz über F(b) − F(a) berechnen — mit Integralfunktionen, Beispielen, Verständnis-Checks und Übungen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .werte-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .werte-tabelle th, .werte-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: center; }
+  .werte-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Stammfunktionen und Hauptsatz</h1>
+  <p class="einleitung">Ein Sensor am Zulauf eines Regenrückhaltebeckens misst pausenlos, wie viel Wasser pro Stunde hereinströmt. Was er nicht verrät: wie viel Wasser am Abend im Becken steht. In der Einführungsphase bist du den Weg vom Bestand zur Änderungsrate gegangen — jetzt geht es in die Gegenrichtung: vom Zufluss zurück zum Wasserstand, von der Änderung zurück zum Bestand. Dafür bekommst du zwei neue Werkzeuge, die <strong>Stammfunktion</strong> und das <strong>bestimmte Integral</strong> — und mit dem <strong>Hauptsatz</strong> die überraschende Brücke, die beide verbindet.</p>
+
+  <section aria-labelledby="stf-motivation">
+    <h2 id="stf-motivation">1. Vom Bestand zur Änderung — und zurück</h2>
+    <p>Im Thema <a href="../../einfuehrungsphase/aenderungsraten-und-ableitung/index.html">Änderungsraten und Ableitung</a> war die Richtung klar: Aus der Bestandsfunktion — etwa der Wassermenge $V(t)$ in einem Tank — liefert die Ableitung die momentane Änderungsrate $V'(t)$, hier die Zuflussrate in Litern pro Stunde. In der Praxis kennt man aber oft nur die Rate: Der Sensor misst den Zufluss $r(t)$, der Tacho die Geschwindigkeit, das Energiemessgerät die elektrische Leistung. Gesucht ist jeweils der Bestand — Wassermenge, zurückgelegte Strecke, verbrauchte Energie.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Konstante Rate</span>
+      <p>Fließt Wasser konstant mit $r = 60\,\frac{\text{L}}{\text{h}}$ in einen leeren Tank, enthält er nach $3\,\text{h}$ genau $60 \cdot 3 = 180\,\text{L}$ — Rate mal Zeit. Im Graphen von $r$ ist dieses Produkt ein Rechteck mit Höhe $60$ und Breite $3$: Die zugeflossene Menge ist die <strong>Fläche unter dem Graphen der Rate</strong>. Diese Beobachtung trägt weiter als jede einzelne Formel, denn sie bleibt auch richtig, wenn die Rate sich ständig ändert — nur ist die Fläche dann krummlinig begrenzt.</p>
+    </div>
+    <p>Damit stehen die beiden Aufgaben dieses Themas fest. Erstens: das Ableiten umkehren — zu gegebenem $f$ eine Funktion $F$ finden, deren Ableitung $f$ ist (Abschnitt 2). Zweitens: Flächen unter krummen Graphen messen (Abschnitt 3). Dass beides im Kern dasselbe Problem ist, gehört zu den großen Überraschungen der Mathematik — und heißt deshalb Hauptsatz (Abschnitt 4).</p>
+  </section>
+
+  <section aria-labelledby="stf-stammfunktion">
+    <h2 id="stf-stammfunktion">2. Stammfunktionen</h2>
+    <p>Die Umkehraufgabe zum Ableiten bekommt zuerst einen Namen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Stammfunktion</span>
+      <p class="formel-abgesetzt">$$F'(x) = f(x)$$</p>
+      <p>Eine Funktion $F$ heißt <strong>Stammfunktion</strong> von $f$ (auf einem Intervall), wenn dort $F'(x) = f(x)$ gilt. Ableiten von $F$ muss also wieder $f$ ergeben — das ist zugleich die Probe, mit der du jede gefundene Stammfunktion kontrollierst.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Eine Stammfunktion von 2x</span>
+      <p>Gesucht ist eine Stammfunktion von $f(x) = 2x$. Ein Kandidat: $F(x) = x^2$, denn $(x^2)' = 2x$ — Probe bestanden. Aber auch $x^2 + 5$ und $x^2 - 1$ bestehen sie, weil jeder konstante Summand beim Ableiten wegfällt. $f$ hat also nicht <em>eine</em> Stammfunktion, sondern unendlich viele.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die „+C“-Familie</span>
+      <p>Ist $F$ eine Stammfunktion von $f$, dann auch $F(x) + C$ für jede Konstante $C$ — und das sind bereits alle: Zwei Stammfunktionen derselben Funktion unterscheiden sich höchstens um eine additive Konstante. Ihre Graphen bilden eine Familie <strong>vertikal verschobener</strong> Kurven mit identischem Steigungsverlauf.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 300" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Koordinatensystem mit drei deckungsgleichen, vertikal gegeneinander verschobenen Parabeln: den Graphen der Stammfunktionen x Quadrat minus 1, x Quadrat und x Quadrat plus 1 derselben Funktion f von x gleich 2x. Eine gestrichelte senkrechte Linie markiert die Stelle x gleich 1; dort tragen alle drei Graphen kurze grüne Tangentenstücke, die exakt parallel sind — jede Stammfunktion hat an der Stelle 1 dieselbe Steigung 2.">
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="24" y1="200" x2="344" y2="200"/>
+          <line x1="180" y1="268" x2="180" y2="26"/>
+        </g>
+        <path d="M352 200 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M180 18 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <text x="344" y="218" font-size="12" fill="var(--text-leise)" text-anchor="end">x</text>
+        <text x="190" y="24" font-size="12" fill="var(--text-leise)">F(x)</text>
+        <!-- Skalenstrich y = 1 -->
+        <line x1="175" y1="155" x2="180" y2="155" stroke="var(--text-leise)" stroke-width="1"/>
+        <text x="171" y="159" font-size="11" fill="var(--text-leise)" text-anchor="end">1</text>
+        <!-- gestrichelte Hilfslinie an der Stelle x = 1 -->
+        <line x1="240" y1="200" x2="240" y2="104" stroke="var(--text-leise)" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="247" y="216" font-size="12" fill="var(--text-leise)">1</text>
+        <!-- Familienname oben links -->
+        <text x="24" y="38" font-size="13" font-weight="600" fill="var(--text)">Familie F(x) = x² + C</text>
+        <!-- drei Stammfunktions-Graphen: x²+1, x², x²−1 (vertikal verschoben) -->
+        <g fill="none" stroke="var(--mathe)" stroke-width="2.5">
+          <path d="M 90 53.8 Q 180 256.3 270 53.8"/>
+          <path d="M 90 98.8 Q 180 301.3 270 98.8"/>
+          <path d="M 90 143.8 Q 180 346.3 270 143.8"/>
+        </g>
+        <!-- parallele Tangentenstücke an der Stelle x = 1 (Steigung 2) -->
+        <g stroke="var(--ok)" stroke-width="2.5">
+          <line x1="225" y1="132.5" x2="255" y2="87.5"/>
+          <line x1="225" y1="177.5" x2="255" y2="132.5"/>
+          <line x1="225" y1="222.5" x2="255" y2="177.5"/>
+        </g>
+        <text x="258" y="240" font-size="12" font-weight="600" fill="var(--ok)" text-anchor="middle">gleiche Steigung f(1) = 2</text>
+        <!-- Kurvenpunkte bei x = 1 -->
+        <g fill="var(--bg)" stroke="var(--text)" stroke-width="1.8">
+          <circle cx="240" cy="110" r="3.5"/>
+          <circle cx="240" cy="155" r="3.5"/>
+          <circle cx="240" cy="200" r="3.5"/>
+        </g>
+        <!-- Beschriftung der drei Graphen -->
+        <g font-size="13" font-weight="600" fill="var(--mathe)">
+          <text x="276" y="58">x² + 1</text>
+          <text x="276" y="103">x²</text>
+          <text x="276" y="148">x² − 1</text>
+        </g>
+      </svg>
+    </div>
+    <p>Alle drei Graphen gehören zu Stammfunktionen von $f(x) = 2x$: An jeder Stelle — im Bild bei $x = 1$ — haben sie dieselbe Steigung $f(1) = 2$, die grünen Tangentenstücke sind parallel. Erst eine Zusatzbedingung wie „der Graph soll durch $(0 \mid 2)$ laufen“ legt das $C$ und damit eine einzelne Stammfunktion fest.</p>
+    <p>Wie findet man Stammfunktionen systematisch? Indem man die Ableitungsregeln rückwärts liest. Beim Ableiten von $x^{n+1}$ springt der Exponent nach vorn: $(x^{n+1})' = (n+1) \cdot x^n$. Teilt man vorab durch $n + 1$, bleibt beim Ableiten genau $x^n$ übrig:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Potenzregel rückwärts — mit Faktor- und Summenregel</span>
+      <p class="formel-abgesetzt">$$f(x) = x^n \;\rightarrow\; F(x) = \frac{1}{n+1}\,x^{n+1}$$</p>
+      <p>Exponent um $1$ erhöhen, durch den <em>neuen</em> Exponenten teilen. Konstante Faktoren bleiben wie beim Ableiten einfach stehen, Summen werden Summand für Summand behandelt — Faktor- und Summenregel gelten auch rückwärts. Das Bilden einer Stammfunktion wird umgangssprachlich oft „Aufleiten“ genannt.</p>
+    </div>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Wichtige Stammfunktionen ganzrationaler Bausteine; zu jeder darf eine beliebige Konstante C addiert werden</caption>
+      <thead>
+        <tr><th scope="col">f(x)</th><th scope="col">eine Stammfunktion F(x)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>$c$ (Konstante)</td><td>$c \cdot x$</td></tr>
+        <tr><td>$x$</td><td>$\frac{1}{2}x^2$</td></tr>
+        <tr><td>$x^2$</td><td>$\frac{1}{3}x^3$</td></tr>
+        <tr><td>$x^3$</td><td>$\frac{1}{4}x^4$</td></tr>
+        <tr><td>$x^n$</td><td>$\frac{1}{n+1}\,x^{n+1}$</td></tr>
+      </tbody>
+    </table>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Ein ganzes Polynom</span>
+      <p>$f(x) = 6x^2 - 4x + 5$ wird Summand für Summand behandelt: $6x^2 \rightarrow 6 \cdot \frac{1}{3}x^3 = 2x^3$, dann $-4x \rightarrow -2x^2$ und $5 \rightarrow 5x$. Also $F(x) = 2x^3 - 2x^2 + 5x$ (plus beliebiges $C$). Probe durch Ableiten: $F'(x) = 6x^2 - 4x + 5 = f(x)$ — passt.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Gib eine Stammfunktion von f(x) = 3x² + 4 an.</summary>
+      <div class="check-antwort"><p>$F(x) = x^3 + 4x$, denn $(x^3 + 4x)' = 3x^2 + 4$. Ebenso richtig ist $x^3 + 4x + C$ für jede Konstante $C$ — etwa $x^3 + 4x - 7$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="stf-integral">
+    <h2 id="stf-integral">3. Das bestimmte Integral</h2>
+    <p>Zurück zur Fläche. Unter dem Graphen einer konstanten Rate lag ein Rechteck — aber wie groß ist die Fläche unter einer <em>Kurve</em>, etwa unter der Parabel $f(x) = x^2$ zwischen $x = 0$ und $x = 2$? Die Idee der Integralrechnung: Wenn du eine Fläche nicht direkt messen kannst, pflastere sie mit schmalen Rechteckstreifen, deren Flächen du kennst.</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 290" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Koordinatensystem mit dem Graphen von f von x gleich x Quadrat über dem Intervall von 0 bis 2. Das Intervall ist in fünf gleich breite Streifen geteilt. Gefüllte Rechtecke, deren Höhen die Funktionswerte am jeweils linken Streifenrand sind, bleiben unterhalb des Graphen und bilden die Untersumme; der erste dieser Streifen hat die Höhe 0. Gestrichelt umrandete, etwas höhere Rechtecke mit den Funktionswerten am rechten Rand überragen den Graphen und bilden die Obersumme. Die gesuchte Fläche unter der Parabel liegt zwischen Unter- und Obersumme.">
+        <!-- Untersumme: gefüllte Rechtecke (linker Rand) -->
+        <g fill="var(--mathe)" fill-opacity="0.25" stroke="var(--mathe)" stroke-width="1">
+          <rect x="98" y="232.8" width="48" height="7.2"/>
+          <rect x="146" y="211.2" width="48" height="28.8"/>
+          <rect x="194" y="175.2" width="48" height="64.8"/>
+          <rect x="242" y="124.8" width="48" height="115.2"/>
+        </g>
+        <!-- Obersumme: gestrichelt umrandete Rechtecke (rechter Rand) -->
+        <g fill="none" stroke="var(--akzent)" stroke-width="1.8" stroke-dasharray="4 3">
+          <rect x="50" y="232.8" width="48" height="7.2"/>
+          <rect x="98" y="211.2" width="48" height="28.8"/>
+          <rect x="146" y="175.2" width="48" height="64.8"/>
+          <rect x="194" y="124.8" width="48" height="115.2"/>
+          <rect x="242" y="60" width="48" height="180"/>
+        </g>
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="28" y1="240" x2="332" y2="240"/>
+          <line x1="50" y1="252" x2="50" y2="30"/>
+        </g>
+        <path d="M340 240 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M50 22 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <text x="330" y="232" font-size="12" fill="var(--text-leise)" text-anchor="end">x</text>
+        <text x="60" y="28" font-size="12" fill="var(--text-leise)">f(x)</text>
+        <!-- Skalenstriche -->
+        <line x1="290" y1="240" x2="290" y2="245" stroke="var(--text-leise)" stroke-width="1"/>
+        <g font-size="11" fill="var(--text-leise)" text-anchor="middle">
+          <text x="50" y="258">0</text>
+          <text x="290" y="258">2</text>
+        </g>
+        <!-- Graph von f(x) = x² -->
+        <path d="M 50 240 Q 179 240 308 32" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <text x="300" y="50" font-size="13" font-weight="600" fill="var(--mathe)" text-anchor="end">f(x) = x²</text>
+        <!-- Legende -->
+        <rect x="62" y="36" width="16" height="11" fill="var(--mathe)" fill-opacity="0.25" stroke="var(--mathe)" stroke-width="1"/>
+        <text x="84" y="46" font-size="12" fill="var(--text)">Untersumme</text>
+        <rect x="62" y="56" width="16" height="11" fill="none" stroke="var(--akzent)" stroke-width="1.8" stroke-dasharray="4 3"/>
+        <text x="84" y="66" font-size="12" fill="var(--text)">Obersumme</text>
+      </svg>
+    </div>
+    <p>Im Bild ist das Intervall $[0; 2]$ in fünf Streifen der Breite $0{,}4$ geteilt. Die gefüllten Rechtecke bleiben unter dem Graphen — ihre Höhen sind die Funktionswerte am jeweils linken Rand. Zusammen bilden sie die <strong>Untersumme</strong> $U_5 = 0{,}4 \cdot (0 + 0{,}16 + 0{,}64 + 1{,}44 + 2{,}56) = 1{,}92$. Die gestrichelten Rechtecke nutzen den rechten Rand und überragen den Graphen: <strong>Obersumme</strong> $O_5 = 3{,}52$. Die wahre Fläche liegt dazwischen. Verfeinert man auf 50 Streifen, wird die Zange eng: $U_{50} = 2{,}5872$ und $O_{50} = 2{,}7472$. Je schmaler die Streifen, desto näher rücken Unter- und Obersumme von beiden Seiten an denselben Wert heran — und genau dieser Grenzwert <em>ist</em> die gesuchte Fläche.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Das bestimmte Integral</span>
+      <p class="formel-abgesetzt">$$\int_a^b f(x)\,\mathrm{d}x$$</p>
+      <p>So bezeichnet man den gemeinsamen Grenzwert, gegen den die Produktsummen (Streifenhöhe mal Streifenbreite) bei immer feinerer Zerlegung von $[a; b]$ streben — gelesen: „Integral von $a$ bis $b$ über $f(x)\,\mathrm{d}x$“. Das Zeichen $\int$ ist ein stilisiertes S wie <em>Summe</em>, $a$ und $b$ heißen untere und obere <strong>Grenze</strong>, $f$ heißt <strong>Integrand</strong>, und das $\mathrm{d}x$ erinnert an die Streifenbreite $\Delta x$, die gegen null geht.</p>
+    </div>
+    <p>Eine Feinheit hat es in sich: Verläuft der Graph <em>unterhalb</em> der x-Achse, sind die „Höhen“ $f(x)$ negativ — und mit ihnen die Produktsummen. Das Integral zählt solche Flächenstücke negativ. Beispiel: $\int_0^3 (-2)\,\mathrm{d}x = -6$, denn das Rechteck (Breite $3$, Höhe $2$) liegt komplett unter der Achse.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Orientierter Flächeninhalt — Vorzeichen beachten!</span>
+      <p>Das bestimmte Integral misst den <strong>orientierten</strong> Flächeninhalt: Flächenstücke oberhalb der x-Achse gehen positiv ein, Flächenstücke unterhalb negativ. Der Integralwert ist also eine <em>Bilanz</em> — er kann sogar null sein, obwohl der Graph deutlich sichtbare Flächen mit der Achse einschließt. Wie man aus dieser Bilanz echte Flächeninhalte gewinnt — auch zwischen zwei Graphen —, vertieft das Schwesterthema <a href="../flaechen-und-integralanwendungen/index.html">Flächen und Integralanwendungen</a>.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Welches Vorzeichen und welchen Wert hat das Integral über f(x) = x − 2 von 0 bis 1?</summary>
+      <div class="check-antwort"><p>Auf $[0; 1]$ verläuft der Graph komplett unterhalb der x-Achse (die Werte reichen von $f(0) = -2$ bis $f(1) = -1$) — das Integral ist negativ. Die eingeschlossene Fläche ist ein Trapez mit den Parallelseiten $2$ und $1$ bei Breite $1$, also Inhalt $\frac{2 + 1}{2} \cdot 1 = 1{,}5$. Damit gilt $\int_0^1 (x - 2)\,\mathrm{d}x = -1{,}5$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="stf-hauptsatz">
+    <h2 id="stf-hauptsatz">4. Der Hauptsatz</h2>
+    <p>Streifensummen machen das Integral begrifflich klar — zum Rechnen sind sie eine Qual. Die Abkürzung liefert der zentrale Satz der gesamten Analysis. Er verbindet die beiden Stränge dieses Themas: Flächenmessung (Integral) und umgekehrtes Ableiten (Stammfunktion).</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Hauptsatz der Differential- und Integralrechnung</span>
+      <p class="formel-abgesetzt">$$\int_a^b f(x)\,\mathrm{d}x = F(b) - F(a)$$</p>
+      <p>Dabei ist $F$ eine beliebige Stammfunktion von $f$. Mit der <strong>Klammer-Schreibweise</strong> notiert man die Rechnung platzsparend:</p>
+      <p class="formel-abgesetzt">$$\int_a^b f(x)\,\mathrm{d}x = \left[ F(x) \right]_a^b = F(b) - F(a)$$</p>
+      <p>Erst die obere Grenze einsetzen, dann die untere, dann subtrahieren — die Flächenbestimmung schrumpft auf das Einsetzen zweier Zahlen.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Vollständig durchgerechnet</span>
+      <p>Gesucht ist $\int_1^3 (2x + 1)\,\mathrm{d}x$. Stammfunktion: $F(x) = x^2 + x$ (Probe: $F'(x) = 2x + 1$). Dann:</p>
+      <p class="formel-abgesetzt">$$\int_1^3 (2x + 1)\,\mathrm{d}x = \left[ x^2 + x \right]_1^3 = (3^2 + 3) - (1^2 + 1) = 12 - 2 = 10$$</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Die Parabelfläche aus Abschnitt 3</span>
+      <p class="formel-abgesetzt">$$\int_0^2 x^2\,\mathrm{d}x = \left[ \frac{1}{3}x^3 \right]_0^2 = \frac{8}{3} - 0 = \frac{8}{3} \approx 2{,}67$$</p>
+      <p>Genau der Wert, den Unter- und Obersummen mühsam eingekreist hatten ($2{,}5872 < \frac{8}{3} < 2{,}7472$) — hier ohne einen einzigen Streifen.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Negative Bilanz</span>
+      <p class="formel-abgesetzt">$$\int_0^3 (x^2 - 4)\,\mathrm{d}x = \left[ \frac{1}{3}x^3 - 4x \right]_0^3 = (9 - 12) - 0 = -3$$</p>
+      <p>Der Graph verläuft auf $[0; 2)$ unterhalb und auf $(2; 3]$ oberhalb der x-Achse — die untere Teilfläche überwiegt, die Bilanz fällt negativ aus.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Welche Stammfunktion nehmen? Egal!</span>
+      <p>Bei $F(x) + C$ hebt sich die Konstante in der Differenz weg: $(F(b) + C) - (F(a) + C) = F(b) - F(a)$. Darum nimmt man beim Integrieren stets die bequemste Stammfunktion — die mit $C = 0$. Übrigens: Ein CAS wie der ClassPad II berechnet bestimmte Integrale direkt über das ∫-Template. In Klausuren ist das eine wertvolle <em>Kontrolle</em> — der Rechenweg über die Stammfunktion gehört trotzdem aufs Papier.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Berechne das Integral über 6x von 1 bis 2.</summary>
+      <div class="check-antwort"><p>Eine Stammfunktion von $6x$ ist $3x^2$, denn $(3x^2)' = 6x$. Also $\int_1^2 6x\,\mathrm{d}x = \left[ 3x^2 \right]_1^2 = 12 - 3 = 9$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="stf-integralfunktion">
+    <h2 id="stf-integralfunktion">5. Integralfunktionen (erhöhtes Anforderungsniveau)</h2>
+    <p>Bisher waren beide Grenzen fest. Lässt man die obere Grenze laufen, wird aus dem Integral eine Funktion: Jedem $x$ wird die Flächenbilanz von $a$ bis $x$ zugeordnet. Dieser Blickwechsel gehört vor allem zum erhöhten Anforderungsniveau — und er ist der Schlüssel zum Verständnis des Hauptsatzes.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Integralfunktion</span>
+      <p class="formel-abgesetzt">$$I_a(x) = \int_a^x f(t)\,\mathrm{d}t$$</p>
+      <p>heißt <strong>Integralfunktion</strong> von $f$ zur unteren Grenze $a$. Die Integrationsvariable wird in $t$ umbenannt, damit sie nicht mit der oberen Grenze $x$ kollidiert. Direkt aus der Definition folgt $I_a(a) = 0$ — von $a$ bis $a$ ist der Streifen leer.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Integralfunktion zu f(t) = 2t</span>
+      <p class="formel-abgesetzt">$$I_0(x) = \int_0^x 2t\,\mathrm{d}t = \left[ t^2 \right]_0^x = x^2$$</p>
+      <p>Probe am Bild: $I_0(3) = 9$ ist die Dreiecksfläche unter der Geraden bis $x = 3$ — Breite $3$, Höhe $f(3) = 6$, also $\frac{1}{2} \cdot 3 \cdot 6 = 9$. Und auffällig: $I_0'(x) = 2x = f(x)$ — die Integralfunktion ist eine Stammfunktion von $f$.</p>
+    </div>
+    <p>Das ist kein Zufall, sondern der eigentliche Kern des Hauptsatzes: <strong>Jede Integralfunktion von $f$ ist eine Stammfunktion von $f$</strong>, es gilt $I_a'(x) = f(x)$ (die Begründungsidee skizziert die Vertiefung). Damit lassen sich Eigenschaften von $I_a$ direkt am Graphen von $f$ ablesen — ganz wie beim graphischen Ableiten, nur rückwärts:</p>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Übersetzungstabelle zwischen dem Verlauf des Graphen von f und dem Verhalten der Integralfunktion</caption>
+      <thead>
+        <tr><th scope="col">Graph von f …</th><th scope="col">Integralfunktion Iₐ …</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>verläuft oberhalb der x-Achse</td><td>wächst</td></tr>
+        <tr><td>verläuft unterhalb der x-Achse</td><td>fällt</td></tr>
+        <tr><td>Nullstelle mit Wechsel + → −</td><td>Hochpunkt</td></tr>
+        <tr><td>Nullstelle mit Wechsel − → +</td><td>Tiefpunkt</td></tr>
+      </tbody>
+    </table>
+    <p>Dazu kommt die Nullstelle bei $x = a$: Dort startet die Bilanz bei null. Vorsicht aber mit der Umkehrung — nicht jede Nullstelle von $I_a$ verrät etwas über $f$, denn positive und negative Flächenstücke können sich unterwegs ausgleichen.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Warum der Hauptsatz gilt — die Streifen-Idee</summary>
+    <div class="vertiefung-inhalt">
+      <p>Warum liefert ausgerechnet die Flächenfunktion $I_a$ beim Ableiten den Integranden $f$? Die Begründungsidee passt in ein Bild. Betrachte $I_a(x)$ als Flächenbilanz bis zur Stelle $x$ und rücke ein kleines Stück $h$ weiter zu $I_a(x + h)$. Der Zuwachs $I_a(x + h) - I_a(x)$ ist genau der schmale Streifen zwischen $x$ und $x + h$. Ist $h$ winzig, schwankt $f$ auf diesem Mini-Intervall kaum noch — der Streifen ist fast exakt ein Rechteck mit Breite $h$ und Höhe $f(x)$:</p>
+      <p class="formel-abgesetzt">$$I_a(x + h) - I_a(x) \approx f(x) \cdot h$$</p>
+      <p>Division durch $h$ macht daraus den Differenzenquotienten der Funktion $I_a$:</p>
+      <p class="formel-abgesetzt">$$\frac{I_a(x + h) - I_a(x)}{h} \approx f(x)$$</p>
+      <p>Lässt man die Streifenbreite $h$ gegen $0$ gehen, wird die Näherung beliebig genau, und links entsteht die Ableitung: $I_a'(x) = f(x)$. Das ist exakt das Differenzenquotienten-Argument aus der Einführungsphase — nur angewandt auf die Flächenfunktion. (Ein lückenloser Beweis braucht die Stetigkeit von $f$ und schätzt die Streifenhöhe sauber nach oben und unten ab; die Idee bleibt dieselbe.)</p>
+      <p>Daraus folgt auch die Rechenformel des Hauptsatzes: $I_a$ ist eine Stammfunktion von $f$, und jede weitere Stammfunktion hat die Form $F = I_a + C$. Dann ist $F(b) - F(a) = I_a(b) - I_a(a) = \int_a^b f(t)\,\mathrm{d}t - 0$ — Differenzen von Stammfunktionswerten liefern tatsächlich Integrale. Deshalb darfst du in der Klammer-Schreibweise jede beliebige Stammfunktion einsetzen.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Bilden von Stammfunktionen über Vorzeichen-Bilanzen bis zum Hauptsatz und zur Integralfunktion — mit gestuften Tipps, vollständigen Lösungswegen und CAS-Kontrollen für den ClassPad II.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

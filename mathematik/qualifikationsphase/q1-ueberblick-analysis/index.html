@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q1 im Überblick: Analysis — Qualifikationsphase · Mathematik — Lernwelt</title>
+<meta name="description" content="Semesterübersicht und Klausurvorbereitung für das 1. Halbjahr der Qualifikationsphase: Kann-Checklisten zu Ableitung, Integral, e-Funktion, Wachstum und Kurvenanpassung mit Links auf alle Teilthemen, Klausur-Strategie, typische Stolperfallen und 13 gemischte Übungsaufgaben.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Kann-Listen: Checkliste mit Linkzeile je Eintrag */
+  .kann-liste { list-style: none; padding-left: 0; margin: var(--abstand-3) 0; }
+  .kann-liste li { position: relative; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: .6rem .9rem .6rem 2.4rem; margin-bottom: .6rem; }
+  .kann-liste li::before { content: "☐"; position: absolute; left: .85rem; top: .5rem; font-size: 1.15rem; color: var(--mathe); }
+  .kann-links { display: block; margin-top: .3rem; font-size: .92rem; color: var(--text-leise); }
+  .ea-tag { display: inline-block; border: 1.5px solid var(--akzent); color: var(--akzent); border-radius: 999px; padding: 0 .5rem; font-size: .8rem; font-weight: 700; vertical-align: middle; }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Q1 im Überblick: Analysis</h1>
+  <p class="einleitung">In der ersten Klausur der Qualifikationsphase ist plötzlich alles gleichzeitig dran: Ableitung und Kurvenuntersuchung aus der Einführungsphase, dazu Integrale, e-Funktion, Wachstumsmodelle und Steckbriefaufgaben — und keine Aufgabe trägt ein Schild, zu welchem Thema sie gehört. Diese Seite verschafft dir den <strong>Überblick über das ganze Semester</strong>: mit Kann-Checklisten zu jedem Themenblock, Links zu allen Teilthemen, einer Klausur-Strategie gegen die typischen Stolperfallen — und 13 gemischten Übungsaufgaben als Generalprobe.</p>
+
+  <section aria-labelledby="q1a-nutzung">
+    <h2 id="q1a-nutzung">1. So nutzt du diese Seite</h2>
+    <p>Diese Seite ist anders als die übrigen Themenseiten: Sie erklärt <strong>nichts Neues</strong>. Stattdessen bündelt sie die komplette Analysis des ersten Halbjahres für zwei Situationen — den <strong>Semester-Check</strong> („Wo stehe ich?“) und die <strong>Klausurvorbereitung</strong> („Was muss ich noch üben?“).</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">So gehst du vor</span>
+      <ol>
+        <li><strong>Checklisten durchgehen:</strong> Die Abschnitte 2 bis 4 enthalten Kann-Aussagen zu jedem Themenblock. Lies jede ehrlich und entscheide: Kann ich das — auch ohne Beispiel daneben?</li>
+        <li><strong>Lücken schließen:</strong> Bei jedem „Nein“ oder „Unsicher“ führen dich die Links der Aussage direkt zur Erklärseite und zu den Übungen des passenden Teilthemas.</li>
+        <li><strong>Gemischt trainieren:</strong> Zum Schluss löst du die <a href="uebungen.html">13 gemischten Aufgaben</a> dieser Seite — dort steht, wie in der Klausur, an keiner Aufgabe mehr, zu welchem Thema sie gehört.</li>
+      </ol>
+    </div>
+    <p>Deinen gespeicherten Übungsstand findest du auf der <a href="../index.html">Übersichtsseite der Qualifikationsphase</a>: Dort zeigt jede Themenkachel an, wie viele Aufgaben du bereits gelöst hast — auf einen Blick siehst du, welche Teilthemen noch Training brauchen. Die Landkarte zeigt, wie die Q1-Themen zusammenhängen:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 680 372" style="width:100%;max-width:680px;height:auto" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Landkarte der Q1-Themen als Kästen mit Pfeilen. Oben die Grundlagen aus der Einführungsphase: Ableitung, Kurvenuntersuchung und Optimierung. Von dort führen drei Stränge nach unten: erstens Stammfunktionen und Hauptsatz, darauf aufbauend Flächen und Integralanwendungen; zweitens die natürliche Exponentialfunktion, darauf aufbauend Wachstumsmodelle; drittens Kurvenanpassung mit Steckbriefaufgaben, darauf aufbauend Funktionenscharen — letztere nur im erhöhten Anforderungsniveau. Alle drei Stränge münden im untersten Kasten: Q1-Klausur, alles gemischt.">
+        <!-- Grundlagen-Kasten (EP) -->
+        <rect x="150" y="14" width="380" height="58" rx="10" fill="var(--hauch)" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <text x="340" y="38" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">Einführungsphase: die Grundlagen</text>
+        <text x="340" y="57" font-size="12" fill="var(--text-leise)" text-anchor="middle">Ableitung · Kurvenuntersuchung · Optimierung</text>
+        <!-- Verteiler von der EP zu den drei Strängen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5" fill="none">
+          <line x1="340" y1="72" x2="340" y2="86"/>
+          <line x1="116" y1="86" x2="564" y2="86"/>
+          <line x1="116" y1="86" x2="116" y2="101"/>
+          <line x1="340" y1="86" x2="340" y2="101"/>
+          <line x1="564" y1="86" x2="564" y2="101"/>
+        </g>
+        <g fill="var(--text-leise)">
+          <path d="M111 101 h10 l-5 9 z"/>
+          <path d="M335 101 h10 l-5 9 z"/>
+          <path d="M559 101 h10 l-5 9 z"/>
+        </g>
+        <!-- Strang 1: Integrieren -->
+        <rect x="16" y="112" width="200" height="58" rx="10" fill="var(--flaeche)" stroke="var(--mathe)" stroke-width="2"/>
+        <text x="116" y="136" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">Stammfunktionen</text>
+        <text x="116" y="155" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">und Hauptsatz</text>
+        <rect x="16" y="194" width="200" height="58" rx="10" fill="var(--flaeche)" stroke="var(--mathe)" stroke-width="2"/>
+        <text x="116" y="218" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">Flächen und Integral-</text>
+        <text x="116" y="237" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">anwendungen</text>
+        <!-- Strang 2: e-Funktion -->
+        <rect x="240" y="112" width="200" height="58" rx="10" fill="var(--flaeche)" stroke="var(--mathe)" stroke-width="2"/>
+        <text x="340" y="136" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">Natürliche</text>
+        <text x="340" y="155" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">Exponentialfunktion</text>
+        <rect x="240" y="194" width="200" height="58" rx="10" fill="var(--flaeche)" stroke="var(--mathe)" stroke-width="2"/>
+        <text x="340" y="221" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">Wachstumsmodelle</text>
+        <text x="340" y="239" font-size="12" fill="var(--text-leise)" text-anchor="middle">exponentiell · beschränkt</text>
+        <!-- Strang 3: Modellieren -->
+        <rect x="464" y="112" width="200" height="58" rx="10" fill="var(--flaeche)" stroke="var(--mathe)" stroke-width="2"/>
+        <text x="564" y="136" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">Kurvenanpassung</text>
+        <text x="564" y="155" font-size="12" fill="var(--text-leise)" text-anchor="middle">Steckbriefaufgaben · LGS</text>
+        <rect x="464" y="194" width="200" height="58" rx="10" fill="var(--flaeche)" stroke="var(--mathe)" stroke-width="2"/>
+        <text x="564" y="221" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">Funktionenscharen</text>
+        <text x="554" y="239" font-size="12" fill="var(--text-leise)" text-anchor="middle">Parameter · Ortskurven</text>
+        <rect x="622" y="200" width="34" height="18" rx="9" fill="none" stroke="var(--akzent)" stroke-width="1.5"/>
+        <text x="639" y="213" font-size="12" font-weight="700" fill="var(--akzent)" text-anchor="middle">eA</text>
+        <!-- Pfeile innerhalb der Stränge -->
+        <g stroke="var(--mathe)" stroke-width="1.5" fill="none">
+          <line x1="116" y1="170" x2="116" y2="183"/>
+          <line x1="340" y1="170" x2="340" y2="183"/>
+          <line x1="564" y1="170" x2="564" y2="183"/>
+        </g>
+        <g fill="var(--mathe)">
+          <path d="M111 183 h10 l-5 9 z"/>
+          <path d="M335 183 h10 l-5 9 z"/>
+          <path d="M559 183 h10 l-5 9 z"/>
+        </g>
+        <!-- Sammelschiene zur Klausur -->
+        <g stroke="var(--akzent)" stroke-width="1.5" fill="none">
+          <line x1="116" y1="252" x2="116" y2="266"/>
+          <line x1="340" y1="252" x2="340" y2="266"/>
+          <line x1="564" y1="252" x2="564" y2="266"/>
+          <line x1="116" y1="266" x2="564" y2="266"/>
+          <line x1="340" y1="266" x2="340" y2="287"/>
+        </g>
+        <path d="M335 287 h10 l-5 9 z" fill="var(--akzent)"/>
+        <!-- Klausur-Kasten -->
+        <rect x="190" y="298" width="300" height="58" rx="10" fill="var(--hauch)" stroke="var(--akzent)" stroke-width="2"/>
+        <text x="340" y="322" font-size="15" font-weight="600" fill="var(--text)" text-anchor="middle">Q1-Klausur: alles gemischt</text>
+        <text x="340" y="341" font-size="12" fill="var(--text-leise)" text-anchor="middle">Generalprobe: die Übungen dieser Seite</text>
+      </svg>
+    </div>
+  </section>
+
+  <section aria-labelledby="q1a-ableiten">
+    <h2 id="q1a-ableiten">2. Ableiten und untersuchen — das Fundament aus der EP</h2>
+    <p>Die Differentialrechnung aus der Einführungsphase wird in der Q1-Klausur stillschweigend vorausgesetzt: Jede Kurvenuntersuchung, jede Optimierung und jede e-Funktions-Aufgabe baut darauf auf. Geh die Liste durch — jede Aussage verlinkt das Teilthema, in dem du nacharbeiten kannst.</p>
+    <p><strong>Das solltest du können:</strong></p>
+    <ul class="kann-liste">
+      <li>Ich kann die Ableitung an einer Stelle als momentane Änderungsrate und als Tangentensteigung deuten — und den Übergang von der Sekante zur Tangente erklären.
+        <span class="kann-links">→ <a href="../../einfuehrungsphase/aenderungsraten-und-ableitung/index.html">Änderungsraten und Ableitung</a> · <a href="../../einfuehrungsphase/aenderungsraten-und-ableitung/uebungen.html">Übungen</a></span></li>
+      <li>Ich kann ganzrationale Funktionen mit Potenz-, Faktor- und Summenregel sicher ableiten — auch zweite und dritte Ableitungen.
+        <span class="kann-links">→ <a href="../../einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-werkzeug">Ableitungsregeln und Anwendungen, Abschnitt 1</a> · <a href="../../einfuehrungsphase/ableitungsregeln-und-anwendungen/uebungen.html">Übungen</a></span></li>
+      <li>Ich kann die Gleichung der Tangente (und der Normale) an einer Stelle $x_0$ aufstellen.
+        <span class="kann-links">→ <a href="../../einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-tangente">Ableitungsregeln, Abschnitt 2</a></span></li>
+      <li>Ich kann Extrempunkte mit notwendiger <strong>und</strong> hinreichender Bedingung bestimmen — $f'(x_0) = 0$ plus $f''(x_0) \neq 0$ oder Vorzeichenwechsel von $f'$.
+        <span class="kann-links">→ <a href="../../einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-monotonie">Ableitungsregeln, Abschnitt 3</a></span></li>
+      <li>Ich kann Wendepunkte bestimmen und das Krümmungsverhalten eines Graphen beschreiben.
+        <span class="kann-links">→ <a href="../../einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-kruemmung">Ableitungsregeln, Abschnitt 4</a></span></li>
+      <li>Ich kann Extremwertprobleme lösen: Zielfunktion mit Nebenbedingung aufstellen, Kandidaten bestimmen, Ränder prüfen, Antwortsatz schreiben.
+        <span class="kann-links">→ <a href="../../einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-optimierung">Ableitungsregeln, Abschnitt 5</a></span></li>
+    </ul>
+    <details class="check">
+      <summary>Mini-Selbsttest: Bestimme die Extrempunkte von f(x) = x³ − 12x — mit beiden Bedingungen.</summary>
+      <div class="check-antwort"><p>Notwendig: $f'(x) = 3x^2 - 12 = 0$ liefert die Kandidaten $x = -2$ und $x = 2$. Hinreichend mit $f''(x) = 6x$: Wegen $f''(-2) = -12 < 0$ liegt bei $x = -2$ ein Hochpunkt, wegen $f''(2) = 12 > 0$ bei $x = 2$ ein Tiefpunkt. Einsetzen in $f$: Hochpunkt $(-2 \mid 16)$, Tiefpunkt $(2 \mid -16)$. Wer nur $f'(x) = 0$ löst, hat erst die Hälfte der Punkte.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="q1a-integrieren">
+    <h2 id="q1a-integrieren">3. Integrieren</h2>
+    <p>Der erste neue Block der Qualifikationsphase: das Ableiten umkehren, Flächen messen, Bestände rekonstruieren. Zwei Teilthemen gehören dazu — <a href="../stammfunktionen-und-hauptsatz/index.html">Stammfunktionen und Hauptsatz</a> liefert die Werkzeuge, <a href="../flaechen-und-integralanwendungen/index.html">Flächen und Integralanwendungen</a> setzt sie ein.</p>
+    <p><strong>Das solltest du können:</strong></p>
+    <ul class="kann-liste">
+      <li>Ich kann Stammfunktionen ganzrationaler Funktionen bilden (Potenzregel rückwärts) und mein Ergebnis durch Ableiten kontrollieren.
+        <span class="kann-links">→ <a href="../stammfunktionen-und-hauptsatz/index.html#stf-stammfunktion">Stammfunktionen, Abschnitt 2</a> · <a href="../stammfunktionen-und-hauptsatz/uebungen.html">Übungen</a></span></li>
+      <li>Ich kann bestimmte Integrale mit dem Hauptsatz in Klammer-Schreibweise berechnen: $\int_a^b f(x)\,\mathrm{d}x = F(b) - F(a)$.
+        <span class="kann-links">→ <a href="../stammfunktionen-und-hauptsatz/index.html#stf-hauptsatz">Stammfunktionen, Abschnitt 4</a></span></li>
+      <li>Ich kann den Integralwert als orientierten Flächeninhalt deuten — und erklären, warum er negativ oder null sein kann, obwohl sichtbar Fläche da ist.
+        <span class="kann-links">→ <a href="../stammfunktionen-und-hauptsatz/index.html#stf-integral">Stammfunktionen, Abschnitt 3</a></span></li>
+      <li>Ich kann Flächen zwischen Graph und x-Achse (an den Nullstellen aufteilen, Beträge addieren!) und zwischen zwei Graphen berechnen.
+        <span class="kann-links">→ <a href="../flaechen-und-integralanwendungen/index.html#int-flaechen">Flächen, Abschnitte 1–2</a> · <a href="../flaechen-und-integralanwendungen/uebungen.html">Übungen</a></span></li>
+      <li>Ich kann aus einer Änderungsrate den Bestand rekonstruieren — und vergesse den Anfangsbestand nicht.
+        <span class="kann-links">→ <a href="../flaechen-und-integralanwendungen/index.html#int-bestand">Flächen, Abschnitt 3</a></span></li>
+      <li>Ich kann Integralfunktionen $I_a(x)$ untersuchen und ihren Verlauf aus dem Graphen von $f$ ablesen. <span class="ea-tag">eA</span>
+        <span class="kann-links">→ <a href="../stammfunktionen-und-hauptsatz/index.html#stf-integralfunktion">Stammfunktionen, Abschnitt 5</a></span></li>
+    </ul>
+    <details class="check">
+      <summary>Mini-Selbsttest: Berechne das Integral über x² − 2x von 0 bis 3. Warum ist der Wert nicht der Flächeninhalt?</summary>
+      <div class="check-antwort"><p>$\int_0^3 (x^2 - 2x)\,\mathrm{d}x = \left[ \frac{1}{3}x^3 - x^2 \right]_0^3 = (9 - 9) - 0 = 0$. Der Graph hat im Intervall die Nullstelle $x = 2$: Auf $[0; 2]$ verläuft er unterhalb der x-Achse (Teilintegral $-\frac{4}{3}$), auf $[2; 3]$ oberhalb (Teilintegral $+\frac{4}{3}$) — die Bilanz ist null, weil sich beide Stücke ausgleichen. Der tatsächliche Flächeninhalt ist die Summe der Beträge: $\frac{4}{3} + \frac{4}{3} = \frac{8}{3} \approx 2{,}67$ Flächeneinheiten.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="q1a-efunktion">
+    <h2 id="q1a-efunktion">4. e-Funktion, Wachstum und Kurvenanpassung</h2>
+    <p>Der zweite neue Block: Mit der <a href="../natuerliche-exponentialfunktion/index.html">natürlichen Exponentialfunktion</a> kommen Wachstums- und Zerfallsprozesse in Reichweite der Analysis (<a href="../wachstumsmodelle/index.html">Wachstumsmodelle</a>), und die <a href="../kurvenanpassung-ganzrational/index.html">Kurvenanpassung</a> dreht die Blickrichtung um: vom gewünschten Graphen zurück zum Funktionsterm. Im erhöhten Anforderungsniveau kommen <a href="../funktionenscharen/index.html">Funktionenscharen</a> dazu.</p>
+    <p><strong>Das solltest du können:</strong></p>
+    <ul class="kann-liste">
+      <li>Ich kann die e-Funktion ableiten — auch Verkettungen wie $\mathrm{e}^{kx}$ mit der Kettenregel.
+        <span class="kann-links">→ <a href="../natuerliche-exponentialfunktion/index.html#ef-kettenregel">e-Funktion, Abschnitte 2 und 4</a> · <a href="../natuerliche-exponentialfunktion/uebungen.html">Übungen</a></span></li>
+      <li>Ich kann Exponentialgleichungen wie $5\,\mathrm{e}^{2x} = 40$ mit dem natürlichen Logarithmus lösen.
+        <span class="kann-links">→ <a href="../natuerliche-exponentialfunktion/index.html#ef-ln">e-Funktion, Abschnitt 3</a></span></li>
+      <li>Ich kann exponentielles und beschränktes Wachstum modellieren, Parameter aus gegebenen Daten bestimmen und das Modell im Kontext beurteilen (logistisch: <span class="ea-tag">eA</span>).
+        <span class="kann-links">→ <a href="../wachstumsmodelle/index.html">Wachstumsmodelle</a> · <a href="../wachstumsmodelle/uebungen.html">Übungen</a></span></li>
+      <li>Ich kann Verdopplungs- und Halbwertszeit berechnen und die Wachstumsgeschwindigkeit $N'(t)$ deuten.
+        <span class="kann-links">→ <a href="../wachstumsmodelle/index.html#wm-tempo">Wachstumsmodelle, Abschnitte 1–2</a></span></li>
+      <li>Ich kann Steckbriefaufgaben lösen: Bedingungen übersetzen, LGS aufstellen und lösen, Ergebnis an allen Bedingungen prüfen.
+        <span class="kann-links">→ <a href="../kurvenanpassung-ganzrational/index.html">Kurvenanpassung</a> · <a href="../kurvenanpassung-ganzrational/uebungen.html">Übungen</a></span></li>
+      <li>Ich kann mit Funktionenscharen umgehen: Extrempunkte in Abhängigkeit vom Parameter, gemeinsame Punkte und Ortskurven bestimmen. <span class="ea-tag">eA</span>
+        <span class="kann-links">→ <a href="../funktionenscharen/index.html">Funktionenscharen</a> · <a href="../funktionenscharen/uebungen.html">Übungen</a></span></li>
+    </ul>
+    <details class="check">
+      <summary>Mini-Selbsttest: N(t) = 50 · e^(0,2t) (t in Tagen). Gib N′(0) an und berechne die Verdopplungszeit.</summary>
+      <div class="check-antwort"><p>Kettenregel: $N'(t) = 50 \cdot 0{,}2 \cdot \mathrm{e}^{0{,}2t} = 10\,\mathrm{e}^{0{,}2t}$, also $N'(0) = 10$ — zu Beginn wächst der Bestand mit $10$ Einheiten pro Tag. Verdopplung: $50\,\mathrm{e}^{0{,}2t} = 100 \Leftrightarrow \mathrm{e}^{0{,}2t} = 2 \Leftrightarrow t = \frac{\ln 2}{0{,}2} = 5 \ln 2 \approx 3{,}47$ Tage. Wer hier zögert: beide Rechnungen stehen im Thema Wachstumsmodelle.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="q1a-klausur">
+    <h2 id="q1a-klausur">5. Typische Klausuraufgaben knacken</h2>
+    <p>Fachwissen ist die halbe Klausur — die andere Hälfte ist Arbeitstechnik: die Aufgabe richtig lesen, die Zeit einteilen und die bekannten Fallen umgehen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Klausur-Strategie</span>
+      <ul>
+        <li><strong>Operatoren ernst nehmen:</strong> <em>Berechne</em> verlangt eine nachvollziehbare Rechnung, <em>bestimme/ermittle</em> lässt den Weg frei (auch CAS, wenn zugelassen), <em>zeige/weise nach</em> verlangt eine lückenlose Begründung — das Ergebnis steht ja schon da —, <em>begründe</em> ein Argument, <em>skizziere</em> nur den qualitativen Verlauf.</li>
+        <li><strong>Punkte = Zeitplan:</strong> Teile die Bearbeitungszeit durch die Gesamtpunktzahl — meist bleiben etwa 1,5 bis 2 Minuten pro Bewertungseinheit. Eine 4-Punkte-Aufgabe verdient keine 20 Minuten. Erst alles einsammeln, was sicher klappt; Teilaufgaben sind oft unabhängig, du darfst bei b) weitermachen, auch wenn a) fehlt.</li>
+        <li><strong>CAS gezielt einsetzen:</strong> Q1-Klausuren haben in der Regel einen hilfsmittelfreien Teil und einen CAS-Teil. Im CAS-Teil gilt: Ansatz und Gleichung aufs Papier, dann „Lösen mit dem CAS liefert …“. Stark ist das CAS beim LGS der Steckbriefaufgabe, bei e-Gleichungen (solve) und als Integral-Kontrolle — nutzlos, wo <em>zeige</em> oder <em>begründe</em> steht.</li>
+        <li><strong>Antwortsätze schreiben:</strong> Bei Sachaufgaben gehören Einheit und Antwortsatz zur Lösung — das sind sichere Punkte.</li>
+      </ul>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Drei klassische Stolperfallen</span>
+      <ol>
+        <li><strong>Vorzeichenflächen:</strong> Das Integral liefert eine <em>Bilanz</em>, keinen Flächeninhalt. Bei Flächenaufgaben zuerst die Nullstellen im Intervall suchen, dort aufteilen und die Beträge der Teilintegrale addieren — sonst rechnet sich die Fläche klein oder sogar auf null.</li>
+        <li><strong>„+C“ und der Anfangsbestand:</strong> Beim Rekonstruieren von Beständen legt erst der Anfangswert die Integrationskonstante fest (z. B. $B(0) = 20$). Wer $C$ unterschlägt, verschiebt die komplette Lösung — die Klausurfrage „Wie viel ist am Ende im Becken?“ geht dann schief, obwohl das Integral stimmt.</li>
+        <li><strong>Hinreichende Bedingung vergessen:</strong> $f'(x_0) = 0$ allein beweist keinen Extrempunkt — $f(x) = x^3$ hat bei $x = 0$ einen Sattelpunkt. Immer $f''(x_0) \neq 0$ prüfen oder den Vorzeichenwechsel von $f'$ angeben; bei $f''(x_0) = 0$ entscheidet nur der Vorzeichenwechsel.</li>
+      </ol>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Was bei eA in der Klausur dazukommt</summary>
+    <div class="vertiefung-inhalt">
+      <p>Lernst du im grundlegenden Anforderungsniveau (gA), kannst du diesen Kasten überspringen. Im erhöhten Anforderungsniveau (eA) erweitert sich der Klausurstoff in fünf Richtungen:</p>
+      <ul>
+        <li><strong>Produktregel und kombinierte e-Funktionen:</strong> Untersuchungen von Funktionen wie $f(x) = x \cdot \mathrm{e}^{-x}$ — Produkt- und Kettenregel greifen ineinander (<a href="../natuerliche-exponentialfunktion/index.html#ef-kurven">e-Funktion, Abschnitt 5</a>).</li>
+        <li><strong>Integralfunktionen:</strong> $I_a(x) = \int_a^x f(t)\,\mathrm{d}t$ untersuchen, ihren Verlauf aus dem Graphen von $f$ ablesen und $I_a' = f$ argumentativ nutzen (<a href="../stammfunktionen-und-hauptsatz/index.html#stf-integralfunktion">Stammfunktionen, Abschnitt 5</a>).</li>
+        <li><strong>Logistisches Wachstum:</strong> das S-Kurven-Modell mit Sättigungsgrenze, dazu Begründungen über die Wachstumsgleichung $N' = k \cdot N$ (<a href="../wachstumsmodelle/index.html#wm-logistisch">Wachstumsmodelle, Abschnitt 4</a>).</li>
+        <li><strong>Funktionenscharen komplett:</strong> Extrempunkte in Abhängigkeit vom Parameter, Fallunterscheidungen, gemeinsame Punkte aller Scharkurven und Ortskurven (<a href="../funktionenscharen/index.html">Funktionenscharen</a>) — in den Übungen unten sind die beiden Zusatzaufgaben genau dafür da.</li>
+        <li><strong>Mehr Begründen, weniger Schema:</strong> eA-Klausuren enthalten mehr Aufgaben im Anforderungsbereich III — <em>zeige</em>, <em>begründe</em>, <em>beurteile</em>. Trainiere, Rechnungen in vollständige Argumentationsketten zu verwandeln: Behauptung, Rechnung, Schlussfolgerung.</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Generalprobe gefällig?</strong> 13 gemischte Aufgaben quer durch das Semester — Kurvenuntersuchung, Tangente, Optimierung, Integrale, Flächen, Rekonstruktion, e-Funktion, Wachstum und Steckbriefe, dazu zwei eA-Zusatzaufgaben zu Funktionenscharen. Ohne Themen-Etikett, wie in der Klausur — mit gestuften Tipps, Lösungswegen und CAS-Kontrollen.</p>
+    <a class="knopf" href="uebungen.html">Jetzt gemischt trainieren</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

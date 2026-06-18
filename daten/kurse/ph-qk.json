@@ -1,0 +1,1956 @@
+{
+ "version": 1,
+ "kurs": "ph-qk",
+ "fach": "physik",
+ "stufe": "qualifikationsphase",
+ "titel": "Physik · Qualifikationsphase — Atomkern",
+ "untertitel": "Lernbüro-Pilot: Atomkern und Radioaktivität als Selbstlern-Einheit",
+ "zweig": [
+  "gym"
+ ],
+ "stand": "2026-06-13",
+ "taktung": "wochenplan",
+ "checkpoints": "freischalten",
+ "werkzeuge": [
+  "ampel",
+  "lerntagebuch"
+ ],
+ "hinweis": "Lektionen verweisen nur auf vorhandene Inhalte. Pilot – fachliche Endprüfung durch die Lehrkraft.",
+ "stoffverteilung": [
+  {
+   "wochen": "L1–L3",
+   "thema": "Atomkern und Radioaktivität",
+   "lektionen": "3 (Kernaufbau, Kernumwandlungen, Zerfallsgesetz)",
+   "kc": "KC Physik GO (2022): Sachgebiet Atomkern und Radioaktivität (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/atomkern/"
+  },
+  {
+   "wochen": "L4–L5",
+   "thema": "Atomkern und Radioaktivität (Fortsetzung)",
+   "lektionen": "2 (C-14-Altersbestimmung, Massendefekt eA)",
+   "kc": "KC Physik GO (2022): Sachgebiet Atomkern und Radioaktivität (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/atomkern/"
+  },
+  {
+   "wochen": "L6–L10",
+   "thema": "Atomhülle",
+   "lektionen": "5 (Linienspektren, Energieniveaus, Franck-Hertz, Wasserstoff, Atommodelle)",
+   "kc": "KC Physik GO (2022): Sachgebiet Atomhülle und Atomkern (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/atomhuelle/"
+  }
+ ],
+ "wochen": [
+  {
+   "nr": 1,
+   "spanne": "Diese Woche",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 1–3 geschafft"
+  },
+  {
+   "nr": 2,
+   "spanne": "Nächste Woche",
+   "lektionen": [
+    "l4",
+    "l5"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 4–5 geschafft"
+  },
+  {
+   "nr": 3,
+   "spanne": "Block 2: Atomhülle",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 6–10 geschafft"
+  }
+ ],
+ "lektionen": [
+  {
+   "id": "l1",
+   "nr": 1,
+   "titel": "Der Atomkern",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomkern",
+   "themaPfad": "physik/qualifikationsphase/atomkern/",
+   "anker": "#ak-kern",
+   "ziele": [
+    "Ich kann Nukleonen, Protonenzahl und Massenzahl benennen und die Nuklidschreibweise lesen.",
+    "Ich kann Isotope erklären und weiß, warum Kerne mit wachsender Protonenzahl mehr Neutronen benötigen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Kurze Auffrischung aus Klasse 10 – Kernaufbau und Strahlenarten.",
+     "aufgaben": [
+      {
+       "quelle": "ph-10-atom-und-kernphysik",
+       "ids": [
+        "ph-10-akp-001",
+        "ph-10-akp-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ak-kern",
+     "text": "Lies den Abschnitt und schau dir die Nuklidkarte an — arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomkern/index.html#ak-kern"
+     },
+     "schritte": [
+      {
+       "titel": "Aufbau des Kerns und Nuklidschreibweise",
+       "html": "<p>Der Atomkern besteht aus <strong>Protonen</strong> (positiv geladen) und <strong>Neutronen</strong> (ungeladen); beide nennt man zusammen <strong>Nukleonen</strong>. Die <strong>Protonenzahl</strong> $Z$ (Kernladungszahl) bestimmt das Element, die <strong>Massenzahl</strong> $A = Z + N$ zählt alle Nukleonen. Man schreibt ein Nuklid als $^{A}_{Z}\\text{X}$, z.\\,B. $^{12}_{6}\\text{C}$: $Z=6$ Protonen, $A=12$ Nukleonen, also $N = 12-6 = 6$ Neutronen.</p>",
+       "check": {
+        "frage": "Wie viele Neutronen hat der Kern $^{197}_{79}\\text{Au}$?",
+        "antwort": "$N = A - Z = 197 - 79 = 118$ Neutronen."
+       }
+      },
+      {
+       "titel": "Isotope",
+       "html": "<p><strong>Isotope</strong> sind Kerne desselben Elements (gleiches $Z$) mit unterschiedlicher Neutronenzahl (verschiedenes $N$, also verschiedenes $A$). Beispiel Wasserstoff: $^{1}_{1}\\text{H}$, $^{2}_{1}\\text{H}$ (Deuterium), $^{3}_{1}\\text{H}$ (Tritium). Chemisch verhalten sich Isotope nahezu gleich, weil die Elektronenhülle nur von $Z$ abhängt; ihre Kerne (Masse, Stabilität) unterscheiden sich aber.</p>",
+       "check": {
+        "frage": "Sind $^{35}_{17}\\text{Cl}$ und $^{37}_{17}\\text{Cl}$ Isotope? Begründe.",
+        "antwort": "Ja. Beide haben $Z=17$ (also Chlor), aber unterschiedliche Massenzahlen ($N=18$ bzw. $N=20$). Gleiches Element, verschiedene Neutronenzahl — das sind Isotope."
+       }
+      },
+      {
+       "titel": "Warum schwere Kerne mehr Neutronen brauchen",
+       "html": "<p>Im Kern wirken zwei Kräfte gegeneinander: die <strong>elektrische Abstoßung</strong> der Protonen (große Reichweite) und die anziehende, aber <strong>kurzreichweitige starke Kernkraft</strong> zwischen allen Nukleonen. Je mehr Protonen, desto stärker die Abstoßung. Zusätzliche Neutronen liefern Kernkraft, ohne abzustoßen, und „verdünnen“ die Protonen. Deshalb steigt das Verhältnis $N/Z$ von etwa $1$ bei leichten Kernen auf über $1{,}5$ bei schweren — die Stabilitätslinie der Nuklidkarte krümmt sich nach oben.</p>",
+       "check": {
+        "frage": "Warum reicht bei sehr schweren Kernen ein Verhältnis $N=Z$ nicht mehr aus?",
+        "antwort": "Die elektrische Abstoßung der vielen Protonen reicht weit, die starke Kernkraft nur über kurze Distanz. Ein Neutronenüberschuss bringt zusätzliche Kernkraft ohne weitere Abstoßung und hält den Kern zusammen."
+       }
+      }
+     ],
+     "merksatz": "Ein Kern $^{A}_{Z}\\text{X}$ enthält $Z$ Protonen und $N = A - Z$ Neutronen. <strong>Isotope</strong> haben gleiches $Z$, aber verschiedenes $N$. Mit wachsendem $Z$ steigt der Neutronenanteil, weil die <strong>kurzreichweitige Kernkraft</strong> die <strong>weitreichende Protonenabstoßung</strong> kompensieren muss.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Nuklidkarte selbst erkunden (Trockenübung)",
+       "material": "Ausschnitt einer Nuklidkarte (im Schulbuch oder als Ausdruck), Lineal, Buntstifte.",
+       "vorhersage": "Vermute zuerst: Liegt die Linie der stabilen Kerne genau auf der Diagonalen $N = Z$, oder weicht sie ab? In welche Richtung?",
+       "auftraege": [
+        "Trage für fünf stabile Kerne (z.\\,B. He, C, Ca, Fe, Pb) jeweils $Z$ und $N$ ab und markiere sie.",
+        "Zeichne die Diagonale $N = Z$ ein und vergleiche sie mit der Lage deiner Punkte — ab wann weicht das stabile Gebiet deutlich nach oben ab?",
+        "Suche zwei Isotope desselben Elements und beschreibe, wie sie in der Karte zueinander liegen (waagerecht? senkrecht?)."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was unterscheidet Protonenzahl und Massenzahl?",
+       "antwort": "Die Protonenzahl $Z$ zählt nur die Protonen und bestimmt das Element; die Massenzahl $A$ zählt alle Nukleonen (Protonen + Neutronen)."
+      },
+      {
+       "frage": "Gib die Nuklidschreibweise eines Kerns mit 26 Protonen und 30 Neutronen an.",
+       "antwort": "$Z=26$ (Eisen), $A = 26+30 = 56$, also $^{56}_{26}\\text{Fe}$."
+      },
+      {
+       "frage": "Was entscheidet, ob zwei Kerne Isotope sind?",
+       "antwort": "Sie müssen dieselbe Protonenzahl $Z$ (gleiches Element) haben, sich aber in der Neutronenzahl unterscheiden."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-001",
+        "ph-qp-ak-002"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-101"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-102"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin: Welche Rolle spielen Neutronen für den Zusammenhalt eines Kerns – und warum helfen sie, obwohl sie keine Ladung tragen?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-003"
+       ]
+      }
+     ],
+     "transfer": "Nenne ein Isotopenpaar deiner Wahl und erkläre, was die Kerne gemeinsam haben und was sie unterscheidet."
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du beschreibst den Atomkern aus Protonen und Neutronen, benennst Protonen-, Neutronen- und Massenzahl und liest die Nuklidschreibweise $^{A}_{Z}\\text{X}$."
+    },
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst, was Isotope sind, und begründest, warum schwere Kerne einen Neutronenüberschuss besitzen."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du entnimmst einer Nuklidkarte Informationen über Kerne und ordnest Nuklide nach $Z$ und $N$ ein."
+    }
+   ]
+  },
+  {
+   "id": "l2",
+   "nr": 2,
+   "titel": "Kernumwandlungen: α, β, γ",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomkern",
+   "themaPfad": "physik/qualifikationsphase/atomkern/",
+   "anker": "#ak-umwandlungen",
+   "ziele": [
+    "Ich kann α-, β⁻- und γ-Zerfall mit Erhaltungssätzen beschreiben und Umwandlungsgleichungen aufstellen.",
+    "Ich kenne den Unterschied zwischen den drei Zerfallstypen und kann Tochterkerne berechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Nuklidschreibweise aus Lektion 1.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-004"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ak-umwandlungen",
+     "text": "Lies den Abschnitt und prüfe die drei Beispielgleichungen mit den Erhaltungssätzen — dann arbeite dich Schritt für Schritt durch.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomkern/index.html#ak-umwandlungen"
+     },
+     "schritte": [
+      {
+       "titel": "Die zwei Erhaltungssätze",
+       "html": "<p>Bei jeder Kernumwandlung bleiben zwei Größen erhalten: die <strong>Nukleonenzahl</strong> (Summe aller $A$) und die <strong>Ladungszahl</strong> (Summe aller $Z$). Auf beiden Seiten der Gleichung muss die Summe von $A$ und die Summe von $Z$ jeweils gleich sein. Damit lässt sich jeder Tochterkern eindeutig bestimmen.</p>",
+       "check": {
+        "frage": "In $^{226}_{88}\\text{Ra} \\rightarrow \\text{?} + ^{4}_{2}\\text{He}$ — welcher Kern entsteht?",
+        "antwort": "$A: 226 - 4 = 222$, $Z: 88 - 2 = 86$. Das ergibt $^{222}_{86}\\text{Rn}$ (Radon)."
+       }
+      },
+      {
+       "titel": "$\\alpha$-Zerfall",
+       "html": "<p>Beim <strong>$\\alpha$-Zerfall</strong> stößt der Kern einen <strong>Heliumkern</strong> $^{4}_{2}\\text{He}$ (zwei Protonen, zwei Neutronen) aus. Dadurch sinkt $A$ um $4$ und $Z$ um $2$: $$^{A}_{Z}\\text{X} \\rightarrow\\, ^{A-4}_{Z-2}\\text{Y} + ^{4}_{2}\\text{He}$$ Typisch für schwere Kerne, die ihren Nukleonenüberschuss abbauen.</p>",
+       "check": {
+        "frage": "Wie ändern sich $A$ und $Z$ beim $\\alpha$-Zerfall?",
+        "antwort": "$A$ nimmt um $4$ ab, $Z$ um $2$ — der Kern rückt im Periodensystem zwei Plätze nach unten."
+       }
+      },
+      {
+       "titel": "$\\beta^-$-Zerfall",
+       "html": "<p>Beim <strong>$\\beta^-$-Zerfall</strong> wandelt sich im Kern ein <strong>Neutron in ein Proton</strong> um; dabei werden ein Elektron $^{\\,0}_{-1}\\text{e}$ und ein (Anti-)Neutrino ausgesandt. $A$ bleibt gleich, $Z$ steigt um $1$: $$^{A}_{Z}\\text{X} \\rightarrow\\, ^{A}_{Z+1}\\text{Y} + ^{\\,0}_{-1}\\text{e} + \\bar{\\nu}$$ Typisch für Kerne mit Neutronenüberschuss.</p>",
+       "check": {
+        "frage": "Warum bleibt beim $\\beta^-$-Zerfall die Massenzahl $A$ unverändert?",
+        "antwort": "Es wird ein Neutron in ein Proton umgewandelt — die Gesamtzahl der Nukleonen ändert sich nicht, nur ihre Art. Daher bleibt $A$ gleich, während $Z$ um $1$ steigt."
+       }
+      },
+      {
+       "titel": "$\\gamma$-Zerfall",
+       "html": "<p>Beim <strong>$\\gamma$-Zerfall</strong> gibt ein angeregter Kern überschüssige Energie als <strong>hochenergetisches Photon</strong> ($\\gamma$-Quant) ab. Weder $A$ noch $Z$ ändern sich — nur der Energiezustand des Kerns wird niedriger. $\\gamma$-Strahlung begleitet oft einen vorangegangenen $\\alpha$- oder $\\beta$-Zerfall.</p>",
+       "check": {
+        "frage": "Was unterscheidet den $\\gamma$-Zerfall von den anderen beiden?",
+        "antwort": "Beim $\\gamma$-Zerfall ändert sich die Kernzusammensetzung nicht ($A$ und $Z$ bleiben gleich). Der Kern gibt nur Energie als Photon ab und geht in einen niedrigeren Energiezustand über."
+       }
+      }
+     ],
+     "merksatz": "Bei jeder Umwandlung sind <strong>Nukleonenzahl</strong> und <strong>Ladungszahl</strong> erhalten. $\\alpha$: $A-4$, $Z-2$ (He-Kern). $\\beta^-$: $A$ gleich, $Z+1$ (Neutron $\\to$ Proton + Elektron). $\\gamma$: $A$ und $Z$ unverändert (nur Energieabgabe als Photon).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Zerfallsketten mit Stellvertretern legen",
+       "material": "Karten oder Spielsteine (z.\\,B. zwei Farben für Protonen/Neutronen), Tabelle der Nuklidkarte als Ausschnitt.",
+       "vorhersage": "Sage voraus: Wenn ein Kern erst einen $\\alpha$-, dann einen $\\beta^-$-Zerfall durchläuft — wie ändert sich $Z$ insgesamt? (zuerst überlegen, dann legen)",
+       "auftraege": [
+        "Lege $^{238}_{92}\\text{U}$ als Steinmodell und führe einen $\\alpha$-Zerfall durch: notiere $A$ und $Z$ des Tochterkerns.",
+        "Führe danach einen $\\beta^-$-Zerfall durch und vergleiche das Ergebnis mit deiner Vorhersage.",
+        "Stelle beide Zerfälle als Gleichungen auf und prüfe für jede Zeile die beiden Erhaltungssätze."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Stelle die Gleichung für den $\\alpha$-Zerfall von $^{210}_{84}\\text{Po}$ auf.",
+       "antwort": "$^{210}_{84}\\text{Po} \\rightarrow\\, ^{206}_{82}\\text{Pb} + ^{4}_{2}\\text{He}$ — $A$ um 4, $Z$ um 2 verringert."
+      },
+      {
+       "frage": "$^{14}_{6}\\text{C}$ ist ein $\\beta^-$-Strahler. Welcher Kern entsteht?",
+       "antwort": "$A$ bleibt 14, $Z$ steigt auf 7: $^{14}_{7}\\text{N}$ (Stickstoff)."
+      },
+      {
+       "frage": "Warum verändert ein $\\gamma$-Übergang das chemische Element nicht?",
+       "antwort": "Beim $\\gamma$-Zerfall bleibt $Z$ unverändert; nur Energie wird abgegeben. Das Element ist durch $Z$ festgelegt und bleibt daher dasselbe."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-106"
+       ]
+      },
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-007"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-103"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-104"
+       ]
+      }
+     ],
+     "partner": "Erkläre den Unterschied: Beim α-Zerfall verliert der Kern vier Nukleonen, beim β⁻-Zerfall bleibt $A$ gleich – wie ist das möglich?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-006"
+       ]
+      }
+     ],
+     "transfer": "Warum verändert ein γ-Übergang das Element nicht, aber ein β⁻-Zerfall schon?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du beschreibst $\\alpha$-, $\\beta^-$- und $\\gamma$-Zerfall und benennst die jeweils ausgesandte Strahlung."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du stellst Zerfallsgleichungen auf und nutzt die Erhaltung von Nukleonen- und Ladungszahl, um Tochterkerne zu bestimmen."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du erklärst mit Fachbegriffen, wie sich $A$ und $Z$ bei jedem Zerfallstyp ändern."
+    }
+   ]
+  },
+  {
+   "id": "l3",
+   "nr": 3,
+   "titel": "Das Zerfallsgesetz",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomkern",
+   "themaPfad": "physik/qualifikationsphase/atomkern/",
+   "anker": "#ak-zerfallsgesetz",
+   "ziele": [
+    "Ich kann das Zerfallsgesetz $N(t) = N_0 \\cdot e^{-\\lambda t}$ anwenden und Halbwertszeit und Zerfallskonstante ineinander umrechnen.",
+    "Ich kann Restanteile nach $n$ Halbwertszeiten berechnen und den halblogarithmischen Zusammenhang beschreiben."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt eine kurze gemeinsame Klärung: Warum wird aus dem Zufall des Einzelkerns ein exponentielles Gesetz? Sammelt an der Tafel, was ,fester Anteil je Zeitspanne' bedeutet."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Zerfallstypen aus Lektion 2.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ak-zerfallsgesetz",
+     "text": "Lies den Abschnitt und verfolge die Herleitung der Halbwertszeit aus dem Zerfallsgesetz — arbeite dich dann Schritt für Schritt durch.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomkern/index.html#ak-zerfallsgesetz"
+     },
+     "schritte": [
+      {
+       "titel": "Das Zerfallsgesetz",
+       "html": "<p>Radioaktiver Zerfall ist ein <strong>statistischer Zufallsprozess</strong>: In jedem Zeitintervall zerfällt ein fester Bruchteil der noch vorhandenen Kerne. Daraus folgt das Zerfallsgesetz $$N(t) = N_0 \\cdot e^{-\\lambda t}.$$ $N_0$ ist die Anfangszahl der Kerne, $\\lambda$ die <strong>Zerfallskonstante</strong> (Zerfallswahrscheinlichkeit pro Zeit). Je größer $\\lambda$, desto schneller nimmt $N$ ab.</p>",
+       "check": {
+        "frage": "Was bedeutet eine große Zerfallskonstante $\\lambda$?",
+        "antwort": "Eine große Zerfallswahrscheinlichkeit pro Zeit — die Kerne zerfallen schnell, die Halbwertszeit ist kurz."
+       }
+      },
+      {
+       "titel": "Halbwertszeit und Zerfallskonstante",
+       "html": "<p>Die <strong>Halbwertszeit</strong> $T_{1/2}$ ist die Zeit, nach der nur noch die Hälfte der Kerne vorhanden ist: $N(T_{1/2}) = \\frac{1}{2}N_0$. Einsetzen ins Zerfallsgesetz und Auflösen liefert $$T_{1/2} = \\frac{\\ln 2}{\\lambda} \\quad\\Leftrightarrow\\quad \\lambda = \\frac{\\ln 2}{T_{1/2}}.$$ Halbwertszeit und Zerfallskonstante sind also umgekehrt proportional.</p>",
+       "check": {
+        "frage": "Ein Nuklid hat $\\lambda = 0{,}10\\,\\text{h}^{-1}$. Wie groß ist $T_{1/2}$?",
+        "antwort": "$T_{1/2} = \\frac{\\ln 2}{\\lambda} = \\frac{0{,}693}{0{,}10\\,\\text{h}^{-1}} \\approx 6{,}9\\,\\text{h}$."
+       }
+      },
+      {
+       "titel": "Restanteil nach $n$ Halbwertszeiten",
+       "html": "<p>Nach jeder Halbwertszeit halbiert sich der Bestand. Nach $n$ Halbwertszeiten ist also noch $$\\frac{N}{N_0} = \\left(\\frac{1}{2}\\right)^{n}$$ übrig. Nach $1$ Halbwertszeit $50\\,\\%$, nach $2$ $25\\,\\%$, nach $3$ $12{,}5\\,\\%$ usw. Dabei muss $n$ keine ganze Zahl sein: $n = t / T_{1/2}$.</p>",
+       "check": {
+        "frage": "Wie viel Prozent sind nach 4 Halbwertszeiten noch übrig?",
+        "antwort": "$(1/2)^4 = 1/16 = 6{,}25\\,\\%$."
+       }
+      },
+      {
+       "titel": "Die halblogarithmische Gerade",
+       "html": "<p>Logarithmiert man das Zerfallsgesetz, ergibt sich $$\\ln N = \\ln N_0 - \\lambda t.$$ Trägt man $\\ln N$ über $t$ auf, erhält man eine <strong>Gerade</strong> mit der Steigung $-\\lambda$ und dem Achsenabschnitt $\\ln N_0$. Eine Gerade im halblogarithmischen Diagramm ist das Kennzeichen exponentiellen Zerfalls.</p>",
+       "check": {
+        "frage": "Wie liest man $\\lambda$ aus dem halblogarithmischen Diagramm ab?",
+        "antwort": "$\\lambda$ ist der Betrag der Steigung der Geraden $\\ln N$ gegen $t$ (die Steigung ist $-\\lambda$)."
+       }
+      }
+     ],
+     "merksatz": "$N(t) = N_0\\,e^{-\\lambda t}$ mit $T_{1/2} = \\dfrac{\\ln 2}{\\lambda}$. Nach $n$ Halbwertszeiten ist der Restanteil $\\left(\\dfrac{1}{2}\\right)^n$. In der Auftragung $\\ln N$ über $t$ ergibt sich eine <strong>Gerade</strong> mit Steigung $-\\lambda$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Würfel-Zerfall — das Zerfallsgesetz nachbilden",
+       "material": "100 gleiche Würfel (oder Münzen), eine Schale, Millimeterpapier.",
+       "vorhersage": "Sage voraus: Wenn pro Runde jeder Würfel mit Augenzahl 6 „zerfällt“, wie viele der 100 Würfel bleiben nach der ersten Runde ungefähr übrig? Und ist die Abnahme pro Runde konstant oder wird sie kleiner?",
+       "auftraege": [
+        "Würfle alle Würfel, entferne jeden mit einer 6, notiere die verbleibende Anzahl. Wiederhole über mindestens 8 Runden.",
+        "Trage die verbleibende Anzahl über der Rundenzahl auf — erkennst du den exponentiellen Verlauf?",
+        "Trage $\\ln N$ über der Rundenzahl auf und prüfe, ob sich eine Gerade ergibt; schätze die „Halbwertszeit“ in Runden ab und vergleiche mit der Erwartung."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie hängen Halbwertszeit und Zerfallskonstante zusammen?",
+       "antwort": "$T_{1/2} = \\frac{\\ln 2}{\\lambda}$ — sie sind umgekehrt proportional: große $\\lambda$ bedeutet kurze Halbwertszeit."
+      },
+      {
+       "frage": "Von $N_0 = 8000$ Kernen sind nach 3 Halbwertszeiten wie viele übrig?",
+       "antwort": "$(1/2)^3 = 1/8$, also $8000/8 = 1000$ Kerne."
+      },
+      {
+       "frage": "Warum benutzt man eine halblogarithmische Auftragung?",
+       "antwort": "Weil exponentieller Zerfall dort eine Gerade ergibt; aus deren Steigung $-\\lambda$ lässt sich die Zerfallskonstante direkt ablesen."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-005",
+        "ph-qp-ak-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-010"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin den Unterschied: ,Nach jeder Halbwertszeit zerfallen dieselbe Anzahl Kerne' \\u2013 stimmt das? Und wenn nicht: Was stimmt?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-109"
+       ]
+      }
+     ],
+     "transfer": "Cäsium-137 ($T_{1/2} = 30{,}1\\\\,\\text{a}$): Nach wie vielen Jahren ist die Aktivität auf ein Achtel gesunken? Ohne Rechner."
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du wendest das Zerfallsgesetz $N(t) = N_0\\,e^{-\\lambda t}$ an und kennst die Bedeutung von $N_0$, $\\lambda$ und der Halbwertszeit $T_{1/2}$."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du rechnest Halbwertszeit und Zerfallskonstante über $T_{1/2} = \\frac{\\ln 2}{\\lambda}$ ineinander um und bestimmst Restanteile nach $n$ Halbwertszeiten."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du beschreibst, warum die Auftragung von $\\ln N$ über $t$ eine Gerade ergibt, und deutest ihre Steigung."
+    }
+   ]
+  },
+  {
+   "id": "l4",
+   "nr": 4,
+   "titel": "Altersbestimmung mit C-14",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomkern",
+   "themaPfad": "physik/qualifikationsphase/atomkern/",
+   "anker": "#ak-c14",
+   "ziele": [
+    "Ich kann das Zerfallsgesetz nach der Zeit $t$ auflösen und damit das Alter eines Fundes berechnen.",
+    "Ich kenne die Grundidee und die Grenzen der Radiokarbonmethode."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Zerfallsgesetz aus Lektion 3.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-009"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ak-c14",
+     "text": "Lies den Abschnitt und verfolge das Fund-Beispiel Schritt für Schritt — arbeite dich dann durch und prüfe dich am Ende selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomkern/index.html#ak-c14"
+     },
+     "schritte": [
+      {
+       "titel": "Die Grundidee: $^{14}\\text{C}$ im Gleichgewicht",
+       "html": "<p>In der Atmosphäre entsteht ständig <strong>$^{14}\\text{C}$</strong> aus Stickstoff durch kosmische Strahlung; es zerfällt mit $T_{1/2} \\approx 5730\\,\\text{a}$ wieder. Dadurch stellt sich ein konstanter Anteil $^{14}\\text{C}/^{12}\\text{C}$ ein. <strong>Lebende</strong> Organismen nehmen über Atmung und Nahrung ständig Kohlenstoff auf und tragen denselben Anteil in sich.</p>",
+       "check": {
+        "frage": "Warum bleibt der $^{14}\\text{C}$-Anteil in einem lebenden Baum konstant?",
+        "antwort": "Solange der Baum lebt, nimmt er ständig frischen Kohlenstoff (mit dem atmosphärischen $^{14}\\text{C}$-Anteil) auf. Aufnahme und Zerfall halten sich im Gleichgewicht."
+       }
+      },
+      {
+       "titel": "Nach dem Tod beginnt die „Uhr“",
+       "html": "<p>Mit dem <strong>Tod</strong> stoppt die Kohlenstoffaufnahme. Das vorhandene $^{14}\\text{C}$ zerfällt weiter, ohne ersetzt zu werden — der Anteil sinkt nach dem Zerfallsgesetz. Aus dem heute gemessenen Restanteil $N/N_0$ lässt sich berechnen, wie lange der Zerfall schon läuft, also wie alt der Fund ist.</p>",
+       "check": {
+        "frage": "Was startet beim Tod des Organismus die „radioaktive Uhr“?",
+        "antwort": "Die Kohlenstoffaufnahme endet. Ab da nimmt der $^{14}\\text{C}$-Anteil nur noch durch Zerfall ab — der gemessene Rest verrät die seither vergangene Zeit."
+       }
+      },
+      {
+       "titel": "Zerfallsgesetz nach $t$ auflösen",
+       "html": "<p>Aus $N = N_0\\,e^{-\\lambda t}$ folgt durch Logarithmieren $$t = -\\frac{1}{\\lambda}\\ln\\!\\left(\\frac{N}{N_0}\\right) = \\frac{T_{1/2}}{\\ln 2}\\,\\ln\\!\\left(\\frac{N_0}{N}\\right).$$ Man braucht nur den Restanteil $N/N_0$ und die Halbwertszeit. Beispiel: noch $25\\,\\%$ bedeutet zwei Halbwertszeiten, also $t \\approx 2 \\cdot 5730\\,\\text{a} = 11\\,460\\,\\text{a}$.</p>",
+       "check": {
+        "frage": "Ein Fund enthält noch $50\\,\\%$ des $^{14}\\text{C}$. Wie alt ist er?",
+        "antwort": "$50\\,\\%$ entspricht genau einer Halbwertszeit, also etwa $5730\\,\\text{a}$."
+       }
+      },
+      {
+       "titel": "Grenzen der Methode",
+       "html": "<p>Die Methode funktioniert gut bis etwa <strong>50\\,000 Jahre</strong>: danach ist zu wenig $^{14}\\text{C}$ übrig, um es zuverlässig zu messen. Voraussetzung ist außerdem ein in der Vergangenheit <strong>konstanter</strong> atmosphärischer $^{14}\\text{C}$-Anteil — Schwankungen müssen mit Eichkurven korrigiert werden. Anwendbar ist sie nur auf einst lebendes, kohlenstoffhaltiges Material.</p>",
+       "check": {
+        "frage": "Warum kann man Gesteine, die Millionen Jahre alt sind, nicht mit $^{14}\\text{C}$ datieren?",
+        "antwort": "Gestein war nie lebendig und hat $^{14}\\text{C}$ nie aufgenommen; außerdem wäre nach so langer Zeit ohnehin praktisch kein $^{14}\\text{C}$ mehr vorhanden."
+       }
+      }
+     ],
+     "merksatz": "Lebende Organismen halten den atmosphärischen $^{14}\\text{C}$-Anteil; nach dem Tod zerfällt er ungestört. Aus dem Restanteil folgt $t = \\dfrac{T_{1/2}}{\\ln 2}\\,\\ln\\!\\left(\\dfrac{N_0}{N}\\right)$. Nutzbar bis $\\sim 50\\,000\\,\\text{a}$ und nur für einst lebendes Material.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Altersbestimmung am Rechenbeispiel durchspielen",
+       "material": "Taschenrechner, Tabelle mit Restanteilen verschiedener Funde (selbst erstellt).",
+       "vorhersage": "Ein Fund hat noch $30\\,\\%$ seines $^{14}\\text{C}$. Schätze zuerst ohne Rechner: mehr oder weniger als zwei Halbwertszeiten alt? Begründe.",
+       "auftraege": [
+        "Berechne mit $T_{1/2} = 5730\\,\\text{a}$ das Alter für die Restanteile $50\\,\\%$, $30\\,\\%$ und $10\\,\\%$.",
+        "Vergleiche dein Ergebnis für $30\\,\\%$ mit deiner Schätzung — lagst du richtig?",
+        "Überlege, ab welchem Restanteil die Methode unsicher wird, und begründe mit der Halbwertszeit."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie löst man $N = N_0 e^{-\\lambda t}$ nach $t$ auf?",
+       "antwort": "$t = -\\frac{1}{\\lambda}\\ln\\!\\left(\\frac{N}{N_0}\\right)$, gleichwertig $t = \\frac{T_{1/2}}{\\ln 2}\\ln\\!\\left(\\frac{N_0}{N}\\right)$."
+      },
+      {
+       "frage": "Ein Knochen hat noch $25\\,\\%$ $^{14}\\text{C}$. Wie alt ist er ungefähr?",
+       "antwort": "$25\\,\\% = (1/2)^2$, also zwei Halbwertszeiten: rund $11\\,500$ Jahre."
+      },
+      {
+       "frage": "Nenne eine Voraussetzung, damit die C-14-Datierung verlässlich ist.",
+       "antwort": "Der atmosphärische $^{14}\\text{C}$-Anteil muss zur Lebenszeit bekannt bzw. konstant (oder über Eichkurven korrigierbar) sein, und der Fund muss aus einst lebendem Material bestehen."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-106"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-011"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-107",
+        "ph-qp-ak-303"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Warum ist die Radiokarbonmethode bei Stein oder Metall nicht anwendbar?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-006"
+       ]
+      }
+     ],
+     "transfer": "Nenne zwei Grenzen der C-14-Methode und begründe sie physikalisch."
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du löst das Zerfallsgesetz nach der Zeit $t$ auf und berechnest damit das Alter eines Fundes."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du erklärst die Grundidee der Radiokarbonmethode über das Gleichgewicht von $^{14}\\text{C}$ in lebenden Organismen."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du beurteilst die Grenzen der Methode (Altersbereich, Voraussetzungen) und ihre Aussagekraft."
+    }
+   ]
+  },
+  {
+   "id": "l5",
+   "nr": 5,
+   "titel": "Massendefekt und Kernenergie (eA)",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomkern",
+   "themaPfad": "physik/qualifikationsphase/atomkern/",
+   "anker": "#ak-massendefekt",
+   "ziele": [
+    "Ich kann den Massendefekt berechnen und über $E_B = \\Delta m \\cdot c^2$ in Bindungsenergie umrechnen.",
+    "Ich kann die Bindungsenergiekurve interpretieren und daraus erklären, warum Spaltung und Fusion Energie freisetzen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung Zerfallsgesetz und Aktivität.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-010"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ak-massendefekt",
+     "text": "Lies den Abschnitt über Massendefekt und Bindungsenergiekurve — arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomkern/index.html#ak-massendefekt"
+     },
+     "schritte": [
+      {
+       "titel": "Der Massendefekt",
+       "html": "<p>Ein Kern ist <strong>leichter</strong> als die Summe seiner einzelnen Nukleonen. Diese Differenz $$\\Delta m = Z\\,m_p + N\\,m_n - m_{\\text{Kern}}$$ heißt <strong>Massendefekt</strong>. Sie entsteht, weil beim Zusammenfügen der Nukleonen Bindungsenergie frei wird und nach $E = m c^2$ als Masse „fehlt“.</p>",
+       "check": {
+        "frage": "Warum ist ein Kern leichter als seine einzelnen Bausteine zusammen?",
+        "antwort": "Beim Binden der Nukleonen wird Energie frei; diese fehlende Energie entspricht nach $E = mc^2$ einer fehlenden Masse — dem Massendefekt."
+       }
+      },
+      {
+       "titel": "Bindungsenergie $E_B = \\Delta m \\cdot c^2$",
+       "html": "<p>Die <strong>Bindungsenergie</strong> ist die Energie, die man aufwenden müsste, um den Kern wieder in einzelne Nukleonen zu zerlegen: $$E_B = \\Delta m \\cdot c^2.$$ Praktisch nutzt man die Einheit $\\text{MeV}$: einer atomaren Masseneinheit $1\\,\\text{u}$ entsprechen etwa $931{,}5\\,\\text{MeV}$. So lässt sich aus $\\Delta m$ in $\\text{u}$ direkt die Energie in $\\text{MeV}$ berechnen.</p>",
+       "check": {
+        "frage": "Ein Kern hat $\\Delta m = 0{,}10\\,\\text{u}$. Wie groß ist seine Bindungsenergie?",
+        "antwort": "$E_B = 0{,}10\\,\\text{u} \\cdot 931{,}5\\,\\frac{\\text{MeV}}{\\text{u}} \\approx 93\\,\\text{MeV}$."
+       }
+      },
+      {
+       "titel": "Die Bindungsenergiekurve",
+       "html": "<p>Aussagekräftig ist die <strong>Bindungsenergie je Nukleon</strong> $E_B/A$. Trägt man sie über $A$ auf, steigt sie für leichte Kerne steil an, erreicht bei <strong>Eisen/Nickel</strong> ($A \\approx 56$–$60$) ihr Maximum von etwa $8{,}8\\,\\text{MeV}$ und fällt zu schweren Kernen langsam ab. Je höher $E_B/A$, desto fester gebunden und desto stabiler der Kern.</p>",
+       "check": {
+        "frage": "Was bedeutet ein hoher Wert von $E_B/A$ für einen Kern?",
+        "antwort": "Je größer die Bindungsenergie je Nukleon, desto stärker sind die Nukleonen gebunden und desto stabiler ist der Kern."
+       }
+      },
+      {
+       "titel": "Warum Spaltung und Fusion Energie liefern",
+       "html": "<p>Energie wird frei, wenn die Kerne nach der Reaktion <strong>fester gebunden</strong> sind (höheres $E_B/A$), also Richtung Eisen-Maximum. <strong>Fusion</strong> leichter Kerne (z.\\,B. Wasserstoff zu Helium) bewegt sich von links auf den Gipfel zu; <strong>Spaltung</strong> schwerer Kerne (z.\\,B. Uran) bewegt sich von rechts darauf zu. Die Differenz der Bindungsenergien wird als nutzbare Energie freigesetzt.</p>",
+       "check": {
+        "frage": "Warum setzt sowohl die Fusion leichter als auch die Spaltung schwerer Kerne Energie frei?",
+        "antwort": "In beiden Fällen entstehen Kerne mit höherer Bindungsenergie je Nukleon (näher am Eisen-Maximum). Die zusätzliche Bindung wird als Energie frei."
+       }
+      }
+     ],
+     "merksatz": "Der Kern ist um den <strong>Massendefekt</strong> $\\Delta m$ leichter als seine Nukleonen; die Bindungsenergie ist $E_B = \\Delta m \\cdot c^2$ (mit $1\\,\\text{u} \\,\\hat{=}\\, 931{,}5\\,\\text{MeV}$). Die Bindungsenergie je Nukleon hat ihr Maximum bei <strong>Eisen</strong> — deshalb liefern <strong>Fusion</strong> (links) und <strong>Spaltung</strong> (rechts) Energie.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Massendefekt aus Tabellenwerten berechnen",
+       "material": "Tabelle der Nuklidmassen (Tafelwerk), Taschenrechner, $c = 2{,}998\\cdot 10^{8}\\,\\frac{\\text{m}}{\\text{s}}$, $1\\,\\text{u} = 1{,}6605\\cdot 10^{-27}\\,\\text{kg}$.",
+       "vorhersage": "Sage voraus: Hat $^{56}\\text{Fe}$ oder $^{238}\\text{U}$ die größere Bindungsenergie je Nukleon? Begründe mit der Lage in der Kurve.",
+       "auftraege": [
+        "Berechne den Massendefekt von $^{4}_{2}\\text{He}$ aus $m_p$, $m_n$ und der Kernmasse.",
+        "Wandle $\\Delta m$ über $E_B = \\Delta m\\, c^2$ in Energie um — einmal in $\\text{J}$, einmal in $\\text{MeV}$.",
+        "Teile durch $A=4$ und vergleiche $E_B/A$ mit dem Eisenwert ($\\approx 8{,}8\\,\\text{MeV}$); prüfe deine Vorhersage."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie berechnet man den Massendefekt eines Kerns?",
+       "antwort": "$\\Delta m = Z\\,m_p + N\\,m_n - m_{\\text{Kern}}$ — Summe der Einzelmassen minus tatsächliche Kernmasse."
+      },
+      {
+       "frage": "Welche Energie entspricht $\\Delta m = 0{,}05\\,\\text{u}$?",
+       "antwort": "$E_B = 0{,}05 \\cdot 931{,}5\\,\\text{MeV} \\approx 47\\,\\text{MeV}$."
+      },
+      {
+       "frage": "Warum liegt Eisen am Gipfel der Bindungsenergiekurve, und was folgt daraus?",
+       "antwort": "Eisen hat die größte Bindungsenergie je Nukleon — die stabilsten Kerne. Daraus folgt: Fusion leichterer und Spaltung schwererer Kerne führen darauf zu und setzen Energie frei."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-108"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-012",
+        "ph-qp-ak-013"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Was passiert mit der Masse bei einer Kernspaltung \\u2013 und wo geht sie hin?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-110"
+       ]
+      }
+     ],
+     "transfer": "Wenn 1\\u00a0g Uran rund 23\\u00a0000\\u00a0kWh liefert: Wie viel Kilogramm Uran braucht ein Haushalt mit 3000\\u00a0kWh Jahresverbrauch für ein Jahr?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest den Massendefekt $\\Delta m$ und die Bindungsenergie $E_B = \\Delta m \\cdot c^2$ eines Kerns."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du interpretierst die Bindungsenergiekurve (Bindungsenergie je Nukleon) und leitest daraus ab, warum Spaltung und Fusion Energie freisetzen."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du erklärst die Äquivalenz von Masse und Energie am Beispiel des Kerns und nutzt die Einheit $\\text{MeV}$."
+    }
+   ]
+  },
+  {
+   "id": "l6",
+   "nr": 1,
+   "titel": "Linienspektren — Fingerabdrücke der Elemente",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomhuelle",
+   "themaPfad": "physik/qualifikationsphase/atomhuelle/",
+   "anker": "#ah-spektren",
+   "ziele": [
+    "Ich kann kontinuierliche Spektren, Emissionslinienspektren und Absorptionslinienspektren unterscheiden und ihr Entstehen erklären.",
+    "Ich kann die Spektralanalyse als Methode der Elementbestimmung beschreiben und ein Beispiel aus der Astronomie nennen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Kurze Auffrischung: Was ist ein Photon — und was bestimmt seine Energie? (Thema Quantenobjekte)",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-quantenobjekte",
+       "ids": [
+        "ph-qp-qo-001",
+        "ph-qp-qo-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ah-spektren",
+     "text": "Lies den Abschnitt und schau dir das Vergleichsbild der drei Spektraltypen an — arbeite dich dann Schritt für Schritt durch.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomhuelle/index.html#ah-spektren"
+     },
+     "schritte": [
+      {
+       "titel": "Drei Arten von Spektren",
+       "html": "<p>Ein <strong>kontinuierliches Spektrum</strong> (alle Farben fließend) sendet ein glühender Festkörper aus. Ein <strong>Emissionslinienspektrum</strong> (einzelne helle Linien auf dunklem Grund) entsteht, wenn ein verdünntes, angeregtes Gas leuchtet. Ein <strong>Absorptionslinienspektrum</strong> (dunkle Linien in einem kontinuierlichen Spektrum) entsteht, wenn weißes Licht ein kühleres Gas durchläuft.</p>",
+       "check": {
+        "frage": "Welche Lichtquelle erzeugt ein kontinuierliches Spektrum?",
+        "antwort": "Ein glühender Festkörper (oder dichtes, heißes Gas), z.\\,B. der Glühdraht einer Lampe — er sendet alle Farben lückenlos aus."
+       }
+      },
+      {
+       "titel": "Warum Linien statt aller Farben?",
+       "html": "<p>Ein verdünntes Gas kann nur Licht ganz <strong>bestimmter Wellenlängen</strong> aussenden oder schlucken — die für sein Element charakteristischen Linien. Diese Linien sind für jedes Element einzigartig, ein echter <strong>„Fingerabdruck“</strong>. (Den tieferen Grund — diskrete Energieniveaus — behandelt die nächste Lektion.)</p>",
+       "check": {
+        "frage": "Warum nennt man ein Linienspektrum den „Fingerabdruck“ eines Elements?",
+        "antwort": "Weil die Lage der Linien für jedes Element charakteristisch und einzigartig ist — man kann ein Element an seinem Linienmuster eindeutig erkennen."
+       }
+      },
+      {
+       "titel": "Emission und Absorption fallen zusammen",
+       "html": "<p>Ein Element <strong>absorbiert genau die Wellenlängen, die es auch emittiert</strong>. Die dunklen Absorptionslinien eines Gases liegen daher exakt an denselben Stellen wie seine hellen Emissionslinien. Ursache ist, dass dieselben Energieübergänge im Atom für beides verantwortlich sind.</p>",
+       "check": {
+        "frage": "Warum liegen die Absorptionslinien des Natriums genau auf seinen Emissionslinien?",
+        "antwort": "Aufnahme und Abgabe von Licht beruhen auf denselben Energieübergängen im Atom — daher betreffen sie exakt dieselben Wellenlängen."
+       }
+      },
+      {
+       "titel": "Spektralanalyse in der Astronomie",
+       "html": "<p>Aus dem Spektrum eines Sterns liest man ab, welche Elemente in seiner Atmosphäre vorkommen — dort zeigen sich <strong>Fraunhofer-Linien</strong> als dunkle Absorptionslinien im Sonnenspektrum. So lässt sich die chemische Zusammensetzung weit entfernter Objekte bestimmen, ohne eine Probe zu nehmen.</p>",
+       "check": {
+        "frage": "Wie erkennt man, dass die Sonne Wasserstoff enthält, ohne dorthin zu fliegen?",
+        "antwort": "Im Sonnenspektrum erscheinen dunkle Absorptionslinien genau an den Stellen der Wasserstofflinien — das Element im Sonnengas absorbiert dort Licht."
+       }
+      }
+     ],
+     "merksatz": "<strong>Kontinuierlich</strong>: glühender Festkörper. <strong>Emissionslinien</strong>: leuchtendes dünnes Gas. <strong>Absorptionslinien</strong>: weißes Licht durch kühleres Gas. Jedes Element hat ein einzigartiges Linienmuster; <strong>Absorptions- und Emissionslinien fallen zusammen</strong> — Grundlage der Spektralanalyse.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Flammenfärbung — Elementlinien sichtbar machen",
+       "material": "Magnesiastäbchen, Bunsenbrenner, Salze von Natrium, Kalium, Lithium und Kupfer, optional eine einfache Handspektroskop-Folie (Gitter).",
+       "vorhersage": "Sage voraus: Welche Salze erzeugen welche Flammenfarbe? Und vermute: Siehst du durch das Gitter eine durchgehende Farbe oder einzelne Linien?",
+       "auftraege": [
+        "Halte nacheinander die Salze in die Flamme und notiere die jeweilige Färbung.",
+        "Betrachte die gefärbte Flamme durch das Gitter — beschreibe, ob du ein kontinuierliches Spektrum oder einzelne Linien siehst.",
+        "Erkläre, warum verschiedene Elemente verschiedene Farben/Linien zeigen, und ordne die Beobachtung dem Begriff „Fingerabdruck“ zu."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wodurch unterscheiden sich Emissions- und Absorptionslinienspektrum im Aussehen?",
+       "antwort": "Emission: helle Linien auf dunklem Grund. Absorption: dunkle Linien in einem ansonsten kontinuierlichen (hellen) Spektrum."
+      },
+      {
+       "frage": "Was sagt die Lage der Linien über ein Gas aus?",
+       "antwort": "Sie verrät, welches Element vorliegt — jedes Element hat ein einzigartiges Linienmuster."
+      },
+      {
+       "frage": "Warum stimmen Absorptions- und Emissionslinien eines Elements überein?",
+       "antwort": "Beide beruhen auf denselben Energieübergängen im Atom, also auf denselben Wellenlängen."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-102",
+        "ph-qp-ah-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-001"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin: Warum konnte Helium 1868 zuerst im Sonnenlicht entdeckt werden — und erst Jahrzehnte später auf der Erde? Was verrät das über die Methode der Spektralanalyse?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-002"
+       ]
+      }
+     ],
+     "transfer": "Nenne zwei Alltagsbeispiele, in denen Licht durch Spektralanalyse Informationen über Materie liefert — eines auf der Erde, eines im Weltall."
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du unterscheidest kontinuierliche, Emissions- und Absorptionslinienspektren und erklärst ihr Entstehen."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du deutest Spektren als „Fingerabdruck“ eines Elements und begründest, warum Absorptions- und Emissionslinien zusammenfallen."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du beschreibst die Spektralanalyse als Methode der Elementbestimmung und nennst ein Beispiel aus der Astronomie."
+    }
+   ]
+  },
+  {
+   "id": "l7",
+   "nr": 2,
+   "titel": "Diskrete Energieniveaus und das Termschema",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomhuelle",
+   "themaPfad": "physik/qualifikationsphase/atomhuelle/",
+   "anker": "#ah-niveaus",
+   "ziele": [
+    "Ich kann erklären, warum Linienspektren diskrete Energieniveaus belegen, und die Beziehung $\\Delta E = h \\cdot f$ auf Übergänge anwenden.",
+    "Ich kann aus dem Termschema Emissionslinien und Absorptionslinien eines Atoms ableiten."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein gemeinsames Gespräch: Was würde man im Spektrum sehen, wenn die Atomhülle beliebige Energien annehmen könnte? Sammelt an der Tafel, was ‘diskret’ in diesem Zusammenhang bedeutet."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Linienspektren aus Lektion 6: Warum gibt es überhaupt scharfe Linien statt eines kontinuierlichen Bandes?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ah-niveaus",
+     "text": "Lies den Abschnitt mit dem Termschema und dem Merkkasten — arbeite dich dann Schritt für Schritt durch.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomhuelle/index.html#ah-niveaus"
+     },
+     "schritte": [
+      {
+       "titel": "Diskrete Energieniveaus",
+       "html": "<p>Die Elektronen eines Atoms können nur ganz <strong>bestimmte Energiewerte</strong> annehmen — die Energieniveaus. Dazwischen gibt es keine erlaubten Zustände. Im <strong>Termschema</strong> stellt man diese Niveaus als waagerechte Linien dar, mit der niedrigsten (dem Grundzustand) unten.</p>",
+       "check": {
+        "frage": "Was bedeutet „diskret“ bei den Energieniveaus?",
+        "antwort": "Es sind nur einzelne, voneinander getrennte Energiewerte erlaubt — keine beliebigen Zwischenwerte."
+       }
+      },
+      {
+       "titel": "$\\Delta E = h \\cdot f$",
+       "html": "<p>Springt ein Elektron von einem höheren auf ein niedrigeres Niveau, wird die <strong>Energiedifferenz als Photon</strong> abgegeben: $$\\Delta E = E_{\\text{oben}} - E_{\\text{unten}} = h \\cdot f.$$ Über $c = \\lambda f$ folgt $\\Delta E = \\frac{h c}{\\lambda}$. Eine große Energiedifferenz bedeutet eine hohe Frequenz, also eine <strong>kurze</strong> Wellenlänge.</p>",
+       "check": {
+        "frage": "Ein Übergang hat $\\Delta E = 3{,}0\\,\\text{eV}$. Liegt die zugehörige Wellenlänge im Sichtbaren? (sichtbar: $\\sim 1{,}6$–$3{,}3\\,\\text{eV}$)",
+        "antwort": "Ja — $3{,}0\\,\\text{eV}$ liegt im Bereich des sichtbaren Lichts (entspricht etwa $410\\,\\text{nm}$, violett)."
+       }
+      },
+      {
+       "titel": "Emission und Absorption im Termschema",
+       "html": "<p><strong>Emission</strong>: Das Elektron fällt nach unten und sendet ein Photon der passenden Energie aus (helle Linie). <strong>Absorption</strong>: Ein Photon mit genau der richtigen Energie hebt das Elektron auf ein höheres Niveau (dunkle Linie). Nur Photonen, deren Energie exakt einer Niveaudifferenz entspricht, werden absorbiert — daher dieselben Wellenlängen wie bei Emission.</p>",
+       "check": {
+        "frage": "Warum kann ein Atom nur Photonen ganz bestimmter Energie absorbieren?",
+        "antwort": "Nur wenn die Photonenenergie genau einer Differenz zwischen zwei erlaubten Niveaus entspricht, kann das Elektron auf ein höheres Niveau springen — sonst passt der Übergang nicht."
+       }
+      },
+      {
+       "titel": "Mehr Niveaus, mehr Linien",
+       "html": "<p>Je mehr Energieniveaus ein Atom hat, desto mehr verschiedene Übergänge — und damit Linien — sind möglich. Aus einem Termschema mit $n$ Niveaus lassen sich systematisch alle erlaubten Übergänge und die zugehörigen Linien ableiten. Übergänge mit größerer Energiedifferenz liefern kurzwelligeres Licht.</p>",
+       "check": {
+        "frage": "Aus drei Energieniveaus — wie viele verschiedene Emissionslinien sind höchstens möglich?",
+        "antwort": "Drei: $3\\to2$, $3\\to1$ und $2\\to1$ (jedes Niveaupaar liefert eine Linie)."
+       }
+      }
+     ],
+     "merksatz": "Atome haben <strong>diskrete Energieniveaus</strong>. Beim Übergang gilt $\\Delta E = h\\cdot f = \\dfrac{h c}{\\lambda}$: große Energiedifferenz $\\Rightarrow$ kurze Wellenlänge. Emission (Linie hell) und Absorption (Linie dunkel) betreffen dieselben Übergänge, also dieselben Wellenlängen.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Aus einem Termschema die Spektrallinien konstruieren",
+       "material": "Selbst gezeichnetes Termschema mit drei bis vier Niveaus (Energiewerte in eV), Lineal, Buntstifte, Taschenrechner.",
+       "vorhersage": "Sage voraus: Welcher Übergang in deinem Schema liefert die kurzwelligste Linie — der mit der größten oder der kleinsten Energiedifferenz?",
+       "auftraege": [
+        "Zeichne alle möglichen Abwärts-Übergänge als Pfeile ein und notiere jeweils $\\Delta E$.",
+        "Berechne mit $\\lambda = \\frac{h c}{\\Delta E}$ die Wellenlängen und markiere, welche im Sichtbaren liegen.",
+        "Ordne die Linien nach Wellenlänge und prüfe deine Vorhersage zur kurzwelligsten Linie."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche Beziehung verbindet Energiedifferenz und Frequenz eines Photons?",
+       "antwort": "$\\Delta E = h \\cdot f$ — die abgegebene Energie ist proportional zur Frequenz des Photons."
+      },
+      {
+       "frage": "Wie hängen Energiedifferenz und Wellenlänge zusammen?",
+       "antwort": "$\\Delta E = \\frac{h c}{\\lambda}$: je größer $\\Delta E$, desto kleiner $\\lambda$ (kurzwelliger)."
+      },
+      {
+       "frage": "Warum erscheinen Absorptionslinien an denselben Stellen wie Emissionslinien?",
+       "antwort": "Beide entsprechen denselben Niveaudifferenzen $\\Delta E$, also denselben Wellenlängen — einmal beim Hinauf-, einmal beim Hinunterspringen."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-004"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-103"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-104"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Ein Photon der Energie $2{,}5\\,\\text{eV}$ trifft auf ein Natriumatom. Kann es absorbiert werden — und was hängt davon ab?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-007"
+       ]
+      }
+     ],
+     "transfer": "Eine Spektrallinie liegt bei $\\lambda = 500\\,\\text{nm}$. Gibt sie Auskunft darüber, welche Elemente in der Lichtquelle leuchten — und wie?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst, dass Linienspektren auf diskrete Energieniveaus zurückgehen, und wendest $\\Delta E = h \\cdot f$ auf Übergänge an."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du leitest aus einem Termschema Emissions- und Absorptionslinien ab und ordnest Übergänge ihren Energiedifferenzen zu."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du beschreibst den Zusammenhang von Energiedifferenz, Frequenz und Wellenlänge eines emittierten Photons."
+    }
+   ]
+  },
+  {
+   "id": "l8",
+   "nr": 3,
+   "titel": "Der Franck-Hertz-Versuch",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomhuelle",
+   "themaPfad": "physik/qualifikationsphase/atomhuelle/",
+   "anker": "#ah-franck-hertz",
+   "ziele": [
+    "Ich kann den Aufbau und die charakteristische Kennlinie des Franck-Hertz-Versuchs beschreiben und deuten.",
+    "Ich kann erklären, warum der Versuch die Existenz diskreter Energieniveaus unabhängig von Spektralmessungen belegt."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Energieniveaus aus Lektion 7: Was bedeutet es, wenn ein Atom durch einen Stoß angeregt wird?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ah-franck-hertz",
+     "text": "Lies den Abschnitt, verfolge die Kennlinie und ihre Deutung — arbeite dich dann Schritt für Schritt durch.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomhuelle/index.html#ah-franck-hertz"
+     },
+     "schritte": [
+      {
+       "titel": "Aufbau des Versuchs",
+       "html": "<p>In einer mit <strong>Quecksilberdampf</strong> gefüllten Röhre werden Elektronen von einer Glühkathode emittiert und durch eine <strong>Beschleunigungsspannung</strong> $U$ zu einem Gitter hin beschleunigt. Hinter dem Gitter müssen sie eine kleine Gegenspannung überwinden, um die Auffängerelektrode zu erreichen. Gemessen wird der <strong>Auffängerstrom</strong> in Abhängigkeit von $U$.</p>",
+       "check": {
+        "frage": "Was wird im Franck-Hertz-Versuch gemessen?",
+        "antwort": "Der Auffängerstrom in Abhängigkeit von der Beschleunigungsspannung $U$."
+       }
+      },
+      {
+       "titel": "Die Kennlinie",
+       "html": "<p>Mit steigendem $U$ wächst der Strom zunächst an, bricht dann aber <strong>plötzlich ein</strong> — und das wiederholt sich in <strong>gleichen Spannungsabständen</strong> (bei Quecksilber $\\approx 4{,}9\\,\\text{V}$). Es entsteht eine charakteristische Kurve mit periodischen Maxima und Minima.</p>",
+       "check": {
+        "frage": "Wie sieht die Franck-Hertz-Kennlinie qualitativ aus?",
+        "antwort": "Der Strom steigt, bricht periodisch ein und steigt wieder — mit gleichbleibenden Spannungsabständen zwischen den Einbrüchen."
+       }
+      },
+      {
+       "titel": "Deutung: Stöße und Anregung",
+       "html": "<p>Solange die Elektronen weniger als $4{,}9\\,\\text{eV}$ Energie haben, stoßen sie <strong>elastisch</strong> mit den Hg-Atomen — sie verlieren kaum Energie. Erreichen sie genau $4{,}9\\,\\text{eV}$, geben sie diese Energie bei einem <strong>unelastischen Stoß</strong> vollständig an ein Hg-Atom ab und regen es an. Mit (fast) null Energie schaffen sie die Gegenspannung nicht mehr — der Strom bricht ein. Bei doppelter Spannung passiert das zweimal hintereinander.</p>",
+       "check": {
+        "frage": "Warum bricht der Strom genau bei Vielfachen von $4{,}9\\,\\text{V}$ ein?",
+        "antwort": "Bei $4{,}9\\,\\text{eV}$ können die Elektronen ein Hg-Atom unelastisch anregen und verlieren dabei ihre gesamte Energie; bei Vielfachen gelingt das mehrfach hintereinander."
+       }
+      },
+      {
+       "titel": "Der eigenständige Beleg für Energieniveaus",
+       "html": "<p>Der feste Energiebetrag $4{,}9\\,\\text{eV}$ zeigt: Das Atom nimmt Energie nur in einem <strong>bestimmten, festen Quantum</strong> auf — der ersten Anregungsenergie. Das belegt diskrete Energieniveaus <strong>ohne</strong> jede Spektralmessung, allein aus Stoßvorgängen. Tatsächlich sendet das angeregte Hg beim Zurückfallen UV-Licht der passenden Wellenlänge aus, was zur Spannung $4{,}9\\,\\text{V}$ passt.</p>",
+       "check": {
+        "frage": "Wieso ist der Franck-Hertz-Versuch ein von Spektren unabhängiger Beleg für Energieniveaus?",
+        "antwort": "Er misst die Energieaufnahme über Elektronenstöße, nicht über Licht. Dass nur ein festes Energiequantum aufgenommen wird, beweist diskrete Niveaus rein mechanisch/elektrisch."
+       }
+      }
+     ],
+     "merksatz": "Im Franck-Hertz-Versuch bricht der Auffängerstrom in festen Spannungsabständen ($\\approx 4{,}9\\,\\text{V}$ bei Hg) ein: Elektronen regen die Atome bei einem <strong>unelastischen Stoß</strong> nur mit einem <strong>festen Energiequantum</strong> an. Das belegt <strong>diskrete Energieniveaus</strong> unabhängig von Spektralmessungen.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Franck-Hertz-Kennlinie aufnehmen oder deuten",
+       "material": "Franck-Hertz-Röhre mit Steuergerät (Demonstration durch die Lehrkraft) oder eine aufgezeichnete Kennlinie zur Auswertung.",
+       "vorhersage": "Sage voraus: Was änderte sich an den Spannungsabständen der Einbrüche, wenn man Quecksilber durch ein Gas mit kleinerer erster Anregungsenergie ersetzte — würden sie größer oder kleiner?",
+       "auftraege": [
+        "Nimm (oder lies aus der gegebenen Kurve) die Spannungen der Stromeinbrüche ab und bestimme ihren Abstand.",
+        "Bestätige, dass der Abstand der ersten Anregungsenergie in $\\text{eV}$ entspricht.",
+        "Überprüfe deine Vorhersage: Begründe, warum ein anderer Stoffabstand auf eine andere Anregungsenergie schließen lässt."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was zeigt der periodische Stromeinbruch in der Kennlinie?",
+       "antwort": "Dass die Elektronen immer denselben festen Energiebetrag an die Atome abgeben — ein Zeichen für diskrete Energieniveaus."
+      },
+      {
+       "frage": "Worin unterscheiden sich elastische und unelastische Elektronenstöße hier?",
+       "antwort": "Beim elastischen Stoß bleibt die Elektronenenergie nahezu erhalten; beim unelastischen Stoß gibt das Elektron das Anregungsquantum vollständig ab."
+      },
+      {
+       "frage": "Welche Größe liest man aus dem Spannungsabstand der Einbrüche ab?",
+       "antwort": "Die erste Anregungsenergie des Gases (bei Quecksilber etwa $4{,}9\\,\\text{eV}$)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-005"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-105"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-006"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig: Warum belegt der Franck-Hertz-Versuch die diskreten Energiestufen unabhängig von der Spektroskopie? Was ist der entscheidende Unterschied in der Methode?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-106"
+       ]
+      }
+     ],
+     "transfer": "Das Licht, das angeregte Hg-Atome aussenden, hat $\\lambda \\approx 254\\,\\text{nm}$. Warum sieht man es nicht — und wie könnte man es trotzdem nachweisen?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du beschreibst Aufbau und Kennlinie des Franck-Hertz-Versuchs und deutest die periodischen Stromeinbrüche."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du begründest, warum der Versuch diskrete Energieniveaus unabhängig von Spektralmessungen belegt."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du erklärst den Zusammenhang zwischen dem Spannungsabstand der Einbrüche und der ersten Anregungsenergie des Gases."
+    }
+   ]
+  },
+  {
+   "id": "l9",
+   "nr": 4,
+   "titel": "Das Wasserstoffatom und die Balmer-Serie",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomhuelle",
+   "themaPfad": "physik/qualifikationsphase/atomhuelle/",
+   "anker": "#ah-wasserstoff",
+   "ziele": [
+    "Ich kann die Energieniveauformel $E_n = -\\frac{13{,}6\\,\\text{eV}}{n^2}$ anwenden und die Wellenlängen von Spektrallinien berechnen.",
+    "Ich kenne die Balmer-, Lyman- und Paschen-Serie und kann erklären, warum die Balmer-Serie als einzige im sichtbaren Bereich liegt."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Franck-Hertz aus Lektion 8: Was sagt der Versuch über die Größe der Energiestufen aus?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-008"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ah-wasserstoff",
+     "text": "Lies den Abschnitt, verfolge das $\\text{H}_\\alpha$-Beispiel und schau dir die Serien an — arbeite dich dann Schritt für Schritt durch.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomhuelle/index.html#ah-wasserstoff"
+     },
+     "schritte": [
+      {
+       "titel": "Die Energieniveaus des Wasserstoffs",
+       "html": "<p>Beim Wasserstoffatom sind die Energieniveaus durch $$E_n = -\\frac{13{,}6\\,\\text{eV}}{n^2}, \\quad n = 1, 2, 3, \\dots$$ gegeben. $n=1$ ist der Grundzustand ($-13{,}6\\,\\text{eV}$), nach oben rücken die Niveaus immer enger zusammen und nähern sich der Ionisierungsgrenze $E_\\infty = 0$.</p>",
+       "check": {
+        "frage": "Wie groß ist die Energie des Niveaus $n=2$?",
+        "antwort": "$E_2 = -\\frac{13{,}6\\,\\text{eV}}{2^2} = -\\frac{13{,}6}{4}\\,\\text{eV} = -3{,}4\\,\\text{eV}$."
+       }
+      },
+      {
+       "titel": "Energie eines Übergangs",
+       "html": "<p>Die Energie eines emittierten Photons ist die Differenz zweier Niveaus: $$\\Delta E = E_{n_2} - E_{n_1} = 13{,}6\\,\\text{eV}\\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right),$$ wobei $n_1$ das untere, $n_2$ das obere Niveau ist. Daraus folgt die Wellenlänge über $\\lambda = \\frac{h c}{\\Delta E}$.</p>",
+       "check": {
+        "frage": "Welche Energie hat der Übergang von $n=3$ nach $n=2$?",
+        "antwort": "$\\Delta E = 13{,}6\\,\\text{eV}\\left(\\frac{1}{4} - \\frac{1}{9}\\right) = 13{,}6 \\cdot 0{,}1389\\,\\text{eV} \\approx 1{,}89\\,\\text{eV}$ (die rote $\\text{H}_\\alpha$-Linie)."
+       }
+      },
+      {
+       "titel": "Die Spektralserien",
+       "html": "<p>Übergänge mit gleichem <strong>Endniveau</strong> bilden eine Serie: <strong>Lyman</strong> (Ende $n=1$), <strong>Balmer</strong> (Ende $n=2$), <strong>Paschen</strong> (Ende $n=3$). Je tiefer das Endniveau, desto größer die Energiedifferenzen — Lyman hat die größten, Paschen die kleinsten.</p>",
+       "check": {
+        "frage": "Welche Serie endet auf dem Niveau $n=2$?",
+        "antwort": "Die Balmer-Serie — alle ihre Übergänge enden im Niveau $n=2$."
+       }
+      },
+      {
+       "titel": "Warum nur Balmer sichtbar ist",
+       "html": "<p>Sichtbares Licht entspricht etwa $1{,}6$–$3{,}3\\,\\text{eV}$. Die <strong>Lyman</strong>-Übergänge (Ende $n=1$) haben zu große Energien $\\Rightarrow$ <strong>UV</strong>. Die <strong>Paschen</strong>-Übergänge (Ende $n=3$) haben zu kleine Energien $\\Rightarrow$ <strong>Infrarot</strong>. Nur die <strong>Balmer</strong>-Übergänge fallen mit $1{,}9$–$3{,}4\\,\\text{eV}$ genau in den sichtbaren Bereich.</p>",
+       "check": {
+        "frage": "Warum liegt die Lyman-Serie im UV?",
+        "antwort": "Ihre Übergänge enden auf $n=1$ und haben deshalb sehr große Energiedifferenzen; große $\\Delta E$ bedeutet kurze Wellenlänge — das liegt im Ultraviolett."
+       }
+      }
+     ],
+     "merksatz": "$E_n = -\\dfrac{13{,}6\\,\\text{eV}}{n^2}$; Übergangsenergie $\\Delta E = 13{,}6\\,\\text{eV}\\left(\\dfrac{1}{n_1^2}-\\dfrac{1}{n_2^2}\\right)$. Serien nach Endniveau: <strong>Lyman</strong> ($n{=}1$, UV), <strong>Balmer</strong> ($n{=}2$, sichtbar), <strong>Paschen</strong> ($n{=}3$, IR).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Balmer-Linien berechnen und einordnen",
+       "material": "Taschenrechner, $h c \\approx 1240\\,\\text{eV·nm}$, Wertebereich des sichtbaren Lichts ($\\sim 380$–$780\\,\\text{nm}$).",
+       "vorhersage": "Sage voraus: Welcher Balmer-Übergang ($3\\to2$ oder $4\\to2$) liefert die kurzwelligere (mehr ins Blaue gehende) Linie?",
+       "auftraege": [
+        "Berechne $\\Delta E$ für die Übergänge $3\\to2$, $4\\to2$ und $5\\to2$.",
+        "Wandle mit $\\lambda = \\frac{1240\\,\\text{eV·nm}}{\\Delta E}$ in Wellenlängen um und ordne sie Farben zu.",
+        "Prüfe, ob alle drei im Sichtbaren liegen, und vergleiche mit deiner Vorhersage."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie berechnet man die Energie des Niveaus $n=4$ im Wasserstoffatom?",
+       "antwort": "$E_4 = -\\frac{13{,}6\\,\\text{eV}}{16} = -0{,}85\\,\\text{eV}$."
+      },
+      {
+       "frage": "Zu welcher Serie gehört ein Übergang, der auf $n=1$ endet, und in welchem Bereich liegt er?",
+       "antwort": "Zur Lyman-Serie; sie liegt im ultravioletten Bereich."
+      },
+      {
+       "frage": "Warum ist gerade die Balmer-Serie sichtbar?",
+       "antwort": "Ihre Übergänge (Ende $n=2$) haben Energien von etwa $1{,}9$–$3{,}4\\,\\text{eV}$ — genau der Bereich des sichtbaren Lichts; Lyman ist energiereicher (UV), Paschen energieärmer (IR)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-004"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-107"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-009",
+        "ph-qp-ah-011"
+       ]
+      }
+     ],
+     "partner": "Vergleicht: $\\text{H}\\alpha$ ($656\\,\\text{nm}$), $\\text{H}\\beta$ ($486\\,\\text{nm}$), $\\text{H}\\gamma$ ($434\\,\\text{nm}$). Warum werden die Linien mit steigendem $n$ kurzwelliger? Zeigt das an der Formel."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-007"
+       ]
+      }
+     ],
+     "transfer": "Warum leuchten viele Gasnebel im Weltall rötlich — und welche Spektrallinie ist dafür verantwortlich?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du wendest die Energieniveauformel $E_n = -\\frac{13{,}6\\,\\text{eV}}{n^2}$ an und berechnest Wellenlängen von Spektrallinien."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du ordnest Übergänge den Serien (Lyman, Balmer, Paschen) zu und begründest, warum nur die Balmer-Serie im sichtbaren Bereich liegt."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du erklärst den Zusammenhang zwischen Endniveau, Energiedifferenz und Spektralbereich einer Serie."
+    }
+   ]
+  },
+  {
+   "id": "l10",
+   "nr": 5,
+   "titel": "Atommodelle im Wandel",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomhuelle",
+   "themaPfad": "physik/qualifikationsphase/atomhuelle/",
+   "anker": "#ah-modelle",
+   "ziele": [
+    "Ich kann die fünf Atommodelle (Dalton, Thomson, Rutherford, Bohr, Quantenmechanik) in der richtigen Reihenfolge nennen und ihre wichtigsten Stärken und Schwächen benennen.",
+    "Ich kann erklären, warum das Bohrsche Modell trotz des Erfolgs beim Wasserstoffspektrum durch die Quantenmechanik ersetzt wurde."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Wasserstoffniveaus aus Lektion 9: Welche Serie liegt im Sichtbaren — und warum?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ah-modelle",
+     "text": "Lies den Abschnitt und den Merkkasten zu Modellen als Werkzeuge — arbeite dich dann Schritt für Schritt durch.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/atomhuelle/index.html#ah-modelle"
+     },
+     "schritte": [
+      {
+       "titel": "Von Dalton zu Thomson",
+       "html": "<p><strong>Dalton</strong> (um 1808): Atome sind unteilbare, kugelförmige Bausteine eines Elements. <strong>Thomson</strong> (1904) entdeckte das Elektron und schlug das „Rosinenkuchenmodell“ vor: negative Elektronen sitzen in einer gleichmäßig positiv geladenen Kugel. Damit war das Atom erstmals nicht mehr unteilbar.</p>",
+       "check": {
+        "frage": "Was war neu an Thomsons Modell gegenüber Dalton?",
+        "antwort": "Thomson sah das Atom als teilbar an: Es enthält negativ geladene Elektronen, eingebettet in eine positive Ladung — Dalton hielt das Atom für unteilbar."
+       }
+      },
+      {
+       "titel": "Rutherford und der Kern",
+       "html": "<p>Rutherfords <strong>Streuversuch</strong> (1911): Die meisten $\\alpha$-Teilchen durchdrangen eine Goldfolie nahezu ungestört, wenige wurden stark abgelenkt. Folgerung: Die Masse und positive Ladung sitzen in einem winzigen, dichten <strong>Kern</strong>, die Hülle ist fast leer. Das widerlegte Thomsons gleichmäßig verteilte Ladung.</p>",
+       "check": {
+        "frage": "Welche Beobachtung im Streuversuch belegt einen winzigen, schweren Kern?",
+        "antwort": "Dass die allermeisten $\\alpha$-Teilchen ungehindert durchfliegen und nur ganz wenige stark zurückgelenkt werden — die Masse muss in einem sehr kleinen, dichten Bereich konzentriert sein."
+       }
+      },
+      {
+       "titel": "Das Bohrsche Modell",
+       "html": "<p><strong>Bohr</strong> (1913) ergänzte feste <strong>Bahnen</strong> mit diskreten Energien: Elektronen strahlen auf einer Bahn nicht, sondern nur beim Sprung zwischen Bahnen ($\\Delta E = h f$). Damit erklärte das Modell <strong>das Wasserstoffspektrum</strong> quantitativ — ein großer Erfolg. Schwäche: Es behandelt nur Wasserstoff gut und mischt klassische Bahnvorstellung mit Quantenbedingungen.</p>",
+       "check": {
+        "frage": "Welchen großen Erfolg hatte das Bohrsche Modell?",
+        "antwort": "Es erklärte das Linienspektrum des Wasserstoffatoms quantitativ richtig über Sprünge zwischen Bahnen mit diskreten Energien."
+       }
+      },
+      {
+       "titel": "Warum die Quantenmechanik kam",
+       "html": "<p>Bohrs Bahnen sind ein klassisches Bild, das mit der Physik nicht vereinbar ist (kreisende Ladungen müssten strahlen) und bei Mehrelektronen-Atomen versagt. Die <strong>Quantenmechanik</strong> (ab 1926) ersetzt feste Bahnen durch <strong>Aufenthaltswahrscheinlichkeiten (Orbitale)</strong>: Man kennt nur, wo das Elektron mit welcher Wahrscheinlichkeit ist. Sie erklärt auch komplexere Atome und gilt bis heute.</p>",
+       "check": {
+        "frage": "Wodurch ersetzt die Quantenmechanik die festen Bohrschen Bahnen?",
+        "antwort": "Durch Orbitale — Bereiche, in denen sich das Elektron mit bestimmter Wahrscheinlichkeit aufhält. Statt einer genauen Bahn gibt es nur Aufenthaltswahrscheinlichkeiten."
+       }
+      }
+     ],
+     "merksatz": "Atommodelle sind <strong>Werkzeuge</strong>, die wachsende Beobachtungen erklären: <strong>Dalton</strong> (unteilbar) &rarr; <strong>Thomson</strong> (Elektronen in positiver Kugel) &rarr; <strong>Rutherford</strong> (Kern + leere Hülle) &rarr; <strong>Bohr</strong> (Bahnen mit diskreten Energien, erklärt H-Spektrum) &rarr; <strong>Quantenmechanik</strong> (Orbitale, Aufenthaltswahrscheinlichkeit).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Rutherford-Streuung mit dem Murmelmodell",
+       "material": "Unter einem Karton verstecktes Hindernis (z.\\,B. ein Kreis/Keil), Murmeln, die man darunter rollen lässt — die „Streuung“ wird nur an den auslaufenden Murmeln beobachtet.",
+       "vorhersage": "Sage voraus: Wenn nur sehr wenige Murmeln stark abgelenkt werden und fast alle gerade durchlaufen — ist das verdeckte Hindernis dann groß oder klein im Vergleich zur Fläche?",
+       "auftraege": [
+        "Rolle viele Murmeln unter den Karton und notiere, welcher Anteil stark abgelenkt wird.",
+        "Schließe aus dem Muster auf Größe und Lage des verdeckten Hindernisses, ohne nachzusehen.",
+        "Übertrage das Ergebnis auf Rutherfords Versuch: Wofür stehen Murmeln, Hindernis und starke Ablenkung?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Nenne die fünf Atommodelle in der richtigen Reihenfolge.",
+       "antwort": "Dalton &rarr; Thomson &rarr; Rutherford &rarr; Bohr &rarr; Quantenmechanik."
+      },
+      {
+       "frage": "Welches Experiment führte zum Kernmodell und was zeigte es?",
+       "antwort": "Rutherfords Streuversuch an Goldfolie: Die meisten $\\alpha$-Teilchen flogen durch, wenige wurden stark abgelenkt — also gibt es einen winzigen, schweren, positiven Kern."
+      },
+      {
+       "frage": "Warum wurde das Bohrsche Modell trotz seines Erfolgs ersetzt?",
+       "antwort": "Es vermischt klassische Bahnen mit Quantenbedingungen, ist physikalisch nicht widerspruchsfrei und versagt bei Atomen mit mehreren Elektronen; die Quantenmechanik mit Orbitalen erklärt diese ebenfalls."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-108"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-006"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-109"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Jedes Modell hat seinen Gültigkeitsbereich. Wann genügt Bohrs Modell — und wann muss man die Quantenmechanik bemühen? Nennt je ein Beispiel."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-010"
+       ]
+      }
+     ],
+     "transfer": "Ein Schüler sagt: ‘Das Elektron kreist im Atom wie ein Planet um die Sonne.’ Welche zwei Fehler stecken in diesem Satz?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt — Erweiterungsanforderung:",
+     "links": [
+      {
+       "label": "Vertiefung: Potentialtopf (eA) auf der Erklärseite",
+       "href": "physik/qualifikationsphase/atomhuelle/index.html#ah-modelle"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du nennst die fünf Atommodelle (Dalton, Thomson, Rutherford, Bohr, Quantenmechanik) in der richtigen Reihenfolge mit ihren wichtigsten Aussagen."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du benennst Stärken und Schwächen jedes Modells und begründest, warum ein Modell jeweils abgelöst wurde."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du beurteilst Atommodelle als Werkzeuge, die jeweils nur bestimmte Beobachtungen erklären, und ordnest ihre Reichweite ein."
+    }
+   ]
+  },
+  {
+   "id": "l5b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Atomkern und Radioaktivität",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomkern",
+   "themaPfad": "physik/qualifikationsphase/atomkern/",
+   "ziele": [
+    "Ich kann Zerfallsarten erkennen, Tochterkerne bestimmen und das Zerfallsgesetz auf Halbwertszeit, Zerfallskonstante und Aktivität anwenden.",
+    "Ich kann Massendefekt und Bindungsenergie deuten und mein Wissen über den Atomkern auf neue Anwendungen übertragen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zu den Zerfallsarten — danach mischst und vertiefst du das ganze Thema Atomkern.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-202",
+        "ph-qp-ak-203",
+        "ph-qp-ak-304"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-204",
+        "ph-qp-ak-205",
+        "ph-qp-ak-206",
+        "ph-qp-ak-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-207",
+        "ph-qp-ak-301"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einem selbst gewählten Nuklid: Woran erkennt man die Zerfallsart, und wie ändern sich dabei Massenzahl $A$ und Ladungszahl $Z$?"
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-atomkern",
+       "ids": [
+        "ph-qp-ak-208"
+       ]
+      }
+     ],
+     "transfer": "Geh bei jeder Zerfallsaufgabe in dieser Reihenfolge vor: erst die Zerfallsart bestimmen, dann mit den Erhaltungssätzen $A$ und $Z$ anpassen, und erst zuletzt mit dem Zerfallsgesetz die Zeit oder Aktivität berechnen."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Radioaktiver Zerfall — Halbwertszeit und Zerfallsgesetz",
+       "href": "simulationen/physik/zerfall/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erkennst Zerfallsarten, bestimmst Tochterkerne und wendest das Zerfallsgesetz auf Halbwertszeit, Zerfallskonstante und Aktivität an."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du überträgst Massendefekt und Bindungsenergie auf neue Aufgaben und verknüpfst die Themen des Kernblocks miteinander."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du beurteilst Anwendungen wie die Altersbestimmung und ordnest Energiefreisetzung bei Spaltung und Fusion physikalisch ein."
+    }
+   ]
+  },
+  {
+   "id": "l10b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Atomhülle",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-atomhuelle",
+   "themaPfad": "physik/qualifikationsphase/atomhuelle/",
+   "ziele": [
+    "Ich kann Photonenenergien aus Wellenlänge und Frequenz berechnen und Spektraltypen sicher unterscheiden.",
+    "Ich kann das Termschema des Wasserstoffatoms anwenden und mein Wissen auf Ionisierung und den Franck-Hertz-Versuch übertragen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zu den Spektraltypen — danach mischst und vertiefst du das ganze Thema Atomhülle.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-202",
+        "ph-qp-ah-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-204",
+        "ph-qp-ah-205",
+        "ph-qp-ah-206"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-207",
+        "ph-qp-ah-301"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig: Warum kann ein Atom ein Photon nur dann absorbieren, wenn dessen Energie exakt zu einem Übergang passt — und was bedeutet das für die Lage der Spektrallinien?"
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-atomhuelle",
+       "ids": [
+        "ph-qp-ah-208"
+       ]
+      }
+     ],
+     "transfer": "Bei jeder Spektral- oder Photonenaufgabe hilft dieselbe Brücke: $E = h \\cdot f = \\frac{h \\cdot c}{\\lambda}$. Überlege zuerst, ob du von einem Übergang, einer Wellenlänge oder einer Frequenz ausgehst — dann setzt du in die passende Form ein."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Energieniveaus und Spektrallinien des Wasserstoffatoms",
+       "href": "simulationen/physik/atomhuelle/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest Photonenenergien aus Wellenlänge und Frequenz und unterscheidest die Spektraltypen sicher."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du wendest das Termschema des Wasserstoffatoms an und überträgst es auf Ionisierung und den Franck-Hertz-Versuch."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du verknüpfst Spektren, Energieniveaus und Atommodelle zu einem stimmigen Gesamtbild der Atomhülle."
+    }
+   ]
+  }
+ ],
+ "bloecke": [
+  {
+   "titel": "Atomkern und Radioaktivität",
+   "thema": "ph-qp-atomkern",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l5b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Atomhülle",
+   "thema": "ph-qp-atomhuelle",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10",
+    "l10b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  }
+ ]
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suchen und Sortieren — Klasse 10 · Informatik — Lernwelt</title>
+<meta name="description" content="Lineare und binäre Suche, Bubble Sort und Aufwandsabschätzung — mit interaktivem Sortier-Visualisierer.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="informatik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln und Simulation. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Suchen und Sortieren</h1>
+  <p class="einleitung">Dein Handy findet einen Kontakt unter Tausenden in Sekundenbruchteilen, eine Suchmaschine durchforstet Milliarden Seiten. Wie geht das so schnell? Die Antwort beginnt mit zwei Grundproblemen der Informatik: <strong>Suchen</strong> und <strong>Sortieren</strong> — und mit der Frage, wie viele Schritte ein Verfahren braucht.</p>
+
+  <section aria-labelledby="ue-suchen">
+    <h2 id="ue-suchen">1. Lineare Suche: der naive Weg</h2>
+    <p>Die einfachste Suche prüft jeden Eintrag der Reihe nach: erster, zweiter, dritter … bis der gesuchte gefunden ist. Das funktioniert immer — auch in unsortierten Listen. Aber im schlechtesten Fall muss man <strong>alle $n$ Einträge</strong> ansehen.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Wie viele Vergleiche braucht die lineare Suche im Durchschnitt?</summary>
+      <div class="check-antwort"><p>Etwa die Hälfte: Mal steht der gesuchte Eintrag vorne, mal hinten — im Mittel rund $\frac{n}{2}$ Vergleiche. Bei 1000 Einträgen also etwa 500.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ue-binaer">
+    <h2 id="ue-binaer">2. Binäre Suche: halbieren statt durchprobieren</h2>
+    <p>In einer <strong>sortierten</strong> Liste geht es dramatisch schneller — wie beim Nachschlagen in einem Wörterbuch: Man schlägt in der Mitte auf, vergleicht, und weiß sofort, in welcher Hälfte es weitergeht. Jeder Vergleich <strong>halbiert</strong> den Suchbereich.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: 1000 Einträge</span>
+      <p>$1000 \to 500 \to 250 \to 125 \to 63 \to 32 \to 16 \to 8 \to 4 \to 2 \to 1$ — nach höchstens <strong>10 Vergleichen</strong> ist die Suche beendet. Die lineare Suche braucht im schlechtesten Fall 1000.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p>Die binäre Suche braucht bei $n$ Einträgen höchstens etwa $\log_2(n)$ Vergleiche — aber sie funktioniert <strong>nur auf sortierten Listen</strong>. Genau deshalb lohnt sich Sortieren: Einmal sortiert, wird jede spätere Suche extrem schnell.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum funktioniert die binäre Suche nicht auf unsortierten Listen?</summary>
+      <div class="check-antwort"><p>Der Trick beruht darauf, dass man nach dem Vergleich mit der Mitte sicher weiß, in welcher Hälfte der gesuchte Wert liegen muss. In einer unsortierten Liste könnte er überall sein — das Wegwerfen einer Hälfte wäre nicht gerechtfertigt.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ue-bubble">
+    <h2 id="ue-bubble">3. Bubble Sort: sortieren durch Vergleichen und Tauschen</h2>
+    <p>Bubble Sort ist das anschaulichste Sortierverfahren. Es vergleicht immer <strong>benachbarte</strong> Elemente und tauscht sie, wenn sie in der falschen Reihenfolge stehen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Bubble Sort — Ablauf</span>
+      <p>1. Gehe die Liste von links nach rechts und vergleiche jedes Paar benachbarter Elemente.<br>
+      2. Steht das größere links, tausche beide.<br>
+      3. Am Ende des Durchlaufs ist das größte Element ganz rechts „angekommen“ — wie eine Luftblase (engl. <em>bubble</em>), die aufsteigt.<br>
+      4. Wiederhole die Durchläufe (jeweils ohne den schon sortierten Schluss), bis ein Durchlauf ohne Tausch bleibt.</p>
+    </div>
+
+    <h3>Probiere es selbst aus</h3>
+    <p>Führe den Algorithmus Schritt für Schritt aus — mit „Weiter“ und „Zurück“ kannst du jeden Vergleich einzeln nachvollziehen. Der grüne Bereich ist bereits endgültig sortiert.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/informatik/sortieren/index.html?einbettung=1#n=8&anordnung=7"
+        title="Interaktiver Sortier-Visualisierer: Bubble Sort" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/informatik/sortieren/index.html#n=8&anordnung=7" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Stelle „Bereits sortiert“ ein: Wie viele Vergleiche braucht der Algorithmus, um fertig zu sein?<br>
+      2. Stelle „Absteigend“ mit $n = 10$ ein und prüfe: Es sind genau $9 + 8 + \dots + 1 = 45$ Vergleiche.<br>
+      3. Beobachte einen kompletten Durchlauf: Warum steht danach das größte verbleibende Element ganz rechts?</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ue-aufwand">
+    <h2 id="ue-aufwand">4. Wie teuer ist Sortieren? Der Aufwand</h2>
+    <p>Im schlechtesten Fall (absteigend sortierte Liste) braucht Bubble Sort</p>
+    <p class="formel-abgesetzt">$$(n-1) + (n-2) + \dots + 1 = \frac{n \cdot (n-1)}{2} \approx \frac{n^2}{2} \text{ Vergleiche.}$$</p>
+    <p>Der Aufwand wächst <strong>quadratisch</strong>: Doppelt so viele Elemente bedeuten rund viermal so viele Vergleiche. Bei kleinen Listen ist das egal — bei Millionen Einträgen wird es zum Problem. Im besten Fall (Liste schon sortiert) erkennt unser Bubble Sort das dagegen nach nur einem Durchlauf mit $n - 1$ Vergleichen.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Eine Liste mit 20 Elementen statt 10 — wie ändert sich der schlechteste Fall?</summary>
+      <div class="check-antwort"><p>Von $\frac{10 \cdot 9}{2} = 45$ auf $\frac{20 \cdot 19}{2} = 190$ Vergleiche — gut das Vierfache. Das ist das quadratische Wachstum: $n$ verdoppeln $\Rightarrow$ Aufwand etwa vervierfachen.</p></div>
+    </details>
+  <p>Wie schnell wachsen die Aufwände wirklich? Im Experiment <a href="../../../experimente/informatik/laufzeitmessung/index.html">Laufzeitmessung von Algorithmen</a> stoppst du echte Laufzeiten und findest die Wachstumskurven selbst heraus.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Geht Sortieren schneller?</summary>
+    <div class="vertiefung-inhalt">
+      <p>Ja — deutlich. Verfahren wie <em>Mergesort</em> teilen die Liste wiederholt in Hälften, sortieren die Teile und verschmelzen sie geschickt. Der Aufwand sinkt damit von rund $n^2$ auf etwa $n \cdot \log_2(n)$ Vergleiche: Bei einer Million Einträgen sind das etwa $2 \cdot 10^7$ statt $5 \cdot 10^{11}$ — Faktor 25.000! Solche „Teile und herrsche“-Strategien begegnen dir in der Oberstufen-Informatik wieder.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen — inklusive Zählaufgabe mit der Simulation.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

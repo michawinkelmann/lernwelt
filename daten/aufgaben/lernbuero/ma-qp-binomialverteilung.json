@@ -1,0 +1,685 @@
+{
+ "thema": "ma-qp-binomialverteilung",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben zur Binomialverteilung (Qualifikationsphase). Zur fachlichen Prüfung durch die Lehrkraft.",
+ "aufgaben": [
+  {
+   "id": "ma-qp-bv-101",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze die vier Bedingungen für eine Bernoulli-Kette.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "zwei",
+     "optionen": [
+      "zwei",
+      "drei",
+      "beliebig viele"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "gleich groß",
+     "optionen": [
+      "gleich groß",
+      "von Stufe zu Stufe kleiner",
+      "unterschiedlich"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "unabhängig voneinander",
+     "optionen": [
+      "unabhängig voneinander",
+      "abhängig voneinander",
+      "gleich ausgegangen"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "binomialverteilt",
+     "optionen": [
+      "binomialverteilt",
+      "gleichverteilt",
+      "normalverteilt"
+     ]
+    }
+   ],
+   "tipps": [
+    "Ein Bernoulli-Versuch kennt nur Treffer oder Niete — mehr gibt es nicht.",
+    "Das Skatblatt-Gegenbeispiel hilft: Beim Ziehen ohne Zurüklegen ändert sich p — das verletzt die zweite Bedingung.",
+    "Die Bezeichnung der zugehörigen Zufallsgröße enthält das Wort „Binom“ — von lat. bi = zwei, nomen = Name."
+   ],
+   "loesungsweg": "Zwei Ausgänge — gleich groß — unabhängig voneinander — binomialverteilt: Ein Bernoulli-Versuch ist auf Treffer/Niete beschränkt. Die Kette verlangt zusätzlich konstantes $p$ und unabhängige Stufen. Die Trefferzahl $X$ folgt dann einer Binomialverteilung mit den Parametern $n$ und $p$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP)"
+   ],
+   "text": "Ergänze die Bernoulli-Bedingungen. Ein Zufallsversuch heißt Bernoulli-Versuch, wenn er genau ___ Ausgänge hat. Wiederholt man ihn n-mal, so spricht man von einer Bernoulli-Kette, falls die Trefferwahrscheinlichkeit in jeder Stufe ___ bleibt und die Versuche ___ sind. Die Zufallsgröße X, die die Treffer zählt, heißt dann ___."
+  },
+  {
+   "id": "ma-qp-bv-102",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine faire Münze wird 4-mal geworfen; $X$ zählt die „Zahl“-Würfe. Bestimme den Binomialkoeffizienten $\\binom{4}{2}$ und berechne damit $P(X = 2)$.",
+   "eingaben": [
+    {
+     "label": "$\\binom{4}{2}$",
+     "antwort": 6,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X = 2)$",
+     "antwort": 0.375,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$\\binom{4}{2}$ zählt die Pfade mit genau 2 Treffern: $\\binom{4}{2} = \\frac{4 \\cdot 3}{2 \\cdot 1}$.",
+    "Bei $p = 0{,}5$ hat jeder Pfad die Wahrscheinlichkeit $0{,}5^4 = \\frac{1}{16}$ — egal wie Treffer und Nieten angeordnet sind.",
+    "Formel von Bernoulli: $P(X = 2) = \\binom{4}{2} \\cdot 0{,}5^4 = \\frac{6}{16}$."
+   ],
+   "loesungsweg": "$\\binom{4}{2} = \\frac{4 \\cdot 3}{2 \\cdot 1} = 6$ Pfade tragen genau 2 Treffer. Jeder hat die Wahrscheinlichkeit $0{,}5^4 = \\frac{1}{16}$. Formel von Bernoulli: $P(X = 2) = 6 \\cdot \\frac{1}{16} = \\frac{6}{16} = 0{,}375$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP)"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-103",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Glücksrad mit Gewinnwahrscheinlichkeit $p = 0{,}4$ wird $n = 5$-mal gedreht; $X$ zählt die Gewinne. Berechne $P(X \\le 1)$ (auf vier Nachkommastellen) und daraus $P(X \\ge 2)$ über das Gegenereignis.",
+   "eingaben": [
+    {
+     "label": "$P(X \\le 1)$",
+     "antwort": 0.337,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X \\ge 2)$",
+     "antwort": 0.663,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$P(X \\le 1) = P(X = 0) + P(X = 1)$ — nur zwei Summanden, beide mit der Formel von Bernoulli ($n = 5$, $p = 0{,}4$).",
+    "$P(X = 0) = 0{,}6^5$ und $P(X = 1) = \\binom{5}{1} \\cdot 0{,}4 \\cdot 0{,}6^4$.",
+    "Gegenereignis-Trick: $P(X \\ge 2) = 1 - P(X \\le 1)$ — die Grenze rutscht auf $k = 1$."
+   ],
+   "loesungsweg": "$P(X = 0) = 0{,}6^5 \\approx 0{,}0778$, $P(X = 1) = 5 \\cdot 0{,}4 \\cdot 0{,}6^4 \\approx 0{,}2592$. Zusammen: $P(X \\le 1) \\approx 0{,}3370$. Gegenereignis: $P(X \\ge 2) = 1 - 0{,}3370 = 0{,}6630$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP)"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-104",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine faire Münze wird 6-mal geworfen; $X$ zählt die „Zahl“-Würfe. Bestimme $\\binom{6}{3}$ und berechne $P(X = 3)$ (auf vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "$\\binom{6}{3}$",
+     "antwort": 20,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X = 3)$",
+     "antwort": 0.3125,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$\\binom{6}{3} = \\frac{6 \\cdot 5 \\cdot 4}{3 \\cdot 2 \\cdot 1}$ — oder direkt die nCr-Taste.",
+    "Bei $p = 0{,}5$ hat jeder Pfad die Wahrscheinlichkeit $0{,}5^6 = \\frac{1}{64}$.",
+    "Formel von Bernoulli: $P(X = 3) = 20 \\cdot \\frac{1}{64}$."
+   ],
+   "loesungsweg": "$\\binom{6}{3} = \\frac{6!}{3! \\cdot 3!} = 20$ Pfade. Jeder hat die Wahrscheinlichkeit $0{,}5^6 = \\frac{1}{64}$. Formel von Bernoulli: $P(X = 3) = 20 \\cdot \\frac{1}{64} = \\frac{20}{64} = 0{,}3125$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP)"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-105",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Zufallsgröße $X$ ist binomialverteilt mit $n = 20$ und $p = 0{,}3$. Berechne den Erwartungswert $\\mu$ und die Standardabweichung $\\sigma$ (auf zwei Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "$\\mu$",
+     "antwort": 6.0,
+     "toleranz": 0.01,
+     "einheit": ""
+    },
+    {
+     "label": "$\\sigma$",
+     "antwort": 2.05,
+     "toleranz": 0.02,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Erwartungswert: $\\mu = n \\cdot p = 20 \\cdot 0{,}3$.",
+    "Standardabweichung: $\\sigma = \\sqrt{n \\cdot p \\cdot (1 - p)} = \\sqrt{20 \\cdot 0{,}3 \\cdot 0{,}7}$.",
+    "$\\sqrt{4{,}2} \\approx 2{,}05$ — als Schätzstart: $\\sqrt{4} = 2$."
+   ],
+   "loesungsweg": "$\\mu = 20 \\cdot 0{,}3 = 6$. $\\sigma = \\sqrt{20 \\cdot 0{,}3 \\cdot 0{,}7} = \\sqrt{4{,}2} \\approx 2{,}05$. Wegen $\\sigma \\approx 2{,}05 < 3$ ist die Laplace-Bedingung nicht erfüllt.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP)"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-106",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Zufallsgröße $X$ ist binomialverteilt mit $n = 40$ und $p = 0{,}5$. Berechne $\\mu$ und $\\sigma$ (auf zwei Nachkommastellen) und prüfe die Laplace-Bedingung.",
+   "eingaben": [
+    {
+     "label": "$\\mu$",
+     "antwort": 20.0,
+     "toleranz": 0.01,
+     "einheit": ""
+    },
+    {
+     "label": "$\\sigma$",
+     "antwort": 3.16,
+     "toleranz": 0.02,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$\\mu = n \\cdot p = 40 \\cdot 0{,}5$.",
+    "$\\sigma = \\sqrt{40 \\cdot 0{,}5 \\cdot 0{,}5} = \\sqrt{10}$.",
+    "$\\sqrt{10} \\approx 3{,}16 > 3$: Laplace-Bedingung erfüllt."
+   ],
+   "loesungsweg": "$\\mu = 40 \\cdot 0{,}5 = 20$. $\\sigma = \\sqrt{40 \\cdot 0{,}5 \\cdot 0{,}5} = \\sqrt{10} \\approx 3{,}16$. Da $\\sigma > 3$ ist die Laplace-Bedingung erfüllt.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP)"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-107",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Zufallsgröße $X$ ist binomialverteilt mit $n = 50$ und $p = 0{,}4$. Berechne $\\mu$ und $\\sigma$ und bestimme die ganzzahligen Grenzen der $2\\sigma$-Umgebung.",
+   "eingaben": [
+    {
+     "label": "$\\mu$",
+     "antwort": 20.0,
+     "toleranz": 0.01,
+     "einheit": ""
+    },
+    {
+     "label": "$\\sigma$",
+     "antwort": 3.46,
+     "toleranz": 0.02,
+     "einheit": ""
+    },
+    {
+     "label": "untere Grenze",
+     "antwort": 14,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "obere Grenze",
+     "antwort": 26,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$\\mu = n \\cdot p = 50 \\cdot 0{,}4$ und $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)} = \\sqrt{50 \\cdot 0{,}4 \\cdot 0{,}6}$.",
+    "Die $2\\sigma$-Umgebung ist $[\\mu - 2\\sigma;\\ \\mu + 2\\sigma]$.",
+    "Trefferzahlen sind ganzzahlig: untere Grenze aufrunden, obere Grenze abrunden. $20 - 2 \\cdot 3{,}46 \\approx 13{,}07$ und $20 + 2 \\cdot 3{,}46 \\approx 26{,}93$."
+   ],
+   "loesungsweg": "$\\mu = 50 \\cdot 0{,}4 = 20$. $\\sigma = \\sqrt{50 \\cdot 0{,}4 \\cdot 0{,}6} = \\sqrt{12} \\approx 3{,}46$ (Laplace-Bedingung erfüllt). $2\\sigma$-Umgebung: $[20 - 6{,}93;\\ 20 + 6{,}93] = [13{,}07;\\ 26{,}93]$. Ganzzahlig: 14 bis 26. In rund $95\\,\\%$ der Versuche liegt die Trefferzahl in diesem Bereich.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP)"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Zufallsgröße $X$ ist binomialverteilt mit $n = 12$ und $p = 0{,}25$. Welche Aussagen sind richtig?",
+   "optionen": [
+    {
+     "text": "Der Erwartungswert ist $\\mu = n \\cdot p = 3$.",
+     "richtig": true,
+     "erklaerung": "Richtig: $\\mu = 12 \\cdot 0{,}25 = 3$."
+    },
+    {
+     "text": "Es gilt $P(X = k) = \\binom{12}{k} \\cdot 0{,}25^k \\cdot 0{,}75^{12-k}$.",
+     "richtig": true,
+     "erklaerung": "Richtig: Das ist die Formel von Bernoulli mit $p = 0{,}25$ und $1 - p = 0{,}75$."
+    },
+    {
+     "text": "Der Faktor $0{,}75^{12-k}$ steht für die $k$ Treffer.",
+     "richtig": false,
+     "erklaerung": "Falsch: $0{,}75^{12-k}$ steht für die $12 - k$ Nieten; die Treffer liefern $0{,}25^k$."
+    },
+    {
+     "text": "Die Standardabweichung ist $\\sigma = \\sqrt{n \\cdot p \\cdot (1 - p)} = \\sqrt{2{,}25} = 1{,}5$.",
+     "richtig": true,
+     "erklaerung": "Richtig: $\\sigma = \\sqrt{12 \\cdot 0{,}25 \\cdot 0{,}75} = \\sqrt{2{,}25} = 1{,}5$."
+    }
+   ],
+   "tipps": [
+    "Erwartungswert: $\\mu = n \\cdot p$.",
+    "In der Formel von Bernoulli gehört $p^k$ zu den Treffern und $(1-p)^{n-k}$ zu den Nieten.",
+    "Standardabweichung: $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$."
+   ],
+   "loesungsweg": "Richtig sind die erste, zweite und vierte Aussage. $\\mu = 12 \\cdot 0{,}25 = 3$ und $\\sigma = \\sqrt{12 \\cdot 0{,}25 \\cdot 0{,}75} = \\sqrt{2{,}25} = 1{,}5$. Die Formel von Bernoulli stimmt. Falsch ist die dritte Aussage: $0{,}75^{12-k}$ beschreibt die Nieten, nicht die Treffer.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Würfel wird $n = 7$-mal geworfen; $X$ zählt, wie oft eine Sechs fällt (also $p = \\frac16$). Bestimme den Binomialkoeffizienten $\\binom{7}{2}$ und berechne $P(X = 2)$ (auf vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "$\\binom{7}{2}$",
+     "antwort": 21,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X = 2)$",
+     "antwort": 0.2344,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$\\binom{7}{2} = \\frac{7 \\cdot 6}{2 \\cdot 1}$.",
+    "Eine Sechs hat die Wahrscheinlichkeit $p = \\frac16$, keine Sechs $1 - p = \\frac56$.",
+    "Formel von Bernoulli: $P(X = 2) = \\binom{7}{2} \\cdot \\left(\\frac16\\right)^2 \\cdot \\left(\\frac56\\right)^5$."
+   ],
+   "loesungsweg": "$\\binom{7}{2} = \\frac{7 \\cdot 6}{2 \\cdot 1} = 21$. Formel von Bernoulli: $P(X = 2) = 21 \\cdot \\left(\\frac16\\right)^2 \\cdot \\left(\\frac56\\right)^5 \\approx 0{,}2344$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Basketballspielerin trifft jeden Freiwurf mit der Wahrscheinlichkeit $p = 0{,}3$ unabhängig voneinander. Sie wirft $n = 6$-mal; $X$ zählt die Treffer. Berechne $P(X \\leq 2)$ (auf vier Nachkommastellen) und daraus $P(X \\geq 3)$ über das Gegenereignis.",
+   "eingaben": [
+    {
+     "label": "$P(X \\leq 2)$",
+     "antwort": 0.7443,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X \\geq 3)$",
+     "antwort": 0.2557,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$P(X \\leq 2) = P(X=0) + P(X=1) + P(X=2)$ — drei Summanden der Formel von Bernoulli.",
+    "Das Gegenereignis von „mindestens 3“ ist „höchstens 2“.",
+    "$P(X \\geq 3) = 1 - P(X \\leq 2)$."
+   ],
+   "loesungsweg": "$P(X \\leq 2) = \\sum_{k=0}^{2} \\binom{6}{k} \\cdot 0{,}3^k \\cdot 0{,}7^{6-k} \\approx 0{,}7443$. Gegenereignis: $P(X \\geq 3) = 1 - P(X \\leq 2) \\approx 1 - 0{,}7443 = 0{,}2557$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "In einer Produktion sind erfahrungsgemäß $8\\,\\%$ der Bauteile fehlerhaft. Aus der laufenden (sehr großen) Produktion werden $n = 25$ Bauteile zufällig entnommen; $X$ zählt die fehlerhaften. Berechne $P(X = 0)$, $P(X = 2)$ und $P(X \\leq 1)$ (je vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "$P(X = 0)$",
+     "antwort": 0.1244,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X = 2)$",
+     "antwort": 0.2821,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X \\leq 1)$",
+     "antwort": 0.3947,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$p = 0{,}08$ (fehlerhaft), $1 - p = 0{,}92$ (in Ordnung), $n = 25$.",
+    "$P(X = 0) = 0{,}92^{25}$, da $\\binom{25}{0} = 1$.",
+    "$P(X \\leq 1) = P(X = 0) + P(X = 1)$."
+   ],
+   "loesungsweg": "$P(X = 0) = \\binom{25}{0} \\cdot 0{,}08^0 \\cdot 0{,}92^{25} \\approx 0{,}1244$. $P(X = 2) = \\binom{25}{2} \\cdot 0{,}08^2 \\cdot 0{,}92^{23} \\approx 0{,}2821$. $P(X \\leq 1) = P(X=0) + P(X=1) \\approx 0{,}1244 + 0{,}2703 = 0{,}3947$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Sportschütze trifft die Zielscheibe mit der Wahrscheinlichkeit $p = 0{,}75$. Er gibt $n = 12$ unabhängige Schüsse ab; $X$ zählt die Treffer. Berechne $P(X = 10)$ und $P(X \\geq 11)$ (je vier Nachkommastellen) sowie den Erwartungswert $\\mu$.",
+   "eingaben": [
+    {
+     "label": "$P(X = 10)$",
+     "antwort": 0.2323,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X \\geq 11)$",
+     "antwort": 0.1584,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$\\mu$",
+     "antwort": 9,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$P(X = 10) = \\binom{12}{10} \\cdot 0{,}75^{10} \\cdot 0{,}25^{2}$.",
+    "$P(X \\geq 11) = P(X = 11) + P(X = 12)$ — nur zwei Summanden.",
+    "Erwartungswert: $\\mu = n \\cdot p = 12 \\cdot 0{,}75$."
+   ],
+   "loesungsweg": "$P(X = 10) = \\binom{12}{10} \\cdot 0{,}75^{10} \\cdot 0{,}25^{2} \\approx 0{,}2323$. $P(X \\geq 11) = P(X=11) + P(X=12) \\approx 0{,}1267 + 0{,}0317 = 0{,}1584$. Erwartungswert: $\\mu = 12 \\cdot 0{,}75 = 9$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Zufallsgröße $X$ ist binomialverteilt mit $n = 80$ und $p = 0{,}35$. Berechne den Erwartungswert $\\mu$ und die Standardabweichung $\\sigma$ (auf zwei Nachkommastellen) und bestimme die ganzzahligen Grenzen $a$ und $b$ der $2\\sigma$-Umgebung um $\\mu$.",
+   "eingaben": [
+    {
+     "label": "$\\mu$",
+     "antwort": 28,
+     "toleranz": 0.01,
+     "einheit": ""
+    },
+    {
+     "label": "$\\sigma$",
+     "antwort": 4.27,
+     "toleranz": 0.02,
+     "einheit": ""
+    },
+    {
+     "label": "untere Grenze $a$",
+     "antwort": 20,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "obere Grenze $b$",
+     "antwort": 36,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$\\mu = n \\cdot p$ und $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$.",
+    "Die $2\\sigma$-Umgebung ist $[\\mu - 2\\sigma;\\ \\mu + 2\\sigma]$.",
+    "Runde die untere Grenze auf und die obere Grenze ab, damit nur ganze Trefferzahlen im Intervall liegen."
+   ],
+   "loesungsweg": "$\\mu = 80 \\cdot 0{,}35 = 28$. $\\sigma = \\sqrt{80 \\cdot 0{,}35 \\cdot 0{,}65} = \\sqrt{18{,}2} \\approx 4{,}27$. $2\\sigma$-Umgebung: $[28 - 8{,}53;\\ 28 + 8{,}53] = [19{,}47;\\ 36{,}53]$. Ganzzahlig: $a = 20$, $b = 36$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Glücksrad bleibt mit der Wahrscheinlichkeit $p = 0{,}2$ auf dem Gewinnfeld stehen und wird $n = 100$-mal gedreht; $X$ zählt die Gewinne. Berechne $P(X \\geq 25)$ über das Gegenereignis und $P(18 \\leq X \\leq 22)$ (je vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "$P(X \\geq 25)$",
+     "antwort": 0.1314,
+     "toleranz": 0.0015,
+     "einheit": ""
+    },
+    {
+     "label": "$P(18 \\leq X \\leq 22)$",
+     "antwort": 0.4677,
+     "toleranz": 0.0015,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Das Gegenereignis von „mindestens 25“ ist „höchstens 24“: $P(X \\geq 25) = 1 - P(X \\leq 24)$.",
+    "Achte auf die Grenzverschiebung: „mindestens 25“ wird über $P(X \\leq 24)$ berechnet, nicht über $P(X \\leq 25)$.",
+    "$P(18 \\leq X \\leq 22) = P(X \\leq 22) - P(X \\leq 17)$."
+   ],
+   "loesungsweg": "Gegenereignis: $P(X \\geq 25) = 1 - P(X \\leq 24) \\approx 1 - 0{,}8686 = 0{,}1314$. Intervall: $P(18 \\leq X \\leq 22) = P(X \\leq 22) - P(X \\leq 17) \\approx 0{,}7800 - 0{,}3123 = 0{,}4677$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Reifenwerk produziert Ventile; erfahrungsgemäß sind $4\\,\\%$ undicht. Für eine Stichprobe werden $n = 150$ Ventile zufällig entnommen; $X$ zählt die undichten. a) Berechne den Erwartungswert $\\mu$ und die Wahrscheinlichkeit $P(X \\leq 5)$ (auf vier Nachkommastellen). b) Berechne $P(X \\geq 8)$ über das Gegenereignis (auf vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "a) $\\mu$",
+     "antwort": 6,
+     "toleranz": 0.01,
+     "einheit": ""
+    },
+    {
+     "label": "a) $P(X \\leq 5)$",
+     "antwort": 0.4424,
+     "toleranz": 0.0015,
+     "einheit": ""
+    },
+    {
+     "label": "b) $P(X \\geq 8)$",
+     "antwort": 0.2532,
+     "toleranz": 0.0015,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$\\mu = n \\cdot p = 150 \\cdot 0{,}04$.",
+    "$P(X \\leq 5) = \\sum_{k=0}^{5} \\binom{150}{k} \\cdot 0{,}04^k \\cdot 0{,}96^{150-k}$ — am einfachsten mit dem CAS als kumulierte Wahrscheinlichkeit.",
+    "$P(X \\geq 8) = 1 - P(X \\leq 7)$ (Gegenereignis, Grenze um 1 verschieben)."
+   ],
+   "loesungsweg": "a) $\\mu = 150 \\cdot 0{,}04 = 6$. $P(X \\leq 5) \\approx 0{,}4424$. b) Gegenereignis: $P(X \\geq 8) = 1 - P(X \\leq 7) \\approx 1 - 0{,}7468 = 0{,}2532$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-301",
+   "typ": "freitext",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Schüler behauptet: „In einer Tombola sind 500 Lose, 50 davon gewinnen. Ich ziehe nacheinander 3 Lose ohne Zurücklegen. Die Wahrscheinlichkeit, mindestens einmal zu gewinnen, rechne ich bedenkenlos mit der Binomialverteilung ($n = 3$, $p = \\frac{50}{500} = 0{,}1$): $P(X \\ge 1) = 1 - 0{,}9^3 = 0{,}271$.“ Beurteile sein Vorgehen: Ist die Binomialverteilung hier erlaubt? Begründe mit den Bernoulli-Bedingungen und schätze ab, wie stark das Ergebnis vom exakten Wert abweicht.",
+   "musterloesung": "Streng genommen liegt keine Bernoulli-Kette vor, weil ohne Zurücklegen gezogen wird: Nach dem ersten gezogenen Los ändert sich die Gewinnwahrscheinlichkeit (z. B. nach einem Gewinn auf $\\frac{49}{499} \\approx 0{,}0982$, nach einer Niete auf $\\frac{50}{499} \\approx 0{,}1002$), und die Züge sind voneinander abhängig. Damit ist die Bedingung „konstantes $p$ und Unabhängigkeit“ verletzt; die übrigen Bedingungen (zwei Ausgänge, festes $n = 3$) sind erfüllt. Trotzdem ist das Vorgehen hier gut vertretbar, denn die Stichprobe ist mit $\\frac{3}{500} = 0{,}6\\,\\%$ winzig gegenüber der Grundgesamtheit (Faustregel: höchstens etwa $5\\,\\%$). Die exakte Rechnung über Pfadregeln liefert $P(X \\ge 1) = 1 - \\frac{450}{500} \\cdot \\frac{449}{499} \\cdot \\frac{448}{498} \\approx 1 - 0{,}7285 = 0{,}2715$, also praktisch denselben Wert wie die Binomialnäherung $0{,}271$. Die Abweichung liegt erst in der dritten Nachkommastelle. Fazit: Das Modell ist formal nicht exakt, als Näherung aber sehr genau und damit zulässig.",
+   "tipps": [
+    "Prüfe die vier Bernoulli-Bedingungen einzeln — bei „ohne Zurücklegen“ lohnt der Blick auf das konstante $p$.",
+    "Vergleiche den Stichprobenumfang mit der Grundgesamtheit: Wie viel Prozent von 500 sind 3 Lose?",
+    "Rechne den exakten Wert mit Pfadregeln ($\\frac{450}{500}\\cdot\\frac{449}{499}\\cdot\\frac{448}{498}$ für „kein Gewinn“) und vergleiche mit $0{,}9^3$."
+   ],
+   "loesungsweg": "Keine echte Bernoulli-Kette: Ohne Zurücklegen verändert sich $p$ von Zug zu Zug und die Züge sind abhängig (verletzt: konstantes $p$/Unabhängigkeit; erfüllt: zwei Ausgänge, festes $n$). Da die Stichprobe nur $0{,}6\\,\\%$ der 500 Lose ausmacht (deutlich unter der $5\\,\\%$-Faustregel), ist die Binomialnäherung sehr gut. Exakt: $1 - \\frac{450}{500}\\cdot\\frac{449}{499}\\cdot\\frac{448}{498} \\approx 0{,}2715$ gegenüber $1 - 0{,}9^3 = 0{,}271$ — Übereinstimmung bis zur dritten Nachkommastelle. Das Vorgehen ist also als Näherung gerechtfertigt.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-302",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "In jeder Sachsituation wird eine Zufallsgröße $X$ gezählt. Ordne jeder Situation die korrekte Festlegung von Treffer, $n$ und $p$ zu.",
+   "paare": [
+    {
+     "links": "Aus einer Riesenproduktion mit $5\\,\\%$ Ausschuss werden 20 Bauteile geprüft; $X$ zählt die defekten.",
+     "rechts": "Treffer = defekt, n = 20, p = 0,05"
+    },
+    {
+     "links": "Ein Basketballspieler wirft 15-mal; jeder Wurf trifft unabhängig mit $80\\,\\%$; $X$ zählt die Treffer.",
+     "rechts": "Treffer = Korb, n = 15, p = 0,8"
+    },
+    {
+     "links": "Ein Würfel wird 30-mal geworfen; $X$ zählt, wie oft eine Sechs fällt.",
+     "rechts": "Treffer = Sechs, n = 30, p = ein Sechstel"
+    },
+    {
+     "links": "In einer Umfrage werden 50 Personen befragt; $40\\,\\%$ der Bevölkerung stimmen zu; $X$ zählt die Zustimmungen.",
+     "rechts": "Treffer = Zustimmung, n = 50, p = 0,4"
+    }
+   ],
+   "tipps": [
+    "Der „Treffer“ ist immer genau das Ereignis, das $X$ zählt.",
+    "$n$ ist die fest vorgegebene Anzahl der Wiederholungen, $p$ die Trefferwahrscheinlichkeit eines Einzelversuchs.",
+    "Beim Würfel ist die Trefferwahrscheinlichkeit für „Sechs“ ein Sechstel."
+   ],
+   "loesungsweg": "Bei der Qualitätskontrolle ist der Treffer „defekt“ mit $p = 0{,}05$ und $n = 20$; die Riesenproduktion erlaubt das Bernoulli-Modell. Beim Basketball ist der Treffer „Korb“, $p = 0{,}8$, $n = 15$ (Würfe sind laut Text unabhängig). Beim Würfel zählt $X$ die Sechsen, also $p = \\frac{1}{6}$ und $n = 30$. Bei der Umfrage ist der Treffer „Zustimmung“ mit $p = 0{,}4$ und $n = 50$. In allen vier Fällen steht $n$ vorher fest und $p$ ist konstant — die Festlegung von Treffer, $n$ und $p$ ist der erste Schritt jeder Binomialaufgabe.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  },
+  {
+   "id": "ma-qp-bv-303",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Von der Sachaufgabe zum Modell: In einer Bäckerei verbrennt erfahrungsgemäß jedes 25. Brötchen ($p = 0{,}04$). Aus einer großen Tagesproduktion werden 60 Brötchen geprüft; gesucht ist die Wahrscheinlichkeit für genau 2 verbrannte. Bringe die Schritte zum Aufstellen des Binomialmodells in die richtige Reihenfolge.",
+   "elemente": [
+    "Treffer festlegen: ein Brötchen ist verbrannt",
+    "Trefferwahrscheinlichkeit angeben: p = 0,04",
+    "Stichprobenumfang festlegen: n = 60",
+    "Bernoulli-Bedingungen prüfen: konstantes p und Unabhängigkeit sind wegen der sehr großen Tagesproduktion näherungsweise erfüllt",
+    "Die Zufallsgröße benennen: X zählt die verbrannten Brötchen, also X ~ B(60; 0,04)",
+    "Die Frage in einen Term übersetzen: gesucht ist P(X = 2)"
+   ],
+   "tipps": [
+    "Bevor man rechnet, müssen Treffer, $p$ und $n$ feststehen.",
+    "Erst nach der Modellprüfung darf man $X \\sim B(n;p)$ schreiben.",
+    "Ganz zum Schluss wird die sprachliche Frage („genau 2“) in einen Term übersetzt."
+   ],
+   "loesungsweg": "Zuerst legt man den Treffer fest („Brötchen verbrannt“), dann die Trefferwahrscheinlichkeit $p = 0{,}04$ und den Stichprobenumfang $n = 60$. Anschließend prüft man die Bernoulli-Bedingungen: Weil die Tagesproduktion sehr groß ist, sind konstantes $p$ und Unabhängigkeit näherungsweise erfüllt. Erst jetzt darf man die Zufallsgröße als $X \\sim B(60;\\,0{,}04)$ benennen. Zuletzt übersetzt man die Frage „genau 2 verbrannte“ in den Term $P(X = 2)$, der dann mit der Formel von Bernoulli berechnet wird. Diese Reihenfolge — Modell zuerst, Term zuletzt — trägt durch jede Sachaufgabe.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Binomialverteilung"
+   ]
+  }
+ ]
+}

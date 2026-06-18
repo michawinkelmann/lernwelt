@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Einheiten-Meister — Trainingsraum · Lernwelt</title>
+<meta name="description" content="km zu m, Minuten zu Sekunden, cm² zu m²: Einheiten umrechnen gegen die Uhr — mit den klassischen 100er- und 1000er-Fallen.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Lernspiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Einheiten-Meister</h1>
+  <p class="einleitung">km zu m, Minuten zu Sekunden, cm² zu m²: Einheiten umrechnen gegen die Uhr — mit den klassischen 100er- und 1000er-Fallen. Alle Umrechnungszahlen samt Merkhilfen findest du im Thema <a href="../../mathematik/klasse-5/groessen-und-einheiten/index.html">Größen und Einheiten (Klasse 5)</a>.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert’s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Regeln:</strong> Wähle ein Level — dann läuft die Uhr: 60 Sekunden Umrechnungssprint. Jede Aufgabe sieht so aus: „3,5 km = ? m“ — du tippst nur die Zahl, die Zieleinheit steht schon da. Level 1 trainiert Länge und Zeit, Level 2 nimmt Masse und Fläche dazu, Level 3 zusätzlich Volumen. Richtig gelöst heißt sofort weiter; bei einem Fehler siehst du 1,2 Sekunden lang die richtige Lösung.</p>
+      <p><strong>Steuerung:</strong> Antwort eintippen und mit <kbd>Enter</kbd> oder dem Knopf „Prüfen“ abschicken. Komma und Punkt zählen beide („3,5“ und „3.5“ sind gleich richtig). Mit „Neustart“ geht es zurück zur Levelwahl.</p>
+      <p><strong>Punktesystem:</strong> Jede richtige Antwort bringt 10 Punkte mal Levelnummer (Level 3 also 30 Punkte). Ab der dritten richtigen Antwort in Folge gibt es Combo-Punkte: +2 extra, und mit jedem weiteren Treffer wächst der Bonus um 2 (4. Treffer +4, 5. Treffer +6 …). Ein Fehler bricht die Serie. Die zehn besten Ergebnisse landen in der Bestenliste auf diesem Gerät.</p>
+      <p><strong>Lerntipp:</strong> Merke dir die Umrechnungszahlen als Treppen: Bei Längen ist jede Stufe mal 10 (nur m → km ist mal 1000), bei Flächen mal 100 — deshalb hat 1 m² ganze 10 000 cm²! Bei der Zeit gilt mal 60, nicht mal 100: 1,5 h sind 90 min, nicht 150. Alle Treppen mit Übungen: <a href="../../mathematik/klasse-5/groessen-und-einheiten/index.html">Größen und Einheiten</a>.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+import * as spiel from "./spiel.js";
+starteSpielSeite(spiel);
+</script>
+</body>
+</html>

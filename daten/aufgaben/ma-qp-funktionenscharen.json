@@ -1,0 +1,539 @@
+{
+  "thema": "ma-qp-funktionenscharen",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-fs-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über die Schar $f_t(x) = t \\cdot x^2$ und über Funktionenscharen allgemein sind richtig?",
+      "optionen": [
+        {
+          "text": "Für jeden Wert von $t$ entsteht eine eigene Funktion — die Schar ist eine ganze Familie von Funktionen.",
+          "richtig": true,
+          "erklaerung": "Richtig: $f_1(x) = x^2$, $f_2(x) = 2x^2$, $f_{-1}(x) = -x^2$, … — jeder Parameterwert liefert eine eigene Funktion mit eigener Scharkurve."
+        },
+        {
+          "text": "Bei $f_t(x) = t \\cdot x^2$ bewirkt $t$ eine Streckung oder Stauchung in y-Richtung; für $t < 0$ öffnen die Parabeln nach unten.",
+          "richtig": true,
+          "erklaerung": "Richtig: Der Faktor $t$ vervielfacht jeden Funktionswert. Für negatives $t$ werden alle Werte gespiegelt — die Parabel öffnet nach unten."
+        },
+        {
+          "text": "$t$ ist die Variable, nach der man die Schar ableitet.",
+          "richtig": false,
+          "erklaerung": "Nein: Variable ist und bleibt $x$. Der Parameter $t$ wird beim Ableiten nach $x$ wie eine feste Zahl behandelt — hier $f_t'(x) = 2t \\cdot x$."
+        },
+        {
+          "text": "Eine Funktionenschar besteht immer aus endlich vielen Funktionen.",
+          "richtig": false,
+          "erklaerung": "Da $t$ in der Regel jede reelle Zahl sein darf, gehören unendlich viele Funktionen zur Schar — gezeichnet werden nur einige Vertreter."
+        }
+      ],
+      "tipps": [
+        "Setze konkrete Werte ein: Welche Funktionen sind $f_1$, $f_2$ und $f_{-1}$ bei $f_t(x) = t \\cdot x^2$?",
+        "Unterscheide die Rollen der Buchstaben: $x$ ist die Variable, $t$ der von außen gewählte, feste Parameter.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Jeder $t$-Wert liefert eine eigene Funktion ($f_1(x) = x^2$, $f_2(x) = 2x^2$, …), und der Faktor $t$ streckt bzw. staucht die Normalparabel in y-Richtung — für $t < 0$ öffnet sie nach unten. Aussage 3 verwechselt die Rollen: Abgeleitet wird nach der Variablen $x$, der Parameter $t$ ist dabei eine Konstante. Aussage 4 ist falsch, weil $t$ üblicherweise alle reellen Zahlen durchläuft — die Schar umfasst unendlich viele Funktionen.",
+      "kc": [
+        "schar-begriff"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-002",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Gegeben ist die Schar $f_t(x) = x^2 - 2t \\cdot x$. a) Berechne $f_3(2)$, also den Funktionswert für $t = 3$ an der Stelle $x = 2$. b) Für welchen Parameterwert $t$ verläuft die Scharkurve durch den Punkt $(1 \\mid 5)$?",
+      "eingaben": [
+        {
+          "label": "a) $f_3(2)$",
+          "antwort": -8,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "b) Parameterwert $t$",
+          "antwort": -2,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "a) Setze zuerst $t = 3$ in den Scharterm ein: $f_3(x) = x^2 - 6x$ — dann $x = 2$ einsetzen.",
+        "b) Punktprobe: Setze $x = 1$ ein und verlange $f_t(1) = 5$ — es entsteht eine Gleichung für $t$.",
+        "b) $1 - 2t = 5$ — jetzt nach $t$ auflösen."
+      ],
+      "loesungsweg": "a) Mit $t = 3$ wird aus der Schar die konkrete Funktion $f_3(x) = x^2 - 6x$; einsetzen liefert $f_3(2) = 4 - 12 = -8$. b) Punktprobe mit $(1 \\mid 5)$: $f_t(1) = 1 - 2t = 5$, also $-2t = 4$ und damit $t = -2$. Kontrolle: $f_{-2}(x) = x^2 + 4x$ und $f_{-2}(1) = 1 + 4 = 5$ — passt. Die Teilaufgaben zeigen beide Blickrichtungen: $t$ gegeben und Wert gesucht — oder Punkt gegeben und $t$ gesucht.",
+      "kc": [
+        "schar-werte"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-003",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zum Rechnen mit Funktionenscharen.",
+      "text": "Eine Funktionenschar wie fₜ(x) = x² + t enthält neben der Variablen x einen ___. Beim Ableiten nach x behandelt man t wie eine ___ — es gilt fₜ′(x) = ___. Der Summand t verschiebt den Graphen von fₜ in ___-Richtung.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Parameter",
+          "optionen": [
+            "Parameter",
+            "zweiten Funktionswert",
+            "Exponenten"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "feste Zahl (Konstante)",
+          "optionen": [
+            "feste Zahl (Konstante)",
+            "zweite Variable",
+            "Funktion von x"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "2x",
+          "optionen": [
+            "2x",
+            "2x + 1",
+            "2x + t"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "y",
+          "optionen": [
+            "y",
+            "x",
+            "gar keine"
+          ]
+        }
+      ],
+      "tipps": [
+        "Wie heißt die Größe t in einer Schar — und welche Rolle spielt sie beim Ableiten nach x?",
+        "Leite x² + t nach x ab: Was passiert mit einem konstanten Summanden beim Ableiten?",
+        "Vergleiche f₀(x) = x², f₁(x) = x² + 1 und f₂(x) = x² + 2 — wie gehen die Graphen auseinander hervor?"
+      ],
+      "loesungsweg": "Parameter — feste Zahl (Konstante) — 2x — y: Der Buchstabe $t$ heißt Parameter; beim Ableiten nach $x$ wird er wie eine feste Zahl behandelt. Der konstante Summand $t$ fällt deshalb weg: $f_t'(x) = 2x$ für jedes $t$. Die Graphen von $f_t(x) = x^2 + t$ sind deckungsgleiche, in y-Richtung verschobene Normalparabeln.",
+      "kc": [
+        "parameter-regeln"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-004",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jeder Scharfunktion ihre Ableitung zu (abgeleitet wird nach x — t ist eine Konstante).",
+      "paare": [
+        {
+          "links": "fₜ(x) = x² + t",
+          "rechts": "fₜ′(x) = 2x"
+        },
+        {
+          "links": "fₜ(x) = t·x²",
+          "rechts": "fₜ′(x) = 2t·x"
+        },
+        {
+          "links": "fₜ(x) = x² − 2t·x",
+          "rechts": "fₜ′(x) = 2x − 2t"
+        },
+        {
+          "links": "fₜ(x) = t·x³ + t²",
+          "rechts": "fₜ′(x) = 3t·x²"
+        }
+      ],
+      "tipps": [
+        "t verhält sich wie eine Zahl: Ein konstanter Summand t fällt beim Ableiten weg, ein konstanter Faktor t bleibt stehen.",
+        "Bei t·x³ wirkt t als Faktor: Potenzregel anwenden und t mitnehmen — aus x³ wird 3x².",
+        "t² ist ein konstanter Summand ohne x — er verschwindet beim Ableiten vollständig."
+      ],
+      "loesungsweg": "Beim Ableiten nach $x$ ist $t$ eine Konstante: Aus $x^2 + t$ wird $2x$ — der Summand $t$ fällt weg. Aus $t \\cdot x^2$ wird $2t \\cdot x$ — der Faktor $t$ bleibt stehen. Aus $x^2 - 2t \\cdot x$ wird $2x - 2t$, denn $-2t \\cdot x$ ist linear in $x$ mit dem festen Faktor $-2t$. Und aus $t \\cdot x^3 + t^2$ wird $3t \\cdot x^2$ — der konstante Summand $t^2$ verschwindet beim Ableiten.",
+      "kc": [
+        "schar-ableitung"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bestimme den Tiefpunkt der Schar $f_t(x) = x^2 - 6t \\cdot x$ in Abhängigkeit von $t$ und gib seine Koordinaten für $t = 2$ an.",
+      "eingaben": [
+        {
+          "label": "x-Koordinate für $t = 2$",
+          "antwort": 6,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "y-Koordinate für $t = 2$",
+          "antwort": -36,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Ableiten mit $t$ als Konstante: $f_t'(x) = 2x - 6t$ — notwendige Bedingung $f_t'(x) = 0$.",
+        "$2x - 6t = 0$ liefert $x = 3t$; wegen $f_t''(x) = 2 > 0$ ist es für jedes $t$ ein Tiefpunkt.",
+        "y-Koordinate: $f_t(3t) = 9t^2 - 18t^2 = -9t^2$ — jetzt $t = 2$ einsetzen."
+      ],
+      "loesungsweg": "$f_t'(x) = 2x - 6t = 0$ ergibt die Extremstelle $x = 3t$; wegen $f_t''(x) = 2 > 0$ liegt für jedes $t$ ein Tiefpunkt vor. Einsetzen in den Scharterm: $f_t(3t) = (3t)^2 - 6t \\cdot 3t = 9t^2 - 18t^2 = -9t^2$. Der Tiefpunkt ist also $T_t(3t \\mid -9t^2)$ — für $t = 2$ liegt er bei $(6 \\mid -36)$. Kontrolle: $f_2(x) = x^2 - 12x = (x - 6)^2 - 36$ hat genau diesen Scheitel.",
+      "kc": [
+        "schar-extrema"
+      ],
+      "cas": "<p>Der ClassPad II rechnet mit $t$ als Symbol — ideal für Scharen:</p><ol><li>Im <b>Main</b>-Menü <code>diff(x^2-6t×x,x)</code> eingeben (Software-Tastatur <b>Math2</b>, d/dx-Template — oder <b>Interactive → Berechnungen → diff</b>): Ergebnis <code>2x-6t</code>.</li><li>Extremstelle: <code>solve(2x-6t=0,x)</code> liefert <code>x=3t</code> — wichtig: nach <code>x</code> auflösen lassen, nicht nach <code>t</code>.</li><li>y-Koordinate: <code>x^2-6t×x | x=3t</code> (mit dem with-Strich aus <b>Math3</b>) ergibt <code>-9t^2</code>; für $t = 2$ also $-36$.</li></ol><p>Achtung bei der Eingabe: Zwischen <code>t</code> und <code>x</code> immer das Malzeichen setzen — sonst liest das CAS <code>tx</code> als eigenen Variablennamen.</p>"
+    },
+    {
+      "id": "ma-qp-fs-006",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Alle Kurven der Schar $g_t(x) = t \\cdot x^2 - 2t \\cdot x + 1$ verlaufen durch gemeinsame Punkte. Bestimme sie Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Sortiere den Term nach $t$: $g_t(x) = t \\cdot (x^2 - 2x) + 1$. Der Funktionswert ist genau dann von $t$ unabhängig, wenn die Klammer null ist. Löse $x^2 - 2x = 0$.",
+          "eingaben": [
+            {
+              "label": "kleinere Lösung $x_1$",
+              "antwort": 0,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "größere Lösung $x_2$",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$x^2 - 2x = x \\cdot (x - 2)$ — ein Produkt ist null, wenn einer der Faktoren null ist."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Bestimme die y-Koordinate der gemeinsamen Punkte.",
+          "eingaben": [
+            {
+              "label": "y-Koordinate",
+              "antwort": 1,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "An den Stellen $x_1$ und $x_2$ ist die $t$-Klammer null — übrig bleibt der $t$-freie Rest des Terms."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Kontrolle mit einem konkreten Parameterwert: Berechne $g_5(2)$.",
+          "eingaben": [
+            {
+              "label": "$g_5(2)$",
+              "antwort": 1,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$g_5(2) = 5 \\cdot 4 - 2 \\cdot 5 \\cdot 2 + 1$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Ein <strong>Term</strong> ist ein Rechenausdruck mit Zahlen und Variablen (ohne Gleichheitszeichen), z. B. $3x+5$.",
+        "Gemeinsame Punkte sind die Stellen, an denen der Funktionswert nicht von $t$ abhängt — klammere $t$ aus.",
+        "Alternativer Ansatz: $g_{t_1}(x) = g_{t_2}(x)$ für $t_1 \\neq t_2$ führt auf $(t_1 - t_2)(x^2 - 2x) = 0$.",
+        "Die gemeinsamen Punkte sind $(0 \\mid 1)$ und $(2 \\mid 1)$ — Schritt 3 bestätigt einen davon."
+      ],
+      "loesungsweg": "Nach $t$ sortiert: $g_t(x) = t \\cdot (x^2 - 2x) + 1$. Der Wert hängt genau dann nicht von $t$ ab, wenn $x^2 - 2x = x(x - 2) = 0$ gilt, also bei $x_1 = 0$ und $x_2 = 2$. Dort ist $g_t(0) = 1$ und $g_t(2) = 1$ für jedes $t$: Alle Scharkurven verlaufen durch $(0 \\mid 1)$ und $(2 \\mid 1)$. Kontrolle: $g_5(2) = 20 - 20 + 1 = 1$. Derselbe Befund mit dem Schnitt-Ansatz $g_{t_1}(x) = g_{t_2}(x)$: Es bleibt $(t_1 - t_2)(x^2 - 2x) = 0$, und wegen $t_1 \\neq t_2$ folgt $x^2 - 2x = 0$.",
+      "kc": [
+        "gemeinsame-punkte"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-007",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Gegeben ist die Schar $f_t(x) = t \\cdot x^2 + 1$. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Alle Scharkurven verlaufen durch den Punkt $(0 \\mid 1)$.",
+          "richtig": true,
+          "erklaerung": "Richtig: $f_t(0) = t \\cdot 0 + 1 = 1$ — unabhängig von $t$. Der Punkt $(0 \\mid 1)$ ist der gemeinsame Punkt der Schar."
+        },
+        {
+          "text": "Für $t > 0$ hat jede Scharkurve bei $x = 0$ einen Tiefpunkt, für $t < 0$ einen Hochpunkt.",
+          "richtig": true,
+          "erklaerung": "Richtig: $f_t'(x) = 2t \\cdot x$ hat die Nullstelle $x = 0$, und $f_t''(x) = 2t$ entscheidet: positiv für $t > 0$ (Tiefpunkt), negativ für $t < 0$ (Hochpunkt)."
+        },
+        {
+          "text": "Für $t = 0$ ist die Scharkurve eine nach oben geöffnete Parabel.",
+          "richtig": false,
+          "erklaerung": "Für $t = 0$ entartet die Schar: $f_0(x) = 1$ ist eine konstante Funktion, ihr Graph die waagerechte Gerade $y = 1$ — keine Parabel."
+        },
+        {
+          "text": "Da der Funktionsterm für alle $t$ gleich aufgebaut ist, ist keine Fallunterscheidung nötig.",
+          "richtig": false,
+          "erklaerung": "Doch: Das Vorzeichen von $t$ entscheidet über Hoch- oder Tiefpunkt, und $t = 0$ liefert gar keine Parabel — genau dafür braucht man die Fälle $t > 0$, $t = 0$, $t < 0$."
+        }
+      ],
+      "tipps": [
+        "Setze $x = 0$ ein — welcher Funktionswert bleibt für jedes $t$ übrig?",
+        "Untersuche $f_t''(x) = 2t$: Sein Vorzeichen entscheidet über Hoch- oder Tiefpunkt — und hängt von $t$ ab.",
+        "Was wird aus dem Funktionsterm für $t = 0$? Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: $f_t(0) = 1$ gilt für jedes $t$, also laufen alle Kurven durch $(0 \\mid 1)$; und wegen $f_t''(x) = 2t$ liegt bei $x = 0$ für $t > 0$ ein Tiefpunkt, für $t < 0$ ein Hochpunkt vor. Aussage 3 ist falsch: $f_0(x) = 1$ ist konstant, der Graph eine waagerechte Gerade. Aussage 4 ist falsch — gerade weil Öffnungsrichtung und Extremtyp am Vorzeichen von $t$ hängen und $t = 0$ entartet, ist die systematische Fallunterscheidung nötig.",
+      "kc": [
+        "fallunterscheidung"
+      ],
+      "cas": "<p>Mehrere Scharkurven zeichnet der ClassPad II in einem Rutsch — mit einer Liste statt einzelner $t$-Werte:</p><ol><li>Menü <b>Grafik &amp; Tabelle</b> öffnen und bei <code>y1</code> eintragen: <code>{-1,0,0.5,2}×x^2+1</code> — die geschweiften Listenklammern findest du auf der Software-Tastatur.</li><li>Graph zeichnen lassen: Für jeden Listenwert entsteht eine eigene Kurve — vier Vertreter der Schar in einem Bild.</li><li>Ablesen: Alle Kurven schneiden sich in $(0 \\mid 1)$; für den negativen Wert öffnet die Parabel nach unten, für $t = 0$ bleibt die waagerechte Gerade $y = 1$.</li></ol><p>Der Listen-Trick ersetzt das mühsame Einzeleingeben — ins Heft skizzierst du zwei, drei Vertreter und beschriftest jede Kurve mit ihrem $t$-Wert.</p>"
+    },
+    {
+      "id": "ma-qp-fs-008",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bestimme die Nullstellen der Schar $f_t(x) = x^2 - 2t \\cdot x - 3t^2$ in Abhängigkeit von $t$ und gib beide für $t = 2$ an.",
+      "eingaben": [
+        {
+          "label": "größere Nullstelle für $t = 2$",
+          "antwort": 6,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "kleinere Nullstelle für $t = 2$",
+          "antwort": -2,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "p-q-Formel mit $p = -2t$ und $q = -3t^2$: $x_{1,2} = t \\pm \\sqrt{t^2 + 3t^2}$.",
+        "Unter der Wurzel steht $4t^2$, und $\\sqrt{4t^2} = 2|t|$ — für $t = 2$ also $4$.",
+        "Beide Vorzeichen zusammen liefern die Nullstellen $3t$ und $-t$ — jetzt $t = 2$ einsetzen."
+      ],
+      "loesungsweg": "Ansatz $x^2 - 2t x - 3t^2 = 0$ mit der p-q-Formel ($p = -2t$, $q = -3t^2$): $x_{1,2} = t \\pm \\sqrt{t^2 + 3t^2} = t \\pm \\sqrt{4t^2} = t \\pm 2|t|$. Beide Vorzeichen zusammen ergeben — für positives wie negatives $t$ — stets die Lösungen $x = 3t$ und $x = -t$. Schneller sieht man das an der Faktorisierung $x^2 - 2tx - 3t^2 = (x - 3t)(x + t)$. Für $t = 2$ sind die Nullstellen $6$ und $-2$. Kontrolle: $f_2(6) = 36 - 24 - 12 = 0$ und $f_2(-2) = 4 + 8 - 12 = 0$.",
+      "kc": [
+        "schar-nullstellen"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-009",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bringe die Schritte zur Bestimmung der Ortskurve aller Tiefpunkte einer Schar in die richtige Reihenfolge.",
+      "elemente": [
+        "Ableitung fₜ′ bilden — t dabei wie eine Konstante behandeln",
+        "fₜ′(x) = 0 nach x auflösen: Extremstelle in Abhängigkeit von t",
+        "Extremstelle in fₜ einsetzen: y-Koordinate in Abhängigkeit von t",
+        "Die x-Gleichung des Extrempunkts nach t auflösen",
+        "t in die y-Gleichung einsetzen: Ortskurven-Gleichung ohne t"
+      ],
+      "tipps": [
+        "Zuerst braucht man den Extrempunkt in Abhängigkeit von t — das ist die gewohnte Extremwert-Routine, nur mit Parameter.",
+        "Der Extrempunkt hat dann die Form (x(t) | y(t)) — daraus wird die Ortskurve, indem man t eliminiert.",
+        "Eliminieren heißt: die x-Gleichung nach t auflösen und das Ergebnis in die y-Gleichung einsetzen."
+      ],
+      "loesungsweg": "Zuerst die Extremwert-Routine mit Parameter: Ableitung $f_t'$ bilden, $f_t'(x) = 0$ nach $x$ auflösen und die Extremstelle in $f_t$ einsetzen — der Extrempunkt hat nun die Form $(x(t) \\mid y(t))$. Anschließend wird $t$ eliminiert: die x-Gleichung nach $t$ auflösen und in die y-Gleichung einsetzen. Übrig bleibt eine Gleichung in $x$ und $y$ ohne $t$ — die Ortskurve, auf der alle Tiefpunkte der Schar liegen.",
+      "kc": [
+        "ortskurve-ablauf"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Schar $f_t(x) = x^2 - 2t \\cdot x + 3$ hat für jedes $t$ genau einen Tiefpunkt. a) Gib die y-Koordinate des Tiefpunkts für $t = 3$ an. b) Bestimme die Ortskurve aller Tiefpunkte und berechne ihren y-Wert an der Stelle $x = 2$.",
+      "eingaben": [
+        {
+          "label": "a) y-Koordinate des Tiefpunkts für $t = 3$",
+          "antwort": -6,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "b) y-Wert der Ortskurve bei $x = 2$",
+          "antwort": -1,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$f_t'(x) = 2x - 2t = 0$ liefert $x = t$; y-Koordinate: $f_t(t) = t^2 - 2t^2 + 3 = 3 - t^2$.",
+        "Ortskurve: $x = t$ nach $t$ auflösen ($t = x$) und in $y = 3 - t^2$ einsetzen.",
+        "Die Ortskurve ist $y = 3 - x^2$ — für a) $t = 3$ in $3 - t^2$, für b) $x = 2$ einsetzen."
+      ],
+      "loesungsweg": "$f_t'(x) = 2x - 2t = 0$ ergibt $x = t$, und wegen $f_t''(x) = 2 > 0$ ist es ein Tiefpunkt. y-Koordinate: $f_t(t) = t^2 - 2t^2 + 3 = 3 - t^2$, also $T_t(t \\mid 3 - t^2)$ — für $t = 3$ liegt der Tiefpunkt bei $(3 \\mid -6)$. Ortskurve: Aus $x = t$ folgt $t = x$; eingesetzt in $y = 3 - t^2$ ergibt sich $y = 3 - x^2$. An der Stelle $x = 2$: $y = 3 - 4 = -1$. Plausibilitätsprüfung: Der Tiefpunkt der Scharkurve $f_2$ ist $(2 \\mid -1)$ — er liegt genau auf der Ortskurve.",
+      "kc": [
+        "ortskurve"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Ein Planungsbüro beschreibt Brückenbögen über einer $8\\,\\text{m}$ breiten Durchfahrt durch die Schar $f_t(x) = t \\cdot x \\cdot (8 - x)$ mit $0 \\le x \\le 8$ ($x$ und $f_t(x)$ in Metern). Erläutere die Bedeutung der Nullstellen, untersuche systematisch, welche Formen sich für $t > 0$, $t = 0$ und $t < 0$ ergeben, und bestimme $t$ so, dass der Bogen in der Mitte $4\\,\\text{m}$ hoch ist.",
+      "musterloesung": "Die Nullstellen $x = 0$ und $x = 8$ sind für jedes $t$ dieselben — sie markieren die beiden Auflagepunkte des Bogens, die Spannweite von $8\\,\\text{m}$ steht also unabhängig vom Design fest. Fallunterscheidung: Ausmultipliziert ist $f_t(x) = -t x^2 + 8t x$, der Koeffizient $-t$ vor $x^2$ bestimmt die Öffnungsrichtung. Für $t > 0$ ist er negativ — eine nach unten geöffnete Parabel, also ein Bogen über der Fahrbahn; der Scheitel liegt aus Symmetriegründen in der Mitte bei $x = 4$ mit Höhe $f_t(4) = t \\cdot 4 \\cdot 4 = 16t$. Für $t = 0$ ist $f_0(x) = 0$: Die Schar entartet zur Fahrbahnlinie, es gibt keinen Bogen. Für $t < 0$ öffnet die Parabel nach oben — der „Bogen“ hinge wie ein Seil unter die Fahrbahn durch und ist als Brückenbogen unbrauchbar. Sinnvoll sind also nur Werte $t > 0$. Höhenbedingung: $f_t(4) = 16t = 4$ liefert $t = 0{,}25$. Der gesuchte Bogen ist $f_{0{,}25}(x) = 0{,}25 \\cdot x \\cdot (8 - x)$; Kontrolle: $f_{0{,}25}(4) = 0{,}25 \\cdot 4 \\cdot 4 = 4$ — die Durchfahrt ist mittig $4\\,\\text{m}$ hoch.",
+      "tipps": [
+        "Nullstellen direkt aus der Produktform $t \\cdot x \\cdot (8 - x)$ ablesen: An welchen Stellen wird der Term null — unabhängig von $t$?",
+        "Multipliziere aus: $f_t(x) = -t x^2 + 8t x$. Das Vorzeichen vor $x^2$ entscheidet über die Öffnungsrichtung — gehe die drei Fälle $t > 0$, $t = 0$ und $t < 0$ einzeln durch.",
+        "Der Scheitel liegt in der Mitte bei $x = 4$: Aus $f_t(4) = 16t = 4$ folgt der gesuchte Parameterwert."
+      ],
+      "loesungsweg": "Nullstellen $x = 0$ und $x = 8$: die t-unabhängigen Auflagepunkte (Spannweite $8\\,\\text{m}$). Fallunterscheidung über $f_t(x) = -t x^2 + 8t x$: Für $t > 0$ nach unten geöffnete Parabel — Bogen über der Fahrbahn mit Scheitel $(4 \\mid 16t)$; für $t = 0$ entartet die Schar zu $f_0(x) = 0$ (kein Bogen); für $t < 0$ nach oben geöffnete Parabel — Durchhang unter die Fahrbahn, unbrauchbar. Höhenbedingung: $16t = 4$, also $t = 0{,}25$ — Kontrolle: $f_{0{,}25}(4) = 4$.",
+      "kc": [
+        "schar-anwendung"
+      ]
+    },
+    {
+      "id": "ma-qp-fs-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Für $t > 0$ schließt der Graph der Schar $f_t(x) = x^2 - 2t \\cdot x$ mit der x-Achse zwischen den Nullstellen $0$ und $2t$ eine Fläche ein. Untersuche sie Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne für den konkreten Parameterwert $t = 1{,}5$ das Integral $\\int_0^{3} (x^2 - 3x)\\,\\mathrm{d}x$.",
+          "eingaben": [
+            {
+              "label": "Integralwert für $t = 1{,}5$",
+              "antwort": -4.5,
+              "toleranz": 0.01,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Stammfunktion $\\frac{1}{3}x^3 - \\frac{3}{2}x^2$, Hauptsatz: $9 - 13{,}5$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Allgemein gilt $\\int_0^{2t} (x^2 - 2t x)\\,\\mathrm{d}x = -\\frac{4}{3}t^3$ (Herleitung im Lösungsweg). Berechne den Wert für $t = 3$.",
+          "eingaben": [
+            {
+              "label": "Integralwert für $t = 3$",
+              "antwort": -36,
+              "toleranz": 0.01,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$-\\frac{4}{3} \\cdot 3^3 = -\\frac{4}{3} \\cdot 27$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Die eingeschlossene Fläche ist der Betrag des Integrals: $A(t) = \\frac{4}{3}t^3$. Für welches $t > 0$ gilt $A(t) = 288$?",
+          "eingaben": [
+            {
+              "label": "Parameterwert $t$",
+              "antwort": 6,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$\\frac{4}{3}t^3 = 288 \\Rightarrow t^3 = 216$ — welche Zahl hat die dritte Potenz $216$?"
+          ]
+        }
+      ],
+      "tipps": [
+        "Auch beim Integrieren ist $t$ eine Konstante: Eine Stammfunktion von $x^2 - 2t x$ ist $\\frac{1}{3}x^3 - t x^2$.",
+        "Hauptsatz mit den Grenzen $0$ und $2t$: $\\frac{(2t)^3}{3} - t \\cdot (2t)^2 = \\frac{8t^3}{3} - 4t^3$.",
+        "Zwischen den Nullstellen verläuft der Graph unterhalb der x-Achse — das Integral ist negativ, die Fläche sein Betrag."
+      ],
+      "loesungsweg": "Schritt 1: $\\int_0^3 (x^2 - 3x)\\,\\mathrm{d}x = \\left[ \\frac{1}{3}x^3 - \\frac{3}{2}x^2 \\right]_0^3 = 9 - 13{,}5 = -4{,}5$. Schritt 2, allgemein: Mit der Stammfunktion $F(x) = \\frac{1}{3}x^3 - t x^2$ liefert der Hauptsatz $\\int_0^{2t} (x^2 - 2t x)\\,\\mathrm{d}x = \\frac{8t^3}{3} - 4t^3 = -\\frac{4}{3}t^3$; für $t = 3$ ergibt das $-36$, und für $t = 1{,}5$ genau $-4{,}5$ — Schritt 1 bestätigt die Formel. Das Integral ist negativ, weil der Graph zwischen den Nullstellen unterhalb der x-Achse verläuft; die eingeschlossene Fläche ist der Betrag $A(t) = \\frac{4}{3}t^3$. Schritt 3: $\\frac{4}{3}t^3 = 288$ führt auf $t^3 = 216$, also $t = 6$. Die Fläche wächst demnach mit der dritten Potenz des Parameters.",
+      "kc": [
+        "schar-integral"
+      ],
+      "cas": "<p>Integrale über Scharen löst der ClassPad II symbolisch:</p><ol><li>Im <b>Main</b>-Menü das ∫-Template (Software-Tastatur <b>Math2</b>) ausfüllen: untere Grenze 0, obere Grenze <code>2t</code>, Integrand <code>x^2-2t×x</code>, Variable <code>x</code> — <b>EXE</b> liefert <code>-4·t^3/3</code>.</li><li>Konkrete Werte zur Kontrolle einsetzen: Für $t = 3$ ergibt sich $-36$, für $t = 1{,}5$ der Wert $-4{,}5$.</li><li>Schritt 3 prüft <code>solve(4/3×t^3=288,t)</code>: Lösung $t = 6$.</li></ol><p>Wie immer gilt: Das CAS kontrolliert nur — Stammfunktion, Hauptsatz und die Betragsüberlegung zur Fläche gehören dokumentiert ins Heft.</p>"
+    },
+    {
+      "id": "ma-qp-fs-013",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Die Schar $f_t(x) = x^2 - 2t \\cdot x$ hat die Tiefpunkte $T_t(t \\mid -t^2)$, und alle Scharkurven verlaufen durch $(0 \\mid 0)$. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Ortskurve aller Tiefpunkte ist $y = -x^2$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Aus $x = t$ und $y = -t^2$ wird durch Einsetzen von $t = x$ die Gleichung $y = -x^2$."
+        },
+        {
+          "text": "Die Ortskurve ist selbst eine Kurve der Schar.",
+          "richtig": false,
+          "erklaerung": "Nein: Jede Scharkurve ist eine nach oben geöffnete Normalparabel (Koeffizient $+1$ vor $x^2$), die Ortskurve $y = -x^2$ öffnet nach unten — sie gehört nicht zur Schar."
+        },
+        {
+          "text": "Der gemeinsame Punkt $(0 \\mid 0)$ liegt auf der Ortskurve — er ist der Tiefpunkt der Scharkurve $f_0$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Ortskurve $y = -x^2$ verläuft durch den Ursprung, und $f_0(x) = x^2$ hat dort tatsächlich ihren Tiefpunkt ($t = 0$ in $T_t(t \\mid -t^2)$)."
+        },
+        {
+          "text": "Jede Scharkurve schneidet die Ortskurve in genau einem Punkt.",
+          "richtig": false,
+          "erklaerung": "Gleichsetzen: $x^2 - 2tx = -x^2$ führt auf $2x(x - t) = 0$ mit den Lösungen $x = 0$ und $x = t$. Für $t \\neq 0$ sind das zwei Punkte: der gemeinsame Punkt $(0 \\mid 0)$ und der eigene Tiefpunkt $(t \\mid -t^2)$."
+        }
+      ],
+      "tipps": [
+        "Ortskurve: Aus $x = t$ und $y = -t^2$ den Parameter eliminieren.",
+        "Vergleiche die Öffnungsrichtung: Vor $x^2$ steht bei jeder Scharkurve $+1$, bei der Ortskurve $-1$.",
+        "Für die letzte Aussage: Setze $f_t(x) = -x^2$ an und löse nach $x$ — wie viele Lösungen gibt es für $t \\neq 0$?"
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 3. Die Ortskurve folgt aus $x = t$, $y = -t^2$ durch Eliminieren: $y = -x^2$ (Aussage 1). Sie verläuft durch den Ursprung, der zugleich Tiefpunkt von $f_0(x) = x^2$ ist (Aussage 3). Aussage 2 ist falsch, weil alle Scharkurven nach oben geöffnete Normalparabeln sind, die Ortskurve aber nach unten öffnet — kein $t$ liefert $y = -x^2$. Aussage 4 ist falsch: $x^2 - 2tx = -x^2$ ergibt $2x(x - t) = 0$, also die beiden Schnittstellen $x = 0$ und $x = t$; nur im Sonderfall $t = 0$ fallen sie zusammen.",
+      "kc": [
+        "ortskurve-konzept"
+      ]
+    }
+  ]
+}

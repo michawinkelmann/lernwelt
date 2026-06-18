@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wurfbewegungen — Einführungsphase · Physik — Lernwelt</title>
+<meta name="description" content="Waagerechter und schiefer Wurf als überlagerte Bewegungen — mit interaktiver Wurf-Simulation, Messwerkzeugen und Diagrammen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln und Simulation. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Wurfbewegungen</h1>
+  <p class="einleitung">Ein Basketball beschreibt einen eleganten Bogen, ein Wasserstrahl aus dem Gartenschlauch genauso. Das Geheimnis hinter diesen Kurven: Würfe sind <strong>zusammengesetzte Bewegungen</strong> — und ihre Bestandteile sind erstaunlich einfach.</p>
+
+  <section aria-labelledby="ue-prinzip">
+    <h2 id="ue-prinzip">1. Das Überlagerungsprinzip</h2>
+    <p>Der Schlüssel zu allen Wurfbewegungen ist eine Entdeckung Galileis:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Unabhängigkeitsprinzip</span>
+      <p>Waagerechte und senkrechte Bewegung laufen <strong>unabhängig voneinander</strong> ab und überlagern sich ungestört: waagerecht eine gleichförmige Bewegung (keine Kraft wirkt in diese Richtung), senkrecht der freie Fall mit der Beschleunigung $g = 9{,}81\,\frac{\text{m}}{\text{s}^2}$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Eine Kugel rollt vom Tisch, eine zweite fällt im selben Moment senkrecht herunter. Welche landet zuerst?</summary>
+      <div class="check-antwort"><p>Beide gleichzeitig! Die waagerechte Bewegung der rollenden Kugel ändert nichts an ihrem Fall — senkrecht macht sie exakt dasselbe wie die fallende Kugel. Genau das ist das Unabhängigkeitsprinzip.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ue-waagerecht">
+    <h2 id="ue-waagerecht">2. Der waagerechte Wurf</h2>
+    <p>Startet ein Körper in der Höhe $h$ mit waagerechter Geschwindigkeit $v_0$, gilt komponentenweise:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Bewegungsgleichungen (waagerechter Wurf)</span>
+      <p class="formel-abgesetzt">$$x(t) = v_0 \cdot t \qquad y(t) = h - \frac{1}{2} g t^2$$</p>
+      <p>Die Fallzeit folgt allein aus der Höhe: $t_F = \sqrt{\frac{2h}{g}}$ — unabhängig davon, wie schnell geworfen wird! Die Wurfweite ist dann $x_W = v_0 \cdot t_F$.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel</span>
+      <p>Ein Ball verlässt eine $20\,\text{m}$ hohe Plattform waagerecht mit $15\,\frac{\text{m}}{\text{s}}$: Fallzeit $t_F = \sqrt{\frac{2 \cdot 20}{9{,}81}} \approx 2{,}02\,\text{s}$, Wurfweite $x_W = 15 \cdot 2{,}02 \approx 30{,}3\,\text{m}$.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ue-schief">
+    <h2 id="ue-schief">3. Der schiefe Wurf</h2>
+    <p>Beim Abwurf unter dem Winkel $\alpha$ wird die Startgeschwindigkeit in Komponenten zerlegt:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Komponentenzerlegung</span>
+      <p class="formel-abgesetzt">$$v_{0x} = v_0 \cdot \cos(\alpha) \qquad v_{0y} = v_0 \cdot \sin(\alpha)$$</p>
+      <p>Daraus folgen (Abwurf auf Bodenhöhe, ohne Luftwiderstand): Steigzeit $t_S = \frac{v_{0y}}{g}$, Flugzeit $T = 2\,t_S$, Wurfweite $W = \frac{v_0^2 \cdot \sin(2\alpha)}{g}$ — maximal bei $\alpha = 45^\circ$.</p>
+    </div>
+
+    <h3>Probiere es selbst aus</h3>
+    <p>Untersuche die Flugbahn mit Messwerkzeugen und Diagrammen. Die Aufträge unter der Simulation führen dich zu den wichtigsten Gesetzmäßigkeiten — die Messwerte brauchst du auch in den Übungen.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/physik/schiefer-wurf/index.html?einbettung=1#v0=12&alpha=45"
+        title="Interaktive Simulation: Schiefer Wurf" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/physik/schiefer-wurf/index.html#v0=12&alpha=45" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Miss die Wurfweite für $\alpha = 30^\circ, 45^\circ, 60^\circ$ bei fester Startgeschwindigkeit. Was fällt bei $30^\circ$ und $60^\circ$ auf?<br>
+      2. Verdopple $v_0$ von $10$ auf $20\,\frac{\text{m}}{\text{s}}$. Um welchen Faktor wächst die Wurfweite?<br>
+      3. Schau auf das $v$-$t$-Diagramm: Woran erkennst du den höchsten Punkt der Bahn?</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Was gilt im höchsten Punkt der Flugbahn?</summary>
+      <div class="check-antwort"><p>Die senkrechte Geschwindigkeit ist null ($v_y = 0$) — aber der Körper bewegt sich weiter: Die waagerechte Komponente $v_x = v_0 \cos(\alpha)$ bleibt die ganze Zeit unverändert. Die Gesamtgeschwindigkeit ist dort also minimal, aber nicht null.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ue-energie">
+    <h2 id="ue-energie">4. Warum 45 Grad?</h2>
+    <p>Die Wurfweite $W = \frac{v_0^2 \sin(2\alpha)}{g}$ wird maximal, wenn $\sin(2\alpha) = 1$ ist, also bei $2\alpha = 90^\circ$. Der optimale Winkel ist ein Kompromiss: Flache Würfe sind schnell, aber kurz in der Luft; steile Würfe fliegen lange, kommen aber kaum voran. Bei $45^\circ$ ist das Produkt aus beidem am größten.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Warum liefern $30^\circ$ und $60^\circ$ dieselbe Wurfweite?</summary>
+      <div class="check-antwort"><p>Wegen $\sin(2 \cdot 30^\circ) = \sin(60^\circ)$ und $\sin(2 \cdot 60^\circ) = \sin(120^\circ) = \sin(60^\circ)$: Beide Winkel ergeben denselben Wert von $\sin(2\alpha)$. Allgemein liefern $\alpha$ und $90^\circ - \alpha$ die gleiche Weite — nur Flugzeit und Höhe unterscheiden sich.</p></div>
+    </details>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Die Bahngleichung — warum die Flugbahn eine Parabel ist</summary>
+    <div class="vertiefung-inhalt">
+      <p>Eliminiert man die Zeit aus den Bewegungsgleichungen ($t = \frac{x}{v_0 \cos\alpha}$ in $y(t)$ einsetzen), entsteht die <strong>Bahngleichung</strong>:</p>
+      <p class="formel-abgesetzt">$$y(x) = x \cdot \tan(\alpha) - \frac{g}{2\,v_0^2 \cos^2(\alpha)} \cdot x^2$$</p>
+      <p>Das ist eine quadratische Funktion in $x$ — die Flugbahn ist also exakt eine nach unten geöffnete Parabel. Hier schließt sich der Kreis zur Mathematik: Scheitelpunkt = höchster Punkt, Nullstellen = Abwurf- und Landepunkt.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben vom Komponentenzerlegen bis zur Bahngleichung — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

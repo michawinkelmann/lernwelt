@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riemann-Summen — Simulation — Lernwelt</title>
+<meta name="description" content="Unter- und Obersumme rahmen den Flächeninhalt unter f(x)=x² ein. Mit dem Schieberegler n die Rechtecke verfeinern und sehen, wie beide Summen gegen das Integral b³/3 streben.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/sim.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="simulation" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Simulation benötigt JavaScript. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Riemann-Summen: Rechtecke unter der Kurve</h1>
+  <p class="einleitung">Wie groß ist der Flächeninhalt unter der Parabel f(x) = x² zwischen 0 und b? Näherst du ihn mit Rechtecken an, liegt die Untersumme stets darunter und die Obersumme darüber. Erhöhe die Anzahl n der Rechtecke und beobachte, wie sich beide dem exakten Integral ∫₀ᵇ x² dx = b³/3 annähern.</p>
+  <div id="sim"></div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSimulation } from "../../../assets/js/sim/engine.js";
+  import * as sim from "./sim.js";
+  starteSimulation(sim, document.getElementById("sim"));
+</script>
+</body>
+</html>

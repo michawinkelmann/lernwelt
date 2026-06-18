@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LED mit Vorwiderstand — Simulation — Lernwelt</title>
+<meta name="description" content="Eine Leuchtdiode leitet erst ab ihrer Flussspannung; der Vorwiderstand begrenzt den Strom. Quellenspannung, Widerstand und Farbe einstellen und Strom, Kennlinie und Arbeitspunkt ablesen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/sim.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="simulation" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Simulation benötigt JavaScript. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>LED mit Vorwiderstand</h1>
+  <p class="einleitung">Eine Leuchtdiode (LED) leuchtet erst, wenn die Spannung an ihr ihre Flussspannung U_F übersteigt — und sie würde ohne Schutz von zu großem Strom sofort zerstört. Deshalb sitzt ein Vorwiderstand R in Reihe: An der leitenden LED liegt fast konstant U_F, die restliche Spannung U_q − U_F fällt am Widerstand ab und legt über I = (U_q − U_F)/R den Strom fest. Stelle Quellenspannung, Vorwiderstand und Farbe (Flussspannung) ein. Links siehst du den Stromkreis mit leuchtender LED, rechts die Kennlinie I(U_LED) mit der Lastgeraden des Widerstands und dem Arbeitspunkt im Schnittpunkt.</p>
+  <div id="sim"></div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSimulation } from "../../../assets/js/sim/engine.js";
+  import * as sim from "./sim.js";
+  starteSimulation(sim, document.getElementById("sim"));
+</script>
+</body>
+</html>

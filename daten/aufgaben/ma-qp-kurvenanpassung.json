@@ -1,0 +1,614 @@
+{
+  "thema": "ma-qp-kurvenanpassung",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-ka-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Bei einer Steckbriefaufgabe wird eine ganzrationale Funktion aus vorgegebenen Eigenschaften bestimmt. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Eine ganzrationale Funktion vom Grad $n$ hat $n + 1$ Koeffizienten — zu ihrer Bestimmung braucht man in der Regel $n + 1$ Bedingungen.",
+          "richtig": true,
+          "erklaerung": "Richtig: Zum Ansatz $f(x) = a_n x^n + \\dots + a_1 x + a_0$ gehören die $n + 1$ Zahlen $a_0$ bis $a_n$, und jede unabhängige Bedingung liefert genau eine Gleichung."
+        },
+        {
+          "text": "Die Steckbriefaufgabe kehrt die Kurvendiskussion um: Die Eigenschaften sind gegeben, der Funktionsterm ist gesucht.",
+          "richtig": true,
+          "erklaerung": "Richtig: Statt aus $f$ die Extrem- und Wendepunkte zu berechnen, wird $f$ aus solchen Angaben erst konstruiert."
+        },
+        {
+          "text": "Für eine Funktion dritten Grades genügen drei Bedingungen.",
+          "richtig": false,
+          "erklaerung": "Der Ansatz $f(x) = ax^3 + bx^2 + cx + d$ enthält vier Koeffizienten — mit nur drei Gleichungen bleibt in der Regel ein Koeffizient frei wählbar."
+        },
+        {
+          "text": "Die Bedingungen führen auf ein quadratisches Gleichungssystem, weil im Ansatz Potenzen von $x$ stehen.",
+          "richtig": false,
+          "erklaerung": "Die Stellen werden als Zahlen eingesetzt — die Potenzen von $x$ werden dadurch zu Zahlen, und die Koeffizienten $a$, $b$, $c$, … bleiben nur linear stehen: Es entsteht ein lineares Gleichungssystem."
+        }
+      ],
+      "tipps": [
+        "Zähle die Koeffizienten im allgemeinen Ansatz $a_n x^n + \\dots + a_1 x + a_0$ — von $a_0$ bis $a_n$.",
+        "Was passiert mit $x^3$, wenn du die Stelle $x = 2$ einsetzt? Bleibt die Gleichung in $a$, $b$, $c$, $d$ linear?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Ein Polynom vom Grad $n$ hat die $n + 1$ Koeffizienten $a_0, \\dots, a_n$, und die Steckbriefaufgabe ist die Umkehrung der Kurvendiskussion. Aussage 3 ist falsch, weil Grad 3 vier Koeffizienten bedeutet — es braucht vier Bedingungen. Aussage 4 ist falsch: Beim Einsetzen der Stellen werden alle Potenzen von $x$ zu Zahlen; die Unbekannten sind die Koeffizienten, und die stehen nur linear da — es entsteht ein lineares Gleichungssystem.",
+      "kc": [
+        "steckbrief-grundidee"
+      ]
+    },
+    {
+      "id": "ma-qp-ka-002",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jeder Steckbrief-Formulierung die passende Gleichung zu ($f'$: erste Ableitung, $f''$: zweite Ableitung).",
+      "paare": [
+        {
+          "links": "verläuft durch den Punkt P(2|5)",
+          "rechts": "f(2) = 5"
+        },
+        {
+          "links": "Extremstelle bei x = 1",
+          "rechts": "f′(1) = 0"
+        },
+        {
+          "links": "Wendestelle bei x = 3",
+          "rechts": "f″(3) = 0"
+        },
+        {
+          "links": "Steigung 4 an der Stelle x = 0",
+          "rechts": "f′(0) = 4"
+        }
+      ],
+      "tipps": [
+        "Punktangaben landen in $f$ selbst, Steigungsangaben in $f'$, Krümmungs- und Wendeangaben in $f''$.",
+        "Eine Extremstelle bedeutet waagerechte Tangente — welcher Wert von $f'$ gehört dazu?",
+        "„Steigung 4“ heißt: Die erste Ableitung hat dort den Wert 4 — nicht den Wert 0."
+      ],
+      "loesungsweg": "Punkt auf dem Graphen: $f(2) = 5$. Extremstelle = waagerechte Tangente: $f'(1) = 0$. Wendestelle = die zweite Ableitung verschwindet: $f''(3) = 0$. Vorgegebene Steigung: $f'(0) = 4$. Merkhilfe: $f$ beantwortet „Wo verläuft der Graph?“, $f'$ „Wie steil ist er?“ und $f''$ „Wie krümmt er sich?“.",
+      "kc": [
+        "bedingungen-uebersetzen"
+      ]
+    },
+    {
+      "id": "ma-qp-ka-003",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zu Steckbriefaufgaben.",
+      "text": "Eine ganzrationale Funktion vom Grad n hat ___ Koeffizienten. Jede Angabe im Steckbrief wird zu einer ___ Gleichung für die Koeffizienten. Berührt der Graph die x-Achse, liefert das ___ Gleichungen. Ein zur y-Achse achsensymmetrischer Ansatz enthält nur ___ Exponenten.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "n + 1",
+          "optionen": [
+            "n + 1",
+            "n",
+            "2n"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "linearen",
+          "optionen": [
+            "linearen",
+            "quadratischen",
+            "gebrochenen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "zwei",
+          "optionen": [
+            "zwei",
+            "eine",
+            "drei"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "gerade",
+          "optionen": [
+            "gerade",
+            "ungerade",
+            "negative"
+          ]
+        }
+      ],
+      "tipps": [
+        "Zähle beim Grad 2 nach: a, b und c — wie viele Zahlen sind das im Verhältnis zum Grad?",
+        "Berühren heißt: gemeinsamer Punkt und gleiche Steigung wie die x-Achse — also f = 0 und f′ = 0.",
+        "Achsensymmetrische Beispiele: x², x⁴, Konstanten — was haben ihre Exponenten gemeinsam?"
+      ],
+      "loesungsweg": "n + 1 — linearen — zwei — gerade: Der Ansatz $a_n x^n + \\dots + a_0$ enthält $n + 1$ Koeffizienten. Einsetzen der Stellen macht aus jeder Bedingung eine lineare Gleichung. Eine Berührung der x-Achse liefert die zwei Gleichungen $f(x_0) = 0$ und $f'(x_0) = 0$. Achsensymmetrie zur y-Achse bedeutet: nur gerade Exponenten im Ansatz (der konstante Summand zählt als $x^0$ mit).",
+      "kc": [
+        "steckbrief-regeln"
+      ]
+    },
+    {
+      "id": "ma-qp-ka-004",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 2,
+      "frage": "Ein Brückenbogen wird durch eine Parabel $f(x) = ax^2 + bx + c$ modelliert ($x$ und $f(x)$ in Metern). Der Bogen beginnt am linken Auflager im Ursprung, endet am rechten Auflager im Punkt $(40 \\mid 0)$ und erreicht in der Mitte bei $x = 20$ seine Scheitelhöhe $10\\,\\text{m}$. Bestimme die Koeffizienten.",
+      "eingaben": [
+        {
+          "label": "$a$",
+          "antwort": -0.025,
+          "toleranz": 0.0001,
+          "einheit": ""
+        },
+        {
+          "label": "$b$",
+          "antwort": 1,
+          "toleranz": 0.0001,
+          "einheit": ""
+        },
+        {
+          "label": "$c$",
+          "antwort": 0,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Der <strong>Koeffizient</strong> ist die Zahl vor einer Variablen – in $3x$ ist $3$ der Koeffizient.",
+        "Übersetze die drei Angaben: $f(0) = 0$, $f(40) = 0$ und $f(20) = 10$.",
+        "Aus $f(0) = 0$ folgt sofort $c = 0$. Übrig bleiben $1600a + 40b = 0$ und $400a + 20b = 10$.",
+        "Die erste Gleichung liefert $b = -40a$; einsetzen ergibt $-400a = 10$, also $a = -\\frac{1}{40} = -0{,}025$."
+      ],
+      "loesungsweg": "Bedingungen: $f(0) = 0 \\Rightarrow c = 0$; $f(40) = 0 \\Rightarrow 1600a + 40b = 0 \\Rightarrow b = -40a$; $f(20) = 10 \\Rightarrow 400a + 20b = 10$. Einsetzen: $400a - 800a = -400a = 10$, also $a = -0{,}025$ und $b = 1$. Modell: $f(x) = -\\frac{1}{40}x^2 + x$. Probe: $f(40) = -40 + 40 = 0$ ✓ und $f(20) = -10 + 20 = 10$ ✓; außerdem $f'(20) = 2 \\cdot (-0{,}025) \\cdot 20 + 1 = 0$ — der Scheitel liegt tatsächlich in der Mitte. Gültig ist das Modell nur auf $[0; 40]$.",
+      "kc": [
+        "steckbrief-parabel"
+      ]
+    },
+    {
+      "id": "ma-qp-ka-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine ganzrationale Funktion dritten Grades $f(x) = ax^3 + bx^2 + cx + d$ hat den Hochpunkt $H(0 \\mid 3)$ und den Tiefpunkt $T(2 \\mid -1)$. Übersetze die Angaben in vier Gleichungen, löse das LGS und gib die Koeffizienten an.",
+      "eingaben": [
+        {
+          "label": "$a$",
+          "antwort": 1,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$b$",
+          "antwort": -3,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$c$",
+          "antwort": 0,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "$d$",
+          "antwort": 3,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Der <strong>Koeffizient</strong> ist die Zahl vor einer Variablen – in $3x$ ist $3$ der Koeffizient.",
+        "Jeder Extrempunkt liefert zwei Gleichungen: $f(0) = 3$, $f'(0) = 0$, $f(2) = -1$ und $f'(2) = 0$ — mit $f'(x) = 3ax^2 + 2bx + c$.",
+        "Aus $f(0) = 3$ folgt $d = 3$, aus $f'(0) = 0$ folgt $c = 0$. Übrig bleiben $8a + 4b = -4$ und $12a + 4b = 0$.",
+        "Subtrahiere die beiden Gleichungen: $4a = 4$. Dann $b$ aus $12a + 4b = 0$ bestimmen."
+      ],
+      "loesungsweg": "Übersetzen: $f(0) = 3 \\Rightarrow d = 3$; $f'(0) = 0 \\Rightarrow c = 0$; $f(2) = -1 \\Rightarrow 8a + 4b + 3 = -1$, also $8a + 4b = -4$; $f'(2) = 0 \\Rightarrow 12a + 4b = 0$. Die Differenz der letzten beiden Gleichungen liefert $4a = 4$, also $a = 1$ und damit $b = -3$. Ergebnis: $f(x) = x^3 - 3x^2 + 3$. Probe: $f(0) = 3$ ✓, $f(2) = 8 - 12 + 3 = -1$ ✓, $f'(x) = 3x^2 - 6x$ hat die Nullstellen $0$ und $2$ ✓. Hinreichend: $f''(x) = 6x - 6$ mit $f''(0) = -6 < 0$ (Hochpunkt ✓) und $f''(2) = 6 > 0$ (Tiefpunkt ✓) — der Steckbrief ist vollständig erfüllt.",
+      "kc": [
+        "steckbrief-extrempunkte"
+      ],
+      "cas": "<p>Das LGS einer Steckbriefaufgabe löst der ClassPad II in einem Schritt:</p><ol><li>Im <b>Main</b>-Menü über die Software-Tastatur den Befehl <code>solve</code> aufrufen (Tippen oder <b>Interactive → Gleich./Ungleich. → solve</b>).</li><li>Alle vier Gleichungen in geschweiften Klammern bündeln: <code>solve({d=3,c=0,8a+4b+2c+d=-1,12a+4b+c=0},{a,b,c,d})</code> — <b>EXE</b> liefert a=1, b=-3, c=0, d=3.</li><li>Probe durch Plot: In <b>Grafik &amp; Tabelle</b> den Term <code>x^3-3x^2+3</code> zeichnen und kontrollieren, dass Hochpunkt (0|3) und Tiefpunkt (2|-1) wirklich zu sehen sind.</li></ol><p>In Klausuren gilt: Das CAS bestätigt nur — das Aufstellen der Bedingungen und der Gauß-Weg gehören aufs Papier.</p>"
+    },
+    {
+      "id": "ma-qp-ka-006",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Graph einer Funktion dritten Grades $f(x) = ax^3 + bx^2 + cx + d$ hat im Ursprung einen Tiefpunkt und im Punkt $H(2 \\mid 4)$ einen Hochpunkt. Bestimme $f$ Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Der Tiefpunkt im Ursprung liefert $f(0) = 0$ und $f'(0) = 0$. Gib $d$ und $c$ an.",
+          "eingaben": [
+            {
+              "label": "$d$",
+              "antwort": 0,
+              "toleranz": 0,
+              "einheit": ""
+            },
+            {
+              "label": "$c$",
+              "antwort": 0,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Einsetzen von $x = 0$: $f(0) = d$ und $f'(0) = c$ — beide Werte stehen direkt da."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Übersetze die Hochpunkt-Angaben $f(2) = 4$ und $f'(2) = 0$ und löse das verbleibende System: Gib $a$ und $b$ an.",
+          "eingaben": [
+            {
+              "label": "$a$",
+              "antwort": -1,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$b$",
+              "antwort": 3,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$8a + 4b = 4$ und $12a + 4b = 0$ — die Differenz liefert $4a = -4$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Probe der hinreichenden Bedingung mit $f''(x) = -6x + 6$: Berechne $f''(0)$ und $f''(2)$.",
+          "eingaben": [
+            {
+              "label": "$f''(0)$",
+              "antwort": 6,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$f''(2)$",
+              "antwort": -6,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Setze $0$ und $2$ in $-6x + 6$ ein — die Vorzeichen müssen zu Tief- und Hochpunkt passen."
+          ]
+        }
+      ],
+      "tipps": [
+        "Hoch- und Tiefpunkt liefern je zwei Gleichungen — zusammen vier Gleichungen für vier Koeffizienten.",
+        "Mit $c = d = 0$ bleibt nur ein 2-mal-2-System aus $f(2) = 4$ und $f'(2) = 0$ übrig.",
+        "$f''(0) > 0$ bestätigt den Tiefpunkt, $f''(2) < 0$ den Hochpunkt — erst damit ist der Steckbrief wirklich erfüllt."
+      ],
+      "loesungsweg": "Schritt 1: $f(0) = d = 0$ und $f'(0) = c = 0$. Schritt 2: $f(2) = 4$ ergibt $8a + 4b = 4$, $f'(2) = 0$ ergibt $12a + 4b = 0$; die Differenz liefert $4a = -4$, also $a = -1$ und $b = 3$. Damit ist $f(x) = -x^3 + 3x^2$. Schritt 3: $f''(x) = -6x + 6$ mit $f''(0) = 6 > 0$ (Minimum im Ursprung ✓) und $f''(2) = -6 < 0$ (Maximum bei $H(2 \\mid 4)$, denn $f(2) = -8 + 12 = 4$ ✓). Alle Angaben des Steckbriefs sind erfüllt.",
+      "kc": [
+        "steckbrief-lgs-schritte"
+      ]
+    },
+    {
+      "id": "ma-qp-ka-007",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Welche Aussagen über symmetrische Ansätze bei Steckbriefaufgaben sind richtig?",
+      "optionen": [
+        {
+          "text": "Ist der Graph achsensymmetrisch zur y-Achse, enthält der Ansatz nur gerade Exponenten — bei Grad 4 also $f(x) = ax^4 + bx^2 + c$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Achsensymmetrie zur y-Achse bedeutet $f(-x) = f(x)$, und das erfüllen genau die geraden Potenzen — statt fünf sind nur drei Koeffizienten zu bestimmen."
+        },
+        {
+          "text": "Ist der Graph punktsymmetrisch zum Ursprung, enthält der Ansatz nur ungerade Exponenten — bei Grad 3 also $f(x) = ax^3 + bx$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Punktsymmetrie zum Ursprung bedeutet $f(-x) = -f(x)$ — es bleiben nur die ungeraden Potenzen, also zwei Koeffizienten."
+        },
+        {
+          "text": "Eine Symmetrie-Angabe liefert eine zusätzliche Gleichung für das LGS.",
+          "richtig": false,
+          "erklaerung": "Symmetrie wirkt anders: Sie streicht Summanden aus dem Ansatz und verkleinert so das LGS — sie steht nicht als Gleichung im System."
+        },
+        {
+          "text": "Eine zum Ursprung punktsymmetrische Funktion dritten Grades kann den y-Achsenabschnitt 5 haben.",
+          "richtig": false,
+          "erklaerung": "Im Ansatz $f(x) = ax^3 + bx$ gilt immer $f(0) = 0$ — der Graph jeder ursprungs-punktsymmetrischen Funktion läuft durch den Ursprung."
+        }
+      ],
+      "tipps": [
+        "Teste die Symmetrie-Regeln an einfachen Beispielen: $x^2$ und $x^4$ gegen $x$ und $x^3$.",
+        "Überlege, was Symmetrie mit dem Ansatz macht: Kommt eine Gleichung dazu — oder fallen Unbekannte weg?",
+        "Setze im punktsymmetrischen Ansatz $x = 0$ ein: Welcher y-Achsenabschnitt ist überhaupt möglich?"
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Achsensymmetrie zur y-Achse erzwingt gerade, Punktsymmetrie zum Ursprung ungerade Exponenten — der Ansatz schrumpft auf $ax^4 + bx^2 + c$ bzw. $ax^3 + bx$. Aussage 3 ist falsch: Symmetrie liefert keine Gleichung, sondern reduziert die Zahl der Unbekannten. Aussage 4 ist falsch, denn aus dem Ansatz $ax^3 + bx$ folgt zwingend $f(0) = 0$ — ein y-Achsenabschnitt $5$ ist mit Punktsymmetrie zum Ursprung unvereinbar.",
+      "kc": [
+        "symmetrischer-ansatz"
+      ]
+    },
+    {
+      "id": "ma-qp-ka-008",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Graph einer zur y-Achse achsensymmetrischen ganzrationalen Funktion vierten Grades hat den Hochpunkt $H(0 \\mid 2)$ und den Tiefpunkt $T(1 \\mid 1)$. Nutze den Ansatz $f(x) = ax^4 + bx^2 + c$, bestimme die Koeffizienten und gib zusätzlich $f(-1)$ an.",
+      "eingaben": [
+        {
+          "label": "$a$",
+          "antwort": 1,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$b$",
+          "antwort": -2,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$c$",
+          "antwort": 2,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$f(-1)$",
+          "antwort": 1,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Der <strong>Koeffizient</strong> ist die Zahl vor einer Variablen – in $3x$ ist $3$ der Koeffizient.",
+        "Nutzbare Gleichungen: $f(0) = 2$, $f(1) = 1$ und $f'(1) = 0$ mit $f'(x) = 4ax^3 + 2bx$. ($f'(0) = 0$ ist im symmetrischen Ansatz automatisch erfüllt.)",
+        "$c = 2$; übrig bleiben $a + b = -1$ und $4a + 2b = 0$, also $b = -2a$.",
+        "$a - 2a = -1$ liefert $a$. Den Wert $f(-1)$ schenkt dir die Achsensymmetrie: $f(-1) = f(1)$."
+      ],
+      "loesungsweg": "Aus $f(0) = 2$ folgt $c = 2$. Aus $f(1) = 1$ folgt $a + b + 2 = 1$, also $a + b = -1$; aus $f'(1) = 0$ folgt $4a + 2b = 0$, also $b = -2a$. Einsetzen: $a - 2a = -1$, also $a = 1$ und $b = -2$. Ergebnis: $f(x) = x^4 - 2x^2 + 2$. Wegen der Achsensymmetrie ist $f(-1) = f(1) = 1$ — der Graph hat dort automatisch den zweiten Tiefpunkt $T'(-1 \\mid 1)$. Probe: $f(1) = 1 - 2 + 2 = 1$ ✓, $f'(x) = 4x^3 - 4x$ hat die Nullstellen $-1$, $0$, $1$ ✓, und $f''(x) = 12x^2 - 4$ bestätigt mit $f''(0) = -4 < 0$ den Hochpunkt sowie mit $f''(\\pm 1) = 8 > 0$ beide Tiefpunkte.",
+      "kc": [
+        "symmetrischer-ansatz"
+      ]
+    },
+    {
+      "id": "ma-qp-ka-009",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bringe die Arbeitsschritte einer Steckbriefaufgabe in die richtige Reihenfolge.",
+      "elemente": [
+        "Grad festlegen und Ansatz wählen — Symmetrie verkleinert ihn",
+        "Jede Steckbrief-Angabe in eine Gleichung übersetzen",
+        "Das lineare Gleichungssystem aufstellen und lösen (Gauß)",
+        "Die Lösung einsetzen und den Funktionsterm notieren",
+        "Probe: alle Bedingungen und hinreichende Kriterien prüfen"
+      ],
+      "tipps": [
+        "Ohne Ansatz gibt es keine Koeffizienten, in die du Bedingungen übersetzen könntest.",
+        "Erst wenn alle Gleichungen dastehen, lohnt sich das systematische Lösen.",
+        "Die Probe braucht den fertigen Funktionsterm — sie ist immer der letzte Schritt."
+      ],
+      "loesungsweg": "Zuerst wird der Ansatz gewählt (Grad aus der Anzahl der Bedingungen, Symmetrie streicht Summanden). Dann werden die Angaben in Gleichungen über $f$, $f'$ und $f''$ übersetzt, das LGS aufgestellt und mit dem Gauß-Verfahren gelöst. Die gefundenen Koeffizienten ergeben den Funktionsterm. Zum Schluss folgt die Probe: alle Bedingungen nachrechnen und die hinreichenden Kriterien (z. B. $f''(x_0) \\ne 0$ am Extremum) kontrollieren — erst dann ist die Aufgabe fertig.",
+      "kc": [
+        "steckbrief-ablauf"
+      ]
+    },
+    {
+      "id": "ma-qp-ka-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Skater-Rampe verbindet den Boden mit einer $2\\,\\text{m}$ hohen Plattform über eine horizontale Strecke von $4\\,\\text{m}$. Damit keine Kante entsteht, soll das Profil $f(x) = ax^3 + bx^2 + cx + d$ (Maße in Metern, $0 \\le x \\le 4$) an beiden Enden waagerecht auslaufen: $f(0) = 0$, $f'(0) = 0$, $f(4) = 2$ und $f'(4) = 0$. Bestimme $a$ und $b$ (überlege zuerst, was aus den ersten beiden Bedingungen folgt) sowie die Steigung $f'(2)$ in der Mitte.",
+      "eingaben": [
+        {
+          "label": "$a$",
+          "antwort": -0.0625,
+          "toleranz": 0.0001,
+          "einheit": ""
+        },
+        {
+          "label": "$b$",
+          "antwort": 0.375,
+          "toleranz": 0.0001,
+          "einheit": ""
+        },
+        {
+          "label": "$f'(2)$",
+          "antwort": 0.75,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$f(0) = 0$ liefert $d = 0$ und $f'(0) = 0$ liefert $c = 0$ — es bleibt ein 2-mal-2-System.",
+        "$f(4) = 2$ ergibt $64a + 16b = 2$, $f'(4) = 0$ ergibt $48a + 8b = 0$, also $b = -6a$. Einsetzen: $-32a = 2$.",
+        "$a = -\\frac{1}{16} = -0{,}0625$ und $b = \\frac{3}{8} = 0{,}375$; die Steigung liefert $f'(x) = 3ax^2 + 2bx$, also $f'(2) = 12a + 4b$."
+      ],
+      "loesungsweg": "Aus $f(0) = 0$ folgt $d = 0$, aus $f'(0) = 0$ folgt $c = 0$. Die restlichen Bedingungen: $f(4) = 2$ ergibt $64a + 16b = 2$ und $f'(4) = 0$ ergibt $48a + 8b = 0$, also $b = -6a$. Einsetzen: $64a - 96a = -32a = 2$, also $a = -\\frac{1}{16}$ und $b = \\frac{3}{8}$. Profil: $f(x) = -\\frac{1}{16}x^3 + \\frac{3}{8}x^2$. Steigung in der Mitte: $f'(2) = 12 \\cdot \\left(-\\frac{1}{16}\\right) + 4 \\cdot \\frac{3}{8} = -\\frac{3}{4} + \\frac{3}{2} = 0{,}75$ — das entspricht 75 % Steigung und ist zugleich die steilste Stelle, denn bei $x = 2$ liegt der Wendepunkt des Profils ($f''(x) = -\\frac{3}{8}x + \\frac{3}{4} = 0$). Probe: $f(4) = -4 + 6 = 2$ ✓ und $f'(4) = -3 + 3 = 0$ ✓.",
+      "kc": [
+        "steckbrief-sachkontext"
+      ],
+      "cas": "<p>Kontrolle der Rampen-Aufgabe mit dem ClassPad II:</p><ol><li>Im <b>Main</b>-Menü das LGS bündeln: <code>solve({d=0,c=0,64a+16b+4c+d=2,48a+8b+c=0},{a,b,c,d})</code> — <b>EXE</b> liefert a=-1/16, b=3/8, c=0, d=0.</li><li>Die Steigung in der Mitte nachrechnen: <code>diff(-x^3/16+3x^2/8,x)|x=2</code> ergibt 3/4.</li><li>Probe durch Plot: In <b>Grafik &amp; Tabelle</b> den Term <code>-x^3/16+3x^2/8</code> im Fenster $0 \\le x \\le 4$ zeichnen — das Profil läuft an beiden Enden waagerecht aus und steigt von 0 auf 2.</li></ol><p>Das CAS kennt den Sachkontext nicht: Dass nur $[0; 4]$ als Rampe taugt, musst du selbst dazusagen.</p>"
+    },
+    {
+      "id": "ma-qp-ka-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Paul soll eine zum Ursprung punktsymmetrische Funktion dritten Grades mit dem Tiefpunkt $T(1 \\mid -2)$ bestimmen. Mit dem Ansatz $f(x) = ax^3 + bx$ erhält er $f(x) = x^3 - 3x$ und notiert: „Wegen der Punktsymmetrie hat der Graph bei $x = -1$ einen zweiten Tiefpunkt $T_2(-1 \\mid 2)$.“ Prüfe Pauls Rechnung und seine Schlussfolgerung.",
+      "musterloesung": "Die Rechnung stimmt: Der Ansatz $f(x) = ax^3 + bx$ ist für Punktsymmetrie zum Ursprung richtig, und die Bedingungen $f(1) = a + b = -2$ sowie $f'(1) = 3a + b = 0$ liefern durch Subtraktion $2a = 2$, also $a = 1$ und $b = -3$ — tatsächlich $f(x) = x^3 - 3x$. Auch die Probe gelingt: $f(1) = 1 - 3 = -2$ ✓, $f'(x) = 3x^2 - 3$ hat bei $x = 1$ eine Nullstelle ✓, und $f''(1) = 6 > 0$ bestätigt den Tiefpunkt. Pauls Schlussfolgerung ist trotzdem falsch: Punktsymmetrie spiegelt den Graphen am Ursprung, und dabei wird aus einem Tal ein Berg — aus dem Tiefpunkt $T(1 \\mid -2)$ entsteht der Hochpunkt $H(-1 \\mid 2)$, kein zweiter Tiefpunkt. Die Kontrolle bestätigt das: $f'(-1) = 0$, aber $f''(-1) = -6 < 0$, also ein Maximum. Merke: Bei Punktsymmetrie wechseln gespiegelte Extrempunkte ihre Art (Hoch ↔ Tief), bei Achsensymmetrie behalten sie sie.",
+      "tipps": [
+        "Löse das 2-mal-2-System aus $f(1) = -2$ und $f'(1) = 0$ selbst und vergleiche mit Pauls Term.",
+        "Punktsymmetrie heißt Spiegelung am Ursprung — was wird dabei aus einem Tal?",
+        "Berechne $f''(-1)$ und entscheide: Hoch- oder Tiefpunkt?"
+      ],
+      "loesungsweg": "Rechnung korrekt: $a + b = -2$ und $3a + b = 0$ ergeben $a = 1$, $b = -3$, also $f(x) = x^3 - 3x$ mit bestätigtem Tiefpunkt bei $x = 1$ ($f''(1) = 6 > 0$). Schlussfolgerung falsch: Die Spiegelung am Ursprung macht aus dem Tiefpunkt $T(1 \\mid -2)$ den Hochpunkt $H(-1 \\mid 2)$ — Kontrolle: $f''(-1) = -6 < 0$. Einen zweiten Tiefpunkt hat der Graph nicht.",
+      "kc": [
+        "symmetrie-pruefen"
+      ]
+    },
+    {
+      "id": "ma-qp-ka-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (erhöhtes Anforderungsniveau): Der Graph einer ganzrationalen Funktion vierten Grades $f(x) = ax^4 + bx^3 + cx^2 + dx + e$ berührt die x-Achse im Ursprung und im Punkt $(4 \\mid 0)$ und verläuft durch $P(2 \\mid 4)$. Bestimme $f$ und prüfe das Ergebnis.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: „Berühren im Ursprung“ liefert $f(0) = 0$ und $f'(0) = 0$. Gib $e$ und $d$ an.",
+          "eingaben": [
+            {
+              "label": "$e$",
+              "antwort": 0,
+              "toleranz": 0,
+              "einheit": ""
+            },
+            {
+              "label": "$d$",
+              "antwort": 0,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$f(0) = e$ und $f'(0) = d$ — beide Werte lassen sich direkt ablesen."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Übersetze $f(4) = 0$, $f'(4) = 0$ und $f(2) = 4$ und löse das 3-mal-3-System: Gib $a$, $b$ und $c$ an.",
+          "eingaben": [
+            {
+              "label": "$a$",
+              "antwort": 0.25,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$b$",
+              "antwort": -2,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$c$",
+              "antwort": 4,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Die Gleichungen lauten $256a + 64b + 16c = 0$, $256a + 48b + 8c = 0$ und $16a + 8b + 4c = 4$. Subtrahiere die ersten beiden: $16b + 8c = 0$, also $c = -2b$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Probe an der zweiten Berührstelle und dazwischen: Berechne $f'(4)$ und $f'(2)$ mit $f'(x) = x^3 - 6x^2 + 8x$.",
+          "eingaben": [
+            {
+              "label": "$f'(4)$",
+              "antwort": 0,
+              "toleranz": 0,
+              "einheit": ""
+            },
+            {
+              "label": "$f'(2)$",
+              "antwort": 0,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Faktorisieren hilft: $f'(x) = x(x - 2)(x - 4)$ — die Nullstellen springen ins Auge."
+          ]
+        }
+      ],
+      "tipps": [
+        "Jede Berührstelle liefert zwei Gleichungen — zusammen mit dem Punkt $P$ sind es fünf für fünf Koeffizienten.",
+        "Nach Schritt 1 bleiben drei Gleichungen; eliminiere zuerst $a$, indem du die beiden Gleichungen mit $256a$ voneinander abziehst.",
+        "Faktorisierte Kontrolle am Ende: $f(x) = \\frac{1}{4}x^2(x - 4)^2$ — beide Berührstellen sind doppelte Nullstellen."
+      ],
+      "loesungsweg": "Schritt 1: $f(0) = e = 0$ und $f'(0) = d = 0$. Schritt 2: Die Bedingungen $f(4) = 0$, $f'(4) = 0$ und $f(2) = 4$ ergeben $256a + 64b + 16c = 0$, $256a + 48b + 8c = 0$ und $16a + 8b + 4c = 4$. Subtraktion der ersten beiden liefert $16b + 8c = 0$, also $c = -2b$; einsetzen in die erste: $256a + 32b = 0$, also $b = -8a$ und $c = 16a$. Die dritte Gleichung wird zu $16a - 64a + 64a = 16a = 4$, also $a = \\frac{1}{4}$, $b = -2$, $c = 4$. Ergebnis: $f(x) = \\frac{1}{4}x^4 - 2x^3 + 4x^2 = \\frac{1}{4}x^2(x - 4)^2$. Schritt 3: $f'(x) = x^3 - 6x^2 + 8x = x(x - 2)(x - 4)$, also $f'(4) = 0$ ✓ und $f'(2) = 0$ — zwischen den Berührstellen liegt der Hochpunkt $H(2 \\mid 4)$ ($f''(2) = -4 < 0$), und wegen $f(x) \\ge 0$ bleibt der Graph oberhalb der x-Achse: Er berührt sie bei $0$ und $4$, wie verlangt.",
+      "kc": [
+        "beruehrbedingung"
+      ],
+      "cas": "<p>Bei fünf Unbekannten lohnt der Matrix-Weg des ClassPad II:</p><ol><li>Nach Schritt 1 bleibt das 3-mal-3-System. Die erweiterte Koeffizientenmatrix über das Matrix-Template der <b>Math2</b>-Tastatur eingeben: <code>[[256,64,16,0],[256,48,8,0],[16,8,4,4]]</code>.</li><li><b>Interactive → Matrix → Berechnung → rref</b> anwenden: Die reduzierte Stufenform zeigt in der letzten Spalte die Lösung 1/4, -2, 4.</li><li>Alternativ in einem Schritt: <code>solve({256a+64b+16c=0,256a+48b+8c=0,16a+8b+4c=4},{a,b,c})</code>.</li><li>Probe durch Plot: <code>x^4/4-2x^3+4x^2</code> zeichnen — der Graph berührt die x-Achse bei 0 und 4 und läuft durch (2|4).</li></ol><p>Dokumentiere im Heft trotzdem den Gauß-Weg — das CAS liefert nur die Bestätigung.</p>"
+    },
+    {
+      "id": "ma-qp-ka-013",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (erhöhtes Anforderungsniveau): Fünf Messpunkte sollen durch eine Parabel $f(x) = ax^2 + bx + c$ beschrieben werden — es gibt also mehr Bedingungen als Koeffizienten. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Das LGS aus allen fünf Punktbedingungen ist überbestimmt und hat im Allgemeinen keine Lösung.",
+          "richtig": true,
+          "erklaerung": "Richtig: Fünf Gleichungen für drei Unbekannte — beim Gauß-Verfahren entstehen in der Regel Widerspruchszeilen wie $0 = 2$; keine Parabel läuft exakt durch alle fünf Punkte."
+        },
+        {
+          "text": "Liegen die fünf Punkte zufällig exakt auf einer Parabel, ist das überbestimmte LGS trotzdem lösbar.",
+          "richtig": true,
+          "erklaerung": "Richtig: Dann werden die überzähligen Zeilen beim Eliminieren zu Nullzeilen $0 = 0$ — die Bedingungen passen zusammen, und die Lösung existiert."
+        },
+        {
+          "text": "Eine Ausgleichsparabel (Regression) macht die Summe der quadrierten Abweichungen zwischen Messwerten und Modellwerten möglichst klein.",
+          "richtig": true,
+          "erklaerung": "Richtig: Das ist die Methode der kleinsten Quadrate — das Quadrieren macht alle Abweichungen positiv und gewichtet große Ausreißer besonders stark."
+        },
+        {
+          "text": "Ein Polynom vierten Grades durch alle fünf Punkte ist immer das bessere Modell, weil es keine Abweichungen hat.",
+          "richtig": false,
+          "erklaerung": "Exakte Interpolation „verewigt“ die Messfehler und schlägt zwischen den Punkten oft unrealistische Bögen — das angemessene Modell begründet sich aus dem Sachkontext, nicht aus der kleinsten Abweichung."
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Der <strong>Koeffizient</strong> ist die Zahl vor einer Variablen – in $3x$ ist $3$ der Koeffizient.",
+        "Vergleiche die Anzahl der Gleichungen (5) mit der Anzahl der Unbekannten (3) — was passiert beim Gauß-Verfahren mit den überzähligen Zeilen?",
+        "Unterscheide die beiden Fälle: Widerspruchszeile $0 = c$ mit $c \\ne 0$ gegen Nullzeile $0 = 0$.",
+        "Drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind die Aussagen 1, 2 und 3: Ein überbestimmtes System ist im Allgemeinen unlösbar (Widerspruchszeilen), kann aber lösbar sein, wenn die Daten exakt zusammenpassen (Nullzeilen). Die Ausgleichsparabel minimiert die Summe der Abweichungsquadrate $\\sum (y_i - f(x_i))^2$ — die Methode der kleinsten Quadrate, die ein CAS als Regression eingebaut hat. Aussage 4 ist falsch: Ein Polynom vierten Grades trifft zwar alle fünf Punkte exakt, übernimmt damit aber jeden Messfehler und oszilliert zwischen den Punkten — mehr Genauigkeit an den Messstellen bedeutet nicht das bessere Modell.",
+      "kc": [
+        "ueberbestimmte-systeme"
+      ]
+    }
+  ]
+}

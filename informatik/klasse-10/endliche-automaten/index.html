@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Endliche Automaten — Klasse 10 · Informatik — Lernwelt</title>
+<meta name="description" content="Zustände, Übergänge, Zustandsdiagramme: Wie endliche Automaten Drehkreuze steuern und Wörter prüfen — Schritt für Schritt erklärt.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: Zustandsdiagramme und Übergangstabelle */
+  .automat-figur { margin: var(--abstand-4) 0; }
+  .automat-figur svg { display: block; width: 100%; height: auto; margin: 0 auto; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); }
+  .automat-figur figcaption { text-align: center; font-size: .9rem; color: var(--text-leise); margin-top: var(--abstand-2); }
+  .uebergangstabelle { border-collapse: collapse; margin: var(--abstand-3) auto; }
+  .uebergangstabelle th, .uebergangstabelle td { border: 1px solid var(--linie); padding: var(--abstand-2) var(--abstand-3); text-align: center; }
+  .uebergangstabelle thead th, .uebergangstabelle tbody th { background: var(--hauch); font-weight: 600; }
+  .uebergangstabelle caption { caption-side: bottom; font-size: .9rem; color: var(--text-leise); padding-top: var(--abstand-2); }
+</style>
+</head>
+<body data-seite="thema" data-fach="informatik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formel-Darstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Endliche Automaten</h1>
+  <p class="einleitung">Ein Drehkreuz im Schwimmbad, ein Getränkeautomat, eine Ampel: Viele Geräte um dich herum kennen nur eine Handvoll <strong>Zustände</strong> und wechseln zwischen ihnen, sobald eine Eingabe kommt. Genau dieses Denkmodell heißt in der Informatik <strong>endlicher Automat</strong> — eines der einfachsten und zugleich mächtigsten Werkzeuge, um Abläufe und Muster zu beschreiben. Auf dieser Seite lernst du, wie man Automaten zeichnet, liest und selbst entwirft.</p>
+
+  <section aria-labelledby="ea-alltag">
+    <h2 id="ea-alltag">1. Automaten im Alltag</h2>
+    <p>Das <strong>Drehkreuz</strong> am Schwimmbad-Eingang kennt genau zwei Zustände: <em>gesperrt</em> und <em>offen</em>. Wirfst du eine Münze ein, wird es offen; drehst du dich hindurch, sperrt es wieder. Mehr passiert nicht — und mehr muss auch nicht passieren.</p>
+    <p>Der <strong>Getränkeautomat</strong> arbeitet genauso, nur mit ein paar Zuständen mehr: „wartet auf Geld“, „50 Cent eingeworfen“, „1 Euro eingeworfen“, „gibt Flasche aus“. Und die <strong>Ampel</strong> läuft stur im Kreis durch ihre vier Zustände Rot, Rot-Gelb, Grün, Gelb — die „Eingabe“ ist hier das Signal der Steuerung, dass die Zeit abgelaufen ist.</p>
+    <p>Allen drei Systemen ist dasselbe gemeinsam: Sie haben <strong>endlich viele Zustände</strong>, sie sind immer in <strong>genau einem</strong> davon, und eine <strong>Eingabe</strong> (Münze, Knopfdruck, Zeitsignal) löst den Wechsel in den nächsten Zustand aus. Was als Nächstes passiert, hängt allein vom aktuellen Zustand und der Eingabe ab — ein anderes Gedächtnis besitzt der Automat nicht.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Eine Fußgängerampel zeigt Rot oder Grün. Was sind hier die Eingaben, die einen Zustandswechsel auslösen?</summary>
+      <div class="check-antwort"><p>Zum Beispiel der <strong>Knopfdruck</strong> der Fußgängerin und das <strong>Zeitsignal</strong> der Steuerung: Rot + Knopfdruck führt (nach kurzer Wartezeit) zu Grün, Grün + abgelaufene Zeit zurück zu Rot. Jeder Übergang braucht ein auslösendes Ereignis — das ist die Eingabe des Automaten.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ea-bausteine">
+    <h2 id="ea-bausteine">2. Die Bausteine</h2>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die Bausteine eines endlichen Automaten</span>
+      <p><strong>Zustände:</strong> die endlich vielen „Situationen“, in denen sich der Automat befinden kann — gezeichnet als Kreise. Genau einer ist zu jedem Zeitpunkt aktiv.<br>
+      <strong>Startzustand:</strong> hier beginnt alles; im Diagramm zeigt ein Pfeil von außen auf ihn.<br>
+      <strong>Eingaben und Übergänge:</strong> beschriftete Pfeile zwischen den Kreisen. Sie legen fest: Kommt in diesem Zustand diese Eingabe, wechsle dorthin. Ein Pfeil zurück zum eigenen Kreis heißt <em>Selbstübergang</em> — der Zustand bleibt.<br>
+      <strong>Endzustände (akzeptierende Zustände):</strong> besonders markierte Zustände mit Doppelkreis. Sie spielen ihre Rolle in Abschnitt 3, wenn Automaten Wörter prüfen.</p>
+    </div>
+    <p>Die Zeichnung aus Kreisen und beschrifteten Pfeilen heißt <strong>Zustandsdiagramm</strong>. So sieht es für das Drehkreuz aus:</p>
+    <figure class="automat-figur" style="max-width: 560px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zustandsdiagramm des Drehkreuz-Automaten: Zwei Zustände Gesperrt und Offen. Der Startpfeil zeigt auf Gesperrt. Die Eingabe Münze führt von Gesperrt nach Offen, die Eingabe Drehen von Offen zurück nach Gesperrt. Drehen im Zustand Gesperrt und Münze im Zustand Offen sind Selbstübergänge und ändern den Zustand nicht.">
+        <defs>
+          <marker id="ea-pfeil-dk" markerWidth="11" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M 0 0 L 11 5 L 0 10 Z" style="fill: var(--text);"/>
+          </marker>
+        </defs>
+        <!-- Startpfeil von außen -->
+        <text x="77" y="114" text-anchor="middle" style="font-size: 15px; fill: var(--text);">Start</text>
+        <path d="M 34 130 H 118" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-dk)"/>
+        <!-- Zustand Gesperrt -->
+        <circle cx="170" cy="130" r="44" style="fill: var(--hauch); stroke: var(--info); stroke-width: 2.5;"/>
+        <text x="170" y="136" text-anchor="middle" style="font-size: 17px; fill: var(--text);">Gesperrt</text>
+        <!-- Zustand Offen -->
+        <circle cx="420" cy="130" r="44" style="fill: var(--hauch); stroke: var(--info); stroke-width: 2.5;"/>
+        <text x="420" y="136" text-anchor="middle" style="font-size: 17px; fill: var(--text);">Offen</text>
+        <!-- Selbstübergang Gesperrt -> Gesperrt bei Drehen -->
+        <path d="M 151 90 C 136 36, 204 36, 189 90" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-dk)"/>
+        <text x="170" y="28" text-anchor="middle" style="font-size: 16px; font-weight: 600; fill: var(--info);">Drehen</text>
+        <!-- Selbstübergang Offen -> Offen bei Münze -->
+        <path d="M 401 90 C 386 36, 454 36, 439 90" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-dk)"/>
+        <text x="420" y="28" text-anchor="middle" style="font-size: 16px; font-weight: 600; fill: var(--info);">Münze</text>
+        <!-- Übergang Gesperrt -> Offen bei Münze (oberer Bogen) -->
+        <path d="M 206 104 Q 295 66 384 104" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-dk)"/>
+        <text x="295" y="74" text-anchor="middle" style="font-size: 16px; font-weight: 600; fill: var(--info);">Münze</text>
+        <!-- Übergang Offen -> Gesperrt bei Drehen (unterer Bogen) -->
+        <path d="M 384 156 Q 295 194 206 156" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-dk)"/>
+        <text x="295" y="193" text-anchor="middle" style="font-size: 16px; font-weight: 600; fill: var(--info);">Drehen</text>
+      </svg>
+      <figcaption>Das Drehkreuz als Zustandsdiagramm: Der Pfeil von außen markiert den Startzustand, die beiden gebogenen Selbstübergänge oben zeigen, dass „Drehen“ im gesperrten und „Münze“ im offenen Zustand nichts ändern.</figcaption>
+    </figure>
+    <p>Lies das Diagramm wie eine Gebrauchsanweisung: Der Automat startet in <strong>Gesperrt</strong>. Die Eingabe „Münze“ folgt dem oberen Pfeil nach <strong>Offen</strong>. Wer jetzt eine zweite Münze einwirft, folgt dem Selbstübergang — der Zustand bleibt Offen, die Münze ist verschenkt. Erst „Drehen“ führt über den unteren Pfeil zurück nach Gesperrt. Und Drehen im gesperrten Zustand? Rüttelt nur am Kreuz: Selbstübergang, alles bleibt, wie es ist.</p>
+    <p>Dieselbe Information lässt sich statt als Diagramm auch als <strong>Übergangstabelle</strong> aufschreiben — dazu gleich mehr in Abschnitt 4.</p>
+  </section>
+
+  <section aria-labelledby="ea-woerter">
+    <h2 id="ea-woerter">3. Ein Automat als Wort-Prüfer</h2>
+    <p>Richtig spannend werden Automaten, wenn sie nicht Drehkreuze steuern, sondern <strong>Wörter prüfen</strong>. Die Eingaben sind dann Zeichen aus einem festen Vorrat, dem <strong>Alphabet</strong> — hier ganz schlicht $\{a, b\}$. Der Automat liest ein Wort Zeichen für Zeichen von links nach rechts und wandert dabei durch seine Zustände. Endet das Wort in einem <strong>akzeptierenden Zustand</strong> (Doppelkreis), wird es <em>akzeptiert</em>, sonst <em>abgelehnt</em>.</p>
+    <p>Unser Beispielautomat soll genau die Wörter akzeptieren, <strong>die auf $b$ enden</strong>. Dafür genügen zwei Zustände: $q_0$ bedeutet „das zuletzt gelesene Zeichen war kein $b$ (oder es wurde noch nichts gelesen)“, $q_1$ bedeutet „das zuletzt gelesene Zeichen war ein $b$“.</p>
+    <figure class="automat-figur" style="max-width: 460px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zustandsdiagramm des Wort-Prüfers: Startzustand q0 und akzeptierender Zustand q1 mit Doppelkreis. Die Eingabe b führt von q0 nach q1, die Eingabe a von q1 zurück nach q0. Die Eingabe a in q0 und die Eingabe b in q1 sind Selbstübergänge.">
+        <defs>
+          <marker id="ea-pfeil-wp" markerWidth="11" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M 0 0 L 11 5 L 0 10 Z" style="fill: var(--text);"/>
+          </marker>
+        </defs>
+        <!-- Startpfeil von außen -->
+        <text x="61" y="96" text-anchor="middle" style="font-size: 15px; fill: var(--text);">Start</text>
+        <path d="M 24 112 H 96" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-wp)"/>
+        <!-- Zustand q0 -->
+        <circle cx="140" cy="112" r="38" style="fill: var(--hauch); stroke: var(--info); stroke-width: 2.5;"/>
+        <text x="140" y="118" text-anchor="middle" style="font-size: 18px; fill: var(--text);">q<tspan dy="5" style="font-size: 12px;">0</tspan></text>
+        <!-- Zustand q1 (akzeptierend: Doppelkreis) -->
+        <circle cx="340" cy="112" r="38" style="fill: var(--hauch); stroke: var(--info); stroke-width: 2.5;"/>
+        <circle cx="340" cy="112" r="31" style="fill: none; stroke: var(--info); stroke-width: 2;"/>
+        <text x="340" y="118" text-anchor="middle" style="font-size: 18px; fill: var(--text);">q<tspan dy="5" style="font-size: 12px;">1</tspan></text>
+        <!-- Selbstübergang q0 -> q0 bei a -->
+        <path d="M 124 78 C 110 28, 170 28, 156 78" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-wp)"/>
+        <text x="140" y="30" text-anchor="middle" style="font-size: 16px; font-weight: 600; font-style: italic; fill: var(--info);">a</text>
+        <!-- Selbstübergang q1 -> q1 bei b -->
+        <path d="M 324 78 C 310 28, 370 28, 356 78" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-wp)"/>
+        <text x="340" y="30" text-anchor="middle" style="font-size: 16px; font-weight: 600; font-style: italic; fill: var(--info);">b</text>
+        <!-- Übergang q0 -> q1 bei b (oberer Bogen) -->
+        <path d="M 171 89 Q 240 56 309 89" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-wp)"/>
+        <text x="240" y="62" text-anchor="middle" style="font-size: 16px; font-weight: 600; font-style: italic; fill: var(--info);">b</text>
+        <!-- Übergang q1 -> q0 bei a (unterer Bogen) -->
+        <path d="M 309 135 Q 240 168 171 135" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ea-pfeil-wp)"/>
+        <text x="240" y="172" text-anchor="middle" style="font-size: 16px; font-weight: 600; font-style: italic; fill: var(--info);">a</text>
+      </svg>
+      <figcaption>Der Wort-Prüfer: $q_1$ trägt den Doppelkreis. Endet ein Wort dort, wird es akzeptiert.</figcaption>
+    </figure>
+    <p>Merke dir die einfache Logik: Ein $b$ führt <em>immer</em> nach $q_1$, ein $a$ <em>immer</em> nach $q_0$ — egal, wo der Automat gerade steht. Jetzt lassen wir Wörter durchlaufen:</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Das Wort $abb$ — Schritt für Schritt</span>
+      <p>Start in $q_0$ · lies $a$ → bleibe in $q_0$ · lies $b$ → wechsle nach $q_1$ · lies $b$ → bleibe in $q_1$.</p>
+      <p>Zustandsfolge: $q_0 \to q_0 \to q_1 \to q_1$. Das Wort endet im akzeptierenden Zustand $q_1$ — <strong>akzeptiert</strong> ✓. Das passt: $abb$ endet auf $b$.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Das Wort $aba$</span>
+      <p>Start in $q_0$ · lies $a$ → bleibe in $q_0$ · lies $b$ → wechsle nach $q_1$ · lies $a$ → zurück nach $q_0$.</p>
+      <p>Zustandsfolge: $q_0 \to q_0 \to q_1 \to q_0$. Das Wort endet in $q_0$, und $q_0$ ist nicht akzeptierend — <strong>abgelehnt</strong> ✗. Auch das passt: $aba$ endet nicht auf $b$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Durchlaufe das Wort $bba$. Wird es akzeptiert?</summary>
+      <div class="check-antwort"><p>Start in $q_0$ · $b$ → $q_1$ · $b$ → $q_1$ · $a$ → $q_0$. Zustandsfolge $q_0 \to q_1 \to q_1 \to q_0$: Das Wort endet in $q_0$ und wird <strong>abgelehnt</strong> — richtig so, denn $bba$ endet auf $a$. Zwischendurch in $q_1$ vorbeizukommen genügt nicht; es zählt nur der Zustand am Wortende.</p></div>
+    </details>
+    <p>Jetzt bist du dran: In der Simulation liest einer von drei Automaten eines von sechs Wörtern — Zeichen für Zeichen, genau wie in den Beispielen oben. Verfolge auf dem Wortband den Lesekopf und im Zustandsdiagramm den aktuellen Zustand; am Wortende fällt die Entscheidung über die Akzeptanz.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/informatik/endlicher-automat/index.html?einbettung=1#automat=1&amp;wort=1"
+        title="Interaktive Simulation: Endlicher Automat prüft Wörter Schritt für Schritt" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/informatik/endlicher-automat/index.html#automat=1&amp;wort=1" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Wähle das Preset „A1 prüft abab“ und gehe mit „Weiter →“ durch das Wort. Notiere vor jedem Schritt den aktuellen <strong>Zustand</strong>: Welche Zustandsfolge entsteht, und welcher <strong>Übergang</strong> wird bei jedem Zeichen benutzt?<br>
+      2. Automat A2 akzeptiert genau die Wörter, die auf $ab$ enden. Sage für alle sechs Wörter vorher, ob A2 sie akzeptiert, und prüfe dann jede Vorhersage. Denk an den Verständnis-Check oben: Für die <strong>Akzeptanz</strong> zählt nur der Zustand am Wortende — nicht, ob der Doppelkreis zwischendurch besucht wird.<br>
+      3. Lass Automat A3 das Wort $aaa$ lesen (Preset „A3 prüft aaa“). Ab welchem Zeichen steht das Ergebnis unabänderlich fest? Sieh dir die Übergänge am Zustand Z2 an und erkläre, warum Z2 eine „Falle“ ist — und warum das für „enthält $aa$“ genau richtig ist.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ea-tabelle">
+    <h2 id="ea-tabelle">4. Die Übergangstabelle</h2>
+    <p>Ein Zustandsdiagramm ist anschaulich — aber dieselbe Information passt auch in eine Tabelle. Die <strong>Übergangstabelle</strong> hat eine Zeile pro Zustand und eine Spalte pro Eingabezeichen; in jeder Zelle steht der Folgezustand. Für den Wort-Prüfer aus Abschnitt 3 sieht sie so aus:</p>
+    <table class="uebergangstabelle">
+      <caption>Übergangstabelle des Wort-Prüfers: Zeile = aktueller Zustand, Spalte = gelesenes Zeichen, Zelle = Folgezustand.</caption>
+      <thead>
+        <tr><th scope="col">Zustand</th><th scope="col">Eingabe $a$</th><th scope="col">Eingabe $b$</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">→ $q_0$ (Start)</th><td>$q_0$</td><td>$q_1$</td></tr>
+        <tr><th scope="row">$q_1$ (akzeptierend)</th><td>$q_0$</td><td>$q_1$</td></tr>
+      </tbody>
+    </table>
+    <p>Die Tabelle hat einen großen Vorteil: Man sieht sofort, ob der Automat <strong>vollständig</strong> ist — also für <em>jeden</em> Zustand und <em>jedes</em> Zeichen genau einen Übergang festlegt. Keine leere Zelle, keine Zelle mit zwei Einträgen: Dann ist für jede Situation eindeutig geregelt, wie es weitergeht. Bei 2 Zuständen und 2 Zeichen sind das $2 \cdot 2 = 4$ Einträge. Für Programme ist die Tabelle ohnehin das Format der Wahl — ein Computer schlägt lieber in Tabellen nach, als Kreise und Pfeile anzuschauen.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Du stehst in $q_1$ und liest ein $a$. In welcher Zelle der Tabelle findest du die Antwort — und wohin wechselst du?</summary>
+      <div class="check-antwort"><p>Zeile $q_1$, Spalte „Eingabe $a$“ — dort steht $q_0$. Der Automat wechselt also nach $q_0$: Das zuletzt gelesene Zeichen ist jetzt ein $a$, das Wort endet im Moment nicht auf $b$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ea-wozu">
+    <h2 id="ea-wozu">5. Wozu das alles?</h2>
+    <p>Endliche Automaten sind das Standardwerkzeug für <strong>Mustererkennung</strong>. Wenn ein Eingabefeld prüft, ob deine E-Mail-Adresse oder eine Postleitzahl gültig aussieht, läuft im Hintergrund ein Automat über die Zeichen — genau wie unser Wort-Prüfer, nur mit ein paar Zuständen mehr. Auch die Suchfunktion in Texten arbeitet so: Ein Automat merkt sich in seinem Zustand, wie viele Zeichen des Suchworts gerade schon passen, und schlägt zu, sobald alle da sind. Das ergänzt die Verfahren von der Seite <a href="../suchen-und-sortieren/index.html">Suchen und Sortieren</a> um das Suchen <em>im Text</em>.</p>
+    <p>Die zweite große Anwendung sind <strong>Steuerungen</strong>: Waschmaschinenprogramme, Fahrstühle, Spielfiguren, die zwischen „patrouillieren“, „verfolgen“ und „fliehen“ wechseln — alles Zustandsautomaten. Und sogar in der Kryptografie steckt die Idee: Historische Chiffriermaschinen wie die Enigma schalteten mit jedem Tastendruck ihre Walzen einen Zustand weiter, damit nicht jeder Buchstabe gleich verschlüsselt wird — eine raffinierte Verwandte der Verschiebechiffren von der Seite <a href="../verschluesselung/index.html">Verschlüsselung</a>.</p>
+    <p>Wer Automaten lesen kann, hat außerdem ein Stück theoretische Informatik in der Hand: Die Frage, welche Muster ein endlicher Automat erkennen kann und welche grundsätzlich nicht, gehört zu den Klassikern des Fachs — ein Vorgeschmack dazu in der Vertiefung.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Was kein endlicher Automat schafft — die Grenzen des Modells</summary>
+    <div class="vertiefung-inhalt">
+      <p>So nützlich endliche Automaten sind — manche Muster sind für sie unerreichbar. Das Paradebeispiel: Akzeptiere genau die Wörter der Form $a^n b^n$, also „erst einige $a$, dann <strong>genauso viele</strong> $b$“ (wie $ab$, $aabb$, $aaabbb$, …). Dafür müsste sich der Automat merken, <em>wie viele</em> $a$ er gelesen hat — und zwar für jede beliebig große Anzahl getrennt. Ein Automat mit, sagen wir, 100 Zuständen kann aber höchstens 100 verschiedene Situationen unterscheiden: Spätestens bei 101 gelesenen $a$ landen zwei verschiedene Anzahlen im selben Zustand. Ab da kann der Automat sie nie wieder auseinanderhalten — er müsste anschließend beide Wörter akzeptieren oder beide ablehnen, obwohl nur eines korrekt ist. Egal wie viele Zustände man spendiert: Es sind endlich viele, und das Argument schlägt immer zu.</p>
+      <p>Der Ausweg ist mehr Gedächtnis: Der <strong>Kellerautomat</strong> bekommt zusätzlich einen Stapelspeicher (Keller), auf den er Zeichen legen und sie wieder herunternehmen kann. Damit ist $a^n b^n$ leicht: für jedes $a$ ein Zeichen auf den Stapel, für jedes $b$ eines herunter — am Ende muss der Stapel leer sein. Solche Automaten prüfen zum Beispiel, ob in einem Programmtext alle Klammern korrekt geschlossen sind. Die Stufenleiter immer mächtigerer Maschinenmodelle endet bei der Turingmaschine — aber das ist eine Geschichte für die Oberstufe.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen — vom ersten Zustandsdiagramm bis zum Teilbarkeits- und Produkt-Automaten.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

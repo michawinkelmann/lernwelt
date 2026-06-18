@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ebenen im Raum — Qualifikationsphase · Mathematik — Lernwelt</title>
+<meta name="description" content="Ebenengleichungen in Parameter-, Normalen- und Koordinatenform aufstellen und ineinander umwandeln, Spurpunkte bestimmen und Lagebeziehungen Gerade–Ebene und Ebene–Ebene untersuchen — mit durchgehendem Beispiel, Schrägbildern, Verständnis-Checks und Übungen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .werte-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .werte-tabelle th, .werte-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: left; }
+  .werte-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Ebenen im Raum</h1>
+  <p class="einleitung">Ein Flugzeug sinkt im Landeanflug durch eine geschlossene Wolkendecke. Die Untergrenze der Wolken lässt sich als riesige ebene Fläche modellieren, die Flugbahn als Gerade — und der Moment, in dem die Maschine unter den Wolken auftaucht, ist ein Durchstoßpunkt. Im Thema <a href="../vektoren-und-geraden/index.html">Vektoren und Geraden</a> hast du Punkte und Geraden im Raum beschrieben; jetzt kommt das dritte Grundobjekt dazu: die <strong>Ebene</strong>. Du lernst ihre drei Beschreibungsformen kennen — <strong>Parameterform</strong>, <strong>Normalenform</strong> und <strong>Koordinatenform</strong> — und untersuchst damit, wie Geraden und Ebenen zueinander liegen.</p>
+
+  <section aria-labelledby="eb-parameterform">
+    <h2 id="eb-parameterform">1. Die Ebene in Parameterform</h2>
+    <p>Eine Gerade entsteht aus einem Stützpunkt und <em>einer</em> Richtung: $g\colon\; \vec{x} = \vec{p} + t \cdot \vec{u}$. Für eine Ebene reicht eine Richtung nicht, denn sie dehnt sich flächig aus. Die Lösung: ein Stützpunkt und <em>zwei</em> Richtungen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Parameterform der Ebene</span>
+      <p class="formel-abgesetzt">$$E\colon\; \vec{x} = \vec{p} + r \cdot \vec{u} + s \cdot \vec{v}$$</p>
+      <p>Dabei ist $\vec{p}$ der <strong>Stützvektor</strong> (er führt vom Ursprung zu einem Punkt der Ebene); $\vec{u}$ und $\vec{v}$ heißen <strong>Spannvektoren</strong>. Sie dürfen keine Vielfachen voneinander sein — sonst spannen sie nur eine Gerade auf. Die Parameter $r$ und $s$ durchlaufen alle reellen Zahlen: Zu jedem Zahlenpaar gehört genau ein Punkt der Ebene.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 300" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Schrägbild: Eine Ebene ist als Parallelogramm im Raum dargestellt. Vom Ursprung O führt der Stützvektor p zum Punkt A der Ebene. In A beginnen die beiden Spannvektoren u und v, die die Ebene aufspannen. Ein weiterer Punkt X der Ebene wird erreicht, indem man von A aus anderthalbmal u und einmal v entlanggeht — angedeutet durch gestrichelte Linien.">
+        <defs>
+          <marker id="eb1-pfeil-akzent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--akzent)"/></marker>
+          <marker id="eb1-pfeil-gruen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--ok)"/></marker>
+        </defs>
+        <!-- Ebene als Parallelogramm -->
+        <polygon points="100,201 282,159 354,49 172,91" fill="var(--mathe)" fill-opacity="0.12" stroke="var(--mathe)" stroke-width="2"/>
+        <text x="196" y="112" font-size="15" font-weight="600" fill="var(--mathe)">E</text>
+        <!-- Stuetzvektor p vom Ursprung O zum Punkt A -->
+        <circle cx="60" cy="270" r="3.5" fill="var(--text)"/>
+        <text x="46" y="288" font-size="12" fill="var(--text-leise)">O</text>
+        <line x1="60" y1="270" x2="146" y2="174" stroke="var(--akzent)" stroke-width="2.5" marker-end="url(#eb1-pfeil-akzent)"/>
+        <text x="84" y="222" font-size="13" font-weight="600" fill="var(--akzent)">p&#8407;</text>
+        <!-- Spannvektoren u und v ab A -->
+        <line x1="150" y1="170" x2="216" y2="155" stroke="var(--ok)" stroke-width="2.5" marker-end="url(#eb1-pfeil-gruen)"/>
+        <line x1="150" y1="170" x2="178" y2="127" stroke="var(--ok)" stroke-width="2.5" marker-end="url(#eb1-pfeil-gruen)"/>
+        <text x="188" y="174" font-size="13" font-weight="600" fill="var(--ok)">u&#8407;</text>
+        <text x="148" y="138" font-size="13" font-weight="600" fill="var(--ok)">v&#8407;</text>
+        <circle cx="150" cy="170" r="3.5" fill="var(--text)"/>
+        <text x="130" y="188" font-size="12" fill="var(--text)">A</text>
+        <!-- Weg zu einem weiteren Punkt X = p + 1,5u + 1v -->
+        <g stroke="var(--text-leise)" stroke-width="1.5" stroke-dasharray="4 3">
+          <line x1="150" y1="170" x2="255" y2="146"/>
+          <line x1="255" y1="146" x2="285" y2="100"/>
+        </g>
+        <circle cx="285" cy="100" r="3.5" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+        <text x="293" y="97" font-size="12" font-weight="600" fill="var(--text)">X</text>
+        <text x="186" y="200" font-size="11" fill="var(--text-leise)">1,5 · u&#8407;</text>
+        <text x="276" y="130" font-size="11" fill="var(--text-leise)">1 · v&#8407;</text>
+      </svg>
+    </div>
+    <p>Das Bild zeigt die Idee: Der Stützvektor $\vec{p}$ bringt dich vom Ursprung in die Ebene, danach bewegst du dich nur noch innerhalb der Ebene — $r$ Schritte entlang $\vec{u}$, $s$ Schritte entlang $\vec{v}$. Der Punkt $X$ gehört zum Beispiel zu $r = 1{,}5$ und $s = 1$. Mit beliebigen reellen Werten erreichst du jeden Punkt der (über das gezeichnete Parallelogramm hinaus unendlich ausgedehnten) Ebene.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Ebene aus drei Punkten — unser Begleitbeispiel</span>
+      <p>Drei Punkte legen eine Ebene fest, sofern sie nicht auf einer gemeinsamen Geraden liegen. So entsteht das Beispiel, das uns durch das ganze Thema begleitet: $A(2\,|\,1\,|\,1)$, $B(4\,|\,0\,|\,1)$ und $C(2\,|\,2\,|\,0)$. Als Stützvektor dient der Ortsvektor von $A$, als Spannvektoren die Verbindungsvektoren zu den beiden anderen Punkten — koordinatenweise „Spitze minus Fuß“:</p>
+      <p class="formel-abgesetzt">$$\vec{u} = \overrightarrow{AB} = \begin{pmatrix} 2 \\ -1 \\ 0 \end{pmatrix}, \qquad \vec{v} = \overrightarrow{AC} = \begin{pmatrix} 0 \\ 1 \\ -1 \end{pmatrix}$$</p>
+      <p class="formel-abgesetzt">$$E\colon\; \vec{x} = \begin{pmatrix} 2 \\ 1 \\ 1 \end{pmatrix} + r \cdot \begin{pmatrix} 2 \\ -1 \\ 0 \end{pmatrix} + s \cdot \begin{pmatrix} 0 \\ 1 \\ -1 \end{pmatrix}$$</p>
+      <p>Kurzer Kontrollblick: $\vec{u}$ und $\vec{v}$ sind keine Vielfachen voneinander (vergleiche die erste Koordinate: $2$ gegen $0$) — die drei Punkte liegen also wirklich nicht auf einer Geraden.</p>
+    </div>
+    <p>Die Parameterform ist nicht eindeutig: Auch $B$ oder $C$ taugen als Stützpunkt, auch $\overrightarrow{BC}$ als Spannvektor. Ganz verschiedene Gleichungen können dieselbe Ebene beschreiben — das macht den Vergleich zweier Ebenen in Parameterform mühsam und ist ein guter Grund für die kompakteren Formen der nächsten Abschnitte.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Welchen Punkt der Beispiel-Ebene liefert r = 1, s = 1?</summary>
+      <div class="check-antwort"><p>Koordinatenweise einsetzen: $x_1 = 2 + 2 + 0 = 4$, $x_2 = 1 - 1 + 1 = 1$, $x_3 = 1 + 0 - 1 = 0$ — also der Punkt $X(4\,|\,1\,|\,0)$. (Ab Abschnitt 3 kannst du das blitzschnell kontrollieren: $4 + 2 \cdot 1 + 2 \cdot 0 = 6$ — passt.)</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="eb-normalenform">
+    <h2 id="eb-normalenform">2. Normalenvektor und Normalenform</h2>
+    <p>Die Spannvektoren beschreiben die Ebene von innen. Oft ist eine andere Blickrichtung praktischer: <em>eine</em> Richtung, die senkrecht aus der Ebene heraussticht — wie ein Nagel aus einem Brett. Diese eine Richtung legt die Lage der Ebene im Raum vollständig fest.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Normalenvektor und Normalenform</span>
+      <p class="formel-abgesetzt">$$E\colon\; \left( \vec{x} - \vec{p} \right) \cdot \vec{n} = 0$$</p>
+      <p>Ein <strong>Normalenvektor</strong> $\vec{n}$ steht senkrecht auf der Ebene — also senkrecht auf beiden Spannvektoren: $\vec{u} \cdot \vec{n} = 0$ und $\vec{v} \cdot \vec{n} = 0$. Die Normalenform ist eine Bedingung: Ein Punkt $X$ liegt genau dann in der Ebene, wenn sein Verbindungsvektor $\vec{x} - \vec{p}$ zum Stützpunkt <em>innerhalb</em> der Ebene verläuft, also senkrecht auf $\vec{n}$ steht — Skalarprodukt null.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Normalenvektor über ein LGS bestimmen</span>
+      <p>Für das Begleitbeispiel mit $\vec{u} = (2\,|\,{-1}\,|\,0)$ und $\vec{v} = (0\,|\,1\,|\,{-1})$ werden beide Senkrecht-Bedingungen als Skalarprodukte ausgeschrieben:</p>
+      <p class="formel-abgesetzt">$$\vec{u} \cdot \vec{n} = 2n_1 - n_2 = 0, \qquad \vec{v} \cdot \vec{n} = n_2 - n_3 = 0$$</p>
+      <p>Zwei Gleichungen, drei Unbekannte — eine Koordinate darf frei gewählt werden, denn jedes Vielfache eines Normalenvektors ist wieder einer. Mit $n_1 = 1$ folgt aus der ersten Gleichung $n_2 = 2$ und aus der zweiten $n_3 = n_2 = 2$:</p>
+      <p class="formel-abgesetzt">$$\vec{n} = \begin{pmatrix} 1 \\ 2 \\ 2 \end{pmatrix}$$</p>
+      <p>Probe: $\vec{u} \cdot \vec{n} = 2 - 2 + 0 = 0$ und $\vec{v} \cdot \vec{n} = 0 + 2 - 2 = 0$ — beide Bedingungen erfüllt. Damit lautet die Normalenform unseres Begleitbeispiels:</p>
+      <p class="formel-abgesetzt">$$E\colon\; \left[ \vec{x} - \begin{pmatrix} 2 \\ 1 \\ 1 \end{pmatrix} \right] \cdot \begin{pmatrix} 1 \\ 2 \\ 2 \end{pmatrix} = 0$$</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Schneller ans Ziel: das Kreuzprodukt (erhöhtes Anforderungsniveau)</span>
+      <p>Im erhöhten Anforderungsniveau steht eine Abkürzung bereit: Das <strong>Kreuzprodukt</strong> $\vec{u} \times \vec{v}$ liefert direkt einen Vektor, der auf beiden Faktoren senkrecht steht.</p>
+      <p class="formel-abgesetzt">$$\vec{u} \times \vec{v} = \begin{pmatrix} u_2 v_3 - u_3 v_2 \\ u_3 v_1 - u_1 v_3 \\ u_1 v_2 - u_2 v_1 \end{pmatrix}$$</p>
+      <p>Im Begleitbeispiel ergibt sich sofort $\vec{u} \times \vec{v} = (1\,|\,2\,|\,2)$ — derselbe Vektor wie über das LGS. Ein CAS rechnet das mit <code>crossP</code> nach. Wer im grundlegenden Anforderungsniveau arbeitet, bleibt beim LGS-Weg: Er führt immer zum Ziel.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="eb-koordinatenform">
+    <h2 id="eb-koordinatenform">3. Die Koordinatenform</h2>
+    <p>Multipliziert man die Normalenform aus, entsteht die kompakteste und rechenfreundlichste Beschreibung einer Ebene. Aus $\left( \vec{x} - \vec{p} \right) \cdot \vec{n} = 0$ wird $\vec{x} \cdot \vec{n} = \vec{p} \cdot \vec{n}$ — links stehen die Koordinaten $x$, $y$, $z$ eines beliebigen Ebenenpunktes, rechts eine feste Zahl.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Koordinatenform</span>
+      <p class="formel-abgesetzt">$$E\colon\; ax + by + cz = d$$</p>
+      <p>Dabei sind $a$, $b$ und $c$ genau die Koordinaten eines Normalenvektors $\vec{n}$, und $d = \vec{p} \cdot \vec{n}$ ergibt sich aus dem Stützvektor. Umgekehrt liest du aus jeder Koordinatenform den Normalenvektor direkt ab — fehlt eine Variable, ist die zugehörige Koordinate null.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Das Begleitbeispiel in allen drei Formen</span>
+      <p>Mit $\vec{n} = (1\,|\,2\,|\,2)$ aus Abschnitt 2 und dem Stützpunkt $A(2\,|\,1\,|\,1)$: $d = 2 \cdot 1 + 1 \cdot 2 + 1 \cdot 2 = 6$. Also:</p>
+      <p class="formel-abgesetzt">$$E\colon\; x + 2y + 2z = 6$$</p>
+      <p>Damit ist die Umwandlungskette komplett — dreimal dieselbe Ebene:</p>
+      <table class="werte-tabelle">
+        <caption class="nur-screenreader">Die drei Beschreibungsformen derselben Beispiel-Ebene im Vergleich</caption>
+        <thead>
+          <tr><th scope="col">Form</th><th scope="col">unser Begleitbeispiel</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Parameterform</td><td>x&#8407; = (2 | 1 | 1) + r · (2 | −1 | 0) + s · (0 | 1 | −1)</td></tr>
+          <tr><td>Normalenform</td><td>[x&#8407; − (2 | 1 | 1)] · (1 | 2 | 2) = 0</td></tr>
+          <tr><td>Koordinatenform</td><td>x + 2y + 2z = 6</td></tr>
+        </tbody>
+      </table>
+      <p>Auch der Rückweg gelingt: Die Koordinatenform nach $x$ auflösen ($x = 6 - 2y - 2z$) und $y = r$, $z = s$ als Parameter wählen. Das liefert $\vec{x} = (6\,|\,0\,|\,0) + r \cdot ({-2}\,|\,1\,|\,0) + s \cdot ({-2}\,|\,0\,|\,1)$ — eine andere, aber gleichwertige Parameterform derselben Ebene.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Punktprobe in Sekunden</span>
+      <p>Liegt $P(1\,|\,1\,|\,1)$ in $E$? Einsetzen: $1 + 2 + 2 = 5 \ne 6$ — nein. Der Punkt $Q(2\,|\,0\,|\,2)$ dagegen: $2 + 0 + 4 = 6$ — ja, $Q$ liegt in $E$. Genau dafür liebt man die Koordinatenform: Die Punktprobe ist reines Einsetzen, während du in der Parameterform dafür ein ganzes Gleichungssystem lösen müsstest.</p>
+    </div>
+    <p>Wie liegt die Ebene nun anschaulich im Koordinatensystem? Das verraten die <strong>Spurpunkte</strong> — die Schnittpunkte mit den drei Koordinatenachsen. Auf einer Achse sind die beiden anderen Koordinaten null, also setzt man jeweils zwei Variablen gleich null: Für $S_1$ auf der x-Achse liefert $x + 0 + 0 = 6$ den Punkt $S_1(6\,|\,0\,|\,0)$; aus $2y = 6$ folgt $S_2(0\,|\,3\,|\,0)$ und aus $2z = 6$ folgt $S_3(0\,|\,0\,|\,3)$.</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 310" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Dreidimensionales Koordinatensystem mit den Achsen x, y und z. Die Ebene E mit der Gleichung x plus 2y plus 2z gleich 6 ist über ihre drei Spurpunkte gezeichnet: S1 bei 6 auf der x-Achse, S2 bei 3 auf der y-Achse und S3 bei 3 auf der z-Achse. Das Dreieck aus den drei Spurpunkten — das Spurdreieck — zeigt anschaulich, wie die Ebene schräg im Koordinatensystem liegt.">
+        <!-- Spurdreieck -->
+        <polygon points="74,266 258,190 150,82" fill="var(--mathe)" fill-opacity="0.15" stroke="var(--mathe)" stroke-width="2.5"/>
+        <text x="158" y="184" font-size="15" font-weight="600" fill="var(--mathe)">E</text>
+        <!-- Achsen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="150" y1="190" x2="320" y2="190"/>
+          <line x1="150" y1="190" x2="150" y2="50"/>
+          <line x1="150" y1="190" x2="52" y2="288"/>
+        </g>
+        <path d="M328 190 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M150 42 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <path d="M46 294 L55 290 L50 285 z" fill="var(--text-leise)"/>
+        <text x="312" y="208" font-size="12" fill="var(--text-leise)">y</text>
+        <text x="160" y="56" font-size="12" fill="var(--text-leise)">z</text>
+        <text x="38" y="284" font-size="12" fill="var(--text-leise)">x</text>
+        <text x="138" y="207" font-size="11" fill="var(--text-leise)">O</text>
+        <!-- Spurpunkte -->
+        <g fill="var(--bg)" stroke="var(--mathe)" stroke-width="1.8">
+          <circle cx="74" cy="266" r="4"/>
+          <circle cx="258" cy="190" r="4"/>
+          <circle cx="150" cy="82" r="4"/>
+        </g>
+        <g font-size="12" font-weight="600" fill="var(--text)">
+          <text x="80" y="286">S&#8321;(6 | 0 | 0)</text>
+          <text x="262" y="212">S&#8322;(0 | 3 | 0)</text>
+          <text x="158" y="78">S&#8323;(0 | 0 | 3)</text>
+        </g>
+      </svg>
+    </div>
+    <p>Die drei Spurpunkte machen die schräge Lage der Ebene greifbar: Das <strong>Spurdreieck</strong> $S_1 S_2 S_3$ ist der Teil von $E$, der zwischen den Achsen liegt — ein bewährter Weg, eine Ebene von Hand zu skizzieren. Beachte: Die Ebene endet dort nicht, das Dreieck ist nur ihr sichtbarster Ausschnitt.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Bestimme die drei Spurpunkte der Ebene 2x + y − z = 4.</summary>
+      <div class="check-antwort"><p>Jeweils zwei Koordinaten null setzen: $2x = 4$ liefert $S_1(2\,|\,0\,|\,0)$, aus $y = 4$ folgt $S_2(0\,|\,4\,|\,0)$, und $-z = 4$ ergibt $S_3(0\,|\,0\,|\,{-4})$. Ein negativer Spurpunkt ist völlig normal — diese Ebene schneidet die z-Achse eben unterhalb des Ursprungs.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="eb-gerade-ebene">
+    <h2 id="eb-gerade-ebene">4. Lagebeziehungen Gerade–Ebene</h2>
+    <p>Zurück zum Flugzeug aus der Einleitung: Gerade (Flugbahn) trifft Ebene (Wolkenuntergrenze) — oder auch nicht. Für eine Gerade und eine Ebene gibt es genau drei Möglichkeiten, und alle drei entlarvt ein und dieselbe Rechnung: die Parameterform der Geraden in die Koordinatenform der Ebene <strong>einsetzen</strong>. Übrig bleibt eine lineare Gleichung mit der einzigen Unbekannten $t$.</p>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Die drei Lagebeziehungen zwischen Gerade und Ebene und das jeweilige Ergebnis beim Einsetzen</caption>
+      <thead>
+        <tr><th scope="col">Lage</th><th scope="col">Beim Einsetzen entsteht …</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>g schneidet E (Durchstoßpunkt)</td><td>genau eine Lösung für t</td></tr>
+        <tr><td>g ist echt parallel zu E</td><td>eine falsche Aussage (z. B. 1 = 6)</td></tr>
+        <tr><td>g liegt in E</td><td>eine allgemeingültige Aussage (z. B. 6 = 6)</td></tr>
+      </tbody>
+    </table>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Durchstoßpunkt vollständig durchgerechnet</span>
+      <p>Wie liegt die Gerade $g$ zur Begleit-Ebene $E\colon\; x + 2y + 2z = 6$?</p>
+      <p class="formel-abgesetzt">$$g\colon\; \vec{x} = \begin{pmatrix} 8 \\ 2 \\ 1 \end{pmatrix} + t \cdot \begin{pmatrix} -2 \\ 0 \\ -1 \end{pmatrix}$$</p>
+      <p><strong>Schritt 1 — Geradenpunkte ablesen:</strong> $x = 8 - 2t$, $y = 2$, $z = 1 - t$.</p>
+      <p><strong>Schritt 2 — in die Koordinatenform einsetzen:</strong></p>
+      <p class="formel-abgesetzt">$$(8 - 2t) + 2 \cdot 2 + 2 \cdot (1 - t) = 6$$</p>
+      <p><strong>Schritt 3 — nach $t$ auflösen:</strong> Zusammenfassen liefert $14 - 4t = 6$, also $t = 2$ — genau eine Lösung: $g$ durchstößt $E$.</p>
+      <p><strong>Schritt 4 — $t$ in die Geradengleichung einsetzen:</strong> $S(8 - 4\,|\,2\,|\,1 - 2) = S(4\,|\,2\,|\,{-1})$.</p>
+      <p><strong>Schritt 5 — Probe in der Ebenengleichung:</strong> $4 + 2 \cdot 2 + 2 \cdot (-1) = 6$ — stimmt, $S$ ist der Durchstoßpunkt.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Dieselbe Rechnung entlarvt die anderen Fälle</span>
+      <p>Für $h\colon\; \vec{x} = (1\,|\,0\,|\,0) + t \cdot (2\,|\,{-1}\,|\,0)$ ergibt das Einsetzen $(1 + 2t) + 2 \cdot (-t) + 0 = 6$, zusammengefasst $1 = 6$ — falsch für jedes $t$: $h$ ist <strong>echt parallel</strong> zu $E$. Startet eine Gerade mit derselben Richtung dagegen im Ebenenpunkt $A(2\,|\,1\,|\,1)$, liefert das Einsetzen $6 = 6$ — wahr für jedes $t$: Diese Gerade <strong>liegt in</strong> $E$.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Schnelltest mit dem Normalenvektor</span>
+      <p>Bevor du rechnest, lohnt ein Blick auf $\vec{d} \cdot \vec{n}$ (Richtungsvektor der Geraden, Normalenvektor der Ebene): Ist das Skalarprodukt <strong>ungleich null</strong>, durchstößt die Gerade die Ebene. Ist es <strong>null</strong>, verläuft die Gerade parallel zur Ebene — die Punktprobe mit dem Stützpunkt entscheidet dann zwischen „echt parallel“ und „liegt in der Ebene“. Im Durchstoß-Beispiel: $\vec{d} \cdot \vec{n} = -2 + 0 - 2 = -4 \ne 0$ — passt.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Wie liegt die Gerade durch (1 | 2 | 0) mit Richtung (2 | −1 | 0) zur Ebene x + 2y + 2z = 6?</summary>
+      <div class="check-antwort"><p>Schnelltest: $\vec{d} \cdot \vec{n} = 2 \cdot 1 + (-1) \cdot 2 + 0 \cdot 2 = 0$ — also parallel oder enthalten. Punktprobe mit dem Stützpunkt: $1 + 2 \cdot 2 + 0 = 5 \ne 6$ — er liegt nicht in der Ebene. Die Gerade ist <strong>echt parallel</strong> zu $E$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="eb-ebene-ebene">
+    <h2 id="eb-ebene-ebene">5. Lagebeziehungen zweier Ebenen</h2>
+    <p>Zwei Ebenen können <strong>identisch</strong> sein, <strong>echt parallel</strong> — oder sie schneiden sich, und zwar nie in einem einzelnen Punkt, sondern immer in einer ganzen <strong>Schnittgeraden</strong> (stell dir zwei sich kreuzende Kartonplatten vor). Liegen beide Ebenen in Koordinatenform vor, entscheidet der Blick auf die Normalenvektoren.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Lage zweier Ebenen — die Normalenvektoren entscheiden</span>
+      <p>Sind die Normalenvektoren <strong>Vielfache voneinander</strong>, sind die Ebenen parallel. Eine Punktprobe trennt dann die Fälle: Liegt ein Punkt der einen Ebene in der anderen, sind sie <strong>identisch</strong> — sonst <strong>echt parallel</strong>. Sind die Normalenvektoren <strong>keine</strong> Vielfachen, schneiden sich die Ebenen in einer Geraden.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: parallel, identisch oder Schnittgerade?</span>
+      <p>Vergleiche mit dem Begleitbeispiel $E\colon\; x + 2y + 2z = 6$:</p>
+      <p>$E_2\colon\; 2x + 4y + 4z = 4$ hat den Normalenvektor $(2\,|\,4\,|\,4) = 2 \cdot (1\,|\,2\,|\,2)$ — parallel zu $E$. Division der ganzen Gleichung durch $2$ ergibt $x + 2y + 2z = 2$: links identisch mit $E$, rechts $2 \ne 6$ — die Ebenen sind <strong>echt parallel</strong>. (Genauso gut per Punktprobe: $S_1(6\,|\,0\,|\,0)$ liegt in $E$, aber $2 \cdot 6 = 12 \ne 4$.)</p>
+      <p>$E_3\colon\; 3x + 6y + 6z = 18$ wird nach Division durch $3$ exakt zu $x + 2y + 2z = 6$ — <strong>identisch</strong> mit $E$: Beide Gleichungen beschreiben dieselbe Punktmenge.</p>
+    </div>
+    <p>Im grundlegenden Anforderungsniveau genügt diese Entscheidung über die Normalenvektoren samt Punktprobe. Das <em>Berechnen</em> der Schnittgeraden gehört zum erhöhten Anforderungsniveau:</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel (erhöhtes Anforderungsniveau): Schnittgerade bestimmen</span>
+      <p>Gesucht ist die Schnittgerade von $E\colon\; x + 2y + 2z = 6$ und $F\colon\; x + z = 2$. Die Normalenvektoren $(1\,|\,2\,|\,2)$ und $(1\,|\,0\,|\,1)$ sind keine Vielfachen voneinander — es gibt also eine Schnittgerade, und jeder ihrer Punkte erfüllt <em>beide</em> Gleichungen. Zwei Gleichungen, drei Unbekannte: Eine Koordinate wird zum Parameter. Geschickt gewählt: $z = 2t$ — der Faktor $2$ vermeidet gleich Brüche. Aus $F$ folgt dann $x = 2 - 2t$, und Einsetzen in $E$ liefert $(2 - 2t) + 2y + 4t = 6$, also $2y = 4 - 2t$ und damit $y = 2 - t$. Alle drei Koordinaten hängen jetzt von $t$ ab:</p>
+      <p class="formel-abgesetzt">$$g\colon\; \vec{x} = \begin{pmatrix} 2 \\ 2 \\ 0 \end{pmatrix} + t \cdot \begin{pmatrix} -2 \\ -1 \\ 2 \end{pmatrix}$$</p>
+      <p>Probe: Der Stützpunkt erfüllt beide Gleichungen ($2 + 4 + 0 = 6$ und $2 + 0 = 2$), und der Richtungsvektor steht senkrecht auf beiden Normalenvektoren: $-2 - 2 + 4 = 0$ und $-2 + 0 + 2 = 0$. Hättest du schlicht $z = t$ gesetzt, wäre $y = 2 - \frac{t}{2}$ entstanden — ebenfalls richtig, nur mit Brüchen: Vielfache des Richtungsvektors beschreiben dieselbe Gerade.</p>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Die Hessesche Normalenform — Abstände gratis</summary>
+    <div class="vertiefung-inhalt">
+      <p>Unter allen Normalenvektoren einer Ebene gibt es einen besonders nützlichen: den mit der Länge $1$. Für das Begleitbeispiel $E\colon\; x + 2y + 2z = 6$ hat $\vec{n} = (1\,|\,2\,|\,2)$ die Länge $|\vec{n}| = \sqrt{1^2 + 2^2 + 2^2} = \sqrt{9} = 3$. Teilt man die komplette Gleichung durch diese Länge, entsteht die <strong>Hessesche Normalenform</strong> (HNF):</p>
+      <p class="formel-abgesetzt">$$\frac{x + 2y + 2z - 6}{3} = 0$$</p>
+      <p>Ihr Clou: Setzt man einen beliebigen Punkt ein, kommt nicht mehr nur „wahr oder falsch“ heraus, sondern eine Zahl mit geometrischer Bedeutung — ihr <strong>Betrag ist der Abstand</strong> des Punktes von der Ebene. Der Ursprung liefert $\frac{|0 + 0 + 0 - 6|}{3} = 2$, der Punkt $P(3\,|\,2\,|\,4)$ liefert $\frac{|3 + 4 + 8 - 6|}{3} = \frac{9}{3} = 3$ — Abstand $2$ bzw. $3$ Längeneinheiten.</p>
+      <p>Warum das funktioniert: Der Zähler misst, wie weit der Punkt die Ebenengleichung „verfehlt“, und zwar entlang der Normalenrichtung gezählt. Bei einem Normalenvektor der Länge $1$ entspricht jede Einheit dieses Fehlbetrags genau einer Längeneinheit senkrechten Abstands — die Division durch $|\vec{n}|$ eicht die Gleichung also auf echte Längen. Auch das Vorzeichen trägt Information: Punkte auf verschiedenen Seiten der Ebene liefern verschiedene Vorzeichen.</p>
+      <p>Damit ist die Brücke zum Folgethema gebaut: Abstände zwischen Punkten, Geraden und Ebenen — und die Winkel dazwischen — sind das Kerngeschäft des Themas „Abstände und Winkel im Raum“. Die HNF ist dort das zentrale Werkzeug.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Aufstellen der Parameterform über Normalenvektor, Koordinatenform und Spurpunkte bis zu Durchstoßpunkt und Schnittgerade — mit gestuften Tipps, vollständigen Lösungswegen und CAS-Kontrollen für den ClassPad II.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

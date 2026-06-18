@@ -1,0 +1,577 @@
+{
+ "thema": "in-10-steuern-und-regeln",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben — fachliche Prüfung ausstehend.",
+ "aufgaben": [
+  {
+   "id": "in-10-sr-101",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze die Sätze zum EVA-Prinzip am Beispiel einer Einparkhilfe.",
+   "text": "Der Abstandssensor am Stoßfänger gehört zur ___. Der Mikrocontroller, der aus dem Abstand entscheidet, wann gewarnt wird, übernimmt die ___. Der Warnton aus dem Lautsprecher ist die ___.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Eingabe",
+     "optionen": [
+      "Eingabe",
+      "Verarbeitung",
+      "Ausgabe"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Verarbeitung",
+     "optionen": [
+      "Verarbeitung",
+      "Eingabe",
+      "Ausgabe"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Ausgabe",
+     "optionen": [
+      "Ausgabe",
+      "Eingabe",
+      "Verarbeitung"
+     ]
+    }
+   ],
+   "tipps": [
+    "Eingabe = messen, Verarbeitung = entscheiden, Ausgabe = handeln.",
+    "Der Sensor misst den Abstand — zu welchem Schritt gehört das Messen?",
+    "Der Warnton verlässt das System — das ist die ..."
+   ],
+   "loesungsweg": "Der Abstandssensor misst — er gehört zur Eingabe. Der Mikrocontroller entscheidet anhand des Abstands — das ist die Verarbeitung. Der Warnton verlässt das System als Ergebnis — das ist die Ausgabe. Damit folgt die Einparkhilfe genau dem EVA-Prinzip.",
+   "kc": [
+    "eva-prinzip"
+   ]
+  },
+  {
+   "id": "in-10-sr-102",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Roboterarm soll ein Werkstück greifen. Welche Bauteile sind Sensoren, welche Aktoren? Welche Aussagen sind richtig?",
+   "optionen": [
+    {
+     "text": "Ein Drucksensor in den Greiffingern, der meldet, ob das Werkstück fest gehalten wird, ist ein Sensor.",
+     "richtig": true,
+     "erklaerung": "Richtig — er misst eine Größe (Druck/Kraft) und liefert sie als Eingabe."
+    },
+    {
+     "text": "Der Motor, der die Greiffinger schließt, ist ein Aktor.",
+     "richtig": true,
+     "erklaerung": "Richtig — er führt die Aktion aus (Signal → Welt)."
+    },
+    {
+     "text": "Eine Kamera, die die Lage des Werkstücks erkennt, ist ein Aktor.",
+     "richtig": false,
+     "erklaerung": "Nein — die Kamera misst (erkennt die Lage), sie handelt nicht. Sie ist ein Sensor."
+    },
+    {
+     "text": "Sensoren wandeln eine physikalische Größe in ein Signal um, Aktoren wandeln ein Signal in eine Wirkung um.",
+     "richtig": true,
+     "erklaerung": "Richtig — das ist genau die Faustregel: Sensor Welt → Signal, Aktor Signal → Welt."
+    }
+   ],
+   "tipps": [
+    "Sensor misst (Welt → Signal), Aktor handelt (Signal → Welt).",
+    "Eine Kamera erkennt etwas — ist das Messen oder Handeln?",
+    "Drei der vier Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind die Aussagen 1, 2 und 4: Der Drucksensor misst (Sensor), der Greifmotor handelt (Aktor), und die Faustregel Sensor = Welt → Signal, Aktor = Signal → Welt stimmt. Falsch ist Aussage 3 — die Kamera erkennt die Lage, also misst sie; sie ist ein Sensor, kein Aktor.",
+   "kc": [
+    "sensor-aktor"
+   ]
+  },
+  {
+   "id": "in-10-sr-103",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Steuern oder Regeln? Ordne jedem Beispiel den richtigen Begriff zu.",
+   "paare": [
+    {
+     "links": "Heizung hält den Raum auf 21 Grad und misst die Temperatur zurück",
+     "rechts": "Regeln"
+    },
+    {
+     "links": "Dämmerungsschalter schaltet bei Dunkelheit das Licht an",
+     "rechts": "Steuern"
+    },
+    {
+     "links": "Backofen hält 180 Grad mit Temperatursensor",
+     "rechts": "Regeln"
+    },
+    {
+     "links": "Toaster heizt eine feste Zeit lang ohne Rückmessung",
+     "rechts": "Steuern"
+    }
+   ],
+   "tipps": [
+    "Regeln = Steuern + Rückkopplung.",
+    "Wird das eigene Ergebnis zurückgemessen? Dann ist es Regeln.",
+    "Eine feste Zeit oder eine einzelne Wenn-Dann-Reaktion ohne Rückmessung ist Steuern."
+   ],
+   "loesungsweg": "Heizung und Backofen messen ihr Ergebnis (Temperatur) zurück und stellen nach — das ist Regeln. Dämmerungsschalter und Toaster reagieren nur auf eine Eingabe bzw. laufen eine feste Zeit, ohne das Ergebnis zu prüfen — das ist Steuern.",
+   "kc": [
+    "steuern-regeln"
+   ]
+  },
+  {
+   "id": "in-10-sr-104",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze die drei Schritte, die ein Steuerungsalgorithmus in seiner Schleife immer wieder durchläuft.",
+   "text": "Zuerst wird der Sensor ausgelesen — das ist das ___. Dann wird der Messwert mit einer Bedingung verglichen — das ist das ___. Schliesslich wird der Aktor angesteuert — das ist das ___.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Messen",
+     "optionen": [
+      "Messen",
+      "Entscheiden",
+      "Handeln"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Entscheiden",
+     "optionen": [
+      "Entscheiden",
+      "Messen",
+      "Handeln"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Handeln",
+     "optionen": [
+      "Handeln",
+      "Messen",
+      "Entscheiden"
+     ]
+    }
+   ],
+   "tipps": [
+    "Die Reihenfolge lautet: erst messen, dann entscheiden, dann handeln.",
+    "Den Sensor auslesen ist das Messen.",
+    "Den Aktor ansteuern ist das Handeln."
+   ],
+   "loesungsweg": "Sensor auslesen = Messen, Messwert mit der Bedingung vergleichen = Entscheiden, Aktor ansteuern = Handeln. Diese drei Schritte wiederholt der Mikrocontroller viele Male pro Sekunde.",
+   "kc": [
+    "steuerungsalgorithmus"
+   ]
+  },
+  {
+   "id": "in-10-sr-105",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Geräte enthalten ein eingebettetes System? Welche Aussagen sind richtig?",
+   "optionen": [
+    {
+     "text": "Eine Waschmaschine enthält ein eingebettetes System, das das Waschprogramm steuert.",
+     "richtig": true,
+     "erklaerung": "Richtig — der eingebaute Mikrocontroller erfüllt genau diese eine Aufgabe."
+    },
+    {
+     "text": "Eine Smartwatch enthält ein eingebettetes System.",
+     "richtig": true,
+     "erklaerung": "Richtig — auch sie ist ein kleines, fest gebautes Computersystem mit festem Zweck."
+    },
+    {
+     "text": "Ein einfacher Holzstuhl enthält ein eingebettetes System.",
+     "richtig": false,
+     "erklaerung": "Nein — ein Holzstuhl hat keinen Computer, keine Sensoren und keine Aktoren."
+    },
+    {
+     "text": "Eine moderne Verkehrsampel wird von einem eingebetteten System gesteuert.",
+     "richtig": true,
+     "erklaerung": "Richtig — ein Mikrocontroller steuert die Phasen, oft mit Sensoren für den Verkehr."
+    }
+   ],
+   "tipps": [
+    "Ein eingebettetes System ist ein fest eingebauter Computer mit Sensoren und Aktoren.",
+    "Hat das Gerät überhaupt Elektronik, die etwas steuert?",
+    "Drei der vier Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind die Aussagen 1, 2 und 4: Waschmaschine, Smartwatch und Verkehrsampel enthalten fest eingebaute Mikrocontroller mit festem Zweck. Falsch ist Aussage 3 — ein einfacher Holzstuhl hat keinerlei Elektronik und damit kein eingebettetes System.",
+   "kc": [
+    "eingebettete-systeme"
+   ]
+  },
+  {
+   "id": "in-10-sr-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Mikrocontroller vergleicht einen Messwert mit einem Schwellwert. Welche Aussagen dazu sind richtig?",
+   "optionen": [
+    {
+     "text": "Ein Schwellwert ist eine feste Grenze, ab der eine Aktion ausgelöst wird.",
+     "richtig": true,
+     "erklaerung": "Genau so funktioniert z. B. ein Thermostat."
+    },
+    {
+     "text": "Der Mikrocontroller liest dazu einen Sensorwert ein und vergleicht ihn mit dem Schwellwert.",
+     "richtig": true,
+     "erklaerung": "Der Sensor liefert den Messwert, die Bedingung vergleicht ihn."
+    },
+    {
+     "text": "Je nach Vergleich schaltet der Mikrocontroller einen Aktor (z. B. Lampe oder Motor).",
+     "richtig": true,
+     "erklaerung": "Der Aktor setzt die Entscheidung in der Umwelt um."
+    },
+    {
+     "text": "Ein Schwellwert muss bei jedem Messvorgang vom Benutzer neu eingegeben werden.",
+     "richtig": false,
+     "erklaerung": "Der Schwellwert ist im Programm festgelegt und gilt dauerhaft."
+    }
+   ],
+   "tipps": [
+    "Denk an einen Thermostat mit eingestellter Grenztemperatur.",
+    "Ablauf: Sensor lesen, mit Grenze vergleichen, Aktor schalten.",
+    "Genau drei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig: Ein Schwellwert ist eine feste Grenze, der Sensorwert wird damit verglichen, und je nach Ergebnis schaltet ein Aktor. Falsch: Der Schwellwert steht im Programm und muss nicht jedes Mal neu eingegeben werden.",
+   "kc": [
+    "sensor-aktor"
+   ]
+  },
+  {
+   "id": "in-10-sr-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Straßenlaterne schaltet sich ein, wenn die gemessene Helligkeit unter $300$ Lux fällt. An fünf Zeitpunkten wird gemessen: $120$, $350$, $80$, $500$, $250$ Lux. An wie vielen dieser Zeitpunkte ist die Lampe eingeschaltet?",
+   "eingaben": [
+    {
+     "label": "Anzahl (Lampe an)",
+     "antwort": 3,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Die Lampe ist an, wenn der Messwert kleiner als $300$ ist.",
+    "Prüfe jeden der fünf Werte einzeln.",
+    "Zähle die Werte unter $300$."
+   ],
+   "loesungsweg": "Lampe an, wenn Helligkeit $< 300$ Lux. Das trifft zu für $120$, $80$ und $250$ – also an $3$ Zeitpunkten. Bei $350$ und $500$ bleibt sie aus.",
+   "kc": [
+    "steuerungsalgorithmus"
+   ]
+  },
+  {
+   "id": "in-10-sr-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Thermostat schaltet die Heizung ein, wenn die Temperatur unter $20\\,°\\text{C}$ liegt. Gemessen werden nacheinander: $22$, $19$, $18$, $21$, $17\\,°\\text{C}$. Wie oft schaltet die Heizung ein?",
+   "eingaben": [
+    {
+     "label": "Anzahl (Heizung an)",
+     "antwort": 3,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Die Heizung geht an, wenn die Temperatur kleiner als $20$ ist.",
+    "Prüfe jeden Messwert.",
+    "Zähle die Werte unter $20$."
+   ],
+   "loesungsweg": "Heizung an bei Temperatur $< 20\\,°\\text{C}$: das gilt für $19$, $18$ und $17$, also $3$ Mal. Bei $22$ und $21$ bleibt sie aus.",
+   "kc": [
+    "steuerungsalgorithmus"
+   ]
+  },
+  {
+   "id": "in-10-sr-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Roboter fährt vorwärts und misst mit einem Abstandssensor den Abstand zur Wand. Er stoppt, sobald der Abstand $10\\,\\text{cm}$ oder weniger beträgt. In den Takten $1$ bis $5$ misst er: $40$, $25$, $15$, $8$, $5\\,\\text{cm}$. In welchem Takt stoppt der Roboter zum ersten Mal?",
+   "eingaben": [
+    {
+     "label": "Takt",
+     "antwort": 4,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Stopp-Bedingung: Abstand $\\le 10\\,\\text{cm}$.",
+    "Gehe die Messwerte Takt für Takt durch.",
+    "Im welchem Takt ist der Wert zum ersten Mal höchstens $10$?"
+   ],
+   "loesungsweg": "Takt 1: $40$ (fahren), Takt 2: $25$ (fahren), Takt 3: $15$ (fahren), Takt 4: $8 \\le 10$ – Stopp. Der Roboter stoppt zum ersten Mal in Takt $4$.",
+   "kc": [
+    "steuerungsalgorithmus"
+   ]
+  },
+  {
+   "id": "in-10-sr-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Lüfter im Gewächshaus schaltet nur dann ein, wenn die Temperatur über $25\\,°\\text{C}$ UND die Luftfeuchte über $60\\,\\%$ liegt (beide Bedingungen müssen erfüllt sein). Gemessen werden fünf Paare (Temperatur, Feuchte): $(26, 65)$, $(24, 70)$, $(30, 55)$, $(28, 80)$, $(27, 40)$. Wie oft schaltet der Lüfter ein?",
+   "eingaben": [
+    {
+     "label": "Anzahl (Lüfter an)",
+     "antwort": 2,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Beide Bedingungen müssen gleichzeitig wahr sein (UND).",
+    "Prüfe je Paar: Ist die Temperatur über 25 UND die Feuchte über 60?",
+    "Zähle nur die Paare, bei denen beides stimmt."
+   ],
+   "loesungsweg": "UND-Bedingung (Temp $> 25$ und Feuchte $> 60$): $(26, 65)$ erfüllt beides, $(24, 70)$ Temp zu niedrig, $(30, 55)$ Feuchte zu niedrig, $(28, 80)$ erfüllt beides, $(27, 40)$ Feuchte zu niedrig. Der Lüfter schaltet $2$ Mal ein.",
+   "kc": [
+    "steuerungsalgorithmus"
+   ]
+  },
+  {
+   "id": "in-10-sr-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Zweipunktregler hält die Temperatur um den Sollwert $21\\,°\\text{C}$. Damit die Heizung nicht ständig flattert, schaltet sie erst bei $21 - 2 = 19\\,°\\text{C}$ ein und erst bei $21 + 2 = 23\\,°\\text{C}$ wieder aus. Wie groß ist der Abstand zwischen unterer und oberer Schaltschwelle (in Grad)?",
+   "eingaben": [
+    {
+     "label": "Abstand",
+     "antwort": 4,
+     "einheit": "°C",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Untere Schaltschwelle: $19\\,°\\text{C}$, obere: $23\\,°\\text{C}$.",
+    "Der Abstand ist die Differenz beider Schwellen.",
+    "Rechne $23 - 19$."
+   ],
+   "loesungsweg": "Abstand $= 23\\,°\\text{C} - 19\\,°\\text{C} = 4\\,°\\text{C}$. Dieser Abstand (Hysterese) verhindert, dass die Heizung bei kleinen Schwankungen dauernd ein- und ausschaltet.",
+   "kc": [
+    "steuern-regeln"
+   ]
+  },
+  {
+   "id": "in-10-sr-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein einfacher Regelkreis erhöht die Temperatur pro Takt um genau $1\\,°\\text{C}$, solange sie unter dem Sollwert $21\\,°\\text{C}$ liegt. Die Starttemperatur ist $16\\,°\\text{C}$. Nach wie vielen Takten erreicht die Temperatur zum ersten Mal $21\\,°\\text{C}$?",
+   "eingaben": [
+    {
+     "label": "Takte",
+     "antwort": 5,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Pro Takt steigt die Temperatur um $1\\,°\\text{C}$.",
+    "Von $16$ bis $21$ sind es wie viele Grad?",
+    "Rechne $21 - 16$."
+   ],
+   "loesungsweg": "Pro Takt $+1\\,°\\text{C}$: $16 \\to 17 \\to 18 \\to 19 \\to 20 \\to 21$. Das sind $21 - 16 = 5$ Takte, bis $21\\,°\\text{C}$ erreicht ist. Danach schaltet die Heizung ab.",
+   "kc": [
+    "steuern-regeln"
+   ]
+  },
+  {
+   "id": "in-10-sr-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Anlage mit Mikrocontroller.<br>a) Eine Lichtschranke am Eingang zählt jede Person, die hindurchgeht, mit $+1$. Es gehen $7$ Personen nacheinander hindurch. Welchen Wert zeigt der Zähler danach?<br>b) Ein Thermostat schaltet die Heizung ein, wenn die Temperatur unter $19\\,°\\text{C}$ liegt. Gemessen werden: $21$, $18$, $20$, $17$, $22\\,°\\text{C}$. Wie oft schaltet die Heizung ein?",
+   "eingaben": [
+    {
+     "label": "a) Zählerstand",
+     "antwort": 7,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) Anzahl (Heizung an)",
+     "antwort": 2,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "a) Jede Person erhöht den Zähler um genau 1.",
+    "b) Heizung an bei Temperatur $< 19\\,°\\text{C}$.",
+    "b) Zähle die Werte unter $19$."
+   ],
+   "loesungsweg": "a) $7$ Personen, jede $+1$: Der Zähler zeigt $7$. b) Heizung an bei $< 19\\,°\\text{C}$: das gilt für $18$ und $17$, also $2$ Mal.",
+   "kc": [
+    "sensor-aktor"
+   ]
+  },
+  {
+   "id": "in-10-sr-301",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein automatischer Sonnenschutz an einem Fenster fährt jeden Tag um 12:00 Uhr nach einer festen Uhr herunter, egal wie hell es ist. Ein anderer Sonnenschutz misst dagegen ständig die Helligkeit und fährt herunter, sobald es zu hell wird, und wieder hinauf, wenn es dunkler wird. Bewerte: Welches der beiden Systeme ist eine Steuerung, welches eine Regelung? Begründe und nenne einen Vorteil der Regelung.",
+   "musterloesung": "Der erste Sonnenschutz ist eine Steuerung: Er handelt nach einem festen Plan (Uhrzeit) und prüft nicht, ob das Ziel — angenehme Helligkeit im Raum — tatsächlich erreicht ist. Es gibt keine Rückmeldung über den Ist-Zustand. Der zweite Sonnenschutz ist eine Regelung: Er misst laufend den Istwert (die Helligkeit), vergleicht ihn mit einem Sollwert (der gewünschten Helligkeit) und passt seine Aktion daran an. Dieses ständige Messen-Vergleichen-Nachstellen ist die Rückkopplung, die eine Regelung ausmacht. Vorteil der Regelung: Sie reagiert auf die tatsächlichen Bedingungen. An einem trüben Tag bleibt der Schutz oben (es ist ohnehin nicht zu hell), an einem grellen Vormittag fährt er schon vor 12 Uhr herunter. Die Steuerung dagegen handelt „blind“ nach Uhrzeit und liegt oft daneben.",
+   "tipps": [
+    "Welches System bekommt eine Rückmeldung über den tatsächlichen Zustand?",
+    "Steuern = fester Plan ohne Rückmeldung; Regeln = messen, vergleichen, nachstellen.",
+    "Überlege, wie sich beide an einem bewölkten Tag verhalten."
+   ],
+   "loesungsweg": "System 1 (feste Uhrzeit, keine Rückmeldung) = Steuerung. System 2 (misst Helligkeit, vergleicht mit Sollwert, passt an = Rückkopplung) = Regelung. Vorteil der Regelung: passt sich an die echten Bedingungen an (z. B. bewölkt vs. grell), statt blind nach Plan zu handeln.",
+   "kc": [
+    "steuern-regeln"
+   ]
+  },
+  {
+   "id": "in-10-sr-302",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Toaster bräunt das Brot immer exakt 120 Sekunden lang und schaltet dann ab — unabhängig davon, wie braun das Brot tatsächlich ist. Welche Aussage bewertet das System korrekt?",
+   "optionen": [
+    {
+     "text": "Es ist eine Steuerung, weil es nach einem festen Ablauf arbeitet und den tatsächlichen Bräunungsgrad nicht zurückmeldet und ausgleicht.",
+     "richtig": true,
+     "erklaerung": "Richtig: Ohne Messung des Istwerts (Bräunung) und ohne Rückkopplung handelt der Toaster nach festem Plan — das ist eine Steuerung."
+    },
+    {
+     "text": "Es ist eine Regelung, weil der Toaster nach 120 Sekunden abschaltet.",
+     "richtig": false,
+     "erklaerung": "Das Abschalten nach fester Zeit ist gerade keine Regelung — es fehlt der Vergleich von Ist- und Sollwert."
+    },
+    {
+     "text": "Es ist eine Regelung, weil Wärme im Spiel ist.",
+     "richtig": false,
+     "erklaerung": "Ob etwas eine Regelung ist, hängt nicht von Wärme ab, sondern von der Rückkopplung (messen, vergleichen, nachstellen)."
+    },
+    {
+     "text": "Es ist weder Steuerung noch Regelung, weil ein Toaster kein Computer ist.",
+     "richtig": false,
+     "erklaerung": "Auch einfache Geräte ohne Computer arbeiten als Steuerung oder Regelung — entscheidend ist das Prinzip, nicht die Bauart."
+    }
+   ],
+   "tipps": [
+    "Misst der Toaster den tatsächlichen Bräunungsgrad?",
+    "Fester Zeitablauf ohne Rückmeldung deutet auf Steuerung.",
+    "Regelung braucht den Vergleich Istwert/Sollwert."
+   ],
+   "loesungsweg": "Der Toaster handelt nach fester Zeit, ohne den Istwert (Bräunung) zu messen oder auszugleichen -> keine Rückkopplung -> Steuerung. Antwort 1.",
+   "kc": [
+    "steuern-regeln"
+   ]
+  },
+  {
+   "id": "in-10-sr-303",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Heizungsregelung (Sollwert 21 °C) durchläuft in ihrer Schleife immer wieder dieselben Schritte. Bringe einen Durchlauf in die richtige Reihenfolge.",
+   "elemente": [
+    "Mit dem Temperatursensor den aktuellen Istwert messen.",
+    "Den Istwert mit dem Sollwert 21 °C vergleichen.",
+    "Anhand des Vergleichs entscheiden: Heizung ein, wenn es zu kalt ist, sonst aus.",
+    "Den Aktor (das Heizventil) entsprechend schalten — danach beginnt der nächste Durchlauf von vorn."
+   ],
+   "tipps": [
+    "Zuerst muss man wissen, wie warm es gerade ist.",
+    "Erst nach dem Vergleich kann man entscheiden.",
+    "Gehandelt (geschaltet) wird zuletzt, dann wiederholt sich alles."
+   ],
+   "loesungsweg": "(1) Istwert messen (Sensor). (2) Istwert mit Sollwert 21 °C vergleichen. (3) Entscheiden: zu kalt -> ein, sonst -> aus. (4) Heizventil (Aktor) schalten. Danach startet die Schleife erneut — das ist die Rückkopplung der Regelung.",
+   "kc": [
+    "steuerungsalgorithmus"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energiefluss und Wirkungsgrad — Simulation — Lernwelt</title>
+<meta name="description" content="Sankey-Flussdiagramm zum Wirkungsgrad: zugefuehrte Energie teilt sich in Nutzenergie und Verlust (Waerme). Wirkungsgrad einstellen und die Strombreiten vergleichen — Energieerhaltung sichtbar gemacht.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/sim.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="simulation" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Simulation benötigt JavaScript. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Energiefluss und Wirkungsgrad</h1>
+  <p class="einleitung">Wenn ein Geraet arbeitet, wird die <strong>zugefuehrte Energie</strong> umgewandelt — aber nur ein Teil davon ist nutzbar. Der <strong>Wirkungsgrad η</strong> gibt an, welcher Anteil als <strong>Nutzenergie</strong> herauskommt; der Rest wird (meist als Waerme) entwertet. Im Sankey-Flussdiagramm teilt sich der breite Eingangsstrom in einen grünen Nutzstrom und einen roten Verluststrom. Stelle η ein und beobachte: Die Summe aus Nutzenergie und Verlust ergibt stets die zugefuehrte Energie — Energie geht nie verloren, sie wird nur umgewandelt.</p>
+  <div id="sim"></div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSimulation } from "../../../assets/js/sim/engine.js";
+  import * as sim from "./sim.js";
+  starteSimulation(sim, document.getElementById("sim"));
+</script>
+</body>
+</html>

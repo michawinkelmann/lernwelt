@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quadratische Funktionen — Klasse 9 · Mathematik — Lernwelt</title>
+<meta name="description" content="Quadratische Funktionen verstehen: Normalparabel, Scheitelpunktform, quadratische Ergänzung und Nullstellen — mit interaktivem Funktionsplotter.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln und Simulation. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Quadratische Funktionen</h1>
+  <p class="einleitung">Ein Ball fliegt durch die Luft, ein Brückenbogen spannt sich über einen Fluss, eine Satellitenschüssel bündelt Signale — überall steckt dieselbe Kurve dahinter: die <strong>Parabel</strong>. Auf dieser Seite lernst du, wie quadratische Funktionen diese Kurven beschreiben und wie du ihre wichtigsten Punkte direkt aus dem Funktionsterm abliest.</p>
+
+  <section aria-labelledby="ueberschrift-normalparabel">
+    <h2 id="ueberschrift-normalparabel">1. Die Normalparabel</h2>
+    <p>Die einfachste quadratische Funktion ist $f(x) = x^2$. Ihr Graph heißt <strong>Normalparabel</strong>. Eine kleine Wertetabelle zeigt ihre Besonderheit:</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Wertetabelle zu $f(x) = x^2$</span>
+      <p>$f(-3) = 9$, &nbsp; $f(-2) = 4$, &nbsp; $f(-1) = 1$, &nbsp; $f(0) = 0$, &nbsp; $f(1) = 1$, &nbsp; $f(2) = 4$, &nbsp; $f(3) = 9$</p>
+      <p>Negative und positive $x$-Werte liefern denselben Funktionswert — der Graph ist <strong>achsensymmetrisch</strong> zur $y$-Achse.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p>Die Normalparabel $f(x) = x^2$ ist nach oben geöffnet, achsensymmetrisch zur $y$-Achse und hat ihren tiefsten Punkt im Ursprung. Dieser tiefste (bzw. bei nach unten geöffneten Parabeln höchste) Punkt heißt <strong>Scheitelpunkt</strong> $S$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum kann $f(x) = x^2$ nie negative Werte annehmen?</summary>
+      <div class="check-antwort"><p>Eine Zahl mal sich selbst ist nie negativ: Für positives $x$ ist $x^2 > 0$, für negatives $x$ ebenfalls (Minus mal Minus), und $0^2 = 0$. Deshalb verläuft die Normalparabel nie unterhalb der $x$-Achse.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ueberschrift-formfaktor">
+    <h2 id="ueberschrift-formfaktor">2. Strecken, Stauchen, Spiegeln: der Faktor $a$</h2>
+    <p>Multipliziert man $x^2$ mit einem Faktor $a$, entsteht $f(x) = a \cdot x^2$. Der Faktor verändert die Form der Parabel:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Wirkung des Faktors $a$</span>
+      <p>
+        $a > 1$: Parabel wird <strong>gestreckt</strong> (schmaler) ·
+        $0 < a < 1$: Parabel wird <strong>gestaucht</strong> (breiter) ·
+        $a < 0$: Parabel ist nach <strong>unten geöffnet</strong> ·
+        $a = 1$: Normalparabel
+      </p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Wie sieht der Graph von $f(x) = -0{,}5 \cdot x^2$ aus?</summary>
+      <div class="check-antwort"><p>Wegen $a = -0{,}5 < 0$ ist die Parabel nach unten geöffnet, und wegen $|a| = 0{,}5 < 1$ ist sie breiter als die Normalparabel (gestaucht). Ihr Scheitelpunkt bleibt im Ursprung.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ueberschrift-scheitelpunktform">
+    <h2 id="ueberschrift-scheitelpunktform">3. Verschieben: die Scheitelpunktform</h2>
+    <p>Jetzt wird die Parabel verschoben — und genau dafür gibt es die wichtigste Schreibweise dieses Themas:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Scheitelpunktform</span>
+      <p class="formel-abgesetzt">$$f(x) = a \cdot (x - d)^2 + e$$</p>
+      <p>Der Scheitelpunkt liegt bei $S(d\,|\,e)$: Die Zahl $d$ verschiebt die Parabel <strong>waagerecht</strong>, die Zahl $e$ <strong>senkrecht</strong>. Achtung beim Vorzeichen: In $(x - 3)^2$ steckt $d = 3$ — Verschiebung nach <strong>rechts</strong>!</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel</span>
+      <p>$f(x) = (x - 3)^2 - 2$ ist die Normalparabel, verschoben um $3$ nach rechts und $2$ nach unten. Scheitelpunkt: $S(3\,|\,{-2})$.</p>
+    </div>
+
+    <h3>Probiere es selbst aus</h3>
+    <p>Verändere $a$, $d$ und $e$ mit den Schiebereglern und beobachte Scheitelpunkt und Nullstellen. Bearbeite dabei die Aufträge unter der Simulation.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/funktionsplotter/index.html?einbettung=1#a=1&d=3&e=-2"
+        title="Interaktiver Funktionsplotter: Scheitelpunktform" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/mathematik/funktionsplotter/index.html#a=1&d=3&e=-2" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Stelle $a = 1$, $d = 3$, $e = -2$ ein und prüfe: Liegt der Scheitel bei $S(3\,|\,{-2})$?<br>
+      2. Lasse $d$ und $e$ fest und ziehe $a$ von $1$ nach $-1$. Was passiert beim Übergang durch $a = 0$?<br>
+      3. Finde drei verschiedene Parabeln, die alle durch den Punkt $(0\,|\,0)$ laufen.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ueberschrift-ergaenzung">
+    <h2 id="ueberschrift-ergaenzung">4. Von der Normalform zur Scheitelpunktform: quadratische Ergänzung</h2>
+    <p>Oft ist eine quadratische Funktion in der <strong>Normalform</strong> $f(x) = x^2 + bx + c$ gegeben — den Scheitelpunkt sieht man ihr nicht direkt an. Die <strong>quadratische Ergänzung</strong> formt sie in die Scheitelpunktform um:</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: $f(x) = x^2 - 6x + 5$</span>
+      <p class="formel-abgesetzt">
+      $$x^2 - 6x + 5 = \underbrace{x^2 - 6x + 9}_{(x-3)^2} - 9 + 5 = (x - 3)^2 - 4$$
+      </p>
+      <p><strong>Schritt 1:</strong> Halbiere den Koeffizienten vor dem $x$ und quadriere: $\left(\frac{6}{2}\right)^2 = 9$.<br>
+      <strong>Schritt 2:</strong> Ergänze diese Zahl und ziehe sie sofort wieder ab — der Wert des Terms ändert sich nicht.<br>
+      <strong>Schritt 3:</strong> Fasse das Quadrat zusammen und rechne den Rest aus: Scheitelpunkt $S(3\,|\,{-4})$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum darf man einfach $+\,9 - 9$ einfügen?</summary>
+      <div class="check-antwort"><p>Weil $+\,9 - 9 = 0$ ist — der Term behält exakt seinen Wert. Die Ergänzung schreibt ihn nur geschickt um, damit die binomische Formel $x^2 - 6x + 9 = (x-3)^2$ anwendbar wird.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ueberschrift-nullstellen">
+    <h2 id="ueberschrift-nullstellen">5. Nullstellen aus der Scheitelpunktform</h2>
+    <p>Nullstellen sind die Schnittpunkte mit der $x$-Achse, also Lösungen von $f(x) = 0$. Aus der Scheitelpunktform sind sie schnell bestimmt:</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: $f(x) = (x - 3)^2 - 4$</span>
+      <p class="formel-abgesetzt">$$(x-3)^2 - 4 = 0 \;\Rightarrow\; (x-3)^2 = 4 \;\Rightarrow\; x - 3 = \pm 2 \;\Rightarrow\; x_1 = 1,\; x_2 = 5$$</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Anzahl der Nullstellen</span>
+      <p>Eine Parabel hat <strong>zwei</strong>, <strong>eine</strong> oder <strong>keine</strong> Nullstelle — je nachdem, ob der Scheitel unterhalb, auf oder oberhalb der $x$-Achse liegt (bei nach oben geöffneter Parabel). Mit der Simulation oben kannst du alle drei Fälle einstellen.</p>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (Gymnasialzweig): Scheitelkoordinaten allgemein herleiten</summary>
+    <div class="vertiefung-inhalt">
+      <p>Die quadratische Ergänzung funktioniert auch ganz allgemein für $f(x) = x^2 + bx + c$:</p>
+      <p class="formel-abgesetzt">$$x^2 + bx + c = \left(x + \frac{b}{2}\right)^2 - \frac{b^2}{4} + c$$</p>
+      <p>Der Scheitelpunkt liegt also immer bei $x_S = -\frac{b}{2}$ und $y_S = c - \frac{b^2}{4}$. Prüfe die Formel am Beispiel oben: $b = -6$, $c = 5$ liefert $x_S = 3$ und $y_S = 5 - 9 = -4$. ✓<br>
+      Diese Herleitung ist auch der Kern der p-q-Formel, die du beim Thema <em>Quadratische Gleichungen</em> kennenlernst.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen warten auf dich.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

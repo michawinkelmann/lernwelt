@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flächen und Integralanwendungen — Qualifikationsphase · Mathematik — Lernwelt</title>
+<meta name="description" content="Flächen unter und zwischen Graphen berechnen, Bestände aus Änderungsraten rekonstruieren, den Mittelwert einer Funktion bestimmen und uneigentliche Integrale verstehen — mit durchgerechneten Beispielen, Verständnis-Checks und Übungen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .werte-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .werte-tabelle th, .werte-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: center; }
+  .werte-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Flächen und Integralanwendungen</h1>
+  <p class="einleitung">Wie viel Regen hat das Gewitter in die Zisterne gespült? Wie lang ist der Bremsweg eines Zuges? Und was genau meint der Wetterbericht mit „Tagesmitteltemperatur“? Drei ganz verschiedene Fragen — eine mathematische Antwort: das Integral. In diesem Thema setzt du den Hauptsatz aus dem Grundlagen-Thema <a href="../stammfunktionen-und-hauptsatz/index.html">Stammfunktionen und Hauptsatz</a> ein, um Flächen zu berechnen, Bestände aus Änderungsraten zu rekonstruieren und Mittelwerte zu bestimmen. Zum Schluss wagst du einen Blick ins Unendliche.</p>
+
+  <section aria-labelledby="int-flaechen">
+    <h2 id="int-flaechen">1. Flächen unter Graphen — und die Vorzeichen-Falle</h2>
+    <p>Der Hauptsatz macht die Flächenberechnung zur Zwei-Zeilen-Rechnung: Stammfunktion $F$ suchen, Grenzen einsetzen. Verläuft der Graph von $f$ auf $[a; b]$ <em>oberhalb</em> der x-Achse, gilt für den Inhalt der Fläche zwischen Graph und x-Achse:</p>
+    <p class="formel-abgesetzt">$$A = \int_a^b f(x)\,dx = F(b) - F(a)$$</p>
+    <p>Gemessen wird in <strong>Flächeneinheiten</strong> (FE) — Kästchen im Koordinatensystem. Doch Vorsicht: Das Integral misst Flächen <em>orientiert</em>. Wo der Graph unterhalb der x-Achse verläuft, sind die Funktionswerte negativ — und die Fläche geht mit Minuszeichen in die Bilanz ein. Wer blind von $a$ bis $b$ integriert, lässt sich Teilflächen gegenseitig wegheben.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Flächeninhalt bei Vorzeichenwechsel</span>
+      <p>Für den <strong>Flächeninhalt</strong> zwischen Graph und x-Achse: zuerst die <strong>Nullstellen</strong> von $f$ im Intervall bestimmen, dann das Integral an den Nullstellen <strong>aufteilen</strong> und die <strong>Beträge</strong> der Teilintegrale addieren. Das bestimmte Integral selbst ist dagegen nur die Bilanz: Flächen oberhalb zählen positiv, Flächen unterhalb negativ.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 280" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Koordinatensystem mit dem Graphen von f(x) gleich x Quadrat minus 4. Zwischen 0 und der Nullstelle 2 verläuft der Graph unterhalb der x-Achse; diese Teilfläche A eins ist markiert und mit einem Minuszeichen versehen, ihr Integral zählt negativ. Zwischen 2 und 3 verläuft der Graph oberhalb der x-Achse; die Teilfläche A zwei trägt ein Pluszeichen und zählt positiv. Für den Flächeninhalt wird an der Nullstelle aufgeteilt und die Beträge addiert.">
+        <!-- Teilflächen -->
+        <path d="M 60 150 H 210 Q 135 246 60 246 Z" fill="var(--fehler)" fill-opacity="0.13"/>
+        <path d="M 210 150 Q 247.5 102 285 30 L 285 150 Z" fill="var(--ok)" fill-opacity="0.16"/>
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="22" y1="150" x2="340" y2="150"/>
+          <line x1="60" y1="272" x2="60" y2="26"/>
+        </g>
+        <path d="M348 150 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M60 18 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <text x="344" y="141" font-size="12" fill="var(--text-leise)" text-anchor="end">x</text>
+        <text x="70" y="26" font-size="12" fill="var(--text-leise)">f(x)</text>
+        <!-- Skalenstriche -->
+        <g stroke="var(--text-leise)" stroke-width="1">
+          <line x1="135" y1="147" x2="135" y2="153"/>
+          <line x1="285" y1="147" x2="285" y2="153"/>
+          <line x1="57" y1="246" x2="63" y2="246"/>
+          <line x1="57" y1="54" x2="63" y2="54"/>
+        </g>
+        <g font-size="11" fill="var(--text-leise)">
+          <text x="135" y="165" text-anchor="middle">1</text>
+          <text x="210" y="165" text-anchor="middle">2</text>
+          <text x="285" y="165" text-anchor="middle">3</text>
+          <text x="52" y="250" text-anchor="end">−4</text>
+          <text x="52" y="58" text-anchor="end">4</text>
+        </g>
+        <!-- Graph f(x) = x² − 4 -->
+        <path d="M 15 237.36 Q 153.75 290.64 292.5 15.36" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <text x="264" y="38" font-size="13" font-weight="600" fill="var(--mathe)" text-anchor="end">f(x) = x² − 4</text>
+        <!-- Nullstelle -->
+        <circle cx="210" cy="150" r="4" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+        <text x="200" y="136" font-size="11" fill="var(--text)" text-anchor="end">Nullstelle x = 2</text>
+        <!-- Flächen-Beschriftungen -->
+        <g font-weight="600" text-anchor="middle">
+          <text x="112" y="202" font-size="14" fill="var(--fehler)">A₁</text>
+          <text x="112" y="226" font-size="15" fill="var(--fehler)">−</text>
+          <text x="255" y="118" font-size="14" fill="var(--ok)">A₂</text>
+          <text x="252" y="140" font-size="15" fill="var(--ok)">+</text>
+        </g>
+      </svg>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: f(x) = x² − 4 auf [0; 3]</span>
+      <p>Gesucht ist der Inhalt der Fläche, die der Graph auf $[0; 3]$ mit der x-Achse einschließt (Abbildung oben). Nullstellen: $x^2 - 4 = 0$ liefert $x = -2$ und $x = 2$ — im Intervall liegt nur $x = 2$. Mit der Stammfunktion $F(x) = \frac{1}{3}x^3 - 4x$ werden beide Teilintegrale getrennt berechnet:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}\int_0^2 (x^2 - 4)\,dx = F(2) - F(0) = \left(\frac{8}{3} - 8\right) - 0 = -\frac{16}{3} \\[4pt] \int_2^3 (x^2 - 4)\,dx = F(3) - F(2) = -3 - \left(-\frac{16}{3}\right) = \frac{7}{3}\end{gathered}$$</p>
+      <p>Die linke Teilfläche liegt unter der Achse, ihr Inhalt ist der Betrag $A_1 = \frac{16}{3}$; rechts kommt $A_2 = \frac{7}{3}$ dazu. Gesamtfläche:</p>
+      <p class="formel-abgesetzt">$$A = \frac{16}{3} + \frac{7}{3} = \frac{23}{3} \approx 7{,}67\ \text{FE}$$</p>
+      <p>Wer die Vorzeichen-Falle übersieht und direkt $\int_0^3 (x^2 - 4)\,dx$ rechnet, erhält $-\frac{16}{3} + \frac{7}{3} = -3$ — die Bilanz aus negativer und positiver Teilfläche, aber ganz sicher kein Flächeninhalt.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Es gilt ∫ von −2 bis 2 über x³ dx = 0. Schließt der Graph mit der x-Achse wirklich keine Fläche ein?</summary>
+      <div class="check-antwort"><p>Doch! Der Graph von $x^3$ liegt auf $[-2; 0]$ unterhalb, auf $[0; 2]$ oberhalb der Achse — die Teilintegrale $-4$ und $+4$ heben sich in der Bilanz nur gegenseitig auf. Der Flächeninhalt ist $A = |-4| + 4 = 8\ \text{FE}$. Ein Integralwert $0$ bedeutet also: gleich viel Fläche oben wie unten.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="int-zwischen">
+    <h2 id="int-zwischen">2. Flächen zwischen zwei Graphen</h2>
+    <p>Schließen die Graphen zweier Funktionen $f$ und $g$ eine Fläche ein, hilft der Blick auf die Differenz: An jeder Stelle $x$ ist $f(x) - g(x)$ der Höhenunterschied der beiden Graphen. Integriert man ihn auf, entsteht genau der Inhalt der eingeschlossenen Fläche.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Fläche zwischen zwei Graphen</span>
+      <p class="formel-abgesetzt">$$A = \int_a^b \bigl(f(x) - g(x)\bigr)\,dx$$</p>
+      <p>Dabei sind $a$ und $b$ benachbarte <strong>Schnittstellen</strong> der Graphen, und $f$ ist auf $[a; b]$ die <strong>obere</strong> Funktion. Das Schöne: Die Formel funktioniert auch, wenn die Fläche ganz oder teilweise unterhalb der x-Achse liegt — der Höhenunterschied $f(x) - g(x)$ ändert sich nicht, wenn man beide Graphen gemeinsam nach oben verschiebt. Kommt dennoch ein negativer Wert heraus, war in Wahrheit $g$ die obere Funktion: Betrag nehmen.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 250" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Koordinatensystem mit einer nach unten geöffneten Parabel f und einer steigenden Geraden g. Beide Graphen schneiden sich im Ursprung und an der Stelle 3; eine gestrichelte Linie markiert die Stelle 3 auf der x-Achse. Die zwischen den beiden Schnittpunkten eingeschlossene Fläche A ist markiert; dort verläuft die Parabel oberhalb der Geraden.">
+        <!-- Fläche zwischen den Graphen -->
+        <path d="M 40 200 Q 137.5 -28 235 86 L 40 200 Z" fill="var(--mathe)" fill-opacity="0.15"/>
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="16" y1="200" x2="342" y2="200"/>
+          <line x1="40" y1="240" x2="40" y2="24"/>
+        </g>
+        <path d="M350 200 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M40 16 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <text x="346" y="191" font-size="12" fill="var(--text-leise)" text-anchor="end">x</text>
+        <text x="50" y="24" font-size="12" fill="var(--text-leise)">y</text>
+        <!-- Hilfslinie an der Schnittstelle x = 3 -->
+        <line x1="235" y1="200" x2="235" y2="86" stroke="var(--text-leise)" stroke-width="1" stroke-dasharray="3 3"/>
+        <g stroke="var(--text-leise)" stroke-width="1">
+          <line x1="105" y1="197" x2="105" y2="203"/>
+          <line x1="235" y1="197" x2="235" y2="203"/>
+        </g>
+        <g font-size="11" fill="var(--text-leise)" text-anchor="middle">
+          <text x="32" y="215">0</text>
+          <text x="105" y="215">1</text>
+          <text x="235" y="215">3</text>
+        </g>
+        <!-- Graphen -->
+        <path d="M 27 231.92 Q 170 -135.92 313 231.92" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <line x1="14" y1="215.2" x2="326" y2="32.8" stroke="var(--ok)" stroke-width="2.5"/>
+        <!-- Schnittpunkte -->
+        <circle cx="40" cy="200" r="4" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+        <circle cx="235" cy="86" r="4" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+        <!-- Beschriftungen -->
+        <text x="152" y="106" font-size="15" font-weight="600" fill="var(--mathe)" text-anchor="middle">A</text>
+        <text x="320" y="224" font-size="13" font-weight="600" fill="var(--mathe)">f</text>
+        <text x="331" y="34" font-size="13" font-weight="600" fill="var(--ok)">g</text>
+      </svg>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Parabel und Gerade</span>
+      <p>Welche Fläche schließen $f(x) = -x^2 + 4x$ und $g(x) = x$ ein (Abbildung oben)? <strong>Schritt 1 — Schnittstellen</strong> durch Gleichsetzen:</p>
+      <p class="formel-abgesetzt">$$-x^2 + 4x = x \;\Longleftrightarrow\; -x^2 + 3x = 0 \;\Longleftrightarrow\; x \cdot (3 - x) = 0$$</p>
+      <p>Die Graphen schneiden sich an den Stellen $x_1 = 0$ und $x_2 = 3$. <strong>Schritt 2 — obere Funktion:</strong> Der Testwert $x = 1$ liefert $f(1) = 3$ über $g(1) = 1$ — die Parabel liegt oben. <strong>Schritt 3 — Differenz integrieren:</strong></p>
+      <p class="formel-abgesetzt">$$\begin{gathered}A = \int_0^3 \bigl(-x^2 + 4x - x\bigr)\,dx = \int_0^3 \bigl(-x^2 + 3x\bigr)\,dx \\[4pt] = \left[-\frac{1}{3}x^3 + \frac{3}{2}x^2\right]_0^3 = -9 + \frac{27}{2} = 4{,}5\ \text{FE}\end{gathered}$$</p>
+      <p>Plausibilitätskontrolle am Bild: Die markierte Fläche umfasst gut vier Kästchen — passt.</p>
+    </div>
+    <p>Bei <strong>mehr als zwei Schnittstellen</strong> wechseln sich die Graphen mit der Oberhand ab. Dann wird die Fläche abschnittsweise zwischen benachbarten Schnittstellen berechnet und die Beträge werden addiert — ganz wie bei der Vorzeichen-Falle aus Abschnitt 1.</p>
+  </section>
+
+  <section aria-labelledby="int-bestand">
+    <h2 id="int-bestand">3. Bestände rekonstruieren</h2>
+    <p>Im Grundlagen-Thema bist du den Weg vom Bestand zur Änderungsrate gegangen — das war die Ableitung. Das Integral läuft ihn rückwärts: Kennt man die <strong>Änderungsrate</strong> einer Größe — den Zufluss in Litern pro Minute, die Geschwindigkeit in Metern pro Sekunde —, dann liefert das Integral, wie sich der <strong>Bestand</strong> insgesamt ändert.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Von der Rate zum Bestand</span>
+      <p class="formel-abgesetzt">$$\text{Bestand}(b) = \text{Bestand}(a) + \int_a^b r(t)\,dt$$</p>
+      <p>Ist $r(t)$ die momentane Änderungsrate eines Bestands, dann gibt $\int_a^b r(t)\,dt$ die <strong>Änderung</strong> des Bestands zwischen $a$ und $b$ an. Den tatsächlichen Bestand erhält man erst, wenn man den <strong>Anfangsbestand</strong> dazu addiert — das Integral allein kennt ihn nicht. Negative Werte von $r$ bedeuten Abfluss: Sie zählen negativ und verringern den Bestand.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Sachaufgabe: Zisterne im Gewitter</span>
+      <p>Bei einem Sommergewitter fließt Regenwasser in eine Zisterne, in der bereits $50\,\text{L}$ stehen. Die Zuflussrate wird modelliert durch $z(t) = 12 - 3t$ ($z$ in $\frac{\text{L}}{\text{min}}$, $t$ in Minuten seit Beginn, $0 \le t \le 4$). Wie viel Wasser enthält die Zisterne, wenn der Zufluss versiegt?</p>
+      <p>Der Zufluss versiegt für $z(t) = 0$: Aus $12 - 3t = 0$ folgt $t = 4$ Minuten. Die zugeflossene Wassermenge ist das Integral über die Rate:</p>
+      <p class="formel-abgesetzt">$$\int_0^4 (12 - 3t)\,dt = \left[12t - \frac{3}{2}t^2\right]_0^4 = 48 - 24 = 24$$</p>
+      <p>Es fließen $24\,\text{L}$ zu; zusammen mit dem Anfangsbestand sind das $50 + 24 = 74\,\text{L}$. Und die Einheiten? Im Integral wird „Rate mal Zeit“ aufsummiert: $\frac{\text{L}}{\text{min}} \cdot \text{min} = \text{L}$ — es kommt tatsächlich eine Wassermenge heraus.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Aus Geschwindigkeit wird Strecke</span>
+      <p>Eine Radfahrerin bremst: $v(t) = 8 - 2t$ ($v$ in $\frac{\text{m}}{\text{s}}$, $t$ in Sekunden). Sie steht nach $4\,\text{s}$, und ihr Bremsweg beträgt $\int_0^4 (8 - 2t)\,dt = \left[8t - t^2\right]_0^4 = 32 - 16 = 16\,\text{m}$. Geschwindigkeit integriert ergibt Strecke, denn $\frac{\text{m}}{\text{s}} \cdot \text{s} = \text{m}$.</p>
+    </div>
+    <p>Die Einheitenbetrachtung lohnt sich bei jeder Sachaufgabe — sie verrät, was das Integral inhaltlich bedeutet:</p>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Einheiten beim Integrieren von Änderungsraten</caption>
+      <thead>
+        <tr><th scope="col">Änderungsrate</th><th scope="col">Einheit der Rate</th><th scope="col">Einheit von t</th><th scope="col">Integral liefert</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Zuflussrate z(t)</td><td>L/min</td><td>min</td><td>Wassermenge in L</td></tr>
+        <tr><td>Geschwindigkeit v(t)</td><td>m/s</td><td>s</td><td>Strecke in m</td></tr>
+        <tr><td>Leistung P(t)</td><td>W = J/s</td><td>s</td><td>Energie in J</td></tr>
+      </tbody>
+    </table>
+    <details class="check">
+      <summary>Verständnis-Check: r(t) misst den Wasserstrom eines Stausees in m³/h (t in Stunden). Welche Einheit hat das Integral über r — und was bedeutet ein negativer Integralwert?</summary>
+      <div class="check-antwort"><p>$\frac{\text{m}^3}{\text{h}} \cdot \text{h} = \text{m}^3$ — das Integral ist eine Wassermenge. Ein negativer Wert heißt: Im Bilanzzeitraum ist insgesamt mehr Wasser abgeflossen als zugeflossen, der Bestand hat abgenommen. Wie viel Wasser im See <em>steht</em>, verrät das Integral allein nicht — dafür braucht man zusätzlich den Anfangsbestand.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="int-mittelwert">
+    <h2 id="int-mittelwert">4. Der Mittelwert einer Funktion</h2>
+    <p>Den Mittelwert von fünf Klausurnoten bildest du, indem du addierst und durch $5$ teilst. Aber der Mittelwert einer <em>Funktion</em> — etwa der Temperatur über einen ganzen Tag? Da gibt es unendlich viele Werte. Die Lösung: Aus dem Addieren wird Integrieren, aus dem Teilen durch die Anzahl wird Teilen durch die Intervalllänge.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Mittelwert einer Funktion</span>
+      <p class="formel-abgesetzt">$$\bar{m} = \frac{1}{b - a} \int_a^b f(x)\,dx$$</p>
+      <p>Anschaulich wird die Fläche unter dem Graphen <strong>eingeebnet</strong>: $\bar{m}$ ist die Höhe des Rechtecks über $[a; b]$, das genau denselben Flächeninhalt hat wie die Fläche unter dem Graphen — Berge werden abgetragen, Täler aufgefüllt.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 252" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Temperaturkurve T über der Zeit t von 0 bis 12 Stunden: ein Bogen, der bei 8 Grad startet, mittags 17 Grad erreicht und wieder auf 8 Grad fällt. Die Fläche unter der Kurve ist eingefärbt. Ein gestricheltes Rechteck über demselben Zeitraum hat die Höhe 14 — den Mittelwert: Es besitzt exakt denselben Flächeninhalt wie die Fläche unter der Kurve.">
+        <!-- Fläche unter der Kurve -->
+        <path d="M 40 126 Q 172 -63 304 126 L 304 210 H 40 Z" fill="var(--mathe)" fill-opacity="0.15"/>
+        <!-- Mittelwert-Rechteck -->
+        <rect x="40" y="63" width="264" height="147" fill="none" stroke="var(--ok)" stroke-width="2" stroke-dasharray="6 4"/>
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="16" y1="210" x2="342" y2="210"/>
+          <line x1="40" y1="244" x2="40" y2="22"/>
+        </g>
+        <path d="M350 210 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M40 14 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <text x="344" y="201" font-size="12" fill="var(--text-leise)" text-anchor="end">t in h</text>
+        <text x="50" y="22" font-size="12" fill="var(--text-leise)">T in °C</text>
+        <!-- Skalenstriche -->
+        <g stroke="var(--text-leise)" stroke-width="1">
+          <line x1="172" y1="207" x2="172" y2="213"/>
+          <line x1="304" y1="207" x2="304" y2="213"/>
+          <line x1="37" y1="126" x2="43" y2="126"/>
+          <line x1="37" y1="63" x2="43" y2="63"/>
+          <line x1="37" y1="31.5" x2="43" y2="31.5"/>
+        </g>
+        <g font-size="11" fill="var(--text-leise)">
+          <text x="172" y="226" text-anchor="middle">6</text>
+          <text x="304" y="226" text-anchor="middle">12</text>
+          <text x="33" y="130" text-anchor="end">8</text>
+          <text x="33" y="67" text-anchor="end">14</text>
+          <text x="33" y="36" text-anchor="end">17</text>
+        </g>
+        <!-- Kurve -->
+        <path d="M 40 126 Q 172 -63 304 126" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <text x="88" y="58" font-size="13" font-weight="600" fill="var(--mathe)">T</text>
+        <text x="172" y="57" font-size="12" font-weight="600" fill="var(--ok)" text-anchor="middle">Mittelwert 14 °C</text>
+      </svg>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Tagesmitteltemperatur</span>
+      <p>Zwischen 6 und 18 Uhr wird der Temperaturverlauf modelliert durch $T(t) = -\frac{1}{4}t^2 + 3t + 8$ ($T$ in $^\circ\text{C}$, $t$ in Stunden seit 6 Uhr). Morgens sind es $8\,^\circ\text{C}$, mittags um 12 Uhr maximal $17\,^\circ\text{C}$ (Abbildung oben). Mittelwert auf $[0; 12]$:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}\bar{m} = \frac{1}{12} \int_0^{12} \left(-\frac{1}{4}t^2 + 3t + 8\right) dt = \frac{1}{12} \left[-\frac{1}{12}t^3 + \frac{3}{2}t^2 + 8t\right]_0^{12} \\[4pt] = \frac{-144 + 216 + 96}{12} = \frac{168}{12} = 14\end{gathered}$$</p>
+      <p>Im Mittel war es $14\,^\circ\text{C}$ warm. Achtung, beliebter Fehler: Der Mittelwert ist <em>nicht</em> einfach der Durchschnitt von Anfangs- und Endwert — der läge hier bei $8\,^\circ\text{C}$ und würde den warmen Mittag komplett ignorieren.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Wie groß ist der Mittelwert von f(x) = x² auf [0; 3]?</summary>
+      <div class="check-antwort"><p>$\bar{m} = \frac{1}{3} \int_0^3 x^2\,dx = \frac{1}{3} \cdot \left[\frac{1}{3}x^3\right]_0^3 = \frac{1}{3} \cdot 9 = 3$. Das Rechteck über $[0; 3]$ mit Höhe $3$ hat denselben Flächeninhalt ($9\ \text{FE}$) wie die Fläche unter der Parabel.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="int-rotation">
+    <h2 id="int-rotation">5. Rotationskörper (erhöhtes Anforderungsniveau)</h2>
+    <p><strong>Hinweis:</strong> Dieser Abschnitt gehört zum erhöhten Anforderungsniveau (eA). Im grundlegenden Anforderungsniveau (gA) kannst du ihn überspringen.</p>
+    <p>Eine Vase, ein Kelch, ein Trinkglas, ein Kegel — viele Körper entstehen, indem ein Profil um eine Achse <strong>gedreht</strong> wird. Lässt man die Fläche zwischen dem Graphen von $f$ und der x-Achse auf $[a; b]$ einmal um die x-Achse rotieren, entsteht ein <strong>Rotationskörper</strong>. Sein Volumen liefert — wie schon Fläche, Bestand und Mittelwert — ein Integral.</p>
+    <p><strong>Die Idee der Kreisscheiben.</strong> Schneidet man den Körper an einer Stelle $x$ senkrecht zur Achse durch, ist die Schnittfläche ein <strong>Kreis</strong>: Der Punkt $(x \mid f(x))$ des Graphen wird beim Drehen zum Rand des Kreises, sein Abstand $f(x)$ von der Achse ist also der <strong>Radius</strong>. Diese Kreisscheibe hat den Flächeninhalt $\pi \cdot (f(x))^2$. Denkt man sich den Körper aus unendlich vielen, hauchdünnen Scheiben der Dicke $dx$ zusammengesetzt, hat jede näherungsweise das Volumen $\pi \cdot (f(x))^2 \cdot dx$. Aufsummiert — und das Aufsummieren unendlich dünner Beiträge <em>ist</em> das Integrieren — ergibt sich das Gesamtvolumen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Volumen eines Rotationskörpers (um die x-Achse)</span>
+      <p class="formel-abgesetzt">$$V = \pi \int_a^b \bigl(f(x)\bigr)^2\,dx$$</p>
+      <p>Rotiert der Graph von $f$ auf $[a; b]$ um die <strong>x-Achse</strong>, hat der entstehende Körper dieses Volumen. Gemessen wird in <strong>Volumeneinheiten</strong> (VE). Wichtig: Es wird $(f(x))^2$ integriert, nicht $f(x)$ — und der Faktor $\pi$ darf nicht vergessen werden. Weil $(f(x))^2 \ge 0$ ist, spielt die Vorzeichen-Falle aus Abschnitt 1 hier keine Rolle: Ein Volumen ist immer positiv.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 380 240" width="380" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Räumliche Skizze eines Rotationskörpers: Der Graph der Funktion f verläuft über der waagerechten x-Achse von a bis b. Die Fläche unter dem Graphen wurde um die x-Achse gedreht, sodass eine schüsselartige Form entsteht. An einer Stelle x ist eine senkrechte Kreisscheibe als Querschnitt eingezeichnet; ihr Radius reicht von der x-Achse bis zum Graphen und ist mit f von x beschriftet. Diese Kreisscheibe hat den Flächeninhalt pi mal f von x zum Quadrat.">
+        <!-- Mantel des Rotationskörpers (oben = Graph, unten = gespiegelt, perspektivisch gestaucht) -->
+        <path d="M 60 120 Q 200 40 320 80 L 320 160 Q 200 200 60 120 Z" fill="var(--mathe)" fill-opacity="0.12" stroke="none"/>
+        <!-- vordere Öffnung als Ellipse (rechter Rand) -->
+        <ellipse cx="320" cy="120" rx="13" ry="40" fill="var(--mathe)" fill-opacity="0.20" stroke="var(--mathe)" stroke-width="1.5"/>
+        <!-- Querschnitts-Kreisscheibe an der Stelle x -->
+        <ellipse cx="200" cy="120" rx="10" ry="60" fill="var(--ok)" fill-opacity="0.22" stroke="var(--ok)" stroke-width="1.8"/>
+        <!-- Radius f(x) in der Scheibe -->
+        <line x1="200" y1="120" x2="200" y2="60" stroke="var(--ok)" stroke-width="1.8"/>
+        <circle cx="200" cy="60" r="2.5" fill="var(--ok)"/>
+        <text x="208" y="92" font-size="12" font-weight="600" fill="var(--ok)">f(x)</text>
+        <!-- x-Achse mit Pfeil -->
+        <line x1="30" y1="120" x2="360" y2="120" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <path d="M368 120 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <text x="362" y="111" font-size="12" fill="var(--text-leise)" text-anchor="end">x</text>
+        <!-- Graph f (obere Randkurve) -->
+        <path d="M 60 120 Q 200 40 320 80" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <text x="150" y="62" font-size="13" font-weight="600" fill="var(--mathe)">f</text>
+        <!-- Grenzen a, b und Stelle x -->
+        <g stroke="var(--text-leise)" stroke-width="1">
+          <line x1="60" y1="116" x2="60" y2="124"/>
+          <line x1="320" y1="116" x2="320" y2="124"/>
+          <line x1="200" y1="116" x2="200" y2="124"/>
+        </g>
+        <g font-size="11" fill="var(--text-leise)" text-anchor="middle">
+          <text x="60" y="138">a</text>
+          <text x="200" y="138">x</text>
+          <text x="320" y="138">b</text>
+        </g>
+        <text x="200" y="200" font-size="11" fill="var(--ok)" text-anchor="middle">Querschnitt: Kreis mit Radius f(x)</text>
+      </svg>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Kegel aus einer Geraden</span>
+      <p>Die Gerade $f(x) = \frac{1}{2}x$ rotiert auf $[0; 6]$ um die x-Achse. Anschaulich entsteht ein <strong>Kegel</strong> der Höhe $6$ mit Grundkreisradius $f(6) = 3$. Zuerst wird quadriert: $(f(x))^2 = \left(\frac{1}{2}x\right)^2 = \frac{1}{4}x^2$. Dann liefert die Formel:</p>
+      <p class="formel-abgesetzt">$$V = \pi \int_0^6 \frac{1}{4}x^2\,dx = \pi \cdot \left[\frac{1}{12}x^3\right]_0^6 = \pi \cdot \frac{216}{12} = 18\pi \approx 56{,}5\ \text{VE}$$</p>
+      <p>Die Probe gelingt mit der Kegelformel aus der Mittelstufe: $V = \frac{1}{3} \pi r^2 h = \frac{1}{3} \pi \cdot 3^2 \cdot 6 = 18\pi$ — dasselbe Ergebnis. Die Integralformel enthält die alte Geometrie also als Spezialfall, funktioniert aber für <em>jedes</em> Profil $f$, auch wenn es dafür keine fertige Formel gibt.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Paraboloid aus der Wurzelfunktion</span>
+      <p>Das Innenprofil einer Schale werde durch $f(x) = \sqrt{x}$ auf $[0; 4]$ beschrieben; der Graph rotiert um die x-Achse. Das Quadrieren ist hier besonders bequem, denn $(\sqrt{x})^2 = x$:</p>
+      <p class="formel-abgesetzt">$$V = \pi \int_0^4 \bigl(\sqrt{x}\bigr)^2\,dx = \pi \int_0^4 x\,dx = \pi \cdot \left[\frac{1}{2}x^2\right]_0^4 = \pi \cdot \frac{16}{2} = 8\pi \approx 25{,}1\ \text{VE}$$</p>
+      <p>Für diese Schüsselform (ein <em>Paraboloid</em>) gibt es keine Mittelstufenformel — die Integralrechnung liefert das Volumen trotzdem in zwei Zeilen.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum steht in der Formel $(f(x))^2$ und nicht einfach $f(x)$ wie bei der Flächenberechnung?</summary>
+      <div class="check-antwort"><p>Weil der Querschnitt eine <strong>Kreisscheibe</strong> ist, keine Strecke. Bei der Fläche summiert man Höhen $f(x)$ auf. Beim Volumen summiert man <em>Querschnittsflächen</em> auf, und die Fläche eines Kreises mit Radius $f(x)$ ist $\pi r^2 = \pi \cdot (f(x))^2$. Daher das Quadrat <em>und</em> der Faktor $\pi$. Anschaulich: Verdoppelt sich der Radius an einer Stelle, vervierfacht sich dort die Querschnittsfläche — genau das leistet das Quadrat.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="int-uneigentlich">
+    <h2 id="int-uneigentlich">6. Uneigentliche Integrale und mehr (erhöhtes Anforderungsniveau)</h2>
+    <p><strong>Hinweis:</strong> Dieser Abschnitt gehört zum erhöhten Anforderungsniveau (eA). Wenn du im grundlegenden Anforderungsniveau (gA) lernst, kannst du ihn überspringen und direkt zu den Übungen wechseln — dort betreffen nur die beiden Zusatzaufgaben diesen Stoff.</p>
+    <p>Kann eine Fläche, die ins Unendliche reicht, einen endlichen Inhalt haben? Klingt unmöglich — die Fläche unter $f(x) = \frac{1}{x^2}$ rechts von $x = 1$ beweist das Gegenteil. Sie wird immer schmaler, je weiter man nach rechts geht. Wir berechnen sie zunächst nur bis zu einer beweglichen Grenze $b$ (Stammfunktion: $F(x) = -\frac{1}{x}$, Potenzregel mit $n = -2$):</p>
+    <p class="formel-abgesetzt">$$\int_1^b \frac{1}{x^2}\,dx = \left[-\frac{1}{x}\right]_1^b = -\frac{1}{b} + 1 = 1 - \frac{1}{b}$$</p>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Flächeninhalt unter 1 durch x Quadrat von 1 bis zur Grenze b für wachsende Werte von b</caption>
+      <thead>
+        <tr><th scope="col">Grenze b</th><th scope="col">10</th><th scope="col">100</th><th scope="col">1000</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Flächeninhalt $1 - \frac{1}{b}$</td><td>0,9</td><td>0,99</td><td>0,999</td></tr>
+      </tbody>
+    </table>
+    <p>Je weiter die Grenze nach rechts wandert, desto näher rückt der Inhalt an $1$ — ohne die $1$ je zu überschreiten. Im Grenzwert:</p>
+    <p class="formel-abgesetzt">$$\int_1^{\infty} \frac{1}{x^2}\,dx = \lim_{b \to \infty} \left(1 - \frac{1}{b}\right) = 1$$</p>
+    <p>Die unendlich lange Fläche hat den Inhalt $1\ \text{FE}$ — exakt, nicht ungefähr.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Uneigentliches Integral</span>
+      <p>Ein Integral mit der „Grenze“ $\infty$ heißt <strong>uneigentlich</strong>. Man berechnet es in zwei Schritten: erst $\int_1^b f(x)\,dx$ mit fester Grenze $b$, dann der Grenzwert für $b \to \infty$. Existiert er, heißt das Integral <strong>konvergent</strong>, sonst <strong>divergent</strong>. $\infty$ ist dabei keine Zahl, die man „einsetzt“, sondern die Richtung, in die die Grenze geschickt wird.</p>
+    </div>
+    <p>Dass Konvergenz nicht selbstverständlich ist, zeigt die Nachbarfunktion $f(x) = \frac{1}{x}$: Auch ihr Graph schmiegt sich an die x-Achse — aber zu langsam. Unter den Graphen passen über $[1; 2]$, $[2; 4]$, $[4; 8]$, … jeweils Rechtecke vom Inhalt mindestens $\frac{1}{2}$ (die Breite verdoppelt sich von Intervall zu Intervall, die Höhe halbiert sich nur). Mit jeder Verdopplungsstrecke kommt also erneut mindestens $\frac{1}{2}\ \text{FE}$ hinzu: Die Fläche wächst über alle Grenzen, das Integral divergiert.</p>
+    <p>Dieselbe Grenzwert-Idee erschließt noch mehr: Flächen, die seitlich an eine Definitionslücke heranreichen (etwa unter $\frac{1}{\sqrt{x}}$ bis zur Stelle $0$), behandelt man genauso — Grenze davorsetzen, Grenzwert bilden. Im eA-Abitur begegnen dir uneigentliche Integrale später vor allem im Zusammenspiel mit der e-Funktion.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Das uneigentliche Integral der e-Funktion</summary>
+    <div class="vertiefung-inhalt">
+      <p>Das wichtigste uneigentliche Integral im eA-Abitur gehört zur Funktion $f(x) = e^{-x}$. Ihr Graph fällt rechts der $y$-Achse rasch gegen die $x$-Achse — schnell genug, dass die unendlich lange Fläche darunter einen endlichen Inhalt besitzt. Eine Stammfunktion ist $F(x) = -e^{-x}$, denn $\left(-e^{-x}\right)' = e^{-x}$. Mit beweglicher Grenze $b$:</p>
+      <p class="formel-abgesetzt">$$\int_0^b e^{-x}\,dx = \left[-e^{-x}\right]_0^b = -e^{-b} + e^{0} = 1 - e^{-b}$$</p>
+      <p>Für $b \to \infty$ geht $e^{-b}$ gegen $0$ (der Nenner $e^{b}$ wächst über alle Grenzen). Also:</p>
+      <p class="formel-abgesetzt">$$\int_0^{\infty} e^{-x}\,dx = \lim_{b \to \infty}\left(1 - e^{-b}\right) = 1$$</p>
+      <p>Die Fläche unter der Abklingkurve hat exakt den Inhalt $1\ \text{FE}$. Genau diese Eigenschaft macht $e^{-x}$ — allgemeiner $\lambda e^{-\lambda x}$ — zur Grundlage der <strong>Exponentialverteilung</strong> in der Stochastik: Eine Dichtefunktion beschreibt nur dann eine Gesamtwahrscheinlichkeit von $1$, wenn die Fläche unter ihr genau $1$ ergibt. Dieselbe Grenzwert-Technik wie bei $\frac{1}{x^2}$ — nur mit der e-Funktion, die im Abitur am häufigsten vorkommt.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — Vorzeichen-Falle, Flächen zwischen Graphen, Bestände, Mittelwerte und als Zusatz uneigentliche Integrale und ein Rotationskörper — mit gestuften Tipps, CAS-Anleitungen und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+  <section class="sim-einbettung" aria-labelledby="sim-einbettung">
+    <h2 id="sim-einbettung">Selbst ausprobieren: Riemann-Summen</h2>
+    <p>Erkunde dieses Thema interaktiv in der Simulation — Schieberegler bewegen, beobachten, ausprobieren.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/riemann-summen/index.html?einbettung=1" title="Interaktive Simulation: Riemann-Summen" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss"><a href="../../../simulationen/mathematik/riemann-summen/index.html" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a></div>
+    </div>
+  </section>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

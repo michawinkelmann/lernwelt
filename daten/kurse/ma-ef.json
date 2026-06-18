@@ -1,0 +1,3816 @@
+{
+ "version": 1,
+ "kurs": "ma-ef",
+ "fach": "mathematik",
+ "stufe": "einfuehrungsphase",
+ "titel": "Mathematik · Einführungsphase",
+ "untertitel": "Lernbüro-Pilot: Änderungsraten und Ableitung als Selbstlern-Einheit",
+ "zweig": [
+  "gym"
+ ],
+ "stand": "2026-06-13",
+ "taktung": "wochenplan",
+ "checkpoints": "freischalten",
+ "werkzeuge": [
+  "ampel",
+  "lerntagebuch"
+ ],
+ "hinweis": "Lektionen verweisen nur auf vorhandene Inhalte. Pilot – fachliche Endprüfung durch die Lehrkraft.",
+ "stoffverteilung": [
+  {
+   "wochen": "1–4",
+   "thema": "Funktionen im Überblick",
+   "lektionen": "ca. 12",
+   "kc": "Elementare Funktionenlehre: ganzrationale Funktionen, Transformationen",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "5–8",
+   "thema": "Beschreibende Statistik",
+   "lektionen": "ca. 10",
+   "kc": "Beschreibende Statistik: Lage- und Streuungsmaße, Boxplots",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "9–13",
+   "thema": "Änderungsraten und Ableitung — Pilot (5 Lektionen ausgebaut)",
+   "lektionen": "5 von ca. 14",
+   "kc": "Ableitungen (EP): Differenzenquotient, h-Methode, Ableitungsregeln",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "14–17",
+   "thema": "Ableitungsregeln und Anwendungen",
+   "lektionen": "5 (Ableitungsregeln, Tangenten/Normalen, Monotonie/Extrempunkte, Krümmung/Wendepunkte, Optimierung)",
+   "kc": "Ableitungen (EP): Monotonie, Extrem- und Wendepunkte, Optimierung",
+   "status": "in-arbeit"
+  }
+ ],
+ "wochen": [
+  {
+   "nr": 1,
+   "spanne": "Diese Woche",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 1–3 geschafft"
+  },
+  {
+   "nr": 2,
+   "spanne": "Nächste Woche",
+   "lektionen": [
+    "l4",
+    "l5"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 4–5 geschafft"
+  },
+  {
+   "nr": 3,
+   "spanne": "Wochen 14–17",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 6–10 geschafft"
+  }
+ ],
+ "lektionen": [
+  {
+   "id": "l1",
+   "nr": 1,
+   "titel": "Die mittlere Änderungsrate",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-aenderungsraten-und-ableitung",
+   "themaPfad": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/",
+   "anker": "#abl-mittlere",
+   "ziele": [
+    "Ich kann die mittlere Änderungsrate als Differenzenquotienten $\\frac{f(b)-f(a)}{b-a}$ berechnen.",
+    "Ich kann die mittlere Änderungsrate geometrisch als Sekantensteigung deuten."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Kurze Auffrischung aus Klasse 8 – Steigung linearer Funktionen als Voräufer der Änderungsrate.",
+     "aufgaben": [
+      {
+       "quelle": "ma-08-lineare-funktionen",
+       "ids": [
+        "ma-08-lf-001",
+        "ma-08-lf-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#abl-mittlere",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/index.html#abl-mittlere"
+     },
+     "schritte": [
+      {
+       "titel": "Differenz statt Einzelwert",
+       "html": "<p>Eine Funktion sagt dir den Wert an <em>einer</em> Stelle. Spannender ist oft die <strong>Veränderung</strong> über ein ganzes Intervall: Wie stark wächst $f$, wenn $x$ von $a$ nach $b$ läuft? Dafür bildest du die Differenz der Funktionswerte $f(b)-f(a)$ und teilst sie durch die Differenz der Stellen $b-a$.</p>",
+       "check": {
+        "frage": "Wofür steht der Zähler $f(b)-f(a)$?",
+        "antwort": "Für die Änderung des Funktionswerts (z. B. der zurückgelegte Weg, der Höhenunterschied), während $x$ von $a$ bis $b$ läuft."
+       }
+      },
+      {
+       "titel": "Der Differenzenquotient",
+       "html": "<p>Die <strong>mittlere Änderungsrate</strong> von $f$ auf $[a;b]$ ist $$\\frac{f(b)-f(a)}{b-a}.$$ Sie sagt: Im Schnitt ändert sich $f$ pro Einheit von $x$ um diesen Wert. Bei $f(x)=x^2+1$ auf $[1;4]$ ist das $\\frac{17-2}{3}=5$.</p>",
+       "check": {
+        "frage": "Berechne die mittlere Änderungsrate von $f(x)=x^2$ auf $[2;5]$.",
+        "antwort": "$\\frac{f(5)-f(2)}{5-2}=\\frac{25-4}{3}=\\frac{21}{3}=7$."
+       }
+      },
+      {
+       "titel": "Geometrische Deutung: die Sekante",
+       "html": "<p>Verbindet man die Punkte $(a\\mid f(a))$ und $(b\\mid f(b))$ mit einer Geraden, erhält man die <strong>Sekante</strong>. Ihre Steigung ist genau der Differenzenquotient. „Mittlere Änderungsrate“ und „Sekantensteigung“ sind also dasselbe — einmal rechnerisch, einmal im Bild.</p>",
+       "check": {
+        "frage": "Eine Sekante verläuft fast waagerecht. Was bedeutet das für die mittlere Änderungsrate?",
+        "antwort": "Sie ist nahe null: Über das Intervall ändert sich der Funktionswert kaum."
+       }
+      }
+     ],
+     "merksatz": "Die <strong>mittlere Änderungsrate</strong> von $f$ auf $[a;b]$ ist der Differenzenquotient $\\frac{f(b)-f(a)}{b-a}$. Geometrisch ist das die <strong>Steigung der Sekante</strong> durch die Punkte $(a\\mid f(a))$ und $(b\\mid f(b))$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Durchschnittsgeschwindigkeit messen",
+       "material": "Stoppuhr (Handy), Maßband oder bekannte Strecke (z. B. Flurlänge), eine Person, die geht oder läuft.",
+       "vorhersage": "Schätze, wie viele Meter pro Sekunde du beim normalen Gehen schaffst. Schreibe die Vermutung auf, <em>bevor</em> du misst.",
+       "auftraege": [
+        "Miss eine feste Strecke ab und stoppe die Zeit für mehrere Geschwindigkeiten (langsam, normal, schnell).",
+        "Berechne jeweils $\\frac{\\text{Weg}}{\\text{Zeit}}$ — das ist die mittlere Änderungsrate des Ortes.",
+        "Vergleiche: Welche Strecke-Zeit-Werte ergeben dieselbe Geschwindigkeit? Was bedeutet das für die Sekante im $t$-$s$-Diagramm?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Schreibe die Formel der mittleren Änderungsrate auf $[a;b]$ auf.",
+       "antwort": "$\\frac{f(b)-f(a)}{b-a}$."
+      },
+      {
+       "frage": "Was ist die geometrische Bedeutung dieses Werts?",
+       "antwort": "Die Steigung der Sekante durch $(a\\mid f(a))$ und $(b\\mid f(b))$."
+      },
+      {
+       "frage": "Ein Auto fährt in 2 Stunden 180 km. Wie groß ist die mittlere Änderungsrate des Ortes und wie heißt sie physikalisch?",
+       "antwort": "$\\frac{180}{2}=90$, also 90 km/h — das ist die Durchschnittsgeschwindigkeit."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-001",
+        "ma-ep-abl-002"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-003"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-101"
+       ]
+      }
+     ],
+     "partner": "Erkläre, warum die mittlere Änderungsrate geometrisch die Steigung einer Sekante ist."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-004"
+       ]
+      }
+     ],
+     "transfer": "Ein Auto legt zwischen 10:00 und 11:30 Uhr 135 km zurück – was ist die mittlere Änderungsrate des Ortes, und wie nennt man diesen Wert in der Physik?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum die mittlere Änderungsrate geometrisch die Steigung der Sekante ist."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du wechselst zwischen Term, Tabelle und Graph und deutest den Differenzenquotienten im Schaubild."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du übersetzt eine Sachsituation (z. B. eine Fahrt) in eine mittlere Änderungsrate und gibst ihre Einheit an."
+    }
+   ]
+  },
+  {
+   "id": "l2",
+   "nr": 2,
+   "titel": "Von der Sekante zur Tangente",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-aenderungsraten-und-ableitung",
+   "themaPfad": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/",
+   "anker": "#abl-sekante",
+   "ziele": [
+    "Ich kann erklären, wie die Sekante für kleiner werdende Intervallbreiten $h$ zur Tangente wird.",
+    "Ich kann Sekantensteigungen für konkrete $h$-Werte berechnen und den Grenzwert ablesen."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein gemeinsamer Impuls: Was passiert, wenn das Intervall auf null schrumpft? Kurze Sammlung an der Tafel, was ein Grenzprozess bedeutet."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Differenzenquotient aus Lektion 1.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-005"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#abl-sekante",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/index.html#abl-sekante"
+     },
+     "schritte": [
+      {
+       "titel": "Ein Punkt festhalten, den anderen wandern lassen",
+       "html": "<p>Halte eine Stelle $x_0$ fest und lege den zweiten Punkt bei $x_0+h$. Der Abstand ist die <strong>Schrittweite</strong> $h$. Die Sekante durch $(x_0\\mid f(x_0))$ und $(x_0+h\\mid f(x_0+h))$ hat die Steigung $$\\frac{f(x_0+h)-f(x_0)}{h}.$$</p>",
+       "check": {
+        "frage": "Was bedeutet ein kleines $h$ geometrisch?",
+        "antwort": "Die beiden Punkte rücken nah zusammen — die Sekante schmiegt sich dem Graphen im Punkt $x_0$ immer enger an."
+       }
+      },
+      {
+       "titel": "$h$ verkleinern",
+       "html": "<p>Berechne die Steigung für immer kleinere $h$. Beispiel $f(x)=x^2$ bei $x_0=2$: für $h=1$ ergibt sich $\\frac{9-4}{1}=5$, für $h=0{,}5$ ergibt sich $4{,}5$, für $h=0{,}1$ ergibt sich $4{,}1$. Die Werte nähern sich $4$.</p>",
+       "check": {
+        "frage": "Welchem Wert nähern sich die Sekantensteigungen bei $f(x)=x^2$, $x_0=2$?",
+        "antwort": "Sie nähern sich $4$ — die Steigung wird mit kleiner werdendem $h$ immer dichter an $4$ liegen."
+       }
+      },
+      {
+       "titel": "Von der Sekante zur Tangente",
+       "html": "<p>Lässt man $h$ gegen $0$ gehen, wird aus der Folge von Sekanten die <strong>Tangente</strong> im Punkt $x_0$. Ihre Steigung ist der Grenzwert der Sekantensteigungen. Dieser Grenzwert ist die <strong>momentane Änderungsrate</strong> an der Stelle $x_0$.</p>",
+       "check": {
+        "frage": "Warum darf man $h=0$ nicht einfach einsetzen?",
+        "antwort": "Dann stünde im Nenner $0$, und die Division ist nicht erlaubt. Man betrachtet deshalb den Grenzwert für $h\\to 0$, nicht den Wert bei $h=0$."
+       }
+      }
+     ],
+     "merksatz": "Lässt man bei der Sekantensteigung $\\frac{f(x_0+h)-f(x_0)}{h}$ die Schrittweite $h$ gegen $0$ gehen, geht die <strong>Sekante in die Tangente</strong> über. Ihr Grenzwert ist die <strong>momentane Änderungsrate</strong> (Tangentensteigung) an der Stelle $x_0$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Die Tangente mit dem Lineal annähern",
+       "material": "Millimeterpapier, Bleistift, Lineal, Taschenrechner.",
+       "vorhersage": "Zeichne $f(x)=x^2$ und vermute, wie steil die Tangente im Punkt $(2\\mid 4)$ ungefähr verläuft.",
+       "auftraege": [
+        "Zeichne Sekanten von $(2\\mid 4)$ zu Punkten mit $h=1$, $h=0{,}5$, $h=0{,}25$ und miss ihre Steigung mit dem Steigungsdreieck.",
+        "Trage die gemessenen Steigungen in eine Tabelle ein und beobachte, wohin sie laufen.",
+        "Lege das Lineal so an, dass es den Graphen in $(2\\mid 4)$ nur berührt — vergleiche seine Steigung mit deinem Grenzwert."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie lautet die Sekantensteigung mit Schrittweite $h$ an der Stelle $x_0$?",
+       "antwort": "$\\frac{f(x_0+h)-f(x_0)}{h}$."
+      },
+      {
+       "frage": "Was passiert mit der Sekante, wenn $h\\to 0$ geht?",
+       "antwort": "Sie geht in die Tangente an der Stelle $x_0$ über."
+      },
+      {
+       "frage": "Bei $f(x)=x^2$, $x_0=3$ ergeben die Sekantensteigungen $6{,}1$; $6{,}01$; $6{,}001$. Wie groß ist die Tangentensteigung?",
+       "antwort": "$6$ — die Werte streben gegen $6$ (Kontrolle: $f'(x)=2x$, also $2\\cdot 3=6$)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-006",
+        "ma-ep-abl-007"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-102"
+       ]
+      }
+     ],
+     "partner": "Erkläre mit eigenen Worten, warum man nicht einfach $h = 0$ einsetzen darf, sondern einen Grenzprozess braucht."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-009"
+       ]
+      }
+     ],
+     "transfer": "Was ist der Unterschied zwischen mittlerer Änderungsrate und momentaner Änderungsrate? Nenne je ein Alltagsbeispiel."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest anschaulich, warum die Sekante für $h\\to 0$ in die Tangente übergeht."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du bildest Sekantensteigungen für konkrete $h$-Werte mit dem Differenzenquotienten."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du liest aus einer Wertetabelle den Grenzwert der Sekantensteigungen ab."
+    }
+   ]
+  },
+  {
+   "id": "l3",
+   "nr": 3,
+   "titel": "Die Ableitung an einer Stelle",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-aenderungsraten-und-ableitung",
+   "themaPfad": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/",
+   "anker": "#abl-stelle",
+   "ziele": [
+    "Ich kann die h-Methode anwenden, um $f'(x_0)$ als Grenzwert des Differenzenquotienten zu berechnen.",
+    "Ich kann $f'(x_0)$ als Tangentensteigung im Punkt $(x_0 \\mid f(x_0))$ deuten."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Grenzprozess der Sekantensteigung aus Lektion 2.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#abl-stelle",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/index.html#abl-stelle"
+     },
+     "schritte": [
+      {
+       "titel": "Die Ableitung an einer Stelle",
+       "html": "<p>Den Grenzwert der Sekantensteigungen nennt man die <strong>Ableitung von $f$ an der Stelle $x_0$</strong> und schreibt $$f'(x_0)=\\lim_{h\\to 0}\\frac{f(x_0+h)-f(x_0)}{h}.$$ Sie ist eine einzige Zahl: die Steigung der Tangente in diesem Punkt.</p>",
+       "check": {
+        "frage": "Ist $f'(x_0)$ eine Zahl oder eine Funktion?",
+        "antwort": "Eine Zahl — sie gehört zu genau einer Stelle $x_0$ und gibt dort die Tangentensteigung an."
+       }
+      },
+      {
+       "titel": "Die h-Methode Schritt für Schritt",
+       "html": "<p>Beispiel $f(x)=x^2$ an $x_0$: <br>1. einsetzen $\\frac{(x_0+h)^2-x_0^2}{h}$, <br>2. ausmultiplizieren $\\frac{x_0^2+2x_0h+h^2-x_0^2}{h}=\\frac{2x_0h+h^2}{h}$, <br>3. kürzen $2x_0+h$, <br>4. Grenzwert $h\\to 0$ liefert $2x_0$. Also $f'(x_0)=2x_0$.</p>",
+       "check": {
+        "frage": "Warum muss man $h$ erst herauskürzen, bevor man $h\\to 0$ setzt?",
+        "antwort": "Solange $h$ im Nenner steht, entsteht beim Einsetzen $\\frac{0}{0}$. Nach dem Kürzen steht kein $h$ mehr im Nenner, und man darf $h=0$ einsetzen."
+       }
+      },
+      {
+       "titel": "Tangentensteigung deuten",
+       "html": "<p>$f'(2)=4$ heißt: Der Graph von $f$ steigt im Punkt $(2\\mid 4)$ so steil wie eine Gerade mit Steigung $4$. Ein positiver Wert bedeutet steigend, ein negativer fallend, der Wert $0$ eine waagerechte Tangente.</p>",
+       "check": {
+        "frage": "Was bedeutet $f'(x_0)=0$ anschaulich?",
+        "antwort": "Die Tangente verläuft waagerecht — der Graph hat dort momentan keine Steigung (oft ein Hoch- oder Tiefpunkt)."
+       }
+      }
+     ],
+     "merksatz": "Die <strong>Ableitung</strong> $f'(x_0)=\\lim\\limits_{h\\to 0}\\frac{f(x_0+h)-f(x_0)}{h}$ ist die <strong>Steigung der Tangente</strong> im Punkt $(x_0\\mid f(x_0))$. Mit der h-Methode rechnet man sie aus: einsetzen, vereinfachen, $h$ kürzen, Grenzwert bilden.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Steigung als momentane Geschwindigkeit",
+       "material": "Ball, hohe Treppe oder Mauer (sicher!), Stoppuhr, Maßband; alternativ vorbereitete Falltabelle.",
+       "vorhersage": "Ein Ball fällt nach $s(t)=5t^2$ (in Metern). Vermute, ob er bei $t=2\\,$s schneller oder langsamer ist als seine Durchschnittsgeschwindigkeit von $0$ bis $2\\,$s.",
+       "auftraege": [
+        "Berechne die mittlere Geschwindigkeit auf $[2;2{,}5]$, $[2;2{,}1]$, $[2;2{,}01]$.",
+        "Bestimme den Grenzwert — das ist die momentane Geschwindigkeit bei $t=2$.",
+        "Vergleiche mit $s'(t)=10t$: Stimmt dein Grenzwert mit $s'(2)$ überein?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie lautet der Grenzwert, der $f'(x_0)$ definiert?",
+       "antwort": "$f'(x_0)=\\lim\\limits_{h\\to 0}\\frac{f(x_0+h)-f(x_0)}{h}$."
+      },
+      {
+       "frage": "Nenne die vier Schritte der h-Methode.",
+       "antwort": "1. Differenzenquotient aufstellen, 2. Zähler vereinfachen, 3. $h$ kürzen, 4. Grenzwert für $h\\to 0$ bilden."
+      },
+      {
+       "frage": "Was sagt $f'(x_0)$ geometrisch aus?",
+       "antwort": "Die Steigung der Tangente an den Graphen im Punkt $(x_0\\mid f(x_0))$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-204"
+       ]
+      },
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-010"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-013"
+       ]
+      }
+     ],
+     "partner": "Erkläre Schritt für Schritt: Warum darf man nach dem Ausmultiplizieren durch $h$ kürzen, obwohl man $h = 0$ nicht einsetzen darf?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-011"
+       ]
+      }
+     ],
+     "transfer": "Ein Thermometer zeigt um 8 Uhr 14°C und um 10 Uhr 18°C. Ist das eine mittlere oder momentane Änderungsrate? Erkläre den Unterschied."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du wendest die h-Methode an: aufstellen, vereinfachen, Grenzwert für $h\\to 0$ bilden."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst die Bedeutung der Ableitung $f'(x_0)$ als Grenzwert des Differenzenquotienten."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du deutest $f'(x_0)$ als Steigung der Tangente im Punkt $(x_0\\mid f(x_0))$."
+    }
+   ]
+  },
+  {
+   "id": "l4",
+   "nr": 4,
+   "titel": "Die Ableitungsfunktion",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-aenderungsraten-und-ableitung",
+   "themaPfad": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/",
+   "anker": "#abl-funktion",
+   "ziele": [
+    "Ich kann aus dem Graphen von $f$ qualitativ den Graphen der Ableitungsfunktion $f'$ skizzieren.",
+    "Ich kann die Vorzeichen von $f'$ mit dem Monotonieverhalten von $f$ verknüpfen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung h-Methode und Ableitungsbegriff aus Lektion 3.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-006"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#abl-funktion",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/index.html#abl-funktion"
+     },
+     "schritte": [
+      {
+       "titel": "Von der Stelle zur Funktion",
+       "html": "<p>Statt nur an einer Stelle die Steigung zu bestimmen, fragt man: Welche Steigung hat der Graph an <em>jeder</em> Stelle $x$? Die Zuordnung $x\\mapsto f'(x)$ ist die <strong>Ableitungsfunktion</strong> $f'$. Sie liefert für jedes $x$ die Tangentensteigung.</p>",
+       "check": {
+        "frage": "Was gibt $f'(x)$ für eine beliebige Stelle $x$ an?",
+        "antwort": "Die Steigung der Tangente an den Graphen von $f$ an genau dieser Stelle $x$."
+       }
+      },
+      {
+       "titel": "Vorzeichen von $f'$ und Monotonie",
+       "html": "<p>Wo $f$ <strong>steigt</strong>, sind die Tangenten positiv geneigt: $f'(x)>0$. Wo $f$ <strong>fällt</strong>, gilt $f'(x)<0$. An waagerechten Tangenten (Hoch-/Tiefpunkte) ist $f'(x)=0$. So liest man aus dem Verlauf von $f$ das Vorzeichen von $f'$ ab.</p>",
+       "check": {
+        "frage": "Der Graph von $f$ fällt auf einem ganzen Abschnitt. Was gilt dort für $f'$?",
+        "antwort": "$f'(x)<0$ auf diesem Abschnitt — die Tangenten sind nach unten geneigt."
+       }
+      },
+      {
+       "titel": "$f'$ qualitativ skizzieren",
+       "html": "<p>Vorgehen: Markiere die Stellen mit waagerechter Tangente — dort hat $f'$ eine <strong>Nullstelle</strong>. Zwischen ihnen entscheidet das Steigungsverhalten über das Vorzeichen von $f'$. Steile Stellen von $f$ ergeben große Beträge von $f'$, flache Stellen kleine.</p>",
+       "check": {
+        "frage": "$f$ hat bei $x=1$ einen Hochpunkt. Was tut $f'$ bei $x=1$?",
+        "antwort": "$f'(1)=0$ — und $f'$ wechselt dort das Vorzeichen von $+$ (links, $f$ steigt) nach $-$ (rechts, $f$ fällt)."
+       }
+      }
+     ],
+     "merksatz": "Die <strong>Ableitungsfunktion</strong> $f'$ ordnet jeder Stelle $x$ die Tangentensteigung $f'(x)$ zu. Es gilt: $f$ steigt $\\Leftrightarrow f'>0$, $f$ fällt $\\Leftrightarrow f'<0$, waagerechte Tangente $\\Leftrightarrow f'=0$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Höhenprofil und Steigungsprofil",
+       "material": "Ausdruck oder Skizze eines „Bergprofils“ (Hügelkette als Kurve), Lineal, zweites Blatt.",
+       "vorhersage": "Stelle dir vor, du wanderst über die Hügel. An welchen Stellen ist die Steigung null? Markiere sie zuerst auf dem Profil.",
+       "auftraege": [
+        "Wandere mit dem Lineal als Tangente über die Kurve und notiere für mehrere Stellen, ob die Steigung positiv, null oder negativ ist.",
+        "Zeichne darunter das Steigungsprofil ($f'$): über jedem Gipfel und Tal eine Nullstelle.",
+        "Vergleiche die steilsten Aufstiege mit den höchsten Werten deines Steigungsprofils."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was ordnet die Ableitungsfunktion $f'$ jeder Stelle zu?",
+       "antwort": "Die Steigung der Tangente an den Graphen von $f$ an dieser Stelle."
+      },
+      {
+       "frage": "Wie hängen das Vorzeichen von $f'$ und die Monotonie von $f$ zusammen?",
+       "antwort": "$f'>0$ bedeutet $f$ steigt, $f'<0$ bedeutet $f$ fällt, $f'=0$ bedeutet waagerechte Tangente."
+      },
+      {
+       "frage": "Woran erkennst du im Graphen von $f$, wo $f'$ eine Nullstelle hat?",
+       "antwort": "An den Stellen mit waagerechter Tangente (typisch Hoch- und Tiefpunkte)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-001"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-008",
+        "ma-ep-abl-007"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-104"
+       ]
+      }
+     ],
+     "partner": "Prüft euch gegenseitig: $f$ steigt → $f'$ positiv, $f$ fällt → $f'$ negativ, Hochpunkt → Nullstelle von $f'$. Findet je ein Beispiel für jeden Fall."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-005"
+       ]
+      }
+     ],
+     "transfer": "Warum hat die Ableitungsfunktion dort eine Nullstelle, wo $f$ einen Hoch- oder Tiefpunkt hat? Erkläre geometrisch."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du skizzierst aus dem Graphen von $f$ qualitativ den Graphen der Ableitungsfunktion $f'$."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du verknüpfst das Vorzeichen von $f'$ mit dem Monotonieverhalten von $f$ und begründest deine Skizze."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du verstehst $f'$ als Funktion, die jeder Stelle $x$ die dortige Tangentensteigung zuordnet."
+    }
+   ]
+  },
+  {
+   "id": "l5",
+   "nr": 5,
+   "titel": "Erste Ableitungsregeln",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-aenderungsraten-und-ableitung",
+   "themaPfad": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/",
+   "anker": "#abl-regeln",
+   "ziele": [
+    "Ich kann Potenz-, Faktor- und Summenregel sicher anwenden, um Polynome abzuleiten.",
+    "Ich kann die Tangentengleichung an einem gegebenen Graphenpunkt bestimmen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung Ableitungsfunktion und graphisches Ableiten aus Lektion 4.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-011"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#abl-regeln",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/index.html#abl-regeln"
+     },
+     "schritte": [
+      {
+       "titel": "Die Potenzregel",
+       "html": "<p>Die h-Methode für jede Funktion neu durchzurechnen ist mühsam. Für Potenzen gilt eine einfache Regel: $$f(x)=x^n \\;\\Rightarrow\\; f'(x)=n\\cdot x^{n-1}.$$ Beispiel: $f(x)=x^3$ liefert $f'(x)=3x^2$. Konstanten haben Ableitung $0$.</p>",
+       "check": {
+        "frage": "Leite $f(x)=x^5$ ab.",
+        "antwort": "$f'(x)=5x^4$ (Exponent nach vorn, neuer Exponent um $1$ kleiner)."
+       }
+      },
+      {
+       "titel": "Faktor- und Summenregel",
+       "html": "<p>Ein <strong>konstanter Faktor</strong> bleibt erhalten: $(c\\cdot f)'=c\\cdot f'$. Eine <strong>Summe</strong> leitet man gliedweise ab: $(f+g)'=f'+g'$. Damit lässt sich jedes Polynom Term für Term ableiten, z. B. $f(x)=3x^2-4x+7\\Rightarrow f'(x)=6x-4$.</p>",
+       "check": {
+        "frage": "Leite $f(x)=2x^3-5x$ ab.",
+        "antwort": "$f'(x)=6x^2-5$ (Faktor bleibt, jedes Glied einzeln, $-5x$ wird zu $-5$, die Konstante fiele weg)."
+       }
+      },
+      {
+       "titel": "Tangente an einem Punkt",
+       "html": "<p>Die Tangente in $(x_0\\mid f(x_0))$ ist eine Gerade $y=m\\cdot x+b$ mit Steigung $m=f'(x_0)$. Den Achsenabschnitt $b$ findest du, indem du den Punkt einsetzt. Beispiel $f(x)=x^2$, $x_0=1$: $m=f'(1)=2$, Punkt $(1\\mid 1)$ liefert $1=2\\cdot 1+b$, also $b=-1$: $y=2x-1$.</p>",
+       "check": {
+        "frage": "Wie bekommst du die Steigung der Tangente in $x_0$?",
+        "antwort": "Indem du $x_0$ in die Ableitung einsetzt: $m=f'(x_0)$."
+       }
+      }
+     ],
+     "merksatz": "<strong>Potenzregel:</strong> $\\left(x^n\\right)'=n\\cdot x^{n-1}$. <strong>Faktorregel:</strong> $(c\\cdot f)'=c\\cdot f'$. <strong>Summenregel:</strong> $(f+g)'=f'+g'$. Die <strong>Tangente</strong> in $x_0$ hat die Steigung $m=f'(x_0)$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Regel gegen h-Methode",
+       "material": "Taschenrechner, Papier, ggf. ein Funktionsplotter (offline).",
+       "vorhersage": "Vermute, ob die Potenzregel bei $f(x)=x^3$ denselben Wert für $f'(2)$ liefert wie die mühsame h-Methode.",
+       "auftraege": [
+        "Berechne $f'(2)$ für $f(x)=x^3$ einmal mit der h-Methode (kleine $h$ einsetzen) und einmal mit der Potenzregel.",
+        "Vergleiche die beiden Ergebnisse — und überlege, welcher Weg schneller war.",
+        "Stelle für $f(x)=x^2-x^3$ die Tangente in $(1\\mid 0)$ auf und prüfe, ob sie den Graphen wirklich nur berührt."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie lautet die Potenzregel?",
+       "antwort": "$\\left(x^n\\right)'=n\\cdot x^{n-1}$."
+      },
+      {
+       "frage": "Leite $f(x)=4x^3-2x^2+5$ ab.",
+       "antwort": "$f'(x)=12x^2-4x$ (die Konstante $5$ fällt weg)."
+      },
+      {
+       "frage": "Welche Steigung hat die Tangente an $f(x)=x^2$ im Punkt $(3\\mid 9)$?",
+       "antwort": "$f'(3)=2\\cdot 3=6$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-009",
+        "ma-ep-abl-003"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-012",
+        "ma-ep-abl-013"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig ein Polynom auf – der Partner leitet ab und berechnet $f'$ an einer selbst gewählten Stelle."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-010"
+       ]
+      }
+     ],
+     "transfer": "Was ändert sich, wenn man die Konstante $7$ in $g(x) = 3x^4 - 2x^2 + 7$ durch $-100$ ersetzt? Beeinflusst das die Ableitung? Begründe."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du wendest Potenz-, Faktor- und Summenregel sicher an, um Polynome abzuleiten."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du bestimmst die Tangentengleichung an einem gegebenen Graphenpunkt."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum die Potenzregel die mühsame h-Methode ersetzt."
+    }
+   ]
+  },
+  {
+   "id": "l6",
+   "nr": 1,
+   "titel": "Ableitungsregeln im Werkzeugkasten",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-ableitungsregeln-und-anwendungen",
+   "themaPfad": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/",
+   "anker": "#ablr-werkzeug",
+   "ziele": [
+    "Ich kann Potenz-, Faktor- und Summenregel benennen und auf beliebige Polynome anwenden.",
+    "Ich kann die zweite Ableitung $f''$ bilden und weiß, was sie geometrisch bedeutet."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung aus Lektion 5: Potenz-, Faktor- und Summenregel kurz wiederholen.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-008"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ablr-werkzeug",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-werkzeug"
+     },
+     "schritte": [
+      {
+       "titel": "Ableitungsregeln als Werkzeugkasten",
+       "html": "<p>Mit Potenz-, Faktor- und Summenregel leitest du <em>jedes</em> Polynom Glied für Glied ab — auch mit Brüchen als Faktor, negativen Koeffizienten oder fehlenden Gliedern. Beispiel: $f(x)=\\frac{1}{2}x^4-3x^2+x\\Rightarrow f'(x)=2x^3-6x+1$.</p>",
+       "check": {
+        "frage": "Leite $f(x)=\\frac{1}{3}x^3-x^2+4$ ab.",
+        "antwort": "$f'(x)=x^2-2x$ (Faktor $\\frac{1}{3}\\cdot 3=1$; die Konstante $4$ fällt weg)."
+       }
+      },
+      {
+       "titel": "Die zweite Ableitung",
+       "html": "<p>Leitet man $f'$ noch einmal ab, erhält man die <strong>zweite Ableitung</strong> $f''$. Sie ist die Ableitung der Steigungsfunktion. Beispiel: $f(x)=x^3\\Rightarrow f'(x)=3x^2\\Rightarrow f''(x)=6x$.</p>",
+       "check": {
+        "frage": "Bestimme $f''$ für $f(x)=x^4$.",
+        "antwort": "$f'(x)=4x^3$, also $f''(x)=12x^2$."
+       }
+      },
+      {
+       "titel": "Was $f''$ bedeutet",
+       "html": "<p>$f''$ misst, wie sich die <strong>Steigung</strong> ändert — also die <strong>Krümmung</strong>. Ist $f''(x)>0$, nimmt die Steigung zu: Linkskurve. Ist $f''(x)<0$, nimmt sie ab: Rechtskurve. Das wird später für Wende- und Extrempunkte wichtig.</p>",
+       "check": {
+        "frage": "Was sagt $f''(x)>0$ über den Graphen aus?",
+        "antwort": "Er ist dort linksgekrümmt (nach oben gekrümmt) — die Steigung wächst."
+       }
+      }
+     ],
+     "merksatz": "Mit Potenz-, Faktor- und Summenregel leitet man jedes Polynom gliedweise ab. Die <strong>zweite Ableitung</strong> $f''$ entsteht durch nochmaliges Ableiten und beschreibt die <strong>Krümmung</strong>: $f''>0$ Linkskurve, $f''<0$ Rechtskurve.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Krümmung mit einem Fahrradlenker fühlen",
+       "material": "Ein biegsames Lineal oder Kabel, Papier mit einer gezeichneten Kurve.",
+       "vorhersage": "Lege fest, an welchen Stellen einer S-förmigen Kurve sie nach oben und wo nach unten gekrümmt ist — markiere die vermutete Übergangsstelle.",
+       "auftraege": [
+        "Lege das biegsame Lineal entlang der Kurve und spüre, wo es links- und wo rechtsgekrümmt ist.",
+        "Bilde für $f(x)=x^3-3x$ die Ableitungen $f'$ und $f''$ und bestimme das Vorzeichen von $f''$ links und rechts von $x=0$.",
+        "Vergleiche: Stimmt der Vorzeichenwechsel von $f''$ mit der gefühlten Übergangsstelle überein?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Leite $f(x)=2x^3-4x^2+x-7$ ab.",
+       "antwort": "$f'(x)=6x^2-8x+1$."
+      },
+      {
+       "frage": "Wie entsteht $f''$?",
+       "antwort": "Durch nochmaliges Ableiten von $f'$."
+      },
+      {
+       "frage": "Welche Krümmung hat der Graph, wenn $f''(x)<0$ ist?",
+       "antwort": "Eine Rechtskrümmung (nach unten gekrümmt) — die Steigung nimmt ab."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-001",
+        "ma-ep-ablr-002"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-101"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-013"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig eine Polynomfunktion bis Grad 4 auf — der Partner leitet ab und berechnet $f'$ an einer selbst gewählten Stelle."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-005"
+       ]
+      }
+     ],
+     "transfer": "Eine Funktion $f$ hat den Term $f(x) = 3x^5 - x^3 + 2$. Was passiert mit der Ableitung, wenn du die Konstante $2$ durch $-100$ ersetzt? Begründe ohne zu rechnen."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du benennst Potenz-, Faktor- und Summenregel und wendest sie auf beliebige Polynome an."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du bildest die zweite Ableitung $f''$ und deutest sie als Krümmungsmaß."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst den Zusammenhang von $f$, $f'$ und $f''$ über Steigung und Krümmung."
+    }
+   ]
+  },
+  {
+   "id": "l7",
+   "nr": 2,
+   "titel": "Tangenten und Normalen aufstellen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-ableitungsregeln-und-anwendungen",
+   "themaPfad": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/",
+   "anker": "#ablr-tangente",
+   "ziele": [
+    "Ich kann die Tangentengleichung $y = m \\cdot x + b$ an einem gegebenen Punkt bestimmen.",
+    "Ich kenne die Beziehung $m_t \\cdot m_n = -1$ und kann die Normale aufstellen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 6: Ableitungsregeln und Tangentensteigung als Ableitungswert.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ablr-tangente",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-tangente"
+     },
+     "schritte": [
+      {
+       "titel": "Tangente in drei Schritten",
+       "html": "<p>Gegeben ist $f$ und eine Stelle $x_0$. <br>1. Steigung: $m=f'(x_0)$. <br>2. Berührpunkt: $y_0=f(x_0)$. <br>3. $b$ aus $y_0=m\\cdot x_0+b$ bestimmen. Ergebnis ist die Tangente $y=m\\cdot x+b$.</p>",
+       "check": {
+        "frage": "Stelle die Tangente an $f(x)=x^2$ in $x_0=2$ auf.",
+        "antwort": "$m=f'(2)=4$, $y_0=4$. $4=4\\cdot 2+b\\Rightarrow b=-4$. Tangente: $y=4x-4$."
+       }
+      },
+      {
+       "titel": "Die Normale steht senkrecht",
+       "html": "<p>Die <strong>Normale</strong> ist die Gerade durch den Berührpunkt, die <strong>senkrecht</strong> zur Tangente steht. Für senkrechte Geraden gilt $m_t\\cdot m_n=-1$, also $$m_n=-\\frac{1}{m_t}.$$ Ihr Achsenabschnitt ergibt sich wieder durch Einsetzen des Berührpunkts.</p>",
+       "check": {
+        "frage": "Die Tangente hat Steigung $4$. Welche Steigung hat die Normale?",
+        "antwort": "$m_n=-\\frac{1}{4}$ (Kehrwert mit umgekehrtem Vorzeichen)."
+       }
+      },
+      {
+       "titel": "Normale vollständig aufstellen",
+       "html": "<p>Beispiel weiter: Berührpunkt $(2\\mid 4)$, $m_n=-\\frac{1}{4}$. Einsetzen: $4=-\\frac{1}{4}\\cdot 2+b\\Rightarrow b=4+\\frac{1}{2}=4{,}5$. Normale: $y=-\\frac{1}{4}x+4{,}5$. Tangente und Normale schneiden sich im Berührpunkt.</p>",
+       "check": {
+        "frage": "Warum hat die Normale denselben $x_0$-Punkt wie die Tangente?",
+        "antwort": "Beide gehen durch den Berührpunkt $(x_0\\mid f(x_0))$; nur ihre Steigungen unterscheiden sich."
+       }
+      }
+     ],
+     "merksatz": "Die <strong>Tangente</strong> in $x_0$ hat die Steigung $m_t=f'(x_0)$ und geht durch $(x_0\\mid f(x_0))$. Die <strong>Normale</strong> steht senkrecht dazu: $m_n=-\\frac{1}{m_t}$ (denn $m_t\\cdot m_n=-1$) und geht durch denselben Punkt.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Senkrechte Geraden mit dem Geodreieck",
+       "material": "Millimeterpapier, Geodreieck, Bleistift, Taschenrechner.",
+       "vorhersage": "Zeichne eine Gerade mit Steigung $2$ und vermute, welche Steigung eine dazu senkrechte Gerade hat.",
+       "auftraege": [
+        "Zeichne $f(x)=x^2$ und die Tangente in $(1\\mid 1)$; bestimme ihre Steigung rechnerisch und mit dem Steigungsdreieck.",
+        "Konstruiere mit dem Geodreieck die Senkrechte im Berührpunkt und miss ihre Steigung.",
+        "Vergleiche die gemessene Normalensteigung mit $-\\frac{1}{m_t}$."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche drei Schritte führen zur Tangentengleichung?",
+       "antwort": "Steigung $m=f'(x_0)$ bestimmen, $y_0=f(x_0)$ berechnen, $b$ aus $y_0=m\\cdot x_0+b$ ermitteln."
+      },
+      {
+       "frage": "Wie hängen Tangenten- und Normalensteigung zusammen?",
+       "antwort": "$m_t\\cdot m_n=-1$, also $m_n=-\\frac{1}{m_t}$."
+      },
+      {
+       "frage": "Tangente $y=3x-5$. Wie lautet die Normalensteigung im selben Punkt?",
+       "antwort": "$m_n=-\\frac{1}{3}$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-004"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-012"
+       ]
+      }
+     ],
+     "partner": "Gebt euch gegenseitig eine Funktion und eine Stelle — der andere berechnet Tangente und Normale vollständig."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-006"
+       ]
+      }
+     ],
+     "transfer": "An welcher Stelle hat $f(x) = x^2$ die Tangentensteigung $6$? Erkläre dein Vorgehen in einem Satz."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du bestimmst die Tangentengleichung $y=m\\cdot x+b$ an einem gegebenen Punkt vollständig."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du nutzt die Beziehung $m_t\\cdot m_n=-1$, um die Normale aufzustellen."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum Tangente und Normale im Berührpunkt senkrecht aufeinander stehen."
+    }
+   ]
+  },
+  {
+   "id": "l8",
+   "nr": 3,
+   "titel": "Monotonie und Extrempunkte",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-ableitungsregeln-und-anwendungen",
+   "themaPfad": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/",
+   "anker": "#ablr-monotonie",
+   "ziele": [
+    "Ich kann mithilfe von $f'$ Monotoniebereiche bestimmen und in einer Tabelle darstellen.",
+    "Ich kann Hoch- und Tiefpunkte mit notwendiger und hinreichender Bedingung berechnen."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Wie unterscheiden sich notwendige und hinreichende Bedingung? Kurze Sammlung an der Tafel — Sattelpunkte als Gegenbeispiel einführen."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung: Vorzeichen von $f'$ und Monotonieverhalten aus dem Vorläuferkurs.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-010"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ablr-monotonie",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-monotonie"
+     },
+     "schritte": [
+      {
+       "titel": "Monotonie über das Vorzeichen von $f'$",
+       "html": "<p>Wo $f'(x)>0$ ist, <strong>steigt</strong> $f$; wo $f'(x)<0$ ist, <strong>fällt</strong> $f$. Man bestimmt also zuerst die Nullstellen von $f'$ und prüft dann das Vorzeichen von $f'$ in den entstehenden Abschnitten — am besten in einer Tabelle.</p>",
+       "check": {
+        "frage": "$f'(x)=x^2-4$. Auf welchem Bereich fällt $f$?",
+        "antwort": "Zwischen den Nullstellen $-2$ und $2$ ist $f'(x)<0$, dort fällt $f$ (auf $]-2;2[$)."
+       }
+      },
+      {
+       "titel": "Notwendige Bedingung für Extrempunkte",
+       "html": "<p>An einem Hoch- oder Tiefpunkt verläuft die Tangente waagerecht. Deshalb ist die <strong>notwendige Bedingung</strong>: $f'(x_0)=0$. Diese Gleichung liefert die <em>Kandidaten</em> — ob es wirklich ein Extrempunkt ist, muss noch geprüft werden.</p>",
+       "check": {
+        "frage": "Warum heißt $f'(x_0)=0$ nur „notwendig“?",
+        "antwort": "Weil sie zwar an jedem Extrempunkt gilt, aber auch an Sattelpunkten — sie liefert nur Kandidaten, keine Garantie."
+       }
+      },
+      {
+       "titel": "Hinreichende Bedingung und Art",
+       "html": "<p>Bei einem Kandidaten $x_0$ mit $f'(x_0)=0$ entscheidet die <strong>zweite Ableitung</strong>: $f''(x_0)<0\\Rightarrow$ Hochpunkt, $f''(x_0)>0\\Rightarrow$ Tiefpunkt. (Bei $f''(x_0)=0$ hilft die Vorzeichentabelle von $f'$.) Den $y$-Wert erhält man durch Einsetzen in $f$.</p>",
+       "check": {
+        "frage": "$f'(x_0)=0$ und $f''(x_0)=6>0$. Welche Art Extrempunkt liegt vor?",
+        "antwort": "Ein Tiefpunkt (der Graph ist dort linksgekrümmt, also eine „Mulde“)."
+       }
+      }
+     ],
+     "merksatz": "<strong>Notwendig:</strong> $f'(x_0)=0$ (Kandidaten). <strong>Hinreichend:</strong> $f''(x_0)<0\\Rightarrow$ Hochpunkt, $f''(x_0)>0\\Rightarrow$ Tiefpunkt. Monotonie liest man am <strong>Vorzeichen von $f'$</strong> ab: $f'>0$ steigend, $f'<0$ fallend.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Höchster und tiefster Punkt einer Wurfbahn",
+       "material": "Ball, Handy zum Filmen oder Stoppuhr, freie Fläche; alternativ vorgegebene Funktion $h(t)=-5t^2+10t$.",
+       "vorhersage": "Ein Ball fliegt nach $h(t)=-5t^2+10t$ (Höhe in m). Vermute, nach wie vielen Sekunden er am höchsten ist.",
+       "auftraege": [
+        "Bestimme $h'(t)$ und löse $h'(t)=0$ — wann verläuft die Tangente waagerecht?",
+        "Prüfe mit $h''$, ob es ein Hoch- oder Tiefpunkt ist, und berechne die maximale Höhe.",
+        "Vergleiche dein Ergebnis mit einem echten oder gefilmten Wurf: Passt der Zeitpunkt der größten Höhe?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie bestimmst du, wo $f$ steigt oder fällt?",
+       "antwort": "Über das Vorzeichen von $f'$: $f'>0$ steigend, $f'<0$ fallend (Nullstellen von $f'$ als Grenzen)."
+      },
+      {
+       "frage": "Wie lautet die notwendige Bedingung für einen Extrempunkt?",
+       "antwort": "$f'(x_0)=0$."
+      },
+      {
+       "frage": "Wie unterscheidest du mit $f''$ Hoch- und Tiefpunkt?",
+       "antwort": "$f''(x_0)<0$ ergibt einen Hochpunkt, $f''(x_0)>0$ einen Tiefpunkt."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-007"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-010",
+        "ma-ep-ablr-008"
+       ]
+      }
+     ],
+     "partner": "Einer nennt eine Funktion dritten Grades — der andere bestimmt alle Extrempunkte vollständig (notwendig + hinreichend)."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-104"
+       ]
+      }
+     ],
+     "transfer": "Jonas sagt: Jede Funktion dritten Grades hat genau einen Hoch- und einen Tiefpunkt. Stimmt das? Nenne eine Funktion als Gegenbeispiel oder beweise, dass es stimmt."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du bestimmst Hoch- und Tiefpunkte mit notwendiger und hinreichender Bedingung."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du stellst Monotoniebereiche in einer Vorzeichentabelle von $f'$ dar."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum $f'(x_0)=0$ allein noch keinen Extrempunkt garantiert."
+    }
+   ]
+  },
+  {
+   "id": "l9",
+   "nr": 4,
+   "titel": "Krümmung und Wendepunkte",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-ableitungsregeln-und-anwendungen",
+   "themaPfad": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/",
+   "anker": "#ablr-kruemmung",
+   "ziele": [
+    "Ich kann Links- und Rechtskrümmung anhand des Vorzeichens von $f''$ bestimmen.",
+    "Ich kann Wendepunkte mit notwendiger und hinreichender Bedingung berechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 8: Zweite Ableitung und hinreichende Bedingung für Extrempunkte.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-011"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ablr-kruemmung",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-kruemmung"
+     },
+     "schritte": [
+      {
+       "titel": "Krümmung über $f''$",
+       "html": "<p>Die zweite Ableitung misst die Krümmung: $f''(x)>0$ bedeutet <strong>Linkskrümmung</strong> (nach oben gekrümmt), $f''(x)<0$ bedeutet <strong>Rechtskrümmung</strong> (nach unten gekrümmt). Man bestimmt die Nullstellen von $f''$ und prüft das Vorzeichen in den Abschnitten.</p>",
+       "check": {
+        "frage": "$f''(x)=6x$. Wie ist der Graph für $x<0$ gekrümmt?",
+        "antwort": "Für $x<0$ ist $f''(x)<0$, also rechtsgekrümmt (nach unten gekrümmt)."
+       }
+      },
+      {
+       "titel": "Wendepunkte: notwendige Bedingung",
+       "html": "<p>Ein <strong>Wendepunkt</strong> ist eine Stelle, an der die Krümmung von links nach rechts (oder umgekehrt) wechselt. Dort muss $f''$ das Vorzeichen wechseln, also ist die <strong>notwendige Bedingung</strong> $f''(x_0)=0$.</p>",
+       "check": {
+        "frage": "Welche Gleichung liefert die Wendestellen-Kandidaten?",
+        "antwort": "$f''(x_0)=0$."
+       }
+      },
+      {
+       "titel": "Hinreichende Bedingung",
+       "html": "<p>Hinreichend für einen Wendepunkt ist ein <strong>Vorzeichenwechsel</strong> von $f''$ an $x_0$. Praktisch prüft man $f'''(x_0)\\neq 0$ oder die Vorzeichentabelle. Beispiel $f(x)=x^3$: $f''(x)=6x$ wird bei $x=0$ null und wechselt das Vorzeichen — Wendepunkt $(0\\mid 0)$.</p>",
+       "check": {
+        "frage": "Reicht $f''(x_0)=0$ für einen Wendepunkt aus?",
+        "antwort": "Nein — zusätzlich muss $f''$ dort das Vorzeichen wechseln (z. B. $f'''(x_0)\\neq 0$)."
+       }
+      }
+     ],
+     "merksatz": "$f''>0$ bedeutet <strong>Linkskrümmung</strong>, $f''<0$ <strong>Rechtskrümmung</strong>. Ein <strong>Wendepunkt</strong> erfüllt $f''(x_0)=0$ <em>und</em> einen Vorzeichenwechsel von $f''$ (z. B. $f'''(x_0)\\neq 0$).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wo eine Straße die Kurve wechselt",
+       "material": "Skizze einer S-Kurve (Straße/Achterbahn), biegsames Lineal, Papier.",
+       "vorhersage": "Markiere auf einer S-förmigen Kurve die Stelle, an der sie von einer Links- in eine Rechtskurve übergeht — das ist der vermutete Wendepunkt.",
+       "auftraege": [
+        "Lege das biegsame Lineal entlang der Kurve und finde die Übergangsstelle zwischen Links- und Rechtskrümmung.",
+        "Berechne für $f(x)=x^3-3x^2$ die zweite Ableitung und löse $f''(x)=0$.",
+        "Prüfe den Vorzeichenwechsel von $f''$ und vergleiche die berechnete Wendestelle mit der gefühlten."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was bedeutet $f''(x)>0$ für die Krümmung?",
+       "antwort": "Linkskrümmung (der Graph ist nach oben gekrümmt)."
+      },
+      {
+       "frage": "Wie lautet die notwendige Bedingung für einen Wendepunkt?",
+       "antwort": "$f''(x_0)=0$."
+      },
+      {
+       "frage": "Bestimme die Wendestelle von $f(x)=x^3$.",
+       "antwort": "$f''(x)=6x=0\\Rightarrow x=0$; Vorzeichenwechsel vorhanden, also Wendepunkt $(0\\mid 0)$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-009"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-004"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig: Warum ist $f''(x_0) = 0$ für einen Wendepunkt notwendig, aber nicht hinreichend? Gebt ein Gegenbeispiel."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-012"
+       ]
+      }
+     ],
+     "transfer": "Eine Kurve beschreibt den Verlauf einer Fieberkurve. Bei $t = 3$ ist $f''(3) = 0$ mit Vorzeichenwechsel von $+$ nach $-$. Was bedeutet das für den Fieberverlauf — steigt oder fällt das Fieber noch?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du bestimmst Links- und Rechtskrümmung anhand des Vorzeichens von $f''$ und begründest sie."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du berechnest Wendepunkte mit notwendiger und hinreichender Bedingung."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du stellst das Krümmungsverhalten in einer Vorzeichentabelle von $f''$ dar."
+    }
+   ]
+  },
+  {
+   "id": "l10",
+   "nr": 5,
+   "titel": "Optimierung — Extremwerte im Sachkontext",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-ableitungsregeln-und-anwendungen",
+   "themaPfad": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/",
+   "anker": "#ablr-optimierung",
+   "ziele": [
+    "Ich kann ein Optimierungsproblem in vier Schritten lösen: Zielfunktion, Definitionsbereich, Ableitung, Randwerte.",
+    "Ich kann den Antwortsatz im Sachzusammenhang formulieren."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Aufwärmen: Extrempunkte aus Lektion 8 kurz wiederholen.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-006"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ablr-optimierung",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html#ablr-optimierung"
+     },
+     "schritte": [
+      {
+       "titel": "Zielfunktion aufstellen",
+       "html": "<p>Bei einer Optimierungsaufgabe ist eine Größe maximal oder minimal zu machen. Schreibe diese als <strong>Zielfunktion</strong>, die nur von <em>einer</em> Variablen abhängt. Oft brauchst du dafür eine <strong>Nebenbedingung</strong>, um eine zweite Variable zu ersetzen.</p>",
+       "check": {
+        "frage": "Ein Rechteck hat Umfang $20$. Drücke die Fläche $A$ durch eine Variable aus.",
+        "antwort": "Aus $2x+2y=20$ folgt $y=10-x$, also $A(x)=x\\cdot(10-x)=10x-x^2$."
+       }
+      },
+      {
+       "titel": "Definitionsbereich festlegen",
+       "html": "<p>Nicht jeder $x$-Wert ist sinnvoll: Längen sind positiv, Mengen begrenzt. Lege den <strong>Definitionsbereich</strong> aus dem Sachkontext fest, z. B. $0<x<10$. Nur darin wird das Optimum gesucht.</p>",
+       "check": {
+        "frage": "Warum darf bei $A(x)=10x-x^2$ der Wert $x=0$ ausgeschlossen werden?",
+        "antwort": "Bei $x=0$ hätte das Rechteck keine Seite und keine Fläche — sinnvoll ist $0<x<10$."
+       }
+      },
+      {
+       "titel": "Ableiten, Extremum, Randwerte, Antwort",
+       "html": "<p>1. $A'(x)=0$ lösen und mit $A''$ die Art prüfen. 2. <strong>Randwerte</strong> des Definitionsbereichs vergleichen. 3. Den Wert der zweiten Variablen ergänzen. 4. <strong>Antwortsatz</strong> mit Einheiten schreiben. Bei $A(x)=10x-x^2$: $A'(x)=10-2x=0\\Rightarrow x=5$, $A''=-2<0$ (Maximum), $A(5)=25$.</p>",
+       "check": {
+        "frage": "Welches Rechteck mit Umfang $20$ hat die größte Fläche?",
+        "antwort": "Das Quadrat mit $x=y=5$; die maximale Fläche ist $25$ Flächeneinheiten."
+       }
+      }
+     ],
+     "merksatz": "Optimieren in vier Schritten: <strong>1.</strong> Zielfunktion (mit Nebenbedingung) auf eine Variable bringen, <strong>2.</strong> Definitionsbereich aus dem Sachkontext, <strong>3.</strong> $f'=0$ und Art mit $f''$ prüfen, dazu Randwerte vergleichen, <strong>4.</strong> Antwortsatz mit Einheiten.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Die größte Schachtel aus einem Blatt",
+       "material": "DIN-A4-Blatt, Schere, Lineal, Taschenrechner.",
+       "vorhersage": "Aus einem Blatt schneidet man an den Ecken Quadrate der Seite $x$ heraus und faltet eine offene Schachtel. Vermute, welche Eckgröße das größte Volumen ergibt.",
+       "auftraege": [
+        "Stelle das Volumen $V(x)$ in Abhängigkeit von der Eckgröße $x$ auf (Länge und Breite des Blattes messen).",
+        "Bestimme den Definitionsbereich und löse $V'(x)=0$.",
+        "Falte zwei oder drei Schachteln mit verschiedenen $x$ und vergleiche, ob dein berechnetes $x$ wirklich das größte Volumen liefert."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was ist die Zielfunktion?",
+       "antwort": "Die Funktion der zu optimierenden Größe, abhängig von genau einer Variablen (nach Einsetzen der Nebenbedingung)."
+      },
+      {
+       "frage": "Warum prüft man bei Optimierungsaufgaben auch die Randwerte?",
+       "antwort": "Das Maximum oder Minimum kann am Rand des Definitionsbereichs liegen, nicht nur an einer Nullstelle von $f'$."
+      },
+      {
+       "frage": "Nenne die vier Schritte einer Optimierungsaufgabe.",
+       "antwort": "Zielfunktion aufstellen, Definitionsbereich festlegen, Ableitung/Extremum (und Randwerte) bestimmen, Antwortsatz im Sachzusammenhang."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-106"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-010"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-107"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig ein Optimierungsproblem auf (Zaun, Schachtel, Fläche) — der andere formuliert Zielfunktion und Definitionsbereich."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-007"
+       ]
+      }
+     ],
+     "transfer": "Warum müssen beim Optimieren immer auch die Randwerte des Definitionsbereichs geprüft werden? Gib ein Beispiel, bei dem das innere Maximum keine Bedeutung hat."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du übersetzt eine Sachsituation in eine Zielfunktion mit passendem Definitionsbereich."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du löst Optimierungsprobleme in vier Schritten und prüfst auch die Randwerte."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du formulierst das Ergebnis als Antwortsatz im Sachzusammenhang mit Einheiten."
+    }
+   ]
+  },
+  {
+   "id": "l11",
+   "nr": 1,
+   "titel": "Was eine Funktion ausmacht",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-funktionen-im-ueberblick",
+   "themaPfad": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/",
+   "anker": "#fkt-begriff",
+   "ziele": [
+    "Ich kann erklären, was eine Funktion ist, und die Begriffe Definitionsbereich, Wertebereich und Funktionsvorschrift nennen.",
+    "Ich kann zu einem gegebenen Graphen entscheiden, ob er eine Funktion darstellt (vertikaler Linientest)."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Vorwissen aus Klasse 8: Was ist eine Funktion? Sammle 2-3 Beispiele aus dem Alltag.",
+     "aufgaben": [
+      {
+       "quelle": "ma-08-lineare-funktionen",
+       "ids": [
+        "ma-08-lf-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#fkt-begriff",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/index.html#fkt-begriff"
+     },
+     "schritte": [
+      {
+       "titel": "Was eine Funktion ausmacht",
+       "html": "<p>Eine <strong>Funktion</strong> ordnet jedem Wert aus dem <strong>Definitionsbereich</strong> $D$ <em>genau einen</em> Wert aus dem <strong>Wertebereich</strong> $W$ zu. Die <strong>Funktionsvorschrift</strong> $f(x)$ sagt, wie man den zugeordneten Wert berechnet. Entscheidend ist die Eindeutigkeit: zu jedem $x$ höchstens ein $y$.</p>",
+       "check": {
+        "frage": "Was bedeutet „eindeutig“ bei einer Funktion?",
+        "antwort": "Jedem $x$ aus dem Definitionsbereich wird genau ein $y$-Wert zugeordnet — nicht zwei verschiedene."
+       }
+      },
+      {
+       "titel": "Definitions- und Wertebereich",
+       "html": "<p>Der <strong>Definitionsbereich</strong> sind alle erlaubten $x$ (z. B. keine Division durch $0$, keine Wurzel aus negativen Zahlen). Der <strong>Wertebereich</strong> sind alle tatsächlich angenommenen $y$-Werte. Beispiel $f(x)=x^2$: erlaubt sind alle reellen Zahlen, angenommen werden nur Werte $y\\geq 0$.</p>",
+       "check": {
+        "frage": "Welcher $x$-Wert ist bei $f(x)=\\frac{1}{x}$ verboten?",
+        "antwort": "$x=0$, weil man nicht durch null teilen darf; der Definitionsbereich ist alles außer $0$."
+       }
+      },
+      {
+       "titel": "Der vertikale Linientest",
+       "html": "<p>Ob ein Graph eine Funktion darstellt, prüft man mit dem <strong>vertikalen Linientest</strong>: Schneidet jede senkrechte Gerade den Graphen <em>höchstens einmal</em>, ist es eine Funktion. Schneidet eine Senkrechte zweimal, gäbe es zu einem $x$ zwei $y$-Werte — keine Funktion (z. B. ein liegender Kreis).</p>",
+       "check": {
+        "frage": "Eine Senkrechte schneidet den Graphen an zwei Stellen. Funktion oder nicht?",
+        "antwort": "Keine Funktion — zu diesem $x$ gehören zwei verschiedene $y$-Werte."
+       }
+      }
+     ],
+     "merksatz": "Eine <strong>Funktion</strong> ordnet jedem $x$ aus dem <strong>Definitionsbereich</strong> genau einen $y$-Wert (im <strong>Wertebereich</strong>) zu. Der <strong>vertikale Linientest</strong> entscheidet: trifft jede Senkrechte den Graphen höchstens einmal, ist es eine Funktion.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Linientest mit dem Lineal",
+       "material": "Verschiedene gezeichnete Kurven (Parabel, Kreis, Wellenlinie, senkrechte Gerade), durchsichtiges Lineal.",
+       "vorhersage": "Sieh dir die vier Kurven an und vermute, welche eine Funktion sind und welche nicht.",
+       "auftraege": [
+        "Führe das Lineal senkrecht über jede Kurve und zähle, an wie vielen Stellen es die Kurve trifft.",
+        "Entscheide für jede Kurve mit dem Linientest, ob sie eine Funktion ist.",
+        "Gib bei der Parabel Definitions- und Wertebereich an und prüfe, ob ein liegender Kreis den Test besteht."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was ist eine Funktion?",
+       "antwort": "Eine Zuordnung, die jedem $x$ aus dem Definitionsbereich genau einen $y$-Wert zuordnet."
+      },
+      {
+       "frage": "Was beschreibt der Wertebereich?",
+       "antwort": "Die Menge aller $y$-Werte, die die Funktion tatsächlich annimmt."
+      },
+      {
+       "frage": "Wie funktioniert der vertikale Linientest?",
+       "antwort": "Trifft jede senkrechte Gerade den Graphen höchstens einmal, ist es eine Funktion; sonst nicht."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-001",
+        "ma-ep-fkt-002"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-108"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig: Was ist der Unterschied zwischen Definitions- und Wertebereich? Gebt je ein Beispiel."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-101"
+       ]
+      }
+     ],
+     "transfer": "Ist die Zuordnung 'Jeder Schüler -> seine Schuhgröße' eine Funktion? Und die Umkehrung? Begründe mit dem Funktionsbegriff."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du verwendest die Begriffe Definitionsbereich, Wertebereich und Funktionsvorschrift korrekt."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du entscheidest mit dem vertikalen Linientest, ob ein Graph eine Funktion darstellt."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du wechselst zwischen Term, Wertetabelle und Graph als Darstellungsformen einer Funktion."
+    }
+   ]
+  },
+  {
+   "id": "l12",
+   "nr": 2,
+   "titel": "Lineare und quadratische Funktionen im Überblick",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-funktionen-im-ueberblick",
+   "themaPfad": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/",
+   "anker": "#fkt-gerade-parabel",
+   "ziele": [
+    "Ich kann die Steigung und den $y$-Achsenabschnitt einer linearen Funktion aus dem Term ablesen.",
+    "Ich kann Scheitelpunkt und Öffnungsrichtung einer quadratischen Funktion in Scheitelpunktform bestimmen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 11: Funktionsbegriff und Linientest.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-102"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#fkt-gerade-parabel",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/index.html#fkt-gerade-parabel"
+     },
+     "schritte": [
+      {
+       "titel": "Lineare Funktionen",
+       "html": "<p>$f(x)=m\\cdot x+b$ beschreibt eine Gerade. Die <strong>Steigung</strong> $m$ gibt an, um wie viel $y$ wächst, wenn $x$ um $1$ zunimmt; $b$ ist der <strong>$y$-Achsenabschnitt</strong> (Schnittpunkt mit der $y$-Achse). Die Nullstelle löst $m\\cdot x+b=0$.</p>",
+       "check": {
+        "frage": "Lies bei $f(x)=2x-6$ Steigung, $y$-Achsenabschnitt und Nullstelle ab.",
+        "antwort": "$m=2$, $b=-6$, Nullstelle aus $2x-6=0\\Rightarrow x=3$."
+       }
+      },
+      {
+       "titel": "Quadratische Funktionen — Scheitelpunktform",
+       "html": "<p>$f(x)=a(x-d)^2+e$ ist eine Parabel mit <strong>Scheitelpunkt</strong> $S(d\\mid e)$. Das Vorzeichen von $a$ bestimmt die <strong>Öffnungsrichtung</strong>: $a>0$ nach oben (Minimum), $a<0$ nach unten (Maximum). $|a|$ steuert, wie schmal die Parabel ist.</p>",
+       "check": {
+        "frage": "Bestimme Scheitelpunkt und Öffnungsrichtung von $f(x)=-2(x-3)^2+5$.",
+        "antwort": "Scheitelpunkt $S(3\\mid 5)$, wegen $a=-2<0$ nach unten geöffnet (Maximum)."
+       }
+      },
+      {
+       "titel": "Nullstellen und Schnittpunkte",
+       "html": "<p>Nullstellen quadratischer Funktionen findet man mit der $p$-$q$-Formel oder durch Ausklammern. Den <strong>Schnittpunkt</strong> zweier Funktionen erhält man, indem man die Terme gleichsetzt, nach $x$ löst und in eine Funktion einsetzt.</p>",
+       "check": {
+        "frage": "Wo schneiden sich $f(x)=x+1$ und $g(x)=2x-1$?",
+        "antwort": "$x+1=2x-1\\Rightarrow x=2$, dann $y=3$. Schnittpunkt $(2\\mid 3)$."
+       }
+      }
+     ],
+     "merksatz": "<strong>Linear:</strong> $f(x)=m\\cdot x+b$ — Steigung $m$, $y$-Achsenabschnitt $b$. <strong>Quadratisch (Scheitelpunktform):</strong> $f(x)=a(x-d)^2+e$ mit Scheitelpunkt $S(d\\mid e)$; $a>0$ nach oben, $a<0$ nach unten geöffnet. <strong>Schnittpunkt:</strong> Terme gleichsetzen.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Parabel und Gerade übereinanderlegen",
+       "material": "Millimeterpapier, Lineal, Bleistift, Taschenrechner.",
+       "vorhersage": "Zeichne die Parabel $f(x)=(x-2)^2-1$ und die Gerade $g(x)=x$. Vermute, in wie vielen Punkten sie sich schneiden.",
+       "auftraege": [
+        "Zeichne beide Graphen sorgfältig und lies die Schnittpunkte ab.",
+        "Bestätige die Schnittpunkte durch Gleichsetzen und Lösen der entstehenden Gleichung.",
+        "Verändere $g$ zu $g(x)=x-3$ und untersuche, wie sich die Zahl der Schnittpunkte ändert."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was bedeuten $m$ und $b$ bei $f(x)=m\\cdot x+b$?",
+       "antwort": "$m$ ist die Steigung, $b$ der $y$-Achsenabschnitt."
+      },
+      {
+       "frage": "Wie liest du den Scheitelpunkt aus $f(x)=a(x-d)^2+e$ ab?",
+       "antwort": "Der Scheitelpunkt ist $S(d\\mid e)$; $a>0$ nach oben, $a<0$ nach unten geöffnet."
+      },
+      {
+       "frage": "Wie bestimmst du den Schnittpunkt zweier Funktionen?",
+       "antwort": "Terme gleichsetzen, nach $x$ lösen, $x$ in eine Funktion einsetzen, um $y$ zu erhalten."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-003",
+        "ma-ep-fkt-004"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-006"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-104"
+       ]
+      }
+     ],
+     "partner": "Einer nennt eine Scheitelpunktform -- der andere liest Scheitel und Öffnungsrichtung ab und skizziert die Parabel."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-103"
+       ]
+      }
+     ],
+     "transfer": "Eine Parabel öffnet nach unten und hat ihren Scheitel bei $S(2 \\mid 5)$. Wie lautet der Funktionsterm? Was ist der größte Wert, den $f$ annimmt?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du liest Steigung und $y$-Achsenabschnitt linearer Funktionen aus Term und Graph ab."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du bestimmst Scheitelpunkt und Öffnungsrichtung quadratischer Funktionen in Scheitelpunktform."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du berechnest Nullstellen und Schnittpunkte linearer und quadratischer Funktionen."
+    }
+   ]
+  },
+  {
+   "id": "l13",
+   "nr": 3,
+   "titel": "Potenz-, Wurzel- und Kehrwertfunktion",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-funktionen-im-ueberblick",
+   "themaPfad": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/",
+   "anker": "#fkt-bausteine",
+   "ziele": [
+    "Ich kann $x^n$, $\\sqrt{x}$ und $\\frac{1}{x}$ beschreiben und ihre Graphen skizzieren.",
+    "Ich kenne Symmetrieeigenschaften: achsensymmetrisch ($n$ gerade), punktsymmetrisch ($n$ ungerade)."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzer Impuls: Symmetrie bei Funktionen -- Achsensymmetrie vs. Punktsymmetrie. Kurze Sammlung an der Tafel mit je einem Beispiel."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 12: Lineare und quadratische Funktion kurz wiederholen.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-109"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#fkt-bausteine",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/index.html#fkt-bausteine"
+     },
+     "schritte": [
+      {
+       "titel": "Potenzfunktionen $x^n$",
+       "html": "<p>Bei $f(x)=x^n$ entscheidet der Exponent über die Form: Für gerades $n$ verläuft der Graph wie eine Parabel (beide Äste nach oben, achsensymmetrisch zur $y$-Achse). Für ungerades $n$ läuft er von links unten nach rechts oben (punktsymmetrisch zum Ursprung). Je größer $n$, desto flacher in der Mitte und steiler außen.</p>",
+       "check": {
+        "frage": "Wie verläuft der Graph von $f(x)=x^4$ grob?",
+        "antwort": "Wie eine breitere Parabel: beide Äste nach oben, achsensymmetrisch zur $y$-Achse, in der Mitte flacher als $x^2$."
+       }
+      },
+      {
+       "titel": "Symmetrie über gerade/ungerade $n$",
+       "html": "<p>Ist $n$ <strong>gerade</strong>, gilt $f(-x)=f(x)$: der Graph ist <strong>achsensymmetrisch</strong> zur $y$-Achse. Ist $n$ <strong>ungerade</strong>, gilt $f(-x)=-f(x)$: der Graph ist <strong>punktsymmetrisch</strong> zum Ursprung.</p>",
+       "check": {
+        "frage": "Welche Symmetrie hat $f(x)=x^3$?",
+        "antwort": "Punktsymmetrie zum Ursprung, weil der Exponent $3$ ungerade ist."
+       }
+      },
+      {
+       "titel": "Wurzel- und Kehrwertfunktion",
+       "html": "<p>$\\sqrt{x}$ ist nur für $x\\geq 0$ definiert; der Graph startet im Ursprung und steigt immer flacher. $\\frac{1}{x}$ ist für $x\\neq 0$ definiert; der Graph hat die <strong>Asymptoten</strong> $x=0$ und $y=0$ und besteht aus zwei Ästen (Hyperbel, punktsymmetrisch zum Ursprung).</p>",
+       "check": {
+        "frage": "Welche Werte sind bei $\\frac{1}{x}$ und bei $\\sqrt{x}$ verboten?",
+        "antwort": "Bei $\\frac{1}{x}$ ist $x=0$ verboten; bei $\\sqrt{x}$ sind alle $x<0$ verboten."
+       }
+      }
+     ],
+     "merksatz": "$x^n$: gerades $n$ ⇒ achsensymmetrisch (parabelartig), ungerades $n$ ⇒ punktsymmetrisch. $\\sqrt{x}$ ist nur für $x\\geq 0$ definiert. $\\frac{1}{x}$ ist für $x\\neq 0$ definiert und hat die Asymptoten $x=0$ und $y=0$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Funktionsfamilien zeichnen und vergleichen",
+       "material": "Millimeterpapier oder ein offline-Funktionsplotter, Buntstifte, Wertetabelle.",
+       "vorhersage": "Vermute, welcher der Graphen $x^2$, $x^3$, $\\sqrt{x}$, $\\frac{1}{x}$ durch den Ursprung verläuft und welcher nicht.",
+       "auftraege": [
+        "Lege Wertetabellen an und zeichne die vier Graphen in ein Koordinatensystem (verschiedene Farben).",
+        "Untersuche jeden Graphen auf Symmetrie und prüfe die Vorhersage mit $f(-x)$.",
+        "Bestimme bei $\\frac{1}{x}$ die beiden Asymptoten und beschreibe, was nahe $x=0$ passiert."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche Symmetrie hat $f(x)=x^n$ bei geradem $n$?",
+       "antwort": "Achsensymmetrie zur $y$-Achse, denn $f(-x)=f(x)$."
+      },
+      {
+       "frage": "Für welche $x$ ist $\\sqrt{x}$ definiert?",
+       "antwort": "Für $x\\geq 0$."
+      },
+      {
+       "frage": "Welche Asymptoten hat der Graph von $\\frac{1}{x}$?",
+       "antwort": "Die $y$-Achse ($x=0$) und die $x$-Achse ($y=0$)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-001"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-007",
+        "ma-ep-fkt-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-012"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig: Warum ist $x^4$ achsensymmetrisch, $x^3$ aber punktsymmetrisch? Testet mit $f(-x)$."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-009"
+       ]
+      }
+     ],
+     "transfer": "Die Kehrwertfunktion $f(x) = \\frac{1}{x}$ ist für $x = 0$ nicht definiert. Warum ergibt sich dort eine Asymptote?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du skizzierst die Graphen von $x^n$, $\\sqrt{x}$ und $\\frac{1}{x}$ und beschreibst ihren Verlauf."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest Symmetrieeigenschaften über gerade und ungerade Exponenten."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du gibst Definitionsbereiche an und erkennst die Asymptoten der Kehrwertfunktion."
+    }
+   ]
+  },
+  {
+   "id": "l14",
+   "nr": 4,
+   "titel": "Exponential- und Sinusfunktion im Überblick",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-funktionen-im-ueberblick",
+   "themaPfad": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/",
+   "anker": "#fkt-exp-sinus",
+   "ziele": [
+    "Ich kann $f(x) = a^x$ und $g(x) = \\sin(x)$ beschreiben: Definitionsbereich, Verlauf, Asymptote bzw. Periode.",
+    "Ich kann den $y$-Achsenabschnitt und das Wachstumsverhalten der Exponentialfunktion angeben."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Symmetrie und Potenzfunktionen aus Lektion 13.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#fkt-exp-sinus",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/index.html#fkt-exp-sinus"
+     },
+     "schritte": [
+      {
+       "titel": "Die Exponentialfunktion $a^x$",
+       "html": "<p>$f(x)=a^x$ mit $a>1$ wächst immer schneller — das ist <strong>exponentielles Wachstum</strong>. Der Graph schneidet die $y$-Achse stets bei $1$ (denn $a^0=1$), ist überall positiv und nähert sich nach links der $x$-Achse als <strong>Asymptote</strong> ($y=0$), ohne sie zu erreichen.</p>",
+       "check": {
+        "frage": "Welchen $y$-Achsenabschnitt hat jede Funktion $f(x)=a^x$?",
+        "antwort": "$1$, weil $a^0=1$ für jede Basis $a>0$ gilt."
+       }
+      },
+      {
+       "titel": "Wachstum vergleichen",
+       "html": "<p>Exponentielles Wachstum überholt jedes polynomiale: Auf Dauer wird $2^x$ größer als $x^2$, $x^3$ oder jede Potenz. Das macht Exponentialfunktionen zum Modell für Zinseszins, Bakterienvermehrung oder radioaktiven Zerfall (für $0<a<1$ fallend).</p>",
+       "check": {
+        "frage": "Beschreibt $f(x)=0{,}5^x$ Wachstum oder Abnahme?",
+        "antwort": "Abnahme (Zerfall): für $0<a<1$ fällt der Graph, bleibt aber positiv."
+       }
+      },
+      {
+       "titel": "Die Sinusfunktion $\\sin(x)$",
+       "html": "<p>$g(x)=\\sin(x)$ ist <strong>periodisch</strong> mit der Periode $2\\pi$: Der Graph wiederholt sich immer wieder. Die Werte liegen zwischen $-1$ und $1$ (Amplitude $1$). Solche Funktionen modellieren Schwingungen wie Schall, Wechselstrom oder Gezeiten.</p>",
+       "check": {
+        "frage": "Wie groß ist die Periode von $\\sin(x)$ und in welchem Bereich liegen die Werte?",
+        "antwort": "Die Periode ist $2\\pi$; die Werte liegen zwischen $-1$ und $1$."
+       }
+      }
+     ],
+     "merksatz": "<strong>Exponentialfunktion</strong> $a^x$: für $a>1$ wachsend (schneller als jede Potenz), $y$-Achsenabschnitt $1$, Asymptote $y=0$. <strong>Sinusfunktion</strong> $\\sin(x)$: periodisch mit Periode $2\\pi$, Werte zwischen $-1$ und $1$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Reiskörner auf dem Schachbrett",
+       "material": "Schachbrett oder Raster mit 64 Feldern, Reis oder Bohnen, Taschenrechner.",
+       "vorhersage": "Auf Feld 1 liegt 1 Korn, auf jedem nächsten doppelt so viel. Schätze, wie viele Körner auf Feld 20 lägen.",
+       "auftraege": [
+        "Lege die ersten Felder mit der verdoppelten Menge aus und notiere die Werte als $2^{n-1}$.",
+        "Berechne die Körnerzahl für Feld 10 und Feld 20 und vergleiche mit deiner Schätzung.",
+        "Zeichne die Werte in ein Diagramm und beschreibe, wie sich exponentielles von linearem Wachstum unterscheidet."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welchen $y$-Achsenabschnitt und welche Asymptote hat $f(x)=a^x$?",
+       "antwort": "$y$-Achsenabschnitt $1$ und die Asymptote $y=0$ (die $x$-Achse)."
+      },
+      {
+       "frage": "Was bedeutet „periodisch“ bei $\\sin(x)$?",
+       "antwort": "Der Graph wiederholt sich nach jeder Periodenlänge $2\\pi$ identisch."
+      },
+      {
+       "frage": "Beschreibt $f(x)=3^x$ Wachstum oder Abnahme?",
+       "antwort": "Wachstum, weil die Basis $3>1$ ist."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-110"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-010",
+        "ma-ep-fkt-011"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-107"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Welche Funktion wächst schneller für große $x$: $x^{100}$ oder $2^x$? Macht eine Tabelle für $x = 10$ und $x = 100$."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-013"
+       ]
+      }
+     ],
+     "transfer": "Die Sinusfunktion ist periodisch mit Periode $2\\pi$. Was bedeutet das -- und welche reale Erscheinung aus der Natur folgt diesem Muster?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du beschreibst Exponential- und Sinusfunktion über Verlauf, Asymptote bzw. Periode."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du ordnest Wachstums- und Schwingungsvorgänge der passenden Funktionsklasse zu."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst, warum die Exponentialfunktion schneller wächst als jede Potenzfunktion."
+    }
+   ]
+  },
+  {
+   "id": "l15",
+   "nr": 5,
+   "titel": "Graphen verändern: Verschieben, Strecken, Spiegeln",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-funktionen-im-ueberblick",
+   "themaPfad": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/",
+   "anker": "#fkt-baukasten",
+   "ziele": [
+    "Ich kann aus dem Term $a \\cdot f(b(x-d)) + e$ die Transformationen (Verschiebung, Streckung, Spiegelung) ablesen.",
+    "Ich kann einen gegebenen Graphen durch Transformation beschreiben und den Term aufstellen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung: Scheitelpunktform der Parabel als Spezialfall der Transformation.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-104"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#fkt-baukasten",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/index.html#fkt-baukasten"
+     },
+     "schritte": [
+      {
+       "titel": "Verschieben",
+       "html": "<p>Aus dem Grundgraphen $f(x)$ wird $f(x-d)+e$ durch <strong>Verschiebung</strong>: $+e$ verschiebt um $e$ nach <strong>oben</strong>, $-d$ verschiebt um $d$ nach <strong>rechts</strong>. Achtung: In $x$-Richtung wirkt das Vorzeichen umgekehrt — $f(x-3)$ verschiebt nach rechts, nicht nach links.</p>",
+       "check": {
+        "frage": "Wohin verschiebt $f(x+2)-1$ den Graphen?",
+        "antwort": "Um $2$ nach links (wegen $+2$ im Argument) und um $1$ nach unten."
+       }
+      },
+      {
+       "titel": "Strecken und Stauchen",
+       "html": "<p>Der Faktor $a$ vor der Funktion <strong>streckt</strong> in $y$-Richtung: $|a|>1$ macht den Graphen schmaler/höher, $0<|a|<1$ flacher. Der Faktor $b$ im Argument streckt in $x$-Richtung mit dem Faktor $\\frac{1}{b}$: $b>1$ staucht horizontal, $0<b<1$ streckt horizontal.</p>",
+       "check": {
+        "frage": "Wie wirkt der Faktor $3$ in $g(x)=3\\cdot f(x)$?",
+        "antwort": "Streckung in $y$-Richtung um den Faktor $3$ — alle Funktionswerte werden verdreifacht, der Graph wird steiler/höher."
+       }
+      },
+      {
+       "titel": "Spiegeln",
+       "html": "<p>Ein <strong>Minuszeichen</strong> spiegelt: $-f(x)$ spiegelt an der <strong>$x$-Achse</strong> (oben/unten getauscht), $f(-x)$ spiegelt an der <strong>$y$-Achse</strong> (links/rechts getauscht). Im Gesamtterm $a\\cdot f(b(x-d))+e$ liest man die Transformationen Schritt für Schritt ab.</p>",
+       "check": {
+        "frage": "Was bewirkt das Minus in $h(x)=-f(x)$?",
+        "antwort": "Spiegelung an der $x$-Achse: der Graph wird nach oben/unten umgeklappt."
+       }
+      }
+     ],
+     "merksatz": "Im Term $a\\cdot f(b(x-d))+e$ steht $a$ für Streckung/Spiegelung in $y$-Richtung, $b$ für Streckung/Stauchung in $x$-Richtung, $d$ für Verschiebung in $x$- (umgekehrtes Vorzeichen!) und $e$ für Verschiebung in $y$-Richtung.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Eine Parabel wandern lassen",
+       "material": "Millimeterpapier, Bleistift, Lineal; alternativ ein offline-Funktionsplotter.",
+       "vorhersage": "Zeichne $f(x)=x^2$. Vermute, wie der Graph von $g(x)=(x-2)^2+1$ dazu liegt — wohin verschiebt er sich?",
+       "auftraege": [
+        "Zeichne $f(x)=x^2$ und darüber $g(x)=(x-2)^2+1$ und vergleiche die Lage der Scheitelpunkte.",
+        "Untersuche $-x^2$ und $2x^2$: Welche Transformation erkennst du jeweils?",
+        "Gib zu einem vorgegebenen, verschobenen Parabelgraphen den passenden Term an und prüfe ihn durch Einsetzen."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wohin verschiebt $f(x-4)$ den Graphen?",
+       "antwort": "Um $4$ nach rechts (Vorzeichen im $x$-Argument wirkt umgekehrt)."
+      },
+      {
+       "frage": "Was bewirkt der Faktor $a$ in $a\\cdot f(x)$?",
+       "antwort": "Eine Streckung in $y$-Richtung (bei $a<0$ zusätzlich eine Spiegelung an der $x$-Achse)."
+      },
+      {
+       "frage": "Woran erkennst du eine Spiegelung an der $y$-Achse?",
+       "antwort": "Am Argument $-x$, also $f(-x)$: links und rechts werden getauscht."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-012"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-108"
+       ]
+      }
+     ],
+     "partner": "Einer zeichnet einen transformierten Graphen, der andere schreibt den Term auf. Tauscht dann die Rollen."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-106"
+       ]
+      }
+     ],
+     "transfer": "Der Graph einer Sinusfunktion wurde um $\\frac{\\pi}{2}$ nach rechts verschoben und in $y$-Richtung auf das Doppelte gestreckt. Schreibe den neuen Term auf."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du liest aus dem Term $a\\cdot f(b(x-d))+e$ die Transformationen (Verschiebung, Streckung, Spiegelung) ab."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du beschreibst einen gegebenen Graphen durch Transformationen und stellst den Term auf."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum die Verschiebung in $x$-Richtung mit umgekehrtem Vorzeichen wirkt."
+    }
+   ]
+  },
+  {
+   "id": "l16",
+   "nr": 1,
+   "titel": "Daten und ihre Darstellung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-beschreibende-statistik",
+   "themaPfad": "mathematik/einfuehrungsphase/beschreibende-statistik/",
+   "anker": "#bst-daten",
+   "ziele": [
+    "Ich kann Urlisten, Häufigkeitstabellen sowie Stab- und Säulendiagramme lesen und erstellen.",
+    "Ich kenne den Unterschied zwischen absoluter und relativer Häufigkeit."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Vorwissen aus Klasse 6: Daten ablesen und Diagramme zeichnen.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-009"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#bst-daten",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/beschreibende-statistik/index.html#bst-daten"
+     },
+     "schritte": [
+      {
+       "titel": "Von der Urliste zur Häufigkeitstabelle",
+       "html": "<p>Rohdaten in der Reihenfolge der Erhebung bilden die <strong>Urliste</strong>. Übersichtlicher ist die <strong>Häufigkeitstabelle</strong>: Sie zählt, wie oft jeder Wert vorkommt. Diese Anzahl heißt <strong>absolute Häufigkeit</strong>.</p>",
+       "check": {
+        "frage": "Was zeigt die absolute Häufigkeit eines Wertes?",
+        "antwort": "Wie oft dieser Wert im Datensatz vorkommt (eine Anzahl)."
+       }
+      },
+      {
+       "titel": "Absolute und relative Häufigkeit",
+       "html": "<p>Die <strong>relative Häufigkeit</strong> ist der Anteil am Ganzen: $$h=\\frac{\\text{absolute Häufigkeit}}{\\text{Gesamtzahl}}.$$ Sie liegt zwischen $0$ und $1$ und lässt sich als Prozentwert angeben. So vergleicht man Datensätze unterschiedlicher Größe fair.</p>",
+       "check": {
+        "frage": "Von $25$ Schülern haben $5$ eine Eins. Wie groß ist die relative Häufigkeit?",
+        "antwort": "$\\frac{5}{25}=0{,}2$, also $20\\,\\%$."
+       }
+      },
+      {
+       "titel": "Diagramme lesen und erstellen",
+       "html": "<p><strong>Stab-</strong> und <strong>Säulendiagramme</strong> stellen Häufigkeiten als Höhe dar. Die Achsen müssen beschriftet und gleichmäßig eingeteilt sein. Achtung bei manipulierten Diagrammen: Eine abgeschnittene $y$-Achse lässt Unterschiede größer erscheinen, als sie sind.</p>",
+       "check": {
+        "frage": "Worauf achtest du beim Lesen eines Säulendiagramms zuerst?",
+        "antwort": "Auf die Achsenbeschriftung und ob die $y$-Achse bei $0$ beginnt — sonst wirken Unterschiede verzerrt."
+       }
+      }
+     ],
+     "merksatz": "Die <strong>absolute Häufigkeit</strong> zählt, wie oft ein Wert vorkommt. Die <strong>relative Häufigkeit</strong> $\\frac{\\text{absolut}}{\\text{Gesamtzahl}}$ ist der Anteil (zwischen $0$ und $1$). <strong>Stab-/Säulendiagramme</strong> zeigen Häufigkeiten als Höhe — Achsen müssen sauber beschriftet sein.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Eine kleine Umfrage in der Klasse",
+       "material": "Papier und Stift oder Tafel; eine Frage mit wenigen Antwortmöglichkeiten (z. B. Lieblingsfarbe, Schulweg-Dauer).",
+       "vorhersage": "Vermute vor der Umfrage, welche Antwort am häufigsten genannt wird.",
+       "auftraege": [
+        "Erhebe die Daten als Urliste und übertrage sie in eine Häufigkeitstabelle.",
+        "Berechne zu jedem Wert die relative Häufigkeit in Prozent.",
+        "Zeichne ein Säulendiagramm und prüfe, ob deine Vorhersage zutraf."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was ist eine Urliste?",
+       "antwort": "Die Rohdaten in der Reihenfolge ihrer Erhebung, noch nicht geordnet oder gezählt."
+      },
+      {
+       "frage": "Wie berechnest du die relative Häufigkeit?",
+       "antwort": "Absolute Häufigkeit geteilt durch die Gesamtzahl der Daten."
+      },
+      {
+       "frage": "Warum kann ein Säulendiagramm täuschen?",
+       "antwort": "Wenn die $y$-Achse nicht bei $0$ beginnt oder ungleichmäßig eingeteilt ist, wirken Unterschiede größer oder kleiner, als sie sind."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-001",
+        "ma-ep-bst-002"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-110"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig: Wann ist ein Kreisdiagramm besser geeignet als ein Säulendiagramm? Gebt je ein Beispiel."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-101"
+       ]
+      }
+     ],
+     "transfer": "In einer Umfrage antworten 15 von 50 Personen mit 'Ja'. Berechne die relative Häufigkeit und überlege: Welche Diagrammform eignet sich am besten?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du liest und erstellst Urlisten, Häufigkeitstabellen sowie Stab- und Säulendiagramme."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du unterscheidest absolute und relative Häufigkeit und rechnest zwischen ihnen um."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du beschreibst Datensätze sachgerecht und wählst eine passende Darstellungsform."
+    }
+   ]
+  },
+  {
+   "id": "l17",
+   "nr": 2,
+   "titel": "Lagemaße: Mittelwert, Median, Modalwert",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-beschreibende-statistik",
+   "themaPfad": "mathematik/einfuehrungsphase/beschreibende-statistik/",
+   "anker": "#bst-lagemasse",
+   "ziele": [
+    "Ich kann Mittelwert, Median und Modalwert berechnen und ihre Unterschiede erklären.",
+    "Ich kann entscheiden, welches Lagemass bei einem konkreten Datensatz geeigneter ist."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 16: Häufigkeiten und Datendarstellung.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#bst-lagemasse",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/beschreibende-statistik/index.html#bst-lagemasse"
+     },
+     "schritte": [
+      {
+       "titel": "Drei Lagemaße",
+       "html": "<p>Lagemaße fassen einen Datensatz in einer Zahl zusammen. Der <strong>Mittelwert</strong> $\\bar{x}$ ist die Summe aller Werte geteilt durch ihre Anzahl. Der <strong>Median</strong> ist der Wert in der Mitte der geordneten Liste. Der <strong>Modalwert</strong> ist der am häufigsten vorkommende Wert.</p>",
+       "check": {
+        "frage": "Wie berechnest du den Mittelwert?",
+        "antwort": "Alle Werte addieren und durch die Anzahl der Werte teilen: $\\bar{x}=\\frac{\\text{Summe}}{\\text{Anzahl}}$."
+       }
+      },
+      {
+       "titel": "Median bestimmen",
+       "html": "<p>Für den Median <strong>ordnet</strong> man die Daten zuerst der Größe nach. Bei ungerader Anzahl ist es der mittlere Wert; bei gerader Anzahl der Durchschnitt der beiden mittleren Werte. Beispiel $2,4,5,9$: Median $\\frac{4+5}{2}=4{,}5$.</p>",
+       "check": {
+        "frage": "Bestimme den Median von $3,7,7,10,15$.",
+        "antwort": "Die Liste ist geordnet, $5$ Werte — der mittlere ist $7$."
+       }
+      },
+      {
+       "titel": "Welches Lagemaß passt?",
+       "html": "<p>Der Mittelwert reagiert stark auf <strong>Ausreißer</strong>: Ein einzelner sehr großer Wert zieht ihn nach oben. Der Median ist robust gegen Ausreißer. Bei einem Datensatz wie Einkommen oder Mietpreisen ist der Median oft aussagekräftiger als der Mittelwert.</p>",
+       "check": {
+        "frage": "Warum ist bei Gehältern oft der Median aussagekräftiger?",
+        "antwort": "Wenige sehr hohe Gehälter ziehen den Mittelwert stark nach oben; der Median bleibt davon unberührt und beschreibt die Mitte besser."
+       }
+      }
+     ],
+     "merksatz": "<strong>Mittelwert</strong> $\\bar{x}=\\frac{\\text{Summe}}{\\text{Anzahl}}$ — empfindlich gegen Ausreißer. <strong>Median</strong> = mittlerer Wert der geordneten Liste — robust gegen Ausreißer. <strong>Modalwert</strong> = häufigster Wert.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Taschengeld und ein Ausreißer",
+       "material": "Liste mit Werten (z. B. Taschengeld der Gruppe), Taschenrechner, Papier.",
+       "vorhersage": "Vermute, ob Mittelwert oder Median sich stärker ändert, wenn ein einziger sehr großer Wert hinzukommt.",
+       "auftraege": [
+        "Berechne Mittelwert, Median und Modalwert eines kleinen Datensatzes.",
+        "Füge einen extremen Ausreißer hinzu und berechne alle drei Maße erneut.",
+        "Vergleiche, welches Maß sich am stärksten verändert hat — und begründe, welches du im Bericht verwenden würdest."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie ist der Median definiert?",
+       "antwort": "Als der Wert in der Mitte der der Größe nach geordneten Datenliste (bei gerader Anzahl als Durchschnitt der beiden mittleren Werte)."
+      },
+      {
+       "frage": "Welches Lagemaß ist robust gegen Ausreißer?",
+       "antwort": "Der Median."
+      },
+      {
+       "frage": "Was ist der Modalwert?",
+       "antwort": "Der Wert, der im Datensatz am häufigsten vorkommt."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-004",
+        "ma-ep-bst-006"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-102"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-008"
+       ]
+      }
+     ],
+     "partner": "Gebt euch gegenseitig einen kleinen Datensatz (5 Zahlen) -- der Partner berechnet Mittelwert und Median und begründet, welcher besser geeignet ist."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-103"
+       ]
+      }
+     ],
+     "transfer": "Ein Datensatz enthält einen Ausreisser 1000, alle anderen Werte liegen zwischen 10 und 30. Welches Lagemass wird am stärksten beeinflusst?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest Mittelwert, Median und Modalwert eines Datensatzes."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du entscheidest begründet, welches Lagemaß zu einem Datensatz passt."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du erklärst die Unterschiede der Lagemaße und ihre Empfindlichkeit gegenüber Ausreißern."
+    }
+   ]
+  },
+  {
+   "id": "l18",
+   "nr": 3,
+   "titel": "Streumaße: Spannweite, Quartile, Standardabweichung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-beschreibende-statistik",
+   "themaPfad": "mathematik/einfuehrungsphase/beschreibende-statistik/",
+   "anker": "#bst-streumasse",
+   "ziele": [
+    "Ich kann Spannweite, Quartilsabstand und Standardabweichung berechnen.",
+    "Ich kann erklären, was eine große bzw. kleine Standardabweichung über einen Datensatz aussagt."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein gemeinsamer Impuls: Was sagen Lagemasse nicht aus? Zwei Datensätze mit gleichem Mittelwert, aber unterschiedlicher Streuung vorstellen."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Lagemasse aus Lektion 17.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#bst-streumasse",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/beschreibende-statistik/index.html#bst-streumasse"
+     },
+     "schritte": [
+      {
+       "titel": "Warum Streumaße?",
+       "html": "<p>Zwei Datensätze können denselben Mittelwert haben und trotzdem völlig verschieden sein — der eine eng beieinander, der andere weit gestreut. <strong>Streumaße</strong> beschreiben, wie weit die Werte auseinanderliegen.</p>",
+       "check": {
+        "frage": "Warum reicht der Mittelwert allein nicht, um Daten zu beschreiben?",
+        "antwort": "Er sagt nichts über die Streuung: Daten mit gleichem Mittelwert können eng zusammen oder weit verteilt liegen."
+       }
+      },
+      {
+       "titel": "Spannweite und Quartilsabstand",
+       "html": "<p>Die <strong>Spannweite</strong> ist $\\text{Max}-\\text{Min}$ — die ganze Breite, aber sehr ausreißerempfindlich. Der <strong>Quartilsabstand</strong> $Q_3-Q_1$ beschreibt die Streuung der mittleren $50\\,\\%$ der Daten und ist robuster. Die Quartile $Q_1$ und $Q_3$ teilen die geordneten Daten in Viertel.</p>",
+       "check": {
+        "frage": "Was beschreibt der Quartilsabstand $Q_3-Q_1$?",
+        "antwort": "Die Streuung der mittleren $50\\,\\%$ der Daten — er ist robuster gegen Ausreißer als die Spannweite."
+       }
+      },
+      {
+       "titel": "Die Standardabweichung",
+       "html": "<p>Die <strong>Standardabweichung</strong> $s$ misst die mittlere Abweichung der Werte vom Mittelwert. Eine <strong>große</strong> Standardabweichung bedeutet stark streuende Daten, eine <strong>kleine</strong> eng um den Mittelwert liegende Daten. Man berechnet sie aus den quadrierten Abweichungen (mit dem Taschenrechner).</p>",
+       "check": {
+        "frage": "Was bedeutet eine kleine Standardabweichung?",
+        "antwort": "Die Werte liegen dicht um den Mittelwert — der Datensatz streut wenig."
+       }
+      }
+     ],
+     "merksatz": "<strong>Spannweite</strong> $=\\text{Max}-\\text{Min}$ (ausreißerempfindlich). <strong>Quartilsabstand</strong> $=Q_3-Q_1$ (Streuung der mittleren $50\\,\\%$). <strong>Standardabweichung</strong> $s$ = mittlere Abweichung vom Mittelwert: groß = stark streuend, klein = eng beieinander.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Zielwerfen — wie genau streut die Gruppe?",
+       "material": "Zielscheibe oder Markierung am Boden, kleine Bälle/Münzen zum Werfen, Maßband, Taschenrechner.",
+       "vorhersage": "Zwei Personen werfen je fünfmal auf ein Ziel. Vermute, wessen Würfe eine kleinere Standardabweichung haben.",
+       "auftraege": [
+        "Miss die Abstände der Treffer vom Ziel für beide Personen.",
+        "Berechne jeweils Mittelwert und Standardabweichung der Abstände.",
+        "Vergleiche: Wer trifft im Schnitt näher (Mittelwert), wer gleichmäßiger (kleinere Standardabweichung)?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie berechnest du die Spannweite?",
+       "antwort": "Größter Wert minus kleinster Wert ($\\text{Max}-\\text{Min}$)."
+      },
+      {
+       "frage": "Was sagt eine große Standardabweichung aus?",
+       "antwort": "Die Daten streuen stark, liegen also weit um den Mittelwert verteilt."
+      },
+      {
+       "frage": "Warum ist der Quartilsabstand robuster als die Spannweite?",
+       "antwort": "Er betrachtet nur die mittleren $50\\,\\%$ der Daten und wird daher nicht von einzelnen Ausreißern verzerrt."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-009"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-007",
+        "ma-ep-bst-010"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-104"
+       ]
+      }
+     ],
+     "partner": "Berechnet gemeinsam für denselben Datensatz Spannweite und IQR. Welcher Wert wird durch einen Ausreisser stärker verändert?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-107"
+       ]
+      }
+     ],
+     "transfer": "Was bedeutet $s = 0$ für einen Datensatz? Kann das in der Realität vorkommen?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest Spannweite, Quartilsabstand und Standardabweichung eines Datensatzes."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst, was eine große bzw. kleine Standardabweichung über die Streuung aussagt."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du beschreibst Datensätze über Lage und Streuung gemeinsam und vergleichst sie."
+    }
+   ]
+  },
+  {
+   "id": "l19",
+   "nr": 4,
+   "titel": "Der Boxplot",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-beschreibende-statistik",
+   "themaPfad": "mathematik/einfuehrungsphase/beschreibende-statistik/",
+   "anker": "#bst-boxplot",
+   "ziele": [
+    "Ich kann einen Boxplot aus einem Datensatz erstellen und die fünf Kennwerte (Min, Q1, Median, Q3, Max) ablesen.",
+    "Ich kann zwei Boxplots vergleichen und Aussagen über Lage und Streuung machen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Quartile und IQR aus Lektion 18.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-101"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#bst-boxplot",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/beschreibende-statistik/index.html#bst-boxplot"
+     },
+     "schritte": [
+      {
+       "titel": "Die fünf Kennwerte",
+       "html": "<p>Ein <strong>Boxplot</strong> fasst fünf Kennwerte zusammen: <strong>Minimum</strong>, unteres Quartil $Q_1$, <strong>Median</strong>, oberes Quartil $Q_3$ und <strong>Maximum</strong>. Diese „Fünf-Punkte-Zusammenfassung“ beschreibt Lage und Streuung auf einen Blick.</p>",
+       "check": {
+        "frage": "Welche fünf Kennwerte enthält ein Boxplot?",
+        "antwort": "Minimum, unteres Quartil $Q_1$, Median, oberes Quartil $Q_3$ und Maximum."
+       }
+      },
+      {
+       "titel": "Den Boxplot zeichnen",
+       "html": "<p>Die <strong>Box</strong> reicht von $Q_1$ bis $Q_3$ und enthält die mittleren $50\\,\\%$ der Daten; im Inneren markiert ein Strich den Median. Die <strong>Antennen (Whisker)</strong> reichen bis zum Minimum und Maximum. So sieht man sofort, wo die Daten dicht liegen.</p>",
+       "check": {
+        "frage": "Was stellt die Box im Boxplot dar?",
+        "antwort": "Den Bereich von $Q_1$ bis $Q_3$, also die mittleren $50\\,\\%$ der Daten; der Strich darin ist der Median."
+       }
+      },
+      {
+       "titel": "Zwei Boxplots vergleichen",
+       "html": "<p>Übereinander gezeichnete Boxplots vergleicht man über <strong>Lage</strong> (Wo liegt der Median? Wer ist insgesamt höher?) und <strong>Streuung</strong> (Wie breit ist die Box, wie lang die Antennen?). Eine schmale Box bedeutet wenig Streuung in der Mitte.</p>",
+       "check": {
+        "frage": "Boxplot A hat eine viel breitere Box als Boxplot B. Was folgt daraus?",
+        "antwort": "Die mittleren $50\\,\\%$ von Datensatz A streuen stärker als die von B — A ist in der Mitte breiter verteilt."
+       }
+      }
+     ],
+     "merksatz": "Ein <strong>Boxplot</strong> zeigt fünf Kennwerte: Minimum, $Q_1$, Median, $Q_3$, Maximum. Die <strong>Box</strong> (von $Q_1$ bis $Q_3$) enthält die mittleren $50\\,\\%$; die <strong>Antennen</strong> reichen bis Minimum und Maximum. Man vergleicht Boxplots über Lage und Streuung.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Zwei Gruppen im Boxplot vergleichen",
+       "material": "Zwei Datensätze (z. B. Schuhgrößen zweier Klassenhälften oder Reaktionszeiten), Lineal, kariertes Papier, Taschenrechner.",
+       "vorhersage": "Vermute, welche der beiden Gruppen den höheren Median und welche die größere Streuung hat.",
+       "auftraege": [
+        "Ordne beide Datensätze und bestimme jeweils Minimum, $Q_1$, Median, $Q_3$, Maximum.",
+        "Zeichne beide Boxplots übereinander auf derselben Achse.",
+        "Vergleiche Lage (Median) und Streuung (Boxbreite) und prüfe deine Vorhersage."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche fünf Werte braucht man für einen Boxplot?",
+       "antwort": "Minimum, unteres Quartil $Q_1$, Median, oberes Quartil $Q_3$, Maximum."
+      },
+      {
+       "frage": "Wie viel Prozent der Daten liegen in der Box?",
+       "antwort": "Die mittleren $50\\,\\%$ (von $Q_1$ bis $Q_3$)."
+      },
+      {
+       "frage": "Woran erkennst du im Boxplot eine große Streuung der mittleren Hälfte?",
+       "antwort": "An einer breiten Box (großer Abstand zwischen $Q_1$ und $Q_3$)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-106"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-105"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-109"
+       ]
+      }
+     ],
+     "partner": "Sucht euch gegenseitig einen Datensatz (6-8 Werte) aus und erstellt je einen Boxplot auf Papier. Vergleicht dann eure Ergebnisse."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-008"
+       ]
+      }
+     ],
+     "transfer": "Zwei Boxplots für Mathe- und Deutschnoten liegen vor. Die Box des Mathe-Boxplots ist breiter. Was sagt das über die Streuung aus?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du erstellst einen Boxplot aus einem Datensatz und liest die fünf Kennwerte ab."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du vergleichst zwei Boxplots hinsichtlich Lage und Streuung."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest Aussagen über einen Datensatz mit den Kennwerten des Boxplots."
+    }
+   ]
+  },
+  {
+   "id": "l20",
+   "nr": 5,
+   "titel": "Zusammenhänge: Punktwolken und Regressionsgerade",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-beschreibende-statistik",
+   "themaPfad": "mathematik/einfuehrungsphase/beschreibende-statistik/",
+   "anker": "#bst-zusammenhaenge",
+   "ziele": [
+    "Ich kann eine Punktwolke lesen und den Zusammenhang zwischen zwei Variablen beschreiben (positiv/negativ/kein Zusammenhang).",
+    "Ich kann die Regressionsgerade qualitativ einzeichnen und ihre Steigung interpretieren."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 19: Boxplots und Streuung.",
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-004"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#bst-zusammenhaenge",
+     "text": "Lies den Abschnitt und arbeite dich dann Schritt für Schritt durch — am Ende prüfst du dich selbst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/einfuehrungsphase/beschreibende-statistik/index.html#bst-zusammenhaenge"
+     },
+     "schritte": [
+      {
+       "titel": "Punktwolken lesen",
+       "html": "<p>Trägt man zu jedem Objekt zwei Merkmale als Punkt $(x\\mid y)$ ein, entsteht eine <strong>Punktwolke (Streudiagramm)</strong>. Liegt die Wolke ansteigend, besteht ein <strong>positiver</strong> Zusammenhang (mehr $x$ ⇒ mehr $y$); fällt sie, ein <strong>negativer</strong>; ist sie regellos verstreut, gibt es <strong>keinen</strong> Zusammenhang.</p>",
+       "check": {
+        "frage": "Die Punktwolke steigt von links unten nach rechts oben. Welcher Zusammenhang liegt vor?",
+        "antwort": "Ein positiver Zusammenhang: Mit größerem $x$ wird tendenziell auch $y$ größer."
+       }
+      },
+      {
+       "titel": "Die Regressionsgerade",
+       "html": "<p>Die <strong>Regressionsgerade</strong> ist die Gerade, die sich am besten an die Punktwolke anschmiegt. Ihre <strong>Steigung</strong> beschreibt den Trend: Sie sagt, um wie viel $y$ im Schnitt zunimmt, wenn $x$ um $1$ wächst. Man zeichnet sie so ein, dass sie „mitten durch“ die Wolke verläuft.</p>",
+       "check": {
+        "frage": "Was beschreibt die Steigung der Regressionsgeraden?",
+        "antwort": "Den durchschnittlichen Trend: um wie viel sich $y$ ändert, wenn $x$ um eine Einheit zunimmt."
+       }
+      },
+      {
+       "titel": "Zusammenhang ist keine Ursache",
+       "html": "<p>Ein Zusammenhang in den Daten bedeutet <strong>nicht</strong> automatisch, dass das eine das andere verursacht. Beispiel: Mehr Eisverkäufe und mehr Sonnenbrände hängen zusammen — Ursache ist aber die Sonne, nicht das Eis. Aussagen über Ursachen brauchen mehr als ein Streudiagramm.</p>",
+       "check": {
+        "frage": "Warum darf man aus einem Zusammenhang nicht auf eine Ursache schließen?",
+        "antwort": "Beide Größen können von einer dritten Ursache abhängen (Scheinkorrelation); ein Streudiagramm zeigt nur den Zusammenhang, nicht den Grund."
+       }
+      }
+     ],
+     "merksatz": "Eine <strong>Punktwolke</strong> zeigt den Zusammenhang zweier Merkmale: ansteigend = positiv, fallend = negativ, regellos = kein Zusammenhang. Die <strong>Regressionsgerade</strong> beschreibt den Trend; ihre Steigung gibt die mittlere Änderung an. <strong>Zusammenhang ist nicht gleich Ursache.</strong>",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Körpergröße und Schuhgröße",
+       "material": "Maßband, Liste mit Körper- und Schuhgrößen der Gruppe, kariertes Papier, Lineal.",
+       "vorhersage": "Vermute, ob zwischen Körpergröße und Schuhgröße ein positiver, negativer oder kein Zusammenhang besteht.",
+       "auftraege": [
+        "Erhebe zu jeder Person Körpergröße und Schuhgröße und trage die Paare als Punkte ein.",
+        "Beschreibe die Form der Punktwolke und zeichne eine Regressionsgerade „nach Augenmaß“ ein.",
+        "Deute die Steigung im Sachzusammenhang und diskutiere, ob die Größe die Schuhgröße wirklich „verursacht“."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was zeigt eine fallende Punktwolke an?",
+       "antwort": "Einen negativen Zusammenhang: mit größerem $x$ wird $y$ tendenziell kleiner."
+      },
+      {
+       "frage": "Was beschreibt die Steigung der Regressionsgeraden?",
+       "antwort": "Den durchschnittlichen Trend — die mittlere Änderung von $y$ pro Einheit von $x$."
+      },
+      {
+       "frage": "Folgt aus einem starken Zusammenhang, dass eine Größe die andere verursacht?",
+       "antwort": "Nein — der Zusammenhang kann auf einer gemeinsamen dritten Ursache beruhen (Scheinkorrelation)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-108"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-011",
+        "ma-ep-bst-012"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-013"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Korrelation bedeutet nicht Kausalität. Findet ein Beispiel für zwei Variablen, die korrelieren, aber keinen kausalen Zusammenhang haben."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-005"
+       ]
+      }
+     ],
+     "transfer": "Die Regressionsgerade hat eine negative Steigung. Was bedeutet das inhaltlich für den Zusammenhang der beiden untersuchten Variablen?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du beschreibst den Zusammenhang zweier Variablen anhand einer Punktwolke."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du zeichnest die Regressionsgerade qualitativ ein und deutest ihre Steigung."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du unterscheidest Zusammenhang und Ursache und formulierst vorsichtige Aussagen."
+    }
+   ]
+  },
+  {
+   "id": "l15b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Funktionen im Überblick",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-funktionen-im-ueberblick",
+   "themaPfad": "mathematik/einfuehrungsphase/funktionen-im-ueberblick/",
+   "ziele": [
+    "Ich erkenne lineare, quadratische, Potenz- und Exponentialfunktionen an Gleichung und Graph.",
+    "Ich bestimme Nullstellen, Scheitelpunkte und Schnittpunkte sicher."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 10,
+     "text": "Bevor du übst, schärfe den Blick für die Funktionsklassen — der erste Schritt jeder Aufgabe ist das Erkennen des Typs.",
+     "schritte": [
+      {
+       "titel": "Funktionsklassen am Term erkennen",
+       "html": "<p>Schnelltest am Term: $m\\cdot x+b$ ⇒ <strong>linear</strong> (Gerade), $a x^2+\\dots$ ⇒ <strong>quadratisch</strong> (Parabel), $x^n$ ⇒ <strong>Potenzfunktion</strong>, $a^x$ ⇒ <strong>Exponentialfunktion</strong>. Die Klasse verrät schon Form, Symmetrie und typisches Verhalten des Graphen.</p>",
+       "check": {
+        "frage": "Welche Klasse hat $f(x)=2^x$, welche $g(x)=2x$?",
+        "antwort": "$f(x)=2^x$ ist exponentiell (Variable im Exponenten), $g(x)=2x$ ist linear (Variable als Basis mit Faktor)."
+       }
+      },
+      {
+       "titel": "Kennzahlen je Klasse",
+       "html": "<p>Pro Klasse gehört ein Standardwerkzeug: bei der Geraden die <strong>Nullstelle</strong> aus $m x+b=0$, bei der Parabel der <strong>Scheitelpunkt</strong> (Scheitelpunktform) und die Nullstellen ($p$-$q$-Formel), bei Exponentialfunktionen der <strong>$y$-Achsenabschnitt</strong> $1$ und die Asymptote $y=0$.</p>",
+       "check": {
+        "frage": "Wie findest du die Nullstellen einer quadratischen Funktion?",
+        "antwort": "Durch Ausklammern oder die $p$-$q$-Formel, nachdem die Gleichung auf die Form $x^2+px+q=0$ gebracht wurde."
+       }
+      }
+     ],
+     "merksatz": "Erst die <strong>Funktionsklasse</strong> bestimmen ($m x+b$ linear · $ax^2+\\dots$ quadratisch · $x^n$ Potenz · $a^x$ exponentiell), dann das passende Werkzeug wählen: Nullstelle, Scheitelpunkt bzw. $y$-Achsenabschnitt und Asymptote.",
+     "selbstcheck": [
+      {
+       "frage": "Woran erkennst du eine Exponentialfunktion am Term?",
+       "antwort": "Die Variable steht im Exponenten, z. B. $f(x)=a^x$."
+      },
+      {
+       "frage": "Welche Kennzahl bestimmst du typischerweise bei einer quadratischen Funktion zuerst?",
+       "antwort": "Den Scheitelpunkt (aus der Scheitelpunktform) sowie die Nullstellen."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-202",
+        "ma-ep-fkt-203",
+        "ma-ep-fkt-303"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-204",
+        "ma-ep-fkt-205",
+        "ma-ep-fkt-206",
+        "ma-ep-fkt-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an je einem selbst gewählten Beispiel, woran man eine lineare, eine quadratische und eine Exponentialfunktion am Graphen erkennt."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-funktionen-im-ueberblick",
+       "ids": [
+        "ma-ep-fkt-208",
+        "ma-ep-fkt-301"
+       ]
+      }
+     ],
+     "transfer": "Frage dich bei jeder Funktion zuerst: Welcher Funktionstyp liegt vor? Davon hängt ab, ob du nach Nullstellen über die p-q-Formel, über Ausklammern oder über Potenzgesetze suchst."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Funktionsplotter — Funktionstypen vergleichen",
+       "href": "simulationen/mathematik/funktionsplotter/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du erkennst lineare, quadratische, Potenz- und Exponentialfunktionen an Gleichung und Graph."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du bestimmst Nullstellen, Scheitelpunkte und Schnittpunkte sicher."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du ordnest einem Graphen die passende Funktionsklasse zu und begründest deine Wahl."
+    }
+   ]
+  },
+  {
+   "id": "l20b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Beschreibende Statistik",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-beschreibende-statistik",
+   "themaPfad": "mathematik/einfuehrungsphase/beschreibende-statistik/",
+   "ziele": [
+    "Ich berechne Mittelwert, Median, Quartile, Spannweite und Standardabweichung sicher.",
+    "Ich beurteile, welche Kenngröße zu einem Datensatz passt, und erkenne Ausreißer."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 10,
+     "text": "Bevor du übst, sortiere die Kennzahlen nach Lage und Streuung — dann weißt du, welche eine Aufgabe verlangt.",
+     "schritte": [
+      {
+       "titel": "Lage und Streuung trennen",
+       "html": "<p>Zwei Fragen an jeden Datensatz: <strong>Wo liegt die Mitte?</strong> ⇒ Lagemaße (Mittelwert, Median, Modalwert). <strong>Wie weit streuen die Werte?</strong> ⇒ Streumaße (Spannweite, Quartilsabstand, Standardabweichung). Eine vollständige Beschreibung nennt immer beides.</p>",
+       "check": {
+        "frage": "Ist die Standardabweichung ein Lage- oder ein Streumaß?",
+        "antwort": "Ein Streumaß — sie beschreibt, wie weit die Werte um den Mittelwert streuen, nicht wo die Mitte liegt."
+       }
+      },
+      {
+       "titel": "Ausreißer und robuste Maße",
+       "html": "<p>Ein <strong>Ausreißer</strong> verzerrt Mittelwert und Spannweite stark, während <strong>Median</strong> und <strong>Quartilsabstand</strong> robust bleiben. Bei schiefen Datensätzen oder Ausreißern wählt man daher eher Median und Quartilsabstand; der Boxplot macht beides sichtbar.</p>",
+       "check": {
+        "frage": "Welche Maße verwendest du bei einem Datensatz mit starkem Ausreißer?",
+        "antwort": "Median und Quartilsabstand, weil sie robust gegen Ausreißer sind (Mittelwert und Spannweite würden verzerrt)."
+       }
+      }
+     ],
+     "merksatz": "Jede Beschreibung braucht <strong>Lage</strong> (Mittelwert, Median, Modalwert) <em>und</em> <strong>Streuung</strong> (Spannweite, Quartilsabstand, Standardabweichung). Bei Ausreißern sind <strong>Median</strong> und <strong>Quartilsabstand</strong> die robustere Wahl; der Boxplot zeigt beides auf einen Blick.",
+     "selbstcheck": [
+      {
+       "frage": "Nenne je zwei Lage- und zwei Streumaße.",
+       "antwort": "Lagemaße: Mittelwert und Median (auch Modalwert). Streumaße: Spannweite und Standardabweichung (auch Quartilsabstand)."
+      },
+      {
+       "frage": "Warum bevorzugt man bei Ausreißern den Median?",
+       "antwort": "Weil der Median robust gegen Ausreißer ist, während der Mittelwert von einzelnen extremen Werten stark verschoben wird."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-202",
+        "ma-ep-bst-203",
+        "ma-ep-bst-303"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-204",
+        "ma-ep-bst-205",
+        "ma-ep-bst-206",
+        "ma-ep-bst-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-207"
+       ]
+      }
+     ],
+     "partner": "Vergleicht an einem selbst ausgedachten Datensatz, wie sich Mittelwert und Median verändern, wenn ihr einen sehr großen Ausreißer ergänzt."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-beschreibende-statistik",
+       "ids": [
+        "ma-ep-bst-208",
+        "ma-ep-bst-301"
+       ]
+      }
+     ],
+     "transfer": "Überlege bei jeder Aufgabe zuerst, ob nach einem Lagemaß (Mittelwert, Median) oder einem Streumaß (Spannweite, Standardabweichung) gefragt ist. Den Datensatz vor dem Ablesen von Median und Quartilen immer sortieren."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Mittelwert und Median im Vergleich",
+       "href": "simulationen/mathematik/mittelwert-median/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest Mittelwert, Median, Quartile, Spannweite und Standardabweichung sicher."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du beurteilst, welche Kenngröße zu einem Datensatz passt, und erkennst Ausreißer."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du beschreibst Datensätze über Lage und Streuung gemeinsam und ziehst Schlüsse aus Boxplots."
+    }
+   ]
+  },
+  {
+   "id": "l5b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Änderungsraten und Ableitung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-aenderungsraten-und-ableitung",
+   "themaPfad": "mathematik/einfuehrungsphase/aenderungsraten-und-ableitung/",
+   "ziele": [
+    "Ich berechne die mittlere Änderungsrate als Differenzenquotient sicher.",
+    "Ich bestimme die momentane Änderungsrate mit der h-Methode und deute sie als Tangentensteigung."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 10,
+     "text": "Bevor du übst, ordne die Werkzeuge dieses Themas — so weißt du bei jeder Aufgabe, welches du brauchst.",
+     "schritte": [
+      {
+       "titel": "Mittlere vs. momentane Änderungsrate",
+       "html": "<p>Die <strong>mittlere</strong> Änderungsrate auf $[a;b]$ ist der Differenzenquotient $\\frac{f(b)-f(a)}{b-a}$ (Sekantensteigung). Die <strong>momentane</strong> Änderungsrate an $x_0$ ist der Grenzwert $f'(x_0)$ (Tangentensteigung). „Über ein Intervall“ ⇒ mittlere; „an einer Stelle / genau jetzt“ ⇒ momentane.</p>",
+       "check": {
+        "frage": "„Wie schnell fährt das Auto genau bei $t=3$?“ — mittlere oder momentane Änderungsrate?",
+        "antwort": "Momentane Änderungsrate, also $s'(3)$ — gefragt ist die Geschwindigkeit in einem Augenblick, nicht über ein Intervall."
+       }
+      },
+      {
+       "titel": "Den schnellsten Weg wählen",
+       "html": "<p>Für $f'(x_0)$ bei Polynomen ist die <strong>Ableitungsregel</strong> schneller als die h-Methode: erst $f'(x)$ mit Potenz-, Faktor- und Summenregel bilden, dann $x_0$ einsetzen. Die h-Methode brauchst du nur, wenn der Grenzwert ausdrücklich verlangt ist.</p>",
+       "check": {
+        "frage": "Bestimme $f'(2)$ für $f(x)=x^3-x$ auf dem schnellsten Weg.",
+        "antwort": "$f'(x)=3x^2-1$, also $f'(2)=3\\cdot 4-1=11$."
+       }
+      }
+     ],
+     "merksatz": "„Über ein Intervall“ ⇒ <strong>mittlere</strong> Änderungsrate $\\frac{f(b)-f(a)}{b-a}$. „An einer Stelle“ ⇒ <strong>momentane</strong> Änderungsrate $f'(x_0)$. Bei Polynomen führt die Ableitungsregel schneller zum Ziel als die h-Methode.",
+     "selbstcheck": [
+      {
+       "frage": "Welche Größe ist die Sekantensteigung, welche die Tangentensteigung?",
+       "antwort": "Die mittlere Änderungsrate ist die Sekantensteigung, die momentane Änderungsrate $f'(x_0)$ ist die Tangentensteigung."
+      },
+      {
+       "frage": "Wann musst du die h-Methode benutzen statt der Ableitungsregel?",
+       "antwort": "Wenn der Grenzwert des Differenzenquotienten ausdrücklich gefordert ist (z. B. zur Herleitung); sonst genügt die Regel."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-202",
+        "ma-ep-abl-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-204",
+        "ma-ep-abl-205",
+        "ma-ep-abl-206",
+        "ma-ep-abl-303",
+        "ma-ep-abl-304"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-207",
+        "ma-ep-abl-302"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig am Beispiel $f(x)=x^2$, wie aus den Sekantensteigungen für immer kleinere $h$ die Tangentensteigung entsteht."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-aenderungsraten-und-ableitung",
+       "ids": [
+        "ma-ep-abl-208",
+        "ma-ep-abl-301"
+       ]
+      }
+     ],
+     "transfer": "Mittlere Änderungsrate heißt Sekante (zwei Stellen, Differenzenquotient), momentane Änderungsrate heißt Tangente (eine Stelle, Grenzwert für $h\\to 0$). Entscheide zuerst, welche der beiden gesucht ist."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Von der Sekante zur Tangente",
+       "href": "simulationen/mathematik/sekante-tangente/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du wählst je nach Aufgabe zwischen mittlerer Änderungsrate, h-Methode und Ableitungsregel das passende Verfahren."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest Differenzenquotient und Ableitung sicher und fehlerfrei."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du deutest Änderungsraten im Sachzusammenhang, etwa als Durchschnitts- und Momentangeschwindigkeit."
+    }
+   ]
+  },
+  {
+   "id": "l10b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Ableitungsregeln und Anwendungen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-ep-ableitungsregeln-und-anwendungen",
+   "themaPfad": "mathematik/einfuehrungsphase/ableitungsregeln-und-anwendungen/",
+   "ziele": [
+    "Ich leite ganzrationale Funktionen mit Potenz-, Faktor- und Summenregel sicher ab.",
+    "Ich bestimme Tangenten und Extrempunkte und löse einfache Optimierungsaufgaben."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 10,
+     "text": "Bevor du übst, fasse das Lösungsschema für Extremstellen zusammen — es zieht sich durch fast alle Aufgaben dieses Themas.",
+     "schritte": [
+      {
+       "titel": "Das Schema für Extrempunkte",
+       "html": "<p>Immer derselbe Ablauf: <strong>1.</strong> $f'(x)=0$ lösen (Kandidaten). <strong>2.</strong> mit $f''$ die Art prüfen: $f''<0$ Hochpunkt, $f''>0$ Tiefpunkt. <strong>3.</strong> $y$-Wert durch Einsetzen in $f$. Bei Optimierung kommt der Schritt „Randwerte vergleichen“ hinzu.</p>",
+       "check": {
+        "frage": "$f(x)=x^2-6x$. Bestimme den Extrempunkt vollständig.",
+        "antwort": "$f'(x)=2x-6=0\\Rightarrow x=3$; $f''(x)=2>0$ ⇒ Tiefpunkt; $f(3)=-9$. Tiefpunkt $(3\\mid -9)$."
+       }
+      },
+      {
+       "titel": "Tangente nicht verwechseln",
+       "html": "<p>Bei Tangentenaufgaben brauchst du die Steigung $m=f'(x_0)$ und den Punkt $(x_0\\mid f(x_0))$, dann $b$ aus dem Einsetzen. Verwechsle nicht $f(x_0)$ (Funktionswert = $y$-Koordinate) mit $f'(x_0)$ (Steigung). Beide werden gebraucht, aber an verschiedenen Stellen.</p>",
+       "check": {
+        "frage": "Welche Steigung hat die Tangente an $f(x)=x^2$ in $x_0=4$?",
+        "antwort": "$m=f'(4)=2\\cdot 4=8$ (nicht $f(4)=16$ — das wäre der $y$-Wert des Berührpunkts)."
+       }
+      }
+     ],
+     "merksatz": "<strong>Extrempunkte:</strong> $f'(x)=0$ lösen, Art mit $f''$ prüfen ($f''<0$ Hoch-, $f''>0$ Tiefpunkt), $y$-Wert einsetzen. <strong>Tangente:</strong> Steigung $m=f'(x_0)$, Punkt $(x_0\\mid f(x_0))$, $b$ aus dem Einsetzen. Steigung $f'(x_0)$ und Funktionswert $f(x_0)$ nicht verwechseln.",
+     "selbstcheck": [
+      {
+       "frage": "Nenne die drei Schritte zur Bestimmung eines Extrempunkts.",
+       "antwort": "$f'(x)=0$ lösen, Art mit $f''$ prüfen, $y$-Wert durch Einsetzen in $f$ bestimmen."
+      },
+      {
+       "frage": "Was unterscheidet eine Optimierungs- von einer reinen Extremwertaufgabe?",
+       "antwort": "Bei der Optimierung muss man zuerst die Zielfunktion aufstellen, den Definitionsbereich festlegen und am Ende auch die Randwerte vergleichen sowie einen Antwortsatz formulieren."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-202",
+        "ma-ep-ablr-203",
+        "ma-ep-ablr-304"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-204",
+        "ma-ep-ablr-205",
+        "ma-ep-ablr-206",
+        "ma-ep-ablr-303",
+        "ma-ep-ablr-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig das Vorgehen bei einer Extremwertaufgabe: Wie kommt man von der Sachsituation über Nebenbedingung und Zielfunktion zur Lösung mit $f'(x)=0$?"
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-ep-ableitungsregeln-und-anwendungen",
+       "ids": [
+        "ma-ep-ablr-208",
+        "ma-ep-ablr-301"
+       ]
+      }
+     ],
+     "transfer": "Extrempunkte findest du in zwei Schritten: zuerst $f'(x)=0$ lösen (mögliche Stellen), dann mit dem Vorzeichen von $f''(x)$ zwischen Hoch- und Tiefpunkt unterscheiden. Bei Anwendungen prüfst du am Ende, ob die Lösung im erlaubten Bereich liegt."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Funktionsplotter — Hoch- und Tiefpunkte ablesen",
+       "href": "simulationen/mathematik/funktionsplotter/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du leitest ganzrationale Funktionen mit Potenz-, Faktor- und Summenregel sicher ab."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du bestimmst Tangenten und Extrempunkte und löst einfache Optimierungsaufgaben."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du übersetzt Sachprobleme in eine Zielfunktion und beantwortest sie im Kontext."
+    }
+   ]
+  }
+ ],
+ "bloecke": [
+  {
+   "titel": "Funktionen im Überblick",
+   "thema": "ma-ep-funktionen-im-ueberblick",
+   "lektionen": [
+    "l11",
+    "l12",
+    "l13",
+    "l14",
+    "l15",
+    "l15b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Beschreibende Statistik",
+   "thema": "ma-ep-beschreibende-statistik",
+   "lektionen": [
+    "l16",
+    "l17",
+    "l18",
+    "l19",
+    "l20",
+    "l20b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Änderungsraten und Ableitung",
+   "thema": "ma-ep-aenderungsraten-und-ableitung",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l5b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Ableitungsregeln und Anwendungen",
+   "thema": "ma-ep-ableitungsregeln-und-anwendungen",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10",
+    "l10b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  }
+ ]
+}

@@ -1,0 +1,4100 @@
+{
+ "version": 1,
+ "kurs": "ma-qs",
+ "fach": "mathematik",
+ "stufe": "qualifikationsphase",
+ "titel": "Mathematik · Qualifikationsphase — Stochastik",
+ "untertitel": "Lernbüro-Pilot: Binomialverteilung als Selbstlern-Einheit",
+ "zweig": [
+  "gym"
+ ],
+ "stand": "2026-06-13",
+ "taktung": "wochenplan",
+ "checkpoints": "freischalten",
+ "werkzeuge": [
+  "ampel",
+  "lerntagebuch"
+ ],
+ "hinweis": "Lektionen verweisen nur auf vorhandene Inhalte. Pilot – fachliche Endprüfung durch die Lehrkraft.",
+ "stoffverteilung": [
+  {
+   "wochen": "1–3",
+   "thema": "Binomialverteilung",
+   "lektionen": "5 (Pilot; Lektionen L1–L5 ausgebaut)",
+   "kc": "KC Mathematik GO (2018): Lernbereich Daten und Zufall – Bernoulli-Ketten, Binomialverteilung, Kennzahlen, Sigma-Umgebungen",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "4–6",
+   "thema": "Normalverteilung",
+   "lektionen": "5 (Pilot: L6-L10 ausgebaut)",
+   "kc": "KC Mathematik GO (2018): Lernbereich Daten und Zufall – Normalverteilung (eA)",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "7–10",
+   "thema": "Hypothesentests",
+   "lektionen": "6 (L11-L16 ausgebaut)",
+   "kc": "KC Mathematik GO (2018): Lernbereich Daten und Zufall -- Hypothesentests",
+   "status": "in-arbeit"
+  },
+  {
+   "wochen": "11–12",
+   "thema": "Vermischtes / Überblick Stochastik",
+   "lektionen": "5 (L17-L21 ausgebaut)",
+   "kc": "KC Mathematik GO (2018): Qualifikationsphase, 3. Schulhalbjahr (Stochastik)",
+   "status": "in-arbeit"
+  }
+ ],
+ "wochen": [
+  {
+   "nr": 1,
+   "spanne": "Diese Woche",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 1–3 geschafft"
+  },
+  {
+   "nr": 2,
+   "spanne": "Nächste Woche",
+   "lektionen": [
+    "l4",
+    "l5"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 4–5 geschafft"
+  },
+  {
+   "nr": 3,
+   "spanne": "Woche 3 (Block 2 Beginn)",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 6-8 geschafft"
+  },
+  {
+   "nr": 4,
+   "spanne": "Woche 4 (Block 2 Abschluss)",
+   "lektionen": [
+    "l9",
+    "l10"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 9-10 geschafft"
+  },
+  {
+   "nr": 5,
+   "spanne": "Woche 5 (Block 3 Beginn)",
+   "lektionen": [
+    "l11",
+    "l12",
+    "l13"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 11-13 geschafft"
+  },
+  {
+   "nr": 6,
+   "spanne": "Woche 6 (Block 3 Fortsetzung)",
+   "lektionen": [
+    "l14",
+    "l15"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 14-15 geschafft"
+  },
+  {
+   "nr": 7,
+   "spanne": "Woche 7 (Block 3 Abschluss)",
+   "lektionen": [
+    "l16"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 16 geschafft"
+  },
+  {
+   "nr": 8,
+   "spanne": "Woche 8 (Block 4 Beginn)",
+   "lektionen": [
+    "l17",
+    "l18",
+    "l19"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 17-19 geschafft"
+  },
+  {
+   "nr": 9,
+   "spanne": "Woche 9 (Block 4 Abschluss)",
+   "lektionen": [
+    "l20",
+    "l21"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 20-21 geschafft"
+  }
+ ],
+ "lektionen": [
+  {
+   "id": "l1",
+   "nr": 1,
+   "titel": "Bernoulli-Versuche und Bernoulli-Ketten",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-binomialverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/binomialverteilung/",
+   "anker": "#bv-bernoulli",
+   "ziele": [
+    "Ich kann erklären, was einen Bernoulli-Versuch und eine Bernoulli-Kette auszeichnet.",
+    "Ich kann anhand der vier Bedingungen prüfen, ob ein Zufallsversuch eine Bernoulli-Kette ist."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung aus Klasse 8 – Pfadregeln im Baumdiagramm.",
+     "aufgaben": [
+      {
+       "quelle": "ma-08-mehrstufige-zufallsversuche",
+       "ids": [
+        "ma-08-mz-001",
+        "ma-08-mz-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#bv-bernoulli",
+     "text": "Eine Bernoulli-Kette ist das Grundmodell der gesamten Einheit. Arbeite dich Schritt für Schritt durch die vier Bedingungen und prüfe sie am Ende selbst an Beispielen.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/binomialverteilung/index.html#bv-bernoulli"
+     },
+     "schritte": [
+      {
+       "titel": "Der Bernoulli-Versuch",
+       "html": "<p>Ein <strong>Bernoulli-Versuch</strong> ist ein Zufallsversuch mit genau <strong>zwei</strong> möglichen Ergebnissen: <strong>Treffer</strong> (Erfolg) und <strong>Niete</strong> (Misserfolg). Die Trefferwahrscheinlichkeit heißt $p$, die der Niete $q = 1 - p$. Welches Ergebnis man „Treffer“ nennt, legt man je nach Fragestellung selbst fest — beim Würfeln kann „Sechs“ der Treffer sein ($p = \\frac{1}{6}$) oder „gerade Zahl“ ($p = \\frac{1}{2}$).</p>",
+       "check": {
+        "frage": "Beim Ziehen einer Karte gilt „Herz“ als Treffer. Wie gross sind $p$ und $q$?",
+        "antwort": "$p = \\frac{13}{52} = \\frac{1}{4}$ (13 Herzkarten von 52). Damit ist $q = 1 - \\frac{1}{4} = \\frac{3}{4}$."
+       }
+      },
+      {
+       "titel": "Die Bernoulli-Kette und ihre vier Bedingungen",
+       "html": "<p>Wiederholt man denselben Bernoulli-Versuch mehrmals, entsteht eine <strong>Bernoulli-Kette der Länge $n$</strong>. Sie liegt vor, wenn <strong>alle vier</strong> Bedingungen erfüllt sind:</p><ol><li>Jeder Einzelversuch hat <strong>nur zwei</strong> Ergebnisse (Treffer/Niete).</li><li>Die Trefferwahrscheinlichkeit $p$ ist bei <strong>jedem</strong> Versuch <strong>gleich</strong> (konstant).</li><li>Die Versuche sind <strong>unabhängig</strong> voneinander.</li><li>Die Anzahl $n$ der Versuche steht <strong>vorher fest</strong>.</li></ol>",
+       "check": {
+        "frage": "Aus einer Urne mit 3 roten und 2 blauen Kugeln wird 4-mal <em>ohne</em> Zurücklegen gezogen. Welche Bedingung ist verletzt?",
+        "antwort": "Bedingung 2 (und 3): Ohne Zurücklegen ändert sich $p$ nach jeder Ziehung, und die Ziehungen sind nicht unabhängig. Es ist also <strong>keine</strong> Bernoulli-Kette. Mit Zurücklegen wäre es eine."
+       }
+      },
+      {
+       "titel": "Modellieren mit der Bernoulli-Kette",
+       "html": "<p>Viele Sachsituationen lassen sich als Bernoulli-Kette deuten: Ein Bauteil ist <em>defekt</em> oder <em>intakt</em>, ein Wurfpfeil trifft oder nicht, eine befragte Person stimmt <em>zu</em> oder nicht. Wichtig ist immer: Treffer klar definieren, $p$ angeben, $n$ festlegen. Bei grossen Grundgesamtheiten (z. B. Stichprobe aus einer Tagesproduktion) darf man das Ziehen ohne Zurücklegen <strong>näherungsweise</strong> als Bernoulli-Kette ansehen, weil sich $p$ kaum ändert.</p>",
+       "check": {
+        "frage": "In einer Fabrik sind erfahrungsgemäß $5\\,\\%$ der Schrauben Ausschuss. Es werden 20 Schrauben gepruft. Treffer, $p$, $n$?",
+        "antwort": "Treffer = „Schraube ist Ausschuss“, $p = 0{,}05$, $n = 20$. Da die Produktion sehr gross ist, ist die Bernoulli-Kette ein gutes Modell."
+       }
+      }
+     ],
+     "merksatz": "Eine <strong>Bernoulli-Kette</strong> der Länge $n$ ist eine feste Anzahl <strong>unabhängiger</strong> Wiederholungen eines Zwei-Ergebnis-Versuchs mit <strong>konstanter</strong> Trefferwahrscheinlichkeit $p$. Alle vier Bedingungen müssen erfüllt sein.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Bernoulli-Check mit Würfel und Münze",
+       "material": "Ein Spielwürfel, eine Münze, Papier für eine Strichliste.",
+       "vorhersage": "Du wirfst eine Münze 10-mal und zählst die Wappen. Notiere <em>vorher</em>: Ist das eine Bernoulli-Kette? Welche Trefferzahl erwartest du am ehesten?",
+       "auftraege": [
+        "Prüfe für das 10-malige Münzwerfen alle vier Bedingungen einzeln und notiere zu jeder ein Stichwort.",
+        "Wirf den Würfel 12-mal und zähle die Sechsen. Gib Treffer, $p$ und $n$ an.",
+        "Denke dir eine Situation aus, die KEINE Bernoulli-Kette ist, und begründe, welche Bedingung scheitert."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Nenne die vier Bedingungen einer Bernoulli-Kette.",
+       "antwort": "Zwei Ergebnisse pro Versuch; konstantes $p$; Unabhängigkeit der Versuche; feste Anzahl $n$."
+      },
+      {
+       "frage": "Ist „10-mal mit einem fairen Würfel werfen und die Augensumme notieren“ eine Bernoulli-Kette?",
+       "antwort": "Nein. Die Augensumme hat mehr als zwei mögliche Ergebnisse; Bedingung 1 (Treffer/Niete) ist verletzt. Erst wenn man z. B. „Sechs / keine Sechs“ betrachtet, wird es eine."
+      },
+      {
+       "frage": "Warum darf man eine Stichprobe von 50 Personen aus einer Grossstadt näherungsweise als Bernoulli-Kette behandeln?",
+       "antwort": "Weil die Grundgesamtheit so gross ist, dass sich $p$ durch das Herausnehmen von 50 Personen praktisch nicht ändert — die Versuche sind nahezu unabhängig mit fast konstantem $p$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-001"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-011"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-301"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig das Skatblatt-Gegenbeispiel: Warum ist das Ziehen ohne Zurüklegen keine Bernoulli-Kette?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-003"
+       ]
+      }
+     ],
+     "transfer": "Nenne ein eigenes Alltagsbeispiel für eine Bernoulli-Kette – und eines, das die Bedingung verletzt."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du prüfst anhand der vier Bedingungen formal, ob ein Zufallsversuch eine Bernoulli-Kette ist."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du erkennst in Sachsituationen (Qualitätskontrolle, Umfragen, Würfeln) das Modell der Bernoulli-Kette und legst Treffer, $p$ und $n$ fest."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest an Gegenbeispielen, warum eine Kette ohne Unabhängigkeit oder mit veränderlichem $p$ keine Bernoulli-Kette ist."
+    }
+   ]
+  },
+  {
+   "id": "l2",
+   "nr": 2,
+   "titel": "Die Formel von Bernoulli",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-binomialverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/binomialverteilung/",
+   "anker": "#bv-formel",
+   "ziele": [
+    "Ich kann $P(X = k)$ mit der Formel von Bernoulli berechnen.",
+    "Ich kann den Binomialkoeffizienten $\\binom{n}{k}$ erklären und bestimmen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Bernoulli-Bedingungen aus Lektion 1.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-106"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#bv-formel",
+     "text": "Die Formel von Bernoulli beantwortet die Kernfrage: Wie wahrscheinlich sind genau $k$ Treffer bei $n$ Versuchen? Erarbeite, woher jeder Baustein der Formel kommt.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/binomialverteilung/index.html#bv-formel"
+     },
+     "schritte": [
+      {
+       "titel": "Ein einzelner Pfad",
+       "html": "<p>Im Baumdiagramm einer Bernoulli-Kette hat <em>jeder</em> Pfad mit $k$ Treffern und $n-k$ Nieten die gleiche Wahrscheinlichkeit $p^{k} \\cdot q^{\\,n-k}$. Beispiel ($n = 4$, $k = 2$): Der Pfad T–T–N–N hat die Wahrscheinlichkeit $p \\cdot p \\cdot q \\cdot q = p^{2} q^{2}$ — ebenso jeder andere Pfad mit zwei Treffern.</p>",
+       "check": {
+        "frage": "Wie gross ist die Wahrscheinlichkeit des Pfades N–T–N–T bei $n = 4$?",
+        "antwort": "$q \\cdot p \\cdot q \\cdot p = p^{2} q^{2}$ — genauso gross wie jeder andere Pfad mit zwei Treffern, denn die Faktoren sind nur umgestellt."
+       }
+      },
+      {
+       "titel": "Wie viele Pfade gibt es?",
+       "html": "<p>Es gibt mehrere Pfade mit genau $k$ Treffern — so viele, wie man $k$ Treffer-Positionen aus $n$ Stellen auswählen kann. Diese Anzahl ist der <strong>Binomialkoeffizient</strong> $\\binom{n}{k} = \\frac{n!}{k!\\,(n-k)!}$ (gesprochen „$n$ über $k$“). Für $n=4$, $k=2$: $\\binom{4}{2} = \\frac{4!}{2!\\,2!} = \\frac{24}{4} = 6$ Pfade.</p>",
+       "check": {
+        "frage": "Berechne $\\binom{5}{2}$.",
+        "antwort": "$\\binom{5}{2} = \\frac{5!}{2!\\,3!} = \\frac{120}{2 \\cdot 6} = \\frac{120}{12} = 10$."
+       }
+      },
+      {
+       "titel": "Die Formel von Bernoulli",
+       "html": "<p>Wahrscheinlichkeit eines Pfades mal Anzahl der Pfade ergibt die <strong>Formel von Bernoulli</strong>:</p><p>$$P(X = k) = \\binom{n}{k} \\cdot p^{k} \\cdot (1-p)^{\\,n-k}$$</p><p>Dabei ist $X$ die Anzahl der Treffer (binomialverteilt, kurz $X \\sim B(n;\\,p)$). Beispiel: $n = 4$, $p = \\frac{1}{2}$, $k = 2$ liefert $P(X = 2) = 6 \\cdot \\left(\\frac{1}{2}\\right)^{2} \\cdot \\left(\\frac{1}{2}\\right)^{2} = 6 \\cdot \\frac{1}{16} = \\frac{6}{16} = 0{,}375$.</p>",
+       "check": {
+        "frage": "Ein Würfel wird 5-mal geworfen. Wie wahrscheinlich sind genau 2 Sechsen?",
+        "antwort": "$P(X=2) = \\binom{5}{2}\\left(\\frac{1}{6}\\right)^{2}\\left(\\frac{5}{6}\\right)^{3} = 10 \\cdot \\frac{1}{36} \\cdot \\frac{125}{216} \\approx 0{,}161$."
+       }
+      }
+     ],
+     "merksatz": "Formel von Bernoulli: $P(X = k) = \\binom{n}{k}\\, p^{k}\\,(1-p)^{\\,n-k}$. Der Binomialkoeffizient $\\binom{n}{k}$ zählt die <strong>Pfade</strong>, $p^{k}(1-p)^{\\,n-k}$ ist die Wahrscheinlichkeit <strong>eines</strong> Pfades.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Vierfacher Münzwurf — Häufigkeiten gegen die Formel",
+       "material": "Vier Münzen (oder eine Münze viermal), Strichliste mit den Werten $k = 0,1,2,3,4$.",
+       "vorhersage": "Du wirfst 4 Münzen und zählst die Wappen. Welche Trefferzahl $k$ tritt am häufigsten auf? Berechne vorher $P(X=2)$ mit der Formel.",
+       "auftraege": [
+        "Berechne mit der Bernoulli-Formel alle fünf Wahrscheinlichkeiten $P(X=0)$ bis $P(X=4)$ für $n=4$, $p=\\frac{1}{2}$ und prüfe, dass ihre Summe 1 ergibt.",
+        "Wirf 20-mal (je 4 Münzen) und trage die relativen Häufigkeiten in eine Tabelle neben die berechneten Wahrscheinlichkeiten.",
+        "Vergleiche: Wo stimmen Versuch und Rechnung gut überein, wo weichen sie ab — und warum?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Woraus setzt sich die Bernoulli-Formel zusammen?",
+       "antwort": "Aus der Anzahl der Pfade $\\binom{n}{k}$ und der Wahrscheinlichkeit eines einzelnen Pfades $p^{k}(1-p)^{\\,n-k}$."
+      },
+      {
+       "frage": "Was bedeutet $\\binom{n}{0}$ und welchen Wert hat es?",
+       "antwort": "Die Anzahl der Pfade mit 0 Treffern — es gibt genau einen (alle Nieten), also $\\binom{n}{0} = 1$."
+      },
+      {
+       "frage": "Berechne $P(X=3)$ für $n=4$, $p=0{,}5$.",
+       "antwort": "$P(X=3) = \\binom{4}{3}(0{,}5)^{3}(0{,}5)^{1} = 4 \\cdot 0{,}0625 = 0{,}25$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-002",
+        "ma-qp-bv-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-006"
+       ]
+      }
+     ],
+     "partner": "Löst gemeinsam: $n = 10$, $p = 0{,}2$ – einer rechnet $P(X = 3)$, der andere $P(X = 0)$. Vergleicht und erklärt euch die Ergebnisse."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-004"
+       ]
+      }
+     ],
+     "transfer": "Die Formel hat drei Faktoren. Welcher Faktor ändert sich, wenn man $k$ von 2 auf 3 erhöht, und welcher bleibt gleich?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest $P(X = k)$ mit der Bernoulli-Formel und bestimmst den Binomialkoeffizienten $\\binom{n}{k}$."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst, warum sich die Formel aus Pfadwahrscheinlichkeit $p^k q^{\\,n-k}$ und Anzahl der Pfade $\\binom{n}{k}$ zusammensetzt."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du liest Binomialwahrscheinlichkeiten am Baumdiagramm und Pascalschen Dreieck ab und deutest sie."
+    }
+   ]
+  },
+  {
+   "id": "l3",
+   "nr": 3,
+   "titel": "Kumulierte Wahrscheinlichkeiten",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-binomialverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/binomialverteilung/",
+   "anker": "#bv-kumuliert",
+   "ziele": [
+    "Ich kann Aufgabenformulierungen wie „höchstens“, „mindestens“, „weniger als“ in Wahrscheinlichkeitsterme übersetzen.",
+    "Ich kann den Gegenereignis-Trick korrekt anwenden (Vorsicht: Grenze um 1 verschieben)."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Bernoulli-Formel aus Lektion 2.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#bv-kumuliert",
+     "text": "In Sachaufgaben steht selten „genau $k$“. Hier lernst du, Formulierungen sauber in Terme zu übersetzen — das ist die häufigste Fehlerquelle.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/binomialverteilung/index.html#bv-kumuliert"
+     },
+     "schritte": [
+      {
+       "titel": "Kumulierte Wahrscheinlichkeit",
+       "html": "<p>$P(X \\le k)$ ist die Wahrscheinlichkeit für <strong>höchstens</strong> $k$ Treffer — die Summe $P(X=0) + P(X=1) + \\dots + P(X=k)$. Diesen Wert nennt man <strong>kumuliert</strong>. Der Taschenrechner liefert ihn direkt (binomCDf), sodass man nicht alle Einzelwerte addieren muss.</p>",
+       "check": {
+        "frage": "Was bedeutet $P(X \\le 3)$ in Worten?",
+        "antwort": "Die Wahrscheinlichkeit für höchstens 3 Treffer, also 0, 1, 2 oder 3 Treffer — die Summe dieser vier Einzelwahrscheinlichkeiten."
+       }
+      },
+      {
+       "titel": "Die Übersetzungstabelle",
+       "html": "<p>So übersetzt man die wichtigsten Formulierungen (mit $\\le$ als Grenze):</p><ul><li>„höchstens $k$“ $\\;\\to\\; P(X \\le k)$</li><li>„weniger als $k$“ $\\;\\to\\; P(X \\le k-1)$</li><li>„genau $k$“ $\\;\\to\\; P(X = k)$</li><li>„mindestens $k$“ $\\;\\to\\; P(X \\ge k) = 1 - P(X \\le k-1)$</li><li>„mehr als $k$“ $\\;\\to\\; P(X > k) = 1 - P(X \\le k)$</li></ul><p>Achte auf das Wort „als“: „mehr als 5“ heißt $\\ge 6$, also Grenze verschieben.</p>",
+       "check": {
+        "frage": "Übersetze „weniger als 4 Treffer“.",
+        "antwort": "$P(X < 4) = P(X \\le 3)$. „Weniger als 4“ bedeutet 0 bis 3 Treffer, die 4 ist ausgeschlossen."
+       }
+      },
+      {
+       "titel": "Der Gegenereignis-Trick",
+       "html": "<p>„Mindestens“- und „mehr als“-Fragen rechnet man über das <strong>Gegenereignis</strong>, weil der Taschenrechner nur $P(X \\le \\dots)$ direkt liefert. Schlüssel ist die richtige Grenze: $P(X \\ge k) = 1 - P(X \\le k-1)$. Der häufigste Fehler ist, statt $k-1$ versehentlich $k$ einzusetzen.</p>",
+       "check": {
+        "frage": "Eine Prüfung hat $n=20$, $p=0{,}3$. Schreibe $P(X \\ge 8)$ mit dem Gegenereignis um (nur Term).",
+        "antwort": "$P(X \\ge 8) = 1 - P(X \\le 7)$. Die Grenze ist $8 - 1 = 7$, nicht 8."
+       }
+      }
+     ],
+     "merksatz": "Bei „mindestens $k$“ gilt $P(X \\ge k) = 1 - P(X \\le k-1)$ — die Grenze wird um <strong>1</strong> verschoben. Lies das Wort „als“ genau: „mehr als $k$“ bedeutet $X \\ge k+1$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Formulierungen sortieren",
+       "material": "Karten oder eine Liste mit Formulierungen („höchstens 5“, „weniger als 5“, „mindestens 5“, „mehr als 5“, „genau 5“).",
+       "vorhersage": "Ordne <em>vor</em> dem Nachschlagen jede Formulierung einem Term zu. Welche zwei verwechselst du am ehesten?",
+       "auftraege": [
+        "Schreibe zu jeder der fünf Formulierungen den passenden Term mit $X$ und der richtigen Grenze auf.",
+        "Markiere bei jedem „mindestens/mehr als“, wie das Gegenereignis lautet und welche Grenze in $P(X \\le \\dots)$ steht.",
+        "Prüfe mit dem Taschenrechner an $n=10$, $p=0{,}5$, dass $P(X \\ge 5) + P(X \\le 4) = 1$ ist."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie hängen $P(X \\ge k)$ und $P(X \\le k-1)$ zusammen?",
+       "antwort": "Sie ergänzen sich zu 1: $P(X \\ge k) = 1 - P(X \\le k-1)$, denn entweder hat man mindestens $k$ oder höchstens $k-1$ Treffer."
+      },
+      {
+       "frage": "Übersetze „mehr als 7 Treffer“ bei $n=15$.",
+       "antwort": "$P(X > 7) = P(X \\ge 8) = 1 - P(X \\le 7)$."
+      },
+      {
+       "frage": "Warum ist die Grenze bei „mindestens 6“ die 5 und nicht die 6?",
+       "antwort": "Das Gegenteil von „mindestens 6“ ist „höchstens 5“ ($X \\le 5$). Daher $P(X \\ge 6) = 1 - P(X \\le 5)$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-104"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-007",
+        "ma-qp-bv-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-009"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig eine „mindestens“- und eine „weniger als“-Aufgabe – und kontrolliert die Übersetzung."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-103"
+       ]
+      }
+     ],
+     "transfer": "$n = 12$, $p = 0{,}3$: Übersetze „mindestens 4“, „höchstens 4“ und „weniger als 4“ – drei Terme auf einen Zettel."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du übersetzt sprachliche Formulierungen wie „höchstens“, „mindestens“, „weniger als“ in korrekte Wahrscheinlichkeitsterme."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest kumulierte Wahrscheinlichkeiten $P(X \\le k)$ und nutzt den Gegenereignis-Trick mit korrekter Grenze."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum bei „mindestens $k$“ das Gegenereignis $X \\le k-1$ ist (Grenzverschiebung)."
+    }
+   ]
+  },
+  {
+   "id": "l4",
+   "nr": 4,
+   "titel": "Erwartungswert und Standardabweichung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-binomialverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/binomialverteilung/",
+   "anker": "#bv-kenngroessen",
+   "ziele": [
+    "Ich kann Erwartungswert $\\mu = np$ und Standardabweichung $\\sigma = \\sqrt{np(1-p)}$ berechnen.",
+    "Ich kann die Laplace-Bedingung prüfen und den Erwartungswert im Sachzusammenhang deuten."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Was bedeutet „Erwartungswert“ intuitiv? Sammelt an der Tafel, was bei 100 Drehungen eines Glücksrads mit $p = 0{,}3$ „normal“ wäre."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung kumulierte Wahrscheinlichkeiten aus Lektion 3.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-202"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#bv-kenngroessen",
+     "text": "Erwartungswert und Standardabweichung fassen eine ganze Verteilung in zwei Zahlen zusammen: ihren Schwerpunkt und ihre Breite. Beide brauchst du für Prognosen und Tests.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/binomialverteilung/index.html#bv-kenngroessen"
+     },
+     "schritte": [
+      {
+       "titel": "Der Erwartungswert",
+       "html": "<p>Der <strong>Erwartungswert</strong> $\\mu = E(X)$ ist die Trefferzahl, die man <em>im Mittel</em> erwartet, wenn man die Bernoulli-Kette sehr oft wiederholt. Für die Binomialverteilung gilt die einfache Formel</p><p>$$\\mu = n \\cdot p.$$</p><p>Beispiel: Bei $n = 50$ Würfen mit $p = 0{,}2$ erwartet man $\\mu = 50 \\cdot 0{,}2 = 10$ Treffer. $\\mu$ muss keine ganze Zahl sein.</p>",
+       "check": {
+        "frage": "Ein Basketballspieler trifft mit $p = 0{,}8$. Wie viele Treffer erwartet man bei 15 Würfen?",
+        "antwort": "$\\mu = n \\cdot p = 15 \\cdot 0{,}8 = 12$ Treffer."
+       }
+      },
+      {
+       "titel": "Die Standardabweichung",
+       "html": "<p>Die <strong>Standardabweichung</strong> $\\sigma$ misst, wie stark die Trefferzahl typischerweise um $\\mu$ schwankt. Für die Binomialverteilung gilt</p><p>$$\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}.$$</p><p>Beispiel ($n=50$, $p=0{,}2$): $\\sigma = \\sqrt{50 \\cdot 0{,}2 \\cdot 0{,}8} = \\sqrt{8} \\approx 2{,}83$. Ein kleines $\\sigma$ bedeutet: Die Ergebnisse liegen eng um $\\mu$.</p>",
+       "check": {
+        "frage": "Berechne $\\sigma$ für $n = 100$, $p = 0{,}5$.",
+        "antwort": "$\\sigma = \\sqrt{100 \\cdot 0{,}5 \\cdot 0{,}5} = \\sqrt{25} = 5$."
+       }
+      },
+      {
+       "titel": "Die Laplace-Bedingung",
+       "html": "<p>Später nähert man die Binomialverteilung durch eine Glockenkurve an. Das ist sinnvoll, wenn die Verteilung breit genug ist — geprüft mit der <strong>Laplace-Bedingung</strong> $\\sigma > 3$ (gleichbedeutend mit $n\\,p\\,(1-p) > 9$). Ist sie erfüllt, ist die Verteilung annähernd symmetrisch und glockenförmig.</p>",
+       "check": {
+        "frage": "Ist die Laplace-Bedingung für $n=200$, $p=0{,}1$ erfüllt?",
+        "antwort": "$\\sigma = \\sqrt{200 \\cdot 0{,}1 \\cdot 0{,}9} = \\sqrt{18} \\approx 4{,}24 > 3$ — ja, die Bedingung ist erfüllt, die Glockennäherung ist erlaubt."
+       }
+      }
+     ],
+     "merksatz": "Für $X \\sim B(n;p)$ gilt $\\mu = n \\cdot p$ (Schwerpunkt) und $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ (Streuung). Die <strong>Laplace-Bedingung</strong> $\\sigma > 3$ entscheidet, ob die Glockennäherung erlaubt ist.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Erwartungswert im Würfelspiel prüfen",
+       "material": "Ein Würfel, Strichliste.",
+       "vorhersage": "Du wirfst 30-mal und zählst die Sechsen. Wie viele erwartest du ($\\mu = n\\,p$)? Schreibe den Wert vorher auf.",
+       "auftraege": [
+        "Berechne $\\mu$ und $\\sigma$ für 30 Würfe mit Treffer „Sechs“ ($p = \\frac{1}{6}$).",
+        "Wirf 30-mal, zähle die Sechsen und vergleiche dein Ergebnis mit $\\mu$.",
+        "Wiederhole die 30 Würfe (oder vergleiche mit Mitschuelern): Liegen die meisten Ergebnisse im Bereich $\\mu \\pm \\sigma$?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was sagt der Erwartungswert $\\mu$ anschaulich aus?",
+       "antwort": "Die Trefferzahl, die man im Durchschnitt erwartet, wenn man die Kette sehr oft wiederholt — den Schwerpunkt der Verteilung."
+      },
+      {
+       "frage": "Berechne $\\mu$ und $\\sigma$ für $n=200$, $p=0{,}1$.",
+       "antwort": "$\\mu = 200 \\cdot 0{,}1 = 20$ und $\\sigma = \\sqrt{200 \\cdot 0{,}1 \\cdot 0{,}9} = \\sqrt{18} \\approx 4{,}24$."
+      },
+      {
+       "frage": "Wozu dient die Laplace-Bedingung?",
+       "antwort": "Sie prüft mit $\\sigma > 3$, ob die Binomialverteilung breit und symmetrisch genug ist, um sie durch die Normalverteilung (Glockenkurve) anzunähern."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-010"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-013"
+       ]
+      }
+     ],
+     "partner": "Berechnet für $n = 40$, $p = 0{,}5$ gemeinsam $\\mu$ und $\\sigma$ und prüft die Laplace-Bedingung – einer leitet, der andere kontrolliert."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-106"
+       ]
+      }
+     ],
+     "transfer": "Bei welchem der drei Datensätze ($n=10$, $p=0{,}3$; $n=50$, $p=0{,}4$; $n=20$, $p=0{,}5$) ist die Laplace-Bedingung erfüllt?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest Erwartungswert $\\mu = n \\cdot p$ und Standardabweichung $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ einer Binomialverteilung."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du deutest den Erwartungswert als langfristigen Durchschnitt im Sachzusammenhang (z. B. erwartete Treffer pro Spiel)."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst, was $\\sigma$ über die Streuung der Trefferzahl aussagt und wann die Laplace-Bedingung erfüllt ist."
+    }
+   ]
+  },
+  {
+   "id": "l5",
+   "nr": 5,
+   "titel": "Sigma-Umgebungen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-binomialverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/binomialverteilung/",
+   "anker": "#bv-sigma",
+   "ziele": [
+    "Ich kann Prognoseintervalle mit der $1\\sigma$-, $2\\sigma$- und $3\\sigma$-Regel bestimmen.",
+    "Ich kann einschätzen, welche Trefferzahlen „normal“ sind und wo berechtigter Zweifel entsteht."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung Kennzahlen aus Lektion 4.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-101"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#bv-sigma",
+     "text": "Sigma-Umgebungen sagen voraus, in welchem Bereich die Trefferzahl mit hoher Wahrscheinlichkeit liegt. Das ist die Brücke zum späteren Hypothesentest.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/binomialverteilung/index.html#bv-sigma"
+     },
+     "schritte": [
+      {
+       "titel": "Was ist eine Sigma-Umgebung?",
+       "html": "<p>Eine <strong>Sigma-Umgebung</strong> ist ein um den Erwartungswert $\\mu$ symmetrischer Bereich der Breite $z \\cdot \\sigma$ nach beiden Seiten: $[\\mu - z\\sigma;\\ \\mu + z\\sigma]$. Sie gibt an, wo die Trefferzahl „üblicherweise“ liegt. Voraussetzung ist die Laplace-Bedingung $\\sigma > 3$, damit die Verteilung glockenförmig ist.</p>",
+       "check": {
+        "frage": "Wie ist die $2\\sigma$-Umgebung definiert?",
+        "antwort": "Als Intervall $[\\mu - 2\\sigma;\\ \\mu + 2\\sigma]$ — zwei Standardabweichungen nach links und rechts um den Erwartungswert."
+       }
+      },
+      {
+       "titel": "Die drei Sigma-Regeln",
+       "html": "<p>Für glockenförmige Binomialverteilungen gelten näherungsweise:</p><ul><li>$P(\\mu - \\sigma \\le X \\le \\mu + \\sigma) \\approx 68\\,\\%$</li><li>$P(\\mu - 2\\sigma \\le X \\le \\mu + 2\\sigma) \\approx 95{,}5\\,\\%$</li><li>$P(\\mu - 3\\sigma \\le X \\le \\mu + 3\\sigma) \\approx 99{,}7\\,\\%$</li></ul><p>Die $2\\sigma$-Umgebung enthält also rund $95\\,\\%$ aller Ergebnisse — nur etwa $4{,}5\\,\\%$ liegen ausserhalb.</p>",
+       "check": {
+        "frage": "Welcher Anteil der Ergebnisse liegt ungefähr in der $1\\sigma$-Umgebung?",
+        "antwort": "Etwa $68\\,\\%$ — also gut zwei Drittel aller Ergebnisse."
+       }
+      },
+      {
+       "titel": "Prognose und Zweifel",
+       "html": "<p>Mit $\\mu = n\\,p$ und $\\sigma = \\sqrt{n\\,p\\,(1-p)}$ kann man vorhersagen: „Mit etwa $95\\,\\%$ Wahrscheinlichkeit liegt die Trefferzahl in $[\\mu - 2\\sigma;\\ \\mu + 2\\sigma]$.“ Liegt ein <em>beobachtetes</em> Ergebnis weit ausserhalb (z. B. ausserhalb der $2\\sigma$-Umgebung), ist das ein Hinweis, dass das angenommene $p$ vielleicht nicht stimmt — genau diese Idee wird beim Hypothesentest formalisiert.</p>",
+       "check": {
+        "frage": "Bei $n=100$, $p=0{,}5$ ist $\\mu = 50$, $\\sigma = 5$. Gib die $2\\sigma$-Prognose an.",
+        "antwort": "$[\\mu - 2\\sigma;\\ \\mu + 2\\sigma] = [50 - 10;\\ 50 + 10] = [40;\\ 60]$. Mit etwa $95\\,\\%$ liegt die Trefferzahl zwischen 40 und 60."
+       }
+      }
+     ],
+     "merksatz": "Die Sigma-Umgebung $[\\mu - z\\sigma;\\ \\mu + z\\sigma]$ enthält für $z = 1;2;3$ rund $68\\,\\%$, $95\\,\\%$ bzw. $99{,}7\\,\\%$ der Ergebnisse. Werte weit ausserhalb der $2\\sigma$-Umgebung sind „untypisch“ und wecken Zweifel am angenommenen $p$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Liegt mein Ergebnis im Prognoseintervall?",
+       "material": "Eine Münze, Strichliste; alternativ Würfe der ganzen Klasse zusammentragen.",
+       "vorhersage": "Du wirfst eine Münze 40-mal. In welchem Bereich erwartest du die Wappenzahl (rechne $\\mu \\pm 2\\sigma$)? Notiere das Intervall vorher.",
+       "auftraege": [
+        "Berechne für 40 Münzwürfe ($p=0{,}5$) die $1\\sigma$- und die $2\\sigma$-Umgebung.",
+        "Wirf 40-mal und prüfe, ob deine Wappenzahl in der $2\\sigma$-Umgebung liegt.",
+        "Sammelt die Ergebnisse der Klasse: Wie viele liegen ausserhalb der $2\\sigma$-Umgebung — passt das zu den erwarteten rund $4{,}5\\,\\%$?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche Wahrscheinlichkeit gehört zur $2\\sigma$-Umgebung?",
+       "antwort": "Rund $95\\,\\%$ (genauer $95{,}5\\,\\%$) aller Ergebnisse liegen in $[\\mu - 2\\sigma;\\ \\mu + 2\\sigma]$."
+      },
+      {
+       "frage": "Bei $n=400$, $p=0{,}25$ ist $\\mu=100$, $\\sigma\\approx 8{,}66$. Gib die $1\\sigma$-Umgebung an.",
+       "antwort": "$[\\mu - \\sigma;\\ \\mu + \\sigma] \\approx [100 - 8{,}66;\\ 100 + 8{,}66] = [91{,}3;\\ 108{,}7]$, also etwa 91 bis 109 Treffer."
+      },
+      {
+       "frage": "Warum weckt ein Ergebnis ausserhalb der $2\\sigma$-Umgebung Zweifel?",
+       "antwort": "Weil unter dem angenommenen $p$ nur etwa $4{,}5\\,\\%$ der Ergebnisse so weit aussen liegen — ein so seltenes Ergebnis spricht dafür, dass das angenommene $p$ möglicherweise falsch ist."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-001"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-107"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-012"
+       ]
+      }
+     ],
+     "partner": "Vergleicht eure $2\\sigma$-Intervalle für $n = 50$, $p = 0{,}4$ – und überlegt: Was würde es bedeuten, wenn bei einer Versuchsreihe der Wert 30 auftritt?"
+    },
+    "sichern": {
+     "zeit": 5,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-005"
+       ]
+      }
+     ],
+     "transfer": "Welche Lektion fiel dir am schwersten? Notiere sie für die Klausur."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Vorbereitung auf die Klausur:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du bestimmst mit den Sigma-Regeln Prognoseintervalle und entscheidest, welche Trefferzahlen „normal“ sind."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, ab wann ein beobachtetes Ergebnis berechtigten Zweifel an der angenommenen Wahrscheinlichkeit weckt."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du rechnest Sigma-Umgebungen $[\\mu - z\\sigma;\\ \\mu + z\\sigma]$ aus und ordnest ihnen die zugehörigen Wahrscheinlichkeiten zu."
+    }
+   ]
+  },
+  {
+   "id": "l5b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Binomialverteilung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-binomialverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/binomialverteilung/",
+   "ziele": [
+    "Ich berechne Wahrscheinlichkeiten mit der Formel von Bernoulli und kumuliert sicher.",
+    "Ich bestimme Erwartungswert, Standardabweichung und Sigma-Umgebungen in Sachzusammenhängen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 10,
+     "text": "Diese Anwendungslektion bündelt den Binomial-Block. Vergegenwärtige dir kurz die Strategie, bevor du die gemischten Aufgaben löst.",
+     "schritte": [
+      {
+       "titel": "Strategie für Binomialaufgaben",
+       "html": "<p>Jede Binomialaufgabe folgt demselben Muster: Zuerst <strong>$n$, $p$ und den Treffer</strong> festlegen, dann die Frage <strong>in einen Term</strong> übersetzen ($P(X=k)$, $P(X \\le k)$ oder über das Gegenereignis) und schließlich mit der Formel von Bernoulli bzw. binomCDf rechnen. Bei Kennzahlen nutzt man $\\mu = n\\,p$ und $\\sigma = \\sqrt{n\\,p\\,(1-p)}$.</p>",
+       "check": {
+        "frage": "Was ist immer der erste Schritt bei einer Binomialaufgabe?",
+        "antwort": "Treffer, $n$ und $p$ festlegen — erst dann kann man die Frage in einen Wahrscheinlichkeitsterm übersetzen."
+       }
+      },
+      {
+       "titel": "Die häufigsten Stolpersteine",
+       "html": "<p>Achte besonders auf zwei Dinge: die <strong>Grenzverschiebung</strong> bei „mindestens/mehr als“ ($P(X \\ge k) = 1 - P(X \\le k-1)$) und die <strong>Laplace-Bedingung</strong> $\\sigma > 3$ als Voraussetzung für Sigma-Umgebungen. Wer hier sauber arbeitet, vermeidet die typischen Fehler.</p>",
+       "check": {
+        "frage": "Schreibe $P(X \\ge 12)$ mit dem Gegenereignis um.",
+        "antwort": "$P(X \\ge 12) = 1 - P(X \\le 11)$ — Grenze um 1 nach unten verschoben."
+       }
+      }
+     ],
+     "merksatz": "Binomialaufgaben: $n$, $p$, Treffer festlegen → Frage in Term übersetzen (Grenzverschiebung bei „mindestens“!) → mit Bernoulli/binomCDf rechnen. Kennzahlen $\\mu=np$, $\\sigma=\\sqrt{np(1-p)}$; Sigma-Umgebungen nur bei $\\sigma>3$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Lösungsplan vor dem Rechnen",
+       "material": "Die Aufgaben dieser Lektion; ein Blatt für kurze Lösungsplaene.",
+       "vorhersage": "Überfliege die Aufgaben und schätze: Welche verlangt eine kumulierte Wahrscheinlichkeit, welche nur $P(X=k)$?",
+       "auftraege": [
+        "Notiere zu zwei Aufgaben vor dem Rechnen $n$, $p$, den Treffer und den geplanten Term.",
+        "Markiere bei jeder „mindestens/mehr als“-Formulierung die richtige Grenze.",
+        "Prüfe nach dem Rechnen mit einer groben Sigma-Abschätzung, ob dein Ergebnis plausibel ist."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche zwei Formeln brauchst du für Erwartungswert und Streuung?",
+       "antwort": "$\\mu = n\\,p$ und $\\sigma = \\sqrt{n\\,p\\,(1-p)}$."
+      },
+      {
+       "frage": "Welche Voraussetzung gilt für Sigma-Umgebungen?",
+       "antwort": "Die Laplace-Bedingung $\\sigma > 3$, damit die Verteilung glockenförmig ist."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-202",
+        "ma-qp-bv-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-204",
+        "ma-qp-bv-205",
+        "ma-qp-bv-206",
+        "ma-qp-bv-302",
+        "ma-qp-bv-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-207",
+        "ma-qp-bv-301"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einem selbst gewählten Beispiel den Unterschied zwischen $P(X = k)$, $P(X \\leq k)$ und $P(X \\geq k)$ — und wann der Gegenereignis-Trick die Rechnung abkürzt."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-208"
+       ]
+      }
+     ],
+     "transfer": "Bei Anwendungsaufgaben prüfst du zuerst: Liegt überhaupt eine Bernoulli-Kette vor? Erst dann wählst du Formel von Bernoulli, kumulierte Wahrscheinlichkeit oder Kenngrößen."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen und Wiederholen:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du berechnest Wahrscheinlichkeiten mit der Formel von Bernoulli und kumuliert sicher in Sachzusammenhängen."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du bestimmst Erwartungswert, Standardabweichung und Sigma-Umgebungen und deutest sie im Sachkontext."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du setzt binomCDf und die Kennzahlformeln zielsicher ein und übersetzt Sprache korrekt in Terme."
+    }
+   ]
+  },
+  {
+   "id": "l6",
+   "nr": 1,
+   "titel": "Von diskret zu stetig",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-normalverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/normalverteilung/",
+   "anker": "#nv-stetig",
+   "ziele": [
+    "Ich kann den Unterschied zwischen diskreten und stetigen Zufallsgrößen erklären.",
+    "Ich weiß, dass bei stetigen Größen Wahrscheinlichkeiten als Flächen unter der Dichtekurve berechnet werden."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung aus Block 1: Was ist eine Binomialverteilung -- und wie sieht ihr Histogramm bei großem $n$ aus?",
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#nv-stetig",
+     "text": "Bisher waren Trefferzahlen ganzzahlig (diskret). Viele reale Größen sind aber stetig. Hier verstehst du, warum sich dadurch die Art der Wahrscheinlichkeitsberechnung grundlegend ändert.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/normalverteilung/index.html#nv-stetig"
+     },
+     "schritte": [
+      {
+       "titel": "Diskret oder stetig?",
+       "html": "<p>Eine <strong>diskrete</strong> Zufallsgröße nimmt nur einzelne, abzählbare Werte an (z. B. Trefferzahl $0,1,2,\\dots$). Eine <strong>stetige</strong> Zufallsgröße kann <em>jeden</em> Wert in einem Intervall annehmen (z. B. Körpergröße, Füllmenge, Wartezeit) — zwischen zwei Werten liegen unendlich viele weitere.</p>",
+       "check": {
+        "frage": "Ist die Füllmenge einer Saftflasche in ml diskret oder stetig?",
+        "antwort": "Stetig — sie kann (theoretisch) jeden Wert annehmen, z. B. $498{,}3\\,$ml oder $501{,}07\\,$ml; zwischen zwei Werten gibt es immer weitere."
+       }
+      },
+      {
+       "titel": "Vom Histogramm zur Dichtekurve",
+       "html": "<p>Eine Binomialverteilung stellt man als <strong>Histogramm</strong> dar: Jede Säule über $k$ hat die Höhe (und bei Breite 1 die Fläche) $P(X=k)$. Macht man $n$ immer größer, werden die Säulen schmaler und zahlreicher — ihre obere Kante nähert sich einer glatten <strong>Glockenkurve</strong>. Diese Grenzkurve heißt <strong>Dichtefunktion</strong> der Normalverteilung.</p>",
+       "check": {
+        "frage": "Was geschieht mit dem Histogramm der Binomialverteilung, wenn $n$ sehr gross wird?",
+        "antwort": "Die Säulen werden immer schmaler und ihre Silhouette nähert sich einer glatten, symmetrischen Glockenkurve an — der Dichtekurve der Normalverteilung."
+       }
+      },
+      {
+       "titel": "Wahrscheinlichkeit als Fläche",
+       "html": "<p>Bei stetigen Größen ist die Wahrscheinlichkeit eines <em>einzelnen</em> Wertes null: $P(X = a) = 0$. Sinnvoll sind nur Intervalle, und ihre Wahrscheinlichkeit ist die <strong>Fläche</strong> unter der Dichtekurve über diesem Intervall: $P(a \\le X \\le b) = $ Flächeninhalt zwischen $a$ und $b$. Die <strong>Gesamtfläche</strong> unter der Kurve ist immer 1.</p>",
+       "check": {
+        "frage": "Warum ist $P(X = a)$ bei einer stetigen Zufallsgröße gleich null?",
+        "antwort": "Weil ein einzelner Punkt keine Breite hat — die Fläche über einem einzelnen Wert ist null. Wahrscheinlichkeiten gibt es nur für Intervalle (Flächen)."
+       }
+      }
+     ],
+     "merksatz": "Bei <strong>stetigen</strong> Zufallsgrößen ist die Wahrscheinlichkeit eines Intervalls die <strong>Fläche</strong> unter der Dichtekurve; die Gesamtfläche ist 1 und $P(X=a) = 0$. Das Histogramm der Binomialverteilung geht für grosses $n$ in eine Glockenkurve über.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Histogramm wird zur Glocke",
+       "material": "Kariertes Papier oder Tabellenkalkulation; Bernoulli-Werte für steigende $n$.",
+       "vorhersage": "Du zeichnest Histogramme für $n = 4$, $n = 16$ und $n = 64$ (jeweils $p=0{,}5$). Welche Form erwartest du beim größten $n$?",
+       "auftraege": [
+        "Berechne (oder lass berechnen) die Binomialwahrscheinlichkeiten für $n=4$ und zeichne das Histogramm; markiere die Säule über $k=2$.",
+        "Wiederhole es für $n=16$ und $n=64$ und lege gedanklich eine glatte Kurve über die obere Kante.",
+        "Beschreibe in einem Satz, wie sich Breite, Höhe und Symmetrie der Silhouette mit wachsendem $n$ verändern."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Nenne je ein Beispiel für eine diskrete und eine stetige Zufallsgröße.",
+       "antwort": "Diskret: Anzahl der Sechsen bei 10 Würfen. Stetig: Körpergröße einer zufällig gewählten Person (jeder Wert in einem Intervall möglich)."
+      },
+      {
+       "frage": "Wie berechnet man bei einer stetigen Größe $P(a \\le X \\le b)$?",
+       "antwort": "Als Fläche unter der Dichtekurve zwischen $a$ und $b$."
+      },
+      {
+       "frage": "Wie gross ist die Gesamtfläche unter einer Dichtekurve und warum?",
+       "antwort": "Genau 1, weil ein Wert mit Sicherheit irgendwo im gesamten Wertebereich liegt — die Gesamtwahrscheinlichkeit ist 1."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-001"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-102"
+       ]
+      }
+     ],
+     "partner": "Erkläre deinem Nachbarn: Warum ist die Trefferzahl beim Münzwurf diskret -- auch wenn $n = 1000$? Und warum ist die Füllmenge einer Flasche stetig?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-003"
+       ]
+      }
+     ],
+     "transfer": "Nenne ein eigenes Beispiel für eine stetige und eines für eine diskrete Zufallsgröße -- und erkläre, wie du sie unterscheidest."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst den Unterschied zwischen diskreten und stetigen Zufallsgrößen an Beispielen."
+    },
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du deutest Wahrscheinlichkeiten bei stetigen Größen als Flächeninhalte unter der Dichtekurve."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du ordnest Sachgrößen (Körpergröße, Wartezeit, Stückzahl) als diskret oder stetig ein."
+    }
+   ]
+  },
+  {
+   "id": "l7",
+   "nr": 2,
+   "titel": "Die Gaußsche Glockenkurve",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-normalverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/normalverteilung/",
+   "anker": "#nv-glocke",
+   "ziele": [
+    "Ich kann die Eigenschaften der Gaußschen Glockenkurve (Maximum, Symmetrie, Wendepunkte, Gesamtfläche) benennen.",
+    "Ich kann die Parameter $\\mu$ und $\\sigma$ aus einer Skizze ablesen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 6: Was ist eine stetige Zufallsgröße -- und was sind Dichtefunktionen?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-107"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#nv-glocke",
+     "text": "Die Gausssche Glockenkurve ist die Dichtefunktion der Normalverteilung. Lerne ihre Form lesen — vor allem, wie $\\mu$ und $\\sigma$ sie steuern.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/normalverteilung/index.html#nv-glocke"
+     },
+     "schritte": [
+      {
+       "titel": "Die Form der Glocke",
+       "html": "<p>Die <strong>Glockenkurve</strong> (Gausssche Dichte) ist symmetrisch zur senkrechten Geraden $x = \\mu$. Dort hat sie ihr <strong>Maximum</strong>. Nach beiden Seiten fällt sie ab und nähert sich der $x$-Achse, ohne sie je zu berühren. Die <strong>Gesamtfläche</strong> unter der Kurve ist 1.</p>",
+       "check": {
+        "frage": "Wo liegt das Maximum der Glockenkurve?",
+        "antwort": "Bei $x = \\mu$ — dem Erwartungswert. Die Kurve ist symmetrisch zu dieser senkrechten Geraden."
+       }
+      },
+      {
+       "titel": "$\\mu$ verschiebt, $\\sigma$ formt",
+       "html": "<p>Zwei Regler steuern die Kurve: $\\mu$ verschiebt die ganze Glocke nach links oder rechts (die <strong>Lage</strong>), ohne die Form zu ändern. $\\sigma$ ändert die <strong>Breite</strong>: kleines $\\sigma$ ⇒ schmale, hohe Glocke; grosses $\\sigma$ ⇒ breite, flache Glocke. Weil die Fläche stets 1 bleibt, muss eine schmalere Glocke automatisch höher sein.</p>",
+       "check": {
+        "frage": "Zwei Glocken haben dasselbe $\\mu$, aber die eine ist deutlich schmaler. Welche hat das kleinere $\\sigma$?",
+        "antwort": "Die schmalere, höhere Glocke hat das kleinere $\\sigma$ — ein kleines $\\sigma$ bedeutet geringe Streuung."
+       }
+      },
+      {
+       "titel": "Die Wendepunkte bei $\\mu \\pm \\sigma$",
+       "html": "<p>Genau im Abstand $\\sigma$ vom Maximum liegen die beiden <strong>Wendepunkte</strong> der Glockenkurve, also bei $x = \\mu - \\sigma$ und $x = \\mu + \\sigma$. Dort wechselt die Kurve von Links- zu Rechtskruemmung. Damit kann man $\\sigma$ direkt aus einer Skizze ablesen: Es ist der waagerechte Abstand vom Gipfel zum Wendepunkt.</p>",
+       "check": {
+        "frage": "Eine Glocke hat ihr Maximum bei $x=10$ und einen Wendepunkt bei $x=13$. Wie gross ist $\\sigma$?",
+        "antwort": "$\\sigma = 13 - 10 = 3$ — der Abstand vom Maximum zum Wendepunkt."
+       }
+      }
+     ],
+     "merksatz": "Die Glockenkurve ist symmetrisch um $x = \\mu$ (Maximum), hat ihre Wendepunkte bei $\\mu \\pm \\sigma$ und die Gesamtfläche 1. $\\mu$ steuert die <strong>Lage</strong>, $\\sigma$ die <strong>Breite</strong>: kleines $\\sigma$ ⇒ schmal und hoch.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Glocken vergleichen",
+       "material": "Drei vorbereitete (oder selbst gezeichnete) Glockenkurven mit unterschiedlichem $\\mu$ und $\\sigma$, Lineal.",
+       "vorhersage": "Vor dem Messen: Welche der drei Kurven hat die größte Streuung? Begründe mit der Form.",
+       "auftraege": [
+        "Lies bei jeder Glocke $\\mu$ (Lage des Maximums) ab.",
+        "Bestimme $\\sigma$, indem du den waagerechten Abstand vom Maximum zum Wendepunkt misst.",
+        "Ordne die drei Kurven nach wachsendem $\\sigma$ und prüfe: Ist die mit dem größten $\\sigma$ tatsächlich die flachste?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche vier Eigenschaften kennzeichnen die Glockenkurve?",
+       "antwort": "Symmetrie um $x=\\mu$, Maximum bei $x=\\mu$, Wendepunkte bei $\\mu \\pm \\sigma$, Gesamtfläche 1."
+      },
+      {
+       "frage": "Wie liest man $\\sigma$ aus einer Skizze ab?",
+       "antwort": "Als waagerechten Abstand vom Maximum (bei $\\mu$) bis zu einem Wendepunkt (bei $\\mu \\pm \\sigma$)."
+      },
+      {
+       "frage": "Warum wird die Glocke höher, wenn $\\sigma$ kleiner wird?",
+       "antwort": "Weil die Gesamtfläche immer 1 bleibt: Wird die Kurve schmaler, muss sie höher werden, damit die eingeschlossene Fläche gleich bleibt."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-002"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-008"
+       ]
+      }
+     ],
+     "partner": "Einer skizziert eine Glocke und nennt zwei Punkte auf der Kurve -- der andere liest $\\mu$ und $\\sigma$ ab und erklärt, wie."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-011"
+       ]
+      }
+     ],
+     "transfer": "Welche Glocke streut stärker: $\\mu = 100$, $\\sigma = 5$ oder $\\mu = 80$, $\\sigma = 15$? Wie erkennt man das ohne Rechnung?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematische Darstellungen verwenden",
+     "text": "Du benennst die Eigenschaften der Gaussschen Glockenkurve (Maximum, Symmetrie, Wendepunkte, Gesamtfläche)."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du liest die Parameter $\\mu$ und $\\sigma$ aus einer Skizze ab und ordnest sie der Lage bzw. Breite zu."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum die Glocke bei kleinerem $\\sigma$ schmaler und höher wird, die Fläche aber 1 bleibt."
+    }
+   ]
+  },
+  {
+   "id": "l8",
+   "nr": 3,
+   "titel": "Wahrscheinlichkeiten mit normCDf berechnen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-normalverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/normalverteilung/",
+   "anker": "#nv-flaechen",
+   "ziele": [
+    "Ich kann normCDf korrekt einsetzen (Parameterreihenfolge: Grenzen, dann $\\sigma$, dann $\\mu$).",
+    "Ich weiß, dass $P(X < b) = P(X \\le b)$ gilt und wie das Gegenereignis ohne Grenzverschiebung funktioniert."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Warum gibt es keine Stammfunktion zur Dichtefunktion -- und was macht das CAS stattdessen?"
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Glockenkurve aus Lektion 7: Was steuern $\\mu$ und $\\sigma$?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-102"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#nv-flaechen",
+     "text": "Jetzt rechnest du Normalverteilungs-Wahrscheinlichkeiten mit dem Taschenrechner. Der häufigste Fehler ist die Parameterreihenfolge — darauf liegt hier der Fokus.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/normalverteilung/index.html#nv-flaechen"
+     },
+     "schritte": [
+      {
+       "titel": "normCDf: Fläche zwischen zwei Grenzen",
+       "html": "<p>Der Befehl <strong>normCDf</strong> liefert die Fläche unter der Glockenkurve zwischen einer unteren und einer oberen Grenze — also $P(a \\le X \\le b)$. Die Reihenfolge der Eingaben ist (je nach Gerät) <strong>untere Grenze, obere Grenze, $\\sigma$, $\\mu$</strong>. Vertauscht man $\\sigma$ und $\\mu$, kommt Unsinn heraus — das ist die typische Fehlerquelle.</p>",
+       "check": {
+        "frage": "In welcher Reihenfolge gibt man bei normCDf die vier Werte ein?",
+        "antwort": "Untere Grenze, obere Grenze, dann $\\sigma$ (Standardabweichung), dann $\\mu$ (Erwartungswert) — erst die Streuung, dann der Mittelwert."
+       }
+      },
+      {
+       "titel": "Einseitige Grenzen mit $\\pm\\infty$",
+       "html": "<p>Fragen wie $P(X \\le b)$ („höchstens $b$“) haben nur eine echte Grenze. Die andere setzt man als sehr grosse Zahl: untere Grenze $-10^{99}$ (praktisch $-\\infty$). Für $P(X \\ge a)$ nimmt man als obere Grenze $10^{99}$. Bei stetigen Größen gilt zudem $P(X < b) = P(X \\le b)$, weil der einzelne Randpunkt die Wahrscheinlichkeit 0 hat — man muss also <em>nicht</em> wie bei der Binomialverteilung die Grenze verschieben.</p>",
+       "check": {
+        "frage": "Wie berechnet man $P(X \\le 5)$ mit normCDf?",
+        "antwort": "Als $P(-10^{99} \\le X \\le 5)$, d. h. untere Grenze $-10^{99}$, obere Grenze 5, dann $\\sigma$ und $\\mu$ eingeben."
+       }
+      },
+      {
+       "titel": "Gegenereignis ohne Grenzverschiebung",
+       "html": "<p>Auch $P(X \\ge a)$ kann man als Gegenereignis rechnen: $P(X \\ge a) = 1 - P(X \\le a)$. Anders als bei der Binomialverteilung bleibt die <strong>Grenze gleich</strong> ($a$, nicht $a-1$), weil bei stetigen Größen kein einzelner Wert „weggenommen“ werden muss. Beispiel ($\\mu=500$, $\\sigma=8$): $P(X \\ge 510) = 1 - P(X \\le 510)$.</p>",
+       "check": {
+        "frage": "Warum verschiebt man bei der Normalverteilung die Grenze im Gegenereignis NICHT um 1?",
+        "antwort": "Weil $X$ stetig ist und $P(X = a) = 0$ gilt — es macht keinen Unterschied, ob man $X \\le a$ oder $X < a$ schreibt. Daher $P(X \\ge a) = 1 - P(X \\le a)$ mit gleicher Grenze."
+       }
+      }
+     ],
+     "merksatz": "<strong>normCDf</strong> berechnet $P(a \\le X \\le b)$ mit der Reihenfolge <em>untere Grenze, obere Grenze, $\\sigma$, $\\mu$</em>. Einseitige Grenzen ersetzt man durch $\\pm 10^{99}$. Bei stetigen Größen gilt $P(X < b) = P(X \\le b)$ — keine Grenzverschiebung im Gegenereignis.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Füllmengen einer Abfüllanlage",
+       "material": "Taschenrechner mit normCDf; Beispieldaten $\\mu = 500\\,$ml, $\\sigma = 4\\,$ml.",
+       "vorhersage": "Eine Anlage füllt im Mittel $500\\,$ml mit $\\sigma = 4\\,$ml ab. Schätze vorher: Wie wahrscheinlich ist eine Füllmenge zwischen 496 und 504 ml? (Tipp: $\\mu \\pm \\sigma$.)",
+       "auftraege": [
+        "Berechne $P(496 \\le X \\le 504)$ mit normCDf und vergleiche mit deiner Schätzung (rund $68\\,\\%$).",
+        "Bestimme $P(X \\le 495)$ mit der unteren Grenze $-10^{99}$.",
+        "Berechne $P(X \\ge 508)$ einmal direkt (obere Grenze $10^{99}$) und einmal über das Gegenereignis $1 - P(X \\le 508)$ — beide Wege müssen denselben Wert liefern."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie berechnet man $P(X \\ge a)$ mit normCDf direkt?",
+       "antwort": "Mit der oberen Grenze $10^{99}$: $P(a \\le X \\le 10^{99})$, dann $\\sigma$ und $\\mu$ eingeben."
+      },
+      {
+       "frage": "Gilt bei der Normalverteilung $P(X < 7) = P(X \\le 7)$?",
+       "antwort": "Ja. Da $X$ stetig ist, ist $P(X = 7) = 0$, also machen $<$ und $\\le$ keinen Unterschied."
+      },
+      {
+       "frage": "Worauf muss man bei der Eingabe von normCDf besonders achten?",
+       "antwort": "Auf die Reihenfolge: zuerst die beiden Grenzen, dann $\\sigma$, dann $\\mu$ — $\\sigma$ und $\\mu$ nicht vertauschen."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-104"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-004"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-007"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-302"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig eine einfache normCDf-Aufgabe (nennt $\\mu$, $\\sigma$ und ein Intervall) und kontrolliert die Parameterreihenfolge."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-005"
+       ]
+      }
+     ],
+     "transfer": "Formuliere in einem Satz den Unterschied zwischen $P(X < 1000)$ und $P(X \\le 1000)$ bei einer normalverteilten stetigen Größe."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du setzt normCDf korrekt ein und beachtest die Parameterreihenfolge (untere Grenze, obere Grenze, $\\sigma$, $\\mu$)."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du übersetzt Sachfragen (z. B. Füllmengen, Messwerte) in $P(a \\le X \\le b)$ und wählst sinnvolle Grenzen."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum bei stetigen Größen $P(X < b) = P(X \\le b)$ gilt und wie das Gegenereignis ohne Grenzverschiebung funktioniert."
+    }
+   ]
+  },
+  {
+   "id": "l9",
+   "nr": 4,
+   "titel": "Die Sigma-Regeln",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-normalverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/normalverteilung/",
+   "anker": "#nv-sigma",
+   "ziele": [
+    "Ich kann die $1\\sigma$-, $2\\sigma$- und $3\\sigma$-Umgebungen einer Normalverteilung berechnen und die zugehörigen Wahrscheinlichkeiten nennen.",
+    "Ich kann invNormCDf für Umkehraufgaben einsetzen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung normCDf aus Lektion 8: Wie lautet die Parameterreihenfolge?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-106"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#nv-sigma",
+     "text": "Die Sigma-Regeln der Normalverteilung sind dieselben festen Prozentwerte wie bei der Binomialverteilung. Neu ist die Umkehrung: aus einer Wahrscheinlichkeit die Grenze bestimmen.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/normalverteilung/index.html#nv-sigma"
+     },
+     "schritte": [
+      {
+       "titel": "Die Sigma-Regeln der Normalverteilung",
+       "html": "<p>Für jede Normalverteilung gilt unabhängig von $\\mu$ und $\\sigma$:</p><ul><li>$P(\\mu - \\sigma \\le X \\le \\mu + \\sigma) \\approx 68{,}3\\,\\%$</li><li>$P(\\mu - 2\\sigma \\le X \\le \\mu + 2\\sigma) \\approx 95{,}5\\,\\%$</li><li>$P(\\mu - 3\\sigma \\le X \\le \\mu + 3\\sigma) \\approx 99{,}7\\,\\%$</li></ul><p>Diese Werte muss man auswendig kennen — sie erlauben schnelle Abschätzungen ohne Taschenrechner.</p>",
+       "check": {
+        "frage": "Wie viel Prozent der Werte liegen ausserhalb der $2\\sigma$-Umgebung?",
+        "antwort": "Etwa $100\\,\\% - 95{,}5\\,\\% = 4{,}5\\,\\%$, also rund $2{,}25\\,\\%$ auf jeder Seite."
+       }
+      },
+      {
+       "titel": "invNormCDf: von der Wahrscheinlichkeit zur Grenze",
+       "html": "<p><strong>invNormCDf</strong> ist die Umkehrung von normCDf: Man gibt eine <em>Wahrscheinlichkeit</em> $p$ (als Fläche von links) sowie $\\sigma$ und $\\mu$ ein und erhält die zugehörige <strong>Grenze</strong> $x$ mit $P(X \\le x) = p$. Beispiel ($\\mu=500$, $\\sigma=10$): Gesucht ist die Grenze, unter der $90\\,\\%$ der Werte liegen — invNormCDf liefert $x \\approx 512{,}8$.</p>",
+       "check": {
+        "frage": "Was liefert invNormCDf, wenn man $p = 0{,}5$, $\\sigma$ und $\\mu$ eingibt?",
+        "antwort": "Den Wert $x = \\mu$, denn bei einer symmetrischen Verteilung liegen genau $50\\,\\%$ der Fläche links vom Erwartungswert."
+       }
+      },
+      {
+       "titel": "Symmetrische Intervalle bestimmen",
+       "html": "<p>Soll ein <em>symmetrisches</em> Intervall um $\\mu$ einen Anteil von z. B. $95\\,\\%$ enthalten, liegen links davon $2{,}5\\,\\%$ und rechts $2{,}5\\,\\%$. Die untere Grenze findet man mit invNormCDf für $p = 0{,}025$, die obere für $p = 0{,}975$. So bestimmt man Prognoseintervalle zu beliebigen Sicherheiten, nicht nur zu den Sigma-Standardwerten.</p>",
+       "check": {
+        "frage": "Welche beiden Wahrscheinlichkeiten gibt man in invNormCDf ein, um ein symmetrisches $90\\,\\%$-Intervall zu erhalten?",
+        "antwort": "$p = 0{,}05$ für die untere Grenze und $p = 0{,}95$ für die obere Grenze. Dann liegen $5\\,\\%$ links der unteren und $5\\,\\%$ rechts der oberen Grenze ausserhalb, das Intervall selbst enthält $90\\,\\%$."
+       }
+      }
+     ],
+     "merksatz": "Sigma-Regeln: $68{,}3\\,\\%$ / $95{,}5\\,\\%$ / $99{,}7\\,\\%$ in der $1\\sigma$/$2\\sigma$/$3\\sigma$-Umgebung. <strong>normCDf</strong>: Grenze gegeben → Wahrscheinlichkeit. <strong>invNormCDf</strong>: Wahrscheinlichkeit gegeben → Grenze.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Grenze und Wahrscheinlichkeit hin und her",
+       "material": "Taschenrechner mit normCDf und invNormCDf; Beispiel $\\mu = 50$, $\\sigma = 5$.",
+       "vorhersage": "Du suchst die Grenze, unter der $97{,}5\\,\\%$ der Werte liegen. Schätze sie vorher mit der $2\\sigma$-Regel.",
+       "auftraege": [
+        "Berechne mit den Sigma-Regeln die $2\\sigma$-Umgebung von $\\mu=50$, $\\sigma=5$ und prüfe mit normCDf, dass sie rund $95{,}5\\,\\%$ enthält.",
+        "Bestimme mit invNormCDf die Grenze $x$ mit $P(X \\le x) = 0{,}975$ und vergleiche mit der oberen $2\\sigma$-Grenze.",
+        "Bestimme ein symmetrisches $90\\,\\%$-Intervall um $\\mu$ mithilfe von invNormCDf für $p=0{,}05$ und $p=0{,}95$."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wann nutzt man normCDf, wann invNormCDf?",
+       "antwort": "normCDf, wenn die Grenzen gegeben sind und die Wahrscheinlichkeit gesucht ist; invNormCDf, wenn die Wahrscheinlichkeit gegeben ist und die Grenze gesucht ist."
+      },
+      {
+       "frage": "Welche Wahrscheinlichkeit gehört zur $1\\sigma$-Umgebung?",
+       "antwort": "Etwa $68{,}3\\,\\%$."
+      },
+      {
+       "frage": "Du suchst die Grenze, unter der $99\\,\\%$ der Werte liegen. Welchen Wert von $p$ gibst du in invNormCDf ein?",
+       "antwort": "$p = 0{,}99$ — invNormCDf liefert dann das $x$ mit $P(X \\le x) = 0{,}99$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-006"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-108"
+       ]
+      }
+     ],
+     "partner": "Vergleicht eure $2\\sigma$-Umgebungen für $\\mu = 1000$, $\\sigma = 8$ -- und überlegt gemeinsam: Was bedeutet ein Messwert von 1025?"
+    },
+    "sichern": {
+     "zeit": 5,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-010"
+       ]
+      }
+     ],
+     "transfer": "Erkläre in einem Satz den Unterschied zwischen den Sigma-Regeln bei der Binomialverteilung (Faustregeln) und bei der Normalverteilung (exakt)."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest die $1\\sigma$-, $2\\sigma$- und $3\\sigma$-Umgebungen einer Normalverteilung und nennst die zugehörigen Wahrscheinlichkeiten."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du löst Umkehraufgaben mit invNormCDf (gesuchte Grenze aus gegebener Wahrscheinlichkeit)."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du unterscheidest, ob eine Aufgabe nach einer Wahrscheinlichkeit (normCDf) oder nach einer Grenze (invNormCDf) fragt."
+    }
+   ]
+  },
+  {
+   "id": "l10",
+   "nr": 5,
+   "titel": "Normalverteilung als Näherung der Binomialverteilung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-normalverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/normalverteilung/",
+   "anker": "#nv-naeherung",
+   "ziele": [
+    "Ich kann $\\mu$ und $\\sigma$ aus $n$ und $p$ berechnen und die Laplace-Bedingung prüfen.",
+    "Ich kann eine Binomialwahrscheinlichkeit näherungsweise mit normCDf und Stetigkeitskorrektur berechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung Sigma-Regeln aus Lektion 9 -- welche Prozentsätze gehören zu den drei Umgebungen?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-203"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#nv-naeherung",
+     "text": "Für grosse $n$ ist die Binomialverteilung muehsam zu rechnen. Die Normalverteilung liefert eine schnelle Näherung — wenn man die Stetigkeitskorrektur nicht vergisst.",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "mathematik/qualifikationsphase/normalverteilung/index.html#nv-naeherung"
+     },
+     "schritte": [
+      {
+       "titel": "Die Näherungsidee und ihre Voraussetzung",
+       "html": "<p>Ist eine Binomialverteilung glockenförmig, kann man ihre Wahrscheinlichkeiten durch eine Normalverteilung mit denselben Kennzahlen $\\mu = n\\,p$ und $\\sigma = \\sqrt{n\\,p\\,(1-p)}$ annähern. Voraussetzung ist die <strong>Laplace-Bedingung</strong> $\\sigma > 3$. Ist sie verletzt, ist die Verteilung zu schief und die Näherung ungenau.</p>",
+       "check": {
+        "frage": "Welche Bedingung muss erfüllt sein, damit die Normalnäherung sinnvoll ist?",
+        "antwort": "Die Laplace-Bedingung $\\sigma = \\sqrt{n\\,p\\,(1-p)} > 3$ — die Binomialverteilung muss breit und annähernd symmetrisch sein."
+       }
+      },
+      {
+       "titel": "Warum eine Korrektur nötig ist",
+       "html": "<p>Die Binomialverteilung ist <strong>diskret</strong> (Säulen über ganzen Zahlen), die Normalverteilung <strong>stetig</strong> (glatte Kurve). Eine Säule über $k$ reicht gedanklich von $k-0{,}5$ bis $k+0{,}5$. Damit die Fläche unter der Glocke die ganze Säule erfasst, verschiebt man die Grenzen um $0{,}5$ — das ist die <strong>Stetigkeitskorrektur</strong>.</p>",
+       "check": {
+        "frage": "Von wo bis wo reicht die gedachte Säule über dem Wert $k = 12$?",
+        "antwort": "Von $11{,}5$ bis $12{,}5$ — eine Breite von 1, zentriert um 12."
+       }
+      },
+      {
+       "titel": "Stetigkeitskorrektur richtig anwenden",
+       "html": "<p>Beim Übergang zur Normalnäherung gilt:</p><ul><li>$P(X = k) \\approx P(k-0{,}5 \\le X \\le k+0{,}5)$</li><li>$P(X \\le k) \\approx P(X \\le k+0{,}5)$</li><li>$P(X \\ge k) \\approx P(X \\ge k-0{,}5)$</li></ul><p>Merkhilfe: Die Grenze wird stets so verschoben, dass die Säule des Randwertes <em>mitgenommen</em> wird. Beispiel ($n=100$, $p=0{,}5$): $P(X \\le 55) \\approx P(X \\le 55{,}5)$ mit $\\mu=50$, $\\sigma=5$.</p>",
+       "check": {
+        "frage": "Wie nähert man $P(X \\ge 60)$ mit Stetigkeitskorrektur?",
+        "antwort": "$P(X \\ge 60) \\approx P(X \\ge 59{,}5)$ — die untere Grenze wird um $0{,}5$ nach unten verschoben, damit die Säule über 60 ganz erfasst wird."
+       }
+      }
+     ],
+     "merksatz": "Bei der Normalnäherung der Binomialverteilung gilt $\\mu = n\\,p$, $\\sigma = \\sqrt{n\\,p\\,(1-p)}$ und die Voraussetzung $\\sigma > 3$. Die <strong>Stetigkeitskorrektur</strong> verschiebt jede Grenze um $0{,}5$ nach aussen, sodass die Randsäule mitgezählt wird.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Exakt gegen Näherung",
+       "material": "Taschenrechner mit binomCDf und normCDf; Beispiel $n=100$, $p=0{,}5$.",
+       "vorhersage": "Du vergleichst $P(X \\le 55)$ exakt (binomCDf) mit der Normalnäherung. Schätze vorher, ob die Näherung mit oder ohne Korrektur näher am exakten Wert liegt.",
+       "auftraege": [
+        "Berechne $\\mu$ und $\\sigma$ für $n=100$, $p=0{,}5$ und prüfe die Laplace-Bedingung.",
+        "Bestimme $P(X \\le 55)$ exakt mit binomCDf.",
+        "Nähere $P(X \\le 55)$ einmal ohne und einmal mit Stetigkeitskorrektur ($P(X \\le 55{,}5)$) und vergleiche beide mit dem exakten Wert."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Welche Kennzahlen übernimmt die Normalnäherung von der Binomialverteilung?",
+       "antwort": "Erwartungswert $\\mu = n\\,p$ und Standardabweichung $\\sigma = \\sqrt{n\\,p\\,(1-p)}$."
+      },
+      {
+       "frage": "Warum verschiebt man die Grenzen um $0{,}5$?",
+       "antwort": "Weil die diskreten Säulen je von $k-0{,}5$ bis $k+0{,}5$ reichen — die Stetigkeitskorrektur sorgt dafür, dass die Glockenfläche die Randsäule mitnimmt."
+      },
+      {
+       "frage": "Nähere $P(X = 50)$ für $n=100$, $p=0{,}5$ mit Korrektur (nur Term).",
+       "antwort": "$P(X=50) \\approx P(49{,}5 \\le X \\le 50{,}5)$ mit $\\mu=50$, $\\sigma=5$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-107"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-204"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-012"
+       ]
+      }
+     ],
+     "partner": "Berechnet gemeinsam für $n = 200$, $p = 0{,}4$ die $\\mu$- und $\\sigma$-Werte -- und diskutiert: Ab welchem Bereich würde die Näherung schlecht werden?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-009"
+       ]
+      }
+     ],
+     "transfer": "Wann ist die Normalverteilung als Näherung der Binomialverteilung besser geeignet -- bei $n = 20$, $p = 0{,}5$ oder bei $n = 200$, $p = 0{,}4$? Begründe mit der Laplace-Bedingung."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Vorbereitung auf die Klausur:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du näherst eine Binomialverteilung durch eine Normalverteilung an und prüfst die Laplace-Bedingung als Voraussetzung."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest $\\mu = n\\,p$ und $\\sigma = \\sqrt{n\\,p\\,(1-p)}$ und wendest die Stetigkeitskorrektur an."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum man bei der Näherung die Grenzen um $0{,}5$ verschiebt (Übergang diskret → stetig)."
+    }
+   ]
+  },
+  {
+   "id": "l10b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Normalverteilung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-normalverteilung",
+   "themaPfad": "mathematik/qualifikationsphase/normalverteilung/",
+   "ziele": [
+    "Ich berechne Wahrscheinlichkeiten mit normCDf und invNormCDf in Sachzusammenhängen sicher.",
+    "Ich nutze die Sigma-Regeln, die Standardisierung und die Normalnäherung der Binomialverteilung."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 10,
+     "text": "Diese Anwendungslektion bündelt den Normalverteilungs-Block. Ruf dir kurz die Entscheidungsregeln ins Gedächtnis, bevor du übst.",
+     "schritte": [
+      {
+       "titel": "normCDf oder invNormCDf?",
+       "html": "<p>Die zentrale Frage zuerst: Ist die <strong>Grenze</strong> gegeben und die <strong>Wahrscheinlichkeit</strong> gesucht? → normCDf. Ist die <strong>Wahrscheinlichkeit</strong> gegeben und die <strong>Grenze</strong> gesucht? → invNormCDf. Bei normCDf gilt die Reihenfolge untere Grenze, obere Grenze, $\\sigma$, $\\mu$; einseitige Grenzen durch $\\pm 10^{99}$ ersetzen.</p>",
+       "check": {
+        "frage": "„Welche Masse unterschreiten $90\\,\\%$ der Pakete?“ — welcher Befehl?",
+        "antwort": "invNormCDf, denn die Wahrscheinlichkeit ($0{,}9$) ist gegeben und die Grenze gesucht."
+       }
+      },
+      {
+       "titel": "Näherung nicht ohne Korrektur",
+       "html": "<p>Nähert man eine Binomialverteilung ($\\sigma > 3$), übernimmt man $\\mu = n\\,p$ und $\\sigma = \\sqrt{n\\,p\\,(1-p)}$ und wendet die <strong>Stetigkeitskorrektur</strong> an: jede Grenze um $0{,}5$ nach aussen verschieben. Die Sigma-Regeln ($68/95/99{,}7\\,\\%$) dienen zur schnellen Kontrolle.</p>",
+       "check": {
+        "frage": "Wie nähert man $P(X \\le 40)$ einer Binomialverteilung?",
+        "antwort": "$P(X \\le 40) \\approx P(X \\le 40{,}5)$ mit $\\mu=np$ und $\\sigma=\\sqrt{np(1-p)}$ (Stetigkeitskorrektur, Grenze um $0{,}5$ nach aussen)."
+       }
+      }
+     ],
+     "merksatz": "Normalverteilungs-Aufgaben: Grenze→Wahrscheinlichkeit = <strong>normCDf</strong>, Wahrscheinlichkeit→Grenze = <strong>invNormCDf</strong>. Reihenfolge untere/obere Grenze, $\\sigma$, $\\mu$; einseitig mit $\\pm 10^{99}$. Näherung mit $\\mu=np$, $\\sigma=\\sqrt{np(1-p)}$ und Stetigkeitskorrektur ($\\pm 0{,}5$).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Befehl vor dem Rechnen festlegen",
+       "material": "Die Aufgaben dieser Lektion; Taschenrechner.",
+       "vorhersage": "Überfliege die Aufgaben: Bei welchen ist die Grenze gegeben, bei welchen die Wahrscheinlichkeit?",
+       "auftraege": [
+        "Markiere bei jeder Aufgabe, ob normCDf oder invNormCDf gebraucht wird.",
+        "Prüfe bei einer Näherungsaufgabe die Laplace-Bedingung und wende die Stetigkeitskorrektur an.",
+        "Kontrolliere ein Ergebnis grob mit der passenden Sigma-Regel."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie unterscheidest du, ob normCDf oder invNormCDf gefragt ist?",
+       "antwort": "normCDf: Grenze gegeben, Wahrscheinlichkeit gesucht. invNormCDf: Wahrscheinlichkeit gegeben, Grenze gesucht."
+      },
+      {
+       "frage": "Was darfst du bei der Normalnäherung nicht vergessen?",
+       "antwort": "Die Stetigkeitskorrektur — jede Grenze um $0{,}5$ nach aussen verschieben."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-202",
+        "ma-qp-nv-205"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-206",
+        "ma-qp-nv-104",
+        "ma-qp-nv-105",
+        "ma-qp-nv-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-207",
+        "ma-qp-nv-301"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig eine normCDf-Aufgabe (mit $\\mu$, $\\sigma$ und Intervall) und kontrolliert die Parameterreihenfolge: erst Grenzen, dann $\\sigma$, dann $\\mu$."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-normalverteilung",
+       "ids": [
+        "ma-qp-nv-208"
+       ]
+      }
+     ],
+     "transfer": "Bei der Normalnäherung der Binomialverteilung prüfst du zuerst die Laplace-Bedingung $\\sigma > 3$ und denkst dann an die Stetigkeitskorrektur."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen und Ausprobieren:",
+     "links": [
+      {
+       "label": "Simulation: Normalverteilung — Glockenkurve und Flächen",
+       "href": "simulationen/mathematik/normalverteilung/index.html"
+      },
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du berechnest Wahrscheinlichkeiten mit normCDf und invNormCDf sicher in Sachzusammenhängen."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du nutzt Sigma-Regeln und die Normalnäherung der Binomialverteilung mit Stetigkeitskorrektur."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du wählst zwischen normCDf und invNormCDf und beachtest Parameterreihenfolge und Grenzen."
+    }
+   ]
+  },
+  {
+   "id": "l11",
+   "nr": 1,
+   "titel": "Hypothesen aufstellen und Signifikanzniveau",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-hypothesentests",
+   "themaPfad": "mathematik/qualifikationsphase/hypothesentests/",
+   "anker": "#ht-pruefstand",
+   "ziele": [
+    "Ich kann H\\u2080 und H\\u2081 fachgerecht formulieren.",
+    "Ich wei\\u00df, was das Signifikanzniveau $\\alpha$ bedeutet und welche Werte typisch sind."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespr\\u00e4ch: Was bedeutet es, eine Behauptung 'statistisch zu widerlegen'? Sammelt an der Tafel Alltagsbeispiele f\\u00fcr unsichere Aussagen."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung aus Block 1: Sigma-Umgebungen und 'auff\\u00e4llige' Werte.",
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-binomialverteilung",
+       "ids": [
+        "ma-qp-bv-010"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#ht-pruefstand",
+     "text": "Der Hypothesentest ist die Methode, mit der man eine Behauptung über eine Wahrscheinlichkeit anhand einer Stichprobe prüfen kann. Alles beginnt mit den Hypothesen.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der Erkl\\u00e4rseite",
+      "href": "mathematik/qualifikationsphase/hypothesentests/index.html#ht-pruefstand"
+     },
+     "schritte": [
+      {
+       "titel": "Null- und Gegenhypothese",
+       "html": "<p>Beim Test stehen sich zwei Aussagen gegenüber: Die <strong>Nullhypothese $H_0$</strong> ist die Annahme, die man bis zum Beweis des Gegenteils beibehält (oft der „Status quo“, z. B. „der Würfel ist fair, $p = \\frac{1}{6}$“). Die <strong>Gegenhypothese $H_1$</strong> ist die Vermutung, die man eigentlich zeigen möchte (z. B. „der Würfel zeigt zu oft Sechs, $p > \\frac{1}{6}$“).</p>",
+       "check": {
+        "frage": "Ein Hersteller behauptet, höchstens $5\\,\\%$ Ausschuss zu haben. Ein Prüfer vermutet mehr. Wie lauten $H_0$ und $H_1$?",
+        "antwort": "$H_0: p \\le 0{,}05$ (Behauptung des Herstellers), $H_1: p > 0{,}05$ (Vermutung des Prüfers, dass es mehr Ausschuss gibt)."
+       }
+      },
+      {
+       "titel": "Das Signifikanzniveau",
+       "html": "<p>Das <strong>Signifikanzniveau $\\alpha$</strong> ist die Wahrscheinlichkeit, die man höchstens in Kauf nimmt, $H_0$ fälschlich abzulehnen (obwohl sie stimmt). Übliche Werte sind $\\alpha = 5\\,\\%$ oder $\\alpha = 1\\,\\%$. Ein kleines $\\alpha$ bedeutet: Man verlangt sehr starke Belege, bevor man $H_0$ verwirft — die Entscheidung ist „streng“.</p>",
+       "check": {
+        "frage": "Was bedeutet $\\alpha = 1\\,\\%$ anschaulich?",
+        "antwort": "Man akzeptiert höchstens $1\\,\\%$ Wahrscheinlichkeit, $H_0$ abzulehnen, obwohl sie in Wahrheit richtig ist — eine sehr strenge Entscheidungsregel."
+       }
+      },
+      {
+       "titel": "Die Beweislast liegt bei $H_1$",
+       "html": "<p>Man geht zunächst davon aus, dass $H_0$ gilt, und fragt: Ist das beobachtete Stichprobenergebnis unter $H_0$ so unwahrscheinlich (kleiner als $\\alpha$), dass man $H_0$ verwerfen muss? Nur dann lehnt man $H_0$ ab und nimmt $H_1$ an. Reicht der Beleg nicht, behält man $H_0$ bei — das ist <em>kein</em> Beweis für $H_0$, sondern nur „kein ausreichender Grund dagegen“.</p>",
+       "check": {
+        "frage": "Warum ist „$H_0$ beibehalten“ nicht dasselbe wie „$H_0$ bewiesen“?",
+        "antwort": "Weil man $H_0$ nur deshalb beibehält, weil der Beleg gegen sie nicht ausreichte. Das Stichprobenergebnis war mit $H_0$ verträglich, beweist sie aber nicht."
+       }
+      }
+     ],
+     "merksatz": "$H_0$ (Nullhypothese) ist die Ausgangsannahme, $H_1$ (Gegenhypothese) die zu zeigende Vermutung. Das <strong>Signifikanzniveau $\\alpha$</strong> ist die maximal akzeptierte Wahrscheinlichkeit, $H_0$ fälschlich abzulehnen (typisch $5\\,\\%$ oder $1\\,\\%$).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Hypothesen zu Sachfragen formulieren",
+       "material": "Eine Liste von Behauptungen (z. B. „Die Münze ist fair“, „Mehr als $30\\,\\%$ moegen das Produkt“, „Höchstens $2\\,\\%$ Ausschuss“).",
+       "vorhersage": "Überlege vorher: Welche Aussage gehört jeweils in $H_0$, welche in $H_1$? Woran erkennst du das?",
+       "auftraege": [
+        "Formuliere zu drei Behauptungen jeweils $H_0$ und $H_1$ mit den passenden Ungleichungszeichen.",
+        "Markiere bei jeder Aufgabe, welche Aussage den „Status quo“ darstellt und daher in $H_0$ gehört.",
+        "Diskutiere: Würde man hier eher $\\alpha = 5\\,\\%$ oder $\\alpha = 1\\,\\%$ wählen — und warum?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was ist der Unterschied zwischen $H_0$ und $H_1$?",
+       "antwort": "$H_0$ ist die Ausgangsannahme (Status quo), die man bis zum Beweis des Gegenteils beibehält; $H_1$ ist die Vermutung, die man durch die Stichprobe belegen möchte."
+      },
+      {
+       "frage": "Welche typischen Werte hat das Signifikanzniveau $\\alpha$?",
+       "antwort": "$5\\,\\%$ oder $1\\,\\%$ (manchmal auch $10\\,\\%$). Je kleiner $\\alpha$, desto strenger der Test."
+      },
+      {
+       "frage": "Was sagt $\\alpha$ genau aus?",
+       "antwort": "Die höchstens akzeptierte Wahrscheinlichkeit, $H_0$ abzulehnen, obwohl sie in Wahrheit zutrifft (Fehler 1. Art)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-001"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-003"
+       ]
+      }
+     ],
+     "partner": "Formuliert f\\u00fcr zwei verschiedene Alltagssituationen je eine H\\u2080 und H\\u2081 -- und erkl\\u00e4rt euch gegenseitig, warum H\\u2080 die 'vorsichtigere' Behauptung ist."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-002"
+       ]
+      }
+     ],
+     "transfer": "Nenne ein Beispiel aus dem Alltag: Welche H\\u2080 w\\u00fcrde ein Arzt aufstellen, der ein neues Medikament testet -- und warum?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du formulierst Nullhypothese $H_0$ und Gegenhypothese $H_1$ aus einer Sachfrage."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst die Bedeutung des Signifikanzniveaus $\\alpha$ als maximal akzeptierte Irrtumswahrscheinlichkeit."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du verwendest die Fachbegriffe Nullhypothese, Gegenhypothese und Signifikanzniveau korrekt."
+    }
+   ]
+  },
+  {
+   "id": "l12",
+   "nr": 2,
+   "titel": "Kritischen Bereich bestimmen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-hypothesentests",
+   "themaPfad": "mathematik/qualifikationsphase/hypothesentests/",
+   "anker": "#ht-einseitig",
+   "ziele": [
+    "Ich kann den kritischen Bereich f\\u00fcr einen rechtsseitigen Test bestimmen.",
+    "Ich kann die Bedingung $P(X \\ge c \\mid p_0) \\le \\alpha$ korrekt auswerten."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Hypothesen aus Lektion 11: Was ist H\\u2080 -- und was bedeutet Signifikanzniveau?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#ht-einseitig",
+     "text": "Der kritische Bereich legt fest, bei welchen Stichprobenergebnissen man $H_0$ ablehnt. Hier lernst du, ihn für einen rechtsseitigen Test exakt zu bestimmen.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der Erkl\\u00e4rseite",
+      "href": "mathematik/qualifikationsphase/hypothesentests/index.html#ht-einseitig"
+     },
+     "schritte": [
+      {
+       "titel": "Was ist der kritische Bereich?",
+       "html": "<p>Der <strong>kritische Bereich</strong> (Ablehnungsbereich) ist die Menge der Trefferzahlen, bei denen man $H_0$ verwirft. Bei einem <strong>rechtsseitigen</strong> Test (mit $H_1: p > p_0$) liegt er rechts: $\\{c, c+1, \\dots, n\\}$, also $X \\ge c$. Ist die beobachtete Trefferzahl so gross oder größer, lehnt man $H_0$ ab.</p>",
+       "check": {
+        "frage": "Bei welcher Form von $H_1$ liegt der kritische Bereich rechts?",
+        "antwort": "Bei $H_1: p > p_0$ — vermutet man eine zu hohe Trefferwahrscheinlichkeit, sprechen besonders grosse Trefferzahlen gegen $H_0$, also liegt der kritische Bereich rechts."
+       }
+      },
+      {
+       "titel": "Die Bedingung für die Grenze",
+       "html": "<p>Die Grenze $c$ muss so liegen, dass die Wahrscheinlichkeit, unter $H_0$ in den kritischen Bereich zu fallen, das Signifikanzniveau nicht überschreitet:</p><p>$$P(X \\ge c \\mid p_0) \\le \\alpha.$$</p><p>Gesucht ist das <strong>kleinste</strong> $c$, das diese Bedingung erfüllt — denn man will den kritischen Bereich so gross wie erlaubt machen (sonst übersieht man echte Abweichungen).</p>",
+       "check": {
+        "frage": "Welche Bedingung muss die Grenze $c$ beim rechtsseitigen Test erfüllen?",
+        "antwort": "$P(X \\ge c \\mid p_0) \\le \\alpha$ — und zwar für das kleinste $c$, das diese Ungleichung gerade noch einhält."
+       }
+      },
+      {
+       "titel": "$c$ konkret bestimmen",
+       "html": "<p>Man rechnet $P(X \\ge c \\mid p_0) = 1 - P(X \\le c-1 \\mid p_0)$ mit binomCDf und probiert $c$, bis der Wert erstmals $\\le \\alpha$ wird. Beispiel: $n = 50$, $p_0 = 0{,}2$, $\\alpha = 0{,}05$. Man sucht das kleinste $c$ mit $1 - P(X \\le c-1) \\le 0{,}05$ und erhält $c = 15$ (denn $P(X \\ge 15) \\approx 0{,}048 \\le 0{,}05$, aber $P(X \\ge 14) \\approx 0{,}087 > 0{,}05$). Kritischer Bereich: $\\{15, 16, \\dots, 50\\}$.</p>",
+       "check": {
+        "frage": "Warum nimmt man das kleinste $c$ und nicht ein größeres?",
+        "antwort": "Ein größeres $c$ würde den kritischen Bereich unnötig verkleinern; dann würde man echte Abweichungen seltener erkennen. Das kleinste zulässige $c$ schoepft das Signifikanzniveau bestmöglich aus."
+       }
+      }
+     ],
+     "merksatz": "Beim rechtsseitigen Test ($H_1: p > p_0$) ist der kritische Bereich $\\{c, \\dots, n\\}$. Die Grenze $c$ ist die <strong>kleinste</strong> Zahl mit $P(X \\ge c \\mid p_0) \\le \\alpha$ — berechnet über $1 - P(X \\le c-1 \\mid p_0)$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Grenze c durch Probieren finden",
+       "material": "Taschenrechner mit binomCDf; Beispiel $n=50$, $p_0=0{,}2$, $\\alpha=0{,}05$.",
+       "vorhersage": "Schätze mit $\\mu = n p_0 = 10$ und der $2\\sigma$-Regel grob, wo die kritische Grenze $c$ liegen könnte.",
+       "auftraege": [
+        "Berechne $\\mu$ und $\\sigma$ für $n=50$, $p_0=0{,}2$.",
+        "Berechne $P(X \\ge c)$ für $c = 14$ und $c = 15$ über das Gegenereignis und vergleiche mit $\\alpha = 0{,}05$.",
+        "Gib den kritischen Bereich an und begründe, warum $c=15$ die richtige Grenze ist."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie lautet die Bedingung für die Grenze des kritischen Bereichs beim rechtsseitigen Test?",
+       "antwort": "$P(X \\ge c \\mid p_0) \\le \\alpha$ für das kleinste $c$, das diese Bedingung erfüllt."
+      },
+      {
+       "frage": "Wie berechnet man $P(X \\ge c)$ mit dem Taschenrechner?",
+       "antwort": "Über das Gegenereignis: $P(X \\ge c) = 1 - P(X \\le c-1)$ mit binomCDf und der Wahrscheinlichkeit $p_0$."
+      },
+      {
+       "frage": "Warum wählt man das kleinste zulässige $c$?",
+       "antwort": "Um den kritischen Bereich so gross wie unter $\\alpha$ erlaubt zu machen, damit echte Abweichungen möglichst sicher erkannt werden."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-102",
+        "ma-qp-ht-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-004"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-005"
+       ]
+      }
+     ],
+     "partner": "Einer sucht den kritischen Bereich f\\u00fcr $n = 20$, $p_0 = 0{,}4$, $\\alpha = 5\\\\,\\\\%$, rechtsseitig -- der andere kontrolliert jeden Schritt."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-006"
+       ]
+      }
+     ],
+     "transfer": "Warum ist der kritische Bereich nie exakt $\\alpha$ -- sondern immer 'kleiner oder gleich $\\alpha$'? Was hat die Diskretheit der Binomialverteilung damit zu tun?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du bestimmst den kritischen Bereich (Ablehnungsbereich) für einen rechtsseitigen Test."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du wertest die Bedingung $P(X \\ge c \\mid p_0) \\le \\alpha$ mit dem Taschenrechner aus und bestimmst die kleinste passende Grenze $c$."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum die Grenze $c$ so gewählt wird, dass das Signifikanzniveau gerade nicht überschritten wird."
+    }
+   ]
+  },
+  {
+   "id": "l13",
+   "nr": 3,
+   "titel": "Entscheidung treffen und Test durchf\\u00fchren",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-hypothesentests",
+   "themaPfad": "mathematik/qualifikationsphase/hypothesentests/",
+   "anker": "#ht-einseitig",
+   "ziele": [
+    "Ich kann anhand des Beobachtungswertes eine Entscheidung treffen (H\\u2080 ablehnen oder beibehalten).",
+    "Ich kann das Testergebnis im Sachzusammenhang deuten."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung kritischer Bereich aus Lektion 12.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-202"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#ht-einseitig",
+     "text": "Jetzt fügst du die Bausteine zusammen: Hypothesen, kritischer Bereich, Beobachtungswert — und triffst die Entscheidung. Entscheidend ist die saubere Deutung.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der Erkl\\u00e4rseite",
+      "href": "mathematik/qualifikationsphase/hypothesentests/index.html#ht-einseitig"
+     },
+     "schritte": [
+      {
+       "titel": "Die Entscheidungsregel",
+       "html": "<p>Der Test liefert eine klare Regel: <strong>Liegt der Beobachtungswert $k$ im kritischen Bereich, wird $H_0$ abgelehnt</strong> (und $H_1$ angenommen). Liegt $k$ ausserhalb, wird $H_0$ <strong>beibehalten</strong>. Beispiel: Kritischer Bereich $\\{15, \\dots, 50\\}$, beobachtet $k = 17$ ⇒ $k$ liegt im kritischen Bereich ⇒ $H_0$ ablehnen.</p>",
+       "check": {
+        "frage": "Kritischer Bereich ist $\\{15, \\dots, 50\\}$, beobachtet wurden $k = 12$ Treffer. Wie lautet die Entscheidung?",
+        "antwort": "$k = 12$ liegt NICHT im kritischen Bereich (er beginnt erst bei 15). Also wird $H_0$ beibehalten."
+       }
+      },
+      {
+       "titel": "Der vollständige Testablauf",
+       "html": "<p>Ein Test umfasst stets dieselben Schritte: (1) $H_0$ und $H_1$ aufstellen, (2) Signifikanzniveau $\\alpha$ und Stichprobenumfang $n$ festlegen, (3) kritischen Bereich bestimmen, (4) Beobachtungswert $k$ mit dem kritischen Bereich vergleichen, (5) Entscheidung treffen und (6) im Sachzusammenhang deuten. Diese Reihenfolge sollte man auswendig können.</p>",
+       "check": {
+        "frage": "Was ist der vorletzte Schritt eines Tests, bevor man deutet?",
+        "antwort": "Der Beobachtungswert $k$ wird mit dem kritischen Bereich verglichen und daraus die Entscheidung (ablehnen / beibehalten) abgeleitet."
+       }
+      },
+      {
+       "titel": "Im Sachzusammenhang deuten",
+       "html": "<p>Eine reine „$H_0$ abgelehnt“-Aussage genügt nicht. Man formuliert einen <strong>Antwortsatz</strong>: z. B. „Das Ergebnis ist auf dem $5\\,\\%$-Niveau signifikant; die Stichprobe stützt die Vermutung, dass der Ausschussanteil über $5\\,\\%$ liegt.“ Wird $H_0$ beibehalten: „Das Ergebnis ist mit der Annahme verträglich; es gibt keinen ausreichenden Beleg für einen erhöhten Ausschussanteil.“</p>",
+       "check": {
+        "frage": "Warum reicht „$H_0$ wird abgelehnt“ als Antwort nicht aus?",
+        "antwort": "Weil die Aufgabe eine Sachfrage stellt. Man muss die Entscheidung in Worte fassen: Was bedeutet sie für die urspruengliche Vermutung (z. B. über den Ausschussanteil)?"
+       }
+      }
+     ],
+     "merksatz": "Liegt der Beobachtungswert im <strong>kritischen Bereich</strong>, wird $H_0$ abgelehnt, sonst beibehalten. Die Entscheidung wird immer als <strong>Antwortsatz im Sachzusammenhang</strong> formuliert — „abgelehnt“ allein genügt nie.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Einen Test komplett durchspielen",
+       "material": "Aufgabentext mit $n$, $p_0$, $\\alpha$ und einem Beobachtungswert; Taschenrechner.",
+       "vorhersage": "Lies die Aufgabe und vermute vor dem Rechnen: Wird $H_0$ abgelehnt oder beibehalten? Begründe kurz.",
+       "auftraege": [
+        "Stelle $H_0$ und $H_1$ auf und bestimme den kritischen Bereich.",
+        "Vergleiche den Beobachtungswert mit dem kritischen Bereich und triff die Entscheidung.",
+        "Formuliere einen Antwortsatz, der die Entscheidung im Sachzusammenhang deutet."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wann wird $H_0$ abgelehnt?",
+       "antwort": "Wenn der Beobachtungswert im kritischen Bereich liegt — das Ergebnis ist dann unter $H_0$ so unwahrscheinlich, dass man $H_0$ verwirft."
+      },
+      {
+       "frage": "Nenne die sechs Schritte eines Hypothesentests in Reihenfolge.",
+       "antwort": "1. Hypothesen aufstellen, 2. $\\alpha$ und $n$ festlegen, 3. kritischen Bereich bestimmen, 4. Beobachtungswert vergleichen, 5. Entscheidung treffen, 6. im Sachzusammenhang deuten."
+      },
+      {
+       "frage": "Wie deutet man „$H_0$ wird beibehalten“ sachlich korrekt?",
+       "antwort": "Das Stichprobenergebnis ist mit $H_0$ verträglich; es gibt keinen ausreichenden Beleg für die Gegenhypothese. Das ist kein Beweis, dass $H_0$ stimmt."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-106"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-007",
+        "ma-qp-ht-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-011"
+       ]
+      }
+     ],
+     "partner": "Gebt euch gegenseitig ein Testergebnis ($x$, $n$, $p_0$, $\\alpha$) -- der andere entscheidet und formuliert die Schlussfolgerung im Sachkontext."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-009"
+       ]
+      }
+     ],
+     "transfer": "H\\u2080 wurde nicht abgelehnt. Bedeutet das, dass H\\u2080 wahr ist? Schreibe einen korrekten Schlusssatz."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du triffst anhand des Beobachtungswertes die Testentscheidung ($H_0$ ablehnen oder beibehalten)."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du führst einen vollständigen Test durch und deutest das Ergebnis im Sachzusammenhang."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du formulierst die Entscheidung als sachbezogenen Antwortsatz, nicht nur als „abgelehnt/beibehalten“."
+    }
+   ]
+  },
+  {
+   "id": "l14",
+   "nr": 4,
+   "titel": "Fehler 1. und 2. Art",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-hypothesentests",
+   "themaPfad": "mathematik/qualifikationsphase/hypothesentests/",
+   "anker": "#ht-fehlerarten",
+   "ziele": [
+    "Ich kann Fehler 1. Art und Fehler 2. Art erkl\\u00e4ren und voneinander unterscheiden.",
+    "Ich kann die Wahrscheinlichkeit $\\beta$ des Fehlers 2. Art f\\u00fcr einen konkreten Wert von $p$ berechnen."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespr\\u00e4ch: Was ist schlimmer -- ein unschuldiger Angeklagter, der verurteilt wird, oder ein Schuldiger, der freikommt? Verbindet das mit Fehler 1. und 2. Art."
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung Entscheidungsregel aus Lektion 13.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-105"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#ht-fehlerarten",
+     "text": "Jeder Test kann sich irren — auf zwei verschiedene Arten. Diese beiden Fehler zu verstehen ist entscheidend, um Tests sinnvoll zu beurteilen.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der Erkl\\u00e4rseite",
+      "href": "mathematik/qualifikationsphase/hypothesentests/index.html#ht-fehlerarten"
+     },
+     "schritte": [
+      {
+       "titel": "Der Fehler 1. Art",
+       "html": "<p>Ein <strong>Fehler 1. Art</strong> tritt ein, wenn man $H_0$ <em>ablehnt, obwohl $H_0$ in Wahrheit richtig ist</em>. Seine Wahrscheinlichkeit ist höchstens das Signifikanzniveau: $P(\\text{Fehler 1. Art}) \\le \\alpha$. Beispiel: Man behauptet, der Ausschussanteil sei erhöht, obwohl er in Wirklichkeit normal ist — ein „falscher Alarm“.</p>",
+       "check": {
+        "frage": "Welche Wahrscheinlichkeit gehört zum Fehler 1. Art?",
+        "antwort": "Höchstens das Signifikanzniveau $\\alpha$ — man lehnt $H_0$ ab, obwohl sie richtig ist."
+       }
+      },
+      {
+       "titel": "Der Fehler 2. Art",
+       "html": "<p>Ein <strong>Fehler 2. Art</strong> tritt ein, wenn man $H_0$ <em>beibehält, obwohl $H_0$ in Wahrheit falsch ist</em> (also $H_1$ gilt). Seine Wahrscheinlichkeit heißt $\\beta$ und hängt vom <strong>wahren</strong> Wert von $p$ ab — anders als $\\alpha$ ist sie nicht von vornherein festgelegt. Beispiel: Der Ausschuss ist tatsächlich erhöht, der Test bemerkt es aber nicht — ein „übersehener Defekt“.</p>",
+       "check": {
+        "frage": "Worin unterscheiden sich Fehler 1. und 2. Art im Kern?",
+        "antwort": "Fehler 1. Art: $H_0$ fälschlich ablehnen (obwohl wahr). Fehler 2. Art: $H_0$ fälschlich beibehalten (obwohl falsch). Es sind die beiden möglichen Fehlentscheidungen."
+       }
+      },
+      {
+       "titel": "$\\beta$ berechnen",
+       "html": "<p>Um $\\beta$ zu bestimmen, braucht man einen konkreten <em>wahren</em> Wert $p_1$ aus $H_1$. Dann ist $\\beta = P(\\text{$H_0$ beibehalten} \\mid p = p_1)$, also die Wahrscheinlichkeit, dass die Trefferzahl <em>ausserhalb</em> des kritischen Bereichs landet, obwohl $p_1$ gilt. Beispiel (rechtsseitig, kritischer Bereich $\\{15, \\dots, 50\\}$): Bei wahrem $p_1 = 0{,}3$ ist $\\beta = P(X \\le 14 \\mid p_1 = 0{,}3)$.</p>",
+       "check": {
+        "frage": "Kritischer Bereich $\\{15, \\dots, 50\\}$, wahres $p_1 = 0{,}3$. Wie berechnet man $\\beta$ (nur Term)?",
+        "antwort": "$\\beta = P(X \\le 14 \\mid p = 0{,}3)$ — die Wahrscheinlichkeit, mit $p_1=0{,}3$ NICHT in den kritischen Bereich zu fallen, also $H_0$ fälschlich beizubehalten."
+       }
+      }
+     ],
+     "merksatz": "<strong>Fehler 1. Art</strong>: $H_0$ ablehnen, obwohl wahr — Wahrscheinlichkeit $\\le \\alpha$. <strong>Fehler 2. Art</strong>: $H_0$ beibehalten, obwohl falsch — Wahrscheinlichkeit $\\beta$, abhängig vom wahren $p_1$. $\\beta$ ist die Wahrscheinlichkeit, mit $p_1$ ausserhalb des kritischen Bereichs zu landen.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Beide Fehler an einem Beispiel",
+       "material": "Test mit bekanntem kritischen Bereich $\\{15,\\dots,50\\}$ ($n=50$, $p_0=0{,}2$, $\\alpha=0{,}05$); Taschenrechner.",
+       "vorhersage": "Wird $\\beta$ größer oder kleiner, wenn das wahre $p_1$ näher an $p_0$ liegt? Vermute vorher.",
+       "auftraege": [
+        "Beschreibe in eigenen Worten, was bei diesem Test ein Fehler 1. Art und was ein Fehler 2. Art wäre.",
+        "Berechne $\\beta = P(X \\le 14 \\mid p_1)$ für $p_1 = 0{,}3$.",
+        "Berechne $\\beta$ erneut für $p_1 = 0{,}4$ und vergleiche: Bei welchem wahren $p_1$ ist der Fehler 2. Art kleiner?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was ist ein Fehler 1. Art?",
+       "antwort": "$H_0$ wird abgelehnt, obwohl sie in Wahrheit richtig ist (falscher Alarm). Wahrscheinlichkeit höchstens $\\alpha$."
+      },
+      {
+       "frage": "Wovon hängt die Wahrscheinlichkeit $\\beta$ des Fehlers 2. Art ab?",
+       "antwort": "Vom wahren Wert $p_1$ der Trefferwahrscheinlichkeit (aus $H_1$). Je näher $p_1$ an $p_0$ liegt, desto größer ist $\\beta$."
+      },
+      {
+       "frage": "Wie berechnet man $\\beta$ bei einem rechtsseitigen Test mit kritischem Bereich $\\{c,\\dots,n\\}$?",
+       "antwort": "$\\beta = P(X \\le c-1 \\mid p_1)$ — die Wahrscheinlichkeit, mit dem wahren $p_1$ ausserhalb des kritischen Bereichs zu bleiben."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-104",
+        "ma-qp-ht-302"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-010"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-012"
+       ]
+      }
+     ],
+     "partner": "Erkl\\u00e4rt euch gegenseitig: Warum ist es sinnvoll, $\\alpha = 1\\\\,\\\\%$ statt $\\alpha = 5\\\\,\\\\%$ zu w\\u00e4hlen, wenn man ein gef\\u00e4hrliches Medikament testet?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-013"
+       ]
+      }
+     ],
+     "transfer": "Nenne eine Situation, in der Fehler 2. Art besonders gef\\u00e4hrlich ist -- und eine, in der Fehler 1. Art besonders kritisch ist."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst Fehler 1. Art und Fehler 2. Art und unterscheidest sie sauber."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du berechnest die Wahrscheinlichkeit $\\beta$ des Fehlers 2. Art für einen konkreten Wert von $p$."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du beurteilst die Folgen beider Fehlerarten im Sachzusammenhang."
+    }
+   ]
+  },
+  {
+   "id": "l15",
+   "nr": 5,
+   "titel": "Linksseitiger Test und Wahl der Testart",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-hypothesentests",
+   "themaPfad": "mathematik/qualifikationsphase/hypothesentests/",
+   "anker": "#ht-richtung",
+   "ziele": [
+    "Ich kann entscheiden, ob ein links- oder rechtsseitiger Test vorliegt.",
+    "Ich kann H\\u2080 und H\\u2081 korrekt formulieren und die Richtung aus dem Sachkontext ableiten."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Fehlerarten aus Lektion 14.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-203"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#ht-richtung",
+     "text": "Bisher lag der kritische Bereich rechts. Hier lernst du den linksseitigen Test kennen und vor allem: zu erkennen, welche Testart eine Aufgabe verlangt.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der Erkl\\u00e4rseite",
+      "href": "mathematik/qualifikationsphase/hypothesentests/index.html#ht-richtung"
+     },
+     "schritte": [
+      {
+       "titel": "Der linksseitige Test",
+       "html": "<p>Vermutet man, die Trefferwahrscheinlichkeit sei zu <em>klein</em> ($H_1: p < p_0$), sprechen besonders <strong>kleine</strong> Trefferzahlen gegen $H_0$. Der kritische Bereich liegt dann <strong>links</strong>: $\\{0, 1, \\dots, c\\}$, also $X \\le c$. Die Grenze $c$ ist die <strong>größte</strong> Zahl mit $P(X \\le c \\mid p_0) \\le \\alpha$.</p>",
+       "check": {
+        "frage": "Wo liegt der kritische Bereich, wenn $H_1: p < p_0$ lautet?",
+        "antwort": "Links: $\\{0, 1, \\dots, c\\}$, also $X \\le c$. Kleine Trefferzahlen sprechen gegen $H_0$."
+       }
+      },
+      {
+       "titel": "Die Grenze beim linksseitigen Test",
+       "html": "<p>Anders als rechts sucht man hier das <strong>größte</strong> $c$ mit $P(X \\le c \\mid p_0) \\le \\alpha$ — damit der kritische Bereich so gross wie erlaubt wird. Beispiel: $n=100$, $p_0=0{,}5$, $\\alpha=0{,}05$. Man sucht das größte $c$ mit $P(X \\le c) \\le 0{,}05$ und findet $c=41$ (denn $P(X \\le 41) \\approx 0{,}044$, aber $P(X \\le 42) \\approx 0{,}067 > 0{,}05$). Kritischer Bereich: $\\{0, \\dots, 41\\}$.</p>",
+       "check": {
+        "frage": "Welche Bedingung erfüllt die Grenze $c$ beim linksseitigen Test?",
+        "antwort": "$P(X \\le c \\mid p_0) \\le \\alpha$ — und zwar für das größte $c$, das diese Bedingung gerade noch einhält."
+       }
+      },
+      {
+       "titel": "Die Testart aus dem Kontext erkennen",
+       "html": "<p>Schlüsselwörter verraten die Richtung: „<em>weniger</em>“, „<em>geringer</em>“, „<em>gesunken</em>“ ⇒ $H_1: p < p_0$ ⇒ linksseitig. „<em>mehr</em>“, „<em>höher</em>“, „<em>gestiegen</em>“ ⇒ $H_1: p > p_0$ ⇒ rechtsseitig. Man fragt sich: In welche Richtung würde die vermutete Abweichung zeigen? Diese Richtung bestimmt $H_1$ und damit die Lage des kritischen Bereichs.</p>",
+       "check": {
+        "frage": "„Ein Händler vermutet, dass weniger als $40\\,\\%$ der Kunden zufrieden sind.“ Welche Testart?",
+        "antwort": "Linksseitig: $H_1: p < 0{,}4$. Das Wort „weniger“ zeigt nach unten, also liegt der kritische Bereich links."
+       }
+      }
+     ],
+     "merksatz": "Linksseitiger Test ($H_1: p < p_0$): kritischer Bereich $\\{0, \\dots, c\\}$ mit dem <strong>größten</strong> $c$, für das $P(X \\le c \\mid p_0) \\le \\alpha$. Die Schlüsselwörter „weniger/gesunken“ ⇒ links, „mehr/gestiegen“ ⇒ rechts.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Testart bestimmen und Grenze finden",
+       "material": "Aufgabenliste mit Signalwörtern; Taschenrechner.",
+       "vorhersage": "Ordne jede Aufgabe vor dem Rechnen „links“ oder „rechts“ zu. Welches Signalwort hat dich geführt?",
+       "auftraege": [
+        "Bestimme zu drei Sachaufgaben jeweils $H_0$, $H_1$ und die Testart (links-/rechtsseitig).",
+        "Bestimme für einen linksseitigen Fall ($n=100$, $p_0=0{,}5$, $\\alpha=0{,}05$) die Grenze $c$ durch Probieren mit binomCDf.",
+        "Begründe, warum man hier das größte (und nicht das kleinste) $c$ nimmt."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Woran erkennt man einen linksseitigen Test?",
+       "antwort": "An der Gegenhypothese $H_1: p < p_0$ — meist signalisiert durch Wörter wie „weniger“, „geringer“, „gesunken“."
+      },
+      {
+       "frage": "Welche Grenze $c$ wählt man beim linksseitigen Test?",
+       "antwort": "Das größte $c$ mit $P(X \\le c \\mid p_0) \\le \\alpha$, damit der kritische Bereich so gross wie erlaubt ist."
+      },
+      {
+       "frage": "„Eine Partei vermutet, ihr Stimmenanteil sei über $30\\,\\%$ gestiegen.“ Links- oder rechtsseitig?",
+       "antwort": "Rechtsseitig: $H_1: p > 0{,}3$. „Gestiegen/über“ zeigt nach oben, der kritische Bereich liegt rechts."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-004"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-207"
+       ]
+      }
+     ],
+     "partner": "Lest euch gegenseitig einen Sachtext vor -- der andere muss sofort sagen: links- oder rechtsseitig? Und warum?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-007"
+       ]
+      }
+     ],
+     "transfer": "Formuliere je eine Situation, in der ein linksseitiger, und eine, in der ein rechtsseitiger Test angemessen ist."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du entscheidest aus dem Sachkontext, ob ein links- oder rechtsseitiger Test vorliegt, und bestimmst den kritischen Bereich entsprechend."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du leitest die Richtung der Gegenhypothese $H_1$ aus der Fragestellung ab."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du begründest, warum der kritische Bereich beim linksseitigen Test links liegt."
+    }
+   ]
+  },
+  {
+   "id": "l16",
+   "nr": 6,
+   "titel": "Zweiseitiger Test (erh\\u00f6htes Anforderungsniveau)",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-hypothesentests",
+   "themaPfad": "mathematik/qualifikationsphase/hypothesentests/",
+   "anker": "#ht-zweiseitig",
+   "ziele": [
+    "Ich kann den zweiseitigen Test von einseitigen Tests unterscheiden.",
+    "Ich kann beide kritischen Grenzen f\\u00fcr einen zweiseitigen Test bestimmen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung Testart aus Lektion 15: Wann ist ein Test linksseitig, wann rechtsseitig?",
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#ht-zweiseitig",
+     "text": "Manchmal interessiert nur, OB sich etwas geändert hat — egal in welche Richtung. Dann braucht man einen zweiseitigen Test mit zwei Grenzen. (Erhöhtes Anforderungsniveau, eA.)",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der Erkl\\u00e4rseite",
+      "href": "mathematik/qualifikationsphase/hypothesentests/index.html#ht-zweiseitig"
+     },
+     "schritte": [
+      {
+       "titel": "Wann zweiseitig?",
+       "html": "<p>Ein <strong>zweiseitiger</strong> Test wird verwendet, wenn man eine <em>Abweichung in beide Richtungen</em> aufdecken will: $H_1: p \\ne p_0$. Beispiel: „Ist der Würfel verfälscht?“ — eine zu hohe <em>oder</em> zu niedrige Trefferzahl wäre verdaechtig. Der kritische Bereich besteht daher aus zwei Stücken: einem links und einem rechts.</p>",
+       "check": {
+        "frage": "Wie lautet die Gegenhypothese bei einem zweiseitigen Test?",
+        "antwort": "$H_1: p \\ne p_0$ — die Trefferwahrscheinlichkeit weicht ab, ohne dass eine Richtung vorgegeben ist."
+       }
+      },
+      {
+       "titel": "Das Niveau halbieren",
+       "html": "<p>Damit der Test insgesamt das Niveau $\\alpha$ einhält, verteilt man es <strong>gleichmäßig</strong> auf beide Seiten: je $\\frac{\\alpha}{2}$. Die <strong>untere</strong> Grenze $c_1$ erfüllt $P(X \\le c_1 \\mid p_0) \\le \\frac{\\alpha}{2}$, die <strong>obere</strong> Grenze $c_2$ erfüllt $P(X \\ge c_2 \\mid p_0) \\le \\frac{\\alpha}{2}$. Der kritische Bereich ist dann $\\{0, \\dots, c_1\\} \\cup \\{c_2, \\dots, n\\}$.</p>",
+       "check": {
+        "frage": "Warum verwendet man bei jeder Seite $\\frac{\\alpha}{2}$ statt $\\alpha$?",
+        "antwort": "Weil der kritische Bereich aus zwei Teilen besteht. Nur wenn jede Seite höchstens $\\frac{\\alpha}{2}$ beiträgt, bleibt die Gesamtwahrscheinlichkeit eines Fehlers 1. Art bei höchstens $\\alpha$."
+       }
+      },
+      {
+       "titel": "Beide Grenzen bestimmen",
+       "html": "<p>Beispiel: $n=100$, $p_0=0{,}5$, $\\alpha=0{,}05$, also $\\frac{\\alpha}{2}=0{,}025$ je Seite. Untere Grenze: größtes $c_1$ mit $P(X \\le c_1) \\le 0{,}025$ ⇒ $c_1 = 39$. Obere Grenze: kleinstes $c_2$ mit $P(X \\ge c_2) \\le 0{,}025$ ⇒ $c_2 = 61$. Kritischer Bereich: $\\{0,\\dots,39\\} \\cup \\{61,\\dots,100\\}$; der <strong>Annahmebereich</strong> ist $\\{40, \\dots, 60\\}$.</p>",
+       "check": {
+        "frage": "Bei $n=100$, $p_0=0{,}5$, $\\alpha=0{,}05$ ist der Annahmebereich $\\{40,\\dots,60\\}$. Was bedeutet ein Beobachtungswert $k=63$?",
+        "antwort": "$k=63$ liegt im rechten kritischen Bereich ($\\ge 61$), also wird $H_0$ abgelehnt — das Ergebnis weicht signifikant nach oben ab."
+       }
+      }
+     ],
+     "merksatz": "Zweiseitiger Test ($H_1: p \\ne p_0$): Das Niveau wird auf beide Seiten verteilt (je $\\frac{\\alpha}{2}$). Untere Grenze $c_1$ aus $P(X \\le c_1) \\le \\frac{\\alpha}{2}$, obere Grenze $c_2$ aus $P(X \\ge c_2) \\le \\frac{\\alpha}{2}$. Kritischer Bereich = beide Ränder.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Zwei Grenzen bestimmen",
+       "material": "Taschenrechner mit binomCDf; Beispiel $n=100$, $p_0=0{,}5$, $\\alpha=0{,}05$.",
+       "vorhersage": "Schätze mit $\\mu=50$, $\\sigma=5$ und der $2\\sigma$-Regel, wo die beiden Grenzen ungefähr liegen.",
+       "auftraege": [
+        "Bestimme $\\frac{\\alpha}{2}$ und erläutere, warum man je Seite nur dieses halbe Niveau verwendet.",
+        "Finde die untere Grenze $c_1$ (größtes $c_1$ mit $P(X \\le c_1) \\le 0{,}025$) durch Probieren.",
+        "Finde die obere Grenze $c_2$ und gib den vollständigen kritischen Bereich sowie den Annahmebereich an."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wann verwendet man einen zweiseitigen Test?",
+       "antwort": "Wenn man eine Abweichung in beide Richtungen aufdecken will, d. h. $H_1: p \\ne p_0$."
+      },
+      {
+       "frage": "Wie wird das Signifikanzniveau beim zweiseitigen Test aufgeteilt?",
+       "antwort": "Gleichmäßig auf beide Seiten: je $\\frac{\\alpha}{2}$ für den linken und den rechten kritischen Bereich."
+      },
+      {
+       "frage": "Welche Bedingung erfüllt die obere Grenze $c_2$?",
+       "antwort": "$P(X \\ge c_2 \\mid p_0) \\le \\frac{\\alpha}{2}$ für das kleinste $c_2$, das diese Bedingung einhält."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-009",
+        "ma-qp-ht-010"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-013"
+       ]
+      }
+     ],
+     "partner": "Bestimmt gemeinsam f\\u00fcr $n = 20$, $p_0 = 0{,}5$, $\\alpha = 5\\\\,\\\\%$ beide kritische Grenzen -- und \\u00fcberlegt: Warum ist das eher ein eA-Thema?"
+    },
+    "sichern": {
+     "zeit": 5,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-011"
+       ]
+      }
+     ],
+     "transfer": "Wann ist ein zweiseitiger Test besser geeignet als ein einseitiger? Nenne ein konkretes Beispiel."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Vorbereitung auf die Klausur:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du bestimmst beide kritischen Grenzen eines zweiseitigen Tests."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du unterscheidest den zweiseitigen vom einseitigen Test und begründest die Aufteilung $\\alpha/2$ auf beide Seiten."
+    },
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du wertest die Bedingungen $P(X \\le c_1) \\le \\frac{\\alpha}{2}$ und $P(X \\ge c_2) \\le \\frac{\\alpha}{2}$ aus."
+    }
+   ]
+  },
+  {
+   "id": "l16b",
+   "nr": 7,
+   "titel": "Üben & Anwenden: Hypothesentests",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-hypothesentests",
+   "themaPfad": "mathematik/qualifikationsphase/hypothesentests/",
+   "ziele": [
+    "Ich führe ein- und zweiseitige Hypothesentests vollständig durch und bestimme den kritischen Bereich.",
+    "Ich berechne den Fehler 2. Art und deute Testentscheidungen im Sachzusammenhang."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 10,
+     "text": "Diese Anwendungslektion bündelt den Test-Block. Hol dir kurz den Ablauf und die Unterscheidung der Testarten zurück, bevor du übst.",
+     "schritte": [
+      {
+       "titel": "Ablauf und Testart",
+       "html": "<p>Jeder Test folgt sechs Schritten (Hypothesen → $\\alpha$,$n$ → kritischer Bereich → Vergleich → Entscheidung → Deutung). Die <strong>Testart</strong> folgt aus $H_1$: $p>p_0$ rechtsseitig ($P(X \\ge c) \\le \\alpha$), $p<p_0$ linksseitig ($P(X \\le c) \\le \\alpha$), $p \\ne p_0$ zweiseitig (zwei Grenzen mit je $\\frac{\\alpha}{2}$).</p>",
+       "check": {
+        "frage": "Welche Bedingung bestimmt die Grenze bei einem rechtsseitigen Test?",
+        "antwort": "Das kleinste $c$ mit $P(X \\ge c \\mid p_0) \\le \\alpha$."
+       }
+      },
+      {
+       "titel": "Fehler 2. Art berechnen",
+       "html": "<p>Für den Fehler 2. Art braucht man einen konkreten wahren Wert $p_1$ aus $H_1$. Dann ist $\\beta$ die Wahrscheinlichkeit, mit $p_1$ <em>nicht</em> in den kritischen Bereich zu fallen — also $H_0$ fälschlich beizubehalten. Bei rechtsseitigem Test mit kritischem Bereich $\\{c,\\dots,n\\}$ ist $\\beta = P(X \\le c-1 \\mid p_1)$.</p>",
+       "check": {
+        "frage": "Kritischer Bereich $\\{20,\\dots,n\\}$, wahres $p_1$. Wie lautet $\\beta$?",
+        "antwort": "$\\beta = P(X \\le 19 \\mid p_1)$ — die Wahrscheinlichkeit, mit $p_1$ ausserhalb des kritischen Bereichs zu bleiben."
+       }
+      }
+     ],
+     "merksatz": "Hypothesentest: sechs Schritte, Testart aus $H_1$ (rechts/links/zweiseitig). Grenze: kleinstes/größtes $c$ je nach Seite, beim zweiseitigen je $\\frac{\\alpha}{2}$. Fehler 2. Art $\\beta = P(\\text{ausserhalb kritischer Bereich} \\mid p_1)$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Test-Strategie vor dem Rechnen",
+       "material": "Die Aufgaben dieser Lektion; Taschenrechner.",
+       "vorhersage": "Überfliege die Aufgaben: Welche sind einseitig, welche zweiseitig? Woran erkennst du es?",
+       "auftraege": [
+        "Bestimme bei zwei Aufgaben $H_0$, $H_1$ und die Testart, bevor du rechnest.",
+        "Bestimme einen kritischen Bereich und vergleiche den Beobachtungswert; formuliere die Entscheidung als Antwortsatz.",
+        "Berechne bei einer Aufgabe den Fehler 2. Art $\\beta$ für einen gegebenen wahren Wert $p_1$."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie hängt die Testart mit $H_1$ zusammen?",
+       "antwort": "$p>p_0$ → rechtsseitig, $p<p_0$ → linksseitig, $p \\ne p_0$ → zweiseitig (zwei Grenzen mit je $\\frac{\\alpha}{2}$)."
+      },
+      {
+       "frage": "Was braucht man, um $\\beta$ zu berechnen, und was ist $\\beta$?",
+       "antwort": "Einen konkreten wahren Wert $p_1$ aus $H_1$. $\\beta$ ist die Wahrscheinlichkeit, mit $p_1$ ausserhalb des kritischen Bereichs zu landen (Fehler 2. Art)."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-202",
+        "ma-qp-ht-203",
+        "ma-qp-ht-302"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-204",
+        "ma-qp-ht-205",
+        "ma-qp-ht-206",
+        "ma-qp-ht-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-207",
+        "ma-qp-ht-301"
+       ]
+      }
+     ],
+     "partner": "Lest euch gegenseitig einen Sachtext vor — der andere sagt sofort: links- oder rechtsseitig, und formuliert $H_0$ und $H_1$. Kontrolliert anschließend gemeinsam."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-hypothesentests",
+       "ids": [
+        "ma-qp-ht-208"
+       ]
+      }
+     ],
+     "transfer": "Beim Hypothesentest gehst du immer in derselben Reihenfolge vor: $H_0$/$H_1$ aufstellen, Testart erkennen, kritischen Bereich bestimmen, Entscheidung treffen und im Sachkontext deuten."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen und Wiederholen:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du führst ein- und zweiseitige Hypothesentests vollständig durch und bestimmst den kritischen Bereich."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du berechnest den Fehler 2. Art und deutest Testentscheidungen im Sachzusammenhang."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du leitest Testart und Hypothesen aus dem Sachkontext ab und wählst das passende Vorgehen."
+    }
+   ]
+  },
+  {
+   "id": "l17",
+   "nr": 1,
+   "titel": "Fahrplan und Selbst-Check Stochastik",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-q3-stochastik",
+   "themaPfad": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/",
+   "anker": "#q3-fahrplan",
+   "ziele": [
+    "Ich kenne die Themen der Stochastik-Einheit und kann meinen eigenen Lernstand einsch\\u00e4tzen.",
+    "Ich kann Fachbegriffe der Stochastik sicher zuordnen."
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespr\\u00e4ch: Was war bisher der schwierigste Stochastik-Teil -- und was sitzt schon sicher?"
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung: Bernoulli-Kette, Binomialverteilung, Normalverteilung, Hypothesentest -- welche Begriffe fallen dir zuerst ein?",
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#q3-fahrplan",
+     "text": "Diese Lektion gibt dir den Überblick über die ganze Stochastik-Einheit. Sortiere die Themen, prüfe deinen Stand und erkenne, wie alles zusammenpasst.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der \\u00dcbersichtsseite",
+      "href": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/index.html#q3-fahrplan"
+     },
+     "schritte": [
+      {
+       "titel": "Die drei grossen Blöcke",
+       "html": "<p>Die Einheit gliedert sich in drei Teile: (1) <strong>Binomialverteilung</strong> — Bernoulli-Kette, Formel von Bernoulli, kumulierte Wahrscheinlichkeiten, $\\mu$, $\\sigma$, Sigma-Umgebungen. (2) <strong>Normalverteilung</strong> — Glockenkurve, normCDf/invNormCDf, Sigma-Regeln, Näherung der Binomialverteilung. (3) <strong>Hypothesentests</strong> — Hypothesen, kritischer Bereich, Entscheidung, Fehler 1. und 2. Art, ein- und zweiseitige Tests.</p>",
+       "check": {
+        "frage": "Welcher Block beschaeftigt sich mit dem kritischen Bereich und Fehler 2. Art?",
+        "antwort": "Der dritte Block: Hypothesentests. Dort prüft man Behauptungen über eine Wahrscheinlichkeit anhand einer Stichprobe."
+       }
+      },
+      {
+       "titel": "Wie die Blöcke zusammenhängen",
+       "html": "<p>Die Blöcke bauen aufeinander auf: Die <strong>Binomialverteilung</strong> liefert $\\mu$, $\\sigma$ und die Sigma-Umgebungen. Für grosses $n$ wird sie durch die <strong>Normalverteilung</strong> angenähert. Die Idee der Sigma-Umgebung („was ist noch normal?“) führt direkt zum <strong>Hypothesentest</strong>, der diese Frage präzise beantwortet. Stochastik ist also keine Sammlung von Einzeltricks, sondern ein zusammenhängendes Gebaeude.</p>",
+       "check": {
+        "frage": "Welche Idee aus dem Binomial-Block führt zum Hypothesentest?",
+        "antwort": "Die Sigma-Umgebung: Sie sagt, welche Trefferzahlen „normal“ sind und welche Zweifel wecken. Der Hypothesentest formalisiert genau diese Entscheidung."
+       }
+      },
+      {
+       "titel": "Verfahren an der Aufgabe erkennen",
+       "html": "<p>Eine zentrale Kompetenz ist, die <strong>richtige Methode</strong> zu erkennen: Steht eine feste Trefferzahl bei $n$ Versuchen im Mittelpunkt → Binomialverteilung. Geht es um eine stetige Größe (Länge, Gewicht, Zeit) oder grosses $n$ → Normalverteilung. Wird eine Behauptung über $p$ anhand einer Stichprobe geprüft → Hypothesentest. Diese Zuordnung ist der erste Schritt jeder Klausuraufgabe.</p>",
+       "check": {
+        "frage": "„Die Füllmenge ist normalverteilt mit $\\mu=500$, $\\sigma=5$. Wie wahrscheinlich sind unter 495 ml?“ Welches Verfahren?",
+        "antwort": "Normalverteilung (stetige Größe). Man rechnet $P(X < 495)$ mit normCDf."
+       }
+      }
+     ],
+     "merksatz": "Die Stochastik-Einheit besteht aus drei aufeinander aufbauenden Blöcken: <strong>Binomialverteilung</strong> → <strong>Normalverteilung</strong> (Näherung) → <strong>Hypothesentests</strong>. Der erste Schritt jeder Aufgabe ist, das passende Verfahren zu erkennen.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Selbst-Check: Themen sortieren",
+       "material": "Eine Liste der Lektionsthemen und einige Beispielaufgaben; Stift zum Markieren des eigenen Sicherheitsgefühls.",
+       "vorhersage": "Schätze vor dem Durchgehen: Welcher der drei Blöcke fällt dir am leichtesten, welcher am schwersten?",
+       "auftraege": [
+        "Ordne jeden Fachbegriff (Bernoulli-Kette, Glockenkurve, kritischer Bereich, $\\beta$, invNormCDf, Stetigkeitskorrektur) dem richtigen der drei Blöcke zu.",
+        "Markiere bei jedem Thema mit Ampelfarben, wie sicher du dich fühlst (grün/gelb/rot).",
+        "Ordne fünf Beispielaufgaben dem passenden Verfahren zu (Binomial, Normal, Test) — ohne sie zu rechnen."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Nenne die drei grossen Blöcke der Einheit.",
+       "antwort": "Binomialverteilung, Normalverteilung und Hypothesentests."
+      },
+      {
+       "frage": "Woran erkennst du, dass eine Aufgabe einen Hypothesentest verlangt?",
+       "antwort": "Eine Behauptung über eine Wahrscheinlichkeit $p$ wird anhand einer Stichprobe geprüft (Hypothesen, Signifikanzniveau, Entscheidung)."
+      },
+      {
+       "frage": "Wie hängen Binomial- und Normalverteilung zusammen?",
+       "antwort": "Für grosses $n$ (Laplace-Bedingung $\\sigma>3$) nähert die Normalverteilung die Binomialverteilung mit denselben Kennzahlen $\\mu=np$ und $\\sigma=\\sqrt{np(1-p)}$ an."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-101",
+        "ma-qp-q3-304"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-001",
+        "ma-qp-q3-002"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-207"
+       ]
+      }
+     ],
+     "partner": "Erkl\\u00e4rt euch gegenseitig: Was unterscheidet Fehler 1. und 2. Art -- und welcher ist beim Hypothesentest direkt kontrollierbar?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-004"
+       ]
+      }
+     ],
+     "transfer": "Markiere auf dem Fahrplan, welche drei Themen du am sichersten beherrschst -- und welches du nochmals wiederholen möchtest."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du ordnest die Fachbegriffe der Stochastik (Bernoulli-Kette, Binomial-/Normalverteilung, Hypothesentest) sicher zu und schätzt deinen Lernstand ein."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du erklärst, wie die drei grossen Themenblöcke der Einheit zusammenhängen."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du erkennst an einer Aufgabenformulierung, welches Verfahren der Einheit gefragt ist."
+    }
+   ]
+  },
+  {
+   "id": "l18",
+   "nr": 2,
+   "titel": "Binomialverteilung: Wiederholung und Vertiefung",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-q3-stochastik",
+   "themaPfad": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/",
+   "anker": "#q3-binomial",
+   "ziele": [
+    "Ich beherrsche die Bernoulli-Formel und kumulierte Wahrscheinlichkeiten sicher.",
+    "Ich kann Erwartungswert, Standardabweichung und Sigma-Umgebungen berechnen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Fahrplan aus Lektion 17: Welche Binomialverteilungs-Konzepte m\\u00f6chtest du heute \\u00fcben?",
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-008"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#q3-binomial",
+     "text": "Diese Lektion bündelt den gesamten Binomial-Block. Frische die Kernformeln und Sprachregeln in einer kompakten Synthese auf, bevor du übst.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der \\u00dcbersichtsseite",
+      "href": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/index.html#q3-binomial"
+     },
+     "schritte": [
+      {
+       "titel": "Die vier Kernformeln",
+       "html": "<p>Der Binomial-Block steht auf vier Säulen: <strong>Einzelwahrscheinlichkeit</strong> $P(X=k) = \\binom{n}{k} p^k (1-p)^{n-k}$, <strong>kumuliert</strong> $P(X \\le k)$ (binomCDf), <strong>Erwartungswert</strong> $\\mu = n\\,p$ und <strong>Standardabweichung</strong> $\\sigma = \\sqrt{n\\,p\\,(1-p)}$. Mit diesen vier Werkzeugen löst man jede Binomialaufgabe.</p>",
+       "check": {
+        "frage": "Mit welcher Formel berechnet man die Wahrscheinlichkeit für GENAU $k$ Treffer?",
+        "antwort": "Mit der Formel von Bernoulli: $P(X=k) = \\binom{n}{k} p^k (1-p)^{n-k}$."
+       }
+      },
+      {
+       "titel": "Sprache in Terme übersetzen",
+       "html": "<p>Die häufigste Fehlerquelle bleibt die Übersetzung: „mindestens $k$“ → $1 - P(X \\le k-1)$, „höchstens $k$“ → $P(X \\le k)$, „mehr als $k$“ → $1 - P(X \\le k)$, „weniger als $k$“ → $P(X \\le k-1)$. Bei „mindestens/mehr als“ stets über das Gegenereignis und mit der richtigen Grenzverschiebung.</p>",
+       "check": {
+        "frage": "Übersetze „mindestens 10 Treffer“ in einen Term.",
+        "antwort": "$P(X \\ge 10) = 1 - P(X \\le 9)$ — Gegenereignis mit Grenze 9."
+       }
+      },
+      {
+       "titel": "Prognose mit Sigma-Umgebungen",
+       "html": "<p>Mit $\\mu$ und $\\sigma$ bildet man Prognoseintervalle: Die $2\\sigma$-Umgebung $[\\mu - 2\\sigma;\\ \\mu + 2\\sigma]$ enthält rund $95\\,\\%$ der Ergebnisse. Damit beurteilt man, ob eine beobachtete Trefferzahl „normal“ ist — die Vorstufe des Hypothesentests. Voraussetzung: Laplace-Bedingung $\\sigma > 3$.</p>",
+       "check": {
+        "frage": "$n=100$, $p=0{,}5$: Gib die $2\\sigma$-Prognose an.",
+        "antwort": "$\\mu=50$, $\\sigma=5$, also $[40;\\ 60]$ — rund $95\\,\\%$ der Ergebnisse liegen zwischen 40 und 60 Treffern."
+       }
+      }
+     ],
+     "merksatz": "Binomial-Block kompakt: $P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}$, kumuliert $P(X\\le k)$, $\\mu=np$, $\\sigma=\\sqrt{np(1-p)}$. Sprache sauber übersetzen (Grenzverschiebung beachten), $2\\sigma$-Umgebung für Prognosen.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Binomial-Spickzettel selbst bauen",
+       "material": "Ein Blatt Papier; die vier Kernformeln und die Übersetzungstabelle.",
+       "vorhersage": "Schreibe vorher aus dem Gedächtnis auf, welche vier Formeln zum Binomial-Block gehören. Welche fällt dir am schwersten?",
+       "auftraege": [
+        "Erstelle einen kompakten Spickzettel mit den vier Kernformeln und der Übersetzungstabelle.",
+        "Löse damit eine selbstgewählte Beispielaufgabe ($n$, $p$, $k$ frei) für $P(X=k)$, $P(X \\le k)$, $\\mu$ und $\\sigma$.",
+        "Prüfe an einem „mindestens“-Beispiel, dass du die Grenze korrekt um 1 verschiebst."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wie lauten die Formeln für $\\mu$ und $\\sigma$ der Binomialverteilung?",
+       "antwort": "$\\mu = n\\,p$ und $\\sigma = \\sqrt{n\\,p\\,(1-p)}$."
+      },
+      {
+       "frage": "Wie übersetzt man „weniger als 7 Treffer“?",
+       "antwort": "$P(X < 7) = P(X \\le 6)$."
+      },
+      {
+       "frage": "Welche Wahrscheinlichkeit enthält die $2\\sigma$-Umgebung und wozu nutzt man sie?",
+       "antwort": "Rund $95\\,\\%$; man beurteilt damit, ob eine beobachtete Trefferzahl „normal“ ist — als Prognose und Vorstufe des Hypothesentests."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 22,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-104"
+       ]
+      },
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-012"
+       ]
+      }
+     ],
+     "partner": "Stellt euch gegenseitig je eine 'mindestens'- und eine 'h\\u00f6chstens'-Aufgabe -- und kontrolliert die \\u00dcbersetzung."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-006"
+       ]
+      }
+     ],
+     "transfer": "Welcher Schritt bei der Binomialverteilung war im Kurs am schwierigsten -- kumulierte Wahrscheinlichkeiten oder Sigma-Umgebungen? Notiere f\\u00fcr die Klausur."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du beherrschst die Bernoulli-Formel und kumulierte Wahrscheinlichkeiten sicher und routiniert."
+    },
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du berechnest Erwartungswert, Standardabweichung und Sigma-Umgebungen und wählst den passenden Lösungsweg."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du fasst die Kernbegriffe der Binomialverteilung in einer Übersicht zusammen."
+    }
+   ]
+  },
+  {
+   "id": "l19",
+   "nr": 3,
+   "titel": "Normalverteilung: Wiederholung (nur eA)",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-q3-stochastik",
+   "themaPfad": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/",
+   "anker": "#q3-normal",
+   "ziele": [
+    "Ich kann normCDf und invNormCDf korrekt anwenden.",
+    "Ich kann die Normalverteilung als N\\u00e4herung der Binomialverteilung mit Stetigkeitskorrektur einsetzen."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Auffrischung Block 2: Was steuern $\\mu$ und $\\sigma$ bei der Normalverteilung?",
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#q3-normal",
+     "text": "Diese Wiederholung (nur eA) bündelt den Normalverteilungs-Block. Im Mittelpunkt stehen die beiden Befehle und die Näherung der Binomialverteilung.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der \\u00dcbersichtsseite",
+      "href": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/index.html#q3-normal"
+     },
+     "schritte": [
+      {
+       "titel": "normCDf gegen invNormCDf",
+       "html": "<p>Die beiden Befehle sind Umkehrungen voneinander. <strong>normCDf</strong>: Grenzen gegeben → Wahrscheinlichkeit (Fläche). <strong>invNormCDf</strong>: Wahrscheinlichkeit gegeben → Grenze. Bei normCDf gilt die Reihenfolge untere Grenze, obere Grenze, $\\sigma$, $\\mu$; einseitige Grenzen ersetzt man durch $\\pm 10^{99}$.</p>",
+       "check": {
+        "frage": "„Welche Grenze unterschreiten $95\\,\\%$ der Werte?“ — welcher Befehl?",
+        "antwort": "invNormCDf, denn die Wahrscheinlichkeit ($0{,}95$) ist gegeben und die Grenze ist gesucht."
+       }
+      },
+      {
+       "titel": "Die Sigma-Regeln",
+       "html": "<p>Für jede Normalverteilung gelten dieselben Prozentwerte: $1\\sigma \\approx 68{,}3\\,\\%$, $2\\sigma \\approx 95{,}5\\,\\%$, $3\\sigma \\approx 99{,}7\\,\\%$. Damit kontrolliert man Taschenrechner-Ergebnisse und schätzt schnell ab. Ein symmetrisches Intervall mit Anteil $1-\\gamma$ erhält man über invNormCDf für die Wahrscheinlichkeiten $\\frac{\\gamma}{2}$ und $1-\\frac{\\gamma}{2}$.</p>",
+       "check": {
+        "frage": "Welcher Anteil liegt in der $2\\sigma$-Umgebung?",
+        "antwort": "Rund $95{,}5\\,\\%$ — knapp $95\\,\\%$ aller Werte."
+       }
+      },
+      {
+       "titel": "Binomialverteilung nähern",
+       "html": "<p>Für grosses $n$ (Laplace-Bedingung $\\sigma > 3$) nähert man die Binomialverteilung durch eine Normalverteilung mit $\\mu = n\\,p$ und $\\sigma = \\sqrt{n\\,p\\,(1-p)}$. Wichtig ist die <strong>Stetigkeitskorrektur</strong>: jede Grenze um $0{,}5$ nach aussen verschieben, damit die Randsäule mitgezählt wird, z. B. $P(X \\le k) \\approx P(X \\le k+0{,}5)$.</p>",
+       "check": {
+        "frage": "Wie nähert man $P(X \\ge 60)$ mit Stetigkeitskorrektur?",
+        "antwort": "$P(X \\ge 60) \\approx P(X \\ge 59{,}5)$ — die Grenze wird um $0{,}5$ nach aussen (unten) verschoben."
+       }
+      }
+     ],
+     "merksatz": "Normalverteilungs-Block (eA): <strong>normCDf</strong> (Grenze → Wahrscheinlichkeit) und <strong>invNormCDf</strong> (Wahrscheinlichkeit → Grenze). Sigma-Regeln $68/95/99{,}7\\,\\%$. Näherung der Binomialverteilung mit $\\mu=np$, $\\sigma=\\sqrt{np(1-p)}$ und <strong>Stetigkeitskorrektur</strong> ($\\pm 0{,}5$).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Beide Befehle gegenprüfen",
+       "material": "Taschenrechner mit normCDf/invNormCDf; Beispiel $\\mu=100$, $\\sigma=10$.",
+       "vorhersage": "Du suchst die Grenze, unter der $97{,}5\\,\\%$ liegen. Schätze sie vorher mit der $2\\sigma$-Regel.",
+       "auftraege": [
+        "Berechne mit invNormCDf die Grenze $x$ mit $P(X \\le x)=0{,}975$ und vergleiche mit der oberen $2\\sigma$-Grenze.",
+        "Prüfe mit normCDf, dass $P(X \\le x)$ für dieses $x$ tatsächlich $0{,}975$ ergibt.",
+        "Nähere für $n=400$, $p=0{,}5$ die Wahrscheinlichkeit $P(X \\le 210)$ mit Stetigkeitskorrektur und vergleiche mit binomCDf."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Wann nutzt man invNormCDf statt normCDf?",
+       "antwort": "Wenn die Wahrscheinlichkeit gegeben und die Grenze gesucht ist (Umkehraufgabe)."
+      },
+      {
+       "frage": "Welche Voraussetzung muss für die Normalnäherung erfüllt sein?",
+       "antwort": "Die Laplace-Bedingung $\\sigma = \\sqrt{np(1-p)} > 3$."
+      },
+      {
+       "frage": "Was bewirkt die Stetigkeitskorrektur?",
+       "antwort": "Sie verschiebt jede Grenze um $0{,}5$ nach aussen, sodass die diskrete Randsäule von der stetigen Glockenfläche miterfasst wird."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 22,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-007",
+        "ma-qp-q3-009"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-013"
+       ]
+      }
+     ],
+     "partner": "Vergleicht: Wann ist die Normalverteilung als N\\u00e4herung der Binomialverteilung gut -- und wann nicht? Welche Bedingung pr\\u00fcft ihr zuerst?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-010"
+       ]
+      }
+     ],
+     "transfer": "Die Stetigkeitskorrektur verbessert die N\\u00e4herung deutlich. Erkl\\u00e4re in einem Satz, warum."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Mit symbolischen, formalen und technischen Elementen umgehen",
+     "text": "Du wendest normCDf und invNormCDf sicher an und unterscheidest, wann welcher Befehl gefragt ist (nur eA)."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du setzt die Normalverteilung als Näherung der Binomialverteilung mit Stetigkeitskorrektur ein."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du fasst die Regeln des Normalverteilungs-Blocks in einer Übersicht zusammen."
+    }
+   ]
+  },
+  {
+   "id": "l20",
+   "nr": 4,
+   "titel": "Hypothesentests: Wiederholung und \\u00dcberblick",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-q3-stochastik",
+   "themaPfad": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/",
+   "anker": "#q3-test",
+   "ziele": [
+    "Ich kann den vollst\\u00e4ndigen Testablauf (H\\u2080/H\\u2081, kritischer Bereich, Entscheidung) sicher durchf\\u00fchren.",
+    "Ich kann Fehler 1. und 2. Art korrekt zuordnen und interpretieren."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Hypothesentests: Welche vier Schritte geh\\u00f6ren zum einseitigen Test?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-101"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#q3-test",
+     "text": "Diese Wiederholung bündelt den gesamten Test-Block. Bringe Ablauf, Testarten und die beiden Fehlerarten in eine klare Ordnung.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der \\u00dcbersichtsseite",
+      "href": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/index.html#q3-test"
+     },
+     "schritte": [
+      {
+       "titel": "Der Testablauf in sechs Schritten",
+       "html": "<p>Jeder Test folgt demselben Schema: (1) $H_0$ und $H_1$ aufstellen, (2) $\\alpha$ und $n$ festlegen, (3) Testart und kritischen Bereich bestimmen, (4) Beobachtungswert vergleichen, (5) Entscheidung treffen, (6) im Sachzusammenhang deuten. Wer dieses Schema beherrscht, kann jede Testaufgabe strukturiert angehen.</p>",
+       "check": {
+        "frage": "In welchem Schritt entscheidet sich, ob der kritische Bereich links, rechts oder zweiseitig liegt?",
+        "antwort": "In Schritt 3 — die Testart folgt aus der Form von $H_1$ ($p<p_0$ links, $p>p_0$ rechts, $p\\ne p_0$ zweiseitig)."
+       }
+      },
+      {
+       "titel": "Die drei Testarten",
+       "html": "<p>Aus $H_1$ ergibt sich die Lage des kritischen Bereichs: <strong>rechtsseitig</strong> ($H_1: p > p_0$) → $X \\ge c$ mit $P(X \\ge c) \\le \\alpha$. <strong>linksseitig</strong> ($H_1: p < p_0$) → $X \\le c$ mit $P(X \\le c) \\le \\alpha$. <strong>zweiseitig</strong> ($H_1: p \\ne p_0$) → zwei Grenzen mit je $\\frac{\\alpha}{2}$. Schlüsselwörter „weniger/mehr/verändert“ helfen bei der Zuordnung.</p>",
+       "check": {
+        "frage": "Welche Testart gehört zu $H_1: p \\ne 0{,}5$?",
+        "antwort": "Ein zweiseitiger Test — der kritische Bereich besteht aus zwei Rändern mit je $\\frac{\\alpha}{2}$."
+       }
+      },
+      {
+       "titel": "Die beiden Fehlerarten",
+       "html": "<p>Zwei Fehlentscheidungen sind möglich: <strong>Fehler 1. Art</strong> — $H_0$ ablehnen, obwohl wahr (Wahrscheinlichkeit $\\le \\alpha$). <strong>Fehler 2. Art</strong> — $H_0$ beibehalten, obwohl falsch (Wahrscheinlichkeit $\\beta$, abhängig vom wahren $p_1$). Merkhilfe: Fehler 1. Art = „falscher Alarm“, Fehler 2. Art = „übersehene Abweichung“.</p>",
+       "check": {
+        "frage": "Ein Test behält $H_0$ bei, obwohl die Trefferwahrscheinlichkeit in Wahrheit erhöht ist. Welcher Fehler?",
+        "antwort": "Ein Fehler 2. Art — die echte Abweichung wurde übersehen. Seine Wahrscheinlichkeit ist $\\beta$."
+       }
+      }
+     ],
+     "merksatz": "Test-Block: sechs Schritte (Hypothesen → $\\alpha$,$n$ → kritischer Bereich → Vergleich → Entscheidung → Deutung). Drei Testarten (rechts/links/zweiseitig je nach $H_1$). Zwei Fehler: <strong>1. Art</strong> (ablehnen obwohl wahr, $\\le \\alpha$) und <strong>2. Art</strong> (beibehalten obwohl falsch, $\\beta$).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Test-Landkarte erstellen",
+       "material": "Ein Blatt; die sechs Schritte, die drei Testarten und die zwei Fehlerarten.",
+       "vorhersage": "Schreibe vorher aus dem Gedächtnis die sechs Testschritte auf. Welcher fällt dir am schwersten?",
+       "auftraege": [
+        "Zeichne eine Übersicht mit den sechs Schritten und ordne den drei Testarten jeweils die Bedingung für den kritischen Bereich zu.",
+        "Trage zu jeder Fehlerart ein, was sie bedeutet und welche Wahrscheinlichkeit ($\\alpha$ bzw. $\\beta$) dazugehört.",
+        "Ordne zwei Beispielaufgaben der richtigen Testart zu und benenne, was hier jeweils ein Fehler 1. und 2. Art wäre."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Nenne die drei Testarten und die zugehörige Form von $H_1$.",
+       "antwort": "Rechtsseitig ($p>p_0$), linksseitig ($p<p_0$), zweiseitig ($p \\ne p_0$)."
+      },
+      {
+       "frage": "Was unterscheidet Fehler 1. von Fehler 2. Art?",
+       "antwort": "Fehler 1. Art: $H_0$ ablehnen, obwohl wahr ($\\le \\alpha$). Fehler 2. Art: $H_0$ beibehalten, obwohl falsch ($\\beta$)."
+      },
+      {
+       "frage": "Wie ist beim zweiseitigen Test das Niveau auf die Seiten verteilt?",
+       "antwort": "Je $\\frac{\\alpha}{2}$ auf den linken und den rechten kritischen Bereich."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 22,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-104"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-004",
+        "ma-qp-q3-011"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-012"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-302"
+       ]
+      }
+     ],
+     "partner": "Gebt euch gegenseitig eine Hypothesentest-Aufgabe aus dem Kopf -- der andere f\\u00fchrt den Test vollst\\u00e4ndig durch."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-005"
+       ]
+      }
+     ],
+     "transfer": "Formuliere in eigenen Worten: Was bedeutet ein Signifikanzniveau von $\\alpha = 1\\\\,\\\\%$ im Vergleich zu $\\alpha = 5\\\\,\\\\%$ -- was wird strenger, was l\\u00e4ssiger?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du führst den vollständigen Testablauf (Hypothesen, kritischer Bereich, Entscheidung) sicher durch."
+    },
+    {
+     "bereich": "Mathematisch argumentieren",
+     "text": "Du ordnest Fehler 1. und 2. Art korrekt zu und interpretierst sie im Sachzusammenhang."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du stellst die Schritte und Begriffe des Hypothesentests in einer Übersicht dar."
+    }
+   ]
+  },
+  {
+   "id": "l21",
+   "nr": 5,
+   "titel": "Klausurvorbereitung: Gemischte Stochastik-Aufgaben",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-q3-stochastik",
+   "themaPfad": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/",
+   "anker": "#q3-klausur",
+   "ziele": [
+    "Ich kann typische Klausuraufgaben aus der Stochastik eigenst\\u00e4ndig l\\u00f6sen.",
+    "Ich kann den richtigen Rechenweg w\\u00e4hlen (Binomialverteilung, Normalverteilung oder Hypothesentest)."
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Letzter Check: Welches Thema der Stochastik-Einheit m\\u00f6chtest du heute nochmals festigen?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-102"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 16,
+     "anker": "#q3-klausur",
+     "text": "Diese Lektion bereitet auf die Klausur vor. Der Schlüssel ist eine sichere Strategie: erst das Verfahren erkennen, dann sauber rechnen und deuten.",
+     "interaktiv": {
+      "label": "Verst\\u00e4ndnis-Check auf der \\u00dcbersichtsseite",
+      "href": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/index.html#q3-klausur"
+     },
+     "schritte": [
+      {
+       "titel": "Verfahren sicher erkennen",
+       "html": "<p>Klausuraufgaben sind gemischt — der erste Schritt ist immer die <strong>Einordnung</strong>: Feste Trefferzahl bei $n$ Wiederholungen → <strong>Binomialverteilung</strong>. Stetige Größe (Länge, Gewicht, Zeit) oder Näherung bei grossem $n$ → <strong>Normalverteilung</strong>. Behauptung über $p$ anhand einer Stichprobe prüfen → <strong>Hypothesentest</strong>. Diese Zuordnung entscheidet über den ganzen Lösungsweg.</p>",
+       "check": {
+        "frage": "„Ein Würfel wird 60-mal geworfen. Wie wahrscheinlich sind mindestens 15 Sechsen?“ — welches Verfahren?",
+        "antwort": "Binomialverteilung: feste Trefferzahl bei $n=60$. Man rechnet $P(X \\ge 15) = 1 - P(X \\le 14)$ mit $p=\\frac{1}{6}$."
+       }
+      },
+      {
+       "titel": "Sauber rechnen und deuten",
+       "html": "<p>Nach der Einordnung folgt der vertraute Ablauf des jeweiligen Verfahrens. Wichtig für die Klausur: Ansatz und Term aufschreiben (nicht nur das Ergebnis), Taschenrechnerbefehl angeben, Einheiten und Rundung beachten und am Ende einen <strong>Antwortsatz im Sachzusammenhang</strong> formulieren. Gerade beim Hypothesentest gibt es Punkte für die saubere Deutung.</p>",
+       "check": {
+        "frage": "Warum sollte man bei einem Hypothesentest immer einen Antwortsatz formulieren?",
+        "antwort": "Weil die Aufgabe eine Sachfrage stellt und es Punkte für die korrekte Deutung gibt — „$H_0$ abgelehnt“ allein beantwortet die Frage nicht."
+       }
+      },
+      {
+       "titel": "Typische Fallen vermeiden",
+       "html": "<p>Wiederkehrende Fehlerquellen: bei „mindestens/mehr als“ die Grenze falsch verschoben; bei normCDf $\\sigma$ und $\\mu$ vertauscht; die Stetigkeitskorrektur vergessen; beim Test das kleinste/größte $c$ verwechselt; beim zweiseitigen Test $\\alpha$ statt $\\frac{\\alpha}{2}$ verwendet. Wer diese Fallen kennt, vermeidet die häufigsten Punktverluste.</p>",
+       "check": {
+        "frage": "Welche typische Falle lauert bei der Normalnäherung der Binomialverteilung?",
+        "antwort": "Die Stetigkeitskorrektur zu vergessen — jede Grenze muss um $0{,}5$ nach aussen verschoben werden."
+       }
+      }
+     ],
+     "merksatz": "Klausurstrategie: (1) <strong>Verfahren erkennen</strong> (Binomial / Normal / Test), (2) sauber rechnen mit Ansatz, Term und Taschenrechnerbefehl, (3) im Sachzusammenhang deuten. Typische Fallen (Grenzverschiebung, $\\sigma/\\mu$-Tausch, Stetigkeitskorrektur, $\\frac{\\alpha}{2}$) bewusst vermeiden.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Aufgaben-Triage üben",
+       "material": "Eine Sammlung gemischter Aufgabenstellungen (nur die Texte, ohne Lösung).",
+       "vorhersage": "Schätze vorher: Bei welchem der drei Verfahren machst du erfahrungsgemäß die meisten Flüchtigkeitsfehler?",
+       "auftraege": [
+        "Ordne jede der gemischten Aufgaben dem richtigen Verfahren zu (Binomial / Normal / Test) — ohne zu rechnen.",
+        "Notiere zu jeder Aufgabe in einem Satz den geplanten Lösungsweg und den nötigen Taschenrechnerbefehl.",
+        "Markiere bei mindestens drei Aufgaben, welche typische Falle hier drohen könnte."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was ist der erste Schritt bei jeder gemischten Klausuraufgabe?",
+       "antwort": "Das passende Verfahren erkennen: Binomialverteilung, Normalverteilung oder Hypothesentest — abhängig von der Struktur der Aufgabe."
+      },
+      {
+       "frage": "Nenne zwei typische Fallen, die Punkte kosten.",
+       "antwort": "Z. B. die Grenze bei „mindestens“ falsch verschieben und die Stetigkeitskorrektur bei der Normalnäherung vergessen (auch: $\\sigma$/$\\mu$ in normCDf vertauschen)."
+      },
+      {
+       "frage": "Was gehört zu einer vollständigen Klausurlösung neben dem Ergebnis?",
+       "antwort": "Ansatz und Term, der Taschenrechnerbefehl, korrekte Rundung/Einheiten und ein Antwortsatz im Sachzusammenhang."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 22,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-007",
+        "ma-qp-q3-006"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-013"
+       ]
+      }
+     ],
+     "partner": "Jeder sucht die Aufgabe heraus, die er am schwersten fand -- und erkl\\u00e4rt dem Partner den L\\u00f6sungsweg."
+    },
+    "sichern": {
+     "zeit": 5,
+     "aufgaben": [
+      {
+       "quelle": "ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-008"
+       ]
+      }
+     ],
+     "transfer": "Schreibe f\\u00fcr jedes der drei Stochastik-Themen (Binomialverteilung, Normalverteilung, Hypothesentest) einen Merksatz, den du in der Klausur nutzen wirst."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Klausurvorbereitung:",
+     "links": [
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du löst typische Klausuraufgaben der Stochastik eigenständig und vollständig."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du wählst den richtigen Rechenweg (Binomialverteilung, Normalverteilung oder Hypothesentest) anhand der Aufgabenstruktur."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du dokumentierst Lösungswege nachvollziehbar und deutest Ergebnisse im Sachzusammenhang."
+    }
+   ]
+  },
+  {
+   "id": "l21b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Vermischtes / Überblick Stochastik",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ma-qp-q3-stochastik",
+   "themaPfad": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/",
+   "ziele": [
+    "Ich wähle bei gemischten Aufgaben den richtigen Weg: Binomialverteilung, Normalverteilung oder Hypothesentest.",
+    "Ich löse typische Klausuraufgaben aus der Stochastik der Qualifikationsphase eigenständig."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-201"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 10,
+     "text": "Diese Anwendungslektion mischt alle Themen. Schärfe kurz deinen Blick für die Verfahrenswahl, bevor du die gemischten Aufgaben löst.",
+     "schritte": [
+      {
+       "titel": "Verfahren in Sekunden zuordnen",
+       "html": "<p>Bei gemischten Aufgaben entscheidet die <strong>Struktur</strong> über das Verfahren: feste Trefferzahl bei $n$ Wiederholungen → <strong>Binomialverteilung</strong>; stetige Größe oder Näherung bei grossem $n$ → <strong>Normalverteilung</strong>; eine Behauptung über $p$ wird anhand einer Stichprobe geprüft → <strong>Hypothesentest</strong>. Diese Triage ist die wichtigste Klausurkompetenz.</p>",
+       "check": {
+        "frage": "„Die Lebensdauer ist normalverteilt. Welcher Anteil hält länger als 1000 h?“ — welches Verfahren?",
+        "antwort": "Normalverteilung (stetige Größe): $P(X > 1000)$ mit normCDf."
+       }
+      },
+      {
+       "titel": "Vollständig lösen und deuten",
+       "html": "<p>Eine klausurreife Lösung enthält mehr als das Ergebnis: <strong>Ansatz und Term</strong>, den <strong>Taschenrechnerbefehl</strong>, korrekte Rundung/Einheiten und einen <strong>Antwortsatz im Sachzusammenhang</strong>. Typische Fallen (Grenzverschiebung, $\\sigma/\\mu$-Tausch, fehlende Stetigkeitskorrektur, $\\frac{\\alpha}{2}$ beim zweiseitigen Test) sollte man bewusst meiden.</p>",
+       "check": {
+        "frage": "Was gehört neben dem Ergebnis in eine vollständige Lösung?",
+        "antwort": "Ansatz und Term, der Taschenrechnerbefehl, Rundung/Einheiten und ein Antwortsatz im Sachzusammenhang."
+       }
+      }
+     ],
+     "merksatz": "Gemischte Aufgaben: erst <strong>Verfahren erkennen</strong> (Binomial / Normal / Test), dann vollständig lösen (Ansatz, Term, Befehl, Antwortsatz). Typische Fallen — Grenzverschiebung, $\\sigma/\\mu$-Tausch, Stetigkeitskorrektur, $\\frac{\\alpha}{2}$ — bewusst vermeiden.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Gemischte Triage üben",
+       "material": "Die Aufgaben dieser Lektion (nur die Texte).",
+       "vorhersage": "Überfliege die Aufgaben und vermute die Verteilung der Verfahren: Wie viele Binomial-, Normal- und Testaufgaben sind dabei?",
+       "auftraege": [
+        "Ordne jede Aufgabe vor dem Rechnen dem passenden Verfahren zu.",
+        "Notiere zu jeder Aufgabe in einem Satz den Lösungsweg und den nötigen Befehl.",
+        "Markiere bei drei Aufgaben die typische Falle, die hier drohen könnte."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Was ist der erste Schritt bei einer gemischten Aufgabe?",
+       "antwort": "Das passende Verfahren erkennen: Binomialverteilung, Normalverteilung oder Hypothesentest."
+      },
+      {
+       "frage": "Nenne zwei typische Fallen, die Punkte kosten.",
+       "antwort": "Z. B. Grenze bei „mindestens“ falsch verschieben und Stetigkeitskorrektur bei der Normalnäherung vergessen."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-202",
+        "ma-qp-q3-203",
+        "ma-qp-q3-304"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-204",
+        "ma-qp-q3-205",
+        "ma-qp-q3-206",
+        "ma-qp-q3-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-207",
+        "ma-qp-q3-301",
+        "ma-qp-q3-302"
+       ]
+      }
+     ],
+     "partner": "Jede Person sucht die Aufgabe heraus, die ihr am schwersten fiel — und erklärt der Partnerin oder dem Partner, an welchem Schlüsselwort man die passende Methode erkennt."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ma-qp-q3-stochastik",
+       "ids": [
+        "ma-qp-q3-208"
+       ]
+      }
+     ],
+     "transfer": "Lies bei gemischten Aufgaben zuerst die Schlüsselwörter: „genau/höchstens/mindestens“ deutet auf Binomialverteilung, „stetig/normalverteilt“ auf die Normalverteilung, „testen/Niveau/Hypothese“ auf einen Hypothesentest."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Klausurvorbereitung:",
+     "links": [
+      {
+       "label": "Simulation: Normalverteilung — Glockenkurve und Flächen",
+       "href": "simulationen/mathematik/normalverteilung/index.html"
+      },
+      {
+       "label": "Tagesmischung Mathematik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Probleme mathematisch lösen",
+     "text": "Du löst typische Klausuraufgaben der Stochastik der Qualifikationsphase eigenständig."
+    },
+    {
+     "bereich": "Mathematisch modellieren",
+     "text": "Du wählst bei gemischten Aufgaben den richtigen Weg: Binomialverteilung, Normalverteilung oder Hypothesentest."
+    },
+    {
+     "bereich": "Mathematisch kommunizieren",
+     "text": "Du dokumentierst Lösungswege nachvollziehbar und deutest Ergebnisse im Sachzusammenhang."
+    }
+   ]
+  }
+ ],
+ "bloecke": [
+  {
+   "titel": "Binomialverteilung",
+   "thema": "ma-qp-binomialverteilung",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l5b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Normalverteilung",
+   "thema": "ma-qp-normalverteilung",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10",
+    "l10b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Hypothesentests",
+   "thema": "ma-qp-hypothesentests",
+   "lektionen": [
+    "l11",
+    "l12",
+    "l13",
+    "l14",
+    "l15",
+    "l16",
+    "l16b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Vermischtes / Überblick Stochastik",
+   "thema": "ma-qp-q3-stochastik",
+   "lektionen": [
+    "l17",
+    "l18",
+    "l19",
+    "l20",
+    "l21",
+    "l21b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  }
+ ]
+}

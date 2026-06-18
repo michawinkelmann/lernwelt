@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validierung der Simulationen — Lernwelt</title>
+<meta name="robots" content="noindex">
+<link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/print.css" media="print">
+<style>
+  .validierung table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; background: var(--flaeche); }
+  .validierung th, .validierung td { border: 1px solid var(--linie); padding: 6px 10px; text-align: right; }
+  .validierung th { background: var(--hauch); }
+  .validierung td:first-child, .validierung th:first-child,
+  .validierung td:nth-child(2), .validierung th:nth-child(2) { text-align: left; }
+  .ergebnis-ok { color: var(--ok); font-weight: 700; }
+  .ergebnis-fehler { color: var(--fehler); font-weight: 700; }
+  .gesamt { font-size: 1.1rem; font-weight: 700; margin: 16px 0; }
+</style>
+</head>
+<body data-seite="validierung">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript. <a href="../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt validierung">
+  <h1>Validierung der Simulationen</h1>
+  <p class="einleitung">Jede Simulation enthält Prüffälle mit analytisch bekannter Lösung. Diese Seite rechnet alle Fälle ohne Darstellung durch und vergleicht das numerische Ergebnis mit der Theorie. Pflichtcheck, bevor eine Simulation online geht.</p>
+  <p class="gesamt" id="gesamt" role="status">Rechne Prüffälle …</p>
+  <div id="ergebnisse"></div>
+</main>
+<script type="module" src="../assets/js/komponenten.js"></script>
+<script type="module">
+  import { laufeHeadless } from "../assets/js/sim/engine.js";
+  import { formatZahl } from "../assets/js/sim/welt.js";
+
+  // Registrierte Simulationen (bei jeder neuen Sim ergänzen)
+  const SIMS = [
+    { titel: "Schiefer Wurf", modul: "./physik/schiefer-wurf/sim.js" },
+    { titel: "Plattenkondensator", modul: "./physik/plattenkondensator/sim.js" },
+    { titel: "Funktionsplotter", modul: "./mathematik/funktionsplotter/sim.js" },
+    { titel: "Sortieren: Bubble Sort", modul: "./informatik/sortieren/sim.js" },
+    { titel: "Bewegungsdiagramme", modul: "./physik/bewegungsdiagramme/sim.js" },
+    { titel: "Elektron auf Kreisbahn", modul: "./physik/teilchen-kreisbahn/sim.js" },
+    { titel: "Bewegter Leiter (Induktion)", modul: "./physik/leiterschaukel/sim.js" },
+    { titel: "Reihe oder parallel?", modul: "./physik/schaltkreis-vergleich/sim.js" },
+    { titel: "Schattenwerfer", modul: "./physik/schattenwerfer/sim.js" },
+    { titel: "Caesar-Scheibe", modul: "./informatik/caesar-scheibe/sim.js" },
+    { titel: "Paket-Reise durchs Netz", modul: "./informatik/paket-reise/sim.js" },
+    { titel: "Binär-Trainer: 8 Bit", modul: "./informatik/binaer-trainer/sim.js" },
+    { titel: "Quader füllen", modul: "./mathematik/quader-fuellen/sim.js" },
+    { titel: "Radioaktiver Zerfall", modul: "./physik/zerfall/sim.js" },
+    { titel: "Photoeffekt: Gegenfeldmethode", modul: "./physik/gegenfeld/sim.js" },
+    { titel: "Interferenz am Doppelspalt", modul: "./physik/doppelspalt/sim.js" },
+    { titel: "Federpendel", modul: "./physik/federpendel/sim.js" },
+    { titel: "Einheitskreis und Sinuskurve", modul: "./mathematik/einheitskreis-sinus/sim.js" },
+    { titel: "Glücksrad: relative Häufigkeit", modul: "./mathematik/gluecksrad/sim.js" },
+    { titel: "Stehende Welle", modul: "./physik/stehende-welle/sim.js" },
+    { titel: "Gasgesetze: Kolben und p-V-Diagramm", modul: "./physik/gasgesetze/sim.js" },
+    { titel: "Sammellinse: Bildkonstruktion", modul: "./physik/linsen-strahlengang/sim.js" },
+    { titel: "Hebel und Drehmoment", modul: "./physik/hebel/sim.js" },
+    { titel: "Linearer Funktionenplotter", modul: "./mathematik/linearer-plotter/sim.js" },
+    { titel: "Pythagoras: Quadrate an den Seiten", modul: "./mathematik/pythagoras-quadrate/sim.js" },
+    { titel: "Sekante und Tangente: h läuft gegen 0", modul: "./mathematik/sekante-tangente/sim.js" },
+    { titel: "Endlicher Automat: Wörter prüfen", modul: "./informatik/endlicher-automat/sim.js" },
+    { titel: "Stromkreis-Baukasten", modul: "./physik/stromkreis-baukasten/sim.js" },
+    { titel: "Riemann-Summen", modul: "./mathematik/riemann-summen/sim.js" },
+    { titel: "Energieerhaltung am Pendel", modul: "./physik/energie-erhaltung/sim.js" },
+    { titel: "Generator: Induktionsspannung", modul: "./physik/generator/sim.js" },
+    { titel: "Spannung und Stromstärke messen", modul: "./physik/strom-spannung-messen/sim.js" },
+    { titel: "Magnetfeld eines Stabmagneten", modul: "./physik/magnetfeld/sim.js" },
+    { titel: "Energiefluss und Wirkungsgrad", modul: "./physik/energiefluss/sim.js" },
+    { titel: "LED mit Vorwiderstand", modul: "./physik/led-vorwiderstand/sim.js" },
+    { titel: "Normalverteilung", modul: "./mathematik/normalverteilung/sim.js" },
+    { titel: "Matrix als Abbildung", modul: "./mathematik/matrix-abbildung/sim.js" },
+    { titel: "Logik-Gatter-Baukasten", modul: "./informatik/logik-gatter/sim.js" },
+    { titel: "Besondere Linien im Dreieck", modul: "./mathematik/dreieck-transversalen/sim.js" },
+    { titel: "Bruch-Werkstatt", modul: "./mathematik/bruch-werkstatt/sim.js" },
+    { titel: "Symmetrie-Werkstatt", modul: "./mathematik/symmetrie-werkstatt/sim.js" },
+    { titel: "Zweipunktregler (Regelkreis)", modul: "./informatik/regelkreis/sim.js" },
+    { titel: "Klassifikator (Perzeptron)", modul: "./informatik/klassifikator/sim.js" },
+    { titel: "Vektoren im Raum (3D)", modul: "./mathematik/vektoren-3d/sim.js" },
+    { titel: "Lineares Gleichungssystem grafisch", modul: "./mathematik/lineare-gleichungssysteme/sim.js" },
+    { titel: "Binomische Formel als Flächenpuzzle", modul: "./mathematik/binomische-formeln/sim.js" },
+    { titel: "Mittelwert und Median", modul: "./mathematik/mittelwert-median/sim.js" },
+    { titel: "Winkel messen und Winkelarten", modul: "./mathematik/winkel-messen/sim.js" },
+    { titel: "Baumdiagramm und Vierfeldertafel", modul: "./mathematik/baumdiagramm/sim.js" },
+    { titel: "Wachstumsmodelle", modul: "./mathematik/wachstumsmodelle/sim.js" },
+    { titel: "Energieniveaus und Spektrallinien", modul: "./physik/atomhuelle/sim.js" }
+  ];
+
+  const ziel = document.getElementById("ergebnisse");
+  const gesamt = document.getElementById("gesamt");
+  let bestanden = 0, gesamtZahl = 0;
+
+  for (const eintrag of SIMS) {
+    const sim = await import(eintrag.modul);
+    const zeilen = [];
+    for (const fall of sim.pruefFaelle) {
+      const ist = laufeHeadless(sim, fall.parameter);
+      for (const groesse of Object.keys(fall.soll)) {
+        const soll = fall.soll[groesse];
+        const wert = ist[groesse];
+        // Bei Soll = 0 wird absolut geprüft (Toleranzwert als absolute Schranke)
+        const istNull = Math.abs(soll) < 1e-12;
+        const abweichung = istNull ? Math.abs(wert) : Math.abs(wert - soll) / Math.abs(soll) * 100;
+        const ok = abweichung <= fall.toleranzProzent;
+        gesamtZahl++;
+        if (ok) bestanden++;
+        const label = (sim.manifest.bilanz && sim.manifest.bilanz[groesse]) ? sim.manifest.bilanz[groesse].label : groesse;
+        const einheit = (sim.manifest.bilanz && sim.manifest.bilanz[groesse]) ? sim.manifest.bilanz[groesse].einheit : "";
+        zeilen.push(`<tr>
+          <td>${fall.name}</td><td>${label}</td>
+          <td>${formatZahl(soll, 4)} ${einheit}</td>
+          <td>${formatZahl(wert, 4)} ${einheit}</td>
+          <td>${formatZahl(abweichung, 3)}${istNull ? " (abs.)" : " %"}</td>
+          <td class="${ok ? "ergebnis-ok" : "ergebnis-fehler"}">${ok ? "✓" : "✗"}</td>
+        </tr>`);
+      }
+    }
+    ziel.insertAdjacentHTML("beforeend", `
+      <h2>${eintrag.titel}</h2>
+      <table>
+        <thead><tr><th>Prüffall</th><th>Größe</th><th>Soll (Theorie)</th><th>Ist (Simulation)</th><th>Abweichung</th><th>✓/✗</th></tr></thead>
+        <tbody>${zeilen.join("")}</tbody>
+      </table>`);
+  }
+
+  const allesOk = bestanden === gesamtZahl;
+  gesamt.textContent = allesOk
+    ? `✓ Alle ${gesamtZahl} Prüfungen bestanden.`
+    : `✗ ${gesamtZahl - bestanden} von ${gesamtZahl} Prüfungen fehlgeschlagen!`;
+  gesamt.className = "gesamt " + (allesOk ? "ergebnis-ok" : "ergebnis-fehler");
+  gesamt.dataset.ok = String(allesOk);
+</script>
+</body>
+</html>

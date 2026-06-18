@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bewegung geladener Teilchen im E-Feld — Qualifikationsphase · Physik — Lernwelt</title>
+<meta name="description" content="Elektronen beschleunigen und ablenken: Längsfeld, Querfeld, Parabelbahn quantitativ und Braunsche Röhre — mit interaktiver Simulation.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln und Simulation. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Bewegung geladener Teilchen im E-Feld</h1>
+  <p class="einleitung">Im Inneren eines klassischen Oszilloskops zeichnet ein Elektronenstrahl Spannungskurven auf einen Leuchtschirm — gelenkt von nichts als elektrischen Feldern. Wie eine Spannung Elektronen auf Millionen Meter pro Sekunde bringt und eine zweite sie millimetergenau ablenkt, lernst du auf dieser Seite. Sie baut direkt auf dem Thema <a href="../elektrische-felder/index.html">Elektrische Felder</a> auf.</p>
+
+  <section aria-labelledby="ue-beschleunigen">
+    <h2 id="ue-beschleunigen">1. Längsfeld: Ladungen beschleunigen</h2>
+    <p>In einer <strong>Elektronenkanone</strong> treten Elektronen aus einem Glühdraht aus und werden zur durchbohrten Anode hin beschleunigt — das Feld zeigt <em>längs</em> der Bewegungsrichtung. Beim Durchlaufen der Beschleunigungsspannung $U_0$ überträgt das Feld die Energie $W = q \cdot U$, beim Elektron also $W = e \cdot U_0$. Startet es aus der Ruhe, steckt diese Energie am Ende vollständig in der Bewegung.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Beschleunigung im Längsfeld</span>
+      <p class="formel-abgesetzt">$$e \cdot U_0 = \frac{1}{2}\,m_e\,v^2 \quad\Longrightarrow\quad v = \sqrt{2 \cdot \frac{e}{m_e} \cdot U_0}$$</p>
+      <p>Dabei ist $\frac{e}{m_e} = 1{,}7588 \cdot 10^{11}\,\frac{\text{C}}{\text{kg}}$ die spezifische Ladung des Elektrons ($e = 1{,}602 \cdot 10^{-19}\,\text{C}$, $m_e = 9{,}109 \cdot 10^{-31}\,\text{kg}$). Die Endgeschwindigkeit hängt nur von der durchlaufenen Spannung ab — nicht von Plattenabstand oder Feldform.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel</span>
+      <p>Schon $U_0 = 500\,\text{V}$ ergeben $v = \sqrt{2 \cdot 1{,}7588 \cdot 10^{11} \cdot 500}\,\frac{\text{m}}{\text{s}} = \sqrt{1{,}7588 \cdot 10^{14}}\,\frac{\text{m}}{\text{s}} \approx 1{,}326 \cdot 10^{7}\,\frac{\text{m}}{\text{s}}$ — mehr als vier Prozent der Lichtgeschwindigkeit.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Elektron durchläuft erst $100\,\text{V}$, dann noch einmal $100\,\text{V}$. Ist es am Ende doppelt so schnell wie nach dem ersten Stück?</summary>
+      <div class="check-antwort"><p>Nein. Die <em>Energie</em> verdoppelt sich, aber wegen $v \sim \sqrt{U_0}$ wächst die Geschwindigkeit nur um den Faktor $\sqrt{2} \approx 1{,}41$. Für doppelte Geschwindigkeit braucht es die vierfache Spannung.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ue-ablenken">
+    <h2 id="ue-ablenken">2. Querfeld: Ladungen ablenken</h2>
+    <p>Nun fliegt das schnelle Elektron seitlich in einen Plattenkondensator hinein — <em>quer</em> zu den Feldlinien. Die konstante Feldkraft $F = e \cdot E$ wirkt senkrecht zur Flugrichtung. Diese Situation kennst du schon von den <a href="../../einfuehrungsphase/wurfbewegungen/index.html">Wurfbewegungen</a>: Beim waagerechten Wurf macht die Gewichtskraft genau dasselbe.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Analogie zum waagerechten Wurf</span>
+      <p>Längs zur Flugrichtung: <strong>gleichförmige</strong> Bewegung (keine Kraftkomponente). Quer dazu: <strong>gleichmäßig beschleunigte</strong> Bewegung. Überlagert ergibt das zwischen den Platten eine <strong>Parabelbahn</strong> — und nach dem Verlassen des Feldes eine <strong>Gerade</strong>, denn ohne Kraft fliegt das Elektron geradlinig weiter (Trägheitsgesetz).</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum ist die Bahn im Feld eine Parabel und keine Kreisbahn?</summary>
+      <div class="check-antwort"><p>Die Feldkraft ist im homogenen Feld <em>konstant in Betrag und Richtung</em> — wie die Gewichtskraft beim Wurf. Das ergibt eine Parabel. Für eine Kreisbahn müsste die Kraft stets <em>senkrecht zur momentanen Bahnrichtung</em> stehen — das leistet später erst die Lorentzkraft im Magnetfeld.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ue-bahn">
+    <h2 id="ue-bahn">3. Die Bahn quantitativ</h2>
+    <p>Mit der Zerlegung in Längs- und Querbewegung lässt sich die Bahn vollständig berechnen. Das Elektron tritt mit $v_0$ mittig zwischen die Platten ein; sie haben die Länge $L$, den Abstand $d$, und an ihnen liegt die Ablenkspannung $U_a$:</p>
+    <ol>
+      <li><strong>Querbeschleunigung:</strong> Aus $F = e \cdot E$ und $E = \frac{U_a}{d}$ folgt $a = \frac{e}{m_e} \cdot \frac{U_a}{d}$.</li>
+      <li><strong>Verweilzeit im Feld:</strong> Die Längsbewegung ist gleichförmig, also $t_1 = \frac{L}{v_0}$.</li>
+      <li><strong>Ablenkung am Plattenende:</strong> $y_1 = \frac{1}{2}\,a\,t_1^2$.</li>
+      <li><strong>Austrittswinkel:</strong> Mit der Quergeschwindigkeit $v_y = a \cdot t_1$ gilt $\tan\theta = \frac{v_y}{v_0}$.</li>
+    </ol>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel (Startwerte der Simulation unten)</span>
+      <p>$U_0 = 1000\,\text{V}$, $U_a = 150\,\text{V}$, $d = 5{,}0\,\text{cm}$, $L = 8{,}0\,\text{cm}$: Eintritt mit $v_0 = 1{,}876 \cdot 10^7\,\frac{\text{m}}{\text{s}}$, Querbeschleunigung $a = 5{,}28 \cdot 10^{14}\,\frac{\text{m}}{\text{s}^2}$, Verweilzeit $t_1 = 4{,}27\,\text{ns}$, Ablenkung am Plattenende $y_1 = 4{,}8\,\text{mm}$, Austrittswinkel $\tan\theta = 0{,}12$, also $\theta \approx 6{,}8^\circ$. Auf dem geraden Weg zum Schirm ($s = 12\,\text{cm}$ hinter den Platten) kommen $\tan\theta \cdot s = 14{,}4\,\text{mm}$ hinzu — am Schirm: $19{,}2\,\text{mm}$.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Ablenkung am Schirm</span>
+      <p class="formel-abgesetzt">$$y_{\text{Schirm}} = \frac{U_a \, L \left(\frac{L}{2} + s\right)}{2\,U_0\,d}$$</p>
+      <p>Bemerkenswert: Die spezifische Ladung $\frac{e}{m_e}$ kürzt sich vollständig heraus — Geometrie und Spannungsverhältnis $\frac{U_a}{U_0}$ allein bestimmen die Ablenkung. Warum das so ist, klärst du in Übungsaufgabe 11.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Doppelt so lange Platten — wievielfache Ablenkung $y_1$ am Plattenende?</summary>
+      <div class="check-antwort"><p>Die vierfache! Die Verweilzeit $t_1 = L/v_0$ verdoppelt sich, und in $y_1 = \frac{1}{2}\,a\,t_1^2$ geht sie <em>quadratisch</em> ein: $y_1 \sim L^2$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ue-simulation">
+    <h2 id="ue-simulation">4. Probiere es selbst aus</h2>
+    <p>Untersuche in der Simulation, wie Beschleunigungsspannung $U_0$, Ablenkspannung $U_a$ und Plattenabstand $d$ die Bahn formen. Plattenlänge $L = 8\,\text{cm}$ und Schirmabstand $s = 12\,\text{cm}$ sind fest eingebaut — wie in den Übungsaufgaben.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/physik/plattenkondensator/index.html?einbettung=1#ub=1000&ua=150&d=5"
+        title="Interaktive Simulation: Plattenkondensator" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/physik/plattenkondensator/index.html#ub=1000&ua=150&d=5" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Miss die Schirmablenkung für $U_a = 50, 100, 200, 300\,\text{V}$ (CSV-Export hilft). Prüfe: Ist $y$ proportional zu $U_a$ — verdoppelt sich die Ablenkung mit der Spannung?<br>
+      2. Finde die Grenze zum Plattenkontakt: Senke $U_0$ auf $500\,\text{V}$ und verkleinere $d$. Bei welcher Ablenkspannung trifft das Elektron gerade noch die Platte? Vergleiche die Grenzwerte für zwei verschiedene $d$.<br>
+      3. Aktiviere das <strong>Winkelmesser</strong>-Werkzeug und miss den Winkel zwischen Einflugrichtung und der geraden Bahn hinter den Platten. Vergleiche mit der Rechnung: $\tan\theta = \frac{U_a \cdot L}{2\,U_0\,d} = 0{,}12$, also $\theta \approx 6{,}8^\circ$ bei den Startwerten.</p>
+    </div>
+  <p>Und was passiert, wenn quer zur Flugbahn statt des elektrischen ein <em>magnetisches</em> Feld steht? Die Kreisbahn dazu untersuchst du in der Simulation <a href="../../../simulationen/physik/teilchen-kreisbahn/index.html">Elektron auf Kreisbahn (Fadenstrahlrohr)</a>.</p>
+  </section>
+
+  <section aria-labelledby="ue-anwendungen">
+    <h2 id="ue-anwendungen">5. Anwendungen: vom Oszilloskop zum Tintenstrahldrucker</h2>
+    <p><strong>Braunsche Röhre und Oszilloskop.</strong> Karl Ferdinand Braun kombinierte 1897 genau die beiden Bausteine dieser Seite: eine Elektronenkanone und Ablenkkondensatoren. Im analogen Oszilloskop schiebt ein Plattenpaar den Strahl mit einer Sägezahnspannung gleichmäßig von links nach rechts (Zeitachse), das zweite lenkt ihn proportional zur Messspannung senkrecht aus — auf dem Leuchtschirm erscheint der Spannungsverlauf als Kurve. Über ein Jahrhundert steckte diese Röhre in Oszilloskopen und Fernsehern; heute ist sie durch Flachbildschirme und digitale Messtechnik abgelöst, als Klassiker der Physik lebt sie weiter.</p>
+    <p><strong>Tintenstrahldrucker.</strong> Industrielle Continuous-Inkjet-Drucker — sie drucken zum Beispiel Haltbarkeitsdaten auf Verpackungen — erzeugen einen feinen Strom von Tintentröpfchen. Jedes Tröpfchen erhält beim Abriss eine gezielt dosierte Ladung und durchfliegt dann einen Ablenkkondensator: Je nach Ladung landet es an einer anderen Stelle der Druckzeile; ungeladene Tröpfchen fliegen geradeaus in einen Auffangkanal. Anders als beim Elektron kürzt sich $\frac{q}{m}$ hier nicht heraus, denn die Tröpfchen werden mechanisch durch Druck statt elektrisch beschleunigt — genau dadurch lässt sich die Position über die Ladung steuern.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Energiebilanz im Querfeld</summary>
+    <div class="vertiefung-inhalt">
+      <p>Bleibt die kinetische Energie im Querfeld erhalten? Nein! Die Längskomponente $v_x = v_0$ ändert sich zwar nicht: Die Feldkraft steht senkrecht zur $x$-Richtung, hat also keine $x$-Komponente und kann die Längsbewegung nicht beeinflussen. Quer dazu verrichtet das Feld aber Arbeit — das Elektron rückt um $y_1$ auf eine Platte zu, und längs dieses Weges zieht die Kraft $F = e \cdot \frac{U_a}{d}$. Die kinetische Energie wächst dadurch um</p>
+      <p class="formel-abgesetzt">$$\Delta E_{\text{kin}} = F \cdot y_1 = \frac{1}{2}\,m_e\,v_y^2$$</p>
+      <p>Im Beispiel aus Abschnitt 3 ($E = 3000\,\frac{\text{V}}{\text{m}}$, $y_1 = 4{,}8\,\text{mm}$): $\Delta E_{\text{kin}} = e \cdot 3000 \cdot 0{,}0048\,\text{J} \approx 2{,}3 \cdot 10^{-18}\,\text{J}$ — das Elektron „fällt“ quer durch $14{,}4\,\text{V}$ Potenzialdifferenz. Bezogen auf die Anfangsenergie $e \cdot 1000\,\text{V}$ sind das gerade $\left(\frac{v_y}{v_0}\right)^2 = 0{,}12^2 = 1{,}44\,\%$; der Geschwindigkeitsbetrag wächst von $1{,}876 \cdot 10^7$ auf $1{,}889 \cdot 10^7\,\frac{\text{m}}{\text{s}}$. Geliefert wird diese Energie von der Spannungsquelle des Ablenkkondensators.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen — inklusive Messaufgabe mit der Simulation.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+{
+  "thema": "in-10-endliche-automaten",
+  "fach": "informatik",
+  "stufe": "klasse-10",
+  "aufgaben": [
+    {
+      "id": "in-10-ea-001",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über endliche Automaten sind richtig?",
+      "optionen": [
+        { "text": "Ein endlicher Automat befindet sich zu jedem Zeitpunkt in genau einem Zustand.", "richtig": true, "erklaerung": "Richtig — genau das macht Automaten so übersichtlich: Es ist immer eindeutig, „wo“ der Automat gerade steht." },
+        { "text": "Ein Übergang legt fest, in welchen Zustand der Automat bei einer bestimmten Eingabe wechselt.", "richtig": true, "erklaerung": "Richtig: Im Diagramm ist der Übergang ein beschrifteter Pfeil — aktueller Zustand plus Eingabe bestimmen den Folgezustand." },
+        { "text": "Ein endlicher Automat kann beliebig viele Zustände haben.", "richtig": false, "erklaerung": "Nein — „endlich“ steckt im Namen: Die Anzahl der Zustände ist fest und begrenzt." },
+        { "text": "Der Automat merkt sich die komplette Folge aller bisherigen Eingaben.", "richtig": false, "erklaerung": "Nein: Sein einziges „Gedächtnis“ ist der aktuelle Zustand. Alles, was er sich merken soll, muss in den Zuständen stecken." }
+      ],
+      "tipps": [
+        "Denke an das Drehkreuz von der Erklärseite: Es ist entweder gesperrt oder offen — nie beides gleichzeitig.",
+        "Was verrät der Name „endlicher Automat“ über die Anzahl der Zustände?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Ein Automat steht immer in genau einem Zustand, und die Übergänge legen für jede Eingabe den Folgezustand fest. Falsch sind Aussage 3 und 4: Die Zustandsanzahl ist endlich (daher der Name), und der Automat merkt sich nicht die ganze Eingabefolge — sein gesamtes Gedächtnis ist der aktuelle Zustand.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-002",
+      "typ": "zuordnung",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jedem Fachbegriff die passende Bedeutung zu.",
+      "paare": [
+        { "links": "Zustand", "rechts": "Eine der endlich vielen „Situationen“, in denen sich der Automat befinden kann" },
+        { "links": "Startzustand", "rechts": "Hier steht der Automat vor der ersten Eingabe — markiert durch den Pfeil von außen" },
+        { "links": "Akzeptierender Zustand", "rechts": "Endet ein Wort hier, wird es angenommen — gezeichnet als Doppelkreis" },
+        { "links": "Übergang", "rechts": "Beschrifteter Pfeil: legt zu Zustand und Eingabe den Folgezustand fest" }
+      ],
+      "tipps": [
+        "Schau dir das Zustandsdiagramm auf der Erklärseite an: Kreise, ein Pfeil von außen, beschriftete Pfeile, ein Doppelkreis.",
+        "Der Pfeil von außen zeigt, wo alles beginnt.",
+        "Der Doppelkreis bedeutet: Wer hier am Wortende steht, hat die Prüfung bestanden."
+      ],
+      "loesungsweg": "Zustand = eine der endlich vielen Situationen des Automaten (Kreis). Startzustand = hier beginnt jede Verarbeitung (Pfeil von außen). Akzeptierender Zustand = endet das Wort hier, wird es angenommen (Doppelkreis). Übergang = beschrifteter Pfeil, der zu aktuellem Zustand und Eingabe den Folgezustand angibt.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-003",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Das Drehkreuz-Diagramm von der Erklärseite: zwei Zustände Gesperrt und Offen, Übergänge bei den Eingaben Münze und Drehen. Ergänze den Text.",
+      "text": "Das Drehkreuz startet im Zustand ___. Wirft man eine Münze ein, wechselt es in den Zustand ___. Dreht man das Kreuz anschließend, ist es danach wieder ___. Eine weitere Münze im Zustand Offen ändert am Zustand ___.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "Gesperrt", "optionen": ["Gesperrt", "Offen"] },
+        { "art": "dropdown", "antwort": "Offen", "optionen": ["Offen", "Gesperrt"] },
+        { "art": "dropdown", "antwort": "gesperrt", "optionen": ["gesperrt", "offen"] },
+        { "art": "dropdown", "antwort": "nichts", "optionen": ["nichts", "alles"] }
+      ],
+      "tipps": [
+        "Der Pfeil von außen im Diagramm zeigt auf den Startzustand.",
+        "Münze öffnet, Drehen sperrt wieder.",
+        "Im Zustand Offen ist der Münze-Pfeil ein Selbstübergang: Er führt zurück in denselben Zustand."
+      ],
+      "loesungsweg": "Der Startzustand ist Gesperrt (Pfeil von außen). Die Münze löst den Übergang Gesperrt → Offen aus. Drehen führt zurück: Offen → Gesperrt. Und die zweite Münze trifft im Zustand Offen auf den Selbstübergang „Münze“ — am Zustand ändert sie nichts, die Münze ist verschenkt.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-004",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ein endlicher Automat hat 3 Zustände und arbeitet mit dem Alphabet $\\{0, 1\\}$. Seine vollständige Übergangstabelle enthält für jeden Zustand und jedes Eingabezeichen genau einen Eintrag (den Folgezustand). Wie viele Einträge hat die Tabelle?",
+      "eingaben": [
+        { "label": "Anzahl Einträge", "antwort": 6, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Die Tabelle hat für jeden Zustand eine Zeile und für jedes Eingabezeichen eine Spalte.",
+        "3 Zeilen und 2 Spalten — wie viele Zellen ergibt das?",
+        "Rechne $3 \\cdot 2$."
+      ],
+      "loesungsweg": "Pro Zustand eine Zeile, pro Eingabezeichen eine Spalte: $3 \\cdot 2 = 6$ Einträge. Jede Zelle nennt genau einen Folgezustand — so ist für jede Situation eindeutig festgelegt, wie es weitergeht.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-005",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Wort-Prüfer von der Erklärseite akzeptiert alle Wörter über $\\{a, b\\}$, die auf $b$ enden. Seine Übergänge: Ein $b$ führt immer nach $q_1$, ein $a$ immer nach $q_0$; Start ist $q_0$, akzeptierend ist $q_1$. Durchlaufe das Wort $bab$ und trage jeweils den Zustand ein (q0 oder q1).",
+      "text": "Start: q0. Nach dem ersten b: ___. Nach dem a: ___. Nach dem letzten b: ___. Das Wort wird also ___.",
+      "luecken": [
+        { "art": "eingabe", "antwort": "q1" },
+        { "art": "eingabe", "antwort": "q0" },
+        { "art": "eingabe", "antwort": "q1" },
+        { "art": "dropdown", "antwort": "akzeptiert", "optionen": ["akzeptiert", "abgelehnt"] }
+      ],
+      "tipps": [
+        "Lies das Wort von links nach rechts und verfolge jeden Buchstaben mit dem Finger im Diagramm.",
+        "Bei diesem Automaten gilt: Ein $b$ führt immer nach $q_1$, ein $a$ immer nach $q_0$ — egal, wo du gerade stehst.",
+        "Entscheidend ist der Zustand nach dem letzten Buchstaben: $q_1$ ist akzeptierend."
+      ],
+      "loesungsweg": "Start in $q_0$. Erstes $b$: Wechsel nach $q_1$. Dann $a$: zurück nach $q_0$. Letztes $b$: wieder nach $q_1$. Die Zustandsfolge lautet $q_0 \\to q_1 \\to q_0 \\to q_1$ — das Wort endet im akzeptierenden Zustand $q_1$ und wird akzeptiert. Das passt: $bab$ endet auf $b$.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-006",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein endlicher Automat liest das Wort $babba$ (Länge 5) Buchstabe für Buchstabe. Bei jedem gelesenen Buchstaben führt er genau einen Übergang aus. Wie viele Übergangs-Schritte macht der Automat insgesamt, bis das Wort vollständig gelesen ist?",
+      "eingaben": [
+        { "label": "Anzahl Schritte", "antwort": 5, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Pro gelesenem Buchstaben gibt es genau einen Schritt von Zustand zu Zustand.",
+        "Zähle die Buchstaben des Worts.",
+        "Beliebter Stolperstein: Die Zustandsfolge enthält 6 Zustände (Start plus einer nach jedem Buchstaben) — gefragt sind aber die Schritte dazwischen."
+      ],
+      "loesungsweg": "Jeder der 5 Buchstaben löst genau einen Übergang aus — der Automat macht 5 Schritte. Die zugehörige Zustandsfolge ist um eins länger: Sie besteht aus 6 Zuständen, nämlich dem Startzustand und je einem Zustand nach jedem gelesenen Buchstaben.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-007",
+      "typ": "reihenfolge",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Wort-Prüfer (akzeptiert Wörter, die auf $b$ enden; ein $b$ führt immer nach $q_1$, ein $a$ immer nach $q_0$) liest das Wort $abb$. Bringe die Stationen des Durchlaufs in die richtige Reihenfolge.",
+      "elemente": [
+        "Start: Der Automat steht in $q_0$, noch ist nichts gelesen",
+        "Nach dem $a$: Der Automat bleibt in $q_0$",
+        "Nach dem ersten $b$: Wechsel in den Zustand $q_1$",
+        "Nach dem zweiten $b$: Der Automat bleibt in $q_1$ — Wortende, akzeptiert"
+      ],
+      "tipps": [
+        "Jede Station gehört zu genau einem Zeitpunkt: vor dem Lesen, nach dem 1., nach dem 2. und nach dem 3. Buchstaben.",
+        "Das Wort heißt $abb$: erst ein $a$, dann zweimal $b$.",
+        "Ein $a$ führt immer nach $q_0$, ein $b$ immer nach $q_1$."
+      ],
+      "loesungsweg": "Die Zustandsfolge lautet $q_0 \\to q_0 \\to q_1 \\to q_1$: Der Start ist $q_0$; das $a$ lässt den Automaten in $q_0$; das erste $b$ wechselt nach $q_1$; das zweite $b$ bleibt per Selbstübergang in $q_1$. Dort endet das Wort — $q_1$ ist akzeptierend, $abb$ wird angenommen.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-008",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Wort-Prüfer akzeptiert genau die Wörter über $\\{a, b\\}$, die auf $b$ enden ($q_0$ Start, $q_1$ akzeptierend; ein $b$ führt stets nach $q_1$, ein $a$ stets nach $q_0$). Welche Aussagen sind richtig?",
+      "optionen": [
+        { "text": "Das Wort $aabbb$ wird akzeptiert.", "richtig": true, "erklaerung": "Richtig: $q_0 \\to q_0 \\to q_0 \\to q_1 \\to q_1 \\to q_1$ — das Wort endet in $q_1$, denn sein letzter Buchstabe ist ein $b$." },
+        { "text": "Das Wort $abba$ wird akzeptiert.", "richtig": false, "erklaerung": "Nein: Das letzte $a$ führt sicher nach $q_0$ — abgelehnt. Es zählt allein der Buchstabe am Wortende." },
+        { "text": "Im Kern merkt sich der Automat nur, ob der zuletzt gelesene Buchstabe ein $b$ war.", "richtig": true, "erklaerung": "Genau: $q_1$ bedeutet „zuletzt ein $b$“, $q_0$ bedeutet „zuletzt kein $b$ (oder noch nichts gelesen)“. Mehr Gedächtnis braucht diese Aufgabe nicht." },
+        { "text": "Der Automat zählt, wie viele $b$ das Wort insgesamt enthält.", "richtig": false, "erklaerung": "Nein — dafür bräuchte er für jede mögliche Anzahl einen eigenen Zustand. Ob ein Wort auf $b$ endet, hängt zum Glück nur vom letzten Buchstaben ab." }
+      ],
+      "tipps": [
+        "Verfolge $aabbb$ und $abba$ Buchstabe für Buchstabe durch das Diagramm.",
+        "Nach einem $a$ steht der Automat immer in $q_0$, nach einem $b$ immer in $q_1$ — egal, was vorher war.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 3. $aabbb$: $q_0 \\to q_0 \\to q_0 \\to q_1 \\to q_1 \\to q_1$ — endet akzeptierend. $abba$ endet mit $a$ in $q_0$ — abgelehnt. Der Automat merkt sich tatsächlich nur, ob der letzte Buchstabe ein $b$ war; gezählt wird dabei nichts.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-009",
+      "typ": "reihenfolge",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Du sollst selbst einen endlichen Automaten entwerfen. Bringe die Entwurfsschritte in eine sinnvolle Reihenfolge.",
+      "elemente": [
+        "Aufgabe klären: Welche Wörter oder Eingabefolgen soll der Automat akzeptieren?",
+        "Zustände festlegen: überlegen, was sich der Automat merken muss, und Start- sowie akzeptierende Zustände markieren",
+        "Übergänge eintragen: für jeden Zustand und jedes Zeichen den Folgezustand bestimmen",
+        "Testen: Beispielwörter durchlaufen lassen — solche, die akzeptiert, und solche, die abgelehnt werden müssen"
+      ],
+      "tipps": [
+        "Ohne klares Ziel weißt du nicht, was sich der Automat merken muss.",
+        "Pfeile kannst du erst zeichnen, wenn die Kreise feststehen.",
+        "Der Test kommt zum Schluss — am besten mit beiden Sorten von Wörtern."
+      ],
+      "loesungsweg": "Sinnvoll ist: (1) Aufgabe klären, (2) aus dem nötigen „Gedächtnis“ die Zustände ableiten und Start/akzeptierend markieren, (3) für jeden Zustand und jedes Zeichen den Übergang festlegen — erst dann ist der Automat vollständig —, (4) mit Beispielwörtern testen, und zwar mit Wörtern, die angenommen werden müssen, und mit Wörtern, die durchfallen sollen.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-010",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Vervollständige die Übergangstabelle des Wort-Prüfers (akzeptiert genau die Wörter, die auf $b$ enden; $q_0$ ist Start, $q_1$ akzeptierend).",
+      "text": "Zeile q0: Bei a wechselt der Automat nach ___ , bei b nach ___ . Zeile q1: Bei a wechselt er nach ___ , bei b nach ___ .",
+      "luecken": [
+        { "art": "dropdown", "antwort": "q0", "optionen": ["q0", "q1"] },
+        { "art": "dropdown", "antwort": "q1", "optionen": ["q0", "q1"] },
+        { "art": "dropdown", "antwort": "q0", "optionen": ["q0", "q1"] },
+        { "art": "dropdown", "antwort": "q1", "optionen": ["q0", "q1"] }
+      ],
+      "tipps": [
+        "Überlege für jede Zelle: Endet das bisher gelesene Wort jetzt auf $b$ — ja oder nein?",
+        "Ein $b$ macht den zuletzt gelesenen Buchstaben zum $b$ — egal, wo der Automat vorher stand.",
+        "Ein $a$ zerstört jedes „endet auf $b$“ sofort wieder."
+      ],
+      "loesungsweg": "Nach einem $a$ endet das bisher gelesene Wort sicher nicht auf $b$ — also führt $a$ aus beiden Zuständen nach $q_0$. Nach einem $b$ endet es sicher auf $b$ — also führt $b$ aus beiden Zuständen nach $q_1$. Fertige Tabelle: $q_0$: $a \\to q_0$, $b \\to q_1$; $q_1$: $a \\to q_0$, $b \\to q_1$. Alle vier Zellen sind gefüllt — der Automat ist vollständig.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-011",
+      "typ": "freitext",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Entwirf in Worten einen endlichen Automaten über dem Alphabet $\\{a, b\\}$, der genau die Wörter mit einer geraden Anzahl von $a$ akzeptiert (0 zählt als gerade). Gib an: die Zustände und ihre Bedeutung, den Startzustand, den akzeptierenden Zustand und alle Übergänge.",
+      "musterloesung": "Zwei Zustände genügen: „gerade“ (bisher eine gerade Anzahl $a$ gelesen) und „ungerade“. Startzustand ist „gerade“, denn am Anfang sind 0 $a$ gelesen — und 0 ist gerade. Übergänge: Ein $a$ wechselt immer den Zustand (gerade ↔ ungerade), ein $b$ ändert nichts — der Automat bleibt per Selbstübergang im aktuellen Zustand. Akzeptierend ist „gerade“: Der Startzustand ist hier also zugleich der akzeptierende Zustand. Test: $ab$ endet in „ungerade“ (ein $a$) — abgelehnt; $aab$ endet in „gerade“ (zwei $a$) — akzeptiert; $bbb$ (null $a$) — akzeptiert.",
+      "tipps": [
+        "Der Automat muss sich nur eines merken: War die Anzahl der bisher gelesenen $a$ gerade oder ungerade? Das sind genau zwei Möglichkeiten.",
+        "Was muss bei einem $a$ passieren, was bei einem $b$?",
+        "0 ist gerade — was bedeutet das für den Startzustand und den akzeptierenden Zustand?"
+      ],
+      "loesungsweg": "Kernpunkte: (1) Zwei Zustände „gerade“ und „ungerade“ — mehr Gedächtnis ist nicht nötig. (2) Jedes $a$ wechselt den Zustand, jedes $b$ lässt ihn per Selbstübergang unverändert. (3) Start ist „gerade“ (0 gelesene $a$, und 0 ist gerade), und „gerade“ ist zugleich der akzeptierende Zustand. Prüfe deine Lösung mit Beispielen: $aab$ wird akzeptiert, $ab$ wird abgelehnt.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-012",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Ein Automat prüft, ob eine Binärzahl gerade oder ungerade ist — also welchen Rest sie beim Teilen durch 2 lässt. Er liest die Zahl von links (höchstwertige Ziffer zuerst) und merkt sich als Zustand den Rest der bisher gelesenen Zahl: „Rest 0“ oder „Rest 1“. Start ist „Rest 0“. Bei jeder Ziffer $z$ gilt: $\\text{neuer Rest} = (2 \\cdot \\text{alter Rest} + z) \\bmod 2$. Durchlaufe die Binärzahl $1011_2$ (dezimal 11).",
+      "text": "Start: Rest 0. Nach der ersten Ziffer 1: ___. Nach der Ziffer 0: ___. Nach der dritten Ziffer 1: ___. Nach der letzten Ziffer 1: ___. Die Zahl 11 ist also ___.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "Rest 1", "optionen": ["Rest 0", "Rest 1"] },
+        { "art": "dropdown", "antwort": "Rest 0", "optionen": ["Rest 0", "Rest 1"] },
+        { "art": "dropdown", "antwort": "Rest 1", "optionen": ["Rest 0", "Rest 1"] },
+        { "art": "dropdown", "antwort": "Rest 1", "optionen": ["Rest 0", "Rest 1"] },
+        { "art": "dropdown", "antwort": "ungerade", "optionen": ["gerade", "ungerade"] }
+      ],
+      "tipps": [
+        "Rechne Schritt für Schritt $(2 \\cdot \\text{alter Rest} + \\text{Ziffer}) \\bmod 2$ — „mod 2“ ist der Rest beim Teilen durch 2.",
+        "Erster Schritt: $(2 \\cdot 0 + 1) \\bmod 2 = 1$. Zweiter Schritt: $(2 \\cdot 1 + 0) \\bmod 2 = 2 \\bmod 2 = 0$.",
+        "Kontrolle am Ende: $1011_2 = 8 + 2 + 1 = 11$, und 11 ist ungerade — der Automat muss in „Rest 1“ enden."
+      ],
+      "loesungsweg": "Schrittweise: Start Rest 0. Ziffer 1: $(2 \\cdot 0 + 1) \\bmod 2 = 1$ → Rest 1. Ziffer 0: $(2 \\cdot 1 + 0) \\bmod 2 = 0$ → Rest 0. Ziffer 1: $(2 \\cdot 0 + 1) \\bmod 2 = 1$ → Rest 1. Ziffer 1: $(2 \\cdot 1 + 1) \\bmod 2 = 3 \\bmod 2 = 1$ → Rest 1. Der Automat endet in „Rest 1“ — die Zahl ist ungerade. Probe: $1011_2 = 8 + 2 + 1 = 11$, und 11 lässt beim Teilen durch 2 den Rest 1. Nach demselben Bauplan (Zustände = Reste) lassen sich Teilbarkeits-Automaten für jeden Teiler bauen, etwa für 3 mit drei Zuständen.",
+      "kc": ["automaten"]
+    },
+    {
+      "id": "in-10-ea-013",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Automat A prüft „gerade Anzahl $a$“ und braucht 2 Zustände; Automat B prüft „endet auf $b$“ und braucht ebenfalls 2 Zustände. Für die Bedingung „gerade Anzahl $a$ UND endet auf $b$“ baut man einen Produkt-Automaten: Jeder seiner Zustände ist ein Paar (Zustand von A, Zustand von B), damit er beide Informationen gleichzeitig im Blick behält. Wie viele Zustände hat dieser Automat höchstens?",
+      "eingaben": [
+        { "label": "Anzahl Zustände", "antwort": 4, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Der neue Automat muss sich beides gleichzeitig merken: den Zustand von A und den Zustand von B.",
+        "Wie viele verschiedene Paare lassen sich aus 2 Zuständen von A und 2 Zuständen von B bilden?",
+        "Rechne $2 \\cdot 2$."
+      ],
+      "loesungsweg": "Jeder Zustand des Produkt-Automaten ist ein Paar: (gerade, zuletzt $b$), (gerade, zuletzt kein $b$), (ungerade, zuletzt $b$) und (ungerade, zuletzt kein $b$) — das sind $2 \\cdot 2 = 4$ Zustände. Akzeptierend ist genau das Paar (gerade, zuletzt $b$), denn dort sind beide Bedingungen erfüllt. Allgemein gilt: Haben die Automaten $m$ und $n$ Zustände, hat der Produkt-Automat höchstens $m \\cdot n$ Zustände.",
+      "kc": ["automaten"]
+    }
+  ]
+}

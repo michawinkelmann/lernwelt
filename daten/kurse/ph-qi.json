@@ -1,0 +1,1918 @@
+{
+ "version": 1,
+ "kurs": "ph-qi",
+ "fach": "physik",
+ "stufe": "qualifikationsphase",
+ "titel": "Physik · Qualifikationsphase — Induktion",
+ "untertitel": "Lernbüro-Pilot: Elektromagnetische Induktion als Selbstlern-Einheit",
+ "zweig": [
+  "gym"
+ ],
+ "stand": "2026-06-13",
+ "taktung": "wochenplan",
+ "checkpoints": "freischalten",
+ "werkzeuge": [
+  "ampel",
+  "lerntagebuch"
+ ],
+ "hinweis": "Lektionen verweisen nur auf vorhandene Inhalte. Pilot – fachliche Endprüfung durch die Lehrkraft.",
+ "stoffverteilung": [
+  {
+   "wochen": "L1–L3",
+   "thema": "Elektromagnetische Induktion",
+   "lektionen": "3 (Phänomen, Fluss, Induktionsgesetz)",
+   "kc": "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizität — Induktion (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/induktion/"
+  },
+  {
+   "wochen": "L4–L5",
+   "thema": "Elektromagnetische Induktion (Fortsetzung)",
+   "lektionen": "2 (Lenzsche Regel, Anwendungen)",
+   "kc": "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizität — Induktion (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/induktion/"
+  },
+  {
+   "wochen": "L6–L10",
+   "thema": "Bewegung geladener Teilchen",
+   "lektionen": "5 (Beschleunigen, Ablenken, Bahn quantitativ, Schirmformel, Anwendungen)",
+   "kc": "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizität — Bewegung geladener Teilchen (QP)",
+   "status": "in-arbeit",
+   "themaPfad": "physik/qualifikationsphase/bewegung-geladener-teilchen/"
+  }
+ ],
+ "wochen": [
+  {
+   "nr": 1,
+   "spanne": "Diese Woche",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 1–3 geschafft"
+  },
+  {
+   "nr": 2,
+   "spanne": "Nächste Woche",
+   "lektionen": [
+    "l4",
+    "l5"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 4–5 geschafft"
+  },
+  {
+   "nr": 3,
+   "spanne": "Block 2 — Woche 1",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 6–8 geschafft"
+  },
+  {
+   "nr": 4,
+   "spanne": "Block 2 — Woche 2",
+   "lektionen": [
+    "l9",
+    "l10"
+   ],
+   "mindestmarke": "Basis-Spur von Lektion 9–10 geschafft"
+  }
+ ],
+ "lektionen": [
+  {
+   "id": "l1",
+   "nr": 1,
+   "titel": "Das Phänomen Induktion",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-induktion",
+   "themaPfad": "physik/qualifikationsphase/induktion/",
+   "anker": "#ind-phaenomen",
+   "ziele": [
+    "Ich kann erklären, unter welchen Bedingungen elektromagnetische Induktion auftritt.",
+    "Ich kann beschreiben, wie Bewegungsgeschwindigkeit und Windungszahl die induzierte Spannung beeinflussen."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du nennst die Bedingung für elektromagnetische Induktion: In einer Spule wird nur dann eine Spannung induziert, wenn sich das von ihr umfasste Magnetfeld zeitlich ändert."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du untersuchst experimentell, wie Bewegungsgeschwindigkeit und Windungszahl die induzierte Spannung beeinflussen, und stellt qualitative Je-desto-Zusammenhänge auf."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du beschreibst Induktionsversuche fachsprachlich korrekt und unterscheidest dabei Ursache (Feldänderung) und Wirkung (Induktionsspannung)."
+    }
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Kurze Auffrischung: Magnetfelder und Lorentzkraft aus dem Vorwissen.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-001",
+        "ph-qp-mf-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ind-phaenomen",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/induktion/index.html#ind-phaenomen"
+     },
+     "text": "Arbeite dich Schritt für Schritt durch das Grundphänomen — am Ende prüfst du dich selbst.",
+     "schritte": [
+      {
+       "titel": "Wann entsteht eine Induktionsspannung?",
+       "html": "<p>Bewegt man einen Stabmagneten in eine Spule hinein oder aus ihr heraus, zeigt ein angeschlossenes Voltmeter einen Ausschlag. Liegt der Magnet dagegen <strong>ruhig</strong> in der Spule, ist die Spannung null — egal wie stark er ist. Entscheidend ist also nicht das Magnetfeld selbst, sondern seine <strong>zeitliche Änderung</strong>.</p>",
+       "check": {
+        "frage": "Warum zeigt das Voltmeter bei einem ruhenden Magneten null Spannung?",
+        "antwort": "Weil sich das Magnetfeld in der Spule nicht ändert. Induktion tritt nur bei einer zeitlichen Änderung des Feldes (bzw. des Flusses) auf, nicht bei einem konstanten Feld."
+       }
+      },
+      {
+       "titel": "Je schneller, desto mehr",
+       "html": "<p>Bewegt man denselben Magneten <strong>schneller</strong>, schlägt das Voltmeter weiter aus: Die induzierte Spannung wächst mit der Geschwindigkeit der Änderung. Beim Hineinschieben und beim Herausziehen ist die Polung des Ausschlags <strong>entgegengesetzt</strong>, weil das Feld einmal zu- und einmal abnimmt.</p>",
+       "check": {
+        "frage": "Wie ändert sich die Induktionsspannung, wenn du den Magneten doppelt so schnell bewegst?",
+        "antwort": "Sie wird größer — grob doppelt so groß, weil sich das Magnetfeld in der halben Zeit ändert. Schnellere Änderung bedeutet höhere Induktionsspannung."
+       }
+      },
+      {
+       "titel": "Mehr Windungen, mehr Spannung",
+       "html": "<p>Verwendet man eine Spule mit <strong>mehr Windungen</strong> $n$, wird bei gleicher Magnetbewegung eine größere Spannung induziert. Jede Windung trägt ihren Anteil bei, und die Beiträge addieren sich. Die Windungszahl ist daher neben der Änderungsgeschwindigkeit der zweite „Verstärker“.</p>",
+       "check": {
+        "frage": "Du nimmst eine Spule mit dreifacher Windungszahl. Was erwartest du?",
+        "antwort": "Etwa die dreifache Induktionsspannung, weil sich die Beiträge aller Windungen addieren."
+       }
+      }
+     ],
+     "merksatz": "Eine Spannung wird <strong>nur</strong> induziert, wenn sich das von der Spule umfasste Magnetfeld <strong>zeitlich ändert</strong>. Je schneller die Änderung und je größer die Windungszahl $n$, desto größer die induzierte Spannung.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Magnet, Spule und Voltmeter",
+       "material": "Eine Spule (möglichst mit verschiedenen Windungszahl-Anzapfungen), ein Stabmagnet, ein empfindliches Voltmeter (oder Spannungssensor), Kabel.",
+       "vorhersage": "Was zeigt das Voltmeter, wenn der Magnet (a) ruhig in der Spule liegt, (b) langsam, (c) schnell bewegt wird? Notiere deine Vermutung, bevor du misst.",
+       "auftraege": [
+        "Lege den Magneten ruhig in die Spule und lies die Spannung ab — bewege ihn dann langsam und schnell hinein und heraus.",
+        "Vergleiche die Polung des Ausschlags beim Hineinschieben und beim Herausziehen.",
+        "Wechsle zu einer Spule mit höherer Windungszahl und wiederhole eine Bewegung möglichst gleich schnell — was ändert sich?",
+        "Formuliere aus deinen Beobachtungen zwei Je-desto-Sätze (Geschwindigkeit, Windungszahl)."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Nenne die Bedingung, unter der überhaupt eine Spannung induziert wird.",
+       "antwort": "Das von der Spule umfasste Magnetfeld muss sich zeitlich ändern — etwa durch einen bewegten Magneten oder ein zu- bzw. abnehmendes Feld."
+      },
+      {
+       "frage": "Von welchen zwei Größen hängt die Höhe der Induktionsspannung in diesen Versuchen ab?",
+       "antwort": "Von der Geschwindigkeit der Feldänderung und von der Windungszahl $n$ der Spule. Beide vergrößern die Induktionsspannung."
+      },
+      {
+       "frage": "Ein starker Magnet liegt ruhig in der Spule. Welche Spannung wird induziert?",
+       "antwort": "Keine. Ohne zeitliche Änderung des Feldes ist die Induktionsspannung null, unabhängig von der Stärke des Magneten."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-001",
+        "ph-qp-ind-003"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-101"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-102"
+       ]
+      }
+     ],
+     "partner": "Erkläre deinem Nachbarn: Warum zeigt das Voltmeter bei einem ruhenden Magneten null — egal wie stark er ist?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-004"
+       ]
+      }
+     ],
+     "transfer": "Ein Magnet hängt ruhig in einer Spule. Was passiert mit der induzierten Spannung, wenn das Magnetfeld plötzlich schwächer wird — aber der Magnet sich immer noch nicht bewegt?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l2",
+   "nr": 2,
+   "titel": "Der magnetische Fluss",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-induktion",
+   "themaPfad": "physik/qualifikationsphase/induktion/",
+   "anker": "#ind-fluss",
+   "ziele": [
+    "Ich kann den magnetischen Fluss $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ berechnen.",
+    "Ich kann erklären, warum der Winkel $\\alpha$ zwischen Feldlinien und Flächennormale maßgebend ist."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest den magnetischen Fluss $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ und gibst seine Einheit Weber ($1\\,\\text{Wb} = 1\\,\\text{T}\\cdot\\text{m}^2$) an."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du begründest mithilfe der Flächennormale, warum der Winkel $\\alpha$ zwischen Feldlinien und Fläche den Fluss bestimmt."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du veranschaulichst den Fluss als „Zahl der durch die Fläche tretenden Feldlinien“ und stellst den Zusammenhang in Skizzen dar."
+    }
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Phänomen aus Lektion 1: Wann entsteht Induktion?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-008"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ind-fluss",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/induktion/index.html#ind-fluss"
+     },
+     "text": "Der magnetische Fluss fasst zusammen, „wie viel Feld“ durch eine Fläche tritt — arbeite dich durch die drei Schritte.",
+     "schritte": [
+      {
+       "titel": "Was beschreibt der magnetische Fluss?",
+       "html": "<p>Der magnetische Fluss $\\Phi$ gibt anschaulich an, <strong>wie viele Feldlinien</strong> durch eine Fläche $A$ hindurchtreten. Bei einem homogenen Feld senkrecht zur Fläche gilt $\\Phi = B \\cdot A$. Die Einheit ist das Weber: $1\\,\\text{Wb} = 1\\,\\text{T} \\cdot \\text{m}^2$.</p>",
+       "check": {
+        "frage": "Eine Fläche $A = 0{,}02\\,\\text{m}^2$ steht senkrecht in einem Feld $B = 0{,}5\\,\\text{T}$. Wie groß ist $\\Phi$?",
+        "antwort": "$\\Phi = B \\cdot A = 0{,}5\\,\\text{T} \\cdot 0{,}02\\,\\text{m}^2 = 0{,}01\\,\\text{Wb}$."
+       }
+      },
+      {
+       "titel": "Die Rolle des Winkels",
+       "html": "<p>Steht die Fläche schräg zum Feld, treten weniger Feldlinien hindurch. Maßgebend ist der Winkel $\\alpha$ zwischen den Feldlinien und der <strong>Flächennormale</strong> (der Senkrechten auf der Fläche): $\\Phi = B \\cdot A \\cdot \\cos\\alpha$. Bei $\\alpha = 0^\\circ$ ist $\\cos\\alpha = 1$ (maximaler Fluss), bei $\\alpha = 90^\\circ$ ist $\\cos\\alpha = 0$.</p>",
+       "check": {
+        "frage": "Warum verschwindet der Fluss, wenn die Feldlinien parallel zur Fläche verlaufen?",
+        "antwort": "Dann ist $\\alpha = 90^\\circ$ und $\\cos 90^\\circ = 0$, also $\\Phi = 0$. Es tritt keine Feldlinie durch die Fläche — sie verlaufen in der Ebene."
+       }
+      },
+      {
+       "titel": "Warum die Flächennormale?",
+       "html": "<p>Man misst den Winkel bewusst gegen die <strong>Normale</strong> und nicht gegen die Fläche selbst, damit der maximale Durchtritt (senkrechtes Feld) gerade $\\alpha = 0^\\circ$ entspricht. So liefert $\\cos\\alpha$ direkt den „wirksamen Anteil“ der Fläche, der dem Feld zugewandt ist.</p>",
+       "check": {
+        "frage": "Die Fläche wird aus der senkrechten Lage um $60^\\circ$ gekippt. Welcher Bruchteil des Flusses bleibt?",
+        "antwort": "Es bleibt $\\cos 60^\\circ = 0{,}5$, also die Hälfte des maximalen Flusses."
+       }
+      }
+     ],
+     "merksatz": "Der magnetische Fluss ist $\\Phi = B \\cdot A \\cdot \\cos\\alpha$, wobei $\\alpha$ der Winkel zwischen Feldlinien und <strong>Flächennormale</strong> ist. Er ist maximal bei senkrechtem Feld ($\\alpha = 0^\\circ$) und null bei parallelem Feld ($\\alpha = 90^\\circ$).",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Leiterschleife im Magnetfeld drehen",
+       "material": "Eine drehbare Leiterschleife oder kleine Spule, ein Hufeisen- oder Helmholtz-Magnetfeld, ein Spannungssensor, ein Winkelmesser.",
+       "vorhersage": "Bei welcher Schleifenstellung (senkrecht oder parallel zu den Feldlinien) ist der Fluss am größten? Begründe vorab mit $\\cos\\alpha$.",
+       "auftraege": [
+        "Stelle die Schleife so ein, dass die Fläche senkrecht vom Feld durchsetzt wird ($\\alpha = 0^\\circ$), und markiere diese Lage.",
+        "Drehe die Schleife in mehreren Schritten bis zu $\\alpha = 90^\\circ$ und überlege jeweils, wie sich $\\Phi$ qualitativ ändert.",
+        "Zeichne die Flächennormale ein und ordne den Stellungen $\\alpha = 0^\\circ, 60^\\circ, 90^\\circ$ die Werte von $\\cos\\alpha$ zu."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Gib die Formel für den magnetischen Fluss mit allen Größen an.",
+       "antwort": "$\\Phi = B \\cdot A \\cdot \\cos\\alpha$ mit der Flussdichte $B$, der Fläche $A$ und dem Winkel $\\alpha$ zwischen Feldlinien und Flächennormale."
+      },
+      {
+       "frage": "Wie groß ist der Fluss bei $\\alpha = 0^\\circ$ im Vergleich zu $\\alpha = 90^\\circ$?",
+       "antwort": "Bei $\\alpha = 0^\\circ$ ist er maximal ($\\Phi = B \\cdot A$), bei $\\alpha = 90^\\circ$ ist er null."
+      },
+      {
+       "frage": "Nenne die Einheit des magnetischen Flusses und ihren Zusammenhang mit Tesla.",
+       "antwort": "Das Weber: $1\\,\\text{Wb} = 1\\,\\text{T} \\cdot \\text{m}^2$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-009"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-104",
+        "ph-qp-ind-301"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Warum ist $\\Phi = 0$, wenn die Feldlinien parallel zur Spulenfläche verlaufen — obwohl $B \\neq 0$?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-006"
+       ]
+      }
+     ],
+     "transfer": "Welcher Winkel $\\alpha$ liefert den maximalen Fluss, welcher den minimalen? Und wann ändert sich der Fluss am schnellsten — nahe $0^\\circ$ oder nahe $90^\\circ$?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l3",
+   "nr": 3,
+   "titel": "Das Induktionsgesetz",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-induktion",
+   "themaPfad": "physik/qualifikationsphase/induktion/",
+   "anker": "#ind-gesetz",
+   "ziele": [
+    "Ich kann die induzierte Spannung mit $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ berechnen.",
+    "Ich kann die Bewegungsinduktion $U = B \\cdot l \\cdot v$ als Spezialfall herleiten und anwenden."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die induzierte Spannung mit $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ und deutest sie als Änderungsrate des Flusses."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du leitest die Bewegungsinduktion $U = B \\cdot l \\cdot v$ als Spezialfall aus dem Induktionsgesetz her und prüfst sie an einer Leiterschaukel."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du unterscheidest die beiden Ursachen einer Flussänderung — Änderung von $B$ und Änderung von $A$ — und benennst sie in Aufgaben korrekt."
+    }
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Unterrichtsgespräch: Was bedeutet das Minuszeichen im Induktionsgesetz? Warum steht die Flussänderungsrate — und nicht der Fluss selbst — auf der rechten Seite?"
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Fluss aus Lektion 2: $\\Phi = B \\cdot A \\cdot \\cos\\alpha$.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-004"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 13,
+     "anker": "#ind-gesetz",
+     "interaktiv": {
+      "label": "Simulation Leiterschaukel auf der Erklärseite",
+      "href": "physik/qualifikationsphase/induktion/index.html#ind-gesetz"
+     },
+     "text": "Jetzt wird das Phänomen quantitativ: Die Induktionsspannung ist die Änderungsrate des Flusses.",
+     "schritte": [
+      {
+       "titel": "Das Induktionsgesetz",
+       "html": "<p>Die induzierte Spannung hängt davon ab, <strong>wie schnell</strong> sich der Fluss ändert: $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$. Dabei ist $n$ die Windungszahl und $\\frac{\\Delta\\Phi}{\\Delta t}$ die Flussänderung pro Zeit. Ein konstanter Fluss ($\\Delta\\Phi = 0$) liefert keine Spannung.</p>",
+       "check": {
+        "frage": "In einer Spule mit $n = 200$ ändert sich der Fluss um $\\Delta\\Phi = 0{,}004\\,\\text{Wb}$ in $\\Delta t = 0{,}1\\,\\text{s}$. Wie groß ist $U_\\text{ind}$?",
+        "antwort": "$U_\\text{ind} = 200 \\cdot \\frac{0{,}004\\,\\text{Wb}}{0{,}1\\,\\text{s}} = 8\\,\\text{V}$."
+       }
+      },
+      {
+       "titel": "Zwei Wege, den Fluss zu ändern",
+       "html": "<p>Wegen $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ kann sich der Fluss auf zwei Arten ändern: durch ein <strong>sich änderndes Feld</strong> $B$ (z. B. bewegter Magnet) oder durch eine <strong>sich ändernde Fläche</strong> $A$ (z. B. ein im Feld verschobener Leiter). Beide erzeugen eine Induktionsspannung.</p>",
+       "check": {
+        "frage": "Nenne je ein Beispiel für eine Flussänderung über $B$ und über $A$.",
+        "antwort": "Über $B$: ein in die Spule bewegter Magnet. Über $A$: ein Leiterstab, der auf Schienen quer durch ein Magnetfeld gezogen wird und so die umschlossene Fläche vergrößert."
+       }
+      },
+      {
+       "titel": "Bewegungsinduktion als Spezialfall",
+       "html": "<p>Zieht man einen Leiter der Länge $l$ mit der Geschwindigkeit $v$ senkrecht durch ein homogenes Feld $B$, wächst die Fläche um $\\Delta A = l \\cdot v \\cdot \\Delta t$. Einsetzen liefert die handliche Formel $U = B \\cdot l \\cdot v$. Sie ist der Spezialfall des Induktionsgesetzes für einen bewegten Leiter.</p>",
+       "check": {
+        "frage": "Ein Stab ($l = 0{,}2\\,\\text{m}$) bewegt sich mit $v = 3\\,\\frac{\\text{m}}{\\text{s}}$ durch $B = 0{,}4\\,\\text{T}$. Welche Spannung wird induziert?",
+        "antwort": "$U = B \\cdot l \\cdot v = 0{,}4\\,\\text{T} \\cdot 0{,}2\\,\\text{m} \\cdot 3\\,\\frac{\\text{m}}{\\text{s}} = 0{,}24\\,\\text{V}$."
+       }
+      }
+     ],
+     "merksatz": "Induktionsgesetz: $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$. Der Fluss kann sich über $B$ oder über $A$ ändern. Für einen mit $v$ durch das Feld bewegten Leiter folgt der Spezialfall $U = B \\cdot l \\cdot v$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Leiterschaukel im Magnetfeld",
+       "material": "Ein Hufeisenmagnet (oder Feldmagnet), ein leitender Stab als Schaukel an zwei Zuleitungen, ein empfindliches Voltmeter, ein Lineal.",
+       "vorhersage": "Wie verändert sich die induzierte Spannung, wenn du den Stab schneller durch das Feld bewegst? Sage es mit $U = B \\cdot l \\cdot v$ voraus.",
+       "auftraege": [
+        "Bewege den Stab langsam und dann schnell durch das Feld und vergleiche die Voltmeter-Ausschläge.",
+        "Halte den Stab ruhig im Feld — welche Spannung misst du, und passt das zum Gesetz?",
+        "Schätze aus $l$, $B$ und einer abgeschätzten Geschwindigkeit eine Spannung ab und vergleiche mit der Messung."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Gib das Induktionsgesetz an und erkläre die Bedeutung von $\\frac{\\Delta\\Phi}{\\Delta t}$.",
+       "antwort": "$|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$. Der Bruch ist die Flussänderung pro Zeit, also wie schnell sich der Fluss ändert."
+      },
+      {
+       "frage": "Auf welche zwei Weisen kann sich der Fluss durch eine Schleife ändern?",
+       "antwort": "Durch eine Änderung der Flussdichte $B$ oder durch eine Änderung der durchsetzten Fläche $A$ (beides bei festem oder mit $\\cos\\alpha$ veränderlichem Winkel)."
+      },
+      {
+       "frage": "Aus welcher allgemeinen Gleichung folgt $U = B \\cdot l \\cdot v$ und wann gilt sie?",
+       "antwort": "Aus dem Induktionsgesetz, wenn sich nur die Fläche durch einen mit $v$ senkrecht zum Feld bewegten Leiter der Länge $l$ ändert."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-010",
+        "ph-qp-ind-011"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-013"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-302"
+       ]
+      }
+     ],
+     "partner": "Prüft gegenseitig: Warum steigt die induzierte Spannung, wenn man denselben Magneten schneller in die Spule schiebt?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-007"
+       ]
+      }
+     ],
+     "transfer": "Ein Leiterstab verdoppelt seine Geschwindigkeit. Wie ändert sich die induzierte Spannung — und warum?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l4",
+   "nr": 4,
+   "titel": "Die lenzsche Regel",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-induktion",
+   "themaPfad": "physik/qualifikationsphase/induktion/",
+   "anker": "#ind-lenz",
+   "ziele": [
+    "Ich kann die lenzsche Regel formulieren und auf Induktionsversuche anwenden.",
+    "Ich kann erklären, warum die lenzsche Regel aus der Energieerhaltung folgt."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du formulierst die lenzsche Regel: Der Induktionsstrom ist stets so gerichtet, dass er seiner Ursache entgegenwirkt."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du wendest die Regel auf Induktionsversuche an und sagst die Wirkungsrichtung von Induktionsstrom und Kraft voraus."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du begründest die lenzsche Regel aus der Energieerhaltung und erkennst, dass eine umgekehrte Stromrichtung ein Perpetuum mobile bedeuten würde."
+    }
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Induktionsgesetz aus Lektion 3: Was bestimmt das Vorzeichen der induzierten Spannung?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-006"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ind-lenz",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/induktion/index.html#ind-lenz"
+     },
+     "text": "Die lenzsche Regel legt die Richtung des Induktionsstroms fest — und folgt zwingend aus der Energieerhaltung.",
+     "schritte": [
+      {
+       "titel": "Die lenzsche Regel",
+       "html": "<p>Der Induktionsstrom fließt immer so, dass sein eigenes Magnetfeld der <strong>Ursache</strong> seiner Entstehung <strong>entgegenwirkt</strong>. Schiebt man einen Magneten in eine Spule, baut die Spule ein Feld auf, das den Magneten <strong>abstößt</strong>; zieht man ihn heraus, wird er <strong>angezogen</strong>. Der Induktionsstrom bremst die Änderung also stets ab.</p>",
+       "check": {
+        "frage": "Du näherst der Spule den Nordpol eines Magneten. Welchen Pol bildet die Spule auf der zugewandten Seite?",
+        "antwort": "Einen Nordpol — gleichnamige Pole stoßen sich ab, sodass der Induktionsstrom der Annäherung entgegenwirkt."
+       }
+      },
+      {
+       "titel": "Begründung aus der Energieerhaltung",
+       "html": "<p>Warum „entgegen“ und nicht „mit“? Würde der Induktionsstrom die Bewegung <strong>unterstützen</strong>, liefe der Magnet von selbst immer schneller und erzeugte dabei auch noch elektrische Energie — Energie aus dem Nichts. Das verbietet die Energieerhaltung. Man muss daher <strong>Arbeit gegen</strong> die bremsende Kraft verrichten; diese Arbeit wird zur elektrischen Energie.</p>",
+       "check": {
+        "frage": "Warum kann der Induktionsstrom die Bewegung des Magneten nicht verstärken?",
+        "antwort": "Sonst würde Bewegungsenergie und elektrische Energie aus dem Nichts entstehen — ein Perpetuum mobile. Das widerspricht der Energieerhaltung."
+       }
+      },
+      {
+       "titel": "Wirbelströme und Bremsen",
+       "html": "<p>Auch in massiven Metallplatten entstehen bei Flussänderung <strong>Wirbelströme</strong>, deren Kraft der Bewegung entgegenwirkt. Eine Aluminiumscheibe, die durch ein Magnetfeld pendelt, wird daher abgebremst — das Prinzip der <strong>Wirbelstrombremse</strong>.</p>",
+       "check": {
+        "frage": "Warum bremst eine Metallplatte ab, wenn sie durch ein Magnetfeld bewegt wird?",
+        "antwort": "Die Flussänderung induziert Wirbelströme; nach Lenz wirkt deren Magnetfeld der Bewegung entgegen und bremst die Platte."
+       }
+      }
+     ],
+     "merksatz": "Lenzsche Regel: Der Induktionsstrom ist stets so gerichtet, dass er seiner <strong>Ursache entgegenwirkt</strong>. Sie folgt aus der Energieerhaltung — andernfalls entstünde Energie aus dem Nichts.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Fallender Magnet im Kupferrohr",
+       "material": "Ein Kupfer- oder Aluminiumrohr (nicht magnetisch), ein passender starker Magnet, zum Vergleich ein gleich schwerer unmagnetischer Körper, eine Stoppuhr.",
+       "vorhersage": "Fällt der Magnet durch das Metallrohr schneller, langsamer oder gleich schnell wie der unmagnetische Körper? Begründe mit der lenzschen Regel.",
+       "auftraege": [
+        "Lasse den Magneten und den unmagnetischen Körper durch das Rohr fallen und vergleiche die Fallzeiten.",
+        "Erkläre die Verzögerung mit Wirbelströmen und der Energieerhaltung.",
+        "Überlege, was passieren würde, wenn der Induktionsstrom die Bewegung verstärken würde — und warum das unmöglich ist."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Formuliere die lenzsche Regel in einem Satz.",
+       "antwort": "Der Induktionsstrom ist stets so gerichtet, dass er der ihn verursachenden Flussänderung entgegenwirkt."
+      },
+      {
+       "frage": "Aus welchem Erhaltungssatz folgt die lenzsche Regel?",
+       "antwort": "Aus der Energieerhaltung: Eine die Bewegung verstärkende Stromrichtung würde Energie aus dem Nichts erzeugen."
+      },
+      {
+       "frage": "Warum wird eine Metallplatte beim Durchqueren eines Magnetfeldes abgebremst?",
+       "antwort": "Es entstehen Wirbelströme, deren Magnetfeld der Bewegung entgegenwirkt (lenzsche Regel) — Wirbelstrombremse."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-003"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-005"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-106",
+        "ph-qp-ind-304"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Warum wäre ein Induktionsstrom, der den Fluss verstärkt statt bremst, ein Perpetuum mobile?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-002"
+       ]
+      }
+     ],
+     "transfer": "Ein Aluminiumring liegt auf dem Kern einer Spule. Beim Einschalten des Stroms springt er hoch — beim Ausschalten nicht. Erkläre den Unterschied mit der lenzschen Regel."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l5",
+   "nr": 5,
+   "titel": "Generator und Transformator",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-induktion",
+   "themaPfad": "physik/qualifikationsphase/induktion/",
+   "anker": "#ind-anwendungen",
+   "ziele": [
+    "Ich kann erklären, wie ein Generator mithilfe der elektromagnetischen Induktion Wechselspannung erzeugt.",
+    "Ich kann das Windungsverhältnis des Transformators anwenden und Sinn der Hochspannungsübertragung erläutern."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst, wie ein Generator durch Drehung einer Spule im Magnetfeld eine sinusförmige Wechselspannung erzeugt."
+    },
+    {
+     "bereich": "Fachwissen",
+     "text": "Du wendest die Transformatorgleichung $\\frac{U_1}{U_2} = \\frac{n_1}{n_2}$ an und berechnest Spannungen am idealen Transformator."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du begründest, warum elektrische Energie zur Übertragung hochtransformiert wird, und beurteilst den Nutzen für die Reduktion der Leitungsverluste."
+    }
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Kurze Auffrischung: Wann ändert sich der Fluss durch eine rotierende Spule am schnellsten?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-007"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ind-anwendungen",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/induktion/index.html#ind-anwendungen"
+     },
+     "text": "Generator und Transformator sind die wichtigsten technischen Anwendungen der Induktion — so funktionieren sie.",
+     "schritte": [
+      {
+       "titel": "Der Generator erzeugt Wechselspannung",
+       "html": "<p>Im Generator dreht sich eine Spule im Magnetfeld. Dabei ändert sich der Winkel $\\alpha$ ständig, also der Fluss $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ — und nach dem Induktionsgesetz entsteht eine Spannung. Weil sich der Fluss <strong>sinusförmig</strong> ändert, ist die induzierte Spannung eine <strong>Wechselspannung</strong>: maximal, wenn sich der Fluss am schnellsten ändert, null, wenn er gerade extremal ist.</p>",
+       "check": {
+        "frage": "Bei welcher Spulenstellung ist die induzierte Spannung am größten?",
+        "antwort": "Wenn sich der Fluss am schnellsten ändert — das ist beim Durchlaufen der Lage parallel zum Feld ($\\alpha = 90^\\circ$, $\\Phi = 0$), nicht bei maximalem Fluss."
+       }
+      },
+      {
+       "titel": "Der Transformator",
+       "html": "<p>Ein Transformator besteht aus zwei Spulen auf einem gemeinsamen Eisenkern. Die Wechselspannung der Primärspule erzeugt einen wechselnden Fluss, der in der Sekundärspule eine Spannung induziert. Für den idealen Transformator gilt das <strong>Windungsverhältnis</strong>: $\\frac{U_1}{U_2} = \\frac{n_1}{n_2}$.</p>",
+       "check": {
+        "frage": "Primärseite: $U_1 = 230\\,\\text{V}$, $n_1 = 1000$. Sekundärseite: $n_2 = 50$. Wie groß ist $U_2$?",
+        "antwort": "$U_2 = U_1 \\cdot \\frac{n_2}{n_1} = 230\\,\\text{V} \\cdot \\frac{50}{1000} = 11{,}5\\,\\text{V}$."
+       }
+      },
+      {
+       "titel": "Warum Hochspannung?",
+       "html": "<p>In Leitungen geht Energie als Wärme verloren: $P_\\text{Verlust} = R \\cdot I^2$. Bei gleicher übertragener Leistung $P = U \\cdot I$ ist der Strom $I$ umso kleiner, je höher die Spannung $U$ ist. Darum transformiert man die Energie für die Übertragung auf <strong>Hochspannung</strong> hoch — kleiner Strom bedeutet kleine Verluste — und vor Ort wieder herunter.</p>",
+       "check": {
+        "frage": "Warum sinken die Leitungsverluste, wenn man mit höherer Spannung überträgt?",
+        "antwort": "Bei gleicher Leistung ist der Strom kleiner. Da $P_\\text{Verlust} = R \\cdot I^2$ quadratisch vom Strom abhängt, sinken die Verluste stark."
+       }
+      }
+     ],
+     "merksatz": "Der Generator erzeugt durch eine im Feld rotierende Spule eine sinusförmige Wechselspannung. Der ideale Transformator gehorcht $\\frac{U_1}{U_2} = \\frac{n_1}{n_2}$. Hochspannungsübertragung senkt wegen $P_\\text{Verlust} = R \\cdot I^2$ die Leitungsverluste.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Transformator mit zwei Spulen",
+       "material": "Zwei Spulen mit unterschiedlicher Windungszahl, ein gemeinsamer (auftrennbarer) Eisenkern, eine Wechselspannungsquelle (Schutzkleinspannung), zwei Multimeter.",
+       "vorhersage": "Wie verhält sich die Sekundärspannung zur Primärspannung, wenn die Sekundärspule mehr Windungen hat? Sage es mit dem Windungsverhältnis voraus.",
+       "auftraege": [
+        "Lege eine Wechselspannung an die Primärspule und miss $U_1$ und $U_2$ für verschiedene Windungspaare.",
+        "Prüfe, ob $\\frac{U_1}{U_2} \\approx \\frac{n_1}{n_2}$ gilt, und diskutiere Abweichungen (kein idealer Trafo).",
+        "Öffne den Eisenkern ein Stück und beobachte, wie sich $U_2$ ändert — welche Rolle spielt der Kern für den Fluss?"
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Warum liefert ein Generator Wechselspannung statt Gleichspannung?",
+       "antwort": "Weil sich der Fluss durch die rotierende Spule sinusförmig ändert; die induzierte Spannung wechselt dadurch periodisch ihr Vorzeichen."
+      },
+      {
+       "frage": "Gib die Transformatorgleichung an und nenne die Bedeutung von $n_1$ und $n_2$.",
+       "antwort": "$\\frac{U_1}{U_2} = \\frac{n_1}{n_2}$ mit den Windungszahlen $n_1$ (Primärspule) und $n_2$ (Sekundärspule)."
+      },
+      {
+       "frage": "Erkläre in einem Satz, warum die Energieübertragung mit Hochspannung erfolgt.",
+       "antwort": "Hohe Spannung bedeutet kleinen Strom; wegen $P_\\text{Verlust} = R \\cdot I^2$ werden dadurch die Leitungsverluste klein."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-107"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-011"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-012"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Warum werden Stromübertragungen bei Hochspannung und kleinem Strom durchgeführt? Was hat das mit dem Transformator zu tun?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-008"
+       ]
+      }
+     ],
+     "transfer": "Ein Transformator hat 400 Windungen primär und 100 Windungen sekundär. Die Eingangsspannung beträgt $230\\,\\text{V}$. Wie groß ist die Ausgangsspannung?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Vertiefung:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l5b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Elektromagnetische Induktion",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-induktion",
+   "themaPfad": "physik/qualifikationsphase/induktion/",
+   "ziele": [
+    "Ich kann magnetischen Fluss, Induktionsgesetz und Bewegungsinduktion sicher auf gemischte Aufgaben anwenden.",
+    "Ich kann Generator-, Transformator- und Selbstinduktionsaufgaben durchrechnen und die Ergebnisse physikalisch deuten."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du wendest magnetischen Fluss, Induktionsgesetz und Bewegungsinduktion sicher auf gemischte Aufgaben an."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du löst Generator-, Transformator- und Selbstinduktionsaufgaben und deutest die Ergebnisse physikalisch."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du dokumentierst Lösungswege mit Formel, Rechnung und Einheit nachvollziehbar."
+    }
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zum gesamten Thema Induktion — danach mischst und vertiefst du alle Bausteine.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-202",
+        "ph-qp-ind-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-204",
+        "ph-qp-ind-205",
+        "ph-qp-ind-206",
+        "ph-qp-ind-301",
+        "ph-qp-ind-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-207",
+        "ph-qp-ind-303"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einem selbst gewählten Beispiel, welche Größen die Induktionsspannung bestimmen — und warum ein ruhender Magnet trotz starkem Feld keine Spannung erzeugt."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-induktion",
+       "ids": [
+        "ph-qp-ind-208"
+       ]
+      }
+     ],
+     "transfer": "Entscheide bei jeder Induktionsaufgabe zuerst: Ändert sich der Fluss durch Fläche, Feldstärke oder Winkel? Erst danach wählst du das passende Gesetz — $U = B \\cdot L \\cdot v$, das Induktionsgesetz oder die Transformatorgleichung."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Generator — Wechselspannung erzeugen",
+       "href": "simulationen/physik/generator/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l6",
+   "nr": 1,
+   "titel": "Längsfeld: Ladungen beschleunigen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-bewegung-geladener-teilchen",
+   "themaPfad": "physik/qualifikationsphase/bewegung-geladener-teilchen/",
+   "anker": "#ue-beschleunigen",
+   "ziele": [
+    "Ich kann die Energie $W = e \\cdot U_0$ und die Endgeschwindigkeit $v = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0}$ berechnen.",
+    "Ich kann erklären, warum doppelte Spannung nicht doppelte Geschwindigkeit bedeutet."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die im Längsfeld aufgenommene Energie $W = e \\cdot U_0$ und die Endgeschwindigkeit $v = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0}$ eines Elektrons."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du wendest den Energieerhaltungssatz an, indem du elektrische Arbeit und kinetische Energie gleichsetzt."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du begründest mithilfe der Wurzel, warum eine Verdopplung der Beschleunigungsspannung die Geschwindigkeit nicht verdoppelt."
+    }
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Vorwissen: elektrische Felder und die Energie einer Ladung im Feld ($W = q \\cdot U$) aus dem Thema Elektrische Felder.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-001",
+        "ph-qp-ef-002"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ue-beschleunigen",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/bewegung-geladener-teilchen/index.html#ue-beschleunigen"
+     },
+     "text": "Im Längsfeld (Feld parallel zur Bewegung) werden Ladungen beschleunigt — der Energiesatz liefert die Endgeschwindigkeit.",
+     "schritte": [
+      {
+       "titel": "Energie aus der Beschleunigungsspannung",
+       "html": "<p>Durchläuft ein Elektron (Ladung $e$) die Beschleunigungsspannung $U_0$, leistet das Feld die Arbeit $W = e \\cdot U_0$. Diese Arbeit erhöht die kinetische Energie des Elektrons. Setzt man beide gleich, $e \\cdot U_0 = \\frac{1}{2} m_e v^2$, ergibt sich die Endgeschwindigkeit.</p>",
+       "check": {
+        "frage": "Welche Energie nimmt ein Elektron beim Durchlaufen von $U_0 = 1000\\,\\text{V}$ auf?",
+        "antwort": "$W = e \\cdot U_0 = 1{,}6 \\cdot 10^{-19}\\,\\text{C} \\cdot 1000\\,\\text{V} = 1{,}6 \\cdot 10^{-16}\\,\\text{J}$."
+       }
+      },
+      {
+       "titel": "Die Endgeschwindigkeit",
+       "html": "<p>Auflösen von $e \\cdot U_0 = \\frac{1}{2} m_e v^2$ nach $v$ liefert $v = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0}$. Mit der spezifischen Ladung $\\frac{e}{m_e} \\approx 1{,}76 \\cdot 10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$ kann man $v$ direkt berechnen, ohne $e$ und $m_e$ einzeln zu kennen.</p>",
+       "check": {
+        "frage": "Wovon hängt die Endgeschwindigkeit laut Formel ab — und wovon nicht?",
+        "antwort": "Sie hängt von der Spannung $U_0$ und der spezifischen Ladung $\\frac{e}{m_e}$ ab. Die Plattenform oder der Abstand spielen für die Endgeschwindigkeit keine Rolle."
+       }
+      },
+      {
+       "titel": "Doppelte Spannung, nicht doppelte Geschwindigkeit",
+       "html": "<p>Weil $v \\propto \\sqrt{U_0}$ ist, führt eine <strong>Verdopplung</strong> der Spannung nur zu einer Geschwindigkeit, die um den Faktor $\\sqrt{2} \\approx 1{,}41$ größer ist. Für die <strong>doppelte</strong> Geschwindigkeit braucht man die <strong>vierfache</strong> Spannung.</p>",
+       "check": {
+        "frage": "Um wie viel muss man $U_0$ erhöhen, damit $v$ doppelt so groß wird?",
+        "antwort": "Auf das Vierfache, denn $v \\propto \\sqrt{U_0}$: $(2)^2 = 4$."
+       }
+      }
+     ],
+     "merksatz": "Im Längsfeld gilt der Energiesatz $e \\cdot U_0 = \\frac{1}{2} m_e v^2$, also $W = e \\cdot U_0$ und $v = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0}$. Wegen $v \\propto \\sqrt{U_0}$ erfordert doppelte Geschwindigkeit die vierfache Spannung.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Elektronenstrahl im Fadenstrahlrohr beschleunigen",
+       "material": "Ein Fadenstrahlrohr (Elektronenstrahlröhre) mit regelbarer Beschleunigungsspannung, ein Hochspannungsnetzgerät, Messgeräte. (Demonstrationsversuch der Lehrkraft.)",
+       "vorhersage": "Wie verändert sich die Geschwindigkeit (sichtbar an der Bahn) des Elektronenstrahls, wenn die Beschleunigungsspannung vervierfacht wird? Sage es mit $v \\propto \\sqrt{U_0}$ voraus.",
+       "auftraege": [
+        "Notiere für mehrere Beschleunigungsspannungen $U_0$ den zugehörigen Effekt auf den Strahl.",
+        "Berechne zu zwei Spannungen die Endgeschwindigkeiten und prüfe das Verhältnis gegen $\\sqrt{U_2/U_1}$.",
+        "Begründe aus den Daten, warum die Geschwindigkeit langsamer wächst als die Spannung."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Stelle den Energieansatz für die Beschleunigung eines Elektrons auf.",
+       "antwort": "$e \\cdot U_0 = \\frac{1}{2} m_e v^2$: Die elektrische Arbeit $W = e \\cdot U_0$ wird vollständig zu kinetischer Energie."
+      },
+      {
+       "frage": "Gib die Formel für die Endgeschwindigkeit an.",
+       "antwort": "$v = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0}$."
+      },
+      {
+       "frage": "Warum bedeutet doppelte Spannung nicht doppelte Geschwindigkeit?",
+       "antwort": "Weil $v \\propto \\sqrt{U_0}$. Doppelte Spannung ergibt nur den Faktor $\\sqrt{2} \\approx 1{,}41$; doppelte Geschwindigkeit braucht die vierfache Spannung."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-201"
+       ]
+      },
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-003"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-101"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-004"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig: Was ändert sich an der Endgeschwindigkeit, wenn man die Beschleunigungsspannung vervierfacht — und warum?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-002"
+       ]
+      }
+     ],
+     "transfer": "Ein Proton ($m_p \\approx 1840 \\cdot m_e$) und ein Elektron werden durch dieselbe Spannung $U_0$ beschleunigt. Welches ist schneller — und um welchen Faktor?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Simulation Plattenkondensator",
+       "href": "simulationen/physik/plattenkondensator/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l7",
+   "nr": 2,
+   "titel": "Querfeld: Ladungen ablenken",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-bewegung-geladener-teilchen",
+   "themaPfad": "physik/qualifikationsphase/bewegung-geladener-teilchen/",
+   "anker": "#ue-ablenken",
+   "ziele": [
+    "Ich kann die Querbeschleunigung $a = \\frac{e}{m_e} \\cdot \\frac{U_a}{d}$ berechnen.",
+    "Ich kann die Analogie zwischen Querfeld-Bewegung und waagerechtem Wurf erklären."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die Querbeschleunigung eines Elektrons im Plattenkondensator mit $a = \\frac{e}{m_e} \\cdot \\frac{U_a}{d}$."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du analysierst die Bewegung als Überlagerung aus gleichförmiger Längs- und gleichmäßig beschleunigter Querbewegung."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du erklärst die Analogie zwischen der Bahn im Querfeld und dem waagerechten Wurf und überträgst die Begriffe sachgerecht."
+    }
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 6: Wie hängt die Eintrittsgeschwindigkeit $v_0$ von der Beschleunigungsspannung $U_0$ ab?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-001"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ue-ablenken",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/bewegung-geladener-teilchen/index.html#ue-ablenken"
+     },
+     "text": "Steht das Feld quer zur Flugrichtung, wird die Ladung abgelenkt — die Bahn ist eine Wurfparabel.",
+     "schritte": [
+      {
+       "titel": "Kraft und Querbeschleunigung",
+       "html": "<p>Im Plattenkondensator (Spannung $U_a$, Plattenabstand $d$) herrscht das Feld $E = \\frac{U_a}{d}$. Auf das Elektron wirkt die Kraft $F = e \\cdot E$, also $F = e \\cdot \\frac{U_a}{d}$. Mit $F = m_e \\cdot a$ folgt die <strong>Querbeschleunigung</strong> $a = \\frac{e}{m_e} \\cdot \\frac{U_a}{d}$.</p>",
+       "check": {
+        "frage": "Wie verändert sich die Querbeschleunigung, wenn man den Plattenabstand $d$ halbiert (bei gleichem $U_a$)?",
+        "antwort": "Sie verdoppelt sich, denn $a \\propto \\frac{1}{d}$: Das Feld $E = \\frac{U_a}{d}$ und damit die Kraft werden doppelt so groß."
+       }
+      },
+      {
+       "titel": "Bewegung als Überlagerung",
+       "html": "<p>Die Bewegung zerlegt man in zwei unabhängige Anteile: In <strong>Längsrichtung</strong> fliegt das Elektron mit konstanter Eintrittsgeschwindigkeit $v_0$ (kraftfrei), in <strong>Querrichtung</strong> wird es mit $a$ gleichmäßig beschleunigt. Beide überlagern sich zu einer gekrümmten Bahn.</p>",
+       "check": {
+        "frage": "Welche Bewegungsart liegt längs, welche quer zum Feld vor?",
+        "antwort": "Längs: gleichförmige (kraftfreie) Bewegung mit $v_0$. Quer: gleichmäßig beschleunigte Bewegung mit der Beschleunigung $a$."
+       }
+      },
+      {
+       "titel": "Analogie zum waagerechten Wurf",
+       "html": "<p>Das ist genau der <strong>waagerechte Wurf</strong>: Dort entspricht die konstante Horizontalgeschwindigkeit dem $v_0$ und die Fallbeschleunigung $g$ der Querbeschleunigung $a$. Die Bahn ist in beiden Fällen eine <strong>Parabel</strong>. Man kann alle Formeln des waagerechten Wurfs übernehmen und nur $g$ durch $a$ ersetzen.</p>",
+       "check": {
+        "frage": "Welche Größe des waagerechten Wurfs entspricht im Querfeld der Fallbeschleunigung $g$?",
+        "antwort": "Die Querbeschleunigung $a = \\frac{e}{m_e} \\cdot \\frac{U_a}{d}$."
+       }
+      }
+     ],
+     "merksatz": "Im Querfeld wirkt die Kraft $F = e \\cdot \\frac{U_a}{d}$, also $a = \\frac{e}{m_e} \\cdot \\frac{U_a}{d}$. Die Bewegung überlagert eine gleichförmige Längs- und eine beschleunigte Querbewegung — wie beim <strong>waagerechten Wurf</strong> ist die Bahn eine Parabel.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Elektronenstrahl im Ablenkkondensator",
+       "material": "Eine Elektronenstrahlröhre mit eingebautem Ablenkkondensator (Demonstration), regelbare Ablenkspannung $U_a$, ein Leuchtschirm.",
+       "vorhersage": "In welche Richtung und wie stark wird der Strahl abgelenkt, wenn du $U_a$ vergrößerst? Begründe mit $a \\propto U_a$.",
+       "auftraege": [
+        "Verändere die Ablenkspannung $U_a$ schrittweise und beobachte die Auslenkung des Leuchtflecks.",
+        "Drehe die Polung um und überlege, warum sich die Ablenkrichtung umkehrt.",
+        "Vergleiche die Strahlbahn mit der Wurfparabel eines waagerecht geworfenen Balls."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Gib die Formel für die Querbeschleunigung im Plattenkondensator an.",
+       "antwort": "$a = \\frac{e}{m_e} \\cdot \\frac{U_a}{d}$ mit der Ablenkspannung $U_a$ und dem Plattenabstand $d$."
+      },
+      {
+       "frage": "Aus welchen zwei Teilbewegungen setzt sich die Bahn zusammen?",
+       "antwort": "Aus einer gleichförmigen Bewegung längs (mit $v_0$) und einer gleichmäßig beschleunigten Bewegung quer zum Feld."
+      },
+      {
+       "frage": "Welche bekannte Bewegung ist das Vorbild für die Bahn im Querfeld?",
+       "antwort": "Der waagerechte Wurf; die Querbeschleunigung $a$ übernimmt die Rolle der Fallbeschleunigung $g$, die Bahn ist eine Parabel."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-006"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-007"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-303"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Warum bleibt die Längsgeschwindigkeit $v_x$ im Querfeld konstant — obwohl eine Kraft auf das Elektron wirkt?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-005"
+       ]
+      }
+     ],
+     "transfer": "In welche Richtung bewegt sich ein Elektron, das von links in einen Ablenkkondensator eintritt, wenn die obere Platte positiv geladen ist? Begründe mit der Kraftrichtung."
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Simulation Plattenkondensator",
+       "href": "simulationen/physik/plattenkondensator/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l8",
+   "nr": 3,
+   "titel": "Die Bahn quantitativ",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-bewegung-geladener-teilchen",
+   "themaPfad": "physik/qualifikationsphase/bewegung-geladener-teilchen/",
+   "anker": "#ue-bahn",
+   "ziele": [
+    "Ich kann Verweilzeit $t_1$, Ablenkung $y_1$ am Plattenende und Austrittswinkel $\\theta$ berechnen.",
+    "Ich kann den vollständigen Rechenweg $v_0 \\to t_1 \\to a \\to y_1$ ohne Formelblatt durchführen."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die Verweilzeit $t_1$ im Kondensator, die Ablenkung $y_1$ am Plattenende und den Austrittswinkel $\\theta$."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du führst den vollständigen Rechenweg $v_0 \\to t_1 \\to a \\to y_1$ systematisch und ohne Formelblatt durch."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du dokumentierst Lösungswege mit Größengleichungen, Einheiten und sinnvoller Rundung nachvollziehbar."
+    }
+   ],
+   "stopppunkt": {
+    "text": "Vor dieser Lektion empfiehlt sich ein kurzes Gespräch: Wie zerlegt man die Bewegung im Querfeld? Welche Größen braucht man für den Rechenweg — und in welcher Reihenfolge?"
+   },
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 7: Querbeschleunigung und Analogie zum waagerechten Wurf.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-008"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 13,
+     "anker": "#ue-bahn",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/bewegung-geladener-teilchen/index.html#ue-bahn"
+     },
+     "text": "Jetzt rechnest du die Wurfparabel im Querfeld vollständig aus — Schritt für Schritt vom Eintritt bis zum Austritt.",
+     "schritte": [
+      {
+       "titel": "Die Verweilzeit im Feld",
+       "html": "<p>Die Längsbewegung ist gleichförmig: Bei der Plattenlänge $L$ und der Eintrittsgeschwindigkeit $v_0$ braucht das Elektron für den Durchflug die <strong>Verweilzeit</strong> $t_1 = \\frac{L}{v_0}$. Während genau dieser Zeit wirkt die Querbeschleunigung $a$.</p>",
+       "check": {
+        "frage": "Plattenlänge $L = 0{,}06\\,\\text{m}$, $v_0 = 3 \\cdot 10^7\\,\\frac{\\text{m}}{\\text{s}}$. Wie groß ist $t_1$?",
+        "antwort": "$t_1 = \\frac{L}{v_0} = \\frac{0{,}06\\,\\text{m}}{3 \\cdot 10^7\\,\\frac{\\text{m}}{\\text{s}}} = 2 \\cdot 10^{-9}\\,\\text{s}$."
+       }
+      },
+      {
+       "titel": "Die Ablenkung am Plattenende",
+       "html": "<p>In Querrichtung gilt das Weg-Zeit-Gesetz der beschleunigten Bewegung: $y_1 = \\frac{1}{2} a \\cdot t_1^2$. Setzt man $t_1 = \\frac{L}{v_0}$ ein, erhält man die seitliche Auslenkung $y_1$ genau am Ende der Platten — der erste sichtbare Teil der Ablenkung.</p>",
+       "check": {
+        "frage": "Welche Formel beschreibt die Ablenkung $y_1$ am Plattenende?",
+        "antwort": "$y_1 = \\frac{1}{2} a \\cdot t_1^2$ mit $t_1 = \\frac{L}{v_0}$; die beschleunigte Querbewegung liefert eine quadratische Abhängigkeit von der Zeit."
+       }
+      },
+      {
+       "titel": "Der Austrittswinkel",
+       "html": "<p>Beim Austritt hat das Elektron die unveränderte Längsgeschwindigkeit $v_0$ und die in der Zeit $t_1$ aufgebaute Quergeschwindigkeit $v_y = a \\cdot t_1$. Der <strong>Austrittswinkel</strong> gegen die ursprüngliche Richtung folgt aus $\\tan\\theta = \\frac{v_y}{v_0} = \\frac{a \\cdot t_1}{v_0}$.</p>",
+       "check": {
+        "frage": "Aus welchen Geschwindigkeiten bestimmt man den Austrittswinkel $\\theta$?",
+        "antwort": "Aus der konstanten Längsgeschwindigkeit $v_0$ und der Quergeschwindigkeit $v_y = a \\cdot t_1$ über $\\tan\\theta = \\frac{v_y}{v_0}$."
+       }
+      }
+     ],
+     "merksatz": "Vollständiger Rechenweg im Querfeld: Verweilzeit $t_1 = \\frac{L}{v_0}$, Ablenkung $y_1 = \\frac{1}{2} a \\cdot t_1^2$, Austrittswinkel über $\\tan\\theta = \\frac{a \\cdot t_1}{v_0}$. Reihenfolge: $v_0 \\to t_1 \\to a \\to y_1$.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Ablenkung am Schirm ausmessen",
+       "material": "Eine Elektronenstrahlröhre mit Ablenkkondensator und Leuchtschirm, ein Lineal, bekannte Werte für $L$, $d$, $U_a$ und $U_0$.",
+       "vorhersage": "Wie groß erwartest du die Ablenkung $y_1$ am Plattenende? Rechne sie mit $t_1 = \\frac{L}{v_0}$ und $y_1 = \\frac{1}{2} a \\, t_1^2$ vorher aus.",
+       "auftraege": [
+        "Berechne aus $U_0$ zuerst $v_0$, daraus $t_1$ und mit $a$ schließlich $y_1$.",
+        "Vergleiche deinen berechneten Austrittswinkel $\\theta$ mit dem geschätzten Verlauf des Strahls.",
+        "Diskutiere, welche Größe ($U_a$, $L$, $v_0$) die Ablenkung am stärksten beeinflusst."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Gib die Formel für die Verweilzeit im Kondensator an.",
+       "antwort": "$t_1 = \\frac{L}{v_0}$ — die Längsbewegung ist gleichförmig mit der Eintrittsgeschwindigkeit $v_0$."
+      },
+      {
+       "frage": "Wie berechnet man die Ablenkung $y_1$ am Plattenende?",
+       "antwort": "Über das Weg-Zeit-Gesetz der beschleunigten Querbewegung: $y_1 = \\frac{1}{2} a \\cdot t_1^2$."
+      },
+      {
+       "frage": "In welcher Reihenfolge gehst du den Rechenweg an?",
+       "antwort": "Erst $v_0$ (aus $U_0$), dann $t_1 = \\frac{L}{v_0}$, dann $a$, schließlich $y_1$ und ggf. $\\theta$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-009"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-010"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-304"
+       ]
+      }
+     ],
+     "partner": "Gebt euch gegenseitig eine Aufgabe: nennt $U_0$, $U_a$, $d$ — der andere nennt die Ablenkung am Plattenende $y_1$. Kontrolliert mit der Kurzformel $y_1 = \\frac{U_a L^2}{4 U_0 d}$."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-011"
+       ]
+      }
+     ],
+     "transfer": "Warum steht in der Ablenkformel nirgends $e$ oder $m_e$ — obwohl beide die Bahn beeinflussen?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Simulation Plattenkondensator (Messaufgabe)",
+       "href": "simulationen/physik/plattenkondensator/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l9",
+   "nr": 4,
+   "titel": "Die Schirmformel und ihre Konsequenzen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-bewegung-geladener-teilchen",
+   "themaPfad": "physik/qualifikationsphase/bewegung-geladener-teilchen/",
+   "anker": "#ue-bahn",
+   "ziele": [
+    "Ich kann die Schirmablenkung $y = \\frac{U_a L (L/2 + s)}{2 U_0 d}$ anwenden und nach $U_a$ oder $U_0$ umstellen.",
+    "Ich kann begründen, warum sich die spezifische Ladung $e/m_e$ aus der Formel heraus­kürzt."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du wendest die Schirmformel $y = \\frac{U_a \\, L \\,(L/2 + s)}{2 \\, U_0 \\, d}$ an und stellst sie nach $U_a$ oder $U_0$ um."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du verfolgst die Herleitung der Schirmablenkung und zeigst, dass sich die spezifische Ladung $\\frac{e}{m_e}$ herauskürzt."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du beurteilst, von welchen Geräteparametern die Empfindlichkeit der Ablenkung abhängt, und ziehst Schlüsse für die Bauweise."
+    }
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Ablenkung aus Lektion 8: Wie berechnet man $y_1$ und den Austrittswinkel?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-007"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ue-bahn",
+     "interaktiv": {
+      "label": "Simulation auf der Erklärseite (Messreihe Schirmablenkung)",
+      "href": "physik/qualifikationsphase/bewegung-geladener-teilchen/index.html#ue-simulation"
+     },
+     "text": "Die Schirmformel verbindet alle Geräteparameter zur Gesamtablenkung am Leuchtschirm — und enthüllt eine Überraschung.",
+     "schritte": [
+      {
+       "titel": "Von der Platte zum Schirm",
+       "html": "<p>Hinter den Platten fliegt das Elektron geradlinig weiter. Verlängert man die Austrittsgerade zurück, scheint sie aus der <strong>Plattenmitte</strong> zu kommen. Die Gesamtablenkung am Schirm setzt sich daher aus der halben Plattenlänge $L/2$ und dem Schirmabstand $s$ zusammen. So entsteht die <strong>Schirmformel</strong> $y = \\frac{U_a \\, L \\,(L/2 + s)}{2 \\, U_0 \\, d}$.</p>",
+       "check": {
+        "frage": "Warum taucht in der Schirmformel der Term $(L/2 + s)$ auf?",
+        "antwort": "Weil die geradlinige Austrittsbahn so verläuft, als käme sie aus der Plattenmitte. Der wirksame Hebel ist daher $L/2$ plus der Schirmabstand $s$."
+       }
+      },
+      {
+       "titel": "Die spezifische Ladung kürzt sich heraus",
+       "html": "<p>In der Herleitung steckt die Beschleunigung $a \\propto \\frac{e}{m_e}$, aber auch $v_0^2 \\propto \\frac{e}{m_e} \\cdot U_0$. Beim Einsetzen <strong>kürzt sich $\\frac{e}{m_e}$ heraus</strong>. Die Schirmablenkung hängt also <strong>nicht</strong> von der Teilchensorte ab, sondern nur von den Spannungen $U_a, U_0$ und der Geometrie $L, d, s$.</p>",
+       "check": {
+        "frage": "Warum steht die spezifische Ladung $\\frac{e}{m_e}$ nicht in der Schirmformel?",
+        "antwort": "Sie kommt sowohl in der Querbeschleunigung als auch in $v_0^2$ vor und kürzt sich beim Einsetzen vollständig heraus."
+       }
+      },
+      {
+       "titel": "Umstellen nach den Spannungen",
+       "html": "<p>Die Formel lässt sich nach jeder Größe auflösen. Nach der Ablenkspannung: $U_a = \\frac{2 \\, U_0 \\, d \\, y}{L \\,(L/2 + s)}$. Misst man $y$ und kennt die Geometrie und $U_0$, kann man so eine unbekannte Ablenkspannung bestimmen — die Grundlage des Oszilloskops.</p>",
+       "check": {
+        "frage": "Nach welcher Größe stellst du die Schirmformel um, um aus einer gemessenen Ablenkung $y$ die Ablenkspannung zu bestimmen?",
+        "antwort": "Nach $U_a$: $U_a = \\frac{2 \\, U_0 \\, d \\, y}{L \\,(L/2 + s)}$."
+       }
+      }
+     ],
+     "merksatz": "Schirmformel: $y = \\frac{U_a \\, L \\,(L/2 + s)}{2 \\, U_0 \\, d}$. Der Hebel $L/2 + s$ kommt von der scheinbaren Herkunft aus der Plattenmitte. Die spezifische Ladung $\\frac{e}{m_e}$ kürzt sich heraus — die Ablenkung hängt nur von Spannungen und Geometrie ab.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Empfindlichkeit der Schirmablenkung untersuchen",
+       "material": "Eine Elektronenstrahlröhre mit Ablenkkondensator und Leuchtschirm, regelbare Spannungen $U_a$ und $U_0$, ein Lineal mit Schirmskala.",
+       "vorhersage": "Wie ändert sich die Schirmablenkung $y$, wenn du (a) $U_a$ verdoppelst, (b) $U_0$ verdoppelst? Sage es anhand der Formel voraus.",
+       "auftraege": [
+        "Miss $y$ für mehrere Ablenkspannungen $U_a$ bei festem $U_0$ und prüfe die Proportionalität $y \\propto U_a$.",
+        "Halte $U_a$ fest und variiere $U_0$ — bestätige, dass $y \\propto \\frac{1}{U_0}$ gilt.",
+        "Berechne aus einer Messung über die umgestellte Formel $U_a$ zurück und vergleiche mit dem eingestellten Wert."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Gib die Schirmformel an und benenne den Faktor $(L/2 + s)$.",
+       "antwort": "$y = \\frac{U_a \\, L \\,(L/2 + s)}{2 \\, U_0 \\, d}$; $(L/2 + s)$ ist der wirksame Hebel, weil die Bahn scheinbar aus der Plattenmitte kommt."
+      },
+      {
+       "frage": "Warum hängt die Schirmablenkung nicht von der Teilchensorte ab?",
+       "antwort": "Weil sich die spezifische Ladung $\\frac{e}{m_e}$ in der Herleitung herauskürzt; übrig bleiben nur Spannungen und Geometrie."
+      },
+      {
+       "frage": "Wie groß wird $y$, wenn man $U_0$ verdoppelt (alles andere fest)?",
+       "antwort": "Nur halb so groß, denn $y \\propto \\frac{1}{U_0}$."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-104"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-105"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-006"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-305"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig: Warum liefert ein Proton bei derselben Beschleunigungsspannung dieselbe Schirmablenkung wie ein Elektron — obwohl es fast 2000-mal schwerer ist?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-012"
+       ]
+      }
+     ],
+     "transfer": "Aus der Ablenkung im E-Feld allein lässt sich $e/m_e$ nicht bestimmen. Was wäre zusätzlich nötig? (Tipp: Denke an die Lorentzkraft.)"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Simulation Teilchen-Kreisbahn (Fadenstrahlrohr)",
+       "href": "simulationen/physik/teilchen-kreisbahn/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l10",
+   "nr": 5,
+   "titel": "Anwendungen: Oszilloskop und Tintenstrahldrucker",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-bewegung-geladener-teilchen",
+   "themaPfad": "physik/qualifikationsphase/bewegung-geladener-teilchen/",
+   "anker": "#ue-anwendungen",
+   "ziele": [
+    "Ich kann erklären, wie Braunsche Röhre und Oszilloskop auf der Elektronen­ablenkung beruhen.",
+    "Ich kann beschreiben, wie ein Tintenstrahldrucker Tröpfchen mit einem Ablenkkondensator positioniert."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst, wie Braunsche Röhre und Oszilloskop einen Elektronenstrahl durch elektrische Ablenkung sichtbar steuern."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du beschreibst, wie ein Tintenstrahldrucker geladene Tröpfchen mit einem Ablenkkondensator positioniert."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du überträgst das physikalische Ablenkprinzip auf technische Geräte und beurteilst Möglichkeiten und Grenzen der Anwendung."
+    }
+   ],
+   "stopppunkt": null,
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung Schirmformel aus Lektion 9: Welche Größen bestimmen die Ablenkung am Schirm — und was kürzt sich heraus?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-003"
+       ]
+      }
+     ]
+    },
+    "verstehen": {
+     "zeit": 12,
+     "anker": "#ue-anwendungen",
+     "interaktiv": {
+      "label": "Verständnis-Check auf der Erklärseite",
+      "href": "physik/qualifikationsphase/bewegung-geladener-teilchen/index.html#ue-anwendungen"
+     },
+     "text": "Die Ablenkung geladener Teilchen steckt in vielen Geräten — vom klassischen Oszilloskop bis zum Tintenstrahldrucker.",
+     "schritte": [
+      {
+       "titel": "Die Braunsche Röhre",
+       "html": "<p>In der Braunschen Röhre erzeugt eine Glühkathode einen Elektronenstrahl, der beschleunigt und auf einen Leuchtschirm gelenkt wird. Zwei Plattenpaare lenken den Strahl <strong>waagerecht</strong> und <strong>senkrecht</strong> ab. So lässt sich der Leuchtfleck an jeden Punkt des Schirms steuern.</p>",
+       "check": {
+        "frage": "Wozu dienen die zwei Plattenpaare in der Braunschen Röhre?",
+        "antwort": "Zur Ablenkung des Strahls in zwei Richtungen — ein Paar lenkt waagerecht (x), das andere senkrecht (y) ab, sodass jeder Punkt des Schirms erreichbar ist."
+       }
+      },
+      {
+       "titel": "Das Oszilloskop",
+       "html": "<p>Im Oszilloskop liegt die zu messende Spannung an den <strong>y-Platten</strong>; sie lenkt den Strahl proportional aus. Eine intern erzeugte „Sägezahn“-Spannung an den <strong>x-Platten</strong> zieht den Fleck gleichmäßig von links nach rechts. So wird der zeitliche Verlauf der Spannung als Kurve auf dem Schirm sichtbar.</p>",
+       "check": {
+        "frage": "Wodurch entsteht im Oszilloskop die waagerechte (zeitliche) Bewegung des Leuchtflecks?",
+        "antwort": "Durch eine intern erzeugte Sägezahnspannung an den x-Platten, die den Fleck zeitproportional von links nach rechts zieht."
+       }
+      },
+      {
+       "titel": "Der Tintenstrahldrucker",
+       "html": "<p>Beim Continuous-Inkjet-Verfahren werden winzige Tintentröpfchen <strong>elektrisch aufgeladen</strong> und durchfliegen einen <strong>Ablenkkondensator</strong>. Je nach Ladung werden sie unterschiedlich stark abgelenkt und treffen den richtigen Punkt auf dem Papier — exakt nach dem Querfeld-Prinzip aus den vorigen Lektionen.</p>",
+       "check": {
+        "frage": "Wie steuert ein Tintenstrahldrucker, wohin ein Tröpfchen trifft?",
+        "antwort": "Er lädt das Tröpfchen auf und lenkt es im Ablenkkondensator ab; über Ladung bzw. Ablenkspannung wird die Auftreffstelle auf dem Papier bestimmt."
+       }
+      }
+     ],
+     "merksatz": "Braunsche Röhre und Oszilloskop steuern einen Elektronenstrahl über zwei Plattenpaare; im Oszilloskop macht eine Sägezahnspannung den Spannungsverlauf zeitlich sichtbar. Der Tintenstrahldrucker lenkt geladene Tröpfchen im Ablenkkondensator ab — alles nach dem Querfeld-Prinzip.",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Eine Wechselspannung auf dem Oszilloskop darstellen",
+       "material": "Ein (analoges) Oszilloskop, ein Funktionsgenerator oder eine kleine Wechselspannungsquelle, Messleitungen.",
+       "vorhersage": "Wie verändert sich das Bild auf dem Schirm, wenn du die Frequenz der Eingangsspannung erhöhst? Was bewirkt eine andere Zeitablenkung (x)?",
+       "auftraege": [
+        "Lege eine Wechselspannung an den y-Eingang und stelle ein stehendes Bild ein.",
+        "Variiere die Zeitbasis (x-Ablenkung) und beobachte, wie sich die Zahl der dargestellten Schwingungen ändert.",
+        "Erkläre, welche Platten für die senkrechte und welche für die waagerechte Auslenkung zuständig sind."
+       ]
+      }
+     ],
+     "selbstcheck": [
+      {
+       "frage": "Worauf beruht die Darstellung in Braunscher Röhre und Oszilloskop physikalisch?",
+       "antwort": "Auf der elektrischen Ablenkung eines Elektronenstrahls im Querfeld zweier Plattenpaare (x- und y-Ablenkung)."
+      },
+      {
+       "frage": "Welche Aufgabe hat die Sägezahnspannung im Oszilloskop?",
+       "antwort": "Sie lenkt den Strahl an den x-Platten zeitproportional ab und macht so den zeitlichen Verlauf der Eingangsspannung sichtbar."
+      },
+      {
+       "frage": "Welches Prinzip nutzt der Tintenstrahldrucker zur Positionierung der Tröpfchen?",
+       "antwort": "Die Ablenkung geladener Teilchen im Querfeld eines Kondensators — die Ladung bzw. Ablenkspannung bestimmt die Auftreffstelle."
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-001"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-106"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-013"
+       ]
+      }
+     ],
+     "partner": "Erklärt: Warum konnte das analoge Oszilloskop mit zwei Plattenpaaren gleichzeitig Zeit- und Spannungsachse darstellen? Zeichnet eine Skizze."
+    },
+    "sichern": {
+     "zeit": 7,
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-002"
+       ]
+      }
+     ],
+     "transfer": "Ein Ingenieur möchte die Ablenkempfindlichkeit des Oszilloskops verdoppeln (gleiche Ablenkspannung → doppelte Schirmablenkung). Welche konstruktiven Änderungen sind möglich — und was sind die Nachteile?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "l10b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Bewegung geladener Teilchen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-bewegung-geladener-teilchen",
+   "themaPfad": "physik/qualifikationsphase/bewegung-geladener-teilchen/",
+   "ziele": [
+    "Ich kann Beschleunigung im E-Feld und Kreisbahnen im B-Feld sicher berechnen und kombinieren.",
+    "Ich kann Geschwindigkeitsfilter, spezifische Ladung und Massenspektrometer als Anwendungen durchrechnen."
+   ],
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest Beschleunigungen im E-Feld und Kreisbahnen im B-Feld sicher und kombinierst beide."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du durchdringst Geschwindigkeitsfilter, spezifische Ladung und Massenspektrometer als Anwendungen."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du stellst Lösungswege strukturiert mit Größengleichungen, Zwischenschritten und Einheiten dar."
+    }
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zur Lorentzkraft und Kreisbahn — danach mischst und vertiefst du das ganze Thema.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-201"
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-202",
+        "ph-qp-bt-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-204",
+        "ph-qp-bt-205",
+        "ph-qp-bt-206",
+        "ph-qp-bt-303",
+        "ph-qp-bt-304"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-207",
+        "ph-qp-bt-301",
+        "ph-qp-bt-302",
+        "ph-qp-bt-305"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig, warum die Lorentzkraft keine Arbeit verrichtet — und wie aus ihr als Zentripetalkraft die Radiusformel $r = \\frac{m \\cdot v}{q \\cdot B}$ entsteht."
+    },
+    "sichern": {
+     "zeit": 15,
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-bewegung-geladener-teilchen",
+       "ids": [
+        "ph-qp-bt-208"
+       ]
+      }
+     ],
+     "transfer": "Viele Aufgaben verlaufen in zwei Schritten: erst die Geschwindigkeit aus der Beschleunigungsspannung ($v = \\sqrt{2 \\cdot \\frac{q}{m} \\cdot U_0}$), dann der Radius im Magnetfeld ($r = \\frac{m \\cdot v}{q \\cdot B}$). Halte die Reihenfolge ein."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Teilchen-Kreisbahn im Magnetfeld (Fadenstrahlrohr)",
+       "href": "simulationen/physik/teilchen-kreisbahn/index.html"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "bloecke": [
+  {
+   "titel": "Elektromagnetische Induktion",
+   "thema": "ph-qp-induktion",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l5b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  },
+  {
+   "titel": "Bewegung geladener Teilchen",
+   "thema": "ph-qp-bewegung-geladener-teilchen",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10",
+    "l10b"
+   ],
+   "mindestmarke": "Basis-Spur des Themas geschafft"
+  }
+ ]
+}

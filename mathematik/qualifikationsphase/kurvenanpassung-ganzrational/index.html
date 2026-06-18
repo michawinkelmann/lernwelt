@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kurvenanpassung mit ganzrationalen Funktionen — Qualifikationsphase · Mathematik — Lernwelt</title>
+<meta name="description" content="Steckbriefaufgaben: Bedingungen in Gleichungen übersetzen, das lineare Gleichungssystem mit dem Gauß-Verfahren lösen, mit Symmetrie abkürzen und das fertige Modell kritisch prüfen — mit Beispielen, Verständnis-Checks und Übungen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .werte-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .werte-tabelle th, .werte-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: center; }
+  .werte-tabelle th { background: var(--hauch); }
+  .werte-tabelle td:first-child { text-align: left; }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Kurvenanpassung mit ganzrationalen Funktionen</h1>
+  <p class="einleitung">Ein Planungsbüro entwirft einen Brückenbogen: 40 Meter Spannweite, 10 Meter Scheitelhöhe — doch die Gleichung der Bogenkurve steht in keiner Formelsammlung. Genauso beim Aufsprunghang einer Skisprungschanze, der an festgelegten Stellen eine vorgeschriebene Neigung haben muss: Gegeben sind <strong>Eigenschaften</strong>, gesucht ist die <strong>Funktion</strong>. Solche Aufgaben heißen <strong>Steckbriefaufgaben</strong>, denn die Kurve wird wie eine gesuchte Person anhand ihres Steckbriefs identifiziert. Du lernst hier, wie du Bedingungen in Gleichungen übersetzt, das entstehende lineare Gleichungssystem löst — und warum du dem Ergebnis erst nach einer gründlichen Probe trauen darfst.</p>
+
+  <section aria-labelledby="ka-steckbrief">
+    <h2 id="ka-steckbrief">1. Steckbriefaufgaben: Funktionen nach Maß</h2>
+    <p>In der <a href="../../einfuehrungsphase/ableitungsregeln-und-anwendungen/index.html">Kurvendiskussion</a> war die Richtung klar: Der Funktionsterm ist gegeben, und du bestimmst daraus Nullstellen, Extrem- und Wendepunkte. Die Steckbriefaufgabe kehrt diese Richtung um — aus den gewünschten Eigenschaften wird der Term erst konstruiert. Als „Baumaterial“ dienen <a href="../../einfuehrungsphase/funktionen-im-ueberblick/index.html">ganzrationale Funktionen</a>, weil sie sich beliebig oft ableiten lassen und ihre Koeffizienten in allen Bedingungen nur linear auftreten.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Grad, Koeffizienten, Bedingungen</span>
+      <p class="formel-abgesetzt">$$f(x) = a_n x^n + \dots + a_1 x + a_0$$</p>
+      <p>Eine ganzrationale Funktion vom Grad $n$ enthält $n + 1$ unbekannte Koeffizienten $a_0$ bis $a_n$. Um sie alle festzulegen, braucht der Steckbrief in der Regel <strong>$n + 1$ unabhängige Bedingungen</strong> — eine Gleichung pro Unbekannter. Umgekehrt verrät die Anzahl der Bedingungen, welcher Grad zum Ansatz passt.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Welcher Ansatz passt?</span>
+      <p>Für den <strong>Brückenbogen</strong> genügt eine Parabel, also $f(x) = ax^2 + bx + c$ mit drei Koeffizienten: Die beiden Auflagerpunkte und die Scheitelhöhe liefern genau drei Bedingungen. Der <strong>Übergangsbogen einer Schanze oder Rampe</strong> braucht mehr: Wenn an beiden Enden Höhe <em>und</em> Steigung vorgeschrieben sind, sind das vier Bedingungen — passend zum Ansatz dritten Grades $f(x) = ax^3 + bx^2 + cx + d$ mit vier Koeffizienten.</p>
+    </div>
+    <p>Der Fahrplan ist damit klar: Ansatz wählen (Abschnitt 1), Bedingungen übersetzen (Abschnitt 2), Gleichungssystem lösen (Abschnitt 3) — und am Ende prüfen, ob die gefundene Funktion den Steckbrief wirklich erfüllt (Abschnitt 5). Symmetrie kann den Weg deutlich abkürzen (Abschnitt 4).</p>
+  </section>
+
+  <section aria-labelledby="ka-woerterbuch">
+    <h2 id="ka-woerterbuch">2. Bedingungen übersetzen</h2>
+    <p>Jede Angabe im Steckbrief beschreibt den Graphen an einer bestimmten Stelle — und lässt sich als Gleichung über $f$, $f'$ oder $f''$ schreiben. Dabei hilft das Grundvokabular der Kurvendiskussion, nur rückwärts gelesen: $f$ liefert Punkte, $f'$ Steigungen, $f''$ das Krümmungsverhalten. Die wichtigsten Übersetzungen im Überblick:</p>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Wörterbuch: Steckbrief-Formulierungen und die zugehörigen Gleichungen</caption>
+      <thead>
+        <tr><th scope="col">Der Steckbrief sagt …</th><th scope="col">Gleichung(en)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>verläuft durch den Punkt $P(2 \mid 5)$</td><td>$f(2) = 5$</td></tr>
+        <tr><td>schneidet die y-Achse bei $3$</td><td>$f(0) = 3$</td></tr>
+        <tr><td>hat bei $x = 1$ die Steigung $4$</td><td>$f'(1) = 4$</td></tr>
+        <tr><td>Extremstelle bei $x = 1$</td><td>$f'(1) = 0$</td></tr>
+        <tr><td>Hochpunkt $H(1 \mid 4)$</td><td>$f(1) = 4$ <strong>und</strong> $f'(1) = 0$</td></tr>
+        <tr><td>Wendestelle bei $x = 3$</td><td>$f''(3) = 0$</td></tr>
+        <tr><td>Wendepunkt $W(3 \mid 2)$</td><td>$f(3) = 2$ <strong>und</strong> $f''(3) = 0$</td></tr>
+        <tr><td>berührt die x-Achse bei $x = 4$</td><td>$f(4) = 0$ <strong>und</strong> $f'(4) = 0$</td></tr>
+      </tbody>
+    </table>
+    <p>Zwei Formulierungen verdienen besondere Aufmerksamkeit. <strong>Punkte mit Zusatzeigenschaft zählen doppelt:</strong> Ein Hochpunkt $H(1 \mid 4)$ steckt voller Information — der Graph läuft durch den Punkt <em>und</em> hat dort eine waagerechte Tangente. <strong>Berühren heißt anschmiegen:</strong> Wer die x-Achse berührt, hat mit ihr nicht nur den Punkt gemeinsam, sondern auch die Steigung $0$ — wieder zwei Gleichungen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Vom Steckbrief zum Gleichungssystem</span>
+      <p>Jede Bedingung wird durch Einsetzen der Stelle in $f$, $f'$ oder $f''$ zu einer <strong>linearen Gleichung in den Koeffizienten</strong> — die $x$-Werte sind ja Zahlen, unbekannt bleiben nur $a$, $b$, $c$, … Hoch-, Tief- und Wendepunkte mit beiden Koordinaten liefern <strong>je zwei</strong> Gleichungen. Eine Symmetrie-Angabe liefert dagegen <em>keine</em> Gleichung, sondern verkleinert den Ansatz (Abschnitt 4). Und beachte: Ob eine Extremstelle wirklich Hoch- oder Tiefpunkt ist, steht in keiner der Gleichungen — das prüft erst die Probe am Ende.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Wie viele Gleichungen liefert die Angabe „Tiefpunkt T(2|−1)“ — und welche?</summary>
+      <div class="check-antwort"><p>Zwei: $f(2) = -1$ (der Punkt liegt auf dem Graphen) und $f'(2) = 0$ (waagerechte Tangente). Dass es sich um einen <em>Tief</em>punkt handelt, lässt sich nicht als lineare Gleichung schreiben — diese Information hebst du dir für die Kontrolle mit $f''$ auf (Abschnitt 5).</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ka-lgs">
+    <h2 id="ka-lgs">3. Das LGS lösen</h2>
+    <p>Jetzt alles zusammen an einem vollständigen Beispiel. <strong>Gesucht:</strong> eine ganzrationale Funktion dritten Grades, deren Graph durch den Ursprung verläuft, im Punkt $W(2 \mid 2)$ einen Wendepunkt besitzt und dort eine Tangente mit der Steigung $-3$ hat. Vier Angaben — passend zum Ansatz $f(x) = ax^3 + bx^2 + cx + d$ mit den Ableitungen $f'(x) = 3ax^2 + 2bx + c$ und $f''(x) = 6ax + 2b$. Die Übersetzung:</p>
+    <p class="formel-abgesetzt">$$\begin{gathered} f(0) = 0 \;\Rightarrow\; d = 0 \\ f(2) = 2 \;\Rightarrow\; 8a + 4b + 2c + d = 2 \\ f''(2) = 0 \;\Rightarrow\; 12a + 2b = 0 \\ f'(2) = -3 \;\Rightarrow\; 12a + 4b + c = -3 \end{gathered}$$</p>
+    <p>Die erste Gleichung verrät $d = 0$ sofort. Übrig bleibt ein System aus drei Gleichungen für $a$, $b$ und $c$, das du mit dem <strong>Gauß-Verfahren</strong> systematisch auf Stufenform bringst — hier kompakt als Tabelle (jede Zeile steht für eine Gleichung, rechts ihr Ergebniswert):</p>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Gauß-Schema: Koeffizienten der drei Gleichungen und die Zeilenumformungen bis zur Stufenform</caption>
+      <thead>
+        <tr><th scope="col">Zeile</th><th scope="col">$a$</th><th scope="col">$b$</th><th scope="col">$c$</th><th scope="col">$=$</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>I</td><td>8</td><td>4</td><td>2</td><td>2</td></tr>
+        <tr><td>II</td><td>12</td><td>4</td><td>1</td><td>−3</td></tr>
+        <tr><td>III</td><td>12</td><td>2</td><td>0</td><td>0</td></tr>
+        <tr><td>II′ = 2·II − 3·I</td><td>0</td><td>−4</td><td>−4</td><td>−12</td></tr>
+        <tr><td>III′ = 2·III − 3·I</td><td>0</td><td>−8</td><td>−6</td><td>−6</td></tr>
+        <tr><td>III″ = III′ − 2·II′</td><td>0</td><td>0</td><td>2</td><td>18</td></tr>
+      </tbody>
+    </table>
+    <p>Rückwärts einsetzen: Aus III″ folgt $2c = 18$, also $c = 9$. Damit liefert II′ die Gleichung $-4b - 36 = -12$, also $b = -6$. Und I ergibt $8a - 24 + 18 = 2$, also $a = 1$. Die gesuchte Funktion ist</p>
+    <p class="formel-abgesetzt">$$f(x) = x^3 - 6x^2 + 9x$$</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 300" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Koordinatensystem mit dem Graphen der gefundenen Funktion dritten Grades f von x gleich x hoch 3 minus 6 x Quadrat plus 9 x. Alle vier Steckbrief-Bedingungen sind markiert: Der Graph verläuft durch den Ursprung, dort steht die Beschriftung f von 0 gleich 0. Im Wendepunkt W an der Stelle 2 mit dem y-Wert 2 ist eine fallende grüne Tangente mit der Steigung minus 3 eingezeichnet; daneben stehen die Bedingungen f von 2 gleich 2, zweite Ableitung an der Stelle 2 gleich 0 und erste Ableitung an der Stelle 2 gleich minus 3. Der Graph hat zudem einen Hochpunkt bei x gleich 1 und einen Tiefpunkt bei x gleich 3.">
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="30" y1="220" x2="344" y2="220"/>
+          <line x1="66" y1="284" x2="66" y2="26"/>
+        </g>
+        <path d="M352 220 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M66 18 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <text x="344" y="238" font-size="12" fill="var(--text-leise)" text-anchor="end">x</text>
+        <text x="76" y="26" font-size="12" fill="var(--text-leise)">f(x)</text>
+        <!-- Skalenstriche -->
+        <g stroke="var(--text-leise)" stroke-width="1">
+          <line x1="126" y1="220" x2="126" y2="225"/>
+          <line x1="186" y1="220" x2="186" y2="225"/>
+          <line x1="246" y1="220" x2="246" y2="225"/>
+          <line x1="306" y1="220" x2="306" y2="225"/>
+          <line x1="61" y1="160" x2="66" y2="160"/>
+          <line x1="61" y1="100" x2="66" y2="100"/>
+        </g>
+        <g font-size="11" fill="var(--text-leise)" text-anchor="middle">
+          <text x="126" y="238">1</text>
+          <text x="186" y="238">2</text>
+          <text x="246" y="238">3</text>
+          <text x="306" y="238">4</text>
+        </g>
+        <g font-size="11" fill="var(--text-leise)" text-anchor="end">
+          <text x="57" y="164">2</text>
+          <text x="57" y="104">4</text>
+        </g>
+        <!-- Tangente im Wendepunkt (Steigung -3) -->
+        <line x1="144" y1="97" x2="228" y2="223" stroke="var(--ok)" stroke-width="2.5"/>
+        <text x="232" y="234" font-size="12" font-weight="600" fill="var(--ok)">Tangente: f′(2) = −3</text>
+        <!-- Graph von f(x) = x^3 - 6x^2 + 9x -->
+        <path d="M 52.8 288.4 L 57.6 261.4 L 62.4 236.9 L 67.2 214.7 L 72.0 194.8 L 76.8 177.1 L 81.6 161.4 L 86.4 147.8 L 91.2 136.1 L 96.0 126.2 L 100.8 118.1 L 105.6 111.6 L 110.4 106.6 L 115.2 103.1 L 120.0 100.9 L 124.8 100.0 L 129.6 100.3 L 134.4 101.7 L 139.2 104.0 L 144.0 107.3 L 148.8 111.3 L 153.6 116.1 L 158.4 121.5 L 163.2 127.4 L 168.0 133.8 L 172.8 140.5 L 177.6 147.5 L 182.4 154.6 L 187.2 161.8 L 192.0 169.0 L 196.8 176.0 L 201.6 182.9 L 206.4 189.4 L 211.2 195.6 L 216.0 201.3 L 220.8 206.3 L 225.6 210.8 L 230.4 214.4 L 235.2 217.3 L 240.0 219.1 L 244.8 220.0 L 249.6 219.7 L 254.4 218.2 L 259.2 215.3 L 264.0 211.1 L 268.8 205.4 L 273.6 198.0 L 278.4 189.0 L 283.2 178.3 L 288.0 165.6 L 292.8 151.0 L 297.6 134.4 L 302.4 115.6 L 307.2 94.5 L 312.0 71.2 L 316.8 45.4" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <text x="348" y="34" font-size="13" font-weight="600" fill="var(--mathe)" text-anchor="end">f(x) = x³ − 6x² + 9x</text>
+        <!-- markierte Bedingungs-Punkte -->
+        <g fill="var(--bg)" stroke="var(--text)" stroke-width="1.8">
+          <circle cx="66" cy="220" r="4"/>
+          <circle cx="186" cy="160" r="4"/>
+        </g>
+        <text x="12" y="206" font-size="12" font-weight="600" fill="var(--text)">f(0) = 0</text>
+        <text x="194" y="142" font-size="12" font-weight="600" fill="var(--text)">W(2|2): f(2) = 2,</text>
+        <text x="194" y="157" font-size="12" font-weight="600" fill="var(--text)">f″(2) = 0</text>
+      </svg>
+    </div>
+    <p>Das Bild zeigt, wie alle vier Bedingungen am Graphen sichtbar werden: der Durchgang durch den Ursprung, der Wendepunkt $W(2 \mid 2)$ als Übergang von Rechts- in Linkskrümmung und die dort anliegende Tangente mit Steigung $-3$. Die Kurzprobe bestätigt die Rechnung: $f(0) = 0$, $f(2) = 8 - 24 + 18 = 2$, $f'(2) = 12 - 24 + 9 = -3$ und $f''(2) = 12 - 12 = 0$. Übrigens: Ein CAS wie der ClassPad II löst das System direkt per <code>solve({…},{a,b,c,d})</code> — eine wertvolle Kontrolle, aber in Klausuren gehört der dokumentierte Gauß-Weg aufs Papier.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Bestimme die Parabel mit Scheitelpunkt S(1|2), die durch P(3|10) verläuft.</summary>
+      <div class="check-antwort"><p>Der Scheitel liefert zwei Gleichungen: $f(1) = 2$ und $f'(1) = 0$; dazu kommt $f(3) = 10$. Mit $f(x) = ax^2 + bx + c$ und $f'(x) = 2ax + b$ entsteht das System $a + b + c = 2$, $\; 2a + b = 0$, $\; 9a + 3b + c = 10$. Die Differenz aus dritter und erster Gleichung ergibt $8a + 2b = 8$, also $4a + b = 4$; zusammen mit $2a + b = 0$ folgt $2a = 4$, also $a = 2$, $b = -4$ und $c = 4$. Ergebnis: $f(x) = 2x^2 - 4x + 4$. Probe: $f(1) = 2$ ✓, $f'(1) = 0$ ✓, $f(3) = 18 - 12 + 4 = 10$ ✓.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ka-symmetrie">
+    <h2 id="ka-symmetrie">4. Mit Symmetrie schneller</h2>
+    <p>Steht im Steckbrief eine Symmetrie-Angabe, lohnt sich ein zweiter Blick, bevor du losrechnest: Sie halbiert den Ansatz fast. Ein Graph ist genau dann <strong>achsensymmetrisch zur y-Achse</strong>, wenn der Funktionsterm nur gerade Exponenten enthält — und genau dann <strong>punktsymmetrisch zum Ursprung</strong>, wenn er nur ungerade enthält.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Symmetrische Ansätze</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} \text{achsensymmetrisch, Grad 4:} \\ f(x) = ax^4 + bx^2 + c \\[6pt] \text{punktsymmetrisch, Grad 3:} \\ f(x) = ax^3 + bx \end{gathered}$$</p>
+      <p>Statt fünf bzw. vier Koeffizienten sind nur noch drei bzw. zwei zu bestimmen — der Steckbrief braucht entsprechend weniger Bedingungen, und das LGS schrumpft. Symmetrie ist also keine zusätzliche Gleichung, sondern eine <strong>Abkürzung im Ansatz</strong>.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Grad 4, achsensymmetrisch</span>
+      <p>Gesucht ist eine achsensymmetrische ganzrationale Funktion vierten Grades mit Hochpunkt $H(0 \mid 1)$ und Tiefpunkt $T(2 \mid -3)$. Ansatz: $f(x) = ax^4 + bx^2 + c$ mit $f'(x) = 4ax^3 + 2bx$. Die Bedingung $f'(0) = 0$ aus dem Hochpunkt ist im symmetrischen Ansatz <em>automatisch</em> erfüllt — sie liefert keine neue Gleichung. Nutzbar bleiben genau drei:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} f(0) = 1 \;\Rightarrow\; c = 1 \\ f(2) = -3 \;\Rightarrow\; 16a + 4b + 1 = -3 \\ f'(2) = 0 \;\Rightarrow\; 32a + 4b = 0 \end{gathered}$$</p>
+      <p>Die dritte Gleichung liefert $b = -8a$; eingesetzt in die zweite: $16a - 32a = -4$, also $a = \frac{1}{4}$ und $b = -2$. Ergebnis: $f(x) = \frac{1}{4}x^4 - 2x^2 + 1$. Die Symmetrie schenkt sogar noch etwas: Spiegeln liefert automatisch den zweiten Tiefpunkt $T'(-2 \mid -3)$ — ohne jede weitere Rechnung.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Bestimme eine zum Ursprung punktsymmetrische Funktion dritten Grades mit Tiefpunkt T(2|−16).</summary>
+      <div class="check-antwort"><p>Der Ansatz $f(x) = ax^3 + bx$ enthält nur zwei Koeffizienten — zwei Bedingungen genügen: $f(2) = 8a + 2b = -16$ und $f'(2) = 12a + b = 0$, also $b = -12a$. Einsetzen: $8a - 24a = -16$, also $a = 1$ und $b = -12$, das heißt $f(x) = x^3 - 12x$. Probe: $f(2) = 8 - 24 = -16$ ✓, $f'(2) = 12 - 12 = 0$ ✓ und $f''(2) = 12 > 0$ — tatsächlich ein Tiefpunkt. Punktsymmetrisch ergänzt sich der Hochpunkt $H(-2 \mid 16)$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ka-pruefen">
+    <h2 id="ka-pruefen">5. Modell prüfen und verwerfen</h2>
+    <p>Das Gauß-Verfahren liefert verlässlich Zahlen — aber ob diese Zahlen den Steckbrief wirklich erfüllen, ist damit noch nicht garantiert. Zur vollständigen Lösung gehört deshalb immer die <strong>Probe aller Bedingungen</strong>: jede Gleichung mit dem gefundenen $f$, $f'$ und $f''$ nachrechnen. Sie entlarvt Rechenfehler — und mehr noch: Sie deckt auf, wenn der Steckbrief selbst zu viel verlangt hat.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Der Steckbrief, den keine Funktion erfüllt</span>
+      <p>Gesucht sei eine Funktion dritten Grades mit <strong>Tiefpunkt im Ursprung</strong>, die durch $P(1 \mid 1)$ verläuft und dort die Steigung $3$ hat. Die vier Gleichungen $f(0) = 0$, $f'(0) = 0$, $f(1) = 1$ und $f'(1) = 3$ führen glatt auf $d = c = 0$, $a + b = 1$ und $3a + 2b = 3$ — also $a = 1$, $b = 0$ und damit $f(x) = x^3$. Alle vier Gleichungen stimmen! Trotzdem ist das Ergebnis zu verwerfen: Wegen $f''(0) = 0$ und $f'(x) = 3x^2 \ge 0$ ohne Vorzeichenwechsel hat $f$ im Ursprung <strong>keinen Tiefpunkt, sondern einen Sattelpunkt</strong>. Die notwendige Bedingung $f'(0) = 0$ war erfüllt, die hinreichende nicht — diesen Steckbrief erfüllt keine Funktion dritten Grades.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Probe-Checkliste — erst dann ist die Aufgabe fertig</span>
+      <p><strong>1. Alle Gleichungen nachrechnen:</strong> jede Steckbrief-Angabe in $f$, $f'$ bzw. $f''$ einsetzen. <strong>2. Hinreichende Kriterien prüfen:</strong> Ein Extremum verlangt $f''(x_0) \ne 0$ (bzw. einen Vorzeichenwechsel von $f'$), ein Wendepunkt einen Vorzeichenwechsel von $f''$ — sonst Ergebnis verwerfen oder als „nicht erfüllbar“ dokumentieren. <strong>3. Sachkontext kontrollieren:</strong> Passen Definitionsbereich, Einheiten und der Verlauf zum realen Objekt?</p>
+    </div>
+    <p>Der dritte Punkt wird bei Anwendungsaufgaben oft unterschätzt. Der Brückenbogen aus der Einleitung wird durch $f(x) = -\frac{1}{40}x^2 + x$ beschrieben — aber nur auf dem Intervall $[0; 40]$: Außerhalb stürzt jede ganzrationale Funktion unaufhaltsam gegen $-\infty$ oder $+\infty$, was mit der Brücke nichts mehr zu tun hat. Ein Funktionsmodell beschreibt außerdem nur die <em>Form</em> — ob der Bogen statisch trägt, verrät es nicht. Und es ist nicht eindeutig: Auch eine Funktion vierten Grades könnte durch dieselben Punkte laufen. Welche Modellierung angemessen ist, entscheidet der Sachkontext, nicht die Mathematik allein.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Wenn der Steckbrief zu viel verlangt — überbestimmte Systeme</summary>
+    <div class="vertiefung-inhalt">
+      <p>Bisher passte die Anzahl der Bedingungen stets zur Anzahl der Koeffizienten. In der Praxis ist das die Ausnahme: Eine Messreihe liefert schnell zehn Datenpunkte, das Parabel-Modell hat aber nur drei Koeffizienten. Das LGS ist dann <strong>überbestimmt</strong> — mehr Gleichungen als Unbekannte. Beim Gauß-Verfahren zeigt sich das so: Nach dem Eliminieren bleiben zusätzliche Zeilen übrig. Entsteht dabei eine <strong>Widerspruchszeile</strong> wie $0 = 2$, hat das System keine Lösung — keine Parabel läuft exakt durch alle Punkte. Entstehen dagegen nur <strong>Nullzeilen</strong> ($0 = 0$), passen die überzähligen Bedingungen zufällig zusammen, und die Lösung existiert trotzdem.</p>
+      <p>Messdaten streuen aber praktisch immer — exakte Lösbarkeit ist die seltene Ausnahme. Deshalb wechselt man die Strategie: Statt einer Kurve <em>durch</em> alle Punkte sucht man die Kurve, die allen Punkten <em>möglichst nahe</em> kommt. Als Maß dafür dient die Summe der quadrierten Abweichungen zwischen Messwert und Modellwert,</p>
+      <p class="formel-abgesetzt">$$S = \sum_{i=1}^{n} \left( y_i - f(x_i) \right)^2$$</p>
+      <p>und gesucht sind die Koeffizienten, die $S$ minimal machen — die <strong>Methode der kleinsten Quadrate</strong>, mit der Carl Friedrich Gauß um 1800 die Bahn des verloren geglaubten Zwergplaneten Ceres wiederfand. Das Quadrieren bestraft große Ausreißer besonders stark und macht alle Abweichungen positiv, sodass sich Fehler nicht gegenseitig aufheben.</p>
+      <p>Die Rechnung dahinter übernimmt das CAS: Im Statistik-Menü des ClassPad II trägst du die Messpunkte als Listen ein und wählst <b>Calc → Regression</b>, etwa die quadratische oder kubische Regression — das Gerät liefert die Ausgleichskoeffizienten samt Plot. Wichtig bleibt deine Modellentscheidung: Ein höherer Grad schmiegt sich zwar enger an die Messpunkte, „verewigt“ damit aber auch deren Messfehler und schlägt zwischen den Punkten unrealistische Bögen. Das beste Modell ist nicht das mit der kleinsten Abweichung, sondern das, dessen Form sich aus dem Sachkontext begründen lässt.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Bedingungs-Wörterbuch über Brückenbogen- und Rampen-Steckbriefe bis zu Symmetrie-Abkürzung und Modell-Probe — mit gestuften Tipps, vollständigen Lösungswegen und CAS-Kontrollen für den ClassPad II.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

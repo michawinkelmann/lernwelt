@@ -1,0 +1,773 @@
+{
+ "thema": "ma-qp-matrizen",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben zum Thema Matrizen: Abbildungen und Prozesse (Qualifikationsphase, Gymnasium, eA). Marker ergänzung:lernbüro — zur fachlichen Prüfung durch die Lehrkraft ausstehend. IDs ma-qp-mx-101 bis ma-qp-mx-108.",
+ "aufgaben": [
+  {
+   "id": "ma-qp-mx-101",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Berechne $\\begin{pmatrix} 3 & 1 \\\\ 2 & 4 \\end{pmatrix} \\cdot \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$. Gib die beiden Koordinaten an.",
+   "eingaben": [
+    {
+     "label": "obere Koordinate",
+     "antwort": 7,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "untere Koordinate",
+     "antwort": 8,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "„Zeile mal Spalte“: obere Zeile (3 1) mit dem Vektor (2 1).",
+    "Obere Zeile: 3·2 + 1·1.",
+    "Untere Zeile: 2·2 + 4·1 = 8."
+   ],
+   "loesungsweg": "Obere Zeile: $3 \\cdot 2 + 1 \\cdot 1 = 7$. Untere Zeile: $2 \\cdot 2 + 4 \\cdot 1 = 8$. Ergebnis: $\\begin{pmatrix} 7 \\\\ 8 \\end{pmatrix}$.",
+   "kc": [
+    "matrix-vektor-produkt"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-mx-102",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Berechne das Produkt $\\begin{pmatrix} 2 & 0 \\\\ 1 & 3 \\end{pmatrix} \\cdot \\begin{pmatrix} 1 & 5 \\\\ 2 & 1 \\end{pmatrix}$. Gib die vier Einträge an.",
+   "eingaben": [
+    {
+     "label": "oben links",
+     "antwort": 2,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "oben rechts",
+     "antwort": 10,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "unten links",
+     "antwort": 7,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "unten rechts",
+     "antwort": 8,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Jeder Eintrag ist „Zeile mal Spalte“.",
+    "Oben rechts: 1. Zeile (2 0) mal 2. Spalte (5 1) = 2·5 + 0·1.",
+    "Unten links: (1 3) mal (1 2) = 1·1 + 3·2 = 7."
+   ],
+   "loesungsweg": "Oben links: $2 \\cdot 1 + 0 \\cdot 2 = 2$. Oben rechts: $2 \\cdot 5 + 0 \\cdot 1 = 10$. Unten links: $1 \\cdot 1 + 3 \\cdot 2 = 7$. Unten rechts: $1 \\cdot 5 + 3 \\cdot 1 = 8$. Also $\\begin{pmatrix} 2 & 10 \\\\ 7 & 8 \\end{pmatrix}$.",
+   "kc": [
+    "matrizenmultiplikation"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-mx-103",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Zusatz (eA): Die Übergangsmatrix $\\begin{pmatrix} 0{,}75 & 0{,}5 \\\\ 0{,}25 & 0{,}5 \\end{pmatrix}$ beschreibt einen Prozess mit zwei Zuständen A und B. Bestimme den Fixvektor bei einer Gesamtzahl von $3000$.",
+   "eingaben": [
+    {
+     "label": "Bestand in A",
+     "antwort": 2000,
+     "toleranz": 0.5,
+     "einheit": ""
+    },
+    {
+     "label": "Bestand in B",
+     "antwort": 1000,
+     "toleranz": 0.5,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Fixvektor: U·f = f. Stelle aus der ersten Zeile 0,75a + 0,5b = a die Bedingung auf.",
+    "0,5b = 0,25a liefert a = 2b, also Verhältnis a : b = 2 : 1.",
+    "Mit a + b = 3000 und a = 2b folgt 3b = 3000."
+   ],
+   "loesungsweg": "Aus $U \\cdot \\vec{f} = \\vec{f}$ folgt mit der ersten Zeile $0{,}75a + 0{,}5b = a$, also $0{,}5b = 0{,}25a$ und damit $a = 2b$ (Verhältnis $a:b = 2:1$). Mit $a + b = 3000$ wird $2b + b = 3b = 3000$, also $b = 1000$ und $a = 2000$. Probe: $U \\cdot \\begin{pmatrix} 2000 \\\\ 1000 \\end{pmatrix} = \\begin{pmatrix} 0{,}75 \\cdot 2000 + 0{,}5 \\cdot 1000 \\\\ 0{,}25 \\cdot 2000 + 0{,}5 \\cdot 1000 \\end{pmatrix} = \\begin{pmatrix} 2000 \\\\ 1000 \\end{pmatrix}$.",
+   "kc": [
+    "fixvektor"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-mx-104",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Die Matrix $\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$ spiegelt an der x-Achse. Bestimme den Bildpunkt von $P(3\\,|\\,5)$.",
+   "eingaben": [
+    {
+     "label": "x-Koordinate",
+     "antwort": 3,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "y-Koordinate",
+     "antwort": -5,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Rechne die Matrix mal den Vektor (3 | 5).",
+    "Bei der Spiegelung an der x-Achse bleibt x gleich und y wechselt das Vorzeichen.",
+    "Bildpunkt: (3 | −5)."
+   ],
+   "loesungsweg": "$\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix} \\cdot \\begin{pmatrix} 3 \\\\ 5 \\end{pmatrix} = \\begin{pmatrix} 1 \\cdot 3 + 0 \\cdot 5 \\\\ 0 \\cdot 3 + (-1) \\cdot 5 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ -5 \\end{pmatrix}$. Die x-Koordinate bleibt, die y-Koordinate wechselt das Vorzeichen — typisch für die Spiegelung an der x-Achse.",
+   "kc": [
+    "abbildungsmatrix",
+    "abbildung-anwenden"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-mx-105",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Welche der folgenden Matrizen ist eine (spalten-)stochastische Übergangsmatrix?",
+   "optionen": [
+    {
+     "text": "( 0,6  0,3 ; 0,4  0,7 )",
+     "richtig": true,
+     "erklaerung": "Richtig: Beide Spaltensummen sind 1 (0,6+0,4 und 0,3+0,7), alle Einträge liegen zwischen 0 und 1."
+    },
+    {
+     "text": "( 0,6  0,3 ; 0,3  0,7 )",
+     "richtig": false,
+     "erklaerung": "Die erste Spalte ergibt 0,6 + 0,3 = 0,9 ≠ 1 — also nicht stochastisch."
+    },
+    {
+     "text": "( 1,2  0,3 ; −0,2  0,7 )",
+     "richtig": false,
+     "erklaerung": "Ein Eintrag ist größer als 1 und einer negativ — Anteile müssen aber zwischen 0 und 1 liegen."
+    },
+    {
+     "text": "( 0,5  0,5 ; 0,5  0,5 )",
+     "richtig": true,
+     "erklaerung": "Richtig: Beide Spaltensummen sind 1 und alle Einträge liegen zwischen 0 und 1."
+    }
+   ],
+   "tipps": [
+    "Prüfe für jede Matrix die Summe jeder Spalte.",
+    "Alle Einträge müssen außerdem zwischen 0 und 1 liegen (es sind Anteile).",
+    "Zwei Matrizen erfüllen beide Bedingungen."
+   ],
+   "loesungsweg": "Eine Übergangsmatrix ist (spalten-)stochastisch, wenn jede Spalte die Summe $1$ hat und alle Einträge zwischen $0$ und $1$ liegen. Matrix 1 ($0{,}6+0{,}4 = 1$, $0{,}3+0{,}7 = 1$) und Matrix 4 ($0{,}5+0{,}5 = 1$) erfüllen das. Matrix 2 hat die Spaltensumme $0{,}9$, Matrix 3 enthält einen Eintrag $> 1$ und einen negativen — beide sind keine Übergangsmatrizen.",
+   "kc": [
+    "stochastische-matrix"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-mx-106",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Eine Übergangsmatrix $\\begin{pmatrix} 0{,}6 & 0{,}1 \\\\ 0{,}4 & 0{,}9 \\end{pmatrix}$ wirkt auf den Zustandsvektor $\\begin{pmatrix} 300 \\\\ 700 \\end{pmatrix}$. Bestimme den Zustand nach einem Schritt.",
+   "eingaben": [
+    {
+     "label": "1. Zustand danach",
+     "antwort": 250,
+     "toleranz": 0.5,
+     "einheit": ""
+    },
+    {
+     "label": "2. Zustand danach",
+     "antwort": 750,
+     "toleranz": 0.5,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Rechne U · v0 nach „Zeile mal Spalte“.",
+    "1. Zustand: 0,6·300 + 0,1·700.",
+    "2. Zustand: 0,4·300 + 0,9·700 = 750. Kontrolle: Summe bleibt 1000."
+   ],
+   "loesungsweg": "$\\begin{pmatrix} 0{,}6 & 0{,}1 \\\\ 0{,}4 & 0{,}9 \\end{pmatrix} \\cdot \\begin{pmatrix} 300 \\\\ 700 \\end{pmatrix} = \\begin{pmatrix} 0{,}6 \\cdot 300 + 0{,}1 \\cdot 700 \\\\ 0{,}4 \\cdot 300 + 0{,}9 \\cdot 700 \\end{pmatrix} = \\begin{pmatrix} 250 \\\\ 750 \\end{pmatrix}$. Die Gesamtzahl bleibt $1000$.",
+   "kc": [
+    "uebergangsmatrix",
+    "zustandsvektor"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-mx-107",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Was beschreibt die Potenz $U^n$ einer Übergangsmatrix?",
+   "optionen": [
+    {
+     "text": "Den Gesamtübergang über genau n Stufen (Schritte).",
+     "richtig": true,
+     "erklaerung": "Richtig: U^n fasst n Einzelschritte in einer Matrix zusammen."
+    },
+    {
+     "text": "Den Zustand nach n Schritten erhält man mit v_n = U^n · v_0.",
+     "richtig": true,
+     "erklaerung": "Richtig: Statt n-mal einzeln zu multiplizieren, wendet man die n-te Potenz auf den Startvektor an."
+    },
+    {
+     "text": "U^n ist nicht mehr stochastisch, sobald n > 1 ist.",
+     "richtig": false,
+     "erklaerung": "Auch jede Potenz einer stochastischen Matrix ist wieder stochastisch — die Spaltensummen bleiben 1."
+    },
+    {
+     "text": "Man berechnet U^n, indem man jeden Eintrag von U mit n potenziert.",
+     "richtig": false,
+     "erklaerung": "U^n entsteht durch wiederholtes Matrizenprodukt U·U·…·U, nicht durch eintragsweises Potenzieren."
+    }
+   ],
+   "tipps": [
+    "Erinnere dich: U² = U·U, U³ = U·U·U usw.",
+    "Bleiben die Spaltensummen bei Potenzen erhalten?",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussage 1 und 2: $U^n$ beschreibt den Gesamtübergang über $n$ Stufen, und der Zustand nach $n$ Schritten ist $\\vec{v}_n = U^n \\cdot \\vec{v}_0$. Aussage 3 ist falsch — auch Potenzen stochastischer Matrizen sind stochastisch. Aussage 4 ist falsch: $U^n$ entsteht durch wiederholtes Matrizenprodukt, nicht durch eintragsweises Potenzieren.",
+   "kc": [
+    "matrixpotenz",
+    "mehrstufiger-prozess"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-mx-108",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Eine Übergangsmatrix $U = \\begin{pmatrix} 0{,}8 & 0{,}3 \\\\ 0{,}2 & 0{,}7 \\end{pmatrix}$ startet mit $\\vec{v}_0 = \\begin{pmatrix} 1000 \\\\ 1000 \\end{pmatrix}$. Ergänze die Werte und Begriffe.",
+   "text": "Nach einem Schritt ist der 1. Zustand ___ und der 2. Zustand 900. Nach zwei Schritten ist der 1. Zustand ___. Der nächste Zustand entsteht stets durch v_neu = ___ · v_alt. Über n Schritte rechnet man kürzer mit v_n = ___ · v_0.",
+   "luecken": [
+    {
+     "art": "eingabe",
+     "antwort": "1100"
+    },
+    {
+     "art": "eingabe",
+     "antwort": "1150"
+    },
+    {
+     "art": "dropdown",
+     "antwort": "U",
+     "optionen": [
+      "U",
+      "v_0",
+      "U^n"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "U^n",
+     "optionen": [
+      "U^n",
+      "U",
+      "2U"
+     ]
+    }
+   ],
+   "tipps": [
+    "Erster Schritt: 1. Zustand = 0,8·1000 + 0,3·1000.",
+    "Zweiter Schritt: wende U auf den ersten Folgevektor (1100 | 900) an.",
+    "Über mehrere Schritte fasst die Potenz U^n alle Einzelschritte zusammen."
+   ],
+   "loesungsweg": "Erster Schritt: $\\vec{v}_1 = U \\cdot \\vec{v}_0 = \\begin{pmatrix} 0{,}8 \\cdot 1000 + 0{,}3 \\cdot 1000 \\\\ 0{,}2 \\cdot 1000 + 0{,}7 \\cdot 1000 \\end{pmatrix} = \\begin{pmatrix} 1100 \\\\ 900 \\end{pmatrix}$. Zweiter Schritt: $\\vec{v}_2 = U \\cdot \\vec{v}_1 = \\begin{pmatrix} 0{,}8 \\cdot 1100 + 0{,}3 \\cdot 900 \\\\ 0{,}2 \\cdot 1100 + 0{,}7 \\cdot 900 \\end{pmatrix} = \\begin{pmatrix} 1150 \\\\ 850 \\end{pmatrix}$. Der Folgezustand ist $\\vec{v}_{\\text{neu}} = U \\cdot \\vec{v}_{\\text{alt}}$, über $n$ Schritte $\\vec{v}_n = U^n \\cdot \\vec{v}_0$.",
+   "kc": [
+    "mehrstufiger-prozess",
+    "matrixpotenz"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-mx-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Aussagen über Matrizen und Übergangsprozesse sind richtig?",
+   "optionen": [
+    {
+     "text": "Bei einer (spalten-)stochastischen Übergangsmatrix ergibt jede Spalte in der Summe $1$.",
+     "richtig": true,
+     "erklaerung": "Die Spalten beschreiben Verteilungen, deren Anteile sich zu $1$ (bzw. $100\\,\\%$) addieren."
+    },
+    {
+     "text": "Das Matrizenprodukt ist immer kommutativ, also $A\\cdot B=B\\cdot A$.",
+     "richtig": false,
+     "erklaerung": "Im Allgemeinen gilt $A\\cdot B\\neq B\\cdot A$."
+    },
+    {
+     "text": "Ein Fixvektor $\\vec{v}$ erfüllt $U\\cdot\\vec{v}=\\vec{v}$.",
+     "richtig": true,
+     "erklaerung": "Er bleibt unter der Abbildung unverändert — die stationäre Verteilung ist ein solcher Fixvektor."
+    },
+    {
+     "text": "Die Potenz $U^n$ beschreibt den Zustandsübergang über $n$ Schritte.",
+     "richtig": true,
+     "erklaerung": "$U^n\\cdot\\vec{x}_0$ liefert den Zustand nach $n$ Schritten."
+    }
+   ],
+   "tipps": [
+    "Bei stochastischen Matrizen achtet man auf die Spaltensummen.",
+    "Die Reihenfolge spielt beim Matrizenprodukt eine Rolle.",
+    "Ein Fixvektor bleibt bei der Abbildung unverändert."
+   ],
+   "loesungsweg": "Richtig sind: Spaltensumme $1$ bei stochastischen Matrizen, $U\\cdot\\vec{v}=\\vec{v}$ für Fixvektoren und $U^n$ als $n$-Schritt-Übergang. Falsch ist nur die Behauptung, das Matrizenprodukt sei stets kommutativ.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Berechne das Produkt $\\begin{pmatrix} 2 & 1 \\\\ 3 & 4 \\end{pmatrix} \\cdot \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$ und gib beide Komponenten des Ergebnisvektors an.",
+   "eingaben": [
+    {
+     "label": "obere Komponente",
+     "antwort": 8,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "untere Komponente",
+     "antwort": 17,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Zeile mal Spalte: obere Zeile $(2\\ \\ 1)$ mit $\\begin{pmatrix}3\\\\2\\end{pmatrix}$.",
+    "Obere Komponente: $2\\cdot 3+1\\cdot 2$.",
+    "Untere Komponente: $3\\cdot 3+4\\cdot 2$."
+   ],
+   "loesungsweg": "Obere Komponente: $2\\cdot 3+1\\cdot 2=6+2=8$. Untere Komponente: $3\\cdot 3+4\\cdot 2=9+8=17$. Ergebnis: $\\begin{pmatrix}8\\\\17\\end{pmatrix}$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Berechne das Matrizenprodukt $\\begin{pmatrix} 1 & 2 \\\\ 0 & 3 \\end{pmatrix} \\cdot \\begin{pmatrix} 2 & 1 \\\\ 4 & 0 \\end{pmatrix}$. Gib die vier Einträge der Ergebnismatrix an (zeilenweise).",
+   "eingaben": [
+    {
+     "label": "Eintrag oben links",
+     "antwort": 10,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "Eintrag oben rechts",
+     "antwort": 1,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "Eintrag unten links",
+     "antwort": 12,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "Eintrag unten rechts",
+     "antwort": 0,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Jeder Eintrag ist „Zeile der ersten Matrix mal Spalte der zweiten Matrix“.",
+    "Oben links: $1\\cdot 2+2\\cdot 4$.",
+    "Oben rechts: $1\\cdot 1+2\\cdot 0$."
+   ],
+   "loesungsweg": "Oben links: $1\\cdot 2+2\\cdot 4=10$. Oben rechts: $1\\cdot 1+2\\cdot 0=1$. Unten links: $0\\cdot 2+3\\cdot 4=12$. Unten rechts: $0\\cdot 1+3\\cdot 0=0$. Ergebnis: $\\begin{pmatrix}10 & 1\\\\12 & 0\\end{pmatrix}$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Matrix $D=\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$ beschreibt eine Drehung um $90^\\circ$ um den Ursprung (gegen den Uhrzeigersinn). Bestimme das Bild $P'$ des Punktes $P(3 \\mid 2)$.",
+   "eingaben": [
+    {
+     "label": "$x'$",
+     "antwort": -2,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "$y'$",
+     "antwort": 3,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Wende die Matrix auf den Ortsvektor $\\begin{pmatrix}3\\\\2\\end{pmatrix}$ an.",
+    "$x'=0\\cdot 3+(-1)\\cdot 2$.",
+    "$y'=1\\cdot 3+0\\cdot 2$."
+   ],
+   "loesungsweg": "$D\\cdot\\begin{pmatrix}3\\\\2\\end{pmatrix}=\\begin{pmatrix}0\\cdot 3+(-1)\\cdot 2\\\\1\\cdot 3+0\\cdot 2\\end{pmatrix}=\\begin{pmatrix}-2\\\\3\\end{pmatrix}$. Also $P'(-2 \\mid 3)$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Übergangsmatrix $U=\\begin{pmatrix} 0{,}7 & 0{,}2 \\\\ 0{,}3 & 0{,}8 \\end{pmatrix}$ wirkt auf den Startzustand $\\vec{x}_0=\\begin{pmatrix} 100 \\\\ 200 \\end{pmatrix}$. Berechne den Zustand $\\vec{x}_1=U\\cdot\\vec{x}_0$ nach einem Schritt.",
+   "eingaben": [
+    {
+     "label": "obere Komponente von $\\vec{x}_1$",
+     "antwort": 110,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "untere Komponente von $\\vec{x}_1$",
+     "antwort": 190,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Matrix mal Vektor: Zeile mal Spalte.",
+    "Obere Komponente: $0{,}7\\cdot 100+0{,}2\\cdot 200$.",
+    "Untere Komponente: $0{,}3\\cdot 100+0{,}8\\cdot 200$."
+   ],
+   "loesungsweg": "Obere Komponente: $0{,}7\\cdot 100+0{,}2\\cdot 200=70+40=110$. Untere Komponente: $0{,}3\\cdot 100+0{,}8\\cdot 200=30+160=190$. Also $\\vec{x}_1=\\begin{pmatrix}110\\\\190\\end{pmatrix}$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Mit derselben Übergangsmatrix $U=\\begin{pmatrix} 0{,}7 & 0{,}2 \\\\ 0{,}3 & 0{,}8 \\end{pmatrix}$ und $\\vec{x}_0=\\begin{pmatrix} 100 \\\\ 200 \\end{pmatrix}$: Berechne den Zustand nach $\\textbf{zwei}$ Schritten, also $\\vec{x}_2=U\\cdot\\vec{x}_1$ (mit $\\vec{x}_1=\\begin{pmatrix}110\\\\190\\end{pmatrix}$).",
+   "eingaben": [
+    {
+     "label": "obere Komponente von $\\vec{x}_2$",
+     "antwort": 115,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "untere Komponente von $\\vec{x}_2$",
+     "antwort": 185,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Wende $U$ erneut auf $\\vec{x}_1=\\begin{pmatrix}110\\\\190\\end{pmatrix}$ an.",
+    "Obere Komponente: $0{,}7\\cdot 110+0{,}2\\cdot 190$.",
+    "Untere Komponente: $0{,}3\\cdot 110+0{,}8\\cdot 190$."
+   ],
+   "loesungsweg": "$\\vec{x}_2=U\\cdot\\vec{x}_1$: Obere Komponente $0{,}7\\cdot 110+0{,}2\\cdot 190=77+38=115$. Untere Komponente $0{,}3\\cdot 110+0{,}8\\cdot 190=33+152=185$. Also $\\vec{x}_2=\\begin{pmatrix}115\\\\185\\end{pmatrix}$. (Die Gesamtsumme $300$ bleibt erhalten.)",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Bestimme die stationäre Verteilung (Fixvektor) der Übergangsmatrix $U=\\begin{pmatrix} 0{,}8 & 0{,}3 \\\\ 0{,}2 & 0{,}7 \\end{pmatrix}$, deren Komponenten sich zu $1$ addieren.",
+   "eingaben": [
+    {
+     "label": "obere Komponente $v_1$",
+     "antwort": 0.6,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "untere Komponente $v_2$",
+     "antwort": 0.4,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Ansatz $U\\cdot\\vec{v}=\\vec{v}$ mit $v_1+v_2=1$.",
+    "Erste Zeile: $0{,}8\\,v_1+0{,}3\\,v_2=v_1\\Rightarrow 0{,}3\\,v_2=0{,}2\\,v_1$.",
+    "Daraus $v_2=\\frac{2}{3}v_1$; zusammen mit $v_1+v_2=1$ folgt $v_1=0{,}6$."
+   ],
+   "loesungsweg": "Fixvektor: $U\\cdot\\vec{v}=\\vec{v}$. Erste Zeile: $0{,}8\\,v_1+0{,}3\\,v_2=v_1\\Rightarrow 0{,}3\\,v_2=0{,}2\\,v_1\\Rightarrow v_2=\\frac{2}{3}v_1$. Mit $v_1+v_2=1$: $v_1+\\frac{2}{3}v_1=1\\Rightarrow \\frac{5}{3}v_1=1\\Rightarrow v_1=0{,}6$ und $v_2=0{,}4$. Probe: $U\\cdot\\begin{pmatrix}0{,}6\\\\0{,}4\\end{pmatrix}=\\begin{pmatrix}0{,}6\\\\0{,}4\\end{pmatrix}$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "In einer Stadt nutzen zwei Anbieter $A$ und $B$ einen Streamingdienst. Pro Monat bleiben $90\\,\\%$ der $A$-Kunden bei $A$, $80\\,\\%$ der $B$-Kunden bei $B$. Die Übergangsmatrix ist $U=\\begin{pmatrix} 0{,}9 & 0{,}2 \\\\ 0{,}1 & 0{,}8 \\end{pmatrix}$. Zu Beginn hat $A$ $600$ und $B$ $400$ Kunden. a) Wie viele Kunden hat $A$ nach einem Monat? b) Wie viele Kunden hat $A$ langfristig (stationärer Zustand, Gesamtzahl bleibt $1000$)?",
+   "eingaben": [
+    {
+     "label": "a) $A$-Kunden nach 1 Monat",
+     "antwort": 620,
+     "einheit": "",
+     "toleranz": 0.5
+    },
+    {
+     "label": "b) $A$-Kunden langfristig",
+     "antwort": 666.67,
+     "einheit": "",
+     "toleranz": 1
+    }
+   ],
+   "tipps": [
+    "a) $A$-Kunden: $0{,}9\\cdot 600+0{,}2\\cdot 400$.",
+    "b) Stationär: $U\\cdot\\vec{v}=\\vec{v}$ mit $v_A+v_B=1000$.",
+    "b) Aus $0{,}9\\,v_A+0{,}2\\,v_B=v_A$ folgt $v_B=0{,}5\\,v_A$, also $v_A=\\frac{2}{3}\\cdot 1000$."
+   ],
+   "loesungsweg": "a) $A$-Kunden nach einem Monat: $0{,}9\\cdot 600+0{,}2\\cdot 400=540+80=620$. b) Stationär: $0{,}9\\,v_A+0{,}2\\,v_B=v_A\\Rightarrow 0{,}2\\,v_B=0{,}1\\,v_A\\Rightarrow v_B=0{,}5\\,v_A$. Mit $v_A+v_B=1000$: $1{,}5\\,v_A=1000\\Rightarrow v_A=\\frac{2}{3}\\cdot 1000\\approx 666{,}67$ Kunden (und $v_B\\approx 333{,}33$).",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-301",
+   "typ": "freitext",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Tom überträgt eine Regel vom Zahlenrechnen aufs Rechnen mit Matrizen und behauptet: „Bei der Multiplikation ist die Reihenfolge egal, also gilt für quadratische Matrizen immer $A\\cdot B = B\\cdot A$.“ Nimm Stellung zu Toms Behauptung. Belege deine Antwort mit einem konkreten Zahlenbeispiel zweier $2\\times 2$-Matrizen.",
+   "musterloesung": "Toms Behauptung ist falsch. Die Matrizenmultiplikation ist im Allgemeinen nicht kommutativ — das ist einer der wichtigsten Unterschiede zum Rechnen mit gewöhnlichen Zahlen. Für die meisten Matrizenpaare gilt $A\\cdot B\\neq B\\cdot A$. Gegenbeispiel: Mit $A=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ und $B=\\begin{pmatrix}1&0\\\\1&1\\end{pmatrix}$ erhält man $A\\cdot B=\\begin{pmatrix}1\\cdot 1+1\\cdot 1 & 1\\cdot 0+1\\cdot 1\\\\0\\cdot 1+1\\cdot 1 & 0\\cdot 0+1\\cdot 1\\end{pmatrix}=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix}$, aber $B\\cdot A=\\begin{pmatrix}1\\cdot 1+0\\cdot 0 & 1\\cdot 1+0\\cdot 1\\\\1\\cdot 1+1\\cdot 0 & 1\\cdot 1+1\\cdot 1\\end{pmatrix}=\\begin{pmatrix}1&1\\\\1&2\\end{pmatrix}$. Die beiden Ergebnisse sind verschieden, also $A\\cdot B\\neq B\\cdot A$. Anschaulich liegt das daran, dass Matrizen Abbildungen beschreiben: Erst $B$ und dann $A$ anzuwenden ist etwas anderes als die umgekehrte Reihenfolge — wie „erst drehen, dann spiegeln“ gegenüber „erst spiegeln, dann drehen“. Es gibt zwar Sonderfälle, in denen die Reihenfolge doch egal ist (z. B. wenn eine Matrix die Einheitsmatrix ist), aber als allgemeine Regel ist Toms Aussage nicht haltbar.",
+   "tipps": [
+    "Prüfe die Behauptung an einem einfachen Beispiel, statt sie zu glauben.",
+    "Wähle zwei verschiedene $2\\times 2$-Matrizen und berechne $A\\cdot B$ und $B\\cdot A$ getrennt.",
+    "Denke an die Deutung als Hintereinanderausführung von Abbildungen — spielt dort die Reihenfolge eine Rolle?"
+   ],
+   "loesungsweg": "Die Matrizenmultiplikation ist im Allgemeinen nicht kommutativ. Gegenbeispiel: $A=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$, $B=\\begin{pmatrix}1&0\\\\1&1\\end{pmatrix}$ liefern $A\\cdot B=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix}\\neq\\begin{pmatrix}1&1\\\\1&2\\end{pmatrix}=B\\cdot A$. Da $A\\cdot B\\neq B\\cdot A$, ist Toms Regel widerlegt; sie gilt höchstens in Sonderfällen.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-302",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine spaltenstochastische Übergangsmatrix $U$ beschreibt einen Prozess mit zwei Zuständen. Welche Aussagen über solche Matrizen und ihr Langzeitverhalten sind richtig?",
+   "optionen": [
+    {
+     "text": "In jeder Spalte einer spaltenstochastischen Matrix ergibt die Summe der Einträge genau $1$.",
+     "richtig": true,
+     "erklaerung": "Richtig: Jede Spalte beschreibt, wohin ein Zustand vollständig übergeht — die Anteile summieren sich zu $1$."
+    },
+    {
+     "text": "Alle Einträge einer Übergangsmatrix liegen zwischen $0$ und $1$, weil sie Anteile bzw. Wahrscheinlichkeiten sind.",
+     "richtig": true,
+     "erklaerung": "Richtig: Negative Anteile oder Anteile über $1$ wären sinnlos."
+    },
+    {
+     "text": "Ein Fixvektor $\\vec{v}$ erfüllt $U\\cdot\\vec{v}=\\vec{v}$ und ändert sich beim weiteren Anwenden der Matrix nicht mehr.",
+     "richtig": true,
+     "erklaerung": "Richtig: Genau das ist die definierende Eigenschaft eines Fixvektors (stationäre Verteilung)."
+    },
+    {
+     "text": "Bei einem mehrstufigen Prozess wächst die Gesamtzahl der Objekte mit jedem Schritt, weil die Matrix die Werte streckt.",
+     "richtig": false,
+     "erklaerung": "Falsch: Eine spaltenstochastische Matrix erhält die Gesamtsumme der Objekte — sie verteilt sie nur um, sie vermehrt sie nicht."
+    }
+   ],
+   "tipps": [
+    "Was bedeutet 'spaltenstochastisch' für die Summe der Einträge einer Spalte?",
+    "Die Einträge sind Anteile — welcher Zahlenbereich ist dafür sinnvoll?",
+    "Ein Fixvektor bleibt unter $U$ unverändert; überlege, was mit der Gesamtsumme der Objekte über die Schritte passiert."
+   ],
+   "loesungsweg": "Spaltenstochastisch heißt: Jede Spaltensumme ist $1$, alle Einträge liegen in $[0,1]$. Ein Fixvektor erfüllt $U\\cdot\\vec{v}=\\vec{v}$ (stationäre Verteilung). Da jede Spaltensumme $1$ ist, bleibt die Gesamtzahl der Objekte über alle Schritte erhalten — sie wächst nicht. Damit sind die ersten drei Aussagen richtig, die vierte ist falsch.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-303",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze den Lösungsweg zur Bestimmung des Fixvektors der Übergangsmatrix $U=\\begin{pmatrix} 0{,}7 & 0{,}4 \\\\ 0{,}3 & 0{,}6 \\end{pmatrix}$, dessen Komponenten sich zu $1$ addieren.",
+   "text": "Gesucht ist $\\vec{v}=\\begin{pmatrix} a \\\\ b \\end{pmatrix}$ mit $U\\cdot\\vec{v}=$ ___. Die erste Zeile liefert die Gleichung $0{,}7a + 0{,}4b = a$, also $0{,}4b = $ ___ $\\cdot a$. Zusammen mit der Nebenbedingung $a + b = $ ___ erhält man $a = $ ___ (gerundet) und $b = 0{,}4286$.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "\\vec{v}",
+     "optionen": [
+      "\\vec{v}",
+      "\\vec{0}",
+      "U"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "0{,}3",
+     "optionen": [
+      "0{,}3",
+      "0{,}7",
+      "0{,}4"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "1",
+     "optionen": [
+      "1",
+      "0",
+      "100"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "0{,}5714",
+     "optionen": [
+      "0{,}5714",
+      "0{,}5",
+      "0{,}7"
+     ]
+    }
+   ],
+   "tipps": [
+    "Ein Fixvektor erfüllt $U\\cdot\\vec{v}=\\vec{v}$ — der Vektor bleibt unter der Abbildung unverändert.",
+    "Erste Zeile: $0{,}7a+0{,}4b=a$ umstellen zu $0{,}4b=0{,}3a$.",
+    "Mit $a+b=1$ und $0{,}4b=0{,}3a$ folgt $a=\\frac{4}{7}\\approx 0{,}5714$, $b=\\frac{3}{7}\\approx 0{,}4286$."
+   ],
+   "loesungsweg": "Fixvektor-Bedingung: $U\\cdot\\vec{v}=\\vec{v}$. Erste Zeile: $0{,}7a+0{,}4b=a\\Rightarrow 0{,}4b=0{,}3a$. Nebenbedingung $a+b=1$. Aus $0{,}4b=0{,}3a$ folgt $b=0{,}75a$; eingesetzt: $a+0{,}75a=1\\Rightarrow 1{,}75a=1\\Rightarrow a=\\frac{1}{1{,}75}=\\frac{4}{7}\\approx 0{,}5714$ und $b=\\frac{3}{7}\\approx 0{,}4286$. Der Fixvektor ist $\\vec{v}\\approx\\begin{pmatrix}0{,}5714\\\\0{,}4286\\end{pmatrix}$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-304",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "In einer Bibliothek ist jedes Buch entweder „verfügbar im Regal“ (R) oder „ausgeliehen“ (A). Pro Woche werden $20\\,\\%$ der Regalbücher ausgeliehen ($80\\,\\%$ bleiben im Regal); von den ausgeliehenen Büchern kommen $50\\,\\%$ zurück ins Regal ($50\\,\\%$ bleiben ausgeliehen). Zu Wochenbeginn sind $600$ Bücher im Regal und $400$ ausgeliehen. Die Übergangsmatrix ist $U=\\begin{pmatrix} 0{,}8 & 0{,}5 \\\\ 0{,}2 & 0{,}5 \\end{pmatrix}$ mit dem Startvektor $\\vec{x}_0=\\begin{pmatrix} 600 \\\\ 400 \\end{pmatrix}$. Berechne die Verteilung nach einer Woche, $\\vec{x}_1 = U\\cdot\\vec{x}_0$.",
+   "eingaben": [
+    {
+     "label": "Bücher im Regal nach 1 Woche",
+     "antwort": 680,
+     "toleranz": 1,
+     "einheit": ""
+    },
+    {
+     "label": "Ausgeliehene Bücher nach 1 Woche",
+     "antwort": 320,
+     "toleranz": 1,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Matrix-Vektor-Produkt: erste Komponente $=0{,}8\\cdot 600 + 0{,}5\\cdot 400$.",
+    "Zweite Komponente $=0{,}2\\cdot 600 + 0{,}5\\cdot 400$.",
+    "Kontrolle: Die beiden Ergebnisse müssen zusammen wieder $1000$ Bücher ergeben."
+   ],
+   "loesungsweg": "$\\vec{x}_1=U\\cdot\\vec{x}_0=\\begin{pmatrix}0{,}8\\cdot 600+0{,}5\\cdot 400\\\\0{,}2\\cdot 600+0{,}5\\cdot 400\\end{pmatrix}=\\begin{pmatrix}480+200\\\\120+200\\end{pmatrix}=\\begin{pmatrix}680\\\\320\\end{pmatrix}$. Nach einer Woche stehen $680$ Bücher im Regal und $320$ sind ausgeliehen. Kontrolle: $680+320=1000$ — die Gesamtzahl bleibt erhalten.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  }
+ ]
+}

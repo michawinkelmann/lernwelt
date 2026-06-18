@@ -1,0 +1,282 @@
+{
+  "thema": "ph-08-widerstand-und-schaltungen",
+  "fach": "physik",
+  "stufe": "klasse-8",
+  "aufgaben": [
+    {
+      "id": "ph-08-wid-001",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über den elektrischen Widerstand sind richtig?",
+      "optionen": [
+        { "text": "Der Widerstand $R$ gibt an, wie stark ein Bauteil den Strom behindert.", "richtig": true, "erklaerung": "Richtig: Je größer der Widerstand, desto stärker wird der Strom gebremst." },
+        { "text": "Bei gleicher Spannung fließt durch den größeren Widerstand weniger Strom.", "richtig": true, "erklaerung": "Richtig: $I = \\frac{U}{R}$ — wächst $R$ bei fester Spannung, wird $I$ kleiner." },
+        { "text": "Die Einheit des Widerstands ist das Volt.", "richtig": false, "erklaerung": "Das Volt ist die Einheit der Spannung. Der Widerstand wird in Ohm gemessen: $1\\,\\Omega = 1\\,\\frac{\\text{V}}{\\text{A}}$." },
+        { "text": "Ein kurzes, dickes Kupferkabel hat einen besonders großen Widerstand.", "richtig": false, "erklaerung": "Genau umgekehrt: Kupfer leitet sehr gut, und kurz und dick bedeutet besonders wenig Widerstand — deshalb baut man Leitungen aus Kupfer." }
+      ],
+      "tipps": [
+        "Im Wort Widerstand steckt schon die Bedeutung: Etwas widersetzt sich dem Strom.",
+        "Denk an die Formel $R = \\frac{U}{I}$ — und daran, welche Einheit zu welcher Größe gehört.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Der Widerstand beschreibt, wie stark ein Bauteil den Strom behindert — bei gleicher Spannung fließt durch den größeren Widerstand der kleinere Strom. Die Einheit des Widerstands ist das Ohm ($\\Omega$), nicht das Volt. Und ein kurzes, dickes Kupferkabel hat einen besonders kleinen Widerstand.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-002",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zum elektrischen Widerstand.",
+      "text": "Der Widerstand $R$ gibt an, wie stark ein Bauteil den Strom behindert. Man berechnet ihn mit $R = \\frac{U}{I}$. Seine Einheit ist das ___ . Je größer der Widerstand, desto ___ ist die Stromstärke bei gleicher Spannung. Ist die Kennlinie eine Ursprungsgerade, ist der Widerstand ___ .",
+      "luecken": [
+        { "art": "dropdown", "antwort": "Ohm", "optionen": ["Ohm", "Volt", "Ampere"] },
+        { "art": "dropdown", "antwort": "kleiner", "optionen": ["kleiner", "größer", "unverändert"] },
+        { "art": "dropdown", "antwort": "konstant", "optionen": ["konstant", "null", "unendlich groß"] }
+      ],
+      "tipps": [
+        "Die Einheit des Widerstands ist nach Georg Simon Ohm benannt.",
+        "Ein größerer Widerstand bremst den Strom stärker.",
+        "Eine Gerade durch den Ursprung bedeutet: $U$ und $I$ sind proportional — ihr Quotient ändert sich nicht."
+      ],
+      "loesungsweg": "Die Einheit des Widerstands ist das Ohm ($\\Omega$). Je größer der Widerstand, desto kleiner die Stromstärke bei gleicher Spannung. Eine Ursprungsgerade als Kennlinie bedeutet: $U$ und $I$ sind proportional, der Quotient $R = \\frac{U}{I}$ ist konstant — das ist das ohmsche Gesetz.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-003",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Berechne jeweils den Widerstand: (a) Durch ein Lämpchen fließen bei $6\\,\\text{V}$ genau $0{,}5\\,\\text{A}$. (b) Durch den Heizdraht eines Toasters fließen bei $230\\,\\text{V}$ genau $5\\,\\text{A}$.",
+      "eingaben": [
+        { "label": "$R$ (Lämpchen)", "antwort": 12, "toleranz": 0.1, "einheit": "Ω" },
+        { "label": "$R$ (Heizdraht)", "antwort": 46, "toleranz": 0.5, "einheit": "Ω" }
+      ],
+      "tipps": [
+        "Widerstand = Spannung geteilt durch Stromstärke: $R = \\frac{U}{I}$.",
+        "(a) $6 : 0{,}5$ — wie oft passt $0{,}5$ in $6$?",
+        "(b) $230 : 5$."
+      ],
+      "loesungsweg": "(a) $R = \\frac{U}{I} = \\frac{6\\,\\text{V}}{0{,}5\\,\\text{A}} = 12\\,\\Omega$. (b) $R = \\frac{230\\,\\text{V}}{5\\,\\text{A}} = 46\\,\\Omega$. Der Heizdraht hat fast den vierfachen Widerstand des Lämpchens.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-004",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Stelle die Widerstandsformel passend um: (a) Ein $30\\,\\Omega$-Widerstand liegt an $9\\,\\text{V}$ — berechne die Stromstärke. (b) Durch einen $50\\,\\Omega$-Widerstand fließen $0{,}12\\,\\text{A}$ — berechne die anliegende Spannung.",
+      "eingaben": [
+        { "label": "$I$", "antwort": 0.3, "toleranz": 0.005, "einheit": "A" },
+        { "label": "$U$", "antwort": 6, "toleranz": 0.05, "einheit": "V" }
+      ],
+      "tipps": [
+        "Aus $R = \\frac{U}{I}$ folgt umgestellt: $I = \\frac{U}{R}$ und $U = R \\cdot I$.",
+        "(a) $9 : 30$.",
+        "(b) $50 \\cdot 0{,}12$."
+      ],
+      "loesungsweg": "(a) $I = \\frac{U}{R} = \\frac{9\\,\\text{V}}{30\\,\\Omega} = 0{,}3\\,\\text{A}$. (b) $U = R \\cdot I = 50\\,\\Omega \\cdot 0{,}12\\,\\text{A} = 6\\,\\text{V}$.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-005",
+      "typ": "zuordnung",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Reihen- oder Parallelschaltung? Ordne jeder Eigenschaft die passende Aussage zu.",
+      "paare": [
+        { "links": "Reihenschaltung: Gesamtwiderstand", "rechts": "Summe der Einzelwiderstände" },
+        { "links": "Reihenschaltung: Stromstärke", "rechts": "überall gleich groß" },
+        { "links": "Parallelschaltung: Spannung", "rechts": "an beiden Widerständen gleich" },
+        { "links": "Parallelschaltung: Gesamtwiderstand", "rechts": "kleiner als jeder Einzelwiderstand" }
+      ],
+      "tipps": [
+        "In der Reihenschaltung gibt es nur einen Stromweg — was heißt das für die Stromstärke?",
+        "In der Parallelschaltung hängt jeder Widerstand direkt an den beiden Polen der Quelle.",
+        "Jeder zusätzliche parallele Zweig öffnet dem Strom einen weiteren Weg — was macht das mit dem Gesamtwiderstand?"
+      ],
+      "loesungsweg": "Reihenschaltung: Die Widerstände addieren sich ($R_\\text{ges} = R_1 + R_2$), und die Stromstärke ist überall gleich groß, weil es nur einen Weg gibt. Parallelschaltung: An beiden Widerständen liegt dieselbe Spannung — die der Quelle —, und der Gesamtwiderstand ist kleiner als jeder Einzelwiderstand, weil jeder Zweig einen zusätzlichen Stromweg öffnet.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-006",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Widerstände $R_1 = 15\\,\\Omega$ und $R_2 = 45\\,\\Omega$ liegen in Reihe an einem Netzgerät mit $U = 12\\,\\text{V}$. Berechne (a) den Gesamtwiderstand, (b) die Stromstärke im Stromkreis, (c) die Teilspannung an $R_2$.",
+      "eingaben": [
+        { "label": "$R_\\text{ges}$", "antwort": 60, "toleranz": 0.5, "einheit": "Ω" },
+        { "label": "$I$", "antwort": 0.2, "toleranz": 0.005, "einheit": "A" },
+        { "label": "$U_2$", "antwort": 9, "toleranz": 0.1, "einheit": "V" }
+      ],
+      "tipps": [
+        "In der Reihenschaltung addieren sich die Widerstände: $R_\\text{ges} = R_1 + R_2$.",
+        "Die Stromstärke folgt aus Gesamtspannung und Gesamtwiderstand: $I = \\frac{U}{R_\\text{ges}}$.",
+        "Für die Teilspannung gilt $U_2 = R_2 \\cdot I$ — durch beide Widerstände fließt ja derselbe Strom."
+      ],
+      "loesungsweg": "(a) $R_\\text{ges} = 15\\,\\Omega + 45\\,\\Omega = 60\\,\\Omega$. (b) $I = \\frac{U}{R_\\text{ges}} = \\frac{12\\,\\text{V}}{60\\,\\Omega} = 0{,}2\\,\\text{A}$. (c) $U_2 = R_2 \\cdot I = 45\\,\\Omega \\cdot 0{,}2\\,\\text{A} = 9\\,\\text{V}$. Kontrolle: $U_1 = 15\\,\\Omega \\cdot 0{,}2\\,\\text{A} = 3\\,\\text{V}$, und $3\\,\\text{V} + 9\\,\\text{V} = 12\\,\\text{V}$ — passt.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-007",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Zwei verschieden große Widerstände hängen parallel an einer Batterie. Welche Aussagen sind richtig?",
+      "optionen": [
+        { "text": "An beiden Widerständen liegt die volle Spannung der Batterie an.", "richtig": true, "erklaerung": "Richtig: Jeder Zweig ist direkt mit beiden Polen verbunden — parallel heißt gleiche Spannung." },
+        { "text": "Die Zweigströme addieren sich zur Gesamtstromstärke.", "richtig": true, "erklaerung": "Richtig: Am Knoten fließt zusammen so viel hinein, wie in die Zweige hinausfließt: $I = I_1 + I_2$." },
+        { "text": "Der Gesamtwiderstand ist die Summe der beiden Einzelwiderstände.", "richtig": false, "erklaerung": "Das gilt für die Reihenschaltung. Parallel ist der Gesamtwiderstand kleiner als jeder Einzelwiderstand — jeder Zweig öffnet einen weiteren Stromweg." },
+        { "text": "Durch beide Widerstände fließt immer gleich viel Strom.", "richtig": false, "erklaerung": "Nur wenn beide gleich groß sind. Wegen $I = \\frac{U}{R}$ fließt durch den kleineren Widerstand der größere Strom." }
+      ],
+      "tipps": [
+        "Parallel heißt: Jeder Widerstand hängt direkt an den beiden Polen der Quelle.",
+        "Stell dir den Knoten als Kreuzung vor: Was hineinfließt, muss auch wieder hinaus.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: In der Parallelschaltung liegt an jedem Zweig die volle Quellenspannung, und die Zweigströme addieren sich ($I = I_1 + I_2$). Die Summenformel für Widerstände gilt nur in der Reihenschaltung — parallel sinkt der Gesamtwiderstand unter jeden Einzelwert. Und weil $I = \\frac{U}{R}$ ist, fließt durch den kleineren Widerstand der größere Strom.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-008",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "$R_1 = 40\\,\\Omega$ und $R_2 = 60\\,\\Omega$ liegen parallel an $U = 12\\,\\text{V}$. Berechne die Zweigströme $I_1$ und $I_2$ sowie die Gesamtstromstärke $I$.",
+      "eingaben": [
+        { "label": "$I_1$", "antwort": 0.3, "toleranz": 0.005, "einheit": "A" },
+        { "label": "$I_2$", "antwort": 0.2, "toleranz": 0.005, "einheit": "A" },
+        { "label": "$I$", "antwort": 0.5, "toleranz": 0.01, "einheit": "A" }
+      ],
+      "tipps": [
+        "An beiden Widerständen liegt die volle Spannung von $12\\,\\text{V}$ an.",
+        "Jeden Zweig einzeln rechnen: $I_1 = \\frac{U}{R_1}$ und $I_2 = \\frac{U}{R_2}$.",
+        "Die Zweigströme addieren sich: $I = I_1 + I_2$."
+      ],
+      "loesungsweg": "$I_1 = \\frac{12\\,\\text{V}}{40\\,\\Omega} = 0{,}3\\,\\text{A}$ und $I_2 = \\frac{12\\,\\text{V}}{60\\,\\Omega} = 0{,}2\\,\\text{A}$. Zusammen: $I = 0{,}3\\,\\text{A} + 0{,}2\\,\\text{A} = 0{,}5\\,\\text{A}$. Nebenbei: Der Gesamtwiderstand ist $R_\\text{ges} = \\frac{12\\,\\text{V}}{0{,}5\\,\\text{A}} = 24\\,\\Omega$ — kleiner als $R_1$ und $R_2$, wie es bei der Parallelschaltung sein muss.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-009",
+      "typ": "reihenfolge",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Du sollst eine Reihenschaltung aus zwei bekannten Widerständen an einer bekannten Spannung vollständig durchrechnen. Bringe die Rechenschritte in eine sinnvolle Reihenfolge.",
+      "elemente": [
+        "Gesamtwiderstand berechnen: beide Widerstände addieren",
+        "Stromstärke berechnen: Spannung durch den Gesamtwiderstand teilen",
+        "Teilspannungen berechnen: jeweils Widerstand mal Stromstärke",
+        "Kontrolle: Die Teilspannungen müssen zusammen die Gesamtspannung ergeben"
+      ],
+      "tipps": [
+        "Ohne den Gesamtwiderstand kannst du die Stromstärke noch nicht ausrechnen.",
+        "Erst wenn du die Stromstärke kennst, kommst du an die Teilspannungen ($U = R \\cdot I$).",
+        "Die Kontrolle steht ganz am Ende: $U_1 + U_2 = U$."
+      ],
+      "loesungsweg": "Zuerst den Gesamtwiderstand bilden ($R_\\text{ges} = R_1 + R_2$), damit lässt sich die Stromstärke $I = \\frac{U}{R_\\text{ges}}$ berechnen. Mit $I$ folgen die Teilspannungen $U_1 = R_1 \\cdot I$ und $U_2 = R_2 \\cdot I$. Zum Schluss die Kontrolle: $U_1 + U_2$ muss die Gesamtspannung $U$ ergeben.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-010",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Text zu Schaltungen im Alltag.",
+      "text": "In der Hausinstallation sind alle Steckdosen und Lampen ___ geschaltet — so bekommt jedes Gerät die vollen $230\\,\\text{V}$. Mit jedem zusätzlich eingeschalteten Gerät wird die Gesamtstromstärke ___ . Wird sie zu groß für die Leitung, unterbricht die ___ den Stromkreis.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "parallel", "optionen": ["parallel", "in Reihe", "gar nicht"] },
+        { "art": "dropdown", "antwort": "größer", "optionen": ["größer", "kleiner", "null"] },
+        { "art": "dropdown", "antwort": "Sicherung", "optionen": ["Sicherung", "Batterie", "Steckdose"] }
+      ],
+      "tipps": [
+        "Hingen die Geräte in Reihe, gingen alle aus, sobald du eines ausschaltest.",
+        "Jedes zusätzliche Gerät öffnet einen weiteren Stromweg — der Gesamtwiderstand sinkt.",
+        "Das Schutzbauteil sitzt im Sicherungskasten — der Name verrät es."
+      ],
+      "loesungsweg": "In der Hausinstallation ist alles parallel geschaltet: Jedes Gerät bekommt die vollen $230\\,\\text{V}$ und lässt sich unabhängig schalten. Jedes zusätzlich eingeschaltete Gerät öffnet einen weiteren Stromweg — der Gesamtwiderstand sinkt, die Gesamtstromstärke wird größer. Wird sie zu groß, unterbricht die Sicherung den Stromkreis, bevor die Leitung überhitzt.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-011",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Widerstände $R_1 = 30\\,\\Omega$ und $R_2 = 60\\,\\Omega$ liegen parallel an $U = 6\\,\\text{V}$. Berechne den Gesamtwiderstand mit der Bruchformel und prüfe dein Ergebnis über die Zweigströme.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne $R_\\text{ges}$ mit $\\frac{1}{R_\\text{ges}} = \\frac{1}{R_1} + \\frac{1}{R_2}$.",
+          "eingaben": [{ "label": "$R_\\text{ges}$", "antwort": 20, "toleranz": 0.5, "einheit": "Ω" }],
+          "tipps": ["Hauptnenner $60$: $\\frac{1}{30} + \\frac{1}{60} = \\frac{2}{60} + \\frac{1}{60} = \\frac{3}{60}$ — und zum Schluss den Kehrwert nehmen."]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Gesamtstromstärke $I = \\frac{U}{R_\\text{ges}}$.",
+          "eingaben": [{ "label": "$I$", "antwort": 0.3, "toleranz": 0.005, "einheit": "A" }],
+          "tipps": ["$6 : 20$."]
+        },
+        {
+          "frage": "Schritt 3: Kontrolle — berechne die Zweigströme $I_1 = \\frac{U}{R_1}$ und $I_2 = \\frac{U}{R_2}$. Ihre Summe muss die Gesamtstromstärke ergeben.",
+          "eingaben": [
+            { "label": "$I_1$", "antwort": 0.2, "toleranz": 0.005, "einheit": "A" },
+            { "label": "$I_2$", "antwort": 0.1, "toleranz": 0.005, "einheit": "A" }
+          ],
+          "tipps": ["$6 : 30$ und $6 : 60$ — zusammen sollte wieder $0{,}3\\,\\text{A}$ herauskommen."]
+        }
+      ],
+      "tipps": [
+        "Bring die Brüche auf den Hauptnenner $60$ und addiere sie.",
+        "Die Bruchformel liefert zunächst $\\frac{1}{R_\\text{ges}}$ — vergiss am Ende den Kehrwert nicht.",
+        "Plausibilität: Der Gesamtwiderstand muss kleiner als $30\\,\\Omega$ sein — sonst steckt ein Fehler in der Rechnung."
+      ],
+      "loesungsweg": "$\\frac{1}{R_\\text{ges}} = \\frac{1}{30} + \\frac{1}{60} = \\frac{2}{60} + \\frac{1}{60} = \\frac{3}{60} = \\frac{1}{20}$, also $R_\\text{ges} = 20\\,\\Omega$. Damit ist $I = \\frac{6\\,\\text{V}}{20\\,\\Omega} = 0{,}3\\,\\text{A}$. Kontrolle: $I_1 = \\frac{6\\,\\text{V}}{30\\,\\Omega} = 0{,}2\\,\\text{A}$ und $I_2 = \\frac{6\\,\\text{V}}{60\\,\\Omega} = 0{,}1\\,\\text{A}$ — zusammen $0{,}3\\,\\text{A}$, wie berechnet.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-012",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: $R_1 = 20\\,\\Omega$ liegt in Reihe mit einer Parallelschaltung aus zwei gleichen Widerständen $R_2 = R_3 = 60\\,\\Omega$. Die Quelle liefert $U = 10\\,\\text{V}$. Berechne (a) den Ersatzwiderstand der beiden parallelen Widerstände, (b) den Gesamtwiderstand der Schaltung, (c) die Stromstärke, die die Quelle liefert.",
+      "eingaben": [
+        { "label": "$R_\\text{parallel}$", "antwort": 30, "toleranz": 0.5, "einheit": "Ω" },
+        { "label": "$R_\\text{ges}$", "antwort": 50, "toleranz": 0.5, "einheit": "Ω" },
+        { "label": "$I$", "antwort": 0.2, "toleranz": 0.005, "einheit": "A" }
+      ],
+      "tipps": [
+        "Zwei gleiche Widerstände parallel wirken zusammen wie der halbe Einzelwiderstand.",
+        "Ersetze die Parallelschaltung gedanklich durch ihren Ersatzwiderstand — übrig bleibt eine einfache Reihenschaltung.",
+        "Am Ende: $I = \\frac{U}{R_\\text{ges}}$."
+      ],
+      "loesungsweg": "(a) Zwei gleiche $60\\,\\Omega$-Widerstände parallel ergeben den halben Wert: $R_\\text{parallel} = 30\\,\\Omega$. (b) Dieser Ersatzwiderstand liegt in Reihe mit $R_1$: $R_\\text{ges} = 20\\,\\Omega + 30\\,\\Omega = 50\\,\\Omega$. (c) $I = \\frac{U}{R_\\text{ges}} = \\frac{10\\,\\text{V}}{50\\,\\Omega} = 0{,}2\\,\\text{A}$. So knackt man jede gemischte Schaltung: Schritt für Schritt durch Ersatzwiderstände vereinfachen.",
+      "kc": ["widerstand-und-schaltungen"]
+    },
+    {
+      "id": "ph-08-wid-013",
+      "typ": "freitext",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Für den Widerstand eines Drahtes gilt $R = \\frac{\\rho \\cdot l}{A}$ — mit der Länge $l$, der Querschnittsfläche $A$ und der Materialkonstante $\\rho$. (a) Begründe, warum ein doppelt so langer Draht den doppelten Widerstand hat. (b) Begründe, warum man für stark belastete Leitungen besonders dicke Adern verlegt. (c) Berechne den Widerstand einer $20\\,\\text{m}$ langen Kupferader mit $A = 1{,}5\\,\\text{mm}^2$ ($\\rho = 0{,}0178\\,\\frac{\\Omega \\cdot \\text{mm}^2}{\\text{m}}$).",
+      "musterloesung": "(a) Ein doppelt so langer Draht wirkt wie zwei gleiche Drahtstücke in Reihe: Die Widerstände addieren sich, also verdoppelt sich $R$ — in der Formel steht $l$ deshalb im Zähler. (b) Ein dickerer Draht bietet dem Strom mehr nebeneinanderliegende Wege, wie eine Parallelschaltung aus vielen dünnen Drähten: Je größer $A$, desto kleiner $R$ ($A$ steht im Nenner). Der kleinere Widerstand hält bei großen Strömen die Erwärmung und die Verluste in der Leitung klein — deshalb dicke Adern. (c) $R = \\frac{0{,}0178 \\cdot 20}{1{,}5}\\,\\Omega = \\frac{0{,}356}{1{,}5}\\,\\Omega \\approx 0{,}24\\,\\Omega$. Der Widerstand der Leitung ist also winzig im Vergleich zu typischen Geräten — genau so soll es sein.",
+      "tipps": [
+        "Stell dir den doppelt so langen Draht als zwei gleiche Stücke hintereinander vor — welche Schaltung ist das?",
+        "Ein dicker Draht ist wie viele dünne Drähte nebeneinander — welche Schaltung ist das, und was passiert mit dem Gesamtwiderstand?",
+        "(c) Erst $\\rho \\cdot l$ rechnen, dann durch $A$ teilen — die Einheiten $\\text{m}$ und $\\text{mm}^2$ kürzen sich gegen die Einheit von $\\rho$ weg."
+      ],
+      "loesungsweg": "Kern: Die Länge wirkt wie eine Reihenschaltung (Widerstände addieren sich, $R$ wächst proportional zu $l$), der Querschnitt wie eine Parallelschaltung (mehr Wege, $R$ sinkt mit wachsendem $A$). Einsetzen liefert $R = \\frac{0{,}0178 \\cdot 20}{1{,}5}\\,\\Omega \\approx 0{,}24\\,\\Omega$ — Leitungen haben im Vergleich zu Geräten einen sehr kleinen Widerstand.",
+      "kc": ["widerstand-und-schaltungen", "argumentieren"]
+    }
+  ]
+}

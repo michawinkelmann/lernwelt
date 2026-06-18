@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hypothesentests — Qualifikationsphase · Mathematik — Lernwelt</title>
+<meta name="description" content="Nullhypothese und Gegenhypothese aufstellen, Ablehnungsbereiche über kumulierte Binomialwahrscheinlichkeiten bestimmen, Fehler 1. und 2. Art unterscheiden, links-, rechts- und zweiseitige Tests — mit Histogramm, Beispielen, Verständnis-Checks und Übungen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .werte-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .werte-tabelle th, .werte-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: center; }
+  .werte-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Hypothesentests</h1>
+  <p class="einleitung">„Bei diesem Würfel kommt die Sechs viel zu oft — der ist doch gezinkt!“ Solche Sätze fallen schnell. Aber wie prüft man so einen Verdacht fair? Einfach würfeln und zählen reicht nicht, denn auch ein einwandfreier Würfel liefert mal sieben, mal dreizehn Sechsen bei 60 Würfen. Dieselbe Frage steckt in vielen Situationen: Wirkt das neue Medikament wirklich besser — oder hatte die Studie nur Glück? Hält der Online-Shop sein Werbeversprechen „98&nbsp;% pünktliche Lieferungen“? Ein <strong>Hypothesentest</strong> macht aus dem Bauchgefühl ein faires Verfahren: Er legt <em>vor</em> der Stichprobe fest, ab welchem Ergebnis eine Behauptung verworfen wird — und hält dabei das Risiko eines Fehlurteils kontrolliert klein. Das Handwerkszeug — Bernoulli-Ketten und kumulierte Wahrscheinlichkeiten — bringst du aus dem Thema <a href="../binomialverteilung/index.html">Binomialverteilung</a> mit.</p>
+
+  <section aria-labelledby="ht-pruefstand">
+    <h2 id="ht-pruefstand">1. Eine Behauptung auf dem Prüfstand</h2>
+    <p>Gezinkter Würfel, Medikament, Lieferversprechen — alle drei Situationen haben dasselbe Muster: Es geht um eine <em>unbekannte</em> Trefferwahrscheinlichkeit $p$, über die jemand eine Behauptung aufstellt. Prüfen lässt sie sich nur mit einer Stichprobe, und die unterliegt dem Zufall: Ein einzelnes Ergebnis kann eine Behauptung niemals endgültig beweisen oder widerlegen. Die Idee des Hypothesentests: Man unterstellt <em>probeweise</em> einen Wert für $p$ und fragt dann, ob das Stichprobenergebnis zu dieser Annahme noch passt — oder so extrem ausfällt, dass die Annahme unglaubwürdig wird.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Nullhypothese und Gegenhypothese</span>
+      <p>Die <strong>Nullhypothese $H_0$</strong> ist die Annahme über $p$, die dem Test zugrunde gelegt wird. Sie spielt die Rolle der skeptischen Ausgangsposition: Sie wird so lange beibehalten, bis die Daten <em>deutlich</em> gegen sie sprechen. Die <strong>Gegenhypothese $H_1$</strong> ist die Vermutung, die mit dem Test <em>nachgewiesen</em> werden soll — sie umfasst die $p$-Werte, die $H_0$ widersprechen. Getestet wird immer eine Trefferwahrscheinlichkeit: Die Trefferzahl $X$ der Stichprobe wird als binomialverteilt angenommen, unter $H_0$ mit dem dort unterstellten $p$.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Drei Behauptungen, drei Hypothesenpaare</span>
+      <p><strong>Würfel:</strong> Der Verdacht „zu viele Sechsen“ soll belegt werden — also $H_0\colon p = \frac{1}{6}$ (Würfel in Ordnung) gegen $H_1\colon p &gt; \frac{1}{6}$. <strong>Medikament:</strong> Die Standardtherapie hilft 50&nbsp;% der Erkrankten; das neue Präparat soll <em>besser</em> wirken — $H_0\colon p = 0{,}5$ (nicht besser) gegen $H_1\colon p &gt; 0{,}5$. <strong>Lieferversprechen:</strong> Eine Kundin vermutet, dass <em>weniger</em> als 98&nbsp;% der Pakete pünktlich kommen — $H_0\colon p = 0{,}98$ (Versprechen stimmt) gegen $H_1\colon p &lt; 0{,}98$. In allen Fällen gilt: Was nachgewiesen werden soll, steht in $H_1$ — warum das so herum sinnvoll ist, klärt Abschnitt 4.</p>
+    </div>
+    <p>Bleibt die entscheidende Frage: Ab wann sprechen Daten „deutlich“ gegen $H_0$? Sieben Sechsen statt der erwarteten zehn? Dreizehn? Die Antwort darf nicht vom Bauchgefühl abhängen — sie wird vor der Stichprobe ausgerechnet. Wie, zeigt der nächste Abschnitt an einem vollständigen Beispiel.</p>
+  </section>
+
+  <section aria-labelledby="ht-einseitig">
+    <h2 id="ht-einseitig">2. Der einseitige Test Schritt für Schritt</h2>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Wirkt das neue Medikament besser?</span>
+      <p>Die Standardtherapie hilft erfahrungsgemäß der Hälfte der Behandelten. Ein neues Präparat wird an $n = 50$ zufällig ausgewählten Personen erprobt; $X$ zählt die Behandlungserfolge. Getestet wird $H_0\colon p = 0{,}5$ gegen $H_1\colon p &gt; 0{,}5$. Unter $H_0$ ist $X$ binomialverteilt mit $n = 50$ und $p = 0{,}5$, im Mittel sind also $\mu = 25$ Erfolge zu erwarten ($\sigma \approx 3{,}54$). Je mehr Erfolge die Studie zählt, desto schlechter passt $H_0$ — aber wo genau liegt die Grenze?</p>
+    </div>
+    <p>Würde man schon bei 28 Erfolgen „Wirkung nachgewiesen!“ rufen, käme das auch bei einem wirkungslosen Präparat ständig vor — solche Ausschläge sind normale Zufallsschwankung. Deshalb vereinbart man vorab ein <strong>Signifikanzniveau</strong>, üblich ist $\alpha = 5\,\%$: Das Risiko, ein zutreffendes $H_0$ irrtümlich zu verwerfen, soll höchstens $5\,\%$ betragen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Signifikanzniveau und Ablehnungsbereich</span>
+      <p>Der <strong>Ablehnungsbereich</strong> $A$ ist die Menge der Stichprobenergebnisse, bei denen $H_0$ verworfen wird. Er liegt dort, wo die Ergebnisse für $H_1$ sprechen — beim rechtsseitigen Test also am rechten Rand: $A = \{k;\ \dots;\ n\}$. Gewählt wird das <strong>kleinste</strong> $k$, für das unter $H_0$ noch</p>
+      <p class="formel-abgesetzt">$$P(X \ge k) = 1 - P(X \le k - 1) \le \alpha$$</p>
+      <p>gilt. So schöpft der Test das Risiko-Budget $\alpha$ möglichst weit aus, ohne es zu überschreiten — ein kleinerer Ablehnungsbereich würde echte Abweichungen unnötig oft übersehen.</p>
+    </div>
+    <p>Die Grenze findest du durch systematisches Probieren mit kumulierten Wahrscheinlichkeiten — aus dem Tabellenwerk oder vom CAS (ClassPad II: <strong>Interactive → Verteilungsfunktionen → binomialCDf</strong>, $p$ mit Dezimal<em>punkt</em> eingeben):</p>
+    <table class="werte-tabelle">
+      <caption class="nur-screenreader">Suche des kleinsten k, für das P(X größer gleich k) höchstens 0,05 beträgt, bei n = 50 und p = 0,5</caption>
+      <thead>
+        <tr><th scope="col">Kandidat $k$</th><th scope="col">$P(X \ge k) = 1 - P(X \le k-1)$</th><th scope="col">$\le 0{,}05$?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>$30$</td><td>$1 - 0{,}8987 = 0{,}1013$</td><td>nein</td></tr>
+        <tr><td>$31$</td><td>$1 - 0{,}9405 = 0{,}0595$</td><td>nein</td></tr>
+        <tr><td>$32$</td><td>$1 - 0{,}9675 = 0{,}0325$</td><td><strong>ja ✓</strong></td></tr>
+      </tbody>
+    </table>
+    <p>Erst bei $k = 32$ rutscht die Wahrscheinlichkeit unter die 5-Prozent-Marke: Der Ablehnungsbereich ist $A = \{32;\ 33;\ \dots;\ 50\}$ mit $P(X \ge 32) \approx 0{,}0325$. Daraus folgt die <strong>Entscheidungsregel</strong>: <em>Werden mindestens 32 der 50 Personen geheilt, wird $H_0$ verworfen — das Ergebnis gilt als signifikant, die bessere Wirkung als nachgewiesen. Bei höchstens 31 Erfolgen wird $H_0$ beibehalten.</em> Im Histogramm ist die Lage gut zu erkennen:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 460 290" width="460" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Histogramm der Binomialverteilung mit n gleich 50 und p gleich 0,5. Die Säulen über den Trefferzahlen k von 15 bis 40 bilden einen symmetrischen Berg mit Maximum etwa 0,112 bei k gleich 25. Eine gestrichelte senkrechte Linie trennt den Annahmebereich bis 31 vom Ablehnungsbereich ab 32. Die Säulen ab k gleich 32 sind farblich hervorgehoben und mit einer Klammer zusammengefasst, beschriftet mit Ablehnungsbereich A gleich 32 bis 50 und P von X größer oder gleich 32 ungefähr 0,0325. Diese Säulen sind sehr niedrig: zusammen nur gut drei Prozent der Gesamtfläche.">
+        <!-- Gitterlinien bei P = 0,05 und P = 0,10 -->
+        <g stroke="var(--linie)" stroke-width="1" stroke-dasharray="4 4">
+          <line x1="46" y1="180" x2="446" y2="180"/>
+          <line x1="46" y1="100" x2="446" y2="100"/>
+        </g>
+        <!-- Annahmebereich: Säulenhöhe = P(X = k) · 1600 px, exakt berechnet (k = 15 bis 31) -->
+        <g fill="var(--mathe)" fill-opacity="0.45" stroke="var(--mathe)" stroke-width="1.5">
+          <rect x="50" y="256.8" width="12" height="3.2"/>
+          <rect x="65" y="253" width="12" height="7"/>
+          <rect x="80" y="246.01" width="12" height="13.99"/>
+          <rect x="95" y="234.34" width="12" height="25.66"/>
+          <rect x="110" y="216.79" width="12" height="43.21"/>
+          <rect x="125" y="193.03" width="12" height="66.97"/>
+          <rect x="140" y="164.32" width="12" height="95.68"/>
+          <rect x="155" y="133.88" width="12" height="126.12"/>
+          <rect x="170" y="106.46" width="12" height="153.54"/>
+          <rect x="185" y="87.27" width="12" height="172.73"/>
+          <rect x="200" y="80.36" width="12" height="179.64"/>
+          <rect x="215" y="87.27" width="12" height="172.73"/>
+          <rect x="230" y="106.46" width="12" height="153.54"/>
+          <rect x="245" y="133.88" width="12" height="126.12"/>
+          <rect x="260" y="164.32" width="12" height="95.68"/>
+          <rect x="275" y="193.03" width="12" height="66.97"/>
+          <rect x="290" y="216.79" width="12" height="43.21"/>
+        </g>
+        <!-- Ablehnungsbereich: k = 32 bis 40 hervorgehoben (Säulen ab 41 unter 0,01 px) -->
+        <g fill="var(--akzent)" fill-opacity="0.55" stroke="var(--akzent)" stroke-width="1.5">
+          <rect x="305" y="234.34" width="12" height="25.66"/>
+          <rect x="320" y="246.01" width="12" height="13.99"/>
+          <rect x="335" y="253" width="12" height="7"/>
+          <rect x="350" y="256.8" width="12" height="3.2"/>
+          <rect x="365" y="258.67" width="12" height="1.33"/>
+          <rect x="380" y="259.5" width="12" height="0.5"/>
+          <rect x="395" y="259.83" width="12" height="0.17"/>
+          <rect x="410" y="259.95" width="12" height="0.05"/>
+          <rect x="425" y="259.99" width="12" height="0.01"/>
+        </g>
+        <!-- Grenze zwischen Annahme- und Ablehnungsbereich -->
+        <line x1="303.5" y1="76" x2="303.5" y2="260" stroke="var(--akzent)" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <path d="M305 76 v-6 h132 v6" fill="none" stroke="var(--akzent)" stroke-width="1.5"/>
+        <text x="446" y="42" font-size="12" font-weight="600" fill="var(--akzent)" text-anchor="end">Ablehnungsbereich A = {32; …; 50}</text>
+        <text x="446" y="58" font-size="12" fill="var(--akzent)" text-anchor="end">P(X ≥ 32) ≈ 0,0325</text>
+        <text x="52" y="52" font-size="13" font-weight="600" fill="var(--text)">unter H₀: n = 50, p = 0,5</text>
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="40" y1="260" x2="446" y2="260"/>
+          <line x1="46" y1="268" x2="46" y2="34"/>
+        </g>
+        <path d="M454 260 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M46 26 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <text x="56" y="34" font-size="12" fill="var(--text-leise)">P(X = k)</text>
+        <text x="452" y="280" font-size="12" fill="var(--text-leise)" text-anchor="end">k</text>
+        <!-- Skala der senkrechten Achse -->
+        <g stroke="var(--text-leise)" stroke-width="1">
+          <line x1="41" y1="180" x2="46" y2="180"/>
+          <line x1="41" y1="100" x2="46" y2="100"/>
+        </g>
+        <g font-size="11" fill="var(--text-leise)" text-anchor="end">
+          <text x="38" y="184">0,05</text>
+          <text x="38" y="104">0,10</text>
+        </g>
+        <!-- Trefferzahlen unter den Säulen -->
+        <g font-size="11" fill="var(--text-leise)" text-anchor="middle">
+          <text x="56" y="276">15</text>
+          <text x="131" y="276">20</text>
+          <text x="206" y="276">25</text>
+          <text x="281" y="276">30</text>
+          <text x="356" y="276">35</text>
+          <text x="431" y="276">40</text>
+        </g>
+        <text x="311" y="276" font-size="11" font-weight="700" fill="var(--akzent)" text-anchor="middle">32</text>
+      </svg>
+    </div>
+    <p>Die hervorgehobenen Säulen ab $k = 32$ machen zusammen nur $3{,}25\,\%$ der Gesamtfläche aus — genau das ist das tatsächliche Irrtumsrisiko des Tests. Dass es nicht exakt $5\,\%$ trifft, liegt an der Diskretheit von $X$: Die Grenze kann nur von ganzer Zahl zu ganzer Zahl springen, und $k = 31$ würde das Budget mit $5{,}95\,\%$ bereits überziehen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Rezept: einseitiger Hypothesentest</span>
+      <p>1. <strong>Hypothesen</strong> aufstellen ($H_0$ und $H_1$) und Zufallsgröße $X$ festlegen. &nbsp;2. <strong>Signifikanzniveau</strong> $\alpha$ und Stichprobenumfang $n$ vor der Datenerhebung vereinbaren. &nbsp;3. <strong>Modell unter $H_0$:</strong> $X$ ist binomialverteilt mit $n$ und $p_0$. &nbsp;4. <strong>Ablehnungsbereich bestimmen:</strong> am Rand, auf den $H_1$ zeigt; Grenze über kumulierte Wahrscheinlichkeiten so wählen, dass $P(X \in A) \le \alpha$ gilt. &nbsp;5. <strong>Entscheiden und deuten:</strong> Ergebnis in $A$ → $H_0$ verwerfen, sonst beibehalten — immer im Sachzusammenhang formulieren.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: In der Studie werden 33 von 50 Personen geheilt. Wie entscheidet der Test — und wie wäre es bei 30 Geheilten?</summary>
+      <div class="check-antwort"><p>$33 \ge 32$, das Ergebnis liegt im Ablehnungsbereich: $H_0$ wird verworfen, die bessere Wirkung gilt als signifikant nachgewiesen — mit einem Restrisiko von höchstens $5\,\%$ (tatsächlich $3{,}25\,\%$), falls das Präparat in Wahrheit doch nicht besser wirkt. Bei 30 Geheilten gilt $30 &lt; 32$: $H_0$ wird beibehalten — die Studie liefert keinen Nachweis. Das ist <em>kein</em> Beleg dafür, dass das Medikament wirkungslos ist (dazu Abschnitt 3 und 4).</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ht-fehlerarten">
+    <h2 id="ht-fehlerarten">3. Die zwei Fehlerarten</h2>
+    <p>Ein Hypothesentest entscheidet unter Unsicherheit — selbst bei fehlerfreier Rechnung kann die Entscheidung falsch ausfallen, weil der Zufall die Stichprobe in die „falsche“ Region schiebt. Je nachdem, was in Wirklichkeit gilt, gibt es zwei grundverschiedene Pannen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Vier-Felder-Übersicht: Entscheidung gegen Wirklichkeit</span>
+      <table class="werte-tabelle">
+        <caption class="nur-screenreader">Die vier möglichen Kombinationen aus Testentscheidung und Wirklichkeit mit den beiden Fehlerarten</caption>
+        <thead>
+          <tr><th scope="col"></th><th scope="col">$H_0$ ist wahr</th><th scope="col">$H_0$ ist falsch ($H_1$ trifft zu)</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Test behält $H_0$ bei</th><td>richtige Entscheidung</td><td><strong>Fehler 2. Art</strong> (Risiko $\beta$)</td></tr>
+          <tr><th scope="row">Test verwirft $H_0$</th><td><strong>Fehler 1. Art</strong> (Risiko $\le \alpha$)</td><td>richtige Entscheidung</td></tr>
+        </tbody>
+      </table>
+      <p>Merkhilfe: Der Fehler <strong>1.</strong> Art ist der „falsche Alarm“, der Fehler <strong>2.</strong> Art der „verschlafene Alarm“.</p>
+    </div>
+    <p><strong>Fehler 1. Art:</strong> $H_0$ trifft zu, aber die Stichprobe fällt zufällig in den Ablehnungsbereich — das wirkungslose Medikament wird fälschlich als besser gefeiert. Genau dieses Risiko kontrolliert die Konstruktion des Tests: Es ist die Wahrscheinlichkeit des Ablehnungsbereichs unter $H_0$ und damit höchstens $\alpha$ — im Beispiel exakt $0{,}0325$. <strong>Fehler 2. Art:</strong> In Wahrheit gilt $H_1$, aber das Ergebnis landet trotzdem im Annahmebereich — die echte Verbesserung bleibt unentdeckt. Dieses Risiko $\beta$ wird von $\alpha$ <em>nicht</em> kontrolliert. Es lässt sich überhaupt nur berechnen, wenn man ein konkretes wahres $p$ annimmt, denn „$p &gt; 0{,}5$“ allein legt die Verteilung von $X$ nicht fest.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel (erhöhtes Anforderungsniveau): Fehler 2. Art berechnen</span>
+      <p>Angenommen, das neue Medikament wirkt in Wahrheit bei $70\,\%$ ($p = 0{,}7$). Ein Fehler 2. Art passiert, wenn die Studie trotzdem höchstens 31 Erfolge zählt — $X$ ist jetzt binomialverteilt mit $n = 50$ und $p = 0{,}7$:</p>
+      <p class="formel-abgesetzt">$$\beta = P(X \le 31) \approx 0{,}1406$$</p>
+      <p>(ClassPad II: <code>binomialCDf(31,50,0.7)</code> — gerechnet wird mit dem <em>wahren</em> $p$, nicht mit $0{,}5$!) In rund $14\,\%$ aller solcher Studien bliebe die deutliche Verbesserung also unentdeckt. Je näher das wahre $p$ an $0{,}5$ liegt, desto größer wird $\beta$ — kleine Verbesserungen sind mit $n = 50$ kaum nachweisbar. Wer beide Risiken senken will, hat nur einen Hebel: mehr Versuchspersonen. Denn ein kleineres $\alpha$ verschiebt die Grenze nach rechts und vergrößert $\beta$ — die beiden Fehler stehen im Zielkonflikt.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Der Test behält H₀ bei, obwohl das Medikament in Wahrheit bei 70 % wirkt. Welcher Fehler liegt vor — und war sein Risiko durch α begrenzt?</summary>
+      <div class="check-antwort"><p>Das ist ein <strong>Fehler 2. Art</strong>: $H_0$ wird fälschlich beibehalten. Sein Risiko war <em>nicht</em> durch $\alpha$ begrenzt — $\alpha$ deckelt nur den Fehler 1. Art. Für $p = 0{,}7$ beträgt es $\beta \approx 0{,}1406$, also rund $14\,\%$ — mehr als das $\alpha$-Budget von $5\,\%$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ht-richtung">
+    <h2 id="ht-richtung">4. Linksseitig, rechtsseitig — und die Wahl von H₀</h2>
+    <p>Warum stand beim Medikament „nicht besser“ in $H_0$ und nicht umgekehrt? Weil der Test die <strong>Beweislast</strong> verteilt: Verworfen wird $H_0$ nur bei deutlichem Widerspruch — wer also etwas <em>nachweisen</em> will, muss es in $H_1$ packen und gegen die Skepsis von $H_0$ antreten lassen. Nur dann ist die Wahrscheinlichkeit, fälschlich „nachgewiesen!“ zu rufen, durch $\alpha$ kontrolliert. Aus der Richtung von $H_1$ folgt die Lage des Ablehnungsbereichs:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Testrichtungen im Überblick</span>
+      <table class="werte-tabelle">
+        <caption class="nur-screenreader">Zusammenhang zwischen Gegenhypothese, Testrichtung, Lage des Ablehnungsbereichs und Bedingung an die Grenze</caption>
+        <thead>
+          <tr><th scope="col">Gegenhypothese</th><th scope="col">Test</th><th scope="col">Ablehnungsbereich</th><th scope="col">Grenzbedingung</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$H_1\colon p &gt; p_0$</td><td>rechtsseitig</td><td>$\{k;\ \dots;\ n\}$</td><td>kleinstes $k$ mit $1 - P(X \le k-1) \le \alpha$</td></tr>
+          <tr><td>$H_1\colon p &lt; p_0$</td><td>linksseitig</td><td>$\{0;\ \dots;\ k\}$</td><td>größtes $k$ mit $P(X \le k) \le \alpha$</td></tr>
+          <tr><td>$H_1\colon p \ne p_0$</td><td>zweiseitig (eA)</td><td>beide Ränder</td><td>je Seite $\frac{\alpha}{2}$ — Abschnitt 5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Das Glücksrad — diesmal linksseitig</span>
+      <p>Der Betreiber eines Glücksrads verspricht die Gewinnwahrscheinlichkeit $p = 0{,}3$. Eine Verbraucherschützerin vermutet, dass das Rad <em>seltener</em> gewinnt, und will genau das nachweisen: $H_0\colon p = 0{,}3$ gegen $H_1\colon p &lt; 0{,}3$ bei $n = 100$ Drehungen und $\alpha = 5\,\%$. Jetzt sprechen <em>kleine</em> Gewinnzahlen gegen $H_0$, gesucht ist das größte $k$ mit $P(X \le k) \le 0{,}05$: Wegen $P(X \le 21) \approx 0{,}0288$, $P(X \le 22) \approx 0{,}0479$ und $P(X \le 23) \approx 0{,}0755$ ist $k = 22$ die Grenze. Ablehnungsbereich: $A = \{0;\ \dots;\ 22\}$ mit tatsächlichem Irrtumsrisiko $0{,}0479$. Liefert das Rad — wie am Ende des Themas Binomialverteilung — nur 15 Gewinne, liegt das tief im Ablehnungsbereich: Die Daten weisen signifikant nach, dass das Rad seltener gewinnt als versprochen.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Achtung: „nicht verwerfen“ heißt nicht „bewiesen“</span>
+      <p>Ein Hypothesentest kennt nur zwei Ausgänge: $H_0$ <strong>verwerfen</strong> (die Stichprobe widerspricht deutlich) oder $H_0$ <strong>beibehalten</strong> (die Stichprobe widerspricht nicht deutlich). Beibehalten ist <em>kein</em> Beleg für $H_0$ — vielleicht war nur die Stichprobe zu klein oder der Zufall gnädig; das Fehler-2.-Art-Risiko bleibt unkontrolliert. Sprachlich sauber: „Die Daten sprechen nicht signifikant gegen $H_0$“ — niemals „$H_0$ ist damit bewiesen“.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Die Verbraucherschützerin zählt 25 Gewinne bei 100 Drehungen. Wie entscheidet der Test — und ist das Versprechen p = 0,3 damit bestätigt?</summary>
+      <div class="check-antwort"><p>$25 &gt; 22$, das Ergebnis liegt <em>nicht</em> im Ablehnungsbereich $\{0;\ \dots;\ 22\}$: $H_0$ wird beibehalten, der Nachweis „Rad gewinnt seltener“ ist nicht gelungen. Bestätigt ist das Versprechen damit aber nicht — der Test kann $H_0$ nur verwerfen oder beibehalten, niemals beweisen. Auch ein Rad mit wahrem $p = 0{,}27$ könnte leicht 25 Gewinne liefern.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ht-zweiseitig">
+    <h2 id="ht-zweiseitig">5. Der zweiseitige Test (erhöhtes Anforderungsniveau)</h2>
+    <p>Manchmal gibt es keine Verdachtsrichtung — auffällig wäre <em>jede</em> deutliche Abweichung. Ist ein Spielchip fair? Getestet wird $H_0\colon p = 0{,}5$ gegen $H_1\colon p \ne 0{,}5$: Sowohl sehr kleine als auch sehr große Trefferzahlen sprechen gegen $H_0$. Der Ablehnungsbereich besteht deshalb aus <strong>beiden Rändern</strong>, und das Budget $\alpha$ wird aufgeteilt: je $\frac{\alpha}{2}$ pro Seite.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Fairness-Check mit n = 50 und α = 5 %</span>
+      <p>Jede Seite bekommt $2{,}5\,\%$. Links: größtes $k$ mit $P(X \le k) \le 0{,}025$ — wegen $P(X \le 17) \approx 0{,}0164$ und $P(X \le 18) \approx 0{,}0325$ ist das $k = 17$. Rechts liefert die Symmetrie der Verteilung das Spiegelbild: $P(X \ge 33) = P(X \le 17) \approx 0{,}0164$, während $P(X \ge 32) \approx 0{,}0325$ das halbe Budget schon reißt. Also $A = \{0;\ \dots;\ 17\} \cup \{33;\ \dots;\ 50\}$ mit Gesamtirrtumswahrscheinlichkeit $\approx 0{,}0328$. Beachte den Vergleich mit Abschnitt 2: Der rechtsseitige Test verwarf schon ab 32 Treffern, der zweiseitige erst ab 33 — das halbierte Budget pro Seite schiebt die Grenzen nach außen. Welche Variante gilt, entscheidet die Fragestellung <em>vor</em> der Datenerhebung, nie das Stichprobenergebnis.</p>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (erhöhtes Anforderungsniveau): Die Gütefunktion — wie zuverlässig schlägt ein Test an?</summary>
+    <div class="vertiefung-inhalt">
+      <p>Der Fehler 2. Art aus Abschnitt 3 hing vom wahren $p$ ab — diese Idee lässt sich zu einer Funktion ausbauen. Die <strong>Gütefunktion</strong> (auch Trennschärfe oder Power) des Tests gibt für jedes denkbare wahre $p$ an, mit welcher Wahrscheinlichkeit $H_0$ verworfen wird. Für den Medikamenten-Test aus Abschnitt 2 ($n = 50$, Ablehnungsbereich $\{32;\ \dots;\ 50\}$) ist das</p>
+      <p class="formel-abgesetzt">$$g(p) = P(X \ge 32), \quad X \text{ binomialverteilt mit } n = 50 \text{ und } p$$</p>
+      <table class="werte-tabelle">
+        <caption class="nur-screenreader">Werte der Gütefunktion des Tests für verschiedene wahre Trefferwahrscheinlichkeiten</caption>
+        <thead>
+          <tr><th scope="col">wahres $p$</th><th scope="col">$0{,}5$</th><th scope="col">$0{,}6$</th><th scope="col">$0{,}7$</th><th scope="col">$0{,}8$</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">$g(p)$</th><td>$0{,}0325$</td><td>$0{,}3356$</td><td>$0{,}8594$</td><td>$0{,}9975$</td></tr>
+        </tbody>
+      </table>
+      <p>Lies die Tabelle als Charakterprofil des Tests: Bei $p = 0{,}5$ (also unter $H_0$) schlägt er nur in $3{,}25\,\%$ der Fälle an — das ist gerade der Fehler 1. Art. Eine echte Verbesserung auf $p = 0{,}7$ entdeckt er mit $g(0{,}7) \approx 0{,}8594$, das ist genau $1 - \beta$ aus Abschnitt 3. Eine kleine Verbesserung auf $p = 0{,}6$ dagegen erkennt er nur in gut einem Drittel der Studien — dafür wäre ein größeres $n$ nötig. Die Gegenwahrscheinlichkeit $1 - g(p)$, also die Wahrscheinlichkeit, $H_0$ <em>beizubehalten</em>, heißt <strong>Operationscharakteristik</strong> $\mathrm{OC}(p)$; für $p$-Werte aus $H_1$ ist sie genau das Fehler-2.-Art-Risiko $\beta(p)$. Ein idealer Test hätte $g(p) = 0$ auf $H_0$ und $g(p) = 1$ auf $H_1$ — reale Tests nähern sich diesem Sprung umso besser an, je größer der Stichprobenumfang ist.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Aufstellen von Hypothesen über Ablehnungsbereiche, Entscheidungsregeln und die beiden Fehlerarten bis zum zweiseitigen Test — mit gestuften Tipps, vollständigen Lösungswegen und CAS-Kontrollen für den ClassPad II.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

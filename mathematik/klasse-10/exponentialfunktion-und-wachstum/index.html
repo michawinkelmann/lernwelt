@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exponentialfunktion und Wachstum — Klasse 10 · Mathematik — Lernwelt</title>
+<meta name="description" content="Exponentielles Wachstum und exponentielle Abnahme: fester Faktor statt fester Summand, die Exponentialfunktion f(x) = a·b^x, Zinseszins, Halbwertszeit und Verdopplungszeit durch Probieren — und wo das exponentielle Modell an seine Grenzen stößt.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  .vergleich-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .vergleich-tabelle th, .vergleich-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: center; }
+  .vergleich-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Exponentialfunktion und Wachstum</h1>
+  <p class="einleitung">In einem Teich verdoppeln Seerosen jeden Tag ihre Fläche. Am Tag 30 ist der Teich vollständig zugewachsen — an welchem Tag war er halb bedeckt? Wer „Tag 15“ antwortet, ist in guter Gesellschaft und liegt trotzdem daneben: Es ist Tag 29. <strong>Exponentielles Wachstum</strong> beginnt unscheinbar und explodiert am Ende — bei Seerosen genauso wie bei Zinsen, Bakterien oder dem Wertverlust eines Autos. Hier lernst du, es zu erkennen, mit der Exponentialfunktion zu beschreiben und seine Grenzen einzuschätzen.</p>
+
+  <section aria-labelledby="exp-linear">
+    <h2 id="exp-linear">1. Linear oder exponentiell?</h2>
+    <p>Beim Video-Streamen verliert ein Handy-Akku in jeder Stunde etwa 12 Prozentpunkte Ladung: $100\,\% \rightarrow 88\,\% \rightarrow 76\,\% \rightarrow 64\,\%$. Pro Stunde wird immer <strong>dieselbe Zahl abgezogen</strong> — die Anzeige sinkt gleichmäßig wie auf einer Geraden. Ganz anders die Seerosen: Verdoppelt sich ihre Fläche jeden Tag, wird der Bestand pro Tag <strong>mit derselben Zahl multipliziert</strong> — aus 3 Blättern werden 6, 12, 24, 48, … Das sind die beiden Grundmuster, die du auseinanderhalten musst:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Fester Summand oder fester Faktor?</span>
+      <p><strong>Linear:</strong> In jedem Schritt kommt derselbe <strong>Summand</strong> dazu (z.&nbsp;B. $+10$) oder wird abgezogen. <strong>Exponentiell:</strong> In jedem Schritt wird mit demselben <strong>Faktor</strong> multipliziert (z.&nbsp;B. $\cdot\,1{,}5$). Erkennungstest an der Wertetabelle: Sind die <em>Differenzen</em> benachbarter Werte konstant, ist das Wachstum linear — sind die <em>Quotienten</em> konstant, ist es exponentiell.</p>
+    </div>
+    <p>Dieselbe Startzahl 10, zwei verschiedene Regeln:</p>
+    <table class="vergleich-tabelle">
+      <caption class="nur-screenreader">Wertetabelle: lineares Wachstum mit plus 10 je Schritt und exponentielles Wachstum mit Faktor 1,5 je Schritt im Vergleich</caption>
+      <thead>
+        <tr><th scope="col">Schritt</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">linear: je Schritt +10</th><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td></tr>
+        <tr><th scope="row">exponentiell: je Schritt ·1,5</th><td>10</td><td>15</td><td>22,5</td><td>33,75</td><td>≈&nbsp;50,6</td></tr>
+      </tbody>
+    </table>
+    <p>Bis Schritt 3 liegt die lineare Variante vorn — dann kippt das Bild. Der Graph zeigt, warum exponentielles Wachstum so oft unterschätzt wird: Die Kurve startet flacher, überholt die Gerade (markierter Punkt nach gut 4 Schritten) und zieht danach steil davon.</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 256" width="360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Koordinatensystem mit zwei Graphen, beide starten beim Wert 10: Eine Gerade wächst gleichmäßig um 10 je Schritt. Eine Exponentialkurve mit Faktor 1,5 je Schritt verläuft anfangs flacher, überholt die Gerade nach gut vier Schritten an einem markierten Punkt und steigt dann immer steiler nach oben.">
+        <!-- Achsen mit Pfeilspitzen -->
+        <g stroke="var(--text-leise)" stroke-width="1.5">
+          <line x1="36" y1="230" x2="344" y2="230"/>
+          <line x1="40" y1="234" x2="40" y2="26"/>
+        </g>
+        <path d="M352 230 l-9 -4 v8 z" fill="var(--text-leise)"/>
+        <path d="M40 18 l-4 9 h8 z" fill="var(--text-leise)"/>
+        <!-- Skalenstriche -->
+        <g stroke="var(--text-leise)" stroke-width="1">
+          <line x1="100" y1="230" x2="100" y2="235"/>
+          <line x1="160" y1="230" x2="160" y2="235"/>
+          <line x1="220" y1="230" x2="220" y2="235"/>
+          <line x1="280" y1="230" x2="280" y2="235"/>
+          <line x1="340" y1="230" x2="340" y2="235"/>
+          <line x1="35" y1="130" x2="40" y2="130"/>
+          <line x1="35" y1="30" x2="40" y2="30"/>
+        </g>
+        <g font-size="11" fill="var(--text-leise)" text-anchor="middle">
+          <text x="40" y="247">0</text><text x="100" y="247">2</text><text x="160" y="247">4</text>
+          <text x="220" y="247">6</text><text x="280" y="247">8</text><text x="340" y="247">10</text>
+        </g>
+        <g font-size="11" fill="var(--text-leise)" text-anchor="end">
+          <text x="31" y="134">50</text><text x="31" y="34">100</text>
+        </g>
+        <text x="344" y="220" font-size="12" fill="var(--text-leise)" text-anchor="end">Schritte</text>
+        <text x="50" y="24" font-size="12" fill="var(--text-leise)">Wert</text>
+        <!-- Überholpunkt mit Hilfslinie -->
+        <line x1="160" y1="230" x2="160" y2="129" stroke="var(--text-leise)" stroke-width="1" stroke-dasharray="3 3"/>
+        <!-- linear: Start 10, +10 je Schritt -->
+        <line x1="40" y1="210" x2="310" y2="30" stroke="var(--akzent)" stroke-width="2.5"/>
+        <!-- exponentiell: Start 10, Faktor 1,5 je Schritt -->
+        <polyline points="40,210 55,205.5 70,200 85,193.3 100,185 115,174.9 130,162.5 145,147.3 160,128.8 175,106 190,78.1 202,51.4 210,30" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <circle cx="160" cy="129" r="4" fill="var(--bg)" stroke="var(--text)" stroke-width="1.8"/>
+        <!-- Beschriftungen -->
+        <text transform="rotate(-34 234 104)" x="234" y="104" font-size="13" font-weight="600" fill="var(--akzent)" text-anchor="middle">linear: +10 je Schritt</text>
+        <g font-size="13" font-weight="600" fill="var(--mathe)">
+          <text x="218" y="58">exponentiell:</text>
+          <text x="218" y="75">·1,5 je Schritt</text>
+        </g>
+      </svg>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: 4 → 12 → 36 → 108 — linear oder exponentiell?</summary>
+      <div class="check-antwort"><p>Die Differenzen sind $8$, $24$, $72$ — nicht konstant, also nicht linear. Die Quotienten sind $\frac{12}{4} = \frac{36}{12} = \frac{108}{36} = 3$ — konstant: Die Größe wächst <strong>exponentiell</strong> mit dem Faktor $3$ pro Schritt.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="exp-funktion">
+    <h2 id="exp-funktion">2. Die Exponentialfunktion f(x) = a · bˣ</h2>
+    <p>Für lineares Wachstum kennst du aus Klasse 8 die <a href="../../klasse-8/lineare-funktionen/index.html">linearen Funktionen</a> $f(x) = m \cdot x + b$. Exponentielle Vorgänge beschreibt eine neue Funktionsart — bei ihr steht die Variable im <strong>Exponenten</strong>:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Exponentialfunktion</span>
+      <p class="formel-abgesetzt">$$f(x) = a \cdot b^x$$</p>
+      <p>Dabei ist $a$ der <strong>Startwert</strong> — wegen $b^0 = 1$ gilt $f(0) = a$. Die Zahl $b$ heißt <strong>Wachstumsfaktor</strong> ($b > 0$): Für $b > 1$ wächst der Bestand mit jedem Schritt (<strong>exponentielles Wachstum</strong>), für $0 < b < 1$ schrumpft er (<strong>exponentielle Abnahme</strong>). Und $x$ zählt die Schritte — Tage, Stunden oder Jahre.</p>
+    </div>
+    <p>Meist steckt der Faktor in einer Prozentangabe. Wie in der <a href="../../klasse-7/prozent-und-zinsrechnung/index.html">Prozent- und Zinsrechnung</a> gilt: Bei Wachstum um $p\,\%$ kommen zum Bestand ($100\,\%$) noch $p\,\%$ dazu, bei Abnahme um $p\,\%$ bleiben $100\,\% - p\,\%$ übrig:</p>
+    <p class="formel-abgesetzt">$$\begin{gathered}\text{Wachstum um } 3\,\%: \; b = 1 + 0{,}03 = 1{,}03 \\[4pt] \text{Abnahme um } 20\,\%: \; b = 1 - 0{,}20 = 0{,}80\end{gathered}$$</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Vom Text zur Funktion</span>
+      <p>Ein Guthaben von $200\,\text{€}$ wächst um $5\,\%$ pro Jahr. Startwert $a = 200$, Faktor $b = 1{,}05$:</p>
+      <p class="formel-abgesetzt">$$f(x) = 200 \cdot 1{,}05^x$$</p>
+      <p>Kontrolle: $f(1) = 210$ — stimmt, denn $5\,\%$ von $200$ sind $10$. Und $f(2) = 220{,}50$: Im zweiten Jahr kommen schon $10{,}50\,\text{€}$ dazu, weil jetzt auch der Zuwachs des ersten Jahres mitwächst.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Beliebte Falle bei der Abnahme</span>
+      <p>„Abnahme um $20\,\%$“ bedeutet Faktor $0{,}8$ — <em>nicht</em> $0{,}2$. Wer mit $0{,}2$ multipliziert, behält nur ein Fünftel und beschreibt eine Abnahme um $80\,\%$. Frage dich immer: <em>Wie viel Prozent bleiben übrig?</em></p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Welche Faktoren gehören zu +18 % und −25 %?</summary>
+      <div class="check-antwort"><p>Wachstum um $18\,\%$: $b = 1 + 0{,}18 = 1{,}18$. Abnahme um $25\,\%$: Es bleiben $75\,\%$ übrig, also $b = 0{,}75$ — nicht $0{,}25$, das wäre eine Abnahme um $75\,\%$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="exp-wachstum">
+    <h2 id="exp-wachstum">3. Exponentielles Wachstum rechnen</h2>
+    <p>Mit dem Funktionsterm kannst du in die Zukunft rechnen: Nach $n$ Schritten ist aus dem Startwert $a$ der Bestand $a \cdot b^n$ geworden. Der Rechenfahrplan ist immer derselbe:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Rechenfahrplan</span>
+      <ol>
+        <li>Startwert $a$ aus dem Text ablesen.</li>
+        <li>Prozentsatz in den Wachstumsfaktor $b$ übersetzen.</li>
+        <li>Anzahl der Schritte $n$ klären — Jahre, Tage oder Stunden?</li>
+        <li>Endwert $a \cdot b^n$ berechnen (Potenz-Taste des Taschenrechners).</li>
+      </ol>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Zinseszins</span>
+      <p>$500\,\text{€}$ werden zu $2\,\%$ Zinsen pro Jahr angelegt, die Zinsen bleiben auf dem Konto. Guthaben nach 10 Jahren:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}K = 500 \cdot 1{,}02^{10} \\[4pt] \approx 500 \cdot 1{,}2190 \approx 609{,}50\,\text{€}\end{gathered}$$</p>
+      <p>Die Bank verzinst jedes Jahr auch die schon gutgeschriebenen Zinsen — das ist der <strong>Zinseszins</strong>. Ohne ihn (jedes Jahr nur $10\,\text{€}$ auf den Startbetrag) wären es $600\,\text{€}$; der Vorsprung wächst mit jedem weiteren Jahr.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Bakterienkultur</span>
+      <p>Eine Kultur startet mit 500 Zellen, die Anzahl verdoppelt sich jede Stunde ($b = 2$):</p>
+      <p class="formel-abgesetzt">$$f(6) = 500 \cdot 2^6 = 500 \cdot 64 = 32\,000$$</p>
+      <p>Nach nur 6 Stunden sind aus 500 Zellen $32\,000$ geworden — nach 24 Stunden wären es rechnerisch über 8 Milliarden. Ob das realistisch ist, klärt Abschnitt 5.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Bevölkerungswachstum</span>
+      <p>Eine Stadt mit $40\,000$ Einwohnern wächst um $1{,}5\,\%$ pro Jahr:</p>
+      <p class="formel-abgesetzt">$$f(10) = 40\,000 \cdot 1{,}015^{10} \approx 46\,400$$</p>
+      <p>Achtung beim Übersetzen: $1{,}5\,\%$ Wachstum heißt Faktor $1{,}015$ — nicht $1{,}15$, das wären $15\,\%$.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="exp-abnahme">
+    <h2 id="exp-abnahme">4. Exponentielle Abnahme</h2>
+    <p>Dieselbe Mathematik beschreibt auch das Schrumpfen — nur liegt der Faktor dann zwischen $0$ und $1$. Typische Beispiele: der Wertverlust eines Autos, der Abbau eines Medikaments im Körper oder der radioaktive Zerfall.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Wertverlust eines Autos</span>
+      <p>Ein Neuwagen kostet $30\,000\,\text{€}$ und verliert pro Jahr $20\,\%$ seines aktuellen Wertes ($b = 0{,}8$):</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}30\,000 \rightarrow 24\,000 \rightarrow 19\,200 \\[4pt] \rightarrow 15\,360 \rightarrow 12\,288\end{gathered}$$</p>
+      <p>Nach 4 Jahren: $30\,000 \cdot 0{,}8^4 = 12\,288\,\text{€}$. Der jährliche Verlust wird dabei immer kleiner — erst $6\,000\,\text{€}$, dann $4\,800\,\text{€}$, … — denn die $20\,\%$ beziehen sich stets auf den aktuellen Wert.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Medikament im Körper</span>
+      <p>Von $400\,\text{mg}$ eines Wirkstoffs baut der Körper pro Stunde etwa $25\,\%$ des jeweils Vorhandenen ab ($b = 0{,}75$):</p>
+      <p class="formel-abgesetzt">$$400 \rightarrow 300 \rightarrow 225 \rightarrow 168{,}75$$</p>
+      <p>Die Menge wird immer kleiner, erreicht im Modell aber nie exakt null — sie nähert sich der Null nur an.</p>
+    </div>
+    <p>Bei exponentieller Abnahme gibt es eine charakteristische Zeitspanne: die <strong>Halbwertszeit</strong> — die Zeit, nach der nur noch die Hälfte des Bestands übrig ist. Berühmt ist sie vom <strong>radioaktiven Zerfall</strong>: Von einer Menge instabiler Atomkerne ist nach einer festen Zeit immer genau die Hälfte zerfallen — beim Kohlenstoff-Isotop C-14 sind das rund 5730 Jahre. Weil das so zuverlässig funktioniert, können Archäologinnen und Archäologen damit das Alter von Knochen und Holzfunden bestimmen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Halbwertszeit und Verdopplungszeit</span>
+      <p>Die <strong>Halbwertszeit</strong> ist die Zeit, in der ein exponentiell abnehmender Bestand auf die Hälfte fällt; die <strong>Verdopplungszeit</strong> die Zeit, in der ein exponentiell wachsender Bestand sich verdoppelt. Das Besondere: Beide sind <em>immer gleich lang</em>, egal wie groß der Bestand gerade ist. In Klasse 10 bestimmst du sie durch <strong>systematisches Probieren mit einer Wertetabelle</strong> — ein exaktes Rechenverfahren lernst du erst in der Oberstufe kennen.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Halbwertszeit durch Probieren</span>
+      <p>Wann ist vom Medikament ($b = 0{,}75$) nur noch die Hälfte da? Gesucht ist $n$ mit $0{,}75^n = 0{,}5$. Tabelle:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}0{,}75^2 \approx 0{,}56 \quad (\text{noch über der Hälfte}) \\[4pt] 0{,}75^3 \approx 0{,}42 \quad (\text{schon darunter})\end{gathered}$$</p>
+      <p>Die Halbwertszeit liegt also zwischen 2 und 3 Stunden. Genauso findest du Verdopplungszeiten: Eine Stadt, die jährlich um $3\,\%$ wächst ($b = 1{,}03$), hat sich wegen $1{,}03^{23} \approx 1{,}97$ und $1{,}03^{24} \approx 2{,}03$ nach knapp 24 Jahren verdoppelt.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Faktor 0,9 pro Tag — wann unter der Hälfte?</summary>
+      <div class="check-antwort"><p>Gesucht ist das erste ganze $n$ mit $0{,}9^n < 0{,}5$. Probieren: $0{,}9^6 \approx 0{,}53$ — noch drüber. $0{,}9^7 \approx 0{,}48$ — zum ersten Mal weniger als die Hälfte: <strong>nach 7 Tagen</strong>.</p></div>
+    </details>
+  <h3>Exponentielle Abnahme live: der radioaktive Zerfall</h3>
+    <p>Das Paradebeispiel für exponentielle Abnahme kommt aus der Physik: Von $N_0$ instabilen Atomkernen zerfällt in jeder Halbwertszeit $T$ die Hälfte — der Bestand folgt $N(t) = N_0 \cdot 0{,}5^{t/T}$. In der Simulation würfelt jeder Kern einzeln, und trotzdem entsteht die glatte Exponentialkurve.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/physik/zerfall/index.html?einbettung=1#n0=400&thalb=5"
+        title="Interaktive Simulation: Radioaktiver Zerfall — exponentielle Abnahme mit Halbwertszeit" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/physik/zerfall/index.html#n0=400&thalb=5" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Lies am Graphen ab, nach wie vielen Sekunden sich der Bestand jeweils halbiert. Prüfe: Die Kurve fällt um den gleichen <strong>Faktor</strong> je Zeitschritt — nicht um den gleichen Betrag.<br>
+      2. Bestimme den Wachstumsfaktor pro Sekunde: $q = 0{,}5^{1/5} \approx 0{,}87$. Passt $N(t) = 400 \cdot 0{,}87^t$ zur Theoriekurve?<br>
+      3. Stelle $N_0 = 2000$ ein: Ändert sich die Halbwertszeit? Genau diese Unabhängigkeit vom Bestand unterscheidet exponentielle von linearer Abnahme.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="exp-modell">
+    <h2 id="exp-modell">5. Modellgrenzen und Vergleich</h2>
+    <p>Zurück zum Seerosenteich: Am Tag 30 ist er voll — und am Tag 31? Die doppelte Teichfläche gibt es nicht. Das exponentielle Modell <strong>endet</strong>, sobald Platz oder Nährstoffe fehlen. Genauso bei den Bakterien aus Abschnitt 3: Irgendwann ist die Nährlösung aufgebraucht, das Wachstum flacht ab. Und Bevölkerungen wachsen langfristig nicht ungebremst, sondern nähern sich einer Sättigungsgrenze. Kein realer Bestand wächst beliebig lange exponentiell — das Modell beschreibt immer nur eine <em>Phase</em>.</p>
+    <p>Ob für Daten ein lineares oder ein exponentielles Modell passt, entscheidest du mit dem Test aus Abschnitt 1 — Differenzen und Quotienten prüfen:</p>
+    <table class="vergleich-tabelle">
+      <caption class="nur-screenreader">Zwei Datenreihen über vier Zeitschritte: Aufrufe eines Videos (40, 120, 360, 1080) und Mitglieder eines Sportvereins (500, 540, 580, 620)</caption>
+      <thead>
+        <tr><th scope="col">Schritt</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Videoaufrufe</th><td>40</td><td>120</td><td>360</td><td>1080</td></tr>
+        <tr><th scope="row">Vereinsmitglieder</th><td>500</td><td>540</td><td>580</td><td>620</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Videoaufrufe:</strong> Differenzen $80$, $240$, $720$ — nicht konstant. Quotienten $\frac{120}{40} = \frac{360}{120} = \frac{1080}{360} = 3$ — konstant: exponentiell, $f(n) = 40 \cdot 3^n$. <strong>Vereinsmitglieder:</strong> Differenzen $40$, $40$, $40$ — konstant: linear, $f(n) = 500 + 40 \cdot n$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Modell wählen — und Grenzen dazusagen</span>
+      <p>Differenzen ungefähr konstant → lineares Modell. Quotienten ungefähr konstant → exponentielles Modell. Reale Messwerte schwanken — „ungefähr“ genügt. Und jede Prognose braucht einen Gültigkeitsbereich: $f(n) = 40 \cdot 3^n$ liefert für $n = 20$ schon über 139 Milliarden Videoaufrufe — mehr als 17-mal die Menschheit. Spätestens dort ist das Modell offensichtlich am Ende.</p>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (Gymnasialzweig): Verdopplungszeit und der Logarithmus</summary>
+    <div class="vertiefung-inhalt">
+      <p>Wie lange dauert es, bis sich ein Guthaben bei $5\,\%$ Zinsen pro Jahr verdoppelt? Gesucht ist der <em>Exponent</em> $n$ in der Gleichung:</p>
+      <p class="formel-abgesetzt">$$1{,}05^n = 2$$</p>
+      <p>Solche Gleichungen kannst du bisher nur durch systematisches Probieren lösen — und das ist völlig in Ordnung:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered}1{,}05^{14} \approx 1{,}98 \\[4pt] 1{,}05^{15} \approx 2{,}08\end{gathered}$$</p>
+      <p>Die Verdopplung passiert also nach gut 14 Jahren. Bemerkenswert: Das Startkapital spielt dabei keine Rolle — $100\,\text{€}$ verdoppeln sich genauso schnell wie $10\,000\,\text{€}$, denn die Gleichung enthält nur den Faktor.</p>
+      <p>Für die Frage „$1{,}05$ hoch <em>wie viel</em> ergibt $2$?“ hat die Mathematik eine eigene Rechenart: den <strong>Logarithmus</strong>. So wie die Wurzel das Quadrieren umkehrt, kehrt der Logarithmus das Potenzieren um — er liest den Exponenten ab. Formal lernst du ihn in der Einführungsphase kennen; bis dahin reicht das Probieren. Als Abkürzung gibt es die <strong>Faustregel 70</strong>: Bei $p\,\%$ Wachstum pro Schritt gilt für die Verdopplungszeit näherungsweise $n \approx \frac{70}{p}$ — für $5\,\%$ also $\frac{70}{5} = 14$ Schritte. Passt.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Erkennen exponentiellen Wachstums über Zinseszins und Wertverlust bis zu Halbwertszeit und Modellvergleich — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

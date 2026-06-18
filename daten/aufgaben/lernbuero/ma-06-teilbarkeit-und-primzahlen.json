@@ -1,0 +1,804 @@
+{
+ "thema": "ma-06-teilbarkeit-und-primzahlen",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben zum Füllen dünner Spuren. Zur fachlichen Prüfung durch die Lehrkraft.",
+ "aufgaben": [
+  {
+   "id": "ma-06-tp-101",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Zahl $24$ soll lückenlos auf gleich lange Gruppen aufgeteilt werden. Wie viele Teiler hat $24$ insgesamt?",
+   "eingaben": [
+    {
+     "label": "Anzahl der Teiler",
+     "antwort": 8,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Suche Teiler-Paare, die als Produkt $24$ ergeben: $1 \\cdot 24$, $2 \\cdot 12$, ...",
+    "Weitere Paare: $3 \\cdot 8$ und $4 \\cdot 6$.",
+    "Zähle alle gefundenen Teiler: $T(24) = \\{1, 2, 3, 4, 6, 8, 12, 24\\}$."
+   ],
+   "loesungsweg": "Teiler-Paare: $1 \\cdot 24 = 24$, $2 \\cdot 12 = 24$, $3 \\cdot 8 = 24$, $4 \\cdot 6 = 24$. Damit ist $T(24) = \\{1, 2, 3, 4, 6, 8, 12, 24\\}$ — insgesamt $8$ Teiler.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-102",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz: Gesucht ist die größte dreistellige Zahl, die sowohl durch $4$ als auch durch $9$ teilbar ist. Welche Zahl ist das?",
+   "eingaben": [
+    {
+     "label": "gesuchte Zahl",
+     "antwort": 972,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Eine Zahl, die durch $4$ und durch $9$ teilbar ist, muss auch durch $\\text{kgV}(4, 9)$ teilbar sein.",
+    "$4 = 2^2$, $9 = 3^2$ — da sie keine gemeinsamen Primfaktoren haben, ist $\\text{kgV}(4, 9) = 4 \\cdot 9 = 36$.",
+    "Finde das größte Vielfache von $36$, das noch dreistellig ist: $999 : 36 = 27$ Rest $27$, also $27 \\cdot 36 = 972$."
+   ],
+   "loesungsweg": "Eine durch $4$ und $9$ teilbare Zahl ist ein Vielfaches von $\\text{kgV}(4, 9) = 36$ (da $\\text{ggT}(4, 9) = 1$). Das größte dreistellige Vielfache von $36$: $\\lfloor 999 : 36 \\rfloor = 27$, also $27 \\cdot 36 = 972$. Probe: $972 : 4 = 243$ ✓, $972 : 9 = 108$ ✓.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-103",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "In der Zahl $4\\square7$ ist die Zehnerziffer verdeckt. Welche Ziffer muss dort stehen, damit die Zahl durch $3$ teilbar ist? (Die kleinste passende Ziffer.)",
+   "eingaben": [
+    {
+     "label": "gesuchte Ziffer",
+     "antwort": 1,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Durch $3$ teilbar heißt: Die Quersumme muss durch $3$ teilbar sein.",
+    "Die bekannten Ziffern ergeben $4 + 7 = 11$.",
+    "Die nächste durch $3$ teilbare Zahl größer als $11$ ist $12$ — also muss die Zehnerstelle $1$ sein."
+   ],
+   "loesungsweg": "Quersummenregel: $4 + \\square + 7$ muss durch $3$ teilbar sein. $4 + 7 = 11$, die nächste durch $3$ teilbare Zahl ist $12$, also $\\square = 1$. Probe: $417 = 3 \\cdot 139$ ✓.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-104",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Primzahlen erkennen: Welche der folgenden Zahlen sind Primzahlen?",
+   "optionen": [
+    {
+     "text": "$7$",
+     "richtig": true,
+     "erklaerung": "Richtig: Die einzigen Teiler von $7$ sind $1$ und $7$ selbst — genau zwei Teiler."
+    },
+    {
+     "text": "$9$",
+     "richtig": false,
+     "erklaerung": "Nein: $9 = 3 \\cdot 3$ hat drei Teiler: $1$, $3$ und $9$."
+    },
+    {
+     "text": "$11$",
+     "richtig": true,
+     "erklaerung": "Richtig: $11$ ist durch keine Zahl zwischen $2$ und $10$ teilbar — eine Primzahl."
+    },
+    {
+     "text": "$1$",
+     "richtig": false,
+     "erklaerung": "Nein: Die $1$ hat nur einen einzigen Teiler (sich selbst). Eine Primzahl braucht genau zwei Teiler."
+    }
+   ],
+   "tipps": [
+    "Primzahl bedeutet: genau zwei Teiler — nämlich $1$ und die Zahl selbst.",
+    "Teste jede Zahl: Hat sie einen Teiler zwischen $2$ und ihr selbst?",
+    "$9 = 3 \\cdot 3$ — schreibe die Teilermenge auf."
+   ],
+   "loesungsweg": "Primzahlen haben genau zwei Teiler. Die $7$ ist prim ($T(7) = \\{1, 7\\}$) ✓. Die $9$ ist keine Primzahl ($T(9) = \\{1, 3, 9\\}$ — drei Teiler). Die $11$ ist prim ($T(11) = \\{1, 11\\}$) ✓. Die $1$ ist keine Primzahl (nur ein Teiler).",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-105",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Wie viele Primzahlen gibt es zwischen $1$ und $20$ (die $1$ und $20$ nicht mitgezählt)?",
+   "eingaben": [
+    {
+     "label": "Anzahl der Primzahlen",
+     "antwort": 8,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Gehe alle Zahlen von $2$ bis $19$ durch und prüfe jede: Hat sie außer $1$ und sich selbst noch einen Teiler?",
+    "Die geraden Zahlen $4$, $6$, $8$, $10$, $12$, $14$, $16$, $18$ sind keine Primzahlen.",
+    "Übrig bleiben acht Primzahlen: $2$, $3$, $5$, $7$, $11$, $13$, $17$, $19$."
+   ],
+   "loesungsweg": "Die Primzahlen von $2$ bis $19$: $2, 3, 5, 7, 11, 13, 17, 19$ — das sind genau $8$ Primzahlen. Nicht-Primzahlen in diesem Bereich sind z.B. $4 = 2 \\cdot 2$, $6 = 2 \\cdot 3$, $9 = 3 \\cdot 3$, $15 = 3 \\cdot 5$.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-106",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Zerlege $30$ vollständig in Primfaktoren: $30 = 2 \\cdot \\square \\cdot \\square$. Wie viele verschiedene Primfaktoren hat $30$?",
+   "eingaben": [
+    {
+     "label": "Anzahl verschiedener Primfaktoren",
+     "antwort": 3,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Teile $30$ schrittweise durch die kleinste passende Primzahl: $30 : 2 = 15$.",
+    "$15$ ist durch $2$ nicht mehr teilbar — versuche die $3$: $15 : 3 = 5$.",
+    "$5$ ist selbst prim. Damit ist $30 = 2 \\cdot 3 \\cdot 5$."
+   ],
+   "loesungsweg": "$30 : 2 = 15$, dann $15 : 3 = 5$, dann $5$ ist prim. Also $30 = 2 \\cdot 3 \\cdot 5$. Die drei verschiedenen Primfaktoren sind $2$, $3$ und $5$.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-107",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz: Die Zahl $72$ lässt sich schreiben als $72 = 2^3 \\cdot 3^2$. Wie viele Teiler hat $72$ insgesamt? (Nutze die Formel: Wenn $n = p^a \\cdot q^b$, dann hat $n$ genau $(a+1) \\cdot (b+1)$ Teiler.)",
+   "eingaben": [
+    {
+     "label": "Anzahl der Teiler von 72",
+     "antwort": 12,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Schreibe zuerst die Primfaktorzerlegung: $72 = 2^3 \\cdot 3^2$. Was sind $a$ und $b$?",
+    "Der Exponent von $2$ ist $a = 3$, der Exponent von $3$ ist $b = 2$.",
+    "Wende die Formel an: $(3 + 1) \\cdot (2 + 1) = 4 \\cdot 3 = 12$."
+   ],
+   "loesungsweg": "$72 = 2^3 \\cdot 3^2$. Jeder Teiler von $72$ hat die Form $2^i \\cdot 3^j$ mit $0 \\le i \\le 3$ (vier Möglichkeiten) und $0 \\le j \\le 2$ (drei Möglichkeiten). Insgesamt also $4 \\cdot 3 = 12$ Teiler: $T(72) = \\{1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72\\}$ — nachgezählt $12$ ✓.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-108",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Zerlege $45$ vollständig in Primfaktoren und schreibe das Ergebnis als Potenz-Produkt. Welches ist der einzige Primfaktor, der mehr als einmal vorkommt, und wie oft kommt er vor?",
+   "eingaben": [
+    {
+     "label": "dieser Primfaktor",
+     "antwort": 3,
+     "toleranz": 0
+    },
+    {
+     "label": "kommt vor (Anzahl)",
+     "antwort": 2,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "$45$ ist ungerade — die $2$ scheidet aus. Versuche die $3$: $45 : 3 = 15$.",
+    "$15 : 3 = 5$, und die $5$ ist prim.",
+    "Also $45 = 3 \\cdot 3 \\cdot 5 = 3^2 \\cdot 5$. Welcher Faktor kommt doppelt vor?"
+   ],
+   "loesungsweg": "$45 : 3 = 15$, dann $15 : 3 = 5$, und $5$ ist prim. Damit ist $45 = 3^2 \\cdot 5$. Der Primfaktor $3$ kommt zweimal vor, der Primfaktor $5$ nur einmal.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-109",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Bestimme den größten gemeinsamen Teiler von $12$ und $18$, indem du die Teilermengen aufschreibst.",
+   "eingaben": [
+    {
+     "label": "ggT(12, 18)",
+     "antwort": 6,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Schreibe alle Teiler von $12$ auf: $T(12) = \\{1, 2, 3, 4, 6, 12\\}$.",
+    "Schreibe alle Teiler von $18$ auf: $T(18) = \\{1, 2, 3, 6, 9, 18\\}$.",
+    "Welche Teiler stehen in beiden Mengen? Der größte davon ist der ggT."
+   ],
+   "loesungsweg": "$T(12) = \\{1, 2, 3, 4, 6, 12\\}$ und $T(18) = \\{1, 2, 3, 6, 9, 18\\}$. Gemeinsame Teiler: $\\{1, 2, 3, 6\\}$. Der größte gemeinsame Teiler ist $\\text{ggT}(12, 18) = 6$.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-110",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Zwei Seile sind $60\\,\\text{cm}$ und $80\\,\\text{cm}$ lang. Sie sollen in gleich lange Stücke zerschnitten werden — so lang wie möglich, ohne Verschnitt. Rechne in zwei Schritten.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Wie viele Zentimeter ist jedes Stück lang?",
+     "eingaben": [
+      {
+       "label": "Länge je Stück",
+       "antwort": 20,
+       "toleranz": 0,
+       "einheit": "cm"
+      }
+     ],
+     "tipps": [
+      "Jede Stücklänge muss ein Teiler von $60$ und von $80$ sein — gesucht ist der ggT."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Wie viele Stücke entstehen insgesamt (beide Seile zusammen)?",
+     "eingaben": [
+      {
+       "label": "Anzahl der Stücke",
+       "antwort": 7,
+       "toleranz": 0,
+       "einheit": "Stücke"
+      }
+     ],
+     "tipps": [
+      "Vom $60$-cm-Seil: $60 : 20 = 3$ Stücke. Vom $80$-cm-Seil: $80 : 20 = ?$ Stücke."
+     ]
+    }
+   ],
+   "tipps": [
+    "Die Stücklänge muss in $60$ und in $80$ ganzzahlig aufgehen — das ist ein gemeinsamer Teiler.",
+    "$T(60)$ enthält u.a. $\\{1, 2, 4, 5, 10, 12, 15, 20, \\ldots\\}$ und $T(80)$ enthält $\\{1, 2, 4, 5, 8, 10, 16, 20, \\ldots\\}$.",
+    "Der größte gemeinsame Teiler: $\\text{ggT}(60, 80) = 20$."
+   ],
+   "loesungsweg": "Schritt 1: $60 = 2^2 \\cdot 3 \\cdot 5$ und $80 = 2^4 \\cdot 5$, gemeinsame Primfaktoren: $2^2 \\cdot 5 = 20$. Also ist $\\text{ggT}(60, 80) = 20\\,\\text{cm}$. Schritt 2: Vom $60$-cm-Seil entstehen $60 : 20 = 3$ Stücke, vom $80$-cm-Seil $80 : 20 = 4$ Stücke — insgesamt $3 + 4 = 7$ Stücke.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Teilbarkeitsregeln und Primzahlen: Welche Aussagen sind richtig?",
+   "optionen": [
+    {
+     "text": "Eine Zahl ist durch $3$ teilbar, wenn ihre Quersumme durch $3$ teilbar ist.",
+     "richtig": true,
+     "erklaerung": "Richtig: das ist die Quersummenregel für $3$."
+    },
+    {
+     "text": "Jede Zahl, die auf $0$ endet, ist durch $5$ und durch $10$ teilbar.",
+     "richtig": true,
+     "erklaerung": "Richtig: Endziffer $0$ bedeutet teilbar durch $5$ und durch $10$."
+    },
+    {
+     "text": "$1$ ist eine Primzahl.",
+     "richtig": false,
+     "erklaerung": "Falsch: eine Primzahl hat genau zwei Teiler; $1$ hat nur einen."
+    },
+    {
+     "text": "Jede gerade Zahl außer $2$ ist eine Primzahl.",
+     "richtig": false,
+     "erklaerung": "Falsch: gerade Zahlen außer $2$ sind durch $2$ teilbar und daher keine Primzahlen."
+    }
+   ],
+   "tipps": [
+    "Quersumme heißt: alle Ziffern addieren.",
+    "Eine Primzahl hat genau zwei verschiedene Teiler: $1$ und sich selbst.",
+    "$2$ ist die einzige gerade Primzahl."
+   ],
+   "loesungsweg": "Richtig sind die erste und die zweite Aussage (Quersummenregel für $3$; Endziffer $0$ → teilbar durch $5$ und $10$). Falsch: $1$ ist keine Primzahl (nur ein Teiler), und gerade Zahlen außer $2$ sind durch $2$ teilbar, also keine Primzahlen.",
+   "kc": [
+    "KC Mathematik Gym Sek I (2015): Zahl, Teilbarkeit und Primzahlen (Klasse 6)"
+   ]
+  },
+  {
+   "id": "ma-06-tp-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Bestimme die Teilermenge von $48$, indem du Teiler-Paare suchst ($1\\cdot 48$, $2\\cdot 24$, …). Wie viele Teiler hat $48$ insgesamt?",
+   "eingaben": [
+    {
+     "label": "Anzahl der Teiler",
+     "antwort": 10,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Suche Paare, deren Produkt $48$ ergibt.",
+    "$1\\cdot 48$, $2\\cdot 24$, $3\\cdot 16$, $4\\cdot 12$, $6\\cdot 8$.",
+    "Jedes Paar liefert zwei Teiler – zähle sie alle."
+   ],
+   "loesungsweg": "Teiler-Paare: $1\\cdot 48$, $2\\cdot 24$, $3\\cdot 16$, $4\\cdot 12$, $6\\cdot 8$. Teilermenge: $\\{1,2,3,4,6,8,12,16,24,48\\}$. Das sind $10$ Teiler.",
+   "kc": [
+    "KC Mathematik Gym Sek I (2015): Zahl, Teilbarkeit und Primzahlen (Klasse 6)"
+   ]
+  },
+  {
+   "id": "ma-06-tp-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ziffernrätsel: In der Zahl $2\\square 4$ ist die Zehnerziffer verdeckt. Welche Ziffer muss an der Stelle $\\square$ stehen, damit die Zahl durch $9$ teilbar ist?",
+   "eingaben": [
+    {
+     "label": "gesuchte Ziffer",
+     "antwort": 3,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Eine Zahl ist durch $9$ teilbar, wenn ihre Quersumme durch $9$ teilbar ist.",
+    "Quersumme: $2+\\square+4=6+\\square$.",
+    "Welche Ziffer ergänzt $6$ zur nächsten durch $9$ teilbaren Zahl?"
+   ],
+   "loesungsweg": "Eine Zahl ist durch $9$ teilbar, wenn ihre Quersumme durch $9$ teilbar ist. Quersumme: $2+\\square+4=6+\\square$. Für $6+\\square=9$ muss $\\square=3$ sein. Probe: $234:9=26$. Die Ziffer ist $3$.",
+   "kc": [
+    "KC Mathematik Gym Sek I (2015): Zahl, Teilbarkeit und Primzahlen (Klasse 6)"
+   ]
+  },
+  {
+   "id": "ma-06-tp-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Zerlege $90$ in Primfaktoren – zum Beispiel mit einem Zerlegungsbaum. Wie oft kommt der Primfaktor $3$ vor, und wie heißt der größte Primfaktor?",
+   "eingaben": [
+    {
+     "label": "Anzahl der Faktoren 3",
+     "antwort": 2,
+     "toleranz": 0.01,
+     "einheit": ""
+    },
+    {
+     "label": "größter Primfaktor",
+     "antwort": 5,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Beginne mit der kleinsten Primzahl, durch die $90$ teilbar ist.",
+    "$90=2\\cdot 45$, dann $45$ weiter zerlegen.",
+    "$45=3\\cdot 15=3\\cdot 3\\cdot 5$."
+   ],
+   "loesungsweg": "$90=2\\cdot 45=2\\cdot 3\\cdot 15=2\\cdot 3\\cdot 3\\cdot 5$. Also $90=2\\cdot 3^2\\cdot 5$. Der Primfaktor $3$ kommt $2$-mal vor, der größte Primfaktor ist $5$.",
+   "kc": [
+    "KC Mathematik Gym Sek I (2015): Zahl, Teilbarkeit und Primzahlen (Klasse 6)"
+   ]
+  },
+  {
+   "id": "ma-06-tp-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Bestimme den größten gemeinsamen Teiler und das kleinste gemeinsame Vielfache von $18$ und $30$.",
+   "eingaben": [
+    {
+     "label": "ggT(18, 30)",
+     "antwort": 6,
+     "toleranz": 0.01,
+     "einheit": ""
+    },
+    {
+     "label": "kgV(18, 30)",
+     "antwort": 90,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Zerlege beide Zahlen in Primfaktoren: $18=2\\cdot 3^2$, $30=2\\cdot 3\\cdot 5$.",
+    "Der ggT ist das Produkt der gemeinsamen Primfaktoren in der kleinsten Anzahl.",
+    "Das kgV nimmt jeden Primfaktor in der höchsten Anzahl."
+   ],
+   "loesungsweg": "$18=2\\cdot 3^2$, $30=2\\cdot 3\\cdot 5$. ggT: gemeinsame Faktoren $2\\cdot 3=6$. kgV: jeden Faktor in höchster Anzahl $2\\cdot 3^2\\cdot 5=90$. Also $\\text{ggT}=6$, $\\text{kgV}=90$.",
+   "kc": [
+    "KC Mathematik Gym Sek I (2015): Zahl, Teilbarkeit und Primzahlen (Klasse 6)"
+   ]
+  },
+  {
+   "id": "ma-06-tp-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Wie viele Primzahlen gibt es zwischen $1$ und $30$ (die $1$ und $30$ nicht mitgezählt)?",
+   "eingaben": [
+    {
+     "label": "Anzahl der Primzahlen",
+     "antwort": 10,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Eine Primzahl hat genau zwei Teiler.",
+    "Streiche der Reihe nach alle Vielfachen von $2$, $3$, $5$ … (Sieb des Eratosthenes).",
+    "Die Primzahlen beginnen mit $2,3,5,7,11,\\dots$"
+   ],
+   "loesungsweg": "Primzahlen zwischen $1$ und $30$: $2,3,5,7,11,13,17,19,23,29$. Das sind $10$ Primzahlen.",
+   "kc": [
+    "KC Mathematik Gym Sek I (2015): Zahl, Teilbarkeit und Primzahlen (Klasse 6)"
+   ]
+  },
+  {
+   "id": "ma-06-tp-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Knobelei: Welche kleinste Zahl (außer $0$) ist durch alle Zahlen von $1$ bis $6$ teilbar?",
+   "eingaben": [
+    {
+     "label": "kleinste Zahl",
+     "antwort": 60,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Gesucht ist das kleinste gemeinsame Vielfache (kgV) von $1$ bis $6$.",
+    "Zerlege in Primfaktoren: $4=2^2$, $6=2\\cdot 3$, $5=5$.",
+    "Nimm jeden Primfaktor in der höchsten vorkommenden Anzahl: $2^2\\cdot 3\\cdot 5$."
+   ],
+   "loesungsweg": "Gesucht ist das kgV von $1,2,3,4,5,6$. Höchste Primfaktor-Anzahlen: $2^2$ (aus $4$), $3$ (aus $3$ oder $6$), $5$ (aus $5$). kgV $=2^2\\cdot 3\\cdot 5=4\\cdot 15=60$. Die kleinste Zahl ist $60$.",
+   "kc": [
+    "KC Mathematik Gym Sek I (2015): Zahl, Teilbarkeit und Primzahlen (Klasse 6)"
+   ]
+  },
+  {
+   "id": "ma-06-tp-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein rechteckiger Boden ist $84\\,\\text{cm}$ breit und $120\\,\\text{cm}$ lang. Er soll lückenlos mit möglichst großen quadratischen Fliesen ausgelegt werden, ohne eine Fliese zu zerschneiden. a) Welche Seitenlänge haben die Fliesen? b) Wie viele Fliesen braucht man?",
+   "eingaben": [
+    {
+     "label": "a) Seitenlänge der Fliesen",
+     "antwort": 12,
+     "toleranz": 0.01,
+     "einheit": "cm"
+    },
+    {
+     "label": "b) Anzahl der Fliesen",
+     "antwort": 70,
+     "toleranz": 0.01,
+     "einheit": "Fliesen"
+    }
+   ],
+   "tipps": [
+    "Die Fliesenseite muss sowohl $84$ als auch $120$ teilen – gesucht ist der ggT.",
+    "$84=2^2\\cdot 3\\cdot 7$, $120=2^3\\cdot 3\\cdot 5$; gemeinsam $2^2\\cdot 3=12$.",
+    "Anzahl: (Breite : Seitenlänge) mal (Länge : Seitenlänge)."
+   ],
+   "loesungsweg": "a) Größte Fliese = ggT$(84,120)$. $84=2^2\\cdot 3\\cdot 7$, $120=2^3\\cdot 3\\cdot 5$, gemeinsam $2^2\\cdot 3=12$. Seitenlänge $12\\,\\text{cm}$. b) In die Breite passen $84:12=7$, in die Länge $120:12=10$ Fliesen. Insgesamt $7\\cdot 10=70$ Fliesen.",
+   "kc": [
+    "KC Mathematik Gym Sek I (2015): Zahl, Teilbarkeit und Primzahlen (Klasse 6)"
+   ]
+  },
+  {
+   "id": "ma-06-tp-301",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Mara sagt: „Eine Primzahl kann niemals gerade sein, denn gerade Zahlen sind ja durch $2$ teilbar.“ Hat Mara recht? Begründe deine Antwort und nenne ein Gegenbeispiel, falls es eines gibt.",
+   "musterloesung": "Mara hat fast recht, aber nicht ganz. Eine Primzahl hat genau zwei Teiler: $1$ und sich selbst. Jede gerade Zahl ist durch $2$ teilbar. Ist eine gerade Zahl größer als $2$, dann hat sie neben $1$ und sich selbst auch noch den Teiler $2$ - also mehr als zwei Teiler, und sie ist keine Primzahl. Die Zahl $2$ selbst ist aber eine Ausnahme: Sie ist gerade und hat trotzdem nur die Teiler $1$ und $2$. Deshalb ist $2$ eine Primzahl - sogar die einzige gerade Primzahl. Maras Behauptung stimmt also für alle geraden Zahlen außer der $2$.",
+   "tipps": [
+    "Wie viele Teiler hat eine Primzahl?",
+    "Welche Teiler hat eine gerade Zahl auf jeden Fall?",
+    "Schau dir die Zahl $2$ ganz genau an: Welche Teiler hat sie?"
+   ],
+   "loesungsweg": "Gerade Zahlen größer als $2$ haben den zusätzlichen Teiler $2$, sind also keine Primzahlen. Aber $2$ hat nur die Teiler $1$ und $2$ und ist die einzige gerade Primzahl. Gegenbeispiel: $2$.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-302",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Über Teiler, Vielfache und Primzahlen werden Aussagen gemacht. Welche sind richtig?",
+   "optionen": [
+    {
+     "text": "Ist eine Zahl durch $6$ teilbar, dann ist sie auch durch $2$ und durch $3$ teilbar.",
+     "richtig": true,
+     "erklaerung": "Richtig: $6=2\\cdot 3$, jeder Teiler von $6$ teilt die Zahl mit, also auch $2$ und $3$."
+    },
+    {
+     "text": "Jede Zahl ist ein Teiler von sich selbst.",
+     "richtig": true,
+     "erklaerung": "Richtig: $a:a=1$ geht immer auf, also ist $a$ Teiler von $a$."
+    },
+    {
+     "text": "Wenn eine Zahl durch $2$ und durch $3$ teilbar ist, ist sie auch durch $5$ teilbar.",
+     "richtig": false,
+     "erklaerung": "Falsch: $12$ ist durch $2$ und $3$ teilbar, aber nicht durch $5$."
+    },
+    {
+     "text": "Die Zahl $0$ ist ein Vielfaches jeder natürlichen Zahl.",
+     "richtig": true,
+     "erklaerung": "Richtig: $0=0\\cdot a$ für jede Zahl $a$, also ist $0$ Vielfaches von allen."
+    }
+   ],
+   "tipps": [
+    "Zerlege die $6$ in ihre Faktoren: Welche Zahlen stecken darin?",
+    "Prüfe die dritte Aussage mit einem Beispiel wie $12$.",
+    "Ein Vielfaches entsteht durch Malnehmen - auch das Malnehmen mit $0$ zählt."
+   ],
+   "loesungsweg": "Richtig sind die erste, zweite und vierte Aussage. Die dritte ist falsch: $12$ ist durch $2$ und $3$ teilbar, aber nicht durch $5$.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-303",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jeder Zahl die Aussage zu, die genau auf sie passt.",
+   "paare": [
+    {
+     "links": "$17$",
+     "rechts": "Primzahl"
+    },
+    {
+     "links": "$1$",
+     "rechts": "hat nur einen einzigen Teiler"
+    },
+    {
+     "links": "$36$",
+     "rechts": "Quadratzahl mit vielen Teilern"
+    },
+    {
+     "links": "$50$",
+     "rechts": "durch 2 und durch 5 teilbar, aber keine Primzahl"
+    }
+   ],
+   "tipps": [
+    "Eine Primzahl hat genau zwei Teiler.",
+    "Die $1$ hat nur sich selbst als Teiler.",
+    "$36=6\\cdot 6$; eine Zahl, die auf $0$ endet, ist durch $2$ und $5$ teilbar."
+   ],
+   "loesungsweg": "$17$ hat nur die Teiler $1$ und $17$, also Primzahl. $1$ hat nur den Teiler $1$. $36=6^2$ ist eine Quadratzahl mit den Teilern $1,2,3,4,6,9,12,18,36$. $50$ endet auf $0$, ist durch $2$ und $5$ teilbar und wegen weiterer Teiler keine Primzahl.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-304",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Fülle die Lücken zur Primfaktorzerlegung und zum ggT.",
+   "text": "Die Zahl $60$ zerlegt man in Primfaktoren als $60=2^2\\cdot$___$\\cdot 5$. Eine Zahl ist genau dann durch $4$ teilbar, wenn die aus den letzten ___ Ziffern gebildete Zahl durch $4$ teilbar ist. Der größte gemeinsame Teiler von $8$ und $12$ ist ___.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "3",
+     "optionen": [
+      "3",
+      "6",
+      "15"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "zwei",
+     "optionen": [
+      "zwei",
+      "drei",
+      "vier"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "4",
+     "optionen": [
+      "2",
+      "4",
+      "24"
+     ]
+    }
+   ],
+   "tipps": [
+    "$60=4\\cdot 15=2^2\\cdot 3\\cdot 5$.",
+    "Für die Teilbarkeit durch $4$ schaut man auf die letzten beiden Ziffern.",
+    "Teiler von $8$: $1,2,4,8$; Teiler von $12$: $1,2,3,4,6,12$ - der größte gemeinsame ist $4$."
+   ],
+   "loesungsweg": "$60=2^2\\cdot 3\\cdot 5$, also fehlt die $3$. Die $4$-er-Regel betrachtet die letzten zwei Ziffern. $\\text{ggT}(8,12)=4$.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-305",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "So bestimmt man das kleinste gemeinsame Vielfache von $4$ und $6$ über Vielfachenreihen. Bringe die Schritte in die richtige Reihenfolge.",
+   "elemente": [
+    "Die ersten Vielfachen von $4$ aufschreiben: $4, 8, 12, 16, \\ldots$",
+    "Die ersten Vielfachen von $6$ aufschreiben: $6, 12, 18, 24, \\ldots$",
+    "Die Zahlen suchen, die in beiden Reihen vorkommen: $12, 24, \\ldots$",
+    "Die kleinste gemeinsame Zahl als Ergebnis nehmen: $\\text{kgV}(4,6)=12$."
+   ],
+   "tipps": [
+    "Vielfache entstehen durch Malnehmen mit $1, 2, 3, \\ldots$",
+    "Zuerst beide Reihen, dann nach gemeinsamen Zahlen suchen.",
+    "Das kgV ist die kleinste Zahl, die in beiden Reihen auftaucht."
+   ],
+   "loesungsweg": "Vielfache von $4$: $4,8,12,\\ldots$; von $6$: $6,12,18,\\ldots$. Gemeinsam ist zuerst $12$, also $\\text{kgV}(4,6)=12$.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-306",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Im Schwimmbad startet ein Wellenbecken alle $15$ Minuten, die Rutsche wird alle $20$ Minuten kurz gesperrt. Um $14{:}00$ Uhr beginnen beide gleichzeitig. Nach wie vielen Minuten treffen Wellenstart und Rutschensperrung das nächste Mal wieder zusammen?",
+   "eingaben": [
+    {
+     "label": "nach",
+     "antwort": 60,
+     "toleranz": 0,
+     "einheit": "min"
+    }
+   ],
+   "tipps": [
+    "Gesucht ist eine Zeit, die sowohl ein Vielfaches von $15$ als auch von $20$ ist.",
+    "Das ist das kleinste gemeinsame Vielfache von $15$ und $20$.",
+    "Vielfache von $15$: $15,30,45,60,\\ldots$; von $20$: $20,40,60,\\ldots$"
+   ],
+   "loesungsweg": "Gesucht ist $\\text{kgV}(15,20)$. Mit Primfaktoren: $15=3\\cdot 5$, $20=2^2\\cdot 5$, also $\\text{kgV}=2^2\\cdot 3\\cdot 5=60$. Nach $60$ Minuten treffen beide wieder zusammen.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  }
+ ]
+}
