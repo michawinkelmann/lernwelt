@@ -169,7 +169,7 @@ function rendereLandkarte() {
     <p class="lb-untertitel">${esc(KURS.untertitel || "")}</p>
   </div>`);
   const leiste = el(`<div class="lb-leitleiste"></div>`);
-  const taktung = KURS.taktung === "wochenplan" ? "Wochenplan mit Mindestmarke" : "feste Lektionsfolge";
+  const taktung = KURS.taktung === "wochenplan" ? "Wochenplan" : "feste Lektionsfolge";
   const cp = KURS.checkpoints === "freischalten" ? "Checkpoints schalten frei (Lehrkraft kann freigeben)" : "Checkpoints nur als Empfehlung";
   leiste.append(el(`<span class="lb-chip">🗓️ ${esc(taktung)}</span>`));
   leiste.append(el(`<span class="lb-chip">🔓 ${esc(cp)}</span>`));
@@ -196,7 +196,6 @@ function rendereLandkarte() {
     const panel = el(`<section class="lb-woche" aria-label="${esc(titel)}">
       <div class="lb-woche-kopf"><h2>${esc(titel)}</h2>
         <span class="lb-woche-spanne">${block.lektionen.length} Lektionen</span></div>
-      ${block.mindestmarke ? `<p class="lb-mindestmarke">Mindestmarke: <strong>${esc(block.mindestmarke)}</strong></p>` : ""}
       <div class="lb-lektionsliste"></div></section>`);
     const liste = panel.querySelector(".lb-lektionsliste");
     block.lektionen.forEach(id => {
