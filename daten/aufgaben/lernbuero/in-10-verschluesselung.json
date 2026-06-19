@@ -17,7 +17,7 @@
     {
      "text": "Verschlüsselung stellt sicher, dass nur berechtigte Personen den Inhalt einer Nachricht lesen können.",
      "richtig": true,
-     "erklaerung": "Richtig — genau das nennt man Vertraulichkeit. Selbst wenn jemand die Nachricht abfängt, bleibt sie ohne Schlüsse unlesbar."
+     "erklaerung": "Richtig — genau das nennt man Vertraulichkeit. Selbst wenn jemand die Nachricht abfängt, bleibt sie ohne Schlüssell unlesbar."
     },
     {
      "text": "Verschlüsselung macht Nachrichten kleiner, damit sie schneller übertragen werden.",
@@ -30,7 +30,7 @@
      "erklaerung": "Richtig — überall dort werden vertrauliche Daten übertragen, die geschützt werden müssen."
     },
     {
-     "text": "Eine Nachricht ist nur dann sicher, wenn niemand weiss, dass sie verschickt wurde.",
+     "text": "Eine Nachricht ist nur dann sicher, wenn niemand weiß, dass sie verschickt wurde.",
      "richtig": false,
      "erklaerung": "Das beschreibt Steganographie (Verstecken der Nachricht), nicht Verschlüsselung. Verschlüsselung schützt den Inhalt, auch wenn die Übertragung sichtbar ist."
     }
@@ -40,7 +40,7 @@
     "Es gibt einen Unterschied zwischen dem Schutz des Inhalts und dem Schutz der Tatsache, dass überhaupt etwas übertragen wird.",
     "Zwei Aussagen sind richtig."
    ],
-   "loesungsweg": "Richtig sind Aussagen 1 und 3: Verschlüsselung schützt die Vertraulichkeit — nur Berechtigte können den Inhalt lesen — und sie wird in Banking, Messenger und Online-Shopping eingesetzt. Das Verkleinern von Daten ist Kompression, nicht Verschlüsselung. Und das Verstecken der Existenz einer Nachricht heisst Steganographie.",
+   "loesungsweg": "Richtig sind Aussagen 1 und 3: Verschlüsselung schützt die Vertraulichkeit — nur Berechtigte können den Inhalt lesen — und sie wird in Banking, Messenger und Online-Shopping eingesetzt. Das Verkleinern von Daten ist Kompression, nicht Verschlüsselung. Und das Verstecken der Existenz einer Nachricht heißt Steganographie.",
    "kc": [
     "daten-und-ihre-spuren"
    ]
@@ -70,7 +70,7 @@
      "rechts": "Verbindlichkeit"
     },
     {
-     "links": "Jeder kann den öffentlichen Schlussel nutzen, um eine Nachricht zu verschlüsseln",
+     "links": "Jeder kann den öffentlichen Schlüssel nutzen, um eine Nachricht zu verschlüsseln",
      "rechts": "Asymmetrisches Verfahren"
     }
    ],
@@ -79,7 +79,7 @@
     "Integrität = der Inhalt wurde nicht manipuliert.",
     "Verbindlichkeit = Absender kann Sendung nicht leugnen (vgl. eingeschriebener Brief)."
    ],
-   "loesungsweg": "Nur der berechtigte Empfänger kann lesen: Vertraulichkeit. Unveränderbarkeit erkennbar machen: Integrität. Absender kann nicht leugnen: Verbindlichkeit. Öffentlichen Schlussel zum Verschlüsseln nutzen: Asymmetrisches Verfahren — das Grundprinzip von RSA und HTTPS.",
+   "loesungsweg": "Nur der berechtigte Empfänger kann lesen: Vertraulichkeit. Unveränderbarkeit erkennbar machen: Integrität. Absender kann nicht leugnen: Verbindlichkeit. Öffentlichen Schlüssel zum Verschlüsseln nutzen: Asymmetrisches Verfahren — das Grundprinzip von RSA und HTTPS.",
    "kc": [
     "daten-und-ihre-spuren"
    ]
@@ -418,15 +418,15 @@
     },
     {
      "art": "eingabe",
-     "antwort": "ÖFGI"
+     "antwort": "OEFGI"
     }
    ],
    "tipps": [
     "Entschlüsseln bedeutet: Schlüsselposition abziehen. Wenn das Ergebnis negativ ist, addiere 26.",
     "P(15) - B(1) = 14. Position 14 ist O (A=0, B=1, ..., O=14).",
-    "N(13) - I(8) = 5. Position 5 ist F."
+    "Der Klartext OEFGI ist ein Kunstwort – hier zählt nur das richtige Rechnen."
    ],
-   "loesungsweg": "P(15)-B(1)=14->O. I(8)-E(4)=4->E. N(13)-I(8)=5->F. H(7)-B(1)=6->G. M(12)-E(4)=8->I. Klartext: ÖFGI. Probe: O(14)+B(1)=15->P, E(4)+E(4)=8->I, F(5)+I(8)=13->N, G(6)+B(1)=7->H, I(8)+E(4)=12->M — PINHM. Stimmt.",
+   "loesungsweg": "P(15)-B(1)=14->O. I(8)-E(4)=4->E. N(13)-I(8)=5->F. H(7)-B(1)=6->G. M(12)-E(4)=8->I. Klartext: OEFGI. Probe: O(14)+B(1)=15->P, E(4)+E(4)=8->I, F(5)+I(8)=13->N, G(6)+B(1)=7->H, I(8)+E(4)=12->M — PINHM. Stimmt.",
    "kc": [
     "daten-und-ihre-spuren"
    ]
@@ -446,7 +446,7 @@
     {
      "text": "Bei symmetrischer Verschlüsselung verwenden Absender und Empfänger denselben Schlüssel.",
      "richtig": true,
-     "erklaerung": "Richtig — genau das macht sie symmetrisch. Caesar und ÄS sind Beispiele."
+     "erklaerung": "Richtig — genau das macht sie symmetrisch. Caesar und AES sind Beispiele."
     },
     {
      "text": "Bei asymmetrischer Verschlüsselung gibt es einen öffentlichen Schlüssel zum Verschlüsseln und einen privaten zum Entschlüsseln.",
@@ -454,9 +454,9 @@
      "erklaerung": "Richtig — das Schlüsselpaar ist das Kernprinzip: Jeder kann verschlüsseln, nur die Empfängerin kann entschlüsseln."
     },
     {
-     "text": "ÄS ist ein asymmetrisches Verfahren mit zwei verschiedenen Schlüsseln.",
+     "text": "AES ist ein asymmetrisches Verfahren mit zwei verschiedenen Schlüsseln.",
      "richtig": false,
-     "erklaerung": "ÄS ist symmetrisch: Verschlüsseln und Entschlüsseln nutzen denselben geheimen Schlüssel."
+     "erklaerung": "AES ist symmetrisch: Verschlüsseln und Entschlüsseln nutzen denselben geheimen Schlüssel."
     },
     {
      "text": "Ende-zu-Ende-Verschlüsselung bedeutet, dass der Dienstbetreiber die Nachrichten mitlesen kann.",
@@ -469,7 +469,7 @@
     "Denke an das Briefkasten-Bild: Einwerfen kann jeder (öffentlicher Schlüssel), herausholen nur die Besitzerin (privater Schlüssel).",
     "Zwei Aussagen sind richtig."
    ],
-   "loesungsweg": "Richtig sind Aussage 1 und 2: Symmetrisch = ein gemeinsamer Schlüssel (Caesar, ÄS); asymmetrisch = Schlüsselpaar öffentlich/privat. ÄS ist symmetrisch, nicht asymmetrisch. Und Ende-zu-Ende schutzt gerade vor dem Betreiber — er sieht nur den Geheimtext.",
+   "loesungsweg": "Richtig sind Aussage 1 und 2: Symmetrisch = ein gemeinsamer Schlüssel (Caesar, AES); asymmetrisch = Schlüsselpaar öffentlich/privat. AES ist symmetrisch, nicht asymmetrisch. Und Ende-zu-Ende schutzt gerade vor dem Betreiber — er sieht nur den Geheimtext.",
    "kc": [
     "daten-und-ihre-spuren"
    ]
@@ -778,7 +778,7 @@
      "rechts": "Mehrere Caesar-Verschiebungen wechseln sich nach einem Schlüssewort ab"
     },
     {
-     "links": "Symmetrisches Verfahren (z. B. ÄS)",
+     "links": "Symmetrisches Verfahren (z. B. AES)",
      "rechts": "Ver- und Entschlüsseln erfolgen mit demselben geheimen Schlüssel"
     },
     {
@@ -791,7 +791,89 @@
     "Symmetrisch = ein Schlüssel für beide Richtungen.",
     "Asymmetrisch = zwei verschiedene Schlüssel — einer darf öffentlich sein."
    ],
-   "loesungsweg": "Caesar = feste Verschiebung aller Buchstaben. Vigenere = wechselnde Verschiebungen nach Schlüssewort. Symmetrisch (ÄS) = ein gemeinsamer Schlüssel. Asymmetrisch = Schlüsselpaar: öffentlicher Schlüssel verschlüsselt, privater Schlüssel entschlüsselt.",
+   "loesungsweg": "Caesar = feste Verschiebung aller Buchstaben. Vigenere = wechselnde Verschiebungen nach Schlüssewort. Symmetrisch (AES) = ein gemeinsamer Schlüssel. Asymmetrisch = Schlüsselpaar: öffentlicher Schlüssel verschlüsselt, privater Schlüssel entschlüsselt.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-116",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Standard L6: Ordne die drei Grundbegriffe einer einzelnen Nachricht zu. Anna schreibt TREFFEN, verschlüsselt es und schickt WUHIIHQ.",
+   "text": "Das lesbare Wort TREFFEN ist der ___. Das verschickte WUHIIHQ ist der ___. Die geheime Zusatzinformation, mit der Anna ver- und ihre Freundin wieder entschlüsselt, ist der ___. Von den dreien muss nur der ___ geheim bleiben.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Klartext",
+     "optionen": [
+      "Klartext",
+      "Geheimtext",
+      "Schlüssel"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Geheimtext",
+     "optionen": [
+      "Geheimtext",
+      "Klartext",
+      "Schlüssel"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Schlüssel",
+     "optionen": [
+      "Schlüssel",
+      "Klartext",
+      "Geheimtext"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Schlüssel",
+     "optionen": [
+      "Schlüssel",
+      "Geheimtext",
+      "Klartext"
+     ]
+    }
+   ],
+   "tipps": [
+    "„Klar\" heißt: direkt lesbar, noch nicht verschlüsselt.",
+    "Der Geheimtext ist die unleserliche, verschickte Fassung.",
+    "Wer die geheime Zusatzinformation kennt, kann jeden Geheimtext wieder lesbar machen."
+   ],
+   "loesungsweg": "TREFFEN ist der Klartext (lesbare Originalnachricht). WUHIIHQ ist der Geheimtext (verschlüsselt, unleserlich). Die Verschiebung bzw. das geheime Zusatzwissen ist der Schlüssel. Geheim bleiben muss nur der Schlüssel – Klar- und Geheimtext können sichtbar werden, ohne dass die Sicherheit sofort verloren ist.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-117",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Plus L6: Erkläre mit dem Bild von Postkarte und Brief, warum man auch ganz normale Alltagsnachrichten im Internet verschlüsseln sollte – und nicht nur Geheimagenten. Nenne dabei mindestens zwei Beispiele für schützenswerte Alltagsdaten.",
+   "musterloesung": "Eine unverschlüsselte Nachricht ist wie eine Postkarte: Auf ihrem Weg geht sie über viele Stationen (WLAN, Router, Server), und an jeder kann jemand mitlesen. Eine verschlüsselte Nachricht ist wie ein verschlossener Brief – unterwegs ist nur unleserliches Zeug zu sehen, lesen kann sie nur die berechtigte Person. Das ist nicht nur für Geheimnisse wichtig: Auch alltägliche Daten reisen durch fremde Netze und sind schützenswert, zum Beispiel Passwörter beim Login, Chatnachrichten, der eigene Standort, Bankdaten beim Online-Kauf oder Gesundheitsdaten. Würden diese offen wie eine Postkarte verschickt, könnten Dritte sie abfangen und missbrauchen. Verschlüsselung stellt deshalb Vertraulichkeit her – für alle, nicht nur für Agenten.",
+   "tipps": [
+    "Eine Postkarte kann jeder lesen, durch dessen Hände sie geht – ein Brief ist verschlossen.",
+    "Über welche Stationen reist eine Nachricht im Internet?",
+    "Denke an Passwörter, Standort, Bankdaten – alles Alltägliches, das geschützt gehört."
+   ],
+   "loesungsweg": "Kernpunkte: (1) Unverschlüsselt = Postkarte, an jeder Zwischenstation mitlesbar; verschlüsselt = Brief, unterwegs unleserlich. (2) Auch Alltagsdaten (Passwörter, Chats, Standort, Bankdaten, Gesundheitsdaten) reisen durch fremde Netze und sind schützenswert. (3) Verschlüsselung stellt Vertraulichkeit her – für jeden, nicht nur für Geheimagenten.",
    "kc": [
     "daten-und-ihre-spuren"
    ]

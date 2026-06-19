@@ -199,6 +199,109 @@
    ]
   },
   {
+   "id": "in-10-ea-106",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Standard L17: Ein Zustandsdiagramm zeigt drei Kreise q0, q1, q2. Ein Pfeil kommt von außen auf q0. Um q2 ist ein zweiter Kreis gezeichnet. Ein beschrifteter Pfeil führt von q0 nach q1 (Beschriftung a), einer von q1 nach q2 (Beschriftung b). Ordne die Symbole den Begriffen zu.",
+   "text": "Der Pfeil von außen auf q0 zeigt: q0 ist der ___. Der zweite Kreis um q2 bedeutet: q2 ist ein ___ Zustand. Der beschriftete Pfeil von q0 nach q1 ist ein ___. Seine Beschriftung a ist das ___.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Startzustand",
+     "optionen": [
+      "Startzustand",
+      "akzeptierende Zustand",
+      "Übergang"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "akzeptierender",
+     "optionen": [
+      "akzeptierender",
+      "gesperrter",
+      "leerer"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Übergang",
+     "optionen": [
+      "Übergang",
+      "Startzustand",
+      "Doppelkreis"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Eingabesymbol",
+     "optionen": [
+      "Eingabesymbol",
+      "Folgezustand",
+      "Gedächtnis"
+     ]
+    }
+   ],
+   "tipps": [
+    "Ein Pfeil ohne Ausgangskreis (von außen) markiert immer den Startzustand.",
+    "Ein Doppelkreis (zweiter Kreis) kennzeichnet einen akzeptierenden Zustand.",
+    "Die Beschriftung an einem Übergangspfeil ist das Eingabesymbol, das ihn auslöst."
+   ],
+   "loesungsweg": "Pfeil von außen → q0 ist Startzustand. Doppelkreis um q2 → q2 ist akzeptierender Zustand. Der beschriftete Pfeil q0→q1 ist ein Übergang, und seine Beschriftung a ist das Eingabesymbol, bei dem der Übergang ausgeführt wird.",
+   "kc": [
+    "automaten"
+   ]
+  },
+  {
+   "id": "in-10-ea-107",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Plus L17: Welche Aussagen über die Symbole eines Zustandsdiagramms sind richtig?",
+   "optionen": [
+    {
+     "text": "Ein akzeptierender Zustand wird als Doppelkreis gezeichnet.",
+     "richtig": true,
+     "erklaerung": "Richtig – der zweite Kreis um den Zustand kennzeichnet ihn als akzeptierend (Endzustand)."
+    },
+    {
+     "text": "Den Startzustand erkennt man an einem Pfeil, der von außen ohne Ausgangskreis auf ihn zeigt.",
+     "richtig": true,
+     "erklaerung": "Richtig – dieser Pfeil hat keine Quelle und markiert den Startzustand."
+    },
+    {
+     "text": "Ein Zustand kann niemals gleichzeitig Startzustand und akzeptierender Zustand sein.",
+     "richtig": false,
+     "erklaerung": "Doch: Dann hat er den Pfeil von außen UND den Doppelkreis."
+    },
+    {
+     "text": "Die Beschriftung eines Übergangspfeils gibt den Namen des Folgezustands an.",
+     "richtig": false,
+     "erklaerung": "Nein – die Beschriftung ist das Eingabesymbol; der Folgezustand ist der Kreis, auf den der Pfeil zeigt."
+    }
+   ],
+   "tipps": [
+    "Doppelkreis und Pfeil von außen sind zwei verschiedene Markierungen – ein Zustand kann beide tragen.",
+    "Was steht an einem Übergangspfeil: ein Symbol oder ein Zustandsname?",
+    "Genau zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig: Doppelkreis = akzeptierend; Pfeil von außen = Startzustand. Falsch: Ein Zustand darf zugleich Start und akzeptierend sein (Pfeil von außen + Doppelkreis), und die Pfeilbeschriftung ist das Eingabesymbol, nicht der Folgezustand.",
+   "kc": [
+    "automaten"
+   ]
+  },
+  {
    "id": "in-10-ea-201",
    "typ": "multiple-choice",
    "zweig": [

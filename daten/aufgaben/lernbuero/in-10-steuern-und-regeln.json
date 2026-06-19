@@ -146,7 +146,7 @@
    "afb": 1,
    "ergaenzung": "lernbuero",
    "frage": "Ergänze die drei Schritte, die ein Steuerungsalgorithmus in seiner Schleife immer wieder durchläuft.",
-   "text": "Zuerst wird der Sensor ausgelesen — das ist das ___. Dann wird der Messwert mit einer Bedingung verglichen — das ist das ___. Schliesslich wird der Aktor angesteuert — das ist das ___.",
+   "text": "Zuerst wird der Sensor ausgelesen — das ist das ___. Dann wird der Messwert mit einer Bedingung verglichen — das ist das ___. Schließlich wird der Aktor angesteuert — das ist das ___.",
    "luecken": [
     {
      "art": "dropdown",
@@ -227,6 +227,137 @@
    "loesungsweg": "Richtig sind die Aussagen 1, 2 und 4: Waschmaschine, Smartwatch und Verkehrsampel enthalten fest eingebaute Mikrocontroller mit festem Zweck. Falsch ist Aussage 3 — ein einfacher Holzstuhl hat keinerlei Elektronik und damit kein eingebettetes System.",
    "kc": [
     "eingebettete-systeme"
+   ]
+  },
+  {
+   "id": "in-10-sr-106",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Plus L26: Welche Aussagen über das EVA-Prinzip und den Mikrocontroller sind richtig?",
+   "optionen": [
+    {
+     "text": "Jedes verarbeitende technische System lässt sich in Eingabe, Verarbeitung und Ausgabe gliedern.",
+     "richtig": true,
+     "erklaerung": "Richtig – das ist gerade die Aussage des EVA-Prinzips."
+    },
+    {
+     "text": "Den mittleren Schritt, die Verarbeitung, übernimmt bei kleinen Geräten ein Mikrocontroller.",
+     "richtig": true,
+     "erklaerung": "Richtig – ein Mikrocontroller ist ein kompletter kleiner Computer auf einem Chip."
+    },
+    {
+     "text": "Ein Mikrocontroller enthält Prozessor, Speicher und Anschlüsse.",
+     "richtig": true,
+     "erklaerung": "Richtig – damit liest er Eingaben ein, rechnet und schaltet Ausgaben."
+    },
+    {
+     "text": "Die Ausgabe eines Geräts ist immer ein Bild auf einem Bildschirm.",
+     "richtig": false,
+     "erklaerung": "Nein – die Ausgabe kann auch Licht, Ton oder Bewegung sein."
+    }
+   ],
+   "tipps": [
+    "Wofür stehen die Buchstaben E, V, A?",
+    "Welcher Schritt wird vom Mikrocontroller erledigt?",
+    "Drei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig: EVA gliedert jedes System in Eingabe, Verarbeitung, Ausgabe; die Verarbeitung übernimmt der Mikrocontroller; dieser enthält Prozessor, Speicher und Anschlüsse. Falsch ist nur, dass die Ausgabe immer ein Bildschirmbild sei – sie kann auch Licht, Ton oder Bewegung sein.",
+   "kc": [
+    "eva-prinzip"
+   ]
+  },
+  {
+   "id": "in-10-sr-107",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Sichern L26: Ordne die Bauteile eines Taschenrechners dem EVA-Prinzip zu und ergänze die Begriffe.",
+   "text": "Die Tasten, über die du Zahlen eingibst, gehören zur ___ . Der Rechenchip, der das Ergebnis bestimmt, übernimmt die ___ . Das Display, das die Zahl zeigt, gehört zur ___ . Diesen mittleren Schritt erledigt bei kleinen Geräten ein ___ .",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Eingabe",
+     "optionen": [
+      "Eingabe",
+      "Verarbeitung",
+      "Ausgabe"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Verarbeitung",
+     "optionen": [
+      "Verarbeitung",
+      "Eingabe",
+      "Ausgabe"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Ausgabe",
+     "optionen": [
+      "Ausgabe",
+      "Eingabe",
+      "Verarbeitung"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Mikrocontroller",
+     "optionen": [
+      "Mikrocontroller",
+      "Sensor",
+      "Display"
+     ]
+    }
+   ],
+   "tipps": [
+    "Über die Tasten gelangt etwas ins Gerät – Eingabe.",
+    "Das Display gibt eine Information nach außen – Ausgabe.",
+    "Der kleine Computer im Gerät erledigt die Verarbeitung."
+   ],
+   "loesungsweg": "Tasten = Eingabe (etwas gelangt ins Gerät), Rechenchip = Verarbeitung (rechnen/entscheiden), Display = Ausgabe (Information nach außen). Den mittleren Schritt übernimmt ein Mikrocontroller – ein kleiner Computer auf einem Chip.",
+   "kc": [
+    "eva-prinzip"
+   ]
+  },
+  {
+   "id": "in-10-sr-108",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Sichern L29: Ein Steuerungsalgorithmus für ein Nachtlicht läuft in einer Endlosschleife aus den drei Schritten messen, entscheiden, handeln. Der Mikrocontroller durchläuft die Schleife 50-mal pro Sekunde. Wie viele vollständige Schleifendurchläufe sind das in 4 Sekunden?",
+   "eingaben": [
+    {
+     "label": "Durchläufe",
+     "antwort": 200,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Ein Durchlauf besteht aus messen → entscheiden → handeln.",
+    "Pro Sekunde sind es 50 Durchläufe.",
+    "Rechne 50 · 4."
+   ],
+   "loesungsweg": "Pro Sekunde durchläuft der Controller die Schleife 50-mal, in 4 Sekunden also 50 · 4 = 200 vollständige Durchläufe. Weil das so oft pro Sekunde passiert, reagiert das Nachtlicht scheinbar sofort.",
+   "kc": [
+    "steuerungsalgorithmus"
    ]
   },
   {

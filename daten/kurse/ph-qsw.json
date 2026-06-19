@@ -87,57 +87,71 @@
         "ma-10-sf-002"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Zwei kleine Pendel hängen nebeneinander: eine schwere Mutter an einer kurzen Schnur und ein leichter Schlüssel an einer doppelt so langen Schnur. Beide werden gleich weit ausgelenkt und losgelassen. Sie schwingen sichtbar unterschiedlich schnell hin und her.</p>",
+      "figur": "<svg viewBox=\"0 0 240 222\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"74\" y1=\"18\" x2=\"166\" y2=\"18\"/><line class=\"hilfslinie\" x1=\"76\" y1=\"18\" x2=\"68\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"89\" y1=\"18\" x2=\"81\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"102\" y1=\"18\" x2=\"94\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"115\" y1=\"18\" x2=\"107\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"128\" y1=\"18\" x2=\"120\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"141\" y1=\"18\" x2=\"133\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"154\" y1=\"18\" x2=\"146\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"120\" y1=\"18\" x2=\"120\" y2=\"168\"/><line class=\"gerade-b\" x1=\"120\" y1=\"18\" x2=\"176\" y2=\"157\"/><text class=\"label-b\" x=\"154\" y=\"88\" text-anchor=\"start\">l</text><path class=\"gerade\" fill=\"none\" d=\"M 120.0 56.0 A 38 38 0 0 0 134.2 53.2\"/><text class=\"label-a\" x=\"130\" y=\"64\" text-anchor=\"start\">φ</text><circle class=\"punkt\" cx=\"176\" cy=\"157\" r=\"9\"/><text class=\"label-a\" x=\"188\" y=\"161\" text-anchor=\"start\">m</text><text class=\"beschriftung\" x=\"120\" y=\"184\" text-anchor=\"middle\">Ruhelage</text></svg>",
+      "figurAlt": "Ein Fadenpendel: eine Kugel hängt an einem Faden der Länge l, ausgelenkt um den Winkel phi gegen die senkrechte Ruhelage.",
+      "vorhersage": "Was bestimmt, wie oft ein Pendel pro Sekunde hin- und herschwingt — vor allem die Masse, die Pendellänge oder wie weit man auslenkt?",
+      "optionen": [
+       "vor allem die Masse",
+       "vor allem die Länge",
+       "vor allem die Auslenkung"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 16,
      "anker": "#sw-beschreiben",
-     "text": "Lies zuerst den Abschnitt und arbeite dich dann Schritt für Schritt durch die Grundgrößen — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-beschreiben"
-     },
      "schritte": [
       {
        "titel": "Was ist eine Schwingung?",
-       "html": "<p>Eine <strong>mechanische Schwingung</strong> ist eine zeitlich periodische Bewegung um eine <strong>Ruhelage</strong>. Der Körper kehrt nach jeder vollen Hin- und Herbewegung in denselben Bewegungszustand zurück. Voraussetzung ist eine <strong>rücktreibende Kraft</strong>, die ihn immer zur Ruhelage zurückzieht, und eine <strong>Trägheit</strong>, die ihn über die Ruhelage hinausschießen lässt.</p>",
-       "check": {
+       "kern": "Eine <strong>mechanische Schwingung</strong> ist eine periodische Bewegung um eine <strong>Ruhelage</strong>. Sie braucht eine <strong>rücktreibende Kraft</strong> und die <strong>Trägheit</strong> des Körpers.",
+       "details": "<p>Der Körper kehrt nach jeder vollen Hin- und Herbewegung in denselben Bewegungszustand zurück. Die rücktreibende Kraft zieht ihn immer zur Ruhelage zurück; wegen seiner Trägheit schießt er über die Ruhelage hinaus und schwingt weiter.</p>",
+       "minicheck": {
         "frage": "Was treibt einen schwingenden Körper immer wieder zur Ruhelage zurück?",
         "antwort": "Eine rücktreibende Kraft, die zur Ruhelage hin gerichtet ist. Wegen seiner Trägheit schießt der Körper jedoch über die Ruhelage hinaus, sodass er weiterschwingt."
        }
       },
       {
        "titel": "Elongation und Amplitude",
-       "html": "<p>Die <strong>Elongation</strong> $s(t)$ (auch Auslenkung) ist der momentane Abstand von der Ruhelage — sie ändert sich ständig und kann positiv oder negativ sein. Der <strong>größte</strong> Wert der Elongation heißt <strong>Amplitude</strong> $\\hat{s}$ (oder $A$). Die Amplitude ist also fest, die Elongation veränderlich.</p>",
-       "check": {
+       "kern": "Die <strong>Elongation</strong> $s(t)$ ist die momentane Auslenkung (mit Vorzeichen, ständig veränderlich). Ihr größter Betrag ist die <strong>Amplitude</strong> $\\hat{s}$ (fest).",
+       "minicheck": {
         "frage": "Worin unterscheiden sich Elongation und Amplitude?",
         "antwort": "Die Elongation ist die momentane Auslenkung und ändert sich ständig (mit Vorzeichen). Die Amplitude ist ihr größter Betrag — ein fester Maximalwert."
        }
       },
       {
        "titel": "Periodendauer und Frequenz",
-       "html": "<p>Die <strong>Periodendauer</strong> $T$ ist die Zeit für <em>eine vollständige</em> Schwingung (Einheit Sekunde). Die <strong>Frequenz</strong> $f$ gibt an, wie viele Schwingungen pro Sekunde stattfinden; ihre Einheit ist das Hertz: $1\\,\\text{Hz} = 1\\,\\frac{1}{\\text{s}}$. Beide hängen über $f = \\dfrac{1}{T}$ zusammen.</p>",
-       "check": {
+       "kern": "Die <strong>Periodendauer</strong> $T$ ist die Zeit für eine vollständige Schwingung (in s). Die <strong>Frequenz</strong> $f$ ist die Anzahl Schwingungen pro Sekunde, Einheit $1\\,\\text{Hz} = 1\\,\\frac{1}{\\text{s}}$.",
+       "minicheck": {
         "frage": "Was bedeutet eine Frequenz von $5\\,\\text{Hz}$?",
         "antwort": "Der Körper führt 5 vollständige Schwingungen pro Sekunde aus. Die Periodendauer beträgt dann $T = \\frac{1}{5\\,\\text{Hz}} = 0{,}2\\,\\text{s}$."
        }
       },
       {
        "titel": "Umrechnen von $f$ und $T$",
-       "html": "<p>Weil $f$ und $T$ Kehrwerte sind, gilt $f = \\dfrac{1}{T}$ und ebenso $T = \\dfrac{1}{f}$. Großes $T$ bedeutet kleine Frequenz (langsame Schwingung), kleines $T$ bedeutet hohe Frequenz. Beispiel: Schlägt ein Kolibri $50$-mal pro Sekunde, so ist $f = 50\\,\\text{Hz}$ und $T = \\dfrac{1}{50\\,\\text{Hz}} = 0{,}02\\,\\text{s}$.</p>",
-       "check": {
-        "frage": "Eine Schwingung dauert $T = 0{,}25\\,\\text{s}$. Wie groß ist die Frequenz?",
-        "antwort": "$f = \\frac{1}{T} = \\frac{1}{0{,}25\\,\\text{s}} = 4\\,\\text{Hz}$ — also 4 Schwingungen pro Sekunde."
+       "kern": "Frequenz und Periodendauer sind <strong>Kehrwerte</strong>: $f = \\frac{1}{T}$ und $T = \\frac{1}{f}$. Großes $T$ heißt kleine Frequenz und umgekehrt.",
+       "beispiel": {
+        "aufgabe": "Ein Kolibri schlägt $50$-mal pro Sekunde mit den Flügeln. Bestimme $f$ und $T$.",
+        "schritte": [
+         "50 Schläge pro Sekunde bedeuten $f = 50\\,\\text{Hz}$.",
+         "$T = \\frac{1}{f} = \\frac{1}{50\\,\\text{Hz}}$",
+         "$T = 0{,}02\\,\\text{s}$ — eine Schwingung dauert 20 Millisekunden."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Eine Schwingung dauert $T = 0{,}25\\,\\text{s}$. Wie groß ist $f$?",
+         "loesung": "<p>$f = \\frac{1}{T} = \\frac{1}{0{,}25\\,\\text{s}} = 4\\,\\text{Hz}$ — also 4 Schwingungen pro Sekunde.</p>"
+        }
        }
       }
      ],
-     "merksatz": "Eine Schwingung ist eine periodische Bewegung um eine Ruhelage. Die <strong>Elongation</strong> $s(t)$ ist die momentane Auslenkung, ihr Maximum die <strong>Amplitude</strong> $\\hat{s}$. <strong>Periodendauer</strong> $T$ und <strong>Frequenz</strong> $f$ sind Kehrwerte: $f = \\dfrac{1}{T}$.",
+     "merksatz": "Eine Schwingung ist eine periodische Bewegung um eine Ruhelage. Die <strong>Elongation</strong> $s(t)$ ist die momentane Auslenkung, ihr Maximum die <strong>Amplitude</strong> $\\hat{s}$. <strong>Periodendauer</strong> $T$ und <strong>Frequenz</strong> $f$ sind Kehrwerte: $f = \\frac{1}{T}$.",
      "erkunden": [
       {
        "typ": "experiment",
        "titel": "Periodendauer eines Pendels messen",
        "material": "Eine kleine Masse (z. B. Schlüsselbund) an einer etwa $1\\,\\text{m}$ langen Schnur, eine Stoppuhr (Handy), ein Lineal.",
-       "vorhersage": "Schätze, wie lange dein Pendel für <em>eine</em> volle Hin- und Herbewegung braucht. Notiere die Vermutung in Sekunden, <em>bevor</em> du misst.",
        "auftraege": [
         "Lenke das Pendel um wenige Zentimeter aus und stoppe die Zeit für 10 volle Schwingungen. Teile durch 10 — das ist die Periodendauer $T$. Warum ist das genauer, als nur eine Schwingung zu stoppen?",
         "Berechne aus deinem Messwert die Frequenz $f = \\frac{1}{T}$ und prüfe deine Vorhersage.",
@@ -158,7 +172,32 @@
        "frage": "Hängt die Amplitude mit der Frequenz zusammen?",
        "antwort": "Nein. Amplitude (Stärke der Auslenkung) und Frequenz (Anzahl Schwingungen pro Sekunde) sind voneinander unabhängige Größen."
       }
-     ]
+     ],
+     "stolperstein": "Amplitude und Frequenz werden oft verwechselt. Die <strong>Amplitude</strong> sagt, <em>wie weit</em> der Körper ausschlägt; die <strong>Frequenz</strong> sagt, <em>wie oft pro Sekunde</em> er schwingt. Ein Pendel kann weit und langsam oder eng und schnell schwingen — beide Größen sind voneinander unabhängig.",
+     "selbsterklaerung": "Erkläre in einem Satz, worin sich Elongation und Amplitude unterscheiden — ohne eine Formel zu benutzen.",
+     "darstellungen": {
+      "titel": "Eine harmonische Schwingung — in mehreren Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Eine Masse pendelt periodisch um ihre Ruhelage hin und her."
+       },
+       {
+        "art": "Graph",
+        "figur": "<svg viewBox=\"0 0 340 170\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"78.0\" x2=\"336.0\" y2=\"78.0\"/><polygon class=\"pfeil\" points=\"336.0,78.0 328.0,74.0 328.0,82.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"140.0\" x2=\"40.0\" y2=\"4\"/><polygon class=\"pfeil\" points=\"40.0,4 36.0,12 44.0,12\"/><text class=\"achsentitel\" x=\"334.0\" y=\"93.0\" text-anchor=\"end\">t in s</text><text class=\"achsentitel\" x=\"46.0\" y=\"14\">s</text><line class=\"hilfslinie\" x1=\"40.0\" y1=\"28.4\" x2=\"320.0\" y2=\"28.4\"/><line class=\"hilfslinie\" x1=\"40.0\" y1=\"127.6\" x2=\"320.0\" y2=\"127.6\"/><polyline class=\"gerade-a\" fill=\"none\" points=\"40.0,78.0 41.8,74.1 43.5,70.2 45.2,66.4 47.0,62.7 48.8,59.0 50.5,55.5 52.2,52.1 54.0,48.8 55.8,45.8 57.5,42.9 59.2,40.3 61.0,37.9 62.8,35.7 64.5,33.8 66.2,32.2 68.0,30.8 69.8,29.8 71.5,29.0 73.2,28.6 75.0,28.4 76.8,28.6 78.5,29.0 80.2,29.8 82.0,30.8 83.8,32.2 85.5,33.8 87.2,35.7 89.0,37.9 90.8,40.3 92.5,42.9 94.2,45.8 96.0,48.8 97.8,52.1 99.5,55.5 101.2,59.0 103.0,62.7 104.8,66.4 106.5,70.2 108.2,74.1 110.0,78.0 111.8,81.9 113.5,85.8 115.2,89.6 117.0,93.3 118.8,97.0 120.5,100.5 122.2,103.9 124.0,107.2 125.8,110.2 127.5,113.1 129.2,115.7 131.0,118.1 132.8,120.3 134.5,122.2 136.2,123.8 138.0,125.2 139.8,126.2 141.5,127.0 143.2,127.4 145.0,127.6 146.8,127.4 148.5,127.0 150.2,126.2 152.0,125.2 153.8,123.8 155.5,122.2 157.2,120.3 159.0,118.1 160.8,115.7 162.5,113.1 164.2,110.2 166.0,107.2 167.8,103.9 169.5,100.5 171.2,97.0 173.0,93.3 174.8,89.6 176.5,85.8 178.2,81.9 180.0,78.0 181.8,74.1 183.5,70.2 185.2,66.4 187.0,62.7 188.8,59.0 190.5,55.5 192.2,52.1 194.0,48.8 195.8,45.8 197.5,42.9 199.2,40.3 201.0,37.9 202.8,35.7 204.5,33.8 206.2,32.2 208.0,30.8 209.8,29.8 211.5,29.0 213.2,28.6 215.0,28.4 216.8,28.6 218.5,29.0 220.2,29.8 222.0,30.8 223.8,32.2 225.5,33.8 227.2,35.7 229.0,37.9 230.8,40.3 232.5,42.9 234.2,45.8 236.0,48.8 237.8,52.1 239.5,55.5 241.2,59.0 243.0,62.7 244.8,66.4 246.5,70.2 248.2,74.1 250.0,78.0 251.8,81.9 253.5,85.8 255.2,89.6 257.0,93.3 258.8,97.0 260.5,100.5 262.2,103.9 264.0,107.2 265.8,110.2 267.5,113.1 269.2,115.7 271.0,118.1 272.8,120.3 274.5,122.2 276.2,123.8 278.0,125.2 279.8,126.2 281.5,127.0 283.2,127.4 285.0,127.6 286.8,127.4 288.5,127.0 290.2,126.2 292.0,125.2 293.8,123.8 295.5,122.2 297.2,120.3 299.0,118.1 300.8,115.7 302.5,113.1 304.2,110.2 306.0,107.2 307.8,103.9 309.5,100.5 311.2,97.0 313.0,93.3 314.8,89.6 316.5,85.8 318.2,81.9 320.0,78.0\"/><text class=\"label-a\" x=\"34.0\" y=\"32.4\" text-anchor=\"end\">A</text><text class=\"label-a\" x=\"34.0\" y=\"131.6\" text-anchor=\"end\">-A</text><line class=\"marke\" x1=\"40.0\" y1=\"136.5\" x2=\"180.0\" y2=\"136.5\"/><text class=\"label-b\" x=\"110.0\" y=\"148.5\" text-anchor=\"middle\">eine Periode T</text></svg>",
+        "figurAlt": "Sinusförmiges Auslenkung-Zeit-Diagramm; der größte Ausschlag ist die Amplitude A, eine volle Wiederholung dauert die Periodendauer T."
+       },
+       {
+        "art": "Gleichung",
+        "text": "$f = \\frac{1}{T}$"
+       },
+       {
+        "art": "Tabelle",
+        "html": "<table class='lb-mini-tab'><tr><th>T in s</th><td>0{,}5</td><td>1</td><td>2</td></tr><tr><th>f in Hz</th><td>2</td><td>1</td><td>0{,}5</td></tr></table>"
+       }
+      ]
+     },
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -192,7 +231,8 @@
        ]
       }
      ],
-     "transfer": "Ein Pendel schwingt mit $T = 0{,}4\\,\\text{s}$. Wie viele Schwingungen schafft es in einer Minute?"
+     "transfer": "Ein Pendel schwingt mit $T = 0{,}4\\,\\text{s}$. Wie viele Schwingungen schafft es in einer Minute?",
+     "rueckbezug": "Zurück zu den beiden Pendeln vom Anfang: Beobachte (oder überlege), dass das längere Pendel <em>langsamer</em> schwingt und die Masse fast keine Rolle spielt — die Auslenkung ändert die Frequenz praktisch nicht. Welche der drei Vermutungen vom Anfang trifft also zu? (Die genaue Formel dazu lernst du in den Lektionen 2 und 3.)"
     },
     "extra": {
      "zeit": 4,
@@ -245,57 +285,71 @@
         "ph-qp-sw-101"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>An einer Schraubenfeder hängt ein Massestück und schwingt nach dem Anstoßen auf und ab. Nun werden zwei Dinge verändert: einmal hängt man ein <strong>schwereres</strong> Stück an, einmal nimmt man eine <strong>steifere</strong> Feder.</p>",
+      "figur": "<svg viewBox=\"0 0 190 234\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"45\" y1=\"16\" x2=\"145\" y2=\"16\"/><line class=\"hilfslinie\" x1=\"47\" y1=\"16\" x2=\"39\" y2=\"8\"/><line class=\"hilfslinie\" x1=\"61\" y1=\"16\" x2=\"53\" y2=\"8\"/><line class=\"hilfslinie\" x1=\"75\" y1=\"16\" x2=\"67\" y2=\"8\"/><line class=\"hilfslinie\" x1=\"89\" y1=\"16\" x2=\"81\" y2=\"8\"/><line class=\"hilfslinie\" x1=\"103\" y1=\"16\" x2=\"95\" y2=\"8\"/><line class=\"hilfslinie\" x1=\"117\" y1=\"16\" x2=\"109\" y2=\"8\"/><line class=\"hilfslinie\" x1=\"131\" y1=\"16\" x2=\"123\" y2=\"8\"/><polyline class=\"gerade-a\" fill=\"none\" points=\"95,20 107,32 83,45 107,58 83,70 107,82 83,95 107,108 95,120\"/><rect class=\"dreieck\" x=\"78\" y=\"120\" width=\"34\" height=\"34\"/><text class=\"label-a\" x=\"95\" y=\"142\" text-anchor=\"middle\">m</text><line class=\"hilfslinie\" x1=\"25\" y1=\"137\" x2=\"165\" y2=\"137\"/><text class=\"beschriftung\" x=\"167\" y=\"141\" text-anchor=\"start\">Ruhelage</text><line class=\"pfeil\" x1=\"153\" y1=\"143\" x2=\"153\" y2=\"177\" stroke-width=\"2\"/><polygon class=\"pfeil\" points=\"153,185 149,177 157,177\"/><text class=\"label-b\" x=\"159\" y=\"164\" text-anchor=\"start\">s</text></svg>",
+      "figurAlt": "Feder-Masse-Pendel: an einer von der Decke hängenden Feder ist ein Quader der Masse m befestigt; eine gestrichelte Linie zeigt die Ruhelage, ein Pfeil die Auslenkung s.",
+      "vorhersage": "Wie ändert sich die Zeit für eine volle Schwingung, wenn man die Masse vervierfacht — wird sie viermal so groß, doppelt so groß oder bleibt sie gleich?",
+      "optionen": [
+       "viermal so groß",
+       "doppelt so groß",
+       "bleibt gleich"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 18,
      "anker": "#sw-federpendel",
-     "text": "Lies den Abschnitt zur Federkraft und zur Periodenformel und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-federpendel"
-     },
      "schritte": [
       {
        "titel": "Die rücktreibende Kraft",
-       "html": "<p>Hängt eine Masse $m$ an einer Feder, so übt die Feder bei Auslenkung um $s$ die Rückstellkraft $F = -D \\cdot s$ aus (Hookesches Gesetz). $D$ ist die <strong>Federkonstante</strong> (Einheit $\\frac{\\text{N}}{\\text{m}}$). Das Minuszeichen zeigt: Die Kraft ist immer <strong>entgegen</strong> der Auslenkung zur Ruhelage hin gerichtet.</p>",
-       "check": {
+       "kern": "Bei Auslenkung um $s$ übt die Feder die Rückstellkraft $F = -D\\cdot s$ aus (Hookesches Gesetz). $D$ ist die <strong>Federkonstante</strong> in $\\frac{\\text{N}}{\\text{m}}$.",
+       "details": "<p>Das Minuszeichen zeigt: Die Kraft ist immer <strong>entgegen</strong> der Auslenkung zur Ruhelage hin gerichtet. Lenkt man die Masse nach unten aus, zieht die Feder nach oben — und umgekehrt.</p>",
+       "minicheck": {
         "frage": "Wohin zeigt die Federkraft, wenn die Masse nach unten ausgelenkt ist?",
         "antwort": "Nach oben, also zur Ruhelage hin. Die Rückstellkraft ist stets der Auslenkung entgegengerichtet — das drückt das Minuszeichen in $F = -D\\,s$ aus."
        }
       },
       {
        "titel": "Warum harmonisch?",
-       "html": "<p>Eine Schwingung heißt <strong>harmonisch</strong>, wenn die Rückstellkraft <strong>proportional</strong> zur Auslenkung ist: $F \\sim -s$. Genau das leistet die Feder. Deshalb verläuft die Elongation zeitlich nach einer <strong>Sinusfunktion</strong>, und die Periodendauer hängt <strong>nicht</strong> von der Amplitude ab.</p>",
-       "check": {
+       "kern": "Eine Schwingung heißt <strong>harmonisch</strong>, wenn die Rückstellkraft <strong>proportional</strong> zur Auslenkung ist ($F \\sim -s$). Genau das leistet die Feder, daher verläuft $s(t)$ sinusförmig.",
+       "minicheck": {
         "frage": "Welche Bedingung muss die Rückstellkraft erfüllen, damit die Schwingung harmonisch ist?",
         "antwort": "Sie muss proportional zur Auslenkung und ihr entgegengerichtet sein: $F = -D\\,s$. Dann ist die Schwingung harmonisch (sinusförmig)."
        }
       },
       {
        "titel": "Die Periodenformel",
-       "html": "<p>Für das Feder-Masse-Pendel gilt $T = 2\\pi\\sqrt{\\dfrac{m}{D}}$. Eine <strong>größere Masse</strong> macht das System träger → längere Periodendauer. Eine <strong>steifere Feder</strong> (großes $D$) zieht stärker zurück → kürzere Periodendauer. Beides geht nur unter der Wurzel ein.</p>",
-       "check": {
-        "frage": "Wie wirkt sich eine steifere Feder (größeres $D$) auf $T$ aus?",
-        "antwort": "Die Periodendauer wird kleiner: $D$ steht im Nenner unter der Wurzel. Eine stärkere Rückstellkraft beschleunigt die Masse schneller zur Ruhelage."
+       "kern": "Für das Feder-Masse-Pendel gilt $T = 2\\pi\\sqrt{\\frac{m}{D}}$. Große Masse → träger → größeres $T$; steife Feder (großes $D$) → kleineres $T$.",
+       "beispiel": {
+        "aufgabe": "Eine Masse $m = 0{,}50\\,\\text{kg}$ hängt an einer Feder mit $D = 20\\,\\frac{\\text{N}}{\\text{m}}$. Bestimme $T$.",
+        "schritte": [
+         "$T = 2\\pi\\sqrt{\\frac{m}{D}} = 2\\pi\\sqrt{\\frac{0{,}50\\,\\text{kg}}{20\\,\\text{N/m}}}$",
+         "$= 2\\pi\\sqrt{0{,}025\\,\\text{s}^2}$",
+         "$\\approx 0{,}99\\,\\text{s}$"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Dieselbe Feder, aber $m = 2{,}0\\,\\text{kg}$. Wie ändert sich $T$ gegenüber $0{,}50\\,\\text{kg}$?",
+         "loesung": "<p>Die Masse wird vervierfacht ($0{,}50 \\to 2{,}0$), also wird $T$ um $\\sqrt{4}=2$ größer: aus $0{,}99\\,\\text{s}$ werden rund $1{,}98\\,\\text{s}$.</p>"
+        }
        }
       },
       {
        "titel": "Die Wurzel verstehen",
-       "html": "<p>Weil $m$ und $D$ unter einer <strong>Wurzel</strong> stehen, wirkt sich eine Vervierfachung nur als <strong>Verdopplung</strong> aus: Vervierfacht man $m$, so wird $T$ doppelt so groß ($\\sqrt{4}=2$). Vervierfacht man $D$, halbiert sich $T$.</p>",
-       "check": {
+       "kern": "Weil $m$ und $D$ unter einer <strong>Wurzel</strong> stehen, wirkt eine Vervierfachung nur als Verdopplung: Vervierfacht man $m$, wird $T$ doppelt so groß; vervierfacht man $D$, halbiert sich $T$.",
+       "minicheck": {
         "frage": "Die Masse wird vervierfacht. Um welchen Faktor ändert sich $T$?",
         "antwort": "$T$ verdoppelt sich, denn $\\sqrt{4} = 2$. (Vervierfacht man $D$, halbiert sich $T$.)"
        }
       }
      ],
-     "merksatz": "Das Feder-Masse-Pendel schwingt <strong>harmonisch</strong>, weil die Federkraft $F = -D\\,s$ proportional zur Auslenkung ist. Es gilt $T = 2\\pi\\sqrt{\\dfrac{m}{D}}$: große Masse → träger (größer $T$), steife Feder → schneller (kleiner $T$); beide nur unter der Wurzel.",
+     "merksatz": "Das Feder-Masse-Pendel schwingt <strong>harmonisch</strong>, weil die Federkraft $F = -D\\,s$ proportional zur Auslenkung ist. Es gilt $T = 2\\pi\\sqrt{\\frac{m}{D}}$: große Masse → träger (größer $T$), steife Feder → schneller (kleiner $T$); beide nur unter der Wurzel.",
      "erkunden": [
       {
        "typ": "experiment",
        "titel": "Masse und Federkonstante variieren",
        "material": "Eine Schraubenfeder, ein Stativ, mehrere gleiche Massestücke (z. B. $50\\,\\text{g}$), eine Stoppuhr.",
-       "vorhersage": "Du verdoppelst die angehängte Masse. Wird die Periodendauer doppelt so groß, mehr oder weniger? Notiere deine Vermutung, bevor du misst.",
        "auftraege": [
         "Hänge eine Masse an, lenke leicht aus und miss $T$ über 10 Schwingungen. Verdopple dann die Masse und miss erneut. Vergleiche mit deiner Vorhersage und mit dem Faktor $\\sqrt{2}\\approx 1{,}41$.",
         "Hänge zwei gleiche Federn parallel — die effektive Federkonstante verdoppelt sich. Wie ändert sich $T$? Deute es mit der Formel.",
@@ -316,7 +370,10 @@
        "frage": "Hängt die Periodendauer des Federpendels von der Amplitude ab?",
        "antwort": "Nein. Bei einer harmonischen Schwingung ist $T$ unabhängig von der Amplitude — nur $m$ und $D$ bestimmen sie."
       }
-     ]
+     ],
+     "stolperstein": "Eine vervierfachte Masse macht die Schwingung <strong>nicht</strong> viermal langsamer. Weil $m$ unter der <strong>Wurzel</strong> steht, wird $T$ nur um den Faktor $\\sqrt{4}=2$ größer. Wurzeln „dämpfen“ den Effekt — daran denkt man im ersten Moment oft nicht.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein Federpendel überhaupt <em>harmonisch</em> schwingt.",
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -357,7 +414,8 @@
        ]
       }
      ],
-     "transfer": "Eine Feder-Masse-System schwingt mit $T = 1\\,\\text{s}$. Wie ändert sich $T$, wenn man die Federkonstante $D$ verdoppelt?"
+     "transfer": "Eine Feder-Masse-System schwingt mit $T = 1\\,\\text{s}$. Wie ändert sich $T$, wenn man die Federkonstante $D$ verdoppelt?",
+     "rueckbezug": "Zurück zum Federpendel vom Anfang: Eine vervierfachte Masse macht $T$ doppelt so groß ($\\sqrt{4}=2$), eine steifere Feder macht es kleiner. Welche der drei Vermutungen war richtig? Begründe mit $T = 2\\pi\\sqrt{m/D}$."
     },
     "extra": {
      "zeit": 4,
@@ -410,57 +468,71 @@
         "ph-qp-sw-002"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>An zwei <strong>gleich langen</strong> Fäden hängen zwei Kugeln: die eine aus Blei, die andere aus Holz — also sehr unterschiedlich schwer. Beide werden gleich weit ausgelenkt und gleichzeitig losgelassen.</p>",
+      "figur": "<svg viewBox=\"0 0 240 222\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"74\" y1=\"18\" x2=\"166\" y2=\"18\"/><line class=\"hilfslinie\" x1=\"76\" y1=\"18\" x2=\"68\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"89\" y1=\"18\" x2=\"81\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"102\" y1=\"18\" x2=\"94\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"115\" y1=\"18\" x2=\"107\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"128\" y1=\"18\" x2=\"120\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"141\" y1=\"18\" x2=\"133\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"154\" y1=\"18\" x2=\"146\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"120\" y1=\"18\" x2=\"120\" y2=\"168\"/><line class=\"gerade-b\" x1=\"120\" y1=\"18\" x2=\"171\" y2=\"159\"/><text class=\"label-b\" x=\"152\" y=\"88\" text-anchor=\"start\">l</text><path class=\"gerade\" fill=\"none\" d=\"M 120.0 56.0 A 38 38 0 0 0 133.0 53.7\"/><text class=\"label-a\" x=\"130\" y=\"64\" text-anchor=\"start\">φ</text><circle class=\"punkt\" cx=\"171\" cy=\"159\" r=\"9\"/><text class=\"label-a\" x=\"183\" y=\"163\" text-anchor=\"start\">m</text><text class=\"beschriftung\" x=\"120\" y=\"184\" text-anchor=\"middle\">Ruhelage</text></svg>",
+      "figurAlt": "Fadenpendel: eine Kugel der Masse m hängt an einem Faden der Länge l und ist um den Winkel phi aus der senkrechten Ruhelage ausgelenkt.",
+      "vorhersage": "Welche Kugel ist mit einer vollen Schwingung zuerst fertig — die schwere, die leichte, oder kommen beide gleichzeitig an?",
+      "optionen": [
+       "die schwere zuerst",
+       "die leichte zuerst",
+       "beide gleichzeitig"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 16,
      "anker": "#sw-fadenpendel",
-     "text": "Lies den Abschnitt zum Fadenpendel und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-fadenpendel"
-     },
      "schritte": [
       {
        "titel": "Die rücktreibende Kraft beim Fadenpendel",
-       "html": "<p>Beim Fadenpendel ist die <strong>Rückstellkraft</strong> die Hangabtriebskomponente der Gewichtskraft: $F = -m\\,g\\,\\sin\\varphi$. Für <strong>kleine Winkel</strong> gilt näherungsweise $\\sin\\varphi \\approx \\varphi$, sodass die Kraft proportional zur Auslenkung wird — erst dann schwingt das Pendel <strong>harmonisch</strong>.</p>",
-       "check": {
+       "kern": "Rückstellend wirkt die Hangabtriebskomponente der Gewichtskraft: $F = -m\\,g\\,\\sin\\varphi$. Erst für <strong>kleine Winkel</strong> ($\\sin\\varphi \\approx \\varphi$) wird sie proportional zur Auslenkung.",
+       "details": "<p>Nur unter dieser Kleinwinkelnäherung ist die Rückstellkraft proportional zur Auslenkung — und erst dann schwingt das Pendel <strong>harmonisch</strong>. Bei großen Auslenkungen stimmt die Näherung nicht mehr und die Schwingung wird leicht anharmonisch.</p>",
+       "minicheck": {
         "frage": "Warum schwingt ein Fadenpendel nur bei kleinen Auslenkungen harmonisch?",
         "antwort": "Nur für kleine Winkel gilt $\\sin\\varphi \\approx \\varphi$. Dann ist die Rückstellkraft proportional zur Auslenkung — die Bedingung für eine harmonische Schwingung. Bei großen Winkeln stimmt die Näherung nicht mehr."
        }
       },
       {
        "titel": "Die Periodenformel",
-       "html": "<p>Für kleine Auslenkungen gilt $T = 2\\pi\\sqrt{\\dfrac{l}{g}}$. Dabei ist $l$ die Pendellänge und $g$ der Ortsfaktor ($g \\approx 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$). Ein <strong>längeres</strong> Pendel schwingt langsamer (größeres $T$), an einem Ort mit <strong>größerem</strong> $g$ schneller.</p>",
-       "check": {
-        "frage": "Wie ändert sich die Periodendauer, wenn man die Pendellänge vervierfacht?",
-        "antwort": "$T$ verdoppelt sich, denn $l$ steht unter der Wurzel: $\\sqrt{4}=2$."
+       "kern": "Für kleine Auslenkungen gilt $T = 2\\pi\\sqrt{\\frac{l}{g}}$ mit Pendellänge $l$ und Ortsfaktor $g \\approx 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$. Längeres Pendel → größeres $T$.",
+       "beispiel": {
+        "aufgabe": "Bestimme $T$ für ein Pendel der Länge $l = 1{,}0\\,\\text{m}$ ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$).",
+        "schritte": [
+         "$T = 2\\pi\\sqrt{\\frac{l}{g}} = 2\\pi\\sqrt{\\frac{1{,}0\\,\\text{m}}{9{,}81\\,\\text{m/s}^2}}$",
+         "$= 2\\pi\\sqrt{0{,}102\\,\\text{s}^2}$",
+         "$\\approx 2{,}0\\,\\text{s}$"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Wie ändert sich $T$, wenn man die Länge auf $l = 4{,}0\\,\\text{m}$ vervierfacht?",
+         "loesung": "<p>$l$ steht unter der Wurzel, also wird $T$ um $\\sqrt{4}=2$ größer: aus $2{,}0\\,\\text{s}$ werden $4{,}0\\,\\text{s}$.</p>"
+        }
        }
       },
       {
        "titel": "Unabhängigkeit von der Masse",
-       "html": "<p>In der Formel $T = 2\\pi\\sqrt{\\dfrac{l}{g}}$ kommt die <strong>Masse nicht vor</strong>. Grund: Die rücktreibende Kraft ist proportional zu $m$ (über $g$), die Trägheit aber ebenfalls — beide $m$ kürzen sich heraus. Eine schwere und eine leichte Kugel gleicher Fadenlänge schwingen <strong>gleich schnell</strong>.</p>",
-       "check": {
+       "kern": "In $T = 2\\pi\\sqrt{\\frac{l}{g}}$ kommt die <strong>Masse nicht vor</strong>: Sie steckt gleichzeitig in Rückstellkraft und Trägheit und kürzt sich heraus.",
+       "minicheck": {
         "frage": "Eine Bleikugel und eine Holzkugel hängen an gleich langen Fäden. Welche schwingt schneller?",
         "antwort": "Beide schwingen gleich schnell. Die Periodendauer hängt nicht von der Masse ab — die Masse kürzt sich aus rücktreibender Kraft und Trägheit heraus."
        }
       },
       {
        "titel": "Vergleich mit dem Federpendel",
-       "html": "<p>Beide Pendel schwingen harmonisch und haben dieselbe Bauform $T = 2\\pi\\sqrt{\\text{Trägheit}/\\text{Rückstellung}}$. Beim <strong>Federpendel</strong> ($T=2\\pi\\sqrt{m/D}$) zählt die Masse, beim <strong>Fadenpendel</strong> ($T=2\\pi\\sqrt{l/g}$) nicht. Dafür ist das Fadenpendel nur näherungsweise harmonisch (kleine Winkel) und hängt von $g$, also vom Ort ab.</p>",
-       "check": {
+       "kern": "Beide haben die Bauform $T = 2\\pi\\sqrt{\\text{Trägheit}/\\text{Rückstellung}}$. Feder: $\\sqrt{m/D}$ (Masse zählt). Faden: $\\sqrt{l/g}$ (Masse zählt nicht, dafür der Ort über $g$).",
+       "minicheck": {
         "frage": "Worin unterscheiden sich Faden- und Federpendel hinsichtlich der Masse?",
         "antwort": "Beim Federpendel geht die Masse in $T$ ein, beim Fadenpendel nicht. Beim Fadenpendel hängt $T$ dafür vom Ortsfaktor $g$ ab."
        }
       }
      ],
-     "merksatz": "Für kleine Auslenkungen schwingt das Fadenpendel harmonisch mit $T = 2\\pi\\sqrt{\\dfrac{l}{g}}$. Die Periodendauer hängt von Länge und Ortsfaktor ab, <strong>nicht</strong> von der Masse.",
+     "merksatz": "Für kleine Auslenkungen schwingt das Fadenpendel harmonisch mit $T = 2\\pi\\sqrt{\\frac{l}{g}}$. Die Periodendauer hängt von Länge und Ortsfaktor ab, <strong>nicht</strong> von der Masse.",
      "erkunden": [
       {
        "typ": "experiment",
        "titel": "Fadenpendel untersuchen",
        "material": "Eine Schnur, verschiedene kleine Massen (z. B. Mutter, Stein), ein Maßband, eine Stoppuhr.",
-       "vorhersage": "Welche Pendellänge brauchst du ungefähr, damit eine volle Schwingung genau $1\\,\\text{s}$ dauert? Schätze zuerst, dann rechne mit der Formel nach.",
        "auftraege": [
         "Stelle die berechnete Länge ein und überprüfe durch Messen (10 Schwingungen, durch 10 teilen), ob $T \\approx 1\\,\\text{s}$ herauskommt.",
         "Hänge nacheinander eine leichte und eine schwere Masse an dieselbe Fadenlänge. Bestätigt die Messung die Massenunabhängigkeit?",
@@ -481,7 +553,10 @@
        "frage": "Warum gilt die Formel nur für kleine Auslenkungen?",
        "antwort": "Nur dann gilt $\\sin\\varphi \\approx \\varphi$, sodass die Rückstellkraft proportional zur Auslenkung und die Schwingung harmonisch ist."
       }
-     ]
+     ],
+     "stolperstein": "Viele erwarten, dass die schwerere Kugel „kräftiger“ und damit schneller schwingt. Tatsächlich fällt die <strong>Masse beim Fadenpendel ganz aus der Formel heraus</strong>: Sie steckt sowohl in der rücktreibenden Kraft als auch in der Trägheit und kürzt sich weg. Gleiche Länge → gleiche Periodendauer.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum beim Fadenpendel die Masse keine Rolle für die Periodendauer spielt.",
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -528,7 +603,8 @@
        ]
       }
      ],
-     "transfer": "Auf dem Mond ist $g \\approx 1{,}6\\,\\frac{\\text{m}}{\\text{s}^2}$. Um welchen Faktor ändert sich die Periodendauer des Fadenpendels?"
+     "transfer": "Auf dem Mond ist $g \\approx 1{,}6\\,\\frac{\\text{m}}{\\text{s}^2}$. Um welchen Faktor ändert sich die Periodendauer des Fadenpendels?",
+     "rueckbezug": "Zurück zu Blei- und Holzkugel: Bei gleicher Fadenlänge ist $T = 2\\pi\\sqrt{l/g}$ für beide identisch — sie kommen <em>gleichzeitig</em> an. Welche Vermutung vom Anfang war richtig, und warum spielt die Masse keine Rolle?"
     },
     "extra": {
      "zeit": 4,
@@ -583,45 +659,60 @@
         "ph-qp-sw-101"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Ein Federpendel schwingt gleichmäßig auf und ab. Filmt man es in Zeitlupe, sieht man: An manchen Stellen rast die Masse, an anderen steht sie kurz still. Auch das „Reißen“ an der Feder (die Beschleunigung) ist nicht überall gleich.</p>",
+      "figur": "<svg viewBox=\"0 0 340 170\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"78.0\" x2=\"336.0\" y2=\"78.0\"/><polygon class=\"pfeil\" points=\"336.0,78.0 328.0,74.0 328.0,82.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"140.0\" x2=\"40.0\" y2=\"4\"/><polygon class=\"pfeil\" points=\"40.0,4 36.0,12 44.0,12\"/><text class=\"achsentitel\" x=\"334.0\" y=\"93.0\" text-anchor=\"end\">t in s</text><text class=\"achsentitel\" x=\"46.0\" y=\"14\">s</text><line class=\"hilfslinie\" x1=\"40.0\" y1=\"28.4\" x2=\"320.0\" y2=\"28.4\"/><line class=\"hilfslinie\" x1=\"40.0\" y1=\"127.6\" x2=\"320.0\" y2=\"127.6\"/><polyline class=\"gerade-a\" fill=\"none\" points=\"40.0,78.0 41.8,74.1 43.5,70.2 45.2,66.4 47.0,62.7 48.8,59.0 50.5,55.5 52.2,52.1 54.0,48.8 55.8,45.8 57.5,42.9 59.2,40.3 61.0,37.9 62.8,35.7 64.5,33.8 66.2,32.2 68.0,30.8 69.8,29.8 71.5,29.0 73.2,28.6 75.0,28.4 76.8,28.6 78.5,29.0 80.2,29.8 82.0,30.8 83.8,32.2 85.5,33.8 87.2,35.7 89.0,37.9 90.8,40.3 92.5,42.9 94.2,45.8 96.0,48.8 97.8,52.1 99.5,55.5 101.2,59.0 103.0,62.7 104.8,66.4 106.5,70.2 108.2,74.1 110.0,78.0 111.8,81.9 113.5,85.8 115.2,89.6 117.0,93.3 118.8,97.0 120.5,100.5 122.2,103.9 124.0,107.2 125.8,110.2 127.5,113.1 129.2,115.7 131.0,118.1 132.8,120.3 134.5,122.2 136.2,123.8 138.0,125.2 139.8,126.2 141.5,127.0 143.2,127.4 145.0,127.6 146.8,127.4 148.5,127.0 150.2,126.2 152.0,125.2 153.8,123.8 155.5,122.2 157.2,120.3 159.0,118.1 160.8,115.7 162.5,113.1 164.2,110.2 166.0,107.2 167.8,103.9 169.5,100.5 171.2,97.0 173.0,93.3 174.8,89.6 176.5,85.8 178.2,81.9 180.0,78.0 181.8,74.1 183.5,70.2 185.2,66.4 187.0,62.7 188.8,59.0 190.5,55.5 192.2,52.1 194.0,48.8 195.8,45.8 197.5,42.9 199.2,40.3 201.0,37.9 202.8,35.7 204.5,33.8 206.2,32.2 208.0,30.8 209.8,29.8 211.5,29.0 213.2,28.6 215.0,28.4 216.8,28.6 218.5,29.0 220.2,29.8 222.0,30.8 223.8,32.2 225.5,33.8 227.2,35.7 229.0,37.9 230.8,40.3 232.5,42.9 234.2,45.8 236.0,48.8 237.8,52.1 239.5,55.5 241.2,59.0 243.0,62.7 244.8,66.4 246.5,70.2 248.2,74.1 250.0,78.0 251.8,81.9 253.5,85.8 255.2,89.6 257.0,93.3 258.8,97.0 260.5,100.5 262.2,103.9 264.0,107.2 265.8,110.2 267.5,113.1 269.2,115.7 271.0,118.1 272.8,120.3 274.5,122.2 276.2,123.8 278.0,125.2 279.8,126.2 281.5,127.0 283.2,127.4 285.0,127.6 286.8,127.4 288.5,127.0 290.2,126.2 292.0,125.2 293.8,123.8 295.5,122.2 297.2,120.3 299.0,118.1 300.8,115.7 302.5,113.1 304.2,110.2 306.0,107.2 307.8,103.9 309.5,100.5 311.2,97.0 313.0,93.3 314.8,89.6 316.5,85.8 318.2,81.9 320.0,78.0\"/><text class=\"label-a\" x=\"34.0\" y=\"32.4\" text-anchor=\"end\">A</text><text class=\"label-a\" x=\"34.0\" y=\"131.6\" text-anchor=\"end\">-A</text><line class=\"marke\" x1=\"40.0\" y1=\"136.5\" x2=\"180.0\" y2=\"136.5\"/><text class=\"label-b\" x=\"110.0\" y=\"148.5\" text-anchor=\"middle\">eine Periode T</text></svg>",
+      "figurAlt": "Sinusförmiges Auslenkung-Zeit-Diagramm einer harmonischen Schwingung mit Amplitude A und Periodendauer T.",
+      "vorhersage": "An welcher Stelle der Bewegung ist die Masse am schnellsten — am Umkehrpunkt (größte Auslenkung) oder beim Durchgang durch die Ruhelage?",
+      "optionen": [
+       "am Umkehrpunkt",
+       "in der Ruhelage",
+       "überall gleich schnell"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 18,
      "anker": "#sw-mathematisch",
-     "text": "Lies den Abschnitt zur Sinusbeschreibung und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-mathematisch"
-     },
      "schritte": [
       {
        "titel": "Der Sinusansatz",
-       "html": "<p>Startet die Schwingung in der Ruhelage, so beschreibt $s(t) = \\hat{s}\\cdot\\sin(\\omega t)$ die Elongation. Dabei ist $\\hat{s}$ die <strong>Amplitude</strong> und $\\omega$ die <strong>Kreisfrequenz</strong> mit $\\omega = 2\\pi f = \\dfrac{2\\pi}{T}$ (Einheit $\\frac{1}{\\text{s}}$). $\\omega$ gibt an, wie schnell das Argument des Sinus mit der Zeit wächst.</p>",
-       "check": {
+       "kern": "Startet die Schwingung in der Ruhelage, gilt $s(t) = \\hat{s}\\cdot\\sin(\\omega t)$ mit Amplitude $\\hat{s}$ und <strong>Kreisfrequenz</strong> $\\omega = 2\\pi f = \\frac{2\\pi}{T}$ (in $\\frac{1}{\\text{s}}$).",
+       "details": "<p>$\\omega$ gibt an, wie schnell das Argument des Sinus mit der Zeit wächst. In genau einer Periodendauer $T$ durchläuft das Sinusargument $2\\pi$, deshalb $\\omega = 2\\pi/T$.</p>",
+       "minicheck": {
         "frage": "Wie hängt die Kreisfrequenz $\\omega$ mit der Periodendauer $T$ zusammen?",
         "antwort": "$\\omega = \\frac{2\\pi}{T} = 2\\pi f$. In einer Periodendauer durchläuft das Sinusargument genau $2\\pi$."
        }
       },
       {
        "titel": "Geschwindigkeit durch Ableiten",
-       "html": "<p>Die Geschwindigkeit ist die zeitliche Ableitung der Elongation: $v(t) = \\dot{s}(t) = \\hat{s}\\,\\omega\\,\\cos(\\omega t)$. Wo $s$ ein Sinus ist, ist $v$ ein <strong>Kosinus</strong> — beide sind um eine Viertelperiode <strong>phasenverschoben</strong>. Die Maximalgeschwindigkeit beträgt $v_{\\max} = \\hat{s}\\,\\omega$.</p>",
-       "check": {
+       "kern": "$v(t) = \\dot{s}(t) = \\hat{s}\\,\\omega\\,\\cos(\\omega t)$. Wo $s$ ein Sinus ist, ist $v$ ein <strong>Kosinus</strong>; der Maximalwert ist $v_{\\max} = \\hat{s}\\,\\omega$ (in der Ruhelage).",
+       "minicheck": {
         "frage": "An welcher Stelle der Schwingung ist die Geschwindigkeit am größten?",
         "antwort": "In der Ruhelage ($s=0$). Dort hat der Kosinus seinen Maximalbetrag, also $v_{\\max} = \\hat{s}\\,\\omega$. An den Umkehrpunkten ist $v = 0$."
        }
       },
       {
        "titel": "Beschleunigung durch nochmaliges Ableiten",
-       "html": "<p>Die Beschleunigung ist die Ableitung der Geschwindigkeit: $a(t) = \\dot{v}(t) = -\\hat{s}\\,\\omega^2\\,\\sin(\\omega t) = -\\omega^2\\,s(t)$. Sie ist also <strong>proportional zur Auslenkung</strong> und ihr entgegengerichtet — genau die Bedingung der harmonischen Schwingung. Der Maximalbetrag ist $a_{\\max} = \\hat{s}\\,\\omega^2$.</p>",
-       "check": {
-        "frage": "Wo erreicht die Beschleunigung ihren größten Betrag?",
-        "antwort": "An den Umkehrpunkten ($s = \\pm\\hat{s}$). Dort ist die Auslenkung und damit auch $|a| = \\omega^2|s|$ maximal: $a_{\\max} = \\hat{s}\\,\\omega^2$. In der Ruhelage ist $a = 0$."
+       "kern": "$a(t) = \\dot{v}(t) = -\\hat{s}\\,\\omega^2\\,\\sin(\\omega t) = -\\omega^2\\,s(t)$ — proportional zur Auslenkung und ihr entgegengerichtet. Maximalwert $a_{\\max} = \\hat{s}\\,\\omega^2$.",
+       "beispiel": {
+        "aufgabe": "Eine Schwingung hat $\\hat{s} = 0{,}10\\,\\text{m}$ und $T = 0{,}50\\,\\text{s}$. Bestimme $v_{\\max}$ und $a_{\\max}$.",
+        "schritte": [
+         "$\\omega = \\frac{2\\pi}{T} = \\frac{2\\pi}{0{,}50\\,\\text{s}} \\approx 12{,}6\\,\\frac{1}{\\text{s}}$",
+         "$v_{\\max} = \\hat{s}\\,\\omega = 0{,}10\\,\\text{m}\\cdot 12{,}6\\,\\frac{1}{\\text{s}} \\approx 1{,}26\\,\\frac{\\text{m}}{\\text{s}}$",
+         "$a_{\\max} = \\hat{s}\\,\\omega^2 = 0{,}10\\,\\text{m}\\cdot (12{,}6\\,\\frac{1}{\\text{s}})^2 \\approx 15{,}9\\,\\frac{\\text{m}}{\\text{s}^2}$"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Wo in der Schwingung treten $v_{\\max}$ und $a_{\\max}$ auf?",
+         "loesung": "<p>$v_{\\max}$ in der Ruhelage ($s=0$), $a_{\\max}$ an den Umkehrpunkten ($s=\\pm\\hat{s}$).</p>"
+        }
        }
       },
       {
        "titel": "Phasenlage von $s$, $v$, $a$",
-       "html": "<p>Auslenkung, Geschwindigkeit und Beschleunigung sind gegeneinander verschoben: In der Ruhelage ist $|v|$ maximal und $a=0$; am Umkehrpunkt ist $v=0$ und $|a|$ maximal. Die Beschleunigung ist der Auslenkung stets entgegengesetzt ($a = -\\omega^2 s$).</p>",
-       "check": {
+       "kern": "In der Ruhelage ist $|v|$ maximal und $a=0$; am Umkehrpunkt ist $v=0$ und $|a|$ maximal. Die Beschleunigung ist der Auslenkung stets entgegengesetzt ($a = -\\omega^2 s$).",
+       "minicheck": {
         "frage": "Warum ist am Umkehrpunkt die Geschwindigkeit null, aber die Beschleunigung maximal?",
         "antwort": "Am Umkehrpunkt kehrt die Bewegung um — die Geschwindigkeit ist gerade null. Die Auslenkung ist dort maximal, und wegen $a=-\\omega^2 s$ ist auch die rücktreibende Beschleunigung maximal."
        }
@@ -633,7 +724,6 @@
        "typ": "experiment",
        "titel": "Auslenkung und Geschwindigkeit vergleichen",
        "material": "Ein Federpendel (Masse an Feder am Stativ), eine Handy-Kamera für eine Zeitlupenaufnahme (Slow-Motion).",
-       "vorhersage": "An welcher Stelle der Bewegung — Ruhelage oder Umkehrpunkt — ist die Masse am schnellsten? Notiere deine Vermutung vor der Aufnahme.",
        "auftraege": [
         "Filme die schwingende Masse in Zeitlupe. Spiele die Aufnahme Bild für Bild ab: Wo bewegt sich die Masse zwischen zwei Bildern am weitesten (= schnellste Stelle)?",
         "Suche die Umkehrpunkte: Dort steht die Masse kurz still. Stimmt das mit $v=0$ am Umkehrpunkt überein?",
@@ -654,7 +744,31 @@
        "frage": "Was bedeutet das Minuszeichen in $a = -\\omega^2 s$?",
        "antwort": "Die Beschleunigung ist der Auslenkung stets entgegengerichtet — sie wirkt rücktreibend zur Ruhelage. Das ist das Kennzeichen der harmonischen Schwingung."
       }
-     ]
+     ],
+     "stolperstein": "Schnell und stark beschleunigt ist <strong>nicht dasselbe</strong>. In der Ruhelage ist die Masse am <em>schnellsten</em>, aber die Beschleunigung ist dort <em>null</em>. Am Umkehrpunkt steht sie still ($v=0$), wird aber <em>maximal beschleunigt</em>. Geschwindigkeit und Beschleunigung sind um eine Viertelperiode versetzt.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum am Umkehrpunkt $v=0$, aber $|a|$ maximal ist.",
+     "darstellungen": {
+      "titel": "Auslenkung, Geschwindigkeit und Beschleunigung — verschiedene Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Gleichung",
+        "text": "$s(t)=\\hat{s}\\sin(\\omega t)$"
+       },
+       {
+        "art": "Gleichung",
+        "text": "$v(t)=\\hat{s}\\,\\omega\\cos(\\omega t)$"
+       },
+       {
+        "art": "Gleichung",
+        "text": "$a(t)=-\\hat{s}\\,\\omega^2\\sin(\\omega t)=-\\omega^2 s$"
+       },
+       {
+        "art": "Situation",
+        "text": "Ruhelage: $|v|$ maximal, $a=0$. Umkehrpunkt: $v=0$, $|a|$ maximal."
+       }
+      ]
+     },
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -695,7 +809,8 @@
        ]
       }
      ],
-     "transfer": "Warum ist $a_\\text{max} = A \\cdot \\omega^2$ an den Umkehrpunkten maximal – und nicht in der Gleichgewichtslage?"
+     "transfer": "Warum ist $a_\\text{max} = A \\cdot \\omega^2$ an den Umkehrpunkten maximal – und nicht in der Gleichgewichtslage?",
+     "rueckbezug": "Zurück zur Zeitlupe vom Anfang: Mit $v(t)=\\hat{s}\\,\\omega\\cos(\\omega t)$ ist die Masse <em>in der Ruhelage am schnellsten</em> (dort $v_{\\max}=\\hat{s}\\,\\omega$) und steht am Umkehrpunkt still. Welche Vermutung vom Anfang war richtig?"
     },
     "extra": {
      "zeit": 4,
@@ -748,45 +863,53 @@
         "ph-qp-sw-103"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Eine Schaukel bringt man schon mit ganz kleinen Anstößen erstaunlich hoch — wenn man sie im richtigen Takt gibt. Die gleiche Idee steckt hinter einem viel dramatischeren Phänomen: Brücken und Bauwerke können bei passender Anregung gefährlich aufschwingen.</p>",
+      "figur": "<svg viewBox=\"0 0 240 222\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"74\" y1=\"18\" x2=\"166\" y2=\"18\"/><line class=\"hilfslinie\" x1=\"76\" y1=\"18\" x2=\"68\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"89\" y1=\"18\" x2=\"81\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"102\" y1=\"18\" x2=\"94\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"115\" y1=\"18\" x2=\"107\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"128\" y1=\"18\" x2=\"120\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"141\" y1=\"18\" x2=\"133\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"154\" y1=\"18\" x2=\"146\" y2=\"10\"/><line class=\"hilfslinie\" x1=\"120\" y1=\"18\" x2=\"120\" y2=\"168\"/><line class=\"gerade-b\" x1=\"120\" y1=\"18\" x2=\"190\" y2=\"150\"/><text class=\"label-b\" x=\"161\" y=\"84\" text-anchor=\"start\">l</text><path class=\"gerade\" fill=\"none\" d=\"M 120.0 56.0 A 38 38 0 0 0 137.8 51.6\"/><text class=\"label-a\" x=\"130\" y=\"64\" text-anchor=\"start\">φ</text><circle class=\"punkt\" cx=\"190\" cy=\"150\" r=\"9\"/><text class=\"label-a\" x=\"202\" y=\"154\" text-anchor=\"start\">m</text><text class=\"beschriftung\" x=\"120\" y=\"184\" text-anchor=\"middle\">Ruhelage</text></svg>",
+      "figurAlt": "Ein Pendel (Schaukel-Modell) als Fadenpendel der Länge l, ausgelenkt um den Winkel phi.",
+      "vorhersage": "Warum reichen winzige, regelmäßige Anstöße aus, um eine Schaukel hoch zu bringen?",
+      "optionen": [
+       "weil jeder Anstoß sehr kräftig ist",
+       "weil die Anstöße im Takt der Eigenfrequenz kommen",
+       "weil die Schaukel sehr leicht ist"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 18,
      "anker": "#sw-energie",
-     "text": "Lies den Abschnitt zu Energie, Dämpfung und Resonanz und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/schwingungen/index.html#sw-energie"
-     },
      "schritte": [
       {
        "titel": "Energieumwandlung in der Schwingung",
-       "html": "<p>Während der Schwingung wandeln sich <strong>kinetische</strong> und <strong>potenzielle</strong> Energie fortlaufend ineinander um. Am <strong>Umkehrpunkt</strong> ist die gesamte Energie potenziell (Spann- bzw. Lageenergie), in der <strong>Ruhelage</strong> vollständig kinetisch. Ohne Reibung bleibt die Gesamtenergie konstant (Energieerhaltung).</p>",
-       "check": {
+       "kern": "Während der Schwingung wandeln sich <strong>kinetische</strong> und <strong>potenzielle</strong> Energie ineinander um. Am Umkehrpunkt ist alles potenziell, in der Ruhelage alles kinetisch.",
+       "details": "<p>Ohne Reibung bleibt die Gesamtenergie konstant (Energieerhaltung). Die Gesamtenergie lässt sich z. B. über den Maximalwert der kinetischen Energie in der Ruhelage berechnen: $E = \\frac{1}{2}m\\,v_{\\max}^2$.</p>",
+       "minicheck": {
         "frage": "Wo ist die kinetische Energie am größten, wo die potenzielle?",
         "antwort": "Die kinetische Energie ist in der Ruhelage maximal (dort ist die Geschwindigkeit am größten), die potenzielle am Umkehrpunkt (dort steht der Körper kurz still). Die Summe bleibt ohne Reibung konstant."
        }
       },
       {
        "titel": "Dämpfung",
-       "html": "<p>In Wirklichkeit entzieht <strong>Reibung</strong> (Luft, innere Reibung) dem System Energie. Die <strong>Amplitude nimmt ab</strong>, die Schwingung klingt aus — sie ist <strong>gedämpft</strong>. Die Periodendauer bleibt dabei nahezu unverändert; verloren geht Energie, nicht der Takt.</p>",
-       "check": {
+       "kern": "<strong>Reibung</strong> entzieht dem System Energie: Die <strong>Amplitude nimmt ab</strong>, die Schwingung klingt aus. Die Periodendauer bleibt dabei nahezu unverändert.",
+       "minicheck": {
         "frage": "Was passiert bei einer gedämpften Schwingung mit Amplitude und Energie?",
         "antwort": "Beide nehmen mit der Zeit ab: Reibung wandelt mechanische Energie in Wärme um, die Amplitude wird immer kleiner, bis die Schwingung zur Ruhe kommt."
        }
       },
       {
        "titel": "Eigenfrequenz und erzwungene Schwingung",
-       "html": "<p>Jedes schwingungsfähige System hat eine <strong>Eigenfrequenz</strong> $f_0$, mit der es frei schwingt. Regt man es von außen periodisch an (<strong>erzwungene Schwingung</strong>), so schwingt es mit der <strong>Erregerfrequenz</strong>. Die Amplitude hängt davon ab, wie nah die Erregerfrequenz an $f_0$ liegt.</p>",
-       "check": {
+       "kern": "Jedes schwingungsfähige System hat eine <strong>Eigenfrequenz</strong> $f_0$. Regt man es periodisch an, schwingt es im eingeschwungenen Zustand mit der <strong>Erregerfrequenz</strong>.",
+       "minicheck": {
         "frage": "Mit welcher Frequenz schwingt ein System im eingeschwungenen Zustand bei erzwungener Schwingung?",
         "antwort": "Mit der Erregerfrequenz (Frequenz des Antriebs), nicht mit seiner Eigenfrequenz. Die Eigenfrequenz bestimmt aber, wie groß die Amplitude wird."
        }
       },
       {
        "titel": "Resonanz",
-       "html": "<p>Stimmt die Erregerfrequenz mit der Eigenfrequenz überein, wird in jeder Periode „im richtigen Takt“ Energie zugeführt: Die Amplitude wächst stark an — das ist <strong>Resonanz</strong>. Bei schwacher Dämpfung kann das <strong>nützlich</strong> sein (Schaukel anschubsen, Musikinstrument) oder <strong>gefährlich</strong> (Bauwerke, Maschinen können zerstört werden — „Resonanzkatastrophe“).</p>",
-       "check": {
+       "kern": "Stimmt die Erregerfrequenz mit der Eigenfrequenz überein, wird im richtigen Takt Energie zugeführt: Die Amplitude wächst stark an — <strong>Resonanz</strong>. Je nach Dämpfung nützlich oder gefährlich.",
+       "details": "<p>Nützlich z. B. beim Anschubsen einer Schaukel oder beim Klangkörper eines Instruments. Gefährlich, wenn Bauwerke oder Maschinen bei schwacher Dämpfung in Resonanz geraten — bis zur „Resonanzkatastrophe“.</p>",
+       "minicheck": {
         "frage": "Warum reichen kleine, gut getimte Anstöße aus, um eine Schaukel hoch zu bringen?",
         "antwort": "Weil man im Takt der Eigenfrequenz anschubst (Resonanz). In jeder Periode wird ein wenig Energie passend zugeführt, sodass sich die Amplitude aufschaukelt."
        }
@@ -798,7 +921,6 @@
        "typ": "experiment",
        "titel": "Resonanz mit gekoppelten Pendeln zeigen",
        "material": "Zwei gleich lange Fadenpendel und ein bis zwei unterschiedlich lange, alle an einer gespannten waagerechten Schnur aufgehängt.",
-       "vorhersage": "Du regst eines der gleich langen Pendel an. Welches der anderen Pendel wird am stärksten mitschwingen? Notiere deine Vermutung.",
        "auftraege": [
         "Hänge mehrere Pendel an die gemeinsame Schnur. Stoße eines der gleich langen an und beobachte über eine Minute, welches Pendel die größte Amplitude aufbaut.",
         "Erkläre mit den Begriffen Eigenfrequenz und Resonanz, warum gerade das gleich lange Pendel mitschwingt und die anderen kaum.",
@@ -819,7 +941,10 @@
        "frage": "Nenne je ein Beispiel für nützliche und für gefährliche Resonanz.",
        "antwort": "Nützlich: Schaukel im Takt anschubsen, Klangkörper eines Instruments. Gefährlich: eine Brücke, die durch Wind oder Schritte in Resonanz gerät (Resonanzkatastrophe)."
       }
-     ]
+     ],
+     "stolperstein": "Resonanz heißt <strong>nicht</strong>, mit besonders viel Kraft anzuschieben, sondern <strong>im richtigen Takt</strong>: Die Erregerfrequenz muss zur Eigenfrequenz passen. Dann summiert sich in jeder Periode ein kleiner Energiebetrag und die Amplitude wächst stark — auch bei winzigen Anstößen.",
+     "selbsterklaerung": "Erkläre in einem Satz, was bei Resonanz passiert und warum die Amplitude dann stark anwächst.",
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -867,7 +992,8 @@
        ]
       }
      ],
-     "transfer": "Ein Pendel hat am Umkehrpunkt $E_\\text{ges} = 0{,}05\\,\\text{J}$. Wie groß ist die kinetische Energie in der Gleichgewichtslage?"
+     "transfer": "Ein Pendel hat am Umkehrpunkt $E_\\text{ges} = 0{,}05\\,\\text{J}$. Wie groß ist die kinetische Energie in der Gleichgewichtslage?",
+     "rueckbezug": "Zurück zur Schaukel vom Anfang: Die kleinen Anstöße wirken nur deshalb so stark, weil sie im <em>Takt der Eigenfrequenz</em> kommen (Resonanz) — genau das kann bei Bauwerken gefährlich werden. Welche Vermutung vom Anfang war richtig?"
     },
     "extra": {
      "zeit": 4,
@@ -918,7 +1044,18 @@
         "ph-qp-sw-201"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Drei Aufgaben liegen vor dir: ein Massestück an einer Feder, eine Kugel an einem Faden und eine als $s(t)=\\hat{s}\\sin(\\omega t)$ gegebene Schwingung. Alle fragen nach einer Periodendauer oder einer Maximalgröße — aber jede verlangt eine andere Formel.</p>",
+      "figur": "<svg viewBox=\"0 0 340 170\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"78.0\" x2=\"336.0\" y2=\"78.0\"/><polygon class=\"pfeil\" points=\"336.0,78.0 328.0,74.0 328.0,82.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"140.0\" x2=\"40.0\" y2=\"4\"/><polygon class=\"pfeil\" points=\"40.0,4 36.0,12 44.0,12\"/><text class=\"achsentitel\" x=\"334.0\" y=\"93.0\" text-anchor=\"end\">t in s</text><text class=\"achsentitel\" x=\"46.0\" y=\"14\">s</text><line class=\"hilfslinie\" x1=\"40.0\" y1=\"28.4\" x2=\"320.0\" y2=\"28.4\"/><line class=\"hilfslinie\" x1=\"40.0\" y1=\"127.6\" x2=\"320.0\" y2=\"127.6\"/><polyline class=\"gerade-a\" fill=\"none\" points=\"40.0,78.0 41.8,74.1 43.5,70.2 45.2,66.4 47.0,62.7 48.8,59.0 50.5,55.5 52.2,52.1 54.0,48.8 55.8,45.8 57.5,42.9 59.2,40.3 61.0,37.9 62.8,35.7 64.5,33.8 66.2,32.2 68.0,30.8 69.8,29.8 71.5,29.0 73.2,28.6 75.0,28.4 76.8,28.6 78.5,29.0 80.2,29.8 82.0,30.8 83.8,32.2 85.5,33.8 87.2,35.7 89.0,37.9 90.8,40.3 92.5,42.9 94.2,45.8 96.0,48.8 97.8,52.1 99.5,55.5 101.2,59.0 103.0,62.7 104.8,66.4 106.5,70.2 108.2,74.1 110.0,78.0 111.8,81.9 113.5,85.8 115.2,89.6 117.0,93.3 118.8,97.0 120.5,100.5 122.2,103.9 124.0,107.2 125.8,110.2 127.5,113.1 129.2,115.7 131.0,118.1 132.8,120.3 134.5,122.2 136.2,123.8 138.0,125.2 139.8,126.2 141.5,127.0 143.2,127.4 145.0,127.6 146.8,127.4 148.5,127.0 150.2,126.2 152.0,125.2 153.8,123.8 155.5,122.2 157.2,120.3 159.0,118.1 160.8,115.7 162.5,113.1 164.2,110.2 166.0,107.2 167.8,103.9 169.5,100.5 171.2,97.0 173.0,93.3 174.8,89.6 176.5,85.8 178.2,81.9 180.0,78.0 181.8,74.1 183.5,70.2 185.2,66.4 187.0,62.7 188.8,59.0 190.5,55.5 192.2,52.1 194.0,48.8 195.8,45.8 197.5,42.9 199.2,40.3 201.0,37.9 202.8,35.7 204.5,33.8 206.2,32.2 208.0,30.8 209.8,29.8 211.5,29.0 213.2,28.6 215.0,28.4 216.8,28.6 218.5,29.0 220.2,29.8 222.0,30.8 223.8,32.2 225.5,33.8 227.2,35.7 229.0,37.9 230.8,40.3 232.5,42.9 234.2,45.8 236.0,48.8 237.8,52.1 239.5,55.5 241.2,59.0 243.0,62.7 244.8,66.4 246.5,70.2 248.2,74.1 250.0,78.0 251.8,81.9 253.5,85.8 255.2,89.6 257.0,93.3 258.8,97.0 260.5,100.5 262.2,103.9 264.0,107.2 265.8,110.2 267.5,113.1 269.2,115.7 271.0,118.1 272.8,120.3 274.5,122.2 276.2,123.8 278.0,125.2 279.8,126.2 281.5,127.0 283.2,127.4 285.0,127.6 286.8,127.4 288.5,127.0 290.2,126.2 292.0,125.2 293.8,123.8 295.5,122.2 297.2,120.3 299.0,118.1 300.8,115.7 302.5,113.1 304.2,110.2 306.0,107.2 307.8,103.9 309.5,100.5 311.2,97.0 313.0,93.3 314.8,89.6 316.5,85.8 318.2,81.9 320.0,78.0\"/><text class=\"label-a\" x=\"34.0\" y=\"32.4\" text-anchor=\"end\">A</text><text class=\"label-a\" x=\"34.0\" y=\"131.6\" text-anchor=\"end\">-A</text><line class=\"marke\" x1=\"40.0\" y1=\"136.5\" x2=\"180.0\" y2=\"136.5\"/><text class=\"label-b\" x=\"110.0\" y=\"148.5\" text-anchor=\"middle\">eine Periode T</text></svg>",
+      "figurAlt": "Auslenkung-Zeit-Diagramm einer harmonischen Schwingung mit Amplitude A und Periodendauer T als Symbol für den ganzen Schwingungsblock.",
+      "vorhersage": "Was solltest du bei einer gemischten Aufgabe <em>zuerst</em> tun, bevor du eine Formel einsetzt?",
+      "optionen": [
+       "sofort Zahlen einsetzen",
+       "zuerst den Schwingertyp bestimmen",
+       "immer alle drei Formeln ausprobieren"
+      ]
+     }
     },
     "ueben": {
      "zeit": 20,
@@ -964,7 +1101,8 @@
        ]
       }
      ],
-     "transfer": "Entscheide bei jeder Aufgabe zuerst: Federpendel (Masse und Federkonstante), Fadenpendel (Länge und Ortsfaktor) oder harmonische Schwingung (Amplitude und Kreisfrequenz)? Erst dann wählst du die passende Formel."
+     "transfer": "Entscheide bei jeder Aufgabe zuerst: Federpendel (Masse und Federkonstante), Fadenpendel (Länge und Ortsfaktor) oder harmonische Schwingung (Amplitude und Kreisfrequenz)? Erst dann wählst du die passende Formel.",
+     "rueckbezug": "Zurück zu den drei Aufgaben vom Anfang: Ordne jede zuerst einem Schwingertyp zu (Feder $\\to m,D$ · Faden $\\to l,g$ · harmonisch $\\to \\hat{s},\\omega$), dann wähle die Formel. So war auch deine Eingangsvermutung gemeint — zuerst sortieren, dann rechnen."
     },
     "extra": {
      "zeit": 5,
@@ -978,28 +1116,27 @@
     },
     "verstehen": {
      "zeit": 12,
-     "text": "Bevor du loslegst, verschaffe dir den Überblick: Diese Lektion mischt den gesamten Schwingungs-Block. Sortiere die Werkzeuge, dann wendest du sie sicher an.",
      "schritte": [
       {
        "titel": "Die drei Periodenformeln auf einen Blick",
-       "html": "<p>Alle harmonischen Schwinger haben die Bauform $T = 2\\pi\\sqrt{\\dfrac{\\text{Trägheit}}{\\text{Rückstellung}}}$. Konkret: <strong>Federpendel</strong> $T = 2\\pi\\sqrt{\\dfrac{m}{D}}$ (Masse, Federkonstante) und <strong>Fadenpendel</strong> $T = 2\\pi\\sqrt{\\dfrac{l}{g}}$ (Länge, Ortsfaktor). Beim Fadenpendel kommt die Masse nicht vor.</p>",
-       "check": {
+       "kern": "Alle harmonischen Schwinger haben die Bauform $T = 2\\pi\\sqrt{\\frac{\\text{Trägheit}}{\\text{Rückstellung}}}$: <strong>Feder</strong> $T = 2\\pi\\sqrt{m/D}$, <strong>Faden</strong> $T = 2\\pi\\sqrt{l/g}$ (Masse zählt nicht).",
+       "minicheck": {
         "frage": "Du sollst $T$ eines schwingenden Massestücks an einer Feder berechnen. Welche Formel nimmst du?",
         "antwort": "Die Federpendel-Formel $T = 2\\pi\\sqrt{m/D}$ — gebraucht werden Masse $m$ und Federkonstante $D$."
        }
       },
       {
        "titel": "Frequenz, Kreisfrequenz und Energie verknüpfen",
-       "html": "<p>Aus $T$ folgt $f = \\dfrac{1}{T}$ und $\\omega = 2\\pi f = \\dfrac{2\\pi}{T}$. Für die harmonische Schwingung gilt $v_{\\max} = \\hat{s}\\,\\omega$ und $a_{\\max} = \\hat{s}\\,\\omega^2$. Die Gesamtenergie lässt sich über den Maximalwert der kinetischen Energie $E = \\frac{1}{2}m\\,v_{\\max}^2$ in der Ruhelage berechnen.</p>",
-       "check": {
+       "kern": "Aus $T$ folgt $f = \\frac{1}{T}$ und $\\omega = 2\\pi f = \\frac{2\\pi}{T}$. Damit $v_{\\max} = \\hat{s}\\,\\omega$, $a_{\\max} = \\hat{s}\\,\\omega^2$ und $E = \\frac{1}{2}m\\,v_{\\max}^2$.",
+       "minicheck": {
         "frage": "Du kennst $T$ und sollst die Kreisfrequenz angeben. Wie gehst du vor?",
         "antwort": "$\\omega = \\frac{2\\pi}{T}$. Aus $\\omega$ folgen dann $v_{\\max}=\\hat{s}\\,\\omega$ und $a_{\\max}=\\hat{s}\\,\\omega^2$."
        }
       },
       {
        "titel": "Erst zuordnen, dann rechnen",
-       "html": "<p>Gehe bei jeder Aufgabe in dieser Reihenfolge vor: <strong>(1)</strong> Um welchen Schwinger geht es (Feder, Faden, allgemein harmonisch)? <strong>(2)</strong> Welche Größen sind gegeben, welche gesucht? <strong>(3)</strong> Welche Formel verbindet sie? Prüfe am Ende die <strong>Einheit</strong> und ob die Größenordnung plausibel ist.</p>",
-       "check": {
+       "kern": "Reihenfolge: <strong>(1)</strong> Welcher Schwinger? <strong>(2)</strong> Was ist gegeben, was gesucht? <strong>(3)</strong> Welche Formel verbindet sie? Am Ende Einheit und Größenordnung prüfen.",
+       "minicheck": {
         "frage": "Warum lohnt es sich, vor dem Rechnen den Schwingertyp zu bestimmen?",
         "antwort": "Weil davon abhängt, welche Formel und welche Größen man braucht. Federpendel verlangt $m$ und $D$, Fadenpendel $l$ und $g$ — Verwechslung führt zu falschen Ergebnissen."
        }
@@ -1011,7 +1148,6 @@
        "typ": "experiment",
        "titel": "Schwingertyp am Realobjekt bestimmen",
        "material": "Verschiedene schwingungsfähige Gegenstände aus dem Alltag (z. B. Lineal über Tischkante, Schlüssel an Band, Gummiband mit Gewicht).",
-       "vorhersage": "Suche dir drei Gegenstände und notiere vorab, welcher sich eher wie ein Federpendel und welcher wie ein Fadenpendel verhält.",
        "auftraege": [
         "Bringe jeden Gegenstand zum Schwingen und ordne ihn begründet einem Typ zu (Feder- oder Fadenpendel-ähnlich).",
         "Miss bei einem Gegenstand die Periodendauer (10 Schwingungen) und berechne daraus $f$ und $\\omega$.",
@@ -1028,7 +1164,9 @@
        "frage": "Wie kommst du von der Periodendauer $T$ zur Maximalgeschwindigkeit einer harmonischen Schwingung?",
        "antwort": "Über $\\omega = \\frac{2\\pi}{T}$ und dann $v_{\\max} = \\hat{s}\\,\\omega$."
       }
-     ]
+     ],
+     "stolperstein": "Der häufigste Fehler in gemischten Aufgaben ist, die <strong>falsche Periodenformel</strong> zu nehmen — etwa $\\sqrt{l/g}$ für ein Federpendel. Erst den Schwingertyp und die gegebenen Größen klären, dann die passende Formel wählen.",
+     "selbsterklaerung": "Erkläre in einem Satz, woran du erkennst, ob eine Aufgabe die Feder- oder die Fadenpendelformel verlangt."
     }
    },
    "kompetenzen": [
@@ -1072,45 +1210,52 @@
         "ph-qp-sw-002"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Eine La-Ola-Welle läuft durchs Stadion: Sie wandert sichtbar rundherum — und doch verlässt kein einziger Fan seinen Platz. Genauso „läuft“ eine Welle auf einem Seil, während ein markierter Punkt nur auf und ab schwingt.</p>",
+      "figur": "<svg viewBox=\"0 0 340 200\" xmlns=\"http://www.w3.org/2000/svg\"><polyline class=\"gerade-a\" fill=\"none\" points=\"40.0,38.0 41.8,36.7 43.5,35.4 45.2,34.1 47.0,32.9 48.8,31.7 50.5,30.5 52.2,29.4 54.0,28.3 55.8,27.3 57.5,26.3 59.2,25.5 61.0,24.7 62.8,23.9 64.5,23.3 66.2,22.8 68.0,22.3 69.8,22.0 71.5,21.7 73.2,21.6 75.0,21.5 76.8,21.6 78.5,21.7 80.2,22.0 82.0,22.3 83.8,22.8 85.5,23.3 87.2,23.9 89.0,24.7 90.8,25.5 92.5,26.3 94.2,27.3 96.0,28.3 97.8,29.4 99.5,30.5 101.2,31.7 103.0,32.9 104.8,34.1 106.5,35.4 108.2,36.7 110.0,38.0 111.8,39.3 113.5,40.6 115.2,41.9 117.0,43.1 118.8,44.3 120.5,45.5 122.2,46.6 124.0,47.7 125.8,48.7 127.5,49.7 129.2,50.5 131.0,51.3 132.8,52.1 134.5,52.7 136.2,53.2 138.0,53.7 139.8,54.0 141.5,54.3 143.2,54.4 145.0,54.5 146.8,54.4 148.5,54.3 150.2,54.0 152.0,53.7 153.8,53.2 155.5,52.7 157.2,52.1 159.0,51.3 160.8,50.5 162.5,49.7 164.2,48.7 166.0,47.7 167.8,46.6 169.5,45.5 171.2,44.3 173.0,43.1 174.8,41.9 176.5,40.6 178.2,39.3 180.0,38.0 181.8,36.7 183.5,35.4 185.2,34.1 187.0,32.9 188.8,31.7 190.5,30.5 192.2,29.4 194.0,28.3 195.8,27.3 197.5,26.3 199.2,25.5 201.0,24.7 202.8,23.9 204.5,23.3 206.2,22.8 208.0,22.3 209.8,22.0 211.5,21.7 213.2,21.6 215.0,21.5 216.8,21.6 218.5,21.7 220.2,22.0 222.0,22.3 223.8,22.8 225.5,23.3 227.2,23.9 229.0,24.7 230.8,25.5 232.5,26.3 234.2,27.3 236.0,28.3 237.8,29.4 239.5,30.5 241.2,31.7 243.0,32.9 244.8,34.1 246.5,35.4 248.2,36.7 250.0,38.0 251.8,39.3 253.5,40.6 255.2,41.9 257.0,43.1 258.8,44.3 260.5,45.5 262.2,46.6 264.0,47.7 265.8,48.7 267.5,49.7 269.2,50.5 271.0,51.3 272.8,52.1 274.5,52.7 276.2,53.2 278.0,53.7 279.8,54.0 281.5,54.3 283.2,54.4 285.0,54.5 286.8,54.4 288.5,54.3 290.2,54.0 292.0,53.7 293.8,53.2 295.5,52.7 297.2,52.1 299.0,51.3 300.8,50.5 302.5,49.7 304.2,48.7 306.0,47.7 307.8,46.6 309.5,45.5 311.2,44.3 313.0,43.1 314.8,41.9 316.5,40.6 318.2,39.3 320.0,38.0\"/><text class=\"beschriftung\" x=\"6\" y=\"14\" text-anchor=\"start\">Transversal: Teilchen schwingt quer</text><line class=\"pfeil\" x1=\"110\" y1=\"21\" x2=\"110\" y2=\"54\" stroke-width=\"1.5\"/><text class=\"beschriftung\" x=\"6\" y=\"120\" text-anchor=\"start\">Longitudinal: Verdichtung &amp; Verdünnung</text><circle class=\"punkt\" cx=\"18\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"28\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"37\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"51\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"71\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"95\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"115\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"129\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"138\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"148\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"157\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"171\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"191\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"215\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"235\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"249\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"258\" cy=\"150\" r=\"3\"/><line class=\"pfeil\" x1=\"270\" y1=\"172\" x2=\"328\" y2=\"172\" stroke-width=\"1.5\"/><polygon class=\"pfeil\" points=\"328,172 320,168 320,176\"/><text class=\"beschriftung\" x=\"266\" y=\"176\" text-anchor=\"end\">Ausbreitung</text></svg>",
+      "figurAlt": "Oben eine Transversalwelle als Sinuslinie mit senkrechtem Schwingpfeil; unten eine Longitudinalwelle als Punktreihe mit Verdichtungen und Verdünnungen, beide breiten sich nach rechts aus.",
+      "vorhersage": "Wenn eine Welle durch ein Medium läuft — wandert das einzelne Teilchen mit der Welle mit, oder bleibt es an seinem Ort?",
+      "optionen": [
+       "es wandert mit der Welle mit",
+       "es bleibt am Ort und schwingt nur",
+       "es wandert ein Stück und kommt zurück"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 16,
      "anker": "#we-entstehung",
-     "text": "Lies den Abschnitt zur Entstehung der Welle und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/wellen/index.html#we-entstehung"
-     },
      "schritte": [
       {
        "titel": "Gekoppelte Oszillatoren",
-       "html": "<p>Man stelle sich viele Pendel (Oszillatoren) vor, die durch Federn miteinander <strong>gekoppelt</strong> sind. Lenkt man das erste aus, zieht es über die Kopplung das nächste mit — aber erst etwas <strong>später</strong>. So setzt sich die Schwingung von Teilchen zu Teilchen fort.</p>",
-       "check": {
+       "kern": "Viele durch Federn <strong>gekoppelte</strong> Pendel: Lenkt man das erste aus, zieht es das nächste mit — aber erst etwas <strong>später</strong>. So setzt sich die Schwingung von Teilchen zu Teilchen fort.",
+       "minicheck": {
         "frage": "Wieso schwingt das zweite Teilchen erst nach dem ersten?",
         "antwort": "Weil die Kopplung die Auslenkung mit einer kleinen Zeitverzögerung weitergibt. Jedes Teilchen wird vom Nachbarn angeregt — daher pflanzt sich die Bewegung mit endlicher Geschwindigkeit fort."
        }
       },
       {
        "titel": "Was ist eine Welle?",
-       "html": "<p>Eine <strong>mechanische Welle</strong> ist die Ausbreitung einer Schwingung im Raum durch ein Medium. Wichtig: Es wird <strong>Energie</strong> (und Impuls) transportiert, <strong>nicht aber Materie</strong> — jedes Teilchen schwingt nur um seine Ruhelage und wandert nicht mit.</p>",
-       "check": {
+       "kern": "Eine <strong>mechanische Welle</strong> ist die Ausbreitung einer Schwingung im Raum durch ein Medium. Transportiert werden <strong>Energie und Impuls</strong>, <strong>nicht Materie</strong>.",
+       "details": "<p>Jedes Teilchen schwingt nur um seine Ruhelage und wandert nicht mit der Welle mit. Das unterscheidet eine Welle grundlegend von einem Materiestrom wie einem Wasserschlauch.</p>",
+       "minicheck": {
         "frage": "Was wird bei einer Welle transportiert — und was nicht?",
         "antwort": "Transportiert werden Energie und Impuls. Die Teilchen des Mediums schwingen nur um ihre Ruhelage; sie wandern nicht mit der Welle mit."
        }
       },
       {
        "titel": "Transversal- und Longitudinalwellen",
-       "html": "<p>Bei der <strong>Transversalwelle</strong> schwingen die Teilchen <strong>senkrecht</strong> zur Ausbreitungsrichtung (z. B. Welle auf einem Seil, Wasseroberfläche). Bei der <strong>Longitudinalwelle</strong> schwingen sie <strong>längs</strong> der Ausbreitungsrichtung — es entstehen Verdichtungen und Verdünnungen (z. B. Schall in Luft).</p>",
-       "check": {
+       "kern": "<strong>Transversalwelle</strong>: Teilchen schwingen <strong>senkrecht</strong> zur Ausbreitung (Seil, Wasser). <strong>Longitudinalwelle</strong>: <strong>längs</strong> dazu, mit Verdichtungen und Verdünnungen (Schall in Luft).",
+       "minicheck": {
         "frage": "Ist Schall in Luft eine Transversal- oder eine Longitudinalwelle?",
         "antwort": "Eine Longitudinalwelle: Die Luftteilchen schwingen längs der Ausbreitungsrichtung, es entstehen Verdichtungen und Verdünnungen."
        }
       },
       {
        "titel": "Warum kein Schall im Vakuum?",
-       "html": "<p>Eine mechanische Welle braucht ein <strong>Medium</strong> aus schwingungsfähigen, gekoppelten Teilchen. Im <strong>Vakuum</strong> gibt es keine Teilchen, die die Schwingung weitergeben könnten — deshalb breitet sich Schall dort nicht aus. Die Explosion im Weltraum-Film wäre in Wirklichkeit lautlos.</p>",
-       "check": {
+       "kern": "Eine mechanische Welle braucht ein <strong>Medium</strong> aus gekoppelten Teilchen. Im <strong>Vakuum</strong> fehlen diese — Schall kann sich dort nicht ausbreiten.",
+       "minicheck": {
         "frage": "Warum hört man im Weltraum keinen Knall?",
         "antwort": "Schall ist eine mechanische Welle und braucht ein Medium. Im Vakuum fehlen Teilchen, die die Schwingung weitergeben könnten — es kann sich kein Schall ausbreiten."
        }
@@ -1122,7 +1267,6 @@
        "typ": "experiment",
        "titel": "Wellen am Seil und an einer Feder erzeugen",
        "material": "Ein langes Seil oder eine lange Schraubenfeder (z. B. Slinky), eine zweite Person oder ein fester Befestigungspunkt.",
-       "vorhersage": "Wandert ein Punkt des Seils mit der Welle mit, oder bleibt er an seinem Ort? Notiere deine Vermutung vor dem Versuch.",
        "auftraege": [
         "Spanne das Seil locker und erzeuge durch eine schnelle Hand­bewegung quer zur Seilrichtung eine einzelne Welle. Markiere mit einem Klebeband einen Punkt: Wandert er mit oder schwingt er nur auf und ab? (Transversalwelle)",
         "Schiebe die Feder kurz in Längsrichtung an: Es läuft eine Verdichtung entlang. Vergleiche diese Longitudinalwelle mit der Seilwelle.",
@@ -1143,7 +1287,32 @@
        "frage": "Transportiert eine Welle Materie?",
        "antwort": "Nein. Sie transportiert Energie und Impuls; die Teilchen schwingen nur um ihre Ruhelage und wandern nicht mit."
       }
-     ]
+     ],
+     "stolperstein": "Der hartnäckigste Irrtum: „Die Teilchen wandern mit der Welle mit.“ Falsch — jedes Teilchen schwingt nur um seine <strong>Ruhelage</strong>. Weitergegeben werden <strong>Energie und Bewegungszustand</strong>, nicht die Materie. Die La-Ola-Welle macht es sichtbar: Der Fan bleibt sitzen, die Welle wandert.",
+     "selbsterklaerung": "Erkläre in einem Satz, was bei einer Welle transportiert wird — und was gerade nicht.",
+     "darstellungen": {
+      "titel": "Eine Welle — in mehreren Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Gekoppelte Oszillatoren geben ihre Schwingung zeitversetzt an die Nachbarn weiter."
+       },
+       {
+        "art": "Graph",
+        "figur": "<svg viewBox=\"0 0 340 170\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"78.0\" x2=\"336.0\" y2=\"78.0\"/><polygon class=\"pfeil\" points=\"336.0,78.0 328.0,74.0 328.0,82.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"140.0\" x2=\"40.0\" y2=\"4\"/><polygon class=\"pfeil\" points=\"40.0,4 36.0,12 44.0,12\"/><text class=\"achsentitel\" x=\"334.0\" y=\"93.0\" text-anchor=\"end\">Ort x</text><text class=\"achsentitel\" x=\"46.0\" y=\"14\">s</text><polyline class=\"gerade-b\" fill=\"none\" points=\"40.0,78.0 41.8,74.1 43.5,70.2 45.2,66.4 47.0,62.7 48.8,59.0 50.5,55.5 52.2,52.1 54.0,48.8 55.8,45.8 57.5,42.9 59.2,40.3 61.0,37.9 62.8,35.7 64.5,33.8 66.2,32.2 68.0,30.8 69.8,29.8 71.5,29.0 73.2,28.6 75.0,28.4 76.8,28.6 78.5,29.0 80.2,29.8 82.0,30.8 83.8,32.2 85.5,33.8 87.2,35.7 89.0,37.9 90.8,40.3 92.5,42.9 94.2,45.8 96.0,48.8 97.8,52.1 99.5,55.5 101.2,59.0 103.0,62.7 104.8,66.4 106.5,70.2 108.2,74.1 110.0,78.0 111.8,81.9 113.5,85.8 115.2,89.6 117.0,93.3 118.8,97.0 120.5,100.5 122.2,103.9 124.0,107.2 125.8,110.2 127.5,113.1 129.2,115.7 131.0,118.1 132.8,120.3 134.5,122.2 136.2,123.8 138.0,125.2 139.8,126.2 141.5,127.0 143.2,127.4 145.0,127.6 146.8,127.4 148.5,127.0 150.2,126.2 152.0,125.2 153.8,123.8 155.5,122.2 157.2,120.3 159.0,118.1 160.8,115.7 162.5,113.1 164.2,110.2 166.0,107.2 167.8,103.9 169.5,100.5 171.2,97.0 173.0,93.3 174.8,89.6 176.5,85.8 178.2,81.9 180.0,78.0 181.8,74.1 183.5,70.2 185.2,66.4 187.0,62.7 188.8,59.0 190.5,55.5 192.2,52.1 194.0,48.8 195.8,45.8 197.5,42.9 199.2,40.3 201.0,37.9 202.8,35.7 204.5,33.8 206.2,32.2 208.0,30.8 209.8,29.8 211.5,29.0 213.2,28.6 215.0,28.4 216.8,28.6 218.5,29.0 220.2,29.8 222.0,30.8 223.8,32.2 225.5,33.8 227.2,35.7 229.0,37.9 230.8,40.3 232.5,42.9 234.2,45.8 236.0,48.8 237.8,52.1 239.5,55.5 241.2,59.0 243.0,62.7 244.8,66.4 246.5,70.2 248.2,74.1 250.0,78.0 251.8,81.9 253.5,85.8 255.2,89.6 257.0,93.3 258.8,97.0 260.5,100.5 262.2,103.9 264.0,107.2 265.8,110.2 267.5,113.1 269.2,115.7 271.0,118.1 272.8,120.3 274.5,122.2 276.2,123.8 278.0,125.2 279.8,126.2 281.5,127.0 283.2,127.4 285.0,127.6 286.8,127.4 288.5,127.0 290.2,126.2 292.0,125.2 293.8,123.8 295.5,122.2 297.2,120.3 299.0,118.1 300.8,115.7 302.5,113.1 304.2,110.2 306.0,107.2 307.8,103.9 309.5,100.5 311.2,97.0 313.0,93.3 314.8,89.6 316.5,85.8 318.2,81.9 320.0,78.0\"/><line class=\"marke\" x1=\"75.0\" y1=\"19.5\" x2=\"215.0\" y2=\"19.5\"/><text class=\"label-b\" x=\"145.0\" y=\"14.5\" text-anchor=\"middle\">Wellenlänge λ</text></svg>",
+        "figurAlt": "Momentaufnahme einer Welle: Auslenkung gegen den Ort; der Abstand zweier benachbarter Berge ist die Wellenlänge."
+       },
+       {
+        "art": "Situation",
+        "text": "Transversal: Teilchen schwingen quer zur Ausbreitung. Longitudinal: längs dazu (Verdichtung/Verdünnung)."
+       },
+       {
+        "art": "Gleichung",
+        "text": "Es wird Energie transportiert, keine Materie."
+       }
+      ]
+     },
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -1184,7 +1353,8 @@
        ]
       }
      ],
-     "transfer": "Eine La-Ola-Welle läuft durchs Stadion. Kein Fan verlässt seinen Platz – was wandert dann wirklich?"
+     "transfer": "Eine La-Ola-Welle läuft durchs Stadion. Kein Fan verlässt seinen Platz – was wandert dann wirklich?",
+     "rueckbezug": "Zurück zur La-Ola-Welle: Kein Fan verlässt seinen Platz, jeder steht nur kurz auf und setzt sich wieder — es wandert der <em>Bewegungszustand</em> (Energie), nicht die Person. Welche Vermutung vom Anfang war richtig?"
     },
     "extra": {
      "zeit": 4,
@@ -1237,45 +1407,59 @@
         "ph-qp-we-104"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Eine Stimmgabel klingt in Luft mit einem bestimmten Ton. Taucht man dieselbe schwingende Quelle ins Wasser, in dem sich Schall viel schneller ausbreitet, bleibt der Ton (die Frequenz) für einen mitschwimmenden Hörer derselbe — aber „im Wasser“ ändert sich etwas an der Welle.</p>",
+      "figur": "<svg viewBox=\"0 0 340 170\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"78.0\" x2=\"336.0\" y2=\"78.0\"/><polygon class=\"pfeil\" points=\"336.0,78.0 328.0,74.0 328.0,82.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"140.0\" x2=\"40.0\" y2=\"4\"/><polygon class=\"pfeil\" points=\"40.0,4 36.0,12 44.0,12\"/><text class=\"achsentitel\" x=\"334.0\" y=\"93.0\" text-anchor=\"end\">Ort x</text><text class=\"achsentitel\" x=\"46.0\" y=\"14\">s</text><polyline class=\"gerade-b\" fill=\"none\" points=\"40.0,78.0 41.8,74.1 43.5,70.2 45.2,66.4 47.0,62.7 48.8,59.0 50.5,55.5 52.2,52.1 54.0,48.8 55.8,45.8 57.5,42.9 59.2,40.3 61.0,37.9 62.8,35.7 64.5,33.8 66.2,32.2 68.0,30.8 69.8,29.8 71.5,29.0 73.2,28.6 75.0,28.4 76.8,28.6 78.5,29.0 80.2,29.8 82.0,30.8 83.8,32.2 85.5,33.8 87.2,35.7 89.0,37.9 90.8,40.3 92.5,42.9 94.2,45.8 96.0,48.8 97.8,52.1 99.5,55.5 101.2,59.0 103.0,62.7 104.8,66.4 106.5,70.2 108.2,74.1 110.0,78.0 111.8,81.9 113.5,85.8 115.2,89.6 117.0,93.3 118.8,97.0 120.5,100.5 122.2,103.9 124.0,107.2 125.8,110.2 127.5,113.1 129.2,115.7 131.0,118.1 132.8,120.3 134.5,122.2 136.2,123.8 138.0,125.2 139.8,126.2 141.5,127.0 143.2,127.4 145.0,127.6 146.8,127.4 148.5,127.0 150.2,126.2 152.0,125.2 153.8,123.8 155.5,122.2 157.2,120.3 159.0,118.1 160.8,115.7 162.5,113.1 164.2,110.2 166.0,107.2 167.8,103.9 169.5,100.5 171.2,97.0 173.0,93.3 174.8,89.6 176.5,85.8 178.2,81.9 180.0,78.0 181.8,74.1 183.5,70.2 185.2,66.4 187.0,62.7 188.8,59.0 190.5,55.5 192.2,52.1 194.0,48.8 195.8,45.8 197.5,42.9 199.2,40.3 201.0,37.9 202.8,35.7 204.5,33.8 206.2,32.2 208.0,30.8 209.8,29.8 211.5,29.0 213.2,28.6 215.0,28.4 216.8,28.6 218.5,29.0 220.2,29.8 222.0,30.8 223.8,32.2 225.5,33.8 227.2,35.7 229.0,37.9 230.8,40.3 232.5,42.9 234.2,45.8 236.0,48.8 237.8,52.1 239.5,55.5 241.2,59.0 243.0,62.7 244.8,66.4 246.5,70.2 248.2,74.1 250.0,78.0 251.8,81.9 253.5,85.8 255.2,89.6 257.0,93.3 258.8,97.0 260.5,100.5 262.2,103.9 264.0,107.2 265.8,110.2 267.5,113.1 269.2,115.7 271.0,118.1 272.8,120.3 274.5,122.2 276.2,123.8 278.0,125.2 279.8,126.2 281.5,127.0 283.2,127.4 285.0,127.6 286.8,127.4 288.5,127.0 290.2,126.2 292.0,125.2 293.8,123.8 295.5,122.2 297.2,120.3 299.0,118.1 300.8,115.7 302.5,113.1 304.2,110.2 306.0,107.2 307.8,103.9 309.5,100.5 311.2,97.0 313.0,93.3 314.8,89.6 316.5,85.8 318.2,81.9 320.0,78.0\"/><line class=\"marke\" x1=\"75.0\" y1=\"19.5\" x2=\"215.0\" y2=\"19.5\"/><text class=\"label-b\" x=\"145.0\" y=\"14.5\" text-anchor=\"middle\">Wellenlänge λ</text></svg>",
+      "figurAlt": "Momentaufnahme einer Welle als Sinuslinie über dem Ort; der markierte Abstand zweier Berge ist die Wellenlänge lambda.",
+      "vorhersage": "Beim Übergang in ein Medium mit größerer Ausbreitungsgeschwindigkeit — was ändert sich bei gleicher Frequenz: die Wellenlänge, die Frequenz oder beides?",
+      "optionen": [
+       "die Wellenlänge ändert sich",
+       "die Frequenz ändert sich",
+       "beides bleibt gleich"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 16,
      "anker": "#we-kenngroessen",
-     "text": "Lies den Abschnitt zu den Kenngrößen und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/wellen/index.html#we-kenngroessen"
-     },
      "schritte": [
       {
        "titel": "Zwei Bilder einer Welle",
-       "html": "<p>Eine Welle kann man zeitlich (ein Teilchen über die Zeit → <strong>Periodendauer</strong> $T$) oder räumlich (Momentaufnahme entlang des Weges → <strong>Wellenlänge</strong> $\\lambda$) betrachten. Die Wellenlänge $\\lambda$ ist der Abstand zwischen zwei <strong>gleichphasigen</strong> Punkten, z. B. von Berg zu Berg.</p>",
-       "check": {
+       "kern": "Zeitlich betrachtet (ein Teilchen über die Zeit) zeigt sich die <strong>Periodendauer</strong> $T$; räumlich (Momentaufnahme) die <strong>Wellenlänge</strong> $\\lambda$ — der Abstand zweier <strong>gleichphasiger</strong> Punkte (Berg zu Berg).",
+       "minicheck": {
         "frage": "Was beschreibt die Wellenlänge $\\lambda$?",
         "antwort": "Den räumlichen Abstand zweier benachbarter gleichphasiger Punkte der Welle — etwa von einem Wellenberg zum nächsten."
        }
       },
       {
        "titel": "Die Ausbreitungsgeschwindigkeit",
-       "html": "<p>Die <strong>Ausbreitungsgeschwindigkeit</strong> $c$ gibt an, wie schnell sich ein bestimmter Wellenzustand (z. B. ein Berg) im Raum fortbewegt. Sie ist eine Eigenschaft des <strong>Mediums</strong> — in Luft ist $c \\approx 343\\,\\frac{\\text{m}}{\\text{s}}$ für Schall, in Wasser deutlich größer.</p>",
-       "check": {
+       "kern": "$c$ gibt an, wie schnell sich ein bestimmter Wellenzustand fortbewegt. Sie ist eine Eigenschaft des <strong>Mediums</strong> (z. B. Schall in Luft $c \\approx 343\\,\\frac{\\text{m}}{\\text{s}}$).",
+       "minicheck": {
         "frage": "Wovon hängt die Ausbreitungsgeschwindigkeit einer Welle hauptsächlich ab?",
         "antwort": "Vom Medium, in dem sie sich ausbreitet (und dessen Zustand, z. B. Temperatur). In festeren bzw. dichteren Medien ist $c$ oft größer."
        }
       },
       {
        "titel": "Die Grundgleichung herleiten",
-       "html": "<p>In genau <strong>einer Periodendauer</strong> $T$ rückt die Welle um <strong>eine Wellenlänge</strong> $\\lambda$ vor. Geschwindigkeit ist Weg pro Zeit: $c = \\dfrac{\\lambda}{T}$. Mit $f = \\dfrac{1}{T}$ folgt die <strong>Grundgleichung</strong> $c = \\lambda \\cdot f$.</p>",
-       "check": {
-        "frage": "Wie kommt man von $c=\\frac{\\lambda}{T}$ auf $c=\\lambda\\cdot f$?",
-        "antwort": "In einer Periode legt die Welle eine Wellenlänge zurück: $c=\\frac{\\lambda}{T}$. Wegen $f=\\frac{1}{T}$ ist $\\frac{1}{T}=f$, also $c=\\lambda\\cdot f$."
+       "kern": "In einer Periodendauer $T$ rückt die Welle um eine Wellenlänge $\\lambda$ vor: $c = \\frac{\\lambda}{T}$. Mit $f = \\frac{1}{T}$ folgt die <strong>Grundgleichung</strong> $c = \\lambda \\cdot f$.",
+       "beispiel": {
+        "aufgabe": "Der Kammerton $a^1$ hat $f = 440\\,\\text{Hz}$. Bestimme seine Wellenlänge in Luft ($c = 343\\,\\frac{\\text{m}}{\\text{s}}$).",
+        "schritte": [
+         "Grundgleichung nach $\\lambda$ umstellen: $\\lambda = \\frac{c}{f}$",
+         "$\\lambda = \\frac{343\\,\\text{m/s}}{440\\,\\text{Hz}}$",
+         "$\\lambda \\approx 0{,}78\\,\\text{m}$"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Welche Wellenlänge hat ein Ton mit $f = 170\\,\\text{Hz}$ in Luft?",
+         "loesung": "<p>$\\lambda = \\frac{c}{f} = \\frac{343\\,\\text{m/s}}{170\\,\\text{Hz}} \\approx 2{,}0\\,\\text{m}$.</p>"
+        }
        }
       },
       {
        "titel": "Frequenz bleibt, Wellenlänge ändert sich",
-       "html": "<p>Geht eine Welle von einem Medium in ein anderes über, bleibt die <strong>Frequenz</strong> gleich (sie wird vom Sender vorgegeben). Ändert sich $c$, so ändert sich nach $\\lambda = \\dfrac{c}{f}$ die <strong>Wellenlänge</strong>. Beispiel: Der Kammerton $a^1$ mit $f=440\\,\\text{Hz}$ hat in Luft ($c=343\\,\\frac{\\text{m}}{\\text{s}}$) die Wellenlänge $\\lambda = \\dfrac{343}{440}\\,\\text{m} \\approx 0{,}78\\,\\text{m}$.</p>",
-       "check": {
+       "kern": "Beim Übergang in ein anderes Medium bleibt die <strong>Frequenz</strong> gleich (vom Sender vorgegeben). Ändert sich $c$, so ändert sich nach $\\lambda = \\frac{c}{f}$ die <strong>Wellenlänge</strong>.",
+       "minicheck": {
         "frage": "Was bleibt beim Übergang in ein anderes Medium gleich — Frequenz oder Wellenlänge?",
         "antwort": "Die Frequenz bleibt gleich (vom Sender vorgegeben). Weil sich $c$ ändert, ändert sich über $\\lambda = c/f$ die Wellenlänge."
        }
@@ -1287,7 +1471,6 @@
        "typ": "experiment",
        "titel": "Wellenlänge auf der Wasseroberfläche schätzen",
        "material": "Eine flache Schale oder Wasserschüssel mit Wasser, ein Lineal, ein Handy für eine Videoaufnahme.",
-       "vorhersage": "Wenn du schneller mit dem Finger tippst (höhere Frequenz), werden die Wellen­berge enger oder weiter auseinander liegen? Notiere deine Vermutung.",
        "auftraege": [
         "Tippe regelmäßig langsam mit dem Finger ins Wasser und filme die Wellen. Schätze mit dem Lineal den Abstand benachbarter Wellenberge (die Wellenlänge).",
         "Tippe nun schneller (höhere Frequenz). Vergleiche die Wellenlänge mit dem ersten Versuch — passt das zu $\\lambda = c/f$ bei gleichem $c$?",
@@ -1308,7 +1491,10 @@
        "frage": "Ein Ton geht von Luft in Wasser über. Welche Größen ändern sich?",
        "antwort": "Die Frequenz bleibt gleich. Die Ausbreitungsgeschwindigkeit $c$ ist im Wasser größer, daher wird über $\\lambda=c/f$ auch die Wellenlänge größer."
       }
-     ]
+     ],
+     "stolperstein": "Beim Mediumwechsel ändert sich <strong>nicht</strong> die Frequenz, sondern die <strong>Wellenlänge</strong>. Die Frequenz gibt der Sender vor und bleibt erhalten; weil sich $c$ ändert, folgt aus $\\lambda = c/f$ eine neue Wellenlänge. Wer hier Frequenz und Wellenlänge verwechselt, rechnet falsch.",
+     "selbsterklaerung": "Erkläre in einem Satz, wie $c$, $\\lambda$ und $f$ über die Grundgleichung zusammenhängen.",
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -1348,7 +1534,8 @@
        ]
       }
      ],
-     "transfer": "Ein Ton mit $f = 686\\,\\text{Hz}$ breitet sich in Luft aus ($c = 343\\,\\frac{\\text{m}}{\\text{s}}$). Wie weit liegen die Verdichtungszonen auseinander?"
+     "transfer": "Ein Ton mit $f = 686\\,\\text{Hz}$ breitet sich in Luft aus ($c = 343\\,\\frac{\\text{m}}{\\text{s}}$). Wie weit liegen die Verdichtungszonen auseinander?",
+     "rueckbezug": "Zurück zur Stimmgabel in Luft und Wasser: Die Frequenz bleibt gleich, aber wegen des größeren $c$ im Wasser wird über $\\lambda = c/f$ auch die <em>Wellenlänge größer</em>. Welche Vermutung vom Anfang war richtig?"
     },
     "extra": {
      "zeit": 4,
@@ -1403,45 +1590,60 @@
         "ph-qp-we-103"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Zwei Lautsprecher spielen denselben Ton. Geht man langsam an ihnen entlang, wird es an manchen Stellen auffällig <strong>lauter</strong>, an anderen fast <strong>still</strong> — obwohl beide Lautsprecher gleich laut spielen und nichts kaputt ist.</p>",
+      "figur": "<svg viewBox=\"0 0 340 170\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"78.0\" x2=\"336.0\" y2=\"78.0\"/><polygon class=\"pfeil\" points=\"336.0,78.0 328.0,74.0 328.0,82.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"140.0\" x2=\"40.0\" y2=\"4\"/><polygon class=\"pfeil\" points=\"40.0,4 36.0,12 44.0,12\"/><text class=\"achsentitel\" x=\"334.0\" y=\"93.0\" text-anchor=\"end\">Ort x</text><text class=\"achsentitel\" x=\"46.0\" y=\"14\">s</text><polyline class=\"gerade-a\" fill=\"none\" points=\"40.0,78.0 41.8,74.1 43.5,70.2 45.2,66.4 47.0,62.7 48.8,59.0 50.5,55.5 52.2,52.1 54.0,48.8 55.8,45.8 57.5,42.9 59.2,40.3 61.0,37.9 62.8,35.7 64.5,33.8 66.2,32.2 68.0,30.8 69.8,29.8 71.5,29.0 73.2,28.6 75.0,28.4 76.8,28.6 78.5,29.0 80.2,29.8 82.0,30.8 83.8,32.2 85.5,33.8 87.2,35.7 89.0,37.9 90.8,40.3 92.5,42.9 94.2,45.8 96.0,48.8 97.8,52.1 99.5,55.5 101.2,59.0 103.0,62.7 104.8,66.4 106.5,70.2 108.2,74.1 110.0,78.0 111.8,81.9 113.5,85.8 115.2,89.6 117.0,93.3 118.8,97.0 120.5,100.5 122.2,103.9 124.0,107.2 125.8,110.2 127.5,113.1 129.2,115.7 131.0,118.1 132.8,120.3 134.5,122.2 136.2,123.8 138.0,125.2 139.8,126.2 141.5,127.0 143.2,127.4 145.0,127.6 146.8,127.4 148.5,127.0 150.2,126.2 152.0,125.2 153.8,123.8 155.5,122.2 157.2,120.3 159.0,118.1 160.8,115.7 162.5,113.1 164.2,110.2 166.0,107.2 167.8,103.9 169.5,100.5 171.2,97.0 173.0,93.3 174.8,89.6 176.5,85.8 178.2,81.9 180.0,78.0 181.8,74.1 183.5,70.2 185.2,66.4 187.0,62.7 188.8,59.0 190.5,55.5 192.2,52.1 194.0,48.8 195.8,45.8 197.5,42.9 199.2,40.3 201.0,37.9 202.8,35.7 204.5,33.8 206.2,32.2 208.0,30.8 209.8,29.8 211.5,29.0 213.2,28.6 215.0,28.4 216.8,28.6 218.5,29.0 220.2,29.8 222.0,30.8 223.8,32.2 225.5,33.8 227.2,35.7 229.0,37.9 230.8,40.3 232.5,42.9 234.2,45.8 236.0,48.8 237.8,52.1 239.5,55.5 241.2,59.0 243.0,62.7 244.8,66.4 246.5,70.2 248.2,74.1 250.0,78.0 251.8,81.9 253.5,85.8 255.2,89.6 257.0,93.3 258.8,97.0 260.5,100.5 262.2,103.9 264.0,107.2 265.8,110.2 267.5,113.1 269.2,115.7 271.0,118.1 272.8,120.3 274.5,122.2 276.2,123.8 278.0,125.2 279.8,126.2 281.5,127.0 283.2,127.4 285.0,127.6 286.8,127.4 288.5,127.0 290.2,126.2 292.0,125.2 293.8,123.8 295.5,122.2 297.2,120.3 299.0,118.1 300.8,115.7 302.5,113.1 304.2,110.2 306.0,107.2 307.8,103.9 309.5,100.5 311.2,97.0 313.0,93.3 314.8,89.6 316.5,85.8 318.2,81.9 320.0,78.0\"/><line class=\"marke\" x1=\"75.0\" y1=\"19.5\" x2=\"215.0\" y2=\"19.5\"/><text class=\"label-b\" x=\"145.0\" y=\"14.5\" text-anchor=\"middle\">Wellenlänge λ</text></svg>",
+      "figurAlt": "Sinusförmige Welle über dem Ort als Symbol für zwei sich überlagernde Wellen.",
+      "vorhersage": "Wie kann es sein, dass zwei gleiche Schallquellen an manchen Punkten zusammen <em>leiser</em> sind als eine allein?",
+      "optionen": [
+       "die Wellen löschen sich dort aus",
+       "ein Lautsprecher ist leiser",
+       "der Schall wird vom Boden verschluckt"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 16,
      "anker": "#we-ueberlagerung",
-     "text": "Lies den Abschnitt zum Superpositionsprinzip und zur Interferenz und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/wellen/index.html#we-ueberlagerung"
-     },
      "schritte": [
       {
        "titel": "Das Superpositionsprinzip",
-       "html": "<p>Treffen zwei Wellen aufeinander, so ist die <strong>resultierende Auslenkung</strong> an jeder Stelle die <strong>Summe</strong> der Einzelauslenkungen: $s = s_1 + s_2$. Danach laufen beide Wellen <strong>ungestört</strong> weiter, als wäre nichts geschehen. Das nennt man <strong>Superpositionsprinzip</strong>.</p>",
-       "check": {
+       "kern": "Treffen zwei Wellen aufeinander, ist die resultierende Auslenkung die <strong>Summe</strong> der Einzelauslenkungen: $s = s_1 + s_2$. Danach laufen beide <strong>ungestört</strong> weiter.",
+       "minicheck": {
         "frage": "Was geschieht mit zwei Wellenbergen, die sich an einem Punkt treffen?",
         "antwort": "Ihre Auslenkungen addieren sich an diesem Punkt zu einem größeren Berg. Anschließend laufen beide Wellen unverändert weiter."
        }
       },
       {
        "titel": "Konstruktive Interferenz",
-       "html": "<p>Treffen zwei Wellen <strong>gleichphasig</strong> zusammen (Berg auf Berg, Tal auf Tal), verstärken sie sich — die Amplitude wird maximal. Das ist <strong>konstruktive Interferenz</strong>. Sie tritt auf, wenn der Gangunterschied ein <strong>ganzzahliges Vielfaches</strong> der Wellenlänge ist: $\\Delta s = k\\,\\lambda$ mit $k = 0, 1, 2, \\dots$</p>",
-       "check": {
+       "kern": "<strong>Gleichphasig</strong> (Berg auf Berg) verstärken sich die Wellen — maximale Amplitude. Bedingung: Gangunterschied $\\Delta s = k\\,\\lambda$ mit $k = 0, 1, 2, \\dots$",
+       "minicheck": {
         "frage": "Bei welchem Gangunterschied verstärken sich zwei gleichartige Wellen?",
         "antwort": "Wenn $\\Delta s = k\\,\\lambda$ (ganzzahliges Vielfaches der Wellenlänge), treffen sie gleichphasig zusammen — konstruktive Interferenz, maximale Amplitude."
        }
       },
       {
        "titel": "Destruktive Interferenz",
-       "html": "<p>Treffen die Wellen <strong>gegenphasig</strong> zusammen (Berg auf Tal), schwächen sie sich — bei gleicher Amplitude löschen sie sich ganz aus. Das ist <strong>destruktive Interferenz</strong>. Sie tritt bei einem Gangunterschied von einem <strong>ungeraden Vielfachen der halben</strong> Wellenlänge auf: $\\Delta s = (k+\\frac{1}{2})\\,\\lambda$.</p>",
-       "check": {
-        "frage": "Was beobachtest du an einem Punkt mit Gangunterschied $\\Delta s = 1{,}5\\,\\lambda$?",
-        "antwort": "$1{,}5\\,\\lambda = (1+\\frac{1}{2})\\,\\lambda$ ist ein ungerades Vielfaches der halben Wellenlänge — die Wellen treffen gegenphasig zusammen, es herrscht destruktive Interferenz (Auslöschung bzw. minimale Amplitude)."
+       "kern": "<strong>Gegenphasig</strong> (Berg auf Tal) schwächen sich die Wellen, bei gleicher Amplitude Auslöschung. Bedingung: $\\Delta s = (k+\\frac{1}{2})\\,\\lambda$.",
+       "beispiel": {
+        "aufgabe": "An einem Punkt beträgt der Gangunterschied $\\Delta s = 1{,}5\\,\\lambda$. Verstärkung oder Auslöschung?",
+        "schritte": [
+         "$1{,}5\\,\\lambda$ als Vielfaches schreiben: $1{,}5\\,\\lambda = (1+\\frac{1}{2})\\,\\lambda$",
+         "Das ist ein ungerades Vielfaches der halben Wellenlänge",
+         "→ gegenphasig → destruktive Interferenz (Auslöschung)"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Was passiert bei $\\Delta s = 2\\,\\lambda$?",
+         "loesung": "<p>$2\\,\\lambda = k\\,\\lambda$ mit $k=2$ → konstruktive Interferenz, die Wellen verstärken sich (maximale Amplitude).</p>"
+        }
        }
       },
       {
        "titel": "Reflexion",
-       "html": "<p>Trifft eine Welle auf ein Hindernis, wird sie <strong>reflektiert</strong>. Am <strong>festen Ende</strong> kehrt sich die Auslenkung um (Phasensprung), am <strong>losen Ende</strong> nicht. Die hin- und die rücklaufende Welle überlagern sich — diese Überlagerung führt später zu stehenden Wellen.</p>",
-       "check": {
+       "kern": "Trifft eine Welle auf ein Hindernis, wird sie <strong>reflektiert</strong>. Am <strong>festen Ende</strong> kehrt sich die Auslenkung um (Phasensprung), am <strong>losen Ende</strong> nicht.",
+       "details": "<p>Die hin- und die rücklaufende Welle überlagern sich — diese Überlagerung führt in der nächsten Lektion zu stehenden Wellen.</p>",
+       "minicheck": {
         "frage": "Was passiert mit der Auslenkung bei Reflexion am festen Ende?",
         "antwort": "Sie kehrt sich um: Aus einem Berg wird ein Tal (Phasensprung um eine halbe Wellenlänge). Am losen Ende bleibt die Auslenkung dagegen erhalten."
        }
@@ -1453,7 +1655,6 @@
        "typ": "experiment",
        "titel": "Überlagerung am Seil zeigen",
        "material": "Ein langes Seil und zwei Personen (eine an jedem Ende).",
-       "vorhersage": "Zwei Personen schicken gleichzeitig je einen Wellenberg von beiden Enden aufeinander zu. Was passiert in dem Moment, in dem sie sich in der Mitte treffen? Notiere deine Vermutung.",
        "auftraege": [
         "Schickt von beiden Seiten gleichzeitig einen Berg (gleiche Seite) los. Beobachtet die Mitte: Verstärken sich die Auslenkungen kurz? Laufen die Berge danach unverändert weiter? (Superposition, konstruktiv)",
         "Schickt nun einen Berg von der einen und ein Tal (Auslenkung nach unten) von der anderen Seite. Was geschieht in der Mitte? (destruktive Interferenz)",
@@ -1474,7 +1675,10 @@
        "frage": "Bei $\\Delta s = 2\\,\\lambda$ — was beobachtest du?",
        "antwort": "$2\\,\\lambda = k\\,\\lambda$ mit $k=2$: konstruktive Interferenz, die Wellen verstärken sich (maximale Amplitude)."
       }
-     ]
+     ],
+     "stolperstein": "„Mehr Schallquellen = immer lauter“ stimmt nicht. Bei <strong>destruktiver Interferenz</strong> (Gangunterschied $\\Delta s = (k+\\frac{1}{2})\\lambda$) treffen Berg auf Tal und löschen sich aus — dann ist es trotz zweier Quellen leise. Entscheidend ist der Gangunterschied, nicht die Anzahl der Quellen.",
+     "selbsterklaerung": "Erkläre in einem Satz, woran man entscheidet, ob sich zwei Wellen verstärken oder auslöschen.",
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -1520,7 +1724,8 @@
        ]
       }
      ],
-     "transfer": "Was unterscheidet den Gangunterschied $\\Delta s = 2\\lambda$ von $\\Delta s = 2{,}5\\lambda$ – und welches Muster ergibt sich jeweils?"
+     "transfer": "Was unterscheidet den Gangunterschied $\\Delta s = 2\\lambda$ von $\\Delta s = 2{,}5\\lambda$ – und welches Muster ergibt sich jeweils?",
+     "rueckbezug": "Zurück zu den zwei Lautsprechern: An den leisen Stellen ist der Gangunterschied $\\Delta s = (k+\\frac{1}{2})\\lambda$ — dort treffen Berg auf Tal und die Wellen löschen sich aus (destruktive Interferenz). Welche Vermutung vom Anfang war richtig?"
     },
     "extra": {
      "zeit": 4,
@@ -1573,57 +1778,70 @@
         "ph-qp-we-105"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Eine Gitarrensaite ist an beiden Enden fest eingespannt. Zupft man sie, klingt immer ein bestimmter Grundton — und greift man sie genau in der Mitte ab, springt der Ton hörbar höher. Andere Tonhöhen lassen sich auf der freien Saite gar nicht erzeugen.</p>",
+      "figur": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"68.0\" x2=\"320.0\" y2=\"68.0\"/><polyline class=\"gerade-a\" fill=\"none\" points=\"40.0,68.0 41.8,65.4 43.5,62.9 45.2,60.4 47.0,57.9 48.8,55.4 50.5,53.0 52.2,50.6 54.0,48.3 55.8,46.1 57.5,43.9 59.2,41.8 61.0,39.9 62.8,38.0 64.5,36.2 66.2,34.5 68.0,32.9 69.8,31.5 71.5,30.2 73.2,29.0 75.0,28.0 76.8,27.1 78.5,26.3 80.2,25.7 82.0,25.2 83.8,24.9 85.5,24.7 87.2,24.7 89.0,24.8 90.8,25.1 92.5,25.5 94.2,26.1 96.0,26.8 97.8,27.6 99.5,28.6 101.2,29.8 103.0,31.1 104.8,32.4 106.5,34.0 108.2,35.6 110.0,37.4 111.8,39.2 113.5,41.2 115.2,43.2 117.0,45.4 118.8,47.6 120.5,49.9 122.2,52.2 124.0,54.6 125.8,57.1 127.5,59.5 129.2,62.1 131.0,64.6 132.8,67.1 134.5,69.7 136.2,72.2 138.0,74.8 139.8,77.3 141.5,79.8 143.2,82.2 145.0,84.6 146.8,86.9 148.5,89.2 150.2,91.4 152.0,93.5 153.8,95.5 155.5,97.4 157.2,99.2 159.0,101.0 160.8,102.6 162.5,104.0 164.2,105.4 166.0,106.6 167.8,107.7 169.5,108.7 171.2,109.5 173.0,110.1 174.8,110.7 176.5,111.0 178.2,111.3 180.0,111.3 181.8,111.3 183.5,111.0 185.2,110.7 187.0,110.1 188.8,109.5 190.5,108.7 192.2,107.7 194.0,106.6 195.8,105.4 197.5,104.0 199.2,102.6 201.0,101.0 202.8,99.2 204.5,97.4 206.2,95.5 208.0,93.5 209.8,91.4 211.5,89.2 213.2,86.9 215.0,84.6 216.8,82.2 218.5,79.8 220.2,77.3 222.0,74.8 223.8,72.2 225.5,69.7 227.2,67.1 229.0,64.6 230.8,62.1 232.5,59.5 234.2,57.1 236.0,54.6 237.8,52.2 239.5,49.9 241.2,47.6 243.0,45.4 244.8,43.2 246.5,41.2 248.2,39.2 250.0,37.4 251.8,35.6 253.5,34.0 255.2,32.4 257.0,31.1 258.8,29.8 260.5,28.6 262.2,27.6 264.0,26.8 265.8,26.1 267.5,25.5 269.2,25.1 271.0,24.8 272.8,24.7 274.5,24.7 276.2,24.9 278.0,25.2 279.8,25.7 281.5,26.3 283.2,27.1 285.0,28.0 286.8,29.0 288.5,30.2 290.2,31.5 292.0,32.9 293.8,34.5 295.5,36.2 297.2,38.0 299.0,39.9 300.8,41.8 302.5,43.9 304.2,46.1 306.0,48.3 307.8,50.6 309.5,53.0 311.2,55.4 313.0,57.9 314.8,60.4 316.5,62.9 318.2,65.4 320.0,68.0\"/><polyline class=\"gerade-b\" fill=\"none\" points=\"40.0,68.0 41.8,70.6 43.5,73.1 45.2,75.6 47.0,78.1 48.8,80.6 50.5,83.0 52.2,85.4 54.0,87.7 55.8,89.9 57.5,92.1 59.2,94.2 61.0,96.1 62.8,98.0 64.5,99.8 66.2,101.5 68.0,103.1 69.8,104.5 71.5,105.8 73.2,107.0 75.0,108.0 76.8,108.9 78.5,109.7 80.2,110.3 82.0,110.8 83.8,111.1 85.5,111.3 87.2,111.3 89.0,111.2 90.8,110.9 92.5,110.5 94.2,109.9 96.0,109.2 97.8,108.4 99.5,107.4 101.2,106.2 103.0,104.9 104.8,103.6 106.5,102.0 108.2,100.4 110.0,98.6 111.8,96.8 113.5,94.8 115.2,92.8 117.0,90.6 118.8,88.4 120.5,86.1 122.2,83.8 124.0,81.4 125.8,78.9 127.5,76.5 129.2,73.9 131.0,71.4 132.8,68.9 134.5,66.3 136.2,63.8 138.0,61.2 139.8,58.7 141.5,56.2 143.2,53.8 145.0,51.4 146.8,49.1 148.5,46.8 150.2,44.6 152.0,42.5 153.8,40.5 155.5,38.6 157.2,36.8 159.0,35.0 160.8,33.4 162.5,32.0 164.2,30.6 166.0,29.4 167.8,28.3 169.5,27.3 171.2,26.5 173.0,25.9 174.8,25.3 176.5,25.0 178.2,24.7 180.0,24.7 181.8,24.7 183.5,25.0 185.2,25.3 187.0,25.9 188.8,26.5 190.5,27.3 192.2,28.3 194.0,29.4 195.8,30.6 197.5,32.0 199.2,33.4 201.0,35.0 202.8,36.8 204.5,38.6 206.2,40.5 208.0,42.5 209.8,44.6 211.5,46.8 213.2,49.1 215.0,51.4 216.8,53.8 218.5,56.2 220.2,58.7 222.0,61.2 223.8,63.8 225.5,66.3 227.2,68.9 229.0,71.4 230.8,73.9 232.5,76.5 234.2,78.9 236.0,81.4 237.8,83.8 239.5,86.1 241.2,88.4 243.0,90.6 244.8,92.8 246.5,94.8 248.2,96.8 250.0,98.6 251.8,100.4 253.5,102.0 255.2,103.6 257.0,104.9 258.8,106.2 260.5,107.4 262.2,108.4 264.0,109.2 265.8,109.9 267.5,110.5 269.2,110.9 271.0,111.2 272.8,111.3 274.5,111.3 276.2,111.1 278.0,110.8 279.8,110.3 281.5,109.7 283.2,108.9 285.0,108.0 286.8,107.0 288.5,105.8 290.2,104.5 292.0,103.1 293.8,101.5 295.5,99.8 297.2,98.0 299.0,96.1 300.8,94.2 302.5,92.1 304.2,89.9 306.0,87.7 307.8,85.4 309.5,83.0 311.2,80.6 313.0,78.1 314.8,75.6 316.5,73.1 318.2,70.6 320.0,68.0\"/><circle class=\"punkt\" cx=\"40.0\" cy=\"68.0\" r=\"3.2\"/><circle class=\"punkt\" cx=\"133.3\" cy=\"68.0\" r=\"3.2\"/><circle class=\"punkt\" cx=\"226.7\" cy=\"68.0\" r=\"3.2\"/><circle class=\"punkt\" cx=\"320.0\" cy=\"68.0\" r=\"3.2\"/><text class=\"label-b\" x=\"42.0\" y=\"62.0\" text-anchor=\"start\">Knoten</text><text class=\"label-a\" x=\"86.7\" y=\"20.7\" text-anchor=\"middle\">Bauch</text></svg>",
+      "figurAlt": "Stehende Welle mit drei Bäuchen und vier Knoten; die Einhüllende besteht aus oberen und unteren Sinusbögen, die Knoten sind als Punkte markiert.",
+      "vorhersage": "Warum kann eine fest eingespannte Saite nur ganz bestimmte Töne erzeugen und keine beliebigen?",
+      "optionen": [
+       "weil an beiden Enden ein Knoten liegen muss",
+       "weil die Saite zu kurz ist",
+       "weil Luft im Weg ist"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 16,
      "anker": "#we-stehende",
-     "text": "Lies den Abschnitt zu stehenden Wellen und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/wellen/index.html#we-stehende"
-     },
      "schritte": [
       {
        "titel": "Wie eine stehende Welle entsteht",
-       "html": "<p>Überlagern sich zwei <strong>gegenläufige</strong> Wellen gleicher Frequenz und Amplitude (z. B. eine Welle und ihre Reflexion), entsteht eine <strong>stehende Welle</strong>. Sie wandert nicht — bestimmte Stellen stehen dauernd still (<strong>Knoten</strong>), andere schwingen maximal (<strong>Bäuche</strong>).</p>",
-       "check": {
+       "kern": "Überlagern sich zwei <strong>gegenläufige</strong> Wellen gleicher Frequenz und Amplitude (z. B. Welle und ihre Reflexion), entsteht eine <strong>stehende Welle</strong>, die nicht wandert.",
+       "minicheck": {
         "frage": "Wodurch entsteht eine stehende Welle?",
         "antwort": "Durch Überlagerung zweier gegenläufiger Wellen gleicher Frequenz und Amplitude — meist einer hinlaufenden Welle und ihrer Reflexion am Ende."
        }
       },
       {
        "titel": "Knoten und Bäuche",
-       "html": "<p>An den <strong>Knoten</strong> löschen sich die Wellen ständig aus, die Auslenkung ist dort immer null. An den <strong>Bäuchen</strong> verstärken sie sich, die Auslenkung schwingt maximal. Der Abstand zweier benachbarter Knoten (bzw. Bäuche) beträgt eine <strong>halbe</strong> Wellenlänge: $\\dfrac{\\lambda}{2}$.</p>",
-       "check": {
+       "kern": "An <strong>Knoten</strong> ist die Auslenkung immer null (ständige Auslöschung), an <strong>Bäuchen</strong> maximal. Der Abstand zweier benachbarter Knoten ist $\\frac{\\lambda}{2}$.",
+       "minicheck": {
         "frage": "Wie groß ist der Abstand zweier benachbarter Knoten?",
         "antwort": "Eine halbe Wellenlänge, also $\\frac{\\lambda}{2}$. Zwischen zwei Knoten liegt jeweils ein Bauch."
        }
       },
       {
        "titel": "Die Randbedingung der Saite",
-       "html": "<p>Eine beidseitig <strong>eingespannte</strong> Saite ist an beiden Enden fest — dort muss ein <strong>Knoten</strong> liegen. Deshalb passt nur dann eine stehende Welle auf die Saitenlänge $l$, wenn $l$ ein <strong>ganzzahliges Vielfaches</strong> von $\\dfrac{\\lambda}{2}$ ist: $l = n\\cdot\\dfrac{\\lambda_n}{2}$, also $\\lambda_n = \\dfrac{2l}{n}$ mit $n = 1, 2, 3, \\dots$</p>",
-       "check": {
+       "kern": "Beidseitig eingespannt → an beiden Enden ein <strong>Knoten</strong>. Eine stehende Welle passt nur, wenn $l = n\\cdot\\frac{\\lambda_n}{2}$, also $\\lambda_n = \\frac{2l}{n}$ mit $n = 1, 2, 3, \\dots$",
+       "minicheck": {
         "frage": "Warum passen nur bestimmte Wellenlängen auf eine eingespannte Saite?",
         "antwort": "Weil an beiden festen Enden ein Knoten liegen muss. Das geht nur, wenn die Saitenlänge ein ganzzahliges Vielfaches von $\\lambda/2$ ist: $\\lambda_n = \\frac{2l}{n}$."
        }
       },
       {
        "titel": "Eigenfrequenzen, Grundton und Obertöne",
-       "html": "<p>Mit $f = \\dfrac{c}{\\lambda}$ folgt für die Eigenfrequenzen $f_n = n\\cdot\\dfrac{c}{2l}$. Für $n=1$ ergibt sich der <strong>Grundton</strong> $f_1 = \\dfrac{c}{2l}$, für $n=2,3,\\dots$ die <strong>Obertöne</strong> (ganzzahlige Vielfache des Grundtons). Greift man die Saite in der Mitte ab, halbiert man $l$ — der Grundton steigt um eine Oktave.</p>",
-       "check": {
-        "frage": "Wie ändert sich der Grundton, wenn du eine Saite genau in der Mitte abgreifst?",
-        "antwort": "Die schwingende Länge halbiert sich ($l \\to l/2$), daher verdoppelt sich der Grundton $f_1 = \\frac{c}{2l}$ — der Ton steigt um eine Oktave."
+       "kern": "Mit $f = \\frac{c}{\\lambda}$ folgt $f_n = n\\cdot\\frac{c}{2l}$. $n=1$ ist der <strong>Grundton</strong> $f_1 = \\frac{c}{2l}$, $n=2,3,\\dots$ die <strong>Obertöne</strong>.",
+       "beispiel": {
+        "aufgabe": "Eine Saite hat $l = 0{,}65\\,\\text{m}$, die Wellengeschwindigkeit ist $c = 260\\,\\frac{\\text{m}}{\\text{s}}$. Bestimme den Grundton.",
+        "schritte": [
+         "$f_1 = \\frac{c}{2l}$",
+         "$f_1 = \\frac{260\\,\\text{m/s}}{2\\cdot 0{,}65\\,\\text{m}}$",
+         "$f_1 = 200\\,\\text{Hz}$"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Wie ändert sich der Grundton, wenn du die Saite genau in der Mitte abgreifst?",
+         "loesung": "<p>Die schwingende Länge halbiert sich ($l \\to l/2$), daher verdoppelt sich $f_1$ — der Ton steigt um eine Oktave (auf $400\\,\\text{Hz}$).</p>"
+        }
        }
       }
      ],
-     "merksatz": "Stehende Wellen entstehen aus gegenläufigen Wellen; sie haben ortsfeste <strong>Knoten</strong> (Auslöschung) und <strong>Bäuche</strong> (Verstärkung) im Abstand $\\lambda/2$. Eine beidseitig eingespannte Saite hat $\\lambda_n = \\dfrac{2l}{n}$ und Eigenfrequenzen $f_n = n\\cdot\\dfrac{c}{2l}$ (Grundton + Obertöne).",
+     "merksatz": "Stehende Wellen entstehen aus gegenläufigen Wellen; sie haben ortsfeste <strong>Knoten</strong> (Auslöschung) und <strong>Bäuche</strong> (Verstärkung) im Abstand $\\lambda/2$. Eine beidseitig eingespannte Saite hat $\\lambda_n = \\frac{2l}{n}$ und Eigenfrequenzen $f_n = n\\cdot\\frac{c}{2l}$ (Grundton + Obertöne).",
      "erkunden": [
       {
        "typ": "experiment",
        "titel": "Stehende Wellen auf einer Saite hören und sehen",
        "material": "Ein gespanntes Gummiband oder eine einzelne Gitarren-/Saiteninstrument-Saite, optional ein Lineal zum Abgreifen.",
-       "vorhersage": "Du greifst die Saite an verschiedenen Stellen ab und zupfst. Bei welcher abgegriffenen Länge wird der Ton höher? Notiere deine Vermutung.",
        "auftraege": [
         "Zupfe die volle Saite — das ist der Grundton. Greife sie genau in der Mitte ab und zupfe die Hälfte: Höre, dass der Ton um eine Oktave steigt (Frequenz verdoppelt).",
         "Greife bei $1/3$ und $2/3$ der Länge ab und vergleiche die Tonhöhen. Wie passt das zu $f_n \\sim 1/l$?",
@@ -1644,7 +1862,10 @@
        "frage": "In welchem Verhältnis stehen die Eigenfrequenzen einer eingespannten Saite?",
        "antwort": "Sie sind ganzzahlige Vielfache des Grundtons: $f_n = n\\cdot f_1$ ($f_1, 2f_1, 3f_1, \\dots$) — Grundton und Obertöne."
       }
-     ]
+     ],
+     "stolperstein": "Eine stehende Welle <strong>wandert nicht</strong> — anders als die Wellen vorher. Knoten und Bäuche bleiben ortsfest. Außerdem ist der Abstand zweier benachbarter Knoten nur eine <strong>halbe</strong> Wellenlänge ($\\lambda/2$), nicht eine ganze; das wird oft verwechselt.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum auf eine eingespannte Saite nur bestimmte Wellenlängen passen.",
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -1691,7 +1912,8 @@
        ]
       }
      ],
-     "transfer": "Eine Saite schwingt mit dem Grundton $f_1 = 200\\,\\text{Hz}$. Mit welcher Frequenz erklingt die zweite Oberschwingung ($k = 3$)?"
+     "transfer": "Eine Saite schwingt mit dem Grundton $f_1 = 200\\,\\text{Hz}$. Mit welcher Frequenz erklingt die zweite Oberschwingung ($k = 3$)?",
+     "rueckbezug": "Zurück zur Gitarrensaite: Weil an beiden Enden ein Knoten liegen muss, passen nur $\\lambda_n = \\frac{2l}{n}$ und damit nur die Frequenzen $f_n = n\\cdot\\frac{c}{2l}$ — Grundton und Obertöne. Greift man in der Mitte ab, halbiert sich $l$ und der Ton steigt um eine Oktave. Welche Vermutung vom Anfang war richtig?"
     },
     "extra": {
      "zeit": 4,
@@ -1744,57 +1966,70 @@
         "ph-qp-we-114"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Ein Schiff will die Wassertiefe unter sich wissen, ohne ein Lot hinabzulassen. Es sendet einen kurzen Schallimpuls nach unten und misst nur die Zeit, bis das Echo vom Meeresboden zurückkommt.</p>",
+      "figur": "<svg viewBox=\"0 0 340 200\" xmlns=\"http://www.w3.org/2000/svg\"><polyline class=\"gerade-a\" fill=\"none\" points=\"40.0,38.0 41.8,36.7 43.5,35.4 45.2,34.1 47.0,32.9 48.8,31.7 50.5,30.5 52.2,29.4 54.0,28.3 55.8,27.3 57.5,26.3 59.2,25.5 61.0,24.7 62.8,23.9 64.5,23.3 66.2,22.8 68.0,22.3 69.8,22.0 71.5,21.7 73.2,21.6 75.0,21.5 76.8,21.6 78.5,21.7 80.2,22.0 82.0,22.3 83.8,22.8 85.5,23.3 87.2,23.9 89.0,24.7 90.8,25.5 92.5,26.3 94.2,27.3 96.0,28.3 97.8,29.4 99.5,30.5 101.2,31.7 103.0,32.9 104.8,34.1 106.5,35.4 108.2,36.7 110.0,38.0 111.8,39.3 113.5,40.6 115.2,41.9 117.0,43.1 118.8,44.3 120.5,45.5 122.2,46.6 124.0,47.7 125.8,48.7 127.5,49.7 129.2,50.5 131.0,51.3 132.8,52.1 134.5,52.7 136.2,53.2 138.0,53.7 139.8,54.0 141.5,54.3 143.2,54.4 145.0,54.5 146.8,54.4 148.5,54.3 150.2,54.0 152.0,53.7 153.8,53.2 155.5,52.7 157.2,52.1 159.0,51.3 160.8,50.5 162.5,49.7 164.2,48.7 166.0,47.7 167.8,46.6 169.5,45.5 171.2,44.3 173.0,43.1 174.8,41.9 176.5,40.6 178.2,39.3 180.0,38.0 181.8,36.7 183.5,35.4 185.2,34.1 187.0,32.9 188.8,31.7 190.5,30.5 192.2,29.4 194.0,28.3 195.8,27.3 197.5,26.3 199.2,25.5 201.0,24.7 202.8,23.9 204.5,23.3 206.2,22.8 208.0,22.3 209.8,22.0 211.5,21.7 213.2,21.6 215.0,21.5 216.8,21.6 218.5,21.7 220.2,22.0 222.0,22.3 223.8,22.8 225.5,23.3 227.2,23.9 229.0,24.7 230.8,25.5 232.5,26.3 234.2,27.3 236.0,28.3 237.8,29.4 239.5,30.5 241.2,31.7 243.0,32.9 244.8,34.1 246.5,35.4 248.2,36.7 250.0,38.0 251.8,39.3 253.5,40.6 255.2,41.9 257.0,43.1 258.8,44.3 260.5,45.5 262.2,46.6 264.0,47.7 265.8,48.7 267.5,49.7 269.2,50.5 271.0,51.3 272.8,52.1 274.5,52.7 276.2,53.2 278.0,53.7 279.8,54.0 281.5,54.3 283.2,54.4 285.0,54.5 286.8,54.4 288.5,54.3 290.2,54.0 292.0,53.7 293.8,53.2 295.5,52.7 297.2,52.1 299.0,51.3 300.8,50.5 302.5,49.7 304.2,48.7 306.0,47.7 307.8,46.6 309.5,45.5 311.2,44.3 313.0,43.1 314.8,41.9 316.5,40.6 318.2,39.3 320.0,38.0\"/><text class=\"beschriftung\" x=\"6\" y=\"14\" text-anchor=\"start\">Transversal: Teilchen schwingt quer</text><line class=\"pfeil\" x1=\"110\" y1=\"21\" x2=\"110\" y2=\"54\" stroke-width=\"1.5\"/><text class=\"beschriftung\" x=\"6\" y=\"120\" text-anchor=\"start\">Longitudinal: Verdichtung &amp; Verdünnung</text><circle class=\"punkt\" cx=\"18\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"28\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"37\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"51\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"71\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"95\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"115\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"129\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"138\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"148\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"157\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"171\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"191\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"215\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"235\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"249\" cy=\"150\" r=\"3\"/><circle class=\"punkt\" cx=\"258\" cy=\"150\" r=\"3\"/><line class=\"pfeil\" x1=\"270\" y1=\"172\" x2=\"328\" y2=\"172\" stroke-width=\"1.5\"/><polygon class=\"pfeil\" points=\"328,172 320,168 320,176\"/><text class=\"beschriftung\" x=\"266\" y=\"176\" text-anchor=\"end\">Ausbreitung</text></svg>",
+      "figurAlt": "Oben eine Transversalwelle, unten eine Longitudinalwelle mit Verdichtungen und Verdünnungen als Symbol für Schall.",
+      "vorhersage": "Das Echo braucht die Zeit $t$ für den Weg hin und zurück. Wie tief ist das Wasser bei Schallgeschwindigkeit $c$?",
+      "optionen": [
+       "$d = c\\cdot t$",
+       "$d = \\frac{c\\cdot t}{2}$",
+       "$d = 2\\,c\\cdot t$"
+      ]
+     }
     },
     "verstehen": {
      "zeit": 16,
      "anker": "#we-schall",
-     "text": "Lies den Abschnitt zu Schall und seinen Anwendungen und arbeite dich Schritt für Schritt durch — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/qualifikationsphase/wellen/index.html#we-schall"
-     },
      "schritte": [
       {
        "titel": "Schall als Longitudinalwelle",
-       "html": "<p>Schall ist eine <strong>longitudinale</strong> Druckwelle: Eine schwingende Quelle (Lautsprecher, Stimmbänder) erzeugt abwechselnd <strong>Verdichtungen und Verdünnungen</strong> der Luft, die sich als Welle ausbreiten. Das menschliche Ohr nimmt Frequenzen von etwa $16\\,\\text{Hz}$ bis $20\\,000\\,\\text{Hz}$ wahr.</p>",
-       "check": {
+       "kern": "Schall ist eine <strong>longitudinale</strong> Druckwelle: Eine schwingende Quelle erzeugt <strong>Verdichtungen und Verdünnungen</strong> der Luft. Das Ohr hört etwa $16\\,\\text{Hz}$ bis $20\\,000\\,\\text{Hz}$.",
+       "minicheck": {
         "frage": "Welche Art von Welle ist Schall in Luft?",
         "antwort": "Eine Longitudinalwelle (Druckwelle): Die Luftteilchen schwingen längs der Ausbreitungsrichtung und erzeugen Verdichtungen und Verdünnungen."
        }
       },
       {
        "titel": "Tonhöhe und Lautstärke",
-       "html": "<p>Die <strong>Tonhöhe</strong> hängt von der <strong>Frequenz</strong> ab: hohe Frequenz → hoher Ton. Die <strong>Lautstärke</strong> hängt von der <strong>Amplitude</strong> ab: große Amplitude → laut. Frequenz und Amplitude sind unabhängig — ein Ton kann hoch und leise oder tief und laut sein.</p>",
-       "check": {
+       "kern": "<strong>Tonhöhe ↔ Frequenz</strong> (hohe Frequenz = hoher Ton), <strong>Lautstärke ↔ Amplitude</strong> (große Amplitude = laut). Beide sind unabhängig.",
+       "minicheck": {
         "frage": "Welche Größe bestimmt, ob ein Ton hoch oder tief klingt?",
         "antwort": "Die Frequenz: hohe Frequenz ergibt einen hohen Ton, niedrige Frequenz einen tiefen. Die Lautstärke hängt dagegen von der Amplitude ab."
        }
       },
       {
        "titel": "Stehende Wellen in Pfeifen",
-       "html": "<p>In Blasinstrumenten bilden sich stehende Schallwellen. Eine <strong>beidseitig offene</strong> Pfeife der Länge $l$ hat den Grundton $f = \\dfrac{c}{2l}$, eine <strong>einseitig gedackte</strong> (geschlossene) Pfeife dagegen $f = \\dfrac{c}{4l}$. Bei gleicher Länge klingt die gedackte Pfeife daher eine <strong>Oktave tiefer</strong>.</p>",
-       "check": {
+       "kern": "In Blasinstrumenten bilden sich stehende Schallwellen. <strong>Offene</strong> Pfeife: Grundton $f = \\frac{c}{2l}$. <strong>Gedackte</strong> (einseitig geschlossene) Pfeife: $f = \\frac{c}{4l}$ — eine Oktave tiefer.",
+       "minicheck": {
         "frage": "Warum klingt eine gedackte Pfeife eine Oktave tiefer als eine gleich lange offene?",
         "antwort": "Bei der gedackten Pfeife passt in dieselbe Länge nur ein Viertel der Wellenlänge ($f=\\frac{c}{4l}$) statt einer halben ($f=\\frac{c}{2l}$). Die halbe Frequenz bedeutet eine Oktave tiefer."
        }
       },
       {
        "titel": "Echolot und Ultraschall",
-       "html": "<p><strong>Ultraschall</strong> ($> 20\\,000\\,\\text{Hz}$) nutzt man zur Abstandsmessung: Ein kurzer Puls wird ausgesandt, am Hindernis reflektiert und nach der Laufzeit $t$ wieder empfangen. Da der Schall die Strecke <strong>hin und zurück</strong> durchläuft, gilt $d = \\dfrac{c\\cdot t}{2}$. So arbeiten Echolot (Wassertiefe) und medizinische Sonografie.</p>",
-       "check": {
-        "frage": "Warum steht in der Echolot-Formel $d = \\frac{c\\cdot t}{2}$ der Faktor $\\frac{1}{2}$?",
-        "antwort": "Weil der Schall in der Laufzeit $t$ die Strecke zum Hindernis und wieder zurück durchläuft — also den doppelten Abstand. Daher ist der Abstand die halbe Laufstrecke."
+       "kern": "<strong>Ultraschall</strong> ($> 20\\,000\\,\\text{Hz}$) misst Abstände: Ein Puls läuft <strong>hin und zurück</strong>, daher $d = \\frac{c\\cdot t}{2}$.",
+       "beispiel": {
+        "aufgabe": "Ein Echolot empfängt das Echo nach $t = 0{,}40\\,\\text{s}$ ($c_{\\text{Wasser}} = 1500\\,\\frac{\\text{m}}{\\text{s}}$). Wie tief ist das Wasser?",
+        "schritte": [
+         "$d = \\frac{c\\cdot t}{2}$",
+         "$d = \\frac{1500\\,\\text{m/s}\\cdot 0{,}40\\,\\text{s}}{2}$",
+         "$d = 300\\,\\text{m}$"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Nenne zwei weitere Anwendungen des Echo-Prinzips mit Ultraschall.",
+         "loesung": "<p>Zum Beispiel Einpark-/Abstandssensoren im Auto und die medizinische Sonografie (Ultraschalluntersuchung).</p>"
+        }
        }
       }
      ],
-     "merksatz": "Schall ist eine Longitudinalwelle. <strong>Tonhöhe ↔ Frequenz</strong>, <strong>Lautstärke ↔ Amplitude</strong>. Beim <strong>Echolot</strong> mit Laufzeit $t$ gilt $d = \\dfrac{c\\cdot t}{2}$ (Hin- und Rückweg).",
+     "merksatz": "Schall ist eine Longitudinalwelle. <strong>Tonhöhe ↔ Frequenz</strong>, <strong>Lautstärke ↔ Amplitude</strong>. Beim <strong>Echolot</strong> mit Laufzeit $t$ gilt $d = \\frac{c\\cdot t}{2}$ (Hin- und Rückweg).",
      "erkunden": [
       {
        "typ": "experiment",
        "titel": "Schallgeschwindigkeit über ein Echo abschätzen",
        "material": "Eine große, glatte Wand im Freien (mind. $30\\,\\text{m}$ entfernt), zwei Holzbretter oder die eigenen Hände zum Klatschen, eine Stoppuhr.",
-       "vorhersage": "Schätze, wie lange das Echo von der Wand zu dir zurückbraucht, wenn die Wand etwa $50\\,\\text{m}$ entfernt ist. Notiere deine Vermutung in Sekunden.",
        "auftraege": [
         "Klatsche in regelmäßigem Takt so, dass jeder neue Klatsch genau mit dem zurückkommenden Echo zusammenfällt. Miss mit der Stoppuhr die Zeit für 10 Klatsch-Echo-Abstände und teile durch 10 — das ist die Laufzeit $t$ für Hin- und Rückweg.",
         "Miss (oder schätze) die Entfernung $d$ zur Wand und berechne die Schallgeschwindigkeit $c = \\frac{2d}{t}$. Vergleiche mit $343\\,\\frac{\\text{m}}{\\text{s}}$.",
@@ -1815,7 +2050,10 @@
        "frage": "Nenne zwei technische oder medizinische Anwendungen des Ultraschalls.",
        "antwort": "Zum Beispiel Echolot zur Bestimmung der Wassertiefe, Abstands- und Einparksensoren im Auto sowie die Sonografie (Ultraschalluntersuchung) in der Medizin."
       }
-     ]
+     ],
+     "stolperstein": "Beim Echolot rechnet man oft die <strong>doppelte</strong> Tiefe aus, weil man den Faktor $\\frac{1}{2}$ vergisst. Der Schall läuft <strong>hin und zurück</strong> — also die doppelte Strecke. Deshalb ist die Tiefe nur die halbe Laufstrecke: $d = \\frac{c\\cdot t}{2}$.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum in der Echolot-Formel der Faktor $\\frac{1}{2}$ steht.",
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -1856,7 +2094,8 @@
        ]
       }
      ],
-     "transfer": "Ein Echolot sendet einen Impuls aus und empfängt das Echo nach $t = 0{,}40\\,\\text{s}$. Was ist die Wassertiefe ($c = 1500\\,\\frac{\\text{m}}{\\text{s}}$)?"
+     "transfer": "Ein Echolot sendet einen Impuls aus und empfängt das Echo nach $t = 0{,}40\\,\\text{s}$. Was ist die Wassertiefe ($c = 1500\\,\\frac{\\text{m}}{\\text{s}}$)?",
+     "rueckbezug": "Zurück zum Schiff: Weil der Schall die Strecke hin und zurück durchläuft, ist die Tiefe nur die halbe Laufstrecke: $d = \\frac{c\\cdot t}{2}$. Welche der drei Formeln vom Anfang war richtig?"
     },
     "extra": {
      "zeit": 4,
@@ -1907,7 +2146,18 @@
         "ph-qp-we-202"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Vor dir liegen drei Wellenaufgaben: ein frei laufender Ton, eine eingespannte Saite und zwei sich überlagernde Lautsprecher. Jede sieht ähnlich aus, doch jede verlangt ein anderes Werkzeug — Grundgleichung, stehende Welle oder Interferenz.</p>",
+      "figur": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"68.0\" x2=\"320.0\" y2=\"68.0\"/><polyline class=\"gerade-a\" fill=\"none\" points=\"40.0,68.0 41.8,65.4 43.5,62.9 45.2,60.4 47.0,57.9 48.8,55.4 50.5,53.0 52.2,50.6 54.0,48.3 55.8,46.1 57.5,43.9 59.2,41.8 61.0,39.9 62.8,38.0 64.5,36.2 66.2,34.5 68.0,32.9 69.8,31.5 71.5,30.2 73.2,29.0 75.0,28.0 76.8,27.1 78.5,26.3 80.2,25.7 82.0,25.2 83.8,24.9 85.5,24.7 87.2,24.7 89.0,24.8 90.8,25.1 92.5,25.5 94.2,26.1 96.0,26.8 97.8,27.6 99.5,28.6 101.2,29.8 103.0,31.1 104.8,32.4 106.5,34.0 108.2,35.6 110.0,37.4 111.8,39.2 113.5,41.2 115.2,43.2 117.0,45.4 118.8,47.6 120.5,49.9 122.2,52.2 124.0,54.6 125.8,57.1 127.5,59.5 129.2,62.1 131.0,64.6 132.8,67.1 134.5,69.7 136.2,72.2 138.0,74.8 139.8,77.3 141.5,79.8 143.2,82.2 145.0,84.6 146.8,86.9 148.5,89.2 150.2,91.4 152.0,93.5 153.8,95.5 155.5,97.4 157.2,99.2 159.0,101.0 160.8,102.6 162.5,104.0 164.2,105.4 166.0,106.6 167.8,107.7 169.5,108.7 171.2,109.5 173.0,110.1 174.8,110.7 176.5,111.0 178.2,111.3 180.0,111.3 181.8,111.3 183.5,111.0 185.2,110.7 187.0,110.1 188.8,109.5 190.5,108.7 192.2,107.7 194.0,106.6 195.8,105.4 197.5,104.0 199.2,102.6 201.0,101.0 202.8,99.2 204.5,97.4 206.2,95.5 208.0,93.5 209.8,91.4 211.5,89.2 213.2,86.9 215.0,84.6 216.8,82.2 218.5,79.8 220.2,77.3 222.0,74.8 223.8,72.2 225.5,69.7 227.2,67.1 229.0,64.6 230.8,62.1 232.5,59.5 234.2,57.1 236.0,54.6 237.8,52.2 239.5,49.9 241.2,47.6 243.0,45.4 244.8,43.2 246.5,41.2 248.2,39.2 250.0,37.4 251.8,35.6 253.5,34.0 255.2,32.4 257.0,31.1 258.8,29.8 260.5,28.6 262.2,27.6 264.0,26.8 265.8,26.1 267.5,25.5 269.2,25.1 271.0,24.8 272.8,24.7 274.5,24.7 276.2,24.9 278.0,25.2 279.8,25.7 281.5,26.3 283.2,27.1 285.0,28.0 286.8,29.0 288.5,30.2 290.2,31.5 292.0,32.9 293.8,34.5 295.5,36.2 297.2,38.0 299.0,39.9 300.8,41.8 302.5,43.9 304.2,46.1 306.0,48.3 307.8,50.6 309.5,53.0 311.2,55.4 313.0,57.9 314.8,60.4 316.5,62.9 318.2,65.4 320.0,68.0\"/><polyline class=\"gerade-b\" fill=\"none\" points=\"40.0,68.0 41.8,70.6 43.5,73.1 45.2,75.6 47.0,78.1 48.8,80.6 50.5,83.0 52.2,85.4 54.0,87.7 55.8,89.9 57.5,92.1 59.2,94.2 61.0,96.1 62.8,98.0 64.5,99.8 66.2,101.5 68.0,103.1 69.8,104.5 71.5,105.8 73.2,107.0 75.0,108.0 76.8,108.9 78.5,109.7 80.2,110.3 82.0,110.8 83.8,111.1 85.5,111.3 87.2,111.3 89.0,111.2 90.8,110.9 92.5,110.5 94.2,109.9 96.0,109.2 97.8,108.4 99.5,107.4 101.2,106.2 103.0,104.9 104.8,103.6 106.5,102.0 108.2,100.4 110.0,98.6 111.8,96.8 113.5,94.8 115.2,92.8 117.0,90.6 118.8,88.4 120.5,86.1 122.2,83.8 124.0,81.4 125.8,78.9 127.5,76.5 129.2,73.9 131.0,71.4 132.8,68.9 134.5,66.3 136.2,63.8 138.0,61.2 139.8,58.7 141.5,56.2 143.2,53.8 145.0,51.4 146.8,49.1 148.5,46.8 150.2,44.6 152.0,42.5 153.8,40.5 155.5,38.6 157.2,36.8 159.0,35.0 160.8,33.4 162.5,32.0 164.2,30.6 166.0,29.4 167.8,28.3 169.5,27.3 171.2,26.5 173.0,25.9 174.8,25.3 176.5,25.0 178.2,24.7 180.0,24.7 181.8,24.7 183.5,25.0 185.2,25.3 187.0,25.9 188.8,26.5 190.5,27.3 192.2,28.3 194.0,29.4 195.8,30.6 197.5,32.0 199.2,33.4 201.0,35.0 202.8,36.8 204.5,38.6 206.2,40.5 208.0,42.5 209.8,44.6 211.5,46.8 213.2,49.1 215.0,51.4 216.8,53.8 218.5,56.2 220.2,58.7 222.0,61.2 223.8,63.8 225.5,66.3 227.2,68.9 229.0,71.4 230.8,73.9 232.5,76.5 234.2,78.9 236.0,81.4 237.8,83.8 239.5,86.1 241.2,88.4 243.0,90.6 244.8,92.8 246.5,94.8 248.2,96.8 250.0,98.6 251.8,100.4 253.5,102.0 255.2,103.6 257.0,104.9 258.8,106.2 260.5,107.4 262.2,108.4 264.0,109.2 265.8,109.9 267.5,110.5 269.2,110.9 271.0,111.2 272.8,111.3 274.5,111.3 276.2,111.1 278.0,110.8 279.8,110.3 281.5,109.7 283.2,108.9 285.0,108.0 286.8,107.0 288.5,105.8 290.2,104.5 292.0,103.1 293.8,101.5 295.5,99.8 297.2,98.0 299.0,96.1 300.8,94.2 302.5,92.1 304.2,89.9 306.0,87.7 307.8,85.4 309.5,83.0 311.2,80.6 313.0,78.1 314.8,75.6 316.5,73.1 318.2,70.6 320.0,68.0\"/><circle class=\"punkt\" cx=\"40.0\" cy=\"68.0\" r=\"3.2\"/><circle class=\"punkt\" cx=\"133.3\" cy=\"68.0\" r=\"3.2\"/><circle class=\"punkt\" cx=\"226.7\" cy=\"68.0\" r=\"3.2\"/><circle class=\"punkt\" cx=\"320.0\" cy=\"68.0\" r=\"3.2\"/><text class=\"label-b\" x=\"42.0\" y=\"62.0\" text-anchor=\"start\">Knoten</text><text class=\"label-a\" x=\"86.7\" y=\"20.7\" text-anchor=\"middle\">Bauch</text></svg>",
+      "figurAlt": "Stehende Welle mit drei Bäuchen und vier Knoten als Symbol für den ganzen Wellenblock.",
+      "vorhersage": "Was solltest du bei einer Wellenaufgabe <em>zuerst</em> klären, bevor du eine Formel wählst?",
+      "optionen": [
+       "sofort $c=\\lambda f$ einsetzen",
+       "zuerst die Situation einordnen",
+       "immer den Gangunterschied ausrechnen"
+      ]
+     }
     },
     "ueben": {
      "zeit": 20,
@@ -1954,7 +2204,8 @@
        ]
       }
      ],
-     "transfer": "Frage dich bei jeder Aufgabe: Geht es um die freie Ausbreitung ($c = \\lambda \\cdot f$), um eine stehende Welle (Knotenabstand $= \\lambda/2$, Eigenfrequenzen) oder um die Überlagerung zweier Wellen (Gangunterschied, Schwebung)?"
+     "transfer": "Frage dich bei jeder Aufgabe: Geht es um die freie Ausbreitung ($c = \\lambda \\cdot f$), um eine stehende Welle (Knotenabstand $= \\lambda/2$, Eigenfrequenzen) oder um die Überlagerung zweier Wellen (Gangunterschied, Schwebung)?",
+     "rueckbezug": "Zurück zu den drei Aufgaben vom Anfang: Ordne jede zuerst einer Situation zu — freie Ausbreitung ($c=\\lambda f$), stehende Welle ($\\lambda/2$, $f_n$) oder Überlagerung ($\\Delta s$, Schwebung) — und wähle dann das Werkzeug. Genau das war mit „zuerst einordnen“ gemeint."
     },
     "extra": {
      "zeit": 5,
@@ -1968,30 +2219,37 @@
     },
     "verstehen": {
      "zeit": 12,
-     "text": "Bevor du loslegst, verschaffe dir den Überblick: Diese Lektion mischt den gesamten Wellen-Block. Ordne die Werkzeuge den drei Situationen zu, dann wendest du sie sicher an.",
      "schritte": [
       {
        "titel": "Drei Situationen, drei Werkzeuge",
-       "html": "<p>Wellenaufgaben gehören meist zu einer von drei Situationen: <strong>(1) freie Ausbreitung</strong> einer Welle → Grundgleichung $c = \\lambda\\cdot f$; <strong>(2) stehende Welle</strong> (z. B. Saite, Pfeife) → Knotenabstand $\\lambda/2$ und Eigenfrequenzen $f_n = n\\cdot\\dfrac{c}{2l}$; <strong>(3) Überlagerung</strong> zweier Wellen → Gangunterschied $\\Delta s$ und Interferenz.</p>",
-       "check": {
+       "kern": "<strong>(1) freie Ausbreitung</strong> → Grundgleichung $c = \\lambda\\cdot f$; <strong>(2) stehende Welle</strong> (Saite, Pfeife) → Knotenabstand $\\frac{\\lambda}{2}$ und $f_n = n\\cdot\\frac{c}{2l}$; <strong>(3) Überlagerung</strong> → Gangunterschied $\\Delta s$ und Interferenz.",
+       "minicheck": {
         "frage": "Du sollst die Wellenlänge eines frei laufenden Tons aus $f$ und $c$ bestimmen. Welche Beziehung nimmst du?",
         "antwort": "Die Grundgleichung $c=\\lambda\\cdot f$, umgestellt zu $\\lambda = c/f$."
        }
       },
       {
        "titel": "Konstruktiv oder destruktiv?",
-       "html": "<p>Bei der Überlagerung entscheidet der <strong>Gangunterschied</strong>: $\\Delta s = k\\,\\lambda$ ergibt <strong>konstruktive</strong> Interferenz (Verstärkung, laut), $\\Delta s = (k+\\frac{1}{2})\\,\\lambda$ ergibt <strong>destruktive</strong> Interferenz (Auslöschung, leise). Drücke den gegebenen Gangunterschied immer als Vielfaches von $\\lambda$ aus, dann ist die Entscheidung eindeutig.</p>",
-       "check": {
+       "kern": "Der <strong>Gangunterschied</strong> entscheidet: $\\Delta s = k\\,\\lambda$ → <strong>konstruktiv</strong> (laut), $\\Delta s = (k+\\frac{1}{2})\\,\\lambda$ → <strong>destruktiv</strong> (leise). Immer als Vielfaches von $\\lambda$ ausdrücken.",
+       "minicheck": {
         "frage": "An einem Punkt ist $\\Delta s = 2{,}5\\,\\lambda$. Laut oder leise?",
         "antwort": "$2{,}5\\,\\lambda = (2+\\frac{1}{2})\\,\\lambda$ ist ein ungerades Vielfaches der halben Wellenlänge → destruktive Interferenz, also leise (Auslöschung)."
        }
       },
       {
        "titel": "Die Schwebung",
-       "html": "<p>Überlagern sich zwei Töne mit <strong>leicht verschiedenen</strong> Frequenzen $f_1$ und $f_2$, schwankt die Lautstärke periodisch — eine <strong>Schwebung</strong>. Die <strong>Schwebungsfrequenz</strong> ist die Differenz der Frequenzen: $f_{\\text{S}} = |f_1 - f_2|$. Musiker nutzen das zum Stimmen: Verschwindet die Schwebung, sind die Töne gleich.</p>",
-       "check": {
-        "frage": "Zwei Saiten klingen mit $440\\,\\text{Hz}$ und $443\\,\\text{Hz}$. Wie oft pro Sekunde schwillt der Ton an und ab?",
-        "antwort": "$f_{\\text{S}} = |443 - 440|\\,\\text{Hz} = 3\\,\\text{Hz}$ — der Ton schwankt dreimal pro Sekunde in der Lautstärke."
+       "kern": "Zwei Töne mit <strong>leicht verschiedenen</strong> Frequenzen erzeugen eine <strong>Schwebung</strong>: die Lautstärke schwankt periodisch mit $f_{\\text{S}} = |f_1 - f_2|$.",
+       "beispiel": {
+        "aufgabe": "Zwei Saiten klingen mit $440\\,\\text{Hz}$ und $443\\,\\text{Hz}$. Wie oft pro Sekunde schwillt der Ton an und ab?",
+        "schritte": [
+         "$f_{\\text{S}} = |f_1 - f_2|$",
+         "$f_{\\text{S}} = |443 - 440|\\,\\text{Hz}$",
+         "$f_{\\text{S}} = 3\\,\\text{Hz}$ — der Ton schwankt dreimal pro Sekunde."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Wozu nutzen Musiker die Schwebung?",
+         "loesung": "<p>Zum Stimmen: Verschwindet die Schwebung, haben beide Saiten/Instrumente dieselbe Frequenz.</p>"
+        }
        }
       }
      ],
@@ -2001,7 +2259,6 @@
        "typ": "experiment",
        "titel": "Schwebung zweier Töne hören",
        "material": "Zwei gleiche Stimmgabeln (oder zwei Tongeneratoren / Handy-Apps), bei einer Stimmgabel ein kleines Gewicht (z. B. ein Stück Knete) an einem Zinken.",
-       "vorhersage": "Wenn beide Stimmgabeln fast, aber nicht ganz gleich klingen — wie verändert sich der Gesamtklang über die Zeit? Notiere deine Vermutung.",
        "auftraege": [
         "Lass zuerst beide identischen Stimmgabeln gleichzeitig klingen: Du hörst einen gleichmäßigen Ton.",
         "Beschwere einen Zinken einer Gabel leicht (das senkt ihre Frequenz minimal) und schlage beide erneut an: Höre das periodische An- und Abschwellen — die Schwebung.",
@@ -2018,7 +2275,9 @@
        "frage": "Was ist eine Schwebung und wie groß ist ihre Frequenz?",
        "antwort": "Das periodische An- und Abschwellen der Lautstärke bei Überlagerung zweier Töne fast gleicher Frequenz. Die Schwebungsfrequenz ist $f_{\\text{S}} = |f_1 - f_2|$."
       }
-     ]
+     ],
+     "stolperstein": "Der häufigste Fehler im gemischten Block ist, vorschnell die Grundgleichung $c=\\lambda f$ auf eine stehende Welle oder eine Interferenz anzuwenden. Erst die <strong>Situation</strong> klären — freie Ausbreitung, stehende Welle oder Überlagerung — dann das passende Werkzeug nehmen.",
+     "selbsterklaerung": "Erkläre in einem Satz, woran du erkennst, welche der drei Wellensituationen eine Aufgabe verlangt."
     }
    },
    "kompetenzen": [

@@ -177,16 +177,159 @@
    "niveau": 3,
    "afb": 3,
    "ergaenzung": "lernbuero",
-   "frage": "Ein Krankenhaus möchte ein KI-Modell einsetzen, das aus Röentgenbildern automatisch einschätzt, ob ein Patient ernsthaft erkrankt ist. Nenne zwei Chancen und zwei Risiken dieses Einsatzes und erkläre, welche Massnahmen die Risiken mindern könnten.",
-   "musterloesung": "Chancen: (1) Schnellere Diagnose — das Modell kann Bilder in Sekunden sichten, was bei Notfällen hilft. (2) Unterstützung von Ärzten — auffällige Befunde können nicht übersehen werden, wenn das Modell als zweite Meinung dient. Risiken: (1) Falsche Vorhersagen (falsch negativ: ernste Erkrankung wird übersehen; falsch positiv: gesunder Patient wird unnötig behandelt) können lebensbedrohlich sein. (2) Verzerrung durch einseitige Trainingsdaten (z. B. Unterrepräsentation bestimmter Altersgruppen) führt zu schlechterer Versorgung dieser Gruppen. Massnahmen: Modell nur als Entscheidungshilfe, nie als alleinige Entscheidung; regelmäßige Prüfung auf Bias; transparente Dokumentation der Modellgrenzen.",
+   "frage": "Ein Krankenhaus möchte ein KI-Modell einsetzen, das aus Röentgenbildern automatisch einschätzt, ob ein Patient ernsthaft erkrankt ist. Nenne zwei Chancen und zwei Risiken dieses Einsatzes und erkläre, welche Maßnahmen die Risiken mindern könnten.",
+   "musterloesung": "Chancen: (1) Schnellere Diagnose — das Modell kann Bilder in Sekunden sichten, was bei Notfällen hilft. (2) Unterstützung von Ärzten — auffällige Befunde können nicht übersehen werden, wenn das Modell als zweite Meinung dient. Risiken: (1) Falsche Vorhersagen (falsch negativ: ernste Erkrankung wird übersehen; falsch positiv: gesunder Patient wird unnötig behandelt) können lebensbedrohlich sein. (2) Verzerrung durch einseitige Trainingsdaten (z. B. Unterrepräsentation bestimmter Altersgruppen) führt zu schlechterer Versorgung dieser Gruppen. Maßnahmen: Modell nur als Entscheidungshilfe, nie als alleinige Entscheidung; regelmäßige Prüfung auf Bias; transparente Dokumentation der Modellgrenzen.",
    "tipps": [
     "Überlege zuerst: Was könnte gut laufen? Was könnte schief gehen?",
     "Denke an falsch positive und falsch negative Vorhersagen.",
     "Wer trägt die Verantwortung — und was folgt daraus für den Einsatz?"
    ],
-   "loesungsweg": "Siehe Musterlösung. Kernideen: Chancen = Geschwindigkeit + Unterstützung; Risiken = Falschklassifikation + Bias; Massnahmen = Modell als Hilfsmittel, nicht als Entscheidungsinstanz.",
+   "loesungsweg": "Siehe Musterlösung. Kernideen: Chancen = Geschwindigkeit + Unterstützung; Risiken = Falschklassifikation + Bias; Maßnahmen = Modell als Hilfsmittel, nicht als Entscheidungsinstanz.",
    "kc": [
     "ki-bewertung"
+   ]
+  },
+  {
+   "id": "in-10-ki-106",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Plus L21: Wähle ein automatisches Gerät aus deinem Alltag (z. B. automatische Schiebetür, Toaster mit Bräunungsregler, Rolltreppe). Zerlege es in die drei Bausteine Sensor, Verarbeitung und Aktor und beschreibe jeden in einem Satz.",
+   "musterloesung": "Beispiel automatische Schiebetür: Sensor – ein Bewegungs- oder Infrarotsensor nimmt wahr, ob sich eine Person nähert. Verarbeitung – die Steuerung entscheidet nach der Regel „wenn Bewegung erkannt, dann öffnen, sonst nach kurzer Zeit schließen\". Aktor – ein Motor zieht die Türflügel auf oder schiebt sie zu. So fließt die Information vom Sensor über die Verarbeitung zum Aktor, der auf die Welt zurückwirkt. (Andere Geräte sind ebenso richtig, solange Sensor, Verarbeitung und Aktor klar benannt und sinnvoll zugeordnet sind.)",
+   "tipps": [
+    "Der Sensor nimmt etwas aus der Umgebung wahr (Bewegung, Temperatur, Helligkeit …).",
+    "Die Verarbeitung entscheidet nach einer Regel, was zu tun ist.",
+    "Der Aktor verändert etwas in der Welt (Motor, Heizung, Lampe, Anzeige)."
+   ],
+   "loesungsweg": "Kern: ein Gerät wählen und sauber zerlegen – Sensor (Wahrnehmung), Verarbeitung (Regel/Entscheidung), Aktor (Wirkung). Die Kette Sensor → Verarbeitung → Aktor muss erkennbar sein.",
+   "kc": [
+    "ki"
+   ]
+  },
+  {
+   "id": "in-10-ki-107",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Standard L22: Ein regelbasierter Türöffner soll nur tagsüber bei Bewegung öffnen. Ergänze die Wenn-Dann-Regel und die Begriffe.",
+   "text": "Eine Regel besteht aus der ___ (nach WENN) und der ___ (nach DANN). Vervollständige: WENN es hell ist ___ Bewegung erkannt wird, DANN ___ die Tür. Die Verknüpfung sorgt dafür, dass beide Teilbedingungen erfüllt sein müssen.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Bedingung",
+     "optionen": [
+      "Bedingung",
+      "Aktion"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Aktion",
+     "optionen": [
+      "Aktion",
+      "Bedingung"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "UND",
+     "optionen": [
+      "UND",
+      "ODER"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "öffne",
+     "optionen": [
+      "öffne",
+      "schließe"
+     ]
+    }
+   ],
+   "tipps": [
+    "Nach WENN steht die Bedingung, nach DANN die Aktion.",
+    "„Beide Teilbedingungen müssen erfüllt sein\" – welche Verknüpfung passt, UND oder ODER?",
+    "Tagsüber bei Bewegung soll die Tür aufgehen."
+   ],
+   "loesungsweg": "Eine Regel hat eine Bedingung (nach WENN) und eine Aktion (nach DANN). Da beide Teilbedingungen gelten müssen, verknüpft man mit UND: WENN es hell ist UND Bewegung erkannt wird, DANN öffne die Tür. Das System handelt streng nach dieser Vorschrift.",
+   "kc": [
+    "ki"
+   ]
+  },
+  {
+   "id": "in-10-ki-108",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Plus L22: Ein Schulserver sortiert E-Mails mit fest programmierten Wenn-Dann-Regeln in Spam. Nenne einen Vorteil und einen Nachteil dieser regelbasierten Lösung und erkläre beide kurz.",
+   "musterloesung": "Vorteil – Transparenz und Nachvollziehbarkeit: Man kann jederzeit nachlesen, warum eine Mail als Spam markiert wurde, denn die Regel steht ausgeschrieben da. Das macht Fehler leicht auffindbar und das Verhalten vorhersehbar. Nachteil – Unflexibilität: Das System kann nur, was vorher hineingeschrieben wurde. Taucht eine neue Spam-Masche auf, die die bekannten Reizwörter vermeidet, rutscht sie durch, bis ein Mensch eine zusätzliche Regel ergänzt. Ein regelbasiertes System lernt nicht von selbst dazu.",
+   "tipps": [
+    "Denke daran, ob man die Entscheidung des Systems nachvollziehen kann.",
+    "Was passiert bei einer ganz neuen Spam-Masche, die kein bekanntes Reizwort enthält?",
+    "Stichworte: transparent/nachvollziehbar vs. unflexibel/lernt nicht dazu."
+   ],
+   "loesungsweg": "Vorteil: Transparenz/Nachvollziehbarkeit – jede Entscheidung lässt sich an der Regel ablesen. Nachteil: Unflexibilität – das System kann nur fest Programmiertes und lernt nicht selbst dazu; neue Maschen erfordern neue Regeln von einem Menschen.",
+   "kc": [
+    "ki"
+   ]
+  },
+  {
+   "id": "in-10-ki-109",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Sichern L22: Welche Aussagen über regelbasierte Systeme sind richtig?",
+   "optionen": [
+    {
+     "text": "Bei einem regelbasierten System schreibt ein Mensch die Wenn-Dann-Regeln vorher auf.",
+     "richtig": true,
+     "erklaerung": "Richtig – das System denkt sich keine Regeln selbst aus."
+    },
+    {
+     "text": "Ein regelbasiertes System ist transparent: Man kann an der Regel ablesen, warum es so entschieden hat.",
+     "richtig": true,
+     "erklaerung": "Richtig – das ist ein großer Vorteil gegenüber undurchsichtigen Modellen."
+    },
+    {
+     "text": "Ein regelbasiertes System passt seine Regeln selbstständig an neue Fälle an.",
+     "richtig": false,
+     "erklaerung": "Nein – das wäre ein lernendes System. Feste Regeln ändern sich nur, wenn ein Mensch sie ändert."
+    },
+    {
+     "text": "Jede Wenn-Dann-Regel besteht aus einer Bedingung und einer Aktion.",
+     "richtig": true,
+     "erklaerung": "Richtig – nach WENN die Bedingung, nach DANN die Aktion."
+    }
+   ],
+   "tipps": [
+    "Wer legt die Regeln fest – ein Mensch oder das System selbst?",
+    "Regelbasiert heißt: feste Regeln, kein Dazulernen.",
+    "Drei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig: Menschen schreiben die Regeln, das System ist transparent, und jede Regel hat Bedingung und Aktion. Falsch ist nur die Behauptung, ein regelbasiertes System lerne selbstständig dazu – das tut ein lernendes System.",
+   "kc": [
+    "ki"
    ]
   },
   {
@@ -487,7 +630,7 @@
    "niveau": 2,
    "afb": 2,
    "ergaenzung": "lernbuero",
-   "frage": "Eine Bilderkennung erkennt helle Gesichter zuverlässig, dunkle dagegen oft falsch. Welche Aussage benennt die wahrscheinlichste Ursache und eine sinnvolle Gegenmassnahme am treffendsten?",
+   "frage": "Eine Bilderkennung erkennt helle Gesichter zuverlässig, dunkle dagegen oft falsch. Welche Aussage benennt die wahrscheinlichste Ursache und eine sinnvolle Gegenmaßnahme am treffendsten?",
    "optionen": [
     {
      "text": "Die Trainingsdaten enthielten überwiegend helle Gesichter (Verzerrung); man sollte die Daten um viele dunkle Gesichter ergänzen und das Modell erneut prüfen.",
@@ -513,9 +656,9 @@
    "tipps": [
     "Welche Gruppe war in den Trainingsdaten vermutlich seltener vertreten?",
     "Ein systematischer Fehler ist kein Zufall.",
-    "Die beste Gegenmassnahme setzt bei den Daten an."
+    "Die beste Gegenmaßnahme setzt bei den Daten an."
    ],
-   "loesungsweg": "Schlechtere Erkennung dunkler Gesichter deutet auf Unterrepräsentation in den Trainingsdaten (Bias). Gegenmassnahme: Daten ausgewogener machen (mehr dunkle Gesichter) und neu testen — Antwort 1.",
+   "loesungsweg": "Schlechtere Erkennung dunkler Gesichter deutet auf Unterrepräsentation in den Trainingsdaten (Bias). Gegenmaßnahme: Daten ausgewogener machen (mehr dunkle Gesichter) und neu testen — Antwort 1.",
    "kc": [
     "ki-bewertung"
    ]

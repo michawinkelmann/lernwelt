@@ -1,6 +1,6 @@
 {
  "thema": "ma-qp-matrizen",
- "hinweis": "Lernbüro-Ergänzungsaufgaben zum Thema Matrizen: Abbildungen und Prozesse (Qualifikationsphase, Gymnasium, eA). Marker ergänzung:lernbüro — zur fachlichen Prüfung durch die Lehrkraft ausstehend. IDs ma-qp-mx-101 bis ma-qp-mx-108.",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben zum Thema Matrizen: Abbildungen und Prozesse (Qualifikationsphase, Gymnasium, eA). Marker ergänzung:lernbüro — zur fachlichen Prüfung durch die Lehrkraft ausstehend. IDs ma-qp-mx-101 bis ma-qp-mx-108 sowie ma-qp-mx-201 bis ma-qp-mx-208, ma-qp-mx-301 bis ma-qp-mx-308.",
  "aufgaben": [
   {
    "id": "ma-qp-mx-101",
@@ -765,6 +765,240 @@
     "Kontrolle: Die beiden Ergebnisse müssen zusammen wieder $1000$ Bücher ergeben."
    ],
    "loesungsweg": "$\\vec{x}_1=U\\cdot\\vec{x}_0=\\begin{pmatrix}0{,}8\\cdot 600+0{,}5\\cdot 400\\\\0{,}2\\cdot 600+0{,}5\\cdot 400\\end{pmatrix}=\\begin{pmatrix}480+200\\\\120+200\\end{pmatrix}=\\begin{pmatrix}680\\\\320\\end{pmatrix}$. Nach einer Woche stehen $680$ Bücher im Regal und $320$ sind ausgeliehen. Kontrolle: $680+320=1000$ — die Gesamtzahl bleibt erhalten.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-305",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jeder Abbildungsmatrix die Beschreibung zu, die zu ihr passt. (Die Spalten sind die Bilder der Einheitsvektoren.)",
+   "paare": [
+    {
+     "links": "$\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
+     "rechts": "Spiegelung an der x-Achse"
+    },
+    {
+     "links": "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
+     "rechts": "Punktspiegelung am Ursprung"
+    },
+    {
+     "links": "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$",
+     "rechts": "Drehung um $90^\\circ$ gegen den Uhrzeigersinn"
+    },
+    {
+     "links": "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}$",
+     "rechts": "zentrische Streckung mit Faktor $3$"
+    }
+   ],
+   "tipps": [
+    "Schau dir an, wohin die Matrix die Einheitsvektoren $\\vec{e_1}=(1|0)$ und $\\vec{e_2}=(0|1)$ schickt.",
+    "Bei der Spiegelung an der x-Achse bleibt $\\vec{e_1}$ gleich und $\\vec{e_2}$ kippt nach unten.",
+    "Eine Diagonalmatrix mit gleichen Einträgen $k$ streckt jeden Punkt mit dem Faktor $k$."
+   ],
+   "loesungsweg": "Die Spalten sind die Bilder der Einheitsvektoren. $\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$ lässt $\\vec{e_1}$ fest und kippt $\\vec{e_2}$ nach unten — Spiegelung an der x-Achse. $\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$ dreht beide Einheitsvektoren um — Punktspiegelung am Ursprung. $\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$ schickt $\\vec{e_1}\\mapsto(0|1)$ und $\\vec{e_2}\\mapsto(-1|0)$ — Drehung um $90^\\circ$ gegen den Uhrzeigersinn. $\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}$ verdreifacht beide Einheitsvektoren — zentrische Streckung mit Faktor $3$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-306",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz (eA): Ein Punkt wird zuerst an der x-Achse gespiegelt ($S=\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$) und das Ergebnis anschließend um $90^\\circ$ gegen den Uhrzeigersinn gedreht ($D=\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$). Bestimme die Gesamtmatrix und den Bildpunkt von $P(2\\,|\\,3)$.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Bestimme die Gesamtmatrix $M=D\\cdot S$ (die zuerst ausgeführte Abbildung steht rechts). Gib die vier Einträge an.",
+     "eingaben": [
+      {
+       "label": "oben links",
+       "antwort": 0,
+       "toleranz": 0.001,
+       "einheit": ""
+      },
+      {
+       "label": "oben rechts",
+       "antwort": 1,
+       "toleranz": 0.001,
+       "einheit": ""
+      },
+      {
+       "label": "unten links",
+       "antwort": 1,
+       "toleranz": 0.001,
+       "einheit": ""
+      },
+      {
+       "label": "unten rechts",
+       "antwort": 0,
+       "toleranz": 0.001,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$D\\cdot S$ nach „Zeile mal Spalte“: oben links $0\\cdot 1+(-1)\\cdot 0=0$, oben rechts $0\\cdot 0+(-1)\\cdot(-1)=1$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Wende $M$ auf $P(2\\,|\\,3)$ an und gib den Bildpunkt an.",
+     "eingaben": [
+      {
+       "label": "x-Koordinate",
+       "antwort": 3,
+       "toleranz": 0.001,
+       "einheit": ""
+      },
+      {
+       "label": "y-Koordinate",
+       "antwort": 2,
+       "toleranz": 0.001,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$M\\cdot(2|3)$: obere Zeile $0\\cdot 2+1\\cdot 3=3$, untere Zeile $1\\cdot 2+0\\cdot 3=2$."
+     ]
+    }
+   ],
+   "tipps": [
+    "Beim Verketten steht die zuerst ausgeführte Abbildung rechts: $M=D\\cdot S$.",
+    "Berechne erst die Gesamtmatrix, dann multipliziere sie mit dem Punkt.",
+    "Kontrolle: erst spiegeln ($(2|3)\\to(2|{-3})$), dann drehen ($(2|{-3})\\to(3|2)$) liefert denselben Bildpunkt."
+   ],
+   "loesungsweg": "Schritt 1: $M=D\\cdot S=\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}\\cdot\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}=\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$. Schritt 2: $M\\cdot\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}=\\begin{pmatrix} 0\\cdot 2+1\\cdot 3 \\\\ 1\\cdot 2+0\\cdot 3 \\end{pmatrix}=\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$. Der Bildpunkt ist $P'(3\\,|\\,2)$ — dasselbe Ergebnis wie erst spiegeln, dann drehen. Hinweis: $D\\cdot S\\neq S\\cdot D$, die Reihenfolge ist hier entscheidend.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-307",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz (eA): Drei Anbieter $1$, $2$ und $3$ teilen sich einen Markt mit der Übergangsmatrix $$U=\\begin{pmatrix} 0{,}6 & 0{,}2 & 0{,}1 \\\\ 0{,}3 & 0{,}5 & 0{,}4 \\\\ 0{,}1 & 0{,}3 & 0{,}5 \\end{pmatrix}.$$ Zu Beginn gilt $\\vec{v}_0=\\begin{pmatrix} 1000 \\\\ 2000 \\\\ 1000 \\end{pmatrix}$. Bestimme die Verteilung nach $\\textbf{zwei}$ Schritten ($\\vec{v}_2=U\\cdot\\vec{v}_1$).",
+   "eingaben": [
+    {
+     "label": "Anbieter 1 nach 2 Schritten",
+     "antwort": 1120,
+     "toleranz": 1,
+     "einheit": ""
+    },
+    {
+     "label": "Anbieter 2 nach 2 Schritten",
+     "antwort": 1660,
+     "toleranz": 1,
+     "einheit": ""
+    },
+    {
+     "label": "Anbieter 3 nach 2 Schritten",
+     "antwort": 1220,
+     "toleranz": 1,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Rechne in zwei Schritten: erst $\\vec{v}_1=U\\cdot\\vec{v}_0$, dann $\\vec{v}_2=U\\cdot\\vec{v}_1$.",
+    "1. Schritt, Anbieter 1: $0{,}6\\cdot 1000+0{,}2\\cdot 2000+0{,}1\\cdot 1000=1100$. So entsteht $\\vec{v}_1=(1100\\,|\\,1700\\,|\\,1200)$.",
+    "Kontrolle: Die drei Zahlen müssen zusammen $4000$ ergeben."
+   ],
+   "loesungsweg": "Erster Schritt: $\\vec{v}_1=U\\cdot\\vec{v}_0$. Anbieter 1: $0{,}6\\cdot 1000+0{,}2\\cdot 2000+0{,}1\\cdot 1000=600+400+100=1100$. Anbieter 2: $0{,}3\\cdot 1000+0{,}5\\cdot 2000+0{,}4\\cdot 1000=300+1000+400=1700$. Anbieter 3: $0{,}1\\cdot 1000+0{,}3\\cdot 2000+0{,}5\\cdot 1000=100+600+500=1200$. Also $\\vec{v}_1=\\begin{pmatrix} 1100 \\\\ 1700 \\\\ 1200 \\end{pmatrix}$. Zweiter Schritt: $\\vec{v}_2=U\\cdot\\vec{v}_1$. Anbieter 1: $0{,}6\\cdot 1100+0{,}2\\cdot 1700+0{,}1\\cdot 1200=660+340+120=1120$. Anbieter 2: $0{,}3\\cdot 1100+0{,}5\\cdot 1700+0{,}4\\cdot 1200=330+850+480=1660$. Anbieter 3: $0{,}1\\cdot 1100+0{,}3\\cdot 1700+0{,}5\\cdot 1200=110+510+600=1220$. Also $\\vec{v}_2=\\begin{pmatrix} 1120 \\\\ 1660 \\\\ 1220 \\end{pmatrix}$. Die Gesamtzahl $4000$ bleibt erhalten.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-308",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz (eA): Eine Übergangsmatrix $U=\\begin{pmatrix} 0{,}8 & 0{,}4 \\\\ 0{,}2 & 0{,}6 \\end{pmatrix}$ startet mit $\\vec{v}_0=\\begin{pmatrix} 1000 \\\\ 0 \\end{pmatrix}$. Bestimme den Zustand nach drei Schritten, also $\\vec{v}_3=U^3\\cdot\\vec{v}_0$, schrittweise.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Berechne $\\vec{v}_1=U\\cdot\\vec{v}_0$.",
+     "eingaben": [
+      {
+       "label": "1. Zustand",
+       "antwort": 800,
+       "toleranz": 0.5,
+       "einheit": ""
+      },
+      {
+       "label": "2. Zustand",
+       "antwort": 200,
+       "toleranz": 0.5,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$0{,}8\\cdot 1000+0{,}4\\cdot 0=800$; $0{,}2\\cdot 1000+0{,}6\\cdot 0=200$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Berechne $\\vec{v}_2=U\\cdot\\vec{v}_1$.",
+     "eingaben": [
+      {
+       "label": "1. Zustand",
+       "antwort": 720,
+       "toleranz": 0.5,
+       "einheit": ""
+      },
+      {
+       "label": "2. Zustand",
+       "antwort": 280,
+       "toleranz": 0.5,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$0{,}8\\cdot 800+0{,}4\\cdot 200=720$; $0{,}2\\cdot 800+0{,}6\\cdot 200=280$."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Berechne $\\vec{v}_3=U\\cdot\\vec{v}_2$.",
+     "eingaben": [
+      {
+       "label": "1. Zustand",
+       "antwort": 688,
+       "toleranz": 0.5,
+       "einheit": ""
+      },
+      {
+       "label": "2. Zustand",
+       "antwort": 312,
+       "toleranz": 0.5,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$0{,}8\\cdot 720+0{,}4\\cdot 280=688$; $0{,}2\\cdot 720+0{,}6\\cdot 280=312$."
+     ]
+    }
+   ],
+   "tipps": [
+    "$U^3\\cdot\\vec{v}_0$ ist dasselbe wie drei nacheinander ausgeführte Einzelschritte.",
+    "Rechne jeden Schritt mit „Zeile mal Spalte“ und nutze das Ergebnis als neuen Startvektor.",
+    "Kontrolle: Die Summe bleibt in jedem Schritt $1000$."
+   ],
+   "loesungsweg": "$\\vec{v}_1=U\\cdot\\vec{v}_0=\\begin{pmatrix} 0{,}8\\cdot 1000+0{,}4\\cdot 0 \\\\ 0{,}2\\cdot 1000+0{,}6\\cdot 0 \\end{pmatrix}=\\begin{pmatrix} 800 \\\\ 200 \\end{pmatrix}$. $\\vec{v}_2=U\\cdot\\vec{v}_1=\\begin{pmatrix} 0{,}8\\cdot 800+0{,}4\\cdot 200 \\\\ 0{,}2\\cdot 800+0{,}6\\cdot 200 \\end{pmatrix}=\\begin{pmatrix} 720 \\\\ 280 \\end{pmatrix}$. $\\vec{v}_3=U\\cdot\\vec{v}_2=\\begin{pmatrix} 0{,}8\\cdot 720+0{,}4\\cdot 280 \\\\ 0{,}2\\cdot 720+0{,}6\\cdot 280 \\end{pmatrix}=\\begin{pmatrix} 688 \\\\ 312 \\end{pmatrix}$. Das ist gleichwertig zu $U^3\\cdot\\vec{v}_0$. Die Gesamtzahl bleibt durchgehend $1000$, weil $U$ stochastisch ist.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
    ]

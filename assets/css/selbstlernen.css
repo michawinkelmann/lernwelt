@@ -307,3 +307,104 @@ body[data-seite="lehrkraft"] tbody tr:nth-child(even) td { background: color-mix
 .lb-minicheck > summary { cursor: pointer; font-weight: 600; }
 .lb-minicheck[open] > summary { margin-bottom: .35rem; }
 .lb-minicheck-a > *:first-child { margin-top: 0; } .lb-minicheck-a > *:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   Lernbüro 3.0 — problemorientierte Lektionen (Pilot)
+   Einstieg mit Anschauung · Kernsatz + einklappbare Details ·
+   Musterbeispiel · Stolperstein · Darstellungswechsel · Rückbezug
+   Alle Farben aus design-tokens.css → Dark Mode automatisch.
+   ============================================================ */
+
+/* --- Problemorientierter Einstieg --- */
+.lb-einstieg { border: 1px solid var(--akzent); border-radius: var(--radius);
+  background: color-mix(in srgb, var(--akzent) 7%, var(--flaeche)); padding: var(--abstand-3); }
+.lb-einstieg > .lb-etikett { font-weight: 700; color: var(--akzent); display: block; margin-bottom: .3rem; }
+.lb-einstieg-text { margin: 0 0 var(--abstand-2); }
+.lb-einstieg-text > *:first-child { margin-top: 0; } .lb-einstieg-text > *:last-child { margin-bottom: 0; }
+
+/* --- Anschauliche Figur (selbst erstelltes SVG) --- */
+.lb-figur { margin: var(--abstand-2) 0; }
+.lb-figur-svg svg { display: block; width: 100%; height: auto; max-width: 360px; margin: 0 auto; }
+.lb-figur figcaption { font-size: .85rem; color: var(--text-leise); text-align: center; margin-top: .3rem; }
+.lb-figur .achse { stroke: var(--text-leise); stroke-width: 1.2; }
+.lb-figur .pfeil { fill: var(--text-leise); }
+.lb-figur .raster { stroke: var(--linie); stroke-width: 1; }
+.lb-figur .beschriftung { fill: var(--text-leise); font-family: var(--schrift); font-size: 13px; }
+.lb-figur .achsentitel { fill: var(--text-leise); font-family: var(--schrift); font-size: 12px; font-style: italic; }
+.lb-figur .gerade { stroke: var(--akzent); stroke-width: 2.5; fill: none; }
+.lb-figur .gerade-a { stroke: var(--physik); stroke-width: 2.5; fill: none; }
+.lb-figur .gerade-b { stroke: var(--mathe); stroke-width: 2.5; fill: none; }
+.lb-figur .hilfslinie { stroke: var(--text-leise); stroke-width: 1; stroke-dasharray: 4 3; fill: none; }
+.lb-figur .dreieck { stroke: var(--ok); stroke-width: 1.6; fill: color-mix(in srgb, var(--ok) 14%, transparent); }
+.lb-figur .punkt { fill: var(--text); }
+.lb-figur .marke { fill: var(--akzent); }
+.lb-figur .label-a { fill: var(--physik); font-family: var(--schrift); font-size: 13px; font-weight: 700; }
+.lb-figur .label-b { fill: var(--mathe); font-family: var(--schrift); font-size: 13px; font-weight: 700; }
+
+/* --- Vorhersage (POE, formativ – kein richtig/falsch beim Schätzen) --- */
+.lb-vorhersage { background: var(--flaeche); border: 1px dashed var(--linie); border-radius: var(--radius);
+  padding: var(--abstand-2) var(--abstand-3); margin-top: var(--abstand-2); }
+.lb-vorhersage-frage { margin: 0 0 .4rem; }
+.lb-vorhersage-knoepfe { display: flex; flex-wrap: wrap; gap: var(--abstand-2); }
+.lb-tipp-knopf { min-height: var(--beruehrziel); padding: .4rem .9rem; border: 1px solid var(--linie);
+  border-radius: 999px; background: var(--flaeche); color: var(--text); font: inherit; cursor: pointer; }
+.lb-tipp-knopf:hover { border-color: var(--akzent); }
+.lb-tipp-knopf[aria-pressed="true"] { background: var(--akzent); color: var(--flaeche); border-color: var(--akzent); font-weight: 600; }
+.lb-tipp-knopf:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; }
+.lb-vorhersage-hinweis { margin: .4rem 0 0; min-height: 1.1em; color: var(--ok); font-size: .9rem; }
+
+/* --- Kernsatz (immer sichtbar, komprimiert) --- */
+.lb-kern { font-size: 1.05rem; line-height: 1.55; margin: 0 0 .5rem; }
+.lb-kern > *:first-child { margin-top: 0; } .lb-kern > *:last-child { margin-bottom: 0; }
+
+/* --- Einklappbare Vertiefung „Mehr dazu" --- */
+.lb-mehr { margin: .35rem 0; }
+.lb-mehr > summary { cursor: pointer; font-size: .9rem; font-weight: 600; color: var(--akzent); width: fit-content; }
+.lb-mehr > summary:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; border-radius: var(--radius-klein); }
+.lb-mehr[open] > summary { margin-bottom: .35rem; }
+.lb-mehr-koerper { border-left: 2px solid var(--linie); padding-left: var(--abstand-3); color: var(--text); }
+.lb-mehr-koerper > *:first-child { margin-top: 0; } .lb-mehr-koerper > *:last-child { margin-bottom: 0; }
+
+/* --- Musterbeispiel mit ausgeblendeter Hilfe (faded guidance) --- */
+.lb-beispiel { background: var(--hauch); border-radius: var(--radius); padding: var(--abstand-2) var(--abstand-3); }
+.lb-beispiel > .lb-etikett { font-weight: 700; display: block; margin-bottom: .25rem; }
+.lb-beispiel-aufgabe { margin: 0 0 .4rem; font-weight: 600; }
+.lb-beispiel-schritte { margin: 0; padding-left: 1.3rem; display: grid; gap: .25rem; }
+.lb-jetztdu > summary { color: var(--ok); }
+
+/* --- Stolperstein (Fehlervorstellung; nie nur Farbe → Symbol + Text) --- */
+.lb-stolperstein { border: 1px solid var(--fehler); border-left: 4px solid var(--fehler);
+  background: color-mix(in srgb, var(--fehler) 8%, var(--flaeche)); border-radius: var(--radius);
+  padding: var(--abstand-2) var(--abstand-3); }
+.lb-stolperstein > .lb-etikett { font-weight: 700; color: var(--fehler); display: block; margin-bottom: .2rem; }
+.lb-stolperstein-text > *:first-child { margin-top: 0; } .lb-stolperstein-text > *:last-child { margin-bottom: 0; }
+
+/* --- Darstellungswechsel --- */
+.lb-darstellungen > .lb-etikett { font-weight: 700; display: block; margin-bottom: .25rem; }
+.lb-darstellungen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--abstand-2); }
+.lb-darstellung { border: 1px solid var(--linie); border-radius: var(--radius); padding: var(--abstand-2); background: var(--flaeche); }
+.lb-darstellung-art { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em;
+  color: var(--akzent); display: block; margin-bottom: .3rem; }
+.lb-darstellung-inhalt > *:first-child { margin-top: 0; } .lb-darstellung-inhalt > *:last-child { margin-bottom: 0; }
+
+/* --- Selbsterklärung (Metakognition) --- */
+.lb-selbsterklaerung { background: color-mix(in srgb, var(--mathe) 7%, transparent); border-radius: var(--radius);
+  padding: var(--abstand-2) var(--abstand-3); }
+.lb-selbsterklaerung > .lb-etikett { font-weight: 700; display: block; margin-bottom: .15rem; }
+.lb-selbsterklaerung p { margin: 0; }
+
+/* --- Rückbezug auf die Einstiegsfrage (Soll-Ist, schließt den roten Faden) --- */
+.lb-rueckbezug { border: 1px solid var(--akzent); border-left: 4px solid var(--akzent);
+  background: color-mix(in srgb, var(--akzent) 7%, var(--flaeche)); border-radius: var(--radius);
+  padding: var(--abstand-2) var(--abstand-3); }
+.lb-rueckbezug > .lb-etikett { font-weight: 700; color: var(--akzent); display: block; margin-bottom: .2rem; }
+.lb-rueckbezug-text > *:first-child { margin-top: 0; } .lb-rueckbezug-text > *:last-child { margin-bottom: 0; }
+
+@media (max-width: 480px) {
+  .lb-darstellungen-grid { grid-template-columns: 1fr; }
+  .lb-figur-svg svg { max-width: 100%; }
+}
+
+.lb-mini-tab{border-collapse:collapse;font-size:.9rem}
+.lb-mini-tab th,.lb-mini-tab td{border:1px solid var(--linie);padding:.15rem .5rem;text-align:center}
+.lb-mini-tab th{background:var(--hauch)}

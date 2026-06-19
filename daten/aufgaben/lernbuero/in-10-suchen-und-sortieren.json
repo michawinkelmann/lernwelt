@@ -187,7 +187,7 @@
     {
      "text": "Die binäre Suche funktioniert auch auf unsortierten Listen.",
      "richtig": false,
-     "erklaerung": "Nein — ohne Sortierung darf man eine Hälfte nicht ausschliessen."
+     "erklaerung": "Nein — ohne Sortierung darf man eine Hälfte nicht ausschließen."
     }
    ],
    "tipps": [
@@ -217,6 +217,76 @@
     "Wann überwiegt der Gewinn durch schnelle Suche den einmaligen Sortieraufwand?"
    ],
    "loesungsweg": "Sortieraufwand: $O(n^2)$. Danach $k$ binäre Suchen: je $O(\\log n)$. Gesamtaufwand: $O(n^2 + k \\cdot \\log n)$. Bei vielen Suchen ($k$ groß) ist das besser als $k$ lineare Suchen ($O(k \\cdot n)$). Einmalsuche: Sortieren entfällt, lineare Suche genügt.",
+   "kc": [
+    "algorithmen"
+   ]
+  },
+  {
+   "id": "in-10-ss-107",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Plus L11: Erkläre, warum die lineare Suche auch auf einer völlig unsortierten Liste zuverlässig funktioniert – und nenne eine Situation, in der man sie der binären Suche vorzieht, obwohl die binäre Suche eigentlich schneller ist.",
+   "musterloesung": "Die lineare Suche sieht jeden Eintrag der Reihe nach einzeln an und vergleicht ihn mit dem gesuchten Wert. Weil sie sich auf keine Reihenfolge verlässt und keinen Teil der Liste vorzeitig ausschließt, findet sie das Element in jeder Anordnung sicher – ob sortiert oder nicht. Man bevorzugt sie zum Beispiel dann, wenn die Daten unsortiert vorliegen und nur ein einziges Mal (oder sehr selten) gesucht wird: Die binäre Suche bräuchte zuerst eine sortierte Liste, und das Sortieren würde mehr Aufwand kosten als die eine lineare Suche spart. Für eine einmalige Suche auf unsortierten Daten ist die lineare Suche also die richtige Wahl.",
+   "tipps": [
+    "Worauf verlässt sich die lineare Suche – auf eine Reihenfolge oder nicht?",
+    "Was müsste man vor einer binären Suche zuerst tun?",
+    "Lohnt sich Sortieren, wenn man nur ein einziges Mal sucht?"
+   ],
+   "loesungsweg": "Kern: (1) Lineare Suche prüft jeden Eintrag einzeln, verlässt sich auf keine Reihenfolge → funktioniert auch unsortiert. (2) Bei einmaliger Suche auf unsortierten Daten lohnt das Sortieren (Voraussetzung der binären Suche) nicht – die lineare Suche ist dann die passende Wahl.",
+   "kc": [
+    "algorithmen"
+   ]
+  },
+  {
+   "id": "in-10-ss-108",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Sichern L11: Die lineare Suche durchsucht eine Liste mit 40 Einträgen. Wähle in jeder Lücke den richtigen Wert.",
+   "text": "Steht das gesuchte Element ganz vorne, braucht die lineare Suche ___ Vergleich (bester Fall). Steht es ganz hinten oder fehlt es, braucht sie ___ Vergleiche (schlechtester Fall). Im Durchschnitt sind es etwa ___ Vergleiche.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "1",
+     "optionen": [
+      "1",
+      "40"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "40",
+     "optionen": [
+      "40",
+      "20"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "20",
+     "optionen": [
+      "20",
+      "40"
+     ]
+    }
+   ],
+   "tipps": [
+    "Bester Fall: das Element steht gleich an erster Stelle.",
+    "Schlechtester Fall: die ganze Liste muss durchlaufen werden – das sind n Vergleiche.",
+    "Der Durchschnitt liegt etwa bei der halben Listenlänge."
+   ],
+   "loesungsweg": "Bester Fall: 1 Vergleich (Element ganz vorne). Schlechtester Fall: 40 Vergleiche (Element ganz hinten oder nicht vorhanden, n = 40). Durchschnitt: etwa die halbe Liste, also rund 20 Vergleiche.",
    "kc": [
     "algorithmen"
    ]

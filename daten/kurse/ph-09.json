@@ -31,25 +31,6 @@
    "kc": "KC NW Gym Sek I (2015), Physik: Halbleitertechnik (9/10)"
   }
  ],
- "wochen": [
-  {
-   "nr": 1,
-   "spanne": "Diese Woche",
-   "lektionen": [
-    "l1",
-    "l2",
-    "l3"
-   ]
-  },
-  {
-   "nr": 2,
-   "spanne": "Nächste Woche",
-   "lektionen": [
-    "l4",
-    "l5"
-   ]
-  }
- ],
  "lektionen": [
   {
    "id": "l1",
@@ -68,7 +49,7 @@
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Auffrischung aus Klasse 7: Energieformen und Energieerhaltung.",
+     "hinweis": "Kurz aus Klasse 7: Energie kann weder erzeugt noch vernichtet werden – sie wird nur von einer Form in eine andere umgewandelt oder übertragen.",
      "aufgaben": [
       {
        "quelle": "ph-07-energie",
@@ -77,79 +58,100 @@
         "ph-07-eng-002"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>In einem Wasserkraftwerk stürzt Wasser aus einem hoch gelegenen Stausee herab, treibt eine Turbine an, die einen Generator dreht – am Ende leuchtet eine Lampe. Auf dem Weg vom Stausee bis zur Lampe wechselt die Energie mehrmals ihre Form.</p>",
+      "figur": "<svg viewBox=\"0 0 360 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"0.0\" y=\"40.0\" width=\"70.0\" height=\"44.0\" rx=\"5\"/><text class=\"beschriftung\" x=\"35.0\" y=\"59.0\" text-anchor=\"middle\">Stausee</text><text class=\"beschriftung\" x=\"35.0\" y=\"74.0\" text-anchor=\"middle\">oben</text><rect class=\"dreieck\" x=\"96.7\" y=\"40.0\" width=\"70.0\" height=\"44.0\" rx=\"5\"/><text class=\"beschriftung\" x=\"131.7\" y=\"59.0\" text-anchor=\"middle\">Turbine</text><text class=\"beschriftung\" x=\"131.7\" y=\"74.0\" text-anchor=\"middle\">dreht</text><rect class=\"dreieck\" x=\"193.3\" y=\"40.0\" width=\"70.0\" height=\"44.0\" rx=\"5\"/><text class=\"beschriftung\" x=\"228.3\" y=\"59.0\" text-anchor=\"middle\">Generator</text><text class=\"beschriftung\" x=\"228.3\" y=\"74.0\" text-anchor=\"middle\">Strom</text><rect class=\"dreieck\" x=\"290.0\" y=\"40.0\" width=\"70.0\" height=\"44.0\" rx=\"5\"/><text class=\"beschriftung\" x=\"325.0\" y=\"59.0\" text-anchor=\"middle\">Lampe</text><text class=\"beschriftung\" x=\"325.0\" y=\"74.0\" text-anchor=\"middle\">Licht</text><line class=\"pfeil\" x1=\"73.0\" y1=\"62.0\" x2=\"89.7\" y2=\"62.0\"/><polygon class=\"pfeil\" points=\"93.7,62.0 85.7,58.0 85.7,66.0\"/><line class=\"pfeil\" x1=\"169.7\" y1=\"62.0\" x2=\"186.3\" y2=\"62.0\"/><polygon class=\"pfeil\" points=\"190.3,62.0 182.3,58.0 182.3,66.0\"/><line class=\"pfeil\" x1=\"266.3\" y1=\"62.0\" x2=\"283.0\" y2=\"62.0\"/><polygon class=\"pfeil\" points=\"287.0,62.0 279.0,58.0 279.0,66.0\"/><text class=\"label-b\" x=\"35.0\" y=\"102.0\" text-anchor=\"middle\">Lageenergie</text><text class=\"label-b\" x=\"131.7\" y=\"102.0\" text-anchor=\"middle\">Bewegung</text><text class=\"label-b\" x=\"228.3\" y=\"102.0\" text-anchor=\"middle\">elektrisch</text><text class=\"label-b\" x=\"325.0\" y=\"102.0\" text-anchor=\"middle\">Licht + Wärme</text><text class=\"achsentitel\" x=\"6\" y=\"20\">Energie wandert von links nach rechts</text></svg>",
+      "figurAlt": "Vier Kästen von links nach rechts mit Pfeilen dazwischen: Stausee (oben), Turbine (dreht), Generator (Strom), Lampe (Licht). Darunter die Energieformen Lageenergie, Bewegung, elektrisch, Licht und Wärme.",
+      "vorhersage": "Kommt am Ende genauso viel nutzbare Energie als Licht an, wie oben im Stausee steckte – oder geht unterwegs etwas „verloren\"?",
+      "optionen": [
+       "alles wird zu Licht",
+       "ein Teil geht als Wärme ab",
+       "am Ende ist mehr Energie da"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#en-formen",
-     "text": "Lies zuerst den Abschnitt zu den Energieformen, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/energie-quantitativ/index.html#en-formen"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Energie und ihre Einheit",
-       "html": "<p>Energie steckt in vielem: in gespanntem Gummi, im heißen Tee, im Wasser eines Stausees, in deinem Frühstück. Gemessen wird sie in <strong>Joule</strong> ($\\text{J}$), wobei $1\\,\\text{kJ} = 1000\\,\\text{J}$ sind. Energie kann weder erzeugt noch vernichtet werden &mdash; sie wird nur von einer Form in eine andere <strong>umgewandelt</strong> oder von einem Körper auf einen anderen <strong>übertragen</strong>.</p>",
-       "check": {
-        "frage": "In welcher Einheit wird Energie gemessen, und wie viel Joule sind $1\\,\\text{kJ}$?",
-        "antwort": "Energie wird in Joule ($\\text{J}$) gemessen. $1\\,\\text{kJ}$ sind $1000\\,\\text{J}$."
+       "kern": "Energie wird in <strong>Joule</strong> ($\\text{J}$) gemessen, $1\\,\\text{kJ} = 1000\\,\\text{J}$. Sie kann weder erzeugt noch vernichtet, sondern nur <strong>umgewandelt</strong> oder <strong>übertragen</strong> werden.",
+       "minicheck": {
+        "frage": "Wie viele Joule sind $1\\,\\text{kJ}$?",
+        "antwort": "$1\\,\\text{kJ} = 1000\\,\\text{J}$."
        }
       },
       {
        "titel": "Die wichtigsten Energieformen",
-       "html": "<p>Aus Klasse 7 kennst du die wichtigsten Energieformen: <strong>Lageenergie</strong> (hochgehobene Körper), <strong>Bewegungsenergie</strong> (bewegte Körper), <strong>Spannenergie</strong> (verformte Federn), <strong>thermische Energie</strong> (Wärme) sowie <strong>elektrische</strong>, <strong>chemische</strong> und <strong>Lichtenergie</strong>. Welche Form vorliegt, erkennst du am Zustand des Körpers: hochgehoben, in Bewegung, gespannt, warm.</p>",
-       "check": {
+       "kern": "An welcher Form du eine Energie erkennst, verrät der Zustand des Körpers: <strong>hochgehoben</strong> (Lageenergie), <strong>in Bewegung</strong> (Bewegungsenergie), <strong>gespannt</strong> (Spannenergie), <strong>warm</strong> (thermische Energie) – dazu elektrische, chemische und Lichtenergie.",
+       "details": "<p>Aus Klasse 7 kennst du diese Formen schon. <strong>Lageenergie</strong> steckt in allem, was hochgehoben wurde (Wasser im Stausee, Buch im Regal). <strong>Bewegungsenergie</strong> in allem, was sich bewegt. <strong>Spannenergie</strong> in verformten Federn oder gedehnten Gummibändern. <strong>Thermische Energie</strong> ist die Energie warmer Körper. Hinzu kommen <strong>elektrische</strong>, <strong>chemische</strong> (Akku, Nahrung) und <strong>Lichtenergie</strong>.</p>",
+       "minicheck": {
         "frage": "Welche Energieform steckt in einer gespannten Sprungfeder?",
-        "antwort": "Spannenergie &mdash; die Energie steckt in der Verformung der Feder und wird frei, sobald die Feder zurückschnellt."
+        "antwort": "Spannenergie – sie wird frei, sobald die Feder zurückschnellt."
        }
       },
       {
        "titel": "Energieumwandlungsketten lesen",
-       "html": "<p>Geräte und Maschinen sind <strong>Energiewandler</strong> &mdash; oft arbeiten mehrere hintereinander. Solche Ketten liest man von links nach rechts. Im Wasserkraftwerk etwa: Lageenergie (Stausee) $\\rightarrow$ Bewegungsenergie (Turbine) $\\rightarrow$ elektrische Energie (Generator) $\\rightarrow$ Licht und Wärme (Lampe). Bei jeder Umwandlung wird nebenbei ein Teil zu thermischer Energie.</p>",
-       "check": {
+       "kern": "Geräte sind <strong>Energiewandler</strong>; oft arbeiten mehrere hintereinander. Eine Kette liest man von links nach rechts, z. B. Wasserkraftwerk: Lageenergie $\\rightarrow$ Bewegungsenergie $\\rightarrow$ elektrische Energie $\\rightarrow$ Licht.",
+       "details": "<p>Bei jeder Umwandlung wird nebenbei ein Teil zu <strong>thermischer Energie</strong> – diese Wärme verteilt sich in der Umgebung und lässt sich kaum noch nutzen. Man sagt, sie wird <strong>entwertet</strong>. Deshalb steht am Ende fast jeder Kette „+ Wärme\".</p>",
+       "minicheck": {
         "frage": "Welche Energiekette steckt in einem Fahrraddynamo, der eine Lampe versorgt?",
-        "antwort": "Bewegungsenergie (des Rades) $\\rightarrow$ elektrische Energie (im Dynamo) $\\rightarrow$ Licht und thermische Energie (in der Lampe)."
+        "antwort": "Bewegungsenergie (Rad) $\\rightarrow$ elektrische Energie (Dynamo) $\\rightarrow$ Licht und thermische Energie (Lampe)."
        }
       }
      ],
-     "merksatz": "Energie wird in <strong>Joule</strong> gemessen. Sie kann weder erzeugt noch vernichtet, sondern nur <strong>umgewandelt</strong> oder <strong>übertragen</strong> werden &mdash; in Energiewandlern, die man als Umwandlungsketten von links nach rechts liest.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Energiefluss und Wirkungsgrad",
-       "pfad": "simulationen/physik/energiefluss/index.html",
-       "vorhersage": "Wenn eine Glühlampe aus elektrischer Energie Licht macht: Wird die gesamte zugeführte Energie zu Licht? Schreibe deine Vermutung auf, <em>bevor</em> du die Simulation startest.",
-       "auftraege": [
-        "Verfolge den Energiefluss durch einen Wandler: Wohin geht der Teil der Energie, der nicht zum Nutzen wird?",
-        "Vergleiche zwei Wandler &mdash; bei welchem fließt mehr Energie ungenutzt als Wärme ab?",
-        "Notiere eine Umwandlungskette, die du in der Simulation siehst, mit den passenden Energieformen."
-       ]
-      },
-      {
-       "typ": "experiment",
-       "titel": "Energieformen im Zimmer suchen",
-       "material": "Nur deine Beobachtung: ein Handy-Ladegerät, eine Lampe, eine Tasse Tee oder eine Stehleuchte.",
-       "vorhersage": "Überlege vorher: Welche Energieform wird wohl am häufigsten als ungewollter Nebeneffekt frei?",
-       "auftraege": [
-        "Suche drei Geräte und schreibe zu jedem die Energiekette auf (Eingang $\\rightarrow$ Nutzen $\\rightarrow$ Nebeneffekt).",
-        "Fasse vorsichtig ein eingeschaltetes Ladegerät an: Welche Energieform spürst du, die nicht der eigentliche Zweck ist?",
-        "Markiere bei jeder Kette, an welcher Stelle thermische Energie entsteht."
-       ]
-      }
-     ],
+     "stolperstein": "„Energie verbrauchen\" ist physikalisch falsch: Beim Bremsen, Leuchten oder Fahren verschwindet keine Energie – sie wird nur <strong>umgewandelt</strong>, oft in nicht mehr nutzbare Wärme (<strong>entwertet</strong>). Die Gesamtmenge bleibt immer gleich.",
+     "darstellungen": {
+      "titel": "Dieselbe Umwandlung in mehreren Sichtweisen – Glühlampe:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Eine Glühlampe macht aus elektrischer Energie hauptsächlich Wärme und nur wenig Licht."
+       },
+       {
+        "art": "Kette",
+        "text": "elektrische Energie $\\rightarrow$ Licht + thermische Energie (Wärme)"
+       },
+       {
+        "art": "Balken",
+        "figur": "<svg viewBox=\"0 0 300 150\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"50\" y1=\"20\" x2=\"50\" y2=\"120\"/><polygon class=\"pfeil\" points=\"50,16 46,24 54,24\"/><text class=\"achsentitel\" x=\"56\" y=\"20\">Energie</text><rect class=\"dreieck\" x=\"70\" y=\"30\" width=\"40\" height=\"80\"/><text class=\"beschriftung\" x=\"90\" y=\"124\" text-anchor=\"middle\">zugeführt</text><text class=\"label-a\" x=\"90\" y=\"25\" text-anchor=\"middle\">100 %</text><rect class=\"gerade-b\" x=\"170\" y=\"86\" width=\"40\" height=\"24\"/><text class=\"beschriftung\" x=\"190\" y=\"124\" text-anchor=\"middle\">Nutzen</text><text class=\"label-b\" x=\"190\" y=\"80\" text-anchor=\"middle\">Licht</text><rect class=\"hilfslinie\" x=\"170\" y=\"30\" width=\"40\" height=\"52\" fill-opacity=\"0.25\"/><text class=\"label-a\" x=\"245\" y=\"58\" text-anchor=\"middle\">Wärme</text><line class=\"pfeil\" x1=\"118\" y1=\"70\" x2=\"162\" y2=\"70\"/><polygon class=\"pfeil\" points=\"168,70 160,66 160,74\"/></svg>",
+        "figurAlt": "Ein voller Balken zugeführte Energie (100 Prozent), daneben ein kleiner Nutzen-Balken Licht und ein großer Balken Wärme."
+       },
+       {
+        "art": "in Worten",
+        "text": "Von der zugeführten Energie wird nur ein kleiner Teil zum Nutzen (Licht), der Rest wird als Wärme entwertet."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum man sagt: Energie wird nicht verbraucht, sondern nur umgewandelt.",
+     "merksatz": "Energie wird in <strong>Joule</strong> gemessen und kann nur <strong>umgewandelt</strong> oder <strong>übertragen</strong>, nie erzeugt oder vernichtet werden. Umwandlungsketten liest man von links nach rechts; dabei wird stets ein Teil als Wärme <strong>entwertet</strong>.",
      "selbstcheck": [
       {
        "frage": "Nenne drei Energieformen und je ein Beispiel.",
        "antwort": "Z. B. Lageenergie (Buch im Regal), Bewegungsenergie (rollender Ball), thermische Energie (heißer Tee). Weitere: Spannenergie, elektrische, chemische, Lichtenergie."
       },
       {
-       "frage": "Erkläre in einem Satz, warum man sagt: Energie wird nicht verbraucht.",
-       "antwort": "Energie verschwindet nicht, sondern wird nur in andere Formen umgewandelt oder übertragen; die Gesamtmenge bleibt erhalten."
+       "frage": "Schreibe die Energiekette eines Akkuschraubers auf.",
+       "antwort": "Chemische Energie (Akku) $\\rightarrow$ elektrische Energie $\\rightarrow$ Bewegungsenergie (Bohrer) $\\rightarrow$ teils thermische Energie (Reibung)."
       },
       {
-       "frage": "Schreibe die Energiekette eines Akkuschraubers auf.",
-       "antwort": "Chemische Energie (Akku) $\\rightarrow$ elektrische Energie $\\rightarrow$ Bewegungsenergie (Motor/Bohrer) $\\rightarrow$ teils thermische Energie (Reibung, Erwärmung)."
+       "frage": "Warum sagt man, Abwärme sei „entwertet\"?",
+       "antwort": "Weil sie sich in der Umgebung verteilt und kaum noch nutzbar ist – die Energie ist nicht weg, aber nicht mehr sinnvoll einsetzbar."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Energieformen im Zimmer suchen",
+       "material": "Nur deine Beobachtung: ein Handy-Ladegerät, eine Lampe, eine Tasse Tee.",
+       "auftraege": [
+        "Suche drei Geräte und schreibe zu jedem die Energiekette auf (Eingang $\\rightarrow$ Nutzen $\\rightarrow$ Nebeneffekt).",
+        "Fasse vorsichtig ein eingeschaltetes Ladegerät an: Welche Energieform spürst du, die nicht der eigentliche Zweck ist?",
+        "Markiere bei jeder Kette, an welcher Stelle thermische Energie entsteht."
+       ]
       }
      ]
     },
@@ -161,13 +163,19 @@
        "ids": [
         "ph-09-en-002"
        ]
+      },
+      {
+       "quelle": "lernbuero/ph-09-energie-quantitativ",
+       "ids": [
+        "ph-09-en-116"
+       ]
       }
      ],
      "standard": [
       {
        "quelle": "lernbuero/ph-09-energie-quantitativ",
        "ids": [
-        "ph-09-en-101",
+        "ph-09-en-109",
         "ph-09-en-115"
        ]
       }
@@ -176,23 +184,24 @@
       {
        "quelle": "lernbuero/ph-09-energie-quantitativ",
        "ids": [
-        "ph-09-en-108"
+        "ph-09-en-101"
        ]
       }
      ],
-     "partner": "Erkläre deinem Nachbarn: Was bedeutet „Energie entwertet“? Warum lässt sich Abwärme nicht einfach zurückverwandeln?"
+     "partner": "Erkläre deinem Nachbarn: Was bedeutet „Energie wird entwertet\"? Warum lässt sich Abwärme nicht einfach zurückverwandeln?"
     },
     "sichern": {
      "zeit": 7,
+     "rueckbezug": "Zurück zum Wasserkraftwerk: Schreibe die ganze Kette Stausee $\\rightarrow$ Lampe mit den Energieformen auf. Kommt am Ende genauso viel Licht heraus, wie oben an Lageenergie steckte? Nein – bei jeder Station wird ein Teil als Wärme entwertet, deshalb leuchtet die Lampe mit weniger Energie, als oben vorhanden war.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-energie-quantitativ",
        "ids": [
-        "ph-09-en-109"
+        "ph-09-en-108"
        ]
       }
      ],
-     "transfer": "Eine Lampe leuchtet. Welche Energieformen stecken am Anfang und am Ende drin – und was „geht verloren“?"
+     "transfer": "Eine Lampe leuchtet. Welche Energieformen stecken am Anfang und am Ende drin – und was wird entwertet?"
     },
     "extra": {
      "zeit": 5,
@@ -237,7 +246,7 @@
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Wiederholung: Welche Energieformen kennst du? Worauf bezieht sich Lageenergie?",
+     "hinweis": "Aus Lektion 1: Lageenergie ist die Energie hochgehobener Körper – eine von mehreren Energieformen.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-07-energie",
@@ -245,56 +254,63 @@
         "ph-07-eng-101"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Du stellst dieselbe Kiste einmal auf ein $1{,}5\\,\\text{m}$ hohes Brett und einmal auf ein doppelt so hohes Regal in $3{,}0\\,\\text{m}$. In beiden Fällen steckt nun Lageenergie in der Kiste – aber nicht gleich viel.</p>",
+      "figur": "<svg viewBox=\"0 0 340 180\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"20\" y1=\"150\" x2=\"320\" y2=\"150\"/><line class=\"hilfslinie\" x1=\"40\" y1=\"100\" x2=\"150\" y2=\"100\"/><rect class=\"dreieck\" x=\"80\" y=\"80\" width=\"30\" height=\"20\"/><text class=\"label-b\" x=\"95\" y=\"74\" text-anchor=\"middle\">Kiste</text><line class=\"pfeil\" x1=\"30\" y1=\"150\" x2=\"30\" y2=\"104\"/><polygon class=\"pfeil\" points=\"30,100 26,108 34,108\"/><text class=\"beschriftung\" x=\"24\" y=\"128\" text-anchor=\"end\">1,5 m</text><line class=\"hilfslinie\" x1=\"200\" y1=\"50\" x2=\"310\" y2=\"50\"/><rect class=\"dreieck\" x=\"240\" y=\"30\" width=\"30\" height=\"20\"/><text class=\"label-b\" x=\"255\" y=\"24\" text-anchor=\"middle\">Kiste</text><line class=\"pfeil\" x1=\"190\" y1=\"150\" x2=\"190\" y2=\"54\"/><polygon class=\"pfeil\" points=\"190,50 186,58 194,58\"/><text class=\"beschriftung\" x=\"184\" y=\"103\" text-anchor=\"end\">3,0 m</text><text class=\"achsentitel\" x=\"20\" y=\"170\">gleiche Kiste, doppelte Höhe</text></svg>",
+      "figurAlt": "Dieselbe Kiste links auf einem Brett in 1,5 m Höhe, rechts auf einem Regal in 3,0 m Höhe über dem Boden, mit eingezeichneten Höhenpfeilen.",
+      "vorhersage": "Wenn du die Höhe verdoppelst – wie verändert sich die Lageenergie der Kiste?",
+      "optionen": [
+       "bleibt gleich",
+       "wird doppelt so groß",
+       "wird viermal so groß"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#en-lage",
-     "text": "Lies zuerst den Abschnitt zur Lageenergie samt Kletterinnen-Beispiel, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/energie-quantitativ/index.html#en-lage"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Was ist Lageenergie?",
-       "html": "<p>Wer eine Kiste hochhebt, überträgt Energie auf sie: Oben angekommen steckt sie als <strong>Lageenergie</strong> (auch Höhenenergie, Formelzeichen $E_{\\text{pot}}$) in der Kiste. Je schwerer der Körper und je größer die Höhe, desto mehr Energie &mdash; und zwar genau proportional zu beiden.</p>",
-       "check": {
+       "kern": "Wer einen Körper hochhebt, überträgt Energie auf ihn: Oben steckt sie als <strong>Lageenergie</strong> ($E_{\\text{pot}}$) im Körper. Je schwerer und je höher, desto mehr – und zwar proportional zu beiden.",
+       "minicheck": {
         "frage": "Wovon hängt die Lageenergie eines Körpers ab?",
-        "antwort": "Von seiner Masse $m$ und von der Höhe $h$ &mdash; je größer eines von beiden, desto mehr Lageenergie."
+        "antwort": "Von seiner Masse $m$ und von der Höhe $h$ – je größer eines von beiden, desto mehr Lageenergie."
        }
       },
       {
        "titel": "Die Formel anwenden",
-       "html": "<p>Es gilt $$E_{\\text{pot}} = m \\cdot g \\cdot h.$$ Dabei ist $m$ die Masse in $\\text{kg}$, $h$ die Höhe in $\\text{m}$ und $g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$ der <strong>Ortsfaktor</strong>; das Ergebnis erhältst du in Joule. Eine Kletterin ($m = 50\\,\\text{kg}$) in $h = 12\\,\\text{m}$ Höhe hat $E_{\\text{pot}} = 50 \\cdot 9{,}81 \\cdot 12\\,\\text{J} \\approx 5900\\,\\text{J}$.</p>",
-       "check": {
-        "frage": "Berechne die Lageenergie eines $2\\,\\text{kg}$-Buchs, das $1{,}5\\,\\text{m}$ hoch im Regal liegt ($g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$).",
-        "antwort": "$E_{\\text{pot}} = 2 \\cdot 9{,}81 \\cdot 1{,}5\\,\\text{J} \\approx 29{,}4\\,\\text{J}$."
+       "kern": "Es gilt $$E_{\\text{pot}} = m \\cdot g \\cdot h$$ mit $m$ in $\\text{kg}$, $h$ in $\\text{m}$ und dem Ortsfaktor $g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$; das Ergebnis kommt in Joule heraus.",
+       "beispiel": {
+        "aufgabe": "Eine Kletterin ($m = 50\\,\\text{kg}$) hängt in $h = 12\\,\\text{m}$ Höhe. Wie groß ist ihre Lageenergie ($g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$)?",
+        "schritte": [
+         "Formel: $E_{\\text{pot}} = m \\cdot g \\cdot h$",
+         "Einsetzen: $E_{\\text{pot}} = 50 \\cdot 9{,}81 \\cdot 12\\,\\text{J}$",
+         "Ergebnis: $E_{\\text{pot}} \\approx 5886\\,\\text{J} \\approx 5{,}9\\,\\text{kJ}$"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Welche Lageenergie hat ein $2\\,\\text{kg}$-Buch, das $1{,}5\\,\\text{m}$ hoch im Regal liegt?",
+         "loesung": "<p>$E_{\\text{pot}} = 2 \\cdot 9{,}81 \\cdot 1{,}5\\,\\text{J} \\approx 29{,}4\\,\\text{J}$.</p>"
+        }
        }
       },
       {
        "titel": "Das Nullniveau",
-       "html": "<p>Die Höhe zählt ab einem frei gewählten <strong>Nullniveau</strong> &mdash; etwa dem Fußboden oder dem Erdboden. Zu jeder Lageenergie gehört deshalb die Angabe, worauf sie sich bezieht. Klettert die Kletterin nur halb so hoch, ist es genau die Hälfte: Die Lageenergie wächst <strong>linear</strong> mit der Höhe.</p>",
-       "check": {
+       "kern": "Die Höhe zählt ab einem frei gewählten <strong>Nullniveau</strong> (Fußboden, Tisch, Erdboden). Zu jeder Lageenergie gehört deshalb die Angabe, worauf sie sich bezieht.",
+       "figur": "<svg viewBox=\"0 0 340 215\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"185.0\" x2=\"336.0\" y2=\"185.0\"/><polygon class=\"pfeil\" points=\"336.0,185.0 328.0,181.0 328.0,189.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"185.0\" x2=\"40.0\" y2=\"4\"/><polygon class=\"pfeil\" points=\"40.0,4 36.0,12 44.0,12\"/><text class=\"achsentitel\" x=\"334.0\" y=\"200.0\" text-anchor=\"end\">h (m)</text><text class=\"achsentitel\" x=\"46.0\" y=\"14\">E_pot (J)</text><text class=\"beschriftung\" x=\"110.0\" y=\"200.0\" text-anchor=\"middle\">1</text><text class=\"beschriftung\" x=\"180.0\" y=\"200.0\" text-anchor=\"middle\">2</text><text class=\"beschriftung\" x=\"250.0\" y=\"200.0\" text-anchor=\"middle\">3</text><text class=\"beschriftung\" x=\"34.0\" y=\"146.8\" text-anchor=\"end\">20</text><text class=\"beschriftung\" x=\"34.0\" y=\"104.5\" text-anchor=\"end\">40</text><text class=\"beschriftung\" x=\"34.0\" y=\"62.2\" text-anchor=\"end\">60</text><line class=\"gerade\" x1=\"40.0\" y1=\"185.0\" x2=\"320.0\" y2=\"19.2\"/><circle class=\"punkt\" cx=\"110.0\" cy=\"143.6\" r=\"3.4\"/><circle class=\"punkt\" cx=\"180.0\" cy=\"102.1\" r=\"3.4\"/><text class=\"label-b\" x=\"194.0\" y=\"98.5\" text-anchor=\"start\">doppelte Höhe</text><text class=\"label-b\" x=\"194.0\" y=\"112.5\" text-anchor=\"start\">doppelte Energie</text></svg>",
+       "figurAlt": "Gerade durch den Ursprung im h-E-Diagramm: Bei doppelter Höhe ist die Lageenergie doppelt so groß; sie wächst linear.",
+       "details": "<p>Wählst du den Tisch als Nullniveau statt des Bodens, ist $h$ kleiner und damit auch $E_{\\text{pot}}$. Wichtig: Weil $h$ in der Formel nur <strong>einfach</strong> steht, wächst die Lageenergie <strong>linear</strong> mit der Höhe – halbe Höhe heißt halbe Energie, doppelte Höhe doppelte Energie.</p>",
+       "minicheck": {
         "frage": "Warum muss man bei einer Lageenergie immer angeben, worauf sie sich bezieht?",
-        "antwort": "Weil die Höhe ab einem frei gewählten Nullniveau gemessen wird. Je nach gewähltem Bezug (Boden, Tisch, Erdboden) ergibt sich ein anderer Wert für $h$ und damit für $E_{\\text{pot}}$."
+        "antwort": "Weil die Höhe ab einem frei gewählten Nullniveau gemessen wird – je nach Bezug (Boden, Tisch) ergibt sich ein anderer Wert für $h$ und damit für $E_{\\text{pot}}$."
        }
       }
      ],
+     "stolperstein": "Höhe und zurückgelegter Weg sind nicht dasselbe. Trägt jemand eine Kiste eine lange, flache Rampe hinauf, zählt für $E_{\\text{pot}}$ nur die <strong>gewonnene Höhe</strong> $h$ – nicht die viel längere Strecke entlang der Rampe.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum die Lageenergie linear mit der Höhe wächst, die Bewegungsenergie aber nicht linear mit der Geschwindigkeit (das siehst du in Lektion 3).",
      "merksatz": "Die Lageenergie ist $E_{\\text{pot}} = m \\cdot g \\cdot h$ (in Joule). Sie wächst <strong>linear</strong> mit der Höhe und zählt immer ab einem frei gewählten <strong>Nullniveau</strong>.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Höhe verdoppeln, Energie verdoppeln",
-       "material": "Ein Buch oder eine kleine Wasserflasche, ein Maßband oder Lineal, ein Tisch.",
-       "vorhersage": "Du hebst dasselbe Buch erst auf Tischhöhe, dann doppelt so hoch. Wie verändert sich die Lageenergie? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Bestimme die Masse des Buchs (Aufdruck oder grobe Schätzung) und miss die Höhe der Tischkante über dem Boden.",
-        "Berechne $E_{\\text{pot}}$ für die Tischhöhe und für die doppelte Höhe &mdash; vergleiche die beiden Werte.",
-        "Erkläre mit der Formel, warum sich die Lageenergie genau verdoppelt, wenn die Höhe sich verdoppelt."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Schreibe die Formel für die Lageenergie auf und benenne jede Größe mit Einheit.",
@@ -305,8 +321,20 @@
        "antwort": "Die frei gewählte Bezugshöhe, ab der man $h$ misst (z. B. der Fußboden). Davon hängt ab, welchen Wert die Lageenergie hat."
       },
       {
-       "frage": "Eine Person trägt eine Kiste eine Treppe hinauf. Verdoppelt sich die Lageenergie, wenn sie doppelt so hoch trägt?",
-       "antwort": "Ja. Da $E_{\\text{pot}} = m \\cdot g \\cdot h$ und $m$ und $g$ gleich bleiben, verdoppelt die doppelte Höhe die Lageenergie."
+       "frage": "Eine Person trägt eine Kiste doppelt so hoch. Verdoppelt sich die Lageenergie?",
+       "antwort": "Ja. Da $E_{\\text{pot}} = m \\cdot g \\cdot h$ und $m$, $g$ gleich bleiben, verdoppelt die doppelte Höhe die Lageenergie."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Höhe verdoppeln, Energie verdoppeln",
+       "material": "Ein Buch oder eine kleine Wasserflasche, ein Maßband, ein Tisch.",
+       "auftraege": [
+        "Bestimme die Masse des Buchs (Aufdruck oder Schätzung) und miss die Höhe der Tischkante über dem Boden.",
+        "Berechne $E_{\\text{pot}}$ für die Tischhöhe und für die doppelte Höhe – vergleiche die Werte.",
+        "Erkläre mit der Formel, warum sich die Lageenergie genau verdoppelt, wenn sich die Höhe verdoppelt."
+       ]
       }
      ]
     },
@@ -317,6 +345,12 @@
        "quelle": "ph-09-energie-quantitativ",
        "ids": [
         "ph-09-en-003"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-09-energie-quantitativ",
+       "ids": [
+        "ph-09-en-202"
        ]
       }
      ],
@@ -341,6 +375,7 @@
     },
     "sichern": {
      "zeit": 7,
+     "rueckbezug": "Zurück zur Kiste vom Anfang ($m$ beliebig): Auf $3{,}0\\,\\text{m}$ statt $1{,}5\\,\\text{m}$ ist $h$ doppelt so groß – also auch $E_{\\text{pot}}$. Deine Vermutung „doppelt so groß\" stimmt: Weil $h$ in $E_{\\text{pot}} = m \\cdot g \\cdot h$ nur einfach vorkommt, verdoppelt die doppelte Höhe die Lageenergie.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-energie-quantitativ",
@@ -349,7 +384,7 @@
        ]
       }
      ],
-     "transfer": "Eine Kugel liegt $2\\,\\text{m}$ hoch. Du nimmst sie und legst sie $4\\,\\text{m}$ hoch. Wie verändert sich ihre Lageenergie – und warum?"
+     "transfer": "Eine Kugel liegt $2\\,\\text{m}$ hoch. Du legst sie $4\\,\\text{m}$ hoch. Wie verändert sich ihre Lageenergie – und warum?"
     },
     "extra": {
      "zeit": 5,
@@ -394,7 +429,7 @@
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Wiederholung Lageenergie aus Lektion 2.",
+     "hinweis": "Aus Lektion 2: Lageenergie $E_{\\text{pot}} = m \\cdot g \\cdot h$ wächst linear mit der Höhe. Jetzt geht es um bewegte Körper.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-07-energie",
@@ -402,68 +437,87 @@
         "ph-07-eng-105"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Zwei gleiche Autos rollen über die Straße – das untere ist doppelt so schnell wie das obere. Beide tragen Bewegungsenergie, die beim Bremsen wieder abgegeben werden muss.</p>",
+      "figur": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"20\" y1=\"60\" x2=\"320\" y2=\"60\"/><rect class=\"dreieck\" x=\"40\" y=\"42\" width=\"44\" height=\"18\" rx=\"4\"/><circle class=\"punkt\" cx=\"52\" cy=\"62\" r=\"5\"/><circle class=\"punkt\" cx=\"74\" cy=\"62\" r=\"5\"/><line class=\"pfeil\" x1=\"88\" y1=\"51\" x2=\"118\" y2=\"51\"/><polygon class=\"pfeil\" points=\"124,51 116,47 116,55\"/><text class=\"label-b\" x=\"60\" y=\"36\" text-anchor=\"middle\">v</text><line class=\"achse\" x1=\"20\" y1=\"120\" x2=\"320\" y2=\"120\"/><rect class=\"dreieck\" x=\"40\" y=\"102\" width=\"44\" height=\"18\" rx=\"4\"/><circle class=\"punkt\" cx=\"52\" cy=\"122\" r=\"5\"/><circle class=\"punkt\" cx=\"74\" cy=\"122\" r=\"5\"/><line class=\"pfeil\" x1=\"88\" y1=\"111\" x2=\"178\" y2=\"111\"/><polygon class=\"pfeil\" points=\"184,111 176,107 176,115\"/><text class=\"label-a\" x=\"60\" y=\"96\" text-anchor=\"middle\">2·v</text><text class=\"achsentitel\" x=\"200\" y=\"40\">gleiche Masse,</text><text class=\"achsentitel\" x=\"200\" y=\"56\">doppeltes Tempo</text></svg>",
+      "figurAlt": "Zwei gleich große Autos: oben mit kurzem Geschwindigkeitspfeil v, unten mit doppelt so langem Pfeil 2 mal v.",
+      "vorhersage": "Das doppelt so schnelle Auto – wie viel Bewegungsenergie trägt es im Vergleich zum langsamen?",
+      "optionen": [
+       "doppelt so viel",
+       "viermal so viel",
+       "gleich viel"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#en-bewegung",
-     "text": "Lies zuerst den Abschnitt zur Bewegungsenergie samt Tempolimit-Beispiel, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/energie-quantitativ/index.html#en-bewegung"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Was ist Bewegungsenergie?",
-       "html": "<p>Alles, was sich bewegt, trägt <strong>Bewegungsenergie</strong> ($E_{\\text{kin}}$, von &bdquo;kinetisch&ldquo;). Sie wächst mit der Masse &mdash; und besonders stark mit der Geschwindigkeit. Ein schnelles Auto trägt deutlich mehr Bewegungsenergie als ein langsames gleicher Masse.</p>",
-       "check": {
+       "kern": "Alles, was sich bewegt, trägt <strong>Bewegungsenergie</strong> ($E_{\\text{kin}}$, von „kinetisch\"). Sie wächst mit der Masse – und besonders stark mit der Geschwindigkeit.",
+       "minicheck": {
         "frage": "Wovon hängt die Bewegungsenergie ab?",
-        "antwort": "Von der Masse $m$ und von der Geschwindigkeit $v$ &mdash; wobei die Geschwindigkeit besonders stark hineingeht (sie steht im Quadrat)."
+        "antwort": "Von der Masse $m$ und der Geschwindigkeit $v$ – wobei $v$ im Quadrat steht und deshalb besonders stark hineingeht."
        }
       },
       {
        "titel": "Die Formel und die Einheiten",
-       "html": "<p>Es gilt $$E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$$ mit $m$ in $\\text{kg}$ und $v$ in $\\frac{\\text{m}}{\\text{s}}$. <strong>Achtung:</strong> Geschwindigkeiten in $\\frac{\\text{km}}{\\text{h}}$ musst du zuerst durch $3{,}6$ teilen. Beispiel: $72\\,\\frac{\\text{km}}{\\text{h}} = 20\\,\\frac{\\text{m}}{\\text{s}}$.</p>",
-       "check": {
-        "frage": "Wie rechnest du $36\\,\\frac{\\text{km}}{\\text{h}}$ in $\\frac{\\text{m}}{\\text{s}}$ um?",
-        "antwort": "Durch $3{,}6$ teilen: $36 : 3{,}6 = 10\\,\\frac{\\text{m}}{\\text{s}}$."
+       "kern": "Es gilt $$E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$$ mit $m$ in $\\text{kg}$ und $v$ in $\\frac{\\text{m}}{\\text{s}}$. Geschwindigkeiten in $\\frac{\\text{km}}{\\text{h}}$ <strong>vorher durch $3{,}6$ teilen</strong>.",
+       "beispiel": {
+        "aufgabe": "Ein Auto ($m = 1000\\,\\text{kg}$) fährt $72\\,\\frac{\\text{km}}{\\text{h}}$. Wie groß ist seine Bewegungsenergie?",
+        "schritte": [
+         "Geschwindigkeit umrechnen: $72 : 3{,}6 = 20\\,\\frac{\\text{m}}{\\text{s}}$",
+         "Einsetzen: $E_{\\text{kin}} = \\frac{1}{2} \\cdot 1000 \\cdot 20^2\\,\\text{J}$",
+         "Ergebnis: $E_{\\text{kin}} = 500 \\cdot 400\\,\\text{J} = 200\\,000\\,\\text{J} = 200\\,\\text{kJ}$"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Ein Ball ($m = 0{,}5\\,\\text{kg}$) fliegt mit $4\\,\\frac{\\text{m}}{\\text{s}}$. Wie groß ist $E_{\\text{kin}}$?",
+         "loesung": "<p>$E_{\\text{kin}} = \\frac{1}{2} \\cdot 0{,}5 \\cdot 4^2\\,\\text{J} = 0{,}25 \\cdot 16\\,\\text{J} = 4\\,\\text{J}$.</p>"
+        }
        }
       },
       {
        "titel": "Warum das Quadrat so wichtig ist",
-       "html": "<p>Weil $v$ im Quadrat steht, gilt: <strong>Doppelte Geschwindigkeit bedeutet vierfache Bewegungsenergie</strong>, dreifache sogar neunfache. Ein Auto ($1000\\,\\text{kg}$) hat bei $10\\,\\frac{\\text{m}}{\\text{s}}$ erst $50\\,\\text{kJ}$, bei $20\\,\\frac{\\text{m}}{\\text{s}}$ schon $200\\,\\text{kJ}$. Diese Energie muss beim Bremsen vollständig abgegeben werden &mdash; deshalb ist der Bremsweg bei doppeltem Tempo viermal so lang.</p>",
-       "check": {
-        "frage": "Dreifaches Tempo &mdash; wievielfache Bewegungsenergie?",
-        "antwort": "Die neunfache: Aus dem Faktor $3$ bei der Geschwindigkeit wird $3^2 = 9$ bei der Energie, weil $v$ im Quadrat steht."
+       "kern": "Weil $v$ im <strong>Quadrat</strong> steht, gilt: doppelte Geschwindigkeit = <strong>vierfache</strong> Bewegungsenergie, dreifache sogar neunfache. Diese Energie muss beim Bremsen vollständig abgegeben werden.",
+       "figur": "<svg viewBox=\"0 0 340 215\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"185.0\" x2=\"336.0\" y2=\"185.0\"/><polygon class=\"pfeil\" points=\"336.0,185.0 328.0,181.0 328.0,189.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"185.0\" x2=\"40.0\" y2=\"4\"/><polygon class=\"pfeil\" points=\"40.0,4 36.0,12 44.0,12\"/><text class=\"achsentitel\" x=\"334.0\" y=\"200.0\" text-anchor=\"end\">v (relativ)</text><text class=\"achsentitel\" x=\"46.0\" y=\"14\">E_kin (relativ)</text><text class=\"beschriftung\" x=\"133.3\" y=\"200.0\" text-anchor=\"middle\">1</text><text class=\"beschriftung\" x=\"226.7\" y=\"200.0\" text-anchor=\"middle\">2</text><text class=\"beschriftung\" x=\"320.0\" y=\"200.0\" text-anchor=\"middle\">3</text><text class=\"beschriftung\" x=\"34.0\" y=\"170.2\" text-anchor=\"end\">1</text><text class=\"beschriftung\" x=\"34.0\" y=\"113.9\" text-anchor=\"end\">4</text><text class=\"beschriftung\" x=\"34.0\" y=\"20.0\" text-anchor=\"end\">9</text><polyline class=\"gerade\" points=\"40.0,185.0 54.0,184.6 68.0,183.3 82.0,181.2 96.0,178.2 110.0,174.4 124.0,169.8 138.0,164.3 152.0,158.0 166.0,150.8 180.0,142.8 194.0,133.9 208.0,124.2 222.0,113.6 236.0,102.2 250.0,89.9 264.0,76.8 278.0,62.9 292.0,48.1 306.0,32.5 320.0,16.0\" fill=\"none\"/><circle class=\"punkt\" cx=\"133.3\" cy=\"166.2\" r=\"3.4\"/><circle class=\"punkt\" cx=\"226.7\" cy=\"109.9\" r=\"3.4\"/><circle class=\"punkt\" cx=\"320.0\" cy=\"16.0\" r=\"3.4\"/><text class=\"label-b\" x=\"232.7\" y=\"109.9\" text-anchor=\"start\">2·v -&gt; 4·E</text></svg>",
+       "figurAlt": "Gekrümmte Kurve im v-E-Diagramm: bei v=1 ist E=1, bei v=2 schon E=4, bei v=3 ist E=9 – die Energie steigt mit dem Quadrat.",
+       "details": "<p>Ein Auto hat bei $10\\,\\frac{\\text{m}}{\\text{s}}$ erst ein Viertel der Energie wie bei $20\\,\\frac{\\text{m}}{\\text{s}}$. Deshalb ist der <strong>Bremsweg bei doppeltem Tempo etwa viermal so lang</strong>: Die vierfache Bewegungsenergie muss als Wärme in den Bremsen abgebaut werden.</p>",
+       "minicheck": {
+        "frage": "Dreifaches Tempo – wievielfache Bewegungsenergie?",
+        "antwort": "Die neunfache: Aus dem Faktor $3$ bei $v$ wird $3^2 = 9$ bei der Energie, weil $v$ im Quadrat steht."
        }
       }
      ],
-     "merksatz": "Die Bewegungsenergie ist $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$. Weil die Geschwindigkeit im <strong>Quadrat</strong> steht, bedeutet doppeltes Tempo vierfache Energie. Geschwindigkeiten vorher durch $3{,}6$ in $\\frac{\\text{m}}{\\text{s}}$ umrechnen.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Bewegungsdiagramme",
-       "pfad": "simulationen/physik/bewegungsdiagramme/index.html",
-       "vorhersage": "Wenn ein Körper schneller wird, wie verändert sich seine Bewegungsenergie &mdash; gleichmäßig oder immer stärker? Schreibe deine Vermutung auf, bevor du die Geschwindigkeit erhöhst.",
-       "auftraege": [
-        "Stelle nacheinander die Geschwindigkeiten $v$, $2v$ und $3v$ ein und lies die Werte ab.",
-        "Berechne für eine feste Masse die Bewegungsenergie bei diesen drei Geschwindigkeiten.",
-        "Vergleiche: Um welchen Faktor wächst die Energie, wenn die Geschwindigkeit sich verdoppelt bzw. verdreifacht?"
-       ]
-      }
-     ],
+     "stolperstein": "Doppeltes Tempo heißt <strong>nicht</strong> doppelte Bewegungsenergie. Weil $v$ quadriert wird, wird aus dem Faktor $2$ der Faktor $2^2 = 4$. Wer nur „mal 2\" rechnet, unterschätzt die Energie um das Vierfache.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein Auto bei doppeltem Tempo nicht doppelt, sondern viermal so viel Bewegungsenergie hat.",
+     "merksatz": "Die Bewegungsenergie ist $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$. Weil $v$ im <strong>Quadrat</strong> steht, bedeutet doppeltes Tempo vierfache Energie. Geschwindigkeiten vorher durch $3{,}6$ in $\\frac{\\text{m}}{\\text{s}}$ umrechnen.",
      "selbstcheck": [
       {
        "frage": "Schreibe die Formel der Bewegungsenergie auf und nenne die nötigen Einheiten.",
        "antwort": "$E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$ mit $m$ in $\\text{kg}$ und $v$ in $\\frac{\\text{m}}{\\text{s}}$; Ergebnis in Joule."
       },
       {
-       "frage": "Ein Ball ($0{,}5\\,\\text{kg}$) fliegt mit $4\\,\\frac{\\text{m}}{\\text{s}}$. Wie groß ist seine Bewegungsenergie?",
-       "antwort": "$E_{\\text{kin}} = \\frac{1}{2} \\cdot 0{,}5 \\cdot 4^2\\,\\text{J} = 4\\,\\text{J}$."
+       "frage": "Wie rechnest du $36\\,\\frac{\\text{km}}{\\text{h}}$ in $\\frac{\\text{m}}{\\text{s}}$ um?",
+       "antwort": "Durch $3{,}6$ teilen: $36 : 3{,}6 = 10\\,\\frac{\\text{m}}{\\text{s}}$."
       },
       {
-       "frage": "Warum ist der Bremsweg bei doppeltem Tempo viermal so lang?",
+       "frage": "Warum ist der Bremsweg bei doppeltem Tempo etwa viermal so lang?",
        "antwort": "Weil die Bewegungsenergie mit dem Quadrat der Geschwindigkeit wächst (viermal so viel bei doppeltem Tempo) und diese Energie beim Bremsen vollständig abgebaut werden muss."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Bewegungsdiagramme",
+       "pfad": "simulationen/physik/bewegungsdiagramme/index.html",
+       "auftraege": [
+        "Stelle nacheinander die Geschwindigkeiten $v$, $2v$ und $3v$ ein und lies die Werte ab.",
+        "Berechne für eine feste Masse die Bewegungsenergie bei diesen drei Geschwindigkeiten.",
+        "Vergleiche: Um welchen Faktor wächst die Energie bei doppelter bzw. dreifacher Geschwindigkeit?"
+       ]
       }
      ]
     },
@@ -473,7 +527,8 @@
       {
        "quelle": "lernbuero/ph-09-energie-quantitativ",
        "ids": [
-        "ph-09-en-104"
+        "ph-09-en-104",
+        "ph-09-en-203"
        ]
       }
      ],
@@ -500,10 +555,11 @@
        ]
       }
      ],
-     "partner": "Diskutiert: Ein Auto bremst von $100\\,\\frac{\\text{km}}{\\text{h}}$ auf $0$. Wohin geht all die Bewegungsenergie?"
+     "partner": "Diskutiert: Ein Auto bremst von $100\\,\\frac{\\text{km}}{\\text{h}}$ auf $0$. Wohin geht die ganze Bewegungsenergie?"
     },
     "sichern": {
      "zeit": 7,
+     "rueckbezug": "Zurück zu den beiden Autos: Das doppelt so schnelle trägt nicht doppelt, sondern <strong>viermal</strong> so viel Bewegungsenergie – denn in $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$ wird $v$ quadriert ($2^2 = 4$). Genau das macht hohes Tempo im Verkehr so gefährlich.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-energie-quantitativ",
@@ -559,7 +615,7 @@
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Wiederholung Bewegungsenergie aus Lektion 3.",
+     "hinweis": "Aus Lektion 3: Bewegungsenergie $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$. Jetzt verbindest du sie mit der Lageenergie.",
      "aufgaben": [
       {
        "quelle": "ph-09-energie-quantitativ",
@@ -567,68 +623,91 @@
         "ph-09-en-004"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Oben auf einer Rutsche hast du viel Lageenergie, aber keine Bewegungsenergie. Unten ist es genau umgekehrt: Du bist schnell. Auf dem Weg nach unten wandelt sich die eine Energieform in die andere um.</p>",
+      "figur": "<svg viewBox=\"0 0 340 180\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"20\" y1=\"150\" x2=\"320\" y2=\"150\"/><line class=\"gerade-a\" x1=\"50\" y1=\"40\" x2=\"250\" y2=\"150\"/><circle class=\"punkt\" cx=\"58\" cy=\"36\" r=\"6\"/><text class=\"label-a\" x=\"68\" y=\"32\" text-anchor=\"start\">oben: viel Lageenergie</text><circle class=\"punkt\" cx=\"248\" cy=\"146\" r=\"6\"/><line class=\"pfeil\" x1=\"258\" y1=\"146\" x2=\"300\" y2=\"146\"/><polygon class=\"pfeil\" points=\"306,146 298,142 298,150\"/><text class=\"label-b\" x=\"220\" y=\"170\" text-anchor=\"middle\">unten: viel Bewegungsenergie</text><line class=\"hilfslinie\" x1=\"50\" y1=\"40\" x2=\"50\" y2=\"150\"/><text class=\"beschriftung\" x=\"44\" y=\"98\" text-anchor=\"end\">h</text></svg>",
+      "figurAlt": "Schräge Rutschbahn der Höhe h: oben eine Person mit viel Lageenergie, unten dieselbe Person schnell mit viel Bewegungsenergie (Pfeil nach rechts).",
+      "vorhersage": "Zwei Kinder – ein schweres und ein leichtes – rutschen reibungsfrei dieselbe Rutsche hinab. Wer kommt unten schneller an?",
+      "optionen": [
+       "das schwere",
+       "das leichte",
+       "beide gleich schnell"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#en-erhaltung",
-     "text": "Lies zuerst den Abschnitt zur Energieerhaltung samt Rutschen-Beispiel, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/energie-quantitativ/index.html#en-erhaltung"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Der Energieerhaltungssatz",
-       "html": "<p>Du stehst oben auf einer Rutsche: viel Lageenergie, keine Bewegungsenergie. Unten ist es genau umgekehrt. Wenn (fast) keine Reibung bremst, geht dabei nichts verloren &mdash; die <strong>Gesamtenergie bleibt erhalten</strong>. Wird Lageenergie vollständig in Bewegungsenergie umgewandelt, gilt $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$.</p>",
-       "check": {
+       "kern": "Wenn (fast) keine Reibung bremst, geht beim Umwandeln nichts verloren – die <strong>Gesamtenergie bleibt erhalten</strong>. Wird Lageenergie vollständig in Bewegungsenergie umgewandelt, gilt $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$.",
+       "figur": "<svg viewBox=\"0 0 320 170\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40\" y1=\"20\" x2=\"40\" y2=\"140\"/><polygon class=\"pfeil\" points=\"40,16 36,24 44,24\"/><text class=\"achsentitel\" x=\"46\" y=\"20\">Energie</text><line class=\"achse\" x1=\"40\" y1=\"140\" x2=\"300\" y2=\"140\"/><rect class=\"gerade-a\" x=\"70.0\" y=\"41.0\" width=\"46\" height=\"99.0\"/><rect class=\"gerade-b\" x=\"70.0\" y=\"41.0\" width=\"46\" height=\"0.0\"/><text class=\"beschriftung\" x=\"93.0\" y=\"154\" text-anchor=\"middle\">oben</text><rect class=\"gerade-a\" x=\"150.0\" y=\"90.5\" width=\"46\" height=\"49.5\"/><rect class=\"gerade-b\" x=\"150.0\" y=\"41.0\" width=\"46\" height=\"49.5\"/><text class=\"beschriftung\" x=\"173.0\" y=\"154\" text-anchor=\"middle\">Mitte</text><rect class=\"gerade-a\" x=\"230.0\" y=\"140.0\" width=\"46\" height=\"0.0\"/><rect class=\"gerade-b\" x=\"230.0\" y=\"41.0\" width=\"46\" height=\"99.0\"/><text class=\"beschriftung\" x=\"253.0\" y=\"154\" text-anchor=\"middle\">unten</text><text class=\"label-a\" x=\"282\" y=\"120\" text-anchor=\"end\">Lage</text><text class=\"label-b\" x=\"282\" y=\"35\" text-anchor=\"end\">Bewegung</text><text class=\"achsentitel\" x=\"60\" y=\"12\">Summe bleibt gleich</text></svg>",
+       "figurAlt": "Drei Säulen oben, Mitte, unten: Der Lage-Anteil schrumpft von oben nach unten, der Bewegungs-Anteil wächst, die Gesamthöhe (Summe) bleibt gleich.",
+       "minicheck": {
         "frage": "Was passiert beim reibungsfreien Rutschen mit der Lageenergie?",
         "antwort": "Sie wird vollständig in Bewegungsenergie umgewandelt. Die Gesamtenergie bleibt dabei erhalten."
        }
       },
       {
        "titel": "Die Masse kürzt sich heraus",
-       "html": "<p>Stellt man $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$ nach $v$ um, kürzt sich die Masse heraus: $$v = \\sqrt{2 \\cdot g \\cdot h}.$$ Die Aufprallgeschwindigkeit hängt also nur von der Höhe ab &mdash; <strong>schwere und leichte Körper kommen ohne Reibung gleich schnell unten an</strong>.</p>",
-       "check": {
+       "kern": "Stellt man $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$ nach $v$ um, kürzt sich die Masse heraus: $$v = \\sqrt{2 \\cdot g \\cdot h}.$$ Die Aufprallgeschwindigkeit hängt also <strong>nur von der Höhe</strong> ab.",
+       "beispiel": {
+        "aufgabe": "Eine Kugel fällt aus $h = 5{,}0\\,\\text{m}$ (ohne Luftwiderstand, $g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$). Wie schnell trifft sie auf?",
+        "schritte": [
+         "Ansatz: $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$, Masse kürzen $\\rightarrow v = \\sqrt{2 \\cdot g \\cdot h}$",
+         "Einsetzen: $v = \\sqrt{2 \\cdot 9{,}81 \\cdot 5{,}0}\\,\\frac{\\text{m}}{\\text{s}} = \\sqrt{98{,}1}\\,\\frac{\\text{m}}{\\text{s}}$",
+         "Ergebnis: $v \\approx 9{,}9\\,\\frac{\\text{m}}{\\text{s}}$ (rund $36\\,\\frac{\\text{km}}{\\text{h}}$)"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Welche Aufprallgeschwindigkeit ergibt sich aus $h = 1{,}25\\,\\text{m}$?",
+         "loesung": "<p>$v = \\sqrt{2 \\cdot 9{,}81 \\cdot 1{,}25}\\,\\frac{\\text{m}}{\\text{s}} = \\sqrt{24{,}525}\\,\\frac{\\text{m}}{\\text{s}} \\approx 5{,}0\\,\\frac{\\text{m}}{\\text{s}}$.</p>"
+        }
+       },
+       "minicheck": {
         "frage": "Warum spielt die Masse für die Aufprallgeschwindigkeit (ohne Reibung) keine Rolle?",
-        "antwort": "Weil sie sich beim Umstellen von $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$ herauskürzt; übrig bleibt $v = \\sqrt{2 \\cdot g \\cdot h}$ ohne $m$."
+        "antwort": "Weil sie sich beim Umstellen herauskürzt; übrig bleibt $v = \\sqrt{2 \\cdot g \\cdot h}$ – darin kommt $m$ nicht mehr vor."
        }
       },
       {
        "titel": "Reibung entwertet Energie",
-       "html": "<p>Eine $5{,}0\\,\\text{m}$ hohe Rutsche ergäbe ohne Reibung $v = \\sqrt{2 \\cdot 9{,}81 \\cdot 5{,}0}\\,\\frac{\\text{m}}{\\text{s}} \\approx 9{,}9\\,\\frac{\\text{m}}{\\text{s}}$. Tatsächlich bist du langsamer: <strong>Reibung wandelt einen Teil in thermische Energie</strong> um &mdash; Rutsche und Badehose werden wärmer. Diese Energie ist nicht verschwunden, aber verteilt und nicht mehr zurückholbar; man sagt, sie wird <strong>entwertet</strong>.</p>",
-       "check": {
-        "frage": "Wo bleibt die Energie, die auf einer echten Rutsche &bdquo;fehlt&ldquo;?",
-        "antwort": "Die Reibung wandelt sie in thermische Energie um (Rutsche und Körper werden wärmer). Die Gesamtenergie bleibt erhalten, aber dieser Teil ist entwertet."
+       "kern": "Auf einer <strong>echten</strong> Rutsche bist du langsamer als berechnet: <strong>Reibung wandelt einen Teil in Wärme</strong> um. Diese Energie ist nicht verschwunden, aber verteilt und nicht mehr nutzbar – sie wird <strong>entwertet</strong>.",
+       "details": "<p>Eine $5{,}0\\,\\text{m}$ hohe Rutsche ergäbe rechnerisch $9{,}9\\,\\frac{\\text{m}}{\\text{s}}$; tatsächlich bist du langsamer, weil Rutsche und Hose warm werden. Wichtig: Die Gesamtenergie bleibt trotzdem erhalten – nur der zu Wärme entwertete Teil fehlt für die Geschwindigkeit. Ein Vorgang, der mehr Bewegungsenergie liefert, als oben an Lageenergie steckte, ist deshalb unmöglich.</p>",
+       "minicheck": {
+        "frage": "Wo bleibt die Energie, die auf einer echten Rutsche „fehlt\"?",
+        "antwort": "Die Reibung wandelt sie in thermische Energie um (Rutsche und Körper werden wärmer). Die Gesamtenergie bleibt erhalten, dieser Teil ist aber entwertet."
        }
       }
      ],
-     "merksatz": "Energieerhaltung: Lageenergie wird in Bewegungsenergie umgewandelt, $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$, also $v = \\sqrt{2 \\cdot g \\cdot h}$ &mdash; <strong>ohne Reibung unabhängig von der Masse</strong>. Reibung <strong>entwertet</strong> einen Teil zu Wärme.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Energieerhaltung",
-       "pfad": "simulationen/physik/energie-erhaltung/index.html",
-       "vorhersage": "Ein Wagen rollt eine Bahn hinab. Wo ist die Bewegungsenergie am größten, wo die Lageenergie? Und bleibt die Summe konstant? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Verfolge an mehreren Punkten der Bahn, wie sich Lage- und Bewegungsenergie verändern &mdash; bleibt ihre Summe gleich?",
-        "Erhöhe die Starthöhe: Wie verändert sich die Geschwindigkeit am tiefsten Punkt?",
-        "Schalte (falls möglich) Reibung dazu: Wohin verschwindet ein Teil der Energie und was sagt das über Energieentwertung?"
-       ]
-      }
-     ],
+     "stolperstein": "Energieerhaltung heißt <strong>nicht</strong>, dass am Ende beliebig viel Geschwindigkeit herauskommt. Aus einer Höhe $h$ kann nie mehr Bewegungsenergie entstehen, als oben an Lageenergie vorhanden war – ein „Perpetuum mobile\", das von selbst immer schneller wird, ist unmöglich.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein schwerer und ein leichter Körper ohne Reibung gleich schnell unten ankommen.",
+     "merksatz": "Energieerhaltung: $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$, also $v = \\sqrt{2 \\cdot g \\cdot h}$ – <strong>ohne Reibung unabhängig von der Masse</strong>. Reibung <strong>entwertet</strong> einen Teil zu Wärme.",
      "selbstcheck": [
       {
        "frage": "Formuliere den Energieerhaltungssatz in einem Satz.",
        "antwort": "Die Gesamtenergie eines abgeschlossenen Systems bleibt erhalten; Energie wird nur umgewandelt, nicht erzeugt oder vernichtet."
       },
       {
-       "frage": "Berechne die Aufprallgeschwindigkeit aus $h = 1{,}25\\,\\text{m}$ (ohne Reibung, $g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$).",
-       "antwort": "$v = \\sqrt{2 \\cdot 9{,}81 \\cdot 1{,}25}\\,\\frac{\\text{m}}{\\text{s}} \\approx 5{,}0\\,\\frac{\\text{m}}{\\text{s}}$."
+       "frage": "Aus welcher Gleichung folgt $v = \\sqrt{2 \\cdot g \\cdot h}$?",
+       "antwort": "Aus $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$ nach Kürzen der Masse und Auflösen nach $v$."
       },
       {
        "frage": "Warum kommt man auf einer echten Rutsche langsamer an als berechnet?",
-       "antwort": "Weil Reibung einen Teil der Bewegungsenergie in thermische Energie umwandelt (entwertet). Diese fehlt dann für die Geschwindigkeit."
+       "antwort": "Weil Reibung einen Teil der Energie in thermische Energie umwandelt (entwertet). Diese fehlt dann für die Geschwindigkeit."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Energieerhaltung",
+       "pfad": "simulationen/physik/energie-erhaltung/index.html",
+       "auftraege": [
+        "Verfolge an mehreren Punkten der Bahn, wie sich Lage- und Bewegungsenergie verändern – bleibt ihre Summe gleich?",
+        "Erhöhe die Starthöhe: Wie verändert sich die Geschwindigkeit am tiefsten Punkt?",
+        "Schalte (falls möglich) Reibung dazu: Wohin verschwindet ein Teil der Energie, und was sagt das über Energieentwertung?"
+       ]
       }
      ]
     },
@@ -640,14 +719,20 @@
        "ids": [
         "ph-09-en-106"
        ]
+      },
+      {
+       "quelle": "ph-09-energie-quantitativ",
+       "ids": [
+        "ph-09-en-007"
+       ]
       }
      ],
      "standard": [
       {
        "quelle": "ph-09-energie-quantitativ",
        "ids": [
-        "ph-09-en-007",
-        "ph-09-en-008"
+        "ph-09-en-008",
+        "ph-09-en-010"
        ]
       },
       {
@@ -669,15 +754,16 @@
     },
     "sichern": {
      "zeit": 7,
+     "rueckbezug": "Zurück zu den beiden Kindern: Ohne Reibung kommen sie <strong>gleich schnell</strong> unten an – die Masse kürzt sich in $v = \\sqrt{2 \\cdot g \\cdot h}$ heraus, übrig bleibt nur die Höhe. Deine Vermutung „beide gleich schnell\" war richtig.",
      "aufgaben": [
       {
-       "quelle": "ph-09-energie-quantitativ",
+       "quelle": "lernbuero/ph-09-energie-quantitativ",
        "ids": [
-        "ph-09-en-010"
+        "ph-09-en-207"
        ]
       }
      ],
-     "transfer": "Eine Kugel fällt aus $h = 5{,}0\\,\\text{m}$ ($g = 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$). Mit welcher Geschwindigkeit trifft sie auf? Rechne im Kopf oder auf dem Zettel."
+     "transfer": "Ein Apfel fällt aus $h = 3{,}2\\,\\text{m}$ ($g = 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$). Mit welcher Geschwindigkeit trifft er auf? Rechne auf dem Zettel."
     },
     "extra": {
      "zeit": 5,
@@ -701,7 +787,7 @@
     },
     {
      "bereich": "Bewertung",
-     "text": "Du erklärst mit dem Begriff Energieentwertung, warum die Reibung Bewegungsenergie in nicht mehr nutzbare Wärme verwandelt."
+     "text": "Du erklärst mit dem Begriff Energieentwertung, warum Reibung Bewegungsenergie in nicht mehr nutzbare Wärme verwandelt."
     }
    ]
   },
@@ -722,7 +808,7 @@
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Aufwärmen mit einer Aufgabe zur Energieerhaltung.",
+     "hinweis": "Aus Lektion 4: Energie wird umgewandelt, ein Teil oft als Wärme entwertet. Jetzt fragst du, wie schnell und wie gut das gelingt.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-07-energie",
@@ -730,68 +816,95 @@
         "ph-07-eng-103"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Zwei Personen tragen dieselbe Last gleich hoch eine Treppe hinauf – eine schlendert, die andere sprintet. Die übertragene Energie ist in beiden Fällen gleich, nur die benötigte Zeit ist verschieden.</p>",
+      "figur": "<svg viewBox=\"0 0 340 160\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"20\" y1=\"140\" x2=\"320\" y2=\"140\"/><rect class=\"dreieck\" x=\"40.0\" y=\"140.0\" width=\"16\" height=\"22\"/><rect class=\"dreieck\" x=\"56.0\" y=\"118.0\" width=\"16\" height=\"22\"/><rect class=\"dreieck\" x=\"72.0\" y=\"96.0\" width=\"16\" height=\"22\"/><rect class=\"dreieck\" x=\"88.0\" y=\"74.0\" width=\"16\" height=\"22\"/><text class=\"label-a\" x=\"70\" y=\"44\" text-anchor=\"middle\">langsam</text><text class=\"beschriftung\" x=\"70\" y=\"156\" text-anchor=\"middle\">große Zeit</text><rect class=\"dreieck\" x=\"210.0\" y=\"140.0\" width=\"16\" height=\"22\"/><rect class=\"dreieck\" x=\"226.0\" y=\"118.0\" width=\"16\" height=\"22\"/><rect class=\"dreieck\" x=\"242.0\" y=\"96.0\" width=\"16\" height=\"22\"/><rect class=\"dreieck\" x=\"258.0\" y=\"74.0\" width=\"16\" height=\"22\"/><text class=\"label-b\" x=\"240\" y=\"44\" text-anchor=\"middle\">Sprint</text><text class=\"beschriftung\" x=\"240\" y=\"156\" text-anchor=\"middle\">kurze Zeit</text><line class=\"hilfslinie\" x1=\"30\" y1=\"74\" x2=\"300\" y2=\"74\"/><text class=\"achsentitel\" x=\"150\" y=\"68\" text-anchor=\"middle\">gleiche Höhe</text></svg>",
+      "figurAlt": "Zwei gleich hohe Treppen mit derselben markierten Endhöhe: links beschriftet langsam, große Zeit; rechts beschriftet Sprint, kurze Zeit.",
+      "vorhersage": "Wer von beiden erbringt die größere <em>Leistung</em> – oder ist sie gleich, weil die Energie gleich ist?",
+      "optionen": [
+       "die schnelle Person",
+       "beide gleich",
+       "die langsame Person"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#en-leistung",
-     "text": "Lies zuerst den Abschnitt zu Leistung und Wirkungsgrad samt Beispielen, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/energie-quantitativ/index.html#en-leistung"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Leistung: wie schnell Energie umgewandelt wird",
-       "html": "<p>Ob du eine Treppe hinaufschlenderst oder hinaufsprintest &mdash; die übertragene Energie ist dieselbe. Der Unterschied ist die <strong>Zeit</strong>. Wie schnell Energie umgewandelt wird, misst die <strong>Leistung</strong>: $$P = \\frac{E}{t}.$$ Einheit ist das <strong>Watt</strong>, $1\\,\\text{W} = 1\\,\\frac{\\text{J}}{\\text{s}}$, und $1\\,\\text{kW} = 1000\\,\\text{W}$.</p>",
-       "check": {
+       "kern": "Wie schnell Energie umgewandelt wird, misst die <strong>Leistung</strong>: $$P = \\frac{E}{t}.$$ Einheit ist das <strong>Watt</strong>, $1\\,\\text{W} = 1\\,\\frac{\\text{J}}{\\text{s}}$, und $1\\,\\text{kW} = 1000\\,\\text{W}$.",
+       "minicheck": {
         "frage": "Zwei Personen heben dieselbe Last gleich hoch, eine schneller. Wer hat die größere Leistung?",
         "antwort": "Die schnellere Person: Gleiche Energie in kürzerer Zeit bedeutet wegen $P = \\frac{E}{t}$ eine größere Leistung."
        }
       },
       {
        "titel": "Leistung berechnen",
-       "html": "<p>Jonas ($m = 70\\,\\text{kg}$) sprintet eine $3{,}0\\,\\text{m}$ hohe Treppe in $5{,}0\\,\\text{s}$ hinauf. Er hebt seine Lageenergie um $E_{\\text{pot}} = 70 \\cdot 9{,}81 \\cdot 3{,}0\\,\\text{J} \\approx 2060\\,\\text{J}$. Seine Leistung: $$P = \\frac{2060\\,\\text{J}}{5{,}0\\,\\text{s}} \\approx 412\\,\\text{W}.$$ Das ist rund das Vierfache der menschlichen Dauerleistung von etwa $100\\,\\text{W}$.</p>",
-       "check": {
-        "frage": "Ein Gerät wandelt $600\\,\\text{J}$ in $3\\,\\text{s}$ um. Wie groß ist seine Leistung?",
-        "antwort": "$P = \\frac{600\\,\\text{J}}{3\\,\\text{s}} = 200\\,\\text{W}$."
+       "kern": "Erst die umgewandelte Energie bestimmen (hier die gewonnene Lageenergie), dann durch die Zeit teilen.",
+       "beispiel": {
+        "aufgabe": "Jonas ($m = 70\\,\\text{kg}$) sprintet eine $3{,}0\\,\\text{m}$ hohe Treppe in $5{,}0\\,\\text{s}$ hinauf ($g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$). Wie groß ist seine Leistung?",
+        "schritte": [
+         "Lageenergie: $E_{\\text{pot}} = 70 \\cdot 9{,}81 \\cdot 3{,}0\\,\\text{J} \\approx 2060\\,\\text{J}$",
+         "Leistung: $P = \\frac{E}{t} = \\frac{2060\\,\\text{J}}{5{,}0\\,\\text{s}}$",
+         "Ergebnis: $P \\approx 412\\,\\text{W}$ (rund das Vierfache der menschlichen Dauerleistung von etwa $100\\,\\text{W}$)"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Ein Gerät wandelt $600\\,\\text{J}$ in $3\\,\\text{s}$ um. Wie groß ist seine Leistung?",
+         "loesung": "<p>$P = \\frac{600\\,\\text{J}}{3\\,\\text{s}} = 200\\,\\text{W}$.</p>"
+        }
        }
       },
       {
        "titel": "Wirkungsgrad: wie gut die Umwandlung gelingt",
-       "html": "<p>Kein Gerät wandelt Energie vollständig in die gewünschte Form um. Wie gut das gelingt, sagt der <strong>Wirkungsgrad</strong>: $$\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}.$$ $\\eta$ (&bdquo;eta&ldquo;) hat keine Einheit und wird meist in Prozent angegeben. Wegen der Energieentwertung gilt <strong>immer</strong> $\\eta < 100\\,\\%$. Eine $60\\,\\text{W}$-Glühlampe macht aus $60\\,\\text{J}$ pro Sekunde nur etwa $3\\,\\text{J}$ Licht ($\\eta = 5\\,\\%$) &mdash; der Rest heizt das Zimmer.</p>",
-       "check": {
-        "frage": "Ein Motor nimmt $1000\\,\\text{J}$ auf und liefert $800\\,\\text{J}$ als Bewegungsenergie. Wie groß ist sein Wirkungsgrad?",
-        "antwort": "$\\eta = \\frac{800\\,\\text{J}}{1000\\,\\text{J}} = 0{,}8 = 80\\,\\%$."
-       }
+       "kern": "Wie gut eine Umwandlung gelingt, sagt der <strong>Wirkungsgrad</strong>: $$\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}.$$ $\\eta$ („eta\") hat keine Einheit und wird meist in Prozent angegeben.",
+       "figur": "<svg viewBox=\"0 0 320 150\" xmlns=\"http://www.w3.org/2000/svg\"><text class=\"achsentitel\" x=\"10\" y=\"16\">Wirkungsgrad: Nutzen / Zufuhr</text><rect class=\"dreieck\" x=\"20\" y=\"40\" width=\"36\" height=\"80\"/><text class=\"beschriftung\" x=\"38\" y=\"134\" text-anchor=\"middle\">zugeführt</text><text class=\"label-a\" x=\"38\" y=\"35\" text-anchor=\"middle\">100 %</text><line class=\"pfeil\" x1=\"58\" y1=\"70\" x2=\"150\" y2=\"70\"/><polygon class=\"pfeil\" points=\"156,70 148,66 148,74\"/><rect class=\"gerade-b\" x=\"160\" y=\"58\" width=\"60\" height=\"24\"/><text class=\"label-b\" x=\"190\" y=\"50\" text-anchor=\"middle\">Nutzen (klein)</text><line class=\"pfeil\" x1=\"58\" y1=\"100\" x2=\"150\" y2=\"115\"/><polygon class=\"pfeil\" points=\"156,117 147,114 150,122\"/><rect class=\"hilfslinie\" x=\"160\" y=\"100\" width=\"120\" height=\"24\" fill-opacity=\"0.3\"/><text class=\"label-a\" x=\"220\" y=\"135\" text-anchor=\"middle\">Wärme (Verlust)</text></svg>",
+       "figurAlt": "Ein voller Balken zugeführte Energie (100 Prozent); ein Pfeil führt zu einem kleinen Nutzen-Balken, ein zweiter Pfeil zu einem großen Wärme-Verlust-Balken.",
+       "beispiel": {
+        "aufgabe": "Ein Motor nimmt $1000\\,\\text{J}$ auf und liefert $800\\,\\text{J}$ als Bewegungsenergie. Wie groß ist sein Wirkungsgrad?",
+        "schritte": [
+         "Formel: $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$",
+         "Einsetzen: $\\eta = \\frac{800\\,\\text{J}}{1000\\,\\text{J}}$",
+         "Ergebnis: $\\eta = 0{,}8 = 80\\,\\%$ – die übrigen $20\\,\\%$ werden als Wärme entwertet"
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Eine Glühlampe nimmt $60\\,\\text{J}$ auf, davon werden $9\\,\\text{J}$ zu Licht. Wie groß ist $\\eta$?",
+         "loesung": "<p>$\\eta = \\frac{9\\,\\text{J}}{60\\,\\text{J}} = 0{,}15 = 15\\,\\%$.</p>"
+        }
+       },
+       "details": "<p>Wegen der Energieentwertung gilt <strong>immer</strong> $\\eta < 100\\,\\%$. Eine $60\\,\\text{W}$-Glühlampe macht aus $60\\,\\text{J}$ pro Sekunde nur etwa $3\\,\\text{J}$ Licht ($\\eta \\approx 5\\,\\%$) – der Rest heizt das Zimmer. Eine LED schafft rund $30\\,\\%$.</p>"
       }
      ],
-     "merksatz": "Leistung ist $P = \\frac{E}{t}$ (in Watt). Der Wirkungsgrad $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$ (in Prozent) gibt an, wie gut die Umwandlung gelingt &mdash; wegen der Energieentwertung <strong>immer</strong> unter $100\\,\\%$.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Energiefluss und Wirkungsgrad",
-       "pfad": "simulationen/physik/energiefluss/index.html",
-       "vorhersage": "Wenn du den Wirkungsgrad eines Wandlers erhöhst: Wie verändert sich der Anteil der Energie, der als Wärme verloren geht? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Stelle einen niedrigen und einen hohen Wirkungsgrad ein und vergleiche, wie breit der Nutz- und der Verluststrom werden.",
-        "Lies ab: Welcher Anteil der zugeführten Energie wird bei einer Glühlampe zu Licht, welcher zu Wärme?",
-        "Begründe mit der Simulation, warum $\\eta = 100\\,\\%$ in der Praxis nie erreicht wird."
-       ]
-      }
-     ],
+     "stolperstein": "Ein Wirkungsgrad über $100\\,\\%$ ist <strong>unmöglich</strong>. Nach dem Energieerhaltungssatz kann ein Gerät nie mehr Nutzenergie abgeben, als es aufnimmt – $E_{\\text{nutz}} \\le E_{\\text{zu}}$, also $\\eta \\le 100\\,\\%$. Wer mit „$120\\,\\%$ Wirkungsgrad\" wirbt, verspricht ein unmögliches Perpetuum mobile.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum der Wirkungsgrad eines Geräts nie über $100\\,\\%$ liegen kann.",
+     "merksatz": "Leistung ist $P = \\frac{E}{t}$ (in Watt). Der Wirkungsgrad $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$ (in Prozent) gibt an, wie gut die Umwandlung gelingt – wegen der Energieentwertung <strong>immer</strong> unter $100\\,\\%$.",
      "selbstcheck": [
       {
        "frage": "Schreibe die Formeln für Leistung und Wirkungsgrad auf.",
        "antwort": "$P = \\frac{E}{t}$ (Einheit Watt) und $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$ (einheitenlos, meist in Prozent)."
       },
       {
-       "frage": "Eine Lampe nimmt $60\\,\\text{J}$ auf, davon werden $9\\,\\text{J}$ zu Licht. Wie groß ist der Wirkungsgrad?",
-       "antwort": "$\\eta = \\frac{9\\,\\text{J}}{60\\,\\text{J}} = 0{,}15 = 15\\,\\%$."
+       "frage": "Ein Gerät wandelt $600\\,\\text{J}$ in $4\\,\\text{s}$ um. Wie groß ist die Leistung?",
+       "antwort": "$P = \\frac{600\\,\\text{J}}{4\\,\\text{s}} = 150\\,\\text{W}$."
       },
       {
        "frage": "Warum kann der Wirkungsgrad nie $100\\,\\%$ erreichen?",
-       "antwort": "Weil bei jeder Umwandlung ein Teil der Energie entwertet wird &mdash; meist als thermische Energie, die nicht zum Nutzen beiträgt. Es bleibt also immer $\\eta < 100\\,\\%$."
+       "antwort": "Weil bei jeder Umwandlung ein Teil der Energie entwertet wird – meist als Wärme, die nicht zum Nutzen beiträgt. Es bleibt also immer $\\eta < 100\\,\\%$."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Energiefluss und Wirkungsgrad",
+       "pfad": "simulationen/physik/energiefluss/index.html",
+       "auftraege": [
+        "Stelle einen niedrigen und einen hohen Wirkungsgrad ein und vergleiche, wie breit der Nutz- und der Verluststrom werden.",
+        "Lies ab: Welcher Anteil der zugeführten Energie wird bei einer Glühlampe zu Licht, welcher zu Wärme?",
+        "Begründe mit der Simulation, warum $\\eta = 100\\,\\%$ in der Praxis nie erreicht wird."
+       ]
       }
      ]
     },
@@ -803,19 +916,25 @@
        "ids": [
         "ph-09-en-107"
        ]
+      },
+      {
+       "quelle": "ph-09-energie-quantitativ",
+       "ids": [
+        "ph-09-en-009"
+       ]
       }
      ],
      "standard": [
       {
        "quelle": "ph-09-energie-quantitativ",
        "ids": [
-        "ph-09-en-006",
-        "ph-09-en-009"
+        "ph-09-en-006"
        ]
       },
       {
        "quelle": "lernbuero/ph-09-energie-quantitativ",
        "ids": [
+        "ph-09-en-204",
         "ph-09-en-303"
        ]
       }
@@ -834,10 +953,11 @@
        ]
       }
      ],
-     "partner": "Diskutiert: Eine Glühlampe hat $η ≈ 5\\,\\%$, eine LED $η ≈ 30\\,\\%$. Wie groß ist der Unterschied im Alltag?"
+     "partner": "Diskutiert: Eine Glühlampe hat $\\eta \\approx 5\\,\\%$, eine LED $\\eta \\approx 30\\,\\%$. Wie groß ist der Unterschied im Alltag?"
     },
     "sichern": {
      "zeit": 7,
+     "rueckbezug": "Zurück zu den beiden Treppenläufern: Die <strong>schnelle</strong> Person erbringt die größere Leistung. Beide wandeln dieselbe Energie um, aber $P = \\frac{E}{t}$ wird bei kleinerer Zeit $t$ größer. Gleiche Energie, weniger Zeit = mehr Leistung.",
      "aufgaben": [
       {
        "quelle": "ph-09-energie-quantitativ",
@@ -883,15 +1003,15 @@
    "thema": "ph-09-halbleiter-und-elektronik",
    "themaPfad": "physik/klasse-9/halbleiter-und-elektronik/",
    "anker": "#hl-leiter",
+   "stopppunkt": null,
    "ziele": [
     "Ich kann Leiter, Halbleiter und Isolatoren unterscheiden und Beispiele nennen.",
     "Ich kann erklären, warum Halbleiter bei Wärme besser leiten als im kalten Zustand."
    ],
-   "stopppunkt": null,
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Vorwissen aus Klasse 8: Widerstand und Schaltungen — was bedeutet elektrischer Widerstand?",
+     "hinweis": "Vorwissen aus Klasse 8: Elektrischer Widerstand sagt, wie stark ein Bauteil den Strom hemmt — je kleiner der Widerstand, desto leichter fließt der Strom.",
      "aufgaben": [
       {
        "quelle": "ph-08-widerstand-und-schaltungen",
@@ -900,68 +1020,94 @@
         "ph-08-wid-002"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Ein Kupferdraht und ein Stück <strong>Silizium</strong> werden gleich stark erwärmt. Beim Kupferdraht weiß man aus Klasse 8: heiß bedeutet größerer Widerstand. Das Silizium aber verhält sich anders.</p>",
+      "figur": "<svg viewBox=\"0 0 360 170\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"4\" y=\"4\" width=\"352\" height=\"162\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><g><rect x=\"22\" y=\"40\" width=\"92\" height=\"58\" rx=\"5\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"68\" y=\"30\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text)\">Leiter</text><circle cx=\"40\" cy=\"58\" r=\"4\" fill=\"var(--physik)\"/><circle cx=\"62\" cy=\"52\" r=\"4\" fill=\"var(--physik)\"/><circle cx=\"86\" cy=\"60\" r=\"4\" fill=\"var(--physik)\"/><circle cx=\"50\" cy=\"78\" r=\"4\" fill=\"var(--physik)\"/><circle cx=\"74\" cy=\"82\" r=\"4\" fill=\"var(--physik)\"/><circle cx=\"98\" cy=\"76\" r=\"4\" fill=\"var(--physik)\"/><circle cx=\"32\" cy=\"86\" r=\"4\" fill=\"var(--physik)\"/><text x=\"68\" y=\"114\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text-leise)\">viele freie e⁻</text><rect x=\"134\" y=\"40\" width=\"92\" height=\"58\" rx=\"5\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"180\" y=\"30\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text)\">Halbleiter</text><circle cx=\"158\" cy=\"62\" r=\"4\" fill=\"var(--physik)\"/><circle cx=\"198\" cy=\"80\" r=\"4\" fill=\"var(--physik)\"/><text x=\"180\" y=\"114\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text-leise)\">wenige, mehr bei Wärme</text><rect x=\"246\" y=\"40\" width=\"92\" height=\"58\" rx=\"5\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"292\" y=\"30\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text)\">Isolator</text><text x=\"292\" y=\"74\" text-anchor=\"middle\" font-size=\"13\" fill=\"var(--text-leise)\">— keine —</text><text x=\"292\" y=\"114\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text-leise)\">keine freien e⁻</text></g><text x=\"180\" y=\"150\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"var(--text)\">Punkte = frei bewegliche Elektronen (e⁻)</text></svg>",
+      "figurAlt": "Drei Blöcke nebeneinander: Leiter mit vielen Punkten (frei bewegliche Elektronen), Halbleiter mit nur wenigen Punkten, Isolator ganz ohne Punkte.",
+      "vorhersage": "Was passiert mit dem <em>Widerstand des Siliziums</em>, wenn es wärmer wird?",
+      "optionen": [
+       "wird größer (wie beim Kupfer)",
+       "wird kleiner",
+       "bleibt unverändert"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#hl-leiter",
-     "text": "Lies zuerst den Abschnitt zu Leiter, Halbleiter und Isolator samt Merkkasten, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/halbleiter-und-elektronik/index.html#hl-leiter"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
-       "titel": "Wovon hängt das Leiten ab?",
-       "html": "<p>Ob ein Stoff Strom leitet, hängt davon ab, ob er <strong>frei bewegliche Ladungsträger</strong> besitzt &mdash; denn Strom heißt: Ladungen wandern. In <strong>Metallen</strong> wie Kupfer oder Silber sind unzählige Elektronen frei unterwegs: gute Leiter mit kleinem Widerstand. In <strong>Isolatoren</strong> wie Porzellan, Glas oder Kunststoff sitzen fast alle Elektronen fest in ihren Bindungen &mdash; es fließt praktisch kein Strom.</p>",
-       "check": {
+       "titel": "Leiten heißt: freie Ladungsträger",
+       "kern": "Strom fließt nur, wenn <strong>frei bewegliche Ladungsträger</strong> da sind. In <strong>Metallen</strong> (Kupfer, Silber) wimmelt es von freien Elektronen — gute Leiter. In <strong>Isolatoren</strong> (Porzellan, Glas, Kunststoff) sitzen fast alle Elektronen fest — es fließt kaum Strom.",
+       "minicheck": {
         "frage": "Warum leitet Kupfer gut, Porzellan aber nicht?",
-        "antwort": "Kupfer hat sehr viele frei bewegliche Elektronen, die als Ladungsträger wandern können. In Porzellan sitzen fast alle Elektronen fest in Bindungen, daher fließt kaum Strom."
+        "antwort": "Kupfer hat sehr viele frei bewegliche Elektronen, Porzellan fast keine — deshalb fließt im Kupfer Strom, im Porzellan praktisch nicht."
        }
       },
       {
-       "titel": "Silizium als Halbleiter",
-       "html": "<p>Dazwischen liegen die <strong>Halbleiter</strong>. Der wichtigste ist <strong>Silizium</strong>. Jedes Siliziumatom hat <strong>vier Außenelektronen</strong> und bindet sich damit an vier Nachbarn &mdash; so entsteht ein regelmäßiges Kristallgitter, in dem zunächst alle Elektronen in Bindungen festsitzen. Reines, kaltes Silizium leitet deshalb fast gar nicht.</p>",
-       "check": {
-        "frage": "Wie viele Außenelektronen hat ein Siliziumatom, und was macht es damit?",
-        "antwort": "Vier Außenelektronen. Damit bindet es sich an vier Nachbaratome und bildet ein regelmäßiges Kristallgitter."
-       }
+       "titel": "Silizium ist ein Halbleiter",
+       "kern": "Dazwischen liegt der <strong>Halbleiter Silizium</strong>: Jedes Atom hat <strong>vier Außenelektronen</strong> und bindet sich an vier Nachbarn. Reines, kaltes Silizium leitet deshalb fast gar nicht.",
+       "details": "<p>Im Siliziumkristall sind zunächst alle vier Außenelektronen jedes Atoms in Bindungen festgelegt — es gibt fast keine freien Ladungsträger. „Halbleiter“ heißt also nicht „halb so guter Leiter“, sondern: mal fast Isolator, mal recht guter Leiter — je nach Wärme, Licht und (später) Dotierung.</p>"
       },
       {
        "titel": "Wärme und Licht erzeugen Ladungsträger",
-       "html": "<p>Schon etwas <strong>Wärme oder Licht</strong> reicht, um einzelne Elektronen aus ihren Bindungen zu reißen. Jedes losgerissene Elektron kann nun wandern &mdash; und hinterlässt eine Lücke, ein <strong>Loch</strong>. Je wärmer oder heller, desto mehr freie Ladungsträger, desto besser leitet der Halbleiter. Beim Metall ist es umgekehrt: Dort stört Erwärmung die ohnehin freien Elektronen nur.</p>",
-       "check": {
-        "frage": "Ein heißer Kupferdraht leitet schlechter, ein heißer Siliziumstab besser. Wie erklärst du diesen Gegensatz?",
-        "antwort": "In Kupfer sind die Elektronen schon frei; Wärme stört nur ihre Bewegung. In Silizium reißt Wärme zusätzliche Elektronen los und schafft so neue Ladungsträger &mdash; deshalb leitet es wärmer besser."
+       "kern": "Schon etwas <strong>Wärme oder Licht</strong> reißt Elektronen aus den Bindungen. Jedes losgerissene Elektron wandert und hinterlässt ein <strong>Loch</strong>. Je wärmer, desto mehr freie Ladungsträger — der Halbleiter leitet <strong>besser</strong>.",
+       "minicheck": {
+        "frage": "Ein heißer Kupferdraht leitet schlechter, ein heißer Siliziumstab besser. Wie passt das zusammen?",
+        "antwort": "In Kupfer sind die Elektronen schon frei; Wärme stört nur ihre Bewegung (Widerstand steigt). In Silizium reißt Wärme zusätzliche Elektronen los — neue Ladungsträger, der Widerstand sinkt."
        }
       }
      ],
-     "merksatz": "Leiter (z. B. Kupfer) haben viele frei bewegliche Elektronen, Isolatoren (z. B. Porzellan) fast keine. <strong>Halbleiter</strong> wie Silizium liegen dazwischen: Bei Wärme oder Licht werden zusätzliche Ladungsträger frei &mdash; sie leiten dann <strong>besser</strong>.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Atomhülle",
-       "pfad": "simulationen/physik/atomhülle/index.html",
-       "vorhersage": "Silizium hat vier Außenelektronen. Wie ist die äußerste Schale besetzt, und warum bindet sich Silizium gerade an vier Nachbarn? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Stelle die Ordnungszahl von Silizium ($14$) ein und zähle die Elektronen in der äußersten Schale.",
-        "Vergleiche mit einem Metall wie Natrium ($11$): Wie viele Außenelektronen hat es, und was sagt das über das Leiten?",
-        "Notiere, warum gerade die Zahl der Außenelektronen darüber entscheidet, wie ein Stoff sich elektrisch verhält."
-       ]
-      }
-     ],
+     "stolperstein": "„Halbleiter“ heißt <strong>nicht</strong> „halb so guter Leiter“. Und das Temperaturverhalten ist <strong>gegenläufig</strong> zum Metall: Metall heiß → leitet schlechter, Halbleiter heiß → leitet besser.",
+     "darstellungen": {
+      "titel": "Dieselbe Einteilung in mehreren Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Ein Kabel leitet (Metall), die Steckergehäuse-Hülle nicht (Kunststoff), der Chip dazwischen ist Silizium."
+       },
+       {
+        "art": "Beispielstoffe",
+        "html": "<table class='lb-mini-tab'><tr><th>Leiter</th><th>Halbleiter</th><th>Isolator</th></tr><tr><td>Kupfer, Silber</td><td>Silizium, Germanium</td><td>Porzellan, Glas, Kunststoff</td></tr></table>"
+       },
+       {
+        "art": "Tabelle",
+        "html": "<table class='lb-mini-tab'><tr><th>Stoff</th><td>Leiter</td><td>Halbleiter</td><td>Isolator</td></tr><tr><th>freie Ladungsträger</th><td>sehr viele</td><td>wenige, mehr bei Wärme/Licht</td><td>fast keine</td></tr></table>"
+       },
+       {
+        "art": "Merksatz",
+        "text": "Leitfähigkeit hängt an der Zahl frei beweglicher Ladungsträger — beim Halbleiter steuerbar."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre einer Mitschülerin in einem Satz, warum sich ein heißer Halbleiter genau umgekehrt zu einem heißen Metalldraht verhält.",
+     "merksatz": "<strong>Leiter</strong> (Kupfer) haben viele freie Elektronen, <strong>Isolatoren</strong> (Porzellan) fast keine. <strong>Halbleiter</strong> wie Silizium liegen dazwischen: Bei Wärme oder Licht werden zusätzliche Ladungsträger frei — sie leiten dann <strong>besser</strong>.",
      "selbstcheck": [
       {
        "frage": "Was unterscheidet einen Leiter von einem Isolator?",
-       "antwort": "Ein Leiter besitzt viele frei bewegliche Ladungsträger (Elektronen), ein Isolator fast keine. Deshalb fließt im Leiter Strom, im Isolator praktisch nicht."
+       "antwort": "Ein Leiter besitzt viele frei bewegliche Ladungsträger (Elektronen), ein Isolator fast keine — deshalb fließt im Leiter Strom, im Isolator praktisch nicht."
       },
       {
        "frage": "Warum leitet reines, kaltes Silizium fast nicht?",
-       "antwort": "Weil alle vier Außenelektronen jedes Atoms in Bindungen festsitzen; es gibt zunächst kaum frei bewegliche Ladungsträger."
+       "antwort": "Weil alle vier Außenelektronen jedes Atoms in Bindungen festsitzen; es gibt kaum frei bewegliche Ladungsträger."
       },
       {
-       "frage": "Was ist ein Loch im Halbleiter?",
-       "antwort": "Die Lücke, die ein losgerissenes Elektron in einer Bindung hinterlässt. Sie verhält sich wie ein positiver Ladungsträger, weil Nachbarelektronen hineinspringen können."
+       "frage": "Wie verhält sich der Widerstand eines Halbleiters bei Erwärmung?",
+       "antwort": "Er sinkt: Wärme setzt zusätzliche Ladungsträger frei, der Halbleiter leitet besser — anders als ein Metall."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Atomhülle: Außenelektronen zählen",
+       "material": "Simulation „Atomhülle“ (simulationen/physik/atomhuelle/index.html).",
+       "auftraege": [
+        "Stelle die Ordnungszahl von Silizium (14) ein und zähle die Elektronen in der äußersten Schale.",
+        "Vergleiche mit einem Metall wie Natrium (11): Wie viele Außenelektronen hat es?",
+        "Notiere, warum die Zahl der Außenelektronen mitentscheidet, wie ein Stoff sich elektrisch verhält."
+       ]
       }
      ]
     },
@@ -972,7 +1118,7 @@
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
        "ids": [
         "ph-09-hl-101",
-        "ph-09-hl-116"
+        "ph-09-hl-111"
        ]
       }
      ],
@@ -980,7 +1126,8 @@
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
        "ids": [
-        "ph-09-hl-102"
+        "ph-09-hl-102",
+        "ph-09-hl-116"
        ]
       }
      ],
@@ -996,15 +1143,16 @@
     },
     "sichern": {
      "zeit": 7,
+     "rueckbezug": "Zurück zum Anfang: Der Siliziumstab leitet beim Erwärmen <strong>besser</strong> (Widerstand sinkt) — genau umgekehrt zum Kupferdraht. Grund: Wärme reißt im Halbleiter zusätzliche Elektronen los. War deine Vermutung richtig?",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
        "ids": [
-        "ph-09-hl-111"
+        "ph-09-hl-201"
        ]
       }
      ],
-     "transfer": "Was würdest du wählen, wenn du einen temperaturabhängigen Sensor bauen willst — einen Metalldraht oder ein Halbleiterstück? Begründe kurz."
+     "transfer": "Was würdest du für einen temperaturabhängigen Sensor wählen — einen Metalldraht oder ein Halbleiterstück? Begründe kurz."
     },
     "extra": {
      "zeit": 5,
@@ -1041,84 +1189,95 @@
    "thema": "ph-09-halbleiter-und-elektronik",
    "themaPfad": "physik/klasse-9/halbleiter-und-elektronik/",
    "anker": "#hl-dotieren",
+   "stopppunkt": null,
    "ziele": [
     "Ich kann n- und p-Dotierung erklären und den Unterschied benennen.",
     "Ich weiß, welche Fremdatome bei der n- bzw. p-Dotierung verwendet werden."
    ],
-   "stopppunkt": null,
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Wiederholung aus Lektion 6: Was ist ein Halbleiter — und warum leitet Silizium bei Wärme besser?",
+     "hinweis": "Wiederholung aus Lektion 6: Reines Silizium leitet erst bei Wärme oder Licht gut, weil dann zusätzliche freie Ladungsträger entstehen.",
      "aufgaben": [
       {
        "quelle": "ph-09-halbleiter-und-elektronik",
        "ids": [
-        "ph-09-hl-001"
+        "ph-09-hl-002"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>In der Technik will man nicht auf Zufall durch Wärme angewiesen sein, sondern die Leitfähigkeit <strong>gezielt einstellen</strong>. Dazu baut man planmäßig winzige Mengen <strong>Fremdatome</strong> ins Siliziumgitter ein — oft nur eines auf eine Million Siliziumatome.</p>",
+      "figur": "<svg viewBox=\"0 0 360 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"4\" y=\"4\" width=\"352\" height=\"172\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><text x=\"92\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text)\">n-Dotierung</text><line x1=\"92\" y1=\"92\" x2=\"52\" y2=\"64\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"92\" y1=\"92\" x2=\"132\" y2=\"64\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"92\" y1=\"92\" x2=\"52\" y2=\"120\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"92\" y1=\"92\" x2=\"132\" y2=\"120\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><circle cx=\"52\" cy=\"64\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"52\" y=\"68\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"132\" cy=\"64\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"132\" y=\"68\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"52\" cy=\"120\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"52\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"132\" cy=\"120\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"132\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"92\" cy=\"92\" r=\"12\" fill=\"var(--flaeche)\" stroke=\"var(--physik)\" stroke-width=\"2\"/><text x=\"92\" y=\"96\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--physik)\">P</text><circle cx=\"120\" cy=\"100\" r=\"4.5\" fill=\"var(--physik)\"/><text x=\"92\" y=\"160\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text-leise)\">Phosphor: 1 freies e⁻ (negativ)</text><line x1=\"180\" y1=\"40\" x2=\"180\" y2=\"150\" stroke=\"var(--linie)\" stroke-width=\"1.2\"/><text x=\"268\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text)\">p-Dotierung</text><line x1=\"268\" y1=\"92\" x2=\"228\" y2=\"64\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"268\" y1=\"92\" x2=\"308\" y2=\"64\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"268\" y1=\"92\" x2=\"228\" y2=\"120\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"268\" y1=\"92\" x2=\"308\" y2=\"120\" stroke=\"var(--text)\" stroke-width=\"1.6\" stroke-dasharray=\"3 3\"/><circle cx=\"228\" cy=\"64\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"228\" y=\"68\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"308\" cy=\"64\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"308\" y=\"68\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"228\" cy=\"120\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"228\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"308\" cy=\"120\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"308\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"268\" cy=\"92\" r=\"12\" fill=\"var(--flaeche)\" stroke=\"var(--physik)\" stroke-width=\"2\"/><text x=\"268\" y=\"96\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--physik)\">B</text><circle cx=\"296\" cy=\"100\" r=\"4.5\" fill=\"none\" stroke=\"var(--physik)\" stroke-width=\"1.8\" stroke-dasharray=\"2 2\"/><text x=\"268\" y=\"160\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text-leise)\">Bor: 1 Loch (positiv)</text></svg>",
+      "figurAlt": "Zwei Gitterausschnitte. Links n-Dotierung: ein Phosphoratom (P) zwischen vier Silizium-Nachbarn, daneben ein zusätzliches freies Elektron als ausgefüllter Punkt. Rechts p-Dotierung: ein Boratom (B), eine Bindung bleibt unbesetzt — ein Loch als offener gestrichelter Kreis.",
+      "vorhersage": "Du baust ein Phosphoratom mit <em>fünf</em> Außenelektronen statt eines Siliziumatoms (vier) ins Gitter. Was passiert mit dem fünften Elektron?",
+      "optionen": [
+       "es bleibt frei beweglich",
+       "es zerfällt",
+       "es macht den Kristall negativ geladen"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#hl-dotieren",
-     "text": "Lies zuerst den Abschnitt zum Dotieren samt Gitterbild und Merkkasten, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/halbleiter-und-elektronik/index.html#hl-dotieren"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
-       "titel": "Warum dotieren?",
-       "html": "<p>Für die Technik ist purer Zufall durch Wärme zu wenig &mdash; man will die Leitfähigkeit <strong>gezielt einstellen</strong>. Der Trick heißt <strong>Dotieren</strong>: In den hochreinen Siliziumkristall werden winzige Mengen <strong>Fremdatome</strong> eingebaut, oft nur eines auf eine Million Siliziumatome. Diese gezielte Verunreinigung verändert die Leitfähigkeit dramatisch.</p>",
-       "check": {
+       "titel": "Dotieren = gezielter Einbau von Fremdatomen",
+       "kern": "<strong>Dotieren</strong> heißt: planmäßig winzige Mengen Fremdatome in hochreines Silizium einbauen. Diese gezielte „Verunreinigung“ verändert die Leitfähigkeit dramatisch.",
+       "minicheck": {
         "frage": "Was versteht man unter Dotieren?",
-        "antwort": "Den gezielten Einbau winziger Mengen von Fremdatomen in einen hochreinen Halbleiterkristall, um seine Leitfähigkeit gezielt einzustellen."
+        "antwort": "Den gezielten Einbau winziger Mengen Fremdatome in einen reinen Halbleiterkristall, um seine Leitfähigkeit einzustellen."
        }
       },
       {
        "titel": "n-Dotierung mit Phosphor",
-       "html": "<p>Baut man ein <strong>Phosphoratom</strong> ein, bringt es <strong>fünf Außenelektronen</strong> mit &mdash; eines mehr, als die vier Bindungen zu den Nachbarn aufnehmen können. Das fünfte Elektron findet keinen Platz und ist <strong>frei beweglich</strong>. Es transportiert Ladung als <strong>negativer</strong> Ladungsträger &mdash; daher das &bdquo;n&ldquo;.</p>",
-       "check": {
+       "kern": "Ein <strong>Phosphoratom</strong> bringt <strong>fünf Außenelektronen</strong> mit — eines mehr, als die vier Bindungen brauchen. Das fünfte ist <strong>frei beweglich</strong> und transportiert Ladung als <strong>negativer</strong> Träger („n“).",
+       "figur": "<svg viewBox=\"0 0 360 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"4\" y=\"4\" width=\"352\" height=\"172\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><text x=\"92\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text)\">n-Dotierung</text><line x1=\"92\" y1=\"92\" x2=\"52\" y2=\"64\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"92\" y1=\"92\" x2=\"132\" y2=\"64\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"92\" y1=\"92\" x2=\"52\" y2=\"120\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"92\" y1=\"92\" x2=\"132\" y2=\"120\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><circle cx=\"52\" cy=\"64\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"52\" y=\"68\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"132\" cy=\"64\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"132\" y=\"68\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"52\" cy=\"120\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"52\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"132\" cy=\"120\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"132\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"92\" cy=\"92\" r=\"12\" fill=\"var(--flaeche)\" stroke=\"var(--physik)\" stroke-width=\"2\"/><text x=\"92\" y=\"96\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--physik)\">P</text><circle cx=\"120\" cy=\"100\" r=\"4.5\" fill=\"var(--physik)\"/><text x=\"92\" y=\"160\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text-leise)\">Phosphor: 1 freies e⁻ (negativ)</text><line x1=\"180\" y1=\"40\" x2=\"180\" y2=\"150\" stroke=\"var(--linie)\" stroke-width=\"1.2\"/><text x=\"268\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text)\">p-Dotierung</text><line x1=\"268\" y1=\"92\" x2=\"228\" y2=\"64\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"268\" y1=\"92\" x2=\"308\" y2=\"64\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"268\" y1=\"92\" x2=\"228\" y2=\"120\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><line x1=\"268\" y1=\"92\" x2=\"308\" y2=\"120\" stroke=\"var(--text)\" stroke-width=\"1.6\" stroke-dasharray=\"3 3\"/><circle cx=\"228\" cy=\"64\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"228\" y=\"68\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"308\" cy=\"64\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"308\" y=\"68\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"228\" cy=\"120\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"228\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"308\" cy=\"120\" r=\"11\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.6\"/><text x=\"308\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text)\">Si</text><circle cx=\"268\" cy=\"92\" r=\"12\" fill=\"var(--flaeche)\" stroke=\"var(--physik)\" stroke-width=\"2\"/><text x=\"268\" y=\"96\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--physik)\">B</text><circle cx=\"296\" cy=\"100\" r=\"4.5\" fill=\"none\" stroke=\"var(--physik)\" stroke-width=\"1.8\" stroke-dasharray=\"2 2\"/><text x=\"268\" y=\"160\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text-leise)\">Bor: 1 Loch (positiv)</text></svg>",
+       "figurAlt": "Links der n-Teil des Gitterbildes: Phosphor (P) mit vier Bindungen zu Silizium-Nachbarn und einem fünften, freien Elektron als ausgefülltem Punkt.",
+       "minicheck": {
         "frage": "Warum liefert ein eingebautes Phosphoratom ein frei bewegliches Elektron?",
-        "antwort": "Phosphor hat fünf Außenelektronen, aber nur vier werden für die Bindungen zu den Siliziumnachbarn gebraucht. Das fünfte bleibt übrig und ist frei beweglich."
+        "antwort": "Phosphor hat fünf Außenelektronen, aber nur vier werden für die Bindungen gebraucht. Das fünfte bleibt übrig und ist frei beweglich."
        }
       },
       {
-       "titel": "p-Dotierung mit Bor und die Neutralität",
-       "html": "<p>Ein <strong>Boratom</strong> hat nur <strong>drei Außenelektronen</strong> &mdash; eine Bindung bleibt unbesetzt: ein <strong>Loch</strong>. Ein Elektron aus einer Nachbarbindung springt hinein, dann wandert das Loch weiter &mdash; wie ein <strong>positiver</strong> Ladungsträger (&bdquo;p&ldquo;). Wichtig: Phosphor und Bor werden als ganze, neutrale Atome eingebaut, deshalb bleibt der Kristall nach außen <strong>elektrisch neutral</strong>. Verändert hat sich nur die Zahl der beweglichen Ladungsträger.</p>",
-       "check": {
-        "frage": "Warum ist ein dotierter Siliziumkristall nach außen elektrisch neutral?",
-        "antwort": "Weil die Fremdatome (Phosphor, Bor) als ganze, neutrale Atome eingebaut werden. Es kommen keine zusätzlichen Ladungen hinzu &mdash; nur die Zahl der beweglichen Ladungsträger ändert sich."
+       "titel": "p-Dotierung mit Bor — und die Neutralität",
+       "kern": "Ein <strong>Boratom</strong> hat nur <strong>drei Außenelektronen</strong> — eine Bindung bleibt leer: ein <strong>Loch</strong>, das sich wie ein <strong>positiver</strong> Träger verhält („p“). Da Phosphor und Bor als ganze, neutrale Atome eingebaut werden, bleibt der Kristall nach außen <strong>elektrisch neutral</strong>.",
+       "details": "<p>Ein Nachbarelektron springt in das Loch, dann ist das Loch dort, wo das Elektron herkam — so wandert das Loch durch den Kristall. Wichtig bleibt: Es kommen keine zusätzlichen Ladungen hinzu, nur zusätzliche bewegliche Ladungsträger. „n“ und „p“ sagen also nichts über die Gesamtladung aus, sondern nur über die Art des beweglichen Trägers.</p>",
+       "minicheck": {
+        "frage": "Warum ist ein dotierter Kristall nach außen elektrisch neutral?",
+        "antwort": "Weil die Fremdatome als ganze, neutrale Atome eingebaut werden — es kommen keine Ladungen hinzu, nur bewegliche Ladungsträger."
        }
       }
      ],
-     "merksatz": "Dotieren ist der gezielte Einbau von Fremdatomen. <strong>n-Dotierung</strong> (Phosphor, 5 Außenelektronen) liefert frei bewegliche <strong>Elektronen</strong>, <strong>p-Dotierung</strong> (Bor, 3 Außenelektronen) erzeugt <strong>Löcher</strong>. Der Kristall bleibt dabei nach außen <strong>neutral</strong>.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Das Gitter aufzeichnen",
-       "material": "Papier und Stift &mdash; ein Denk- und Zeichenexperiment.",
-       "vorhersage": "Zeichne, was passiert, wenn statt eines Siliziumatoms ein Phosphoratom (5 Außenelektronen) ins Gitter kommt. Wo bleibt das fünfte Elektron?",
-       "auftraege": [
-        "Zeichne ein Siliziumatom mit vier Bindungen zu vier Nachbarn.",
-        "Ersetze das mittlere Atom durch Phosphor und markiere das übrige, frei bewegliche Elektron.",
-        "Zeichne dieselbe Stelle mit Bor (3 Außenelektronen) und markiere das entstehende Loch &mdash; erkläre den Unterschied in einem Satz."
-       ]
-      }
-     ],
+     "stolperstein": "Dotiertes Silizium ist insgesamt <strong>elektrisch neutral</strong>. „n“ und „p“ benennen nur die Art des beweglichen Ladungsträgers (Elektron bzw. Loch) — <strong>nicht</strong> eine Gesamtladung. Ein p-dotierter Kristall ist also nicht positiv geladen.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein n-dotierter Kristall freie Elektronen enthält und trotzdem nach außen neutral bleibt.",
+     "merksatz": "Dotieren = gezielter Einbau von Fremdatomen. <strong>n-Dotierung</strong> (Phosphor, 5 Außenelektronen) liefert frei bewegliche <strong>Elektronen</strong>, <strong>p-Dotierung</strong> (Bor, 3 Außenelektronen) erzeugt <strong>Löcher</strong>. Der Kristall bleibt dabei nach außen <strong>neutral</strong>.",
      "selbstcheck": [
       {
        "frage": "Welches Fremdatom nutzt man für n-, welches für p-Dotierung, und wie viele Außenelektronen haben sie?",
        "antwort": "n-Dotierung: Phosphor mit 5 Außenelektronen. p-Dotierung: Bor mit 3 Außenelektronen."
       },
       {
-       "frage": "Welcher bewegliche Ladungsträger entsteht bei der n-, welcher bei der p-Dotierung?",
+       "frage": "Welcher bewegliche Ladungsträger entsteht bei n-, welcher bei p-Dotierung?",
        "antwort": "Bei n-Dotierung ein frei bewegliches Elektron (negativ), bei p-Dotierung ein Loch (verhält sich positiv)."
       },
       {
        "frage": "Ändert das Dotieren die Gesamtladung des Kristalls?",
-       "antwort": "Nein. Die Fremdatome sind selbst neutral; der Kristall bleibt nach außen elektrisch neutral. Nur die Zahl der beweglichen Ladungsträger steigt."
+       "antwort": "Nein. Die Fremdatome sind selbst neutral; der Kristall bleibt nach außen elektrisch neutral — nur die Zahl der beweglichen Ladungsträger steigt."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Das Gitter selbst zeichnen",
+       "material": "Papier und Stift — ein Denk- und Zeichenexperiment.",
+       "auftraege": [
+        "Zeichne ein Siliziumatom mit vier Bindungen zu vier Nachbarn.",
+        "Ersetze das mittlere Atom durch Phosphor (5 Außenelektronen) und markiere das übrige, frei bewegliche Elektron.",
+        "Zeichne dieselbe Stelle mit Bor (3 Außenelektronen), markiere das entstehende Loch und erkläre den Unterschied in einem Satz."
+       ]
       }
      ]
     },
@@ -1153,6 +1312,7 @@
     },
     "sichern": {
      "zeit": 7,
+     "rueckbezug": "Zurück zur Einstiegsfrage: Das fünfte Phosphor-Elektron <strong>bleibt frei beweglich</strong> und macht das Silizium n-leitend — der Kristall bleibt dabei neutral. Genau so stellt man die Leitfähigkeit gezielt ein.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
@@ -1161,7 +1321,7 @@
        ]
       }
      ],
-     "transfer": "Ein Freund sagt: p-Dotiert bedeutet, der Kristall trägt eine positive Gesamtladung. Was stimmt an dieser Aussage nicht?"
+     "transfer": "Ein Freund sagt: „p-dotiert bedeutet, der Kristall trägt eine positive Gesamtladung.“ Was stimmt an dieser Aussage nicht?"
     },
     "extra": {
      "zeit": 5,
@@ -1198,15 +1358,15 @@
    "thema": "ph-09-halbleiter-und-elektronik",
    "themaPfad": "physik/klasse-9/halbleiter-und-elektronik/",
    "anker": "#hl-diode",
+   "stopppunkt": null,
    "ziele": [
     "Ich kann erklären, warum eine Diode Strom nur in eine Richtung lässt.",
     "Ich kann den Vorwiderstand einer LED mit dem ohmschen Gesetz berechnen."
    ],
-   "stopppunkt": null,
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Wiederholung aus Lektion 7: Was unterscheidet n- und p-Dotierung?",
+     "hinweis": "Wiederholung aus Lektion 7: n-Dotierung (Phosphor) liefert freie Elektronen, p-Dotierung (Bor) liefert Löcher — der Kristall bleibt neutral.",
      "aufgaben": [
       {
        "quelle": "ph-09-halbleiter-und-elektronik",
@@ -1214,79 +1374,92 @@
         "ph-09-hl-003"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Eine LED hängt mit einer Batterie in einem Stromkreis und leuchtet. Du <strong>vertauschst die beiden Anschlüsse der Batterie</strong> (polst um) — sonst bleibt alles gleich.</p>",
+      "figur": "<svg viewBox=\"0 0 360 180\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"d8e\" markerWidth=\"9\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 Z\" fill=\"var(--physik)\"/></marker></defs><rect x=\"4\" y=\"4\" width=\"174\" height=\"172\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><text x=\"91\" y=\"26\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"var(--text)\">Durchlassrichtung</text><path d=\"M34 48 H70 M104 48 H150 M34 130 H150 M34 48 V130 M150 48 V130\" fill=\"none\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"22\" y1=\"72\" x2=\"46\" y2=\"72\" stroke=\"var(--text)\" stroke-width=\"2.5\"/><line x1=\"28\" y1=\"86\" x2=\"40\" y2=\"86\" stroke=\"var(--text)\" stroke-width=\"5\"/><text x=\"14\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">+</text><text x=\"14\" y=\"92\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text)\">−</text><polygon points=\"70,36 70,60 100,48\" fill=\"var(--physik)\"/><line x1=\"100\" y1=\"36\" x2=\"100\" y2=\"60\" stroke=\"var(--physik)\" stroke-width=\"3.2\"/><circle cx=\"150\" cy=\"89\" r=\"13\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"140.8\" y1=\"79.8\" x2=\"159.2\" y2=\"98.2\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"159.2\" y1=\"79.8\" x2=\"140.8\" y2=\"98.2\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"62\" y1=\"48\" x2=\"46\" y2=\"48\" stroke=\"var(--physik)\" stroke-width=\"2.4\" marker-end=\"url(#d8e)\"/><line x1=\"104\" y1=\"130\" x2=\"120\" y2=\"130\" stroke=\"var(--physik)\" stroke-width=\"2.4\" marker-end=\"url(#d8e)\"/><text x=\"91\" y=\"156\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text)\">Strom fließt — Lampe an</text><text x=\"91\" y=\"170\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text-leise)\">Elektronen: − → +</text><rect x=\"186\" y=\"4\" width=\"170\" height=\"172\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><text x=\"271\" y=\"26\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"var(--text)\">Sperrrichtung</text><path d=\"M216 48 H252 M286 48 H332 M216 130 H332 M216 48 V130 M332 48 V130\" fill=\"none\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"204\" y1=\"72\" x2=\"228\" y2=\"72\" stroke=\"var(--text)\" stroke-width=\"2.5\"/><line x1=\"210\" y1=\"86\" x2=\"222\" y2=\"86\" stroke=\"var(--text)\" stroke-width=\"5\"/><text x=\"196\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">+</text><text x=\"196\" y=\"92\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text)\">−</text><polygon points=\"286,36 286,60 256,48\" fill=\"var(--physik)\"/><line x1=\"256\" y1=\"36\" x2=\"256\" y2=\"60\" stroke=\"var(--physik)\" stroke-width=\"3.2\"/><circle cx=\"332\" cy=\"89\" r=\"13\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"322.8\" y1=\"79.8\" x2=\"341.2\" y2=\"98.2\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"341.2\" y1=\"79.8\" x2=\"322.8\" y2=\"98.2\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"271\" y=\"156\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text)\">Kein Strom — Lampe aus</text><text x=\"271\" y=\"170\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text-leise)\">Sperrschicht blockiert</text></svg>",
+      "figurAlt": "Zwei gleiche Stromkreise mit Batterie, Diode und Lampe. Links Durchlassrichtung: das Diodendreieck zeigt vom Pluspol weg, Elektronenpfeile fließen von Minus nach Plus, die Lampe leuchtet. Rechts dieselbe Diode umgepolt in Sperrrichtung: das Dreieck zeigt gegen die Stromrichtung, kein Strom, die Lampe bleibt dunkel.",
+      "vorhersage": "Leuchtet die LED nach dem Umpolen genauso weiter, oder bleibt sie dunkel?",
+      "optionen": [
+       "sie leuchtet genauso weiter",
+       "sie bleibt dunkel",
+       "sie leuchtet schwächer"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#hl-diode",
-     "text": "Lies zuerst den Abschnitt zur Diode samt den Schaltbildern für Durchlass- und Sperrrichtung, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/halbleiter-und-elektronik/index.html#hl-diode"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Der pn-Übergang und die Sperrschicht",
-       "html": "<p>Was passiert, wenn eine <strong>p-</strong> und eine <strong>n-dotierte</strong> Schicht direkt aneinandergrenzen? An der Grenze springen freie Elektronen aus der n-Schicht in die Löcher der p-Schicht. In einer dünnen Grenzschicht gibt es dann weder freie Elektronen noch Löcher &mdash; sie wirkt wie eine eingebaute Sperre und heißt <strong>Sperrschicht</strong>. Dieses Bauteil mit pn-Übergang und zwei Anschlüssen ist die <strong>Diode</strong>.</p>",
-       "check": {
+       "kern": "Grenzen eine <strong>p-</strong> und eine <strong>n-Schicht</strong> aneinander, springen an der Grenze Elektronen in Löcher. Dort bleiben keine freien Träger — eine eingebaute <strong>Sperrschicht</strong>. Dieses Bauteil mit pn-Übergang ist die <strong>Diode</strong>.",
+       "minicheck": {
         "frage": "Wie entsteht die Sperrschicht in einer Diode?",
-        "antwort": "Am pn-Übergang springen freie Elektronen aus der n-Schicht in die Löcher der p-Schicht. In der dünnen Grenzschicht bleiben dann keine frei beweglichen Ladungsträger übrig &mdash; das ist die Sperrschicht."
+        "antwort": "Am pn-Übergang springen freie Elektronen aus der n-Schicht in die Löcher der p-Schicht. In der dünnen Grenzschicht bleiben keine beweglichen Ladungsträger — das ist die Sperrschicht."
        }
       },
       {
        "titel": "Durchlass- und Sperrrichtung",
-       "html": "<p><strong>Durchlassrichtung:</strong> Liegt der Pluspol an der p-Schicht und der Minuspol an der n-Schicht, drückt die Quelle Ladungsträger in die Grenzschicht &mdash; die Sperrschicht wird abgebaut, und ab etwa $0{,}7\\,\\text{V}$ fließt Strom. Die <strong>Elektronen</strong> wandern dann vom Minuspol (n-Schicht) durch die Diode zum Pluspol, also von $-$ nach $+$. <strong>Sperrrichtung:</strong> Umgepolt zieht die Quelle die Ladungsträger von der Grenze weg, die Sperrschicht wird breiter &mdash; es fließt kein Strom.</p>",
-       "check": {
+       "kern": "<strong>Plus an p</strong> (Anode): Die Sperrschicht wird abgebaut, ab der Schwellenspannung (Silizium ≈ $0{,}7\\,\\text{V}$) fließt Strom — die <strong>Elektronen</strong> wandern von − nach +. <strong>Umgepolt</strong> zieht die Quelle die Träger von der Grenze weg, die Sperrschicht wächst — kein Strom.",
+       "figur": "<svg viewBox=\"0 0 360 180\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"d8e\" markerWidth=\"9\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 Z\" fill=\"var(--physik)\"/></marker></defs><rect x=\"4\" y=\"4\" width=\"174\" height=\"172\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><text x=\"91\" y=\"26\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"var(--text)\">Durchlassrichtung</text><path d=\"M34 48 H70 M104 48 H150 M34 130 H150 M34 48 V130 M150 48 V130\" fill=\"none\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"22\" y1=\"72\" x2=\"46\" y2=\"72\" stroke=\"var(--text)\" stroke-width=\"2.5\"/><line x1=\"28\" y1=\"86\" x2=\"40\" y2=\"86\" stroke=\"var(--text)\" stroke-width=\"5\"/><text x=\"14\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">+</text><text x=\"14\" y=\"92\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text)\">−</text><polygon points=\"70,36 70,60 100,48\" fill=\"var(--physik)\"/><line x1=\"100\" y1=\"36\" x2=\"100\" y2=\"60\" stroke=\"var(--physik)\" stroke-width=\"3.2\"/><circle cx=\"150\" cy=\"89\" r=\"13\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"140.8\" y1=\"79.8\" x2=\"159.2\" y2=\"98.2\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"159.2\" y1=\"79.8\" x2=\"140.8\" y2=\"98.2\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"62\" y1=\"48\" x2=\"46\" y2=\"48\" stroke=\"var(--physik)\" stroke-width=\"2.4\" marker-end=\"url(#d8e)\"/><line x1=\"104\" y1=\"130\" x2=\"120\" y2=\"130\" stroke=\"var(--physik)\" stroke-width=\"2.4\" marker-end=\"url(#d8e)\"/><text x=\"91\" y=\"156\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text)\">Strom fließt — Lampe an</text><text x=\"91\" y=\"170\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text-leise)\">Elektronen: − → +</text><rect x=\"186\" y=\"4\" width=\"170\" height=\"172\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><text x=\"271\" y=\"26\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"var(--text)\">Sperrrichtung</text><path d=\"M216 48 H252 M286 48 H332 M216 130 H332 M216 48 V130 M332 48 V130\" fill=\"none\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"204\" y1=\"72\" x2=\"228\" y2=\"72\" stroke=\"var(--text)\" stroke-width=\"2.5\"/><line x1=\"210\" y1=\"86\" x2=\"222\" y2=\"86\" stroke=\"var(--text)\" stroke-width=\"5\"/><text x=\"196\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">+</text><text x=\"196\" y=\"92\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text)\">−</text><polygon points=\"286,36 286,60 256,48\" fill=\"var(--physik)\"/><line x1=\"256\" y1=\"36\" x2=\"256\" y2=\"60\" stroke=\"var(--physik)\" stroke-width=\"3.2\"/><circle cx=\"332\" cy=\"89\" r=\"13\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"322.8\" y1=\"79.8\" x2=\"341.2\" y2=\"98.2\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"341.2\" y1=\"79.8\" x2=\"322.8\" y2=\"98.2\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"271\" y=\"156\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text)\">Kein Strom — Lampe aus</text><text x=\"271\" y=\"170\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text-leise)\">Sperrschicht blockiert</text></svg>",
+       "figurAlt": "Links Durchlassrichtung mit fließendem Strom und leuchtender Lampe, rechts dieselbe Diode in Sperrrichtung ohne Stromfluss.",
+       "minicheck": {
         "frage": "Warum fließt in Sperrrichtung kein Strom, obwohl die Batterie dieselbe Spannung liefert?",
-        "antwort": "Weil die Quelle umgepolt ist und die Ladungsträger von der Grenzschicht wegzieht. Die Sperrschicht wird dadurch breiter und unterbricht den Stromkreis."
+        "antwort": "Weil die Quelle umgepolt die Ladungsträger von der Grenzschicht wegzieht; die Sperrschicht wird breiter und unterbricht den Stromkreis."
        }
       },
       {
-       "titel": "Kennlinie und LED-Vorwiderstand",
-       "html": "<p>Die <strong>Kennlinie</strong> einer Diode ist keine Ursprungsgerade: In Durchlassrichtung bleibt der Strom zunächst nahe null und steigt erst ab der <strong>Knickspannung</strong> (Silizium rund $0{,}7\\,\\text{V}$) steil an &mdash; eine Diode ist also <strong>kein ohmscher Widerstand</strong>. Eine LED verträgt nur kleine Ströme (typisch $I = 20\\,\\text{mA}$); die überschüssige Spannung muss an einem <strong>Vorwiderstand</strong> abfallen, den man mit $R = \\frac{U}{I}$ berechnet.</p>",
-       "check": {
-        "frage": "An einem LED-Vorwiderstand sollen $U = 3\\,\\text{V}$ bei $I = 20\\,\\text{mA} = 0{,}020\\,\\text{A}$ abfallen. Wie groß ist $R$?",
-        "antwort": "$R = \\frac{U}{I} = \\frac{3\\,\\text{V}}{0{,}020\\,\\text{A}} = 150\\,\\Omega$."
+       "titel": "LED und Vorwiderstand: R_V berechnen",
+       "kern": "Eine <strong>LED</strong> (Leuchtdiode) leitet ab ihrer Schwellenspannung und verträgt nur kleine Ströme (typisch $I = 20\\,\\text{mA} = 0{,}020\\,\\text{A}$). Die übrige Spannung fällt am <strong>Vorwiderstand</strong> ab: $$R_V = \\frac{U_{\\text{ges}} - U_{\\text{LED}}}{I}.$$",
+       "figur": "<svg viewBox=\"0 0 300 150\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"lvE\" markerWidth=\"9\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 Z\" fill=\"var(--physik)\"/></marker></defs><rect x=\"4\" y=\"4\" width=\"292\" height=\"142\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><path d=\"M48 44 H96 M150 44 H210 M252 44 H252 M48 116 H252 M48 44 V116 M252 44 V116\" fill=\"none\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"36\" y1=\"66\" x2=\"60\" y2=\"66\" stroke=\"var(--text)\" stroke-width=\"2.5\"/><line x1=\"42\" y1=\"80\" x2=\"54\" y2=\"80\" stroke=\"var(--text)\" stroke-width=\"5\"/><text x=\"28\" y=\"70\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text)\">+</text><text x=\"28\" y=\"86\" text-anchor=\"middle\" font-size=\"14\" fill=\"var(--text)\">−</text><rect x=\"96\" y=\"34\" width=\"54\" height=\"20\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"123\" y=\"26\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text-leise)\">Vorwiderstand R_V</text><polygon points=\"210,32 210,56 240,44\" fill=\"var(--physik)\"/><line x1=\"240\" y1=\"32\" x2=\"240\" y2=\"56\" stroke=\"var(--physik)\" stroke-width=\"3.2\"/><line x1=\"226\" y1=\"26\" x2=\"234\" y2=\"16\" stroke=\"var(--physik)\" stroke-width=\"1.8\" marker-end=\"url(#lvE)\"/><line x1=\"236\" y1=\"26\" x2=\"244\" y2=\"16\" stroke=\"var(--physik)\" stroke-width=\"1.8\" marker-end=\"url(#lvE)\"/><text x=\"225\" y=\"70\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text-leise)\">LED</text><line x1=\"148\" y1=\"116\" x2=\"168\" y2=\"116\" stroke=\"var(--physik)\" stroke-width=\"2.4\" marker-end=\"url(#lvE)\"/><text x=\"150\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text)\">R_V und LED in Reihe · Elektronen: − → +</text></svg>",
+       "figurAlt": "Stromkreis mit Batterie, einem Vorwiderstand (Rechteck) und einer LED (Diodendreieck mit zwei kleinen Lichtpfeilen) in Reihe. Elektronenpfeil zeigt den Fluss von Minus nach Plus.",
+       "beispiel": {
+        "aufgabe": "Eine rote LED ($U_{\\text{LED}} = 2{,}0\\,\\text{V}$, $I = 20\\,\\text{mA} = 0{,}020\\,\\text{A}$) soll an einer $9{,}0\\,\\text{V}$-Batterie leuchten. Berechne den Vorwiderstand $R_V$.",
+        "schritte": [
+         "Spannung am Vorwiderstand: $U_R = U_{\\text{ges}} - U_{\\text{LED}} = 9{,}0\\,\\text{V} - 2{,}0\\,\\text{V} = 7{,}0\\,\\text{V}$.",
+         "Ohmsches Gesetz: $R_V = \\frac{U_R}{I} = \\frac{7{,}0\\,\\text{V}}{0{,}020\\,\\text{A}}$.",
+         "$R_V = 350\\,\\Omega$."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: dieselbe rote LED ($2{,}0\\,\\text{V}$, $20\\,\\text{mA}$) an einer $6{,}0\\,\\text{V}$-Batterie. Wie groß ist $R_V$?",
+         "loesung": "<p>$U_R = 6{,}0\\,\\text{V} - 2{,}0\\,\\text{V} = 4{,}0\\,\\text{V}$, also $R_V = \\frac{4{,}0\\,\\text{V}}{0{,}020\\,\\text{A}} = 200\\,\\Omega$.</p>"
+        }
+       },
+       "minicheck": {
+        "frage": "Warum darf eine LED nie ohne Vorwiderstand direkt an die Batterie?",
+        "antwort": "Weil die Diode den Strom nicht selbst begrenzt — oberhalb der Schwellenspannung würde ein viel zu großer Strom fließen und die LED durchbrennen."
        }
       }
      ],
-     "merksatz": "Eine <strong>Diode</strong> (pn-Übergang mit Sperrschicht) lässt Strom nur in <strong>Durchlassrichtung</strong> ab der Knickspannung (Silizium $\\approx 0{,}7\\,\\text{V}$); in <strong>Sperrrichtung</strong> sperrt sie. Sie ist kein ohmscher Widerstand. Den LED-Vorwiderstand berechnet man mit $R = \\frac{U}{I}$.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "U-I-Kennlinie einer Diode",
-       "pfad": "experimente/physik/ui-kennlinie/index.html",
-       "vorhersage": "Wie sieht die Kennlinie einer Diode aus? Steigt der Strom von Anfang an gleichmäßig mit der Spannung &mdash; oder erst ab einer bestimmten Spannung? Skizziere deine Vermutung.",
-       "auftraege": [
-        "Nimm die Kennlinie in Durchlassrichtung auf: Ab welcher Spannung steigt der Strom merklich an?",
-        "Vergleiche mit einem ohmschen Widerstand: Warum ist die Diodenkennlinie keine Ursprungsgerade?",
-        "Lies die Knickspannung ab und vergleiche sie mit dem Wert $0{,}7\\,\\text{V}$ für Silizium."
-       ]
-      },
-      {
-       "typ": "simulation",
-       "titel": "LED mit Vorwiderstand",
-       "pfad": "simulationen/physik/led-vorwiderstand/index.html",
-       "vorhersage": "Was passiert mit der LED, wenn der Vorwiderstand zu klein ist? Und wenn er zu groß ist? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Stelle verschiedene Vorwiderstände ein und beobachte Stromstärke und Helligkeit der LED.",
-        "Berechne für eine Vorgabe den passenden Vorwiderstand mit $R = \\frac{U}{I}$ und prüfe ihn in der Simulation.",
-        "Begründe, warum eine LED ohne Vorwiderstand zerstört würde."
-       ]
-      }
-     ],
+     "stolperstein": "Eine LED schließt man <strong>nie ohne Vorwiderstand</strong> an: Die Diode begrenzt den Strom nicht selbst. Und die <strong>Polung</strong> muss stimmen — falsch herum leitet sie gar nicht.",
+     "selbsterklaerung": "Erkläre in einem Satz, woran man im Schaltbild erkennt, ob eine Diode in Durchlass- oder in Sperrrichtung eingebaut ist.",
+     "merksatz": "Eine <strong>Diode</strong> (pn-Übergang mit Sperrschicht) lässt Strom nur in <strong>Durchlassrichtung</strong> ab der Schwellenspannung (Silizium ≈ $0{,}7\\,\\text{V}$); in <strong>Sperrrichtung</strong> sperrt sie. Den LED-Vorwiderstand berechnet man mit $R_V = \\frac{U_{\\text{ges}} - U_{\\text{LED}}}{I}$.",
      "selbstcheck": [
       {
-       "frage": "Erkläre in einem Satz, warum eine Diode den Strom nur in eine Richtung lässt.",
-       "antwort": "Weil in Durchlassrichtung die Sperrschicht abgebaut wird und Strom fließt, in Sperrrichtung dagegen die Sperrschicht breiter wird und den Stromkreis unterbricht."
+       "frage": "Erkläre in einem Satz, warum eine Diode Strom nur in eine Richtung lässt.",
+       "antwort": "Weil in Durchlassrichtung die Sperrschicht abgebaut wird und Strom fließt, in Sperrrichtung dagegen die Sperrschicht wächst und den Stromkreis unterbricht."
       },
       {
-       "frage": "Was bedeutet die Knickspannung bei einer Silizium-Diode?",
-       "antwort": "Erst ab etwa $0{,}7\\,\\text{V}$ in Durchlassrichtung steigt der Strom merklich an. Darunter fließt praktisch kein Strom &mdash; deshalb ist die Kennlinie keine Ursprungsgerade."
+       "frage": "Eine LED ($U_{\\text{LED}} = 2{,}0\\,\\text{V}$) soll bei $I = 20\\,\\text{mA}$ an $5{,}0\\,\\text{V}$ leuchten. Wie groß ist $R_V$?",
+       "antwort": "$U_R = 5{,}0\\,\\text{V} - 2{,}0\\,\\text{V} = 3{,}0\\,\\text{V}$, also $R_V = \\frac{3{,}0\\,\\text{V}}{0{,}020\\,\\text{A}} = 150\\,\\Omega$."
       },
       {
-       "frage": "Berechne den Vorwiderstand für $U = 2\\,\\text{V}$ und $I = 20\\,\\text{mA}$.",
-       "antwort": "$R = \\frac{U}{I} = \\frac{2\\,\\text{V}}{0{,}020\\,\\text{A}} = 100\\,\\Omega$."
+       "frage": "Was passiert mit einer LED, die ohne Vorwiderstand direkt an eine Batterie kommt?",
+       "antwort": "Es fließt ein viel zu großer Strom — die LED brennt durch. Der Vorwiderstand begrenzt den Strom auf einen sicheren Wert."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "LED mit Vorwiderstand erproben",
+       "material": "Simulation „LED mit Vorwiderstand“ (simulationen/physik/led-vorwiderstand/index.html).",
+       "auftraege": [
+        "Stelle verschiedene Vorwiderstände ein und beobachte Stromstärke und Helligkeit der LED.",
+        "Berechne mit $R_V = \\frac{U_{\\text{ges}} - U_{\\text{LED}}}{I}$ den passenden Widerstand für $20\\,\\text{mA}$ und prüfe ihn in der Simulation.",
+        "Begründe, warum eine LED ohne Vorwiderstand zerstört würde."
+       ]
       }
      ]
     },
@@ -1304,30 +1477,30 @@
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
        "ids": [
-        "ph-09-hl-106",
-        "ph-09-hl-301"
+        "ph-09-hl-106"
+       ]
+      },
+      {
+       "quelle": "ph-09-halbleiter-und-elektronik",
+       "ids": [
+        "ph-09-hl-005"
        ]
       }
      ],
      "plus": [
       {
-       "quelle": "ph-09-halbleiter-und-elektronik",
-       "ids": [
-        "ph-09-hl-005",
-        "ph-09-hl-008"
-       ]
-      },
-      {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
        "ids": [
+        "ph-09-hl-301",
         "ph-09-hl-304"
        ]
       }
      ],
-     "partner": "Gebt euch gegenseitig eine Aufgabe: Nennt eine Spannung und eine LED-Spannung — der andere berechnet den Vorwiderstand."
+     "partner": "Gebt euch gegenseitig eine Aufgabe: Nennt Quellenspannung und LED-Spannung — der andere berechnet den Vorwiderstand $R_V = \\frac{U_{\\text{ges}} - U_{\\text{LED}}}{I}$."
     },
     "sichern": {
      "zeit": 7,
+     "rueckbezug": "Zurück zur Einstiegsfrage: Nach dem Umpolen <strong>bleibt die LED dunkel</strong> — jetzt liegt sie in Sperrrichtung, die Sperrschicht blockiert den Strom. Die Diode ist eben eine Einbahnstraße.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
@@ -1336,7 +1509,7 @@
        ]
       }
      ],
-     "transfer": "Eine Lampe leuchtet nicht, obwohl Batterie und Diode eingebaut sind. Nenne zwei mögliche Ursachen und wie du sie prüfen würdest."
+     "transfer": "Eine LED leuchtet nicht, obwohl Batterie und Vorwiderstand eingebaut sind. Nenne zwei mögliche Ursachen und wie du sie prüfen würdest."
     },
     "extra": {
      "zeit": 5,
@@ -1356,7 +1529,7 @@
     },
     {
      "bereich": "Erkenntnisgewinnung",
-     "text": "Du deutest die Dioden-Kennlinie und erkennst an der Knickspannung, dass eine Diode kein ohmscher Widerstand ist."
+     "text": "Du erkennst an der Schwellenspannung, dass eine Diode den Strom nicht selbst begrenzt, und begründest den Vorwiderstand."
     },
     {
      "bereich": "Fachwissen",
@@ -1373,17 +1546,17 @@
    "thema": "ph-09-halbleiter-und-elektronik",
    "themaPfad": "physik/klasse-9/halbleiter-und-elektronik/",
    "anker": "#hl-transistor",
+   "stopppunkt": {
+    "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Was macht ein Schalter? Warum könnte man ihn durch einen Transistor ersetzen?"
+   },
    "ziele": [
     "Ich kann die Funktion von Basis, Kollektor und Emitter beschreiben.",
     "Ich kann erklären, wie ein Transistor als elektronischer Schalter arbeitet."
    ],
-   "stopppunkt": {
-    "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Was macht ein Schalter? Warum könnte man ihn durch einen Transistor ersetzen?"
-   },
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Wiederholung aus Lektion 8: Wie funktioniert die Diode als Einbahn­straße?",
+     "hinweis": "Wiederholung aus Lektion 8: Die Diode lässt Strom nur in Durchlassrichtung — sie kann aber nicht gesteuert werden.",
      "aufgaben": [
       {
        "quelle": "ph-09-halbleiter-und-elektronik",
@@ -1391,56 +1564,56 @@
         "ph-09-hl-004"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Straßenlaternen gehen abends von selbst an — niemand legt einen Schalter um. Im Inneren sitzt ein <strong>Lichtsensor (LDR)</strong>, dessen winziger Strom aber viel zu schwach ist, um eine Laterne direkt zu versorgen. Dazwischen steckt ein <strong>Transistor</strong>.</p>",
+      "figur": "<svg viewBox=\"0 0 320 190\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"trE\" markerWidth=\"9\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 Z\" fill=\"var(--physik)\"/></marker></defs><rect x=\"4\" y=\"4\" width=\"312\" height=\"182\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"95\" r=\"34\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"142\" y1=\"75\" x2=\"142\" y2=\"115\" stroke=\"var(--text)\" stroke-width=\"3\"/><line x1=\"92\" y1=\"95\" x2=\"142\" y2=\"95\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"100\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">B</text><line x1=\"142\" y1=\"82\" x2=\"168\" y2=\"66\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"168\" y1=\"66\" x2=\"168\" y2=\"34\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"182\" y=\"50\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">C</text><line x1=\"142\" y1=\"108\" x2=\"168\" y2=\"124\" stroke=\"var(--text)\" stroke-width=\"2\"/><polygon points=\"168,124 158,121 163,131\" fill=\"var(--text)\"/><line x1=\"168\" y1=\"124\" x2=\"168\" y2=\"156\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"182\" y=\"146\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">E</text><line x1=\"110\" y1=\"95\" x2=\"128\" y2=\"95\" stroke=\"var(--physik)\" stroke-width=\"2\" marker-end=\"url(#trE)\"/><text x=\"92\" y=\"112\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--text-leise)\">kleiner I_B</text><line x1=\"168\" y1=\"52\" x2=\"168\" y2=\"40\" stroke=\"var(--physik)\" stroke-width=\"4\" marker-end=\"url(#trE)\"/><text x=\"232\" y=\"40\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--text-leise)\">großer I_C</text><text x=\"150\" y=\"176\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text)\">Kleiner Basisstrom schaltet großen Kollektor-Emitter-Strom</text></svg>",
+      "figurAlt": "NPN-Transistorsymbol: ein Kreis mit senkrechtem Basisbalken, Anschluss Basis (B) links, Kollektor (C) oben, Emitter (E) unten mit nach außen zeigendem Pfeil. Ein dünner Pfeil zeigt den kleinen Basisstrom, ein dicker Pfeil den großen Kollektorstrom.",
+      "vorhersage": "Wie kann ein <em>kleiner</em> Strom an der Basis einen <em>viel größeren</em> Strom für die Laterne schalten?",
+      "optionen": [
+       "der Transistor erzeugt die Energie selbst",
+       "der kleine Strom steuert nur, die Energie kommt aus der Versorgung",
+       "das geht gar nicht"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#hl-transistor",
-     "text": "Lies zuerst den Abschnitt zum Transistor samt Dämmerungsschalter-Beispiel, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/halbleiter-und-elektronik/index.html#hl-transistor"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Drei Schichten, drei Anschlüsse",
-       "html": "<p>Die Diode kann Strom durchlassen oder sperren &mdash; aber nicht gesteuert werden. Das kann der <strong>Transistor</strong>: ein Halbleiterbauteil aus <strong>drei dotierten Schichten</strong> mit drei Anschlüssen &mdash; <strong>Basis (B)</strong>, <strong>Kollektor (C)</strong> und <strong>Emitter (E)</strong>.</p>",
-       "check": {
+       "kern": "Der <strong>Transistor</strong> besteht aus <strong>drei dotierten Schichten</strong> mit drei Anschlüssen: <strong>Basis (B)</strong>, <strong>Kollektor (C)</strong> und <strong>Emitter (E)</strong>.",
+       "figur": "<svg viewBox=\"0 0 320 190\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"trE\" markerWidth=\"9\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 Z\" fill=\"var(--physik)\"/></marker></defs><rect x=\"4\" y=\"4\" width=\"312\" height=\"182\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"95\" r=\"34\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"142\" y1=\"75\" x2=\"142\" y2=\"115\" stroke=\"var(--text)\" stroke-width=\"3\"/><line x1=\"92\" y1=\"95\" x2=\"142\" y2=\"95\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"100\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">B</text><line x1=\"142\" y1=\"82\" x2=\"168\" y2=\"66\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"168\" y1=\"66\" x2=\"168\" y2=\"34\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"182\" y=\"50\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">C</text><line x1=\"142\" y1=\"108\" x2=\"168\" y2=\"124\" stroke=\"var(--text)\" stroke-width=\"2\"/><polygon points=\"168,124 158,121 163,131\" fill=\"var(--text)\"/><line x1=\"168\" y1=\"124\" x2=\"168\" y2=\"156\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"182\" y=\"146\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text)\">E</text><line x1=\"110\" y1=\"95\" x2=\"128\" y2=\"95\" stroke=\"var(--physik)\" stroke-width=\"2\" marker-end=\"url(#trE)\"/><text x=\"92\" y=\"112\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--text-leise)\">kleiner I_B</text><line x1=\"168\" y1=\"52\" x2=\"168\" y2=\"40\" stroke=\"var(--physik)\" stroke-width=\"4\" marker-end=\"url(#trE)\"/><text x=\"232\" y=\"40\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--text-leise)\">großer I_C</text><text x=\"150\" y=\"176\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text)\">Kleiner Basisstrom schaltet großen Kollektor-Emitter-Strom</text></svg>",
+       "figurAlt": "NPN-Transistorsymbol mit beschrifteten Anschlüssen Basis (B) links, Kollektor (C) oben, Emitter (E) unten mit Emitterpfeil nach außen.",
+       "minicheck": {
         "frage": "Wie heißen die drei Anschlüsse eines Transistors?",
         "antwort": "Basis (B), Kollektor (C) und Emitter (E)."
        }
       },
       {
        "titel": "Ein kleiner Strom steuert einen großen",
-       "html": "<p>Die Regel ist einfach: <strong>Ohne Basisstrom sperrt der Transistor</strong> &mdash; zwischen Kollektor und Emitter fließt nichts. Fließt aber ein kleiner Strom in die Basis, schaltet der Transistor durch und lässt einen bis zu <strong>hundertmal größeren</strong> Strom vom Kollektor zum Emitter passieren. Ein winziges Signal steuert also einen kräftigen Strom &mdash; der Transistor arbeitet als <strong>elektronischer Schalter</strong>, ganz ohne bewegliche Teile.</p>",
-       "check": {
+       "kern": "<strong>Ohne Basisstrom sperrt</strong> der Transistor. Fließt ein kleiner Strom in die <strong>Basis</strong>, schaltet er durch und lässt einen bis zu <strong>hundertmal größeren</strong> Strom vom Kollektor zum Emitter passieren — ein <strong>Schalter ohne bewegliche Teile</strong>.",
+       "details": "<p>Wichtig: Der Transistor „verstärkt“ den Strom nicht aus dem Nichts. Die Energie des großen Kollektorstroms kommt aus der <strong>Versorgungsspannung</strong>; der kleine Basisstrom <strong>steuert</strong> nur, ob dieser große Strom fließt — wie ein Finger, der einen Lichtschalter drückt.</p>",
+       "minicheck": {
         "frage": "Was passiert mit dem Transistor, wenn kein Basisstrom fließt?",
-        "antwort": "Er sperrt &mdash; zwischen Kollektor und Emitter fließt kein Strom."
+        "antwort": "Er sperrt — zwischen Kollektor und Emitter fließt kein Strom."
        }
       },
       {
-       "titel": "Beispiel Dämmerungsschalter",
-       "html": "<p>Straßenlaternen schalten abends von selbst ein &mdash; mit einem <strong>LDR</strong> (lichtabhängiger Widerstand) und einem Transistor. Solange es hell ist, leitet der LDR gut und führt den Steuerstrom an der Basis vorbei: kein Basisstrom, der Transistor sperrt, die Laterne ist aus. Wird es dunkel, wird der LDR hochohmig &mdash; nun fließt ein kleiner Basisstrom, der Transistor schaltet durch, und der große Kollektorstrom lässt die Laterne leuchten.</p>",
-       "check": {
-        "frage": "Was übernimmt beim Transistor die Rolle deines Fingers an einem normalen Lichtschalter?",
-        "antwort": "Der kleine Basisstrom: Er entscheidet wie ein Finger, ob der große Kollektorstrom fließt &mdash; nur eben elektronisch und ohne bewegliche Teile."
+       "titel": "Sensorschaltung: der Dämmerungsschalter",
+       "kern": "Mit einem <strong>LDR</strong> (lichtabhängiger Widerstand) wird der Transistor zum Dämmerungsschalter: Bei Helligkeit ist der LDR niederohmig, kein Basisstrom, Laterne aus. Bei Dunkelheit wird der LDR hochohmig, ein Basisstrom fließt, der Transistor schaltet durch — die Laterne leuchtet.",
+       "details": "<p>Genauso baut man einen Temperaturschalter mit einem <strong>NTC</strong> (Heißleiter): Wird es zu warm, sinkt sein Widerstand, ein Basisstrom fließt, der Transistor schaltet z. B. einen Lüfter ein. Der Sensor liefert nur das schwache Steuersignal — schalten tut der Transistor.</p>",
+       "minicheck": {
+        "frage": "Was übernimmt beim Transistor die Rolle deines Fingers an einem Lichtschalter?",
+        "antwort": "Der kleine Basisstrom: Er entscheidet, ob der große Kollektorstrom fließt — nur eben elektronisch und ohne bewegliche Teile."
        }
       }
      ],
-     "merksatz": "Ein <strong>Transistor</strong> hat drei Anschlüsse: <strong>Basis</strong>, <strong>Kollektor</strong>, <strong>Emitter</strong>. Ein kleiner <strong>Basisstrom</strong> schaltet einen viel größeren <strong>Kollektorstrom</strong> frei &mdash; ohne Basisstrom sperrt er. So wirkt er als <strong>Schalter ohne bewegliche Teile</strong>.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Dämmerungsschalter durchdenken",
-       "material": "Ein Denkexperiment mit Papier; optional ein LDR und eine Taschenlampe zum Beobachten.",
-       "vorhersage": "Was muss mit dem Widerstand des LDR passieren, damit die Laterne bei Dunkelheit angeht? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Beschreibe Schritt für Schritt, was bei Helligkeit am LDR, an der Basis und am Transistor passiert.",
-        "Wiederhole das für Dunkelheit &mdash; was ändert sich am Widerstand des LDR und am Basisstrom?",
-        "Erkläre, warum der schwache Sensorstrom die Laterne nicht direkt versorgen könnte, der Transistor aber das Schalten übernimmt."
-       ]
-      }
-     ],
+     "stolperstein": "Der Transistor <strong>verstärkt Strom nicht aus dem Nichts</strong>. Die Energie des großen Kollektorstroms kommt aus der <strong>Versorgungsspannung</strong> — die Basis <strong>steuert</strong> nur, ob er fließt.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum man sagt, der Transistor „steuert“ statt „erzeugt“ den großen Strom.",
+     "merksatz": "Ein <strong>Transistor</strong> hat drei Anschlüsse: <strong>Basis</strong>, <strong>Kollektor</strong>, <strong>Emitter</strong>. Ein kleiner <strong>Basisstrom</strong> schaltet einen viel größeren <strong>Kollektorstrom</strong> frei — ohne Basisstrom sperrt er. So wirkt er als Schalter ohne bewegliche Teile.",
      "selbstcheck": [
       {
        "frage": "Nenne die drei Anschlüsse eines Transistors und ihre Aufgabe in einem Satz.",
@@ -1448,11 +1621,23 @@
       },
       {
        "frage": "Warum nennt man den Transistor einen Schalter ohne bewegliche Teile?",
-       "antwort": "Weil er den großen Kollektorstrom allein durch den kleinen Basisstrom ein- und ausschaltet &mdash; ohne dass sich mechanisch etwas bewegt, und das millionenfach pro Sekunde."
+       "antwort": "Weil er den großen Kollektorstrom allein durch den kleinen Basisstrom ein- und ausschaltet — ohne mechanische Bewegung, und sehr schnell."
       },
       {
        "frage": "Welche Rolle spielt der LDR im Dämmerungsschalter?",
-       "antwort": "Er ist der Sensor: Im Hellen leitet er gut und hält den Basisstrom klein (Transistor sperrt), im Dunklen wird er hochohmig, sodass ein Basisstrom fließt und der Transistor durchschaltet."
+       "antwort": "Er ist der Sensor: Im Hellen niederohmig (kein Basisstrom, Transistor sperrt), im Dunklen hochohmig (Basisstrom fließt, Transistor schaltet durch)."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Dämmerungsschalter durchdenken",
+       "material": "Ein Denkexperiment mit Papier; optional ein LDR und eine Taschenlampe.",
+       "auftraege": [
+        "Beschreibe Schritt für Schritt, was bei Helligkeit am LDR, an der Basis und am Transistor passiert.",
+        "Wiederhole das für Dunkelheit — was ändert sich am Widerstand des LDR und am Basisstrom?",
+        "Erkläre, warum der schwache Sensorstrom die Laterne nicht direkt versorgen kann, der Transistor das Schalten aber übernimmt."
+       ]
       }
      ]
     },
@@ -1479,15 +1664,21 @@
       {
        "quelle": "ph-09-halbleiter-und-elektronik",
        "ids": [
-        "ph-09-hl-009",
         "ph-09-hl-010"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
+       "ids": [
+        "ph-09-hl-302"
        ]
       }
      ],
-     "partner": "Erklärt euch: Warum kann der schwache LDR-Sensor-Strom die Straßenlaterne nicht direkt einschalten — und was übernimmt der Transistor?"
+     "partner": "Erklärt euch: Warum kann der schwache LDR-Sensorstrom die Straßenlaterne nicht direkt einschalten — und was übernimmt der Transistor?"
     },
     "sichern": {
      "zeit": 7,
+     "rueckbezug": "Zurück zur Einstiegsfrage: Der kleine Basisstrom <strong>steuert</strong> nur — die Energie für die Laterne kommt aus der Versorgungsspannung. So schaltet ein winziges Sensorsignal einen kräftigen Strom.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
@@ -1496,7 +1687,7 @@
        ]
       }
      ],
-     "transfer": "Dein Handy-Akku ist leer. Im Akku sitzen Temperatursensoren (NTC) und Transistoren. Wofür könnten sie zuständig sein?"
+     "transfer": "In einem Handy-Akku sitzen Temperatursensoren (NTC) und Transistoren. Wofür könnten sie zusammen zuständig sein?"
     },
     "extra": {
      "zeit": 5,
@@ -1533,15 +1724,15 @@
    "thema": "ph-09-halbleiter-und-elektronik",
    "themaPfad": "physik/klasse-9/halbleiter-und-elektronik/",
    "anker": "#hl-alltag",
+   "stopppunkt": null,
    "ziele": [
     "Ich kann NTC, LDR, Solarzelle und Mikrochip beschreiben und ihre Funktion erklären.",
     "Ich kann die Solarzelle als Umkehrung der LED beschreiben."
    ],
-   "stopppunkt": null,
    "phasen": {
     "ankommen": {
      "zeit": 3,
-     "hinweis": "Wiederholung aus Lektion 9: Was macht ein Transistor — und was unterscheidet ihn von einem mechanischen Schalter?",
+     "hinweis": "Wiederholung aus Lektion 9: Ein kleiner Basisstrom steuert über den Transistor einen großen Strom — z. B. beim Dämmerungsschalter mit LDR.",
      "aufgaben": [
       {
        "quelle": "ph-09-halbleiter-und-elektronik",
@@ -1549,68 +1740,96 @@
         "ph-09-hl-007"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Eine <strong>LED</strong> macht aus Strom Licht. Auf dem Hausdach sitzt eine <strong>Solarzelle</strong> — ein flaches Stück Silizium mit pn-Übergang, fast wie eine sehr große Diode. Sonnenlicht fällt darauf.</p>",
+      "figur": "<svg viewBox=\"0 0 320 160\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"soE\" markerWidth=\"9\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 Z\" fill=\"var(--physik)\"/></marker></defs><rect x=\"4\" y=\"4\" width=\"312\" height=\"152\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><rect x=\"40\" y=\"62\" width=\"70\" height=\"20\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"72\" x2=\"110\" y2=\"72\" stroke=\"var(--linie)\" stroke-width=\"1\"/><text x=\"33\" y=\"60\" text-anchor=\"end\" font-size=\"9.5\" fill=\"var(--text-leise)\">n</text><text x=\"33\" y=\"80\" text-anchor=\"end\" font-size=\"9.5\" fill=\"var(--text-leise)\">p</text><text x=\"75\" y=\"98\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text-leise)\">pn-Übergang</text><line x1=\"50\" y1=\"30\" x2=\"58\" y2=\"58\" stroke=\"var(--physik)\" stroke-width=\"1.8\" marker-end=\"url(#soE)\"/><line x1=\"75\" y1=\"30\" x2=\"80\" y2=\"58\" stroke=\"var(--physik)\" stroke-width=\"1.8\" marker-end=\"url(#soE)\"/><line x1=\"100\" y1=\"30\" x2=\"100\" y2=\"58\" stroke=\"var(--physik)\" stroke-width=\"1.8\" marker-end=\"url(#soE)\"/><text x=\"75\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text)\">Licht</text><path d=\"M110 66 H150 M150 66 V44 M150 44 H250 M250 44 V72 M250 100 V120 M110 78 V120 M110 120 H250\" fill=\"none\" stroke=\"var(--text)\" stroke-width=\"2\"/><circle cx=\"250\" cy=\"86\" r=\"14\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"240\" y1=\"76\" x2=\"260\" y2=\"96\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"260\" y1=\"76\" x2=\"240\" y2=\"96\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"250\" y=\"118\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--text-leise)\">Verbraucher</text><line x1=\"190\" y1=\"44\" x2=\"208\" y2=\"44\" stroke=\"var(--physik)\" stroke-width=\"2.4\" marker-end=\"url(#soE)\"/><text x=\"160\" y=\"142\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text)\">Solarzelle: Licht → Strom (Umkehrung der LED)</text></svg>",
+      "figurAlt": "Eine Solarzelle als pn-Plättchen mit Lichtpfeilen, die von oben darauf fallen. Über Leitungen ist ein Verbraucher (Kreis mit X) angeschlossen, ein Strompfeil zeigt den fließenden Strom. Beschriftung: Solarzelle, Licht zu Strom als Umkehrung der LED.",
+      "vorhersage": "Was macht die Solarzelle mit dem Licht — im Vergleich zur LED?",
+      "optionen": [
+       "sie macht aus Licht Strom (umgekehrt zur LED)",
+       "sie macht aus Strom Licht (wie die LED)",
+       "sie speichert nur Wärme"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 12,
+     "zeit": 14,
      "anker": "#hl-alltag",
-     "text": "Lies zuerst den Abschnitt mit den vier Beispielen NTC, LDR, Solarzelle und Mikrochip, arbeite dich dann Schritt für Schritt durch und prüfe dich am Ende selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-9/halbleiter-und-elektronik/index.html#hl-alltag"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "NTC und LDR: Halbleiter als Sensoren",
-       "html": "<p>Der <strong>NTC-Widerstand</strong> (Heißleiter) zeigt genau das Halbleiter-Verhalten aus Abschnitt 1: Je wärmer, desto kleiner sein Widerstand. Als Temperaturfühler steckt er im Fieberthermometer und im Akku. Der <strong>LDR</strong> (lichtabhängiger Widerstand) wird durch Licht niederohmig &mdash; je heller, desto kleiner der Widerstand. Aus dem gemessenen Widerstand liest die Elektronik Temperatur bzw. Helligkeit ab.</p>",
-       "check": {
-        "frage": "Wie verändert sich der Widerstand eines NTC, wenn er wärmer wird?",
-        "antwort": "Er wird kleiner: Mehr Wärme setzt im Halbleiter mehr Ladungsträger frei, deshalb leitet er besser und der Widerstand sinkt."
+       "kern": "Der <strong>NTC</strong> (Heißleiter) zeigt das Halbleiterverhalten direkt: je wärmer, desto kleiner sein Widerstand — Temperaturfühler im Fieberthermometer und Akku. Der <strong>LDR</strong> wird bei Licht niederohmig — Lichtsensor.",
+       "minicheck": {
+        "frage": "Wie ändert sich der Widerstand eines NTC, wenn er wärmer wird?",
+        "antwort": "Er sinkt: Mehr Wärme setzt im Halbleiter mehr Ladungsträger frei, er leitet besser — der Widerstand wird kleiner."
        }
       },
       {
        "titel": "Die Solarzelle: Umkehrung der LED",
-       "html": "<p>Eine <strong>Solarzelle</strong> ist ein großflächiger <strong>pn-Übergang</strong>. Licht erzeugt im Kristall Elektron-Loch-Paare; die Grenzschicht trennt die beiden Sorten und schiebt sie zu verschiedenen Seiten &mdash; zwischen den Kontakten entsteht eine <strong>Spannung</strong>. Damit ist die Solarzelle die <strong>Umkehrung der LED</strong>: Die LED macht aus Strom Licht, die Solarzelle aus Licht Strom.</p>",
-       "check": {
+       "kern": "Eine <strong>Solarzelle</strong> ist ein großflächiger <strong>pn-Übergang</strong>. Licht erzeugt Elektron-Loch-Paare, die Grenzschicht trennt sie — es entsteht eine <strong>Spannung</strong>. Die LED macht aus Strom Licht, die Solarzelle aus Licht Strom.",
+       "figur": "<svg viewBox=\"0 0 320 160\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"soE\" markerWidth=\"9\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 Z\" fill=\"var(--physik)\"/></marker></defs><rect x=\"4\" y=\"4\" width=\"312\" height=\"152\" rx=\"8\" fill=\"var(--hauch)\" stroke=\"var(--linie)\" stroke-width=\"1.5\"/><rect x=\"40\" y=\"62\" width=\"70\" height=\"20\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"72\" x2=\"110\" y2=\"72\" stroke=\"var(--linie)\" stroke-width=\"1\"/><text x=\"33\" y=\"60\" text-anchor=\"end\" font-size=\"9.5\" fill=\"var(--text-leise)\">n</text><text x=\"33\" y=\"80\" text-anchor=\"end\" font-size=\"9.5\" fill=\"var(--text-leise)\">p</text><text x=\"75\" y=\"98\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text-leise)\">pn-Übergang</text><line x1=\"50\" y1=\"30\" x2=\"58\" y2=\"58\" stroke=\"var(--physik)\" stroke-width=\"1.8\" marker-end=\"url(#soE)\"/><line x1=\"75\" y1=\"30\" x2=\"80\" y2=\"58\" stroke=\"var(--physik)\" stroke-width=\"1.8\" marker-end=\"url(#soE)\"/><line x1=\"100\" y1=\"30\" x2=\"100\" y2=\"58\" stroke=\"var(--physik)\" stroke-width=\"1.8\" marker-end=\"url(#soE)\"/><text x=\"75\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text)\">Licht</text><path d=\"M110 66 H150 M150 66 V44 M150 44 H250 M250 44 V72 M250 100 V120 M110 78 V120 M110 120 H250\" fill=\"none\" stroke=\"var(--text)\" stroke-width=\"2\"/><circle cx=\"250\" cy=\"86\" r=\"14\" fill=\"var(--flaeche)\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"240\" y1=\"76\" x2=\"260\" y2=\"96\" stroke=\"var(--text)\" stroke-width=\"2\"/><line x1=\"260\" y1=\"76\" x2=\"240\" y2=\"96\" stroke=\"var(--text)\" stroke-width=\"2\"/><text x=\"250\" y=\"118\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"var(--text-leise)\">Verbraucher</text><line x1=\"190\" y1=\"44\" x2=\"208\" y2=\"44\" stroke=\"var(--physik)\" stroke-width=\"2.4\" marker-end=\"url(#soE)\"/><text x=\"160\" y=\"142\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"var(--text)\">Solarzelle: Licht → Strom (Umkehrung der LED)</text></svg>",
+       "figurAlt": "Solarzelle mit einfallendem Licht und angeschlossenem Verbraucher; ein Strompfeil zeigt den erzeugten Strom.",
+       "minicheck": {
         "frage": "Was wandelt die LED um, was die Solarzelle?",
-        "antwort": "Die LED wandelt elektrische Energie (Strom) in Licht um, die Solarzelle wandelt Licht in elektrische Energie um &mdash; sie ist die Umkehrung der LED."
+        "antwort": "Die LED wandelt Strom in Licht um, die Solarzelle Licht in Strom — sie ist die Umkehrung der LED."
        }
       },
       {
        "titel": "Der Mikrochip: Millionen Schalter",
-       "html": "<p>Auf einem fingernagelgroßen Siliziumplättchen sitzen viele Millionen, in modernen Prozessoren sogar Milliarden <strong>Transistoren</strong>. Jeder ist ein winziger Schalter &mdash; und aus &bdquo;an&ldquo; und &bdquo;aus&ldquo; (1 und 0) baut der Computer alles auf, was er kann. Ob Smartphone, Solaranlage oder Fieberthermometer: Überall arbeitet derselbe dotierte Kristall.</p>",
-       "check": {
+       "kern": "Auf einem fingernagelgroßen Siliziumplättchen sitzen Millionen bis Milliarden <strong>Transistoren</strong>. Jeder ist ein winziger Schalter; aus „an“ und „aus“ (1 und 0) baut der Computer alles auf.",
+       "details": "<p>Ob Smartphone, Solaranlage oder Fieberthermometer — überall arbeitet derselbe dotierte Siliziumkristall. Die Bausteine sind immer dieselben: Diode, LED, Transistor, Sensoren und Solarzelle, nur in riesiger Zahl und winziger Größe kombiniert.</p>",
+       "minicheck": {
         "frage": "Woraus besteht ein Mikrochip im Kern, und was tut jedes einzelne Bauteil?",
-        "antwort": "Aus vielen Millionen bis Milliarden winziger Transistoren auf einem Siliziumplättchen. Jeder Transistor ist ein Schalter, der zwischen an (1) und aus (0) umschaltet."
+        "antwort": "Aus Millionen bis Milliarden winziger Transistoren auf einem Siliziumplättchen. Jeder Transistor ist ein Schalter zwischen an (1) und aus (0)."
        }
       }
      ],
+     "stolperstein": "Eine Solarzelle macht <strong>Strom aus Licht</strong> — sie ist keine Lampe und kein Akku. Sie erzeugt Spannung nur, solange Licht einfällt, und liefert <strong>Gleichstrom</strong> (für das Hausnetz braucht es noch einen Wechselrichter).",
+     "darstellungen": {
+      "titel": "Halbleiter im Alltag — vier Bauteile, eine Idee:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Fieberthermometer (NTC), Dämmerungsschalter (LDR), Dach-Solaranlage (Solarzelle), Smartphone-Prozessor (Mikrochip)."
+       },
+       {
+        "art": "Tabelle",
+        "html": "<table class='lb-mini-tab'><tr><th>Bauteil</th><th>Funktion</th></tr><tr><td>NTC</td><td>Temperatursensor (Widerstand sinkt bei Wärme)</td></tr><tr><td>LDR</td><td>Lichtsensor (Widerstand sinkt bei Licht)</td></tr><tr><td>Solarzelle</td><td>Energiewandler (Licht → Strom)</td></tr><tr><td>Mikrochip</td><td>Rechenbaustein (Millionen Transistor-Schalter)</td></tr></table>"
+       },
+       {
+        "art": "Merksatz",
+        "text": "Sensor, Energiewandler, Schalter — alle aus dotiertem Silizium."
+       }
+      ]
+     },
+     "selbsterklaerung": "Ordne in einem Satz: Welches der vier Bauteile ist Sensor, welches Energiewandler, welches Rechenbaustein?",
      "merksatz": "Halbleiterbauteile prägen den Alltag: <strong>NTC</strong> und <strong>LDR</strong> sind Sensoren (Widerstand sinkt bei Wärme bzw. Licht), die <strong>Solarzelle</strong> macht aus Licht Strom (Umkehrung der LED), der <strong>Mikrochip</strong> ist ein Verbund aus Millionen Transistor-Schaltern.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "LED mit Vorwiderstand",
-       "pfad": "simulationen/physik/led-vorwiderstand/index.html",
-       "vorhersage": "Die Solarzelle ist die Umkehrung der LED. Wenn die LED aus Strom Licht macht &mdash; was macht dann die Solarzelle, und wie hängt das mit dem pn-Übergang zusammen? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Beobachte in der Simulation, wie die LED aus elektrischer Energie Licht erzeugt.",
-        "Überlege und notiere, wie der umgekehrte Vorgang in einer Solarzelle abläuft (Licht erzeugt Spannung).",
-        "Ordne NTC, LDR, Solarzelle und Mikrochip jeweils zu: Sensor, Energiewandler oder Rechenbaustein?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Wie verhalten sich NTC und LDR bei Wärme bzw. Licht?",
-       "antwort": "Beim NTC sinkt der Widerstand mit steigender Temperatur, beim LDR sinkt er mit steigender Helligkeit &mdash; beides typisches Halbleiterverhalten."
+       "antwort": "Beim NTC sinkt der Widerstand mit steigender Temperatur, beim LDR mit steigender Helligkeit — beides typisches Halbleiterverhalten."
       },
       {
        "frage": "Warum ist die Solarzelle die Umkehrung der LED?",
-       "antwort": "Beide nutzen denselben pn-Übergang, aber in entgegengesetzter Richtung: Die LED macht aus Strom Licht, die Solarzelle aus Licht Strom."
+       "antwort": "Beide nutzen denselben pn-Übergang, aber umgekehrt: Die LED macht aus Strom Licht, die Solarzelle aus Licht Strom."
       },
       {
        "frage": "Was ist die Grundeinheit eines Mikrochips?",
        "antwort": "Der Transistor: Millionen bis Milliarden winziger Transistor-Schalter bilden zusammen den Chip und verarbeiten Informationen als 1 und 0."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Halbleiter im eigenen Zuhause finden",
+       "material": "Stift, Papier — eine kleine Erkundung in der Wohnung.",
+       "auftraege": [
+        "Sammle Geräte, in denen ein Temperatursensor (NTC) steckt — z. B. Fieberthermometer, Backofen, Akku.",
+        "Sammle Geräte mit Lichtsensor (LDR) oder Solarzelle — z. B. Nachtlicht, Taschenrechner, Gartenleuchte.",
+        "Ordne jedem gefundenen Bauteil zu: Sensor, Energiewandler oder Rechenbaustein."
+       ]
       }
      ]
     },
@@ -1629,7 +1848,7 @@
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
        "ids": [
         "ph-09-hl-110",
-        "ph-09-hl-302"
+        "ph-09-hl-208"
        ]
       }
      ],
@@ -1637,16 +1856,9 @@
       {
        "quelle": "ph-09-halbleiter-und-elektronik",
        "ids": [
-        "ph-09-hl-006",
         "ph-09-hl-013"
        ]
-      }
-     ],
-     "partner": "Sucht zusammen: In welchen Geräten steckt zuhause ein NTC, ein LDR oder eine Solarzelle? Sammelt mindestens fünf Beispiele."
-    },
-    "sichern": {
-     "zeit": 7,
-     "aufgaben": [
+      },
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
        "ids": [
@@ -1654,7 +1866,20 @@
        ]
       }
      ],
-     "transfer": "Das Silicon Valley ist nach Silizium benannt. Was genau macht Silizium so besonders — warum nicht Germanium oder Kohlenstoff (auch Halbleiter)?"
+     "partner": "Sucht zusammen: In welchen Geräten zuhause steckt ein NTC, ein LDR oder eine Solarzelle? Sammelt mindestens fünf Beispiele."
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zur Einstiegsfrage: Die Solarzelle <strong>macht aus Licht Strom</strong> — die Umkehrung der LED. Beide nutzen denselben pn-Übergang, nur in entgegengesetzter Richtung.",
+     "aufgaben": [
+      {
+       "quelle": "ph-09-halbleiter-und-elektronik",
+       "ids": [
+        "ph-09-hl-006"
+       ]
+      }
+     ],
+     "transfer": "Das Silicon Valley ist nach Silizium benannt. Was macht Silizium so besonders — warum nicht ein beliebiges anderes Material?"
     },
     "extra": {
      "zeit": 5,
@@ -1691,13 +1916,13 @@
    "thema": "ph-09-energie-quantitativ",
    "themaPfad": "physik/klasse-9/energie-quantitativ/",
    "ziele": [
-    "Ich berechne Lage-, Bewegungsenergie, Arbeit und Leistung sicher und gemischt.",
+    "Ich berechne Lage-, Bewegungsenergie und Leistung sicher und gemischt.",
     "Ich wende Energieerhaltung und Wirkungsgrad auf Anwendungsaufgaben an."
    ],
    "phasen": {
     "ankommen": {
      "zeit": 5,
-     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "hinweis": "Kurzer Aufwärmer zu den Formeln und Einheiten, dann mischst und wendest du das ganze Thema an.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-energie-quantitativ",
@@ -1705,63 +1930,53 @@
         "ph-09-en-201"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Im ganzen Block hast du vier Werkzeuge kennengelernt: Lageenergie, Bewegungsenergie, Leistung und Wirkungsgrad. In einer gemischten Aufgabe musst du jetzt selbst entscheiden, welches Werkzeug gerade passt.</p>",
+      "figur": "<svg viewBox=\"0 0 340 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"20\" y=\"20\" width=\"150\" height=\"50\" rx=\"6\"/><text class=\"label-b\" x=\"95.0\" y=\"42.0\" text-anchor=\"middle\">E_pot = m·g·h</text><text class=\"beschriftung\" x=\"95.0\" y=\"60.0\" text-anchor=\"middle\">Lageenergie</text><rect class=\"dreieck\" x=\"190\" y=\"20\" width=\"150\" height=\"50\" rx=\"6\"/><text class=\"label-b\" x=\"265.0\" y=\"42.0\" text-anchor=\"middle\">E_kin = 1/2·m·v²</text><text class=\"beschriftung\" x=\"265.0\" y=\"60.0\" text-anchor=\"middle\">Bewegungsenergie</text><rect class=\"dreieck\" x=\"20\" y=\"86\" width=\"150\" height=\"50\" rx=\"6\"/><text class=\"label-b\" x=\"95.0\" y=\"108.0\" text-anchor=\"middle\">P = E / t</text><text class=\"beschriftung\" x=\"95.0\" y=\"126.0\" text-anchor=\"middle\">Leistung</text><rect class=\"dreieck\" x=\"190\" y=\"86\" width=\"150\" height=\"50\" rx=\"6\"/><text class=\"label-b\" x=\"265.0\" y=\"108.0\" text-anchor=\"middle\">Wirkungsgrad eta</text><text class=\"beschriftung\" x=\"265.0\" y=\"126.0\" text-anchor=\"middle\">wie gut?</text></svg>",
+      "figurAlt": "Vier Werkzeug-Kästen: E_pot = m·g·h (Lageenergie), E_kin = 1/2·m·v² (Bewegungsenergie), P = E / t (Leistung) und Wirkungsgrad eta (wie gut?).",
+      "vorhersage": "Bei „Ein Aufzug hebt $300\\,\\text{kg}$ um $12\\,\\text{m}$ in $20\\,\\text{s}$\" – welches Werkzeug brauchst du, um die <em>Leistung</em> zu finden?",
+      "optionen": [
+       "nur $E_{\\text{kin}}$",
+       "erst $E_{\\text{pot}}$, dann $P = \\frac{E}{t}$",
+       "nur den Wirkungsgrad"
+      ]
+     }
     },
     "verstehen": {
+     "zeit": 8,
      "anker": "#en-erhaltung",
-     "text": "Bevor du das ganze Thema mischst und anwendest, holst du dir hier die wichtigsten Formeln und Ideen noch einmal kompakt zurück.",
+     "erklaerseite": true,
      "schritte": [
       {
-       "titel": "Die vier Kernformeln",
-       "html": "<p>Für dieses Thema brauchst du vier Formeln sicher: <strong>Lageenergie</strong> $E_{\\text{pot}} = m \\cdot g \\cdot h$, <strong>Bewegungsenergie</strong> $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$, <strong>Leistung</strong> $P = \\frac{E}{t}$ und <strong>Wirkungsgrad</strong> $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$. Prüfe bei jeder Aufgabe zuerst: Welche Größen sind gegeben, welche gesucht?</p>",
-       "check": {
-        "frage": "Welche Formel brauchst du, wenn Energie und Zeit gegeben sind und die Leistung gesucht ist?",
-        "antwort": "$P = \\frac{E}{t}$."
-       }
+       "titel": "Die vier Werkzeuge im Überblick",
+       "kern": "<strong>Lageenergie</strong> $E_{\\text{pot}} = m \\cdot g \\cdot h$ · <strong>Bewegungsenergie</strong> $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$ · <strong>Leistung</strong> $P = \\frac{E}{t}$ · <strong>Wirkungsgrad</strong> $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$. Die <strong>Energieerhaltung</strong> $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$ verbindet die ersten beiden.",
+       "details": "<p>Einheiten zuerst angleichen: Geschwindigkeiten in $\\frac{\\text{km}}{\\text{h}}$ vor dem Einsetzen durch $3{,}6$ in $\\frac{\\text{m}}{\\text{s}}$ umrechnen, $g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$ verwenden, Energien in Joule, Leistungen in Watt angeben.</p>"
       },
       {
-       "titel": "Einheiten zuerst angleichen",
-       "html": "<p>Die häufigste Fehlerquelle sind Einheiten. Rechne Geschwindigkeiten in $\\frac{\\text{km}}{\\text{h}}$ vor dem Einsetzen durch $3{,}6$ in $\\frac{\\text{m}}{\\text{s}}$ um, nutze $g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$ und gib Energien in Joule, Leistungen in Watt an. Erst die Einheiten ordnen, dann rechnen.</p>",
-       "check": {
-        "frage": "Eine Geschwindigkeit ist mit $54\\,\\frac{\\text{km}}{\\text{h}}$ angegeben. Was setzt du in die Formel ein?",
-        "antwort": "$54 : 3{,}6 = 15\\,\\frac{\\text{m}}{\\text{s}}$."
-       }
-      },
-      {
-       "titel": "Energieerhaltung als Bindeglied",
-       "html": "<p>Viele Anwendungsaufgaben verknüpfen mehrere Formeln. Beim freien Fall oder Rutschen verbindet die <strong>Energieerhaltung</strong> Lage- und Bewegungsenergie: $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$, also $v = \\sqrt{2 \\cdot g \\cdot h}$. Achte darauf, ob Reibung eine Rolle spielt &mdash; dann ist die reale Geschwindigkeit kleiner.</p>",
-       "check": {
-        "frage": "Aus welcher Gleichung folgt $v = \\sqrt{2 \\cdot g \\cdot h}$?",
-        "antwort": "Aus der Energieerhaltung $m \\cdot g \\cdot h = \\frac{1}{2} \\cdot m \\cdot v^2$, nach dem Kürzen der Masse und Auflösen nach $v$."
+       "titel": "Welches Werkzeug wann?",
+       "kern": "Frag dich zuerst: Was ist gegeben, was gesucht? <strong>Höhe</strong> $\\rightarrow E_{\\text{pot}}$. <strong>Geschwindigkeit</strong> $\\rightarrow E_{\\text{kin}}$. <strong>Höhe und Endgeschwindigkeit verknüpft</strong> $\\rightarrow$ Energieerhaltung $v = \\sqrt{2 \\cdot g \\cdot h}$. <strong>Energie und Zeit</strong> $\\rightarrow P = \\frac{E}{t}$. <strong>Nutzen und Aufwand</strong> $\\rightarrow \\eta$.",
+       "minicheck": {
+        "frage": "Welches Werkzeug brauchst du, wenn ein Stein aus $20\\,\\text{m}$ fällt und du die Aufprallgeschwindigkeit suchst?",
+        "antwort": "Die Energieerhaltung: $v = \\sqrt{2 \\cdot g \\cdot h}$ – die Masse spielt keine Rolle."
        }
       }
      ],
-     "merksatz": "Vier Formeln tragen das Thema: $E_{\\text{pot}} = m \\cdot g \\cdot h$, $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$, $P = \\frac{E}{t}$, $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$. Zuerst Einheiten angleichen, dann rechnen &mdash; die Energieerhaltung verbindet Lage- und Bewegungsenergie.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Energieerhaltung",
-       "pfad": "simulationen/physik/energie-erhaltung/index.html",
-       "vorhersage": "Bei welcher Starthöhe erreicht der Wagen unten genau $5\\,\\frac{\\text{m}}{\\text{s}}$? Rechne mit $v = \\sqrt{2 \\cdot g \\cdot h}$ vor und prüfe deine Rechnung dann in der Simulation.",
-       "auftraege": [
-        "Berechne vorab, welche Höhe zu $v = 5\\,\\frac{\\text{m}}{\\text{s}}$ am tiefsten Punkt führt, und stelle sie ein.",
-        "Vergleiche deinen Rechenwert mit der angezeigten Geschwindigkeit &mdash; wie gut passt es?",
-        "Variiere die Höhe und prüfe, ob die Beziehung &bdquo;vierfache Höhe, doppelte Geschwindigkeit&ldquo; stimmt."
-       ]
-      }
-     ],
+     "stolperstein": "Bei mehrschrittigen Aufgaben nicht die Einheiten vergessen: Eine Geschwindigkeit in $\\frac{\\text{km}}{\\text{h}}$ muss <strong>vor</strong> dem Einsetzen in $E_{\\text{kin}}$ durch $3{,}6$ geteilt werden, sonst ist das Ergebnis um ein Vielfaches falsch.",
+     "selbsterklaerung": "Nenne zu jedem der vier Werkzeuge in einem Stichwort, woran du erkennst, dass gerade dieses gebraucht wird.",
+     "merksatz": "Vier Werkzeuge tragen das Thema: $E_{\\text{pot}} = m \\cdot g \\cdot h$, $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$, $P = \\frac{E}{t}$, $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$. Zuerst Einheiten angleichen, dann rechnen – die Energieerhaltung verbindet Lage- und Bewegungsenergie.",
      "selbstcheck": [
       {
        "frage": "Nenne die vier Formeln dieses Themas mit ihren Einheiten.",
        "antwort": "$E_{\\text{pot}} = m \\cdot g \\cdot h$ (J), $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$ (J), $P = \\frac{E}{t}$ (W), $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$ (Prozent)."
       },
       {
-       "frage": "Welche Einheit-Umrechnung ist bei Bewegungsenergie besonders wichtig?",
+       "frage": "Welche Einheit-Umrechnung ist bei der Bewegungsenergie besonders wichtig?",
        "antwort": "Geschwindigkeiten von $\\frac{\\text{km}}{\\text{h}}$ in $\\frac{\\text{m}}{\\text{s}}$: durch $3{,}6$ teilen."
       },
       {
        "frage": "Wie prüfst du am Ende, ob dein Ergebnis plausibel ist?",
-       "antwort": "Mit den Einheiten (passt das Ergebnis in J, W oder Prozent?) und mit Größenordnungen (z. B. Dauerleistung Mensch $\\approx 100\\,\\text{W}$, Wirkungsgrad immer unter $100\\,\\%$)."
+       "antwort": "Mit den Einheiten (J, W oder Prozent?) und mit Größenordnungen (Dauerleistung Mensch $\\approx 100\\,\\text{W}$, Wirkungsgrad immer unter $100\\,\\%$)."
       }
      ]
     },
@@ -1783,8 +1998,13 @@
         "ph-09-en-204",
         "ph-09-en-205",
         "ph-09-en-206",
-        "ph-09-en-303",
-        "ph-09-en-304"
+        "ph-09-en-303"
+       ]
+      },
+      {
+       "quelle": "ph-09-energie-quantitativ",
+       "ids": [
+        "ph-09-en-008"
        ]
       }
      ],
@@ -1793,15 +2013,21 @@
        "quelle": "lernbuero/ph-09-energie-quantitativ",
        "ids": [
         "ph-09-en-207",
-        "ph-09-en-301",
         "ph-09-en-302"
+       ]
+      },
+      {
+       "quelle": "ph-09-energie-quantitativ",
+       "ids": [
+        "ph-09-en-012"
        ]
       }
      ],
      "partner": "Erklärt euch gegenseitig an einem Beispiel: Wann nehme ich $E_{\\text{pot}} = m \\cdot g \\cdot h$, wann $E_{\\text{kin}} = \\frac{1}{2} \\cdot m \\cdot v^2$ und wann $P = \\frac{E}{t}$?"
     },
     "sichern": {
-     "zeit": 15,
+     "zeit": 12,
+     "rueckbezug": "Zurück zur Werkzeug-Frage vom Anfang: Für die Leistung des Aufzugs brauchst du <strong>zwei</strong> Werkzeuge nacheinander – erst die Lageenergie $E_{\\text{pot}} = m \\cdot g \\cdot h$, dann $P = \\frac{E}{t}$. Genau dieses planvolle Vorgehen – gesuchte Größe erkennen, passende(s) Werkzeug(e) wählen, Einheiten ordnen, rechnen – trägt durch den ganzen Block.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-energie-quantitativ",
@@ -1810,7 +2036,7 @@
        ]
       }
      ],
-     "transfer": "Bei Anwendungsaufgaben überlegst du zuerst: Welche Energieform ist gefragt — und welche Formel passt? Erst dann rechnest du Schritt für Schritt und achtest auf die Einheiten."
+     "transfer": "Bei jeder Anwendungsaufgabe gilt: zuerst überlegen, welche Energieform oder Größe gefragt ist und welche Formel passt – erst dann Schritt für Schritt rechnen und auf die Einheiten achten."
     },
     "extra": {
      "zeit": 5,
@@ -1847,13 +2073,13 @@
    "thema": "ph-09-halbleiter-und-elektronik",
    "themaPfad": "physik/klasse-9/halbleiter-und-elektronik/",
    "ziele": [
-    "Ich unterscheide Leiter, Halbleiter und Isolator und beschreibe Diode, Transistor, NTC und LDR sicher.",
-    "Ich berechne den Vorwiderstand einer LED und wende das ohmsche Gesetz an."
+    "Ich kann Leiter, Halbleiter und Isolator unterscheiden und die Wirkung des Dotierens erklären.",
+    "Ich kann Diode und Transistor in Schaltungen deuten und Halbleiter-Bauteile im Alltag wiedererkennen."
    ],
    "phasen": {
     "ankommen": {
-     "zeit": 5,
-     "hinweis": "Kurzer Aufwärmer, dann mischst und wendest du das ganze Thema an.",
+     "zeit": 3,
+     "hinweis": "Kurzer Aufwärmer zu Leiter/Halbleiter/Isolator aus Lektion 6, dann mischst und wendest du das ganze Thema an.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
@@ -1861,68 +2087,44 @@
         "ph-09-hl-201"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>In einem winzigen Mikrochip eines Handys stecken Millionen von Bauteilen — alle aus dotiertem Halbleitermaterial. Vier Bausteine hast du kennengelernt: das Halbleitermaterial selbst, das gezielte Dotieren, die Diode und den Transistor.</p>",
+      "figur": "<svg viewBox=\"0 0 340 120\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"8\" y=\"40\" width=\"66\" height=\"40\"/><text class=\"beschriftung\" x=\"41\" y=\"64\" text-anchor=\"middle\">Halbleiter</text><polygon class=\"pfeil\" points=\"80,60 90,55 90,65\"/><rect class=\"dreieck\" x=\"92\" y=\"40\" width=\"62\" height=\"40\"/><text class=\"beschriftung\" x=\"123\" y=\"64\" text-anchor=\"middle\">Dotieren</text><polygon class=\"pfeil\" points=\"160,60 170,55 170,65\"/><rect class=\"dreieck\" x=\"172\" y=\"40\" width=\"50\" height=\"40\"/><text class=\"beschriftung\" x=\"197\" y=\"64\" text-anchor=\"middle\">Diode</text><polygon class=\"pfeil\" points=\"228,60 238,55 238,65\"/><rect class=\"dreieck\" x=\"240\" y=\"40\" width=\"92\" height=\"40\"/><text class=\"beschriftung\" x=\"286\" y=\"64\" text-anchor=\"middle\">Transistor</text><text class=\"label-b\" x=\"170\" y=\"22\" text-anchor=\"middle\">Vom Material zum Mikrochip</text></svg>",
+      "figurAlt": "Vier beschriftete Kästchen mit Pfeilen: Halbleiter, Dotieren, Diode, Transistor — vom Material zum Mikrochip.",
+      "vorhersage": "Welcher der vier Bausteine wirkt im Chip als steuerbarer Schalter?",
+      "optionen": [
+       "das reine Halbleitermaterial",
+       "die Diode",
+       "der Transistor"
+      ]
+     }
     },
     "verstehen": {
-     "anker": "#hl-diode",
-     "text": "Bevor du das ganze Thema mischst und anwendest, holst du dir hier die wichtigsten Ideen noch einmal kompakt zurück.",
+     "zeit": 8,
      "schritte": [
       {
-       "titel": "Vom Halbleiter zum Bauteil",
-       "html": "<p>Der rote Faden des Themas: <strong>Silizium</strong> leitet erst bei Wärme oder Licht (Abschnitt 1). Durch <strong>Dotieren</strong> stellt man die Leitfähigkeit gezielt ein und erzeugt n- oder p-Material. Aus dem <strong>pn-Übergang</strong> entstehen <strong>Diode</strong> und <strong>Transistor</strong> &mdash; und daraus alle modernen Bauteile.</p>",
-       "check": {
-        "frage": "Welche zwei Materialarten ergibt das Dotieren, und woraus entsteht aus ihrer Grenze die Diode?",
-        "antwort": "n-Material (frei bewegliche Elektronen) und p-Material (Löcher). An ihrer Grenze entsteht der pn-Übergang mit Sperrschicht &mdash; das ist die Diode."
-       }
-      },
-      {
-       "titel": "Diode und Transistor im Vergleich",
-       "html": "<p>Die <strong>Diode</strong> lässt Strom nur in <strong>Durchlassrichtung</strong> (ab der Knickspannung $\\approx 0{,}7\\,\\text{V}$) und sperrt in Sperrrichtung &mdash; sie kann aber nicht gesteuert werden. Der <strong>Transistor</strong> kann: Ein kleiner <strong>Basisstrom</strong> schaltet einen viel größeren <strong>Kollektorstrom</strong> &mdash; ein Schalter ohne bewegliche Teile.</p>",
-       "check": {
-        "frage": "Was kann der Transistor, was die Diode nicht kann?",
-        "antwort": "Der Transistor lässt sich steuern: Ein kleiner Basisstrom schaltet einen großen Kollektorstrom ein oder aus. Die Diode kann nur durchlassen oder sperren, ohne Steuerung."
-       }
-      },
-      {
-       "titel": "Den LED-Vorwiderstand sicher berechnen",
-       "html": "<p>Eine LED verträgt nur kleine Ströme (typisch $I = 20\\,\\text{mA} = 0{,}020\\,\\text{A}$). Die überschüssige Spannung $U$ fällt am <strong>Vorwiderstand</strong> ab, berechnet mit dem ohmschen Gesetz: $$R = \\frac{U}{I}.$$ Achte darauf, $I$ in Ampere einzusetzen ($20\\,\\text{mA} = 0{,}020\\,\\text{A}$).</p>",
-       "check": {
-        "frage": "Am Vorwiderstand fallen $U = 3{,}5\\,\\text{V}$ ab, $I = 20\\,\\text{mA}$. Wie groß ist $R$?",
-        "antwort": "$R = \\frac{3{,}5\\,\\text{V}}{0{,}020\\,\\text{A}} = 175\\,\\Omega$."
-       }
+       "titel": "Vier Bausteine im Überblick",
+       "kern": "<strong>Reiner Halbleiter</strong> leitet kaum; <strong>Dotieren</strong> schleust Ladungsträger ein (n- und p-Typ); die <strong>Diode</strong> (pn-Übergang) lässt Strom nur in eine Richtung; der <strong>Transistor</strong> schaltet oder verstärkt.",
+       "details": "<p>Frag dich bei jeder Aufgabe zuerst: Geht es um die Leitfähigkeit (Material, Temperatur), um n-/p-Dotierung, um die Durchlass-/Sperrrichtung einer Diode oder um die Schalter-/Verstärkerwirkung des Transistors? So wählst du den richtigen Baustein.</p>"
       }
      ],
-     "merksatz": "Roter Faden: dotiertes Silizium $\\rightarrow$ pn-Übergang $\\rightarrow$ <strong>Diode</strong> (lässt Strom nur in Durchlassrichtung) und <strong>Transistor</strong> (kleiner Basisstrom schaltet großen Kollektorstrom). Den LED-Vorwiderstand berechnet man mit $R = \\frac{U}{I}$ &mdash; $I$ in Ampere.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "LED mit Vorwiderstand",
-       "pfad": "simulationen/physik/led-vorwiderstand/index.html",
-       "vorhersage": "Du sollst eine LED an einer Quelle betreiben. Welcher Vorwiderstand lässt genau $20\\,\\text{mA}$ fließen? Rechne mit $R = \\frac{U}{I}$ vor und prüfe dann in der Simulation.",
-       "auftraege": [
-        "Lies aus der Simulation ab, welche Spannung am Vorwiderstand abfallen muss, und berechne $R$ für $I = 20\\,\\text{mA}$.",
-        "Stelle deinen berechneten Widerstand ein und prüfe, ob die Stromstärke wie erwartet bei $20\\,\\text{mA}$ liegt.",
-        "Verändere $R$ nach oben und unten und beschreibe, wie sich Stromstärke und Helligkeit ändern."
-       ]
-      }
-     ],
+     "stolperstein": "Eine Diode ist kein einfacher Schalter, den man umlegt — sie lässt Strom <strong>nur in Durchlassrichtung</strong> fließen und sperrt in Gegenrichtung von selbst.",
+     "selbsterklaerung": "Nenne zu jedem der vier Bausteine in einem Stichwort, woran du in einer Aufgabe erkennst, dass gerade dieser gebraucht wird.",
+     "merksatz": "Halbleiter leiten zwischen Leiter und Isolator; Dotieren erzeugt n-/p-Typ; die Diode (pn-Übergang) ist eine Einbahnstraße; der Transistor schaltet und verstärkt — die Grundlage jedes Mikrochips.",
      "selbstcheck": [
       {
-       "frage": "Ordne zu: NTC, LDR, Solarzelle, Transistor &mdash; welches Bauteil ist Sensor, welches Energiewandler, welches Schalter?",
-       "antwort": "NTC und LDR sind Sensoren (Temperatur bzw. Licht), die Solarzelle ist ein Energiewandler (Licht $\\rightarrow$ Strom), der Transistor ist ein Schalter."
+       "frage": "Was bewirkt das Dotieren eines Halbleiters?",
+       "antwort": "Es bringt gezielt zusätzliche Ladungsträger ein (n-Typ: Elektronen, p-Typ: Löcher) und macht den Halbleiter besser steuerbar leitfähig."
       },
       {
-       "frage": "In welche Richtung lässt eine Diode den Strom durch, und ab welcher Spannung (Silizium)?",
-       "antwort": "Nur in Durchlassrichtung, und dort erst ab der Knickspannung von etwa $0{,}7\\,\\text{V}$. In Sperrrichtung sperrt sie."
-      },
-      {
-       "frage": "Berechne den Vorwiderstand für $U = 1{,}8\\,\\text{V}$ und $I = 20\\,\\text{mA}$.",
-       "antwort": "$R = \\frac{U}{I} = \\frac{1{,}8\\,\\text{V}}{0{,}020\\,\\text{A}} = 90\\,\\Omega$."
+       "frage": "Wodurch unterscheidet sich der Transistor von der Diode?",
+       "antwort": "Die Diode lässt Strom nur in eine Richtung; der Transistor kann mit einem kleinen Steuerstrom einen größeren Strom schalten oder verstärken."
       }
      ]
     },
     "ueben": {
-     "zeit": 20,
+     "zeit": 18,
      "basis": [
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
@@ -1938,9 +2140,7 @@
        "ids": [
         "ph-09-hl-204",
         "ph-09-hl-205",
-        "ph-09-hl-206",
-        "ph-09-hl-303",
-        "ph-09-hl-304"
+        "ph-09-hl-206"
        ]
       }
      ],
@@ -1948,16 +2148,15 @@
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
        "ids": [
-        "ph-09-hl-207",
-        "ph-09-hl-301",
-        "ph-09-hl-302"
+        "ph-09-hl-301"
        ]
       }
      ],
-     "partner": "Gebt euch gegenseitig eine Vorwiderstands-Aufgabe: Einer nennt Quellenspannung, LED-Spannung und Strom, der andere berechnet $R_V = \\frac{U_q - U_{\\text{LED}}}{I}$."
+     "partner": "Erklärt euch gegenseitig an einem Alltagsgerät (z. B. LED-Lampe, Radio), welche Halbleiter-Bauteile darin stecken und welche Aufgabe sie haben."
     },
     "sichern": {
-     "zeit": 15,
+     "zeit": 7,
+     "rueckbezug": "Zurück zur Einstiegsfrage: Der <strong>Transistor</strong> ist der steuerbare Schalter im Chip — Millionen davon bilden Speicher und Rechenwerk. Diode (Einbahnstraße) und Dotierung liefern die Grundlage.",
      "aufgaben": [
       {
        "quelle": "lernbuero/ph-09-halbleiter-und-elektronik",
@@ -1966,39 +2165,24 @@
        ]
       }
      ],
-     "transfer": "Bei der LED entscheidest du zuerst: Liegt sie in Durchlassrichtung? Dann berechnest du den Vorwiderstand aus der übrigen Spannung — er schützt die LED vor zu großem Strom."
+     "transfer": "Bei jedem elektronischen Gerät gilt: Erst fragen, welche Funktion gebraucht wird (gleichrichten, schalten, verstärken, Licht erzeugen), dann das passende Halbleiter-Bauteil zuordnen."
     },
     "extra": {
      "zeit": 5,
-     "text": "Zum Vertiefen:",
+     "text": "Wenn Zeit bleibt:",
      "links": [
       {
-       "label": "Simulation: LED mit Vorwiderstand",
-       "href": "simulationen/physik/led-vorwiderstand/index.html"
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
       }
      ]
     }
-   },
-   "kompetenzen": [
-    {
-     "bereich": "Fachwissen",
-     "text": "Du unterscheidest Leiter, Halbleiter und Isolator sicher und beschreibst Diode, Transistor, NTC und LDR mit Fachbegriffen."
-    },
-    {
-     "bereich": "Fachwissen",
-     "text": "Du wendest das ohmsche Gesetz an und berechnest den Vorwiderstand einer LED."
-    },
-    {
-     "bereich": "Erkenntnisgewinnung",
-     "text": "Du ordnest Halbleiterbauteile ihrer Funktion zu (Sensor, Schalter, Energiewandler) und begründest deine Zuordnung."
-    }
-   ]
+   }
   }
  ],
  "bloecke": [
   {
    "titel": "Energie quantitativ",
-   "thema": "ph-09-energie-quantitativ",
    "lektionen": [
     "l1",
     "l2",
@@ -2010,7 +2194,6 @@
   },
   {
    "titel": "Halbleiter und Elektronik",
-   "thema": "ph-09-halbleiter-und-elektronik",
    "lektionen": [
     "l6",
     "l7",

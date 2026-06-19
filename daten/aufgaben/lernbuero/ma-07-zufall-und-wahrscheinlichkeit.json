@@ -175,6 +175,313 @@
    ]
   },
   {
+   "id": "ma-07-zw-107",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Würfel wird einmal geworfen. Ordne jedem Ereignis das passende Wort zu.",
+   "paare": [
+    {
+     "links": "Eine Zahl zwischen $1$ und $6$ würfeln.",
+     "rechts": "sicher"
+    },
+    {
+     "links": "Eine $7$ würfeln.",
+     "rechts": "unmöglich"
+    },
+    {
+     "links": "Eine gerade Zahl würfeln.",
+     "rechts": "möglich"
+    },
+    {
+     "links": "Eine Zahl kleiner als $10$ würfeln.",
+     "rechts": "sicher"
+    }
+   ],
+   "tipps": [
+    "Was immer eintritt, ist sicher.",
+    "Was nie eintreten kann, ist unmöglich.",
+    "Was manchmal eintritt, ist möglich."
+   ],
+   "loesungsweg": "Zwischen 1 und 6 sowie kleiner als 10: sicher (trifft immer zu). Eine 7: unmöglich (gibt es nicht). Eine gerade Zahl: möglich (manchmal).",
+   "kc": [
+    "zufall-und-wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-07-zw-108",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Münze wird einmal geworfen. Wie viele verschiedene Ergebnisse hat dieser Zufallsversuch (Größe des Ergebnisraums)?",
+   "eingaben": [
+    {
+     "label": "Anzahl Ergebnisse",
+     "antwort": 2,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Welche Ausgänge sind möglich?",
+    "Kopf oder Zahl.",
+    "Das sind $2$ Ergebnisse."
+   ],
+   "loesungsweg": "Der Ergebnisraum ist $\\Omega = \\{\\text{Kopf}; \\text{Zahl}\\}$, also $2$ Ergebnisse.",
+   "kc": [
+    "zufall-und-wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-07-zw-109",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Für ein Ereignis $A$ gilt $P(A) = \\frac{1}{5}$. Wie groß ist die Gegenwahrscheinlichkeit $P(\\bar{A})$? Gib sie als Dezimalzahl an.",
+   "eingaben": [
+    {
+     "label": "P(Gegenereignis)",
+     "antwort": 0.8,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Es gilt $P(\\bar{A}) = 1 - P(A)$.",
+    "$\\frac{1}{5} = 0{,}2$.",
+    "$1 - 0{,}2 = 0{,}8$."
+   ],
+   "loesungsweg": "$P(\\bar{A}) = 1 - P(A) = 1 - \\frac{1}{5} = \\frac{4}{5} = 0{,}8$.",
+   "kc": [
+    "zufall-und-wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-07-zw-110",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Aussagen über das Gegenereignis sind richtig?",
+   "optionen": [
+    {
+     "text": "Das Gegenereignis zu &bdquo;eine $6$ würfeln&ldquo; ist &bdquo;keine $6$ würfeln&ldquo;.",
+     "richtig": true,
+     "erklaerung": "Richtig: $\\bar{A}$ enthält alles, was nicht zu $A$ gehört."
+    },
+    {
+     "text": "Es gilt $P(A) + P(\\bar{A}) = 1$.",
+     "richtig": true,
+     "erklaerung": "Richtig: Zusammen decken sie alle Ergebnisse ab."
+    },
+    {
+     "text": "Das Gegenereignis hat immer dieselbe Wahrscheinlichkeit wie $A$.",
+     "richtig": false,
+     "erklaerung": "Nein: Nur wenn $P(A) = 0{,}5$ ist, sind beide gleich."
+    },
+    {
+     "text": "Bei &bdquo;mindestens eine $6$&ldquo; ist der Weg über das Gegenereignis oft einfacher.",
+     "richtig": true,
+     "erklaerung": "Richtig: $1 - P(\\text{keine }6)$ ist meist schneller."
+    }
+   ],
+   "tipps": [
+    "$\\bar{A}$ ist alles außer $A$.",
+    "$P(A) + P(\\bar{A}) = 1$.",
+    "Genau drei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind 1, 2 und 4. Aussage 3 stimmt nur im Sonderfall $P(A)=0{,}5$.",
+   "kc": [
+    "zufall-und-wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-07-zw-111",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Würfel wird einmal geworfen. Berechne Schritt für Schritt die Wahrscheinlichkeit, <strong>keine</strong> $6$ zu würfeln.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Wie groß ist $P(\\text{eine }6)$?",
+     "eingaben": [
+      {
+       "label": "P(6)",
+       "antwort": 0.1667,
+       "toleranz": 0.01,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Eine günstige von sechs möglichen: $\\frac{1}{6} \\approx 0{,}167$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Wie groß ist $P(\\text{keine }6) = 1 - P(\\text{eine }6)$?",
+     "eingaben": [
+      {
+       "label": "P(keine 6)",
+       "antwort": 0.8333,
+       "toleranz": 0.01,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$1 - \\frac{1}{6} = \\frac{5}{6} \\approx 0{,}833$."
+     ]
+    }
+   ],
+   "tipps": [
+    "Erst $P(\\text{eine }6) = \\frac{1}{6}$.",
+    "Dann das Gegenereignis: $1 - \\frac{1}{6}$.",
+    "$\\frac{5}{6} \\approx 0{,}833$."
+   ],
+   "loesungsweg": "$P(\\text{eine }6) = \\frac{1}{6}$. Gegenereignis: $P(\\text{keine }6) = 1 - \\frac{1}{6} = \\frac{5}{6} \\approx 0{,}83$.",
+   "kc": [
+    "zufall-und-wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-07-zw-112",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Auffrischung: Ein Würfel wird einmal geworfen. Wie viele Ergebnisse hat der Ergebnisraum?",
+   "eingaben": [
+    {
+     "label": "Anzahl",
+     "antwort": 6,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Welche Augenzahlen sind möglich?",
+    "$1$ bis $6$.",
+    "Das sind $6$ Ergebnisse."
+   ],
+   "loesungsweg": "$\\Omega = \\{1;2;3;4;5;6\\}$, also $6$ Ergebnisse.",
+   "kc": [
+    "zufall-und-wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-07-zw-113",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Auffrischung (relative Häufigkeit): Ein Würfel wird $50$-mal geworfen, die $3$ erscheint $10$-mal. Wie groß ist die relative Häufigkeit der $3$? Gib sie als Dezimalzahl an.",
+   "eingaben": [
+    {
+     "label": "relative Häufigkeit",
+     "antwort": 0.2,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "relative Häufigkeit = Anzahl geteilt durch Versuche.",
+    "$\\frac{10}{50}$.",
+    "$= 0{,}2$."
+   ],
+   "loesungsweg": "$h = \\frac{10}{50} = 0{,}2$ (also $20\\,\\%$).",
+   "kc": [
+    "zufall-und-wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-07-zw-114",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Auffrischung (Laplace): Ein Würfel wird geworfen. Wie groß ist $P(\\text{eine }2)$? Gib den Bruch als Dezimalzahl an.",
+   "eingaben": [
+    {
+     "label": "P(2)",
+     "antwort": 0.1667,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Eine günstige von sechs möglichen.",
+    "$\\frac{1}{6}$.",
+    "$\\approx 0{,}167$."
+   ],
+   "loesungsweg": "$P(\\text{eine }2) = \\frac{1}{6} \\approx 0{,}167$.",
+   "kc": [
+    "zufall-und-wahrscheinlichkeit"
+   ]
+  },
+  {
+   "id": "ma-07-zw-115",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Auffrischung (Gegenereignis): Für ein Ereignis gilt $P(A) = 0{,}3$. Wie groß ist $P(\\bar{A})$?",
+   "eingaben": [
+    {
+     "label": "P(Gegenereignis)",
+     "antwort": 0.7,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$P(\\bar{A}) = 1 - P(A)$.",
+    "$1 - 0{,}3$.",
+    "$= 0{,}7$."
+   ],
+   "loesungsweg": "$P(\\bar{A}) = 1 - 0{,}3 = 0{,}7$.",
+   "kc": [
+    "zufall-und-wahrscheinlichkeit"
+   ]
+  },
+  {
    "id": "ma-07-zw-301",
    "typ": "freitext",
    "zweig": [

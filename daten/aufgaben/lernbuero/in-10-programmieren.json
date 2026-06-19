@@ -167,7 +167,7 @@
     "Starte mit produkt = 1 und multipliziere in jedem Durchlauf mit dem aktuellen i.",
     "1 * 1 = 1, 1 * 2 = 2, 2 * 3 = 6."
    ],
-   "loesungsweg": "Schreibtischtest: Start: produkt = 1. Durchlauf i=1: produkt = 1 * 1 = 1. Durchlauf i=2: produkt = 1 * 2 = 2. Durchlauf i=3: produkt = 2 * 3 = 6. print(produkt) gibt 6 aus. Das Programm berechnet 1 * 2 * 3 = 3! (Fakultät von 3).",
+   "loesungsweg": "Schreibtischtest: Start: produkt = 1. Durchlauf i=1: produkt = 1 * 1 = 1. Durchlauf i=2: produkt = 1 * 2 = 2. Durchlauf i=3: produkt = 2 * 3 = 6. print(produkt) gibt 6 aus. Das Programm berechnet 1 * 2 * 3 (die Fakultät von 3).",
    "kc": [
     "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
    ]
@@ -206,7 +206,7 @@
     "return gibt das Ergebnis aus der Funktion heraus.",
     "Beim Aufruf stehen konkrete Werte in den Klammern."
    ],
-   "loesungsweg": "def startet die Funktionsdefinition: def name(parameter): – die Funktion existiert ab hier im Programm. Parameter sind die Platzhalter für Eingaben. return liefert das Ergebnis zurück an den Aufrufer. Beim Aufruf (z. B. begrüssung(Mia)) wird die Funktion mit den konkreten Werten ausgeführt.",
+   "loesungsweg": "def startet die Funktionsdefinition: def name(parameter): – die Funktion existiert ab hier im Programm. Parameter sind die Platzhalter für Eingaben. return liefert das Ergebnis zurück an den Aufrufer. Beim Aufruf (z. B. begruessung(\"Mia\")) wird die Funktion mit den konkreten Werten ausgeführt.",
    "kc": [
     "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
    ]
@@ -250,13 +250,13 @@
    "afb": 3,
    "ergaenzung": "lernbuero",
    "frage": "Plus L2: Erkläre den Unterschied zwischen <code>42</code> und <code>&quot;42&quot;</code> in Python. Was gibt <code>print(42 + 1)</code> aus – und was gibt <code>print(&quot;42&quot; + &quot;1&quot;)</code> aus? Begründe jeweils.",
-   "musterloesung": "<code>42</code> ist eine ganze Zahl (int) – sie kann für Berechnungen genutzt werden. <code>42</code> ist ein Text (String, str) – erkennbar an den Anführungszeichen. Der +-Operator hat für beide Typen eine andere Bedeutung: <code>42 + 1</code> rechnet 43 (Addition). <code>42 + 1</code> hängt die Texte aneinander (Konkatenation): Ergebnis ist der String <code>421</code>. Python wählt die Bedeutung von + je nach Datentyp – das nennt man Operatorüberladung.",
+   "musterloesung": "<code>42</code> ist eine ganze Zahl (int) – sie kann für Berechnungen genutzt werden. <code>\"42\"</code> ist ein Text (String, str) – erkennbar an den Anführungszeichen. Der +-Operator hat für beide Typen eine andere Bedeutung: <code>42 + 1</code> rechnet 43 (Addition). <code>\"42\" + \"1\"</code> hängt die Texte aneinander (Konkatenation): Ergebnis ist der String <code>\"421\"</code>. Python wählt die Bedeutung von + je nach Datentyp.",
    "tipps": [
     "Anführungszeichen machen aus einer Zahl einen Text (String).",
     "Mit + kann man Zahlen addieren oder Texte aneinanderhängen – der Typ entscheidet.",
-    "Teste in Gedanken: 42 + 1 = ? und 42 + 1 = ?"
+    "Teste in Gedanken: 42 + 1 = ? und \"42\" + \"1\" = ?"
    ],
-   "loesungsweg": "42 ist vom Typ int (ganze Zahl) – print(42 + 1) ergibt 43. 42 ist vom Typ str (Text) – print(42 + 1) ergibt 421 (Texte werden aneinandergehängt, nicht addiert). Der Datentyp bestimmt, was + bedeutet.",
+   "loesungsweg": "42 ist vom Typ int (ganze Zahl) – print(42 + 1) ergibt 43. \"42\" ist vom Typ str (Text) – print(\"42\" + \"1\") ergibt \"421\" (Texte werden aneinandergehängt, nicht addiert). Der Datentyp bestimmt, was + bedeutet.",
    "kc": [
     "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
    ]
@@ -284,6 +284,62 @@
     "Ohne das Programm kann der Computer gar nichts starten."
    ],
    "loesungsweg": "Reihenfolge: (1) Idee – das Problem verstehen. (2) Pseudocode – die Lösung informell aufschreiben. (3) Programm – den Pseudocode in eine Programmiersprache übersetzen. (4) Ausführung – der Computer führt das fertige Programm aus. Jeder Schritt baut auf dem vorherigen auf.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-110",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Standard L2: Datentypen und das Pluszeichen. Wähle in jeder Lücke das passende Ergebnis.",
+   "text": "Der Wert <code>42</code> ist vom Typ ___ , der Wert <code>\"42\"</code> dagegen ist ein ___ . Darum ergibt <code>40 + 2</code> die Zahl ___ , aber <code>\"40\" + \"2\"</code> ergibt den Text ___ .",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "int",
+     "optionen": [
+      "int",
+      "str"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "str",
+     "optionen": [
+      "str",
+      "int"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "42",
+     "optionen": [
+      "42",
+      "402"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "402",
+     "optionen": [
+      "402",
+      "42"
+     ]
+    }
+   ],
+   "tipps": [
+    "Anführungszeichen machen aus einer Zahl einen Text (String).",
+    "Bei zwei Zahlen addiert das Plus; bei zwei Texten hängt es sie aneinander.",
+    "\"40\" + \"2\" setzt die Zeichenfolgen einfach hintereinander."
+   ],
+   "loesungsweg": "42 ist eine ganze Zahl (int), \"42\" ist ein Text (str, erkennbar an den Anführungszeichen). Bei Zahlen rechnet das Plus: 40 + 2 = 42. Bei Texten verkettet das Plus: \"40\" + \"2\" = \"402\". Der Datentyp entscheidet also, was das Pluszeichen tut.",
    "kc": [
     "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
    ]
@@ -551,7 +607,7 @@
    "afb": 3,
    "ergaenzung": "lernbuero",
    "frage": "Lena schreibt ein Programm und kopiert denselben Block aus drei Zeilen, der den Mittelwert zweier Zahlen berechnet, an fünf verschiedenen Stellen hinein. Bewerte diese Vorgehensweise. Nenne zwei Nachteile und erkläre, wie eine Funktion das Programm verbessern würde.",
-   "musterloesung": "Das mehrfache Kopieren desselben Codes (Copy-Paste) ist schlechter Programmierstil. Nachteil 1: Wartbarkeit — findet Lena später einen Fehler in der Berechnung, muss sie ihn an allen fünf Stellen einzeln korrigieren; leicht wird eine Stelle vergessen. Nachteil 2: Lesbarkeit und Länge — das Programm wird unnötig lang und unübersichtlich, gleiche Logik steht mehrfach da. Eine Funktion <code>mittelwert(a, b)</code> würde den Block genau einmal definieren; an den fünf Stellen steht dann nur noch der kurze Aufruf. Eine Korrektur muss nur an einer Stelle erfolgen und wirkt überall. Das macht das Programm kürzer, lesbarer und sicherer in der Pflege.",
+   "musterloesung": "Das mehrfache Kopieren desselben Codes (Copy-Paste) ist schlechter Programmierstil. Nachteil 1: Wartbarkeit — findet Lena später einen Fehler in der Berechnung, muss sie ihn an allen fünf Stellen einzeln korrigieren; leicht wird eine Stelle vergessen. Nachteil 2: Lesbarkeit und Länge — das Programm wird unnötig lang und unübersichtlich, gleiche Logik steht mehrfach da. Eine Funktion <code>mittelwert(a, b)</code> würde den Block genau einmal definieren; an den fünf Stellen steht dann nur noch der kurze Aufruf. Eine Korrektur muss nur an einer Stelle erfolgen und wirkt überall.",
    "tipps": [
     "Stell dir vor, in der kopierten Berechnung steckt ein Fehler — wie oft musst du ihn korrigieren?",
     "Eine Funktion schreibt man einmal und ruft sie beliebig oft auf.",
@@ -626,7 +682,7 @@
    "frage": "Schreibtischtest in Schritten. Verfolge dieses Programm Zeile für Zeile:<br><pre>summe = 0\nfor i in range(1, 4):\n    for j in range(1, 3):\n        summe = summe + i * j\nprint(summe)</pre>Die äußere Schleife setzt i auf 1, 2, 3; die innere setzt j auf 1, 2.",
    "schritte": [
     {
-     "frage": "Schritt 1: i = 1. Berechne den Beitrag der inneren Schleife: i*1 + i*2 für i = 1.",
+     "frage": "Schritt 1: i = 1. Berechne den Beitrag der inneren Schleife: i·1 + i·2 für i = 1.",
      "eingaben": [
       {
        "label": "Beitrag bei i=1",
@@ -635,11 +691,11 @@
       }
      ],
      "tipps": [
-      "i*j für j=1 und j=2: 1*1 + 1*2 = 1 + 2 = 3."
+      "i·j für j=1 und j=2: 1·1 + 1·2 = 1 + 2 = 3."
      ]
     },
     {
-     "frage": "Schritt 2: i = 2. Berechne i*1 + i*2 für i = 2.",
+     "frage": "Schritt 2: i = 2. Berechne i·1 + i·2 für i = 2.",
      "eingaben": [
       {
        "label": "Beitrag bei i=2",
@@ -648,11 +704,11 @@
       }
      ],
      "tipps": [
-      "2*1 + 2*2 = 2 + 4 = 6."
+      "2·1 + 2·2 = 2 + 4 = 6."
      ]
     },
     {
-     "frage": "Schritt 3: i = 3. Berechne i*1 + i*2 für i = 3.",
+     "frage": "Schritt 3: i = 3. Berechne i·1 + i·2 für i = 3.",
      "eingaben": [
       {
        "label": "Beitrag bei i=3",
@@ -661,7 +717,7 @@
       }
      ],
      "tipps": [
-      "3*1 + 3*2 = 3 + 6 = 9."
+      "3·1 + 3·2 = 3 + 6 = 9."
      ]
     },
     {
@@ -683,7 +739,7 @@
     "Notiere nach jedem Durchlauf den Zwischenstand von summe.",
     "Am Ende ist summe = 3 + 6 + 9."
    ],
-   "loesungsweg": "Für i=1: 1*1+1*2=3. Für i=2: 2*1+2*2=6. Für i=3: 3*1+3*2=9. summe = 0+3+6+9 = 18. Ausgabe: 18.",
+   "loesungsweg": "Für i=1: 1·1+1·2=3. Für i=2: 2·1+2·2=6. Für i=3: 3·1+3·2=9. summe = 0+3+6+9 = 18. Ausgabe: 18.",
    "kc": [
     "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
    ]

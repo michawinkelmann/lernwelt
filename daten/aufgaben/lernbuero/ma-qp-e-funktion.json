@@ -464,7 +464,7 @@
    "niveau": 3,
    "afb": 3,
    "ergaenzung": "lernbuero",
-   "frage": "Gegeben ist $f(x)=\\dfrac{x}{\\mathrm{e}^{x}}$. Untersuche den Graphen auf Extremstellen. Gib die $x$-Koordinate $x_E$ und den Funktionswert $f(x_E)$ an. Runde den Funktionswert auf vier Dezimalstellen.",
+   "frage": "Gegeben ist $f(x)=\\frac{x}{\\mathrm{e}^{x}}$. Untersuche den Graphen auf Extremstellen. Gib die $x$-Koordinate $x_E$ und den Funktionswert $f(x_E)$ an. Runde den Funktionswert auf vier Dezimalstellen.",
    "eingaben": [
     {
      "label": "Extremstelle $x_E$",
@@ -483,9 +483,9 @@
     "Kurz erklärt: Eine <strong>Extremstelle</strong> ist ein x-Wert mit einem Hoch- oder Tiefpunkt.",
     "Schreibe $f(x)=x\\cdot\\mathrm{e}^{-x}$ und nutze die Produktregel (oder die Quotientenregel).",
     "Es ergibt sich $f'(x)=(1-x)\\,\\mathrm{e}^{-x}$. Da $\\mathrm{e}^{-x}>0$, ist nur $1-x=0$ entscheidend.",
-    "Setze $x_E=1$ ein: $f(1)=1\\cdot\\mathrm{e}^{-1}=\\dfrac{1}{\\mathrm{e}}$. Über die zweite Ableitung erkennst du einen Hochpunkt."
+    "Setze $x_E=1$ ein: $f(1)=1\\cdot\\mathrm{e}^{-1}=\\frac{1}{\\mathrm{e}}$. Über die zweite Ableitung erkennst du einen Hochpunkt."
    ],
-   "loesungsweg": "Umschreiben: $f(x)=x\\cdot\\mathrm{e}^{-x}$. Produktregel: $f'(x)=1\\cdot\\mathrm{e}^{-x}+x\\cdot(-\\mathrm{e}^{-x})=(1-x)\\,\\mathrm{e}^{-x}$. Nullsetzen: Da $\\mathrm{e}^{-x}>0$, folgt $1-x=0$, also $x_E=1$. Funktionswert: $f(1)=\\dfrac{1}{\\mathrm{e}}\\approx 0{,}3679$. Die zweite Ableitung $f''(x)=(x-2)\\,\\mathrm{e}^{-x}$ ist bei $x=1$ negativ, also liegt ein Hochpunkt vor.",
+   "loesungsweg": "Umschreiben: $f(x)=x\\cdot\\mathrm{e}^{-x}$. Produktregel: $f'(x)=1\\cdot\\mathrm{e}^{-x}+x\\cdot(-\\mathrm{e}^{-x})=(1-x)\\,\\mathrm{e}^{-x}$. Nullsetzen: Da $\\mathrm{e}^{-x}>0$, folgt $1-x=0$, also $x_E=1$. Funktionswert: $f(1)=\\frac{1}{\\mathrm{e}}\\approx 0{,}3679$. Die zweite Ableitung $f''(x)=(x-2)\\,\\mathrm{e}^{-x}$ ist bei $x=1$ negativ, also liegt ein Hochpunkt vor.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, Kurvenuntersuchung mit e-Funktionen, Quotientenregel (Qualifikationsphase)"
    ]
@@ -682,6 +682,60 @@
    "loesungsweg": "stehen — innere — −2·e⁻²ˣ — Umkehrfunktion: Bei $(\\mathrm{e}^{g(x)})' = g'(x)\\cdot\\mathrm{e}^{g(x)}$ bleibt die e-Funktion stehen, davor steht die innere Ableitung. Für $g(x)=-2x$ ist $g'(x)=-2$, also $(\\mathrm{e}^{-2x})' = -2\\,\\mathrm{e}^{-2x}$. Und weil $\\ln(\\mathrm{e}^x)=x$ gilt, ist $\\ln$ die Umkehrfunktion der e-Funktion.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2017): Analysis, natürliche Exponentialfunktion (Qualifikationsphase)"
+   ]
+  },
+  {
+   "id": "ma-qp-ef-109",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Berechne den Funktionswert $f(1)$ für $f(x)=\\mathrm{e}^{x}$. Runde auf zwei Dezimalstellen.",
+   "eingaben": [
+    {
+     "label": "$f(1)\\approx$",
+     "antwort": 2.72,
+     "toleranz": 0.02
+    }
+   ],
+   "tipps": [
+    "$\\mathrm{e}$ ist die Eulersche Zahl, etwa $2{,}718$.",
+    "$f(1)=\\mathrm{e}^{1}=\\mathrm{e}$.",
+    "$\\mathrm{e}\\approx 2{,}72$."
+   ],
+   "loesungsweg": "$f(1)=\\mathrm{e}^{1}=\\mathrm{e}\\approx 2{,}72$.",
+   "kc": [
+    "natürliche Exponentialfunktion"
+   ]
+  },
+  {
+   "id": "ma-qp-ef-110",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Vereinfache mit der Umkehr-Beziehung: $\\ln\\!\\left(\\mathrm{e}^{5}\\right)=?$",
+   "eingaben": [
+    {
+     "label": "Ergebnis",
+     "antwort": 5,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "$\\ln$ und $\\mathrm{e}^{x}$ sind Umkehrfunktionen.",
+    "$\\ln(\\mathrm{e}^{a})=a$.",
+    "Hier ist $a=5$."
+   ],
+   "loesungsweg": "Da $\\ln$ die Umkehrfunktion von $\\mathrm{e}^{x}$ ist, gilt $\\ln(\\mathrm{e}^{5})=5$.",
+   "kc": [
+    "natürlicher Logarithmus"
    ]
   }
  ]

@@ -76,71 +76,79 @@
         "ph-05-sk-302"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Vor dir liegen eine <strong>Batterie</strong>, ein <strong>Lämpchen</strong> und <strong>zwei Kabel</strong>. Du sollst das Lämpchen zum Leuchten bringen. Ein Mitschüler meint, <strong>ein</strong> Kabel von der Batterie zum Lämpchen müsste doch reichen.</p>",
+      "figur": "<svg viewBox=\"0 0 230 150\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"54.0\" y1=\"83.0\" x2=\"54.0\" y2=\"107.0\"/><line class=\"gerade\" x1=\"66.0\" y1=\"88.0\" x2=\"66.0\" y2=\"102.0\"/><line class=\"achse\" x1=\"66.0\" y1=\"95.0\" x2=\"150.0\" y2=\"95.0\"/><circle class=\"gerade\" cx=\"165.0\" cy=\"95.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"156.5\" y1=\"86.5\" x2=\"173.5\" y2=\"103.5\"/><line class=\"gerade\" x1=\"156.5\" y1=\"103.5\" x2=\"173.5\" y2=\"86.5\"/><line class=\"achse\" x1=\"54.0\" y1=\"95.0\" x2=\"40.0\" y2=\"95.0\"/><circle class=\"marke\" cx=\"40.0\" cy=\"95.0\" r=\"2.6\"/><text class=\"label-a\" x=\"40.0\" y=\"80.0\" text-anchor=\"middle\">frei?</text><text class=\"beschriftung\" x=\"60.0\" y=\"125.0\" text-anchor=\"middle\">Batterie</text><text class=\"beschriftung\" x=\"165.0\" y=\"125.0\" text-anchor=\"middle\">Lämpchen</text></svg>",
+      "figurAlt": "Batterie, ein einzelnes Kabel zum Lämpchen, der zweite Anschluss bleibt frei.",
+      "vorhersage": "Leuchtet das Lämpchen, wenn nur <em>ein</em> Kabel die Batterie mit dem Lämpchen verbindet?",
+      "optionen": [
+       "Ja, ein Kabel reicht",
+       "Nein, es bleibt dunkel",
+       "nur ganz schwach"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#sk-stromkreis",
-     "text": "Arbeite dich Schritt für Schritt durch den Aufbau eines Stromkreises — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/stromkreise/index.html#sk-stromkreis"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Was ein Stromkreis braucht",
-       "html": "<p>Für einen einfachen Stromkreis brauchst du nur drei Dinge: eine <strong>Batterie</strong>, zwei <strong>Kabel</strong> und ein <strong>Lämpchen</strong>. Die Batterie hat zwei Anschlüsse — den <strong>Pluspol (+)</strong> und den <strong>Minuspol (−)</strong>. Verbindest du beide Pole über die Kabel mit dem Lämpchen, leuchtet es.</p>",
-       "check": {
-        "frage": "Reicht ein einziges Kabel von der Batterie zum Lämpchen?",
-        "antwort": "Nein. Der Strom braucht einen Weg hin und zurück: vom Pluspol zum Lämpchen und vom Lämpchen zurück zum Minuspol. Erst das zweite Kabel macht den Ring komplett — mit nur einem Kabel bleibt das Lämpchen dunkel."
+       "kern": "Du brauchst <strong>Batterie</strong>, <strong>zwei Kabel</strong> und ein <strong>Lämpchen</strong>. Die Batterie hat einen <strong>Pluspol (+)</strong> und einen <strong>Minuspol (−)</strong> – verbindest du beide über das Lämpchen, leuchtet es.",
+       "figur": "<svg viewBox=\"0 0 250 158\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"45.0\" y1=\"28.0\" x2=\"205.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"205.0\" y1=\"28.0\" x2=\"205.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"45.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"108.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"128.0\" x2=\"205.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"116.0\" x2=\"114.0\" y2=\"140.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"121.0\" x2=\"126.0\" y2=\"135.0\"/><circle class=\"gerade\" cx=\"125.0\" cy=\"28.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"116.5\" y1=\"19.5\" x2=\"133.5\" y2=\"36.5\"/><line class=\"gerade\" x1=\"116.5\" y1=\"36.5\" x2=\"133.5\" y2=\"19.5\"/><text class=\"beschriftung\" x=\"125.0\" y=\"13.0\" text-anchor=\"middle\">Lämpchen</text><text class=\"beschriftung\" x=\"120.0\" y=\"147.0\" text-anchor=\"middle\">Batterie</text></svg>",
+       "figurAlt": "Geschlossener Ring: Batterie unten, Lämpchen oben, zwei Kabel verbinden beide.",
+       "minicheck": {
+        "frage": "Warum reicht ein einziges Kabel nicht?",
+        "antwort": "Der Strom braucht einen Weg <em>hin und zurück</em>: vom Pluspol zum Lämpchen und zurück zum Minuspol. Erst das zweite Kabel schließt den Ring."
        }
       },
       {
        "titel": "Der Strom fließt im Kreis",
-       "html": "<p>Im geschlossenen Stromkreis fließt der Strom <strong>im Kreis herum</strong>: aus der Batterie heraus, durch das erste Kabel, durch das Lämpchen, durch das zweite Kabel — und wieder zurück in die Batterie. So ein geschlossener Ring heißt <strong>Stromkreis</strong>. Der Name sagt es schon: Der Strom braucht einen Kreis.</p>",
-       "check": {
+       "kern": "Im geschlossenen Stromkreis fließt der Strom <strong>im Ring herum</strong> – aus der Batterie, durch das Lämpchen und zurück. So ein geschlossener Ring heißt <strong>Stromkreis</strong>.",
+       "details": "<p>Der Name verrät es schon: Der Strom braucht einen <em>Kreis</em>. Modell der Elektronen: winzige Teilchen, die <strong>Elektronen</strong>, wandern dabei vom Minuspol (−) durch die Kabel und das Lämpchen zum Pluspol (+). Wichtig ist erst einmal nur: Der Ring muss geschlossen sein.</p>",
+       "minicheck": {
         "frage": "Warum nennt man die Schaltung „Stromkreis“?",
-        "antwort": "Weil der Strom einen geschlossenen Ring (Kreis) braucht, um zu fließen — von der Batterie durch das Lämpchen und wieder zurück zur Batterie."
+        "antwort": "Weil der Strom einen geschlossenen Ring (Kreis) braucht – von der Batterie durch das Lämpchen und wieder zurück."
        }
       },
       {
        "titel": "Eine Lücke stoppt alles",
-       "html": "<p>Ziehst du ein Kabel ab, hat der Ring eine <strong>Lücke</strong> — und das Lämpchen geht <strong>sofort</strong> aus. Der Strom kann eine Lücke nämlich nicht überspringen. Genau das passiert auch, wenn ein Kabel innen gerissen oder das Lämpchen kaputt ist: Der Kreis ist dann offen.</p>",
-       "check": {
-        "frage": "Warum geht das Lämpchen sofort ganz aus, wenn du ein Kabel abziehst?",
-        "antwort": "Der Stromkreis hat dann eine Lücke und ist nicht mehr geschlossen. Der Strom kann die Lücke nicht überspringen, also fließt nirgendwo mehr Strom — das Lämpchen geht sofort aus."
+       "kern": "Ziehst du ein Kabel ab, hat der Ring eine <strong>Lücke</strong> – und das Lämpchen geht <strong>sofort</strong> aus. Der Strom kann eine Lücke nicht überspringen.",
+       "figur": "<svg viewBox=\"0 0 250 158\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"45.0\" y1=\"28.0\" x2=\"205.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"205.0\" y1=\"28.0\" x2=\"205.0\" y2=\"70.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"45.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"108.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"128.0\" x2=\"205.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"116.0\" x2=\"114.0\" y2=\"140.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"121.0\" x2=\"126.0\" y2=\"135.0\"/><circle class=\"gerade\" cx=\"125.0\" cy=\"28.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"116.5\" y1=\"19.5\" x2=\"133.5\" y2=\"36.5\"/><line class=\"gerade\" x1=\"116.5\" y1=\"36.5\" x2=\"133.5\" y2=\"19.5\"/><text class=\"label-a\" x=\"205.0\" y=\"88.0\" text-anchor=\"middle\">Lücke</text><circle class=\"marke\" cx=\"205.0\" cy=\"70.0\" r=\"2.6\"/><text class=\"beschriftung\" x=\"125.0\" y=\"13.0\" text-anchor=\"middle\">Lämpchen</text><text class=\"beschriftung\" x=\"120.0\" y=\"147.0\" text-anchor=\"middle\">Batterie</text></svg>",
+       "figurAlt": "Derselbe Ring, aber rechts ist eine Lücke markiert – der Kreis ist offen.",
+       "minicheck": {
+        "frage": "Was passiert mit dem Lämpchen, wenn ein Kabel innen gerissen ist?",
+        "antwort": "Es bleibt dunkel. Ein gerissenes Kabel ist eine Lücke – der Kreis ist offen, also fließt nirgends Strom."
        }
       }
      ],
-     "merksatz": "Ein Stromkreis besteht aus <strong>Stromquelle</strong> (z. B. Batterie), <strong>Leitungen</strong> und einem <strong>Verbraucher</strong> (z. B. Lämpchen). Strom fließt nur, wenn der Kreis <strong>geschlossen</strong> ist — schon eine kleine Lücke, und alles steht still.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Stromkreis-Baukasten",
-       "pfad": "simulationen/physik/stromkreis-baukasten/index.html",
-       "vorhersage": "Was passiert mit dem Lämpchen, wenn du den Schalter öffnest? Schreibe deine Vermutung auf, <em>bevor</em> du es ausprobierst.",
-       "auftraege": [
-        "Öffne und schließe den Schalter — wann genau leuchtet das Lämpchen, wann nicht?",
-        "Suche im Baukasten die Stelle, an der eine Lücke im Kreis entsteht, und beschreibe, was dann passiert.",
-        "Erkläre mit den Wörtern „geschlossen“ und „Lücke“, warum das Lämpchen an- oder ausgeht."
-       ]
-      },
-      {
-       "typ": "experiment",
-       "titel": "Bau deinen eigenen Stromkreis",
-       "material": "Eine Flachbatterie (4,5 V), ein Lämpchen mit Fassung, zwei Kabel.",
-       "vorhersage": "Skizziere zuerst, wie du Batterie, Kabel und Lämpchen verbinden musst, damit das Lämpchen leuchtet.",
-       "auftraege": [
-        "Baue den Kreis so, dass das Lämpchen leuchtet.",
-        "Löse ein Kabel und beobachte, was passiert — erkläre es mit „offen“ und „geschlossen“.",
-        "Probiere aus, ob das Lämpchen auch mit nur einem Kabel leuchtet, und begründe das Ergebnis."
-       ]
-      }
-     ],
+     "stolperstein": "Viele denken, der Strom „kommt aus der Batterie und wird im Lämpchen verbraucht“ – ein zweites Kabel sei überflüssig. Falsch: Der Strom fließt im <strong>Kreis</strong> und muss zur Batterie <strong>zurück</strong>. Ohne den Rückweg leuchtet nichts.",
+     "darstellungen": {
+      "titel": "Derselbe Stromkreis – in drei Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Batterie, zwei Kabel und ein Lämpchen zu einem geschlossenen Ring verbunden."
+       },
+       {
+        "art": "Schaltbild",
+        "figur": "<svg viewBox=\"0 0 250 158\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"45.0\" y1=\"28.0\" x2=\"205.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"205.0\" y1=\"28.0\" x2=\"205.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"45.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"108.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"128.0\" x2=\"205.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"116.0\" x2=\"114.0\" y2=\"140.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"121.0\" x2=\"126.0\" y2=\"135.0\"/><circle class=\"gerade\" cx=\"125.0\" cy=\"28.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"116.5\" y1=\"19.5\" x2=\"133.5\" y2=\"36.5\"/><line class=\"gerade\" x1=\"116.5\" y1=\"36.5\" x2=\"133.5\" y2=\"19.5\"/><text class=\"beschriftung\" x=\"125.0\" y=\"13.0\" text-anchor=\"middle\">Lämpchen</text><text class=\"beschriftung\" x=\"120.0\" y=\"147.0\" text-anchor=\"middle\">Batterie</text></svg>",
+        "figurAlt": "Geschlossener Ring mit Batterie und Lämpchen."
+       },
+       {
+        "art": "Merksatz",
+        "text": "Strom fließt nur im geschlossenen Kreis – eine Lücke, und alles steht still."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre einer Mitschülerin in einem Satz, warum ein Stromkreis immer einen Hin- und einen Rückweg braucht.",
+     "merksatz": "Ein Stromkreis besteht aus <strong>Stromquelle</strong> (Batterie), <strong>Leitungen</strong> und einem <strong>Verbraucher</strong> (Lämpchen). Strom fließt nur, wenn der Kreis <strong>geschlossen</strong> ist – schon eine kleine Lücke, und alles steht still.",
      "selbstcheck": [
       {
        "frage": "Nenne die Bedingung, damit Strom fließt.",
-       "antwort": "Der Stromkreis muss geschlossen sein — eine durchgehende Verbindung von der Batterie durch das Lämpchen und zurück zur Batterie."
+       "antwort": "Der Stromkreis muss geschlossen sein – ein durchgehender Ring von der Batterie durch das Lämpchen und zurück."
       },
       {
        "frage": "Welche drei Bauteile braucht der einfachste Stromkreis?",
@@ -148,7 +156,29 @@
       },
       {
        "frage": "Ein Lämpchen leuchtet nicht. Nenne zwei mögliche Ursachen, die mit dem Kreis zu tun haben.",
-       "antwort": "Zum Beispiel: ein Kabel ist abgezogen oder innen gerissen, oder das Lämpchen ist kaputt — in beiden Fällen ist der Kreis nicht mehr geschlossen."
+       "antwort": "Zum Beispiel: ein Kabel ist abgezogen oder innen gerissen, oder das Lämpchen ist kaputt – in beiden Fällen ist der Kreis nicht mehr geschlossen."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Bau deinen eigenen Stromkreis",
+       "material": "Eine Flachbatterie (4,5 V), ein Lämpchen mit Fassung, zwei Kabel.",
+       "auftraege": [
+        "Baue den Kreis so, dass das Lämpchen leuchtet.",
+        "Löse ein Kabel und beobachte, was passiert – erkläre es mit „offen“ und „geschlossen“.",
+        "Probiere aus, ob das Lämpchen auch mit nur einem Kabel leuchtet, und begründe das Ergebnis."
+       ]
+      },
+      {
+       "typ": "simulation",
+       "titel": "Stromkreis-Baukasten",
+       "pfad": "simulationen/physik/stromkreis-baukasten/index.html",
+       "auftraege": [
+        "Öffne und schließe den Schalter – wann genau leuchtet das Lämpchen, wann nicht?",
+        "Suche die Stelle, an der eine Lücke im Kreis entsteht, und beschreibe, was dann passiert.",
+        "Erkläre mit den Wörtern „geschlossen“ und „Lücke“, warum das Lämpchen an- oder ausgeht."
+       ]
       }
      ]
     },
@@ -196,7 +226,8 @@
        ]
       }
      ],
-     "transfer": "Stell dir vor, du baust einen Stromkreis aus Batterie, Kabel und Lämpchen. An welcher Stelle ist eine Lücke am wahrscheinlichsten? Warum?"
+     "transfer": "Stell dir vor, du baust einen Stromkreis aus Batterie, Kabel und Lämpchen. An welcher Stelle ist eine Lücke am wahrscheinlichsten? Warum?",
+     "rueckbezug": "Zurück zur Anfangsfrage: Ein einziges Kabel reicht <strong>nicht</strong>. Der Strom braucht den Hin- <em>und</em> den Rückweg, also <strong>zwei</strong> Kabel, damit der Ring geschlossen ist und das Lämpchen leuchtet. Passt das zu deiner Vermutung?"
     },
     "extra": {
      "zeit": 8,
@@ -249,68 +280,109 @@
         "ph-05-sk-005"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Du sollst einer Mitschülerin per Brief erklären, wie sie einen Stromkreis mit Batterie, Schalter und Lampe aufbaut – aber jeder malt die Bauteile ein bisschen anders. Wie kannst du die Schaltung so aufzeichnen, dass sie <strong>jeder</strong> sofort versteht?</p>",
+      "figur": "<svg viewBox=\"0 0 270 158\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"30.0\" x2=\"210.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"40.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"210.0\" y1=\"30.0\" x2=\"210.0\" y2=\"76.0\"/><line class=\"achse\" x1=\"210.0\" y1=\"102.0\" x2=\"210.0\" y2=\"130.0\"/><circle class=\"punkt\" cx=\"210.0\" cy=\"76.0\" r=\"2.6\"/><circle class=\"punkt\" cx=\"210.0\" cy=\"102.0\" r=\"2.6\"/><line class=\"gerade\" x1=\"210.0\" y1=\"102.0\" x2=\"221.0\" y2=\"82.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"108.0\" y2=\"130.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"130.0\" x2=\"210.0\" y2=\"130.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"118.0\" x2=\"114.0\" y2=\"142.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"123.0\" x2=\"126.0\" y2=\"137.0\"/><circle class=\"gerade\" cx=\"125.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"116.5\" y1=\"21.5\" x2=\"133.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"116.5\" y1=\"38.5\" x2=\"133.5\" y2=\"21.5\"/><text class=\"beschriftung\" x=\"125.0\" y=\"15.0\" text-anchor=\"middle\">Lampe</text><text class=\"beschriftung\" x=\"120.0\" y=\"149.0\" text-anchor=\"middle\">Batterie</text><text class=\"beschriftung\" x=\"240.0\" y=\"92.0\" text-anchor=\"start\">Schalter</text></svg>",
+      "figurAlt": "Ein Schaltplan aus genormten Zeichen: Batterie, Lampe (Kreis mit Kreuz) und ein Schalter im Ring.",
+      "vorhersage": "Was glaubst du: Wie zeichnen Fachleute auf der ganzen Welt einen Stromkreis?",
+      "optionen": [
+       "Jeder malt die echten Bauteile ab",
+       "Mit genormten Zeichen, überall gleich",
+       "Mit Fotos der Geräte"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#sk-schaltzeichen",
-     "text": "Lerne Schritt für Schritt, wie man aus echten Bauteilen einen Schaltplan macht — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/stromkreise/index.html#sk-schaltzeichen"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Warum Schaltzeichen?",
-       "html": "<p>Eine Batterie abzumalen dauert — und jeder malt sie ein bisschen anders. Forscherinnen und Elektriker brauchen aber Zeichnungen, die <strong>jeder sofort versteht</strong>. Darum gibt es <strong>Schaltzeichen</strong>: einfache, genormte Zeichen für jedes Bauteil. Sie funktionieren wie Verkehrsschilder — auf der ganzen Welt gleich.</p>",
-       "check": {
+       "kern": "Eine Batterie abzumalen dauert – und jeder malt sie anders. Darum gibt es <strong>Schaltzeichen</strong>: einfache, genormte Zeichen für jedes Bauteil, weltweit gleich wie Verkehrsschilder.",
+       "minicheck": {
         "frage": "Warum sind Schaltzeichen weltweit einheitlich?",
-        "antwort": "Damit jeder eine Schaltung sofort lesen und verstehen kann — egal, wer den Plan gezeichnet hat oder aus welchem Land er kommt. Genau wie Verkehrsschilder."
+        "antwort": "Damit jeder eine Schaltung sofort lesen kann – egal, wer den Plan gezeichnet hat oder aus welchem Land er kommt."
        }
       },
       {
        "titel": "Die wichtigsten Zeichen",
-       "html": "<p><strong>Batterie:</strong> ein langer dünner Strich (Pluspol) und ein kurzer dicker Strich. <strong>Lampe:</strong> ein Kreis mit einem Kreuz darin. <strong>Schalter:</strong> eine Linie mit einer kleinen Klappe (Klappe oben = Lücke, Klappe unten = geschlossen). <strong>Kabel:</strong> eine gerade Linie.</p>",
-       "check": {
+       "kern": "<strong>Batterie:</strong> langer dünner Strich (Pluspol) und kurzer dicker Strich. <strong>Lampe:</strong> Kreis mit Kreuz. <strong>Schalter:</strong> Linie mit kleiner Klappe. <strong>Kabel:</strong> gerade Linie.",
+       "figur": "<svg viewBox=\"0 0 270 158\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"30.0\" x2=\"210.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"40.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"210.0\" y1=\"30.0\" x2=\"210.0\" y2=\"76.0\"/><line class=\"achse\" x1=\"210.0\" y1=\"102.0\" x2=\"210.0\" y2=\"130.0\"/><circle class=\"punkt\" cx=\"210.0\" cy=\"76.0\" r=\"2.6\"/><circle class=\"punkt\" cx=\"210.0\" cy=\"102.0\" r=\"2.6\"/><line class=\"gerade\" x1=\"210.0\" y1=\"102.0\" x2=\"221.0\" y2=\"82.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"108.0\" y2=\"130.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"130.0\" x2=\"210.0\" y2=\"130.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"118.0\" x2=\"114.0\" y2=\"142.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"123.0\" x2=\"126.0\" y2=\"137.0\"/><circle class=\"gerade\" cx=\"125.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"116.5\" y1=\"21.5\" x2=\"133.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"116.5\" y1=\"38.5\" x2=\"133.5\" y2=\"21.5\"/><text class=\"beschriftung\" x=\"125.0\" y=\"15.0\" text-anchor=\"middle\">Lampe</text><text class=\"beschriftung\" x=\"120.0\" y=\"149.0\" text-anchor=\"middle\">Batterie</text><text class=\"beschriftung\" x=\"240.0\" y=\"92.0\" text-anchor=\"start\">Schalter</text></svg>",
+       "figurAlt": "Schaltplan mit Batterie-, Lampen- und Schalter-Zeichen, verbunden durch gerade Linien.",
+       "details": "<p>Beim <strong>Batterie-Zeichen</strong> ist der lange dünne Strich der <strong>Pluspol (+)</strong>, der kurze dicke der <strong>Minuspol (−)</strong>. Das <strong>Lampen-Zeichen</strong> (Kreis mit Kreuz) sieht überall gleich aus. Beim <strong>Schalter</strong> bedeutet die hochgeklappte Klappe „offen“ (Lücke), die heruntergeklappte „geschlossen“.</p>",
+       "minicheck": {
         "frage": "Welches Bauteil zeichnet man als Kreis mit einem Kreuz?",
         "antwort": "Die Lampe."
        }
       },
       {
        "titel": "Vom Bild zum Schaltplan",
-       "html": "<p>Eine Zeichnung aus lauter Schaltzeichen heißt <strong>Schaltplan</strong>. Die Leitungen werden als <strong>gerade Linien</strong> gezeichnet, die Ecken <strong>eckig</strong> (nicht rund). So kann jeder den Plan lesen — und du kannst jede Schaltung schnell aufzeichnen, ohne die Bauteile abzumalen.</p>",
-       "check": {
+       "kern": "Eine Zeichnung aus lauter Schaltzeichen heißt <strong>Schaltplan</strong>. Die Leitungen sind <strong>gerade Linien</strong>, die Ecken <strong>eckig</strong> – so kann jeder den Plan lesen.",
+       "beispiel": {
+        "aufgabe": "Du sollst einen Stromkreis aus Batterie, Schalter und Lampe als Schaltplan zeichnen.",
+        "schritte": [
+         "Zeichne einen rechteckigen Ring aus geraden Linien mit eckigen Ecken.",
+         "Setze das Batterie-Zeichen in die untere Leitung, das Lampen-Zeichen nach oben.",
+         "Setze das Schalter-Zeichen in eine Seite – fertig ist der Schaltplan."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: An welche Stelle gehört im Schaltplan das Lampen-Zeichen, wenn die Batterie unten ist?",
+         "loesung": "<p>Irgendwo in den Ring außerhalb der Batterie – üblich ist gegenüber, also oben. Wichtig ist nur, dass Batterie, Schalter und Lampe alle im selben geschlossenen Ring liegen.</p>"
+        }
+       },
+       "minicheck": {
         "frage": "Wie zeichnet man im Schaltplan die Leitungen und ihre Ecken?",
-        "antwort": "Als gerade Linien mit eckigen Ecken — nicht rund und nicht krumm."
+        "antwort": "Als gerade Linien mit eckigen Ecken – nicht rund und nicht krumm."
        }
       }
      ],
-     "merksatz": "Im <strong>Schaltplan</strong> wird jedes Bauteil als genormtes <strong>Schaltzeichen</strong> gezeichnet, die Leitungen als <strong>gerade Linien mit eckigen Ecken</strong>. So kann jeder den Plan lesen — und Schaltungen lassen sich schnell und eindeutig aufzeichnen.",
+     "stolperstein": "Ein Schaltplan ist <strong>kein</strong> Lageplan: Die Bauteile müssen im Plan nicht dort sitzen, wo sie auf dem Tisch liegen. Entscheidend ist nur, <strong>was womit verbunden</strong> ist – nicht, ob eine Leitung kurz, lang oder im Bogen verläuft.",
+     "darstellungen": {
+      "titel": "Dasselbe Bauteil – echt und als Zeichen:",
+      "eintraege": [
+       {
+        "art": "Bauteil",
+        "text": "Eine Batterie mit zwei Anschlüssen (+ und −)."
+       },
+       {
+        "art": "Schaltzeichen",
+        "figur": "<svg viewBox=\"0 0 120 75\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"54.0\" y1=\"28.0\" x2=\"54.0\" y2=\"52.0\"/><line class=\"gerade\" x1=\"66.0\" y1=\"33.0\" x2=\"66.0\" y2=\"47.0\"/><text class=\"beschriftung\" x=\"48.0\" y=\"22.0\" text-anchor=\"middle\">+</text><text class=\"beschriftung\" x=\"72.0\" y=\"22.0\" text-anchor=\"middle\">–</text></svg>",
+        "figurAlt": "Batterie-Zeichen: langer Strich (+) und kurzer Strich (–)."
+       },
+       {
+        "art": "Regel",
+        "text": "Langer dünner Strich = Pluspol, kurzer dicker Strich = Minuspol."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein Schaltplan mit genormten Zeichen praktischer ist als ein gemaltes Bild der Bauteile.",
+     "merksatz": "Im <strong>Schaltplan</strong> wird jedes Bauteil als genormtes <strong>Schaltzeichen</strong> gezeichnet, die Leitungen als <strong>gerade Linien mit eckigen Ecken</strong>. So kann jeder den Plan lesen.",
+     "selbstcheck": [
+      {
+       "frage": "Was ist der Unterschied zwischen einem Schaltzeichen und einem Schaltplan?",
+       "antwort": "Ein Schaltzeichen ist das genormte Zeichen für ein einzelnes Bauteil. Ein Schaltplan ist die ganze Zeichnung aus mehreren Schaltzeichen."
+      },
+      {
+       "frage": "Wie erkennt man im Batterie-Zeichen den Pluspol?",
+       "antwort": "Am langen dünnen Strich – der kurze dicke Strich ist der Minuspol."
+      },
+      {
+       "frage": "Warum benutzt man überhaupt Schaltzeichen statt echte Bilder zu malen?",
+       "antwort": "Weil das Zeichnen schneller geht und die Pläne überall gleich aussehen, sodass jeder sie eindeutig lesen kann."
+      }
+     ],
      "erkunden": [
       {
        "typ": "experiment",
        "titel": "Schaltplan zeichnen und nachbauen",
        "material": "Papier und Bleistift, eine Flachbatterie, ein Lämpchen mit Fassung, ein Schalter, drei Kabel.",
-       "vorhersage": "Zeichne den Schaltplan eines Stromkreises mit Batterie, Schalter und Lampe — wo setzt du welches Schaltzeichen hin? Skizziere es zuerst.",
        "auftraege": [
         "Zeichne den Schaltplan: Batterie, Schalter, Lampe, verbunden durch gerade Linien mit eckigen Ecken.",
         "Baue genau diese Schaltung mit den echten Bauteilen nach und prüfe, ob die Lampe leuchtet.",
         "Tausche deinen Plan mit einer Mitschülerin und prüfe: Versteht sie deinen Plan ohne Worte?"
        ]
-      }
-     ],
-     "selbstcheck": [
-      {
-       "frage": "Was ist der Unterschied zwischen einem Schaltzeichen und einem Schaltplan?",
-       "antwort": "Ein Schaltzeichen ist das genormte Zeichen für ein einzelnes Bauteil. Ein Schaltplan ist die ganze Zeichnung aus mehreren Schaltzeichen, die zusammen eine Schaltung darstellt."
-      },
-      {
-       "frage": "Wie erkennt man im Batterie-Zeichen den Pluspol?",
-       "antwort": "Am langen dünnen Strich — der kurze dicke Strich ist der Minuspol."
-      },
-      {
-       "frage": "Warum benutzt man überhaupt Schaltzeichen statt echte Bilder zu malen?",
-       "antwort": "Weil das Zeichnen schneller geht und die Pläne überall gleich aussehen, sodass jeder sie eindeutig lesen kann."
       }
      ]
     },
@@ -352,7 +424,8 @@
        ]
       }
      ],
-     "transfer": "Was wäre der Nachteil, wenn jeder Elektriker seine eigenen Symbole erfinden würde?"
+     "transfer": "Was wäre der Nachteil, wenn jeder Elektriker seine eigenen Symbole erfinden würde?",
+     "rueckbezug": "Zurück zur Anfangsfrage: Du zeichnest die Schaltung als <strong>Schaltplan</strong> mit genormten Schaltzeichen. Den versteht deine Mitschülerin sofort – und Fachleute weltweit benutzen genau diese Zeichen. Lag deine Vermutung richtig?"
     },
     "extra": {
      "zeit": 8,
@@ -405,67 +478,72 @@
         "ph-05-sk-008"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Im Prüfkreis ist eine <strong>Lücke</strong>. Du füllst sie nacheinander mit verschiedenen Gegenständen: einem <strong>Eisennagel</strong>, einem <strong>Radiergummi</strong>, einem <strong>Plastiklineal</strong> und einer <strong>Münze</strong>. Bei manchen leuchtet das Lämpchen, bei anderen nicht.</p>",
+      "figur": "<svg viewBox=\"0 0 250 150\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"45.0\" y1=\"30.0\" x2=\"200.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"200.0\" y1=\"30.0\" x2=\"200.0\" y2=\"120.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"120.0\" x2=\"45.0\" y2=\"30.0\"/><circle class=\"gerade\" cx=\"122.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"113.5\" y1=\"21.5\" x2=\"130.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"113.5\" y1=\"38.5\" x2=\"130.5\" y2=\"21.5\"/><line class=\"achse\" x1=\"45.0\" y1=\"120.0\" x2=\"90.0\" y2=\"120.0\"/><line class=\"achse\" x1=\"72.0\" y1=\"108.0\" x2=\"72.0\" y2=\"132.0\"/><line class=\"gerade\" x1=\"84.0\" y1=\"113.0\" x2=\"84.0\" y2=\"127.0\"/><line class=\"achse\" x1=\"102.0\" y1=\"120.0\" x2=\"110.0\" y2=\"120.0\"/><line class=\"achse\" x1=\"135.0\" y1=\"120.0\" x2=\"200.0\" y2=\"120.0\"/><rect class=\"dreieck\" x=\"110.0\" y=\"111.0\" width=\"25.0\" height=\"18.0\" rx=\"2\"/><text class=\"label-a\" x=\"122.0\" y=\"107.0\" text-anchor=\"middle\">?</text><text class=\"beschriftung\" x=\"122.0\" y=\"15.0\" text-anchor=\"middle\">Lämpchen</text><text class=\"beschriftung\" x=\"78.0\" y=\"139.0\" text-anchor=\"middle\">Batterie</text><text class=\"beschriftung\" x=\"122.0\" y=\"140.0\" text-anchor=\"middle\">Gegenstand</text></svg>",
+      "figurAlt": "Prüfkreis aus Batterie und Lämpchen, in der Lücke ein Gegenstand mit Fragezeichen.",
+      "vorhersage": "Bei welchen Gegenständen leuchtet das Lämpchen – und gibt es eine einfache Regel dahinter?",
+      "optionen": [
+       "Nur bei den Metallen",
+       "Bei allen harten Sachen",
+       "Bei keinem"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#sk-leiter",
-     "text": "Finde Schritt für Schritt heraus, welche Stoffe den Strom durchlassen — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/stromkreise/index.html#sk-leiter"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Der Prüfkreis",
-       "html": "<p>Müssen es immer Kabel sein? Probiere es mit einem <strong>Prüfkreis</strong> aus: Batterie, Lämpchen und zwei Kabel, deren Enden frei bleiben. Hältst du einen Gegenstand an beide Enden, füllt er die <strong>Lücke</strong> im Kreis. Leuchtet das Lämpchen, lässt der Gegenstand den Strom durch.</p>",
-       "check": {
+       "kern": "Ein <strong>Prüfkreis</strong> ist ein Stromkreis mit einer offenen <strong>Lücke</strong>. Hältst du einen Gegenstand an beide Enden, füllt er die Lücke. <strong>Leuchtet</strong> das Lämpchen, lässt der Gegenstand den Strom durch.",
+       "minicheck": {
         "frage": "Was bedeutet es, wenn das Lämpchen im Prüfkreis leuchtet?",
-        "antwort": "Der Gegenstand in der Lücke lässt den Strom durch — er ist also ein Leiter. Der Kreis ist über ihn geschlossen."
+        "antwort": "Der Gegenstand in der Lücke lässt den Strom durch – der Kreis ist über ihn geschlossen."
        }
       },
       {
        "titel": "Leiter und Nichtleiter",
-       "html": "<p>Stoffe, die den Strom durchlassen, heißen <strong>Leiter</strong>. Stoffe, die ihn stoppen, heißen <strong>Nichtleiter</strong> (Fachwort: <strong>Isolatoren</strong>). Die Regel ist einfach: <strong>Alle Metalle</strong> sind Leiter. Plastik, Holz, Glas und Gummi sind Nichtleiter.</p>",
-       "check": {
+       "kern": "Stoffe, die den Strom durchlassen, heißen <strong>Leiter</strong>; Stoffe, die ihn stoppen, <strong>Nichtleiter</strong> (Isolatoren). Einfache Regel: <strong>alle Metalle</strong> sind Leiter, Plastik, Holz, Glas und Gummi sind Nichtleiter.",
+       "details": "<p>Warum leiten Metalle? Im Metall gibt es viele frei bewegliche <strong>Elektronen</strong> – sie können wandern und transportieren den Strom. In Plastik, Holz oder Glas sitzen die Teilchen fest, nichts kann fließen. Darum bleibt dort das Lämpchen dunkel.</p>",
+       "minicheck": {
         "frage": "Welche einfache Regel gilt für alle Metalle?",
-        "antwort": "Alle Metalle sind Leiter — sie lassen den Strom durch. Plastik, Holz, Glas und Gummi dagegen nicht."
+        "antwort": "Alle Metalle sind Leiter – sie lassen den Strom durch. Plastik, Holz, Glas und Gummi dagegen nicht."
        }
       },
       {
        "titel": "Das Kabel ist beides",
-       "html": "<p>Ein Kabel ist <strong>beides auf einmal</strong>: innen ein <strong>Metalldraht</strong>, der den Strom leitet, außen eine <strong>Plastikhülle</strong>, die ihn drinnen hält. Übrigens: Auch Leitungswasser lässt etwas Strom durch — darum gehören Strom und Wasser nie zusammen.</p>",
-       "check": {
+       "kern": "Ein Kabel ist <strong>beides zugleich</strong>: innen ein <strong>Metalldraht</strong>, der leitet, außen eine <strong>Plastikhülle</strong>, die den Strom drinnen hält.",
+       "figur": "<svg viewBox=\"0 0 260 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"hilfslinie\" x=\"40.0\" y=\"50.0\" width=\"180.0\" height=\"40.0\" rx=\"2\"/><rect class=\"dreieck\" x=\"55.0\" y=\"62.0\" width=\"150.0\" height=\"16.0\" rx=\"2\"/><text class=\"beschriftung\" x=\"130.0\" y=\"74.0\" text-anchor=\"middle\">Metalldraht (leitet)</text><text class=\"beschriftung\" x=\"130.0\" y=\"40.0\" text-anchor=\"middle\">Plastikhülle (Nichtleiter)</text><line class=\"hilfslinie\" x1=\"130.0\" y1=\"43.0\" x2=\"130.0\" y2=\"50.0\"/></svg>",
+       "figurAlt": "Kabel im Querschnitt: Metalldraht innen, Plastikhülle außen.",
+       "minicheck": {
         "frage": "Warum hat jedes Kabel eine Plastikhülle?",
-        "antwort": "Plastik ist ein Nichtleiter. Die Hülle hält den Strom sicher im Metalldraht — so bekommt man beim Anfassen nichts ab, und sich berührende Kabel verursachen keine verbotene Abkürzung."
+        "antwort": "Plastik ist ein Nichtleiter. Die Hülle hält den Strom sicher im Metalldraht – so bekommt man beim Anfassen nichts ab."
        }
       }
      ],
-     "merksatz": "<strong>Leiter</strong> lassen den Strom durch — <strong>alle Metalle</strong> sind Leiter. <strong>Nichtleiter</strong> (Isolatoren) stoppen ihn — z. B. Plastik, Holz, Glas und Gummi. Ein Kabel vereint beides: Metalldraht innen, Plastikhülle außen.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Stromkreis-Baukasten — Materialien testen",
-       "pfad": "simulationen/physik/stromkreis-baukasten/index.html",
-       "vorhersage": "Welche Stoffe lassen den Strom durch, welche nicht? Tippe vorher für jeden Stoff (z. B. Metall, Holz, Wasser): leitet er oder leitet er nicht?",
-       "auftraege": [
-        "Tippe das Material in der Lücke durch und teste alle Stoffe: Welche leiten, welche nicht?",
-        "Achte besonders auf das Wasser — leitet es den Strom genauso gut wie Metall?",
-        "Ordne deine Ergebnisse in zwei Gruppen: Leiter und Nichtleiter."
-       ]
-      },
-      {
-       "typ": "experiment",
-       "titel": "Eigener Prüfkreis",
-       "material": "Eine Flachbatterie, ein Lämpchen mit Fassung, zwei Kabel mit freien Enden, dazu Testgegenstände: Büroklammer, Radiergummi, Münze, Bleistiftmine, Lineal.",
-       "vorhersage": "Sortiere die Gegenstände vorher in „leitet“ und „leitet nicht“ — schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Halte jeden Gegenstand in die Lücke des Prüfkreises und notiere, ob das Lämpchen leuchtet.",
-        "Vergleiche dein Ergebnis mit deiner Vermutung — wo lagst du daneben?",
-        "Begründe mit der Metall-Regel, warum die Münze leitet, der Radiergummi aber nicht."
-       ]
-      }
-     ],
+     "stolperstein": "„Metall glänzt, also leitet alles, was glänzt“ – das stimmt nicht. <strong>Glas</strong> kann glänzen und leitet trotzdem nicht. Umgekehrt ist eine matte, lackierte <strong>Eisenschraube</strong> ein Leiter. Es kommt auf den <strong>Stoff</strong> an, nicht auf den Glanz.",
+     "darstellungen": {
+      "titel": "Leiter und Nichtleiter – auf einen Blick:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Gegenstand in die Lücke des Prüfkreises halten und beobachten."
+       },
+       {
+        "art": "Tabelle",
+        "html": "<table class='lb-mini-tab'><tr><th>Stoff</th><td>Eisen</td><td>Kupfer</td><td>Holz</td><td>Plastik</td></tr><tr><th>leitet?</th><td>ja</td><td>ja</td><td>nein</td><td>nein</td></tr></table>"
+       },
+       {
+        "art": "Regel",
+        "text": "Metalle leiten, Nichtleiter (Holz, Plastik, Glas, Gummi) leiten nicht."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, woran du bei einem unbekannten Gegenstand vorhersagen kannst, ob er den Strom leitet.",
+     "merksatz": "<strong>Leiter</strong> lassen den Strom durch – <strong>alle Metalle</strong> sind Leiter. <strong>Nichtleiter</strong> (Isolatoren) stoppen ihn – z. B. Plastik, Holz, Glas und Gummi. Ein Kabel vereint beides.",
      "selbstcheck": [
       {
        "frage": "Was ist der Unterschied zwischen einem Leiter und einem Nichtleiter?",
@@ -477,7 +555,29 @@
       },
       {
        "frage": "Warum sollte man Strom und Wasser voneinander fernhalten?",
-       "antwort": "Weil Leitungswasser den Strom durchlässt — und der menschliche Körper besteht zum großen Teil aus Wasser. Darum gehören Strom und Wasser nie zusammen."
+       "antwort": "Weil Leitungswasser den Strom durchlässt – und der menschliche Körper besteht zum großen Teil aus Wasser. Darum gehören Strom und Wasser nie zusammen."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Eigener Prüfkreis",
+       "material": "Eine Flachbatterie, ein Lämpchen mit Fassung, zwei Kabel mit freien Enden, dazu: Büroklammer, Radiergummi, Münze, Bleistiftmine, Lineal.",
+       "auftraege": [
+        "Halte jeden Gegenstand in die Lücke des Prüfkreises und notiere, ob das Lämpchen leuchtet.",
+        "Vergleiche dein Ergebnis mit deiner Vermutung – wo lagst du daneben?",
+        "Begründe mit der Metall-Regel, warum die Münze leitet, der Radiergummi aber nicht."
+       ]
+      },
+      {
+       "typ": "simulation",
+       "titel": "Stromkreis-Baukasten – Materialien testen",
+       "pfad": "simulationen/physik/stromkreis-baukasten/index.html",
+       "auftraege": [
+        "Tippe das Material in der Lücke durch und teste alle Stoffe: Welche leiten, welche nicht?",
+        "Achte besonders auf das Wasser – leitet es den Strom genauso gut wie Metall?",
+        "Ordne deine Ergebnisse in zwei Gruppen: Leiter und Nichtleiter."
+       ]
       }
      ]
     },
@@ -519,7 +619,8 @@
        ]
       }
      ],
-     "transfer": "Warum muss die Hülle eines Kabels ein Nichtleiter sein? Was könnte passieren, wenn sie aus Metall wäre?"
+     "transfer": "Warum muss die Hülle eines Kabels ein Nichtleiter sein? Was könnte passieren, wenn sie aus Metall wäre?",
+     "rueckbezug": "Zurück zum Prüfkreis vom Anfang: Das Lämpchen leuchtet bei <strong>Eisennagel</strong> und <strong>Münze</strong> (Metalle = Leiter), bleibt aber bei <strong>Radiergummi</strong> und <strong>Plastiklineal</strong> dunkel (Nichtleiter). Die Regel dahinter: Metalle leiten. Hattest du das vermutet?"
     },
     "extra": {
      "zeit": 8,
@@ -572,67 +673,76 @@
         "ph-05-sk-004"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Eine <strong>Waschmaschine</strong> läuft nur, wenn die Tür zu ist <strong>und</strong> der Startknopf gedrückt wird. Eine <strong>Türklingel</strong> dagegen läutet, wenn am Haustür-Knopf <strong>oder</strong> am Gartentor-Knopf gedrückt wird. Beide haben zwei Schalter – aber sie sind unterschiedlich angeordnet.</p>",
+      "figur": "<svg viewBox=\"0 0 255 152\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"30.0\" x2=\"215.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"215.0\" y1=\"30.0\" x2=\"215.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"125.0\" x2=\"40.0\" y2=\"30.0\"/><circle class=\"gerade\" cx=\"95.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"86.5\" y1=\"21.5\" x2=\"103.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"86.5\" y1=\"38.5\" x2=\"103.5\" y2=\"21.5\"/><circle class=\"gerade\" cx=\"160.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"151.5\" y1=\"21.5\" x2=\"168.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"151.5\" y1=\"38.5\" x2=\"168.5\" y2=\"21.5\"/><line class=\"achse\" x1=\"40.0\" y1=\"125.0\" x2=\"108.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"125.0\" x2=\"215.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"113.0\" x2=\"114.0\" y2=\"137.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"118.0\" x2=\"126.0\" y2=\"132.0\"/><text class=\"beschriftung\" x=\"95.0\" y=\"15.0\" text-anchor=\"middle\">L1</text><text class=\"beschriftung\" x=\"160.0\" y=\"15.0\" text-anchor=\"middle\">L2</text><text class=\"beschriftung\" x=\"127.0\" y=\"144.0\" text-anchor=\"middle\">ein Ring</text></svg>",
+      "figurAlt": "Zwei Lampen hintereinander in einem Ring (Reihenschaltung).",
+      "vorhersage": "Bei zwei Schaltern <em>hintereinander</em> im Ring: Wann leuchtet die Lampe?",
+      "optionen": [
+       "Wenn einer zu ist",
+       "Nur wenn beide zu sind",
+       "immer"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#sk-schalter",
-     "text": "Untersuche Schritt für Schritt, wie Schalter den Kreis steuern — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/stromkreise/index.html#sk-schalter"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Was ein Schalter macht",
-       "html": "<p>Ein <strong>Schalter</strong> ist eine kleine bewegliche Brücke im Stromkreis. <strong>Schalter offen:</strong> Die Brücke ist hochgeklappt, der Kreis hat eine Lücke, die Lampe ist aus. <strong>Schalter zu:</strong> Die Brücke liegt unten, der Kreis ist geschlossen, die Lampe leuchtet.</p>",
-       "check": {
+       "kern": "Ein <strong>Schalter</strong> ist eine bewegliche Brücke. <strong>Offen:</strong> Brücke hoch, Lücke im Kreis, Lampe aus. <strong>Zu:</strong> Brücke unten, Kreis geschlossen, Lampe an.",
+       "minicheck": {
         "frage": "Was passiert im Stromkreis, wenn du den Schalter öffnest?",
-        "antwort": "Der Schalter macht eine Lücke in den Kreis — er ist dann offen, und die Lampe geht aus, weil kein Strom mehr fließen kann."
+        "antwort": "Der Schalter macht eine Lücke – der Kreis ist offen, und die Lampe geht aus, weil kein Strom mehr fließt."
        }
       },
       {
-       "titel": "Zwei Schalter hintereinander",
-       "html": "<p>Liegen zwei Schalter <strong>hintereinander</strong> im selben Ring, muss der Strom durch <strong>beide</strong> hindurch. Die Lampe leuchtet nur, wenn <strong>beide</strong> zu sind — ein einziger offener Schalter stoppt alles. So läuft z. B. eine Waschmaschine nur, wenn die Tür zu ist <em>und</em> der Startknopf gedrückt wird.</p>",
-       "check": {
-        "frage": "Zwei Schalter hintereinander, einer ist offen — leuchtet die Lampe?",
-        "antwort": "Nein. Der offene Schalter ist eine Lücke im Kreis — egal, was der andere Schalter macht. Erst wenn beide zu sind, ist der Ring komplett und die Lampe leuchtet."
+       "titel": "Zwei Schalter hintereinander (Reihe)",
+       "kern": "Hintereinander im <strong>einen</strong> Ring muss der Strom durch <strong>beide</strong> Schalter. Die Lampe leuchtet nur, wenn <strong>beide</strong> zu sind – ein offener Schalter stoppt alles.",
+       "figur": "<svg viewBox=\"0 0 255 152\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"30.0\" x2=\"215.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"215.0\" y1=\"30.0\" x2=\"215.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"125.0\" x2=\"40.0\" y2=\"30.0\"/><circle class=\"gerade\" cx=\"95.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"86.5\" y1=\"21.5\" x2=\"103.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"86.5\" y1=\"38.5\" x2=\"103.5\" y2=\"21.5\"/><circle class=\"gerade\" cx=\"160.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"151.5\" y1=\"21.5\" x2=\"168.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"151.5\" y1=\"38.5\" x2=\"168.5\" y2=\"21.5\"/><line class=\"achse\" x1=\"40.0\" y1=\"125.0\" x2=\"108.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"125.0\" x2=\"215.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"113.0\" x2=\"114.0\" y2=\"137.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"118.0\" x2=\"126.0\" y2=\"132.0\"/><text class=\"beschriftung\" x=\"95.0\" y=\"15.0\" text-anchor=\"middle\">L1</text><text class=\"beschriftung\" x=\"160.0\" y=\"15.0\" text-anchor=\"middle\">L2</text><text class=\"beschriftung\" x=\"127.0\" y=\"144.0\" text-anchor=\"middle\">ein Ring</text></svg>",
+       "figurAlt": "Reihenschaltung: zwei Bauteile hintereinander in einem Ring.",
+       "minicheck": {
+        "frage": "Zwei Schalter hintereinander, einer ist offen – leuchtet die Lampe?",
+        "antwort": "Nein. Der offene Schalter ist eine Lücke im Kreis. Erst wenn beide zu sind, ist der Ring komplett."
        }
       },
       {
-       "titel": "Zwei Schalter nebeneinander",
-       "html": "<p>Liegen zwei Schalter <strong>nebeneinander</strong>, hat jeder seinen eigenen kleinen Weg. Dem Strom genügt <strong>ein</strong> geschlossener Weg — die Lampe leuchtet, sobald <strong>einer</strong> der beiden zu ist. So funktioniert eine Klingel mit zwei Knöpfen: Haustür <em>oder</em> Gartentor lässt dieselbe Klingel läuten.</p>",
-       "check": {
-        "frage": "Zwei Schalter nebeneinander, nur einer ist zu — leuchtet die Lampe?",
-        "antwort": "Ja. Bei der Anordnung nebeneinander reicht ein geschlossener Weg. Sobald einer der beiden Schalter zu ist, fließt der Strom über diesen Weg und die Lampe leuchtet."
+       "titel": "Zwei Schalter nebeneinander (parallel)",
+       "kern": "Nebeneinander hat jeder Schalter seinen <strong>eigenen Weg</strong>. Dem Strom genügt <strong>ein</strong> geschlossener Weg – die Lampe leuchtet, sobald <strong>einer</strong> zu ist.",
+       "figur": "<svg viewBox=\"0 0 255 156\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"40.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"28.0\" x2=\"215.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"215.0\" y2=\"130.0\"/><line class=\"achse\" x1=\"95.0\" y1=\"28.0\" x2=\"95.0\" y2=\"58.0\"/><line class=\"achse\" x1=\"95.0\" y1=\"88.0\" x2=\"95.0\" y2=\"130.0\"/><circle class=\"gerade\" cx=\"95.0\" cy=\"73.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"86.5\" y1=\"64.5\" x2=\"103.5\" y2=\"81.5\"/><line class=\"gerade\" x1=\"86.5\" y1=\"81.5\" x2=\"103.5\" y2=\"64.5\"/><line class=\"achse\" x1=\"160.0\" y1=\"28.0\" x2=\"160.0\" y2=\"58.0\"/><line class=\"achse\" x1=\"160.0\" y1=\"88.0\" x2=\"160.0\" y2=\"130.0\"/><circle class=\"gerade\" cx=\"160.0\" cy=\"73.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"151.5\" y1=\"64.5\" x2=\"168.5\" y2=\"81.5\"/><line class=\"gerade\" x1=\"151.5\" y1=\"81.5\" x2=\"168.5\" y2=\"64.5\"/><line class=\"achse\" x1=\"56.0\" y1=\"118.0\" x2=\"56.0\" y2=\"142.0\"/><line class=\"gerade\" x1=\"68.0\" y1=\"123.0\" x2=\"68.0\" y2=\"137.0\"/><text class=\"beschriftung\" x=\"95.0\" y=\"50.0\" text-anchor=\"middle\">L1</text><text class=\"beschriftung\" x=\"160.0\" y=\"50.0\" text-anchor=\"middle\">L2</text><text class=\"beschriftung\" x=\"127.0\" y=\"148.0\" text-anchor=\"middle\">jeder eigener Weg</text></svg>",
+       "figurAlt": "Parallelschaltung: zwei Äste nebeneinander, jeder mit eigenem Weg.",
+       "details": "<p>So funktioniert die <strong>Türklingel</strong> mit zwei Knöpfen: Haustür <em>oder</em> Gartentor lässt dieselbe Klingel läuten. Die <strong>Waschmaschine</strong> dagegen ist eine Reihenschaltung: Tür zu <em>und</em> Startknopf gedrückt – erst dann läuft sie.</p>",
+       "minicheck": {
+        "frage": "Zwei Schalter nebeneinander, nur einer ist zu – leuchtet die Lampe?",
+        "antwort": "Ja. Bei der Anordnung nebeneinander reicht ein geschlossener Weg. Ein gedrückter Schalter genügt."
        }
       }
      ],
-     "merksatz": "<strong>Hintereinander</strong>: Die Lampe leuchtet nur, wenn <strong>alle</strong> Schalter zu sind. <strong>Nebeneinander</strong>: Die Lampe leuchtet, sobald <strong>ein</strong> Schalter zu ist.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Stromkreis-Baukasten — Reihe und Parallel",
-       "pfad": "simulationen/physik/stromkreis-baukasten/index.html",
-       "vorhersage": "Du schaltest zwei Lampen einmal in Reihe, einmal parallel. Was passiert mit der zweiten Lampe, wenn du eine herausdrehst? Schreibe für beide Fälle deine Vermutung auf.",
-       "auftraege": [
-        "Stelle „Reihe“ ein und drehe eine Lampe heraus — was passiert mit der anderen?",
-        "Stelle „Parallel“ ein und drehe eine Lampe heraus — was passiert jetzt mit der anderen?",
-        "Erkläre den Unterschied mit den Wörtern „ein Weg“ und „eigener Weg“."
-       ]
-      },
-      {
-       "typ": "experiment",
-       "titel": "Zwei Schalter ausprobieren",
-       "material": "Eine Flachbatterie, ein Lämpchen mit Fassung, zwei Schalter, mehrere Kabel.",
-       "vorhersage": "Skizziere zuerst die Schaltung „zwei Schalter hintereinander“ und sage voraus, wann die Lampe leuchtet.",
-       "auftraege": [
-        "Baue die Schaltung „hintereinander“ und teste alle vier Schalterstellungen.",
-        "Baue die Schaltung „nebeneinander“ und teste sie ebenso.",
-        "Ordne jeder Schaltung ein Alltagsbeispiel zu (z. B. Waschmaschine, Türklingel)."
-       ]
-      }
-     ],
+     "stolperstein": "„Mehr Schalter zu = heller“ – das stimmt nicht. Die Schalter <strong>steuern</strong> nur, ob der Kreis geschlossen ist. Ob die Lampe leuchtet, hängt allein davon ab, ob ein <strong>geschlossener Weg</strong> existiert, nicht von der Anzahl gedrückter Schalter.",
+     "darstellungen": {
+      "titel": "Reihe und Parallel im Vergleich:",
+      "eintraege": [
+       {
+        "art": "Reihe",
+        "figur": "<svg viewBox=\"0 0 255 152\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"30.0\" x2=\"215.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"215.0\" y1=\"30.0\" x2=\"215.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"125.0\" x2=\"40.0\" y2=\"30.0\"/><circle class=\"gerade\" cx=\"95.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"86.5\" y1=\"21.5\" x2=\"103.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"86.5\" y1=\"38.5\" x2=\"103.5\" y2=\"21.5\"/><circle class=\"gerade\" cx=\"160.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"151.5\" y1=\"21.5\" x2=\"168.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"151.5\" y1=\"38.5\" x2=\"168.5\" y2=\"21.5\"/><line class=\"achse\" x1=\"40.0\" y1=\"125.0\" x2=\"108.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"125.0\" x2=\"215.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"113.0\" x2=\"114.0\" y2=\"137.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"118.0\" x2=\"126.0\" y2=\"132.0\"/><text class=\"beschriftung\" x=\"95.0\" y=\"15.0\" text-anchor=\"middle\">L1</text><text class=\"beschriftung\" x=\"160.0\" y=\"15.0\" text-anchor=\"middle\">L2</text><text class=\"beschriftung\" x=\"127.0\" y=\"144.0\" text-anchor=\"middle\">ein Ring</text></svg>",
+        "figurAlt": "Zwei Lampen hintereinander in einem Ring."
+       },
+       {
+        "art": "Parallel",
+        "figur": "<svg viewBox=\"0 0 255 156\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"40.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"28.0\" x2=\"215.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"215.0\" y2=\"130.0\"/><line class=\"achse\" x1=\"95.0\" y1=\"28.0\" x2=\"95.0\" y2=\"58.0\"/><line class=\"achse\" x1=\"95.0\" y1=\"88.0\" x2=\"95.0\" y2=\"130.0\"/><circle class=\"gerade\" cx=\"95.0\" cy=\"73.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"86.5\" y1=\"64.5\" x2=\"103.5\" y2=\"81.5\"/><line class=\"gerade\" x1=\"86.5\" y1=\"81.5\" x2=\"103.5\" y2=\"64.5\"/><line class=\"achse\" x1=\"160.0\" y1=\"28.0\" x2=\"160.0\" y2=\"58.0\"/><line class=\"achse\" x1=\"160.0\" y1=\"88.0\" x2=\"160.0\" y2=\"130.0\"/><circle class=\"gerade\" cx=\"160.0\" cy=\"73.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"151.5\" y1=\"64.5\" x2=\"168.5\" y2=\"81.5\"/><line class=\"gerade\" x1=\"151.5\" y1=\"81.5\" x2=\"168.5\" y2=\"64.5\"/><line class=\"achse\" x1=\"56.0\" y1=\"118.0\" x2=\"56.0\" y2=\"142.0\"/><line class=\"gerade\" x1=\"68.0\" y1=\"123.0\" x2=\"68.0\" y2=\"137.0\"/><text class=\"beschriftung\" x=\"95.0\" y=\"50.0\" text-anchor=\"middle\">L1</text><text class=\"beschriftung\" x=\"160.0\" y=\"50.0\" text-anchor=\"middle\">L2</text><text class=\"beschriftung\" x=\"127.0\" y=\"148.0\" text-anchor=\"middle\">jeder eigener Weg</text></svg>",
+        "figurAlt": "Zwei Lampen nebeneinander, je eigener Weg."
+       },
+       {
+        "art": "Regel",
+        "text": "Reihe: alle müssen zu sein (UND). Parallel: einer genügt (ODER)."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, woran du erkennst, ob eine Schaltung „in Reihe“ oder „parallel“ aufgebaut ist.",
+     "merksatz": "<strong>Hintereinander (Reihe)</strong>: Die Lampe leuchtet nur, wenn <strong>alle</strong> Schalter zu sind. <strong>Nebeneinander (parallel)</strong>: Die Lampe leuchtet, sobald <strong>ein</strong> Schalter zu ist.",
      "selbstcheck": [
       {
        "frage": "Erkläre in einem Satz, wie ein Schalter den Stromkreis steuert.",
@@ -644,7 +754,29 @@
       },
       {
        "frage": "Warum baut man die Klingel an Haus- und Gartentor „nebeneinander“?",
-       "antwort": "Damit jeder Knopf für sich die Klingel auslösen kann. Bei der Anordnung nebeneinander reicht ein geschlossener Weg, also genügt ein gedrückter Knopf."
+       "antwort": "Damit jeder Knopf für sich die Klingel auslösen kann – bei der Anordnung nebeneinander reicht ein geschlossener Weg."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Zwei Schalter ausprobieren",
+       "material": "Eine Flachbatterie, ein Lämpchen mit Fassung, zwei Schalter, mehrere Kabel.",
+       "auftraege": [
+        "Baue die Schaltung „hintereinander“ und teste alle vier Schalterstellungen.",
+        "Baue die Schaltung „nebeneinander“ und teste sie ebenso.",
+        "Ordne jeder Schaltung ein Alltagsbeispiel zu (z. B. Waschmaschine, Türklingel)."
+       ]
+      },
+      {
+       "typ": "simulation",
+       "titel": "Stromkreis-Baukasten – Reihe und Parallel",
+       "pfad": "simulationen/physik/stromkreis-baukasten/index.html",
+       "auftraege": [
+        "Stelle „Reihe“ ein und drehe eine Lampe heraus – was passiert mit der anderen?",
+        "Stelle „Parallel“ ein und drehe eine Lampe heraus – was passiert jetzt?",
+        "Erkläre den Unterschied mit den Wörtern „ein Weg“ und „eigener Weg“."
+       ]
       }
      ]
     },
@@ -686,7 +818,8 @@
        ]
       }
      ],
-     "transfer": "Wo im Alltag findet man zwei Schalter nebeneinander? Nenn ein Beispiel und begründe."
+     "transfer": "Wo im Alltag findet man zwei Schalter nebeneinander? Nenn ein Beispiel und begründe.",
+     "rueckbezug": "Zurück zu Waschmaschine und Klingel: Die <strong>Waschmaschine</strong> ist eine <strong>Reihenschaltung</strong> (Tür <em>und</em> Knopf – beide müssen zu sein). Die <strong>Klingel</strong> ist eine <strong>Parallelschaltung</strong> (Haustür <em>oder</em> Gartentor – einer genügt). War deine Vorhersage richtig?"
     },
     "extra": {
      "zeit": 8,
@@ -739,68 +872,97 @@
         "ph-05-sk-011"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>In der Schule experimentierst du mit einer <strong>Flachbatterie (4,5 V)</strong> ganz gefahrlos. Zu Hause steckt in der <strong>Steckdose</strong> auch Strom. Ein Freund meint, dann könne man doch dort genauso gut Versuche machen.</p>",
+      "figur": "<svg viewBox=\"0 0 230 115\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"74.0\" y1=\"58.0\" x2=\"74.0\" y2=\"82.0\"/><line class=\"gerade\" x1=\"86.0\" y1=\"63.0\" x2=\"86.0\" y2=\"77.0\"/><line class=\"achse\" x1=\"74.0\" y1=\"70.0\" x2=\"50.0\" y2=\"70.0\"/><line class=\"achse\" x1=\"50.0\" y1=\"70.0\" x2=\"50.0\" y2=\"40.0\"/><line class=\"achse\" x1=\"50.0\" y1=\"40.0\" x2=\"150.0\" y2=\"40.0\"/><line class=\"achse\" x1=\"150.0\" y1=\"40.0\" x2=\"150.0\" y2=\"70.0\"/><line class=\"achse\" x1=\"150.0\" y1=\"70.0\" x2=\"86.0\" y2=\"70.0\"/><text class=\"label-a\" x=\"100.0\" y=\"30.0\" text-anchor=\"middle\">direkte Verbindung – kein Lämpchen!</text><text class=\"beschriftung\" x=\"80.0\" y=\"95.0\" text-anchor=\"middle\">Batterie</text></svg>",
+      "figurAlt": "Eine Batterie, deren Plus- und Minuspol direkt mit einem Kabel verbunden sind – ohne Lämpchen.",
+      "vorhersage": "Darf man für Experimente die Steckdose statt der Batterie benutzen?",
+      "optionen": [
+       "Ja, Strom ist Strom",
+       "Nein, die Steckdose ist viel zu stark",
+       "nur mit Handschuhen"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#sk-sicherheit",
-     "text": "Verstehe Schritt für Schritt, worauf es beim sicheren Umgang mit Strom ankommt — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/stromkreise/index.html#sk-sicherheit"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Batterie ja, Steckdose nein",
-       "html": "<p>Mit <strong>Batterien</strong> darfst du nach Herzenslust experimentieren: Ihr Strom ist so schwach, dass er dir nichts tun kann. Ganz anders die <strong>Steckdose</strong>: Ihr Strom ist viele hundert Mal stärker und kann Menschen ernsthaft verletzen. Darum gilt ohne Ausnahme: Die Steckdose ist für Experimente <strong>tabu</strong>.</p>",
-       "check": {
+       "kern": "Mit <strong>Batterien</strong> darfst du gefahrlos experimentieren – ihr Strom ist sehr schwach. Der Strom der <strong>Steckdose</strong> ist viele hundert Mal stärker und kann Menschen ernsthaft verletzen. Darum: Steckdose ist <strong>tabu</strong>.",
+       "minicheck": {
         "frage": "Warum darf man mit Batterien experimentieren, mit der Steckdose aber nicht?",
-        "antwort": "Der Strom einer Batterie ist sehr schwach und ungefährlich. Der Strom aus der Steckdose ist viele hundert Mal stärker und kann Menschen ernsthaft verletzen — deshalb ist er für Experimente tabu."
+        "antwort": "Der Strom einer Batterie ist sehr schwach und ungefährlich. Der Strom aus der Steckdose ist viel stärker und kann verletzen – deshalb tabu."
        }
       },
       {
        "titel": "Der Kurzschluss",
-       "html": "<p>Ein <strong>Kurzschluss</strong> entsteht, wenn der Strom eine <strong>Abkürzung</strong> nimmt: Ein Kabel verbindet Pluspol und Minuspol direkt — ohne Lämpchen dazwischen. Dann fließt sehr viel Strom auf einmal, und Kabel und Batterie werden schnell <strong>heiß</strong>. Deshalb gehört in den Kreis immer ein Verbraucher, z. B. ein Lämpchen.</p>",
-       "check": {
-        "frage": "Was passiert bei einem Kurzschluss und wie vermeidest du ihn?",
-        "antwort": "Es fließt sehr viel Strom auf einmal, Kabel und Batterie werden heiß. Vermeiden kannst du ihn, indem du die Pole nie direkt verbindest, sondern immer einen Verbraucher (z. B. ein Lämpchen) in den Kreis einbaust."
+       "kern": "Ein <strong>Kurzschluss</strong> entsteht, wenn der Strom eine <strong>Abkürzung</strong> nimmt: ein Kabel verbindet Plus- und Minuspol direkt, <strong>ohne</strong> Lämpchen. Dann fließt sehr viel Strom, und Kabel und Batterie werden <strong>heiß</strong>.",
+       "figur": "<svg viewBox=\"0 0 230 115\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"74.0\" y1=\"58.0\" x2=\"74.0\" y2=\"82.0\"/><line class=\"gerade\" x1=\"86.0\" y1=\"63.0\" x2=\"86.0\" y2=\"77.0\"/><line class=\"achse\" x1=\"74.0\" y1=\"70.0\" x2=\"50.0\" y2=\"70.0\"/><line class=\"achse\" x1=\"50.0\" y1=\"70.0\" x2=\"50.0\" y2=\"40.0\"/><line class=\"achse\" x1=\"50.0\" y1=\"40.0\" x2=\"150.0\" y2=\"40.0\"/><line class=\"achse\" x1=\"150.0\" y1=\"40.0\" x2=\"150.0\" y2=\"70.0\"/><line class=\"achse\" x1=\"150.0\" y1=\"70.0\" x2=\"86.0\" y2=\"70.0\"/><text class=\"label-a\" x=\"100.0\" y=\"30.0\" text-anchor=\"middle\">direkte Verbindung – kein Lämpchen!</text><text class=\"beschriftung\" x=\"80.0\" y=\"95.0\" text-anchor=\"middle\">Batterie</text></svg>",
+       "figurAlt": "Batterie, deren Pole ohne Verbraucher direkt verbunden sind – ein Kurzschluss.",
+       "details": "<p>Deshalb gehört in den Kreis <strong>immer ein Verbraucher</strong>, z. B. ein Lämpchen. Es „bremst“ den Strom auf ein sicheres Maß. Verbindest du die Pole direkt, fehlt diese Bremse – darum wird alles heiß.</p>",
+       "minicheck": {
+        "frage": "Wie vermeidest du einen Kurzschluss?",
+        "antwort": "Die Pole nie direkt verbinden, sondern immer einen Verbraucher (z. B. ein Lämpchen) in den Kreis einbauen."
        }
       },
       {
        "titel": "Die wichtigsten Regeln",
-       "html": "<p>Merke dir: Experimente <strong>nur mit Batterien</strong>, niemals mit der Steckdose. <strong>Nie</strong> Gegenstände in eine Steckdose stecken. <strong>Strom und Wasser trennen</strong> — Geräte nicht mit nassen Händen anfassen. Kaputte Kabel einer erwachsenen Person zeigen. Diese Regeln sind schnell gelernt — dann ist Strom ein sicherer Helfer.</p>",
-       "check": {
-        "frage": "Warum sollte man Geräte und Stecker nicht mit nassen Händen anfassen?",
-        "antwort": "Weil Wasser den Strom leitet. Mit nassen Händen könnte gefährlicher Strom durch den Körper fließen — deshalb gilt: Strom und Wasser immer trennen."
+       "kern": "Experimente <strong>nur mit Batterien</strong>. <strong>Nie</strong> Gegenstände in eine Steckdose stecken. <strong>Strom und Wasser trennen</strong> – Geräte nicht mit nassen Händen anfassen. Kaputte Kabel einer erwachsenen Person zeigen.",
+       "minicheck": {
+        "frage": "Warum sollte man Geräte nicht mit nassen Händen anfassen?",
+        "antwort": "Weil Wasser den Strom leitet. Mit nassen Händen könnte gefährlicher Strom durch den Körper fließen – darum Strom und Wasser trennen."
        }
       }
      ],
-     "merksatz": "Experimente <strong>nur mit Batterien</strong> — die Steckdose ist tabu. Verbinde die Pole einer Batterie <strong>nie direkt</strong> (Kurzschluss!), und halte <strong>Strom und Wasser</strong> immer getrennt.",
+     "stolperstein": "„Eine schwache Batterie ist ungefährlich, also kann nichts passieren“ – fast richtig, aber: Auch eine harmlose Batterie wird bei einem <strong>Kurzschluss heiß</strong> und kann auslaufen. Ungefährlich für den Menschen heißt nicht ungefährlich für die Bauteile.",
+     "darstellungen": {
+      "titel": "Sicher oder gefährlich?",
+      "eintraege": [
+       {
+        "art": "Sicher",
+        "text": "Stromkreis aus Batterie und Lämpchen – mit Verbraucher."
+       },
+       {
+        "art": "Gefährlich",
+        "figur": "<svg viewBox=\"0 0 230 115\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"74.0\" y1=\"58.0\" x2=\"74.0\" y2=\"82.0\"/><line class=\"gerade\" x1=\"86.0\" y1=\"63.0\" x2=\"86.0\" y2=\"77.0\"/><line class=\"achse\" x1=\"74.0\" y1=\"70.0\" x2=\"50.0\" y2=\"70.0\"/><line class=\"achse\" x1=\"50.0\" y1=\"70.0\" x2=\"50.0\" y2=\"40.0\"/><line class=\"achse\" x1=\"50.0\" y1=\"40.0\" x2=\"150.0\" y2=\"40.0\"/><line class=\"achse\" x1=\"150.0\" y1=\"40.0\" x2=\"150.0\" y2=\"70.0\"/><line class=\"achse\" x1=\"150.0\" y1=\"70.0\" x2=\"86.0\" y2=\"70.0\"/><text class=\"label-a\" x=\"100.0\" y=\"30.0\" text-anchor=\"middle\">direkte Verbindung – kein Lämpchen!</text><text class=\"beschriftung\" x=\"80.0\" y=\"95.0\" text-anchor=\"middle\">Batterie</text></svg>",
+        "figurAlt": "Pole direkt verbunden – Kurzschluss."
+       },
+       {
+        "art": "Regel",
+        "text": "Nie die Pole direkt verbinden, nie die Steckdose, Strom und Wasser trennen."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum in jeden Stromkreis ein Verbraucher (z. B. ein Lämpchen) gehört.",
+     "merksatz": "Experimente <strong>nur mit Batterien</strong> – die Steckdose ist tabu. Verbinde die Pole <strong>nie direkt</strong> (Kurzschluss!), und halte <strong>Strom und Wasser</strong> immer getrennt.",
+     "selbstcheck": [
+      {
+       "frage": "Nenne zwei Gefahren, die entstehen können, wenn man Sicherheitsregeln ignoriert.",
+       "antwort": "Zum Beispiel: ein elektrischer Schlag aus der Steckdose und ein Kurzschluss, bei dem Kabel und Batterie heiß werden."
+      },
+      {
+       "frage": "Warum sind Batterien für Schul-Experimente sicher?",
+       "antwort": "Weil ihr Strom sehr schwach ist und Menschen nicht verletzen kann."
+      },
+      {
+       "frage": "Was tust du, wenn du ein kaputtes Kabel entdeckst?",
+       "antwort": "Nicht selbst benutzen oder reparieren, sondern einer erwachsenen Person zeigen."
+      }
+     ],
      "erkunden": [
       {
        "typ": "experiment",
        "titel": "Sicherheits-Check zu Hause und im Klassenraum",
-       "material": "Keine Geräte nötig — nur deine Augen und ein Blatt für Notizen. (Niemals eine Steckdose berühren oder etwas hineinstecken!)",
-       "vorhersage": "Wo im Klassenraum oder zu Hause könnte Strom gefährlich werden? Schreibe drei Stellen auf, bevor du suchst.",
+       "material": "Keine Geräte nötig – nur deine Augen und ein Blatt für Notizen. (Niemals eine Steckdose berühren oder etwas hineinstecken!)",
        "auftraege": [
-        "Suche drei Stellen, an denen Strom und Wasser nah beieinander sind (z. B. Waschbecken, Küche), und notiere sie.",
+        "Suche drei Stellen, an denen Strom und Wasser nah beieinander sind (z. B. Waschbecken, Küche).",
         "Überlege bei jeder Stelle: Welche Sicherheitsregel schützt hier?",
         "Erkläre einer Mitschülerin, warum man die Pole einer Batterie nie direkt verbinden darf."
        ]
-      }
-     ],
-     "selbstcheck": [
-      {
-       "frage": "Nenne zwei konkrete Gefahren, die entstehen können, wenn man Sicherheitsregeln ignoriert.",
-       "antwort": "Zum Beispiel: ein elektrischer Schlag aus der Steckdose, der Menschen verletzen kann, und ein Kurzschluss, bei dem Kabel und Batterie heiß werden und etwas in Brand setzen können."
-      },
-      {
-       "frage": "Warum sind Batterien für Schul-Experimente sicher?",
-       "antwort": "Weil ihr Strom sehr schwach ist und Menschen nicht verletzen kann. Für alle Versuche in der Schule reichen Batterien völlig aus."
-      },
-      {
-       "frage": "Was musst du tun, wenn du ein kaputtes Kabel oder einen kaputten Stecker entdeckst?",
-       "antwort": "Nicht selbst benutzen oder reparieren, sondern einer erwachsenen Person zeigen."
       }
      ]
     },
@@ -842,7 +1004,8 @@
        ]
       }
      ],
-     "transfer": "Was hast du in dieser Einheit über Strom gelernt, das du vorher nicht wusstest? Notiere einen Satz für dein Lerntagebuch."
+     "transfer": "Was hast du in dieser Einheit über Strom gelernt, das du vorher nicht wusstest? Notiere einen Satz für dein Lerntagebuch.",
+     "rueckbezug": "Zurück zur Anfangsfrage: Nein – die <strong>Steckdose</strong> ist für Experimente <strong>tabu</strong>. Ihr Strom ist viele hundert Mal stärker als der einer Batterie und kann verletzen. Für alle Schulversuche reicht die Batterie. Hattest du das vermutet?"
     },
     "extra": {
      "zeit": 8,
@@ -891,6 +1054,111 @@
        "quelle": "lernbuero/ph-05-stromkreise",
        "ids": [
         "ph-05-sk-201"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>An einer alten <strong>Lichterkette</strong> geht eine einzige Lampe kaputt – und plötzlich sind <strong>alle</strong> dunkel. An der Zimmerdecke kannst du dagegen jede Lampe einzeln schalten, ohne dass die anderen ausgehen. Jetzt mischst du alles aus den letzten Stunden: Kreis, Leiter und Schaltungen.</p>",
+      "figur": "<svg viewBox=\"0 0 255 152\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"30.0\" x2=\"215.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"215.0\" y1=\"30.0\" x2=\"215.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"125.0\" x2=\"40.0\" y2=\"30.0\"/><circle class=\"gerade\" cx=\"95.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"86.5\" y1=\"21.5\" x2=\"103.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"86.5\" y1=\"38.5\" x2=\"103.5\" y2=\"21.5\"/><circle class=\"gerade\" cx=\"160.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"151.5\" y1=\"21.5\" x2=\"168.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"151.5\" y1=\"38.5\" x2=\"168.5\" y2=\"21.5\"/><line class=\"achse\" x1=\"40.0\" y1=\"125.0\" x2=\"108.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"125.0\" x2=\"215.0\" y2=\"125.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"113.0\" x2=\"114.0\" y2=\"137.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"118.0\" x2=\"126.0\" y2=\"132.0\"/><text class=\"beschriftung\" x=\"95.0\" y=\"15.0\" text-anchor=\"middle\">L1</text><text class=\"beschriftung\" x=\"160.0\" y=\"15.0\" text-anchor=\"middle\">L2</text><text class=\"beschriftung\" x=\"127.0\" y=\"144.0\" text-anchor=\"middle\">ein Ring</text></svg>",
+      "figurAlt": "Mehrere Lampen hintereinander in einem Ring (Reihenschaltung).",
+      "vorhersage": "Eine Lichterkette geht komplett aus, sobald eine Lampe kaputt ist. Reihe oder parallel?",
+      "optionen": [
+       "Reihenschaltung",
+       "Parallelschaltung",
+       "egal"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "schritte": [
+      {
+       "titel": "Wann leuchtet das Lämpchen?",
+       "kern": "Ein Lämpchen leuchtet nur im <strong>geschlossenen</strong> Stromkreis – ein durchgehender Ring. Jede <strong>Lücke</strong> (abgezogenes Kabel, offener Schalter, kaputtes Lämpchen) stoppt den Strom sofort.",
+       "figur": "<svg viewBox=\"0 0 250 158\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"45.0\" y1=\"28.0\" x2=\"205.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"205.0\" y1=\"28.0\" x2=\"205.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"45.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"108.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"128.0\" x2=\"205.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"116.0\" x2=\"114.0\" y2=\"140.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"121.0\" x2=\"126.0\" y2=\"135.0\"/><circle class=\"gerade\" cx=\"125.0\" cy=\"28.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"116.5\" y1=\"19.5\" x2=\"133.5\" y2=\"36.5\"/><line class=\"gerade\" x1=\"116.5\" y1=\"36.5\" x2=\"133.5\" y2=\"19.5\"/><text class=\"beschriftung\" x=\"125.0\" y=\"13.0\" text-anchor=\"middle\">Lämpchen</text><text class=\"beschriftung\" x=\"120.0\" y=\"147.0\" text-anchor=\"middle\">Batterie</text></svg>",
+       "figurAlt": "Geschlossener Ring aus Batterie und Lämpchen.",
+       "minicheck": {
+        "frage": "Woran erkennst du in einem Schaltplan, dass das Lämpchen leuchtet?",
+        "antwort": "Der Kreis muss geschlossen sein – ein durchgehender Ring ohne Lücke. Ist irgendwo eine Lücke, bleibt es dunkel."
+       }
+      },
+      {
+       "titel": "Leitet es oder nicht?",
+       "kern": "Ob ein Gegenstand in der Lücke den Kreis schließt, hängt vom <strong>Stoff</strong> ab: <strong>alle Metalle</strong> leiten, Plastik, Holz, Glas und Gummi sind <strong>Nichtleiter</strong>. Mit dem <strong>Prüfkreis</strong> testest du das jederzeit.",
+       "minicheck": {
+        "frage": "Du legst einen Holzstab in die Lücke des Prüfkreises. Leuchtet das Lämpchen?",
+        "antwort": "Nein. Holz ist ein Nichtleiter – der Kreis bleibt offen, das Lämpchen dunkel."
+       }
+      },
+      {
+       "titel": "Reihe oder parallel?",
+       "kern": "<strong>Reihe</strong>: alles in <strong>einem</strong> Ring hintereinander – fällt eines aus, ist alles aus. <strong>Parallel</strong>: jedes Bauteil hat seinen <strong>eigenen Weg</strong> – die anderen leuchten weiter.",
+       "figur": "<svg viewBox=\"0 0 255 156\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"40.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"28.0\" x2=\"215.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"215.0\" y2=\"130.0\"/><line class=\"achse\" x1=\"95.0\" y1=\"28.0\" x2=\"95.0\" y2=\"58.0\"/><line class=\"achse\" x1=\"95.0\" y1=\"88.0\" x2=\"95.0\" y2=\"130.0\"/><circle class=\"gerade\" cx=\"95.0\" cy=\"73.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"86.5\" y1=\"64.5\" x2=\"103.5\" y2=\"81.5\"/><line class=\"gerade\" x1=\"86.5\" y1=\"81.5\" x2=\"103.5\" y2=\"64.5\"/><line class=\"achse\" x1=\"160.0\" y1=\"28.0\" x2=\"160.0\" y2=\"58.0\"/><line class=\"achse\" x1=\"160.0\" y1=\"88.0\" x2=\"160.0\" y2=\"130.0\"/><circle class=\"gerade\" cx=\"160.0\" cy=\"73.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"151.5\" y1=\"64.5\" x2=\"168.5\" y2=\"81.5\"/><line class=\"gerade\" x1=\"151.5\" y1=\"81.5\" x2=\"168.5\" y2=\"64.5\"/><line class=\"achse\" x1=\"56.0\" y1=\"118.0\" x2=\"56.0\" y2=\"142.0\"/><line class=\"gerade\" x1=\"68.0\" y1=\"123.0\" x2=\"68.0\" y2=\"137.0\"/><text class=\"beschriftung\" x=\"95.0\" y=\"50.0\" text-anchor=\"middle\">L1</text><text class=\"beschriftung\" x=\"160.0\" y=\"50.0\" text-anchor=\"middle\">L2</text><text class=\"beschriftung\" x=\"127.0\" y=\"148.0\" text-anchor=\"middle\">jeder eigener Weg</text></svg>",
+       "figurAlt": "Parallelschaltung: zwei Lampen mit je eigenem Weg.",
+       "beispiel": {
+        "aufgabe": "In einer Lichterkette geht eine Lampe aus – und alle anderen gehen mit aus. Reihe oder parallel?",
+        "schritte": [
+         "Alle Lampen gehen gemeinsam aus → sie liegen in einem gemeinsamen Ring.",
+         "Ein gemeinsamer Ring, in dem eine Lücke alles stoppt → Reihenschaltung.",
+         "Ergebnis: Es ist eine Reihenschaltung."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: In der Wohnung bleibt eine Lampe an, obwohl eine andere kaputt ist. Reihe oder parallel?",
+         "loesung": "<p>Parallel. Jede Lampe hat ihren eigenen Weg – fällt eine aus, leuchten die anderen weiter.</p>"
+        }
+       },
+       "minicheck": {
+        "frage": "Warum sind Lampen in der Wohnung parallel geschaltet?",
+        "antwort": "Damit man jede einzeln schalten kann und nicht alle ausgehen, wenn eine kaputt ist."
+       }
+      }
+     ],
+     "stolperstein": "Bei einem dunklen Lämpchen sofort „die Batterie ist leer“ zu rufen, ist voreilig. Prüfe der Reihe nach: Ist der Kreis <strong>irgendwo</strong> unterbrochen (Lücke, offener Schalter, Nichtleiter, kaputte Lampe)? Erst danach kommt die Batterie dran.",
+     "darstellungen": {
+      "titel": "Drei Werkzeuge dieses Themas:",
+      "eintraege": [
+       {
+        "art": "Geschlossen?",
+        "figur": "<svg viewBox=\"0 0 250 158\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"45.0\" y1=\"28.0\" x2=\"205.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"205.0\" y1=\"28.0\" x2=\"205.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"45.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"128.0\" x2=\"108.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"132.0\" y1=\"128.0\" x2=\"205.0\" y2=\"128.0\"/><line class=\"achse\" x1=\"114.0\" y1=\"116.0\" x2=\"114.0\" y2=\"140.0\"/><line class=\"gerade\" x1=\"126.0\" y1=\"121.0\" x2=\"126.0\" y2=\"135.0\"/><circle class=\"gerade\" cx=\"125.0\" cy=\"28.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"116.5\" y1=\"19.5\" x2=\"133.5\" y2=\"36.5\"/><line class=\"gerade\" x1=\"116.5\" y1=\"36.5\" x2=\"133.5\" y2=\"19.5\"/><text class=\"beschriftung\" x=\"125.0\" y=\"13.0\" text-anchor=\"middle\">Lämpchen</text><text class=\"beschriftung\" x=\"120.0\" y=\"147.0\" text-anchor=\"middle\">Batterie</text></svg>",
+        "figurAlt": "Geschlossener Ring."
+       },
+       {
+        "art": "Leiter?",
+        "figur": "<svg viewBox=\"0 0 250 150\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"45.0\" y1=\"30.0\" x2=\"200.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"200.0\" y1=\"30.0\" x2=\"200.0\" y2=\"120.0\"/><line class=\"achse\" x1=\"45.0\" y1=\"120.0\" x2=\"45.0\" y2=\"30.0\"/><circle class=\"gerade\" cx=\"122.0\" cy=\"30.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"113.5\" y1=\"21.5\" x2=\"130.5\" y2=\"38.5\"/><line class=\"gerade\" x1=\"113.5\" y1=\"38.5\" x2=\"130.5\" y2=\"21.5\"/><line class=\"achse\" x1=\"45.0\" y1=\"120.0\" x2=\"90.0\" y2=\"120.0\"/><line class=\"achse\" x1=\"72.0\" y1=\"108.0\" x2=\"72.0\" y2=\"132.0\"/><line class=\"gerade\" x1=\"84.0\" y1=\"113.0\" x2=\"84.0\" y2=\"127.0\"/><line class=\"achse\" x1=\"102.0\" y1=\"120.0\" x2=\"110.0\" y2=\"120.0\"/><line class=\"achse\" x1=\"135.0\" y1=\"120.0\" x2=\"200.0\" y2=\"120.0\"/><rect class=\"dreieck\" x=\"110.0\" y=\"111.0\" width=\"25.0\" height=\"18.0\" rx=\"2\"/><text class=\"label-a\" x=\"122.0\" y=\"107.0\" text-anchor=\"middle\">?</text><text class=\"beschriftung\" x=\"122.0\" y=\"15.0\" text-anchor=\"middle\">Lämpchen</text><text class=\"beschriftung\" x=\"78.0\" y=\"139.0\" text-anchor=\"middle\">Batterie</text><text class=\"beschriftung\" x=\"122.0\" y=\"140.0\" text-anchor=\"middle\">Gegenstand</text></svg>",
+        "figurAlt": "Prüfkreis mit Gegenstand in der Lücke."
+       },
+       {
+        "art": "Reihe/Parallel?",
+        "figur": "<svg viewBox=\"0 0 255 156\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"40.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"28.0\" x2=\"215.0\" y2=\"28.0\"/><line class=\"achse\" x1=\"40.0\" y1=\"130.0\" x2=\"215.0\" y2=\"130.0\"/><line class=\"achse\" x1=\"95.0\" y1=\"28.0\" x2=\"95.0\" y2=\"58.0\"/><line class=\"achse\" x1=\"95.0\" y1=\"88.0\" x2=\"95.0\" y2=\"130.0\"/><circle class=\"gerade\" cx=\"95.0\" cy=\"73.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"86.5\" y1=\"64.5\" x2=\"103.5\" y2=\"81.5\"/><line class=\"gerade\" x1=\"86.5\" y1=\"81.5\" x2=\"103.5\" y2=\"64.5\"/><line class=\"achse\" x1=\"160.0\" y1=\"28.0\" x2=\"160.0\" y2=\"58.0\"/><line class=\"achse\" x1=\"160.0\" y1=\"88.0\" x2=\"160.0\" y2=\"130.0\"/><circle class=\"gerade\" cx=\"160.0\" cy=\"73.0\" r=\"12.0\"/><line class=\"gerade\" x1=\"151.5\" y1=\"64.5\" x2=\"168.5\" y2=\"81.5\"/><line class=\"gerade\" x1=\"151.5\" y1=\"81.5\" x2=\"168.5\" y2=\"64.5\"/><line class=\"achse\" x1=\"56.0\" y1=\"118.0\" x2=\"56.0\" y2=\"142.0\"/><line class=\"gerade\" x1=\"68.0\" y1=\"123.0\" x2=\"68.0\" y2=\"137.0\"/><text class=\"beschriftung\" x=\"95.0\" y=\"50.0\" text-anchor=\"middle\">L1</text><text class=\"beschriftung\" x=\"160.0\" y=\"50.0\" text-anchor=\"middle\">L2</text><text class=\"beschriftung\" x=\"127.0\" y=\"148.0\" text-anchor=\"middle\">jeder eigener Weg</text></svg>",
+        "figurAlt": "Parallelschaltung."
+       }
+      ]
+     },
+     "selbsterklaerung": "Nenne in je einem Stichwort, woran du erkennst: (1) ob der Kreis geschlossen ist, (2) ob ein Stoff leitet, (3) ob eine Schaltung Reihe oder parallel ist.",
+     "merksatz": "Lämpchen leuchtet nur im <strong>geschlossenen</strong> Kreis. <strong>Metalle leiten</strong>, Nichtleiter nicht. <strong>Reihe</strong>: alle in einem Ring (eines aus → alles aus). <strong>Parallel</strong>: jeder eigener Weg (die anderen leuchten weiter).",
+     "selbstcheck": [
+      {
+       "frage": "Nenne drei verschiedene Gründe, warum ein Lämpchen nicht leuchtet.",
+       "antwort": "Zum Beispiel: ein offener Schalter, ein abgezogenes Kabel oder ein Nichtleiter in der Lücke – in jedem Fall ist der Kreis nicht geschlossen."
+      },
+      {
+       "frage": "Worin unterscheiden sich Reihe und Parallel, wenn ein Bauteil ausfällt?",
+       "antwort": "In Reihe gehen alle aus (ein Ring unterbrochen). Parallel leuchten die anderen weiter (eigener Weg)."
+      },
+      {
+       "frage": "Warum sind die Lampen in einer Wohnung parallel geschaltet?",
+       "antwort": "Damit man jede einzeln schalten kann und nicht alle ausgehen, wenn eine kaputt ist."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Stromkreis-Baukasten – alles zusammen",
+       "pfad": "simulationen/physik/stromkreis-baukasten/index.html",
+       "auftraege": [
+        "Baue eine Schaltung, bei der das Lämpchen nur leuchtet, wenn der Schalter zu ist UND ein Metallstück in der Lücke liegt.",
+        "Vergleiche Reihe und Parallel: Wo leuchten die anderen Lampen weiter, wenn du eine herausdrehst?",
+        "Finde eine Einstellung, bei der gar kein Lämpchen leuchtet, und erkläre warum."
        ]
       }
      ]
@@ -954,7 +1222,8 @@
        ]
       }
      ],
-     "transfer": "Bei einem dunklen Lämpchen fragst du dich zuerst: Ist der Stromkreis irgendwo unterbrochen (Lücke, kaputte Lampe, leere Batterie)? Bei mehreren Lampen prüfst du dann, ob sie in Reihe oder parallel geschaltet sind."
+     "transfer": "Bei einem dunklen Lämpchen fragst du dich zuerst: Ist der Stromkreis irgendwo unterbrochen (Lücke, kaputte Lampe, leere Batterie)? Bei mehreren Lampen prüfst du dann, ob sie in Reihe oder parallel geschaltet sind.",
+     "rueckbezug": "Zurück zur Lichterkette vom Anfang: Sie geht komplett aus, weil sie eine <strong>Reihenschaltung</strong> ist – alle Lampen in einem Ring, eine Lücke stoppt alles. Die Zimmerlampen sind <strong>parallel</strong> geschaltet. So gehst du jede Schaltung an: erst „geschlossen?“, dann „Reihe oder parallel?“."
     },
     "extra": {
      "zeit": 8,
@@ -965,64 +1234,6 @@
        "href": "simulationen/physik/stromkreis-baukasten/index.html"
       }
      ]
-    },
-    "verstehen": {
-     "text": "Bevor du übst, frische dein Wissen aus den letzten Stunden Schritt für Schritt auf — dann prüfst du dich selbst.",
-     "schritte": [
-      {
-       "titel": "Wann leuchtet das Lämpchen?",
-       "html": "<p>Ein Lämpchen leuchtet nur, wenn der <strong>Stromkreis geschlossen</strong> ist — ein durchgehender Ring von der Batterie durch das Lämpchen zurück zur Batterie. Jede <strong>Lücke</strong> (abgezogenes Kabel, offener Schalter, kaputtes Lämpchen) stoppt den Strom sofort.</p>",
-       "check": {
-        "frage": "Woran erkennst du in einem Schaltplan, dass das Lämpchen leuchtet?",
-        "antwort": "Der Stromkreis muss geschlossen sein — ein durchgehender Ring ohne Lücke. Ist irgendwo eine Lücke (z. B. ein offener Schalter), bleibt das Lämpchen dunkel."
-       }
-      },
-      {
-       "titel": "Leitet es oder nicht?",
-       "html": "<p>Ob ein Gegenstand in der Lücke den Kreis schließt, hängt vom <strong>Stoff</strong> ab: <strong>Alle Metalle</strong> sind Leiter, Plastik, Holz, Glas und Gummi sind <strong>Nichtleiter</strong>. Mit einem <strong>Prüfkreis</strong> kannst du das jederzeit selbst testen — leuchtet das Lämpchen, ist es ein Leiter.</p>",
-       "check": {
-        "frage": "Du legst einen Holzstab in die Lücke des Prüfkreises. Leuchtet das Lämpchen?",
-        "antwort": "Nein. Holz ist ein Nichtleiter und lässt den Strom nicht durch — der Kreis bleibt offen, das Lämpchen bleibt dunkel."
-       }
-      },
-      {
-       "titel": "Reihe oder parallel?",
-       "html": "<p>Bei einer <strong>Reihenschaltung</strong> liegen die Bauteile in <strong>einem</strong> Ring hintereinander — fällt eines aus, ist alles aus. Bei einer <strong>Parallelschaltung</strong> hat jedes Bauteil seinen <strong>eigenen Weg</strong> — die anderen leuchten weiter. Deshalb sind Lampen in der Wohnung parallel geschaltet.</p>",
-       "check": {
-        "frage": "In einer Lichterkette geht eine Lampe aus, und alle anderen gehen auch aus. Reihe oder parallel?",
-        "antwort": "Eine Reihenschaltung. Alle Lampen liegen in einem Ring hintereinander — fällt eine aus, ist der Kreis unterbrochen und alle gehen aus."
-       }
-      }
-     ],
-     "merksatz": "Lämpchen leuchtet nur im <strong>geschlossenen</strong> Kreis. <strong>Metalle leiten</strong>, Nichtleiter nicht. <strong>Reihe</strong>: alle in einem Ring (eines aus → alles aus). <strong>Parallel</strong>: jeder eigener Weg (die anderen leuchten weiter).",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Stromkreis-Baukasten — alles zusammen",
-       "pfad": "simulationen/physik/stromkreis-baukasten/index.html",
-       "vorhersage": "Du wirst Schalter, Materialien und die Schaltungen Reihe/Parallel kombinieren. Überlege vorher: Bei welcher Einstellung leuchten beide Lampen, bei welcher nur eine?",
-       "auftraege": [
-        "Baue eine Schaltung, bei der das Lämpchen nur leuchtet, wenn der Schalter zu ist UND ein Metallstück in der Lücke liegt.",
-        "Vergleiche Reihe und Parallel: In welcher Schaltung leuchten die anderen Lampen weiter, wenn du eine herausdrehst?",
-        "Finde eine Einstellung, bei der gar kein Lämpchen leuchtet, und erkläre warum."
-       ]
-      }
-     ],
-     "selbstcheck": [
-      {
-       "frage": "Nenne drei verschiedene Gründe, warum ein Lämpchen im Stromkreis nicht leuchtet.",
-       "antwort": "Zum Beispiel: ein offener Schalter, ein abgezogenes oder gerissenes Kabel, oder ein Nichtleiter in der Lücke — in jedem Fall ist der Kreis nicht geschlossen. (Auch ein kaputtes Lämpchen wäre möglich.)"
-      },
-      {
-       "frage": "Worin unterscheiden sich Reihen- und Parallelschaltung, wenn ein Bauteil ausfällt?",
-       "antwort": "In der Reihenschaltung gehen alle Bauteile aus, weil der eine Ring unterbrochen ist. In der Parallelschaltung leuchten die anderen weiter, weil jedes Bauteil seinen eigenen Weg hat."
-      },
-      {
-       "frage": "Warum sind die Lampen in einer Wohnung parallel geschaltet?",
-       "antwort": "Damit man jede Lampe einzeln ein- und ausschalten kann und nicht alle ausgehen, wenn eine kaputt ist."
-      }
-     ],
-     "zeit": 25
     }
    },
    "kompetenzen": [
@@ -1065,68 +1276,94 @@
         "ph-05-mag-101"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Du hältst einen <strong>Stabmagneten</strong> nacheinander an verschiedene Dinge: einen <strong>Eisennagel</strong>, ein Stück <strong>Alufolie</strong>, eine <strong>1-Euro-Münze</strong> und einen <strong>Holzstift</strong>. Manche springen an den Magneten, andere bleiben einfach liegen.</p>",
+      "figur": "<svg viewBox=\"0 0 250 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"35.0\" y=\"45.0\" width=\"110.0\" height=\"38.0\" rx=\"2\"/><line class=\"achse\" x1=\"90.0\" y1=\"45.0\" x2=\"90.0\" y2=\"83.0\"/><text class=\"label-a\" x=\"62.5\" y=\"69.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"117.5\" y=\"69.0\" text-anchor=\"middle\">S</text><rect class=\"dreieck\" x=\"170.0\" y=\"56.0\" width=\"40.0\" height=\"8.0\" rx=\"2\"/><text class=\"beschriftung\" x=\"190.0\" y=\"50.0\" text-anchor=\"middle\">Eisennagel</text><polygon class=\"pfeil\" points=\"168.0,64.0 174.0,61.0 174.0,67.0\"/><line class=\"hilfslinie\" x1=\"150.0\" y1=\"64.0\" x2=\"168.0\" y2=\"64.0\"/></svg>",
+      "figurAlt": "Stabmagnet mit N- und S-Pol, daneben ein Eisennagel, der zum Pol gezogen wird.",
+      "vorhersage": "Zieht ein Magnet <em>alle</em> Metalle an (Eisennagel, Alufolie, Euro-Münze)?",
+      "optionen": [
+       "Ja, alle Metalle",
+       "Nein, nur bestimmte",
+       "nur die schweren"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#dm-alltag",
-     "text": "Untersuche Schritt für Schritt, was ein Magnet anzieht und was nicht — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/dauermagnete/index.html#dm-alltag"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Magnete arbeiten überall",
-       "html": "<p>Magnete halten am Kühlschrank Zettel fest, stecken als <strong>Magnetverschluss</strong> in Taschen und halten Schranktüren zu. Magnete, die ihre Kraft <strong>dauerhaft</strong> behalten, nennt man <strong>Dauermagnete</strong>. Du kannst mit ihnen sogar eine Schraube unter dem Schrank hervorangeln — sie springt an den Magneten.</p>",
-       "check": {
+       "kern": "Magnete halten Zettel am Kühlschrank, stecken als <strong>Magnetverschluss</strong> in Taschen und halten Schranktüren zu. Magnete, die ihre Kraft <strong>dauerhaft</strong> behalten, heißen <strong>Dauermagnete</strong>.",
+       "minicheck": {
         "frage": "Was ist ein Dauermagnet?",
-        "antwort": "Ein Magnet, der seine magnetische Kraft dauerhaft behält — zum Beispiel ein Kühlschrankmagnet oder der Magnet in einem Taschenverschluss."
+        "antwort": "Ein Magnet, der seine magnetische Kraft dauerhaft behält – z. B. ein Kühlschrankmagnet."
        }
       },
       {
        "titel": "Nicht jedes Metall",
-       "html": "<p>Mach den Test: Halte einen Magneten an verschiedene Dinge. Überraschung: <strong>Alufolie</strong> und die <strong>1-Euro-Münze</strong> sind aus Metall, werden aber <strong>nicht</strong> angezogen! Ein Magnet zieht eben nicht alle Metalle an, sondern nur Stoffe, in denen <strong>Eisen, Nickel oder Cobalt</strong> steckt.</p>",
-       "check": {
+       "kern": "Überraschung: <strong>Alufolie</strong> und die <strong>1-Euro-Münze</strong> sind aus Metall, werden aber <strong>nicht</strong> angezogen! Ein Magnet zieht nur Stoffe an, in denen <strong>Eisen, Nickel oder Cobalt</strong> steckt.",
+       "details": "<p>Diese drei Stoffe nennt man <strong>magnetisch</strong> (Fachleute sagen „ferromagnetisch“). <strong>Aluminium, Kupfer, Gold und Silber</strong> gehören nicht dazu – sie lassen den Magneten kalt, obwohl sie Metalle sind.</p>",
+       "minicheck": {
         "frage": "Warum bleibt die Alufolie liegen, obwohl sie ein Metall ist?",
-        "antwort": "Weil ein Magnet nur Stoffe anzieht, die Eisen, Nickel oder Cobalt enthalten. Aluminium gehört nicht dazu — darum bleibt die Alufolie liegen."
+        "antwort": "Weil ein Magnet nur Stoffe mit Eisen, Nickel oder Cobalt anzieht. Aluminium gehört nicht dazu."
        }
       },
       {
        "titel": "Stahl steckt überall",
-       "html": "<p><strong>Stahl</strong> besteht zum größten Teil aus Eisen — darum springen Schraube, Büroklammer und Schere an den Magneten. <strong>Aluminium, Kupfer, Gold und Silber</strong> lassen ihn dagegen kalt. Die Cent-Münze ist eine Mogelpackung: außen Kupfer, innen Stahl — deshalb wird sie doch angezogen.</p>",
-       "check": {
+       "kern": "<strong>Stahl</strong> besteht zum größten Teil aus Eisen – darum springen Schraube, Büroklammer und Schere an den Magneten. Die Cent-Münze ist eine Mogelpackung: außen Kupfer, innen Stahl – deshalb wird sie doch angezogen.",
+       "minicheck": {
         "frage": "Warum wird eine Stahlschraube vom Magneten angezogen?",
-        "antwort": "Weil Stahl zum größten Teil aus Eisen besteht, und Eisen ist magnetisch — solche Stoffe zieht der Magnet an."
+        "antwort": "Weil Stahl zum größten Teil aus Eisen besteht – und Eisen ist magnetisch."
        }
       }
      ],
-     "merksatz": "Ein Magnet zieht nur Stoffe an, die <strong>Eisen, Nickel oder Cobalt</strong> enthalten — solche Stoffe heißen <strong>magnetisch</strong>. Andere Metalle wie <strong>Aluminium, Kupfer und Gold</strong> sind nicht magnetisch, Holz, Plastik und Glas sowieso nicht.",
+     "stolperstein": "„Alles Metall ist magnetisch“ – das stimmt nicht. <strong>Aluminium, Kupfer, Gold und Silber</strong> sind Metalle, werden aber <strong>nicht</strong> angezogen. Nur Stoffe mit <strong>Eisen, Nickel oder Cobalt</strong> sind magnetisch.",
+     "darstellungen": {
+      "titel": "Magnetisch oder nicht – auf einen Blick:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Magnet an verschiedene Gegenstände halten und beobachten."
+       },
+       {
+        "art": "Tabelle",
+        "html": "<table class='lb-mini-tab'><tr><th>Stoff</th><td>Eisen</td><td>Stahl</td><td>Alu</td><td>Kupfer</td></tr><tr><th>angezogen?</th><td>ja</td><td>ja</td><td>nein</td><td>nein</td></tr></table>"
+       },
+       {
+        "art": "Regel",
+        "text": "Nur Eisen, Nickel und Cobalt sind magnetisch."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum „aus Metall“ noch nicht heißt, dass ein Gegenstand vom Magneten angezogen wird.",
+     "merksatz": "Ein Magnet zieht nur Stoffe an, die <strong>Eisen, Nickel oder Cobalt</strong> enthalten – sie heißen <strong>magnetisch</strong>. Andere Metalle wie <strong>Aluminium, Kupfer und Gold</strong> sind nicht magnetisch, Holz, Plastik und Glas sowieso nicht.",
+     "selbstcheck": [
+      {
+       "frage": "Zieht ein Magnet alle Metalle an?",
+       "antwort": "Nein. Nur Stoffe mit Eisen, Nickel oder Cobalt. Aluminium, Kupfer, Gold und Silber nicht."
+      },
+      {
+       "frage": "Nenne zwei magnetische und zwei nicht magnetische Stoffe.",
+       "antwort": "Magnetisch: z. B. Eisen und Nickel (auch Stahl). Nicht magnetisch: z. B. Aluminium und Kupfer (auch Holz, Glas)."
+      },
+      {
+       "frage": "Warum wird ein Gegenstand aus Stahl angezogen?",
+       "antwort": "Weil Stahl zum größten Teil aus Eisen besteht – und Eisen ist magnetisch."
+      }
+     ],
      "erkunden": [
       {
        "typ": "experiment",
        "titel": "Was zieht der Magnet an?",
-       "material": "Ein Stabmagnet, dazu Testgegenstände: Eisennagel, Büroklammer aus Stahl, Alufolie, 1-Euro-Münze, Cent-Münze, Radiergummi, Holzstift, Trinkglas.",
-       "vorhersage": "Sortiere alle Gegenstände vorher in „wird angezogen“ und „bleibt liegen“ — schreibe deine Vermutung auf.",
+       "material": "Ein Stabmagnet, dazu: Eisennagel, Büroklammer (Stahl), Alufolie, 1-Euro-Münze, Cent-Münze, Radiergummi, Holzstift, Trinkglas.",
        "auftraege": [
         "Halte den Magneten nacheinander an jeden Gegenstand und notiere das Ergebnis.",
-        "Vergleiche Alufolie und 1-Euro-Münze mit dem Eisennagel — was fällt dir auf?",
+        "Vergleiche Alufolie und 1-Euro-Münze mit dem Eisennagel – was fällt dir auf?",
         "Begründe für die Cent-Münze, warum sie trotz Kupferfarbe angezogen wird."
        ]
-      }
-     ],
-     "selbstcheck": [
-      {
-       "frage": "Zieht ein Magnet alle Metalle an?",
-       "antwort": "Nein. Er zieht nur Stoffe an, die Eisen, Nickel oder Cobalt enthalten. Aluminium, Kupfer, Gold und Silber werden nicht angezogen."
-      },
-      {
-       "frage": "Nenne zwei magnetische und zwei nicht magnetische Stoffe.",
-       "antwort": "Magnetisch: z. B. Eisen und Nickel (auch Stahl). Nicht magnetisch: z. B. Aluminium und Kupfer (auch Holz, Plastik, Glas)."
-      },
-      {
-       "frage": "Warum wird ein Gegenstand aus Stahl vom Magneten angezogen?",
-       "antwort": "Weil Stahl zum größten Teil aus Eisen besteht — und Eisen ist ein magnetischer Stoff."
       }
      ]
     },
@@ -1168,7 +1405,8 @@
        ]
       }
      ],
-     "transfer": "Nenne einen Gegenstand aus dem Alltag, der magnetisch ist, und einen, der es nicht ist. Begründe kurz."
+     "transfer": "Nenne einen Gegenstand aus dem Alltag, der magnetisch ist, und einen, der es nicht ist. Begründe kurz.",
+     "rueckbezug": "Zurück zu deinem Test vom Anfang: Der <strong>Eisennagel</strong> springt an den Magneten, <strong>Alufolie</strong> und <strong>Euro-Münze</strong> bleiben liegen – obwohl alle aus Metall sind. Ein Magnet zieht eben <strong>nicht</strong> alle Metalle an, sondern nur Eisen, Nickel und Cobalt. Stimmt das mit deiner Vermutung überein?"
     },
     "extra": {
      "zeit": 8,
@@ -1221,79 +1459,110 @@
         "ph-05-mag-002"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Du wälzt einen <strong>Stabmagneten</strong> in einem Haufen <strong>Büroklammern</strong>. Danach schaust du, wo die Klammern hängen geblieben sind. Anschließend hältst du zwei Stabmagnete aneinander – mal springen sie zusammen, mal drücken sie sich auseinander.</p>",
+      "figur": "<svg viewBox=\"0 0 250 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"50.0\" y=\"45.0\" width=\"150.0\" height=\"38.0\" rx=\"2\"/><line class=\"achse\" x1=\"125.0\" y1=\"45.0\" x2=\"125.0\" y2=\"83.0\"/><text class=\"label-a\" x=\"87.5\" y=\"69.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"162.5\" y=\"69.0\" text-anchor=\"middle\">S</text><line class=\"achse\" x1=\"44.0\" y1=\"45.0\" x2=\"40.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"194.0\" y1=\"45.0\" x2=\"198.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"50.0\" y1=\"45.0\" x2=\"46.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"200.0\" y1=\"45.0\" x2=\"204.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"56.0\" y1=\"45.0\" x2=\"52.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"206.0\" y1=\"45.0\" x2=\"210.0\" y2=\"30.0\"/><text class=\"beschriftung\" x=\"125.0\" y=\"30.0\" text-anchor=\"middle\">Mitte: keine Klammern</text></svg>",
+      "figurAlt": "Stabmagnet, an dessen beiden Enden Büroklammern hängen, die Mitte bleibt frei.",
+      "vorhersage": "An welcher Stelle des Stabmagneten hängen die meisten Büroklammern?",
+      "optionen": [
+       "In der Mitte",
+       "An den beiden Enden",
+       "überall gleich"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#dm-pole",
-     "text": "Erforsche Schritt für Schritt, wie sich die Pole von Magneten verhalten — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/dauermagnete/index.html#dm-pole"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Die zwei Pole",
-       "html": "<p>Wälzt du einen Stabmagneten in Büroklammern, hängen fast alle an den beiden <strong>Enden</strong> — die Mitte bleibt leer. Dort ist die Kraft am stärksten. Diese starken Stellen heißen <strong>Pole</strong>. Jeder Magnet hat genau zwei: den <strong>Nordpol (N)</strong> und den <strong>Südpol (S)</strong>.</p>",
-       "check": {
-        "frage": "An welcher Stelle eines Stabmagneten ist die Kraft am stärksten?",
-        "antwort": "An den beiden Enden — dort liegen die Pole (Nordpol und Südpol). In der Mitte ist die Kraft am schwächsten."
+       "kern": "Fast alle Klammern hängen an den beiden <strong>Enden</strong> – die Mitte bleibt leer. Dort ist die Kraft am stärksten. Diese starken Stellen heißen <strong>Pole</strong>: <strong>Nordpol (N)</strong> und <strong>Südpol (S)</strong>.",
+       "figur": "<svg viewBox=\"0 0 250 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"50.0\" y=\"45.0\" width=\"150.0\" height=\"38.0\" rx=\"2\"/><line class=\"achse\" x1=\"125.0\" y1=\"45.0\" x2=\"125.0\" y2=\"83.0\"/><text class=\"label-a\" x=\"87.5\" y=\"69.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"162.5\" y=\"69.0\" text-anchor=\"middle\">S</text><line class=\"achse\" x1=\"44.0\" y1=\"45.0\" x2=\"40.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"194.0\" y1=\"45.0\" x2=\"198.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"50.0\" y1=\"45.0\" x2=\"46.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"200.0\" y1=\"45.0\" x2=\"204.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"56.0\" y1=\"45.0\" x2=\"52.0\" y2=\"30.0\"/><line class=\"achse\" x1=\"206.0\" y1=\"45.0\" x2=\"210.0\" y2=\"30.0\"/><text class=\"beschriftung\" x=\"125.0\" y=\"30.0\" text-anchor=\"middle\">Mitte: keine Klammern</text></svg>",
+       "figurAlt": "Büroklammern hängen an den Enden des Magneten, nicht in der Mitte.",
+       "minicheck": {
+        "frage": "Wo ist die Kraft eines Stabmagneten am stärksten?",
+        "antwort": "An den beiden Enden – dort liegen die Pole. In der Mitte ist die Kraft am schwächsten."
        }
       },
       {
        "titel": "Anziehen oder abstoßen",
-       "html": "<p>Hältst du <strong>verschiedene</strong> Pole zueinander (Nordpol an Südpol), <strong>ziehen sie sich an</strong> und springen zusammen. Drehst du einen Magneten um, sodass <strong>gleiche</strong> Pole aufeinandertreffen (Nordpol an Nordpol), <strong>stoßen sie sich ab</strong> — wie ein unsichtbares Kissen dazwischen.</p>",
-       "check": {
+       "kern": "<strong>Verschiedene</strong> Pole (N an S) <strong>ziehen sich an</strong> und springen zusammen. <strong>Gleiche</strong> Pole (N an N) <strong>stoßen sich ab</strong> – wie ein unsichtbares Kissen dazwischen.",
+       "figur": "<svg viewBox=\"0 0 275 115\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"25.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"72.5\" y1=\"50.0\" x2=\"72.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"48.8\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"96.2\" y=\"72.0\" text-anchor=\"middle\">N</text><rect class=\"dreieck\" x=\"155.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"202.5\" y1=\"50.0\" x2=\"202.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"178.8\" y=\"72.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"226.2\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"label-a\" x=\"140.0\" y=\"45.0\" text-anchor=\"middle\">↔</text><text class=\"label-a\" x=\"140.0\" y=\"95.0\" text-anchor=\"middle\">gleiche Pole: abstoßen</text></svg>",
+       "figurAlt": "Zwei Magnete mit gleichen Polen gegeneinander – sie stoßen sich ab.",
+       "minicheck": {
         "frage": "Was passiert, wenn du zwei Nordpole gegeneinander hältst?",
-        "antwort": "Sie stoßen sich ab. Gleiche Pole stoßen sich immer ab — es fühlt sich an wie ein unsichtbares Kissen zwischen den Magneten."
+        "antwort": "Sie stoßen sich ab. Gleiche Pole stoßen sich immer ab."
        }
       },
       {
        "titel": "Pole gibt es nur im Doppelpack",
-       "html": "<p>Brichst du einen Magneten in der Mitte durch, bekommst du <strong>keinen</strong> reinen Nordpol und keinen reinen Südpol. Jedes <strong>Bruchstück</strong> ist wieder ein kompletter Magnet mit eigenem Nord- und Südpol. An der Bruchstelle entstehen sofort zwei neue Pole — so oft du auch brichst.</p>",
-       "check": {
+       "kern": "Brichst du einen Magneten durch, bekommst du <strong>keinen</strong> reinen Nord- oder Südpol. Jedes <strong>Bruchstück</strong> ist wieder ein kompletter Magnet mit eigenem Nord- und Südpol.",
+       "details": "<p>An der Bruchstelle entstehen sofort zwei neue Pole – so oft du auch brichst. Einen <strong>einzelnen</strong> Pol kann niemand herstellen. (Warum das so ist, erklärt später das Modell der Elementarmagnete.)</p>",
+       "minicheck": {
         "frage": "Gibt es einen Magneten mit nur einem Pol?",
-        "antwort": "Nein. Pole treten immer paarweise auf. Zerbrichst du einen Magneten, bekommt jedes Stück an der Bruchstelle sofort einen neuen Pol — jedes Stück hat wieder Nordpol und Südpol."
+        "antwort": "Nein. Pole treten immer paarweise auf. Zerbrichst du einen Magneten, hat jedes Stück wieder Nord- und Südpol."
        }
       }
      ],
-     "merksatz": "Jeder Magnet hat genau zwei <strong>Pole</strong>: Nordpol und Südpol. <strong>Gleiche Pole stoßen sich ab, verschiedene Pole ziehen sich an.</strong> Pole gibt es nur im Doppelpack — auch jedes Bruchstück hat wieder beide Pole.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Magnetfeld eines Stabmagneten",
-       "pfad": "simulationen/physik/magnetfeld/index.html",
-       "vorhersage": "Du stellst zwei Magnete einander gegenüber. Wenn sich zwei gleiche Pole gegenüberstehen — ziehen sie sich an oder stoßen sie sich ab? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Schalte den zweiten Magneten ein und beobachte, ob er angezogen oder abgestoßen wird.",
-        "Drücke „Zweiten Magnet umdrehen“ und vergleiche: Wie ändert sich das Verhalten, wenn sich Nord- und Südpol gegenüberstehen?",
-        "Formuliere aus deinen Beobachtungen die Pol-Regel in einem Satz."
-       ]
-      },
-      {
-       "typ": "experiment",
-       "titel": "Zwei Magnete ausprobieren",
-       "material": "Zwei Stabmagnete mit markiertem Nord- und Südpol.",
-       "vorhersage": "Sage für jede der vier Kombinationen (N–N, S–S, N–S, S–N) voraus: Ziehen sie sich an oder stoßen sie sich ab?",
-       "auftraege": [
-        "Halte die Magnete in allen vier Kombinationen zueinander und prüfe deine Vorhersage.",
-        "Spüre den Unterschied: Wie fühlt sich Abstoßung im Vergleich zur Anziehung an?",
-        "Fasse das Ergebnis als Pol-Regel zusammen."
-       ]
-      }
-     ],
+     "stolperstein": "Manche glauben, durch Zerbrechen könne man „den Nordpol vom Südpol trennen“. Das geht <strong>nicht</strong>: An jeder Bruchstelle entsteht sofort ein neuer Gegenpol. Jedes Stück hat immer <strong>beide</strong> Pole.",
+     "darstellungen": {
+      "titel": "Die Pol-Regel – zwei Fälle:",
+      "eintraege": [
+       {
+        "art": "Anziehen",
+        "figur": "<svg viewBox=\"0 0 275 115\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"25.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"72.5\" y1=\"50.0\" x2=\"72.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"48.8\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"96.2\" y=\"72.0\" text-anchor=\"middle\">N</text><rect class=\"dreieck\" x=\"155.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"202.5\" y1=\"50.0\" x2=\"202.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"178.8\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"226.2\" y=\"72.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"140.0\" y=\"45.0\" text-anchor=\"middle\">→ ←</text><text class=\"beschriftung\" x=\"140.0\" y=\"95.0\" text-anchor=\"middle\">verschiedene Pole: anziehen</text></svg>",
+        "figurAlt": "Verschiedene Pole gegenüber – sie ziehen sich an."
+       },
+       {
+        "art": "Abstoßen",
+        "figur": "<svg viewBox=\"0 0 275 115\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"25.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"72.5\" y1=\"50.0\" x2=\"72.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"48.8\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"96.2\" y=\"72.0\" text-anchor=\"middle\">N</text><rect class=\"dreieck\" x=\"155.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"202.5\" y1=\"50.0\" x2=\"202.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"178.8\" y=\"72.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"226.2\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"label-a\" x=\"140.0\" y=\"45.0\" text-anchor=\"middle\">↔</text><text class=\"label-a\" x=\"140.0\" y=\"95.0\" text-anchor=\"middle\">gleiche Pole: abstoßen</text></svg>",
+        "figurAlt": "Gleiche Pole gegenüber – sie stoßen sich ab."
+       },
+       {
+        "art": "Regel",
+        "text": "Gleiche Pole stoßen sich ab, verschiedene ziehen sich an."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, woran du erkennst, ob sich zwei Magnete anziehen oder abstoßen.",
+     "merksatz": "Jeder Magnet hat genau zwei <strong>Pole</strong>: Nordpol und Südpol. <strong>Gleiche Pole stoßen sich ab, verschiedene Pole ziehen sich an.</strong> Pole gibt es nur im Doppelpack – auch jedes Bruchstück hat wieder beide.",
      "selbstcheck": [
       {
        "frage": "Wie lautet die Pol-Regel?",
        "antwort": "Gleiche Pole (N–N oder S–S) stoßen sich ab, verschiedene Pole (N–S) ziehen sich an."
       },
       {
-       "frage": "Warum hat auch ein winziges Bruchstück eines Magneten wieder zwei Pole?",
-       "antwort": "Weil sich Pole nicht trennen lassen. An jeder Bruchstelle entstehen sofort ein neuer Nord- und ein neuer Südpol — egal, wie klein das Stück ist."
+       "frage": "Warum hat auch ein winziges Bruchstück wieder zwei Pole?",
+       "antwort": "Weil sich Pole nicht trennen lassen. An jeder Bruchstelle entstehen sofort ein neuer Nord- und ein neuer Südpol."
       },
       {
        "frage": "Zwei Magnete springen zusammen. Welche Pole stehen sich gegenüber?",
-       "antwort": "Verschiedene Pole — ein Nordpol und ein Südpol. Nur verschiedene Pole ziehen sich an."
+       "antwort": "Verschiedene Pole – ein Nordpol und ein Südpol. Nur verschiedene Pole ziehen sich an."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Zwei Magnete ausprobieren",
+       "material": "Zwei Stabmagnete mit markiertem Nord- und Südpol.",
+       "auftraege": [
+        "Halte die Magnete in allen vier Kombinationen (N–N, S–S, N–S, S–N) zueinander.",
+        "Spüre den Unterschied: Wie fühlt sich Abstoßung im Vergleich zur Anziehung an?",
+        "Fasse das Ergebnis als Pol-Regel zusammen."
+       ]
+      },
+      {
+       "typ": "simulation",
+       "titel": "Magnetfeld eines Stabmagneten",
+       "pfad": "simulationen/physik/magnetfeld/index.html",
+       "auftraege": [
+        "Schalte den zweiten Magneten ein und beobachte, ob er angezogen oder abgestoßen wird.",
+        "Drücke „Zweiten Magnet umdrehen“ und vergleiche das Verhalten.",
+        "Formuliere aus deinen Beobachtungen die Pol-Regel in einem Satz."
+       ]
       }
      ]
     },
@@ -1336,7 +1605,8 @@
        ]
       }
      ],
-     "transfer": "Ein Magnet zerbricht in drei Stücke. Wie viele Pole haben die Stücke insgesamt? Erkläre kurz."
+     "transfer": "Ein Magnet zerbricht in drei Stücke. Wie viele Pole haben die Stücke insgesamt? Erkläre kurz.",
+     "rueckbezug": "Zurück zum Versuch vom Anfang: Die Büroklammern hängen an den <strong>beiden Enden</strong> – dort sitzen Nord- und Südpol, die starken Stellen. Und ob zwei Magnete zusammenspringen oder sich wegdrücken, sagt dir die Pol-Regel: gleich stößt ab, verschieden zieht an. Lag deine Vorhersage richtig?"
     },
     "extra": {
      "zeit": 8,
@@ -1389,79 +1659,108 @@
         "ph-05-mag-003"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Du näherst einen <strong>Magneten</strong> langsam einer <strong>Büroklammer</strong> – und schon <em>bevor</em> sie sich berühren, hüpft die Klammer dem Magneten entgegen. Außerdem ziehst du eine Klammer über einen Tisch, indem du den Magneten <strong>unter</strong> der Tischplatte bewegst.</p>",
+      "figur": "<svg viewBox=\"0 0 250 175\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"80.0\" y=\"70.0\" width=\"90.0\" height=\"30.0\" rx=\"2\"/><line class=\"achse\" x1=\"125.0\" y1=\"70.0\" x2=\"125.0\" y2=\"100.0\"/><text class=\"label-a\" x=\"102.5\" y=\"90.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"147.5\" y=\"90.0\" text-anchor=\"middle\">S</text><path class=\"gerade-a\" fill=\"none\" d=\"M 95 70 C 73 48, 197 48, 155 70\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 100 C 73 122, 197 122, 155 100\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 70 C 55 30, 215 30, 155 70\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 100 C 55 140, 215 140, 155 100\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 70 C 37 12, 233 12, 155 70\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 100 C 37 158, 233 158, 155 100\"/><text class=\"label-a\" x=\"125.0\" y=\"55.0\" text-anchor=\"middle\">Feldlinien</text></svg>",
+      "figurAlt": "Stabmagnet mit geschwungenen Feldlinien, die vom Nordpol zum Südpol verlaufen.",
+      "vorhersage": "Wie wirkt der Magnet auf die Klammer, ohne sie zu berühren?",
+      "optionen": [
+       "Gar nicht – er muss berühren",
+       "Durch einen unsichtbaren Wirkungsraum",
+       "nur durch Luftzug"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#dm-feld",
-     "text": "Verstehe Schritt für Schritt, wie ein Magnet ohne Berührung wirkt — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/dauermagnete/index.html#dm-feld"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Kraft ohne Berührung",
-       "html": "<p>Das Verrückteste am Magneten: Er muss gar nichts berühren. Hältst du ihn langsam an eine Büroklammer, hüpft sie ihm schon kurz vorher entgegen. Die Kraft wirkt also schon im <strong>Raum um den Magneten herum</strong>. Diesen unsichtbaren Wirkungsraum nennt man <strong>Magnetfeld</strong>.</p>",
-       "check": {
+       "kern": "Der Magnet muss gar nichts berühren: Schon im <strong>Raum um den Magneten herum</strong> wirkt seine Kraft. Diesen unsichtbaren Wirkungsraum nennt man <strong>Magnetfeld</strong>.",
+       "minicheck": {
         "frage": "Was ist ein Magnetfeld?",
-        "antwort": "Der unsichtbare Raum um einen Magneten, in dem seine Kraft wirkt — sogar ohne dass der Magnet den Gegenstand berührt."
+        "antwort": "Der unsichtbare Raum um einen Magneten, in dem seine Kraft wirkt – sogar ohne Berührung."
        }
       },
       {
        "titel": "Durch Stoffe hindurch",
-       "html": "<p>Das Magnetfeld wirkt sogar <strong>durch viele Stoffe hindurch</strong>. Legst du eine Büroklammer auf ein Blatt Papier und führst den Magneten darunter entlang, wandert die Klammer mit. Das klappt auch durch Pappe, ein dünnes Brett oder die Tischplatte — und durch den Zettel am Kühlschrank.</p>",
-       "check": {
+       "kern": "Das Magnetfeld wirkt sogar <strong>durch viele Stoffe hindurch</strong>: Führst du den Magneten unter einem Blatt Papier oder einer Tischplatte entlang, wandert die Klammer darauf mit.",
+       "details": "<p>Das klappt durch Papier, Pappe, ein dünnes Brett oder Glas – durch alle <strong>nicht</strong> magnetischen Stoffe. Darum hält auch ein Kühlschrankmagnet über einem Zettel: Das Feld wirkt durch das Papier auf die Eisentür.</p>",
+       "minicheck": {
         "frage": "Wirkt das Magnetfeld auch durch ein Blatt Papier?",
-        "antwort": "Ja. Das Magnetfeld wirkt durch viele Stoffe wie Papier, Pappe, Holz oder Glas hindurch — deshalb hält auch ein Kühlschrankmagnet über einem Zettel."
+        "antwort": "Ja. Es wirkt durch viele Stoffe wie Papier, Pappe, Holz oder Glas hindurch."
        }
       },
       {
        "titel": "Mit Eisenspänen sichtbar",
-       "html": "<p>Streust du <strong>Eisenspäne</strong> auf ein Blatt über einem Stabmagneten und klopfst leicht, ordnen sie sich zu einem Muster aus <strong>geschwungenen Linien</strong> — den <strong>Wirkungslinien</strong>. Gezeichnet laufen sie außen vom <strong>Nordpol zum Südpol</strong>. An den Polen liegen sie besonders <strong>dicht</strong> — dort ist die Kraft am größten.</p>",
-       "check": {
-        "frage": "Warum ordnen sich die Eisenspäne dort am dichtesten, wo die Linien eng beieinander liegen?",
-        "antwort": "Weil dort das Magnetfeld am stärksten ist — an den Polen. Je dichter die Wirkungslinien liegen, desto kräftiger wirkt das Feld, und desto mehr Späne sammeln sich."
+       "kern": "Streust du <strong>Eisenspäne</strong> auf ein Blatt über dem Magneten und klopfst leicht, ordnen sie sich zu <strong>geschwungenen Linien</strong>. An den <strong>Polen</strong> liegen sie besonders <strong>dicht</strong> – dort ist das Feld am stärksten.",
+       "figur": "<svg viewBox=\"0 0 250 170\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"80.0\" y=\"75.0\" width=\"90.0\" height=\"28.0\" rx=\"2\"/><line class=\"achse\" x1=\"125.0\" y1=\"75.0\" x2=\"125.0\" y2=\"103.0\"/><text class=\"label-a\" x=\"102.5\" y=\"94.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"147.5\" y=\"94.0\" text-anchor=\"middle\">S</text><circle class=\"punkt\" cx=\"151.6\" cy=\"79.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"80.9\" cy=\"44.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"104.2\" cy=\"67.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"201.7\" cy=\"111.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"188.8\" cy=\"70.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"94.9\" cy=\"89.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"50.4\" cy=\"104.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"97.9\" cy=\"103.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"165.8\" cy=\"89.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"85.8\" cy=\"88.4\" r=\"1.4\"/><circle class=\"punkt\" cx=\"87.4\" cy=\"77.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"101.1\" cy=\"86.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"109.1\" cy=\"125.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"161.3\" cy=\"97.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"83.1\" cy=\"89.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"95.3\" cy=\"73.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"145.2\" cy=\"79.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"161.4\" cy=\"95.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.1\" cy=\"90.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"94.1\" cy=\"88.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"167.9\" cy=\"88.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.0\" cy=\"86.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"55.0\" cy=\"109.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"75.9\" cy=\"82.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"129.3\" cy=\"117.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"149.0\" cy=\"105.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.7\" cy=\"88.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"164.9\" cy=\"79.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"130.0\" cy=\"50.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"173.2\" cy=\"110.4\" r=\"1.4\"/><circle class=\"punkt\" cx=\"171.1\" cy=\"86.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"201.0\" cy=\"105.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"74.2\" cy=\"109.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"153.4\" cy=\"109.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"102.5\" cy=\"108.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"101.4\" cy=\"83.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.1\" cy=\"98.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"60.8\" cy=\"98.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"93.0\" cy=\"88.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"91.4\" cy=\"105.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"149.0\" cy=\"77.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"176.0\" cy=\"99.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"155.4\" cy=\"112.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"173.9\" cy=\"100.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"187.3\" cy=\"85.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"82.5\" cy=\"90.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"102.5\" cy=\"99.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"72.6\" cy=\"103.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"119.1\" cy=\"90.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"73.1\" cy=\"99.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"167.3\" cy=\"61.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"172.7\" cy=\"79.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"168.0\" cy=\"71.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"88.0\" cy=\"93.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"154.9\" cy=\"90.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"160.2\" cy=\"102.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"162.7\" cy=\"91.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"54.2\" cy=\"118.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"212.4\" cy=\"53.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"74.6\" cy=\"88.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"174.3\" cy=\"108.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"160.6\" cy=\"81.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"170.4\" cy=\"96.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"187.6\" cy=\"71.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"82.7\" cy=\"80.4\" r=\"1.4\"/><circle class=\"punkt\" cx=\"60.1\" cy=\"71.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"86.1\" cy=\"92.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"79.1\" cy=\"89.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"113.5\" cy=\"123.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"38.2\" cy=\"92.6\" r=\"1.4\"/><text class=\"beschriftung\" x=\"125.0\" y=\"18.0\" text-anchor=\"middle\">Eisenspäne</text></svg>",
+       "figurAlt": "Eisenspäne über einem Stabmagneten, dicht an den Polen, dünner in der Mitte.",
+       "minicheck": {
+        "frage": "Warum liegen die Eisenspäne an den Polen am dichtesten?",
+        "antwort": "Weil dort das Magnetfeld am stärksten ist. Je dichter die Linien, desto kräftiger das Feld."
        }
       }
      ],
-     "merksatz": "Um jeden Magneten gibt es ein <strong>Magnetfeld</strong>. Darin wirkt die Kraft <strong>ohne Berührung</strong> und <strong>durch Stoffe hindurch</strong>. Mit <strong>Eisenspänen</strong> kann man es sichtbar machen — <strong>je näher am Pol, desto stärker</strong>.",
-     "erkunden": [
+     "stolperstein": "Ein Magnetfeld ist <strong>kein Wind und kein Luftzug</strong>. Es wirkt auch im luftleeren Raum und sogar durch feste Stoffe hindurch. Sichtbar wird es nur indirekt – z. B. durch das Muster der Eisenspäne.",
+     "darstellungen": {
+      "titel": "Das Magnetfeld – sichtbar gemacht:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Klammer folgt dem Magneten durch ein Blatt Papier."
+       },
+       {
+        "art": "Feldlinien",
+        "figur": "<svg viewBox=\"0 0 250 175\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"80.0\" y=\"70.0\" width=\"90.0\" height=\"30.0\" rx=\"2\"/><line class=\"achse\" x1=\"125.0\" y1=\"70.0\" x2=\"125.0\" y2=\"100.0\"/><text class=\"label-a\" x=\"102.5\" y=\"90.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"147.5\" y=\"90.0\" text-anchor=\"middle\">S</text><path class=\"gerade-a\" fill=\"none\" d=\"M 95 70 C 73 48, 197 48, 155 70\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 100 C 73 122, 197 122, 155 100\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 70 C 55 30, 215 30, 155 70\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 100 C 55 140, 215 140, 155 100\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 70 C 37 12, 233 12, 155 70\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 100 C 37 158, 233 158, 155 100\"/><text class=\"label-a\" x=\"125.0\" y=\"55.0\" text-anchor=\"middle\">Feldlinien</text></svg>",
+        "figurAlt": "Gezeichnete Feldlinien von N nach S."
+       },
+       {
+        "art": "Eisenspäne",
+        "figur": "<svg viewBox=\"0 0 250 170\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"80.0\" y=\"75.0\" width=\"90.0\" height=\"28.0\" rx=\"2\"/><line class=\"achse\" x1=\"125.0\" y1=\"75.0\" x2=\"125.0\" y2=\"103.0\"/><text class=\"label-a\" x=\"102.5\" y=\"94.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"147.5\" y=\"94.0\" text-anchor=\"middle\">S</text><circle class=\"punkt\" cx=\"151.6\" cy=\"79.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"80.9\" cy=\"44.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"104.2\" cy=\"67.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"201.7\" cy=\"111.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"188.8\" cy=\"70.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"94.9\" cy=\"89.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"50.4\" cy=\"104.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"97.9\" cy=\"103.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"165.8\" cy=\"89.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"85.8\" cy=\"88.4\" r=\"1.4\"/><circle class=\"punkt\" cx=\"87.4\" cy=\"77.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"101.1\" cy=\"86.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"109.1\" cy=\"125.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"161.3\" cy=\"97.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"83.1\" cy=\"89.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"95.3\" cy=\"73.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"145.2\" cy=\"79.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"161.4\" cy=\"95.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.1\" cy=\"90.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"94.1\" cy=\"88.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"167.9\" cy=\"88.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.0\" cy=\"86.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"55.0\" cy=\"109.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"75.9\" cy=\"82.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"129.3\" cy=\"117.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"149.0\" cy=\"105.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.7\" cy=\"88.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"164.9\" cy=\"79.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"130.0\" cy=\"50.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"173.2\" cy=\"110.4\" r=\"1.4\"/><circle class=\"punkt\" cx=\"171.1\" cy=\"86.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"201.0\" cy=\"105.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"74.2\" cy=\"109.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"153.4\" cy=\"109.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"102.5\" cy=\"108.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"101.4\" cy=\"83.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.1\" cy=\"98.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"60.8\" cy=\"98.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"93.0\" cy=\"88.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"91.4\" cy=\"105.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"149.0\" cy=\"77.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"176.0\" cy=\"99.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"155.4\" cy=\"112.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"173.9\" cy=\"100.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"187.3\" cy=\"85.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"82.5\" cy=\"90.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"102.5\" cy=\"99.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"72.6\" cy=\"103.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"119.1\" cy=\"90.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"73.1\" cy=\"99.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"167.3\" cy=\"61.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"172.7\" cy=\"79.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"168.0\" cy=\"71.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"88.0\" cy=\"93.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"154.9\" cy=\"90.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"160.2\" cy=\"102.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"162.7\" cy=\"91.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"54.2\" cy=\"118.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"212.4\" cy=\"53.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"74.6\" cy=\"88.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"174.3\" cy=\"108.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"160.6\" cy=\"81.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"170.4\" cy=\"96.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"187.6\" cy=\"71.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"82.7\" cy=\"80.4\" r=\"1.4\"/><circle class=\"punkt\" cx=\"60.1\" cy=\"71.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"86.1\" cy=\"92.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"79.1\" cy=\"89.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"113.5\" cy=\"123.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"38.2\" cy=\"92.6\" r=\"1.4\"/><text class=\"beschriftung\" x=\"125.0\" y=\"18.0\" text-anchor=\"middle\">Eisenspäne</text></svg>",
+        "figurAlt": "Span-Muster, dicht an den Polen."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein Magnet eine Büroklammer schon anziehen kann, bevor er sie berührt.",
+     "merksatz": "Um jeden Magneten gibt es ein <strong>Magnetfeld</strong>. Darin wirkt die Kraft <strong>ohne Berührung</strong> und <strong>durch Stoffe hindurch</strong>. Mit <strong>Eisenspänen</strong> macht man es sichtbar – <strong>je näher am Pol, desto stärker</strong>.",
+     "selbstcheck": [
       {
-       "typ": "simulation",
-       "titel": "Magnetfeld eines Stabmagneten",
-       "pfad": "simulationen/physik/magnetfeld/index.html",
-       "vorhersage": "Wo um den Stabmagneten herum ist das Feld am stärksten — in der Mitte oder an den Enden? Schreibe deine Vermutung auf, bevor du die Feldlinien einschaltest.",
-       "auftraege": [
-        "Schalte die Feldlinien ein und beschreibe ihren Verlauf — wo laufen sie außen entlang?",
-        "Vergleiche die kleinen Kompassnadeln dicht an einem Pol mit denen weiter weg: Wo sind die Pfeile länger?",
-        "Ziehe den Kompass an verschiedene Stellen und beobachte, wohin seine Nadel zeigt."
-       ]
+       "frage": "Warum zieht ein Magnet eine Büroklammer schon vor der Berührung an?",
+       "antwort": "Weil die Kraft im Magnetfeld wirkt – dem unsichtbaren Raum um den Magneten."
       },
+      {
+       "frage": "Wie kannst du ein Magnetfeld sichtbar machen?",
+       "antwort": "Mit feinen Eisenspänen: auf ein Blatt über dem Magneten gestreut und leicht geklopft."
+      },
+      {
+       "frage": "Wo ist das Magnetfeld eines Stabmagneten am stärksten?",
+       "antwort": "An den beiden Polen – dort liegen die Linien am dichtesten."
+      }
+     ],
+     "erkunden": [
       {
        "typ": "experiment",
        "titel": "Magnetfeld mit Eisenspänen sichtbar machen",
        "material": "Ein Stabmagnet, ein Blatt Papier, feine Eisenspäne (oder eine fertige Feldlinien-Box).",
-       "vorhersage": "Skizziere zuerst, wie das Linienmuster um den Stabmagneten wohl aussehen wird.",
        "auftraege": [
         "Lege das Papier auf den Magneten, streue Eisenspäne darüber und klopfe leicht.",
         "Vergleiche das entstandene Muster mit deiner Skizze.",
         "Markiere die Stelle, an der die Späne am dichtesten liegen, und benenne sie (Pol)."
        ]
-      }
-     ],
-     "selbstcheck": [
-      {
-       "frage": "Erkläre, warum ein Magnet eine Büroklammer schon vor der Berührung anzieht.",
-       "antwort": "Weil die Kraft im Magnetfeld wirkt — dem unsichtbaren Raum um den Magneten. Schon dort, bevor sich Magnet und Klammer berühren, zieht das Feld die Klammer an."
       },
       {
-       "frage": "Wie kannst du ein Magnetfeld sichtbar machen?",
-       "antwort": "Mit feinen Eisenspänen: Auf ein Blatt über dem Magneten gestreut und leicht geklopft, ordnen sie sich zu den Wirkungslinien des Feldes."
-      },
-      {
-       "frage": "Wo ist das Magnetfeld eines Stabmagneten am stärksten?",
-       "antwort": "An den beiden Polen — dort liegen die Wirkungslinien am dichtesten und die Kraft ist am größten."
+       "typ": "simulation",
+       "titel": "Magnetfeld eines Stabmagneten",
+       "pfad": "simulationen/physik/magnetfeld/index.html",
+       "auftraege": [
+        "Schalte die Feldlinien ein und beschreibe ihren Verlauf.",
+        "Vergleiche die kleinen Kompassnadeln dicht an einem Pol mit denen weiter weg.",
+        "Ziehe den Kompass an verschiedene Stellen und beobachte die Nadel."
+       ]
       }
      ]
     },
@@ -1503,7 +1802,8 @@
        ]
       }
      ],
-     "transfer": "Nenne zwei Beispiele aus dem Alltag, bei denen das Magnetfeld durch einen Stoff hindurchwirkt."
+     "transfer": "Nenne zwei Beispiele aus dem Alltag, bei denen das Magnetfeld durch einen Stoff hindurchwirkt.",
+     "rueckbezug": "Zurück zur Klammer vom Anfang: Sie wird angezogen, weil um den Magneten ein <strong>Magnetfeld</strong> liegt – ein unsichtbarer Wirkungsraum. Es wirkt <strong>ohne Berührung</strong> und sogar <strong>durch die Tischplatte hindurch</strong>. War das deine Vermutung?"
     },
     "extra": {
      "zeit": 8,
@@ -1556,68 +1856,98 @@
         "ph-05-mag-007"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Du nimmst einen ganz normalen <strong>Eisennagel</strong>, der selbst nichts anzieht, und streichst viele Male mit einem starken Magneten darüber. Danach hängen plötzlich <strong>Büroklammern</strong> am Nagel. Lässt du ihn aber mehrmals hart auf den Tisch fallen, lässt die Wirkung wieder nach.</p>",
+      "figur": "<svg viewBox=\"0 0 250 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"hilfslinie\" x=\"35.0\" y=\"45.0\" width=\"180.0\" height=\"50.0\" rx=\"2\"/><line class=\"gerade-a\" x1=\"49.3\" y1=\"51.0\" x2=\"50.7\" y2=\"69.0\"/><polygon class=\"pfeil\" points=\"50.7,69.0 48.4,65.1 52.4,64.8\"/><line class=\"gerade-a\" x1=\"58.7\" y1=\"84.5\" x2=\"41.3\" y2=\"79.5\"/><polygon class=\"pfeil\" points=\"41.3,79.5 45.7,78.7 44.6,82.6\"/><line class=\"gerade-a\" x1=\"80.2\" y1=\"53.4\" x2=\"67.8\" y2=\"66.6\"/><polygon class=\"pfeil\" points=\"67.8,66.6 69.1,62.3 72.0,65.0\"/><line class=\"gerade-a\" x1=\"81.1\" y1=\"87.5\" x2=\"66.9\" y2=\"76.5\"/><polygon class=\"pfeil\" points=\"66.9,76.5 71.2,77.4 68.8,80.6\"/><line class=\"gerade-a\" x1=\"104.3\" y1=\"66.4\" x2=\"91.7\" y2=\"53.6\"/><polygon class=\"pfeil\" points=\"91.7,53.6 95.9,55.0 93.1,57.9\"/><line class=\"gerade-a\" x1=\"89.8\" y1=\"78.4\" x2=\"106.2\" y2=\"85.6\"/><polygon class=\"pfeil\" points=\"106.2,85.6 101.8,85.8 103.4,82.2\"/><line class=\"gerade-a\" x1=\"113.0\" y1=\"59.3\" x2=\"131.0\" y2=\"60.7\"/><polygon class=\"pfeil\" points=\"131.0,60.7 126.8,62.4 127.1,58.4\"/><line class=\"gerade-a\" x1=\"117.3\" y1=\"89.7\" x2=\"126.7\" y2=\"74.3\"/><polygon class=\"pfeil\" points=\"126.7,74.3 126.3,78.8 122.9,76.7\"/><line class=\"gerade-a\" x1=\"146.5\" y1=\"51.0\" x2=\"145.5\" y2=\"69.0\"/><polygon class=\"pfeil\" points=\"145.5,69.0 143.7,64.9 147.7,65.1\"/><line class=\"gerade-a\" x1=\"145.1\" y1=\"73.0\" x2=\"146.9\" y2=\"91.0\"/><polygon class=\"pfeil\" points=\"146.9,91.0 144.5,87.2 148.5,86.8\"/><line class=\"gerade-a\" x1=\"161.0\" y1=\"60.2\" x2=\"179.0\" y2=\"59.8\"/><polygon class=\"pfeil\" points=\"179.0,59.8 175.1,61.9 174.9,57.9\"/><line class=\"gerade-a\" x1=\"178.8\" y1=\"80.3\" x2=\"161.2\" y2=\"83.7\"/><polygon class=\"pfeil\" points=\"161.2,83.7 164.7,81.0 165.5,84.9\"/><line class=\"gerade-a\" x1=\"189.3\" y1=\"67.7\" x2=\"198.7\" y2=\"52.3\"/><polygon class=\"pfeil\" points=\"198.7,52.3 198.3,56.8 194.9,54.7\"/><line class=\"gerade-a\" x1=\"202.9\" y1=\"80.7\" x2=\"185.1\" y2=\"83.3\"/><polygon class=\"pfeil\" points=\"185.1,83.3 188.8,80.8 189.4,84.7\"/><text class=\"beschriftung\" x=\"125.0\" y=\"35.0\" text-anchor=\"middle\">kreuz und quer → nicht magnetisch</text></svg>",
+      "figurAlt": "Modell: viele kleine Pfeile (Elementarmagnete) zeigen kreuz und quer.",
+      "vorhersage": "Was passiert im Inneren des Nagels, während du mit dem Magneten darüberstreichst?",
+      "optionen": [
+       "Nichts – außen wird er klebrig",
+       "Winzige Mini-Magnete ordnen sich",
+       "der Nagel wird wärmer"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#dm-elementarmagnete",
-     "text": "Verstehe Schritt für Schritt, wie man Eisen magnetisiert und was dabei im Inneren passiert — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/dauermagnete/index.html#dm-elementarmagnete"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Einen Nagel magnetisieren",
-       "html": "<p>Du kannst aus einem normalen <strong>Eisennagel</strong> selbst einen Magneten machen: Streiche mit dem Pol eines starken Magneten viele Male über den Nagel — immer in <strong>dieselbe Richtung</strong>, wie beim Kämmen. Danach zieht der Nagel selbst Büroklammern an. Er ist <strong>magnetisiert</strong>.</p>",
-       "check": {
-        "frage": "Warum muss man beim Magnetisieren immer in dieselbe Richtung streichen?",
-        "antwort": "Nur so richten sich die Mini-Magnete im Eisen alle in dieselbe Richtung aus. Streicht man hin und her, geraten sie wieder durcheinander, und der Nagel wird nicht magnetisch."
+       "kern": "Streiche mit dem Pol eines starken Magneten viele Male über den Nagel – immer in <strong>dieselbe Richtung</strong>, wie beim Kämmen. Danach zieht der Nagel selbst Büroklammern an: Er ist <strong>magnetisiert</strong>.",
+       "minicheck": {
+        "frage": "Warum muss man immer in dieselbe Richtung streichen?",
+        "antwort": "Nur so richten sich die Mini-Magnete alle gleich aus. Streicht man hin und her, geraten sie wieder durcheinander."
        }
       },
       {
        "titel": "Das Modell der Elementarmagnete",
-       "html": "<p>Im Eisen stecken unzählige winzige Mini-Magnete — die <strong>Elementarmagnete</strong>. In einem normalen Nagel zeigen sie <strong>kreuz und quer</strong>; ihre Kräfte heben sich auf, nach außen merkt man nichts. Beim Streichen <strong>richten sie sich aus</strong>, bis fast alle in dieselbe Richtung zeigen — dann wirken ihre Kräfte zusammen, und der Nagel ist ein Magnet.</p>",
-       "check": {
+       "kern": "Im Eisen stecken unzählige winzige Mini-Magnete – die <strong>Elementarmagnete</strong>. Normal zeigen sie <strong>kreuz und quer</strong> (Kräfte heben sich auf). Beim Streichen <strong>richten sie sich aus</strong> – dann wirken sie zusammen.",
+       "figur": "<svg viewBox=\"0 0 250 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"hilfslinie\" x=\"35.0\" y=\"45.0\" width=\"180.0\" height=\"50.0\" rx=\"2\"/><line class=\"gerade-a\" x1=\"41.0\" y1=\"60.0\" x2=\"59.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"59.0,60.0 55.0,62.0 55.0,58.0\"/><line class=\"gerade-a\" x1=\"41.0\" y1=\"82.0\" x2=\"59.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"59.0,82.0 55.0,84.0 55.0,80.0\"/><line class=\"gerade-a\" x1=\"65.0\" y1=\"60.0\" x2=\"83.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"83.0,60.0 79.0,62.0 79.0,58.0\"/><line class=\"gerade-a\" x1=\"65.0\" y1=\"82.0\" x2=\"83.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"83.0,82.0 79.0,84.0 79.0,80.0\"/><line class=\"gerade-a\" x1=\"89.0\" y1=\"60.0\" x2=\"107.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"107.0,60.0 103.0,62.0 103.0,58.0\"/><line class=\"gerade-a\" x1=\"89.0\" y1=\"82.0\" x2=\"107.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"107.0,82.0 103.0,84.0 103.0,80.0\"/><line class=\"gerade-a\" x1=\"113.0\" y1=\"60.0\" x2=\"131.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"131.0,60.0 127.0,62.0 127.0,58.0\"/><line class=\"gerade-a\" x1=\"113.0\" y1=\"82.0\" x2=\"131.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"131.0,82.0 127.0,84.0 127.0,80.0\"/><line class=\"gerade-a\" x1=\"137.0\" y1=\"60.0\" x2=\"155.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"155.0,60.0 151.0,62.0 151.0,58.0\"/><line class=\"gerade-a\" x1=\"137.0\" y1=\"82.0\" x2=\"155.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"155.0,82.0 151.0,84.0 151.0,80.0\"/><line class=\"gerade-a\" x1=\"161.0\" y1=\"60.0\" x2=\"179.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"179.0,60.0 175.0,62.0 175.0,58.0\"/><line class=\"gerade-a\" x1=\"161.0\" y1=\"82.0\" x2=\"179.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"179.0,82.0 175.0,84.0 175.0,80.0\"/><line class=\"gerade-a\" x1=\"185.0\" y1=\"60.0\" x2=\"203.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"203.0,60.0 199.0,62.0 199.0,58.0\"/><line class=\"gerade-a\" x1=\"185.0\" y1=\"82.0\" x2=\"203.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"203.0,82.0 199.0,84.0 199.0,80.0\"/><text class=\"beschriftung\" x=\"125.0\" y=\"35.0\" text-anchor=\"middle\">geordnet → magnetisch</text></svg>",
+       "figurAlt": "Modell: alle kleinen Pfeile zeigen geordnet in dieselbe Richtung.",
+       "details": "<p>Das ist ein <strong>Modell</strong>: eine Vorstellung, die das Verhalten erklärt. Solange die Elementarmagnete ungeordnet sind, merkt man nach außen nichts. Sind sie geordnet, addieren sich ihre Kräfte zu einem starken Magneten.</p>",
+       "minicheck": {
         "frage": "Wann ist Eisen magnetisch und wann nicht?",
-        "antwort": "Zeigen die Elementarmagnete kreuz und quer, heben sich ihre Kräfte auf — das Eisen ist nicht magnetisch. Zeigen sie geordnet in dieselbe Richtung, wirken sie zusammen — das Eisen ist ein Magnet."
+        "antwort": "Kreuz und quer → die Kräfte heben sich auf, nicht magnetisch. Geordnet → sie wirken zusammen, magnetisch."
        }
       },
       {
        "titel": "Wie die Kraft verloren geht",
-       "html": "<p>Das Modell erklärt auch, wie ein Magnet seine Kraft <strong>verliert</strong>: Lässt man ihn oft fallen, klopft kräftig darauf oder erhitzt ihn stark, geraten die Mini-Magnete wieder <strong>durcheinander</strong> — die Ordnung ist weg, und damit die Kraft. Man sagt: Der Magnet ist <strong>entmagnetisiert</strong>. Darum gilt: Magnete nicht fallen lassen!</p>",
-       "check": {
+       "kern": "Lässt man einen Magneten oft fallen, klopft kräftig darauf oder erhitzt ihn stark, geraten die Mini-Magnete wieder <strong>durcheinander</strong> – die Ordnung ist weg, und damit die Kraft. Man sagt: <strong>entmagnetisiert</strong>.",
+       "minicheck": {
         "frage": "Warum schadet starkes Klopfen einem Magneten?",
-        "antwort": "Bei jedem harten Schlag geraten einige Mini-Magnete durcheinander. Die Ordnung geht verloren, und damit verschwindet die Kraft — der Magnet wird schwächer oder verliert seine Wirkung ganz."
+        "antwort": "Bei jedem harten Schlag geraten Mini-Magnete durcheinander. Die Ordnung geht verloren – der Magnet wird schwächer."
        }
       }
      ],
-     "merksatz": "Im Eisen stecken winzige <strong>Elementarmagnete</strong>. Zeigen sie <strong>kreuz und quer</strong>, ist das Eisen nicht magnetisch; zeigen sie <strong>geordnet in dieselbe Richtung</strong>, wirkt es als Magnet. <strong>Klopfen, Fallenlassen und starkes Erhitzen</strong> bringen die Ordnung durcheinander — der Magnet verliert seine Kraft.",
+     "stolperstein": "Die Elementarmagnete werden beim Magnetisieren <strong>nicht neu erzeugt</strong> – sie sind schon immer im Eisen. Magnetisieren heißt nur: die vorhandenen Mini-Magnete <strong>ordnen</strong>. Darum kann man auch nur magnetische Stoffe (Eisen, Nickel, Cobalt) magnetisieren.",
+     "darstellungen": {
+      "titel": "Das Modell der Elementarmagnete:",
+      "eintraege": [
+       {
+        "art": "nicht magnetisch",
+        "figur": "<svg viewBox=\"0 0 250 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"hilfslinie\" x=\"35.0\" y=\"45.0\" width=\"180.0\" height=\"50.0\" rx=\"2\"/><line class=\"gerade-a\" x1=\"49.3\" y1=\"51.0\" x2=\"50.7\" y2=\"69.0\"/><polygon class=\"pfeil\" points=\"50.7,69.0 48.4,65.1 52.4,64.8\"/><line class=\"gerade-a\" x1=\"58.7\" y1=\"84.5\" x2=\"41.3\" y2=\"79.5\"/><polygon class=\"pfeil\" points=\"41.3,79.5 45.7,78.7 44.6,82.6\"/><line class=\"gerade-a\" x1=\"80.2\" y1=\"53.4\" x2=\"67.8\" y2=\"66.6\"/><polygon class=\"pfeil\" points=\"67.8,66.6 69.1,62.3 72.0,65.0\"/><line class=\"gerade-a\" x1=\"81.1\" y1=\"87.5\" x2=\"66.9\" y2=\"76.5\"/><polygon class=\"pfeil\" points=\"66.9,76.5 71.2,77.4 68.8,80.6\"/><line class=\"gerade-a\" x1=\"104.3\" y1=\"66.4\" x2=\"91.7\" y2=\"53.6\"/><polygon class=\"pfeil\" points=\"91.7,53.6 95.9,55.0 93.1,57.9\"/><line class=\"gerade-a\" x1=\"89.8\" y1=\"78.4\" x2=\"106.2\" y2=\"85.6\"/><polygon class=\"pfeil\" points=\"106.2,85.6 101.8,85.8 103.4,82.2\"/><line class=\"gerade-a\" x1=\"113.0\" y1=\"59.3\" x2=\"131.0\" y2=\"60.7\"/><polygon class=\"pfeil\" points=\"131.0,60.7 126.8,62.4 127.1,58.4\"/><line class=\"gerade-a\" x1=\"117.3\" y1=\"89.7\" x2=\"126.7\" y2=\"74.3\"/><polygon class=\"pfeil\" points=\"126.7,74.3 126.3,78.8 122.9,76.7\"/><line class=\"gerade-a\" x1=\"146.5\" y1=\"51.0\" x2=\"145.5\" y2=\"69.0\"/><polygon class=\"pfeil\" points=\"145.5,69.0 143.7,64.9 147.7,65.1\"/><line class=\"gerade-a\" x1=\"145.1\" y1=\"73.0\" x2=\"146.9\" y2=\"91.0\"/><polygon class=\"pfeil\" points=\"146.9,91.0 144.5,87.2 148.5,86.8\"/><line class=\"gerade-a\" x1=\"161.0\" y1=\"60.2\" x2=\"179.0\" y2=\"59.8\"/><polygon class=\"pfeil\" points=\"179.0,59.8 175.1,61.9 174.9,57.9\"/><line class=\"gerade-a\" x1=\"178.8\" y1=\"80.3\" x2=\"161.2\" y2=\"83.7\"/><polygon class=\"pfeil\" points=\"161.2,83.7 164.7,81.0 165.5,84.9\"/><line class=\"gerade-a\" x1=\"189.3\" y1=\"67.7\" x2=\"198.7\" y2=\"52.3\"/><polygon class=\"pfeil\" points=\"198.7,52.3 198.3,56.8 194.9,54.7\"/><line class=\"gerade-a\" x1=\"202.9\" y1=\"80.7\" x2=\"185.1\" y2=\"83.3\"/><polygon class=\"pfeil\" points=\"185.1,83.3 188.8,80.8 189.4,84.7\"/><text class=\"beschriftung\" x=\"125.0\" y=\"35.0\" text-anchor=\"middle\">kreuz und quer → nicht magnetisch</text></svg>",
+        "figurAlt": "Pfeile kreuz und quer."
+       },
+       {
+        "art": "magnetisiert",
+        "figur": "<svg viewBox=\"0 0 250 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"hilfslinie\" x=\"35.0\" y=\"45.0\" width=\"180.0\" height=\"50.0\" rx=\"2\"/><line class=\"gerade-a\" x1=\"41.0\" y1=\"60.0\" x2=\"59.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"59.0,60.0 55.0,62.0 55.0,58.0\"/><line class=\"gerade-a\" x1=\"41.0\" y1=\"82.0\" x2=\"59.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"59.0,82.0 55.0,84.0 55.0,80.0\"/><line class=\"gerade-a\" x1=\"65.0\" y1=\"60.0\" x2=\"83.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"83.0,60.0 79.0,62.0 79.0,58.0\"/><line class=\"gerade-a\" x1=\"65.0\" y1=\"82.0\" x2=\"83.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"83.0,82.0 79.0,84.0 79.0,80.0\"/><line class=\"gerade-a\" x1=\"89.0\" y1=\"60.0\" x2=\"107.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"107.0,60.0 103.0,62.0 103.0,58.0\"/><line class=\"gerade-a\" x1=\"89.0\" y1=\"82.0\" x2=\"107.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"107.0,82.0 103.0,84.0 103.0,80.0\"/><line class=\"gerade-a\" x1=\"113.0\" y1=\"60.0\" x2=\"131.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"131.0,60.0 127.0,62.0 127.0,58.0\"/><line class=\"gerade-a\" x1=\"113.0\" y1=\"82.0\" x2=\"131.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"131.0,82.0 127.0,84.0 127.0,80.0\"/><line class=\"gerade-a\" x1=\"137.0\" y1=\"60.0\" x2=\"155.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"155.0,60.0 151.0,62.0 151.0,58.0\"/><line class=\"gerade-a\" x1=\"137.0\" y1=\"82.0\" x2=\"155.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"155.0,82.0 151.0,84.0 151.0,80.0\"/><line class=\"gerade-a\" x1=\"161.0\" y1=\"60.0\" x2=\"179.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"179.0,60.0 175.0,62.0 175.0,58.0\"/><line class=\"gerade-a\" x1=\"161.0\" y1=\"82.0\" x2=\"179.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"179.0,82.0 175.0,84.0 175.0,80.0\"/><line class=\"gerade-a\" x1=\"185.0\" y1=\"60.0\" x2=\"203.0\" y2=\"60.0\"/><polygon class=\"pfeil\" points=\"203.0,60.0 199.0,62.0 199.0,58.0\"/><line class=\"gerade-a\" x1=\"185.0\" y1=\"82.0\" x2=\"203.0\" y2=\"82.0\"/><polygon class=\"pfeil\" points=\"203.0,82.0 199.0,84.0 199.0,80.0\"/><text class=\"beschriftung\" x=\"125.0\" y=\"35.0\" text-anchor=\"middle\">geordnet → magnetisch</text></svg>",
+        "figurAlt": "Pfeile geordnet in eine Richtung."
+       },
+       {
+        "art": "Regel",
+        "text": "Geordnet = magnetisch. Durcheinander (Klopfen, Hitze) = entmagnetisiert."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz mit dem Modell der Elementarmagnete, was beim Magnetisieren eines Nagels im Inneren passiert.",
+     "merksatz": "Im Eisen stecken winzige <strong>Elementarmagnete</strong>. <strong>Kreuz und quer</strong> → nicht magnetisch; <strong>geordnet</strong> → Magnet. <strong>Klopfen, Fallenlassen und starkes Erhitzen</strong> bringen die Ordnung durcheinander – der Magnet verliert seine Kraft.",
+     "selbstcheck": [
+      {
+       "frage": "Wie magnetisiert man einen Eisennagel?",
+       "antwort": "Mit dem Pol eines starken Magneten viele Male in dieselbe Richtung darüberstreichen."
+      },
+      {
+       "frage": "Was zeigen die Elementarmagnete in nicht magnetisiertem Eisen?",
+       "antwort": "Sie zeigen kreuz und quer. Ihre Kräfte heben sich auf, sodass nach außen nichts magnetisch wirkt."
+      },
+      {
+       "frage": "Nenne zwei Möglichkeiten, einen Magneten zu entmagnetisieren.",
+       "antwort": "Zum Beispiel: oft fallen lassen oder kräftig klopfen – auch starkes Erhitzen nimmt die Kraft."
+      }
+     ],
      "erkunden": [
       {
        "typ": "experiment",
        "titel": "Einen Eisennagel magnetisieren",
        "material": "Ein großer Eisennagel, ein starker Stabmagnet, einige Büroklammern.",
-       "vorhersage": "Wie viele Büroklammern wird der Nagel nach dem Magnetisieren wohl tragen? Schreibe deine Vermutung auf.",
        "auftraege": [
-        "Streiche den Magneten 30-mal in dieselbe Richtung über den Nagel und prüfe, wie viele Büroklammern er hält.",
+        "Streiche den Magneten 30-mal in dieselbe Richtung über den Nagel und prüfe, wie viele Klammern er hält.",
         "Lass den Nagel mehrmals kräftig auf den Tisch fallen und prüfe danach erneut die Tragkraft.",
         "Erkläre beide Ergebnisse mit dem Modell der Elementarmagnete."
        ]
-      }
-     ],
-     "selbstcheck": [
-      {
-       "frage": "Beschreibe in einem Satz, wie man einen Eisennagel magnetisiert.",
-       "antwort": "Man streicht mit dem Pol eines starken Magneten viele Male in dieselbe Richtung über den Nagel — danach ist er magnetisiert."
-      },
-      {
-       "frage": "Was zeigen die Elementarmagnete in nicht magnetisiertem Eisen?",
-       "antwort": "Sie zeigen kreuz und quer in alle Richtungen. Ihre Kräfte heben sich gegenseitig auf, sodass das Eisen nach außen nicht magnetisch wirkt."
-      },
-      {
-       "frage": "Nenne zwei Möglichkeiten, einen Magneten zu entmagnetisieren.",
-       "antwort": "Zum Beispiel: oft fallen lassen oder kräftig darauf klopfen — auch starkes Erhitzen bringt die Elementarmagnete durcheinander und nimmt dem Magneten die Kraft."
       }
      ]
     },
@@ -1659,7 +1989,8 @@
        ]
       }
      ],
-     "transfer": "Warum darf man Magnete nicht fallen lassen? Erkläre mit dem Modell der Elementarmagnete."
+     "transfer": "Warum darf man Magnete nicht fallen lassen? Erkläre mit dem Modell der Elementarmagnete.",
+     "rueckbezug": "Zurück zum Nagel vom Anfang: Beim Streichen <strong>ordnen</strong> sich die Elementarmagnete im Eisen – der Nagel wird magnetisch und hält Klammern. Beim harten Fallen geraten sie wieder durcheinander, die Kraft lässt nach. Hattest du das richtig vermutet?"
     },
     "extra": {
      "zeit": 8,
@@ -1712,79 +2043,107 @@
         "ph-05-mag-011"
        ]
       }
-     ]
+     ],
+     "einstieg": {
+      "problem": "<p>Eine kleine <strong>Magnetnadel</strong> ist so gelagert, dass sie sich <strong>frei drehen</strong> kann. Egal, wie oft du das Gehäuse drehst – die Nadel schwenkt immer wieder in <strong>dieselbe</strong> Richtung zurück. So findet ein <strong>Kompass</strong> den Weg.</p>",
+      "figur": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"gerade\" cx=\"120.0\" cy=\"80.0\" r=\"45.0\"/><text class=\"beschriftung\" x=\"120.0\" y=\"28.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"120.0\" y=\"142.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"70.0\" y=\"84.0\" text-anchor=\"middle\">W</text><text class=\"beschriftung\" x=\"172.0\" y=\"84.0\" text-anchor=\"middle\">O</text><line class=\"gerade-a\" x1=\"120.0\" y1=\"80.0\" x2=\"120.0\" y2=\"45.0\"/><polygon class=\"pfeil\" points=\"120.0,45.0 123.5,52.0 116.5,52.0\"/><line class=\"achse\" x1=\"120.0\" y1=\"80.0\" x2=\"120.0\" y2=\"112.0\"/><circle class=\"marke\" cx=\"120.0\" cy=\"80.0\" r=\"3.0\"/><text class=\"label-a\" x=\"150.0\" y=\"55.0\" text-anchor=\"start\">Nadel-Nordpol</text></svg>",
+      "figurAlt": "Kompass: Kreis mit den Richtungen N, O, S, W und einer Nadel, deren Nordpol nach Norden zeigt.",
+      "vorhersage": "Warum zeigt die frei drehbare Kompassnadel immer nach Norden?",
+      "optionen": [
+       "Zufall",
+       "Die Erde ist selbst ein Magnet",
+       "die Sonne zieht sie an"
+      ]
+     }
     },
     "verstehen": {
-     "zeit": 25,
+     "zeit": 14,
      "anker": "#dm-kompass",
-     "text": "Verstehe Schritt für Schritt, warum ein Kompass nach Norden zeigt — am Ende prüfst du dich selbst.",
-     "interaktiv": {
-      "label": "Verständnis-Check auf der Erklärseite",
-      "href": "physik/klasse-5/dauermagnete/index.html#dm-kompass"
-     },
+     "erklaerseite": true,
      "schritte": [
       {
        "titel": "Die Kompassnadel",
-       "html": "<p>Ein <strong>Kompass</strong> ist im Kern ein kleiner, leichter Magnet, der sich <strong>frei drehen</strong> kann — die Kompassnadel. Lässt man sie zur Ruhe kommen, zeigt ihr Nordpol (meist farbig markiert) immer nach <strong>Norden</strong>. Egal, wie du den Kompass drehst: Die Nadel schwenkt zurück.</p>",
-       "check": {
+       "kern": "Ein <strong>Kompass</strong> ist im Kern ein kleiner, leichter Magnet, der sich <strong>frei drehen</strong> kann. Kommt die Nadel zur Ruhe, zeigt ihr (meist farbiger) Nordpol immer nach <strong>Norden</strong>.",
+       "figur": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"gerade\" cx=\"120.0\" cy=\"80.0\" r=\"45.0\"/><text class=\"beschriftung\" x=\"120.0\" y=\"28.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"120.0\" y=\"142.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"70.0\" y=\"84.0\" text-anchor=\"middle\">W</text><text class=\"beschriftung\" x=\"172.0\" y=\"84.0\" text-anchor=\"middle\">O</text><line class=\"gerade-a\" x1=\"120.0\" y1=\"80.0\" x2=\"120.0\" y2=\"45.0\"/><polygon class=\"pfeil\" points=\"120.0,45.0 123.5,52.0 116.5,52.0\"/><line class=\"achse\" x1=\"120.0\" y1=\"80.0\" x2=\"120.0\" y2=\"112.0\"/><circle class=\"marke\" cx=\"120.0\" cy=\"80.0\" r=\"3.0\"/><text class=\"label-a\" x=\"150.0\" y=\"55.0\" text-anchor=\"start\">Nadel-Nordpol</text></svg>",
+       "figurAlt": "Kompassnadel, deren Nordpol nach Norden zeigt.",
+       "minicheck": {
         "frage": "Was ist die Nadel eines Kompasses eigentlich?",
-        "antwort": "Ein kleiner, leichter Magnet, der sich frei drehen kann. Ihr Nordpol zeigt immer nach Norden."
+        "antwort": "Ein kleiner, leichter Magnet, der sich frei drehen kann. Ihr Nordpol zeigt nach Norden."
        }
       },
       {
        "titel": "Die Erde ist ein Magnet",
-       "html": "<p>Woher weiß die Nadel, wo Norden ist? Die <strong>Erde selbst ist ein Magnet</strong>! Sie hat ein eigenes <strong>Erdmagnetfeld</strong>, das den ganzen Planeten umgibt. Dieses Feld dreht jede Kompassnadel in die <strong>Nord-Süd-Richtung</strong>. So haben sich Seefahrer schon vor vielen hundert Jahren über die Ozeane geleitet.</p>",
-       "check": {
+       "kern": "Woher weiß die Nadel, wo Norden ist? Die <strong>Erde selbst ist ein Magnet</strong> mit einem eigenen <strong>Erdmagnetfeld</strong>. Es dreht jede Kompassnadel in die <strong>Nord-Süd-Richtung</strong>.",
+       "details": "<p>So haben sich Seefahrer schon vor vielen hundert Jahren über die Ozeane geleitet. Das Erdmagnetfeld ist überall auf der Erde – darum funktioniert ein Kompass an jedem Ort.</p>",
+       "minicheck": {
         "frage": "Warum zeigt die Kompassnadel immer nach Norden?",
-        "antwort": "Weil die Erde ein eigenes Magnetfeld hat. Dieses Erdmagnetfeld dreht die frei bewegliche Nadel in die Nord-Süd-Richtung."
+        "antwort": "Weil die Erde ein eigenes Magnetfeld hat. Es dreht die frei bewegliche Nadel in die Nord-Süd-Richtung."
        }
       },
       {
        "titel": "Vorsicht mit anderen Magneten",
-       "html": "<p>Ein anderer Magnet in der Nähe bringt die Nadel durcheinander — sie zeigt dann <strong>in die Irre</strong>. Auch Handys stören. Darum, und weil starke Magnete <strong>Bankkarten</strong> löschen und verschluckt sehr gefährlich sind, gibt es klare Regeln: Magnete von Karten, Geräten und dem Mund fernhalten.</p>",
-       "check": {
-        "frage": "Warum zeigt die Kompassnadel in die Irre, wenn ein Magnet direkt daneben liegt?",
-        "antwort": "Weil das starke Feld des nahen Magneten das Erdmagnetfeld überdeckt. Die Nadel richtet sich dann nach dem nahen Magneten aus statt nach Norden."
+       "kern": "Ein anderer Magnet in der Nähe bringt die Nadel durcheinander – sie zeigt dann <strong>in die Irre</strong>. Starke Magnete können außerdem <strong>Bankkarten löschen</strong> und sind verschluckt sehr gefährlich.",
+       "minicheck": {
+        "frage": "Warum zeigt die Nadel in die Irre, wenn ein Magnet daneben liegt?",
+        "antwort": "Weil das starke Feld des nahen Magneten das Erdmagnetfeld überdeckt – die Nadel richtet sich nach ihm aus."
        }
       }
      ],
-     "merksatz": "Die <strong>Kompassnadel</strong> ist ein frei drehbarer Magnet; das <strong>Erdmagnetfeld</strong> dreht sie in die <strong>Nord-Süd-Richtung</strong>. <strong>Andere Magnete</strong> in der Nähe stören sie — und sie können Karten löschen, weshalb man Magnete von Karten, Geräten und dem Mund fernhält.",
-     "erkunden": [
+     "stolperstein": "Der <strong>geografische</strong> Nordpol und der <strong>magnetische</strong> Nordpol der Erde liegen nicht exakt am selben Ort. Für den Schulgebrauch genügt aber: Die Kompassnadel zeigt nach Norden, weil die Erde ein Magnet ist.",
+     "darstellungen": {
+      "titel": "Kompass und Erdmagnetfeld:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Frei drehbare Magnetnadel kommt zur Ruhe und zeigt nach Norden."
+       },
+       {
+        "art": "Kompass",
+        "figur": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"gerade\" cx=\"120.0\" cy=\"80.0\" r=\"45.0\"/><text class=\"beschriftung\" x=\"120.0\" y=\"28.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"120.0\" y=\"142.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"70.0\" y=\"84.0\" text-anchor=\"middle\">W</text><text class=\"beschriftung\" x=\"172.0\" y=\"84.0\" text-anchor=\"middle\">O</text><line class=\"gerade-a\" x1=\"120.0\" y1=\"80.0\" x2=\"120.0\" y2=\"45.0\"/><polygon class=\"pfeil\" points=\"120.0,45.0 123.5,52.0 116.5,52.0\"/><line class=\"achse\" x1=\"120.0\" y1=\"80.0\" x2=\"120.0\" y2=\"112.0\"/><circle class=\"marke\" cx=\"120.0\" cy=\"80.0\" r=\"3.0\"/><text class=\"label-a\" x=\"150.0\" y=\"55.0\" text-anchor=\"start\">Nadel-Nordpol</text></svg>",
+        "figurAlt": "Kompass mit nach Norden zeigender Nadel."
+       },
+       {
+        "art": "Erklärung",
+        "text": "Das Erdmagnetfeld dreht die Nadel in die Nord-Süd-Richtung."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein Kompass funktioniert.",
+     "merksatz": "Die <strong>Kompassnadel</strong> ist ein frei drehbarer Magnet; das <strong>Erdmagnetfeld</strong> dreht sie in die <strong>Nord-Süd-Richtung</strong>. <strong>Andere Magnete</strong> stören sie – und können Karten löschen, weshalb man Magnete von Karten, Geräten und dem Mund fernhält.",
+     "selbstcheck": [
       {
-       "typ": "simulation",
-       "titel": "Magnetfeld eines Stabmagneten — Kompass",
-       "pfad": "simulationen/physik/magnetfeld/index.html",
-       "vorhersage": "Du ziehst eine Kompassnadel um einen Magneten herum. Wird sie überall in dieselbe Richtung zeigen oder sich ständig ändern? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Ziehe den Kompass rund um den Magneten und beobachte, wie sich die Nadel an jeder Stelle ausrichtet.",
-        "Vergleiche: Wonach richtet sich die Nadel hier — nach dem Magneten oder nach Norden?",
-        "Übertrage die Beobachtung: Was macht ein echter Kompass, wenn ein Magnet daneben liegt?"
-       ]
+       "frage": "Wie funktioniert ein Kompass?",
+       "antwort": "Die frei drehbare Magnetnadel wird vom Erdmagnetfeld in die Nord-Süd-Richtung gedreht und zeigt nach Norden."
       },
+      {
+       "frage": "Welche Eigenschaft der Erde lässt den Kompass funktionieren?",
+       "antwort": "Die Erde ist selbst ein Magnet und hat ein eigenes Magnetfeld (Erdmagnetfeld)."
+      },
+      {
+       "frage": "Nenne zwei Regeln für den Umgang mit starken Magneten.",
+       "antwort": "Zum Beispiel: von Bankkarten fernhalten (sie können sie löschen) und nicht in den Mund nehmen (verschluckt sehr gefährlich)."
+      }
+     ],
+     "erkunden": [
       {
        "typ": "experiment",
        "titel": "Mit dem Kompass die Himmelsrichtung finden",
        "material": "Ein Kompass, dazu ein Stabmagnet zum Stören (Handy und Metall weit weg halten).",
-       "vorhersage": "In welche Richtung zeigt die Nadel, wenn du den Kompass auf den Tisch legst? Und was passiert wohl, wenn du den Magneten daneben hältst?",
        "auftraege": [
         "Lege den Kompass flach hin, warte, bis die Nadel ruhig steht, und bestimme Norden.",
         "Drehe den Kompass und prüfe: Zeigt die Nadel weiter nach Norden?",
-        "Halte den Stabmagneten daneben und beobachte, wie die Nadel von Norden weg in die Irre zeigt."
+        "Halte den Stabmagneten daneben und beobachte, wie die Nadel in die Irre zeigt."
        ]
-      }
-     ],
-     "selbstcheck": [
-      {
-       "frage": "Erkläre in einem Satz, wie ein Kompass funktioniert.",
-       "antwort": "Die frei drehbare Magnetnadel des Kompasses wird vom Erdmagnetfeld in die Nord-Süd-Richtung gedreht und zeigt so nach Norden."
       },
       {
-       "frage": "Welche Eigenschaft hat die Erde, die den Kompass funktionieren lässt?",
-       "antwort": "Die Erde ist selbst ein Magnet und hat ein eigenes Magnetfeld (Erdmagnetfeld), das die Kompassnadel ausrichtet."
-      },
-      {
-       "frage": "Nenne zwei Regeln für den Umgang mit starken Magneten.",
-       "antwort": "Zum Beispiel: Magnete von Bankkarten und Fahrkarten fernhalten (sie können sie löschen) und Magnete nicht in den Mund nehmen (verschluckte Magnete sind sehr gefährlich)."
+       "typ": "simulation",
+       "titel": "Magnetfeld eines Stabmagneten – Kompass",
+       "pfad": "simulationen/physik/magnetfeld/index.html",
+       "auftraege": [
+        "Ziehe den Kompass rund um den Magneten und beobachte, wie sich die Nadel ausrichtet.",
+        "Vergleiche: Wonach richtet sich die Nadel hier – nach dem Magneten oder nach Norden?",
+        "Übertrage: Was macht ein echter Kompass, wenn ein Magnet daneben liegt?"
+       ]
       }
      ]
     },
@@ -1826,7 +2185,8 @@
        ]
       }
      ],
-     "transfer": "Was hast du in diesem Thema über Dauermagnete gelernt, das du vorher nicht wusstest? Notiere einen Satz für dein Lerntagebuch."
+     "transfer": "Was hast du in diesem Thema über Dauermagnete gelernt, das du vorher nicht wusstest? Notiere einen Satz für dein Lerntagebuch.",
+     "rueckbezug": "Zurück zur Anfangsfrage: Die Nadel zeigt nach Norden, weil die <strong>Erde selbst ein Magnet</strong> ist. Ihr Erdmagnetfeld dreht die frei bewegliche Nadel in die Nord-Süd-Richtung. Liegt ein anderer Magnet daneben, zeigt sie in die Irre. War deine Vermutung richtig?"
     },
     "extra": {
      "zeit": 8,
@@ -1875,6 +2235,111 @@
        "quelle": "lernbuero/ph-05-dauermagnete",
        "ids": [
         "ph-05-mag-201"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>In einem <strong>Mülleimer</strong> liegen durcheinander: eine <strong>Getränkedose</strong> (Aluminium), eine <strong>Konservendose</strong> (Stahl), ein <strong>Kupferdraht</strong> und eine <strong>Glasflasche</strong>. Mit einem starken Magneten willst du herausfischen, was magnetisch ist. Jetzt mischst du alles über Dauermagnete: magnetische Stoffe, Pole, Feld und Modell.</p>",
+      "figur": "<svg viewBox=\"0 0 250 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"35.0\" y=\"45.0\" width=\"110.0\" height=\"38.0\" rx=\"2\"/><line class=\"achse\" x1=\"90.0\" y1=\"45.0\" x2=\"90.0\" y2=\"83.0\"/><text class=\"label-a\" x=\"62.5\" y=\"69.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"117.5\" y=\"69.0\" text-anchor=\"middle\">S</text><rect class=\"dreieck\" x=\"170.0\" y=\"56.0\" width=\"40.0\" height=\"8.0\" rx=\"2\"/><text class=\"beschriftung\" x=\"190.0\" y=\"50.0\" text-anchor=\"middle\">Eisennagel</text><polygon class=\"pfeil\" points=\"168.0,64.0 174.0,61.0 174.0,67.0\"/><line class=\"hilfslinie\" x1=\"150.0\" y1=\"64.0\" x2=\"168.0\" y2=\"64.0\"/></svg>",
+      "figurAlt": "Magnet mit N- und S-Pol, daneben ein Eisengegenstand, der angezogen wird.",
+      "vorhersage": "Welche der vier Sachen zieht der Magnet aus dem Müll heraus?",
+      "optionen": [
+       "Nur die Stahl-Konservendose",
+       "Alle Metalle (Dose, Draht)",
+       "alle vier"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "schritte": [
+      {
+       "titel": "Magnetisch oder nicht?",
+       "kern": "Nur Stoffe mit <strong>Eisen, Nickel oder Cobalt</strong> werden angezogen (<strong>Stahl</strong> zählt dazu). <strong>Aluminium, Kupfer, Glas, Holz und Plastik</strong> bleiben liegen – auch wenn sie aus Metall sind.",
+       "minicheck": {
+        "frage": "Wird eine Getränkedose aus Aluminium vom Magneten angezogen?",
+        "antwort": "Nein. Aluminium ist nicht magnetisch. Nur Eisen, Nickel und Cobalt (und Stahl) werden angezogen."
+       }
+      },
+      {
+       "titel": "Die Pol-Regel sicher anwenden",
+       "kern": "Jeder Magnet hat zwei Pole. <strong>Gleichnamige Pole stoßen sich ab</strong> (N–N, S–S), <strong>ungleichnamige ziehen sich an</strong> (N–S). Damit sagst du jede Anordnung vorher.",
+       "figur": "<svg viewBox=\"0 0 275 115\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"25.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"72.5\" y1=\"50.0\" x2=\"72.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"48.8\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"96.2\" y=\"72.0\" text-anchor=\"middle\">N</text><rect class=\"dreieck\" x=\"155.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"202.5\" y1=\"50.0\" x2=\"202.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"178.8\" y=\"72.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"226.2\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"label-a\" x=\"140.0\" y=\"45.0\" text-anchor=\"middle\">↔</text><text class=\"label-a\" x=\"140.0\" y=\"95.0\" text-anchor=\"middle\">gleiche Pole: abstoßen</text></svg>",
+       "figurAlt": "Zwei Magnete mit gleichen Polen gegenüber – sie stoßen sich ab.",
+       "minicheck": {
+        "frage": "Zwei Magnete stoßen sich ab. Welche Pole stehen sich gegenüber?",
+        "antwort": "Gleichnamige Pole – zwei Nordpole oder zwei Südpole."
+       }
+      },
+      {
+       "titel": "Zwei Pole und das Feld",
+       "kern": "Pole gibt es nur im <strong>Doppelpack</strong> – auch jedes Bruchstück hat wieder Nord- und Südpol. Um jeden Magneten liegt ein <strong>Magnetfeld</strong>, das <strong>ohne Berührung</strong> und <strong>durch Stoffe hindurch</strong> wirkt, an den Polen am stärksten.",
+       "figur": "<svg viewBox=\"0 0 250 170\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"80.0\" y=\"75.0\" width=\"90.0\" height=\"28.0\" rx=\"2\"/><line class=\"achse\" x1=\"125.0\" y1=\"75.0\" x2=\"125.0\" y2=\"103.0\"/><text class=\"label-a\" x=\"102.5\" y=\"94.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"147.5\" y=\"94.0\" text-anchor=\"middle\">S</text><circle class=\"punkt\" cx=\"151.6\" cy=\"79.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"80.9\" cy=\"44.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"104.2\" cy=\"67.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"201.7\" cy=\"111.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"188.8\" cy=\"70.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"94.9\" cy=\"89.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"50.4\" cy=\"104.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"97.9\" cy=\"103.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"165.8\" cy=\"89.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"85.8\" cy=\"88.4\" r=\"1.4\"/><circle class=\"punkt\" cx=\"87.4\" cy=\"77.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"101.1\" cy=\"86.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"109.1\" cy=\"125.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"161.3\" cy=\"97.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"83.1\" cy=\"89.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"95.3\" cy=\"73.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"145.2\" cy=\"79.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"161.4\" cy=\"95.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.1\" cy=\"90.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"94.1\" cy=\"88.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"167.9\" cy=\"88.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.0\" cy=\"86.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"55.0\" cy=\"109.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"75.9\" cy=\"82.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"129.3\" cy=\"117.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"149.0\" cy=\"105.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.7\" cy=\"88.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"164.9\" cy=\"79.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"130.0\" cy=\"50.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"173.2\" cy=\"110.4\" r=\"1.4\"/><circle class=\"punkt\" cx=\"171.1\" cy=\"86.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"201.0\" cy=\"105.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"74.2\" cy=\"109.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"153.4\" cy=\"109.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"102.5\" cy=\"108.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"101.4\" cy=\"83.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"166.1\" cy=\"98.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"60.8\" cy=\"98.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"93.0\" cy=\"88.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"91.4\" cy=\"105.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"149.0\" cy=\"77.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"176.0\" cy=\"99.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"155.4\" cy=\"112.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"173.9\" cy=\"100.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"187.3\" cy=\"85.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"82.5\" cy=\"90.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"102.5\" cy=\"99.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"72.6\" cy=\"103.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"119.1\" cy=\"90.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"73.1\" cy=\"99.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"167.3\" cy=\"61.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"172.7\" cy=\"79.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"168.0\" cy=\"71.9\" r=\"1.4\"/><circle class=\"punkt\" cx=\"88.0\" cy=\"93.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"154.9\" cy=\"90.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"160.2\" cy=\"102.5\" r=\"1.4\"/><circle class=\"punkt\" cx=\"162.7\" cy=\"91.3\" r=\"1.4\"/><circle class=\"punkt\" cx=\"54.2\" cy=\"118.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"212.4\" cy=\"53.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"74.6\" cy=\"88.2\" r=\"1.4\"/><circle class=\"punkt\" cx=\"174.3\" cy=\"108.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"160.6\" cy=\"81.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"170.4\" cy=\"96.1\" r=\"1.4\"/><circle class=\"punkt\" cx=\"187.6\" cy=\"71.6\" r=\"1.4\"/><circle class=\"punkt\" cx=\"82.7\" cy=\"80.4\" r=\"1.4\"/><circle class=\"punkt\" cx=\"60.1\" cy=\"71.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"86.1\" cy=\"92.8\" r=\"1.4\"/><circle class=\"punkt\" cx=\"79.1\" cy=\"89.7\" r=\"1.4\"/><circle class=\"punkt\" cx=\"113.5\" cy=\"123.0\" r=\"1.4\"/><circle class=\"punkt\" cx=\"38.2\" cy=\"92.6\" r=\"1.4\"/><text class=\"beschriftung\" x=\"125.0\" y=\"18.0\" text-anchor=\"middle\">Eisenspäne</text></svg>",
+       "figurAlt": "Eisenspäne über einem Stabmagneten, dicht an den Polen.",
+       "beispiel": {
+        "aufgabe": "Du zersägst einen Stabmagneten in drei Teile. Wie viele Pole hat jedes Teil?",
+        "schritte": [
+         "An jeder Sägestelle entstehen sofort zwei neue Pole.",
+         "Jedes Teil ist wieder ein vollständiger Magnet.",
+         "Ergebnis: Jedes der drei Teile hat genau zwei Pole (N und S)."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Warum hält ein Kühlschrankmagnet einen Zettel fest, obwohl Papier dazwischen liegt?",
+         "loesung": "<p>Weil das Magnetfeld durch das Papier hindurchwirkt. Die Kraft erreicht die Eisentür auch durch dünne Stoffe.</p>"
+        }
+       },
+       "minicheck": {
+        "frage": "Wo ist das Magnetfeld am stärksten?",
+        "antwort": "An den beiden Polen – dort liegen die Feldlinien am dichtesten."
+       }
+      }
+     ],
+     "stolperstein": "„Magnet zieht alle Metalle an“ – der häufigste Fehler. Nur <strong>Eisen, Nickel, Cobalt</strong> (und Stahl) sind magnetisch. Prüfe bei jeder Aufgabe zuerst den <strong>Stoff</strong>, erst dann die Pole oder das Feld.",
+     "darstellungen": {
+      "titel": "Drei Werkzeuge dieses Themas:",
+      "eintraege": [
+       {
+        "art": "Stoff?",
+        "figur": "<svg viewBox=\"0 0 250 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"35.0\" y=\"45.0\" width=\"110.0\" height=\"38.0\" rx=\"2\"/><line class=\"achse\" x1=\"90.0\" y1=\"45.0\" x2=\"90.0\" y2=\"83.0\"/><text class=\"label-a\" x=\"62.5\" y=\"69.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"117.5\" y=\"69.0\" text-anchor=\"middle\">S</text><rect class=\"dreieck\" x=\"170.0\" y=\"56.0\" width=\"40.0\" height=\"8.0\" rx=\"2\"/><text class=\"beschriftung\" x=\"190.0\" y=\"50.0\" text-anchor=\"middle\">Eisennagel</text><polygon class=\"pfeil\" points=\"168.0,64.0 174.0,61.0 174.0,67.0\"/><line class=\"hilfslinie\" x1=\"150.0\" y1=\"64.0\" x2=\"168.0\" y2=\"64.0\"/></svg>",
+        "figurAlt": "Magnet zieht Eisengegenstand an."
+       },
+       {
+        "art": "Pole?",
+        "figur": "<svg viewBox=\"0 0 275 115\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"25.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"72.5\" y1=\"50.0\" x2=\"72.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"48.8\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"96.2\" y=\"72.0\" text-anchor=\"middle\">N</text><rect class=\"dreieck\" x=\"155.0\" y=\"50.0\" width=\"95.0\" height=\"34.0\" rx=\"2\"/><line class=\"achse\" x1=\"202.5\" y1=\"50.0\" x2=\"202.5\" y2=\"84.0\"/><text class=\"label-a\" x=\"178.8\" y=\"72.0\" text-anchor=\"middle\">S</text><text class=\"beschriftung\" x=\"226.2\" y=\"72.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"140.0\" y=\"45.0\" text-anchor=\"middle\">→ ←</text><text class=\"beschriftung\" x=\"140.0\" y=\"95.0\" text-anchor=\"middle\">verschiedene Pole: anziehen</text></svg>",
+        "figurAlt": "Verschiedene Pole ziehen sich an."
+       },
+       {
+        "art": "Feld?",
+        "figur": "<svg viewBox=\"0 0 250 175\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"80.0\" y=\"70.0\" width=\"90.0\" height=\"30.0\" rx=\"2\"/><line class=\"achse\" x1=\"125.0\" y1=\"70.0\" x2=\"125.0\" y2=\"100.0\"/><text class=\"label-a\" x=\"102.5\" y=\"90.0\" text-anchor=\"middle\">N</text><text class=\"beschriftung\" x=\"147.5\" y=\"90.0\" text-anchor=\"middle\">S</text><path class=\"gerade-a\" fill=\"none\" d=\"M 95 70 C 73 48, 197 48, 155 70\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 100 C 73 122, 197 122, 155 100\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 70 C 55 30, 215 30, 155 70\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 100 C 55 140, 215 140, 155 100\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 70 C 37 12, 233 12, 155 70\"/><path class=\"gerade-a\" fill=\"none\" d=\"M 95 100 C 37 158, 233 158, 155 100\"/><text class=\"label-a\" x=\"125.0\" y=\"55.0\" text-anchor=\"middle\">Feldlinien</text></svg>",
+        "figurAlt": "Feldlinien von N nach S."
+       }
+      ]
+     },
+     "selbsterklaerung": "Nenne in je einem Stichwort, woran du erkennst: (1) ob ein Stoff magnetisch ist, (2) ob sich zwei Magnete anziehen, (3) wo das Feld am stärksten ist.",
+     "merksatz": "<strong>Gleichnamige Pole stoßen sich ab, ungleichnamige ziehen sich an.</strong> Jeder Magnet – und jedes Bruchstück – hat <strong>zwei Pole</strong>. Das <strong>Magnetfeld</strong> wirkt ohne Berührung und durch Stoffe hindurch, an den Polen am stärksten.",
+     "selbstcheck": [
+      {
+       "frage": "Wie verhalten sich gleichnamige und ungleichnamige Pole?",
+       "antwort": "Gleichnamige Pole (N–N, S–S) stoßen sich ab, ungleichnamige (N–S) ziehen sich an."
+      },
+      {
+       "frage": "Warum hat jeder Magnet immer zwei Pole, auch nach dem Zerbrechen?",
+       "antwort": "Weil sich Pole nicht trennen lassen. An jeder Bruchstelle entstehen sofort neue Pole – das Modell der Elementarmagnete erklärt es."
+      },
+      {
+       "frage": "Nenne ein Beispiel, dass ein Magnetfeld durch einen Stoff hindurchwirkt.",
+       "antwort": "Ein Kühlschrankmagnet hält einen Zettel: Das Feld wirkt durch das Papier hindurch."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Magnetfeld eines Stabmagneten – Wiederholung",
+       "pfad": "simulationen/physik/magnetfeld/index.html",
+       "auftraege": [
+        "Stelle einmal gleiche und einmal verschiedene Pole gegenüber – was passiert jeweils?",
+        "Schalte die Feldlinien ein und finde die Stelle, an der das Feld am stärksten ist.",
+        "Ziehe den Kompass herum und beschreibe, wie sich seine Nadel ausrichtet."
        ]
       }
      ]
@@ -1938,7 +2403,8 @@
        ]
       }
      ],
-     "transfer": "Bei Magnet-Aufgaben fragst du dich zuerst: Ist der Stoff überhaupt magnetisch (Eisen/Stahl)? Bei zwei Magneten prüfst du dann die Pole: gleichnamig stößt ab, ungleichnamig zieht an."
+     "transfer": "Bei Magnet-Aufgaben fragst du dich zuerst: Ist der Stoff überhaupt magnetisch (Eisen/Stahl)? Bei zwei Magneten prüfst du dann die Pole: gleichnamig stößt ab, ungleichnamig zieht an.",
+     "rueckbezug": "Zurück zum Mülleimer vom Anfang: Der Magnet zieht <strong>nur die Stahl-Konservendose</strong> heraus. Aluminiumdose, Kupferdraht und Glasflasche bleiben liegen – sie sind nicht magnetisch. So gehst du jede Aufgabe an: erst „magnetischer Stoff?“, dann Pole und Feld. Lag deine Vorhersage richtig?"
     },
     "extra": {
      "zeit": 8,
@@ -1949,64 +2415,6 @@
        "href": "simulationen/physik/magnetfeld/index.html"
       }
      ]
-    },
-    "verstehen": {
-     "text": "Bevor du übst, frische dein Wissen über Dauermagnete Schritt für Schritt auf — dann prüfst du dich selbst.",
-     "schritte": [
-      {
-       "titel": "Die Pol-Regel sicher anwenden",
-       "html": "<p>Jeder Magnet hat zwei Pole. Es gilt: <strong>gleichnamige Pole stoßen sich ab</strong> (N–N, S–S), <strong>ungleichnamige ziehen sich an</strong> (N–S). Mit dieser Regel kannst du bei jeder Anordnung vorhersagen, ob zwei Magnete zusammenspringen oder sich wegdrücken.</p>",
-       "check": {
-        "frage": "Zwei Magnete stoßen sich ab. Welche Pole stehen sich gegenüber?",
-        "antwort": "Gleichnamige Pole — also entweder zwei Nordpole oder zwei Südpole. Nur gleiche Pole stoßen sich ab."
-       }
-      },
-      {
-       "titel": "Zwei Pole, immer",
-       "html": "<p>Pole gibt es nur im <strong>Doppelpack</strong>: Auch wenn du einen Magneten zerbrichst, hat jedes Stück sofort wieder einen Nord- und einen Südpol. Das erklärt das Modell der <strong>Elementarmagnete</strong> — in jedem noch so kleinen Stück stecken geordnete Mini-Magnete, und die haben immer beide Pole.</p>",
-       "check": {
-        "frage": "Du zersägst einen Stabmagneten in drei Teile. Wie viele Pole hat jedes Teil?",
-        "antwort": "Jedes der drei Teile hat wieder genau zwei Pole — einen Nordpol und einen Südpol. Einen einzelnen Pol kann man nicht herstellen."
-       }
-      },
-      {
-       "titel": "Das Feld wirkt durch Stoffe",
-       "html": "<p>Um jeden Magneten liegt ein <strong>Magnetfeld</strong>, in dem die Kraft <strong>ohne Berührung</strong> und <strong>durch Stoffe hindurch</strong> wirkt — durch Papier, Holz oder Glas. An den <strong>Polen</strong> ist das Feld am stärksten. Darum hält ein Kühlschrankmagnet auch über einem Zettel.</p>",
-       "check": {
-        "frage": "Warum hält ein Magnet einen Zettel an der Kühlschranktür fest, obwohl der Zettel dazwischen liegt?",
-        "antwort": "Weil das Magnetfeld durch den Zettel (Papier) hindurchwirkt. Die magnetische Kraft erreicht die Eisentür auch durch dünne Stoffe wie Papier."
-       }
-      }
-     ],
-     "merksatz": "<strong>Gleichnamige Pole stoßen sich ab, ungleichnamige ziehen sich an.</strong> Jeder Magnet — und jedes Bruchstück — hat <strong>zwei Pole</strong>. Das <strong>Magnetfeld</strong> wirkt ohne Berührung und durch Stoffe hindurch, an den Polen am stärksten.",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Magnetfeld eines Stabmagneten — Wiederholung",
-       "pfad": "simulationen/physik/magnetfeld/index.html",
-       "vorhersage": "Du prüfst die Pol-Regel und das Feldbild noch einmal. Überlege vorher: Stoßen sich die Magnete ab, wenn gleiche Pole zueinander zeigen?",
-       "auftraege": [
-        "Stelle mit „Zweiten Magnet umdrehen“ einmal gleiche und einmal verschiedene Pole gegenüber — was passiert jeweils?",
-        "Schalte die Feldlinien ein und finde die Stelle, an der das Feld am stärksten ist.",
-        "Ziehe den Kompass herum und beschreibe, wie sich seine Nadel am Magneten ausrichtet."
-       ]
-      }
-     ],
-     "selbstcheck": [
-      {
-       "frage": "Wie verhalten sich gleichnamige und ungleichnamige Pole zueinander?",
-       "antwort": "Gleichnamige Pole (N–N, S–S) stoßen sich ab, ungleichnamige Pole (N–S) ziehen sich an."
-      },
-      {
-       "frage": "Warum hat jeder Magnet immer zwei Pole, auch nach dem Zerbrechen?",
-       "antwort": "Weil sich Pole nicht trennen lassen. An jeder Bruchstelle entstehen sofort ein neuer Nord- und ein neuer Südpol — das Modell der Elementarmagnete erklärt es."
-      },
-      {
-       "frage": "Nenne ein Beispiel dafür, dass ein Magnetfeld durch einen Stoff hindurchwirkt.",
-       "antwort": "Zum Beispiel ein Kühlschrankmagnet, der einen Zettel festhält: Das Feld wirkt durch das Papier hindurch. Oder eine Büroklammer, die durch ein Blatt Papier hindurch dem Magneten folgt."
-      }
-     ],
-     "zeit": 25
     }
    },
    "kompetenzen": [
