@@ -144,6 +144,12 @@
 .lb-erklaer-abschnitt > h3:first-child { margin-top: 0; }
 .lb-erklaer-abschnitt > :last-child { margin-bottom: 0; }
 .lb-erklaer-quelle { margin: var(--abstand-3) 0 0; font-size: .85rem; }
+.lb-erklaer-knopf { margin: var(--abstand-4) 0 var(--abstand-2); }
+.lb-erklaer-knopf a { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; font-size: 1rem;
+  text-decoration: none; padding: 12px 22px; border-radius: var(--radius); min-height: var(--beruehrziel);
+  border: 2px solid var(--akzent); color: var(--akzent); background: color-mix(in srgb, var(--akzent) 8%, transparent); }
+.lb-erklaer-knopf a:hover, .lb-erklaer-knopf a:focus-visible { background: var(--akzent); color: var(--flaeche); }
+html[data-theme="dunkel"] .lb-erklaer-knopf a:hover, html[data-theme="dunkel"] .lb-erklaer-knopf a:focus-visible { color: #1c1812; }
 
 /* Ausblick Gymnasium (nur RS): Gym-only-Zusatzaufgaben am Lektionsende */
 .lb-ausblick { border: 1px solid var(--akzent); border-top: 4px solid var(--akzent); border-radius: var(--radius); padding: var(--abstand-3); margin: var(--abstand-4) 0 var(--abstand-3); background: color-mix(in srgb, var(--akzent) 6%, transparent); }

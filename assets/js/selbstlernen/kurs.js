@@ -493,7 +493,7 @@ function bauePhase(l, key, label, pflicht, daten) {
       koerper.append(box);
       if (daten.stolperstein) koerper.append(el(`<div class="lb-stolperstein"><span class="lb-etikett">⚠️ Typischer Stolperstein</span><div class="lb-stolperstein-text">${daten.stolperstein}</div></div>`));
       if (daten.darstellungen) koerper.append(baueDarstellungen(daten.darstellungen));
-      if (daten.erklaerseite && l.themaPfad) koerper.append(el(`<p class="lb-erklaer-quelle"><a href="${url(l.themaPfad + "index.html" + (daten.anker || ""))}" target="_blank" rel="noopener">Ausführliche Erklärseite mit interaktiven Elementen öffnen ↗</a></p>`));
+      if (daten.erklaerseite && l.themaPfad) koerper.append(el(`<p class="lb-erklaer-knopf"><a href="${url(l.themaPfad + "index.html" + (daten.anker || ""))}" target="_blank" rel="noopener">Ausführliche Erklärseite mit interaktiven Elementen öffnen ↗</a></p>`));
     }
     // Merksatz
     if (daten.merksatz) koerper.append(el(`<div class="lb-merksatz"><span class="lb-etikett">📌 Merksatz</span><div>${daten.merksatz}</div></div>`));
