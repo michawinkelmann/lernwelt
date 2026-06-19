@@ -1111,6 +1111,107 @@
    "kc": [
     "KC NW Gym Sek I (2015), Physik: Elektrik I (7/8)"
    ]
+  },
+  {
+   "id": "ph-08-wid-116",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze den Merktext zur Reihenschaltung zweier Widerstände.",
+   "text": "In der Reihenschaltung gibt es nur einen Stromweg. Deshalb ist die Stromstärke durch beide Widerstände ___. Die Teilspannungen ___ sich zur Gesamtspannung. Den Gesamtwiderstand erhält man, indem man die Einzelwiderstände ___. Am ___ Widerstand fällt die größere Teilspannung ab.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "gleich groß",
+     "optionen": [
+      "gleich groß",
+      "verschieden",
+      "null"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "addieren",
+     "optionen": [
+      "addieren",
+      "subtrahieren",
+      "multiplizieren"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "addiert",
+     "optionen": [
+      "addiert",
+      "subtrahiert",
+      "halbiert"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "größeren",
+     "optionen": [
+      "größeren",
+      "kleineren",
+      "ersten"
+     ]
+    }
+   ],
+   "tipps": [
+    "In der Reihenschaltung fließt durch jeden Widerstand derselbe Strom.",
+    "Es gilt $U = U_1 + U_2$ und $R_{\\text{ges}} = R_1 + R_2$.",
+    "Wegen $U = R \\cdot I$ fällt am größeren Widerstand bei gleichem Strom die größere Spannung ab."
+   ],
+   "loesungsweg": "Reihenschaltung: Es gibt nur einen Weg, also ist die Stromstärke überall gleich groß. Die Teilspannungen addieren sich zur Gesamtspannung ($U = U_1 + U_2$). Der Gesamtwiderstand ist die Summe der Einzelwiderstände ($R_{\\text{ges}} = R_1 + R_2$). Da $U = R \\cdot I$ und der Strom gleich ist, fällt am größeren Widerstand die größere Teilspannung ab.",
+   "kc": [
+    "widerstand-und-schaltungen"
+   ]
+  },
+  {
+   "id": "ph-08-wid-117",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz — Spannungsteiler auslegen: Ein Spannungsteiler besteht aus $R_1 = 200\\,\\Omega$ und $R_2 = 600\\,\\Omega$ in Reihe an $U = 12\\,\\text{V}$. (a) Berechne die Stromstärke im Teiler. (b) Welche Spannung $U_2$ greift man an $R_2$ ab? (c) Welchen Wert müsste $R_2$ stattdessen haben, damit man genau $U_2 = 8\\,\\text{V}$ abgreift (bei unverändertem $R_1 = 200\\,\\Omega$)?",
+   "eingaben": [
+    {
+     "label": "$I$",
+     "antwort": 0.015,
+     "toleranz": 0.0005,
+     "einheit": "A"
+    },
+    {
+     "label": "$U_2$",
+     "antwort": 9,
+     "toleranz": 0.1,
+     "einheit": "V"
+    },
+    {
+     "label": "neues $R_2$",
+     "antwort": 400,
+     "toleranz": 5,
+     "einheit": "Ω"
+    }
+   ],
+   "tipps": [
+    "In der Reihenschaltung ist $R_{\\text{ges}} = R_1 + R_2$ und $I = \\frac{U}{R_{\\text{ges}}}$.",
+    "Die Teilspannung ist $U_2 = R_2 \\cdot I$. Prüfe: $U_1 + U_2$ muss $12\\,\\text{V}$ ergeben.",
+    "Für (c): Es gilt $\\frac{U_2}{U} = \\frac{R_2}{R_1 + R_2}$. Setze $U_2 = 8\\,\\text{V}$ ein und stelle nach $R_2$ um."
+   ],
+   "loesungsweg": "(a) $R_{\\text{ges}} = 200\\,\\Omega + 600\\,\\Omega = 800\\,\\Omega$, also $I = \\frac{12\\,\\text{V}}{800\\,\\Omega} = 0{,}015\\,\\text{A}$. (b) $U_2 = R_2 \\cdot I = 600\\,\\Omega \\cdot 0{,}015\\,\\text{A} = 9\\,\\text{V}$ (Kontrolle: $U_1 = 200\\,\\Omega \\cdot 0{,}015\\,\\text{A} = 3\\,\\text{V}$, zusammen $12\\,\\text{V}$). (c) Aus $\\frac{U_2}{U} = \\frac{R_2}{R_1 + R_2}$ folgt $\\frac{8}{12} = \\frac{R_2}{200\\,\\Omega + R_2}$. Umgestellt: $8 \\cdot (200\\,\\Omega + R_2) = 12 \\cdot R_2$, also $1600\\,\\Omega = 4 \\cdot R_2$ und damit $R_2 = 400\\,\\Omega$.",
+   "kc": [
+    "widerstand-und-schaltungen"
+   ]
   }
  ]
 }

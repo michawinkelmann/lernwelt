@@ -1002,6 +1002,136 @@
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Lineare Algebra, Qualifikationsphase — Matrizen, Abbildungen und Übergangsprozesse"
    ]
+  },
+  {
+   "id": "ma-qp-mx-309",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz (eA): In einer Stadt nutzen Pendler entweder das Auto (A) oder den Bus (B). Von Monat zu Monat steigen $15\\,\\%$ der Autofahrer auf den Bus um ($85\\,\\%$ bleiben beim Auto); von den Busfahrern wechseln $10\\,\\%$ zurück zum Auto ($90\\,\\%$ bleiben beim Bus). Zu Beginn fahren $8000$ Pendler Auto und $2000$ Bus.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Stelle die (spaltenstochastische) Übergangsmatrix $U$ auf. Gib die vier Einträge an (Spalte = von, Zeile = nach; Reihenfolge A, B).",
+     "eingaben": [
+      {
+       "label": "oben links (A nach A)",
+       "antwort": 0.85,
+       "toleranz": 0.001,
+       "einheit": ""
+      },
+      {
+       "label": "oben rechts (B nach A)",
+       "antwort": 0.1,
+       "toleranz": 0.001,
+       "einheit": ""
+      },
+      {
+       "label": "unten links (A nach B)",
+       "antwort": 0.15,
+       "toleranz": 0.001,
+       "einheit": ""
+      },
+      {
+       "label": "unten rechts (B nach B)",
+       "antwort": 0.9,
+       "toleranz": 0.001,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Die erste Spalte beschreibt, wohin die Autofahrer gehen: $0{,}85$ bleiben (A), $0{,}15$ wechseln (B).",
+      "Jede Spalte muss die Summe $1$ haben."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Berechne mit $\\vec{v}_1=U\\cdot\\vec{v}_0$ die Verteilung nach einem Monat.",
+     "eingaben": [
+      {
+       "label": "Autofahrer nach 1 Monat",
+       "antwort": 7000,
+       "toleranz": 1,
+       "einheit": ""
+      },
+      {
+       "label": "Busfahrer nach 1 Monat",
+       "antwort": 3000,
+       "toleranz": 1,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$0{,}85\\cdot 8000+0{,}10\\cdot 2000$ ergibt die Autofahrer.",
+      "Kontrolle: Die Gesamtzahl bleibt $10000$."
+     ]
+    }
+   ],
+   "loesungsweg": "Schritt 1: Spalte 1 (von A): $0{,}85$ bleiben bei A, $0{,}15$ nach B. Spalte 2 (von B): $0{,}10$ nach A, $0{,}90$ bleiben bei B. Also $U=\\begin{pmatrix}0{,}85 & 0{,}10\\\\0{,}15 & 0{,}90\\end{pmatrix}$ — beide Spaltensummen sind $1$. Schritt 2: $\\vec{v}_1=U\\cdot\\vec{v}_0=\\begin{pmatrix}0{,}85\\cdot 8000+0{,}10\\cdot 2000\\\\0{,}15\\cdot 8000+0{,}90\\cdot 2000\\end{pmatrix}=\\begin{pmatrix}7000\\\\3000\\end{pmatrix}$. Nach einem Monat fahren $7000$ Pendler Auto und $3000$ Bus; die Gesamtzahl bleibt $10000$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Matrizen"
+   ]
+  },
+  {
+   "id": "ma-qp-mx-310",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz (eA): Ein Leihfahrrad ist entweder „ausgeliehen“ (A) oder „an der Station“ (S). Pro Tag werden $40\\,\\%$ der Stationsräder ausgeliehen ($60\\,\\%$ bleiben), und $70\\,\\%$ der ausgeliehenen Räder kommen zurück ($30\\,\\%$ bleiben ausgeliehen). Die Übergangsmatrix ist $U=\\begin{pmatrix}0{,}3 & 0{,}4\\\\0{,}7 & 0{,}6\\end{pmatrix}$ (Reihenfolge A, S). Zu Beginn sind $100$ Räder ausgeliehen und $300$ an der Station.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Berechne den Zustand $\\vec{v}_1=U\\cdot\\vec{v}_0$ nach einem Tag.",
+     "eingaben": [
+      {
+       "label": "ausgeliehen nach 1 Tag",
+       "antwort": 150,
+       "toleranz": 1,
+       "einheit": ""
+      },
+      {
+       "label": "an der Station nach 1 Tag",
+       "antwort": 250,
+       "toleranz": 1,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$0{,}3\\cdot 100+0{,}4\\cdot 300$ ergibt die ausgeliehenen Räder.",
+      "Gesamtzahl bleibt $400$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Bestimme den Zustand nach zwei Tagen, $\\vec{v}_2=U\\cdot\\vec{v}_1=U^2\\cdot\\vec{v}_0$.",
+     "eingaben": [
+      {
+       "label": "ausgeliehen nach 2 Tagen",
+       "antwort": 145,
+       "toleranz": 1,
+       "einheit": ""
+      },
+      {
+       "label": "an der Station nach 2 Tagen",
+       "antwort": 255,
+       "toleranz": 1,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Wende $U$ erneut auf $\\vec{v}_1=(150\\mid 250)$ an: $0{,}3\\cdot 150+0{,}4\\cdot 250$.",
+      "Gleichwertig: $U^2\\cdot\\vec{v}_0$ — die Potenz fasst beide Schritte zusammen."
+     ]
+    }
+   ],
+   "loesungsweg": "Schritt 1: $\\vec{v}_1=U\\cdot\\vec{v}_0=\\begin{pmatrix}0{,}3\\cdot 100+0{,}4\\cdot 300\\\\0{,}7\\cdot 100+0{,}6\\cdot 300\\end{pmatrix}=\\begin{pmatrix}150\\\\250\\end{pmatrix}$. Schritt 2: $\\vec{v}_2=U\\cdot\\vec{v}_1=\\begin{pmatrix}0{,}3\\cdot 150+0{,}4\\cdot 250\\\\0{,}7\\cdot 150+0{,}6\\cdot 250\\end{pmatrix}=\\begin{pmatrix}145\\\\255\\end{pmatrix}$. Gleichwertig über die Potenz: $U^2=\\begin{pmatrix}0{,}37 & 0{,}36\\\\0{,}63 & 0{,}64\\end{pmatrix}$ und $\\vec{v}_2=U^2\\cdot\\vec{v}_0=\\begin{pmatrix}145\\\\255\\end{pmatrix}$. Nach zwei Tagen sind $145$ Räder ausgeliehen und $255$ an der Station; die Gesamtzahl bleibt $400$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Matrizen"
+   ]
   }
  ]
 }

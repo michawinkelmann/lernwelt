@@ -609,6 +609,340 @@
    "kc": [
     "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Hypothesentests"
    ]
+  },
+  {
+   "id": "ma-qp-ht-107",
+   "typ": "freitext",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "frage": "Bisher gehen $30\\,\\%$ der Bestellungen eines Online-Shops an Stammkundschaft. Nach einer Treueaktion vermutet die Marketingabteilung, dass dieser Anteil gestiegen ist, und will das mit einer Stichprobe belegen. Stelle die Nullhypothese $H_0$ und die Gegenhypothese $H_1$ auf und begründe deine Zuordnung. Erkläre außerdem in eigenen Worten, was das Signifikanzniveau $\\alpha = 5\\,\\%$ in diesem Zusammenhang bedeutet.",
+   "musterloesung": "Aufgestellt wird der Test um den bisherigen Wert $p_0 = 0{,}3$. Was nachgewiesen werden soll — der gestiegene Anteil — gehört in die Gegenhypothese: $H_1\\colon p > 0{,}3$. Die Nullhypothese ist die skeptische Ausgangsposition, die man nur bei deutlichem Widerspruch aufgibt: $H_0\\colon p = 0{,}3$ (gleichwertig $p \\le 0{,}3$). Begründung: Ein Test kann eine Behauptung nie beweisen, sondern nur die Gegenannahme so stark erschüttern, dass man sie verwirft. Deshalb stellt man das, was man zeigen möchte, immer als $H_1$ auf und legt die bisherige Annahme als $H_0$ zugrunde. Das Signifikanzniveau $\\alpha = 5\\,\\%$ ist die obere Schranke für die Wahrscheinlichkeit, $H_0$ irrtümlich zu verwerfen, obwohl sie in Wahrheit zutrifft (Fehler 1. Art). Anschaulich: Selbst wenn sich der Stammkundenanteil gar nicht verändert hat, darf der Test höchstens in $5\\,\\%$ der Fälle fälschlich „gestiegen“ melden. Je kleiner $\\alpha$, desto vorsichtiger verwirft man $H_0$.",
+   "tipps": [
+    "Was bewiesen werden soll, kommt in die Gegenhypothese $H_1$.",
+    "Die Richtung von $H_1$ ergibt sich aus der Vermutung: „gestiegen“ heißt $p > p_0$.",
+    "$\\alpha$ begrenzt das Risiko, ein in Wahrheit zutreffendes $H_0$ irrtümlich abzulehnen."
+   ],
+   "loesungsweg": "$p_0 = 0{,}3$. Nachzuweisen ist „Anteil gestiegen“, also $H_1\\colon p > 0{,}3$; die skeptische Annahme ist $H_0\\colon p = 0{,}3$. Grund: Ein Test widerlegt nur, er beweist nicht — deshalb steht die Wunsch-Aussage in $H_1$. $\\alpha = 5\\,\\%$ ist die maximal erlaubte Wahrscheinlichkeit, $H_0$ fälschlich zu verwerfen (Fehler 1. Art): Auch ohne echte Veränderung dürfte der Test höchstens in $5\\,\\%$ der Fälle „gestiegen“ melden.",
+   "kc": [
+    "hypothesen-aufstellen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-ht-108",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ein Test prüft eine Trefferwahrscheinlichkeit; der bisher angenommene Wert ist $p_0$. Ordne jeder Beschreibung den passenden Baustein des Hypothesentests zu.",
+   "paare": [
+    {
+     "links": "Die bisherige Annahme, die dem Test zugrunde gelegt und nur bei deutlichem Widerspruch aufgegeben wird",
+     "rechts": "Nullhypothese H0"
+    },
+    {
+     "links": "Die Aussage, die man mit der Stichprobe nachweisen möchte",
+     "rechts": "Gegenhypothese H1"
+    },
+    {
+     "links": "Die obere Schranke für die Wahrscheinlichkeit, H0 irrtuemlich zu verwerfen",
+     "rechts": "Signifikanzniveau alpha"
+    },
+    {
+     "links": "Die unabhaengig wiederholte Anzahl der Einzelversuche in der Stichprobe",
+     "rechts": "Stichprobenumfang n"
+    }
+   ],
+   "loesungsweg": "Die skeptische Ausgangsannahme ist die Nullhypothese $H_0\\colon p = p_0$; man behält sie bei, solange die Daten nicht klar dagegen sprechen. Was nachgewiesen werden soll, ist die Gegenhypothese $H_1$. Das Signifikanzniveau $\\alpha$ begrenzt das Risiko, ein zutreffendes $H_0$ irrtümlich zu verwerfen (Fehler 1. Art). Der Stichprobenumfang $n$ ist die Anzahl der unabhängig wiederholten Einzelversuche, auf der die Entscheidung beruht.",
+   "tipps": [
+    "Die Wunsch-Aussage steht immer in $H_1$, die Ausgangsannahme in $H_0$.",
+    "$\\alpha$ ist eine Wahrscheinlichkeit (typisch $5\\,\\%$ oder $1\\,\\%$), kein Trefferzahl-Wert.",
+    "$n$ ist die Größe der Stichprobe."
+   ],
+   "kc": [
+    "hypothesen-aufstellen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-ht-304",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Bei einem rechtsseitigen Test ($H_0\\colon p \\le 0{,}4$) wurde der kritische Bereich $K = \\{18;\\ 19;\\ \\dots;\\ 40\\}$ bestimmt. In der Stichprobe ergeben sich $x = 16$ Treffer. Welche Entscheidung und Deutung ist korrekt?",
+   "optionen": [
+    {
+     "text": "$x = 16$ liegt nicht im kritischen Bereich, also wird $H_0$ beibehalten.",
+     "richtig": true,
+     "erklaerung": "Richtig: $16 < 18$ liegt außerhalb von $K$. Das Ergebnis spricht nicht deutlich genug gegen $H_0$, also wird die Nullhypothese beibehalten."
+    },
+    {
+     "text": "$x = 16$ liegt im kritischen Bereich, also wird $H_0$ verworfen.",
+     "richtig": false,
+     "erklaerung": "Falsch: Der kritische Bereich beginnt erst bei 18. Mit $16$ liegt das Ergebnis außerhalb."
+    },
+    {
+     "text": "Da $H_0$ beibehalten wird, ist hiermit bewiesen, dass $p = 0{,}4$ gilt.",
+     "richtig": false,
+     "erklaerung": "Falsch: Beibehalten heißt nicht beweisen. Es liegt nur kein hinreichender Grund vor, $H_0$ abzulehnen."
+    },
+    {
+     "text": "Die Entscheidung lässt sich ohne den genauen Wert von $\\alpha$ gar nicht treffen.",
+     "richtig": false,
+     "erklaerung": "Falsch: Der kritische Bereich ist bereits gegeben; die Entscheidung folgt allein aus dem Vergleich von $x$ mit $K$."
+    }
+   ],
+   "tipps": [
+    "Die Entscheidungsregel lautet: liegt der Beobachtungswert in $K$, wird $H_0$ verworfen, sonst beibehalten.",
+    "Vergleiche $x = 16$ mit der unteren Grenze 18 des kritischen Bereichs.",
+    "„Beibehalten“ bedeutet nicht „bewiesen“."
+   ],
+   "loesungsweg": "Die Entscheidung trifft man durch Vergleich des Beobachtungswertes mit dem kritischen Bereich: $x = 16$ liegt wegen $16 < 18$ außerhalb von $K = \\{18;\\ \\dots;\\ 40\\}$. Also wird $H_0$ beibehalten — das Ergebnis spricht nicht signifikant gegen die Nullhypothese. Beibehalten ist dabei kein Beweis von $H_0$, sondern nur das Fehlen eines hinreichenden Gegenbelegs.",
+   "kc": [
+    "entscheidungsregel-deuten"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-ht-305",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Ein Saatguthersteller gibt eine Keimrate von $p_0 = 0{,}85$ an. Ein Labor vermutet eine noch höhere Keimrate und prüft rechtsseitig mit $n = 60$ Samen zum Niveau $\\alpha = 1\\,\\%$: $H_0\\colon p \\le 0{,}85$ gegen $H_1\\colon p > 0{,}85$. Bestimme den kritischen Bereich. (Es geht nur um den kritischen Bereich, noch nicht um eine Entscheidung.)",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Bestimme zur Orientierung den Erwartungswert $\\mu$ unter $H_0$.",
+     "eingaben": [
+      {
+       "label": "$\\mu$",
+       "antwort": 51,
+       "toleranz": 0,
+       "einheit": "keimende Samen"
+      }
+     ],
+     "tipps": [
+      "$\\mu = n \\cdot p_0 = 60 \\cdot 0{,}85$.",
+      "Große Trefferzahlen sprechen für $H_1$, die Grenze liegt also oberhalb von $\\mu$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Bestimme die kleinste kritische Grenze $c$ des Ablehnungsbereichs $K = \\{c;\\ \\dots;\\ 60\\}$, also das kleinste $c$ mit $P(X \\ge c \\mid p_0 = 0{,}85) \\le 0{,}01$.",
+     "eingaben": [
+      {
+       "label": "kritische Grenze $c$",
+       "antwort": 58,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Rechne $P(X \\ge c) = 1 - P(X \\le c-1)$ unter $p_0 = 0{,}85$ und taste dich von $\\mu = 51$ nach oben.",
+      "Bei $c = 57$ ist die Wahrscheinlichkeit noch über $1\\,\\%$ ($\\approx 0{,}0269$), bei $c = 58$ erstmals darunter ($\\approx 0{,}0074$)."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Gib das tatsächliche Signifikanzniveau $P(X \\ge c \\mid p_0)$ für deine Grenze an (vier Nachkommastellen).",
+     "eingaben": [
+      {
+       "label": "$P(X \\ge c \\mid p_0)$",
+       "antwort": 0.0074,
+       "toleranz": 0.001,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$P(X \\ge 58 \\mid 0{,}85) = 1 - P(X \\le 57 \\mid 0{,}85)$.",
+      "Das tatsächliche Niveau bleibt knapp unter $1\\,\\%$, weil $X$ nur ganzzahlige Werte annimmt."
+     ]
+    }
+   ],
+   "tipps": [
+    "Beim rechtsseitigen Test liegt der Ablehnungsbereich am oberen Rand: $K = \\{c;\\ \\dots;\\ n\\}$.",
+    "Gesucht ist das kleinste $c$ mit $P(X \\ge c \\mid p_0) \\le \\alpha$.",
+    "Rechne $P(X \\ge c) = 1 - P(X \\le c-1)$ über die kumulierte Binomialverteilung."
+   ],
+   "loesungsweg": "Unter $H_0$ ist $X$ binomialverteilt mit $n = 60$ und $p_0 = 0{,}85$, also $\\mu = 60 \\cdot 0{,}85 = 51$. Große Trefferzahlen sprechen für $H_1$; gesucht ist das kleinste $c$ mit $P(X \\ge c \\mid 0{,}85) \\le 0{,}01$. Probieren: $P(X \\ge 57) = 1 - P(X \\le 56) \\approx 0{,}0269 > 0{,}01$ — zu groß. $P(X \\ge 58) = 1 - P(X \\le 57) \\approx 0{,}0074 \\le 0{,}01$ — passt. Also $K = \\{58;\\ 59;\\ 60\\}$ mit tatsächlichem Niveau $\\approx 0{,}0074$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Hypothesentests"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-ht-306",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ein Streamingdienst behauptet, $p_0 = 0{,}6$ der Nutzenden schauen täglich. Eine Analystin prüft rechtsseitig mit $n = 50$ zum Niveau $\\alpha = 5\\,\\%$ ($H_0\\colon p \\le 0{,}6$ gegen $H_1\\colon p > 0{,}6$); der kritische Bereich ist bereits zu $K = \\{36;\\ \\dots;\\ 50\\}$ bestimmt. In der Stichprobe schauen $x = 34$ Personen täglich. Triff die Entscheidung und deute sie.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Liegt der Beobachtungswert $x = 34$ im kritischen Bereich $K = \\{36;\\ \\dots;\\ 50\\}$? Gib die untere Grenze von $K$ an, mit der du vergleichst.",
+     "eingaben": [
+      {
+       "label": "untere Grenze von $K$",
+       "antwort": 36,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Vergleiche $x = 34$ mit der kleinsten Zahl in $K$.",
+      "$34 < 36$ — liegt der Wert damit innerhalb oder außerhalb von $K$?"
+     ]
+    },
+    {
+     "frage": "Schritt 2: Wie viele Treffer müssten mindestens beobachtet werden, damit $H_0$ verworfen würde (kleinste Zahl in $K$)?",
+     "eingaben": [
+      {
+       "label": "mindestens nötige Trefferzahl",
+       "antwort": 36,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Das ist genau die untere Grenze des Ablehnungsbereichs.",
+      "Ab dieser Trefferzahl liegt das Ergebnis in $K$."
+     ]
+    }
+   ],
+   "tipps": [
+    "Entscheidungsregel: Liegt $x$ in $K$, wird $H_0$ verworfen, sonst beibehalten.",
+    "$x = 34$ liegt wegen $34 < 36$ außerhalb von $K$.",
+    "Beibehalten heißt nicht, dass $p = 0{,}6$ bewiesen ist."
+   ],
+   "loesungsweg": "Die Entscheidung trifft man durch Vergleich des Beobachtungswertes mit dem kritischen Bereich: $x = 34$ liegt wegen $34 < 36$ außerhalb von $K = \\{36;\\ \\dots;\\ 50\\}$. Also wird $H_0$ beibehalten — das Ergebnis spricht nicht signifikant für einen höheren Anteil als $60\\,\\%$. Erst ab $36$ täglichen Nutzenden in der Stichprobe wäre $H_0$ auf dem $5\\,\\%$-Niveau verworfen worden. Wichtig: Beibehalten ist kein Beweis dafür, dass genau $60\\,\\%$ täglich schauen, sondern nur das Fehlen eines hinreichenden Gegenbelegs.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Hypothesentests"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-ht-307",
+   "typ": "freitext",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "frage": "Ein Verein hat rechtsseitig getestet, ob mehr als $50\\,\\%$ der Mitglieder für eine Beitragserhöhung sind ($H_0\\colon p \\le 0{,}5$, $\\alpha = 5\\,\\%$). Das Stichprobenergebnis fiel in den Ablehnungsbereich. Im Protokoll steht: „Damit ist mit Sicherheit bewiesen, dass die Mehrheit dafür ist.“ Nimm zu dieser Formulierung Stellung und gib eine fachlich korrekte Formulierung an. (Hinweis: Argumentiere mit der Entscheidungsregel und der Bedeutung von $\\alpha$.)",
+   "musterloesung": "Die Formulierung „mit Sicherheit bewiesen“ ist zu stark. Der Test sagt nur: Das beobachtete Ergebnis ist unter der Annahme $H_0$ (Anteil höchstens $50\\,\\%$) so unwahrscheinlich, dass man $H_0$ verwirft und sich für $H_1$ entscheidet. Diese Entscheidung kann aber falsch sein: Mit einer Wahrscheinlichkeit von bis zu $\\alpha = 5\\,\\%$ verwirft man ein in Wahrheit zutreffendes $H_0$ — der Ablehnungsbereich ist ja gerade so gewählt, dass dort selbst bei $p = 0{,}5$ noch bis zu $5\\,\\%$ der Ergebnisse landen. Ein Hypothesentest liefert also nie absolute Sicherheit, sondern nur eine Entscheidung mit kontrolliertem Irrtumsrisiko. Korrekt wäre: „Das Stichprobenergebnis spricht auf dem $5\\,\\%$-Niveau signifikant dafür, dass mehr als die Hälfte der Mitglieder für die Erhöhung ist.“ Das Wort „signifikant“ macht deutlich, dass es sich um ein statistisch abgesichertes, aber nicht um ein mit Sicherheit bewiesenes Ergebnis handelt.",
+   "tipps": [
+    "Ein Test kann $H_0$ nur verwerfen oder beibehalten — „beweisen mit Sicherheit“ gibt es nicht.",
+    "$\\alpha = 5\\,\\%$ ist genau das zugelassene Risiko, ein zutreffendes $H_0$ irrtümlich zu verwerfen.",
+    "Korrekte Sprache: „auf dem 5-%-Niveau signifikant“ statt „mit Sicherheit bewiesen“."
+   ],
+   "loesungsweg": "„Mit Sicherheit bewiesen“ ist falsch: Bei einer Verwerfung von $H_0$ bleibt ein Irrtumsrisiko von bis zu $\\alpha = 5\\,\\%$ (man könnte ein zutreffendes $H_0$ verworfen haben). Der Test entscheidet nur mit kontrolliertem Risiko, nicht mit Gewissheit. Korrekt: „Das Ergebnis spricht auf dem $5\\,\\%$-Niveau signifikant dafür, dass die Mehrheit für die Erhöhung ist.“",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Hypothesentests"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-ht-308",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ergänze den Merktext zu den beiden Fehlerarten beim Hypothesentest.",
+   "text": "Ein Fehler 1. Art liegt vor, wenn man $H_0$ ___, obwohl $H_0$ in Wahrheit zutrifft. Die Wahrscheinlichkeit dafür ist höchstens ___. Ein Fehler 2. Art liegt vor, wenn man $H_0$ ___, obwohl in Wahrheit $H_1$ gilt. Verkleinert man bei festem Stichprobenumfang das Signifikanzniveau, so wird der Ablehnungsbereich kleiner und die Wahrscheinlichkeit des Fehlers 2. Art ___.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "verwirft",
+     "optionen": [
+      "verwirft",
+      "beibehält",
+      "aufstellt"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "das Signifikanzniveau α",
+     "optionen": [
+      "das Signifikanzniveau α",
+      "der Stichprobenumfang n",
+      "der Erwartungswert μ"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "beibehält",
+     "optionen": [
+      "beibehält",
+      "verwirft",
+      "verschärft"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "größer",
+     "optionen": [
+      "größer",
+      "kleiner",
+      "unverändert"
+     ]
+    }
+   ],
+   "tipps": [
+    "Fehler 1. Art: ein zutreffendes $H_0$ wird fälschlich verworfen (falscher Alarm).",
+    "Fehler 2. Art: ein falsches $H_0$ wird fälschlich beibehalten (verschlafener Alarm).",
+    "Kleineres $\\alpha$ macht den Ablehnungsbereich kleiner — dadurch übersieht man echte Abweichungen leichter."
+   ],
+   "loesungsweg": "Fehler 1. Art: $H_0$ wird verworfen, obwohl es zutrifft; die Wahrscheinlichkeit ist durch das Signifikanzniveau $\\alpha$ nach oben begrenzt. Fehler 2. Art: $H_0$ wird beibehalten, obwohl in Wahrheit $H_1$ gilt. Verkleinert man $\\alpha$ (bei festem $n$), schrumpft der Ablehnungsbereich, sodass echte Abweichungen seltener erkannt werden — die Wahrscheinlichkeit des Fehlers 2. Art wird also größer. Die beiden Fehlerrisiken laufen bei festem $n$ gegenläufig.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Hypothesentests"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-ht-309",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Ein Hersteller verspricht eine Pünktlichkeitsquote von $p_0 = 0{,}9$. Eine Verbraucherorganisation vermutet, dass sie in Wahrheit niedriger liegt, und prüft linksseitig mit $n = 80$ Lieferungen zum Niveau $\\alpha = 5\\,\\%$: $H_0\\colon p \\ge 0{,}9$ gegen $H_1\\colon p < 0{,}9$; $X$ zählt die pünktlichen Lieferungen. a) Bestimme die größte kritische Grenze $k$ des Ablehnungsbereichs $A = \\{0;\\ \\dots;\\ k\\}$ mit $P(X \\le k \\mid p_0) \\le 0{,}05$. b) In der Stichprobe sind 68 Lieferungen pünktlich. Gib 1 an, falls $H_0$ verworfen wird, sonst 0.",
+   "eingaben": [
+    {
+     "label": "kritische Grenze $k$",
+     "antwort": 67,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "Entscheidung (1 = verwerfen, 0 = beibehalten)",
+     "antwort": 0,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Beim linksseitigen Test liegt der Ablehnungsbereich am unteren Rand: $A = \\{0;\\ \\dots;\\ k\\}$.",
+    "Unter $H_0$ ist $\\mu = 80 \\cdot 0{,}9 = 72$; suche das größte $k$ mit $P(X \\le k \\mid 0{,}9) \\le 0{,}05$.",
+    "Bei $k = 67$ ist $P(X \\le 67) \\approx 0{,}0439 \\le 0{,}05$, bei $k = 68$ ist $P(X \\le 68) \\approx 0{,}0822 > 0{,}05$."
+   ],
+   "loesungsweg": "a) Unter $H_0$ ist $X$ binomialverteilt mit $n = 80$, $p_0 = 0{,}9$, also $\\mu = 72$. Kleine Trefferzahlen sprechen für $H_1$; gesucht ist das größte $k$ mit $P(X \\le k \\mid 0{,}9) \\le 0{,}05$. Probieren: $P(X \\le 68) \\approx 0{,}0822 > 0{,}05$ — zu groß; $P(X \\le 67) \\approx 0{,}0439 \\le 0{,}05$ — passt. Also $A = \\{0;\\ \\dots;\\ 67\\}$. b) Beobachtet sind $x = 68$ pünktliche Lieferungen. Wegen $68 > 67$ liegt $x$ nicht im Ablehnungsbereich, also wird $H_0$ beibehalten (Eingabe 0). Die niedrigere Quote ist auf dem $5\\,\\%$-Niveau nicht nachgewiesen.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Hypothesentests"
+   ],
+   "ergaenzung": "lernbuero"
   }
  ]
 }

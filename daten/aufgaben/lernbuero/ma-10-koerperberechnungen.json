@@ -1,550 +1,756 @@
 {
- "thema": "ma-10-koerperberechnungen",
- "hinweis": "Lernbüro-Ergänzungsaufgaben — fachliche Prüfung ausstehend",
- "aufgaben": [
-  {
-   "id": "ma-10-kk-101",
-   "typ": "multiple-choice",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "frage": "Welche Formel beschreibt das Volumen eines Zylinders mit Radius $r$ und Höhe $h$?",
-   "optionen": [
+  "thema": "ma-10-koerperberechnungen",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben — fachliche Prüfung ausstehend",
+  "aufgaben": [
     {
-     "text": "V = pi * r * h",
-     "richtig": false,
-     "erklaerung": "Das wäre kein Volumen — hier fehlt das Quadrat beim Radius."
+      "id": "ma-10-kk-101",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Formel beschreibt das Volumen eines Zylinders mit Radius $r$ und Höhe $h$?",
+      "optionen": [
+        {
+          "text": "V = pi * r * h",
+          "richtig": false,
+          "erklaerung": "Das wäre kein Volumen — hier fehlt das Quadrat beim Radius."
+        },
+        {
+          "text": "V = pi * r^2 * h",
+          "richtig": true,
+          "erklaerung": "Richtig: Grundkreis $\\pi r^2$ mal Höhe $h$."
+        },
+        {
+          "text": "V = (4/3) * pi * r^3",
+          "richtig": false,
+          "erklaerung": "Das ist die Kugelformel."
+        },
+        {
+          "text": "V = (1/3) * pi * r^2 * h",
+          "richtig": false,
+          "erklaerung": "Das ist die Kegelformel — beim Zylinder entfällt das Drittel."
+        }
+      ],
+      "tipps": [
+        "Der Zylinder hat eine Kreisfläche als Grundfläche: $G = \\pi r^2$.",
+        "Volumen = Grundfläche $\\times$ Höhe.",
+        "Also: $V = \\pi r^2 \\cdot h$."
+      ],
+      "loesungsweg": "Das Volumen eines Zylinders ergibt sich als Grundfläche mal Höhe: $V = \\pi r^2 \\cdot h$.",
+      "kc": [
+        "Messen: Kreis- und Koerperberechnungen"
+      ],
+      "ergaenzung": "lernbuero"
     },
     {
-     "text": "V = pi * r^2 * h",
-     "richtig": true,
-     "erklaerung": "Richtig: Grundkreis $\\pi r^2$ mal Höhe $h$."
+      "id": "ma-10-kk-102",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Berechne das Volumen eines Zylinders mit $r = 5\\,\\text{cm}$ und $h = 12\\,\\text{cm}$. Verwende $\\pi \\approx 3{,}14159$.",
+      "eingaben": [
+        {
+          "label": "Volumen in cm^3 (gerundet auf ganze Zahl)",
+          "antwort": 942,
+          "toleranz": 2,
+          "einheit": "cm^3"
+        }
+      ],
+      "tipps": [
+        "Die Formel lautet $V = \\pi r^2 \\cdot h$.",
+        "Berechne zuerst $r^2 = 5^2 = 25$.",
+        "$V = \\pi \\cdot 25 \\cdot 12 \\approx 942\\,\\text{cm}^3$."
+      ],
+      "loesungsweg": "$V = \\pi r^2 \\cdot h = \\pi \\cdot 5^2 \\cdot 12 = 300\\pi \\approx 942\\,\\text{cm}^3$.",
+      "kc": [
+        "Messen: Kreis- und Koerperberechnungen"
+      ],
+      "ergaenzung": "lernbuero"
     },
     {
-     "text": "V = (4/3) * pi * r^3",
-     "richtig": false,
-     "erklaerung": "Das ist die Kugelformel."
+      "id": "ma-10-kk-103",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Berechne das Volumen eines Kegels mit $r = 5\\,\\text{cm}$ und $h = 12\\,\\text{cm}$.",
+      "eingaben": [
+        {
+          "label": "Volumen in cm^3 (gerundet auf ganze Zahl)",
+          "antwort": 314,
+          "toleranz": 2,
+          "einheit": "cm^3"
+        }
+      ],
+      "tipps": [
+        "Der Kegel hat durch die Spitze genau ein Drittel des Zylindervolumens: $V = \\frac{\\pi r^2 h}{3}$.",
+        "Berechne zuerst $r^2 = 25$ und dann $\\pi \\cdot 25 \\cdot 12$.",
+        "Teile das Ergebnis durch $3$: $\\frac{300\\pi}{3} = 100\\pi \\approx 314\\,\\text{cm}^3$."
+      ],
+      "loesungsweg": "$V = \\frac{\\pi r^2 \\cdot h}{3} = \\frac{\\pi \\cdot 25 \\cdot 12}{3} = 100\\pi \\approx 314\\,\\text{cm}^3$.",
+      "kc": [
+        "Messen: Kreis- und Koerperberechnungen"
+      ],
+      "ergaenzung": "lernbuero"
     },
     {
-     "text": "V = (1/3) * pi * r^2 * h",
-     "richtig": false,
-     "erklaerung": "Das ist die Kegelformel — beim Zylinder entfällt das Drittel."
+      "id": "ma-10-kk-104",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Eiskugel hat den Radius $r = 6\\,\\text{cm}$. Berechne ihr Volumen.",
+      "eingaben": [
+        {
+          "label": "Volumen in cm^3 (gerundet auf ganze Zahl)",
+          "antwort": 905,
+          "toleranz": 3,
+          "einheit": "cm^3"
+        }
+      ],
+      "tipps": [
+        "Die Kugelformel lautet $V = \\frac{4}{3} \\pi r^3$.",
+        "Berechne zuerst $r^3 = 6^3 = 216$.",
+        "$V = \\frac{4}{3} \\cdot \\pi \\cdot 216 = 288\\pi \\approx 905\\,\\text{cm}^3$."
+      ],
+      "loesungsweg": "$V = \\frac{4}{3} \\pi r^3 = \\frac{4}{3} \\cdot \\pi \\cdot 6^3 = \\frac{4}{3} \\cdot \\pi \\cdot 216 = 288\\pi \\approx 905\\,\\text{cm}^3$.",
+      "kc": [
+        "Messen: Kreis- und Koerperberechnungen"
+      ],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-kk-105",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Ein zusammengesetzter Körper besteht aus einem Zylinder ($r = 4\\,\\text{cm}$, $h = 10\\,\\text{cm}$) mit einer aufgesetzten Halbkugel (gleicher Radius). Berechne das Gesamtvolumen.",
+      "schritte": [
+        {
+          "frage": "Wie groß ist das Zylindervolumen in cm^3 (gerundet auf ganze Zahl)?",
+          "eingaben": [
+            {
+              "label": "V_Zylinder in cm^3",
+              "antwort": 503,
+              "toleranz": 2
+            }
+          ]
+        },
+        {
+          "frage": "Wie groß ist das Halbkugelvolumen in cm^3 (gerundet auf ganze Zahl)?",
+          "eingaben": [
+            {
+              "label": "V_Halbkugel in cm^3",
+              "antwort": 134,
+              "toleranz": 2
+            }
+          ]
+        },
+        {
+          "frage": "Wie groß ist das Gesamtvolumen in cm^3 (gerundet auf ganze Zahl)?",
+          "eingaben": [
+            {
+              "label": "V_gesamt in cm^3",
+              "antwort": 637,
+              "toleranz": 3
+            }
+          ]
+        }
+      ],
+      "tipps": [
+        "Berechne Zylinder und Halbkugel getrennt und addiere.",
+        "Zylinder: $V = \\pi r^2 h = \\pi \\cdot 16 \\cdot 10 = 160\\pi$. Halbkugel: $V = \\frac{1}{2} \\cdot \\frac{4}{3}\\pi r^3 = \\frac{2}{3}\\pi \\cdot 64$.",
+        "Gesamt: $160\\pi + \\frac{128\\pi}{3} = \\frac{480\\pi + 128\\pi}{3} = \\frac{608\\pi}{3} \\approx 637\\,\\text{cm}^3$."
+      ],
+      "loesungsweg": "$V_{\\text{Zyl}} = \\pi \\cdot 4^2 \\cdot 10 = 160\\pi \\approx 503\\,\\text{cm}^3$. $V_{\\text{Halbkugel}} = \\frac{2}{3}\\pi \\cdot 4^3 = \\frac{128\\pi}{3} \\approx 134\\,\\text{cm}^3$. Gesamt: $\\approx 637\\,\\text{cm}^3$.",
+      "kc": [
+        "Messen: Kreis- und Koerperberechnungen"
+      ],
+      "ergaenzung": "lernbuero"
+    },
+    {
+      "id": "ma-10-kk-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Volumen- und Oberflächenformeln sind richtig?",
+      "optionen": [
+        {
+          "text": "Zylinder: $V=\\pi r^2 h$",
+          "richtig": true,
+          "erklaerung": "Grundfläche $\\pi r^2$ mal Höhe $h$."
+        },
+        {
+          "text": "Kegel: $V=\\frac{1}{3}\\pi r^2 h$",
+          "richtig": true,
+          "erklaerung": "Ein Kegel hat ein Drittel des Volumens des umschließenden Zylinders."
+        },
+        {
+          "text": "Kugel: $V=\\frac{4}{3}\\pi r^3$",
+          "richtig": true,
+          "erklaerung": "Das ist die Volumenformel der Kugel."
+        },
+        {
+          "text": "Kugel: $O=2\\pi r^2$",
+          "richtig": false,
+          "erklaerung": "Falsch: Die Kugeloberfläche ist $O=4\\pi r^2$."
+        }
+      ],
+      "tipps": [
+        "Kegel und Pyramide haben den Faktor $\\frac{1}{3}$ vor Grundfläche mal Höhe.",
+        "Die Kugel hat $V=\\frac{4}{3}\\pi r^3$ und $O=4\\pi r^2$.",
+        "Eine Aussage halbiert die Kugeloberfläche fälschlich."
+      ],
+      "loesungsweg": "Richtig sind $V_{\\text{Zyl}}=\\pi r^2 h$, $V_{\\text{Kegel}}=\\frac{1}{3}\\pi r^2 h$ und $V_{\\text{Kugel}}=\\frac{4}{3}\\pi r^3$. Falsch ist $O_{\\text{Kugel}}=2\\pi r^2$ (richtig: $4\\pi r^2$).",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Zylinder hat den Radius $r=4\\,\\text{cm}$ und die Höhe $h=10\\,\\text{cm}$. Berechne sein Volumen. Verwende $\\pi\\approx 3{,}14159$ und runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Volumen",
+          "antwort": 502.7,
+          "einheit": "cm³",
+          "toleranz": 0.5
+        }
+      ],
+      "tipps": [
+        "Volumen Zylinder: $V=\\pi r^2 h$.",
+        "Erst $r^2=4^2=16$.",
+        "$V=\\pi\\cdot 16\\cdot 10$."
+      ],
+      "loesungsweg": "$V=\\pi r^2 h=\\pi\\cdot 4^2\\cdot 10=\\pi\\cdot 160\\approx 502{,}7\\,\\text{cm}^3$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Kegel hat den Radius $r=6\\,\\text{cm}$ und die Höhe $h=15\\,\\text{cm}$. Berechne sein Volumen. Runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Volumen",
+          "antwort": 565.5,
+          "einheit": "cm³",
+          "toleranz": 0.5
+        }
+      ],
+      "tipps": [
+        "Volumen Kegel: $V=\\frac{1}{3}\\pi r^2 h$.",
+        "Erst $r^2=6^2=36$.",
+        "$V=\\frac{1}{3}\\pi\\cdot 36\\cdot 15$."
+      ],
+      "loesungsweg": "$V=\\frac{1}{3}\\pi r^2 h=\\frac{1}{3}\\pi\\cdot 36\\cdot 15=\\frac{1}{3}\\pi\\cdot 540=180\\pi\\approx 565{,}5\\,\\text{cm}^3$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Kugel hat den Radius $r=7\\,\\text{cm}$. Berechne ihr Volumen. Runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Volumen",
+          "antwort": 1436.8,
+          "einheit": "cm³",
+          "toleranz": 1.0
+        }
+      ],
+      "tipps": [
+        "Volumen Kugel: $V=\\frac{4}{3}\\pi r^3$.",
+        "Erst $r^3=7^3=343$.",
+        "$V=\\frac{4}{3}\\pi\\cdot 343$."
+      ],
+      "loesungsweg": "$V=\\frac{4}{3}\\pi r^3=\\frac{4}{3}\\pi\\cdot 7^3=\\frac{4}{3}\\pi\\cdot 343\\approx 1436{,}8\\,\\text{cm}^3$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Kugel hat den Radius $r=9\\,\\text{cm}$. Berechne ihre Oberfläche. Runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Oberfläche",
+          "antwort": 1017.9,
+          "einheit": "cm²",
+          "toleranz": 1.0
+        }
+      ],
+      "tipps": [
+        "Oberfläche Kugel: $O=4\\pi r^2$.",
+        "Erst $r^2=9^2=81$.",
+        "$O=4\\pi\\cdot 81$."
+      ],
+      "loesungsweg": "$O=4\\pi r^2=4\\pi\\cdot 9^2=4\\pi\\cdot 81=324\\pi\\approx 1017{,}9\\,\\text{cm}^2$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Zylinder hat den Radius $r=3\\,\\text{cm}$ und die Höhe $h=8\\,\\text{cm}$. Berechne seine gesamte Oberfläche (zwei Kreise plus Mantel). Runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Oberfläche",
+          "antwort": 207.3,
+          "einheit": "cm²",
+          "toleranz": 0.5
+        }
+      ],
+      "tipps": [
+        "Oberfläche Zylinder: $O=2\\pi r^2+2\\pi r h$.",
+        "Deckel und Boden zusammen: $2\\pi r^2=2\\pi\\cdot 9$.",
+        "Mantel: $2\\pi r h=2\\pi\\cdot 3\\cdot 8$."
+      ],
+      "loesungsweg": "$O=2\\pi r^2+2\\pi r h=2\\pi\\cdot 9+2\\pi\\cdot 24=18\\pi+48\\pi=66\\pi\\approx 207{,}3\\,\\text{cm}^2$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine quadratische Pyramide hat die Grundkante $a=8\\,\\text{cm}$ und die Höhe $h=3\\,\\text{cm}$. a) Berechne das Volumen $V=\\frac{1}{3}a^2 h$. b) Berechne die gesamte Oberfläche (Grundfläche plus vier Dreiecke). Hinweis: Die Höhe eines Seitendreiecks ist $h_s=\\sqrt{h^2+\\left(\\frac{a}{2}\\right)^2}$.",
+      "eingaben": [
+        {
+          "label": "a) Volumen",
+          "antwort": 64,
+          "einheit": "cm³",
+          "toleranz": 0.5
+        },
+        {
+          "label": "b) Oberfläche",
+          "antwort": 144,
+          "einheit": "cm²",
+          "toleranz": 0.5
+        }
+      ],
+      "tipps": [
+        "a) $V=\\frac{1}{3}a^2 h=\\frac{1}{3}\\cdot 64\\cdot 3$.",
+        "b) Seitendreieckshöhe: $h_s=\\sqrt{3^2+4^2}=\\sqrt{25}=5$.",
+        "b) Oberfläche $=a^2+4\\cdot\\frac{1}{2}\\cdot a\\cdot h_s=64+2\\cdot 8\\cdot 5$."
+      ],
+      "loesungsweg": "a) $V=\\frac{1}{3}\\cdot 8^2\\cdot 3=\\frac{1}{3}\\cdot 192=64\\,\\text{cm}^3$. b) $h_s=\\sqrt{3^2+4^2}=\\sqrt{25}=5\\,\\text{cm}$. Mantel $=4\\cdot\\frac{1}{2}\\cdot 8\\cdot 5=80\\,\\text{cm}^2$. Oberfläche $=64+80=144\\,\\text{cm}^2$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Futtersilo besteht aus einem Zylinder ($r=2\\,\\text{m}$, $h=5\\,\\text{m}$) mit einem aufgesetzten Kegeldach (gleicher Radius $r=2\\,\\text{m}$, Höhe $h_K=1{,}5\\,\\text{m}$). a) Berechne das Volumen des Zylinderteils. b) Berechne das Gesamtvolumen (Zylinder plus Kegeldach). Runde jeweils auf zwei Nachkommastellen.",
+      "eingaben": [
+        {
+          "label": "a) Volumen Zylinderteil",
+          "antwort": 62.83,
+          "einheit": "m³",
+          "toleranz": 0.1
+        },
+        {
+          "label": "b) Gesamtvolumen",
+          "antwort": 69.12,
+          "einheit": "m³",
+          "toleranz": 0.1
+        }
+      ],
+      "tipps": [
+        "a) Zylinder: $V_{\\text{Zyl}}=\\pi r^2 h=\\pi\\cdot 4\\cdot 5$.",
+        "Kegeldach: $V_{\\text{Kegel}}=\\frac{1}{3}\\pi r^2 h_K=\\frac{1}{3}\\pi\\cdot 4\\cdot 1{,}5$.",
+        "b) Gesamtvolumen $=V_{\\text{Zyl}}+V_{\\text{Kegel}}$."
+      ],
+      "loesungsweg": "a) $V_{\\text{Zyl}}=\\pi\\cdot 2^2\\cdot 5=20\\pi\\approx 62{,}83\\,\\text{m}^3$. Kegeldach: $V_{\\text{Kegel}}=\\frac{1}{3}\\pi\\cdot 2^2\\cdot 1{,}5=2\\pi\\approx 6{,}28\\,\\text{m}^3$. b) Gesamt $=20\\pi+2\\pi=22\\pi\\approx 69{,}12\\,\\text{m}^3$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-301",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Kugel hat den Radius $r$. Verdoppelt man den Radius auf $2r$, behauptet Jonas: „Dann ist das Volumen auch doppelt so groß.“ Erkläre mithilfe der Formel $V=\\frac{4}{3}\\pi r^3$, warum das falsch ist, und gib an, um welchen Faktor das Volumen tatsächlich wächst.",
+      "musterloesung": "Jonas’ Behauptung ist falsch. Im Volumen steht der Radius in der dritten Potenz: $V=\\frac{4}{3}\\pi r^3$. Ersetzt man $r$ durch $2r$, erhält man $V_{\\text{neu}}=\\frac{4}{3}\\pi (2r)^3=\\frac{4}{3}\\pi\\cdot 8r^3=8\\cdot\\frac{4}{3}\\pi r^3=8\\cdot V$. Der Faktor $2$ wird durch die dritte Potenz zu $2^3=8$. Das Volumen wächst also auf das <strong>Achtfache</strong>, nicht auf das Doppelte. Allgemein: Verdoppelt man bei einem Körper alle Längen, verachtfacht sich das Volumen.",
+      "tipps": [
+        "Setze in der Formel $r$ durch $2r$ und rechne $(2r)^3$ aus.",
+        "Beachte: $(2r)^3=2^3\\cdot r^3=8r^3$.",
+        "Vergleiche das neue Volumen mit dem alten — welcher Faktor bleibt übrig?"
+      ],
+      "loesungsweg": "Vollständige Begründung s. Musterlösung. Kern: $(2r)^3=8r^3$, also $V_{\\text{neu}}=8\\cdot V$ — das Volumen wird achtmal so groß, nicht doppelt.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-302",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ordne jedem Körper die richtige Volumenformel zu. (Dabei ist $r$ der Radius, $h$ die Höhe und $a$ die Grundkante.)",
+      "paare": [
+        {
+          "links": "Zylinder",
+          "rechts": "Pi mal r-Quadrat mal h"
+        },
+        {
+          "links": "Kegel",
+          "rechts": "ein Drittel mal Pi mal r-Quadrat mal h"
+        },
+        {
+          "links": "Kugel",
+          "rechts": "vier Drittel mal Pi mal r hoch drei"
+        },
+        {
+          "links": "quadratische Pyramide",
+          "rechts": "ein Drittel mal a-Quadrat mal h"
+        }
+      ],
+      "tipps": [
+        "Spitze Körper (Kegel, Pyramide) haben den Faktor ein Drittel.",
+        "Die Kugel ist der einzige Körper mit $r$ hoch drei.",
+        "Beim Zylinder ist die Grundfläche ein Kreis ($\\pi r^2$), mal Höhe."
+      ],
+      "loesungsweg": "Zylinder: $V=\\pi r^2 h$. Kegel: $V=\\frac{1}{3}\\pi r^2 h$. Kugel: $V=\\frac{4}{3}\\pi r^3$. Quadratische Pyramide: $V=\\frac{1}{3}a^2 h$. Spitze Körper (Kegel, Pyramide) tragen den Faktor $\\frac{1}{3}$, die Kugel als einzige $r^3$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-303",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Kegel und ein Zylinder haben denselben Radius $r$ und dieselbe Höhe $h$. Welche Aussagen sind <strong>richtig</strong>?",
+      "optionen": [
+        {
+          "text": "Das Kegelvolumen ist genau ein Drittel des Zylindervolumens.",
+          "richtig": true,
+          "erklaerung": "Richtig: $V_{\\text{Kegel}}=\\frac{1}{3}\\pi r^2 h$ und $V_{\\text{Zylinder}}=\\pi r^2 h$, also ein Drittel."
+        },
+        {
+          "text": "Beide Körper haben dasselbe Volumen, weil Radius und Höhe gleich sind.",
+          "richtig": false,
+          "erklaerung": "Falsch: Der Kegel ist spitz und fasst nur ein Drittel des Zylinders."
+        },
+        {
+          "text": "Verdreifacht man die Höhe des Zylinders, verdreifacht sich sein Volumen.",
+          "richtig": true,
+          "erklaerung": "Richtig: $h$ steht in der Formel in der ersten Potenz, also wächst das Volumen proportional zur Höhe."
+        },
+        {
+          "text": "In die Volumenformel des Zylinders gehört $r$ in der zweiten Potenz.",
+          "richtig": true,
+          "erklaerung": "Richtig: $V=\\pi r^2 h$ — der Radius geht quadratisch ein, die Höhe linear."
+        }
+      ],
+      "tipps": [
+        "Vergleiche die Formeln $V_{\\text{Zylinder}}=\\pi r^2 h$ und $V_{\\text{Kegel}}=\\frac{1}{3}\\pi r^2 h$.",
+        "Achte darauf, in welcher Potenz $r$ und $h$ jeweils vorkommen.",
+        "Ein spitzer Körper fasst weniger als der zugehörige gerade Körper."
+      ],
+      "loesungsweg": "Richtig: Kegel = ein Drittel des Zylinders (gleiches $r,h$); Höhe verdreifachen verdreifacht das Volumen ($h$ linear); $r$ geht quadratisch ein. Falsch ist, dass beide dasselbe Volumen hätten — der Kegel fasst nur ein Drittel.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-106",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine zylinderförmige Konservendose hat den Radius $r=4\\,\\text{cm}$ und die Höhe $h=10\\,\\text{cm}$. Berechne ihre gesamte Oberfläche (zwei Deckelkreise plus Mantel). Verwende $\\pi\\approx 3{,}14159$ und runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Oberfläche",
+          "antwort": 351.9,
+          "toleranz": 0.3,
+          "einheit": "cm²"
+        }
+      ],
+      "tipps": [
+        "Die Oberfläche besteht aus zwei Kreisen und dem Mantel: $O=2\\pi r^2+2\\pi r h$.",
+        "Zwei Kreise: $2\\pi\\cdot 4^2=2\\pi\\cdot 16$. Mantel: $2\\pi\\cdot 4\\cdot 10$.",
+        "$O=2\\pi\\cdot 16+2\\pi\\cdot 40=2\\pi\\cdot 56\\approx 351{,}9\\,\\text{cm}^2$."
+      ],
+      "loesungsweg": "$O=2\\pi r^2+2\\pi r h=2\\pi\\cdot 4^2+2\\pi\\cdot 4\\cdot 10=32\\pi+80\\pi=112\\pi\\approx 351{,}9\\,\\text{cm}^2$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-107",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein gerades Prisma hat als Grundfläche ein rechtwinkliges Dreieck mit den Katheten $6\\,\\text{cm}$ und $8\\,\\text{cm}$. Das Prisma ist $15\\,\\text{cm}$ lang. Berechne sein Volumen.",
+      "schritte": [
+        {
+          "frage": "Berechne zuerst die Grundfläche $G$ (Fläche des rechtwinkligen Dreiecks).",
+          "eingaben": [
+            {
+              "label": "$G$",
+              "antwort": 24,
+              "toleranz": 0,
+              "einheit": "cm²"
+            }
+          ],
+          "tipps": [
+            "Die Fläche eines rechtwinkligen Dreiecks ist halbes Produkt der Katheten.",
+            "$G=\\frac{1}{2}\\cdot 6\\cdot 8$.",
+            "$G=24\\,\\text{cm}^2$."
+          ]
+        },
+        {
+          "frage": "Berechne nun das Volumen des Prismas mit $V=G\\cdot h$ (Länge als Höhe der Säule).",
+          "eingaben": [
+            {
+              "label": "$V$",
+              "antwort": 360,
+              "toleranz": 0,
+              "einheit": "cm³"
+            }
+          ],
+          "tipps": [
+            "Beim Prisma gilt $V=G\\cdot h$ — Grundfläche mal Länge.",
+            "$V=24\\cdot 15$.",
+            "$V=360\\,\\text{cm}^3$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Ein Prisma ist ein Säulenkörper: $V=G\\cdot h$, egal welche Form die Grundfläche hat.",
+        "Grundfläche: rechtwinkliges Dreieck $G=\\frac{1}{2}\\cdot 6\\cdot 8=24\\,\\text{cm}^2$.",
+        "$V=24\\cdot 15=360\\,\\text{cm}^3$."
+      ],
+      "loesungsweg": "Grundfläche (rechtwinkliges Dreieck): $G=\\frac{1}{2}\\cdot 6\\cdot 8=24\\,\\text{cm}^2$. Volumen des Prismas: $V=G\\cdot h=24\\cdot 15=360\\,\\text{cm}^3$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-108",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ergänze den Merktext zu den Säulenkörpern Prisma und Zylinder.",
+      "text": "Prisma und Zylinder sind Säulenkörper. Ihr Volumen berechnet man mit der Formel $V=$ ___ $\\cdot h$, also Grundfläche mal Höhe. Beim Zylinder ist die Grundfläche ein ___ mit dem Flächeninhalt $\\pi r^2$, daher gilt $V=\\pi r^2 h$. Das Volumen misst man in ___ , die Oberfläche in cm² oder m².",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "G (Grundfläche)",
+          "optionen": [
+            "G (Grundfläche)",
+            "r (Radius)",
+            "s (Mantellinie)"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Kreis",
+          "optionen": [
+            "Kreis",
+            "Quadrat",
+            "Dreieck"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "cm³ oder m³",
+          "optionen": [
+            "cm³ oder m³",
+            "cm² oder m²",
+            "cm oder m"
+          ]
+        }
+      ],
+      "tipps": [
+        "Säulenkörper haben überall denselben Querschnitt — Volumen ist Grundfläche mal Höhe.",
+        "Die Grundfläche eines Zylinders ist ein Kreis mit Flächeninhalt $\\pi r^2$.",
+        "Volumen ist ein Rauminhalt und wird in Kubikeinheiten gemessen."
+      ],
+      "loesungsweg": "Säulenkörper: $V=G\\cdot h$ (Grundfläche mal Höhe). Beim Zylinder ist die Grundfläche ein <strong>Kreis</strong> ($\\pi r^2$), also $V=\\pi r^2 h$. Volumen in <strong>cm³ oder m³</strong>, Oberfläche in cm² oder m².",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-kk-109",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Kegel hat den Radius $r=6\\,\\text{cm}$ und die Höhe $h=8\\,\\text{cm}$. Berechne seine Mantelfläche und seine gesamte Oberfläche. Verwende $\\pi\\approx 3{,}14159$ und runde auf eine Nachkommastelle.",
+      "schritte": [
+        {
+          "frage": "Berechne zuerst die Länge der Mantellinie $s=\\sqrt{r^2+h^2}$.",
+          "eingaben": [
+            {
+              "label": "$s$",
+              "antwort": 10,
+              "toleranz": 0.05,
+              "einheit": "cm"
+            }
+          ],
+          "tipps": [
+            "Die Mantellinie schließt mit Radius und Höhe ein rechtwinkliges Dreieck — Satz des Pythagoras.",
+            "$s=\\sqrt{6^2+8^2}=\\sqrt{36+64}$.",
+            "$s=\\sqrt{100}=10\\,\\text{cm}$."
+          ]
+        },
+        {
+          "frage": "Berechne die Mantelfläche $M=\\pi r s$.",
+          "eingaben": [
+            {
+              "label": "$M$",
+              "antwort": 188.5,
+              "toleranz": 0.3,
+              "einheit": "cm²"
+            }
+          ],
+          "tipps": [
+            "Mantelfläche des Kegels: $M=\\pi r s$.",
+            "$M=\\pi\\cdot 6\\cdot 10=60\\pi$.",
+            "$60\\pi\\approx 188{,}5\\,\\text{cm}^2$."
+          ]
+        },
+        {
+          "frage": "Berechne die gesamte Oberfläche $O=\\pi r^2+M$ (Grundkreis plus Mantel).",
+          "eingaben": [
+            {
+              "label": "$O$",
+              "antwort": 301.6,
+              "toleranz": 0.4,
+              "einheit": "cm²"
+            }
+          ],
+          "tipps": [
+            "Zur Mantelfläche kommt der Grundkreis $\\pi r^2$ dazu.",
+            "$\\pi\\cdot 6^2=36\\pi$, dazu $60\\pi$.",
+            "$O=96\\pi\\approx 301{,}6\\,\\text{cm}^2$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Zuerst die Mantellinie $s=\\sqrt{r^2+h^2}$ bestimmen (rechtwinkliges Dreieck aus $r$ und $h$).",
+        "Mantelfläche $M=\\pi r s$, Oberfläche $O=\\pi r^2+\\pi r s$.",
+        "$s=10$, $M=60\\pi\\approx 188{,}5$, $O=96\\pi\\approx 301{,}6\\,\\text{cm}^2$."
+      ],
+      "loesungsweg": "Mantellinie: $s=\\sqrt{6^2+8^2}=\\sqrt{100}=10\\,\\text{cm}$. Mantelfläche: $M=\\pi r s=\\pi\\cdot 6\\cdot 10=60\\pi\\approx 188{,}5\\,\\text{cm}^2$. Oberfläche: $O=\\pi r^2+M=36\\pi+60\\pi=96\\pi\\approx 301{,}6\\,\\text{cm}^2$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
+      ]
     }
-   ],
-   "tipps": [
-    "Der Zylinder hat eine Kreisfläche als Grundfläche: $G = \\pi r^2$.",
-    "Volumen = Grundfläche $\\times$ Höhe.",
-    "Also: $V = \\pi r^2 \\cdot h$."
-   ],
-   "loesungsweg": "Das Volumen eines Zylinders ergibt sich als Grundfläche mal Höhe: $V = \\pi r^2 \\cdot h$.",
-   "kc": [
-    "Messen: Kreis- und Koerperberechnungen"
-   ],
-   "ergaenzung": "lernbuero"
-  },
-  {
-   "id": "ma-10-kk-102",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "frage": "Berechne das Volumen eines Zylinders mit $r = 5\\,\\text{cm}$ und $h = 12\\,\\text{cm}$. Verwende $\\pi \\approx 3{,}14159$.",
-   "eingaben": [
-    {
-     "label": "Volumen in cm^3 (gerundet auf ganze Zahl)",
-     "antwort": 942,
-     "toleranz": 2,
-     "einheit": "cm^3"
-    }
-   ],
-   "tipps": [
-    "Die Formel lautet $V = \\pi r^2 \\cdot h$.",
-    "Berechne zuerst $r^2 = 5^2 = 25$.",
-    "$V = \\pi \\cdot 25 \\cdot 12 \\approx 942\\,\\text{cm}^3$."
-   ],
-   "loesungsweg": "$V = \\pi r^2 \\cdot h = \\pi \\cdot 5^2 \\cdot 12 = 300\\pi \\approx 942\\,\\text{cm}^3$.",
-   "kc": [
-    "Messen: Kreis- und Koerperberechnungen"
-   ],
-   "ergaenzung": "lernbuero"
-  },
-  {
-   "id": "ma-10-kk-103",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "frage": "Berechne das Volumen eines Kegels mit $r = 5\\,\\text{cm}$ und $h = 12\\,\\text{cm}$.",
-   "eingaben": [
-    {
-     "label": "Volumen in cm^3 (gerundet auf ganze Zahl)",
-     "antwort": 314,
-     "toleranz": 2,
-     "einheit": "cm^3"
-    }
-   ],
-   "tipps": [
-    "Der Kegel hat durch die Spitze genau ein Drittel des Zylindervolumens: $V = \\frac{\\pi r^2 h}{3}$.",
-    "Berechne zuerst $r^2 = 25$ und dann $\\pi \\cdot 25 \\cdot 12$.",
-    "Teile das Ergebnis durch $3$: $\\frac{300\\pi}{3} = 100\\pi \\approx 314\\,\\text{cm}^3$."
-   ],
-   "loesungsweg": "$V = \\frac{\\pi r^2 \\cdot h}{3} = \\frac{\\pi \\cdot 25 \\cdot 12}{3} = 100\\pi \\approx 314\\,\\text{cm}^3$.",
-   "kc": [
-    "Messen: Kreis- und Koerperberechnungen"
-   ],
-   "ergaenzung": "lernbuero"
-  },
-  {
-   "id": "ma-10-kk-104",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "frage": "Eine Eiskugel hat den Radius $r = 6\\,\\text{cm}$. Berechne ihr Volumen.",
-   "eingaben": [
-    {
-     "label": "Volumen in cm^3 (gerundet auf ganze Zahl)",
-     "antwort": 905,
-     "toleranz": 3,
-     "einheit": "cm^3"
-    }
-   ],
-   "tipps": [
-    "Die Kugelformel lautet $V = \\frac{4}{3} \\pi r^3$.",
-    "Berechne zuerst $r^3 = 6^3 = 216$.",
-    "$V = \\frac{4}{3} \\cdot \\pi \\cdot 216 = 288\\pi \\approx 905\\,\\text{cm}^3$."
-   ],
-   "loesungsweg": "$V = \\frac{4}{3} \\pi r^3 = \\frac{4}{3} \\cdot \\pi \\cdot 6^3 = \\frac{4}{3} \\cdot \\pi \\cdot 216 = 288\\pi \\approx 905\\,\\text{cm}^3$.",
-   "kc": [
-    "Messen: Kreis- und Koerperberechnungen"
-   ],
-   "ergaenzung": "lernbuero"
-  },
-  {
-   "id": "ma-10-kk-105",
-   "typ": "rechenweg",
-   "zweig": [
-    "gym"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "frage": "Ein zusammengesetzter Körper besteht aus einem Zylinder ($r = 4\\,\\text{cm}$, $h = 10\\,\\text{cm}$) mit einer aufgesetzten Halbkugel (gleicher Radius). Berechne das Gesamtvolumen.",
-   "schritte": [
-    {
-     "frage": "Wie groß ist das Zylindervolumen in cm^3 (gerundet auf ganze Zahl)?",
-     "eingaben": [
-      {
-       "label": "V_Zylinder in cm^3",
-       "antwort": 503,
-       "toleranz": 2
-      }
-     ]
-    },
-    {
-     "frage": "Wie groß ist das Halbkugelvolumen in cm^3 (gerundet auf ganze Zahl)?",
-     "eingaben": [
-      {
-       "label": "V_Halbkugel in cm^3",
-       "antwort": 134,
-       "toleranz": 2
-      }
-     ]
-    },
-    {
-     "frage": "Wie groß ist das Gesamtvolumen in cm^3 (gerundet auf ganze Zahl)?",
-     "eingaben": [
-      {
-       "label": "V_gesamt in cm^3",
-       "antwort": 637,
-       "toleranz": 3
-      }
-     ]
-    }
-   ],
-   "tipps": [
-    "Berechne Zylinder und Halbkugel getrennt und addiere.",
-    "Zylinder: $V = \\pi r^2 h = \\pi \\cdot 16 \\cdot 10 = 160\\pi$. Halbkugel: $V = \\frac{1}{2} \\cdot \\frac{4}{3}\\pi r^3 = \\frac{2}{3}\\pi \\cdot 64$.",
-    "Gesamt: $160\\pi + \\frac{128\\pi}{3} = \\frac{480\\pi + 128\\pi}{3} = \\frac{608\\pi}{3} \\approx 637\\,\\text{cm}^3$."
-   ],
-   "loesungsweg": "$V_{\\text{Zyl}} = \\pi \\cdot 4^2 \\cdot 10 = 160\\pi \\approx 503\\,\\text{cm}^3$. $V_{\\text{Halbkugel}} = \\frac{2}{3}\\pi \\cdot 4^3 = \\frac{128\\pi}{3} \\approx 134\\,\\text{cm}^3$. Gesamt: $\\approx 637\\,\\text{cm}^3$.",
-   "kc": [
-    "Messen: Kreis- und Koerperberechnungen"
-   ],
-   "ergaenzung": "lernbuero"
-  },
-  {
-   "id": "ma-10-kk-201",
-   "typ": "multiple-choice",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Welche Volumen- und Oberflächenformeln sind richtig?",
-   "optionen": [
-    {
-     "text": "Zylinder: $V=\\pi r^2 h$",
-     "richtig": true,
-     "erklaerung": "Grundfläche $\\pi r^2$ mal Höhe $h$."
-    },
-    {
-     "text": "Kegel: $V=\\frac{1}{3}\\pi r^2 h$",
-     "richtig": true,
-     "erklaerung": "Ein Kegel hat ein Drittel des Volumens des umschließenden Zylinders."
-    },
-    {
-     "text": "Kugel: $V=\\frac{4}{3}\\pi r^3$",
-     "richtig": true,
-     "erklaerung": "Das ist die Volumenformel der Kugel."
-    },
-    {
-     "text": "Kugel: $O=2\\pi r^2$",
-     "richtig": false,
-     "erklaerung": "Falsch: Die Kugeloberfläche ist $O=4\\pi r^2$."
-    }
-   ],
-   "tipps": [
-    "Kegel und Pyramide haben den Faktor $\\frac{1}{3}$ vor Grundfläche mal Höhe.",
-    "Die Kugel hat $V=\\frac{4}{3}\\pi r^3$ und $O=4\\pi r^2$.",
-    "Eine Aussage halbiert die Kugeloberfläche fälschlich."
-   ],
-   "loesungsweg": "Richtig sind $V_{\\text{Zyl}}=\\pi r^2 h$, $V_{\\text{Kegel}}=\\frac{1}{3}\\pi r^2 h$ und $V_{\\text{Kugel}}=\\frac{4}{3}\\pi r^3$. Falsch ist $O_{\\text{Kugel}}=2\\pi r^2$ (richtig: $4\\pi r^2$).",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-202",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Ein Zylinder hat den Radius $r=4\\,\\text{cm}$ und die Höhe $h=10\\,\\text{cm}$. Berechne sein Volumen. Verwende $\\pi\\approx 3{,}14159$ und runde auf eine Nachkommastelle.",
-   "eingaben": [
-    {
-     "label": "Volumen",
-     "antwort": 502.7,
-     "einheit": "cm³",
-     "toleranz": 0.5
-    }
-   ],
-   "tipps": [
-    "Volumen Zylinder: $V=\\pi r^2 h$.",
-    "Erst $r^2=4^2=16$.",
-    "$V=\\pi\\cdot 16\\cdot 10$."
-   ],
-   "loesungsweg": "$V=\\pi r^2 h=\\pi\\cdot 4^2\\cdot 10=\\pi\\cdot 160\\approx 502{,}7\\,\\text{cm}^3$.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-203",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Ein Kegel hat den Radius $r=6\\,\\text{cm}$ und die Höhe $h=15\\,\\text{cm}$. Berechne sein Volumen. Runde auf eine Nachkommastelle.",
-   "eingaben": [
-    {
-     "label": "Volumen",
-     "antwort": 565.5,
-     "einheit": "cm³",
-     "toleranz": 0.5
-    }
-   ],
-   "tipps": [
-    "Volumen Kegel: $V=\\frac{1}{3}\\pi r^2 h$.",
-    "Erst $r^2=6^2=36$.",
-    "$V=\\frac{1}{3}\\pi\\cdot 36\\cdot 15$."
-   ],
-   "loesungsweg": "$V=\\frac{1}{3}\\pi r^2 h=\\frac{1}{3}\\pi\\cdot 36\\cdot 15=\\frac{1}{3}\\pi\\cdot 540=180\\pi\\approx 565{,}5\\,\\text{cm}^3$.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-204",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Eine Kugel hat den Radius $r=7\\,\\text{cm}$. Berechne ihr Volumen. Runde auf eine Nachkommastelle.",
-   "eingaben": [
-    {
-     "label": "Volumen",
-     "antwort": 1436.8,
-     "einheit": "cm³",
-     "toleranz": 1.0
-    }
-   ],
-   "tipps": [
-    "Volumen Kugel: $V=\\frac{4}{3}\\pi r^3$.",
-    "Erst $r^3=7^3=343$.",
-    "$V=\\frac{4}{3}\\pi\\cdot 343$."
-   ],
-   "loesungsweg": "$V=\\frac{4}{3}\\pi r^3=\\frac{4}{3}\\pi\\cdot 7^3=\\frac{4}{3}\\pi\\cdot 343\\approx 1436{,}8\\,\\text{cm}^3$.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-205",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Eine Kugel hat den Radius $r=9\\,\\text{cm}$. Berechne ihre Oberfläche. Runde auf eine Nachkommastelle.",
-   "eingaben": [
-    {
-     "label": "Oberfläche",
-     "antwort": 1017.9,
-     "einheit": "cm²",
-     "toleranz": 1.0
-    }
-   ],
-   "tipps": [
-    "Oberfläche Kugel: $O=4\\pi r^2$.",
-    "Erst $r^2=9^2=81$.",
-    "$O=4\\pi\\cdot 81$."
-   ],
-   "loesungsweg": "$O=4\\pi r^2=4\\pi\\cdot 9^2=4\\pi\\cdot 81=324\\pi\\approx 1017{,}9\\,\\text{cm}^2$.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-206",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Ein Zylinder hat den Radius $r=3\\,\\text{cm}$ und die Höhe $h=8\\,\\text{cm}$. Berechne seine gesamte Oberfläche (zwei Kreise plus Mantel). Runde auf eine Nachkommastelle.",
-   "eingaben": [
-    {
-     "label": "Oberfläche",
-     "antwort": 207.3,
-     "einheit": "cm²",
-     "toleranz": 0.5
-    }
-   ],
-   "tipps": [
-    "Oberfläche Zylinder: $O=2\\pi r^2+2\\pi r h$.",
-    "Deckel und Boden zusammen: $2\\pi r^2=2\\pi\\cdot 9$.",
-    "Mantel: $2\\pi r h=2\\pi\\cdot 3\\cdot 8$."
-   ],
-   "loesungsweg": "$O=2\\pi r^2+2\\pi r h=2\\pi\\cdot 9+2\\pi\\cdot 24=18\\pi+48\\pi=66\\pi\\approx 207{,}3\\,\\text{cm}^2$.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-207",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Eine quadratische Pyramide hat die Grundkante $a=8\\,\\text{cm}$ und die Höhe $h=3\\,\\text{cm}$. a) Berechne das Volumen $V=\\frac{1}{3}a^2 h$. b) Berechne die gesamte Oberfläche (Grundfläche plus vier Dreiecke). Hinweis: Die Höhe eines Seitendreiecks ist $h_s=\\sqrt{h^2+\\left(\\frac{a}{2}\\right)^2}$.",
-   "eingaben": [
-    {
-     "label": "a) Volumen",
-     "antwort": 64,
-     "einheit": "cm³",
-     "toleranz": 0.5
-    },
-    {
-     "label": "b) Oberfläche",
-     "antwort": 144,
-     "einheit": "cm²",
-     "toleranz": 0.5
-    }
-   ],
-   "tipps": [
-    "a) $V=\\frac{1}{3}a^2 h=\\frac{1}{3}\\cdot 64\\cdot 3$.",
-    "b) Seitendreieckshöhe: $h_s=\\sqrt{3^2+4^2}=\\sqrt{25}=5$.",
-    "b) Oberfläche $=a^2+4\\cdot\\frac{1}{2}\\cdot a\\cdot h_s=64+2\\cdot 8\\cdot 5$."
-   ],
-   "loesungsweg": "a) $V=\\frac{1}{3}\\cdot 8^2\\cdot 3=\\frac{1}{3}\\cdot 192=64\\,\\text{cm}^3$. b) $h_s=\\sqrt{3^2+4^2}=\\sqrt{25}=5\\,\\text{cm}$. Mantel $=4\\cdot\\frac{1}{2}\\cdot 8\\cdot 5=80\\,\\text{cm}^2$. Oberfläche $=64+80=144\\,\\text{cm}^2$.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-208",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Ein Futtersilo besteht aus einem Zylinder ($r=2\\,\\text{m}$, $h=5\\,\\text{m}$) mit einem aufgesetzten Kegeldach (gleicher Radius $r=2\\,\\text{m}$, Höhe $h_K=1{,}5\\,\\text{m}$). a) Berechne das Volumen des Zylinderteils. b) Berechne das Gesamtvolumen (Zylinder plus Kegeldach). Runde jeweils auf zwei Nachkommastellen.",
-   "eingaben": [
-    {
-     "label": "a) Volumen Zylinderteil",
-     "antwort": 62.83,
-     "einheit": "m³",
-     "toleranz": 0.1
-    },
-    {
-     "label": "b) Gesamtvolumen",
-     "antwort": 69.12,
-     "einheit": "m³",
-     "toleranz": 0.1
-    }
-   ],
-   "tipps": [
-    "a) Zylinder: $V_{\\text{Zyl}}=\\pi r^2 h=\\pi\\cdot 4\\cdot 5$.",
-    "Kegeldach: $V_{\\text{Kegel}}=\\frac{1}{3}\\pi r^2 h_K=\\frac{1}{3}\\pi\\cdot 4\\cdot 1{,}5$.",
-    "b) Gesamtvolumen $=V_{\\text{Zyl}}+V_{\\text{Kegel}}$."
-   ],
-   "loesungsweg": "a) $V_{\\text{Zyl}}=\\pi\\cdot 2^2\\cdot 5=20\\pi\\approx 62{,}83\\,\\text{m}^3$. Kegeldach: $V_{\\text{Kegel}}=\\frac{1}{3}\\pi\\cdot 2^2\\cdot 1{,}5=2\\pi\\approx 6{,}28\\,\\text{m}^3$. b) Gesamt $=20\\pi+2\\pi=22\\pi\\approx 69{,}12\\,\\text{m}^3$.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-301",
-   "typ": "freitext",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Eine Kugel hat den Radius $r$. Verdoppelt man den Radius auf $2r$, behauptet Jonas: „Dann ist das Volumen auch doppelt so groß.“ Erkläre mithilfe der Formel $V=\\frac{4}{3}\\pi r^3$, warum das falsch ist, und gib an, um welchen Faktor das Volumen tatsächlich wächst.",
-   "musterloesung": "Jonas’ Behauptung ist falsch. Im Volumen steht der Radius in der dritten Potenz: $V=\\frac{4}{3}\\pi r^3$. Ersetzt man $r$ durch $2r$, erhält man $V_{\\text{neu}}=\\frac{4}{3}\\pi (2r)^3=\\frac{4}{3}\\pi\\cdot 8r^3=8\\cdot\\frac{4}{3}\\pi r^3=8\\cdot V$. Der Faktor $2$ wird durch die dritte Potenz zu $2^3=8$. Das Volumen wächst also auf das <strong>Achtfache</strong>, nicht auf das Doppelte. Allgemein: Verdoppelt man bei einem Körper alle Längen, verachtfacht sich das Volumen.",
-   "tipps": [
-    "Setze in der Formel $r$ durch $2r$ und rechne $(2r)^3$ aus.",
-    "Beachte: $(2r)^3=2^3\\cdot r^3=8r^3$.",
-    "Vergleiche das neue Volumen mit dem alten — welcher Faktor bleibt übrig?"
-   ],
-   "loesungsweg": "Vollständige Begründung s. Musterlösung. Kern: $(2r)^3=8r^3$, also $V_{\\text{neu}}=8\\cdot V$ — das Volumen wird achtmal so groß, nicht doppelt.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-302",
-   "typ": "zuordnung",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Ordne jedem Körper die richtige Volumenformel zu. (Dabei ist $r$ der Radius, $h$ die Höhe und $a$ die Grundkante.)",
-   "paare": [
-    {
-     "links": "Zylinder",
-     "rechts": "Pi mal r-Quadrat mal h"
-    },
-    {
-     "links": "Kegel",
-     "rechts": "ein Drittel mal Pi mal r-Quadrat mal h"
-    },
-    {
-     "links": "Kugel",
-     "rechts": "vier Drittel mal Pi mal r hoch drei"
-    },
-    {
-     "links": "quadratische Pyramide",
-     "rechts": "ein Drittel mal a-Quadrat mal h"
-    }
-   ],
-   "tipps": [
-    "Spitze Körper (Kegel, Pyramide) haben den Faktor ein Drittel.",
-    "Die Kugel ist der einzige Körper mit $r$ hoch drei.",
-    "Beim Zylinder ist die Grundfläche ein Kreis ($\\pi r^2$), mal Höhe."
-   ],
-   "loesungsweg": "Zylinder: $V=\\pi r^2 h$. Kegel: $V=\\frac{1}{3}\\pi r^2 h$. Kugel: $V=\\frac{4}{3}\\pi r^3$. Quadratische Pyramide: $V=\\frac{1}{3}a^2 h$. Spitze Körper (Kegel, Pyramide) tragen den Faktor $\\frac{1}{3}$, die Kugel als einzige $r^3$.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  },
-  {
-   "id": "ma-10-kk-303",
-   "typ": "multiple-choice",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Ein Kegel und ein Zylinder haben denselben Radius $r$ und dieselbe Höhe $h$. Welche Aussagen sind <strong>richtig</strong>?",
-   "optionen": [
-    {
-     "text": "Das Kegelvolumen ist genau ein Drittel des Zylindervolumens.",
-     "richtig": true,
-     "erklaerung": "Richtig: $V_{\\text{Kegel}}=\\frac{1}{3}\\pi r^2 h$ und $V_{\\text{Zylinder}}=\\pi r^2 h$, also ein Drittel."
-    },
-    {
-     "text": "Beide Körper haben dasselbe Volumen, weil Radius und Höhe gleich sind.",
-     "richtig": false,
-     "erklaerung": "Falsch: Der Kegel ist spitz und fasst nur ein Drittel des Zylinders."
-    },
-    {
-     "text": "Verdreifacht man die Höhe des Zylinders, verdreifacht sich sein Volumen.",
-     "richtig": true,
-     "erklaerung": "Richtig: $h$ steht in der Formel in der ersten Potenz, also wächst das Volumen proportional zur Höhe."
-    },
-    {
-     "text": "In die Volumenformel des Zylinders gehört $r$ in der zweiten Potenz.",
-     "richtig": true,
-     "erklaerung": "Richtig: $V=\\pi r^2 h$ — der Radius geht quadratisch ein, die Höhe linear."
-    }
-   ],
-   "tipps": [
-    "Vergleiche die Formeln $V_{\\text{Zylinder}}=\\pi r^2 h$ und $V_{\\text{Kegel}}=\\frac{1}{3}\\pi r^2 h$.",
-    "Achte darauf, in welcher Potenz $r$ und $h$ jeweils vorkommen.",
-    "Ein spitzer Körper fasst weniger als der zugehörige gerade Körper."
-   ],
-   "loesungsweg": "Richtig: Kegel = ein Drittel des Zylinders (gleiches $r,h$); Höhe verdreifachen verdreifacht das Volumen ($h$ linear); $r$ geht quadratisch ein. Falsch ist, dass beide dasselbe Volumen hätten — der Kegel fasst nur ein Drittel.",
-   "kc": [
-    "KC Mathematik Sek I (2015): Raum und Form, Volumen und Oberfläche von Körpern (Klasse 10)"
-   ]
-  }
- ]
+  ]
 }

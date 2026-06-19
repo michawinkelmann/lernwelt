@@ -891,6 +891,80 @@
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Abstände und Winkel"
    ]
+  },
+  {
+   "id": "ma-qp-aw-108",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz (eA): Gegeben ist das Dreieck mit den Eckpunkten $A(1 \\mid 1 \\mid 1)$, $B(4 \\mid 1 \\mid 1)$ und $C(1 \\mid 5 \\mid 4)$. Untersuche es allein mit dem Vektorprodukt.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Bilde die Seitenvektoren $\\overrightarrow{AB}$ und $\\overrightarrow{AC}$ und berechne das Vektorprodukt $\\vec{w}=\\overrightarrow{AB}\\times\\overrightarrow{AC}$.",
+     "eingaben": [
+      {
+       "label": "1. Komponente von $\\vec{w}$",
+       "antwort": 0,
+       "toleranz": 0,
+       "einheit": ""
+      },
+      {
+       "label": "2. Komponente von $\\vec{w}$",
+       "antwort": -9,
+       "toleranz": 0,
+       "einheit": ""
+      },
+      {
+       "label": "3. Komponente von $\\vec{w}$",
+       "antwort": 12,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$\\overrightarrow{AB}=B-A=(3\\mid 0\\mid 0)$ und $\\overrightarrow{AC}=C-A=(0\\mid 4\\mid 3)$.",
+      "Vektorprodukt: $(u_2 v_3-u_3 v_2\\,\\mid\\, u_3 v_1-u_1 v_3\\,\\mid\\, u_1 v_2-u_2 v_1)$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Berechne den Flächeninhalt des Dreiecks über $A_\\triangle=\\frac{1}{2}\\,|\\vec{w}|$.",
+     "eingaben": [
+      {
+       "label": "Flächeninhalt (in FE)",
+       "antwort": 7.5,
+       "toleranz": 0.01,
+       "einheit": "FE"
+      }
+     ],
+     "tipps": [
+      "$|\\vec{w}|=\\sqrt{0^2+(-9)^2+12^2}=\\sqrt{225}=15$.",
+      "Die Dreiecksfläche ist die halbe Parallelogrammfläche."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Bestätige die Senkrecht-Eigenschaft: Berechne das Skalarprodukt $\\vec{w}\\cdot\\overrightarrow{AB}$.",
+     "eingaben": [
+      {
+       "label": "$\\vec{w}\\cdot\\overrightarrow{AB}$",
+       "antwort": 0,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Das Vektorprodukt steht senkrecht auf beiden Faktoren — das Skalarprodukt muss null ergeben.",
+      "$\\vec{w}\\cdot\\overrightarrow{AB}=0\\cdot 3+(-9)\\cdot 0+12\\cdot 0$."
+     ]
+    }
+   ],
+   "loesungsweg": "Seitenvektoren: $\\overrightarrow{AB}=(3\\mid 0\\mid 0)$, $\\overrightarrow{AC}=(0\\mid 4\\mid 3)$. Vektorprodukt: $\\vec{w}=\\overrightarrow{AB}\\times\\overrightarrow{AC}=(0\\cdot 3-0\\cdot 4\\,\\mid\\, 0\\cdot 0-3\\cdot 3\\,\\mid\\, 3\\cdot 4-0\\cdot 0)=(0\\mid -9\\mid 12)$. Betrag: $|\\vec{w}|=\\sqrt{0+81+144}=\\sqrt{225}=15$, also Dreiecksfläche $A_\\triangle=\\frac{1}{2}\\cdot 15=7{,}5$ FE. Probe: $\\vec{w}\\cdot\\overrightarrow{AB}=0$ und $\\vec{w}\\cdot\\overrightarrow{AC}=0\\cdot 0+(-9)\\cdot 4+12\\cdot 3=-36+36=0$ — $\\vec{w}$ steht wie erwartet senkrecht auf beiden Seiten.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Abstände und Winkel"
+   ]
   }
  ]
 }

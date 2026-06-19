@@ -156,7 +156,7 @@
     "Aus $\\vec{v} \\cdot \\vec{n} = 0$ folgt $2n_2 + n_3 = 0$. Mit $n_3 = 2$ ergibt sich $n_2 = -1$.",
     "Rechte Seite: $d = \\vec{p} \\cdot \\vec{n} = 1 \\cdot (-4) + 1 \\cdot (-1) + 0 \\cdot 2 = -5$."
    ],
-   "loesungsweg": "Senkrecht-Bedingungen: $\\vec{u} \\cdot \\vec{n} = n_1 + 2n_3 = 0$ und $\\vec{v} \\cdot \\vec{n} = 2n_2 + n_3 = 0$. Mit $n_3 = 2$: $n_1 = -4$ und $n_2 = -1$. Also $\\vec{n} = (-4\\,|\\,{-1}\\,|\\,2)$. Probe: $\\vec{u} \\cdot \\vec{n} = -4 + 0 + 4 = 0$ und $\\vec{v} \\cdot \\vec{n} = 0 - 2 + 2 = 0$ \\checkmark. Die rechte Seite ist $d = \\vec{p} \\cdot \\vec{n} = (-4) + (-1) + 0 = -5$. Die Normalenform lautet $\\left[\\vec{x} - (1\\,|\\,1\\,|\\,0)\\right] \\cdot (-4\\,|\\,{-1}\\,|\\,2) = 0$, die Koordinatenform $-4x - y + 2z = -5$.",
+   "loesungsweg": "Senkrecht-Bedingungen: $\\vec{u} \\cdot \\vec{n} = n_1 + 2n_3 = 0$ und $\\vec{v} \\cdot \\vec{n} = 2n_2 + n_3 = 0$. Mit $n_3 = 2$: $n_1 = -4$ und $n_2 = -1$. Also $\\vec{n} = (-4\\,|\\,{-1}\\,|\\,2)$. Probe: $\\vec{u} \\cdot \\vec{n} = -4 + 0 + 4 = 0$ und $\\vec{v} \\cdot \\vec{n} = 0 - 2 + 2 = 0$ \\checkmark. Die rechte Seite ist $d = \\vec{p} \\cdot \\vec{n} = (-4) + (-1) + 0 = -5$. Die Normalenform lautet $\\left[\\vec{x} - (1\\,|\\,1\\,|\\,0)\\right] \\cdot (-4\\,|\\,{-1}\\,|\\,2) = 0$.",
    "kc": [
     "normalenvektor-lgs"
    ],
@@ -503,7 +503,7 @@
     "Das Vektorprodukt ergibt $\\begin{pmatrix}8\\\\4\\\\2\\end{pmatrix}$, gekürzt $\\begin{pmatrix}4\\\\2\\\\1\\end{pmatrix}$.",
     "Setze $A$ in $4x+2y+z=d$ ein."
    ],
-   "loesungsweg": "$\\overrightarrow{AB}\\times\\overrightarrow{AC}=\\begin{pmatrix}8\\\\4\\\\2\\end{pmatrix}$, gekürzt $\\vec{n}=\\begin{pmatrix}4\\\\2\\\\1\\end{pmatrix}$. Einsetzen von $A(1\\mid 0\\mid 0)$: $4\\cdot 1+2\\cdot 0+1\\cdot 0=4$. Also $E\\colon\\ 4x+2y+z=4$, somit $d=4$.",
+   "loesungsweg": "Spannvektoren: $\\overrightarrow{AB}=B-A=\\begin{pmatrix}-1\\\\2\\\\0\\end{pmatrix}$, $\\overrightarrow{AC}=C-A=\\begin{pmatrix}-1\\\\0\\\\4\\end{pmatrix}$. Der angegebene Normalenvektor $\\vec{n}=\\begin{pmatrix}4\\\\2\\\\1\\end{pmatrix}$ erfüllt beide Senkrecht-Bedingungen: $\\overrightarrow{AB}\\cdot\\vec{n}=-4+4+0=0$ und $\\overrightarrow{AC}\\cdot\\vec{n}=-4+0+4=0$ \\checkmark. Einsetzen von $A(1\\mid 0\\mid 0)$: $4\\cdot 1+2\\cdot 0+1\\cdot 0=4$. Also $E\\colon\\ 4x+2y+z=4$, somit $d=4$.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Ebenen im Raum"
    ]
@@ -532,7 +532,7 @@
     "$\\begin{pmatrix}2\\\\1\\\\0\\end{pmatrix}\\times\\begin{pmatrix}0\\\\1\\\\2\\end{pmatrix}=\\begin{pmatrix}2\\\\-4\\\\2\\end{pmatrix}$, gekürzt $\\begin{pmatrix}1\\\\-2\\\\1\\end{pmatrix}$.",
     "$d$ über den Stützpunkt: $1\\cdot 1-2\\cdot 2+1\\cdot 3$."
    ],
-   "loesungsweg": "Vektorprodukt der Spannvektoren: $\\begin{pmatrix}2\\\\1\\\\0\\end{pmatrix}\\times\\begin{pmatrix}0\\\\1\\\\2\\end{pmatrix}=\\begin{pmatrix}2\\\\-4\\\\2\\end{pmatrix}$, gekürzt $\\vec{n}=\\begin{pmatrix}1\\\\-2\\\\1\\end{pmatrix}$. Stützpunkt einsetzen: $1\\cdot 1-2\\cdot 2+1\\cdot 3=1-4+3=0$. Also $E\\colon\\ x-2y+z=0$, somit $d=0$.",
+   "loesungsweg": "Der angegebene Normalenvektor $\\vec{n}=\\begin{pmatrix}1\\\\-2\\\\1\\end{pmatrix}$ steht senkrecht auf beiden Spannvektoren: $\\begin{pmatrix}2\\\\1\\\\0\\end{pmatrix}\\cdot\\vec{n}=2-2+0=0$ und $\\begin{pmatrix}0\\\\1\\\\2\\end{pmatrix}\\cdot\\vec{n}=0-2+2=0$ \\checkmark (so findet man $\\vec{n}$ auch über das LGS $\\vec{u}\\cdot\\vec{n}=0$, $\\vec{v}\\cdot\\vec{n}=0$). Stützpunkt einsetzen: $1\\cdot 1-2\\cdot 2+1\\cdot 3=1-4+3=0$. Also $E\\colon\\ x-2y+z=0$, somit $d=0$.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Ebenen im Raum"
    ]
@@ -653,7 +653,7 @@
     "$\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}\\times\\begin{pmatrix}0\\\\1\\\\1\\end{pmatrix}=\\begin{pmatrix}-1\\\\-1\\\\1\\end{pmatrix}$ liefert $E\\colon\\ x+y-z=2$.",
     "Setze die Geradenkoordinaten in die Koordinatenform ein und löse nach $t$."
    ],
-   "loesungsweg": "Normalenvektor: $\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}\\times\\begin{pmatrix}0\\\\1\\\\1\\end{pmatrix}=\\begin{pmatrix}-1\\\\-1\\\\1\\end{pmatrix}$. Mit Stützpunkt $(1\\mid 1\\mid 0)$: $-x-y+z=-2$, also $E\\colon\\ x+y-z=2$. Gerade einsetzen: $2t+t-2t=2\\Rightarrow t=2$. In $g$: $\\vec{x}=2\\begin{pmatrix}2\\\\1\\\\2\\end{pmatrix}=\\begin{pmatrix}4\\\\2\\\\4\\end{pmatrix}$. Also $S(4 \\mid 2 \\mid 4)$.",
+   "loesungsweg": "Normalenvektor über das LGS $\\vec{u}\\cdot\\vec{n}=0$, $\\vec{v}\\cdot\\vec{n}=0$: Mit $\\vec{u}=\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}$, $\\vec{v}=\\begin{pmatrix}0\\\\1\\\\1\\end{pmatrix}$ und der Wahl $n_3=-1$ folgt $n_1=1$, $n_2=1$, also $\\vec{n}=\\begin{pmatrix}1\\\\1\\\\-1\\end{pmatrix}$. Mit Stützpunkt $(1\\mid 1\\mid 0)$: $x+y-z=2$, also $E\\colon\\ x+y-z=2$. Gerade einsetzen: $2t+t-2t=2\\Rightarrow t=2$. In $g$: $\\vec{x}=2\\begin{pmatrix}2\\\\1\\\\2\\end{pmatrix}=\\begin{pmatrix}4\\\\2\\\\4\\end{pmatrix}$. Also $S(4 \\mid 2 \\mid 4)$.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Ebenen im Raum"
    ]
@@ -767,7 +767,7 @@
    "frage": "Bringe die Schritte in die richtige Reihenfolge, mit denen man aus drei gegebenen Punkten $A$, $B$, $C$ die Koordinatenform der Ebene bestimmt.",
    "elemente": [
     "Aus den Punkten die beiden Spannvektoren $\\vec{u}=\\overrightarrow{AB}$ und $\\vec{v}=\\overrightarrow{AC}$ bilden.",
-    "Einen Normalenvektor $\\vec{n}$ bestimmen, der auf $\\vec{u}$ und $\\vec{v}$ senkrecht steht (LGS $\\vec{u}\\cdot\\vec{n}=0$, $\\vec{v}\\cdot\\vec{n}=0$ oder Vektorprodukt).",
+    "Einen Normalenvektor $\\vec{n}$ bestimmen, der auf $\\vec{u}$ und $\\vec{v}$ senkrecht steht (LGS $\\vec{u}\\cdot\\vec{n}=0$, $\\vec{v}\\cdot\\vec{n}=0$).",
     "Die rechte Seite $d=\\vec{n}\\cdot\\vec{a}$ berechnen, indem man den Stützpunkt $A$ einsetzt.",
     "Die Koordinatenform $n_1 x+n_2 y+n_3 z=d$ aufschreiben.",
     "Zur Kontrolle einen der drei Punkte einsetzen und prüfen, ob die Gleichung erfüllt ist."
@@ -777,7 +777,7 @@
     "Der Normalenvektor entsteht vor der rechten Seite; erst danach kann man $d$ ausrechnen.",
     "Die Kontrolle steht ganz am Ende: Ein eingesetzter Punkt muss die fertige Gleichung erfüllen."
    ],
-   "loesungsweg": "Zuerst die Spannvektoren $\\overrightarrow{AB}$ und $\\overrightarrow{AC}$ bilden. Dann einen Normalenvektor $\\vec{n}$ bestimmen (über das LGS der beiden Orthogonalitätsbedingungen oder das Vektorprodukt). Anschließend $d=\\vec{n}\\cdot\\vec{a}$ mit dem Stützpunkt berechnen und die Koordinatenform $n_1x+n_2y+n_3z=d$ notieren. Zum Schluss einen der drei Ausgangspunkte zur Kontrolle einsetzen.",
+   "loesungsweg": "Zuerst die Spannvektoren $\\overrightarrow{AB}$ und $\\overrightarrow{AC}$ bilden. Dann einen Normalenvektor $\\vec{n}$ bestimmen (über das LGS der beiden Orthogonalitätsbedingungen). Anschließend $d=\\vec{n}\\cdot\\vec{a}$ mit dem Stützpunkt berechnen und die Koordinatenform $n_1x+n_2y+n_3z=d$ notieren. Zum Schluss einen der drei Ausgangspunkte zur Kontrolle einsetzen.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Ebenen im Raum"
    ]
@@ -985,6 +985,181 @@
     "Rechne jede Zeile einzeln aus."
    ],
    "loesungsweg": "$\\vec x=\\begin{pmatrix}2\\\\0\\\\0\\end{pmatrix}+\\begin{pmatrix}0\\\\3\\\\0\\end{pmatrix}+\\begin{pmatrix}0\\\\0\\\\10\\end{pmatrix}=\\begin{pmatrix}2\\\\3\\\\10\\end{pmatrix}$, also $P(2\\mid3\\mid10)$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Ebenen im Raum"
+   ]
+  },
+  {
+   "id": "ma-qp-eb-114",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Ebene hat die Spannvektoren $\\vec u=\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}$ und $\\vec v=\\begin{pmatrix}0\\\\2\\\\1\\end{pmatrix}$. Bestimme einen Normalenvektor $\\vec n$ mit der dritten Komponente $n_3=2$ über die beiden Senkrecht-Bedingungen $\\vec u\\cdot\\vec n=0$ und $\\vec v\\cdot\\vec n=0$.",
+   "eingaben": [
+    {
+     "label": "$n_1$",
+     "antwort": -2,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$n_2$",
+     "antwort": -1,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Stelle das LGS auf: $\\vec u\\cdot\\vec n=n_1+n_3=0$ und $\\vec v\\cdot\\vec n=2n_2+n_3=0$.",
+    "Setze $n_3=2$ ein und löse zuerst nach $n_1$, dann nach $n_2$ auf.",
+    "Mache die Probe: Beide Skalarprodukte $\\vec u\\cdot\\vec n$ und $\\vec v\\cdot\\vec n$ müssen null ergeben."
+   ],
+   "loesungsweg": "Senkrecht-Bedingungen: $\\vec u\\cdot\\vec n=n_1+n_3=0$ und $\\vec v\\cdot\\vec n=2n_2+n_3=0$. Mit $n_3=2$ folgt aus der ersten Gleichung $n_1=-2$ und aus der zweiten $n_2=-1$. Also $\\vec n=(-2\\mid -1\\mid 2)$. Probe: $\\vec u\\cdot\\vec n=-2+0+2=0$ und $\\vec v\\cdot\\vec n=0-2+2=0$ \\checkmark.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Ebenen im Raum"
+   ]
+  },
+  {
+   "id": "ma-qp-eb-115",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Ebene $E$ geht durch den Punkt $A(1\\mid 2\\mid 0)$ und hat den Normalenvektor $\\vec n=\\begin{pmatrix}2\\\\1\\\\2\\end{pmatrix}$. Welche Aussagen über Normalenvektor und Normalenform sind richtig?",
+   "optionen": [
+    {
+     "text": "Der Normalenvektor $\\vec n$ steht senkrecht auf jedem Vektor, der in der Ebene $E$ verläuft.",
+     "richtig": true,
+     "erklaerung": "Richtig: Genau das ist die definierende Eigenschaft eines Normalenvektors."
+    },
+    {
+     "text": "Die Normalenform lautet $\\vec n\\cdot(\\vec x-\\vec a)=0$ mit $\\vec a$ als Ortsvektor von $A$.",
+     "richtig": true,
+     "erklaerung": "Richtig: Ein Punkt $X$ liegt genau dann in $E$, wenn $\\overrightarrow{AX}$ senkrecht auf $\\vec n$ steht, also $\\vec n\\cdot(\\vec x-\\vec a)=0$."
+    },
+    {
+     "text": "Auch $\\vec n'=\\begin{pmatrix}4\\\\2\\\\4\\end{pmatrix}$ ist ein Normalenvektor derselben Ebene.",
+     "richtig": true,
+     "erklaerung": "Richtig: Jedes Vielfache von $\\vec n$ (außer dem Nullvektor) steht ebenfalls senkrecht auf der Ebene."
+    },
+    {
+     "text": "Der Betrag $|\\vec n|$ legt fest, wie weit die Ebene vom Ursprung entfernt ist.",
+     "richtig": false,
+     "erklaerung": "Falsch: Der Betrag des Normalenvektors hat mit dem Abstand zum Ursprung nichts zu tun — er kann beliebig skaliert werden."
+    }
+   ],
+   "tipps": [
+    "Ein Normalenvektor steht senkrecht auf der ganzen Ebene, nicht nur auf einem Spannvektor.",
+    "In der Normalenform $\\vec n\\cdot(\\vec x-\\vec a)=0$ ist $\\vec a$ der Ortsvektor eines Ebenenpunkts.",
+    "Überlege, ob ein Vielfaches eines Normalenvektors die Senkrecht-Eigenschaft behält."
+   ],
+   "loesungsweg": "Aussage 1 ist die Definition des Normalenvektors (senkrecht auf der Ebene). Aussage 2 ist die Normalenform $\\vec n\\cdot(\\vec x-\\vec a)=0$. Aussage 3 stimmt, weil jedes Vielfache von $\\vec n$ wieder senkrecht steht. Aussage 4 ist falsch: Der Betrag von $\\vec n$ ist frei skalierbar und sagt nichts über den Abstand zum Ursprung.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Ebenen im Raum"
+   ]
+  },
+  {
+   "id": "ma-qp-eb-116",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze den Merktext zum Normalenvektor und zur Normalenform einer Ebene.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "senkrecht",
+     "optionen": [
+      "senkrecht",
+      "parallel",
+      "schräg"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "null",
+     "optionen": [
+      "null",
+      "eins",
+      "negativ"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "eine Komponente frei",
+     "optionen": [
+      "eine Komponente frei",
+      "alle Komponenten fest",
+      "zwei Gleichungen weglassen"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "n·(x − a) = 0",
+     "optionen": [
+      "n·(x − a) = 0",
+      "n + (x − a) = 0",
+      "n · x = 0"
+     ]
+    }
+   ],
+   "loesungsweg": "Der Normalenvektor steht senkrecht auf der Ebene. Aus den beiden Bedingungen $\\vec n\\cdot\\vec u=0$ und $\\vec n\\cdot\\vec v=0$ (beide null) entsteht ein LGS für drei Komponenten — man darf eine Komponente frei wählen. Die Normalenform lautet $\\vec n\\cdot(\\vec x-\\vec a)=0$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Ebenen im Raum"
+   ]
+  },
+  {
+   "id": "ma-qp-eb-305",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz (eA): Eine dreieckige Glasfläche liegt in der Ebene $E\\colon\\ 3x+4y+6z=12$ (Koordinaten in Metern) und wird von den drei Spurpunkten auf den Koordinatenachsen begrenzt. a) Bestimme die drei Spurpunkte (gib jeweils die nicht verschwindende Koordinate an). b) Wie lang ist die Kante zwischen dem Spurpunkt auf der $x$-Achse und dem Spurpunkt auf der $z$-Achse (auf zwei Dezimalen)?",
+   "eingaben": [
+    {
+     "label": "a) $x$-Koordinate von $S_x$",
+     "antwort": 4,
+     "toleranz": 0.02,
+     "einheit": "m"
+    },
+    {
+     "label": "a) $y$-Koordinate von $S_y$",
+     "antwort": 3,
+     "toleranz": 0.02,
+     "einheit": "m"
+    },
+    {
+     "label": "a) $z$-Koordinate von $S_z$",
+     "antwort": 2,
+     "toleranz": 0.02,
+     "einheit": "m"
+    },
+    {
+     "label": "b) Kantenlänge $|\\overline{S_x S_z}|$",
+     "antwort": 4.47,
+     "toleranz": 0.03,
+     "einheit": "m"
+    }
+   ],
+   "tipps": [
+    "Spurpunkt auf einer Achse: Setze die beiden anderen Koordinaten null und löse nach der verbleibenden auf.",
+    "Die Kantenlänge ist der Betrag des Verbindungsvektors $\\overrightarrow{S_x S_z}=S_z-S_x$.",
+    "Rechne $|\\overrightarrow{S_x S_z}|=\\sqrt{(\\Delta x)^2+(\\Delta y)^2+(\\Delta z)^2}$."
+   ],
+   "loesungsweg": "a) $S_x$: $y=z=0\\Rightarrow 3x=12\\Rightarrow x=4$, also $S_x(4\\mid 0\\mid 0)$. $S_y$: $4y=12\\Rightarrow y=3$, also $S_y(0\\mid 3\\mid 0)$. $S_z$: $6z=12\\Rightarrow z=2$, also $S_z(0\\mid 0\\mid 2)$. b) $\\overrightarrow{S_x S_z}=S_z-S_x=(-4\\mid 0\\mid 2)$, Betrag $=\\sqrt{16+0+4}=\\sqrt{20}=2\\sqrt{5}\\approx 4{,}47\\,\\text{m}$.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Ebenen im Raum"
    ]

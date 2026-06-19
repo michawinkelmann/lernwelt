@@ -799,6 +799,154 @@
    "kc": [
     "teilbarkeit"
    ]
+  },
+  {
+   "id": "ma-06-tp-111",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jeder Zahl die Aussage zu, die genau auf sie passt. (Nur Teiler und Vielfache!)",
+   "paare": [
+    {
+     "links": "$8$",
+     "rechts": "ist ein Teiler von 24"
+    },
+    {
+     "links": "$24$",
+     "rechts": "ist ein Vielfaches von 8"
+    },
+    {
+     "links": "$7$",
+     "rechts": "hat genau zwei Teiler: 1 und 7"
+    },
+    {
+     "links": "$1$",
+     "rechts": "ist Teiler jeder natürlichen Zahl"
+    }
+   ],
+   "tipps": [
+    "Teiler: Die Division geht ohne Rest auf. Vielfaches: entsteht durch Malnehmen.",
+    "$24:8=3$ geht auf — also ist $8$ Teiler von $24$ und $24$ Vielfaches von $8$.",
+    "Die $1$ teilt jede Zahl, denn $a:1=a$ geht immer auf."
+   ],
+   "loesungsweg": "$24:8=3$ ohne Rest: $8$ ist Teiler von $24$, und $24$ ist Vielfaches von $8$. Die $7$ hat nur die Teiler $1$ und $7$. Die $1$ teilt jede natürliche Zahl, denn $a:1=a$.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-112",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "a) Schreibe die ersten vier Vielfachen von $6$ auf und gib das vierte an. b) Wie viele Teiler hat $20$ insgesamt?",
+   "eingaben": [
+    {
+     "label": "a) viertes Vielfaches von 6",
+     "antwort": 24,
+     "toleranz": 0
+    },
+    {
+     "label": "b) Anzahl der Teiler von 20",
+     "antwort": 6,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Vielfache entstehen durch Malnehmen: $6\\cdot 1$, $6\\cdot 2$, $6\\cdot 3$, $6\\cdot 4$.",
+    "Suche für die Teiler von $20$ die Teiler-Paare: $1\\cdot 20$, $2\\cdot 10$, $4\\cdot 5$.",
+    "Zähle alle gefundenen Teiler — jede Zahl nur einmal."
+   ],
+   "loesungsweg": "a) Vielfache von $6$: $6, 12, 18, 24, \\ldots$ — das vierte ist $24$. b) Teiler-Paare von $20$: $1\\cdot 20$, $2\\cdot 10$, $4\\cdot 5$, also $T(20)=\\{1,2,4,5,10,20\\}$ — das sind $6$ Teiler.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-113",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz: In einer Klasse sind $30$ Kinder. Sie sollen in gleich große Gruppen aufgeteilt werden, in jeder Gruppe gleich viele Kinder. Rechne in zwei Schritten.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Wie viele Teiler hat $30$? (So viele verschiedene Gruppengrößen sind möglich.)",
+     "eingaben": [
+      {
+       "label": "Anzahl der Teiler von 30",
+       "antwort": 8,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "Teiler-Paare: $1\\cdot 30$, $2\\cdot 15$, $3\\cdot 10$, $5\\cdot 6$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Es sollen mehr als $1$, aber weniger als $30$ Gruppen sein, und jede Gruppe soll mehr als ein Kind haben. Wie viele Kinder sind in der größtmöglichen solchen Gruppe?",
+     "eingaben": [
+      {
+       "label": "größte Gruppengröße",
+       "antwort": 15,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "Die größten echten Teiler von $30$ (ohne $30$ selbst) sind $15$, $10$, $6$, ..."
+     ]
+    }
+   ],
+   "tipps": [
+    "Jede mögliche Gruppengröße ist ein Teiler von $30$.",
+    "Bestimme zuerst die vollständige Teilermenge von $30$.",
+    "Die größte Gruppe (außer 'alle in einer Gruppe') gehört zum zweitgrößten Teiler."
+   ],
+   "loesungsweg": "$T(30)=\\{1,2,3,5,6,10,15,30\\}$ — das sind $8$ Teiler, also $8$ mögliche Gruppengrößen. Lässt man $1$ Gruppe (alle zusammen) und $30$ Gruppen (jeder allein) weg, ist der größte verbleibende Teiler $15$: Es gibt dann $2$ Gruppen mit je $15$ Kindern.",
+   "kc": [
+    "teilbarkeit"
+   ]
+  },
+  {
+   "id": "ma-06-tp-114",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne die Zahlen nach der Anzahl ihrer Teiler — beginne mit der Zahl, die die wenigsten Teiler hat.",
+   "elemente": [
+    "$10$",
+    "$8$",
+    "$18$",
+    "$24$"
+   ],
+   "tipps": [
+    "Schreibe zu jeder Zahl die Teilermenge mit Teiler-Paaren auf.",
+    "$T(10)=\\{1,2,5,10\\}$ (4 Teiler), $T(8)=\\{1,2,4,8\\}$ (4 Teiler).",
+    "Bei Gleichstand zählt die kleinere Zahl als zuerst: $T(18)$ hat 6, $T(24)$ hat 8 Teiler."
+   ],
+   "loesungsweg": "$T(10)=\\{1,2,5,10\\}$: 4 Teiler. $T(8)=\\{1,2,4,8\\}$: 4 Teiler. $T(18)=\\{1,2,3,6,9,18\\}$: 6 Teiler. $T(24)=\\{1,2,3,4,6,8,12,24\\}$: 8 Teiler. Bei gleicher Teilerzahl ($10$ und $8$) steht die kleinere Zahl zuerst: $10$, $8$, $18$, $24$.",
+   "kc": [
+    "teilbarkeit"
+   ]
   }
  ]
 }

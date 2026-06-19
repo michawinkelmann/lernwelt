@@ -1,748 +1,824 @@
 {
- "thema": "in-10-programmieren",
- "hinweis": "Lernbüro-Ergänzungsaufgaben zum Füllen dünner Spuren. Zur fachlichen Prüfung durch die Lehrkraft.",
- "aufgaben": [
-  {
-   "id": "in-10-prog-101",
-   "typ": "multiple-choice",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Sichern L1: Welche der folgenden Aussagen beschreibt den Unterschied zwischen Pseudocode und einem Programm am genauesten?",
-   "optionen": [
+  "thema": "in-10-programmieren",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben zum Füllen dünner Spuren. Zur fachlichen Prüfung durch die Lehrkraft.",
+  "aufgaben": [
     {
-     "text": "Pseudocode wird vom Computer direkt ausgeführt, ein Programm nicht.",
-     "richtig": false,
-     "erklaerung": "Nein – genau umgekehrt: Ein Programm kann der Computer ausführen, Pseudocode ist nur eine Skizze für Menschen."
+      "id": "in-10-prog-101",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Sichern L1: Welche der folgenden Aussagen beschreibt den Unterschied zwischen Pseudocode und einem Programm am genauesten?",
+      "optionen": [
+        {
+          "text": "Pseudocode wird vom Computer direkt ausgeführt, ein Programm nicht.",
+          "richtig": false,
+          "erklaerung": "Nein – genau umgekehrt: Ein Programm kann der Computer ausführen, Pseudocode ist nur eine Skizze für Menschen."
+        },
+        {
+          "text": "Ein Programm folgt einer festen Grammatik einer Programmiersprache; Pseudocode hat keine festen Regeln.",
+          "richtig": true,
+          "erklaerung": "Richtig: Genau diese strenge Grammatik macht ein Programm ausführbar – der Computer versteht nur, was exakt der Syntax entspricht."
+        },
+        {
+          "text": "Pseudocode und Programm beschreiben immer denselben Algorithmus, sind aber sonst identisch.",
+          "richtig": false,
+          "erklaerung": "Sie können denselben Algorithmus beschreiben, unterscheiden sich aber wesentlich in Formalisierungsgrad und Ausführbarkeit."
+        },
+        {
+          "text": "Ein Programm darf mehrdeutig sein, solange der Computer rät.",
+          "richtig": false,
+          "erklaerung": "Nein: Computer raten nicht. Jede Anweisung muss eindeutig sein."
+        }
+      ],
+      "tipps": [
+        "Pseudocode ist für Menschen gedacht – kein Computer führt ihn aus.",
+        "Eine Programmiersprache wie Python hat eine strenge Grammatik (Syntax).",
+        "Genau eine Aussage ist richtig."
+      ],
+      "loesungsweg": "Pseudocode ist eine formlose Skizze des Algorithmus für Menschen – ohne feste Grammatik, nicht ausführbar. Ein Programm dagegen folgt den exakten Regeln einer Programmiersprache; nur so kann der Computer es Schritt für Schritt ausführen. Antwort 2 ist richtig.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
     },
     {
-     "text": "Ein Programm folgt einer festen Grammatik einer Programmiersprache; Pseudocode hat keine festen Regeln.",
-     "richtig": true,
-     "erklaerung": "Richtig: Genau diese strenge Grammatik macht ein Programm ausführbar – der Computer versteht nur, was exakt der Syntax entspricht."
+      "id": "in-10-prog-102",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Sichern L2: Schreibtischtest – was gibt dieses Programm aus?<br><code>a = 3</code><br><code>b = a + 2</code><br><code>a = a * b</code><br><code>print(a)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 15,
+          "toleranz": 0
+        }
+      ],
+      "tipps": [
+        "Führe das Programm Zeile für Zeile aus und notiere nach jeder Zeile die Werte von a und b.",
+        "Zeile 2: b wird mit dem alten a berechnet – a hat dabei noch den Wert 3.",
+        "Zeile 3: a = a * b = 3 * 5 = 15."
+      ],
+      "loesungsweg": "Schreibtischtest: Zeile 1: a = 3. Zeile 2: b = 3 + 2 = 5. Zeile 3: a = 3 * 5 = 15 (b bleibt 5). Zeile 4: print(15). Ausgabe: 15.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
     },
     {
-     "text": "Pseudocode und Programm beschreiben immer denselben Algorithmus, sind aber sonst identisch.",
-     "richtig": false,
-     "erklaerung": "Sie können denselben Algorithmus beschreiben, unterscheiden sich aber wesentlich in Formalisierungsgrad und Ausführbarkeit."
+      "id": "in-10-prog-103",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Sichern L3: Welchen Wert gibt dieses Programm aus?<br><code>note = 68</code><br><code>if note >= 80:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;ergebnis = 1</code><br><code>elif note >= 60:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;ergebnis = 2</code><br><code>else:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;ergebnis = 3</code><br><code>print(ergebnis)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 2,
+          "toleranz": 0
+        }
+      ],
+      "tipps": [
+        "Setze note = 68 ein und prüfe die Bedingungen von oben nach unten.",
+        "Ist 68 >= 80? Nein. Ist 68 >= 60? Ja.",
+        "Sobald eine Bedingung wahr ist, wird genau dieser Zweig ausgeführt."
+      ],
+      "loesungsweg": "Python prüft von oben: 68 >= 80 ist falsch, weiter. 68 >= 60 ist wahr – ergebnis = 2 wird gesetzt, alle weiteren Zweige werden übersprungen. print(ergebnis) gibt 2 aus.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
     },
     {
-     "text": "Ein Programm darf mehrdeutig sein, solange der Computer rät.",
-     "richtig": false,
-     "erklaerung": "Nein: Computer raten nicht. Jede Anweisung muss eindeutig sein."
+      "id": "in-10-prog-104",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Basis L4: Welche Aussagen zu Schleifen in Python sind richtig?",
+      "optionen": [
+        {
+          "text": "Eine for-Schleife wird verwendet, wenn die Anzahl der Wiederholungen vorher feststeht.",
+          "richtig": true,
+          "erklaerung": "Richtig: for ist ideal, wenn man eine bestimmte Zahlenreihe durchlaufen oder eine Liste abarbeiten möchte."
+        },
+        {
+          "text": "range(1, 5) liefert die Zahlen 1, 2, 3, 4, 5.",
+          "richtig": false,
+          "erklaerung": "Nein: Der Endwert ist nicht mehr dabei – range(1, 5) liefert 1, 2, 3, 4."
+        },
+        {
+          "text": "Eine while-Schleife wiederholt, solange eine Bedingung wahr ist.",
+          "richtig": true,
+          "erklaerung": "Richtig: while ist ideal, wenn das Ende von einer Bedingung abhängt, die Anzahl also nicht von vornherein feststeht."
+        },
+        {
+          "text": "Der Schleifenkörper wird immer mindestens einmal ausgeführt.",
+          "richtig": false,
+          "erklaerung": "Nein: Bei while kann die Bedingung schon vor dem ersten Durchlauf falsch sein – dann läuft der Körper gar nicht."
+        }
+      ],
+      "tipps": [
+        "range(1, 5) – der zweite Wert ist der erste, der NICHT mehr dabei ist.",
+        "for eignet sich für bekannte Anzahl, while für Bedingungen.",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 (for bei bekannter Anzahl) und 3 (while wiederholt bei wahrer Bedingung). Falsch: range(1,5) endet bei 4, nicht 5 (der Endwert ist ausgeschlossen). Und while kann sofort enden, wenn die Bedingung von Anfang an falsch ist.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-105",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Sichern L4: Schreibtischtest – welche Zahl gibt dieses Programm aus?<br><code>produkt = 1</code><br><code>for i in range(1, 4):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;produkt = produkt * i</code><br><code>print(produkt)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 6,
+          "toleranz": 0
+        }
+      ],
+      "tipps": [
+        "range(1, 4) liefert 1, 2, 3.",
+        "Starte mit produkt = 1 und multipliziere in jedem Durchlauf mit dem aktuellen i.",
+        "1 * 1 = 1, 1 * 2 = 2, 2 * 3 = 6."
+      ],
+      "loesungsweg": "Schreibtischtest: Start: produkt = 1. Durchlauf i=1: produkt = 1 * 1 = 1. Durchlauf i=2: produkt = 1 * 2 = 2. Durchlauf i=3: produkt = 2 * 3 = 6. print(produkt) gibt 6 aus. Das Programm berechnet 1 * 2 * 3 (die Fakultät von 3).",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-106",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Basis L5: Ordne jedem Schlüsselwort seine Rolle beim Definieren und Aufrufen von Funktionen zu.",
+      "paare": [
+        {
+          "links": "<code>def</code>",
+          "rechts": "leitet die Funktionsdefinition ein"
+        },
+        {
+          "links": "Parameter",
+          "rechts": "Eingabe, die die Funktion beim Aufruf erhält"
+        },
+        {
+          "links": "<code>return</code>",
+          "rechts": "gibt das Ergebnis an den Aufrufer zurück"
+        },
+        {
+          "links": "Aufruf",
+          "rechts": "führt die Funktion mit konkreten Werten aus"
+        }
+      ],
+      "tipps": [
+        "def leitet immer den Funktionskopf ein – gefolgt vom Namen und den Parametern.",
+        "return gibt das Ergebnis aus der Funktion heraus.",
+        "Beim Aufruf stehen konkrete Werte in den Klammern."
+      ],
+      "loesungsweg": "def startet die Funktionsdefinition: def name(parameter): – die Funktion existiert ab hier im Programm. Parameter sind die Platzhalter für Eingaben. return liefert das Ergebnis zurück an den Aufrufer. Beim Aufruf (z. B. begruessung(\"Mia\")) wird die Funktion mit den konkreten Werten ausgeführt.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-107",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Sichern L5: Was gibt dieses Programm aus?<br><code>def doppelt(x):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;return x * 2</code><br><br><code>summe = 0</code><br><code>for i in range(1, 4):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + doppelt(i)</code><br><code>print(summe)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 12,
+          "toleranz": 0
+        }
+      ],
+      "tipps": [
+        "doppelt(x) gibt 2*x zurück: doppelt(1) = 2, doppelt(2) = 4, doppelt(3) = 6.",
+        "range(1, 4) liefert 1, 2, 3.",
+        "Addiere: summe = 2 + 4 + 6 = 12."
+      ],
+      "loesungsweg": "Die Funktion doppelt(x) liefert x*2. Die Schleife läuft für i = 1, 2, 3. Durchlauf 1: summe = 0 + doppelt(1) = 0 + 2 = 2. Durchlauf 2: summe = 2 + doppelt(2) = 2 + 4 = 6. Durchlauf 3: summe = 6 + doppelt(3) = 6 + 6 = 12. print(summe) gibt 12 aus.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-108",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Plus L2: Erkläre den Unterschied zwischen <code>42</code> und <code>&quot;42&quot;</code> in Python. Was gibt <code>print(42 + 1)</code> aus – und was gibt <code>print(&quot;42&quot; + &quot;1&quot;)</code> aus? Begründe jeweils.",
+      "musterloesung": "<code>42</code> ist eine ganze Zahl (int) – sie kann für Berechnungen genutzt werden. <code>\"42\"</code> ist ein Text (String, str) – erkennbar an den Anführungszeichen. Der +-Operator hat für beide Typen eine andere Bedeutung: <code>42 + 1</code> rechnet 43 (Addition). <code>\"42\" + \"1\"</code> hängt die Texte aneinander (Konkatenation): Ergebnis ist der String <code>\"421\"</code>. Python wählt die Bedeutung von + je nach Datentyp.",
+      "tipps": [
+        "Anführungszeichen machen aus einer Zahl einen Text (String).",
+        "Mit + kann man Zahlen addieren oder Texte aneinanderhängen – der Typ entscheidet.",
+        "Teste in Gedanken: 42 + 1 = ? und \"42\" + \"1\" = ?"
+      ],
+      "loesungsweg": "42 ist vom Typ int (ganze Zahl) – print(42 + 1) ergibt 43. \"42\" ist vom Typ str (Text) – print(\"42\" + \"1\") ergibt \"421\" (Texte werden aneinandergehängt, nicht addiert). Der Datentyp bestimmt, was + bedeutet.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-109",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Plus L1: Die folgenden Schritte beschreiben, wie ein Algorithmus vom menschlichen Plan zum laufenden Programm wird. Bringe sie in die richtige Reihenfolge.",
+      "elemente": [
+        "Idee: Das Problem wird verstanden und eine Lösungsstrategie überlegt.",
+        "Pseudocode: Die Strategie wird als lesbare Schrittfolge aufgeschrieben (kein Computer nötig).",
+        "Programm: Der Pseudocode wird in die strenge Syntax einer Programmiersprache übertragen.",
+        "Ausführung: Der Computer führt das Programm Schritt für Schritt aus."
+      ],
+      "tipps": [
+        "Zuerst kommt das Nachdenken über das Problem, dann die Planung, dann das Schreiben, dann das Starten.",
+        "Pseudocode ist die informelle Zwischenstufe zwischen Idee und fertigem Programm.",
+        "Ohne das Programm kann der Computer gar nichts starten."
+      ],
+      "loesungsweg": "Reihenfolge: (1) Idee – das Problem verstehen. (2) Pseudocode – die Lösung informell aufschreiben. (3) Programm – den Pseudocode in eine Programmiersprache übersetzen. (4) Ausführung – der Computer führt das fertige Programm aus. Jeder Schritt baut auf dem vorherigen auf.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-110",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Standard L2: Datentypen und das Pluszeichen. Wähle in jeder Lücke das passende Ergebnis.",
+      "text": "Der Wert <code>42</code> ist vom Typ ___ , der Wert <code>\"42\"</code> dagegen ist ein ___ . Darum ergibt <code>40 + 2</code> die Zahl ___ , aber <code>\"40\" + \"2\"</code> ergibt den Text ___ .",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "int",
+          "optionen": [
+            "int",
+            "str"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "str",
+          "optionen": [
+            "str",
+            "int"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "42",
+          "optionen": [
+            "42",
+            "402"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "402",
+          "optionen": [
+            "402",
+            "42"
+          ]
+        }
+      ],
+      "tipps": [
+        "Anführungszeichen machen aus einer Zahl einen Text (String).",
+        "Bei zwei Zahlen addiert das Plus; bei zwei Texten hängt es sie aneinander.",
+        "\"40\" + \"2\" setzt die Zeichenfolgen einfach hintereinander."
+      ],
+      "loesungsweg": "42 ist eine ganze Zahl (int), \"42\" ist ein Text (str, erkennbar an den Anführungszeichen). Bei Zahlen rechnet das Plus: 40 + 2 = 42. Bei Texten verkettet das Plus: \"40\" + \"2\" = \"402\". Der Datentyp entscheidet also, was das Pluszeichen tut.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über Schleifen und Bedingungen sind richtig?",
+      "optionen": [
+        {
+          "text": "Eine <code>while</code>-Schleife wiederholt ihren Rumpf, solange die Bedingung wahr ist.",
+          "richtig": true,
+          "erklaerung": "Genau so: Vor jedem Durchlauf wird die Bedingung geprüft."
+        },
+        {
+          "text": "Ein <code>if</code> ohne passendes <code>else</code> ist immer ein Fehler.",
+          "richtig": false,
+          "erklaerung": "Ein <code>if</code> darf allein stehen; <code>else</code> ist freiwillig."
+        },
+        {
+          "text": "<code>for i in range(1, 4)</code> durchläuft die Werte 1, 2, 3.",
+          "richtig": true,
+          "erklaerung": "Die obere Grenze 4 gehört nicht mehr dazu."
+        },
+        {
+          "text": "Eine <code>while</code>-Schleife läuft immer genau einmal.",
+          "richtig": false,
+          "erklaerung": "Ist die Bedingung von Anfang an falsch, läuft der Rumpf gar nicht."
+        }
+      ],
+      "tipps": [
+        "<code>range(a, b)</code> zählt von a bis einschließlich b minus 1.",
+        "Bei <code>while</code> wird die Bedingung vor jedem Durchlauf neu geprüft.",
+        "Genau zwei Aussagen stimmen."
+      ],
+      "loesungsweg": "Richtig sind die Aussagen zur <code>while</code>-Wiederholung und zu <code>range(1, 4)</code> = 1, 2, 3. Falsch: <code>if</code> braucht kein <code>else</code>, und eine <code>while</code>-Schleife läuft bei anfangs falscher Bedingung null Mal.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Schreibtischtest – welchen Wert gibt dieses Programm aus?<br><code>x = 10</code><br><code>y = x - 3</code><br><code>x = y + x</code><br><code>print(x)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 17,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Lies Zeile für Zeile von oben nach unten.",
+        "Nach Zeile 2 ist y = 10 minus 3 = 7. x ist noch 10.",
+        "Zeile 3: x = 7 plus 10."
+      ],
+      "loesungsweg": "Zeile 1: x = 10. Zeile 2: y = 10 minus 3 = 7. Zeile 3: x = y plus x = 7 plus 10 = 17. Ausgabe: 17.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Schreibtischtest – welchen Wert hat <code>preis</code> am Ende? Eingabe: <code>alter = 14</code>.<br><code>if alter < 6:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;preis = 0</code><br><code>elif alter < 16:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;preis = 5</code><br><code>else:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;preis = 9</code>",
+      "eingaben": [
+        {
+          "label": "preis",
+          "antwort": 5,
+          "einheit": "Euro",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Prüfe die Bedingungen der Reihe nach von oben.",
+        "Ist 14 < 6? Nein. Ist 14 < 16? Ja.",
+        "Sobald ein Zweig zutrifft, werden die anderen übersprungen."
+      ],
+      "loesungsweg": "14 < 6 ist falsch. 14 < 16 ist wahr, also wird preis = 5 gesetzt und der else-Zweig übersprungen. Ergebnis: 5.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Schreibtischtest einer <code>while</code>-Schleife. Welchen Wert gibt das Programm aus?<br><code>count = 0</code><br><code>total = 0</code><br><code>while count < 5:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;total = total + count</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1</code><br><code>print(total)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 10,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Führe eine Tabelle mit count und total.",
+        "Die Schleife läuft für count = 0, 1, 2, 3, 4.",
+        "Addiere 0 + 1 + 2 + 3 + 4."
+      ],
+      "loesungsweg": "Die Schleife läuft, solange count < 5. Es werden die Werte 0, 1, 2, 3, 4 zur Summe addiert: 0 + 1 + 2 + 3 + 4 = 10. Bei count = 5 endet die Schleife. Ausgabe: 10.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Schreibtischtest mit Schrittweite. Welchen Wert gibt das Programm aus?<br><code>summe = 0</code><br><code>for i in range(2, 11, 2):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + i</code><br><code>print(summe)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 30,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Die dritte Zahl in <code>range</code> ist die Schrittweite.",
+        "<code>range(2, 11, 2)</code> liefert 2, 4, 6, 8, 10.",
+        "Addiere diese geraden Zahlen."
+      ],
+      "loesungsweg": "<code>range(2, 11, 2)</code> durchläuft 2, 4, 6, 8, 10 (11 gehört nicht dazu). Summe: 2 + 4 + 6 + 8 + 10 = 30. Ausgabe: 30.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Bedingung in der Schleife. Wie oft wird <code>treffer</code> erhöht?<br><code>treffer = 0</code><br><code>for n in range(1, 11):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;if n % 3 == 0:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;treffer = treffer + 1</code><br><code>print(treffer)</code>",
+      "eingaben": [
+        {
+          "label": "Ausgabe",
+          "antwort": 3,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "<code>n % 3</code> ist der Rest beim Teilen durch 3.",
+        "Die Bedingung ist wahr, wenn n durch 3 teilbar ist.",
+        "Welche Zahlen von 1 bis 10 sind durch 3 teilbar?"
+      ],
+      "loesungsweg": "<code>range(1, 11)</code> liefert 1 bis 10. <code>n % 3 == 0</code> ist wahr für 3, 6 und 9. Also wird treffer dreimal erhöht. Ausgabe: 3.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Funktion mit Schleife und Rückgabe. Die Funktion bildet die Quersumme einer Zahl. Welchen Wert hat <code>a + b</code>?<br><code>def quersumme(z):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;s = 0</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;while z > 0:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = s + z % 10</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z = z // 10</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;return s</code><br><code>a = quersumme(123)</code><br><code>b = quersumme(405)</code>",
+      "eingaben": [
+        {
+          "label": "a + b",
+          "antwort": 15,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "<code>z % 10</code> liefert die letzte Ziffer, <code>z // 10</code> schneidet sie ab.",
+        "quersumme(123) addiert 3, 2, 1.",
+        "quersumme(405) addiert 5, 0, 4."
+      ],
+      "loesungsweg": "quersumme(123): 3 + 2 + 1 = 6. quersumme(405): 5 + 0 + 4 = 9. Also a + b = 6 + 9 = 15.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zwei kurze Programme zum Schreibtischtest.<br><br>a) Wie viele Zeichen enthält <code>muster</code> am Ende?<br><code>muster = \"\"</code><br><code>k = 4</code><br><code>while k > 0:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;muster = muster + \"*\"</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;k = k - 1</code><br><br>b) Welchen Wert gibt dieses Programm aus?<br><code>produkt = 1</code><br><code>for i in range(1, 6):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;if i % 2 == 1:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;produkt = produkt * i</code><br><code>print(produkt)</code>",
+      "eingaben": [
+        {
+          "label": "a) Anzahl Zeichen",
+          "antwort": 4,
+          "einheit": "",
+          "toleranz": 0.01
+        },
+        {
+          "label": "b) Ausgabe",
+          "antwort": 15,
+          "einheit": "",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "a) Die Schleife läuft, solange k > 0: für k = 4, 3, 2, 1.",
+        "b) <code>i % 2 == 1</code> ist wahr für ungerade i.",
+        "b) Multipliziere nur die ungeraden Werte aus 1 bis 5."
+      ],
+      "loesungsweg": "a) Die Schleife hängt viermal ein Sternchen an (k = 4, 3, 2, 1), also 4 Zeichen. b) range(1, 6) liefert 1 bis 5; ungerade sind 1, 3, 5. produkt = 1 mal 1 mal 3 mal 5 = 15. Ausgabe: 15.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-301",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Lena schreibt ein Programm und kopiert denselben Block aus drei Zeilen, der den Mittelwert zweier Zahlen berechnet, an fünf verschiedenen Stellen hinein. Bewerte diese Vorgehensweise. Nenne zwei Nachteile und erkläre, wie eine Funktion das Programm verbessern würde.",
+      "musterloesung": "Das mehrfache Kopieren desselben Codes (Copy-Paste) ist schlechter Programmierstil. Nachteil 1: Wartbarkeit — findet Lena später einen Fehler in der Berechnung, muss sie ihn an allen fünf Stellen einzeln korrigieren; leicht wird eine Stelle vergessen. Nachteil 2: Lesbarkeit und Länge — das Programm wird unnötig lang und unübersichtlich, gleiche Logik steht mehrfach da. Eine Funktion <code>mittelwert(a, b)</code> würde den Block genau einmal definieren; an den fünf Stellen steht dann nur noch der kurze Aufruf. Eine Korrektur muss nur an einer Stelle erfolgen und wirkt überall.",
+      "tipps": [
+        "Stell dir vor, in der kopierten Berechnung steckt ein Fehler — wie oft musst du ihn korrigieren?",
+        "Eine Funktion schreibt man einmal und ruft sie beliebig oft auf.",
+        "Denke an die Stichworte Wartbarkeit und Lesbarkeit."
+      ],
+      "loesungsweg": "Copy-Paste verschlechtert Wartbarkeit (Fehler muss mehrfach korrigiert werden) und Lesbarkeit (Programm wird lang, gleiche Logik mehrfach). Eine Funktion bündelt die Logik an einer Stelle; Aufrufe ersetzen die Kopien. Vorteil: Änderungen nur einmal nötig, Programm kürzer und übersichtlicher.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-302",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Man unterscheidet zwei Fehlerarten in Programmen. Wähle in jeder Lücke den passenden Begriff.",
+      "text": "Vergisst man bei einer if-Zeile den Doppelpunkt, meldet Python sofort einen ___ und das Programm startet gar nicht erst. Läuft ein Programm dagegen fehlerfrei durch, liefert aber ein falsches Ergebnis, dann liegt ein ___ vor. Diese zweite Fehlerart findet man am besten mit dem ___, weil man dabei die Werte aller Variablen Schritt für Schritt verfolgt.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Syntaxfehler",
+          "optionen": [
+            "Syntaxfehler",
+            "Logikfehler",
+            "Tippfehler"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Logikfehler",
+          "optionen": [
+            "Logikfehler",
+            "Syntaxfehler",
+            "Rechenfehler"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Schreibtischtest",
+          "optionen": [
+            "Schreibtischtest",
+            "Doppelpunkt",
+            "Kommentar"
+          ]
+        }
+      ],
+      "tipps": [
+        "Ein Syntaxfehler verletzt die Grammatik der Sprache — das Programm läuft nicht an.",
+        "Ein Logikfehler ist ein Denkfehler: Die Syntax stimmt, aber das Ergebnis ist falsch.",
+        "Beim Schreibtischtest verfolgt man Variablenwerte Zeile für Zeile."
+      ],
+      "loesungsweg": "Fehlender Doppelpunkt = Syntaxfehler (Programm startet nicht). Korrekte Syntax, aber falsches Ergebnis = Logikfehler (Denkfehler). Den Logikfehler deckt der Schreibtischtest auf, weil er die Variablenwerte schrittweise sichtbar macht.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-303",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Schreibtischtest in Schritten. Verfolge dieses Programm Zeile für Zeile:<br><pre>summe = 0\nfor i in range(1, 4):\n    for j in range(1, 3):\n        summe = summe + i * j\nprint(summe)</pre>Die äußere Schleife setzt i auf 1, 2, 3; die innere setzt j auf 1, 2.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: i = 1. Berechne den Beitrag der inneren Schleife: i·1 + i·2 für i = 1.",
+          "eingaben": [
+            {
+              "label": "Beitrag bei i=1",
+              "antwort": 3,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "i·j für j=1 und j=2: 1·1 + 1·2 = 1 + 2 = 3."
+          ]
+        },
+        {
+          "frage": "Schritt 2: i = 2. Berechne i·1 + i·2 für i = 2.",
+          "eingaben": [
+            {
+              "label": "Beitrag bei i=2",
+              "antwort": 6,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "2·1 + 2·2 = 2 + 4 = 6."
+          ]
+        },
+        {
+          "frage": "Schritt 3: i = 3. Berechne i·1 + i·2 für i = 3.",
+          "eingaben": [
+            {
+              "label": "Beitrag bei i=3",
+              "antwort": 9,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "3·1 + 3·2 = 3 + 6 = 9."
+          ]
+        },
+        {
+          "frage": "Schritt 4: Welchen Wert gibt print(summe) am Ende aus? Addiere die drei Beiträge.",
+          "eingaben": [
+            {
+              "label": "Ausgabe",
+              "antwort": 18,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "3 + 6 + 9 = 18."
+          ]
+        }
+      ],
+      "tipps": [
+        "Die innere Schleife läuft für jedes i komplett durch (j = 1 und j = 2).",
+        "Notiere nach jedem Durchlauf den Zwischenstand von summe.",
+        "Am Ende ist summe = 3 + 6 + 9."
+      ],
+      "loesungsweg": "Für i=1: 1·1+1·2=3. Für i=2: 2·1+2·2=6. Für i=3: 3·1+3·2=9. summe = 0+3+6+9 = 18. Ausgabe: 18.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-111",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Standard L3: Das Programm gibt je nach Punktzahl eine Rückmeldung. Setze <code>punkte = 50</code> ein und wähle in jeder Lücke das Richtige.<br><code>if punkte &gt;= 80:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;text = \"sehr gut\"</code><br><code>elif punkte &gt;= 50:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;text = \"bestanden\"</code><br><code>else:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;text = \"nicht bestanden\"</code><br><code>print(text)</code>",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "falsch",
+          "optionen": [
+            "falsch",
+            "wahr"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "wahr",
+          "optionen": [
+            "wahr",
+            "falsch"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "bestanden",
+          "optionen": [
+            "bestanden",
+            "sehr gut",
+            "nicht bestanden"
+          ]
+        }
+      ],
+      "tipps": [
+        "Python prüft die Bedingungen von oben nach unten und nimmt den ersten wahren Zweig.",
+        "Ist 50 >= 80? Und ist 50 >= 50?",
+        "Das Zeichen >= bedeutet „größer oder gleich“ — 50 >= 50 ist wahr."
+      ],
+      "loesungsweg": "Eingesetzt wird punkte = 50. Erste Bedingung: 50 >= 80 ist falsch, der if-Zweig wird übersprungen. Zweite Bedingung: 50 >= 50 ist wahr (>= schließt Gleichheit ein), also wird text = \"bestanden\" gesetzt und der else-Zweig übersprungen. Ausgabe: bestanden.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
+    },
+    {
+      "id": "in-10-prog-112",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Standard L3: Die Zeilen einer Verzweigung sind durcheinandergeraten. Bringe sie in die Reihenfolge, in der das Programm bei einem Alter ausgibt, ob jemand das Fahrgeschäft nutzen darf (ab 12 Jahren erlaubt). Die eingerückten Zeilen gehören in den jeweiligen Zweig.",
+      "elemente": [
+        "<code>alter = 12</code>",
+        "<code>if alter &gt;= 12:</code>",
+        "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(\"erlaubt\")</code>",
+        "<code>else:</code>",
+        "<code>&nbsp;&nbsp;&nbsp;&nbsp;print(\"noch zu jung\")</code>"
+      ],
+      "tipps": [
+        "Zuerst muss die Variable alter einen Wert bekommen, bevor man sie vergleichen kann.",
+        "Der if-Kopf steht vor seinem eingerückten Block; der else-Kopf steht danach.",
+        "Reihenfolge: Wertzuweisung, if-Bedingung, if-Block, else, else-Block."
+      ],
+      "loesungsweg": "Korrekte Reihenfolge: (1) alter = 12 legt den Wert fest. (2) if alter >= 12: prüft die Bedingung. (3) Der eingerückte print(\"erlaubt\")-Block gehört zum if. (4) else: leitet den Gegenfall ein. (5) print(\"noch zu jung\") ist der eingerückte else-Block. Da 12 >= 12 wahr ist, gibt das Programm „erlaubt“ aus.",
+      "kc": [
+        "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
+      ]
     }
-   ],
-   "tipps": [
-    "Pseudocode ist für Menschen gedacht – kein Computer führt ihn aus.",
-    "Eine Programmiersprache wie Python hat eine strenge Grammatik (Syntax).",
-    "Genau eine Aussage ist richtig."
-   ],
-   "loesungsweg": "Pseudocode ist eine formlose Skizze des Algorithmus für Menschen – ohne feste Grammatik, nicht ausführbar. Ein Programm dagegen folgt den exakten Regeln einer Programmiersprache; nur so kann der Computer es Schritt für Schritt ausführen. Antwort 2 ist richtig.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-102",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Sichern L2: Schreibtischtest – was gibt dieses Programm aus?<br><code>a = 3</code><br><code>b = a + 2</code><br><code>a = a * b</code><br><code>print(a)</code>",
-   "eingaben": [
-    {
-     "label": "Ausgabe",
-     "antwort": 15,
-     "toleranz": 0
-    }
-   ],
-   "tipps": [
-    "Führe das Programm Zeile für Zeile aus und notiere nach jeder Zeile die Werte von a und b.",
-    "Zeile 2: b wird mit dem alten a berechnet – a hat dabei noch den Wert 3.",
-    "Zeile 3: a = a * b = 3 * 5 = 15."
-   ],
-   "loesungsweg": "Schreibtischtest: Zeile 1: a = 3. Zeile 2: b = 3 + 2 = 5. Zeile 3: a = 3 * 5 = 15 (b bleibt 5). Zeile 4: print(15). Ausgabe: 15.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-103",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Sichern L3: Welchen Wert gibt dieses Programm aus?<br><code>note = 68</code><br><code>if note >= 80:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;ergebnis = 1</code><br><code>elif note >= 60:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;ergebnis = 2</code><br><code>else:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;ergebnis = 3</code><br><code>print(ergebnis)</code>",
-   "eingaben": [
-    {
-     "label": "Ausgabe",
-     "antwort": 2,
-     "toleranz": 0
-    }
-   ],
-   "tipps": [
-    "Setze note = 68 ein und prüfe die Bedingungen von oben nach unten.",
-    "Ist 68 >= 80? Nein. Ist 68 >= 60? Ja.",
-    "Sobald eine Bedingung wahr ist, wird genau dieser Zweig ausgeführt."
-   ],
-   "loesungsweg": "Python prüft von oben: 68 >= 80 ist falsch, weiter. 68 >= 60 ist wahr – ergebnis = 2 wird gesetzt, alle weiteren Zweige werden übersprungen. print(ergebnis) gibt 2 aus.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-104",
-   "typ": "multiple-choice",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Basis L4: Welche Aussagen zu Schleifen in Python sind richtig?",
-   "optionen": [
-    {
-     "text": "Eine for-Schleife wird verwendet, wenn die Anzahl der Wiederholungen vorher feststeht.",
-     "richtig": true,
-     "erklaerung": "Richtig: for ist ideal, wenn man eine bestimmte Zahlenreihe durchlaufen oder eine Liste abarbeiten möchte."
-    },
-    {
-     "text": "range(1, 5) liefert die Zahlen 1, 2, 3, 4, 5.",
-     "richtig": false,
-     "erklaerung": "Nein: Der Endwert ist nicht mehr dabei – range(1, 5) liefert 1, 2, 3, 4."
-    },
-    {
-     "text": "Eine while-Schleife wiederholt, solange eine Bedingung wahr ist.",
-     "richtig": true,
-     "erklaerung": "Richtig: while ist ideal, wenn das Ende von einer Bedingung abhängt, die Anzahl also nicht von vornherein feststeht."
-    },
-    {
-     "text": "Der Schleifenkörper wird immer mindestens einmal ausgeführt.",
-     "richtig": false,
-     "erklaerung": "Nein: Bei while kann die Bedingung schon vor dem ersten Durchlauf falsch sein – dann läuft der Körper gar nicht."
-    }
-   ],
-   "tipps": [
-    "range(1, 5) – der zweite Wert ist der erste, der NICHT mehr dabei ist.",
-    "for eignet sich für bekannte Anzahl, while für Bedingungen.",
-    "Zwei Aussagen sind richtig."
-   ],
-   "loesungsweg": "Richtig sind Aussage 1 (for bei bekannter Anzahl) und 3 (while wiederholt bei wahrer Bedingung). Falsch: range(1,5) endet bei 4, nicht 5 (der Endwert ist ausgeschlossen). Und while kann sofort enden, wenn die Bedingung von Anfang an falsch ist.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-105",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Sichern L4: Schreibtischtest – welche Zahl gibt dieses Programm aus?<br><code>produkt = 1</code><br><code>for i in range(1, 4):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;produkt = produkt * i</code><br><code>print(produkt)</code>",
-   "eingaben": [
-    {
-     "label": "Ausgabe",
-     "antwort": 6,
-     "toleranz": 0
-    }
-   ],
-   "tipps": [
-    "range(1, 4) liefert 1, 2, 3.",
-    "Starte mit produkt = 1 und multipliziere in jedem Durchlauf mit dem aktuellen i.",
-    "1 * 1 = 1, 1 * 2 = 2, 2 * 3 = 6."
-   ],
-   "loesungsweg": "Schreibtischtest: Start: produkt = 1. Durchlauf i=1: produkt = 1 * 1 = 1. Durchlauf i=2: produkt = 1 * 2 = 2. Durchlauf i=3: produkt = 2 * 3 = 6. print(produkt) gibt 6 aus. Das Programm berechnet 1 * 2 * 3 (die Fakultät von 3).",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-106",
-   "typ": "zuordnung",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Basis L5: Ordne jedem Schlüsselwort seine Rolle beim Definieren und Aufrufen von Funktionen zu.",
-   "paare": [
-    {
-     "links": "<code>def</code>",
-     "rechts": "leitet die Funktionsdefinition ein"
-    },
-    {
-     "links": "Parameter",
-     "rechts": "Eingabe, die die Funktion beim Aufruf erhält"
-    },
-    {
-     "links": "<code>return</code>",
-     "rechts": "gibt das Ergebnis an den Aufrufer zurück"
-    },
-    {
-     "links": "Aufruf",
-     "rechts": "führt die Funktion mit konkreten Werten aus"
-    }
-   ],
-   "tipps": [
-    "def leitet immer den Funktionskopf ein – gefolgt vom Namen und den Parametern.",
-    "return gibt das Ergebnis aus der Funktion heraus.",
-    "Beim Aufruf stehen konkrete Werte in den Klammern."
-   ],
-   "loesungsweg": "def startet die Funktionsdefinition: def name(parameter): – die Funktion existiert ab hier im Programm. Parameter sind die Platzhalter für Eingaben. return liefert das Ergebnis zurück an den Aufrufer. Beim Aufruf (z. B. begruessung(\"Mia\")) wird die Funktion mit den konkreten Werten ausgeführt.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-107",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Sichern L5: Was gibt dieses Programm aus?<br><code>def doppelt(x):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;return x * 2</code><br><br><code>summe = 0</code><br><code>for i in range(1, 4):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + doppelt(i)</code><br><code>print(summe)</code>",
-   "eingaben": [
-    {
-     "label": "Ausgabe",
-     "antwort": 12,
-     "toleranz": 0
-    }
-   ],
-   "tipps": [
-    "doppelt(x) gibt 2*x zurück: doppelt(1) = 2, doppelt(2) = 4, doppelt(3) = 6.",
-    "range(1, 4) liefert 1, 2, 3.",
-    "Addiere: summe = 2 + 4 + 6 = 12."
-   ],
-   "loesungsweg": "Die Funktion doppelt(x) liefert x*2. Die Schleife läuft für i = 1, 2, 3. Durchlauf 1: summe = 0 + doppelt(1) = 0 + 2 = 2. Durchlauf 2: summe = 2 + doppelt(2) = 2 + 4 = 6. Durchlauf 3: summe = 6 + doppelt(3) = 6 + 6 = 12. print(summe) gibt 12 aus.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-108",
-   "typ": "freitext",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Plus L2: Erkläre den Unterschied zwischen <code>42</code> und <code>&quot;42&quot;</code> in Python. Was gibt <code>print(42 + 1)</code> aus – und was gibt <code>print(&quot;42&quot; + &quot;1&quot;)</code> aus? Begründe jeweils.",
-   "musterloesung": "<code>42</code> ist eine ganze Zahl (int) – sie kann für Berechnungen genutzt werden. <code>\"42\"</code> ist ein Text (String, str) – erkennbar an den Anführungszeichen. Der +-Operator hat für beide Typen eine andere Bedeutung: <code>42 + 1</code> rechnet 43 (Addition). <code>\"42\" + \"1\"</code> hängt die Texte aneinander (Konkatenation): Ergebnis ist der String <code>\"421\"</code>. Python wählt die Bedeutung von + je nach Datentyp.",
-   "tipps": [
-    "Anführungszeichen machen aus einer Zahl einen Text (String).",
-    "Mit + kann man Zahlen addieren oder Texte aneinanderhängen – der Typ entscheidet.",
-    "Teste in Gedanken: 42 + 1 = ? und \"42\" + \"1\" = ?"
-   ],
-   "loesungsweg": "42 ist vom Typ int (ganze Zahl) – print(42 + 1) ergibt 43. \"42\" ist vom Typ str (Text) – print(\"42\" + \"1\") ergibt \"421\" (Texte werden aneinandergehängt, nicht addiert). Der Datentyp bestimmt, was + bedeutet.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-109",
-   "typ": "reihenfolge",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Plus L1: Die folgenden Schritte beschreiben, wie ein Algorithmus vom menschlichen Plan zum laufenden Programm wird. Bringe sie in die richtige Reihenfolge.",
-   "elemente": [
-    "Idee: Das Problem wird verstanden und eine Lösungsstrategie überlegt.",
-    "Pseudocode: Die Strategie wird als lesbare Schrittfolge aufgeschrieben (kein Computer nötig).",
-    "Programm: Der Pseudocode wird in die strenge Syntax einer Programmiersprache übertragen.",
-    "Ausführung: Der Computer führt das Programm Schritt für Schritt aus."
-   ],
-   "tipps": [
-    "Zuerst kommt das Nachdenken über das Problem, dann die Planung, dann das Schreiben, dann das Starten.",
-    "Pseudocode ist die informelle Zwischenstufe zwischen Idee und fertigem Programm.",
-    "Ohne das Programm kann der Computer gar nichts starten."
-   ],
-   "loesungsweg": "Reihenfolge: (1) Idee – das Problem verstehen. (2) Pseudocode – die Lösung informell aufschreiben. (3) Programm – den Pseudocode in eine Programmiersprache übersetzen. (4) Ausführung – der Computer führt das fertige Programm aus. Jeder Schritt baut auf dem vorherigen auf.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-110",
-   "typ": "luecke",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Standard L2: Datentypen und das Pluszeichen. Wähle in jeder Lücke das passende Ergebnis.",
-   "text": "Der Wert <code>42</code> ist vom Typ ___ , der Wert <code>\"42\"</code> dagegen ist ein ___ . Darum ergibt <code>40 + 2</code> die Zahl ___ , aber <code>\"40\" + \"2\"</code> ergibt den Text ___ .",
-   "luecken": [
-    {
-     "art": "dropdown",
-     "antwort": "int",
-     "optionen": [
-      "int",
-      "str"
-     ]
-    },
-    {
-     "art": "dropdown",
-     "antwort": "str",
-     "optionen": [
-      "str",
-      "int"
-     ]
-    },
-    {
-     "art": "dropdown",
-     "antwort": "42",
-     "optionen": [
-      "42",
-      "402"
-     ]
-    },
-    {
-     "art": "dropdown",
-     "antwort": "402",
-     "optionen": [
-      "402",
-      "42"
-     ]
-    }
-   ],
-   "tipps": [
-    "Anführungszeichen machen aus einer Zahl einen Text (String).",
-    "Bei zwei Zahlen addiert das Plus; bei zwei Texten hängt es sie aneinander.",
-    "\"40\" + \"2\" setzt die Zeichenfolgen einfach hintereinander."
-   ],
-   "loesungsweg": "42 ist eine ganze Zahl (int), \"42\" ist ein Text (str, erkennbar an den Anführungszeichen). Bei Zahlen rechnet das Plus: 40 + 2 = 42. Bei Texten verkettet das Plus: \"40\" + \"2\" = \"402\". Der Datentyp entscheidet also, was das Pluszeichen tut.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-201",
-   "typ": "multiple-choice",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Welche Aussagen über Schleifen und Bedingungen sind richtig?",
-   "optionen": [
-    {
-     "text": "Eine <code>while</code>-Schleife wiederholt ihren Rumpf, solange die Bedingung wahr ist.",
-     "richtig": true,
-     "erklaerung": "Genau so: Vor jedem Durchlauf wird die Bedingung geprüft."
-    },
-    {
-     "text": "Ein <code>if</code> ohne passendes <code>else</code> ist immer ein Fehler.",
-     "richtig": false,
-     "erklaerung": "Ein <code>if</code> darf allein stehen; <code>else</code> ist freiwillig."
-    },
-    {
-     "text": "<code>for i in range(1, 4)</code> durchläuft die Werte 1, 2, 3.",
-     "richtig": true,
-     "erklaerung": "Die obere Grenze 4 gehört nicht mehr dazu."
-    },
-    {
-     "text": "Eine <code>while</code>-Schleife läuft immer genau einmal.",
-     "richtig": false,
-     "erklaerung": "Ist die Bedingung von Anfang an falsch, läuft der Rumpf gar nicht."
-    }
-   ],
-   "tipps": [
-    "<code>range(a, b)</code> zählt von a bis einschließlich b minus 1.",
-    "Bei <code>while</code> wird die Bedingung vor jedem Durchlauf neu geprüft.",
-    "Genau zwei Aussagen stimmen."
-   ],
-   "loesungsweg": "Richtig sind die Aussagen zur <code>while</code>-Wiederholung und zu <code>range(1, 4)</code> = 1, 2, 3. Falsch: <code>if</code> braucht kein <code>else</code>, und eine <code>while</code>-Schleife läuft bei anfangs falscher Bedingung null Mal.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-202",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Schreibtischtest – welchen Wert gibt dieses Programm aus?<br><code>x = 10</code><br><code>y = x - 3</code><br><code>x = y + x</code><br><code>print(x)</code>",
-   "eingaben": [
-    {
-     "label": "Ausgabe",
-     "antwort": 17,
-     "einheit": "",
-     "toleranz": 0.01
-    }
-   ],
-   "tipps": [
-    "Lies Zeile für Zeile von oben nach unten.",
-    "Nach Zeile 2 ist y = 10 minus 3 = 7. x ist noch 10.",
-    "Zeile 3: x = 7 plus 10."
-   ],
-   "loesungsweg": "Zeile 1: x = 10. Zeile 2: y = 10 minus 3 = 7. Zeile 3: x = y plus x = 7 plus 10 = 17. Ausgabe: 17.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-203",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Schreibtischtest – welchen Wert hat <code>preis</code> am Ende? Eingabe: <code>alter = 14</code>.<br><code>if alter < 6:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;preis = 0</code><br><code>elif alter < 16:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;preis = 5</code><br><code>else:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;preis = 9</code>",
-   "eingaben": [
-    {
-     "label": "preis",
-     "antwort": 5,
-     "einheit": "Euro",
-     "toleranz": 0.01
-    }
-   ],
-   "tipps": [
-    "Prüfe die Bedingungen der Reihe nach von oben.",
-    "Ist 14 < 6? Nein. Ist 14 < 16? Ja.",
-    "Sobald ein Zweig zutrifft, werden die anderen übersprungen."
-   ],
-   "loesungsweg": "14 < 6 ist falsch. 14 < 16 ist wahr, also wird preis = 5 gesetzt und der else-Zweig übersprungen. Ergebnis: 5.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-204",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Schreibtischtest einer <code>while</code>-Schleife. Welchen Wert gibt das Programm aus?<br><code>count = 0</code><br><code>total = 0</code><br><code>while count < 5:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;total = total + count</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1</code><br><code>print(total)</code>",
-   "eingaben": [
-    {
-     "label": "Ausgabe",
-     "antwort": 10,
-     "einheit": "",
-     "toleranz": 0.01
-    }
-   ],
-   "tipps": [
-    "Führe eine Tabelle mit count und total.",
-    "Die Schleife läuft für count = 0, 1, 2, 3, 4.",
-    "Addiere 0 + 1 + 2 + 3 + 4."
-   ],
-   "loesungsweg": "Die Schleife läuft, solange count < 5. Es werden die Werte 0, 1, 2, 3, 4 zur Summe addiert: 0 + 1 + 2 + 3 + 4 = 10. Bei count = 5 endet die Schleife. Ausgabe: 10.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-205",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Schreibtischtest mit Schrittweite. Welchen Wert gibt das Programm aus?<br><code>summe = 0</code><br><code>for i in range(2, 11, 2):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + i</code><br><code>print(summe)</code>",
-   "eingaben": [
-    {
-     "label": "Ausgabe",
-     "antwort": 30,
-     "einheit": "",
-     "toleranz": 0.01
-    }
-   ],
-   "tipps": [
-    "Die dritte Zahl in <code>range</code> ist die Schrittweite.",
-    "<code>range(2, 11, 2)</code> liefert 2, 4, 6, 8, 10.",
-    "Addiere diese geraden Zahlen."
-   ],
-   "loesungsweg": "<code>range(2, 11, 2)</code> durchläuft 2, 4, 6, 8, 10 (11 gehört nicht dazu). Summe: 2 + 4 + 6 + 8 + 10 = 30. Ausgabe: 30.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-206",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Bedingung in der Schleife. Wie oft wird <code>treffer</code> erhöht?<br><code>treffer = 0</code><br><code>for n in range(1, 11):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;if n % 3 == 0:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;treffer = treffer + 1</code><br><code>print(treffer)</code>",
-   "eingaben": [
-    {
-     "label": "Ausgabe",
-     "antwort": 3,
-     "einheit": "",
-     "toleranz": 0.01
-    }
-   ],
-   "tipps": [
-    "<code>n % 3</code> ist der Rest beim Teilen durch 3.",
-    "Die Bedingung ist wahr, wenn n durch 3 teilbar ist.",
-    "Welche Zahlen von 1 bis 10 sind durch 3 teilbar?"
-   ],
-   "loesungsweg": "<code>range(1, 11)</code> liefert 1 bis 10. <code>n % 3 == 0</code> ist wahr für 3, 6 und 9. Also wird treffer dreimal erhöht. Ausgabe: 3.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-207",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Funktion mit Schleife und Rückgabe. Die Funktion bildet die Quersumme einer Zahl. Welchen Wert hat <code>a + b</code>?<br><code>def quersumme(z):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;s = 0</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;while z > 0:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = s + z % 10</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z = z // 10</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;return s</code><br><code>a = quersumme(123)</code><br><code>b = quersumme(405)</code>",
-   "eingaben": [
-    {
-     "label": "a + b",
-     "antwort": 15,
-     "einheit": "",
-     "toleranz": 0.01
-    }
-   ],
-   "tipps": [
-    "<code>z % 10</code> liefert die letzte Ziffer, <code>z // 10</code> schneidet sie ab.",
-    "quersumme(123) addiert 3, 2, 1.",
-    "quersumme(405) addiert 5, 0, 4."
-   ],
-   "loesungsweg": "quersumme(123): 3 + 2 + 1 = 6. quersumme(405): 5 + 0 + 4 = 9. Also a + b = 6 + 9 = 15.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-208",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Zwei kurze Programme zum Schreibtischtest.<br><br>a) Wie viele Zeichen enthält <code>muster</code> am Ende?<br><code>muster = \"\"</code><br><code>k = 4</code><br><code>while k > 0:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;muster = muster + \"*\"</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;k = k - 1</code><br><br>b) Welchen Wert gibt dieses Programm aus?<br><code>produkt = 1</code><br><code>for i in range(1, 6):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;if i % 2 == 1:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;produkt = produkt * i</code><br><code>print(produkt)</code>",
-   "eingaben": [
-    {
-     "label": "a) Anzahl Zeichen",
-     "antwort": 4,
-     "einheit": "",
-     "toleranz": 0.01
-    },
-    {
-     "label": "b) Ausgabe",
-     "antwort": 15,
-     "einheit": "",
-     "toleranz": 0.01
-    }
-   ],
-   "tipps": [
-    "a) Die Schleife läuft, solange k > 0: für k = 4, 3, 2, 1.",
-    "b) <code>i % 2 == 1</code> ist wahr für ungerade i.",
-    "b) Multipliziere nur die ungeraden Werte aus 1 bis 5."
-   ],
-   "loesungsweg": "a) Die Schleife hängt viermal ein Sternchen an (k = 4, 3, 2, 1), also 4 Zeichen. b) range(1, 6) liefert 1 bis 5; ungerade sind 1, 3, 5. produkt = 1 mal 1 mal 3 mal 5 = 15. Ausgabe: 15.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-301",
-   "typ": "freitext",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Lena schreibt ein Programm und kopiert denselben Block aus drei Zeilen, der den Mittelwert zweier Zahlen berechnet, an fünf verschiedenen Stellen hinein. Bewerte diese Vorgehensweise. Nenne zwei Nachteile und erkläre, wie eine Funktion das Programm verbessern würde.",
-   "musterloesung": "Das mehrfache Kopieren desselben Codes (Copy-Paste) ist schlechter Programmierstil. Nachteil 1: Wartbarkeit — findet Lena später einen Fehler in der Berechnung, muss sie ihn an allen fünf Stellen einzeln korrigieren; leicht wird eine Stelle vergessen. Nachteil 2: Lesbarkeit und Länge — das Programm wird unnötig lang und unübersichtlich, gleiche Logik steht mehrfach da. Eine Funktion <code>mittelwert(a, b)</code> würde den Block genau einmal definieren; an den fünf Stellen steht dann nur noch der kurze Aufruf. Eine Korrektur muss nur an einer Stelle erfolgen und wirkt überall.",
-   "tipps": [
-    "Stell dir vor, in der kopierten Berechnung steckt ein Fehler — wie oft musst du ihn korrigieren?",
-    "Eine Funktion schreibt man einmal und ruft sie beliebig oft auf.",
-    "Denke an die Stichworte Wartbarkeit und Lesbarkeit."
-   ],
-   "loesungsweg": "Copy-Paste verschlechtert Wartbarkeit (Fehler muss mehrfach korrigiert werden) und Lesbarkeit (Programm wird lang, gleiche Logik mehrfach). Eine Funktion bündelt die Logik an einer Stelle; Aufrufe ersetzen die Kopien. Vorteil: Änderungen nur einmal nötig, Programm kürzer und übersichtlicher.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-302",
-   "typ": "luecke",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Man unterscheidet zwei Fehlerarten in Programmen. Wähle in jeder Lücke den passenden Begriff.",
-   "text": "Vergisst man bei einer if-Zeile den Doppelpunkt, meldet Python sofort einen ___ und das Programm startet gar nicht erst. Läuft ein Programm dagegen fehlerfrei durch, liefert aber ein falsches Ergebnis, dann liegt ein ___ vor. Diese zweite Fehlerart findet man am besten mit dem ___, weil man dabei die Werte aller Variablen Schritt für Schritt verfolgt.",
-   "luecken": [
-    {
-     "art": "dropdown",
-     "antwort": "Syntaxfehler",
-     "optionen": [
-      "Syntaxfehler",
-      "Logikfehler",
-      "Tippfehler"
-     ]
-    },
-    {
-     "art": "dropdown",
-     "antwort": "Logikfehler",
-     "optionen": [
-      "Logikfehler",
-      "Syntaxfehler",
-      "Rechenfehler"
-     ]
-    },
-    {
-     "art": "dropdown",
-     "antwort": "Schreibtischtest",
-     "optionen": [
-      "Schreibtischtest",
-      "Doppelpunkt",
-      "Kommentar"
-     ]
-    }
-   ],
-   "tipps": [
-    "Ein Syntaxfehler verletzt die Grammatik der Sprache — das Programm läuft nicht an.",
-    "Ein Logikfehler ist ein Denkfehler: Die Syntax stimmt, aber das Ergebnis ist falsch.",
-    "Beim Schreibtischtest verfolgt man Variablenwerte Zeile für Zeile."
-   ],
-   "loesungsweg": "Fehlender Doppelpunkt = Syntaxfehler (Programm startet nicht). Korrekte Syntax, aber falsches Ergebnis = Logikfehler (Denkfehler). Den Logikfehler deckt der Schreibtischtest auf, weil er die Variablenwerte schrittweise sichtbar macht.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  },
-  {
-   "id": "in-10-prog-303",
-   "typ": "rechenweg",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Schreibtischtest in Schritten. Verfolge dieses Programm Zeile für Zeile:<br><pre>summe = 0\nfor i in range(1, 4):\n    for j in range(1, 3):\n        summe = summe + i * j\nprint(summe)</pre>Die äußere Schleife setzt i auf 1, 2, 3; die innere setzt j auf 1, 2.",
-   "schritte": [
-    {
-     "frage": "Schritt 1: i = 1. Berechne den Beitrag der inneren Schleife: i·1 + i·2 für i = 1.",
-     "eingaben": [
-      {
-       "label": "Beitrag bei i=1",
-       "antwort": 3,
-       "toleranz": 0
-      }
-     ],
-     "tipps": [
-      "i·j für j=1 und j=2: 1·1 + 1·2 = 1 + 2 = 3."
-     ]
-    },
-    {
-     "frage": "Schritt 2: i = 2. Berechne i·1 + i·2 für i = 2.",
-     "eingaben": [
-      {
-       "label": "Beitrag bei i=2",
-       "antwort": 6,
-       "toleranz": 0
-      }
-     ],
-     "tipps": [
-      "2·1 + 2·2 = 2 + 4 = 6."
-     ]
-    },
-    {
-     "frage": "Schritt 3: i = 3. Berechne i·1 + i·2 für i = 3.",
-     "eingaben": [
-      {
-       "label": "Beitrag bei i=3",
-       "antwort": 9,
-       "toleranz": 0
-      }
-     ],
-     "tipps": [
-      "3·1 + 3·2 = 3 + 6 = 9."
-     ]
-    },
-    {
-     "frage": "Schritt 4: Welchen Wert gibt print(summe) am Ende aus? Addiere die drei Beiträge.",
-     "eingaben": [
-      {
-       "label": "Ausgabe",
-       "antwort": 18,
-       "toleranz": 0
-      }
-     ],
-     "tipps": [
-      "3 + 6 + 9 = 18."
-     ]
-    }
-   ],
-   "tipps": [
-    "Die innere Schleife läuft für jedes i komplett durch (j = 1 und j = 2).",
-    "Notiere nach jedem Durchlauf den Zwischenstand von summe.",
-    "Am Ende ist summe = 3 + 6 + 9."
-   ],
-   "loesungsweg": "Für i=1: 1·1+1·2=3. Für i=2: 2·1+2·2=6. Für i=3: 3·1+3·2=9. summe = 0+3+6+9 = 18. Ausgabe: 18.",
-   "kc": [
-    "KC Informatik Sek I: Lernfeld Algorithmisches Problemlösen, Modul Algorithmisieren und Implementieren"
-   ]
-  }
- ]
+  ]
 }

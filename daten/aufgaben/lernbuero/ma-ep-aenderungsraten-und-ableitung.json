@@ -621,6 +621,337 @@
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Aenderungsraten, Ableitung)"
    ]
+  },
+  {
+   "id": "ma-ep-abl-110",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze den Merktext zur mittleren Änderungsrate.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Differenzenquotient",
+     "optionen": [
+      "Differenzenquotient",
+      "Produkt",
+      "Mittelwert"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Sekante",
+     "optionen": [
+      "Sekante",
+      "Tangente",
+      "Senkrechte"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Durchschnitt",
+     "optionen": [
+      "Durchschnitt",
+      "Höchstwert",
+      "Anfangswert"
+     ]
+    }
+   ],
+   "tipps": [
+    "Die mittlere Änderungsrate auf $[a;b]$ wird mit der Formel $\\frac{f(b)-f(a)}{b-a}$ berechnet — wie heißt dieser Quotient?",
+    "Verbindet man die beiden Graphenpunkte $(a\\mid f(a))$ und $(b\\mid f(b))$ mit einer Geraden, entsteht eine Sekante.",
+    "Die mittlere Änderungsrate beschreibt nur den Schnitt über das ganze Intervall, nicht jeden einzelnen Moment."
+   ],
+   "loesungsweg": "Differenzenquotient — Sekante — Durchschnitt: Die mittlere Änderungsrate von $f$ auf $[a;b]$ ist der Differenzenquotient $\\frac{f(b)-f(a)}{b-a}$. Geometrisch ist sie die Steigung der Sekante durch $(a\\mid f(a))$ und $(b\\mid f(b))$. Sie gibt an, wie stark sich $f$ im Durchschnitt pro Einheit von $x$ ändert.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Aenderungsraten, Ableitung)"
+   ]
+  },
+  {
+   "id": "ma-ep-abl-111",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Für $f(x)=x^2$ wird der Punkt $P(2\\mid 4)$ festgehalten. Berechne die Sekantensteigung $m_h=\\frac{f(2+h)-f(2)}{h}$ für die Schrittweiten $h=1$ und $h=0{,}1$. Gib zusätzlich an, welchem festen Wert sich die Sekantensteigungen für immer kleinere $h$ nähern.",
+   "eingaben": [
+    {
+     "label": "$m_h$ für $h=1$",
+     "antwort": 5,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$m_h$ für $h=0{,}1$",
+     "antwort": 4.1,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "Grenzwert der Sekantensteigungen",
+     "antwort": 4,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Setze zuerst $f(2)=4$ und dann $f(2+h)=(2+h)^2$ ein.",
+    "Für $h=1$: $f(3)=9$, also $m_1=\\frac{9-4}{1}$.",
+    "Für $h=0{,}1$: $f(2{,}1)=4{,}41$, also $m_h=\\frac{4{,}41-4}{0{,}1}$. Die Werte rücken dem Grenzwert immer näher."
+   ],
+   "loesungsweg": "$h=1$: $\\frac{f(3)-f(2)}{1}=\\frac{9-4}{1}=5$. $h=0{,}1$: $\\frac{f(2{,}1)-f(2)}{0{,}1}=\\frac{4{,}41-4}{0{,}1}=4{,}1$. Allgemein gilt $m_h=4+h$; je kleiner $h$, desto näher liegt die Sekantensteigung am festen Wert $4$. Die Sekantensteigungen nähern sich also $4$ — das ist die Steigung der Tangente in $P(2\\mid 4)$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Aenderungsraten, Ableitung)"
+   ]
+  },
+  {
+   "id": "ma-ep-abl-112",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Gegeben ist $f(x)=x^2+1$ mit dem festen Punkt $P(1\\mid 2)$. Berechne die Sekantensteigung $m_h=\\frac{f(1+h)-f(1)}{h}$ für $h=2$, $h=1$ und $h=0{,}5$ und lies daraus ab, gegen welchen Wert die Sekantensteigungen für $h\\to 0$ streben.",
+   "eingaben": [
+    {
+     "label": "$m_h$ für $h=2$",
+     "antwort": 4,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$m_h$ für $h=1$",
+     "antwort": 3,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$m_h$ für $h=0{,}5$",
+     "antwort": 2.5,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "Wert für $h\\to 0$",
+     "antwort": 2,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$f(1)=2$. Berechne $f(1+h)=(1+h)^2+1$ und setze in den Differenzenquotienten ein.",
+    "Für $h=2$: $f(3)=10$, also $m_h=\\frac{10-2}{2}=4$.",
+    "Die Werte $4;\\,3;\\,2{,}5$ werden immer kleiner und nähern sich von oben einem festen Wert."
+   ],
+   "loesungsweg": "$h=2$: $\\frac{f(3)-f(1)}{2}=\\frac{10-2}{2}=4$. $h=1$: $\\frac{f(2)-f(1)}{1}=\\frac{5-2}{1}=3$. $h=0{,}5$: $\\frac{f(1{,}5)-f(1)}{0{,}5}=\\frac{3{,}25-2}{0{,}5}=2{,}5$. Allgemein ist $m_h=2+h$; für $h\\to 0$ streben die Sekantensteigungen gegen $2$. Die Tangente in $P(1\\mid 2)$ hat also die Steigung $2$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Aenderungsraten, Ableitung)"
+   ]
+  },
+  {
+   "id": "ma-ep-abl-113",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Wie nähert man sich der Tangentensteigung in einem Punkt $P$, indem man Sekanten betrachtet? Bringe die Schritte in die richtige Reihenfolge.",
+   "elemente": [
+    "Den Punkt $P(x_0\\mid f(x_0))$ festhalten",
+    "Einen zweiten Punkt im Abstand $h$ als $(x_0+h\\mid f(x_0+h))$ wählen",
+    "Die Sekantensteigung $\\frac{f(x_0+h)-f(x_0)}{h}$ berechnen",
+    "Die Schrittweite $h$ immer kleiner machen und die Sekantensteigungen vergleichen",
+    "Den festen Wert ablesen, dem sich die Sekantensteigungen nähern — die Tangentensteigung"
+   ],
+   "tipps": [
+    "Zuerst braucht man einen festen Bezugspunkt, von dem aus gemessen wird.",
+    "Erst danach lässt sich überhaupt eine Sekante zu einem zweiten Punkt legen.",
+    "Ganz zuletzt schaut man, wogegen die Steigungen für immer kleineres $h$ streben."
+   ],
+   "loesungsweg": "Erst $P(x_0\\mid f(x_0))$ festhalten, dann einen zweiten Punkt im Abstand $h$ wählen und die Sekantensteigung $\\frac{f(x_0+h)-f(x_0)}{h}$ berechnen. Macht man $h$ immer kleiner, rückt der zweite Punkt an $P$ heran; die Sekantensteigungen nähern sich einem festen Wert — der Tangentensteigung in $P$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Aenderungsraten, Ableitung)"
+   ]
+  },
+  {
+   "id": "ma-ep-abl-114",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz: Untersuche $f(x)=2x^2$ am festen Punkt $P(1\\mid 2)$. Berechne die Sekantensteigung $m_h=\\frac{f(1+h)-f(1)}{h}$ für $h=1$, $h=0{,}1$ und $h=0{,}01$ und gib den Wert an, gegen den die Sekantensteigungen für $h\\to 0$ streben.",
+   "eingaben": [
+    {
+     "label": "$m_h$ für $h=1$",
+     "antwort": 6,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$m_h$ für $h=0{,}1$",
+     "antwort": 4.2,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$m_h$ für $h=0{,}01$",
+     "antwort": 4.02,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "Grenzwert für $h\\to 0$",
+     "antwort": 4,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$f(1)=2$. Berechne $f(1+h)=2\\cdot(1+h)^2$ und setze in den Differenzenquotienten ein.",
+    "Für $h=1$: $f(2)=8$, also $m_h=\\frac{8-2}{1}=6$. Für $h=0{,}1$: $f(1{,}1)=2{,}42$.",
+    "Schreibe $f(1+h)=2(1+2h+h^2)=2+4h+2h^2$; im Zähler bleibt $4h+2h^2$. Was ergibt sich nach dem Kürzen für sehr kleines $h$?"
+   ],
+   "loesungsweg": "$f(1+h)=2(1+h)^2=2+4h+2h^2$, also Zähler $=4h+2h^2$ und $m_h=4+2h$. $h=1$: $4+2=6$. $h=0{,}1$: $4+0{,}2=4{,}2$. $h=0{,}01$: $4+0{,}02=4{,}02$. Für $h\\to 0$ verschwindet der Anteil $2h$; die Sekantensteigungen streben gegen $4$. Die Tangente in $P(1\\mid 2)$ hat die Steigung $4$ — der Vorfaktor $2$ macht die Parabel hier doppelt so steil wie bei $x^2$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Aenderungsraten, Ableitung)"
+   ]
+  },
+  {
+   "id": "ma-ep-abl-115",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jedem Begriff aus dem Übergang von der Sekante zur Tangente die passende Beschreibung zu.",
+   "paare": [
+    {
+     "links": "Sekante",
+     "rechts": "Gerade durch zwei Punkte des Graphen"
+    },
+    {
+     "links": "Tangente",
+     "rechts": "Gerade, die den Graphen in einem Punkt berührt"
+    },
+    {
+     "links": "Schrittweite h gegen 0",
+     "rechts": "der zweite Punkt rückt an P heran"
+    },
+    {
+     "links": "Grenzwert der Sekantensteigungen",
+     "rechts": "Steigung der Tangente in P"
+    }
+   ],
+   "tipps": [
+    "Eine Sekante schneidet, eine Tangente berührt.",
+    "Kleines $h$ bedeutet: die beiden Punkte liegen sehr nah beieinander.",
+    "Der feste Wert, dem sich die Sekantensteigungen nähern, gehört zur Tangente."
+   ],
+   "loesungsweg": "Die Sekante ist die Gerade durch zwei Graphenpunkte, die Tangente berührt den Graphen in nur einem Punkt. Lässt man $h\\to 0$ gehen, rückt der zweite Punkt an $P$ heran; die Sekantensteigungen nähern sich einem festen Wert — der Steigung der Tangente in $P$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Aenderungsraten, Ableitung)"
+   ]
+  },
+  {
+   "id": "ma-ep-abl-116",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Bestimme mit der h-Methode die Ableitung von $f(x)=x^2+1$ an der Stelle $x_0=2$, also $f'(2)$.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Bilde $f(2+h)$ und vereinfache (ausmultiplizieren).",
+     "eingaben": [
+      {
+       "label": "konstantes Glied von $f(2+h)$",
+       "antwort": 5,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$f(2+h)=(2+h)^2+1=4+4h+h^2+1$. Das konstante Glied (ohne $h$) ist $4+1$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Bilde den Differenzenquotienten $\\frac{f(2+h)-f(2)}{h}$ und kürze durch $h$. Welcher Ausdruck bleibt?",
+     "eingaben": [
+      {
+       "label": "konstantes Glied im gekürzten Ausdruck $4+h$",
+       "antwort": 4,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$f(2)=5$. Zähler $=(5+4h+h^2)-5=4h+h^2$; geteilt durch $h$ ergibt $4+h$."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Gib den Grenzwert $f'(2)$ für $h\\to 0$ an.",
+     "eingaben": [
+      {
+       "label": "$f'(2)$",
+       "antwort": 4,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Im Ausdruck $4+h$ verschwindet das $h$ für $h\\to 0$."
+     ]
+    }
+   ],
+   "tipps": [
+    "Die h-Methode hat vier Schritte: einsetzen, vereinfachen, durch $h$ kürzen, Grenzwert bilden.",
+    "Das $+1$ verschiebt den Graphen nur und fällt beim Bilden der Differenz $f(2+h)-f(2)$ heraus.",
+    "Nach dem Kürzen steht $4+h$; für $h\\to 0$ ergibt sich $f'(2)=4$."
+   ],
+   "loesungsweg": "$f(2+h)=(2+h)^2+1=4+4h+h^2+1=5+4h+h^2$ und $f(2)=5$. Differenzenquotient: $\\frac{(5+4h+h^2)-5}{h}=\\frac{4h+h^2}{h}=4+h$. Grenzwert für $h\\to 0$: $f'(2)=4$. Das $+1$ wirkt sich nicht auf die Steigung aus — die Tangente in $(2\\mid 5)$ hat die Steigung $4$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Aenderungsraten, Ableitung)"
+   ]
+  },
+  {
+   "id": "ma-ep-abl-117",
+   "typ": "freitext",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz: Der Graph einer Funktion $f$ steigt zunächst, hat bei $x=-1$ einen Hochpunkt, fällt dann bis zu einem Tiefpunkt bei $x=2$ und steigt danach wieder. Beschreibe, an welchen Stellen die Ableitungsfunktion $f'$ den Wert null hat und in welchen Bereichen $f'$ positiv bzw. negativ ist. Begründe ohne zu rechnen.",
+   "musterloesung": "Die Ableitungsfunktion $f'$ gibt an jeder Stelle die Tangentensteigung von $f$ an. An den beiden Extrempunkten ist die Tangente waagerecht, also gilt $f'(-1)=0$ und $f'(2)=0$ — dort hat $f'$ ihre Nullstellen. Wo $f$ steigt, ist die Steigung positiv: also $f'(x)>0$ für $x<-1$ und für $x>2$. Wo $f$ fällt, ist die Steigung negativ: also $f'(x)<0$ für $-1<x<2$. Der Vorzeichenverlauf von $f'$ ist damit: $+$ (bis $-1$), dann $0$, dann $-$ (zwischen $-1$ und $2$), dann $0$, dann wieder $+$.",
+   "tipps": [
+    "Was gilt für die Tangentensteigung genau an einem Hoch- oder Tiefpunkt?",
+    "Wo der Graph steigt, ist $f'>0$; wo er fällt, ist $f'<0$.",
+    "Trage in Gedanken den Verlauf $+\\,,0\\,,-\\,,0\\,,+$ entlang der $x$-Achse ab."
+   ],
+   "loesungsweg": "An den Extremstellen ist die Tangente waagerecht: $f'(-1)=0$ und $f'(2)=0$. Für $x<-1$ steigt $f$, also $f'>0$; für $-1<x<2$ fällt $f$, also $f'<0$; für $x>2$ steigt $f$ wieder, also $f'>0$. Vorzeichenverlauf von $f'$: $+\\,,0\\,,-\\,,0\\,,+$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Aenderungsraten, Ableitung)"
+   ]
   }
  ]
 }

@@ -575,6 +575,438 @@
    "kc": [
     "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
    ]
+  },
+  {
+   "id": "in-09-alg-110",
+   "typ": "zuordnung",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ordne jeder Anleitung zu, ob sie ein Algorithmus ist oder nicht.",
+   "paare": [
+    {
+     "links": "Drücke den Lichtschalter genau einmal nach unten.",
+     "rechts": "Algorithmus"
+    },
+    {
+     "links": "Koche das Ei genau 7 Minuten lang.",
+     "rechts": "Algorithmus"
+    },
+    {
+     "links": "Mache den Salat irgendwie lecker an.",
+     "rechts": "kein Algorithmus"
+    },
+    {
+     "links": "Laufe immer weiter geradeaus.",
+     "rechts": "kein Algorithmus"
+    }
+   ],
+   "tipps": [
+    "Prüfe: Ist jeder Schritt eindeutig, ausführbar und endet die Anleitung?",
+    "Wörter wie „irgendwie\" oder „lecker\" sind nicht eindeutig.",
+    "„Immer weiter\" hat kein Ende — die Endlichkeit fehlt."
+   ],
+   "loesungsweg": "„Lichtschalter einmal drücken\" und „Ei 7 Minuten kochen\" sind eindeutig, ausführbar und enden — also Algorithmen. „Salat irgendwie lecker anmachen\" ist nicht eindeutig (jeder versteht etwas anderes). „Immer weiter geradeaus\" endet nie — die Endlichkeit fehlt. Beide letzten sind deshalb keine Algorithmen.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-111",
+   "typ": "luecke",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ergänze die drei Eigenschaften, die eine Anleitung zu einem Algorithmus machen.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "eindeutig",
+     "optionen": [
+      "eindeutig",
+      "schön",
+      "schnell"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "ausführbar",
+     "optionen": [
+      "ausführbar",
+      "teuer",
+      "lang"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "endlich",
+     "optionen": [
+      "endlich",
+      "unendlich",
+      "bunt"
+     ]
+    }
+   ],
+   "loesungsweg": "Ein Algorithmus muss eindeutig sein (jeder Schritt ist klar und lässt keinen Spielraum), ausführbar (jeder Schritt ist praktisch machbar) und endlich (die Anleitung endet nach endlich vielen Schritten). Fehlt eine dieser drei Eigenschaften, ist es kein Algorithmus.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ],
+   "tipps": [
+    "Denke an die drei Wörter, die jede gute Anleitung erfüllen muss.",
+    "Eindeutig heißt: kein Spielraum. Ausführbar heißt: praktisch machbar.",
+    "Endlich heißt: Die Anleitung endet nach endlich vielen Schritten."
+   ]
+  },
+  {
+   "id": "in-09-alg-112",
+   "typ": "freitext",
+   "niveau": 2,
+   "afb": 3,
+   "frage": "Eine App zeigt an: „Rühre den Teig, bis er gut ist.\" Erkläre, welche der drei Eigenschaften (eindeutig, ausführbar, endlich) hier verletzt ist, und schreibe die Anweisung so um, dass sie zu einem Algorithmus passt.",
+   "musterloesung": "Verletzt ist die Eindeutigkeit: „bis er gut ist\" ist nicht messbar — jede Person beurteilt „gut\" anders, also führen verschiedene Personen die Anweisung unterschiedlich aus. Eine eindeutige Umformulierung wäre zum Beispiel: „Rühre den Teig 2 Minuten lang.\" Jetzt ist die Anweisung eindeutig (klare Zeitangabe), ausführbar und endlich.",
+   "tipps": [
+    "Frage dich: Würden zwei Personen genau dasselbe tun?",
+    "„Gut\" ist Ansichtssache — das verletzt eine der drei Eigenschaften.",
+    "Ersetze die unklare Angabe durch etwas Messbares (z. B. eine Zeit- oder Mengenangabe)."
+   ],
+   "loesungsweg": "Kernpunkte: (1) Die Eindeutigkeit ist verletzt, weil „bis er gut ist\" nicht messbar/objektiv ist. (2) Eine korrekte Umformulierung ersetzt das unklare Kriterium durch eine messbare Angabe, z. B. eine feste Rührzeit oder eine sichtbare, eindeutige Bedingung. Jede Antwort, die die Eindeutigkeit benennt und eine messbare Umformulierung liefert, ist richtig.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-113",
+   "typ": "multiple-choice",
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Bei welcher Anleitung ist die <strong>Endlichkeit</strong> verletzt — die Anleitung endet also nie von selbst?",
+   "optionen": [
+    {
+     "text": "Zähle laut von 1 bis 10 und höre dann auf.",
+     "richtig": false,
+     "erklaerung": "Endet nach der 10 — die Endlichkeit ist erfüllt."
+    },
+    {
+     "text": "Wiederhole „klatsche in die Hände\", ohne jemals aufzuhören.",
+     "richtig": true,
+     "erklaerung": "Richtig — ohne Abbruchbedingung endet die Anleitung nie. Die Endlichkeit ist verletzt."
+    },
+    {
+     "text": "Lege drei Karten nacheinander auf den Tisch.",
+     "richtig": false,
+     "erklaerung": "Endet nach drei Karten — endlich."
+    },
+    {
+     "text": "Schreibe deinen Namen einmal auf das Blatt.",
+     "richtig": false,
+     "erklaerung": "Endet nach einem Schritt — endlich."
+    }
+   ],
+   "tipps": [
+    "Endlich heißt: Die Anleitung kommt nach endlich vielen Schritten zu einem Ende.",
+    "Suche die Anleitung, die kein Abbruchkriterium hat.",
+    "„Ohne jemals aufzuhören\" ist ein deutliches Signal."
+   ],
+   "loesungsweg": "„Wiederhole klatsche in die Hände, ohne jemals aufzuhören\" hat keine Bedingung, die das Ende festlegt — die Anleitung läuft endlos. Damit ist die Endlichkeit verletzt. Alle anderen Anleitungen enden nach einer festen Anzahl von Schritten.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-114",
+   "typ": "multiple-choice",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Welcher Grundbaustein steckt im Satz „Wenn es draußen kalt ist, ziehe eine Jacke an\"?",
+   "optionen": [
+    {
+     "text": "Verzweigung (eine Bedingung entscheidet)",
+     "richtig": true,
+     "erklaerung": "Richtig — „Wenn … ist\" prüft eine Bedingung und entscheidet einmal, ob die Jacke angezogen wird."
+    },
+    {
+     "text": "Sequenz (Schritte nacheinander)",
+     "richtig": false,
+     "erklaerung": "Falsch — hier hängt der Schritt von einer Bedingung ab, es ist keine reine Abfolge."
+    },
+    {
+     "text": "Schleife (Wiederholung mit Bedingung)",
+     "richtig": false,
+     "erklaerung": "Falsch — es wird nichts wiederholt, sondern nur einmal entschieden."
+    },
+    {
+     "text": "Kein Grundbaustein",
+     "richtig": false,
+     "erklaerung": "Falsch — die Wenn-dann-Form ist genau eine Verzweigung."
+    }
+   ],
+   "tipps": [
+    "Achte auf das Signalwort am Anfang: „Wenn …\".",
+    "Wird etwas wiederholt oder nur einmal entschieden?",
+    "Eine einmalige Wenn-dann-Entscheidung gehört zur Verzweigung."
+   ],
+   "loesungsweg": "„Wenn es kalt ist, ziehe eine Jacke an\" ist eine Verzweigung: Eine Bedingung (kalt?) entscheidet einmalig, ob der Schritt ausgeführt wird. Es wird nichts wiederholt (keine Schleife) und es ist keine reine Abfolge (keine Sequenz).",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-115",
+   "typ": "zuordnung",
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ordne jeder Alltagssituation den passenden Grundbaustein zu.",
+   "paare": [
+    {
+     "links": "Erst Zähne putzen, danach Gesicht waschen",
+     "rechts": "Sequenz"
+    },
+    {
+     "links": "Wenn die Ampel grün ist, gehe los",
+     "rechts": "Verzweigung"
+    },
+    {
+     "links": "Mache Hampelmänner, bis du 20 geschafft hast",
+     "rechts": "Schleife"
+    },
+    {
+     "links": "Wenn der Akku leer ist, lade das Handy, sonst nutze es weiter",
+     "rechts": "Verzweigung"
+    }
+   ],
+   "tipps": [
+    "„Erst …, danach …\" ohne Bedingung ist eine Sequenz.",
+    "„Wenn …\" mit einer einmaligen Entscheidung ist eine Verzweigung.",
+    "„… bis …\" mit Wiederholung ist eine Schleife."
+   ],
+   "loesungsweg": "„Erst Zähne putzen, danach Gesicht waschen\" ist eine Sequenz (Schritte nacheinander). „Wenn die Ampel grün ist, gehe los\" und „Wenn der Akku leer ist, lade …, sonst …\" sind Verzweigungen (eine Bedingung entscheidet). „Hampelmänner, bis 20 geschafft\" ist eine Schleife (Wiederholung mit Abbruchbedingung).",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-116",
+   "typ": "luecke",
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ergänze den passenden Grundbaustein (Sequenz, Verzweigung oder Schleife).",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Schleife",
+     "optionen": [
+      "Schleife",
+      "Sequenz",
+      "Verzweigung"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Sequenz",
+     "optionen": [
+      "Sequenz",
+      "Schleife",
+      "Verzweigung"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Verzweigung",
+     "optionen": [
+      "Verzweigung",
+      "Sequenz",
+      "Schleife"
+     ]
+    }
+   ],
+   "loesungsweg": "„Werfe den Würfel erneut, solange du keine Sechs hast\" wiederholt einen Schritt mit Bedingung — das ist eine Schleife. „Lege das Spielbrett auf, verteile dann die Figuren\" ist eine reine Abfolge — eine Sequenz. „Wenn du eine Sechs würfelst, darfst du noch einmal\" entscheidet einmal über den weiteren Verlauf — eine Verzweigung.",
+   "hinweis": "Reihenfolge der Lücken: (1) „Werfe den Würfel erneut, solange du keine Sechs hast\" = ___. (2) „Lege das Spielbrett auf, verteile dann die Figuren\" = ___. (3) „Wenn du eine Sechs würfelst, darfst du noch einmal\" = ___.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ],
+   "tipps": [
+    "Achte auf die Signalwörter: „solange\", „erst … dann\", „wenn\".",
+    "Wird etwas wiederholt (Schleife) oder nur einmal entschieden (Verzweigung)?",
+    "Eine reine Abfolge ohne Bedingung ist eine Sequenz."
+   ]
+  },
+  {
+   "id": "in-09-alg-117",
+   "typ": "reihenfolge",
+   "niveau": 1,
+   "afb": 2,
+   "frage": "Bringe die Schritte des Alltags-Ablaufs „Eine Tasse Tee kochen\" in eine sinnvolle Reihenfolge.",
+   "elemente": [
+    "Wasser in den Wasserkocher füllen",
+    "Wasser zum Kochen bringen",
+    "Teebeutel in die Tasse legen",
+    "Heißes Wasser in die Tasse gießen",
+    "Den Teebeutel nach einigen Minuten herausnehmen"
+   ],
+   "loesungsweg": "Sinnvoll ist die Abfolge: zuerst Wasser einfüllen, dann erhitzen, den Teebeutel in die Tasse legen, das heiße Wasser aufgießen und schließlich den Beutel wieder herausnehmen. Die Schritte folgen als Sequenz aufeinander — die Reihenfolge ist wichtig, weil man z. B. erst Wasser braucht, bevor man es erhitzen kann.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ],
+   "tipps": [
+    "Überlege, was du zuerst brauchst, bevor der nächste Schritt möglich ist.",
+    "Man kann das Wasser erst erhitzen, wenn es im Kocher ist.",
+    "Der Teebeutel wird zuletzt wieder herausgenommen."
+   ]
+  },
+  {
+   "id": "in-09-alg-118",
+   "typ": "zuordnung",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ordne jedem Flussdiagramm-Symbol seine Bedeutung zu.",
+   "paare": [
+    {
+     "links": "Abgerundetes Rechteck",
+     "rechts": "Start oder Ende"
+    },
+    {
+     "links": "Rechteck",
+     "rechts": "Anweisung ausführen"
+    },
+    {
+     "links": "Raute",
+     "rechts": "Verzweigung (Bedingung mit ja/nein)"
+    },
+    {
+     "links": "Pfeil",
+     "rechts": "Reihenfolge des Ablaufs"
+    }
+   ],
+   "tipps": [
+    "Das abgerundete Rechteck markiert Anfang und Schluss eines Ablaufs.",
+    "Im normalen Rechteck steht eine Anweisung.",
+    "Die Raute hat zwei Ausgänge: ja und nein."
+   ],
+   "loesungsweg": "Das abgerundete Rechteck steht für Start oder Ende. Das normale Rechteck enthält eine Anweisung, die ausgeführt wird. Die Raute ist eine Verzweigung mit einer Bedingung und den beiden Ausgängen ja/nein. Die Pfeile geben die Reihenfolge an, in der die Symbole durchlaufen werden.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-119",
+   "typ": "zuordnung",
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ordne jeder der vier Phasen der Algorithmusentwicklung die passende Leitfrage bzw. Tätigkeit zu.",
+   "paare": [
+    {
+     "links": "Verstehen",
+     "rechts": "Was ist die Eingabe, was die Ausgabe?"
+    },
+    {
+     "links": "Planen",
+     "rechts": "In welche Teilschritte zerlege ich das Problem?"
+    },
+    {
+     "links": "Aufschreiben",
+     "rechts": "Den Plan eindeutig als Pseudocode notieren"
+    },
+    {
+     "links": "Testen",
+     "rechts": "Mit dem Schreibtischtest Zeile für Zeile prüfen"
+    }
+   ],
+   "tipps": [
+    "Zuerst klärt man, was hinein- und herauskommt.",
+    "Danach plant man die Teilschritte, bevor man etwas notiert.",
+    "Geprüft wird ganz am Schluss."
+   ],
+   "loesungsweg": "Phase 1 Verstehen: klären, was Eingabe und Ausgabe sind. Phase 2 Planen: das Problem in Teilschritte zerlegen. Phase 3 Aufschreiben: den Plan eindeutig als Pseudocode (oder Flussdiagramm) notieren. Phase 4 Testen: mit dem Schreibtischtest Zeile für Zeile prüfen, ob alles stimmt.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-120",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jedes Signalwort dem passenden Grundbaustein zu.",
+   "paare": [
+    {
+     "links": "erst ..., dann ...",
+     "rechts": "Sequenz"
+    },
+    {
+     "links": "wenn ..., dann ...",
+     "rechts": "Verzweigung"
+    },
+    {
+     "links": "solange ...",
+     "rechts": "Schleife"
+    },
+    {
+     "links": "wiederhole 5-mal",
+     "rechts": "Schleife"
+    }
+   ],
+   "tipps": [
+    "„erst …, dann …\" beschreibt eine feste Abfolge.",
+    "„wenn …\" trifft eine Entscheidung.",
+    "„solange …\" und „wiederhole …\" stehen für Wiederholungen."
+   ],
+   "loesungsweg": "„erst …, dann …\" ist eine Sequenz (Schritte nacheinander). „wenn …, dann …\" ist eine Verzweigung (eine Bedingung entscheidet). „solange …\" und „wiederhole 5-mal\" sind beide Schleifen (Wiederholungen, einmal mit Bedingung, einmal mit fester Anzahl).",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
   }
  ]
 }

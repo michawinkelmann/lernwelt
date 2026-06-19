@@ -1,660 +1,985 @@
 {
- "thema": "ph-qp-induktion",
- "hinweis": "Lernbüro-Ergänzungsaufgaben zur elektromagnetischen Induktion. Zur fachlichen Prüfung durch die Lehrkraft.",
- "aufgaben": [
-  {
-   "id": "ph-qp-ind-101",
-   "typ": "multiple-choice",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Ein Stabmagnet steckt ruhend in einer Spule. Dann wird er mit gleichmäßiger Geschwindigkeit herausgezogen. Welche Aussagen beschreiben den Vorgang richtig?",
-   "optionen": [
+  "thema": "ph-qp-induktion",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben zur elektromagnetischen Induktion. Zur fachlichen Prüfung durch die Lehrkraft.",
+  "aufgaben": [
     {
-     "text": "Während des Herausziehens ist die induzierte Spannung von null verschieden.",
-     "richtig": true,
-     "erklaerung": "Richtig — beim Herausziehen nimmt der magnetische Fluss durch die Spule ab: $\\frac{\\Delta\\Phi}{\\Delta t} \\neq 0$, also $U_\\text{ind} \\neq 0$."
+      "id": "ph-qp-ind-101",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Stabmagnet steckt ruhend in einer Spule. Dann wird er mit gleichmäßiger Geschwindigkeit herausgezogen. Welche Aussagen beschreiben den Vorgang richtig?",
+      "optionen": [
+        {
+          "text": "Während des Herausziehens ist die induzierte Spannung von null verschieden.",
+          "richtig": true,
+          "erklaerung": "Richtig — beim Herausziehen nimmt der magnetische Fluss durch die Spule ab: $\\frac{\\Delta\\Phi}{\\Delta t} \\neq 0$, also $U_\\text{ind} \\neq 0$."
+        },
+        {
+          "text": "Solange der Magnet ruhig in der Spule liegt, ist die induzierte Spannung null.",
+          "richtig": true,
+          "erklaerung": "Richtig — ein ruhender Magnet ändert den Fluss nicht: $\\Delta\\Phi = 0$, daher $U_\\text{ind} = 0$."
+        },
+        {
+          "text": "Die Spannung beim Herausziehen hat dasselbe Vorzeichen wie beim Hineinschieben.",
+          "richtig": false,
+          "erklaerung": "Nein — beim Hineinschieben wächst der Fluss ($\\Delta\\Phi > 0$), beim Herausziehen nimmt er ab ($\\Delta\\Phi < 0$): Das Vorzeichen der Spannung kehrt sich um."
+        },
+        {
+          "text": "Eine stärkere Spule (mehr Windungen) zeigt beim Herausziehen eine kleinere Spannung.",
+          "richtig": false,
+          "erklaerung": "Nein — nach dem Induktionsgesetz $U_\\text{ind} = -n \\cdot \\frac{\\Delta\\Phi}{\\Delta t}$ wächst die Spannung proportional zur Windungszahl $n$."
+        }
+      ],
+      "tipps": [
+        "Schreibe das Induktionsgesetz hin: Was steht auf der rechten Seite? Wann ist der Ausdruck null, wann nicht?",
+        "Vergleiche die Richtung der Flussänderung: Wächst $\\Phi$ beim Hineinschieben oder beim Herausziehen?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussagen 1 und 2. Solange der Magnet ruht, ist $\\Delta\\Phi = 0$ und damit $U_\\text{ind} = 0$. Beim Herausziehen nimmt der Fluss ab — $\\frac{\\Delta\\Phi}{\\Delta t} \\neq 0$, also entsteht eine Spannung. Da $\\Delta\\Phi$ beim Herausziehen das entgegengesetzte Vorzeichen hat wie beim Hineinschieben, kehrt auch die Spannung ihr Vorzeichen um. Mehr Windungen erhöhen die Spannung (Faktor $n$), nicht verringern sie.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
     },
     {
-     "text": "Solange der Magnet ruhig in der Spule liegt, ist die induzierte Spannung null.",
-     "richtig": true,
-     "erklaerung": "Richtig — ein ruhender Magnet ändert den Fluss nicht: $\\Delta\\Phi = 0$, daher $U_\\text{ind} = 0$."
+      "id": "ph-qp-ind-102",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Zwei Spulen A und B sind identisch aufgebaut. Spule A wird mit einem starken Dauermagneten besteckt, Spule B mit einem schwachen. Beide Magnete bleiben anschließend ruhig in der Spule. Jetzt wird in beiden Spulen gleichzeitig der Magnet mit derselben Geschwindigkeit herausgezogen. Vergleiche und erkläre, in welcher Spule die größere Induktionsspannung entsteht — und warum ein starker, aber ruhender Magnet in Spule A zuvor keine Spannung erzeugte.",
+      "musterloesung": "Beim Herausziehen mit gleicher Geschwindigkeit ändert sich der magnetische Fluss in Spule A schneller als in B, weil $\\Delta\\Phi = \\Delta(B \\cdot A)$ und die Flussdichte $B$ des starken Magneten größer ist: $\\frac{\\Delta\\Phi_A}{\\Delta t} > \\frac{\\Delta\\Phi_B}{\\Delta t}$. Nach dem Induktionsgesetz $U_\\text{ind} = -n \\cdot \\frac{\\Delta\\Phi}{\\Delta t}$ ist die Spannung in Spule A größer. Dass der starke Magnet zuvor keine Spannung erzeugte, liegt daran, dass er ruhte: Der Fluss war groß, aber konstant, also $\\Delta\\Phi = 0$ und $U_\\text{ind} = 0$. Entscheidend ist stets die Änderungsrate des Flusses, nicht sein absoluter Betrag.",
+      "tipps": [
+        "Vergleiche zunächst die Flussdichte $B$ beider Magnete: Welcher erzeugt den größeren Fluss durch die Spule?",
+        "Formel: $U_\\text{ind} = -n \\cdot \\frac{\\Delta\\Phi}{\\Delta t}$ — was ändert sich, wenn $B$ größer ist, bei gleicher Herausziehgeschwindigkeit?",
+        "Warum war beim ruhenden Magneten $\\Delta\\Phi = 0$, obwohl der Fluss selbst groß war?"
+      ],
+      "loesungsweg": "Spule A: größerer Magnet $\\Rightarrow$ größeres $\\Phi = B \\cdot A$ $\\Rightarrow$ größere Änderung $\\Delta\\Phi$ beim Herausziehen in derselben Zeit $\\Rightarrow$ größere Spannung. Spule B: schwacher Magnet $\\Rightarrow$ kleineres $\\Delta\\Phi / \\Delta t$ $\\Rightarrow$ kleinere Spannung. Beim ruhenden Magneten: $B$ constant $\\Rightarrow$ $\\Phi$ constant $\\Rightarrow$ $\\Delta\\Phi = 0$ $\\Rightarrow$ $U_\\text{ind} = 0$, egal wie stark der Magnet ist.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
     },
     {
-     "text": "Die Spannung beim Herausziehen hat dasselbe Vorzeichen wie beim Hineinschieben.",
-     "richtig": false,
-     "erklaerung": "Nein — beim Hineinschieben wächst der Fluss ($\\Delta\\Phi > 0$), beim Herausziehen nimmt er ab ($\\Delta\\Phi < 0$): Das Vorzeichen der Spannung kehrt sich um."
+      "id": "ph-qp-ind-103",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine kreisförmige Leiterschleife hat den Radius $r = 4{,}0\\,\\text{cm}$ und wird von einem homogenen Magnetfeld mit $B = 0{,}25\\,\\text{T}$ senkrecht durchsetzt ($\\alpha = 0^\\circ$). Berechne den magnetischen Fluss $\\Phi$ durch die Schleife. Verwende $\\pi \\approx 3{,}14$.",
+      "eingaben": [
+        {
+          "label": "$\\Phi$",
+          "antwort": 1.256,
+          "toleranz": 0.02,
+          "einheit": "mWb"
+        }
+      ],
+      "tipps": [
+        "Kreisfläche: $A = \\pi \\cdot r^2$. Erst $r$ in Meter umrechnen: $4{,}0\\,\\text{cm} = 0{,}040\\,\\text{m}$.",
+        "$A = 3{,}14 \\cdot (0{,}040)^2\\,\\text{m}^2 = 3{,}14 \\cdot 1{,}6 \\cdot 10^{-3}\\,\\text{m}^2$.",
+        "Bei senkrechter Durchsetzung ($\\cos 0^\\circ = 1$): $\\Phi = B \\cdot A = 0{,}25 \\cdot 5{,}024 \\cdot 10^{-3}\\,\\text{Wb}$ — Ergebnis in Milliweber."
+      ],
+      "loesungsweg": "$A = \\pi \\cdot r^2 = 3{,}14 \\cdot (0{,}040\\,\\text{m})^2 = 3{,}14 \\cdot 1{,}6 \\cdot 10^{-3}\\,\\text{m}^2 = 5{,}024 \\cdot 10^{-3}\\,\\text{m}^2$. Fluss: $\\Phi = B \\cdot A = 0{,}25\\,\\text{T} \\cdot 5{,}024 \\cdot 10^{-3}\\,\\text{m}^2 = 1{,}256 \\cdot 10^{-3}\\,\\text{Wb} = 1{,}256\\,\\text{mWb} \\approx 1{,}3\\,\\text{mWb}$. Häufiger Fehler: Radius nicht quadrieren oder $r$ nicht in Meter umrechnen.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
     },
     {
-     "text": "Eine stärkere Spule (mehr Windungen) zeigt beim Herausziehen eine kleinere Spannung.",
-     "richtig": false,
-     "erklaerung": "Nein — nach dem Induktionsgesetz $U_\\text{ind} = -n \\cdot \\frac{\\Delta\\Phi}{\\Delta t}$ wächst die Spannung proportional zur Windungszahl $n$."
+      "id": "ph-qp-ind-104",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Eine quadratische Leiterschleife (Seitenlänge $a = 10\\,\\text{cm}$) befindet sich in einem homogenen Magnetfeld mit $B = 0{,}40\\,\\text{T}$. Die Schleife wird aus der Lage $\\alpha_1 = 0^\\circ$ (senkrechte Durchsetzung) in die Lage $\\alpha_2 = 60^\\circ$ gedreht. Berechne (a) den Anfangsfluss $\\Phi_1$, (b) den Endfluss $\\Phi_2$ und (c) den Betrag der mittleren Induktionsspannung, wenn die Drehung gleichmäßig in $\\Delta t = 25\\,\\text{ms}$ erfolgt (eine Windung).",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Anfangsfluss $\\Phi_1 = B \\cdot A \\cdot \\cos 0^\\circ$ in Milliweber.",
+          "eingaben": [
+            {
+              "label": "$\\Phi_1$",
+              "antwort": 4.0,
+              "toleranz": 0.05,
+              "einheit": "mWb"
+            }
+          ],
+          "tipps": [
+            "$A = a^2 = (0{,}10\\,\\text{m})^2 = 0{,}01\\,\\text{m}^2$; $\\cos 0^\\circ = 1$, also $\\Phi_1 = B \\cdot A$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Endfluss $\\Phi_2 = B \\cdot A \\cdot \\cos 60^\\circ$ in Milliweber.",
+          "eingaben": [
+            {
+              "label": "$\\Phi_2$",
+              "antwort": 2.0,
+              "toleranz": 0.05,
+              "einheit": "mWb"
+            }
+          ],
+          "tipps": [
+            "$\\cos 60^\\circ = 0{,}5$, also $\\Phi_2 = \\Phi_1 \\cdot 0{,}5$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Betrag der mittleren Induktionsspannung $|U_\\text{ind}| = \\frac{|\\Delta\\Phi|}{\\Delta t}$ in Volt.",
+          "eingaben": [
+            {
+              "label": "$|U_\\text{ind}|$",
+              "antwort": 0.08,
+              "toleranz": 0.005,
+              "einheit": "V"
+            }
+          ],
+          "tipps": [
+            "$|\\Delta\\Phi| = |\\Phi_2 - \\Phi_1| = |2{,}0 - 4{,}0|\\,\\text{mWb} = 2{,}0\\,\\text{mWb}$; $\\Delta t = 0{,}025\\,\\text{s}$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Zuerst die Fläche berechnen: $A = a^2$ mit $a$ in Meter.",
+        "$\\cos 0^\\circ = 1$ und $\\cos 60^\\circ = 0{,}5$ — der Endfluss ist halb so groß wie der Anfangsfluss.",
+        "Die Flussänderung ist $\\Delta\\Phi = \\Phi_2 - \\Phi_1$ (negativ, da Fluss abnimmt), für den Betrag der Spannung reicht $|\\Delta\\Phi| / \\Delta t$."
+      ],
+      "loesungsweg": "(a) $A = (0{,}10\\,\\text{m})^2 = 1{,}0 \\cdot 10^{-2}\\,\\text{m}^2$; $\\Phi_1 = 0{,}40 \\cdot 1{,}0 \\cdot 10^{-2}\\,\\text{Wb} = 4{,}0\\,\\text{mWb}$. (b) $\\Phi_2 = 4{,}0 \\cdot \\cos 60^\\circ = 4{,}0 \\cdot 0{,}5 = 2{,}0\\,\\text{mWb}$. (c) $|U_\\text{ind}| = \\frac{|\\Phi_2 - \\Phi_1|}{\\Delta t} = \\frac{2{,}0 \\cdot 10^{-3}\\,\\text{Wb}}{0{,}025\\,\\text{s}} = 0{,}080\\,\\text{V} = 80\\,\\text{mV}$. Je schneller die Drehung, desto größer die Spannung — das ist das Grundprinzip des Generators.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-105",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Durch eine Spule mit $n = 100$ Windungen ändert sich der magnetische Fluss gleichmäßig von $\\Phi_1 = 0{,}80\\,\\text{mWb}$ auf $\\Phi_2 = 0$ innerhalb von $\\Delta t = 40\\,\\text{ms}$. Berechne den Betrag der induzierten Spannung.",
+      "eingaben": [
+        {
+          "label": "$|U_\\text{ind}|$",
+          "antwort": 2.0,
+          "toleranz": 0.05,
+          "einheit": "V"
+        }
+      ],
+      "tipps": [
+        "Induktionsgesetz: $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$.",
+        "$|\\Delta\\Phi| = |\\Phi_2 - \\Phi_1| = |0 - 0{,}80\\,\\text{mWb}| = 0{,}80\\,\\text{mWb} = 8{,}0 \\cdot 10^{-4}\\,\\text{Wb}$.",
+        "$\\Delta t = 40\\,\\text{ms} = 0{,}040\\,\\text{s}$. Einsetzen: $100 \\cdot \\frac{8{,}0 \\cdot 10^{-4}}{0{,}040}$."
+      ],
+      "loesungsweg": "$|\\Delta\\Phi| = 0{,}80 \\cdot 10^{-3}\\,\\text{Wb}$. $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t} = 100 \\cdot \\frac{0{,}80 \\cdot 10^{-3}\\,\\text{Wb}}{0{,}040\\,\\text{s}} = 100 \\cdot 0{,}020\\,\\text{V} = 2{,}0\\,\\text{V}$. Typischer Fehler: Millisekunden nicht in Sekunden umrechnen oder Milliweber nicht in Weber.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-106",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Ein Magnet wird in eine Kupferscheibe fallengelassen (Lenzsche Bremse). Der Magnet fällt deutlich langsamer als im freien Fall. (a) Erkläre mit Induktionsgesetz und lenzscher Regel, warum der Magnet abgebremst wird. (b) Erkläre, warum eine Scheibe aus nicht leitendem Material (z. B. Kunststoff) keine Bremswirkung zeigt. (c) Wäre eine ewige Bremsung — der Magnet bleibt für immer in der Scheibe hängen — mit der Energieerhaltung vereinbar?",
+      "musterloesung": "(a) Beim Fallen des Magneten ändert sich der magnetische Fluss durch die Querschnittflächen der Kupferscheibe: Der Fluss wächst, wenn der Magnet naht, und nimmt ab, wenn er sich entfernt. Nach dem Induktionsgesetz entstehen in der Scheibe Wirbelströme. Die lenzsche Regel besagt, dass diese Wirbelströme ein Magnetfeld erzeugen, das dem wachsenden Fluss entgegenwirkt — also den Magneten anzieht, wenn er sich nähert, und abstosst, wenn er sich entfernt. In beiden Fällen wirkt eine der Bewegung entgegengerichtete Kraft: Der Magnet wird abgebremst. (b) In Kunststoff können keine freien Ladungsträger fließen — es entstehen keine Wirbelströme, kein Gegenfeld, keine Bremskraft. (c) Nein. Die kinetische Energie des Magneten wird durch die Wirbelströme in Wärme umgewandelt. Ist die kinetische Energie aufgebraucht, kann keine Bremskraft mehr wirken; der Magnet bleibt nicht ewig hängen, sondern kommt zum Stillstand, wenn seine Energie vollständig dissipiert ist. Eine ewige Abbremsung wäre ein Perpetuum mobile zweiter Art und widerspricht der Energieerhaltung.",
+      "tipps": [
+        "Was ändert sich, wenn der Magnet durch die Scheibe fällt? Denke an den magnetischen Fluss durch kleine Flächenelemente der Scheibe.",
+        "Lenzsche Regel: Wie ist das Wirbelstromfeld gegenüber dem Magnetfeld des fallenden Magneten ausgerichtet — und welche Kraft folgt daraus?",
+        "Warum können in Kunststoff keine Ströme fließen? Was fehlt?"
+      ],
+      "loesungsweg": "Kern: (1) Fluss ändert sich beim Fallen → Induktionsgesetz → Wirbelströme. (2) Lenzsche Regel: Wirbelströme bremsen die Ursache (die Bewegung des Magneten). (3) Kein Leiter → kein Strom → kein Gegenfeld → keine Bremskraft. (4) Energieerhaltung: Magnetische Energie → Wärme; kein Perpetuum mobile.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-107",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ergänze den Text über Generator und Transformator.",
+      "text": "Ein Generator wandelt ___ Energie in elektrische Energie um. Dazu wird eine Spule in einem Magnetfeld ___ . Die entstehende Spannung ist ___förmig, weil sich der magnetische Fluss durch die rotierende Spule periodisch ändert. Ein Transformator besitzt zwei ___ auf einem gemeinsamen Eisenkern. Er nutzt die elektromagnetische ___ , um eine Wechselspannung zu über- oder untersetzen.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "mechanische",
+          "optionen": [
+            "mechanische",
+            "thermische",
+            "chemische"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "gedreht",
+          "optionen": [
+            "gedreht",
+            "erwärmt",
+            "aufgeladen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "sinus",
+          "optionen": [
+            "sinus",
+            "dreiecks",
+            "rechtecks"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Spulen",
+          "optionen": [
+            "Spulen",
+            "Kondensatoren",
+            "Widerstande"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Induktion",
+          "optionen": [
+            "Induktion",
+            "Leitung",
+            "Strahlung"
+          ]
+        }
+      ],
+      "tipps": [
+        "Ein Generator ist eine Maschine — was wird dort mechanisch bewegt? Und was entsteht daraus?",
+        "Welche Form hat die Spannung, die ein rotierender Magnet in einer Spule erzeugt? Denke an $\\Phi(t) = B \\cdot A \\cdot \\cos(\\omega t)$.",
+        "Ein Transformator überträgt Energie durch Magnetfelder — welches Bauteil erzeugt und empfängt das wechselnde Magnetfeld?"
+      ],
+      "loesungsweg": "Ein Generator wandelt mechanische Energie in elektrische um, indem eine Spule in einem Magnetfeld gedreht wird. Da sich $\\Phi(t) = B \\cdot A \\cdot \\cos(\\omega t)$ sinusförmig ändert, ist auch $U_\\text{ind}(t) = U_\\text{max} \\cdot \\sin(\\omega t)$ sinusförmig. Ein Transformator hat zwei Spulen auf einem Eisenkern; die Primärspule erzeugt ein wechselndes Magnetfeld, das in der Sekundärspule durch Induktion eine Spannung bewirkt. Das Spannungsverhältnis entspricht dem Windungsverhältnis: $\\frac{U_1}{U_2} = \\frac{n_1}{n_2}$.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über die elektromagnetische Induktion sind richtig?",
+      "optionen": [
+        {
+          "text": "Eine Induktionsspannung entsteht nur, wenn sich der magnetische Fluss $\\Phi$ durch die Spule ändert.",
+          "richtig": true,
+          "erklaerung": "Genau das besagt das Induktionsgesetz: maßgebend ist die Flussänderungsrate $\\frac{\\Delta\\Phi}{\\Delta t}$."
+        },
+        {
+          "text": "Ein starker, aber ruhender Magnet in der Spule erzeugt dauerhaft eine hohe Spannung.",
+          "richtig": false,
+          "erklaerung": "Bei Ruhe ist $\\Delta\\Phi = 0$, also $U_\\text{ind} = 0$ — egal wie stark der Magnet ist."
+        },
+        {
+          "text": "Je schneller sich der Fluss ändert, desto größer ist die induzierte Spannung.",
+          "richtig": true,
+          "erklaerung": "$|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ — eine schnellere Änderung bedeutet ein kleineres $\\Delta t$ und damit eine größere Spannung."
+        },
+        {
+          "text": "Eine doppelte Windungszahl bei gleicher Flussänderung verdoppelt die Induktionsspannung.",
+          "richtig": true,
+          "erklaerung": "Die Spannung ist proportional zur Windungszahl $n$."
+        }
+      ],
+      "tipps": [
+        "Frage dich zuerst: Ändert sich der magnetische Fluss $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ überhaupt?",
+        "Im Induktionsgesetz $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ stehen drei Stellschrauben: $n$, $|\\Delta\\Phi|$ und $\\Delta t$.",
+        "Genau eine Aussage beschreibt einen ruhenden Magneten — die ist falsch."
+      ],
+      "loesungsweg": "Richtig sind die erste, dritte und vierte Aussage. Eine Induktionsspannung setzt eine Änderung des Flusses voraus; sie wächst mit der Änderungsrate $\\frac{|\\Delta\\Phi|}{\\Delta t}$ und mit der Windungszahl $n$. Ein ruhender Magnet ändert den Fluss nicht und erzeugt daher keine Spannung.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Elektrizität — elektromagnetische Induktion (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine quadratische Leiterschleife mit der Seitenlänge $a = 8{,}0\\,\\text{cm}$ befindet sich in einem homogenen Magnetfeld mit $B = 0{,}50\\,\\text{T}$. Die Flächennormale schließt mit den Feldlinien den Winkel $\\alpha = 60^\\circ$ ein. Berechne den magnetischen Fluss $\\Phi$ durch die Schleife. ($\\cos 60^\\circ = 0{,}50$)",
+      "eingaben": [
+        {
+          "label": "$\\Phi$",
+          "antwort": 1.6,
+          "einheit": "mWb",
+          "toleranz": 0.05
+        }
+      ],
+      "tipps": [
+        "Berechne zuerst die Fläche: $A = a^2$.",
+        "Der magnetische Fluss ist $\\Phi = B \\cdot A \\cdot \\cos\\alpha$.",
+        "$A = (0{,}080\\,\\text{m})^2 = 6{,}4 \\cdot 10^{-3}\\,\\text{m}^2$; setze $\\cos 60^\\circ = 0{,}50$ ein."
+      ],
+      "loesungsweg": "Fläche: $A = a^2 = (0{,}080\\,\\text{m})^2 = 6{,}4 \\cdot 10^{-3}\\,\\text{m}^2$. Fluss: $\\Phi = B \\cdot A \\cdot \\cos\\alpha = 0{,}50\\,\\text{T} \\cdot 6{,}4 \\cdot 10^{-3}\\,\\text{m}^2 \\cdot 0{,}50 = 1{,}6 \\cdot 10^{-3}\\,\\text{Wb} = 1{,}6\\,\\text{mWb}$.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Elektrizität — magnetischer Fluss (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Leiterstab der Länge $L = 0{,}30\\,\\text{m}$ gleitet mit der konstanten Geschwindigkeit $v = 8{,}0\\,\\frac{\\text{m}}{\\text{s}}$ senkrecht zu den Feldlinien durch ein homogenes Magnetfeld mit $B = 0{,}45\\,\\text{T}$. Berechne den Betrag der induzierten Spannung.",
+      "eingaben": [
+        {
+          "label": "$U$",
+          "antwort": 1.08,
+          "einheit": "V",
+          "toleranz": 0.02
+        }
+      ],
+      "tipps": [
+        "Für den bewegten Leiterstab gilt die Bewegungsinduktion $U = B \\cdot L \\cdot v$.",
+        "Achte darauf, dass alle Größen in SI-Einheiten vorliegen (m, $\\frac{\\text{m}}{\\text{s}}$, T).",
+        "$U = 0{,}45 \\cdot 0{,}30 \\cdot 8{,}0$."
+      ],
+      "loesungsweg": "Bewegungsinduktion: $U = B \\cdot L \\cdot v = 0{,}45\\,\\text{T} \\cdot 0{,}30\\,\\text{m} \\cdot 8{,}0\\,\\frac{\\text{m}}{\\text{s}} = 1{,}08\\,\\text{V} \\approx 1{,}1\\,\\text{V}$.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Elektrizität — Bewegungsinduktion (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Durch eine Spule mit $n = 300$ Windungen ändert sich der magnetische Fluss gleichmäßig von $\\Phi_1 = 1{,}5\\,\\text{mWb}$ auf $\\Phi_2 = 0$ innerhalb von $\\Delta t = 30\\,\\text{ms}$. Berechne den Betrag der induzierten Spannung.",
+      "eingaben": [
+        {
+          "label": "$|U_\\text{ind}|$",
+          "antwort": 15.0,
+          "einheit": "V",
+          "toleranz": 0.2
+        }
+      ],
+      "tipps": [
+        "Es gilt das Induktionsgesetz $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$.",
+        "Bestimme zuerst $|\\Delta\\Phi| = |\\Phi_2 - \\Phi_1| = 1{,}5\\,\\text{mWb} = 1{,}5 \\cdot 10^{-3}\\,\\text{Wb}$ und $\\Delta t = 30\\,\\text{ms} = 0{,}030\\,\\text{s}$.",
+        "$|U_\\text{ind}| = 300 \\cdot \\frac{1{,}5 \\cdot 10^{-3}\\,\\text{Wb}}{0{,}030\\,\\text{s}}$."
+      ],
+      "loesungsweg": "Änderung: $|\\Delta\\Phi| = 1{,}5 \\cdot 10^{-3}\\,\\text{Wb}$, Zeit: $\\Delta t = 0{,}030\\,\\text{s}$. Induktionsgesetz: $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t} = 300 \\cdot \\frac{1{,}5 \\cdot 10^{-3}\\,\\text{Wb}}{0{,}030\\,\\text{s}} = 15\\,\\text{V}$.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Elektrizität — Induktionsgesetz (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Generator dreht eine Spule mit $N = 400$ Windungen und der Fläche $A = 60\\,\\text{cm}^2$ mit der Frequenz $f = 50\\,\\text{Hz}$ in einem homogenen Magnetfeld mit $B = 0{,}25\\,\\text{T}$. Die erzeugte Spannung verläuft sinusförmig: $U(t) = U_0 \\cdot \\sin(\\omega t)$. Berechne die Scheitelspannung $U_0$. ($\\omega = 2\\pi f$, $\\pi \\approx 3{,}1416$)",
+      "eingaben": [
+        {
+          "label": "$U_0$",
+          "antwort": 188.5,
+          "einheit": "V",
+          "toleranz": 1.0
+        }
+      ],
+      "tipps": [
+        "Berechne zuerst die Kreisfrequenz $\\omega = 2\\pi f$.",
+        "Die Scheitelspannung ist $U_0 = N \\cdot B \\cdot A \\cdot \\omega$.",
+        "$A = 60\\,\\text{cm}^2 = 60 \\cdot 10^{-4}\\,\\text{m}^2 = 6{,}0 \\cdot 10^{-3}\\,\\text{m}^2$; $\\omega = 2 \\cdot 3{,}1416 \\cdot 50\\,\\text{Hz} \\approx 314\\,\\frac{1}{\\text{s}}$."
+      ],
+      "loesungsweg": "Kreisfrequenz: $\\omega = 2\\pi f = 2 \\cdot 3{,}1416 \\cdot 50\\,\\text{Hz} \\approx 314{,}2\\,\\frac{1}{\\text{s}}$. Fläche: $A = 6{,}0 \\cdot 10^{-3}\\,\\text{m}^2$. Scheitelspannung: $U_0 = N \\cdot B \\cdot A \\cdot \\omega = 400 \\cdot 0{,}25\\,\\text{T} \\cdot 6{,}0 \\cdot 10^{-3}\\,\\text{m}^2 \\cdot 314{,}2\\,\\frac{1}{\\text{s}} \\approx 188{,}5\\,\\text{V}$.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Elektrizität — Generatorprinzip (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein idealer Transformator hat primär $N_1 = 600$ Windungen und sekundär $N_2 = 30$ Windungen. An die Primärspule wird die Wechselspannung $U_1 = 240\\,\\text{V}$ angelegt. Berechne die Sekundärspannung $U_2$.",
+      "eingaben": [
+        {
+          "label": "$U_2$",
+          "antwort": 12.0,
+          "einheit": "V",
+          "toleranz": 0.1
+        }
+      ],
+      "tipps": [
+        "Beim idealen Transformator gilt $\\frac{U_1}{U_2} = \\frac{N_1}{N_2}$.",
+        "Stelle nach der gesuchten Größe um: $U_2 = U_1 \\cdot \\frac{N_2}{N_1}$.",
+        "$U_2 = 240\\,\\text{V} \\cdot \\frac{30}{600}$."
+      ],
+      "loesungsweg": "Transformatorgleichung: $\\frac{U_1}{U_2} = \\frac{N_1}{N_2}$, also $U_2 = U_1 \\cdot \\frac{N_2}{N_1} = 240\\,\\text{V} \\cdot \\frac{30}{600} = 240\\,\\text{V} \\cdot 0{,}05 = 12\\,\\text{V}$.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Elektrizität — Transformator (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zusatz: Eine Generatorspule mit $N = 250$ Windungen und der Fläche $A = 50\\,\\text{cm}^2$ rotiert in einem Magnetfeld mit $B = 0{,}40\\,\\text{T}$ mit der Drehzahl $3000\\,\\frac{1}{\\text{min}}$. Berechne die Scheitelspannung $U_0$ der erzeugten Wechselspannung. ($\\pi \\approx 3{,}1416$)",
+      "eingaben": [
+        {
+          "label": "$U_0$",
+          "antwort": 157.1,
+          "einheit": "V",
+          "toleranz": 1.5
+        }
+      ],
+      "tipps": [
+        "Rechne die Drehzahl zuerst in die Frequenz um: $f = \\frac{3000}{60\\,\\text{s}} = 50\\,\\text{Hz}$.",
+        "Dann gilt $\\omega = 2\\pi f$ und $U_0 = N \\cdot B \\cdot A \\cdot \\omega$.",
+        "$A = 50\\,\\text{cm}^2 = 5{,}0 \\cdot 10^{-3}\\,\\text{m}^2$; $\\omega = 2 \\cdot 3{,}1416 \\cdot 50\\,\\text{Hz} \\approx 314\\,\\frac{1}{\\text{s}}$."
+      ],
+      "loesungsweg": "Frequenz aus der Drehzahl: $f = \\frac{3000}{60\\,\\text{s}} = 50\\,\\text{Hz}$. Kreisfrequenz: $\\omega = 2\\pi f \\approx 314{,}2\\,\\frac{1}{\\text{s}}$. Fläche: $A = 5{,}0 \\cdot 10^{-3}\\,\\text{m}^2$. Scheitelspannung: $U_0 = N \\cdot B \\cdot A \\cdot \\omega = 250 \\cdot 0{,}40\\,\\text{T} \\cdot 5{,}0 \\cdot 10^{-3}\\,\\text{m}^2 \\cdot 314{,}2\\,\\frac{1}{\\text{s}} \\approx 157{,}1\\,\\text{V}$.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Elektrizität — Generatorprinzip (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Spule hat die Induktivität $L = 0{,}40\\,\\text{H}$. Durch sie fließt zunächst der Strom $I = 3{,}0\\,\\text{A}$. a) Beim Öffnen des Schalters sinkt der Strom gleichmäßig in $\\Delta t = 25\\,\\text{ms}$ auf null. Berechne den Betrag der dabei selbstinduzierten Spannung ($|U_\\text{ind}| = L \\cdot \\frac{|\\Delta I|}{\\Delta t}$). b) Berechne die im ursprünglichen Stromfluss gespeicherte magnetische Energie ($W = \\frac{1}{2} L I^2$).",
+      "eingaben": [
+        {
+          "label": "a) $|U_\\text{ind}|$",
+          "antwort": 48.0,
+          "einheit": "V",
+          "toleranz": 0.5
+        },
+        {
+          "label": "b) $W$",
+          "antwort": 1.8,
+          "einheit": "J",
+          "toleranz": 0.05
+        }
+      ],
+      "tipps": [
+        "a) Die Selbstinduktion bremst die Stromänderung: $|U_\\text{ind}| = L \\cdot \\frac{|\\Delta I|}{\\Delta t}$ mit $|\\Delta I| = 3{,}0\\,\\text{A}$.",
+        "Rechne $\\Delta t = 25\\,\\text{ms} = 0{,}025\\,\\text{s}$ in Sekunden um.",
+        "b) Die gespeicherte Energie ist $W = \\frac{1}{2} L I^2 = \\frac{1}{2} \\cdot 0{,}40\\,\\text{H} \\cdot (3{,}0\\,\\text{A})^2$."
+      ],
+      "loesungsweg": "a) Selbstinduzierte Spannung: $|U_\\text{ind}| = L \\cdot \\frac{|\\Delta I|}{\\Delta t} = 0{,}40\\,\\text{H} \\cdot \\frac{3{,}0\\,\\text{A}}{0{,}025\\,\\text{s}} = 48\\,\\text{V}$. b) Magnetische Energie: $W = \\frac{1}{2} L I^2 = \\frac{1}{2} \\cdot 0{,}40\\,\\text{H} \\cdot (3{,}0\\,\\text{A})^2 = 0{,}5 \\cdot 0{,}40 \\cdot 9{,}0\\,\\text{J} = 1{,}8\\,\\text{J}$.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Elektrizität — Selbstinduktion (Qualifikationsphase)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-301",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ordne jeder physikalischen Größe aus der Induktionslehre ihre passende Einheit zu.",
+      "paare": [
+        {
+          "links": "Magnetischer Fluss $\\Phi$",
+          "rechts": "Weber (Wb)"
+        },
+        {
+          "links": "Magnetische Flussdichte $B$",
+          "rechts": "Tesla (T)"
+        },
+        {
+          "links": "Induktionsspannung $U_\\text{ind}$",
+          "rechts": "Volt (V)"
+        },
+        {
+          "links": "Induktivität $L$ einer Spule",
+          "rechts": "Henry (H)"
+        }
+      ],
+      "tipps": [
+        "Der Fluss ist ein Produkt aus Flussdichte und Fläche — seine Einheit trägt den Namen eines Physikers, nicht „Tesla“.",
+        "Die Flussdichte $B$ misst man in Tesla; verwechsle sie nicht mit dem Fluss selbst.",
+        "Die Induktivität verknüpft Spannung und Stromänderungsrate; ihre Einheit ist nach Joseph Henry benannt."
+      ],
+      "loesungsweg": "Der magnetische Fluss $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ wird in Weber gemessen ($1\\,\\text{Wb} = 1\\,\\text{T} \\cdot \\text{m}^2$). Die Flussdichte $B$ trägt die Einheit Tesla. Jede Spannung — auch die Induktionsspannung — wird in Volt angegeben. Die Induktivität $L$ aus $U_\\text{ind} = -L \\cdot \\frac{\\Delta I}{\\Delta t}$ hat die Einheit Henry ($1\\,\\text{H} = 1\\,\\frac{\\text{V} \\cdot \\text{s}}{\\text{A}}$).",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-302",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Aufgabe verlangt die mittlere Induktionsspannung, wenn eine Spule im homogenen Feld gedreht wird. Bringe die Lösungsschritte in eine sinnvolle Reihenfolge.",
+      "elemente": [
+        "Fläche der Spule aus den Abmessungen berechnen",
+        "Anfangs- und Endfluss über $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ bestimmen",
+        "Die Flussänderung $\\Delta\\Phi = \\Phi_2 - \\Phi_1$ bilden",
+        "Mit dem Induktionsgesetz $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ die Spannung ausrechnen"
+      ],
+      "tipps": [
+        "Ohne die Fläche kannst du den Fluss noch gar nicht angeben — sie steht am Anfang.",
+        "Erst wenn beide Flusswerte feststehen, lässt sich ihre Differenz bilden.",
+        "Das Induktionsgesetz benötigt die fertige Flussänderung $\\Delta\\Phi$ und kommt deshalb zuletzt."
+      ],
+      "loesungsweg": "Zuerst die Fläche $A$ aus den Abmessungen berechnen. Dann mit $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ den Anfangsfluss (z. B. $\\alpha_1 = 0^\\circ$) und den Endfluss (z. B. $\\alpha_2 = 90^\\circ$) bestimmen. Anschließend die Flussänderung $\\Delta\\Phi = \\Phi_2 - \\Phi_1$ bilden. Zuletzt liefert das Induktionsgesetz $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ die gesuchte mittlere Spannung.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-303",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Bewertung: Eine Schülerin behauptet: „Eine Wirbelstrombremse ist besser als eine mechanische Reibungsbremse, weil sie völlig verschleißfrei arbeitet und bei jeder Geschwindigkeit gleich stark bremst.“ Nimm physikalisch begründet Stellung. Gehe dabei darauf ein, (a) warum die Wirbelstrombremse verschleißarm ist und (b) ob die Bremswirkung tatsächlich geschwindigkeitsunabhängig ist und (c) ob sie ein Fahrzeug vollständig bis zum Stillstand abbremsen kann.",
+      "musterloesung": "(a) Richtig ist, dass die Wirbelstrombremse berührungslos arbeitet: Der bewegte Leiter (oder die Scheibe) wird allein durch das Magnetfeld und die induzierten Wirbelströme gebremst, ohne dass sich Bremsbeläge mechanisch berühren. Deshalb tritt praktisch kein mechanischer Verschleiß auf. (b) Die Behauptung „bei jeder Geschwindigkeit gleich stark“ ist jedoch falsch. Die Bremswirkung beruht auf der induzierten Spannung, und nach $U_\\text{ind} \\sim \\frac{\\Delta\\Phi}{\\Delta t}$ wächst diese mit der Geschwindigkeit der Flussänderung. Bei hoher Geschwindigkeit sind die Wirbelströme und damit die Bremskraft groß, bei kleiner Geschwindigkeit klein. Die Bremskraft ist also stark geschwindigkeitsabhängig und nimmt zu kleinen Geschwindigkeiten hin ab. (c) Genau deshalb kann eine reine Wirbelstrombremse ein Fahrzeug nicht bis zum völligen Stillstand bringen: Wird die Geschwindigkeit null, ändert sich der Fluss nicht mehr, es werden keine Wirbelströme mehr induziert und es wirkt keine Bremskraft. Für das letzte Stück bis zum Stillstand ist eine mechanische Bremse nötig. Insgesamt ist die Aussage nur teilweise richtig: verschleißarm ja, geschwindigkeitsunabhängig und allein anhaltefähig nein.",
+      "tipps": [
+        "Überlege zuerst, worauf die Bremskraft physikalisch beruht — auf Reibung oder auf Induktion?",
+        "Setze die induzierte Spannung in Bezug zur Geschwindigkeit: Wie hängt $\\frac{\\Delta\\Phi}{\\Delta t}$ von $v$ ab?",
+        "Frage dich, was bei $v = 0$ mit dem magnetischen Fluss und damit mit den Wirbelströmen passiert."
+      ],
+      "loesungsweg": "Kern der Bewertung: (1) verschleißarm — ja, weil berührungslos (keine Bremsbeläge). (2) geschwindigkeitsunabhängig — nein, da $U_\\text{ind} \\sim \\frac{\\Delta\\Phi}{\\Delta t}$ mit $v$ wächst; Bremskraft groß bei hohem $v$, klein bei kleinem $v$. (3) bis zum Stillstand — nein, denn bei $v = 0$ keine Flussänderung, keine Wirbelströme, keine Bremskraft; eine mechanische Bremse bleibt nötig. Fazit: Aussage nur teilweise korrekt.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-304",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Beim Thomsonschen Ringversuch sitzt ein geschlossener Aluminiumring lose über dem Kern einer Spule. Im Moment des Einschaltens des Spulenstroms springt der Ring nach oben. Welche Begründungen dieses Verhaltens sind physikalisch richtig?",
+      "optionen": [
+        {
+          "text": "Beim Einschalten wächst der Fluss durch den Ring rasch an; der induzierte Ringstrom ist nach der lenzschen Regel so gerichtet, dass sein Feld dem Spulenfeld entgegenwirkt — Ring und Spule stoßen sich ab.",
+          "richtig": true,
+          "erklaerung": "Richtig — die schnelle Flusszunahme induziert einen Strom, dessen Magnetfeld dem zunehmenden Spulenfeld entgegengerichtet ist (Lenz). Gegengleiche Felder bedeuten Abstoßung, der Ring wird nach oben geschleudert."
+        },
+        {
+          "text": "Würde der Induktionsstrom das Spulenfeld verstärken statt ihm entgegenzuwirken, würde der Ring angezogen und gleichzeitig elektrische Energie freigesetzt — das widerspricht der Energieerhaltung.",
+          "richtig": true,
+          "erklaerung": "Richtig — eine die Ursache verstärkende Stromrichtung erzeugte Bewegungs- und elektrische Energie aus dem Nichts (Perpetuum mobile). Genau das schließt die lenzsche Regel als Folge der Energieerhaltung aus."
+        },
+        {
+          "text": "Ein aufgesägter (nicht geschlossener) Ring springt genauso hoch, weil die induzierte Spannung dieselbe bleibt.",
+          "richtig": false,
+          "erklaerung": "Nein — im aufgesägten Ring kann kein Ringstrom fließen. Ohne Strom entsteht kein Gegenfeld und keine abstoßende Kraft; der Ring bleibt liegen, obwohl die induzierte Spannung vorhanden ist."
+        },
+        {
+          "text": "Der Ring springt, weil das konstante Magnetfeld der eingeschalteten Spule ihn dauerhaft abstößt.",
+          "richtig": false,
+          "erklaerung": "Nein — ein konstantes Feld induziert keinen Strom ($\\Delta\\Phi = 0$). Die Kraft tritt nur im Einschaltmoment auf, während sich der Fluss ändert; danach hält die Abstoßung nicht an."
+        }
+      ],
+      "tipps": [
+        "Frage zuerst: Wann ändert sich der Fluss durch den Ring — dauerhaft oder nur beim Schalten?",
+        "Wende die lenzsche Regel auf die Richtung des Ringstroms und das daraus folgende Kräftepaar an.",
+        "Prüfe die Rolle des geschlossenen Stromkreises: Was passiert ohne fließenden Strom? Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind die ersten beiden Aussagen. Beim Einschalten wächst der Fluss; der Ringstrom wirkt nach Lenz dem Spulenfeld entgegen, sodass sich Ring und Spule abstoßen. Eine umgekehrte Stromrichtung wäre ein Perpetuum mobile und ist durch die Energieerhaltung ausgeschlossen. Ein aufgesägter Ring führt keinen Strom und springt nicht. Das konstante Feld nach dem Einschalten induziert nichts mehr — die Kraft wirkt nur während der Flussänderung.",
+      "kc": [
+        "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-108",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ergänze den Text zur Bedingung für elektromagnetische Induktion.",
+      "text": "In einer Spule entsteht eine Induktionsspannung nur dann, wenn sich das von ihr umfasste ___ zeitlich ___ . Bleibt ein Magnet ruhig in der Spule liegen, wird ___ Spannung induziert — selbst wenn der Magnet sehr stark ist. Bewegt man den Magneten ___ , wird die induzierte Spannung größer. Auch eine größere ___ der Spule vergrößert die induzierte Spannung.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Magnetfeld",
+          "optionen": [
+            "Magnetfeld",
+            "Gewicht",
+            "Volumen",
+            "Gewicht des Magneten"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "ändert",
+          "optionen": [
+            "ändert",
+            "halbiert",
+            "verdoppelt",
+            "verschiebt"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "keine",
+          "optionen": [
+            "keine",
+            "eine konstante",
+            "eine sehr große",
+            "eine negative"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "schneller",
+          "optionen": [
+            "schneller",
+            "langsamer",
+            "gar nicht",
+            "seltener"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Windungszahl",
+          "optionen": [
+            "Windungszahl",
+            "Masse",
+            "Temperatur",
+            "Länge"
+          ]
+        }
+      ],
+      "tipps": [
+        "Entscheidend ist nicht, wie stark das Feld ist, sondern ob es sich ändert.",
+        "Ein ruhender Magnet erzeugt ein konstantes Feld — und ein konstantes Feld induziert nichts.",
+        "Schnellere Bewegung und mehr Windungen verstärken den Effekt."
+      ],
+      "loesungsweg": "Eine Induktionsspannung entsteht nur, wenn sich das Magnetfeld durch die Spule zeitlich ändert. Ein ruhender Magnet — auch ein starker — induziert keine Spannung. Schnellere Bewegung und eine größere Windungszahl vergrößern die induzierte Spannung. Es zählt also allein die Änderung des Feldes, nicht seine Stärke.",
+      "kc": [
+        "induktion"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-109",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Mitschüler sagt: „Ein starker Magnet, der ruhig in einer Spule steckt, muss doch eine große Spannung erzeugen — er ist ja so stark.“ Nimm zu dieser Aussage Stellung und erkläre qualitativ, worauf es bei der elektromagnetischen Induktion wirklich ankommt. Beschreibe außerdem, wie man bei demselben Magneten die induzierte Spannung vergrößern könnte.",
+      "musterloesung": "Die Aussage ist falsch. Für eine Induktionsspannung kommt es nicht auf die Stärke des Magnetfelds an, sondern darauf, dass sich das von der Spule umfasste Feld zeitlich ändert. Ein ruhender Magnet erzeugt ein konstantes Feld; die Änderung ist null, also wird keine Spannung induziert — egal wie stark der Magnet ist. Bei demselben Magneten kann man die induzierte Spannung vergrößern, indem man ihn schneller bewegt (das Feld ändert sich dann in kürzerer Zeit) oder indem man eine Spule mit mehr Windungen verwendet. Beide Maßnahmen erhöhen die induzierte Spannung, ohne den Magneten selbst zu verändern.",
+      "tipps": [
+        "Frage dich: Ändert sich das Feld, während der Magnet ruhig liegt?",
+        "Stärke und Änderung sind zwei verschiedene Dinge — nur die Änderung zählt.",
+        "Zwei Stellschrauben: Geschwindigkeit der Bewegung und Windungszahl der Spule."
+      ],
+      "loesungsweg": "Kernpunkte: (1) Induktion braucht eine zeitliche Änderung des Feldes, nicht ein starkes Feld. (2) Ruhender Magnet = konstantes Feld = keine Änderung = keine Spannung. (3) Größer wird die Spannung durch schnelleres Bewegen (Feldänderung in kürzerer Zeit) oder mehr Windungen.",
+      "kc": [
+        "induktion"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-110",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "In welchen der folgenden Situationen wird in einer Spule eine Spannung induziert?",
+      "optionen": [
+        {
+          "text": "Ein Stabmagnet wird zügig in die Spule hineingeschoben.",
+          "richtig": true,
+          "erklaerung": "Richtig — beim Hineinschieben ändert sich das Feld durch die Spule, also wird eine Spannung induziert."
+        },
+        {
+          "text": "Ein Stabmagnet liegt bewegungslos in der Spule.",
+          "richtig": false,
+          "erklaerung": "Falsch — ein ruhender Magnet erzeugt ein konstantes Feld; ohne Änderung keine Induktionsspannung."
+        },
+        {
+          "text": "Ein Magnet wird mit gleichbleibender Geschwindigkeit aus der Spule herausgezogen.",
+          "richtig": true,
+          "erklaerung": "Richtig — beim Herausziehen nimmt das Feld durch die Spule ab; diese Änderung induziert eine Spannung."
+        },
+        {
+          "text": "Die Anzahl der Windungen der ruhenden Spule wird gedanklich verdoppelt, während der Magnet weiter ruht.",
+          "richtig": false,
+          "erklaerung": "Falsch — solange sich nichts bewegt und das Feld konstant bleibt, wird keine Spannung induziert; mehr Windungen verstärken nur eine ohnehin vorhandene Induktion."
+        }
+      ],
+      "tipps": [
+        "Prüfe in jeder Situation: Ändert sich das Magnetfeld durch die Spule?",
+        "Bewegung des Magneten (hinein oder heraus) bedeutet Feldänderung.",
+        "Ein ruhendes System ohne Feldänderung induziert nichts."
+      ],
+      "loesungsweg": "Eine Spannung wird genau dann induziert, wenn sich das Feld durch die Spule ändert: beim Hineinschieben (Aussage 1) und beim Herausziehen (Aussage 3). Ein ruhender Magnet (Aussage 2) und das bloße Verdoppeln der Windungszahl bei ruhendem Magneten (Aussage 4) erzeugen keine Feldänderung und damit keine Induktionsspannung.",
+      "kc": [
+        "induktion"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-111",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine ebene Spule mit der Fläche $A = 25\\,\\text{cm}^2$ befindet sich in einem homogenen Magnetfeld. Bei senkrechter Durchsetzung ($\\alpha = 0^\\circ$) wird der magnetische Fluss $\\Phi_0 = 1{,}5\\,\\text{mWb}$ durch eine Windung gemessen. Bestimme die Flussdichte und den Fluss in einer gedrehten Lage.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne aus $\\Phi_0 = B \\cdot A$ die Flussdichte $B$. Gib das Ergebnis in Tesla an.",
+          "eingaben": [
+            {
+              "label": "$B$",
+              "antwort": 0.6,
+              "toleranz": 0.02,
+              "einheit": "T"
+            }
+          ],
+          "tipps": [
+            "Stelle $\\Phi_0 = B \\cdot A$ nach $B$ um: $B = \\frac{\\Phi_0}{A}$.",
+            "$A = 25\\,\\text{cm}^2 = 25 \\cdot 10^{-4}\\,\\text{m}^2 = 2{,}5 \\cdot 10^{-3}\\,\\text{m}^2$ und $\\Phi_0 = 1{,}5 \\cdot 10^{-3}\\,\\text{Wb}$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Die Spule wird so gedreht, dass die Flächennormale um $\\alpha = 60^\\circ$ gegen die Feldlinien geneigt ist. Berechne den neuen Fluss $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ in mWb.",
+          "eingaben": [
+            {
+              "label": "$\\Phi_{60}$",
+              "antwort": 0.75,
+              "toleranz": 0.03,
+              "einheit": "mWb"
+            }
+          ],
+          "tipps": [
+            "Es gilt $\\Phi = \\Phi_0 \\cdot \\cos\\alpha$.",
+            "$\\cos 60^\\circ = 0{,}5$, also $\\Phi = 1{,}5\\,\\text{mWb} \\cdot 0{,}5$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Aus dem Fluss bei $\\alpha = 0^\\circ$ kannst du die Flussdichte zurückrechnen.",
+        "Zum Fluss trägt nur die Feldkomponente senkrecht zur Fläche bei — daher der Faktor $\\cos\\alpha$.",
+        "Achte auf die Flächenumrechnung: $1\\,\\text{cm}^2 = 10^{-4}\\,\\text{m}^2$."
+      ],
+      "loesungsweg": "Schritt 1: $B = \\frac{\\Phi_0}{A} = \\frac{1{,}5 \\cdot 10^{-3}\\,\\text{Wb}}{2{,}5 \\cdot 10^{-3}\\,\\text{m}^2} = 0{,}60\\,\\text{T}$. Schritt 2: Bei $\\alpha = 60^\\circ$ ist $\\Phi = B \\cdot A \\cdot \\cos 60^\\circ = \\Phi_0 \\cdot 0{,}5 = 1{,}5\\,\\text{mWb} \\cdot 0{,}5 = 0{,}75\\,\\text{mWb}$.",
+      "kc": [
+        "induktion"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-112",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "In einer Spule mit $n = 150$ Windungen ändert sich der magnetische Fluss durch eine Windung gleichmäßig von $\\Phi_1 = 2{,}0\\,\\text{mWb}$ auf $\\Phi_2 = 0{,}5\\,\\text{mWb}$ innerhalb von $\\Delta t = 30\\,\\text{ms}$. Berechne den Betrag der induzierten Spannung.",
+      "eingaben": [
+        {
+          "label": "$|U_\\text{ind}|$",
+          "antwort": 7.5,
+          "toleranz": 0.1,
+          "einheit": "V"
+        }
+      ],
+      "tipps": [
+        "Das Induktionsgesetz lautet $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$.",
+        "$|\\Delta\\Phi| = |\\Phi_2 - \\Phi_1| = 1{,}5\\,\\text{mWb} = 1{,}5 \\cdot 10^{-3}\\,\\text{Wb}$ und $\\Delta t = 0{,}030\\,\\text{s}$.",
+        "Erst $\\frac{|\\Delta\\Phi|}{\\Delta t}$ berechnen, dann mit $n$ multiplizieren."
+      ],
+      "loesungsweg": "$|\\Delta\\Phi| = |\\Phi_2 - \\Phi_1| = |0{,}5 - 2{,}0|\\,\\text{mWb} = 1{,}5\\,\\text{mWb} = 1{,}5 \\cdot 10^{-3}\\,\\text{Wb}$. Mit $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t} = 150 \\cdot \\frac{1{,}5 \\cdot 10^{-3}\\,\\text{Wb}}{0{,}030\\,\\text{s}} = 150 \\cdot 0{,}050\\,\\text{V} = 7{,}5\\,\\text{V}$.",
+      "kc": [
+        "induktion"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-113",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine rechteckige Spulenwindung mit den Seitenlängen $b = 12\\,\\text{cm}$ und $h = 5{,}0\\,\\text{cm}$ steht senkrecht zu den Feldlinien eines homogenen Magnetfelds mit $B = 0{,}35\\,\\text{T}$ ($\\alpha = 0^\\circ$). Berechne den magnetischen Fluss $\\Phi$ durch die Windung.",
+      "eingaben": [
+        {
+          "label": "$\\Phi$",
+          "antwort": 2.1,
+          "toleranz": 0.05,
+          "einheit": "mWb"
+        }
+      ],
+      "tipps": [
+        "Berechne zuerst die Fläche $A = b \\cdot h$ und rechne sie in $\\text{m}^2$ um.",
+        "Bei senkrechter Durchsetzung ist $\\cos 0^\\circ = 1$, also $\\Phi = B \\cdot A$.",
+        "Achte auf die Flächenumrechnung: $1\\,\\text{cm}^2 = 10^{-4}\\,\\text{m}^2$."
+      ],
+      "loesungsweg": "Fläche: $A = b \\cdot h = 0{,}12\\,\\text{m} \\cdot 0{,}050\\,\\text{m} = 6{,}0 \\cdot 10^{-3}\\,\\text{m}^2$. Fluss bei $\\alpha = 0^\\circ$: $\\Phi = B \\cdot A = 0{,}35\\,\\text{T} \\cdot 6{,}0 \\cdot 10^{-3}\\,\\text{m}^2 = 2{,}1 \\cdot 10^{-3}\\,\\text{Wb} = 2{,}1\\,\\text{mWb}$.",
+      "kc": [
+        "induktion"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-114",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Stabmagnet wird in eine Spule hinein- und wieder herausbewegt. Welche Aussagen über die dabei entstehende Induktionsspannung sind richtig?",
+      "optionen": [
+        {
+          "text": "Eine Spannung entsteht nur, solange sich der Magnet relativ zur Spule bewegt.",
+          "richtig": true,
+          "erklaerung": "Richtig — nur während der Bewegung ändert sich das Feld durch die Spule, und nur dann wird induziert."
+        },
+        {
+          "text": "Bewegt man den Magneten schneller, wird die induzierte Spannung größer.",
+          "richtig": true,
+          "erklaerung": "Richtig — schnellere Bewegung bedeutet eine schnellere Feldänderung und damit eine größere Spannung."
+        },
+        {
+          "text": "Ein ruhender, aber sehr starker Magnet in der Spule erzeugt eine besonders große Spannung.",
+          "richtig": false,
+          "erklaerung": "Falsch — ruht der Magnet, ändert sich nichts; egal wie stark er ist, es wird keine Spannung induziert."
+        },
+        {
+          "text": "Eine Spule mit mehr Windungen liefert bei gleicher Bewegung eine kleinere Spannung.",
+          "richtig": false,
+          "erklaerung": "Falsch — mehr Windungen liefern eine größere Spannung, nicht eine kleinere."
+        }
+      ],
+      "tipps": [
+        "Entscheidend ist die Bewegung (Feldänderung), nicht die Stärke des Magneten.",
+        "Schneller bewegen = schnellere Änderung = größere Spannung.",
+        "Mehr Windungen verstärken die induzierte Spannung."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Eine Spannung entsteht nur während der Bewegung (Feldänderung), und schnelleres Bewegen vergrößert sie. Ein ruhender Magnet induziert nichts, auch wenn er stark ist (Aussage 3 falsch), und mehr Windungen liefern eine größere, nicht kleinere Spannung (Aussage 4 falsch).",
+      "kc": [
+        "induktion"
+      ]
+    },
+    {
+      "id": "ph-qp-ind-115",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein idealer Transformator soll die Netzspannung $U_1 = 230\\,\\text{V}$ auf die Ausgangsspannung $U_2 = 11{,}5\\,\\text{V}$ heruntertransformieren. Die Primärspule hat $n_1 = 800$ Windungen. a) Berechne die nötige Windungszahl $n_2$ der Sekundärspule. b) Sekundärseitig fließt der Strom $I_2 = 2{,}0\\,\\text{A}$. Berechne mit der Leistungsbilanz des idealen Transformators ($U_1 I_1 = U_2 I_2$) den Primärstrom $I_1$.",
+      "eingaben": [
+        {
+          "label": "a) $n_2$",
+          "antwort": 40,
+          "toleranz": 1,
+          "einheit": ""
+        },
+        {
+          "label": "b) $I_1$ (in mA)",
+          "antwort": 100,
+          "toleranz": 3,
+          "einheit": "mA"
+        }
+      ],
+      "tipps": [
+        "Am idealen Transformator gilt $\\frac{U_1}{U_2} = \\frac{n_1}{n_2}$ — stelle nach $n_2$ um.",
+        "$n_2 = n_1 \\cdot \\frac{U_2}{U_1}$.",
+        "Beim idealen Transformator ist die Leistung gleich: $U_1 I_1 = U_2 I_2$, also $I_1 = \\frac{U_2 I_2}{U_1}$."
+      ],
+      "loesungsweg": "a) Aus $\\frac{U_1}{U_2} = \\frac{n_1}{n_2}$ folgt $n_2 = n_1 \\cdot \\frac{U_2}{U_1} = 800 \\cdot \\frac{11{,}5\\,\\text{V}}{230\\,\\text{V}} = 800 \\cdot 0{,}05 = 40$ Windungen. b) Aus $U_1 I_1 = U_2 I_2$ folgt $I_1 = \\frac{U_2 I_2}{U_1} = \\frac{11{,}5\\,\\text{V} \\cdot 2{,}0\\,\\text{A}}{230\\,\\text{V}} = 0{,}10\\,\\text{A} = 100\\,\\text{mA}$. Heruntertransformierte Spannung bedeutet hochtransformierten Strom.",
+      "kc": [
+        "induktion"
+      ]
     }
-   ],
-   "tipps": [
-    "Schreibe das Induktionsgesetz hin: Was steht auf der rechten Seite? Wann ist der Ausdruck null, wann nicht?",
-    "Vergleiche die Richtung der Flussänderung: Wächst $\\Phi$ beim Hineinschieben oder beim Herausziehen?",
-    "Zwei Aussagen sind richtig."
-   ],
-   "loesungsweg": "Richtig sind Aussagen 1 und 2. Solange der Magnet ruht, ist $\\Delta\\Phi = 0$ und damit $U_\\text{ind} = 0$. Beim Herausziehen nimmt der Fluss ab — $\\frac{\\Delta\\Phi}{\\Delta t} \\neq 0$, also entsteht eine Spannung. Da $\\Delta\\Phi$ beim Herausziehen das entgegengesetzte Vorzeichen hat wie beim Hineinschieben, kehrt auch die Spannung ihr Vorzeichen um. Mehr Windungen erhöhen die Spannung (Faktor $n$), nicht verringern sie.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-102",
-   "typ": "freitext",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Zusatz: Zwei Spulen A und B sind identisch aufgebaut. Spule A wird mit einem starken Dauermagneten besteckt, Spule B mit einem schwachen. Beide Magnete bleiben anschließend ruhig in der Spule. Jetzt wird in beiden Spulen gleichzeitig der Magnet mit derselben Geschwindigkeit herausgezogen. Vergleiche und erkläre, in welcher Spule die größere Induktionsspannung entsteht — und warum ein starker, aber ruhender Magnet in Spule A zuvor keine Spannung erzeugte.",
-   "musterloesung": "Beim Herausziehen mit gleicher Geschwindigkeit ändert sich der magnetische Fluss in Spule A schneller als in B, weil $\\Delta\\Phi = \\Delta(B \\cdot A)$ und die Flussdichte $B$ des starken Magneten größer ist: $\\frac{\\Delta\\Phi_A}{\\Delta t} > \\frac{\\Delta\\Phi_B}{\\Delta t}$. Nach dem Induktionsgesetz $U_\\text{ind} = -n \\cdot \\frac{\\Delta\\Phi}{\\Delta t}$ ist die Spannung in Spule A größer. Dass der starke Magnet zuvor keine Spannung erzeugte, liegt daran, dass er ruhte: Der Fluss war groß, aber konstant, also $\\Delta\\Phi = 0$ und $U_\\text{ind} = 0$. Entscheidend ist stets die Änderungsrate des Flusses, nicht sein absoluter Betrag.",
-   "tipps": [
-    "Vergleiche zunächst die Flussdichte $B$ beider Magnete: Welcher erzeugt den größeren Fluss durch die Spule?",
-    "Formel: $U_\\text{ind} = -n \\cdot \\frac{\\Delta\\Phi}{\\Delta t}$ — was ändert sich, wenn $B$ größer ist, bei gleicher Herausziehgeschwindigkeit?",
-    "Warum war beim ruhenden Magneten $\\Delta\\Phi = 0$, obwohl der Fluss selbst groß war?"
-   ],
-   "loesungsweg": "Spule A: größerer Magnet $\\Rightarrow$ größeres $\\Phi = B \\cdot A$ $\\Rightarrow$ größere Änderung $\\Delta\\Phi$ beim Herausziehen in derselben Zeit $\\Rightarrow$ größere Spannung. Spule B: schwacher Magnet $\\Rightarrow$ kleineres $\\Delta\\Phi / \\Delta t$ $\\Rightarrow$ kleinere Spannung. Beim ruhenden Magneten: $B$ constant $\\Rightarrow$ $\\Phi$ constant $\\Rightarrow$ $\\Delta\\Phi = 0$ $\\Rightarrow$ $U_\\text{ind} = 0$, egal wie stark der Magnet ist.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-103",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Eine kreisförmige Leiterschleife hat den Radius $r = 4{,}0\\,\\text{cm}$ und wird von einem homogenen Magnetfeld mit $B = 0{,}25\\,\\text{T}$ senkrecht durchsetzt ($\\alpha = 0^\\circ$). Berechne den magnetischen Fluss $\\Phi$ durch die Schleife. Verwende $\\pi \\approx 3{,}14$.",
-   "eingaben": [
-    {
-     "label": "$\\Phi$",
-     "antwort": 1.256,
-     "toleranz": 0.02,
-     "einheit": "mWb"
-    }
-   ],
-   "tipps": [
-    "Kreisfläche: $A = \\pi \\cdot r^2$. Erst $r$ in Meter umrechnen: $4{,}0\\,\\text{cm} = 0{,}040\\,\\text{m}$.",
-    "$A = 3{,}14 \\cdot (0{,}040)^2\\,\\text{m}^2 = 3{,}14 \\cdot 1{,}6 \\cdot 10^{-3}\\,\\text{m}^2$.",
-    "Bei senkrechter Durchsetzung ($\\cos 0^\\circ = 1$): $\\Phi = B \\cdot A = 0{,}25 \\cdot 5{,}024 \\cdot 10^{-3}\\,\\text{Wb}$ — Ergebnis in Milliweber."
-   ],
-   "loesungsweg": "$A = \\pi \\cdot r^2 = 3{,}14 \\cdot (0{,}040\\,\\text{m})^2 = 3{,}14 \\cdot 1{,}6 \\cdot 10^{-3}\\,\\text{m}^2 = 5{,}024 \\cdot 10^{-3}\\,\\text{m}^2$. Fluss: $\\Phi = B \\cdot A = 0{,}25\\,\\text{T} \\cdot 5{,}024 \\cdot 10^{-3}\\,\\text{m}^2 = 1{,}256 \\cdot 10^{-3}\\,\\text{Wb} = 1{,}256\\,\\text{mWb} \\approx 1{,}3\\,\\text{mWb}$. Häufiger Fehler: Radius nicht quadrieren oder $r$ nicht in Meter umrechnen.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-104",
-   "typ": "rechenweg",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Zusatz: Eine quadratische Leiterschleife (Seitenlänge $a = 10\\,\\text{cm}$) befindet sich in einem homogenen Magnetfeld mit $B = 0{,}40\\,\\text{T}$. Die Schleife wird aus der Lage $\\alpha_1 = 0^\\circ$ (senkrechte Durchsetzung) in die Lage $\\alpha_2 = 60^\\circ$ gedreht. Berechne (a) den Anfangsfluss $\\Phi_1$, (b) den Endfluss $\\Phi_2$ und (c) den Betrag der mittleren Induktionsspannung, wenn die Drehung gleichmäßig in $\\Delta t = 25\\,\\text{ms}$ erfolgt (eine Windung).",
-   "schritte": [
-    {
-     "frage": "Schritt 1: Anfangsfluss $\\Phi_1 = B \\cdot A \\cdot \\cos 0^\\circ$ in Milliweber.",
-     "eingaben": [
-      {
-       "label": "$\\Phi_1$",
-       "antwort": 4.0,
-       "toleranz": 0.05,
-       "einheit": "mWb"
-      }
-     ],
-     "tipps": [
-      "$A = a^2 = (0{,}10\\,\\text{m})^2 = 0{,}01\\,\\text{m}^2$; $\\cos 0^\\circ = 1$, also $\\Phi_1 = B \\cdot A$."
-     ]
-    },
-    {
-     "frage": "Schritt 2: Endfluss $\\Phi_2 = B \\cdot A \\cdot \\cos 60^\\circ$ in Milliweber.",
-     "eingaben": [
-      {
-       "label": "$\\Phi_2$",
-       "antwort": 2.0,
-       "toleranz": 0.05,
-       "einheit": "mWb"
-      }
-     ],
-     "tipps": [
-      "$\\cos 60^\\circ = 0{,}5$, also $\\Phi_2 = \\Phi_1 \\cdot 0{,}5$."
-     ]
-    },
-    {
-     "frage": "Schritt 3: Betrag der mittleren Induktionsspannung $|U_\\text{ind}| = \\frac{|\\Delta\\Phi|}{\\Delta t}$ in Volt.",
-     "eingaben": [
-      {
-       "label": "$|U_\\text{ind}|$",
-       "antwort": 0.08,
-       "toleranz": 0.005,
-       "einheit": "V"
-      }
-     ],
-     "tipps": [
-      "$|\\Delta\\Phi| = |\\Phi_2 - \\Phi_1| = |2{,}0 - 4{,}0|\\,\\text{mWb} = 2{,}0\\,\\text{mWb}$; $\\Delta t = 0{,}025\\,\\text{s}$."
-     ]
-    }
-   ],
-   "tipps": [
-    "Zuerst die Fläche berechnen: $A = a^2$ mit $a$ in Meter.",
-    "$\\cos 0^\\circ = 1$ und $\\cos 60^\\circ = 0{,}5$ — der Endfluss ist halb so groß wie der Anfangsfluss.",
-    "Die Flussänderung ist $\\Delta\\Phi = \\Phi_2 - \\Phi_1$ (negativ, da Fluss abnimmt), für den Betrag der Spannung reicht $|\\Delta\\Phi| / \\Delta t$."
-   ],
-   "loesungsweg": "(a) $A = (0{,}10\\,\\text{m})^2 = 1{,}0 \\cdot 10^{-2}\\,\\text{m}^2$; $\\Phi_1 = 0{,}40 \\cdot 1{,}0 \\cdot 10^{-2}\\,\\text{Wb} = 4{,}0\\,\\text{mWb}$. (b) $\\Phi_2 = 4{,}0 \\cdot \\cos 60^\\circ = 4{,}0 \\cdot 0{,}5 = 2{,}0\\,\\text{mWb}$. (c) $|U_\\text{ind}| = \\frac{|\\Phi_2 - \\Phi_1|}{\\Delta t} = \\frac{2{,}0 \\cdot 10^{-3}\\,\\text{Wb}}{0{,}025\\,\\text{s}} = 0{,}080\\,\\text{V} = 80\\,\\text{mV}$. Je schneller die Drehung, desto größer die Spannung — das ist das Grundprinzip des Generators.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-105",
-   "typ": "numerisch",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Durch eine Spule mit $n = 100$ Windungen ändert sich der magnetische Fluss gleichmäßig von $\\Phi_1 = 0{,}80\\,\\text{mWb}$ auf $\\Phi_2 = 0$ innerhalb von $\\Delta t = 40\\,\\text{ms}$. Berechne den Betrag der induzierten Spannung.",
-   "eingaben": [
-    {
-     "label": "$|U_\\text{ind}|$",
-     "antwort": 2.0,
-     "toleranz": 0.05,
-     "einheit": "V"
-    }
-   ],
-   "tipps": [
-    "Induktionsgesetz: $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$.",
-    "$|\\Delta\\Phi| = |\\Phi_2 - \\Phi_1| = |0 - 0{,}80\\,\\text{mWb}| = 0{,}80\\,\\text{mWb} = 8{,}0 \\cdot 10^{-4}\\,\\text{Wb}$.",
-    "$\\Delta t = 40\\,\\text{ms} = 0{,}040\\,\\text{s}$. Einsetzen: $100 \\cdot \\frac{8{,}0 \\cdot 10^{-4}}{0{,}040}$."
-   ],
-   "loesungsweg": "$|\\Delta\\Phi| = 0{,}80 \\cdot 10^{-3}\\,\\text{Wb}$. $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t} = 100 \\cdot \\frac{0{,}80 \\cdot 10^{-3}\\,\\text{Wb}}{0{,}040\\,\\text{s}} = 100 \\cdot 0{,}020\\,\\text{V} = 2{,}0\\,\\text{V}$. Typischer Fehler: Millisekunden nicht in Sekunden umrechnen oder Milliweber nicht in Weber.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-106",
-   "typ": "freitext",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Zusatz: Ein Magnet wird in eine Kupferscheibe fallengelassen (Lenzsche Bremse). Der Magnet fällt deutlich langsamer als im freien Fall. (a) Erkläre mit Induktionsgesetz und lenzscher Regel, warum der Magnet abgebremst wird. (b) Erkläre, warum eine Scheibe aus nicht leitendem Material (z. B. Kunststoff) keine Bremswirkung zeigt. (c) Wäre eine ewige Bremsung — der Magnet bleibt für immer in der Scheibe hängen — mit der Energieerhaltung vereinbar?",
-   "musterloesung": "(a) Beim Fallen des Magneten ändert sich der magnetische Fluss durch die Querschnittflächen der Kupferscheibe: Der Fluss wächst, wenn der Magnet naht, und nimmt ab, wenn er sich entfernt. Nach dem Induktionsgesetz entstehen in der Scheibe Wirbelströme. Die lenzsche Regel besagt, dass diese Wirbelströme ein Magnetfeld erzeugen, das dem wachsenden Fluss entgegenwirkt — also den Magneten anzieht, wenn er sich nähert, und abstosst, wenn er sich entfernt. In beiden Fällen wirkt eine der Bewegung entgegengerichtete Kraft: Der Magnet wird abgebremst. (b) In Kunststoff können keine freien Ladungsträger fließen — es entstehen keine Wirbelströme, kein Gegenfeld, keine Bremskraft. (c) Nein. Die kinetische Energie des Magneten wird durch die Wirbelströme in Wärme umgewandelt. Ist die kinetische Energie aufgebraucht, kann keine Bremskraft mehr wirken; der Magnet bleibt nicht ewig hängen, sondern kommt zum Stillstand, wenn seine Energie vollständig dissipiert ist. Eine ewige Abbremsung wäre ein Perpetuum mobile zweiter Art und widerspricht der Energieerhaltung.",
-   "tipps": [
-    "Was ändert sich, wenn der Magnet durch die Scheibe fällt? Denke an den magnetischen Fluss durch kleine Flächenelemente der Scheibe.",
-    "Lenzsche Regel: Wie ist das Wirbelstromfeld gegenüber dem Magnetfeld des fallenden Magneten ausgerichtet — und welche Kraft folgt daraus?",
-    "Warum können in Kunststoff keine Ströme fließen? Was fehlt?"
-   ],
-   "loesungsweg": "Kern: (1) Fluss ändert sich beim Fallen → Induktionsgesetz → Wirbelströme. (2) Lenzsche Regel: Wirbelströme bremsen die Ursache (die Bewegung des Magneten). (3) Kein Leiter → kein Strom → kein Gegenfeld → keine Bremskraft. (4) Energieerhaltung: Magnetische Energie → Wärme; kein Perpetuum mobile.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-107",
-   "typ": "luecke",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Ergänze den Text über Generator und Transformator.",
-   "text": "Ein Generator wandelt ___ Energie in elektrische Energie um. Dazu wird eine Spule in einem Magnetfeld ___ . Die entstehende Spannung ist ___förmig, weil sich der magnetische Fluss durch die rotierende Spule periodisch ändert. Ein Transformator besitzt zwei ___ auf einem gemeinsamen Eisenkern. Er nutzt die elektromagnetische ___ , um eine Wechselspannung zu über- oder untersetzen.",
-   "luecken": [
-    {
-     "art": "dropdown",
-     "antwort": "mechanische",
-     "optionen": [
-      "mechanische",
-      "thermische",
-      "chemische"
-     ]
-    },
-    {
-     "art": "dropdown",
-     "antwort": "gedreht",
-     "optionen": [
-      "gedreht",
-      "erwärmt",
-      "aufgeladen"
-     ]
-    },
-    {
-     "art": "dropdown",
-     "antwort": "sinus",
-     "optionen": [
-      "sinus",
-      "dreiecks",
-      "rechtecks"
-     ]
-    },
-    {
-     "art": "dropdown",
-     "antwort": "Spulen",
-     "optionen": [
-      "Spulen",
-      "Kondensatoren",
-      "Widerstande"
-     ]
-    },
-    {
-     "art": "dropdown",
-     "antwort": "Induktion",
-     "optionen": [
-      "Induktion",
-      "Leitung",
-      "Strahlung"
-     ]
-    }
-   ],
-   "tipps": [
-    "Ein Generator ist eine Maschine — was wird dort mechanisch bewegt? Und was entsteht daraus?",
-    "Welche Form hat die Spannung, die ein rotierender Magnet in einer Spule erzeugt? Denke an $\\Phi(t) = B \\cdot A \\cdot \\cos(\\omega t)$.",
-    "Ein Transformator überträgt Energie durch Magnetfelder — welches Bauteil erzeugt und empfängt das wechselnde Magnetfeld?"
-   ],
-   "loesungsweg": "Ein Generator wandelt mechanische Energie in elektrische um, indem eine Spule in einem Magnetfeld gedreht wird. Da sich $\\Phi(t) = B \\cdot A \\cdot \\cos(\\omega t)$ sinusförmig ändert, ist auch $U_\\text{ind}(t) = U_\\text{max} \\cdot \\sin(\\omega t)$ sinusförmig. Ein Transformator hat zwei Spulen auf einem Eisenkern; die Primärspule erzeugt ein wechselndes Magnetfeld, das in der Sekundärspule durch Induktion eine Spannung bewirkt. Das Spannungsverhältnis entspricht dem Windungsverhältnis: $\\frac{U_1}{U_2} = \\frac{n_1}{n_2}$.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-201",
-   "typ": "multiple-choice",
-   "zweig": [
-    "gym"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Welche Aussagen über die elektromagnetische Induktion sind richtig?",
-   "optionen": [
-    {
-     "text": "Eine Induktionsspannung entsteht nur, wenn sich der magnetische Fluss $\\Phi$ durch die Spule ändert.",
-     "richtig": true,
-     "erklaerung": "Genau das besagt das Induktionsgesetz: maßgebend ist die Flussänderungsrate $\\frac{\\Delta\\Phi}{\\Delta t}$."
-    },
-    {
-     "text": "Ein starker, aber ruhender Magnet in der Spule erzeugt dauerhaft eine hohe Spannung.",
-     "richtig": false,
-     "erklaerung": "Bei Ruhe ist $\\Delta\\Phi = 0$, also $U_\\text{ind} = 0$ — egal wie stark der Magnet ist."
-    },
-    {
-     "text": "Je schneller sich der Fluss ändert, desto größer ist die induzierte Spannung.",
-     "richtig": true,
-     "erklaerung": "$|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ — eine schnellere Änderung bedeutet ein kleineres $\\Delta t$ und damit eine größere Spannung."
-    },
-    {
-     "text": "Eine doppelte Windungszahl bei gleicher Flussänderung verdoppelt die Induktionsspannung.",
-     "richtig": true,
-     "erklaerung": "Die Spannung ist proportional zur Windungszahl $n$."
-    }
-   ],
-   "tipps": [
-    "Frage dich zuerst: Ändert sich der magnetische Fluss $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ überhaupt?",
-    "Im Induktionsgesetz $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ stehen drei Stellschrauben: $n$, $|\\Delta\\Phi|$ und $\\Delta t$.",
-    "Genau eine Aussage beschreibt einen ruhenden Magneten — die ist falsch."
-   ],
-   "loesungsweg": "Richtig sind die erste, dritte und vierte Aussage. Eine Induktionsspannung setzt eine Änderung des Flusses voraus; sie wächst mit der Änderungsrate $\\frac{|\\Delta\\Phi|}{\\Delta t}$ und mit der Windungszahl $n$. Ein ruhender Magnet ändert den Fluss nicht und erzeugt daher keine Spannung.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Elektrizität — elektromagnetische Induktion (Qualifikationsphase)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-202",
-   "typ": "numerisch",
-   "zweig": [
-    "gym"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Eine quadratische Leiterschleife mit der Seitenlänge $a = 8{,}0\\,\\text{cm}$ befindet sich in einem homogenen Magnetfeld mit $B = 0{,}50\\,\\text{T}$. Die Flächennormale schließt mit den Feldlinien den Winkel $\\alpha = 60^\\circ$ ein. Berechne den magnetischen Fluss $\\Phi$ durch die Schleife. ($\\cos 60^\\circ = 0{,}50$)",
-   "eingaben": [
-    {
-     "label": "$\\Phi$",
-     "antwort": 1.6,
-     "einheit": "mWb",
-     "toleranz": 0.05
-    }
-   ],
-   "tipps": [
-    "Berechne zuerst die Fläche: $A = a^2$.",
-    "Der magnetische Fluss ist $\\Phi = B \\cdot A \\cdot \\cos\\alpha$.",
-    "$A = (0{,}080\\,\\text{m})^2 = 6{,}4 \\cdot 10^{-3}\\,\\text{m}^2$; setze $\\cos 60^\\circ = 0{,}50$ ein."
-   ],
-   "loesungsweg": "Fläche: $A = a^2 = (0{,}080\\,\\text{m})^2 = 6{,}4 \\cdot 10^{-3}\\,\\text{m}^2$. Fluss: $\\Phi = B \\cdot A \\cdot \\cos\\alpha = 0{,}50\\,\\text{T} \\cdot 6{,}4 \\cdot 10^{-3}\\,\\text{m}^2 \\cdot 0{,}50 = 1{,}6 \\cdot 10^{-3}\\,\\text{Wb} = 1{,}6\\,\\text{mWb}$.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Elektrizität — magnetischer Fluss (Qualifikationsphase)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-203",
-   "typ": "numerisch",
-   "zweig": [
-    "gym"
-   ],
-   "niveau": 2,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Ein Leiterstab der Länge $L = 0{,}30\\,\\text{m}$ gleitet mit der konstanten Geschwindigkeit $v = 8{,}0\\,\\frac{\\text{m}}{\\text{s}}$ senkrecht zu den Feldlinien durch ein homogenes Magnetfeld mit $B = 0{,}45\\,\\text{T}$. Berechne den Betrag der induzierten Spannung.",
-   "eingaben": [
-    {
-     "label": "$U$",
-     "antwort": 1.08,
-     "einheit": "V",
-     "toleranz": 0.02
-    }
-   ],
-   "tipps": [
-    "Für den bewegten Leiterstab gilt die Bewegungsinduktion $U = B \\cdot L \\cdot v$.",
-    "Achte darauf, dass alle Größen in SI-Einheiten vorliegen (m, $\\frac{\\text{m}}{\\text{s}}$, T).",
-    "$U = 0{,}45 \\cdot 0{,}30 \\cdot 8{,}0$."
-   ],
-   "loesungsweg": "Bewegungsinduktion: $U = B \\cdot L \\cdot v = 0{,}45\\,\\text{T} \\cdot 0{,}30\\,\\text{m} \\cdot 8{,}0\\,\\frac{\\text{m}}{\\text{s}} = 1{,}08\\,\\text{V} \\approx 1{,}1\\,\\text{V}$.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Elektrizität — Bewegungsinduktion (Qualifikationsphase)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-204",
-   "typ": "numerisch",
-   "zweig": [
-    "gym"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Durch eine Spule mit $n = 300$ Windungen ändert sich der magnetische Fluss gleichmäßig von $\\Phi_1 = 1{,}5\\,\\text{mWb}$ auf $\\Phi_2 = 0$ innerhalb von $\\Delta t = 30\\,\\text{ms}$. Berechne den Betrag der induzierten Spannung.",
-   "eingaben": [
-    {
-     "label": "$|U_\\text{ind}|$",
-     "antwort": 15.0,
-     "einheit": "V",
-     "toleranz": 0.2
-    }
-   ],
-   "tipps": [
-    "Es gilt das Induktionsgesetz $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$.",
-    "Bestimme zuerst $|\\Delta\\Phi| = |\\Phi_2 - \\Phi_1| = 1{,}5\\,\\text{mWb} = 1{,}5 \\cdot 10^{-3}\\,\\text{Wb}$ und $\\Delta t = 30\\,\\text{ms} = 0{,}030\\,\\text{s}$.",
-    "$|U_\\text{ind}| = 300 \\cdot \\frac{1{,}5 \\cdot 10^{-3}\\,\\text{Wb}}{0{,}030\\,\\text{s}}$."
-   ],
-   "loesungsweg": "Änderung: $|\\Delta\\Phi| = 1{,}5 \\cdot 10^{-3}\\,\\text{Wb}$, Zeit: $\\Delta t = 0{,}030\\,\\text{s}$. Induktionsgesetz: $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t} = 300 \\cdot \\frac{1{,}5 \\cdot 10^{-3}\\,\\text{Wb}}{0{,}030\\,\\text{s}} = 15\\,\\text{V}$.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Elektrizität — Induktionsgesetz (Qualifikationsphase)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-205",
-   "typ": "numerisch",
-   "zweig": [
-    "gym"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Ein Generator dreht eine Spule mit $N = 400$ Windungen und der Fläche $A = 60\\,\\text{cm}^2$ mit der Frequenz $f = 50\\,\\text{Hz}$ in einem homogenen Magnetfeld mit $B = 0{,}25\\,\\text{T}$. Die erzeugte Spannung verläuft sinusförmig: $U(t) = U_0 \\cdot \\sin(\\omega t)$. Berechne die Scheitelspannung $U_0$. ($\\omega = 2\\pi f$, $\\pi \\approx 3{,}1416$)",
-   "eingaben": [
-    {
-     "label": "$U_0$",
-     "antwort": 188.5,
-     "einheit": "V",
-     "toleranz": 1.0
-    }
-   ],
-   "tipps": [
-    "Berechne zuerst die Kreisfrequenz $\\omega = 2\\pi f$.",
-    "Die Scheitelspannung ist $U_0 = N \\cdot B \\cdot A \\cdot \\omega$.",
-    "$A = 60\\,\\text{cm}^2 = 60 \\cdot 10^{-4}\\,\\text{m}^2 = 6{,}0 \\cdot 10^{-3}\\,\\text{m}^2$; $\\omega = 2 \\cdot 3{,}1416 \\cdot 50\\,\\text{Hz} \\approx 314\\,\\frac{1}{\\text{s}}$."
-   ],
-   "loesungsweg": "Kreisfrequenz: $\\omega = 2\\pi f = 2 \\cdot 3{,}1416 \\cdot 50\\,\\text{Hz} \\approx 314{,}2\\,\\frac{1}{\\text{s}}$. Fläche: $A = 6{,}0 \\cdot 10^{-3}\\,\\text{m}^2$. Scheitelspannung: $U_0 = N \\cdot B \\cdot A \\cdot \\omega = 400 \\cdot 0{,}25\\,\\text{T} \\cdot 6{,}0 \\cdot 10^{-3}\\,\\text{m}^2 \\cdot 314{,}2\\,\\frac{1}{\\text{s}} \\approx 188{,}5\\,\\text{V}$.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Elektrizität — Generatorprinzip (Qualifikationsphase)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-206",
-   "typ": "numerisch",
-   "zweig": [
-    "gym"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Ein idealer Transformator hat primär $N_1 = 600$ Windungen und sekundär $N_2 = 30$ Windungen. An die Primärspule wird die Wechselspannung $U_1 = 240\\,\\text{V}$ angelegt. Berechne die Sekundärspannung $U_2$.",
-   "eingaben": [
-    {
-     "label": "$U_2$",
-     "antwort": 12.0,
-     "einheit": "V",
-     "toleranz": 0.1
-    }
-   ],
-   "tipps": [
-    "Beim idealen Transformator gilt $\\frac{U_1}{U_2} = \\frac{N_1}{N_2}$.",
-    "Stelle nach der gesuchten Größe um: $U_2 = U_1 \\cdot \\frac{N_2}{N_1}$.",
-    "$U_2 = 240\\,\\text{V} \\cdot \\frac{30}{600}$."
-   ],
-   "loesungsweg": "Transformatorgleichung: $\\frac{U_1}{U_2} = \\frac{N_1}{N_2}$, also $U_2 = U_1 \\cdot \\frac{N_2}{N_1} = 240\\,\\text{V} \\cdot \\frac{30}{600} = 240\\,\\text{V} \\cdot 0{,}05 = 12\\,\\text{V}$.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Elektrizität — Transformator (Qualifikationsphase)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-207",
-   "typ": "numerisch",
-   "zweig": [
-    "gym"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Zusatz: Eine Generatorspule mit $N = 250$ Windungen und der Fläche $A = 50\\,\\text{cm}^2$ rotiert in einem Magnetfeld mit $B = 0{,}40\\,\\text{T}$ mit der Drehzahl $3000\\,\\frac{1}{\\text{min}}$. Berechne die Scheitelspannung $U_0$ der erzeugten Wechselspannung. ($\\pi \\approx 3{,}1416$)",
-   "eingaben": [
-    {
-     "label": "$U_0$",
-     "antwort": 157.1,
-     "einheit": "V",
-     "toleranz": 1.5
-    }
-   ],
-   "tipps": [
-    "Rechne die Drehzahl zuerst in die Frequenz um: $f = \\frac{3000}{60\\,\\text{s}} = 50\\,\\text{Hz}$.",
-    "Dann gilt $\\omega = 2\\pi f$ und $U_0 = N \\cdot B \\cdot A \\cdot \\omega$.",
-    "$A = 50\\,\\text{cm}^2 = 5{,}0 \\cdot 10^{-3}\\,\\text{m}^2$; $\\omega = 2 \\cdot 3{,}1416 \\cdot 50\\,\\text{Hz} \\approx 314\\,\\frac{1}{\\text{s}}$."
-   ],
-   "loesungsweg": "Frequenz aus der Drehzahl: $f = \\frac{3000}{60\\,\\text{s}} = 50\\,\\text{Hz}$. Kreisfrequenz: $\\omega = 2\\pi f \\approx 314{,}2\\,\\frac{1}{\\text{s}}$. Fläche: $A = 5{,}0 \\cdot 10^{-3}\\,\\text{m}^2$. Scheitelspannung: $U_0 = N \\cdot B \\cdot A \\cdot \\omega = 250 \\cdot 0{,}40\\,\\text{T} \\cdot 5{,}0 \\cdot 10^{-3}\\,\\text{m}^2 \\cdot 314{,}2\\,\\frac{1}{\\text{s}} \\approx 157{,}1\\,\\text{V}$.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Elektrizität — Generatorprinzip (Qualifikationsphase)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-208",
-   "typ": "numerisch",
-   "zweig": [
-    "gym"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Eine Spule hat die Induktivität $L = 0{,}40\\,\\text{H}$. Durch sie fließt zunächst der Strom $I = 3{,}0\\,\\text{A}$. a) Beim Öffnen des Schalters sinkt der Strom gleichmäßig in $\\Delta t = 25\\,\\text{ms}$ auf null. Berechne den Betrag der dabei selbstinduzierten Spannung ($|U_\\text{ind}| = L \\cdot \\frac{|\\Delta I|}{\\Delta t}$). b) Berechne die im ursprünglichen Stromfluss gespeicherte magnetische Energie ($W = \\frac{1}{2} L I^2$).",
-   "eingaben": [
-    {
-     "label": "a) $|U_\\text{ind}|$",
-     "antwort": 48.0,
-     "einheit": "V",
-     "toleranz": 0.5
-    },
-    {
-     "label": "b) $W$",
-     "antwort": 1.8,
-     "einheit": "J",
-     "toleranz": 0.05
-    }
-   ],
-   "tipps": [
-    "a) Die Selbstinduktion bremst die Stromänderung: $|U_\\text{ind}| = L \\cdot \\frac{|\\Delta I|}{\\Delta t}$ mit $|\\Delta I| = 3{,}0\\,\\text{A}$.",
-    "Rechne $\\Delta t = 25\\,\\text{ms} = 0{,}025\\,\\text{s}$ in Sekunden um.",
-    "b) Die gespeicherte Energie ist $W = \\frac{1}{2} L I^2 = \\frac{1}{2} \\cdot 0{,}40\\,\\text{H} \\cdot (3{,}0\\,\\text{A})^2$."
-   ],
-   "loesungsweg": "a) Selbstinduzierte Spannung: $|U_\\text{ind}| = L \\cdot \\frac{|\\Delta I|}{\\Delta t} = 0{,}40\\,\\text{H} \\cdot \\frac{3{,}0\\,\\text{A}}{0{,}025\\,\\text{s}} = 48\\,\\text{V}$. b) Magnetische Energie: $W = \\frac{1}{2} L I^2 = \\frac{1}{2} \\cdot 0{,}40\\,\\text{H} \\cdot (3{,}0\\,\\text{A})^2 = 0{,}5 \\cdot 0{,}40 \\cdot 9{,}0\\,\\text{J} = 1{,}8\\,\\text{J}$.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Elektrizität — Selbstinduktion (Qualifikationsphase)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-301",
-   "typ": "zuordnung",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 1,
-   "afb": 1,
-   "ergaenzung": "lernbuero",
-   "frage": "Ordne jeder physikalischen Größe aus der Induktionslehre ihre passende Einheit zu.",
-   "paare": [
-    {
-     "links": "Magnetischer Fluss $\\Phi$",
-     "rechts": "Weber (Wb)"
-    },
-    {
-     "links": "Magnetische Flussdichte $B$",
-     "rechts": "Tesla (T)"
-    },
-    {
-     "links": "Induktionsspannung $U_\\text{ind}$",
-     "rechts": "Volt (V)"
-    },
-    {
-     "links": "Induktivität $L$ einer Spule",
-     "rechts": "Henry (H)"
-    }
-   ],
-   "tipps": [
-    "Der Fluss ist ein Produkt aus Flussdichte und Fläche — seine Einheit trägt den Namen eines Physikers, nicht „Tesla“.",
-    "Die Flussdichte $B$ misst man in Tesla; verwechsle sie nicht mit dem Fluss selbst.",
-    "Die Induktivität verknüpft Spannung und Stromänderungsrate; ihre Einheit ist nach Joseph Henry benannt."
-   ],
-   "loesungsweg": "Der magnetische Fluss $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ wird in Weber gemessen ($1\\,\\text{Wb} = 1\\,\\text{T} \\cdot \\text{m}^2$). Die Flussdichte $B$ trägt die Einheit Tesla. Jede Spannung — auch die Induktionsspannung — wird in Volt angegeben. Die Induktivität $L$ aus $U_\\text{ind} = -L \\cdot \\frac{\\Delta I}{\\Delta t}$ hat die Einheit Henry ($1\\,\\text{H} = 1\\,\\frac{\\text{V} \\cdot \\text{s}}{\\text{A}}$).",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-302",
-   "typ": "reihenfolge",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 2,
-   "afb": 2,
-   "ergaenzung": "lernbuero",
-   "frage": "Eine Aufgabe verlangt die mittlere Induktionsspannung, wenn eine Spule im homogenen Feld gedreht wird. Bringe die Lösungsschritte in eine sinnvolle Reihenfolge.",
-   "elemente": [
-    "Fläche der Spule aus den Abmessungen berechnen",
-    "Anfangs- und Endfluss über $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ bestimmen",
-    "Die Flussänderung $\\Delta\\Phi = \\Phi_2 - \\Phi_1$ bilden",
-    "Mit dem Induktionsgesetz $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ die Spannung ausrechnen"
-   ],
-   "tipps": [
-    "Ohne die Fläche kannst du den Fluss noch gar nicht angeben — sie steht am Anfang.",
-    "Erst wenn beide Flusswerte feststehen, lässt sich ihre Differenz bilden.",
-    "Das Induktionsgesetz benötigt die fertige Flussänderung $\\Delta\\Phi$ und kommt deshalb zuletzt."
-   ],
-   "loesungsweg": "Zuerst die Fläche $A$ aus den Abmessungen berechnen. Dann mit $\\Phi = B \\cdot A \\cdot \\cos\\alpha$ den Anfangsfluss (z. B. $\\alpha_1 = 0^\\circ$) und den Endfluss (z. B. $\\alpha_2 = 90^\\circ$) bestimmen. Anschließend die Flussänderung $\\Delta\\Phi = \\Phi_2 - \\Phi_1$ bilden. Zuletzt liefert das Induktionsgesetz $|U_\\text{ind}| = n \\cdot \\frac{|\\Delta\\Phi|}{\\Delta t}$ die gesuchte mittlere Spannung.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-303",
-   "typ": "freitext",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Bewertung: Eine Schülerin behauptet: „Eine Wirbelstrombremse ist besser als eine mechanische Reibungsbremse, weil sie völlig verschleißfrei arbeitet und bei jeder Geschwindigkeit gleich stark bremst.“ Nimm physikalisch begründet Stellung. Gehe dabei darauf ein, (a) warum die Wirbelstrombremse verschleißarm ist und (b) ob die Bremswirkung tatsächlich geschwindigkeitsunabhängig ist und (c) ob sie ein Fahrzeug vollständig bis zum Stillstand abbremsen kann.",
-   "musterloesung": "(a) Richtig ist, dass die Wirbelstrombremse berührungslos arbeitet: Der bewegte Leiter (oder die Scheibe) wird allein durch das Magnetfeld und die induzierten Wirbelströme gebremst, ohne dass sich Bremsbeläge mechanisch berühren. Deshalb tritt praktisch kein mechanischer Verschleiß auf. (b) Die Behauptung „bei jeder Geschwindigkeit gleich stark“ ist jedoch falsch. Die Bremswirkung beruht auf der induzierten Spannung, und nach $U_\\text{ind} \\sim \\frac{\\Delta\\Phi}{\\Delta t}$ wächst diese mit der Geschwindigkeit der Flussänderung. Bei hoher Geschwindigkeit sind die Wirbelströme und damit die Bremskraft groß, bei kleiner Geschwindigkeit klein. Die Bremskraft ist also stark geschwindigkeitsabhängig und nimmt zu kleinen Geschwindigkeiten hin ab. (c) Genau deshalb kann eine reine Wirbelstrombremse ein Fahrzeug nicht bis zum völligen Stillstand bringen: Wird die Geschwindigkeit null, ändert sich der Fluss nicht mehr, es werden keine Wirbelströme mehr induziert und es wirkt keine Bremskraft. Für das letzte Stück bis zum Stillstand ist eine mechanische Bremse nötig. Insgesamt ist die Aussage nur teilweise richtig: verschleißarm ja, geschwindigkeitsunabhängig und allein anhaltefähig nein.",
-   "tipps": [
-    "Überlege zuerst, worauf die Bremskraft physikalisch beruht — auf Reibung oder auf Induktion?",
-    "Setze die induzierte Spannung in Bezug zur Geschwindigkeit: Wie hängt $\\frac{\\Delta\\Phi}{\\Delta t}$ von $v$ ab?",
-    "Frage dich, was bei $v = 0$ mit dem magnetischen Fluss und damit mit den Wirbelströmen passiert."
-   ],
-   "loesungsweg": "Kern der Bewertung: (1) verschleißarm — ja, weil berührungslos (keine Bremsbeläge). (2) geschwindigkeitsunabhängig — nein, da $U_\\text{ind} \\sim \\frac{\\Delta\\Phi}{\\Delta t}$ mit $v$ wächst; Bremskraft groß bei hohem $v$, klein bei kleinem $v$. (3) bis zum Stillstand — nein, denn bei $v = 0$ keine Flussänderung, keine Wirbelströme, keine Bremskraft; eine mechanische Bremse bleibt nötig. Fazit: Aussage nur teilweise korrekt.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  },
-  {
-   "id": "ph-qp-ind-304",
-   "typ": "multiple-choice",
-   "zweig": [
-    "gym",
-    "rs"
-   ],
-   "niveau": 3,
-   "afb": 3,
-   "ergaenzung": "lernbuero",
-   "frage": "Beim Thomsonschen Ringversuch sitzt ein geschlossener Aluminiumring lose über dem Kern einer Spule. Im Moment des Einschaltens des Spulenstroms springt der Ring nach oben. Welche Begründungen dieses Verhaltens sind physikalisch richtig?",
-   "optionen": [
-    {
-     "text": "Beim Einschalten wächst der Fluss durch den Ring rasch an; der induzierte Ringstrom ist nach der lenzschen Regel so gerichtet, dass sein Feld dem Spulenfeld entgegenwirkt — Ring und Spule stoßen sich ab.",
-     "richtig": true,
-     "erklaerung": "Richtig — die schnelle Flusszunahme induziert einen Strom, dessen Magnetfeld dem zunehmenden Spulenfeld entgegengerichtet ist (Lenz). Gegengleiche Felder bedeuten Abstoßung, der Ring wird nach oben geschleudert."
-    },
-    {
-     "text": "Würde der Induktionsstrom das Spulenfeld verstärken statt ihm entgegenzuwirken, würde der Ring angezogen und gleichzeitig elektrische Energie freigesetzt — das widerspricht der Energieerhaltung.",
-     "richtig": true,
-     "erklaerung": "Richtig — eine die Ursache verstärkende Stromrichtung erzeugte Bewegungs- und elektrische Energie aus dem Nichts (Perpetuum mobile). Genau das schließt die lenzsche Regel als Folge der Energieerhaltung aus."
-    },
-    {
-     "text": "Ein aufgesägter (nicht geschlossener) Ring springt genauso hoch, weil die induzierte Spannung dieselbe bleibt.",
-     "richtig": false,
-     "erklaerung": "Nein — im aufgesägten Ring kann kein Ringstrom fließen. Ohne Strom entsteht kein Gegenfeld und keine abstoßende Kraft; der Ring bleibt liegen, obwohl die induzierte Spannung vorhanden ist."
-    },
-    {
-     "text": "Der Ring springt, weil das konstante Magnetfeld der eingeschalteten Spule ihn dauerhaft abstößt.",
-     "richtig": false,
-     "erklaerung": "Nein — ein konstantes Feld induziert keinen Strom ($\\Delta\\Phi = 0$). Die Kraft tritt nur im Einschaltmoment auf, während sich der Fluss ändert; danach hält die Abstoßung nicht an."
-    }
-   ],
-   "tipps": [
-    "Frage zuerst: Wann ändert sich der Fluss durch den Ring — dauerhaft oder nur beim Schalten?",
-    "Wende die lenzsche Regel auf die Richtung des Ringstroms und das daraus folgende Kräftepaar an.",
-    "Prüfe die Rolle des geschlossenen Stromkreises: Was passiert ohne fließenden Strom? Zwei Aussagen sind richtig."
-   ],
-   "loesungsweg": "Richtig sind die ersten beiden Aussagen. Beim Einschalten wächst der Fluss; der Ringstrom wirkt nach Lenz dem Spulenfeld entgegen, sodass sich Ring und Spule abstoßen. Eine umgekehrte Stromrichtung wäre ein Perpetuum mobile und ist durch die Energieerhaltung ausgeschlossen. Ein aufgesägter Ring führt keinen Strom und springt nicht. Das konstante Feld nach dem Einschalten induziert nichts mehr — die Kraft wirkt nur während der Flussänderung.",
-   "kc": [
-    "KC Physik GO Niedersachsen (2022): Sachgebiet Elektrizitaet — Induktion (QP)"
-   ]
-  }
- ]
+  ]
 }

@@ -791,6 +791,207 @@
    "kc": [
     "daten-und-codierung"
    ]
+  },
+  {
+   "id": "in-09-dc-110",
+   "typ": "zuordnung",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ordne jeder Anzahl von Bits zu, wie viele verschiedene Werte sich damit darstellen lassen.",
+   "paare": [
+    {
+     "links": "1 Bit",
+     "rechts": "2 Werte"
+    },
+    {
+     "links": "2 Bit",
+     "rechts": "4 Werte"
+    },
+    {
+     "links": "3 Bit",
+     "rechts": "8 Werte"
+    },
+    {
+     "links": "4 Bit",
+     "rechts": "16 Werte"
+    }
+   ],
+   "tipps": [
+    "Mit jedem zusätzlichen Bit verdoppelt sich die Anzahl der Möglichkeiten.",
+    "1 Bit: 0 oder 1, also 2 Werte. 2 Bit: 00, 01, 10, 11, also 4 Werte.",
+    "Die Reihe lautet 2, 4, 8, 16 — immer das Doppelte."
+   ],
+   "loesungsweg": "Jedes weitere Bit verdoppelt die Anzahl der Muster: 1 Bit → 2, 2 Bit → 4, 3 Bit → 8, 4 Bit → 16 Werte. Allgemein lassen sich mit n Bit genau 2 hoch n verschiedene Werte darstellen.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-111",
+   "typ": "multiple-choice",
+   "niveau": 1,
+   "afb": 2,
+   "frage": "Welche Aussagen über das Bit sind richtig?",
+   "optionen": [
+    {
+     "text": "Ein Bit ist die kleinste Informationseinheit und kennt nur die Werte 0 und 1.",
+     "richtig": true,
+     "erklaerung": "Richtig — Bit kommt von binary digit und hat genau zwei Werte."
+    },
+    {
+     "text": "Computer nutzen zwei Zustände, weil sich zwei klar getrennte Zustände (z. B. Strom an/aus) technisch zuverlässig unterscheiden lassen.",
+     "richtig": true,
+     "erklaerung": "Richtig — zwei deutlich verschiedene Zustände sind robust gegen Störungen."
+    },
+    {
+     "text": "Mit 3 Bit lassen sich 6 verschiedene Werte darstellen.",
+     "richtig": false,
+     "erklaerung": "Falsch — mit 3 Bit sind es 2·2·2 = 8 Werte, nicht 6."
+    },
+    {
+     "text": "Ein Bit kann beliebig viele Zwischenwerte zwischen 0 und 1 annehmen.",
+     "richtig": false,
+     "erklaerung": "Falsch — ein Bit kennt nur genau zwei Werte, keine Zwischenstufen."
+    }
+   ],
+   "tipps": [
+    "Überlege, wofür die Abkürzung Bit steht.",
+    "Mit n Bit sind es 2 hoch n Werte — rechne für 3 Bit nach.",
+    "Zwei Aussagen stimmen, zwei sind falsch."
+   ],
+   "loesungsweg": "Richtig sind die ersten beiden Aussagen: Ein Bit ist die kleinste Informationseinheit mit den Werten 0/1, und zwei klar getrennte Zustände lassen sich zuverlässig unterscheiden. Falsch ist „6 Werte mit 3 Bit\" (es sind 8 = 2 hoch 3) und „beliebige Zwischenwerte\" (ein Bit hat nur zwei feste Werte).",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-112",
+   "typ": "numerisch",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Wandle die Binärzahl $1011_2$ in eine Dezimalzahl um, indem du die Stellenwerte addierst.",
+   "eingaben": [
+    {
+     "label": "Dezimalwert",
+     "antwort": 11,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Die Stellenwerte von rechts nach links sind 1, 2, 4, 8.",
+    "Addiere nur die Stellenwerte, an denen eine 1 steht.",
+    "Hier: 8 + 0 + 2 + 1."
+   ],
+   "loesungsweg": "Die Stellen von rechts haben die Werte 1, 2, 4, 8. In $1011_2$ steht an der 8er-, 2er- und 1er-Stelle eine 1: $8 + 2 + 1 = 11$. Die 4er-Stelle ist 0 und wird nicht mitgezählt. Also $1011_2 = 11$.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-113",
+   "typ": "rechenweg",
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Eine Speicherkarte hat $2\\,\\text{GB}$ Platz. Ein Foto belegt durchschnittlich $5\\,\\text{MB}$. Wie viele Fotos passen darauf?",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Rechne die Kartengröße in MB um ($1\\,\\text{GB} = 1000\\,\\text{MB}$).",
+     "eingaben": [
+      {
+       "label": "Kartengröße",
+       "antwort": 2000,
+       "toleranz": 0,
+       "einheit": "MB"
+      }
+     ],
+     "tipps": [
+      "Eine Stufe der Speicher-Treppe hinab: $2 \\cdot 1000$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Teile durch die Größe eines Fotos. Wie viele ganze Fotos passen auf die Karte?",
+     "eingaben": [
+      {
+       "label": "Anzahl Fotos",
+       "antwort": 400,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$2000 \\div 5 = ?$"
+     ]
+    }
+   ],
+   "tipps": [
+    "Zuerst beide Größen auf dieselbe Einheit bringen (hier MB).",
+    "$1\\,\\text{GB} = 1000\\,\\text{MB}$.",
+    "Dann die Kartengröße durch die Fotogröße teilen."
+   ],
+   "loesungsweg": "Zuerst die Karte in MB umrechnen: $2\\,\\text{GB} = 2 \\cdot 1000\\,\\text{MB} = 2000\\,\\text{MB}$. Dann durch die Fotogröße teilen: $2000\\,\\text{MB} \\div 5\\,\\text{MB} = 400$. Es passen also 400 Fotos auf die Karte.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-114",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jeder Datei die Speichergröße zu, die ihre Größenordnung am besten beschreibt.",
+   "paare": [
+    {
+     "links": "Kurze Textnachricht",
+     "rechts": "einige Byte"
+    },
+    {
+     "links": "Ein Foto vom Handy",
+     "rechts": "einige MB"
+    },
+    {
+     "links": "Ein Kinofilm in guter Qualität",
+     "rechts": "mehrere GB"
+    },
+    {
+     "links": "Eine große Festplatte",
+     "rechts": "mehrere TB"
+    }
+   ],
+   "tipps": [
+    "Die Einheiten steigen jeweils um den Faktor 1000: Byte, KB, MB, GB, TB.",
+    "Ein Foto ist deutlich größer als eine Textnachricht, aber kleiner als ein Film.",
+    "Festplatten fassen heute oft mehrere Terabyte."
+   ],
+   "loesungsweg": "Eine kurze Textnachricht belegt nur wenige Byte. Ein Handy-Foto liegt im Bereich von einigen MB. Ein Kinofilm in guter Qualität umfasst mehrere GB. Eine große Festplatte fasst mehrere TB. Die Reihenfolge Byte < MB < GB < TB spiegelt die Einheitenleiter (je mal 1000) wider.",
+   "kc": [
+    "daten-und-codierung"
+   ]
   }
  ]
 }

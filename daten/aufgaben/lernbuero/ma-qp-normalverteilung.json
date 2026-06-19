@@ -740,6 +740,181 @@
    "kc": [
     "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
    ]
+  },
+  {
+   "id": "ma-qp-nv-109",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ergänze den Merktext zum Übergang von diskreten zu stetigen Zufallsgrößen.",
+   "text": "Eine ___ Zufallsgröße kann jeden Wert eines ganzen Intervalls annehmen, eine diskrete dagegen nur einzelne, getrennte Werte. Bei einer stetigen Zufallsgröße hat jeder einzelne Wert die Wahrscheinlichkeit ___. Wahrscheinlichkeiten werden deshalb nicht mehr aufsummiert, sondern als ___ unter der Dichtekurve bestimmt. Sinnvoll ist daher nur die Frage nach einem ___, etwa $P(a \\le X \\le b)$.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "stetige",
+     "optionen": [
+      "stetige",
+      "diskrete",
+      "ganzzahlige"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "0",
+     "optionen": [
+      "0",
+      "1",
+      "0,5"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Fläche",
+     "optionen": [
+      "Fläche",
+      "Höhe",
+      "Steigung"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Intervall",
+     "optionen": [
+      "Intervall",
+      "Einzelwert",
+      "Mittelwert"
+     ]
+    }
+   ],
+   "tipps": [
+    "Messgrößen wie Länge, Masse oder Zeit sind stetig; Anzahlen sind diskret.",
+    "Weil zwischen zwei Werten immer unendlich viele weitere liegen, entfällt auf einen einzelnen Wert die Wahrscheinlichkeit 0.",
+    "Bei stetigen Größen steckt Wahrscheinlichkeit in Flächenstücken, nicht in einzelnen Punkten."
+   ],
+   "loesungsweg": "Eine stetige Zufallsgröße nimmt jeden Wert eines Intervalls an (z. B. Füllmengen, Zeiten); ein einzelner Wert hat dabei die Wahrscheinlichkeit $0$. Wahrscheinlichkeiten werden als Flächen unter der Dichtekurve berechnet, und sinnvoll ist nur die Frage nach einem Intervall wie $P(a \\le X \\le b)$. Genau deshalb gilt bei stetigen Größen $P(X < b) = P(X \\le b)$.",
+   "kc": [
+    "stetige-zufallsgroesse"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-110",
+   "typ": "freitext",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "frage": "Zwei Schülerinnen vergleichen zwei normalverteilte Größen: Größe $A$ hat $\\mu_A = 50$ und $\\sigma_A = 4$, Größe $B$ hat $\\mu_B = 50$ und $\\sigma_B = 8$. Beide Glockenkurven werden in dasselbe Koordinatensystem gezeichnet. Beschreibe ohne zu rechnen, wie sich die beiden Kurven in Lage, Höhe und Breite unterscheiden, und erkläre, woran man $\\sigma$ in jeder Skizze unmittelbar ablesen kann.",
+   "musterloesung": "Beide Kurven haben dieselbe Lage, denn $\\mu_A = \\mu_B = 50$: Ihr Maximum (Hochpunkt) sitzt jeweils über $x = 50$, und beide sind symmetrisch zu dieser Stelle. Die Kurven unterscheiden sich nur in der Form, weil $\\sigma$ verschieden ist. Größe $B$ mit dem größeren $\\sigma_B = 8$ streut stärker: Ihre Glocke ist breiter und flacher. Größe $A$ mit $\\sigma_A = 4$ ist schmaler und höher. Das ist kein Zufall, sondern eine Folge davon, dass die Gesamtfläche unter jeder Dichtekurve $1$ beträgt — wird die Kurve breiter, muss sie zwangsläufig flacher werden, damit die Fläche gleich bleibt. Ablesen lässt sich $\\sigma$ an den Wendepunkten: Sie liegen genau bei $\\mu - \\sigma$ und $\\mu + \\sigma$. Bei $A$ also bei $46$ und $54$, bei $B$ bei $42$ und $58$. Der waagerechte Abstand vom Hochpunkt bis zu einem Wendepunkt ist gerade $\\sigma$.",
+   "tipps": [
+    "$\\mu$ bestimmt die Lage (wo der Hochpunkt sitzt), $\\sigma$ die Form (breit/schmal).",
+    "Die Gesamtfläche unter jeder Dichtekurve ist 1 — breiter bedeutet darum flacher.",
+    "Die Wendepunkte liegen bei $\\mu - \\sigma$ und $\\mu + \\sigma$; ihr Abstand vom Hochpunkt ist $\\sigma$."
+   ],
+   "loesungsweg": "Gleiches $\\mu$ heißt gleiche Lage: beide Hochpunkte über $x = 50$, beide symmetrisch dazu. Verschiedenes $\\sigma$ heißt verschiedene Form: $B$ ($\\sigma = 8$) ist breiter und flacher, $A$ ($\\sigma = 4$) schmaler und höher; die feste Gesamtfläche $1$ erzwingt den Tausch von Breite gegen Höhe. $\\sigma$ liest man an den Wendepunkten $\\mu \\pm \\sigma$ ab (bei $A$: $46$ und $54$; bei $B$: $42$ und $58$).",
+   "kc": [
+    "glockenkurve-eigenschaften",
+    "glockenkurve-ablesen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-111",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Die Dichtekurve einer normalverteilten Größe $X$ hat ihren Hochpunkt über $x = 60$; ihre Wendepunkte liegen bei $x = 55$ und $x = 65$. Bestimme $\\mu$ und $\\sigma$ allein aus der Skizze, gib die Grenzen des Intervalls $[\\mu - \\sigma;\\ \\mu + \\sigma]$ an und nenne $P(X \\le \\mu)$. (Keine CAS-Rechnung mit normCDf nötig.)",
+   "eingaben": [
+    {
+     "label": "$\\mu$",
+     "antwort": 60,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "$\\sigma$",
+     "antwort": 5,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "untere Grenze $\\mu - \\sigma$",
+     "antwort": 55,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "obere Grenze $\\mu + \\sigma$",
+     "antwort": 65,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X \\le \\mu)$",
+     "antwort": 0.5,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Der Hochpunkt einer Glockenkurve sitzt immer über $x = \\mu$.",
+    "Die Wendepunkte liegen bei $\\mu - \\sigma$ und $\\mu + \\sigma$; daraus folgt $\\sigma$ als Abstand zum Hochpunkt.",
+    "Wegen der Symmetrie liegt links von $\\mu$ genau die halbe Fläche."
+   ],
+   "loesungsweg": "Der Hochpunkt liegt über dem Erwartungswert: $\\mu = 60$. Die Wendepunkte liegen bei $\\mu \\pm \\sigma$, also $\\sigma = 65 - 60 = 5$ (ebenso $60 - 55 = 5$). Damit reicht die $1\\sigma$-Umgebung von $\\mu - \\sigma = 55$ bis $\\mu + \\sigma = 65$. Wegen der Symmetrie der Glockenkurve liegt links von $\\mu$ genau die Hälfte der Gesamtfläche $1$, also $P(X \\le \\mu) = 0{,}5$. All das liest man direkt aus der Skizze ab, ohne zu rechnen.",
+   "kc": [
+    "glockenkurve-ablesen",
+    "glockenkurve-eigenschaften"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-112",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Die Abfüllmenge $X$ (in ml) einer Maschine ist normalverteilt mit $\\mu = 500$ und $\\sigma = 4$. a) Gib mit den Sigma-Regeln das symmetrische Intervall um $\\mu$ an, das rund $95{,}4\\,\\%$ aller Mengen enthält (also die $2\\sigma$-Umgebung). b) Bestimme mit invNormCDf die Menge $m$, die von höchstens $10\\,\\%$ aller Flaschen unterschritten wird (also $P(X \\le m) = 0{,}10$).",
+   "eingaben": [
+    {
+     "label": "untere Grenze der $2\\sigma$-Umgebung",
+     "antwort": 492,
+     "toleranz": 0,
+     "einheit": "ml"
+    },
+    {
+     "label": "obere Grenze der $2\\sigma$-Umgebung",
+     "antwort": 508,
+     "toleranz": 0,
+     "einheit": "ml"
+    },
+    {
+     "label": "$m$ (10-%-Quantil)",
+     "antwort": 494.9,
+     "toleranz": 0.3,
+     "einheit": "ml"
+    }
+   ],
+   "tipps": [
+    "Die $2\\sigma$-Umgebung reicht von $\\mu - 2\\sigma$ bis $\\mu + 2\\sigma$ und enthält rund $95{,}4\\,\\%$.",
+    "Für b) suchst du das $10\\,\\%$-Quantil: $m = $ invNormCDf($0{,}10$, $\\sigma$, $\\mu$).",
+    "invNormCDf($0{,}10$, $4$, $500$) $\\approx 494{,}9$; zur Kontrolle: $m$ liegt etwa $1{,}28\\sigma$ unter $\\mu$."
+   ],
+   "loesungsweg": "a) $2\\sigma$-Umgebung: $[\\mu - 2\\sigma;\\ \\mu + 2\\sigma] = [500 - 8;\\ 500 + 8] = [492;\\ 508]$; sie enthält rund $95{,}4\\,\\%$ aller Mengen. b) Gesucht ist das $10\\,\\%$-Quantil $m$ mit $P(X \\le m) = 0{,}10$. Mit invNormCDf($0{,}10$, $4$, $500$) ergibt sich $m \\approx 494{,}9$ ml. Plausibilität: Das $10\\,\\%$-Quantil der Standardnormalverteilung liegt bei $z \\approx -1{,}28$, also $m \\approx 500 - 1{,}28 \\cdot 4 \\approx 494{,}9$ ml.",
+   "kc": [
+    "sigma-regeln",
+    "invnormcdf-umkehraufgabe"
+   ],
+   "ergaenzung": "lernbuero"
   }
  ]
 }
