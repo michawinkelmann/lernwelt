@@ -421,7 +421,7 @@ function baueBeispiel(b) {
 }
 
 function baueDarstellungen(d) {
-  const box = el(`<div class="lb-darstellungen"><span class="lb-etikett">🔀 Dieselbe Funktion, vier Sichtweisen</span></div>`);
+  const box = el(`<div class="lb-darstellungen"><span class="lb-etikett">🔀 Dieselbe Sache, mehrere Sichtweisen</span></div>`);
   if (d.titel) box.append(el(`<p class="lb-phase-hinweis">${d.titel}</p>`));
   const grid = el(`<div class="lb-darstellungen-grid"></div>`);
   (d.eintraege || []).forEach(e => {
