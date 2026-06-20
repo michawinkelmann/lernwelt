@@ -95,7 +95,7 @@ const GENERATOREN = {
         { label: "kleinere Lösung $x_1$", antwort: Math.min(x1, x2), toleranz: 0 },
         { label: "größere Lösung $x_2$", antwort: Math.max(x1, x2), toleranz: 0 }
       ],
-      loesungsweg: `p-q-Formel mit $p = ${p}$, $q = ${q}$: $x_{1,2} = ${de(-p / 2)} \pm \sqrt{${de((p / 2) * (p / 2))} ${q >= 0 ? "-" : "+"} ${Math.abs(q)}} = ${de(-p / 2)} \pm ${de(Math.abs(x2 - x1) / 2)}$. Lösungen: $x_1 = ${Math.min(x1, x2)}$ und $x_2 = ${Math.max(x1, x2)}$. Probe (Vieta): $x_1 + x_2 = ${x1 + x2} = -p$ und $x_1 \cdot x_2 = ${q} = q$. ✓`
+      loesungsweg: `p-q-Formel mit $p = ${p}$, $q = ${q}$: $x_{1,2} = ${de(-p / 2)} \\pm \\sqrt{${de((p / 2) * (p / 2))} ${q >= 0 ? "-" : "+"} ${Math.abs(q)}} = ${de(-p / 2)} \\pm ${de(Math.abs(x2 - x1) / 2)}$. Lösungen: $x_1 = ${Math.min(x1, x2)}$ und $x_2 = ${Math.max(x1, x2)}$. Probe (Vieta): $x_1 + x_2 = ${x1 + x2} = -p$ und $x_1 \\cdot x_2 = ${q} = q$. ✓`
     };
   },
 
@@ -175,7 +175,8 @@ export async function starteUebungsseite() {
   halter.append(liste);
 
   daten.aufgaben.forEach((aufgabe, i) => liste.append(baueAufgabe(aufgabe, i, themaId)));
-  await rendereMathe(halter);
+  // Mathematik der ganzen Hauptspalte rendern (auch statische Einleitungstexte außerhalb von #uebungen)
+  await rendereMathe(document.querySelector("main") || halter);
 
   aktualisiereFilter(daten);
   aktualisiereBalken(daten);
@@ -513,7 +514,8 @@ function baueMultipleChoice(kontext) {
 
 function baueLuecke(kontext) {
   const a = kontext.aufgabe;
-  const teile = a.text.split("___");
+  // Robust gegen fehlendes/leeres text-Feld: nie an undefined.split() scheitern.
+  const teile = String(a.text || "").split("___");
   const p = document.createElement("p");
   p.className = "luecken-text";
   let html = "";
@@ -539,6 +541,7 @@ function baueLuecke(kontext) {
     let ok = true;
     a.luecken.forEach((l, i) => {
       const feld = p.querySelector(`[data-index="${i}"]`);
+      if (!feld) { ok = false; return; }   // fehlt ein Feld (Daten-/Render-Fehler): nicht abstürzen
       const erwartet = Array.isArray(l.antwort) ? l.antwort : [l.antwort];
       const passt = erwartet.some(e => normalisiere(e) === normalisiere(feld.value));
       feld.setAttribute("aria-invalid", String(!passt));

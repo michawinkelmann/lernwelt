@@ -188,6 +188,32 @@
     </div>
   </details>
 
+  <section aria-labelledby="fu-tryout">
+    <h2 id="fu-tryout">Selbst ausprobieren: Umfang und Fläche am Rechteck</h2>
+    <p>Verändere die Seiten <strong>a</strong> und <strong>b</strong> und beobachte, wie sich Umfang und Fläche ändern. Probiere auch: Zwei Rechtecke können denselben Umfang haben und trotzdem verschieden viel Fläche umschließen.</p>
+    <figure class="fu-widget">
+      <svg id="fu-svg" viewBox="0 0 300 210" role="img" aria-label="Rechteck, dessen Seiten a und b mit den Reglern verändert werden" style="width:100%;max-width:340px;height:auto;display:block;margin:0 auto;background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--radius)"></svg>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;justify-content:center;margin:var(--abstand-3) 0">
+        <label>Länge a: <input type="range" id="fu-a" min="1" max="12" value="6" step="1" style="vertical-align:middle"> <strong id="fu-av">6</strong> cm</label>
+        <label>Breite b: <input type="range" id="fu-b" min="1" max="8" value="4" step="1" style="vertical-align:middle"> <strong id="fu-bv">4</strong> cm</label>
+      </div>
+      <p role="status" style="text-align:center;font-size:1.05rem">Umfang <strong>U = 2 · (a + b) = <span id="fu-u">20</span> cm</strong> &nbsp;·&nbsp; Fläche <strong>A = a · b = <span id="fu-A">24</span> cm²</strong></p>
+    </figure>
+    <script>
+    (function(){
+      var a=document.getElementById('fu-a'),b=document.getElementById('fu-b'),svg=document.getElementById('fu-svg');
+      var U=document.getElementById('fu-u'),A=document.getElementById('fu-A'),av=document.getElementById('fu-av'),bv=document.getElementById('fu-bv');
+      var PX=22,OX=22,OY=18;
+      function zeichne(){var ca=+a.value,cb=+b.value;av.textContent=ca;bv.textContent=cb;U.textContent=2*(ca+cb);A.textContent=ca*cb;
+        var w=ca*PX,h=cb*PX,s='<rect x="'+OX+'" y="'+OY+'" width="'+w+'" height="'+h+'" style="fill:var(--hauch);stroke:var(--akzent);stroke-width:2.5"/>';
+        for(var i=1;i<ca;i++)s+='<line x1="'+(OX+i*PX)+'" y1="'+OY+'" x2="'+(OX+i*PX)+'" y2="'+(OY+h)+'" style="stroke:var(--linie);stroke-width:1"/>';
+        for(var j=1;j<cb;j++)s+='<line x1="'+OX+'" y1="'+(OY+j*PX)+'" x2="'+(OX+w)+'" y2="'+(OY+j*PX)+'" style="stroke:var(--linie);stroke-width:1"/>';
+        svg.innerHTML=s;}
+      a.addEventListener('input',zeichne);b.addEventListener('input',zeichne);zeichne();
+    })();
+    </script>
+  </section>
+
   <div class="weiter-karte">
     <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Zaun ums Gehege über Flächeneinheiten und L-Figuren bis zur Frage, wie viel Platz in 24 m Zaun steckt — mit gestuften Tipps und vollständigen Lösungswegen.</p>
     <a class="knopf" href="uebungen.html">Zu den Übungen</a>
