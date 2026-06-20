@@ -208,7 +208,45 @@
         "Lies aus deiner Zeichnung ab: Ab ungefähr wie vielen Minuten wird Tarif B günstiger? Den genauen Wert berechnest du erst in Lektion 5."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Geraden erkunden",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m",
+         "min": -3,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        -5,
+        5
+       ],
+       "y": [
+        -6,
+        6
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = m·x + b"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -375,7 +413,45 @@
         "antwort": "$m=-5$, denn $|-5| = 5 > 4$. Das Minus heißt nur: sie fällt."
        }
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Steigung verstehen",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m",
+         "min": -3,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        -5,
+        5
+       ],
+       "y": [
+        -6,
+        6
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = m·x + b"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -527,7 +603,45 @@
         "antwort": "Jede proportionale Funktion ist linear (mit $b=0$). Aber nicht jede lineare ist proportional – nur die mit $b=0$."
        }
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "y-Achsenabschnitt b",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m",
+         "min": -3,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": 2
+        }
+       ],
+       "x": [
+        -5,
+        5
+       ],
+       "y": [
+        -6,
+        6
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = m·x + b"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -686,7 +800,45 @@
         "antwort": "Weil ein Rechenfehler bei $m$ oder $b$ sofort auffällt – der zweite Punkt passt dann nicht."
        }
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Gerade anpassen",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m",
+         "min": -3,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        -5,
+        5
+       ],
+       "y": [
+        -6,
+        6
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = m·x + b"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -862,7 +1014,45 @@
         "antwort": "Weil er ein Punkt in der Ebene ist – mit $x$-Stelle und zugehörigem $y$-Wert."
        }
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Nullstelle finden",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m",
+         "min": -3,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": -2
+        }
+       ],
+       "x": [
+        -5,
+        5
+       ],
+       "y": [
+        -6,
+        6
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = m·x + b"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3410,6 +3600,18 @@
         "text": "$A = g \\cdot h$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "flaeche",
+      "titel": "Parallelogramm-Fläche",
+      "params": {
+       "form": "parallelogramm",
+       "gmax": 12,
+       "hmax": 8,
+       "ginit": 8,
+       "hinit": 5,
+       "einheit": "cm"
+      }
      }
     },
     "ueben": {
@@ -3585,7 +3787,19 @@
       }
      ],
      "stolperstein": "Grundseite und Höhe müssen <strong>zusammengehören</strong>: die Höhe ist das Lot von der gegenüberliegenden Ecke auf <em>diese</em> Grundseite. Man darf nicht eine Grundseite mit der Höhe eines anderen Paares mischen.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum in der Dreiecksformel der Faktor $\\frac{1}{2}$ steht."
+     "selbsterklaerung": "Erkläre in einem Satz, warum in der Dreiecksformel der Faktor $\\frac{1}{2}$ steht.",
+     "interaktiv": {
+      "id": "flaeche",
+      "titel": "Dreiecksfläche",
+      "params": {
+       "form": "dreieck",
+       "gmax": 12,
+       "hmax": 8,
+       "ginit": 8,
+       "hinit": 5,
+       "einheit": "cm"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3783,6 +3997,22 @@
         "text": "$A = \\frac{(a+c)\\cdot h}{2}$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "flaeche",
+      "titel": "Trapezfläche",
+      "params": {
+       "form": "trapez",
+       "gmax": 12,
+       "hmax": 8,
+       "ginit": 10,
+       "hinit": 5,
+       "amax": 12,
+       "cmax": 10,
+       "ainit": 10,
+       "cinit": 6,
+       "einheit": "cm"
+      }
      }
     },
     "ueben": {
@@ -4182,6 +4412,20 @@
         "text": "$V = G \\cdot h$, $\\;O = 2G + M$ mit $M = u \\cdot h$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "koerper",
+      "titel": "Prisma erkunden",
+      "params": {
+       "form": "prisma",
+       "einheit": "cm",
+       "ainit": 4,
+       "binit": 3,
+       "hinit": 6,
+       "amax": 8,
+       "bmax": 6,
+       "hmax": 10
+      }
      }
     },
     "ueben": {
@@ -5663,6 +5907,19 @@
         "text": "$2 \\cdot 2 = 4$ mögliche Ergebnisse."
        }
       ]
+     },
+     "interaktiv": {
+      "id": "zweistufig",
+      "titel": "Baumdiagramm erkunden",
+      "params": {
+       "rot": 3,
+       "blau": 2,
+       "ziehen": "mit",
+       "namen": [
+        "rot",
+        "blau"
+       ]
+      }
      }
     },
     "ueben": {
@@ -5866,6 +6123,19 @@
         "text": "$= \\frac{1}{4}$ — alle vier Pfade zusammen ergeben $1$."
        }
       ]
+     },
+     "interaktiv": {
+      "id": "zweistufig",
+      "titel": "Pfade multiplizieren",
+      "params": {
+       "rot": 3,
+       "blau": 2,
+       "ziehen": "mit",
+       "namen": [
+        "rot",
+        "blau"
+       ]
+      }
      }
     },
     "ueben": {
@@ -6068,6 +6338,19 @@
         "text": "$P = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "zweistufig",
+      "titel": "Pfade addieren",
+      "params": {
+       "rot": 3,
+       "blau": 2,
+       "ziehen": "mit",
+       "namen": [
+        "rot",
+        "blau"
+       ]
+      }
      }
     },
     "ueben": {
@@ -6264,6 +6547,19 @@
         "text": "$P(\\text{rot}) = \\frac{2}{4} = \\frac{1}{2}$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "zweistufig",
+      "titel": "Ohne Zurücklegen",
+      "params": {
+       "rot": 3,
+       "blau": 2,
+       "ziehen": "ohne",
+       "namen": [
+        "rot",
+        "blau"
+       ]
+      }
      }
     },
     "ueben": {
@@ -6466,6 +6762,19 @@
         "text": "$1 - \\frac{5}{6}\\cdot\\frac{5}{6} = 1 - \\frac{25}{36} = \\frac{11}{36}$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "zweistufig",
+      "titel": "Mindestens einmal",
+      "params": {
+       "rot": 1,
+       "blau": 5,
+       "ziehen": "mit",
+       "namen": [
+        "Sechs",
+        "keine"
+       ]
+      }
      }
     },
     "ueben": {

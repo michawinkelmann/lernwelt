@@ -368,7 +368,38 @@
         "Begründe, warum die berechnete Feldstärke $E=F/q$ trotzdem gleich bleibt."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Kraft und Ladung",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "E",
+         "min": 100,
+         "max": 2000,
+         "step": 100,
+         "init": 500,
+         "einheit": "N/C"
+        }
+       ],
+       "x": [
+        0,
+        5
+       ],
+       "y": [
+        0,
+        10000
+       ],
+       "achsen": {
+        "x": "q in nC",
+        "y": "F in N"
+       },
+       "formel": "F = E · q"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -569,7 +600,38 @@
         "Prüfe, ob $E\\cdot d$ bei fester Spannung konstant bleibt, und vergleiche mit $E=U/d$."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Feldstärke und Abstand",
+      "params": {
+       "form": "antiproportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "U",
+         "min": 50,
+         "max": 500,
+         "step": 50,
+         "init": 200,
+         "einheit": "V"
+        }
+       ],
+       "x": [
+        0.5,
+        10
+       ],
+       "y": [
+        0,
+        500
+       ],
+       "achsen": {
+        "x": "d in mm",
+        "y": "E in V/mm"
+       },
+       "formel": "E = U / d"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -753,7 +815,37 @@
         "Begründe mit Feldstärke und Weg, warum der Plattenabstand bei fester Spannung keine Rolle spielt."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Geschwindigkeit aus Spannung",
+      "params": {
+       "form": "wurzel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "k",
+         "min": 1,
+         "max": 8,
+         "step": 0.5,
+         "init": 5.9
+        }
+       ],
+       "x": [
+        0,
+        1000
+       ],
+       "y": [
+        0,
+        200
+       ],
+       "achsen": {
+        "x": "U in V",
+        "y": "v in Mm/s"
+       },
+       "formel": "v = k · √U"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -946,7 +1038,17 @@
         "Lies einen Messwert ab und prüfe ihn mit $y=\\frac{eE}{2mv_0^2}x^2$ nach."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "wurfparabel",
+      "titel": "Elektron im Querfeld",
+      "params": {
+       "v0init": 12,
+       "alphainit": 0,
+       "g": 9.81,
+       "vmax": 25
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1489,7 +1591,37 @@
         "Erhöhe die Stromstärke und beschreibe, wie sich die Auslenkung (die Kraft) ändert."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Kraft und Strom",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "B·L",
+         "min": 0.05,
+         "max": 1,
+         "step": 0.05,
+         "init": 0.3
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        10
+       ],
+       "achsen": {
+        "x": "I in A",
+        "y": "F in N"
+       },
+       "formel": "F = (B · L) · I"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1674,7 +1806,37 @@
         "Begründe, warum der Leuchtfleck nicht heller/dunkler, sondern nur verschoben erscheint (keine Energieänderung)."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Lorentzkraft und Tempo",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "q·B",
+         "min": 0.05,
+         "max": 1,
+         "step": 0.05,
+         "init": 0.4
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        10
+       ],
+       "achsen": {
+        "x": "v in Mm/s",
+        "y": "F in fN"
+       },
+       "formel": "F = (q · B) · v"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1878,7 +2040,37 @@
         "Beobachte die Umlaufdauer bei verschiedenen Geschwindigkeiten – bleibt sie wirklich gleich?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Radius und Geschwindigkeit",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m/(q·B)",
+         "min": 0.5,
+         "max": 5,
+         "step": 0.5,
+         "init": 2
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        50
+       ],
+       "achsen": {
+        "x": "v in Mm/s",
+        "y": "r in cm"
+       },
+       "formel": "r = m/(q · B) · v"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,

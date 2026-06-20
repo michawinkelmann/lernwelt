@@ -213,7 +213,38 @@
         "Formuliere in einem Satz, warum dieselbe Bewegung in zwei Bezugssystemen verschieden schnell ist."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Geschwindigkeit erkunden",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "v",
+         "min": 1,
+         "max": 20,
+         "step": 1,
+         "init": 10,
+         "einheit": "m/s"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        200
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "s in m"
+       },
+       "formel": "s = v · t"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -409,7 +440,47 @@
        "frage": "Wie bestimmst du den Weg, wenn $v$ und $t$ gegeben sind?",
        "antwort": "Mit $s=v\\cdot t$."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Gleichförmige Bewegung",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "v",
+         "min": 0,
+         "max": 20,
+         "step": 1,
+         "init": 8,
+         "einheit": "m/s"
+        },
+        {
+         "sym": "b",
+         "label": "s0",
+         "min": 0,
+         "max": 50,
+         "step": 5,
+         "init": 0,
+         "einheit": "m"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        200
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "s in m"
+       },
+       "formel": "s = v · t + s0"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -600,7 +671,38 @@
        "frage": "Was bedeuten Steigung und Fläche im t-v-Diagramm?",
        "antwort": "Die Steigung ist die Beschleunigung $a$, die Fläche unter dem Graphen ist der zurückgelegte Weg."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Beschleunigter Weg",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "½·a",
+         "min": 0.5,
+         "max": 5,
+         "step": 0.5,
+         "init": 1,
+         "einheit": "m/s²"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        250
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "s in m"
+       },
+       "formel": "s = ½ · a · t²"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -807,7 +909,38 @@
         "Formuliere, was im Vakuum (ohne Luft) passieren würde."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Freier Fall",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "½·g",
+         "min": 4.905,
+         "max": 4.905,
+         "step": 0.1,
+         "init": 4.905,
+         "einheit": "m/s²"
+        }
+       ],
+       "x": [
+        0,
+        5
+       ],
+       "y": [
+        0,
+        125
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "Fallhöhe h in m"
+       },
+       "formel": "h = ½ · g · t²"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -999,7 +1132,38 @@
        "frage": "Wie wächst der Bremsweg mit der Geschwindigkeit?",
        "antwort": "Quadratisch: doppelte Geschwindigkeit bedeutet vierfacher Bremsweg."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Bremsweg erkunden",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "1/(2a)",
+         "min": 0.02,
+         "max": 0.1,
+         "step": 0.005,
+         "init": 0.05,
+         "einheit": "s²/m"
+        }
+       ],
+       "x": [
+        0,
+        30
+       ],
+       "y": [
+        0,
+        80
+       ],
+       "achsen": {
+        "x": "v in m/s",
+        "y": "Bremsweg in m"
+       },
+       "formel": "Bremsweg = v² / (2a)"
+      }
+     }
     },
     "ueben": {
      "zeit": 20,
@@ -1375,7 +1539,38 @@
        "frage": "Wie berechnest du die Gewichtskraft?",
        "antwort": "Mit $F_G=m\\cdot g$ – dem Spezialfall der Grundgleichung mit $a=g$."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Grundgleichung F = m·a",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m",
+         "min": 0.5,
+         "max": 10,
+         "step": 0.5,
+         "init": 2,
+         "einheit": "kg"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        100
+       ],
+       "achsen": {
+        "x": "a in m/s²",
+        "y": "F in N"
+       },
+       "formel": "F = m · a"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1740,7 +1935,56 @@
        "frage": "Hängt die Hangabtriebsbeschleunigung von der Masse ab?",
        "antwort": "Nein, nur vom Neigungswinkel: $a=g\\sin\\alpha$."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Hangabtriebskraft",
+      "params": {
+       "form": "sinus",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m·g",
+         "min": 50,
+         "max": 300,
+         "step": 10,
+         "init": 100,
+         "einheit": "N"
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": 1,
+         "max": 1,
+         "step": 1,
+         "init": 1
+        },
+        {
+         "sym": "c",
+         "label": "c",
+         "min": 0,
+         "max": 0,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        0,
+        90
+       ],
+       "schrittX": 15,
+       "y": [
+        0,
+        300
+       ],
+       "schrittY": 50,
+       "achsen": {
+        "x": "Neigungswinkel α in °",
+        "y": "Hangabtriebskraft in N"
+       },
+       "formel": "F_H = m · g · sin(α)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1927,7 +2171,56 @@
        "frage": "Was ist die Zentrifugalkraft physikalisch?",
        "antwort": "Eine Scheinkraft des mitrotierenden Bezugssystems – keine echte, von einem Körper ausgeübte Kraft."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Zentripetalkraft",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m/r",
+         "min": 0.5,
+         "max": 5,
+         "step": 0.5,
+         "init": 2,
+         "einheit": "kg/m"
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": 0,
+         "max": 0,
+         "step": 1,
+         "init": 0
+        },
+        {
+         "sym": "c",
+         "label": "c",
+         "min": 0,
+         "max": 0,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        200
+       ],
+       "schrittX": 2,
+       "schrittY": 50,
+       "achsen": {
+        "x": "Bahngeschwindigkeit v in m/s",
+        "y": "Zentripetalkraft in N"
+       },
+       "formel": "F_z = (m / r) · v²"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2121,7 +2414,17 @@
         "Erkläre das Ergebnis mit dem Überlagerungsprinzip."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "wurfparabel",
+      "titel": "Wurf zusammensetzen",
+      "params": {
+       "v0init": 12,
+       "alphainit": 45,
+       "g": 9.81,
+       "vmax": 25
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2312,7 +2615,17 @@
        "frage": "Wie berechnest du die Wurfweite?",
        "antwort": "Als $x_w=v_0\\cdot t$ mit der Fallzeit $t$."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "wurfparabel",
+      "titel": "Waagerechter Wurf",
+      "params": {
+       "v0init": 10,
+       "alphainit": 0,
+       "g": 9.81,
+       "vmax": 25
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2498,7 +2811,17 @@
        "frage": "Wie lang ist die Flugzeit auf ebenem Gelände?",
        "antwort": "$t_{\\text{flug}}=\\frac{2v_{0y}}{g}$ – doppelt so lang wie die Steigzeit."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "wurfparabel",
+      "titel": "Schiefer Wurf",
+      "params": {
+       "v0init": 15,
+       "alphainit": 45,
+       "g": 9.81,
+       "vmax": 30
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2683,7 +3006,55 @@
        "frage": "Warum weicht die Praxis vom 45°-Ideal ab?",
        "antwort": "Wegen höherer Abwurfhöhe und Luftwiderstand – dann ist der beste Winkel kleiner als $45^\\circ$."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Wurfweite und Winkel",
+      "params": {
+       "form": "sinus",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "max. Weite",
+         "min": 10,
+         "max": 50,
+         "step": 5,
+         "init": 25,
+         "einheit": "m"
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": 2,
+         "max": 2,
+         "step": 1,
+         "init": 2
+        },
+        {
+         "sym": "c",
+         "label": "c",
+         "min": 0,
+         "max": 0,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        0,
+        90
+       ],
+       "y": [
+        0,
+        50
+       ],
+       "schrittX": 15,
+       "achsen": {
+        "x": "Abwurfwinkel in Grad",
+        "y": "Wurfweite in m"
+       },
+       "formel": "Wurfweite ~ sin(2·Winkel)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2882,7 +3253,12 @@
         "Diskutiere, warum der Gegenstand nicht ganz so hoch kommt, wie es die ideale Energiebilanz erwarten lässt (Reibung/Luftwiderstand)."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "energiekette",
+      "titel": "Energieformen erkunden",
+      "params": {}
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3080,7 +3456,38 @@
         "Diskutiere, warum die gemessene Geschwindigkeit etwas kleiner ausfällt (Reibung, Rollbewegung)."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Endgeschwindigkeit aus Höhe",
+      "params": {
+       "form": "wurzel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "√(2g)",
+         "min": 4.43,
+         "max": 4.43,
+         "step": 0.1,
+         "init": 4.43,
+         "einheit": ""
+        }
+       ],
+       "x": [
+        0,
+        20
+       ],
+       "y": [
+        0,
+        20
+       ],
+       "achsen": {
+        "x": "Höhe h in m",
+        "y": "v in m/s"
+       },
+       "formel": "v = √(2 · g · h)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3282,7 +3689,38 @@
         "Beobachte über viele Schwingungen, wie die Umkehrhöhe langsam abnimmt, und benenne die Ursache (Reibung/Luftwiderstand)."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Pendel: v aus Höhe",
+      "params": {
+       "form": "wurzel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "√(2g)",
+         "min": 4.43,
+         "max": 4.43,
+         "step": 0.1,
+         "init": 4.43,
+         "einheit": ""
+        }
+       ],
+       "x": [
+        0,
+        2
+       ],
+       "y": [
+        0,
+        7
+       ],
+       "achsen": {
+        "x": "Fallhöhe h in m",
+        "y": "v am tiefsten Punkt in m/s"
+       },
+       "formel": "v = √(2 · g · h)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3480,7 +3918,12 @@
         "Begründe, warum sich diese Wärme nicht von selbst wieder in Bewegungsenergie zurückverwandelt (Entwertung)."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "energiekette",
+      "titel": "Energie entwerten",
+      "params": {}
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3674,7 +4117,12 @@
         "Prüfe, ob die Auslaufstrecke proportional zur Starthöhe ist, und erkläre Abweichungen."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "energiekette",
+      "titel": "Energie umwandeln",
+      "params": {}
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -4284,7 +4732,46 @@
         "Vergleiche deine Kurve mit dem Zerfallsgesetz $N=N_0\\left(\\frac{1}{2}\\right)^{n}$ und erkläre Abweichungen durch den Zufall bei kleinen Stückzahlen."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Zerfallsgesetz",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "N0",
+         "min": 100,
+         "max": 2000,
+         "step": 100,
+         "init": 1000,
+         "einheit": ""
+        },
+        {
+         "sym": "b",
+         "label": "Halbierung",
+         "min": 0.5,
+         "max": 0.5,
+         "step": 0.5,
+         "init": 0.5
+        }
+       ],
+       "x": [
+        0,
+        8
+       ],
+       "y": [
+        0,
+        2000
+       ],
+       "achsen": {
+        "x": "t in Halbwertszeiten",
+        "y": "N(t)"
+       },
+       "formel": "N(t) = N0 · (1/2)^(t/T)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,

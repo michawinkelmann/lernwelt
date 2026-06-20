@@ -614,7 +614,46 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum man den Zerfall eines einzelnen Kerns nicht vorhersagen kann, die Halbwertszeit aber eine verlässliche Größe ist."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man den Zerfall eines einzelnen Kerns nicht vorhersagen kann, die Halbwertszeit aber eine verlässliche Größe ist.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Halbwertszeit erkunden",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "N0",
+         "min": 100,
+         "max": 2000,
+         "step": 100,
+         "init": 1000,
+         "einheit": ""
+        },
+        {
+         "sym": "b",
+         "label": "Halbierung",
+         "min": 0.5,
+         "max": 0.5,
+         "step": 0.5,
+         "init": 0.5
+        }
+       ],
+       "x": [
+        0,
+        8
+       ],
+       "y": [
+        0,
+        2000
+       ],
+       "achsen": {
+        "x": "t in Halbwertszeiten",
+        "y": "N (Anzahl Kerne)"
+       },
+       "formel": "N = N0 · (1/2)^(t/T)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1987,7 +2026,38 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum ein Transformator nicht an einer Batterie funktioniert."
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein Transformator nicht an einer Batterie funktioniert.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Trafo-Gleichung",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "U1/n1",
+         "min": 0.5,
+         "max": 5,
+         "step": 0.5,
+         "init": 2,
+         "einheit": "V"
+        }
+       ],
+       "x": [
+        0,
+        100
+       ],
+       "y": [
+        0,
+        500
+       ],
+       "achsen": {
+        "x": "n2 (Windungen)",
+        "y": "U2 in V"
+       },
+       "formel": "U2 = (U1/n1) · n2"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2576,7 +2646,48 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum die Kelvin-Skala genau am absoluten Nullpunkt beginnt und nicht bei $0\\,^\\circ\\text{C}$."
+     "selbsterklaerung": "Erkläre in einem Satz, warum die Kelvin-Skala genau am absoluten Nullpunkt beginnt und nicht bei $0\\,^\\circ\\text{C}$.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Celsius und Kelvin",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "Steigung",
+         "min": 1,
+         "max": 1,
+         "step": 1,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "Nullpunkt",
+         "min": 273,
+         "max": 273,
+         "step": 1,
+         "init": 273,
+         "einheit": "K"
+        }
+       ],
+       "x": [
+        -273,
+        127
+       ],
+       "y": [
+        0,
+        400
+       ],
+       "schrittX": 100,
+       "schrittY": 100,
+       "achsen": {
+        "x": "Temperatur in °C",
+        "y": "Temperatur in K"
+       },
+       "formel": "T(K) = T(°C) + 273"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2780,7 +2891,38 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz mit dem 1. Hauptsatz, warum sich eine Luftpumpe beim Zusammendrücken erwärmt."
+     "selbsterklaerung": "Erkläre in einem Satz mit dem 1. Hauptsatz, warum sich eine Luftpumpe beim Zusammendrücken erwärmt.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Wärmemenge erkunden",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "c·m",
+         "min": 50,
+         "max": 1000,
+         "step": 50,
+         "init": 420,
+         "einheit": "J/K"
+        }
+       ],
+       "x": [
+        0,
+        80
+       ],
+       "y": [
+        0,
+        80000
+       ],
+       "achsen": {
+        "x": "ΔT in K",
+        "y": "Q in J"
+       },
+       "formel": "Q = c · m · ΔT"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2969,7 +3111,38 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz mit dem Teilchenmodell, warum der Reifendruck in der Sonne steigt."
+     "selbsterklaerung": "Erkläre in einem Satz mit dem Teilchenmodell, warum der Reifendruck in der Sonne steigt.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Isotherme erkunden",
+      "params": {
+       "form": "antiproportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "p·V",
+         "min": 50,
+         "max": 300,
+         "step": 10,
+         "init": 100,
+         "einheit": "kPa·L"
+        }
+       ],
+       "x": [
+        0.5,
+        10
+       ],
+       "y": [
+        0,
+        300
+       ],
+       "achsen": {
+        "x": "V in L",
+        "y": "p in kPa"
+       },
+       "formel": "p · V = konstant"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3375,7 +3548,40 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz mit dem 2. Hauptsatz, warum eine Wärmekraftmaschine immer Abwärme abgeben muss."
+     "selbsterklaerung": "Erkläre in einem Satz mit dem 2. Hauptsatz, warum eine Wärmekraftmaschine immer Abwärme abgeben muss.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Wirkungsgrad erkunden",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "1/Q_zu",
+         "min": 0.1,
+         "max": 1,
+         "step": 0.05,
+         "init": 0.5,
+         "einheit": "1/kJ"
+        }
+       ],
+       "x": [
+        0,
+        2
+       ],
+       "y": [
+        0,
+        1
+       ],
+       "schrittX": 0.5,
+       "schrittY": 0.2,
+       "achsen": {
+        "x": "abgegebene Arbeit |W| in kJ",
+        "y": "Wirkungsgrad η"
+       },
+       "formel": "η = |W| / Q_zu"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3767,7 +3973,47 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum in der Physik auch das Bremsen als beschleunigte Bewegung gilt."
+     "selbsterklaerung": "Erkläre in einem Satz, warum in der Physik auch das Bremsen als beschleunigte Bewegung gilt.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Bewegung im v-t-Diagramm",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 3,
+         "step": 0.5,
+         "init": 1,
+         "einheit": "m/s²"
+        },
+        {
+         "sym": "b",
+         "label": "v0",
+         "min": 0,
+         "max": 10,
+         "step": 1,
+         "init": 2,
+         "einheit": "m/s"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        30
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "v in m/s"
+       },
+       "formel": "v = a · t + v0"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3972,7 +4218,38 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, was die Einheit $\\frac{\\text{m}}{\\text{s}^2}$ über die Tempozunahme aussagt."
+     "selbsterklaerung": "Erkläre in einem Satz, was die Einheit $\\frac{\\text{m}}{\\text{s}^2}$ über die Tempozunahme aussagt.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Beschleunigung erkunden",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 0.5,
+         "max": 5,
+         "step": 0.5,
+         "init": 2,
+         "einheit": "m/s²"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        50
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "v in m/s"
+       },
+       "formel": "v = a · t"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -4181,7 +4458,38 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum dieselbe Bewegung im $s$-$t$-Diagramm eine gekrümmte Kurve ergibt."
+     "selbsterklaerung": "Erkläre in einem Satz, warum dieselbe Bewegung im $s$-$t$-Diagramm eine gekrümmte Kurve ergibt.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Weg beim Beschleunigen",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "½·a",
+         "min": 0.5,
+         "max": 5,
+         "step": 0.5,
+         "init": 1,
+         "einheit": "m/s²"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        250
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "s in m"
+       },
+       "formel": "s = ½ · a · t²"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -4388,7 +4696,38 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum ohne Luftwiderstand alle Körper gleich schnell fallen."
+     "selbsterklaerung": "Erkläre in einem Satz, warum ohne Luftwiderstand alle Körper gleich schnell fallen.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Freier Fall",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "½·g",
+         "min": 5,
+         "max": 5,
+         "step": 0.1,
+         "init": 5,
+         "einheit": "m/s²"
+        }
+       ],
+       "x": [
+        0,
+        5
+       ],
+       "y": [
+        0,
+        125
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "Fallstrecke s in m"
+       },
+       "formel": "s = ½ · g · t²"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -4595,7 +4934,38 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum der Bremsweg bei doppeltem Tempo auf das Vierfache wächst."
+     "selbsterklaerung": "Erkläre in einem Satz, warum der Bremsweg bei doppeltem Tempo auf das Vierfache wächst.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Bremsweg erkunden",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "Bremsfaktor",
+         "min": 0.005,
+         "max": 0.02,
+         "step": 0.001,
+         "init": 0.01,
+         "einheit": ""
+        }
+       ],
+       "x": [
+        0,
+        120
+       ],
+       "y": [
+        0,
+        150
+       ],
+       "achsen": {
+        "x": "v in km/h",
+        "y": "Bremsweg in m"
+       },
+       "formel": "Bremsweg ~ v²"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,

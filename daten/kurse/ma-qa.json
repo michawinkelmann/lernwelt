@@ -189,7 +189,45 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Die Rate $f$ ist <strong>nicht</strong> der Bestand. Aus „die Rate ist groß“ folgt nicht „es ist viel da“ — eine große Abflussrate kann auch heißen, dass gerade viel <em>verschwindet</em>. Bestand bekommst du erst durch <strong>Aufsummieren</strong> der Rate.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum man aus einer reinen Raten-Messung trotzdem die geflossene Gesamtmenge bestimmen kann."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man aus einer reinen Raten-Messung trotzdem die geflossene Gesamtmenge bestimmen kann.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Bestand und Rate",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "Zufluss-Steigung",
+         "min": -2,
+         "max": 2,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "Startrate",
+         "min": -3,
+         "max": 3,
+         "step": 1,
+         "init": 1
+        }
+       ],
+       "x": [
+        0,
+        6
+       ],
+       "y": [
+        -4,
+        8
+       ],
+       "achsen": {
+        "x": "t",
+        "y": "Rate f(t)"
+       },
+       "formel": "Fläche unter f = Bestandsänderung"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -543,7 +581,53 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Integralwert und sichtbarer Flächeninhalt sind <strong>nicht dasselbe</strong>. Liegt ein Teil unter der Achse, kann sich das Integral teilweise oder ganz aufheben. Für den echten Flächeninhalt muss man an den Nullstellen aufteilen und Beträge addieren (das kommt im nächsten Thema).",
-     "selbsterklaerung": "Erkläre, was der Unterschied zwischen „$\\int_a^b f\\,dx = 0$“ und „zwischen $a$ und $b$ ist keine Fläche“ ist."
+     "selbsterklaerung": "Erkläre, was der Unterschied zwischen „$\\int_a^b f\\,dx = 0$“ und „zwischen $a$ und $b$ ist keine Fläche“ ist.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Flache unter dem Graphen",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -1,
+         "max": 2,
+         "step": 0.5,
+         "init": 0.5
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": -3,
+         "max": 3,
+         "step": 0.5,
+         "init": 0
+        },
+        {
+         "sym": "c",
+         "label": "c",
+         "min": -2,
+         "max": 4,
+         "step": 1,
+         "init": 1
+        }
+       ],
+       "x": [
+        -1,
+        5
+       ],
+       "y": [
+        -2,
+        10
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "f(x)"
+       },
+       "formel": "f(x) = a·x² + b·x + c"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2259,7 +2343,45 @@
         "Erkläre, warum häufigere Verzinsung das Kapital nicht beliebig groß macht, sondern an $\\mathrm{e}$ heranführt."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Die e-Funktion",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 0.5,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": 1.5,
+         "max": 3,
+         "step": 0.1,
+         "init": 2.7
+        }
+       ],
+       "x": [
+        -3,
+        3
+       ],
+       "y": [
+        0,
+        12
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·b^x"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2431,7 +2553,45 @@
         "Vergleiche das Ergebnis mit $\\mathrm{e}^1\\approx 2{,}72$ — passt „Steigung = Funktionswert\"?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Ableitung der e-Funktion",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 0.5,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": 1.5,
+         "max": 3,
+         "step": 0.1,
+         "init": 2.7
+        }
+       ],
+       "x": [
+        -3,
+        3
+       ],
+       "y": [
+        0,
+        12
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·b^x"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2622,7 +2782,45 @@
         "Probiere $\\ln(-2)$ aus — was zeigt der Rechner an, und warum?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "e-Funktion erkunden",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 0.5,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "Basis b",
+         "min": 1.2,
+         "max": 3,
+         "step": 0.1,
+         "init": 2.7
+        }
+       ],
+       "x": [
+        -3,
+        3
+       ],
+       "y": [
+        -1,
+        12
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "y = a · b^x   (ln macht das rückgängig)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2801,7 +2999,45 @@
         "Leite zur Probe $\\mathrm{e}^{4x-3}$ ab und prüfe deinen Faktor."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Verkettete e-Funktion",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 0.5,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "Basis b",
+         "min": 0.3,
+         "max": 3,
+         "step": 0.1,
+         "init": 2.7
+        }
+       ],
+       "x": [
+        -3,
+        3
+       ],
+       "y": [
+        -1,
+        12
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "f(x)"
+       },
+       "formel": "f(x) = a · b^x  (b<1 ⇒ fallend wie e^(−x))"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2997,7 +3233,45 @@
         "Bestimme die Art des Extremums von $g$ über den Vorzeichenwechsel von $g'$."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "e-Kurve untersuchen",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "Basis b",
+         "min": 0.3,
+         "max": 3,
+         "step": 0.1,
+         "init": 2.7
+        }
+       ],
+       "x": [
+        -4,
+        4
+       ],
+       "y": [
+        -4,
+        12
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "f(x)"
+       },
+       "formel": "f(x) = a · b^x"
+      }
+     }
     },
     "ueben": {
      "zeit": 20,
@@ -3330,7 +3604,45 @@
         "Schätze aus deinen Daten die Halbwertszeit (Runden bis zur Halbierung) und vergleiche sie zwischen mehreren Durchläufen."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Exponentielles Wachstum",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "N0",
+         "min": 1,
+         "max": 10,
+         "step": 1,
+         "init": 2
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": 1,
+         "max": 2.5,
+         "step": 0.1,
+         "init": 1.5
+        }
+       ],
+       "x": [
+        0,
+        8
+       ],
+       "y": [
+        0,
+        40
+       ],
+       "achsen": {
+        "x": "t",
+        "y": "N(t)"
+       },
+       "formel": "N(t) = N0·b^t"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3503,7 +3815,45 @@
         "Bestimme die Steigung der entstehenden Geraden und vergleiche sie mit $k$."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Wachstumsgeschwindigkeit",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "N0",
+         "min": 1,
+         "max": 10,
+         "step": 1,
+         "init": 3
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": 1,
+         "max": 2.5,
+         "step": 0.1,
+         "init": 1.4
+        }
+       ],
+       "x": [
+        0,
+        8
+       ],
+       "y": [
+        0,
+        40
+       ],
+       "achsen": {
+        "x": "t",
+        "y": "N(t)"
+       },
+       "formel": "N(t) = N0·b^t"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3730,7 +4080,45 @@
         "Beobachte: Wo ist die Abkühlung am schnellsten – bei großem oder kleinem Abstand zur Raumtemperatur?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Wachstum erkunden",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 0.5,
+         "max": 4,
+         "step": 0.5,
+         "init": 2
+        },
+        {
+         "sym": "b",
+         "label": "Faktor b",
+         "min": 1.05,
+         "max": 2,
+         "step": 0.05,
+         "init": 1.3
+        }
+       ],
+       "x": [
+        0,
+        8
+       ],
+       "y": [
+        0,
+        30
+       ],
+       "achsen": {
+        "x": "t",
+        "y": "Bestand N"
+       },
+       "formel": "freies Wachstum N = a · b^t"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3908,7 +4296,45 @@
         "Bestimme für die exponentielle Reihe $N_0$ und $k$ aus zwei Wertepaaren."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Modell vergleichen",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "N₀",
+         "min": 0.5,
+         "max": 5,
+         "step": 0.5,
+         "init": 2
+        },
+        {
+         "sym": "b",
+         "label": "Faktor b",
+         "min": 0.5,
+         "max": 2,
+         "step": 0.05,
+         "init": 1.4
+        }
+       ],
+       "x": [
+        0,
+        8
+       ],
+       "y": [
+        0,
+        30
+       ],
+       "achsen": {
+        "x": "t",
+        "y": "N(t)"
+       },
+       "formel": "N(t) = N₀ · b^t"
+      }
+     }
     },
     "ueben": {
      "zeit": 20,
@@ -5045,7 +5471,53 @@
         "Notiere für jeden Strahl die Höhe in der Mitte ($x=4$) und vergleiche mit $16a$ — was bleibt bei allen gleich, was ändert sich?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Scharkurven zeichnen",
+      "params": {
+       "form": "scheitel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 2,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "d",
+         "min": -4,
+         "max": 4,
+         "step": 0.5,
+         "init": 0
+        },
+        {
+         "sym": "c",
+         "label": "e",
+         "min": -4,
+         "max": 4,
+         "step": 0.5,
+         "init": 0
+        }
+       ],
+       "x": [
+        -5,
+        5
+       ],
+       "y": [
+        -6,
+        8
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f_a(x) = a·(x − d)² + e"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -6536,7 +7008,45 @@
         "Markiere die Stelle, an der du dich noch unsicher fühlst, und plane eine kurze Wiederholung."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "e-Funktion & Wachstum",
+      "params": {
+       "form": "exponentiell",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 0.5,
+         "max": 4,
+         "step": 0.5,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "Basis b",
+         "min": 0.5,
+         "max": 3,
+         "step": 0.1,
+         "init": 2.7
+        }
+       ],
+       "x": [
+        -3,
+        5
+       ],
+       "y": [
+        -2,
+        20
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "y = a · b^x"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,

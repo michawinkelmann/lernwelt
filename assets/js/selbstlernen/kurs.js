@@ -375,6 +375,17 @@ function rendereLektion(lektionId) {
 }
 
 // ---------- Lernbüro 3.0: Bausteine für problemorientierte Lektionen ----------
+async function bindeInteraktivEin(halter, id, params) {
+  if (!halter || !id) return;
+  try {
+    const mod = await import(new URL("../interaktiv/" + id + ".js", import.meta.url));
+    if (typeof mod.mount === "function") { halter.innerHTML = ""; mod.mount(halter, params || {}); halter.removeAttribute("aria-busy"); }
+    else halter.innerHTML = `<p class="lb-phase-hinweis">Interaktives Element nicht gefunden.</p>`;
+  } catch (e) {
+    halter.innerHTML = `<p class="lb-phase-hinweis">Interaktives Element konnte nicht geladen werden.</p>`;
+  }
+}
+
 function baueFigur(svg, alt) {
   const f = el(`<figure class="lb-figur"></figure>`);
   const wrap = el(`<div class="lb-figur-svg"${alt ? ` role="img" aria-label="${esc(alt)}"` : ' aria-hidden="true"'}></div>`);
@@ -493,6 +504,14 @@ function bauePhase(l, key, label, pflicht, daten) {
       koerper.append(box);
       if (daten.stolperstein) koerper.append(el(`<div class="lb-stolperstein"><span class="lb-etikett">⚠️ Typischer Stolperstein</span><div class="lb-stolperstein-text">${daten.stolperstein}</div></div>`));
       if (daten.darstellungen) koerper.append(baueDarstellungen(daten.darstellungen));
+      if (daten.interaktiv) {
+        const iid = typeof daten.interaktiv === "string" ? daten.interaktiv : daten.interaktiv.id;
+        const ititel = (daten.interaktiv && daten.interaktiv.titel) ? daten.interaktiv.titel : "Selbst ausprobieren";
+        const ikarte = el(`<div class="lb-erkunden sim"><span class="lb-etikett">🔬 ${esc(ititel)}</span><div class="lb-interaktiv" aria-busy="true"><p class="lb-phase-hinweis">Element wird geladen …</p></div></div>`);
+        const iparams = (daten.interaktiv && typeof daten.interaktiv === "object") ? (daten.interaktiv.params || {}) : {};
+        koerper.append(ikarte);
+        bindeInteraktivEin(ikarte.querySelector(".lb-interaktiv"), iid, iparams);
+      }
       if (daten.erklaerseite && l.themaPfad) koerper.append(el(`<p class="lb-erklaer-knopf"><a href="${url(l.themaPfad + "index.html" + (daten.anker || ""))}" target="_blank" rel="noopener">Ausführliche Erklärseite mit interaktiven Elementen öffnen ↗</a></p>`));
     }
     // Merksatz

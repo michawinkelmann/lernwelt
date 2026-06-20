@@ -195,7 +195,48 @@
       ]
      },
      "selbsterklaerung": "Erkläre einem Mitschüler in einem Satz, warum schwaches UV-Licht Elektronen auslöst, helles Rotlicht aber nicht.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Photoeffekt-Gerade",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "h",
+         "min": 0.5,
+         "max": 1.5,
+         "step": 0.1,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "-W_A",
+         "min": -3,
+         "max": 0,
+         "step": 0.5,
+         "init": -2,
+         "einheit": "eV"
+        }
+       ],
+       "x": [
+        0,
+        6
+       ],
+       "y": [
+        -3,
+        4
+       ],
+       "schrittX": 1,
+       "schrittY": 1,
+       "achsen": {
+        "x": "Frequenz f (·10^14 Hz)",
+        "y": "E_kin in eV"
+       },
+       "formel": "E_kin = h · f − W_A"
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -406,7 +447,45 @@
       ]
      },
      "selbsterklaerung": "Erkläre in einem Satz, warum die Steigung der $U_0$-$f$-Geraden für Zink und für Caesium genau gleich ist.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Photoeffekt-Gerade",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "h",
+         "min": 2,
+         "max": 6,
+         "step": 0.5,
+         "init": 4.14
+        },
+        {
+         "sym": "b",
+         "label": "-W_A",
+         "min": -4,
+         "max": 0,
+         "step": 0.5,
+         "init": -2
+        }
+       ],
+       "x": [
+        0,
+        2
+       ],
+       "y": [
+        -4,
+        6
+       ],
+       "achsen": {
+        "x": "f in PHz",
+        "y": "E_kin in eV"
+       },
+       "formel": "E_kin = h · f − W_A"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -585,7 +664,14 @@
      ],
      "stolperstein": "„Die einzelnen Photonen müssen sich gegenseitig stören, sonst gäbe es keine Interferenz.\" — <strong>Nein.</strong> Auch wenn immer nur <em>ein</em> Photon unterwegs ist, baut sich das Muster auf. Jedes Photon interferiert gewissermaßen <strong>mit sich selbst</strong>; das Muster ist eine Statistik vieler einzelner, unabhängiger Treffer.",
      "selbsterklaerung": "Erkläre in einem Satz, was die Helligkeit eines Streifens über ein <em>einzelnes</em> Photon aussagt.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "welle",
+      "titel": "Interferenz erkunden",
+      "params": {
+       "phiInit": 0
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -774,7 +860,37 @@
      ],
      "stolperstein": "„Die Materiewelle ist die Bahn, auf der das Elektron wellenförmig hin- und herschwingt.\" — <strong>Nein.</strong> Das Elektron zappelt nicht auf einer Schlangenlinie. $\\lambda = h/p$ beschreibt eine <strong>Wahrscheinlichkeitswelle</strong>, die — wie beim Photon — die Verteilung vieler Treffer (z. B. die Beugungsringe) bestimmt.",
      "selbsterklaerung": "Erkläre in einem Satz, warum man Elektronen am Kristall beugt, einen Tennisball aber nicht.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Wellenlänge und Impuls",
+      "params": {
+       "form": "antiproportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "h",
+         "min": 3,
+         "max": 9,
+         "step": 0.5,
+         "init": 6.6
+        }
+       ],
+       "x": [
+        0.5,
+        10
+       ],
+       "y": [
+        0,
+        15
+       ],
+       "achsen": {
+        "x": "p (rel. Einheiten)",
+        "y": "λ (rel. Einheiten)"
+       },
+       "formel": "λ = h / p"
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -1188,7 +1304,14 @@
       ]
      },
      "selbsterklaerung": "Erkläre einer Mitschülerin in einem Satz, warum dunkle Streifen beweisen, dass Licht eine Welle ist.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "welle",
+      "titel": "Doppelspalt-Interferenz",
+      "params": {
+       "phiInit": 0
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -1375,7 +1498,14 @@
      ],
      "stolperstein": "„Beim Maximum muss der Gangunterschied null sein.\" — Nur das <strong>zentrale</strong> Maximum ($k=0$) hat $\\Delta s = 0$. Alle anderen Maxima haben $\\Delta s = k\\lambda$ mit $k=1,2,\\dots$ — ein <strong>ganzzahliges Vielfaches</strong> von $\\lambda$, nicht null. Genau das unterscheidet sie von den Minima ($\\Delta s = (k-\\frac12)\\lambda$).",
      "selbsterklaerung": "Erkläre in einem Satz, warum beim Maximum ein ganzzahliges und beim Minimum ein halbzahliges Vielfaches von $\\lambda$ steht.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "welle",
+      "titel": "Gangunterschied und Maxima",
+      "params": {
+       "phiInit": 0
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -1564,7 +1694,14 @@
      ],
      "stolperstein": "„$\\sin\\alpha \\approx \\tan\\alpha$ gilt immer.\" — <strong>Nein.</strong> Nur bei <em>kleinen</em> Winkeln (Doppelspalt). Beim optischen Gitter (Lektion 9) werden die Winkel groß ($>20^\\circ$); dort weichen Sinus und Tangens stark ab und die Näherung führt zu großen Fehlern.",
      "selbsterklaerung": "Erkläre in einem Satz, warum man beim Doppelspalt den Winkel gar nicht direkt messen muss.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "welle",
+      "titel": "Wellen ueberlagern",
+      "params": {
+       "phiInit": 0
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -1768,7 +1905,14 @@
       ]
      },
      "selbsterklaerung": "Erkläre in einem Satz, warum viele Spalte zu schärferen Maxima führen als zwei.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "welle",
+      "titel": "Scharfe Maxima",
+      "params": {
+       "phiInit": 0
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -1974,7 +2118,14 @@
      ],
      "stolperstein": "„Beim Einzelspalt gilt $b\\sin\\alpha = k\\lambda$ für die <em>Maxima</em> — wie beim Doppelspalt.\" — <strong>Nein!</strong> Dieselbe Formel beschreibt am Einzelspalt die <strong>Minima</strong>. Beim Doppelspalt liefert das ganzzahlige Vielfache die Maxima, beim Einzelspalt die Minima. Genau hinschauen, welcher Fall gemeint ist.",
      "selbsterklaerung": "Erkläre in einem Satz, warum ein schmalerer Spalt ein breiteres Zentralmaximum erzeugt.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "welle",
+      "titel": "Interferenz ueberall",
+      "params": {
+       "phiInit": 0
+      }
+     }
     },
     "ueben": {
      "zeit": 17,

@@ -197,7 +197,39 @@
        }
       ]
      },
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Frequenz und Periode",
+      "params": {
+       "form": "antiproportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 1,
+         "max": 1,
+         "step": 1,
+         "init": 1
+        }
+       ],
+       "x": [
+        0.1,
+        4
+       ],
+       "y": [
+        0,
+        10
+       ],
+       "schrittX": 1,
+       "schrittY": 2,
+       "achsen": {
+        "x": "Periodendauer T in s",
+        "y": "Frequenz f in Hz"
+       },
+       "formel": "f = 1 / T"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -378,7 +410,37 @@
      ],
      "stolperstein": "Eine vervierfachte Masse macht die Schwingung <strong>nicht</strong> viermal langsamer. Weil $m$ unter der <strong>Wurzel</strong> steht, wird $T$ nur um den Faktor $\\sqrt{4}=2$ größer. Wurzeln „dämpfen“ den Effekt — daran denkt man im ersten Moment oft nicht.",
      "selbsterklaerung": "Erkläre in einem Satz, warum ein Federpendel überhaupt <em>harmonisch</em> schwingt.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Periode und Masse",
+      "params": {
+       "form": "wurzel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "k",
+         "min": 0.5,
+         "max": 4,
+         "step": 0.5,
+         "init": 2
+        }
+       ],
+       "x": [
+        0,
+        2
+       ],
+       "y": [
+        0,
+        6
+       ],
+       "achsen": {
+        "x": "m in kg",
+        "y": "T in s"
+       },
+       "formel": "T = 2π · √(m/D)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -567,7 +629,37 @@
      ],
      "stolperstein": "Viele erwarten, dass die schwerere Kugel „kräftiger“ und damit schneller schwingt. Tatsächlich fällt die <strong>Masse beim Fadenpendel ganz aus der Formel heraus</strong>: Sie steckt sowohl in der rücktreibenden Kraft als auch in der Trägheit und kürzt sich weg. Gleiche Länge → gleiche Periodendauer.",
      "selbsterklaerung": "Erkläre in einem Satz, warum beim Fadenpendel die Masse keine Rolle für die Periodendauer spielt.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Periode und Länge",
+      "params": {
+       "form": "wurzel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "k",
+         "min": 1,
+         "max": 3,
+         "step": 0.1,
+         "init": 2
+        }
+       ],
+       "x": [
+        0,
+        3
+       ],
+       "y": [
+        0,
+        5
+       ],
+       "achsen": {
+        "x": "l in m",
+        "y": "T in s"
+       },
+       "formel": "T = 2π · √(l/g)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -779,7 +871,54 @@
        }
       ]
      },
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Sinus-Schwingung",
+      "params": {
+       "form": "sinus",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "A",
+         "min": 1,
+         "max": 5,
+         "step": 0.5,
+         "init": 3
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": 1,
+         "max": 3,
+         "step": 1,
+         "init": 1
+        },
+        {
+         "sym": "c",
+         "label": "c",
+         "min": 0,
+         "max": 0,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        0,
+        360
+       ],
+       "y": [
+        -5,
+        5
+       ],
+       "schrittX": 90,
+       "achsen": {
+        "x": "ωt in Grad",
+        "y": "s(t) in cm"
+       },
+       "formel": "s(t) = A · sin(ω t)"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1512,7 +1651,40 @@
      ],
      "stolperstein": "Beim Mediumwechsel ändert sich <strong>nicht</strong> die Frequenz, sondern die <strong>Wellenlänge</strong>. Die Frequenz gibt der Sender vor und bleibt erhalten; weil sich $c$ ändert, folgt aus $\\lambda = c/f$ eine neue Wellenlänge. Wer hier Frequenz und Wellenlänge verwechselt, rechnet falsch.",
      "selbsterklaerung": "Erkläre in einem Satz, wie $c$, $\\lambda$ und $f$ über die Grundgleichung zusammenhängen.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Wellengrundgleichung",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "f",
+         "min": 50,
+         "max": 500,
+         "step": 10,
+         "init": 200,
+         "einheit": "Hz"
+        }
+       ],
+       "x": [
+        0,
+        4
+       ],
+       "y": [
+        0,
+        2000
+       ],
+       "schrittX": 1,
+       "schrittY": 500,
+       "achsen": {
+        "x": "Wellenlänge λ in m",
+        "y": "Ausbreitungsgeschw. c in m/s"
+       },
+       "formel": "c = λ · f"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1696,7 +1868,14 @@
      ],
      "stolperstein": "„Mehr Schallquellen = immer lauter“ stimmt nicht. Bei <strong>destruktiver Interferenz</strong> (Gangunterschied $\\Delta s = (k+\\frac{1}{2})\\lambda$) treffen Berg auf Tal und löschen sich aus — dann ist es trotz zweier Quellen leise. Entscheidend ist der Gangunterschied, nicht die Anzahl der Quellen.",
      "selbsterklaerung": "Erkläre in einem Satz, woran man entscheidet, ob sich zwei Wellen verstärken oder auslöschen.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "welle",
+      "titel": "Superposition erkunden",
+      "params": {
+       "phiInit": 0
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1883,7 +2062,14 @@
      ],
      "stolperstein": "Eine stehende Welle <strong>wandert nicht</strong> — anders als die Wellen vorher. Knoten und Bäuche bleiben ortsfest. Außerdem ist der Abstand zweier benachbarter Knoten nur eine <strong>halbe</strong> Wellenlänge ($\\lambda/2$), nicht eine ganze; das wird oft verwechselt.",
      "selbsterklaerung": "Erkläre in einem Satz, warum auf eine eingespannte Saite nur bestimmte Wellenlängen passen.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "welle",
+      "titel": "Stehende Wellen",
+      "params": {
+       "phiInit": 0
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2077,7 +2263,14 @@
      ],
      "stolperstein": "Beim Echolot rechnet man oft die <strong>doppelte</strong> Tiefe aus, weil man den Faktor $\\frac{1}{2}$ vergisst. Der Schall läuft <strong>hin und zurück</strong> — also die doppelte Strecke. Deshalb ist die Tiefe nur die halbe Laufstrecke: $d = \\frac{c\\cdot t}{2}$.",
      "selbsterklaerung": "Erkläre in einem Satz, warum in der Echolot-Formel der Faktor $\\frac{1}{2}$ steht.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "interaktiv": {
+      "id": "welle",
+      "titel": "Stehende Schallwellen",
+      "params": {
+       "phiInit": 0
+      }
+     }
     },
     "ueben": {
      "zeit": 18,

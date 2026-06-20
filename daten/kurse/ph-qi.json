@@ -399,7 +399,54 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum man den Winkel zur Flächennormale und nicht zur Fläche selbst misst."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man den Winkel zur Flächennormale und nicht zur Fläche selbst misst.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Fluss und Winkel",
+      "params": {
+       "form": "sinus",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "B·A",
+         "min": 0.5,
+         "max": 5,
+         "step": 0.5,
+         "init": 3
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": 1,
+         "max": 1,
+         "step": 1,
+         "init": 1
+        },
+        {
+         "sym": "c",
+         "label": "c",
+         "min": 0,
+         "max": 0,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        0,
+        360
+       ],
+       "y": [
+        -5,
+        5
+       ],
+       "schrittX": 90,
+       "achsen": {
+        "x": "α in Grad (ab 90°)",
+        "y": "Φ in mWb"
+       },
+       "formel": "Φ = B · A · cos α"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -602,7 +649,40 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum man $U = B \\cdot l \\cdot v$ aus dem Induktionsgesetz herleiten kann und nicht extra auswendig lernen muss."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man $U = B \\cdot l \\cdot v$ aus dem Induktionsgesetz herleiten kann und nicht extra auswendig lernen muss.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Bewegungsinduktion",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "B·l",
+         "min": 0.05,
+         "max": 1,
+         "step": 0.05,
+         "init": 0.3,
+         "einheit": "Vs/m"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        10
+       ],
+       "schrittX": 2,
+       "schrittY": 2,
+       "achsen": {
+        "x": "Geschwindigkeit v in m/s",
+        "y": "Spannung U in V"
+       },
+       "formel": "U = B · l · v"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1323,7 +1403,37 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum man für die doppelte Geschwindigkeit die vierfache Spannung braucht."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man für die doppelte Geschwindigkeit die vierfache Spannung braucht.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Geschwindigkeit aus Spannung",
+      "params": {
+       "form": "wurzel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "k",
+         "min": 1,
+         "max": 8,
+         "step": 0.5,
+         "init": 5.9
+        }
+       ],
+       "x": [
+        0,
+        1000
+       ],
+       "y": [
+        0,
+        200
+       ],
+       "achsen": {
+        "x": "U in V",
+        "y": "v in Mm/s"
+       },
+       "formel": "v = k · √U"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1513,7 +1623,17 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum die Bahn im Querfeld dieselbe Form hat wie die eines waagerecht geworfenen Balls."
+     "selbsterklaerung": "Erkläre in einem Satz, warum die Bahn im Querfeld dieselbe Form hat wie die eines waagerecht geworfenen Balls.",
+     "interaktiv": {
+      "id": "wurfparabel",
+      "titel": "Querfeld als Wurf",
+      "params": {
+       "v0init": 12,
+       "alphainit": 0,
+       "g": 9.81,
+       "vmax": 25
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1715,7 +1835,17 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum die Verweilzeit $t_1$ der Schlüssel ist, von dem alle anderen Größen abhängen."
+     "selbsterklaerung": "Erkläre in einem Satz, warum die Verweilzeit $t_1$ der Schlüssel ist, von dem alle anderen Größen abhängen.",
+     "interaktiv": {
+      "id": "wurfparabel",
+      "titel": "Bahn im Kondensator",
+      "params": {
+       "v0init": 10,
+       "alphainit": 0,
+       "g": 9.81,
+       "vmax": 25
+      }
+     }
     },
     "ueben": {
      "zeit": 18,

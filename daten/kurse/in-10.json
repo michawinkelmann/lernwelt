@@ -1516,6 +1516,14 @@
         "text": "G = (K + 3) mod 26"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "caesar",
+      "titel": "Caesar verschieben",
+      "params": {
+       "text": "HALLO WELT",
+       "shift": 3
+      }
      }
     },
     "ueben": {
@@ -1712,6 +1720,14 @@
         "html": "<table class='lb-mini-tab'><tr><th>häufigster Geheim</th><td>H</td><td>L</td><td>G</td></tr><tr><th>→ Schlüssel s</th><td>3</td><td>7</td><td>2</td></tr></table>"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "caesar",
+      "titel": "Caesar knacken",
+      "params": {
+       "text": "KDOOR ZHOW",
+       "shift": 3
+      }
      }
     },
     "ueben": {
@@ -3252,6 +3268,47 @@
         "text": "Gesperrt = du kommst nicht durch; Offen = du darfst einmal durchgehen."
        }
       ]
+     },
+     "interaktiv": {
+      "id": "automat",
+      "titel": "Drehkreuz-Automat",
+      "params": {
+       "zustaende": [
+        "gesperrt",
+        "frei"
+       ],
+       "start": "gesperrt",
+       "akzept": [
+        "frei"
+       ],
+       "alphabet": [
+        "m",
+        "d"
+       ],
+       "uebergaenge": [
+        {
+         "von": "gesperrt",
+         "zeichen": "m",
+         "nach": "frei"
+        },
+        {
+         "von": "gesperrt",
+         "zeichen": "d",
+         "nach": "gesperrt"
+        },
+        {
+         "von": "frei",
+         "zeichen": "m",
+         "nach": "frei"
+        },
+        {
+         "von": "frei",
+         "zeichen": "d",
+         "nach": "gesperrt"
+        }
+       ],
+       "beispiel": "md"
+      }
      }
     },
     "ueben": {
@@ -3449,6 +3506,47 @@
         "html": "<table class='lb-mini-tab'><tr><th>Symbol</th><th>Bedeutung</th></tr><tr><td>Kreis</td><td>Zustand</td></tr><tr><td>Doppelkreis</td><td>akzeptierend</td></tr><tr><td>Pfeil von außen</td><td>Startzustand</td></tr><tr><td>beschrifteter Pfeil</td><td>Übergang (mit Eingabesymbol)</td></tr></table>"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "automat",
+      "titel": "Zustaende und Akzeptanz",
+      "params": {
+       "zustaende": [
+        "q0",
+        "q1"
+       ],
+       "start": "q0",
+       "akzept": [
+        "q1"
+       ],
+       "alphabet": [
+        "a",
+        "b"
+       ],
+       "uebergaenge": [
+        {
+         "von": "q0",
+         "zeichen": "a",
+         "nach": "q1"
+        },
+        {
+         "von": "q0",
+         "zeichen": "b",
+         "nach": "q0"
+        },
+        {
+         "von": "q1",
+         "zeichen": "a",
+         "nach": "q1"
+        },
+        {
+         "von": "q1",
+         "zeichen": "b",
+         "nach": "q0"
+        }
+       ],
+       "beispiel": "bba"
+      }
      }
     },
     "ueben": {
@@ -3661,6 +3759,47 @@
         "text": "Endzustand q1 (Doppelkreis) → akzeptiert; q0 → abgelehnt."
        }
       ]
+     },
+     "interaktiv": {
+      "id": "automat",
+      "titel": "Wort-Pruefer",
+      "params": {
+       "zustaende": [
+        "q0",
+        "q1"
+       ],
+       "start": "q0",
+       "akzept": [
+        "q1"
+       ],
+       "alphabet": [
+        "a",
+        "b"
+       ],
+       "uebergaenge": [
+        {
+         "von": "q0",
+         "zeichen": "a",
+         "nach": "q0"
+        },
+        {
+         "von": "q0",
+         "zeichen": "b",
+         "nach": "q1"
+        },
+        {
+         "von": "q1",
+         "zeichen": "a",
+         "nach": "q0"
+        },
+        {
+         "von": "q1",
+         "zeichen": "b",
+         "nach": "q1"
+        }
+       ],
+       "beispiel": "aab"
+      }
      }
     },
     "ueben": {
@@ -3869,6 +4008,47 @@
         "text": "Einträge = Zustände × Symbole (hier 2 × 2 = 4)"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "automat",
+      "titel": "Uebergangstabelle",
+      "params": {
+       "zustaende": [
+        "q0",
+        "q1"
+       ],
+       "start": "q0",
+       "akzept": [
+        "q1"
+       ],
+       "alphabet": [
+        "a",
+        "b"
+       ],
+       "uebergaenge": [
+        {
+         "von": "q0",
+         "zeichen": "a",
+         "nach": "q0"
+        },
+        {
+         "von": "q0",
+         "zeichen": "b",
+         "nach": "q1"
+        },
+        {
+         "von": "q1",
+         "zeichen": "a",
+         "nach": "q0"
+        },
+        {
+         "von": "q1",
+         "zeichen": "b",
+         "nach": "q1"
+        }
+       ],
+       "beispiel": "abb"
+      }
      }
     },
     "ueben": {

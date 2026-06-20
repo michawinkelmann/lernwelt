@@ -196,6 +196,18 @@
         "text": "$c$ ist die längste Seite: $c > a$ und $c > b$."
        }
       ]
+     },
+     "interaktiv": {
+      "id": "dreieck",
+      "titel": "Rechtwinkliges Dreieck",
+      "params": {
+       "amax": 8,
+       "bmax": 6,
+       "ainit": 4,
+       "binit": 3,
+       "einheit": "cm",
+       "trig": false
+      }
      }
     },
     "ueben": {
@@ -387,6 +399,18 @@
         "text": "$9 + 16 = 25$, also $c = \\sqrt{25} = 5$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "dreieck",
+      "titel": "Pythagoras erkunden",
+      "params": {
+       "amax": 8,
+       "bmax": 6,
+       "ainit": 4,
+       "binit": 3,
+       "einheit": "cm",
+       "trig": false
+      }
      }
     },
     "ueben": {
@@ -554,7 +578,19 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Wenn unter der Wurzel eine <strong>negative</strong> Zahl herauskäme, hast du Hypotenuse und Kathete verwechselt. Die Hypotenuse ($c$) ist immer die größte Seite — bei der Kathete rechnest du $c^2 - b^2$, also groß minus klein.",
-     "selbsterklaerung": "Erkläre in einem Satz, woran du entscheidest, ob du unter der Wurzel addierst oder subtrahierst."
+     "selbsterklaerung": "Erkläre in einem Satz, woran du entscheidest, ob du unter der Wurzel addierst oder subtrahierst.",
+     "interaktiv": {
+      "id": "dreieck",
+      "titel": "Kathete berechnen",
+      "params": {
+       "amax": 12,
+       "bmax": 8,
+       "ainit": 5,
+       "binit": 12,
+       "einheit": "cm",
+       "trig": false
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -726,7 +762,19 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Setze beim Prüfen <strong>immer die längste Seite</strong> als $c$ ein. Prüfst du versehentlich mit einer kurzen Seite, stimmt die Gleichung nie — und du hältst ein rechtwinkliges Dreieck fälschlich für nicht rechtwinklig.",
-     "selbsterklaerung": "Erkläre in einem Satz den Unterschied zwischen dem Satz des Pythagoras und seiner Umkehrung."
+     "selbsterklaerung": "Erkläre in einem Satz den Unterschied zwischen dem Satz des Pythagoras und seiner Umkehrung.",
+     "interaktiv": {
+      "id": "dreieck",
+      "titel": "Rechtwinklig prüfen",
+      "params": {
+       "amax": 12,
+       "bmax": 12,
+       "ainit": 7,
+       "binit": 24,
+       "einheit": "cm",
+       "trig": false
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -897,7 +945,19 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Die Diagonale ist <strong>nicht</strong> Länge plus Breite. Sie ist die Hypotenuse im rechtwinkligen Dreieck aus Länge und Breite: $d = \\sqrt{l^2 + b^2}$ — und damit kürzer als $l+b$.",
-     "selbsterklaerung": "Erkläre in einem Satz, wie du aus einem Sachtext das passende rechtwinklige Dreieck herausliest."
+     "selbsterklaerung": "Erkläre in einem Satz, wie du aus einem Sachtext das passende rechtwinklige Dreieck herausliest.",
+     "interaktiv": {
+      "id": "dreieck",
+      "titel": "Pythagoras anwenden",
+      "params": {
+       "amax": 10,
+       "bmax": 10,
+       "ainit": 6,
+       "binit": 8,
+       "einheit": "m",
+       "trig": false
+      }
+     }
     },
     "ueben": {
      "zeit": 20,
@@ -1230,6 +1290,52 @@
         "text": "$f(x)=x^2$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Normalparabel",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 2,
+         "step": 0.25,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": -4,
+         "max": 4,
+         "step": 1,
+         "init": 0
+        },
+        {
+         "sym": "c",
+         "label": "c",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        -5,
+        5
+       ],
+       "y": [
+        -2,
+        10
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·x² + b·x + c"
+      }
      }
     },
     "ueben": {
@@ -1402,7 +1508,53 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Ein <strong>negatives</strong> $a$ macht die Parabel nicht „kleiner\", sondern öffnet sie nach <strong>unten</strong>. Über schmal/breit entscheidet der Betrag $|a|$, über die Öffnungsrichtung das Vorzeichen.",
-     "selbsterklaerung": "Erkläre in einem Satz, wie du am Faktor $a$ erkennst, ob eine Parabel gestreckt, gestaucht oder gespiegelt ist."
+     "selbsterklaerung": "Erkläre in einem Satz, wie du am Faktor $a$ erkennst, ob eine Parabel gestreckt, gestaucht oder gespiegelt ist.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Faktor a erkunden",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -3,
+         "max": 3,
+         "step": 0.25,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": -4,
+         "max": 4,
+         "step": 1,
+         "init": 0
+        },
+        {
+         "sym": "c",
+         "label": "c",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        -4,
+        4
+       ],
+       "y": [
+        -8,
+        8
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·x²"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1585,6 +1737,52 @@
         "text": "$f(x)=(x-2)^2-1$, Scheitel $S(2\\,|\\,-1)$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Scheitelpunktform",
+      "params": {
+       "form": "scheitel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 2,
+         "step": 0.25,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "d",
+         "min": -4,
+         "max": 4,
+         "step": 1,
+         "init": 0
+        },
+        {
+         "sym": "c",
+         "label": "e",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        -6,
+        6
+       ],
+       "y": [
+        -6,
+        10
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·(x − d)² + e"
+      }
      }
     },
     "ueben": {
@@ -1752,7 +1950,53 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Die Ergänzungszahl wird <strong>addiert und sofort wieder subtrahiert</strong> ($+9-9$). Wer nur addiert, verändert die Funktion. Durch $+z-z=0$ bleibt der Term gleich und lässt sich trotzdem binomisch zusammenfassen.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum man bei der quadratischen Ergänzung dieselbe Zahl addiert und subtrahiert."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man bei der quadratischen Ergänzung dieselbe Zahl addiert und subtrahiert.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Scheitel verschieben",
+      "params": {
+       "form": "scheitel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 2,
+         "step": 0.25,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "d",
+         "min": -4,
+         "max": 4,
+         "step": 1,
+         "init": 0
+        },
+        {
+         "sym": "c",
+         "label": "e",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": 0
+        }
+       ],
+       "x": [
+        -6,
+        6
+       ],
+       "y": [
+        -6,
+        10
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·(x − d)² + e"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1924,7 +2168,53 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Beim Wurzelziehen brauchst du das <strong>$\\pm$</strong>: aus $(x-2)^2=9$ folgt $x-2=\\pm 3$, also <strong>zwei</strong> Lösungen $x=5$ und $x=-1$. Wer nur $+3$ nimmt, übersieht eine Nullstelle.",
-     "selbsterklaerung": "Erkläre in einem Satz, woran du am Scheitelpunkt und an der Öffnungsrichtung erkennst, wie viele Nullstellen eine Parabel hat."
+     "selbsterklaerung": "Erkläre in einem Satz, woran du am Scheitelpunkt und an der Öffnungsrichtung erkennst, wie viele Nullstellen eine Parabel hat.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Nullstellen der Parabel",
+      "params": {
+       "form": "scheitel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 2,
+         "step": 0.25,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "d",
+         "min": -4,
+         "max": 4,
+         "step": 1,
+         "init": 1
+        },
+        {
+         "sym": "c",
+         "label": "e",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": -4
+        }
+       ],
+       "x": [
+        -6,
+        6
+       ],
+       "y": [
+        -6,
+        10
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·(x − d)² + e"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2249,6 +2539,52 @@
         "text": "quadratisch: $ax^2+bx+c=0$ mit $a\\ne 0$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Quadratische Gleichung",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 2,
+         "step": 0.25,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "b",
+         "min": -4,
+         "max": 4,
+         "step": 1,
+         "init": 0
+        },
+        {
+         "sym": "c",
+         "label": "c",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": -4
+        }
+       ],
+       "x": [
+        -5,
+        5
+       ],
+       "y": [
+        -6,
+        10
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·x² + b·x + c"
+      }
      }
     },
     "ueben": {
@@ -2420,7 +2756,53 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Beim Wurzelziehen brauchst du <strong>beide</strong> Vorzeichen: $x^2=49 \\Rightarrow x=\\pm 7$. Wer nur $x=\\sqrt{49}=7$ schreibt, vergisst die zweite Lösung $x=-7$.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum $x^2=b$ für $b>0$ immer zwei Lösungen hat."
+     "selbsterklaerung": "Erkläre in einem Satz, warum $x^2=b$ für $b>0$ immer zwei Lösungen hat.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Wurzelziehen sichtbar",
+      "params": {
+       "form": "scheitel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 2,
+         "step": 0.25,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "d",
+         "min": -4,
+         "max": 4,
+         "step": 1,
+         "init": 2
+        },
+        {
+         "sym": "c",
+         "label": "e",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": -4
+        }
+       ],
+       "x": [
+        -6,
+        6
+       ],
+       "y": [
+        -6,
+        10
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·(x − d)² + e"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2586,7 +2968,53 @@
      ],
      "erklaerseite": true,
      "stolperstein": "$p$ und $q$ werden <strong>mit Vorzeichen</strong> abgelesen: Bei $x^2-7x+12=0$ ist $p=-7$ (nicht $7$). Ein falsches Vorzeichen kippt die ganze Rechnung.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum man die Diskriminante zuerst berechnet, bevor man die p-q-Formel zu Ende rechnet."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man die Diskriminante zuerst berechnet, bevor man die p-q-Formel zu Ende rechnet.",
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "p-q-Formel prüfen",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 2,
+         "step": 0.25,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "p",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": -2
+        },
+        {
+         "sym": "c",
+         "label": "q",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": -3
+        }
+       ],
+       "x": [
+        -5,
+        6
+       ],
+       "y": [
+        -6,
+        10
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = x² + p·x + q"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2786,6 +3214,52 @@
         "text": "$x_1=-1$, $x_2=3$ (zwei Schnittpunkte, $D>0$)"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Lösungen ablesen",
+      "params": {
+       "form": "quadratisch",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": -2,
+         "max": 2,
+         "step": 0.25,
+         "init": 1
+        },
+        {
+         "sym": "b",
+         "label": "p",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": 0
+        },
+        {
+         "sym": "c",
+         "label": "q",
+         "min": -5,
+         "max": 5,
+         "step": 1,
+         "init": -2
+        }
+       ],
+       "x": [
+        -5,
+        5
+       ],
+       "y": [
+        -6,
+        10
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = x² + p·x + q"
+      }
      }
     },
     "ueben": {
@@ -3105,6 +3579,36 @@
         "text": "$a^2 = 36 \\;\\Rightarrow\\; a = \\sqrt{36} = 6$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Wurzelfunktion",
+      "params": {
+       "form": "wurzel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 0.5,
+         "max": 3,
+         "step": 0.5,
+         "init": 1
+        }
+       ],
+       "x": [
+        0,
+        16
+       ],
+       "y": [
+        0,
+        12
+       ],
+       "achsen": {
+        "x": "x",
+        "y": "y"
+       },
+       "formel": "f(x) = a·√x"
+      }
      }
     },
     "ueben": {
@@ -3271,7 +3775,18 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Nicht jede Wurzel ist irrational! $\\sqrt{16} = 4$ ist eine glatte natürliche Zahl. Irrational ist eine Wurzel nur, wenn der Radikand <strong>keine</strong> Quadratzahl ist.",
-     "selbsterklaerung": "Erkläre in einem Satz, woran man einer Dezimalzahl ansieht, ob sie rational oder irrational ist."
+     "selbsterklaerung": "Erkläre in einem Satz, woran man einer Dezimalzahl ansieht, ob sie rational oder irrational ist.",
+     "interaktiv": {
+      "id": "zahlenstrahl",
+      "titel": "Wurzeln einordnen",
+      "params": {
+       "min": 0,
+       "max": 5,
+       "schritt": 0.1,
+       "init": 1.4,
+       "einheit": ""
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3460,6 +3975,17 @@
         "text": "natürliche $\\subset$ ganze $\\subset$ rationale $\\subset$ reelle Zahlen"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "zahlenstrahl",
+      "titel": "Zahlen einordnen",
+      "params": {
+       "min": -5,
+       "max": 5,
+       "schritt": 0.1,
+       "init": 0,
+       "einheit": ""
+      }
      }
     },
     "ueben": {
@@ -3799,7 +4325,19 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Runde <strong>erst am Ende</strong>. Wer Zwischenwerte rundet (etwa $\\sqrt{2} \\approx 1{,}4$ statt $1{,}41$) und damit weiterrechnet, sammelt Fehler an — das Endergebnis wird ungenau.",
-     "selbsterklaerung": "Erkläre in einem Satz, wann du eine Wurzel exakt stehen lässt und wann du sie rundest."
+     "selbsterklaerung": "Erkläre in einem Satz, wann du eine Wurzel exakt stehen lässt und wann du sie rundest.",
+     "interaktiv": {
+      "id": "dreieck",
+      "titel": "Diagonale berechnen",
+      "params": {
+       "amax": 10,
+       "bmax": 10,
+       "ainit": 4,
+       "binit": 3,
+       "einheit": "cm",
+       "trig": false
+      }
+     }
     },
     "ueben": {
      "zeit": 20,
@@ -4119,6 +4657,13 @@
         "text": "$k=\\frac{\\text{Bild}}{\\text{Original}}$, hier $k=2$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "strahlensatz",
+      "titel": "Zentrische Streckung",
+      "params": {
+       "kInit": 2
+      }
      }
     },
     "ueben": {
@@ -4307,6 +4852,13 @@
         "text": "wächst mit $k^2 = 4$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "strahlensatz",
+      "titel": "Ähnliche Figuren",
+      "params": {
+       "kInit": 1.5
+      }
      }
     },
     "ueben": {
@@ -4492,6 +5044,13 @@
         "text": "$\\frac{ZA}{ZA'}=\\frac{ZB}{ZB'}$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "strahlensatz",
+      "titel": "Strahlensatz-Verhältnis",
+      "params": {
+       "kInit": 2
+      }
      }
     },
     "ueben": {
@@ -4663,7 +5222,14 @@
      ],
      "erklaerseite": true,
      "stolperstein": "<strong>Sonne</strong> heißt parallele Strahlen → ähnliche Dreiecke. Eine nahe <strong>Lampe</strong> dagegen strahlt von einem Punkt aus → dann braucht man den Strahlensatz mit dem Lichtpunkt als Zentrum. Erst prüfen, welche Lichtquelle vorliegt!",
-     "selbsterklaerung": "Erkläre in einem Satz, warum bei Sonnenlicht der Stab und der Baum ähnliche Dreiecke bilden."
+     "selbsterklaerung": "Erkläre in einem Satz, warum bei Sonnenlicht der Stab und der Baum ähnliche Dreiecke bilden.",
+     "interaktiv": {
+      "id": "strahlensatz",
+      "titel": "Messen mit Schatten",
+      "params": {
+       "kInit": 2.5
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -4841,7 +5407,14 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Beim Maßstab werden <strong>Längen</strong> mit dem Maßstabsfaktor umgerechnet, <strong>Flächen</strong> aber mit seinem <strong>Quadrat</strong>. Verwechsle die beiden nicht — sonst stimmt die Flächenangabe um den Faktor $k$ nicht.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum ein Maßstab nichts anderes als ein Ähnlichkeitsfaktor ist."
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein Maßstab nichts anderes als ein Ähnlichkeitsfaktor ist.",
+     "interaktiv": {
+      "id": "strahlensatz",
+      "titel": "Strecken & Verhältnisse",
+      "params": {
+       "kInit": 1.5
+      }
+     }
     },
     "ueben": {
      "zeit": 20,
@@ -5166,6 +5739,15 @@
         "text": "$d=70\\,\\text{cm}$: $u=\\pi\\cdot 70\\approx 220\\,\\text{cm}$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "kreis",
+      "titel": "Umfang und Pi",
+      "params": {
+       "rmax": 8,
+       "rinit": 4,
+       "einheit": "cm"
+      }
      }
     },
     "ueben": {
@@ -5337,7 +5919,16 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Erst <strong>quadrieren</strong>, dann mit $\\pi$ multiplizieren: $A=\\pi r^2$, nicht $(\\pi r)^2$. Und es steht der <strong>Radius</strong> in der Formel — bei gegebenem Durchmesser zuerst halbieren ($r=\\frac{d}{2}$).",
-     "selbsterklaerung": "Erkläre in einem Satz, warum in der Flächenformel der Radius quadriert wird und nicht der Durchmesser eingesetzt."
+     "selbsterklaerung": "Erkläre in einem Satz, warum in der Flächenformel der Radius quadriert wird und nicht der Durchmesser eingesetzt.",
+     "interaktiv": {
+      "id": "kreis",
+      "titel": "Kreisfläche",
+      "params": {
+       "rmax": 8,
+       "rinit": 5,
+       "einheit": "cm"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -5516,7 +6107,16 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Beim Rückwärtsrechnen aus der <strong>Fläche</strong> brauchst du die Wurzel: $r=\\sqrt{\\frac{A}{\\pi}}$ — erst durch $\\pi$ teilen, <strong>dann</strong> Wurzel ziehen. Beim Umfang dagegen genügt das Teilen durch $2\\pi$.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum beim Rückwärtsrechnen aus der Fläche eine Wurzel auftritt, beim Umfang aber nicht."
+     "selbsterklaerung": "Erkläre in einem Satz, warum beim Rückwärtsrechnen aus der Fläche eine Wurzel auftritt, beim Umfang aber nicht.",
+     "interaktiv": {
+      "id": "kreis",
+      "titel": "Radius berechnen",
+      "params": {
+       "rmax": 10,
+       "rinit": 4,
+       "einheit": "cm"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -5709,6 +6309,16 @@
         "text": "$A=\\frac{\\alpha}{360°}\\cdot \\pi r^2$"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "kreissektor",
+      "titel": "Bogen & Sektor",
+      "params": {
+       "rmax": 6,
+       "rinit": 4,
+       "ainit": 90,
+       "einheit": "cm"
+      }
      }
     },
     "ueben": {
@@ -6199,6 +6809,19 @@
         "figurAlt": "Vierfeldertafel-Schema mit vier Innenfeldern und Randsummen."
        }
       ]
+     },
+     "interaktiv": {
+      "id": "zweistufig",
+      "titel": "Zwei Merkmale",
+      "params": {
+       "rot": 3,
+       "blau": 2,
+       "ziehen": "mit",
+       "namen": [
+        "Brille",
+        "keine"
+       ]
+      }
      }
     },
     "ueben": {
@@ -6365,7 +6988,32 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Beginne dort, wo nur <strong>ein</strong> Wert in einer Zeile oder Spalte fehlt — den findest du durch Subtraktion. Wahllos in der Mitte anzufangen führt oft in eine Sackgasse.",
-     "selbsterklaerung": "Erkläre in einem Satz, wie du ein fehlendes Innenfeld aus einer Randsumme und einem bekannten Feld bestimmst."
+     "selbsterklaerung": "Erkläre in einem Satz, wie du ein fehlendes Innenfeld aus einer Randsumme und einem bekannten Feld bestimmst.",
+     "interaktiv": {
+      "id": "vierfeldertafel",
+      "titel": "Vierfeldertafel füllen",
+      "params": {
+       "merkmalA": [
+        "Brille",
+        "keine Brille"
+       ],
+       "merkmalB": [
+        "Junge",
+        "Mädchen"
+       ],
+       "init": [
+        [
+         8,
+         4
+        ],
+        [
+         10,
+         8
+        ]
+       ],
+       "max": 99
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -6536,7 +7184,32 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Der <strong>Nenner</strong> hängt von der Bezugsmenge ab: „von allen\" → Gesamtzahl, „von den Mädchen\" → Zeilensumme, „von den Brillenträgern\" → Spaltensumme. Den falschen Nenner zu wählen ist der häufigste Fehler.",
-     "selbsterklaerung": "Erkläre in einem Satz, woran du in einer Frage erkennst, welche Bezugsmenge (welcher Nenner) gemeint ist."
+     "selbsterklaerung": "Erkläre in einem Satz, woran du in einer Frage erkennst, welche Bezugsmenge (welcher Nenner) gemeint ist.",
+     "interaktiv": {
+      "id": "vierfeldertafel",
+      "titel": "Relative Häufigkeiten",
+      "params": {
+       "merkmalA": [
+        "Sport",
+        "kein Sport"
+       ],
+       "merkmalB": [
+        "Mädchen",
+        "Junge"
+       ],
+       "init": [
+        [
+         18,
+         7
+        ],
+        [
+         12,
+         13
+        ]
+       ],
+       "max": 99
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -6723,6 +7396,19 @@
         "html": "<table class='lb-mini-tab'><tr><th></th><th>B</th><th>kein B</th></tr><tr><th>A</th><td>0,30</td><td>0,30</td></tr><tr><th>kein A</th><td>—</td><td>—</td></tr></table>"
        }
       ]
+     },
+     "interaktiv": {
+      "id": "zweistufig",
+      "titel": "Baum und Tafel",
+      "params": {
+       "rot": 3,
+       "blau": 2,
+       "ziehen": "mit",
+       "namen": [
+        "A",
+        "B"
+       ]
+      }
      }
     },
     "ueben": {
@@ -6894,7 +7580,20 @@
      ],
      "erklaerseite": true,
      "stolperstein": "„$B$ unter den $A$\" und „$A$ unter den $B$\" sind <strong>verschiedene</strong> bedingte Wahrscheinlichkeiten mit verschiedenen Nennern — auch wenn der Zähler gleich ist. Und ein Zusammenhang ist noch keine <strong>Ursache</strong> (Korrelation ≠ Kausalität).",
-     "selbsterklaerung": "Erkläre in einem Satz, warum man aus „die meisten Verunglückten waren ausgeschlafen\" nicht schließen darf, dass Ausschlafen gefährlich ist."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man aus „die meisten Verunglückten waren ausgeschlafen\" nicht schließen darf, dass Ausschlafen gefährlich ist.",
+     "interaktiv": {
+      "id": "zweistufig",
+      "titel": "Bedingte Wahrscheinlichkeit",
+      "params": {
+       "rot": 3,
+       "blau": 2,
+       "ziehen": "ohne",
+       "namen": [
+        "A",
+        "B"
+       ]
+      }
+     }
     },
     "ueben": {
      "zeit": 20,

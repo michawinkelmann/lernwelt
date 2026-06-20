@@ -458,6 +458,19 @@
         "text": "$P(X=k)=\\binom{4}{k}\\left(\\frac{1}{2}\\right)^{k}\\left(\\frac{1}{2}\\right)^{4-k}$, Summe aller Werte $=1$."
        }
       ]
+     },
+     "interaktiv": {
+      "id": "zweistufig",
+      "titel": "Pfade im Baum",
+      "params": {
+       "rot": 3,
+       "blau": 2,
+       "ziehen": "mit",
+       "namen": [
+        "Treffer",
+        "Niete"
+       ]
+      }
      }
     },
     "ueben": {
@@ -863,7 +876,16 @@
      ],
      "erklaerseite": true,
      "stolperstein": "<strong>$\\sigma$ ist <em>nicht</em> $n\\,p\\,(1-p)$, sondern die Wurzel daraus.</strong> Der Term $n\\,p\\,(1-p)$ heißt <em>Varianz</em>; die Standardabweichung ist $\\sigma=\\sqrt{n\\,p\\,(1-p)}$. Wer die Wurzel vergisst, erhält eine viel zu große Streuung.",
-     "selbsterklaerung": "Erkläre in einem Satz den Unterschied zwischen dem Erwartungswert $\\mu$ und der Standardabweichung $\\sigma$."
+     "selbsterklaerung": "Erkläre in einem Satz den Unterschied zwischen dem Erwartungswert $\\mu$ und der Standardabweichung $\\sigma$.",
+     "interaktiv": {
+      "id": "histogramm",
+      "titel": "Erwartungswert & Sigma",
+      "params": {
+       "ninit": 10,
+       "pinit": 0.5,
+       "nmax": 20
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1066,6 +1088,15 @@
         "text": "In diesem Bereich liegen rund $68\\,\\%$ aller Ergebnisse."
        }
       ]
+     },
+     "interaktiv": {
+      "id": "histogramm",
+      "titel": "Sigma-Umgebungen",
+      "params": {
+       "ninit": 12,
+       "pinit": 0.5,
+       "nmax": 20
+      }
      }
     },
     "ueben": {
@@ -1432,7 +1463,19 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum man bei einer stetigen Größe nach $P(179{,}5 \\le X \\le 180{,}5)$ fragt und nicht nach $P(X = 180)$."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man bei einer stetigen Größe nach $P(179{,}5 \\le X \\le 180{,}5)$ fragt und nicht nach $P(X = 180)$.",
+     "interaktiv": {
+      "id": "glocke",
+      "titel": "Von Säulen zur Glocke",
+      "params": {
+       "muinit": 0,
+       "sinit": 1,
+       "mumin": -3,
+       "mumax": 3,
+       "smin": 0.5,
+       "smax": 3
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1637,7 +1680,19 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, woran man in einer Skizze sofort erkennt, welche von zwei Glocken stärker streut."
+     "selbsterklaerung": "Erkläre in einem Satz, woran man in einer Skizze sofort erkennt, welche von zwei Glocken stärker streut.",
+     "interaktiv": {
+      "id": "glocke",
+      "titel": "Glockenkurve erkunden",
+      "params": {
+       "muinit": 0,
+       "sinit": 1,
+       "mumin": -4,
+       "mumax": 4,
+       "smin": 0.5,
+       "smax": 3
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1827,7 +1882,19 @@
      ],
      "erklaerseite": true,
      "stolperstein": "<strong>normCDf braucht immer eine untere UND eine obere Grenze.</strong> Für „höchstens $b$“ darfst du die untere Grenze nicht weglassen, sondern setzt $-10^{99}$ ein (für „mindestens $a$“ die obere Grenze $10^{99}$). Und niemals $\\sigma$ und $\\mu$ vertauschen.",
-     "selbsterklaerung": "Erkläre in einem Satz, wie du eine einseitige Frage wie $P(X \\le 5)$ in die normCDf-Eingabe mit <em>zwei</em> Grenzen übersetzt."
+     "selbsterklaerung": "Erkläre in einem Satz, wie du eine einseitige Frage wie $P(X \\le 5)$ in die normCDf-Eingabe mit <em>zwei</em> Grenzen übersetzt.",
+     "interaktiv": {
+      "id": "glocke",
+      "titel": "Flächen als Wahrscheinlichkeit",
+      "params": {
+       "muinit": 0,
+       "sinit": 1,
+       "mumin": -4,
+       "mumax": 4,
+       "smin": 0.5,
+       "smax": 3
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2017,7 +2084,19 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Die Prozentwerte $68$ / $95$ / $99{,}7\\,\\%$ gehören zur <strong>symmetrischen</strong> Umgebung $\\mu \\pm k\\sigma$. Sie sind <em>nicht</em> der Anteil <strong>unter</strong> der oberen Grenze: Bis $\\mu + \\sigma$ liegen nicht $68\\,\\%$, sondern $50\\,\\% + \\frac{68\\,\\%}{2} \\approx 84\\,\\%$, weil die linke Hälfte schon $50\\,\\%$ beisteuert.",
-     "selbsterklaerung": "Erkläre in einem Satz, woran du erkennst, ob eine Aufgabe nach normCDf (Grenzen gegeben) oder nach invNormCDf (Wahrscheinlichkeit gegeben) verlangt."
+     "selbsterklaerung": "Erkläre in einem Satz, woran du erkennst, ob eine Aufgabe nach normCDf (Grenzen gegeben) oder nach invNormCDf (Wahrscheinlichkeit gegeben) verlangt.",
+     "interaktiv": {
+      "id": "glocke",
+      "titel": "Die Sigma-Regeln",
+      "params": {
+       "muinit": 0,
+       "sinit": 1,
+       "mumin": -4,
+       "mumax": 4,
+       "smin": 0.5,
+       "smax": 3
+      }
+     }
     },
     "ueben": {
      "zeit": 20,
@@ -2213,7 +2292,19 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Die <strong>Stetigkeitskorrektur ($\\pm 0{,}5$) darf man nicht vergessen</strong> – ohne sie ist die Näherung deutlich ungenauer. Achte auf die Richtung: bei „$\\le k$“ wird die Grenze auf $k+0{,}5$ vergrößert, bei „$\\ge k$“ auf $k-0{,}5$ verkleinert. Wer immer $+0{,}5$ rechnet, macht bei „$\\ge$“ einen Fehler.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum man beim Übergang von der diskreten Binomial- zur stetigen Normalverteilung die Grenzen um $0{,}5$ verschiebt."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man beim Übergang von der diskreten Binomial- zur stetigen Normalverteilung die Grenzen um $0{,}5$ verschiebt.",
+     "interaktiv": {
+      "id": "glocke",
+      "titel": "Glocke nähert Binomial",
+      "params": {
+       "muinit": 0,
+       "sinit": 1.5,
+       "mumin": -4,
+       "mumax": 4,
+       "smin": 0.5,
+       "smax": 3
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2565,7 +2656,17 @@
         "Diskutiere: Würde man hier eher $\\alpha = 5\\,\\%$ oder $\\alpha = 1\\,\\%$ wählen — und warum?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "hypothesentest",
+      "titel": "Signifikanzniveau",
+      "params": {
+       "n": 20,
+       "p": 0.5,
+       "modus": "links",
+       "kInit": 6
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2764,7 +2865,17 @@
         "Gib den kritischen Bereich an und begründe, warum $c = 16$ die richtige Grenze ist (und nicht schon $c = 15$)."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "hypothesentest",
+      "titel": "Kritischer Bereich",
+      "params": {
+       "n": 20,
+       "p": 0.5,
+       "modus": "links",
+       "kInit": 5
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2971,7 +3082,17 @@
         "Formuliere einen Antwortsatz, der die Entscheidung im Sachzusammenhang deutet."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "hypothesentest",
+      "titel": "Test durchführen",
+      "params": {
+       "n": 25,
+       "p": 0.5,
+       "modus": "links",
+       "kInit": 7
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3177,7 +3298,17 @@
         "Berechne $\\beta$ erneut für $p_1 = 0{,}4$ und vergleiche: Bei welchem wahren $p_1$ ist der Fehler 2. Art kleiner?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "hypothesentest",
+      "titel": "Fehler 1. Art",
+      "params": {
+       "n": 20,
+       "p": 0.5,
+       "modus": "links",
+       "kInit": 6
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -3378,7 +3509,17 @@
         "Begründe, warum man hier das größte (und nicht das kleinste) $c$ nimmt."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "hypothesentest",
+      "titel": "Linksseitiger Test",
+      "params": {
+       "n": 25,
+       "p": 0.4,
+       "modus": "links",
+       "kInit": 5
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -4368,7 +4509,19 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum die Stetigkeitskorrektur ($\\pm 0{,}5$) nötig ist, wenn man eine diskrete Binomial- durch eine stetige Normalverteilung ersetzt."
+     "selbsterklaerung": "Erkläre in einem Satz, warum die Stetigkeitskorrektur ($\\pm 0{,}5$) nötig ist, wenn man eine diskrete Binomial- durch eine stetige Normalverteilung ersetzt.",
+     "interaktiv": {
+      "id": "glocke",
+      "titel": "Normalverteilung wiederholen",
+      "params": {
+       "muinit": 0,
+       "sinit": 1,
+       "mumin": -4,
+       "mumax": 4,
+       "smin": 0.5,
+       "smax": 3
+      }
+     }
     },
     "ueben": {
      "zeit": 22,

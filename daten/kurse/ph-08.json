@@ -373,7 +373,38 @@
         "Erkläre, warum eine Balkenwaage (Vergleich zweier Massen) ihren Wert auf dem Mond behält, eine Federwaage aber nicht."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Gewichtskraft erkunden",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "g",
+         "min": 1.6,
+         "max": 11,
+         "step": 0.1,
+         "init": 9.81,
+         "einheit": "N/kg"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        110
+       ],
+       "achsen": {
+        "x": "m in kg",
+        "y": "F_G in N"
+       },
+       "formel": "F_G = g · m"
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -590,7 +621,38 @@
         "Bestimme aus einer abgelesenen Kraft umgekehrt die Masse, indem du $m = \\frac{F_G}{g}$ rechnest, und vergleiche mit dem Aufdruck."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Gewichtskraft erkunden",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "g",
+         "min": 1,
+         "max": 12,
+         "step": 0.1,
+         "init": 9.81,
+         "einheit": "N/kg"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        120
+       ],
+       "achsen": {
+        "x": "m in kg",
+        "y": "F_G in N"
+       },
+       "formel": "F_G = m · g"
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -794,7 +856,18 @@
         "Hängt beide Federwaagen nebeneinander an denselben Haken und zieht gemeinsam in eine Richtung — addieren sich die angezeigten Kräfte?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "vektor2d",
+      "titel": "Kräfte zusammensetzen",
+      "params": {
+       "ax": 4,
+       "ay": 0,
+       "bx": 0,
+       "by": 3,
+       "bereich": 6
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1384,7 +1457,38 @@
         "Rechne den eingestellten Wert in $\\text{km/h}$ um (mal $3{,}6$) und vergleiche mit deinem Alltagsgefühl für dieses Tempo."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Weg und Zeit",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "v",
+         "min": 0,
+         "max": 20,
+         "step": 0.5,
+         "init": 5,
+         "einheit": "m/s"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        120
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "s in m"
+       },
+       "formel": "s = v · t"
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -1579,7 +1683,38 @@
         "Stelle die Geschwindigkeit auf null (a = 0): Wie sieht die Linie jetzt aus und welcher Bewegungszustand gehört dazu?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "t-s-Diagramm",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "v",
+         "min": 0,
+         "max": 15,
+         "step": 0.5,
+         "init": 4,
+         "einheit": "m/s"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        100
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "s in m"
+       },
+       "formel": "s = v · t"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1777,7 +1912,47 @@
         "Stelle a = 0 ein: Begründe, warum die v-t-Linie jetzt waagerecht, die x-t-Linie aber eine ansteigende Gerade ist."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "t-v-Diagramm",
+      "params": {
+       "form": "linear",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "a",
+         "min": 0,
+         "max": 4,
+         "step": 0.1,
+         "init": 1,
+         "einheit": "m/s²"
+        },
+        {
+         "sym": "b",
+         "label": "v0",
+         "min": 0,
+         "max": 10,
+         "step": 0.5,
+         "init": 0,
+         "einheit": "m/s"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        30
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "v in m/s"
+       },
+       "formel": "v = a · t + v0"
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -1972,7 +2147,38 @@
         "Erkläre mit deinen Messwerten, warum die Pause den Durchschnitt senkt."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Weg-Zeit-Gerade",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "v",
+         "min": 0,
+         "max": 30,
+         "step": 1,
+         "init": 15,
+         "einheit": "m/s"
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        300
+       ],
+       "achsen": {
+        "x": "t in s",
+        "y": "s in m"
+       },
+       "formel": "s = v · t"
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2176,7 +2382,38 @@
         "Vergleiche, falls möglich, mit einem Glühlämpchen: Bleibt dort die Kennlinie gerade oder krümmt sie sich (Widerstand ändert sich mit der Temperatur)?"
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Ohmsches Gesetz",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "R",
+         "min": 1,
+         "max": 20,
+         "step": 1,
+         "init": 5,
+         "einheit": "Ω"
+        }
+       ],
+       "x": [
+        0,
+        5
+       ],
+       "y": [
+        0,
+        60
+       ],
+       "achsen": {
+        "x": "I in A",
+        "y": "U in V"
+       },
+       "formel": "U = R · I"
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -2376,7 +2613,17 @@
         "Wähle „Sehr ungleich“ (R₁ = 10 Ω, R₂ = 200 Ω): Fällt am viel größeren Widerstand fast die ganze Spannung ab? Begründe mit $U = R \\cdot I$."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "stromkreis",
+      "titel": "Reihenschaltung berechnen",
+      "params": {
+       "modus": "reihe",
+       "U": 12,
+       "R1": 20,
+       "R2": 30
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -2574,7 +2821,17 @@
         "Vergleiche den parallelen Gesamtwiderstand mit den Einzelwerten: Ist er kleiner als beide? Begründe, warum jeder Zweig die volle Spannung erhält."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "stromkreis",
+      "titel": "Parallelschaltung berechnen",
+      "params": {
+       "modus": "parallel",
+       "U": 12,
+       "R1": 20,
+       "R2": 30
+      }
+     }
     },
     "ueben": {
      "zeit": 17,
@@ -2776,7 +3033,17 @@
         "Beobachte, wie sich die Zahl der leuchtenden Lampen auf den Stromfluss auswirkt, und verbinde das mit der Aufgabe der Sicherung (mehr Geräte → mehr Strom in der Zuleitung)."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "stromkreis",
+      "titel": "Hausinstallation parallel",
+      "params": {
+       "modus": "parallel",
+       "U": 230,
+       "R1": 40,
+       "R2": 60
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2966,7 +3233,17 @@
         "Bestätige an den Anzeigen: $U = U_1 + U_2$ (Reihe) und Gesamtstrom $= I_1 + I_2$ (parallel)."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "stromkreis",
+      "titel": "Gemischte Schaltungen",
+      "params": {
+       "modus": "reihe",
+       "U": 12,
+       "R1": 20,
+       "R2": 30
+      }
+     }
     },
     "ueben": {
      "zeit": 19,
