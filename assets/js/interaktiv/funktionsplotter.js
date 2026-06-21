@@ -31,6 +31,7 @@ function fmtNum(v) {
 export function mount(container, params) {
   const p = params || {};
   const form = p.form || "linear";
+  const FAK = (typeof p.faktor === "number") ? p.faktor : 1;
   const regler = Array.isArray(p.regler) && p.regler.length ? p.regler : [{ sym: "a", label: "a", min: -3, max: 3, step: 0.5, init: 1 }];
   const xr = p.x || [-5, 5];
   const achsen = p.achsen || { x: "x", y: "y" };
@@ -53,7 +54,7 @@ export function mount(container, params) {
       for (let i = 0; i <= 80; i++) {
         const x = xr[0] + (xr[1] - xr[0]) * i / 80;
         if (form === "antiproportional" && Math.abs(x) < 0.3) continue;
-        const y = yWert(form, c, x);
+        const y = FAK * yWert(form, c, x);
         if (isFinite(y) && Math.abs(y) < 1e7) { lo = Math.min(lo, y); hi = Math.max(hi, y); }
       }
     });
@@ -115,7 +116,7 @@ export function mount(container, params) {
     // Kurve (auf Zeichenbereich beschnitten — keine Falsch-Waagerechte)
     let pts = [], n = 200;
     for (let i = 0; i <= n; i++) {
-      const x = xr[0] + (xr[1] - xr[0]) * i / n, y = yWert(form, werte, x);
+      const x = xr[0] + (xr[1] - xr[0]) * i / n, y = FAK * yWert(form, werte, x);
       pts.push(isFinite(y) ? `${sx(x).toFixed(1)},${sy(y).toFixed(1)}` : null);
     }
     let pfad = "", offen = false;
