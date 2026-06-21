@@ -405,6 +405,11 @@
       "titel": "Fluss und Winkel",
       "params": {
        "form": "sinus",
+       "fix": {
+        "b": 1,
+        "c": 0,
+        "d": 90
+       },
        "regler": [
         {
          "sym": "a",
@@ -413,35 +418,20 @@
          "max": 5,
          "step": 0.5,
          "init": 3
-        },
-        {
-         "sym": "b",
-         "label": "b",
-         "min": 1,
-         "max": 1,
-         "step": 1,
-         "init": 1
-        },
-        {
-         "sym": "c",
-         "label": "c",
-         "min": 0,
-         "max": 0,
-         "step": 1,
-         "init": 0
         }
        ],
        "x": [
         0,
         360
        ],
+       "schrittX": 90,
        "y": [
         -5,
         5
        ],
-       "schrittX": 90,
+       "yFest": true,
        "achsen": {
-        "x": "α in Grad (ab 90°)",
+        "x": "α in Grad",
         "y": "Φ in mWb"
        },
        "formel": "Φ = B · A · cos α"

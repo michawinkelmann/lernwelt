@@ -619,12 +619,12 @@
       "id": "funktionsplotter",
       "titel": "Halbwertszeit erkunden",
       "params": {
-       "form": "exponentiell",
+       "form": "halbwertszeit",
        "regler": [
         {
          "sym": "a",
-         "label": "N0",
-         "min": 100,
+         "label": "N₀",
+         "min": 200,
          "max": 2000,
          "step": 100,
          "init": 1000,
@@ -632,26 +632,30 @@
         },
         {
          "sym": "b",
-         "label": "Halbierung",
-         "min": 0.5,
-         "max": 0.5,
-         "step": 0.5,
-         "init": 0.5
+         "label": "T",
+         "min": 1,
+         "max": 10,
+         "step": 1,
+         "init": 3,
+         "einheit": "Tage"
         }
        ],
        "x": [
         0,
-        8
+        30
        ],
        "y": [
         0,
         2000
        ],
+       "yFest": true,
+       "schrittX": 5,
+       "schrittY": 500,
        "achsen": {
-        "x": "t in Halbwertszeiten",
+        "x": "t in Tagen",
         "y": "N (Anzahl Kerne)"
        },
-       "formel": "N = N0 · (1/2)^(t/T)"
+       "formel": "N = N₀ · (½)^(t / T)"
       }
      }
     },

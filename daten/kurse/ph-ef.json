@@ -915,24 +915,25 @@
       "titel": "Freier Fall",
       "params": {
        "form": "quadratisch",
+       "faktor": 0.5,
+       "fix": {
+        "b": 0,
+        "c": 0
+       },
        "regler": [
         {
          "sym": "a",
-         "label": "½·g",
-         "min": 4.905,
-         "max": 4.905,
-         "step": 0.1,
-         "init": 4.905,
+         "label": "g",
+         "min": 1,
+         "max": 15,
+         "step": 0.5,
+         "init": 10,
          "einheit": "m/s²"
         }
        ],
        "x": [
         0,
         5
-       ],
-       "y": [
-        0,
-        125
        ],
        "achsen": {
         "x": "t in s",
@@ -1950,22 +1951,6 @@
          "step": 10,
          "init": 100,
          "einheit": "N"
-        },
-        {
-         "sym": "b",
-         "label": "b",
-         "min": 1,
-         "max": 1,
-         "step": 1,
-         "init": 1
-        },
-        {
-         "sym": "c",
-         "label": "c",
-         "min": 0,
-         "max": 0,
-         "step": 1,
-         "init": 0
         }
        ],
        "x": [
@@ -1977,6 +1962,7 @@
         0,
         300
        ],
+       "yFest": true,
        "schrittY": 50,
        "achsen": {
         "x": "Neigungswinkel α in °",
@@ -2177,6 +2163,10 @@
       "titel": "Zentripetalkraft",
       "params": {
        "form": "quadratisch",
+       "fix": {
+        "b": 0,
+        "c": 0
+       },
        "regler": [
         {
          "sym": "a",
@@ -2186,34 +2176,19 @@
          "step": 0.5,
          "init": 2,
          "einheit": "kg/m"
-        },
-        {
-         "sym": "b",
-         "label": "b",
-         "min": 0,
-         "max": 0,
-         "step": 1,
-         "init": 0
-        },
-        {
-         "sym": "c",
-         "label": "c",
-         "min": 0,
-         "max": 0,
-         "step": 1,
-         "init": 0
         }
        ],
        "x": [
         0,
         10
        ],
+       "schrittX": 2,
        "y": [
         0,
-        200
+        500
        ],
-       "schrittX": 2,
-       "schrittY": 50,
+       "yFest": true,
+       "schrittY": 100,
        "achsen": {
         "x": "Bahngeschwindigkeit v in m/s",
         "y": "Zentripetalkraft in N"
@@ -3012,6 +2987,10 @@
       "titel": "Wurfweite und Winkel",
       "params": {
        "form": "sinus",
+       "fix": {
+        "b": 2,
+        "c": 0
+       },
        "regler": [
         {
          "sym": "a",
@@ -3021,33 +3000,18 @@
          "step": 5,
          "init": 25,
          "einheit": "m"
-        },
-        {
-         "sym": "b",
-         "label": "b",
-         "min": 2,
-         "max": 2,
-         "step": 1,
-         "init": 2
-        },
-        {
-         "sym": "c",
-         "label": "c",
-         "min": 0,
-         "max": 0,
-         "step": 1,
-         "init": 0
         }
        ],
        "x": [
         0,
         90
        ],
+       "schrittX": 15,
        "y": [
         0,
         50
        ],
-       "schrittX": 15,
+       "yFest": true,
        "achsen": {
         "x": "Abwurfwinkel in Grad",
         "y": "Wurfweite in m"
@@ -3461,23 +3425,19 @@
       "id": "funktionsplotter",
       "titel": "Endgeschwindigkeit aus Höhe",
       "params": {
-       "form": "wurzel",
+       "form": "fallgeschw",
        "regler": [
         {
          "sym": "a",
-         "label": "√(2g)",
-         "min": 4.43,
-         "max": 4.43,
-         "step": 0.1,
-         "init": 4.43,
-         "einheit": ""
+         "label": "g",
+         "min": 1,
+         "max": 15,
+         "step": 0.5,
+         "init": 10,
+         "einheit": "m/s²"
         }
        ],
        "x": [
-        0,
-        20
-       ],
-       "y": [
         0,
         20
        ],
@@ -3694,29 +3654,25 @@
       "id": "funktionsplotter",
       "titel": "Pendel: v aus Höhe",
       "params": {
-       "form": "wurzel",
+       "form": "fallgeschw",
        "regler": [
         {
          "sym": "a",
-         "label": "√(2g)",
-         "min": 4.43,
-         "max": 4.43,
-         "step": 0.1,
-         "init": 4.43,
-         "einheit": ""
+         "label": "g",
+         "min": 1,
+         "max": 15,
+         "step": 0.5,
+         "init": 10,
+         "einheit": "m/s²"
         }
        ],
        "x": [
         0,
-        2
-       ],
-       "y": [
-        0,
-        7
+        20
        ],
        "achsen": {
-        "x": "Fallhöhe h in m",
-        "y": "v am tiefsten Punkt in m/s"
+        "x": "Höhe h in m",
+        "y": "v in m/s"
        },
        "formel": "v = √(2 · g · h)"
       }
@@ -4737,39 +4693,42 @@
       "id": "funktionsplotter",
       "titel": "Zerfallsgesetz",
       "params": {
-       "form": "exponentiell",
+       "form": "halbwertszeit",
        "regler": [
         {
          "sym": "a",
-         "label": "N0",
-         "min": 100,
+         "label": "N₀",
+         "min": 200,
          "max": 2000,
          "step": 100,
-         "init": 1000,
-         "einheit": ""
+         "init": 1000
         },
         {
          "sym": "b",
-         "label": "Halbierung",
-         "min": 0.5,
-         "max": 0.5,
-         "step": 0.5,
-         "init": 0.5
+         "label": "T",
+         "min": 1,
+         "max": 10,
+         "step": 1,
+         "init": 3,
+         "einheit": "Tage"
         }
        ],
        "x": [
         0,
-        8
+        30
        ],
        "y": [
         0,
         2000
        ],
+       "yFest": true,
+       "schrittX": 5,
+       "schrittY": 500,
        "achsen": {
-        "x": "t in Halbwertszeiten",
-        "y": "N(t)"
+        "x": "t in Tagen",
+        "y": "N (Anzahl Kerne)"
        },
-       "formel": "N(t) = N0 · (1/2)^(t/T)"
+       "formel": "N = N₀ · (½)^(t / T)"
       }
      }
     },

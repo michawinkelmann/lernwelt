@@ -197,39 +197,7 @@
        }
       ]
      },
-     "erklaerseite": true,
-     "interaktiv": {
-      "id": "funktionsplotter",
-      "titel": "Frequenz und Periode",
-      "params": {
-       "form": "antiproportional",
-       "regler": [
-        {
-         "sym": "a",
-         "label": "a",
-         "min": 1,
-         "max": 1,
-         "step": 1,
-         "init": 1
-        }
-       ],
-       "x": [
-        0.1,
-        4
-       ],
-       "y": [
-        0,
-        10
-       ],
-       "schrittX": 1,
-       "schrittY": 2,
-       "achsen": {
-        "x": "Periodendauer T in s",
-        "y": "Frequenz f in Hz"
-       },
-       "formel": "f = 1 / T"
-      }
-     }
+     "erklaerseite": true
     },
     "ueben": {
      "zeit": 18,
@@ -884,34 +852,28 @@
          "min": 1,
          "max": 5,
          "step": 0.5,
-         "init": 3
+         "init": 3,
+         "einheit": "cm"
         },
         {
          "sym": "b",
-         "label": "b",
+         "label": "Perioden",
          "min": 1,
          "max": 3,
          "step": 1,
          "init": 1
-        },
-        {
-         "sym": "c",
-         "label": "c",
-         "min": 0,
-         "max": 0,
-         "step": 1,
-         "init": 0
         }
        ],
        "x": [
         0,
         360
        ],
+       "schrittX": 90,
        "y": [
         -5,
         5
        ],
-       "schrittX": 90,
+       "yFest": true,
        "achsen": {
         "x": "ωt in Grad",
         "y": "s(t) in cm"

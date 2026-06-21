@@ -4,17 +4,19 @@
 // y-Achse wird automatisch passend skaliert (beim Laden, stabil), Achsen sind beschriftet,
 // die Kurve wird sauber auf den Zeichenbereich beschnitten.
 function yWert(form, p, x) {
-  const a = p.a ?? 1, b = p.b ?? 1, c = p.c ?? 0;
+  const a = p.a ?? 1, b = p.b ?? 1, c = p.c ?? 0, d = p.d ?? 0;
   switch (form) {
     case "proportional":     return a * x;
     case "linear":           return a * x + b;
     case "quadratisch":      return a * x * x + b * x + c;
     case "scheitel":         return a * (x - b) * (x - b) + c;
     case "exponentiell":     return a * Math.pow(b, x);
+    case "halbwertszeit":    return b > 0 ? a * Math.pow(0.5, x / b) : NaN;
+    case "fallgeschw":       return x < 0 ? NaN : Math.sqrt(2 * a * x);
     case "potenz":           return a * Math.pow(x, b);
     case "wurzel":           return x < 0 ? NaN : a * Math.sqrt(x);
     case "antiproportional": return x === 0 ? NaN : a / x;
-    case "sinus":            return a * Math.sin(b * x * Math.PI / 180) + c;
+    case "sinus":            return a * Math.sin((b * x + d) * Math.PI / 180) + c;
     default:                 return a * x + b;
   }
 }
@@ -36,14 +38,14 @@ export function mount(container, params) {
   const xr = p.x || [-5, 5];
   const achsen = p.achsen || { x: "x", y: "y" };
   const W = 340, H = 250, ML = 44, MR = 14, MT = 14, MB = 30;
-  const werte = {}; regler.forEach(r => werte[r.sym] = r.init ?? 1);
+  const werte = Object.assign({}, p.fix || {}); regler.forEach(r => werte[r.sym] = r.init ?? 1);
 
   // --- y-Bereich automatisch & STABIL bestimmen (einmalig, deckt alle Reglerstellungen ab) ---
   function reichweite() {
     const blowup = form === "exponentiell" || form === "antiproportional" || form === "potenz";
     const stellen = regler.map(r => blowup ? [r.init ?? 1] : Array.from(new Set([r.min, r.init ?? 1, r.max])));
     // kartesisches Produkt der Eckwerte
-    let combos = [{}];
+    let combos = [Object.assign({}, p.fix || {})];
     regler.forEach((r, i) => {
       const next = [];
       combos.forEach(c => stellen[i].forEach(v => next.push(Object.assign({}, c, { [r.sym]: v }))));

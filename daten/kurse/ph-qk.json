@@ -851,38 +851,42 @@
       "id": "funktionsplotter",
       "titel": "C-14 Restanteil",
       "params": {
-       "form": "exponentiell",
+       "form": "halbwertszeit",
        "regler": [
         {
          "sym": "a",
          "label": "N₀",
-         "min": 100,
-         "max": 100,
-         "step": 1,
-         "init": 100
+         "min": 200,
+         "max": 2000,
+         "step": 100,
+         "init": 1000
         },
         {
          "sym": "b",
-         "label": "b",
-         "min": 0.5,
-         "max": 0.5,
-         "step": 0.1,
-         "init": 0.5
+         "label": "T",
+         "min": 2000,
+         "max": 8000,
+         "step": 10,
+         "init": 5730,
+         "einheit": "a"
         }
        ],
        "x": [
         0,
-        5
+        20000
        ],
        "y": [
         0,
-        100
+        2000
        ],
+       "yFest": true,
+       "schrittX": 5000,
+       "schrittY": 500,
        "achsen": {
-        "x": "t in Halbwertszeiten",
-        "y": "Anteil in %"
+        "x": "t in Jahren",
+        "y": "N (¹⁴C-Kerne)"
        },
-       "formel": "N(t) = N₀ · (1/2)^t"
+       "formel": "N = N₀ · (½)^(t / T)"
       }
      }
     },
