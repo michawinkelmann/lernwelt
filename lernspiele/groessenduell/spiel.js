@@ -60,17 +60,27 @@ export const DATENSATZ = {
   massen: [ // siWert in kg
     { name: "Stechmücke", siWert: 2e-6, anzeige: "≈ 2 mg" },
     { name: "Reiskorn", siWert: 2.5e-5, anzeige: "≈ 25 mg" },
+    { name: "Streichholz", siWert: 1e-4, anzeige: "≈ 0,1 g" },
+    { name: "Rosine", siWert: 5e-4, anzeige: "≈ 0,5 g" },
     { name: "Büroklammer", siWert: 1e-3, anzeige: "≈ 1 g" },
+    { name: "1-Cent-Münze", siWert: 2.3e-3, anzeige: "≈ 2,3 g" },
     { name: "1-Euro-Münze", siWert: 7.5e-3, anzeige: "≈ 7,5 g" },
-    { name: "Tafel Schokolade", siWert: 0.1, anzeige: "≈ 100 g" },
+    { name: "AA-Batterie", siWert: 2.5e-2, anzeige: "≈ 25 g" },
+    { name: "Hühnerei", siWert: 6e-2, anzeige: "≈ 60 g" },
+    { name: "Apfel", siWert: 0.16, anzeige: "≈ 160 g" },
+    { name: "Fußball", siWert: 0.45, anzeige: "≈ 450 g", tag: "genormt" },
     { name: "1 Liter Wasser", siWert: 1, anzeige: "≈ 1 kg" },
-    { name: "Hauskatze", siWert: 4, anzeige: "≈ 4 kg" },
+    { name: "Ziegelstein", siWert: 2.5, anzeige: "≈ 2,5 kg" },
+    { name: "Hauskatze", siWert: 4.5, anzeige: "≈ 4,5 kg" },
     { name: "Fahrrad", siWert: 12, anzeige: "≈ 12 kg" },
+    { name: "Sack Zement", siWert: 25, anzeige: "≈ 25 kg" },
     { name: "Erwachsener Mensch", siWert: 75, anzeige: "≈ 75 kg" },
     { name: "Klavier", siWert: 250, anzeige: "≈ 250 kg" },
     { name: "Kleinwagen", siWert: 1000, anzeige: "≈ 1 t (1 000 kg)" },
+    { name: "Nilpferd", siWert: 2500, anzeige: "≈ 2,5 t" },
     { name: "Afrikanischer Elefant", siWert: 5000, anzeige: "≈ 5 t" },
     { name: "Stadtbus (leer)", siWert: 12000, anzeige: "≈ 12 t" },
+    { name: "Sattelschlepper (beladen)", siWert: 40000, anzeige: "≈ 40 t" },
     { name: "Blauwal", siWert: 150000, anzeige: "≈ 150 t (150 000 kg)" }
   ],
   laengen: [ // siWert in m
@@ -156,6 +166,15 @@ export function punkteFuerDuell(richtig, serie) {
 // in einer Runde doppelt vorkommt. Liefert { links, rechts, schluessel }
 // in zufälliger Seiten-Reihenfolge — oder null, wenn alle Paare verbraucht sind.
 // Mutiert „verbraucht“ nicht; der Aufrufer trägt den Schlüssel selbst ein.
+// Gewicht für die Paarauswahl: bevorzugt Paare, die etwa eine Größenordnung
+// auseinanderliegen (Maximum bei Faktor ≈ 10). So werden triviale Riesen-Abstände
+// (z. B. Mücke gegen Wal) und mehrdeutig dichte Paare seltener gezogen — es ist
+// echtes Größenordnungs-Schätzen nötig statt offensichtlicher Vergleiche.
+export function naehe(a, b) {
+  const d = Math.abs(Math.log10(a) - Math.log10(b)); // Abstand in Größenordnungen
+  return Math.exp(-((d - 1) * (d - 1)) / (2 * 0.8 * 0.8));
+}
+
 export function ziehePaar(kategorie, rng = Math.random, verbraucht = new Set()) {
   const objekte = DATENSATZ[kategorie];
   if (!objekte) throw new Error("Unbekannte Kategorie: " + kategorie);
@@ -166,7 +185,11 @@ export function ziehePaar(kategorie, rng = Math.random, verbraucht = new Set()) 
       if (!verbraucht.has(schluessel)) frei.push({ i, j, schluessel });
     }
   if (!frei.length) return null;
-  const p = frei[Math.floor(rng() * frei.length)];
+  let summe = 0;
+  const gew = frei.map(fp => { const w = naehe(objekte[fp.i].siWert, objekte[fp.j].siWert); summe += w; return w; });
+  let ziel = rng() * summe, idx = 0;
+  while (idx < gew.length - 1 && (ziel -= gew[idx]) > 0) idx++;
+  const p = frei[idx];
   const getauscht = rng() < 0.5;
   return {
     links: objekte[getauscht ? p.j : p.i],

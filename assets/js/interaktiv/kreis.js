@@ -20,7 +20,9 @@ export function mount(container, params) {
     s += `<text x="${C+R/2}" y="${C-4}" text-anchor="middle" font-size="11">r = ${r}</text>`;
     svg.innerHTML = s;
     const U = 2 * Math.PI * r, A = Math.PI * r * r, f = x => (Math.round(x * 100) / 100).toLocaleString("de-DE");
-    out.innerHTML = `Durchmesser d = ${2*r} ${E} <br> Umfang U = 2·π·r = <strong>${f(U)} ${E}</strong> <br> Fläche A = π·r² = <strong>${f(A)} ${E}²</strong>`;
+    const teile = [`Durchmesser d = ${2*r} ${E}`, `Umfang U = 2·π·r = <strong>${f(U)} ${E}</strong>`];
+    if (p.zeige !== "umfang") teile.push(`Fläche A = π·r² = <strong>${f(A)} ${E}²</strong>`);
+    out.innerHTML = teile.join(" <br> ");
   }
   inp.addEventListener("input", () => { r = +inp.value; rv.textContent = r; zeichne(); });
   wrap.append(svg, lab, out); container.append(wrap); zeichne();

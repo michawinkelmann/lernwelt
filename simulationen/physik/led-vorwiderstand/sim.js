@@ -172,9 +172,9 @@ function zeichneSchaltbild(ctx, welt, stil, z, a, dick) {
   leitung(ctx, welt, stil, dick, [[xR + 0.9, T], [R, T]]);
   // untere Leitung
   leitung(ctx, welt, stil, dick, [[L, B], [R, B]]);
-  // linke Seite mit Quelle (Lücke)
-  leitung(ctx, welt, stil, dick, [[L, T], [L, ymQuelle + 0.7]]);
-  leitung(ctx, welt, stil, dick, [[L, ymQuelle - 0.7], [L, B]]);
+  // linke Seite mit Quelle (Leitung reicht bis an die Polstriche — keine sichtbare Lücke)
+  leitung(ctx, welt, stil, dick, [[L, T], [L, ymQuelle + 0.28]]);
+  leitung(ctx, welt, stil, dick, [[L, ymQuelle - 0.28], [L, B]]);
   // rechte Seite mit LED (Lücke)
   leitung(ctx, welt, stil, dick, [[R, T], [R, yLED + 0.95]]);
   leitung(ctx, welt, stil, dick, [[R, yLED - 0.95], [R, B]]);
@@ -204,12 +204,12 @@ function zeichneSchaltbild(ctx, welt, stil, z, a, dick) {
   ctx.fillText("U_LED = " + formatZahl(a.U_LED, 2) + " V", welt.px(R) + welt.laenge(1.0), welt.py(yLED));
   ctx.fillText("U_F = " + formatZahl(z.U_F, 1) + " V", welt.px(R) + welt.laenge(1.0), welt.py(yLED - 0.5));
 
-  // Strompfeil + Stromwert (oben, in Stromrichtung nach rechts), nur wenn Strom fließt
+  // Stromwert oben — bewusst OHNE Richtungspfeil: In dieser Klassenstufe wird mit der
+  // Elektronen-Bewegungsrichtung (− → +) gearbeitet; ein Pfeil der technischen Stromrichtung
+  // würde dem widersprechen. Der reine Zahlenwert behauptet keine Richtung.
   if (a.leitet && a.I > 0) {
-    const xPfeil = (L + xR) / 2 - 0.4;
-    pfeilWaagerecht(ctx, welt, stil.ok, xPfeil, T + 0.0, 0.0, true);
     ctx.fillStyle = stil.ok; ctx.textAlign = "center"; ctx.textBaseline = "bottom";
-    ctx.fillText("I = " + formatZahl(a.I * 1000, 2) + " mA", welt.px(xPfeil + 0.4), welt.py(T + 1.1));
+    ctx.fillText("I = " + formatZahl(a.I * 1000, 2) + " mA", welt.px((L + xR) / 2), welt.py(T + 1.1));
   } else {
     ctx.fillStyle = stil.fehler; ctx.textAlign = "center"; ctx.textBaseline = "bottom";
     ctx.fillText("I = 0 mA — LED aus", welt.px((L + xR) / 2), welt.py(T + 1.1));
@@ -219,20 +219,6 @@ function zeichneSchaltbild(ctx, welt, stil, z, a, dick) {
 // Helligkeitsfaktor [0,1] aus dem Strom: ~20 mA gilt als „voll“ leuchtend.
 function leuchtfaktor(I) {
   return Math.max(0, Math.min(1, (I * 1000) / 20));
-}
-
-// kleiner waagerechter Strompfeil (Richtung +x)
-function pfeilWaagerecht(ctx, welt, farbe, x, y) {
-  ctx.strokeStyle = farbe; ctx.fillStyle = farbe;
-  ctx.lineWidth = welt.laenge(0.06) + 1;
-  const x1 = welt.px(x), x2 = welt.px(x + 0.8), yy = welt.py(y) - welt.laenge(0.0);
-  ctx.beginPath(); ctx.moveTo(x1, yy); ctx.lineTo(x2, yy); ctx.stroke();
-  const aw = welt.laenge(0.22);
-  ctx.beginPath();
-  ctx.moveTo(x2, yy);
-  ctx.lineTo(x2 - aw, yy - aw * 0.55);
-  ctx.lineTo(x2 - aw, yy + aw * 0.55);
-  ctx.closePath(); ctx.fill();
 }
 
 // LED senkrecht: Strom fließt von oben (Anode) nach unten (Kathode) in der rechten
