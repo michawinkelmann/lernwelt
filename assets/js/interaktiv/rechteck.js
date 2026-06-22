@@ -33,7 +33,9 @@ export function mount(container, params) {
     for (let i = 1; i < a; i++) s += `<line x1="${OX+i*PX}" y1="${OY}" x2="${OX+i*PX}" y2="${OY+h}" stroke="var(--linie)" stroke-width="1"/>`;
     for (let j = 1; j < b; j++) s += `<line x1="${OX}" y1="${OY+j*PX}" x2="${OX+w}" y2="${OY+j*PX}" stroke="var(--linie)" stroke-width="1"/>`;
     svg.innerHTML = s;
-    out.innerHTML = `Umfang <strong>U = 2·(a+b) = ${2*(a+b)} ${E}</strong> <br> Fläche <strong>A = a·b = ${a*b} ${E}²</strong>`;
+    const uTxt = `Umfang <strong>U = 2·(a+b) = ${2*(a+b)} ${E}</strong>`;
+    const aTxt = `Fläche <strong>A = a·b = ${a*b} ${E}²</strong>`;
+    out.innerHTML = p.zeige === "umfang" ? uTxt : p.zeige === "flaeche" ? aTxt : uTxt + " <br> " + aTxt;
   }
   steuer.append(regler("Länge a", a, amax, v => a = v), regler("Breite b", b, bmax, v => b = v));
   wrap.append(svg, steuer, out); container.append(wrap); zeichne();

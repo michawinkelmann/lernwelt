@@ -104,7 +104,7 @@
      ],
      "einstieg": {
       "problem": "<p>Auf dem Sportplatz soll eine Bahn von <strong>$400\\ \\text{m}$</strong> markiert werden. Tim hat nur ein Maßband, das in <strong>Zentimetern</strong> eingeteilt ist, Lena eines in <strong>Metern</strong>.</p>",
-      "figur": "<svg viewBox=\"-1.7 -3 281.7 188\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"24\" y=\"150\" width=\"56\" height=\"26\"/><text class=\"beschriftung\" x=\"52\" y=\"167\" text-anchor=\"middle\">mm</text><text class=\"label-b\" x=\"80\" y=\"146\" text-anchor=\"middle\">·10</text><text class=\"label-a\" x=\"80\" y=\"168\" text-anchor=\"middle\">:10</text><rect class=\"dreieck\" x=\"80\" y=\"124\" width=\"56\" height=\"26\"/><text class=\"beschriftung\" x=\"108\" y=\"141\" text-anchor=\"middle\">cm</text><text class=\"label-b\" x=\"136\" y=\"120\" text-anchor=\"middle\">·10</text><text class=\"label-a\" x=\"136\" y=\"168\" text-anchor=\"middle\">:10</text><rect class=\"dreieck\" x=\"136\" y=\"98\" width=\"56\" height=\"26\"/><text class=\"beschriftung\" x=\"164\" y=\"115\" text-anchor=\"middle\">dm</text><text class=\"label-b\" x=\"192\" y=\"94\" text-anchor=\"middle\">·10</text><text class=\"label-a\" x=\"192\" y=\"168\" text-anchor=\"middle\">:10</text><rect class=\"dreieck\" x=\"192\" y=\"72\" width=\"56\" height=\"26\"/><text class=\"beschriftung\" x=\"220\" y=\"89\" text-anchor=\"middle\">m</text><text class=\"achsentitel\" x=\"6\" y=\"14\">kleiner</text><text class=\"achsentitel\" x=\"254\" y=\"66\" text-anchor=\"end\">größer</text></svg>",
+      "figur": "<svg viewBox=\"-1.7 -3 281.7 202\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"dreieck\" x=\"24\" y=\"150\" width=\"56\" height=\"26\"/><text class=\"beschriftung\" x=\"52\" y=\"167\" text-anchor=\"middle\">mm</text><text class=\"label-b\" x=\"80\" y=\"146\" text-anchor=\"middle\">·10</text><text class=\"label-a\" x=\"80\" y=\"168\" text-anchor=\"middle\">:10</text><rect class=\"dreieck\" x=\"80\" y=\"124\" width=\"56\" height=\"26\"/><text class=\"beschriftung\" x=\"108\" y=\"141\" text-anchor=\"middle\">cm</text><text class=\"label-b\" x=\"136\" y=\"120\" text-anchor=\"middle\">·10</text><text class=\"label-a\" x=\"136\" y=\"142\" text-anchor=\"middle\">:10</text><rect class=\"dreieck\" x=\"136\" y=\"98\" width=\"56\" height=\"26\"/><text class=\"beschriftung\" x=\"164\" y=\"115\" text-anchor=\"middle\">dm</text><text class=\"label-b\" x=\"192\" y=\"94\" text-anchor=\"middle\">·10</text><text class=\"label-a\" x=\"192\" y=\"116\" text-anchor=\"middle\">:10</text><rect class=\"dreieck\" x=\"192\" y=\"72\" width=\"56\" height=\"26\"/><text class=\"beschriftung\" x=\"220\" y=\"89\" text-anchor=\"middle\">m</text><text class=\"achsentitel\" x=\"52\" y=\"192\" text-anchor=\"middle\">kleiner</text><text class=\"achsentitel\" x=\"254\" y=\"66\" text-anchor=\"end\">größer</text></svg>",
       "figurAlt": "Eine Treppe aus vier Stufen, beschriftet mm, cm, dm, m. Von Stufe zu Stufe steht oben mal 10, unten geteilt durch 10.",
       "vorhersage": "Wie oft muss Tim sein Zentimeter-Band auslegen, wenn Lena ihres genau viermal auslegt?",
       "optionen": [
@@ -3915,7 +3915,8 @@
        "bmax": 8,
        "ainit": 7,
        "binit": 3,
-       "einheit": "cm"
+       "einheit": "cm",
+       "zeige": "umfang"
       }
      }
     },
@@ -4516,13 +4517,13 @@
      "stolperstein": "Beim Zerlegen oder Ergänzen fehlt oft eine Seitenlänge. Diese findest du durch <strong>Subtraktion</strong> der bekannten Teilstrecken — nicht durch Raten. Beide Methoden (Zerlegen, Ergänzen) führen zum gleichen Ergebnis.",
      "selbsterklaerung": "Erkläre in einem Satz, wie du eine fehlende Seitenlänge in einer zusammengesetzten Figur bestimmst.",
      "interaktiv": {
-      "id": "rechteck",
-      "titel": "Rechteck-Baustein",
+      "id": "zusammengesetzt",
+      "titel": "Zusammengesetzte Figur",
       "params": {
-       "amax": 12,
-       "bmax": 8,
-       "ainit": 6,
-       "binit": 4,
+       "W": 8,
+       "H": 6,
+       "nwInit": 3,
+       "nhInit": 2,
        "einheit": "cm"
       }
      }
@@ -4693,13 +4694,11 @@
      "stolperstein": "<strong>Gleicher Umfang bedeutet nicht gleiche Fläche.</strong> Bei festem Umfang hat ein langes, schmales Rechteck eine viel kleinere Fläche als ein quadratisches. „Mehr Zaun“ heißt also nicht automatisch „mehr Platz“.",
      "selbsterklaerung": "Erkläre in einem Satz, welche Form unter allen Rechtecken mit gleichem Umfang die größte Fläche hat.",
      "interaktiv": {
-      "id": "rechteck",
-      "titel": "Gleicher Umfang",
+      "id": "gleicherumfang",
+      "titel": "Gleicher Umfang, andere Fläche",
       "params": {
-       "amax": 12,
-       "bmax": 12,
-       "ainit": 3,
-       "binit": 9,
+       "U": 24,
+       "aInit": 4,
        "einheit": "cm"
       }
      }
