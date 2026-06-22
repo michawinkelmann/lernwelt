@@ -46,7 +46,9 @@ export function mount(container, params) {
     const f = x => (Math.round(x * 100) / 100).toLocaleString("de-DE");
     let winkel = "—";
     if (la > 0 && lb > 0) { const cosw = Math.max(-1, Math.min(1, dot / (la * lb))); winkel = f(Math.acos(cosw) * 180 / Math.PI) + "°"; }
-    out.innerHTML = `a + b = (${f(V.ax+V.bx)} | ${f(V.ay+V.by)}) <br> Skalarprodukt a·b = <strong>${f(dot)}</strong> <br> Winkel = <strong>${winkel}</strong>`;
+    out.innerHTML = p.nurSumme
+      ? `a + b = (${f(V.ax+V.bx)} | ${f(V.ay+V.by)})`
+      : `a + b = (${f(V.ax+V.bx)} | ${f(V.ay+V.by)}) <br> Skalarprodukt a·b = <strong>${f(dot)}</strong> <br> Winkel = <strong>${winkel}</strong>`;
   }
   steuer.append(regler("ax", "a.x"), regler("ay", "a.y"), regler("bx", "b.x"), regler("by", "b.y"));
   wrap.append(svg, steuer, out); container.append(wrap); zeichne();

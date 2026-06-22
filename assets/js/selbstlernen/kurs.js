@@ -297,7 +297,7 @@ function rendereLektion(lektionId) {
   const kopf = el(`<div class="lb-player-kopf">
     <h2 class="lb-lektion-h2" data-lb-fokus tabindex="-1">Lektion ${l.nr}: ${esc(l.titel)}</h2>
     <p class="lb-untertitel">${KURS.titel} · Lernbüro · ${l.dauer}′</p>
-    <ul class="lb-ziele">${l.ziele.map(z => `<li><span>${z}</span></li>`).join("")}</ul>
+    <ul class="lb-ziele">${l.ziele.map(z => `<li><span>${z.replace(/^Ich kann\s+/, "")}</span></li>`).join("")}</ul>
   </div>`);
   // Lernbüro 2.0: KC-Kompetenzen (optional, abwärtskompatibel)
   if (Array.isArray(l.kompetenzen) && l.kompetenzen.length) {

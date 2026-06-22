@@ -92,7 +92,7 @@
    "anker": "#py-dreieck",
    "ziele": [
     "Ich kann in einem rechtwinkligen Dreieck Hypotenuse und Katheten benennen.",
-    "Ich erkenne, dass die Hypotenuse immer die längste Seite ist und dem rechten Winkel gegenüberliegt."
+    "Ich kann erkennen, dass die Hypotenuse immer die längste Seite ist und dem rechten Winkel gegenüberliegt."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -678,7 +678,7 @@
    "anker": "#py-umkehrung",
    "ziele": [
     "Ich kann mit der Umkehrung des Satzes prüfen, ob ein Dreieck rechtwinklig ist.",
-    "Ich weiß, dass die Umkehrung in die andere Richtung schließt: aus der Gleichung folgt der rechte Winkel."
+    "Ich kann erklären, dass die Umkehrung in die andere Richtung schließt: aus der Gleichung folgt der rechte Winkel."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -1033,8 +1033,8 @@
    "thema": "ma-09-satz-des-pythagoras",
    "themaPfad": "mathematik/klasse-9/satz-des-pythagoras/",
    "ziele": [
-    "Ich berechne mit dem Satz des Pythagoras sicher fehlende Seiten in rechtwinkligen Dreiecken.",
-    "Ich wende den Satz des Pythagoras auf Sachaufgaben wie Leiter, Diagonale und Höhe an."
+    "Ich kann mit dem Satz des Pythagoras sicher fehlende Seiten in rechtwinkligen Dreiecken berechnen.",
+    "Ich kann den Satz des Pythagoras auf Sachaufgaben wie Leiter, Diagonale und Höhe anwenden."
    ],
    "phasen": {
     "ankommen": {
@@ -1171,7 +1171,7 @@
    "anker": "#ueberschrift-normalparabel",
    "ziele": [
     "Ich kann die Normalparabel $f(x) = x^2$ beschreiben und ihren Graphen skizzieren.",
-    "Ich erkenne, dass die Normalparabel achsensymmetrisch zur $y$-Achse ist und den Scheitel im Ursprung hat."
+    "Ich kann erkennen, dass die Normalparabel achsensymmetrisch zur $y$-Achse ist und den Scheitel im Ursprung hat."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -1281,49 +1281,10 @@
       ]
      },
      "interaktiv": {
-      "id": "funktionsplotter",
-      "titel": "Normalparabel",
+      "id": "normalparabel",
+      "titel": "Die Normalparabel",
       "params": {
-       "form": "quadratisch",
-       "regler": [
-        {
-         "sym": "a",
-         "label": "a",
-         "min": -2,
-         "max": 2,
-         "step": 0.25,
-         "init": 1
-        },
-        {
-         "sym": "b",
-         "label": "b",
-         "min": -4,
-         "max": 4,
-         "step": 1,
-         "init": 0
-        },
-        {
-         "sym": "c",
-         "label": "c",
-         "min": -5,
-         "max": 5,
-         "step": 1,
-         "init": 0
-        }
-       ],
-       "x": [
-        -5,
-        5
-       ],
-       "y": [
-        -2,
-        10
-       ],
-       "achsen": {
-        "x": "x",
-        "y": "y"
-       },
-       "formel": "f(x) = a·x² + b·x + c"
+       "xmax": 4
       }
      }
     },
@@ -1412,7 +1373,7 @@
    "anker": "#ueberschrift-formfaktor",
    "ziele": [
     "Ich kann beschreiben, wie der Faktor $a$ in $f(x) = ax^2$ den Graphen gegenüber der Normalparabel verändert.",
-    "Ich erkenne, ob eine Parabel gestreckt, gestaucht oder gespiegelt ist, und kann den Faktor $a$ aus einer Graphbeschreibung bestimmen."
+    "Ich kann erkennen, ob eine Parabel gestreckt, gestaucht oder gespiegelt ist, und den Faktor $a$ aus einer Graphbeschreibung bestimmen."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -1503,30 +1464,18 @@
       "titel": "Faktor a erkunden",
       "params": {
        "form": "quadratisch",
+       "fix": {
+        "b": 0,
+        "c": 0
+       },
        "regler": [
         {
          "sym": "a",
          "label": "a",
          "min": -3,
          "max": 3,
-         "step": 0.25,
+         "step": 0.5,
          "init": 1
-        },
-        {
-         "sym": "b",
-         "label": "b",
-         "min": -4,
-         "max": 4,
-         "step": 1,
-         "init": 0
-        },
-        {
-         "sym": "c",
-         "label": "c",
-         "min": -5,
-         "max": 5,
-         "step": 1,
-         "init": 0
         }
        ],
        "x": [
@@ -1534,9 +1483,11 @@
         4
        ],
        "y": [
-        -8,
-        8
+        -16,
+        16
        ],
+       "yFest": true,
+       "schrittY": 4,
        "achsen": {
         "x": "x",
         "y": "y"
@@ -1939,53 +1890,7 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Die Ergänzungszahl wird <strong>addiert und sofort wieder subtrahiert</strong> ($+9-9$). Wer nur addiert, verändert die Funktion. Durch $+z-z=0$ bleibt der Term gleich und lässt sich trotzdem binomisch zusammenfassen.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum man bei der quadratischen Ergänzung dieselbe Zahl addiert und subtrahiert.",
-     "interaktiv": {
-      "id": "funktionsplotter",
-      "titel": "Scheitel verschieben",
-      "params": {
-       "form": "scheitel",
-       "regler": [
-        {
-         "sym": "a",
-         "label": "a",
-         "min": -2,
-         "max": 2,
-         "step": 0.25,
-         "init": 1
-        },
-        {
-         "sym": "b",
-         "label": "d",
-         "min": -4,
-         "max": 4,
-         "step": 1,
-         "init": 0
-        },
-        {
-         "sym": "c",
-         "label": "e",
-         "min": -5,
-         "max": 5,
-         "step": 1,
-         "init": 0
-        }
-       ],
-       "x": [
-        -6,
-        6
-       ],
-       "y": [
-        -6,
-        10
-       ],
-       "achsen": {
-        "x": "x",
-        "y": "y"
-       },
-       "formel": "f(x) = a·(x − d)² + e"
-      }
-     }
+     "selbsterklaerung": "Erkläre in einem Satz, warum man bei der quadratischen Ergänzung dieselbe Zahl addiert und subtrahiert."
     },
     "ueben": {
      "zeit": 18,
@@ -2072,7 +1977,7 @@
    "anker": "#ueberschrift-nullstellen",
    "ziele": [
     "Ich kann die Nullstellen einer Parabel aus der Scheitelpunktform bestimmen.",
-    "Ich erkenne anhand des Scheitelpunkts und des Vorzeichens von $a$, ob eine Parabel null, eine oder zwei Nullstellen hat."
+    "Ich kann anhand des Scheitelpunkts und des Vorzeichens von $a$ erkennen, ob eine Parabel null, eine oder zwei Nullstellen hat."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -2287,8 +2192,8 @@
    "thema": "ma-09-quadratische-funktionen",
    "themaPfad": "mathematik/klasse-9/quadratische-funktionen/",
    "ziele": [
-    "Ich lese den Scheitelpunkt aus der Scheitelpunktform ab und bestimme ihn mit quadratischer Ergänzung.",
-    "Ich bestimme Nullstellen und nutze quadratische Funktionen in Anwendungssituationen."
+    "Ich kann den Scheitelpunkt aus der Scheitelpunktform ablesen und ihn mit quadratischer Ergänzung bestimmen.",
+    "Ich kann Nullstellen bestimmen und quadratische Funktionen in Anwendungssituationen nutzen."
    ],
    "phasen": {
     "ankommen": {
@@ -2425,7 +2330,7 @@
    "anker": "#ue-begriff",
    "ziele": [
     "Ich kann erklären, was eine quadratische Gleichung ist, und sie von linearen oder kubischen Gleichungen unterscheiden.",
-    "Ich weiß, was Normalform, Koeffizient und Diskriminante bedeuten."
+    "Ich kann erklären, was Normalform, Koeffizient und Diskriminante bedeuten."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -2660,7 +2565,7 @@
    "anker": "#ue-wurzel",
    "ziele": [
     "Ich kann einfache quadratische Gleichungen der Form $(x + a)^2 = b$ durch Wurzelziehen lösen.",
-    "Ich weiß, dass beim Wurzelziehen immer das $\\pm$ zu beachten ist."
+    "Ich kann erklären, dass beim Wurzelziehen immer das $\\pm$ zu beachten ist."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -2957,53 +2862,7 @@
      ],
      "erklaerseite": true,
      "stolperstein": "$p$ und $q$ werden <strong>mit Vorzeichen</strong> abgelesen: Bei $x^2-7x+12=0$ ist $p=-7$ (nicht $7$). Ein falsches Vorzeichen kippt die ganze Rechnung.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum man die Diskriminante zuerst berechnet, bevor man die p-q-Formel zu Ende rechnet.",
-     "interaktiv": {
-      "id": "funktionsplotter",
-      "titel": "p-q-Formel prüfen",
-      "params": {
-       "form": "quadratisch",
-       "regler": [
-        {
-         "sym": "a",
-         "label": "a",
-         "min": -2,
-         "max": 2,
-         "step": 0.25,
-         "init": 1
-        },
-        {
-         "sym": "b",
-         "label": "p",
-         "min": -5,
-         "max": 5,
-         "step": 1,
-         "init": -2
-        },
-        {
-         "sym": "c",
-         "label": "q",
-         "min": -5,
-         "max": 5,
-         "step": 1,
-         "init": -3
-        }
-       ],
-       "x": [
-        -5,
-        6
-       ],
-       "y": [
-        -6,
-        10
-       ],
-       "achsen": {
-        "x": "x",
-        "y": "y"
-       },
-       "formel": "f(x) = x² + p·x + q"
-      }
-     }
+     "selbsterklaerung": "Erkläre in einem Satz, warum man die Diskriminante zuerst berechnet, bevor man die p-q-Formel zu Ende rechnet."
     },
     "ueben": {
      "zeit": 18,
@@ -3209,15 +3068,10 @@
       "titel": "Lösungen ablesen",
       "params": {
        "form": "quadratisch",
+       "fix": {
+        "a": 1
+       },
        "regler": [
-        {
-         "sym": "a",
-         "label": "a",
-         "min": -2,
-         "max": 2,
-         "step": 0.25,
-         "init": 1
-        },
         {
          "sym": "b",
          "label": "p",
@@ -3333,8 +3187,8 @@
    "thema": "ma-09-quadratische-gleichungen",
    "themaPfad": "mathematik/klasse-9/quadratische-gleichungen/",
    "ziele": [
-    "Ich löse quadratische Gleichungen sicher mit der p-q-Formel und durch Wurzelziehen.",
-    "Ich entscheide an der Diskriminante, wie viele Lösungen es gibt, und löse Sachaufgaben."
+    "Ich kann quadratische Gleichungen sicher mit der p-q-Formel und durch Wurzelziehen lösen.",
+    "Ich kann an der Diskriminante entscheiden, wie viele Lösungen es gibt, und Sachaufgaben lösen."
    ],
    "phasen": {
     "ankommen": {
@@ -3465,7 +3319,7 @@
    "anker": "#wu-quadratwurzel",
    "ziele": [
     "Ich kann die Quadratwurzel als Umkehrung des Quadrierens erklären und einfache Wurzeln berechnen.",
-    "Ich weiß, dass $\\sqrt{a}$ nur für $a \\geq 0$ definiert ist und immer ein nicht-negatives Ergebnis liefert."
+    "Ich kann erklären, dass $\\sqrt{a}$ nur für $a \\geq 0$ definiert ist und immer ein nicht-negatives Ergebnis liefert."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -3570,33 +3424,11 @@
       ]
      },
      "interaktiv": {
-      "id": "funktionsplotter",
-      "titel": "Wurzelfunktion",
+      "id": "wurzelquadrat",
+      "titel": "Quadrat und Wurzel",
       "params": {
-       "form": "wurzel",
-       "regler": [
-        {
-         "sym": "a",
-         "label": "a",
-         "min": 0.5,
-         "max": 3,
-         "step": 0.5,
-         "init": 1
-        }
-       ],
-       "x": [
-        0,
-        16
-       ],
-       "y": [
-        0,
-        12
-       ],
-       "achsen": {
-        "x": "x",
-        "y": "y"
-       },
-       "formel": "f(x) = a·√x"
+       "nmax": 12,
+       "ninit": 4
       }
      }
     },
@@ -3679,7 +3511,7 @@
    "anker": "#wu-irrational",
    "ziele": [
     "Ich kann erklären, was irrationale Zahlen sind, und sie von rationalen Zahlen unterscheiden.",
-    "Ich kenne Beispiele für irrationale Zahlen ($\\sqrt{2}$, $\\pi$) und weiß, dass ihr Dezimalbruch nicht abbricht und nicht periodisch ist."
+    "Ich kann Beispiele für irrationale Zahlen ($\\sqrt{2}$, $\\pi$) nennen und erklären, dass ihr Dezimalbruch nicht abbricht und nicht periodisch ist."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -3766,14 +3598,12 @@
      "stolperstein": "Nicht jede Wurzel ist irrational! $\\sqrt{16} = 4$ ist eine glatte natürliche Zahl. Irrational ist eine Wurzel nur, wenn der Radikand <strong>keine</strong> Quadratzahl ist.",
      "selbsterklaerung": "Erkläre in einem Satz, woran man einer Dezimalzahl ansieht, ob sie rational oder irrational ist.",
      "interaktiv": {
-      "id": "zahlenstrahl",
-      "titel": "Wurzeln einordnen",
+      "id": "wurzelstrahl",
+      "titel": "Wurzel auf dem Zahlenstrahl",
       "params": {
-       "min": 0,
-       "max": 5,
-       "schritt": 0.1,
-       "init": 1.4,
-       "einheit": ""
+       "amin": 1,
+       "amax": 17,
+       "ainit": 2
       }
      }
     },
@@ -3966,15 +3796,9 @@
       ]
      },
      "interaktiv": {
-      "id": "zahlenstrahl",
-      "titel": "Zahlen einordnen",
-      "params": {
-       "min": -5,
-       "max": 5,
-       "schritt": 0.1,
-       "init": 0,
-       "einheit": ""
-      }
+      "id": "zahlbereiche",
+      "titel": "Reelle Zahlen am Zahlenstrahl",
+      "params": {}
      }
     },
     "ueben": {
@@ -4314,19 +4138,7 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Runde <strong>erst am Ende</strong>. Wer Zwischenwerte rundet (etwa $\\sqrt{2} \\approx 1{,}4$ statt $1{,}41$) und damit weiterrechnet, sammelt Fehler an — das Endergebnis wird ungenau.",
-     "selbsterklaerung": "Erkläre in einem Satz, wann du eine Wurzel exakt stehen lässt und wann du sie rundest.",
-     "interaktiv": {
-      "id": "dreieck",
-      "titel": "Diagonale berechnen",
-      "params": {
-       "amax": 10,
-       "bmax": 10,
-       "ainit": 4,
-       "binit": 3,
-       "einheit": "cm",
-       "trig": false
-      }
-     }
+     "selbsterklaerung": "Erkläre in einem Satz, wann du eine Wurzel exakt stehen lässt und wann du sie rundest."
     },
     "ueben": {
      "zeit": 20,
@@ -4411,8 +4223,8 @@
    "thema": "ma-09-wurzeln-und-reelle-zahlen",
    "themaPfad": "mathematik/klasse-9/wurzeln-und-reelle-zahlen/",
    "ziele": [
-    "Ich ziehe Quadratwurzeln und vereinfache Wurzeln in der Form $a\\sqrt{b}$.",
-    "Ich rechne mit Wurzeln (multiplizieren, dividieren, zusammenfassen) und unterscheide rationale und irrationale Zahlen."
+    "Ich kann Quadratwurzeln ziehen und Wurzeln in der Form $a\\sqrt{b}$ vereinfachen.",
+    "Ich kann mit Wurzeln rechnen (multiplizieren, dividieren, zusammenfassen) und rationale von irrationalen Zahlen unterscheiden."
    ],
    "phasen": {
     "ankommen": {
@@ -4542,7 +4354,7 @@
    "anker": "#as-streckung",
    "ziele": [
     "Ich kann eine zentrische Streckung mit gegebenem Zentrum und Streckfaktor beschreiben und den Streckfaktor $k$ berechnen.",
-    "Ich weiß, dass $k > 1$ vergrößert, $0 < k < 1$ verkleinert und $k < 0$ zusätzlich punktspiegelt."
+    "Ich kann erklären, dass $k > 1$ vergrößert, $0 < k < 1$ verkleinert und $k < 0$ zusätzlich punktspiegelt."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -4734,7 +4546,7 @@
    "anker": "#as-aehnlichkeit",
    "ziele": [
     "Ich kann ähnliche Figuren erkennen und den Ähnlichkeitsfaktor $k$ angeben.",
-    "Ich weiß: Bei ähnlichen Figuren sind alle Winkel gleich, alle Längen im selben Verhältnis $k$ - Flächen wachsen mit $k^2$."
+    "Ich kann erklären: Bei ähnlichen Figuren sind alle Winkel gleich, alle Längen im selben Verhältnis $k$ - Flächen wachsen mit $k^2$."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -5126,7 +4938,7 @@
    "anker": "#as-schatten",
    "ziele": [
     "Ich kann Baumhöhen und Abstände mithilfe von Schatten und Ähnlichkeit berechnen.",
-    "Ich unterscheide die Fälle parallele Sonnenstrahlen (ähnliche Dreiecke) und Punktlichtquelle (Strahlensatz)."
+    "Ich kann die Fälle parallele Sonnenstrahlen (ähnliche Dreiecke) und Punktlichtquelle (Strahlensatz) unterscheiden."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -5488,8 +5300,8 @@
    "thema": "ma-09-aehnlichkeit-und-strahlensaetze",
    "themaPfad": "mathematik/klasse-9/aehnlichkeit-und-strahlensaetze/",
    "ziele": [
-    "Ich nutze Streckfaktoren und Ähnlichkeit, um fehlende Seitenlängen zu berechnen.",
-    "Ich wende die Strahlensätze auf Figuren und Sachaufgaben wie Schattenmessung an."
+    "Ich kann Streckfaktoren und Ähnlichkeit nutzen, um fehlende Seitenlängen zu berechnen.",
+    "Ich kann die Strahlensätze auf Figuren und Sachaufgaben wie Schattenmessung anwenden."
    ],
    "phasen": {
     "ankommen": {
@@ -5824,7 +5636,7 @@
    "anker": "#kb-flaeche",
    "ziele": [
     "Ich kann die Kreisfläche mit $A = \\pi r^2$ berechnen.",
-    "Ich weiß: In der Flächenformel steht der Radius - nicht der Durchmesser - und er wird quadriert."
+    "Ich kann erklären: In der Flächenformel steht der Radius - nicht der Durchmesser - und er wird quadriert."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -6564,8 +6376,8 @@
    "thema": "ma-09-kreisberechnungen",
    "themaPfad": "mathematik/klasse-9/kreisberechnungen/",
    "ziele": [
-    "Ich berechne Umfang und Flächeninhalt von Kreisen sicher und stelle die Formeln nach $r$ um.",
-    "Ich berechne Kreissektoren und Kreisringe und wende die Kreisformeln auf Sachaufgaben an."
+    "Ich kann Umfang und Flächeninhalt von Kreisen sicher berechnen und die Formeln nach $r$ umstellen.",
+    "Ich kann Kreissektoren und Kreisringe berechnen und die Kreisformeln auf Sachaufgaben anwenden."
    ],
    "phasen": {
     "ankommen": {
@@ -6801,16 +6613,28 @@
       ]
      },
      "interaktiv": {
-      "id": "zweistufig",
-      "titel": "Zwei Merkmale",
+      "id": "vierfeldertafel",
+      "titel": "Zwei Merkmale, eine Tafel",
       "params": {
-       "rot": 3,
-       "blau": 2,
-       "ziehen": "mit",
-       "namen": [
+       "merkmalA": [
         "Brille",
-        "keine"
-       ]
+        "keine Brille"
+       ],
+       "merkmalB": [
+        "Junge",
+        "Mädchen"
+       ],
+       "init": [
+        [
+         6,
+         8
+        ],
+        [
+         9,
+         7
+        ]
+       ],
+       "max": 99
       }
      }
     },
@@ -7089,7 +6913,7 @@
    "anker": "#vb-relativ",
    "ziele": [
     "Ich kann relative Häufigkeiten aus einer Vierfeldertafel berechnen.",
-    "Ich erkenne, worauf sich ein Anteil bezieht (Gesamtmenge, Zeile oder Spalte), und wähle den richtigen Nenner."
+    "Ich kann erkennen, worauf sich ein Anteil bezieht (Gesamtmenge, Zeile oder Spalte), und den richtigen Nenner wählen."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -7485,7 +7309,7 @@
    "anker": "#vb-bedingung",
    "ziele": [
     "Ich kann bedingte Wahrscheinlichkeiten aus Tafel und Baum ablesen und interpretieren.",
-    "Ich erkenne typische Denkfehler (Kausalität vs. Korrelation) und kann sie benennen."
+    "Ich kann typische Denkfehler (Kausalität vs. Korrelation) erkennen und benennen."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -7674,8 +7498,8 @@
    "thema": "ma-09-vierfeldertafel-und-baumdiagramme",
    "themaPfad": "mathematik/klasse-9/vierfeldertafel-und-baumdiagramme/",
    "ziele": [
-    "Ich wende die Pfadregeln im Baumdiagramm an und fülle Vierfeldertafeln vollständig aus.",
-    "Ich berechne bedingte Wahrscheinlichkeiten und nutze sie in Anwendungssituationen."
+    "Ich kann die Pfadregeln im Baumdiagramm anwenden und Vierfeldertafeln vollständig ausfüllen.",
+    "Ich kann bedingte Wahrscheinlichkeiten berechnen und sie in Anwendungssituationen nutzen."
    ],
    "phasen": {
     "ankommen": {

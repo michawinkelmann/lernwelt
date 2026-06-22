@@ -1175,8 +1175,8 @@
    "thema": "ma-qp-binomialverteilung",
    "themaPfad": "mathematik/qualifikationsphase/binomialverteilung/",
    "ziele": [
-    "Ich berechne Wahrscheinlichkeiten mit der Formel von Bernoulli und kumuliert sicher.",
-    "Ich bestimme Erwartungswert, Standardabweichung und Sigma-Umgebungen in Sachzusammenhängen."
+    "Ich kann Wahrscheinlichkeiten mit der Formel von Bernoulli und kumuliert sicher berechnen.",
+    "Ich kann Erwartungswert, Standardabweichung und Sigma-Umgebungen in Sachzusammenhängen bestimmen."
    ],
    "phasen": {
     "ankommen": {
@@ -1348,7 +1348,7 @@
    "anker": "#nv-stetig",
    "ziele": [
     "Ich kann den Unterschied zwischen diskreten und stetigen Zufallsgrößen erklären.",
-    "Ich weiß, dass bei stetigen Größen Wahrscheinlichkeiten als Flächen unter der Dichtekurve berechnet werden."
+    "Ich kann erklären, dass bei stetigen Größen Wahrscheinlichkeiten als Flächen unter der Dichtekurve berechnet werden."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -1465,15 +1465,12 @@
      },
      "selbsterklaerung": "Erkläre in einem Satz, warum man bei einer stetigen Größe nach $P(179{,}5 \\le X \\le 180{,}5)$ fragt und nicht nach $P(X = 180)$.",
      "interaktiv": {
-      "id": "glocke",
-      "titel": "Von Säulen zur Glocke",
+      "id": "histogramm",
+      "titel": "Diskrete Verteilung",
       "params": {
-       "muinit": 0,
-       "sinit": 1,
-       "mumin": -3,
-       "mumax": 3,
-       "smin": 0.5,
-       "smax": 3
+       "ninit": 10,
+       "pinit": 0.5,
+       "nmax": 25
       }
      }
     },
@@ -1778,7 +1775,7 @@
    "anker": "#nv-flaechen",
    "ziele": [
     "Ich kann normCDf korrekt einsetzen (Parameterreihenfolge: Grenzen, dann $\\sigma$, dann $\\mu$).",
-    "Ich weiß, dass $P(X < b) = P(X \\le b)$ gilt und wie das Gegenereignis ohne Grenzverschiebung funktioniert."
+    "Ich kann erklären, dass $P(X < b) = P(X \\le b)$ gilt und wie das Gegenereignis ohne Grenzverschiebung funktioniert."
    ],
    "stopppunkt": {
     "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Warum gibt es keine Stammfunktion zur Dichtefunktion – und was macht das CAS stattdessen?"
@@ -1884,15 +1881,13 @@
      "stolperstein": "<strong>normCDf braucht immer eine untere UND eine obere Grenze.</strong> Für „höchstens $b$“ darfst du die untere Grenze nicht weglassen, sondern setzt $-10^{99}$ ein (für „mindestens $a$“ die obere Grenze $10^{99}$). Und niemals $\\sigma$ und $\\mu$ vertauschen.",
      "selbsterklaerung": "Erkläre in einem Satz, wie du eine einseitige Frage wie $P(X \\le 5)$ in die normCDf-Eingabe mit <em>zwei</em> Grenzen übersetzt.",
      "interaktiv": {
-      "id": "glocke",
-      "titel": "Flächen als Wahrscheinlichkeit",
+      "id": "normalflaeche",
+      "titel": "Wahrscheinlichkeit als Fläche",
       "params": {
-       "muinit": 0,
-       "sinit": 1,
-       "mumin": -4,
-       "mumax": 4,
-       "smin": 0.5,
-       "smax": 3
+       "mu": 0,
+       "sigma": 1,
+       "aInit": -1,
+       "bInit": 1
       }
      }
     },
@@ -2383,8 +2378,8 @@
    "thema": "ma-qp-normalverteilung",
    "themaPfad": "mathematik/qualifikationsphase/normalverteilung/",
    "ziele": [
-    "Ich berechne Wahrscheinlichkeiten mit normCDf und invNormCDf in Sachzusammenhängen sicher.",
-    "Ich nutze die Sigma-Regeln, die Standardisierung und die Normalnäherung der Binomialverteilung."
+    "Ich kann Wahrscheinlichkeiten mit normCDf und invNormCDf in Sachzusammenhängen sicher berechnen.",
+    "Ich kann die Sigma-Regeln, die Standardisierung und die Normalnäherung der Binomialverteilung nutzen."
    ],
    "phasen": {
     "ankommen": {
@@ -2545,7 +2540,7 @@
    "anker": "#ht-pruefstand",
    "ziele": [
     "Ich kann H₀ und H₁ fachgerecht formulieren.",
-    "Ich weiß, was das Signifikanzniveau $\\alpha$ bedeutet und welche Werte typisch sind."
+    "Ich kann erklären, was das Signifikanzniveau $\\alpha$ bedeutet und welche Werte typisch sind."
    ],
    "stopppunkt": {
     "text": "Vor dieser Lektion lohnt ein kurzes Gespräch: Was bedeutet es, eine Behauptung 'statistisch zu widerlegen'? Sammelt an der Tafel Alltagsbeispiele für unsichere Aussagen."
@@ -2656,17 +2651,7 @@
         "Diskutiere: Würde man hier eher $\\alpha = 5\\,\\%$ oder $\\alpha = 1\\,\\%$ wählen — und warum?"
        ]
       }
-     ],
-     "interaktiv": {
-      "id": "hypothesentest",
-      "titel": "Signifikanzniveau",
-      "params": {
-       "n": 20,
-       "p": 0.5,
-       "modus": "links",
-       "kInit": 6
-      }
-     }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -2872,8 +2857,8 @@
       "params": {
        "n": 20,
        "p": 0.5,
-       "modus": "links",
-       "kInit": 5
+       "modus": "rechts",
+       "kInit": 15
       }
      }
     },
@@ -3300,13 +3285,13 @@
       }
      ],
      "interaktiv": {
-      "id": "hypothesentest",
-      "titel": "Fehler 1. Art",
+      "id": "fehler2",
+      "titel": "Fehler 1. und 2. Art",
       "params": {
        "n": 20,
-       "p": 0.5,
-       "modus": "links",
-       "kInit": 6
+       "p0": 0.5,
+       "p1Init": 0.7,
+       "cInit": 14
       }
      }
     },
@@ -3805,8 +3790,8 @@
    "thema": "ma-qp-hypothesentests",
    "themaPfad": "mathematik/qualifikationsphase/hypothesentests/",
    "ziele": [
-    "Ich führe ein- und zweiseitige Hypothesentests vollständig durch und bestimme den kritischen Bereich.",
-    "Ich berechne den Fehler 2. Art und deute Testentscheidungen im Sachzusammenhang."
+    "Ich kann ein- und zweiseitige Hypothesentests vollständig durchführen und den kritischen Bereich bestimmen.",
+    "Ich kann den Fehler 2. Art berechnen und Testentscheidungen im Sachzusammenhang deuten."
    ],
    "phasen": {
     "ankommen": {
@@ -3971,7 +3956,7 @@
    "themaPfad": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/",
    "anker": "#q3-fahrplan",
    "ziele": [
-    "Ich kenne die Themen der Stochastik-Einheit und kann meinen eigenen Lernstand einschätzen.",
+    "Ich kann die Themen der Stochastik-Einheit nennen und meinen eigenen Lernstand einschätzen.",
     "Ich kann Fachbegriffe der Stochastik sicher zuordnen."
    ],
    "stopppunkt": {
@@ -4179,7 +4164,7 @@
    "themaPfad": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/",
    "anker": "#q3-binomial",
    "ziele": [
-    "Ich beherrsche die Bernoulli-Formel und kumulierte Wahrscheinlichkeiten sicher.",
+    "Ich kann die Bernoulli-Formel und kumulierte Wahrscheinlichkeiten sicher beherrschen.",
     "Ich kann Erwartungswert, Standardabweichung und Sigma-Umgebungen berechnen."
    ],
    "stopppunkt": null,
@@ -5009,8 +4994,8 @@
    "thema": "ma-qp-q3-stochastik",
    "themaPfad": "mathematik/qualifikationsphase/q3-ueberblick-stochastik/",
    "ziele": [
-    "Ich wähle bei gemischten Aufgaben den richtigen Weg: Binomialverteilung, Normalverteilung oder Hypothesentest.",
-    "Ich löse typische Klausuraufgaben aus der Stochastik der Qualifikationsphase eigenständig."
+    "Ich kann bei gemischten Aufgaben den richtigen Weg wählen: Binomialverteilung, Normalverteilung oder Hypothesentest.",
+    "Ich kann typische Klausuraufgaben aus der Stochastik der Qualifikationsphase eigenständig lösen."
    ],
    "phasen": {
     "ankommen": {

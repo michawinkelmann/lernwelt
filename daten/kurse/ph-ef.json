@@ -677,24 +677,25 @@
       "titel": "Beschleunigter Weg",
       "params": {
        "form": "quadratisch",
+       "faktor": 0.5,
+       "fix": {
+        "b": 0,
+        "c": 0
+       },
        "regler": [
         {
          "sym": "a",
-         "label": "½·a",
-         "min": 0.5,
-         "max": 5,
-         "step": 0.5,
-         "init": 1,
+         "label": "a",
+         "min": 1,
+         "max": 12,
+         "step": 1,
+         "init": 3,
          "einheit": "m/s²"
         }
        ],
        "x": [
         0,
         10
-       ],
-       "y": [
-        0,
-        250
        ],
        "achsen": {
         "x": "t in s",
@@ -794,7 +795,7 @@
    "themaPfad": "physik/einfuehrungsphase/kinematik/",
    "anker": "#ki-fall",
    "ziele": [
-    "Ich weiß, dass der freie Fall ein Sonderfall der gleichmäßig beschleunigten Bewegung mit $g=9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$ ist.",
+    "Ich kann erklären, dass der freie Fall ein Sonderfall der gleichmäßig beschleunigten Bewegung mit $g=9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$ ist.",
     "Ich kann Fallzeit und Aufprallgeschwindigkeit berechnen."
    ],
    "stopppunkt": {
@@ -1162,7 +1163,11 @@
         "x": "v in m/s",
         "y": "Bremsweg in m"
        },
-       "formel": "Bremsweg = v² / (2a)"
+       "formel": "Bremsweg = v² / (2a)",
+       "fix": {
+        "b": 0,
+        "c": 0
+       }
       }
      }
     },
@@ -1251,7 +1256,7 @@
    "anker": "#ng-traegheit",
    "ziele": [
     "Ich kann das Trägheitsgesetz in eigenen Worten erklären und Beispiele aus dem Alltag nennen.",
-    "Ich verstehe, warum Kräfte nur dann nötig sind, wenn sich ein Bewegungszustand ändert."
+    "Ich kann erklären, warum Kräfte nur dann nötig sind, wenn sich ein Bewegungszustand ändert."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -1653,7 +1658,7 @@
    "anker": "#ng-wechselwirkung",
    "ziele": [
     "Ich kann das Wechselwirkungsgesetz (actio = reactio) erklären und von einem Kräftegleichgewicht unterscheiden.",
-    "Ich weiß, warum Kraft und Gegenkraft sich nie aufheben können."
+    "Ich kann erklären, warum Kraft und Gegenkraft sich nie aufheben können."
    ],
    "stopppunkt": {
     "text": "Vor dieser Lektion lohnt eine kurze Diskussion: Wenn der Wagen das Pferd genauso stark zurückzieht — warum fahren sie dann los? Sammelt Ideen an der Tafel."
@@ -2282,7 +2287,7 @@
    "anker": "#ue-prinzip",
    "ziele": [
     "Ich kann das Überlagerungsprinzip erklären und auf Wurfbewegungen anwenden.",
-    "Ich weiß, dass waagerechte und senkrechte Teilbewegung sich nicht gegenseitig beeinflussen."
+    "Ich kann erklären, dass waagerechte und senkrechte Teilbewegung sich nicht gegenseitig beeinflussen."
    ],
    "stopppunkt": {
     "text": "Vor dieser Lektion lohnt eine Vorhersage-Runde: Landet eine waagerecht abgeworfene Kugel früher oder später als eine gleichzeitig aus derselben Höhe senkrecht fallende? Sammelt Meinungen, bevor ihr lest."
@@ -2486,7 +2491,7 @@
    "anker": "#ue-waagerecht",
    "ziele": [
     "Ich kann Fallzeit und Wurfweite beim waagerechten Wurf berechnen.",
-    "Ich weiß, dass die Fallzeit nur von der Abwurfhöhe, nicht von $v_0$ abhängt."
+    "Ich kann erklären, dass die Fallzeit nur von der Abwurfhöhe, nicht von $v_0$ abhängt."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -3100,7 +3105,7 @@
    "anker": "#ee-energieformen",
    "ziele": [
     "Ich kann Lageenergie, Bewegungsenergie und Spannenergie mit ihren Formeln nennen.",
-    "Ich weiß, was ein abgeschlossenes System ist und warum es für den Energieerhaltungssatz wichtig ist."
+    "Ich kann erklären, was ein abgeschlossenes System ist und warum es für den Energieerhaltungssatz wichtig ist."
    ],
    "stopppunkt": null,
    "phasen": {
@@ -5212,8 +5217,8 @@
    "thema": "ph-ep-kinematik",
    "themaPfad": "physik/einfuehrungsphase/kinematik/",
    "ziele": [
-    "Ich rechne sicher mit den Bewegungsgleichungen für gleichförmige und gleichmäßig beschleunigte Bewegungen.",
-    "Ich lese Wege und Beschleunigungen aus t-v- und t-s-Diagrammen ab und deute sie."
+    "Ich kann sicher mit den Bewegungsgleichungen für gleichförmige und gleichmäßig beschleunigte Bewegungen rechnen.",
+    "Ich kann Wege und Beschleunigungen aus t-v- und t-s-Diagrammen ablesen und deuten."
    ],
    "phasen": {
     "ankommen": {
@@ -5360,8 +5365,8 @@
    "thema": "ph-ep-newtonsche-gesetze",
    "themaPfad": "physik/einfuehrungsphase/newtonsche-gesetze/",
    "ziele": [
-    "Ich wende das Grundgesetz der Mechanik (F = m·a) sowie Gewichts-, Reibungs- und Hangabtriebskraft sicher an.",
-    "Ich stelle für einfache Situationen ein Kräftegleichgewicht auf und löse damit Aufgaben."
+    "Ich kann das Grundgesetz der Mechanik (F = m·a) sowie Gewichts-, Reibungs- und Hangabtriebskraft sicher anwenden.",
+    "Ich kann für einfache Situationen ein Kräftegleichgewicht aufstellen und damit Aufgaben lösen."
    ],
    "phasen": {
     "ankommen": {
@@ -5502,8 +5507,8 @@
    "thema": "ph-ep-wurfbewegungen",
    "themaPfad": "physik/einfuehrungsphase/wurfbewegungen/",
    "ziele": [
-    "Ich beschreibe waagerechte und schräge Würfe mit dem Überlagerungsprinzip.",
-    "Ich berechne Fallzeit, Wurfweite, Steighöhe und die Geschwindigkeitskomponenten sicher."
+    "Ich kann waagerechte und schräge Würfe mit dem Überlagerungsprinzip beschreiben.",
+    "Ich kann Fallzeit, Wurfweite, Steighöhe und die Geschwindigkeitskomponenten sicher berechnen."
    ],
    "phasen": {
     "ankommen": {
@@ -5650,8 +5655,8 @@
    "thema": "ph-ep-energieerhaltung",
    "themaPfad": "physik/einfuehrungsphase/energieerhaltung/",
    "ziele": [
-    "Ich berechne Lage-, Bewegungs- und Spannenergie und wende den Energieerhaltungssatz an.",
-    "Ich bestimme mit dem Energieansatz Geschwindigkeiten und Höhen in reibungsfreien Systemen."
+    "Ich kann Lage-, Bewegungs- und Spannenergie berechnen und den Energieerhaltungssatz anwenden.",
+    "Ich kann mit dem Energieansatz Geschwindigkeiten und Höhen in reibungsfreien Systemen bestimmen."
    ],
    "phasen": {
     "ankommen": {
@@ -5809,8 +5814,8 @@
    "thema": "ph-ep-atom-und-kernphysik",
    "themaPfad": "physik/einfuehrungsphase/atom-und-kernphysik/",
    "ziele": [
-    "Ich beschreibe den Kernaufbau und die Zerfallsarten α, β und γ in der Nuklidschreibweise.",
-    "Ich rechne mit der Halbwertszeit und dem Zerfallsgesetz N(t) = N₀·(1/2)^(t/T)."
+    "Ich kann den Kernaufbau und die Zerfallsarten α, β und γ in der Nuklidschreibweise beschreiben.",
+    "Ich kann mit der Halbwertszeit und dem Zerfallsgesetz N(t) = N₀·(1/2)^(t/T) rechnen."
    ],
    "phasen": {
     "ankommen": {
