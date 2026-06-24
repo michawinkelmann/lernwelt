@@ -227,7 +227,7 @@
       }
      ],
      "erklaerseite": true,
-     "stolperstein": "„Ohne Zurücklegen“ ist <strong>keine</strong> Bernoulli-Kette, weil sich $p$ von Ziehung zu Ziehung ändert. Nur <strong>mit</strong> Zurücklegen (oder bei sehr großer Grundgesamtheit näherungsweise) bleibt $p$ konstant – erst dann darfst du das Modell verwenden.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Jede Folge von Ja/Nein-Versuchen ist eine Bernoulli-Kette, also darf man immer mit der Binomialverteilung rechnen. <strong>Warum das naheliegt:</strong> „Treffer oder Niete, $n$-mal wiederholt“ klingt genau nach dem Muster – ob mit oder ohne Zurücklegen scheint nebensächlich. <strong>Gegenbeispiel:</strong> Zieht man aus $10$ Kugeln ($3$ rote) zweimal <em>ohne</em> Zurücklegen, ist die Trefferwahrscheinlichkeit beim ersten Zug $\\frac{3}{10}$, beim zweiten aber $\\frac{2}{9}$ oder $\\frac{3}{9}$ – sie hängt vom ersten Ergebnis ab. <strong>Richtig ist:</strong> Eine <strong>Bernoulli-Kette</strong> verlangt <strong>konstantes $p$</strong> und <strong>unabhängige</strong> Wiederholungen. Das gilt nur <em>mit</em> Zurücklegen (oder bei sehr großer Grundgesamtheit näherungsweise). Erst dann ist $X$ binomialverteilt mit $E(X)=n\\cdot p$.</p>",
      "darstellungen": {
       "titel": "Derselbe 10-fache Münzwurf – in vier Sichtweisen:",
       "eintraege": [
@@ -478,7 +478,13 @@
         "Niete"
        ]
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Bernoulli-Kette",
+       "lektion": "l1"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -682,7 +688,13 @@
         "text": "binomCDf$(10;\\,0{,}5;\\,3)\\approx 0{,}172$ – derselbe Wert auf einen Tastendruck."
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Formel von Bernoulli",
+       "lektion": "l2"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -892,7 +904,17 @@
        "pinit": 0.5,
        "nmax": 20
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Bernoulli-Kette",
+       "lektion": "l1"
+      },
+      {
+       "wort": "Formel von Bernoulli",
+       "lektion": "l2"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -1153,7 +1175,13 @@
        "pinit": 0.5,
        "nmax": 20
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Erwartungswert",
+       "lektion": "l4"
+      }
+     ]
     },
     "ueben": {
      "zeit": 20,
@@ -1495,7 +1523,7 @@
       }
      ],
      "erklaerseite": true,
-     "stolperstein": "Verlockend, aber falsch: Bei einer stetigen Größe ist $P(X = a)$ <strong>nicht</strong> „sehr klein, aber positiv“, sondern <strong>genau null</strong>. Ein einzelner Wert hat keine Fläche. Frage deshalb nie nach „genau $180\\,$cm“, sondern immer nach einem Intervall wie $179{,}5 \\le X \\le 180{,}5$.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Bei einer stetigen Zufallsgröße ist $P(X=a)$ einfach „sehr klein, aber positiv“. <strong>Warum das naheliegt:</strong> Aus der diskreten Welt ist man gewohnt, dass jeder einzelne Wert eine Wahrscheinlichkeit $>0$ hat, und ein bestimmter Messwert „kommt ja vor“. <strong>Gegenbeispiel:</strong> Bei einer normalverteilten Körpergröße hat „genau $180{,}000\\ldots\\,$cm“ die Wahrscheinlichkeit $0$ – ein einzelner Punkt hat unter der Dichtekurve keine <em>Fläche</em>; nur ein Intervall wie $179{,}5\\le X\\le 180{,}5$ besitzt eine. <strong>Richtig ist:</strong> Für stetige Größen ist $P(X=a)=\\mathbf{0}$, und Wahrscheinlichkeiten sind immer <strong>Flächen</strong> unter der Dichtekurve über einem <strong>Intervall</strong>. Deshalb fragt man nie nach „genau $a$“, sondern stets nach $P(a\\le X\\le b)$.</p>",
      "darstellungen": {
       "titel": "Diskret und stetig – dieselbe Idee in vier Sichtweisen:",
       "eintraege": [
@@ -2153,7 +2181,17 @@
        "smin": 0.5,
        "smax": 3
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Glockenkurve",
+       "lektion": "l7"
+      },
+      {
+       "wort": "Standardabweichung",
+       "lektion": "l4"
+      }
+     ]
     },
     "ueben": {
      "zeit": 20,
@@ -2361,7 +2399,17 @@
        "smin": 0.5,
        "smax": 3
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Binomialverteilung",
+       "lektion": "l2"
+      },
+      {
+       "wort": "Sigma-Regeln",
+       "lektion": "l9"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -2664,7 +2712,7 @@
        }
       }
      ],
-     "stolperstein": "<strong>Signifikanz ist kein Beweis.</strong> Wird $H_0$ abgelehnt, ist $H_1$ damit <em>nicht bewiesen</em> — man hat $H_0$ nur als sehr unwahrscheinlich verworfen und nimmt $H_1$ an. Und wird $H_0$ <em>nicht</em> abgelehnt, ist sie ebenfalls <em>nicht bewiesen</em>: Es fehlte nur der Beleg dagegen. Ein Test liefert nie Gewissheit, sondern nur eine Entscheidung unter Risiko $\\alpha$.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Wird $H_0$ im Test <em>nicht</em> abgelehnt, dann ist $H_0$ damit bestätigt bzw. „bewiesen“. <strong>Warum das naheliegt:</strong> „Nicht widerlegt“ klingt im Alltag wie „also wahr“, und man wünscht sich vom Test eine klare Aussage. <strong>Gegenbeispiel:</strong> Eine faire Münze ($p=0{,}5$) zeigt bei nur $10$ Würfen oft $6$ oder $7$ Treffer – das reicht nicht, um $H_0$ abzulehnen; trotzdem wäre auch eine leicht unfaire Münze mit $p=0{,}55$ mit diesem Ergebnis gut vereinbar. <strong>Richtig ist:</strong> Ein nicht abgelehntes $H_0$ heißt nur „kein ausreichender Beleg dagegen“, <strong>nicht</strong> „bewiesen“. Ein Test ist eine <strong>Entscheidung unter Risiko</strong>: Beim fälschlichen Ablehnen passiert der <strong>Fehler 1. Art</strong> (Wahrscheinlichkeit $\\le\\alpha$), beim fälschlichen Beibehalten der <strong>Fehler 2. Art</strong> – beide nicht verwechseln. (Ebenso ist $P(A\\mid B)\\neq P(B\\mid A)$.)</p>",
      "darstellungen": {
       "titel": "Dieselbe Sachfrage – in vier Sichtweisen:",
       "eintraege": [
@@ -2922,7 +2970,17 @@
        "modus": "rechts",
        "kInit": 15
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "kumulierte Wahrscheinlichkeiten",
+       "lektion": "l3"
+      },
+      {
+       "wort": "Hypothesen",
+       "lektion": "l11"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -3139,7 +3197,17 @@
        "modus": "links",
        "kInit": 7
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "kritischer Bereich",
+       "lektion": "l12"
+      },
+      {
+       "wort": "Hypothesen",
+       "lektion": "l11"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -3355,7 +3423,17 @@
        "p1Init": 0.7,
        "cInit": 14
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "kritischer Bereich",
+       "lektion": "l12"
+      },
+      {
+       "wort": "Hypothesentest",
+       "lektion": "l13"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -3566,7 +3644,17 @@
        "modus": "links",
        "kInit": 5
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "kritischer Bereich",
+       "lektion": "l12"
+      },
+      {
+       "wort": "Fehler 1. und 2. Art",
+       "lektion": "l14"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -3771,6 +3859,16 @@
         "Finde die untere Grenze $c_1$ (größtes $c_1$ mit $P(X \\le c_1) \\le 0{,}025$) durch Probieren.",
         "Finde die obere Grenze $c_2$ und gib den vollständigen kritischen Bereich sowie den Annahmebereich an."
        ]
+      }
+     ],
+     "begriffe": [
+      {
+       "wort": "kritischen Bereich bestimmen",
+       "lektion": "l12"
+      },
+      {
+       "wort": "Wahl der Testart",
+       "lektion": "l15"
       }
      ]
     },

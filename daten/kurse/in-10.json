@@ -459,7 +459,7 @@
       }
      ],
      "erklaerseite": true,
-     "stolperstein": "Eine Zahl in Anführungszeichen ist <strong>keine</strong> Zahl, sondern Text: <code>\"42\"</code> ist ein <code>str</code>, <code>42</code> ein <code>int</code>. Mit <code>\"42\"</code> kann man nicht rechnen – <code>\"42\" + \"1\"</code> ergibt <code>\"421\"</code>, nicht 43.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> <code>a = b</code> koppele die beiden Variablen dauerhaft &ndash; ändert sich <code>b</code> später, ändere sich <code>a</code> automatisch mit. <strong>Warum das naheliegt:</strong> Aus dem Matheunterricht kennt man <code>=</code> als &bdquo;ist gleich&ldquo;, also als Aussage, die <em>immer</em> gilt. Dieses Gleichheits-Bild überträgt man auf das Programm. <strong>Gegenbeispiel:</strong> <code>b = 5</code>, dann <code>a = b</code> (jetzt ist <code>a</code> auch $5$), dann <code>b = 9</code> &ndash; jetzt ist <code>b = 9</code>, aber <code>a</code> ist <strong>weiterhin $5$</strong>. <strong>Richtig ist:</strong> <code>=</code> ist eine <strong>Zuweisung</strong>, kein Gleichheitszeichen. <code>a = b</code> heißt &bdquo;kopiere den <em>aktuellen</em> Wert von <code>b</code> nach <code>a</code>&ldquo;. Deshalb ist auch <code>a = a + 1</code> keine (unmögliche) Gleichung, sondern &bdquo;nimm den alten Wert von <code>a</code>, rechne $+1$, speichere das Ergebnis wieder in <code>a</code>&ldquo;. Eine Variable speichert immer genau <strong>einen</strong> Wert &ndash; den zuletzt zugewiesenen.</p>",
      "selbsterklaerung": "Erkläre in einem Satz, warum <code>punkte = punkte + 5</code> als Befehl Sinn ergibt, als Gleichung aber nicht.",
      "darstellungen": {
       "titel": "Dieselbe Variable, mehrere Sichtweisen:",
@@ -477,7 +477,13 @@
         "html": "<table class='lb-mini-tab'><tr><th>Wert</th><td>15</td><td>\"Mia\"</td><td>True</td></tr><tr><th>Typ</th><td>int</td><td>str</td><td>bool</td></tr></table>"
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Algorithmus",
+       "lektion": "l1"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -682,7 +688,13 @@
         "figurAlt": "Raute mit Bedingung, Verzweigung in wahr-Block und falsch-Block."
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Variable",
+       "lektion": "l2"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -899,7 +911,13 @@
         "html": "<table class='lb-mini-tab'><tr><td><code>for i in range(1, 5): summe = summe + i</code></td></tr></table>"
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Variable",
+       "lektion": "l2"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -1110,7 +1128,17 @@
         "html": "<table class='lb-mini-tab'><tr><th>Aufruf</th><td>fläche(3, 4)</td><td>fläche(5, 2)</td></tr><tr><th>Ergebnis</th><td>12</td><td>10</td></tr></table>"
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Verzweigung",
+       "lektion": "l3"
+      },
+      {
+       "wort": "Schleife",
+       "lektion": "l4"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -1529,7 +1557,13 @@
        "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
      ],
-     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Reihenfolge des Alphabets; Grundbegriffe Klartext, Geheimtext und Schlüssel; einfache Rechnung mit dem Rest (modulo), wie sie über die Scheibe anschaulich wird.</p><p><strong>Angesprochene Kompetenzen:</strong> Modellieren (das Verschieben als Rechnung $\\bmod 26$ fassen), Algorithmisches Denken (ein Verfahren Buchstabe für Buchstabe ausführen), Darstellen (zwischen Scheibe, Buchstabe und Zahl wechseln).</p><p><strong>Erwartung:</strong> Die Lernenden verschlüsseln Wörter korrekt, bestätigen die Formel $G=(K+s)\\bmod 26$ und verstehen das &bdquo;Herumlaufen&ldquo; am Alphabetende als Modulo-Rechnung. Beim Schlüssel 13 (ROT13) erkennen sie, dass Ver- und Entschlüsseln zusammenfallen.</p><p><strong>Modellgrenzen:</strong> Die Scheibe verschiebt nur die Buchstaben A&ndash;Z mit einem einzigen, festen Schlüssel. Genau diese Einfachheit macht das Verfahren leicht zu knacken — das ist Thema der folgenden Lektion und nicht der Anspruch dieses Einstiegs.</p>"
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Reihenfolge des Alphabets; Grundbegriffe Klartext, Geheimtext und Schlüssel; einfache Rechnung mit dem Rest (modulo), wie sie über die Scheibe anschaulich wird.</p><p><strong>Angesprochene Kompetenzen:</strong> Modellieren (das Verschieben als Rechnung $\\bmod 26$ fassen), Algorithmisches Denken (ein Verfahren Buchstabe für Buchstabe ausführen), Darstellen (zwischen Scheibe, Buchstabe und Zahl wechseln).</p><p><strong>Erwartung:</strong> Die Lernenden verschlüsseln Wörter korrekt, bestätigen die Formel $G=(K+s)\\bmod 26$ und verstehen das &bdquo;Herumlaufen&ldquo; am Alphabetende als Modulo-Rechnung. Beim Schlüssel 13 (ROT13) erkennen sie, dass Ver- und Entschlüsseln zusammenfallen.</p><p><strong>Modellgrenzen:</strong> Die Scheibe verschiebt nur die Buchstaben A&ndash;Z mit einem einzigen, festen Schlüssel. Genau diese Einfachheit macht das Verfahren leicht zu knacken — das ist Thema der folgenden Lektion und nicht der Anspruch dieses Einstiegs.</p>",
+     "begriffe": [
+      {
+       "wort": "Verschlüsselung",
+       "lektion": "l6"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -1698,7 +1732,7 @@
       }
      ],
      "erklaerseite": true,
-     "stolperstein": "Die Häufigkeitsanalyse ist nur bei <strong>langen</strong> Texten zuverlässig. Bei einem kurzen Text (z. B. 5 Buchstaben) regiert der Zufall – E muss dort gar nicht vorkommen, und der häufigste Buchstabe führt auf einen falschen Schlüssel.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Die Caesar-Verschlüsselung sei sicher, weil der Geheimtext &bdquo;völlig unleserlich&ldquo; aussieht. <strong>Warum das naheliegt:</strong> Wer den Schlüssel nicht kennt, kann den Text nicht sofort lesen &ndash; das fühlt sich nach echtem Schutz an. <strong>Gegenbeispiel:</strong> Es gibt nur $25$ mögliche Verschiebungen. Die probiert ein Computer in Sekundenbruchteilen alle durch (Brute Force) &ndash; oder man zählt einfach, welcher Buchstabe am häufigsten vorkommt, und tippt auf E. <strong>Richtig ist:</strong> Caesar ist <strong>leicht zu knacken</strong>: nur $25$ Schlüssel und eine verräterische Buchstaben-Häufigkeit. Sicherheit entsteht erst durch Verfahren mit unüberschaubar vielen Schlüsseln, bei denen die Häufigkeiten verwischt werden.</p>",
      "selbsterklaerung": "Erkläre in einem Satz, warum die typische E-Häufigkeit einen Caesar-Text verrät.",
      "darstellungen": {
       "titel": "Caesars Schwäche in zwei Sichtweisen:",
@@ -1739,7 +1773,13 @@
        "material": "Ein ausgedruckter oder abgeschriebener deutscher Caesar-Geheimtext (nur Großbuchstaben A–Z) sowie eine Strichliste mit 26 Feldern (A bis Z), in der du beim Lesen für jeden Buchstaben einen Strich machst."
       }
      ],
-     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Caesar-Verfahren mit fester Verschiebung und die Formel $G=(K+s)\\bmod 26$; Vorstellung, dass Buchstaben in Texten unterschiedlich häufig sind; Auszählen und Ordnen von Häufigkeiten.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (aus Daten — einer Häufigkeitsverteilung — auf den Schlüssel schließen), Argumentieren (begründen, warum und wann die E-Annahme trägt), Mit Mathematik umgehen (Schlüssel über die Restrechnung bestimmen).</p><p><strong>Erwartung:</strong> Die Lernenden zählen die Buchstabenhäufigkeiten, bestimmen über den häufigsten Buchstaben den Schlüssel und entschlüsseln die ersten beiden Texte. Am dritten Text erkennen sie, dass die einfache &bdquo;häufigster = E&ldquo;-Regel bei kurzen oder untypischen Texten fehlschlagen kann und man weitere Hypothesen prüfen muss.</p><p><strong>Modellgrenzen:</strong> Die Häufigkeitsanalyse funktioniert gut bei genügend langen, typischen deutschen Texten. Bei sehr kurzen Texten, ungewöhnlichem Wortschatz oder Verfahren mit wechselndem Schlüssel (z. B. Vigenère) versagt sie — das wird hier bewusst nur angedeutet.</p>"
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Caesar-Verfahren mit fester Verschiebung und die Formel $G=(K+s)\\bmod 26$; Vorstellung, dass Buchstaben in Texten unterschiedlich häufig sind; Auszählen und Ordnen von Häufigkeiten.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (aus Daten — einer Häufigkeitsverteilung — auf den Schlüssel schließen), Argumentieren (begründen, warum und wann die E-Annahme trägt), Mit Mathematik umgehen (Schlüssel über die Restrechnung bestimmen).</p><p><strong>Erwartung:</strong> Die Lernenden zählen die Buchstabenhäufigkeiten, bestimmen über den häufigsten Buchstaben den Schlüssel und entschlüsseln die ersten beiden Texte. Am dritten Text erkennen sie, dass die einfache &bdquo;häufigster = E&ldquo;-Regel bei kurzen oder untypischen Texten fehlschlagen kann und man weitere Hypothesen prüfen muss.</p><p><strong>Modellgrenzen:</strong> Die Häufigkeitsanalyse funktioniert gut bei genügend langen, typischen deutschen Texten. Bei sehr kurzen Texten, ungewöhnlichem Wortschatz oder Verfahren mit wechselndem Schlüssel (z. B. Vigenère) versagt sie — das wird hier bewusst nur angedeutet.</p>",
+     "begriffe": [
+      {
+       "wort": "Caesar-Verschlüsselung",
+       "lektion": "l7"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -1941,7 +1981,13 @@
         "text": "G = (K + s) mod 26, s wechselt je Stelle"
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Caesar-Verschlüsselung",
+       "lektion": "l7"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -2143,7 +2189,13 @@
         "text": "symmetrisch: Caesar, Vigenère, AES — asymmetrisch: das Briefkasten-Prinzip moderner Messenger"
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Caesar-Verschlüsselung",
+       "lektion": "l7"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -2525,7 +2577,7 @@
       }
      ],
      "erklaerseite": true,
-     "stolperstein": "Die binäre Suche darf <strong>nur auf sortierten</strong> Daten laufen. Auf einer unsortierten Liste weiß man nach dem Mittenvergleich nicht, in welcher Hälfte das Element liegt – das Halbieren würde es übersehen. Ohne Sortierung also nicht einsetzbar.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Die binäre Suche sei einfach &bdquo;die schnellere Suche&ldquo; und funktioniere auf jeder Liste. <strong>Warum das naheliegt:</strong> Halbieren klingt nach einem cleveren Trick, der immer hilft &ndash; warum sollte man auf die langsame lineare Suche zurückfallen? <strong>Gegenbeispiel:</strong> In der unsortierten Liste $[7, 2, 9, 1, 5]$ vergleichst du mit der Mitte $9$. Ist $9$ kleiner als die gesuchte $5$? In welcher Hälfte suchst du weiter? Es gibt keine Antwort &ndash; links und rechts von $9$ kann alles stehen. <strong>Richtig ist:</strong> Die binäre Suche setzt eine <strong>sortierte</strong> Liste voraus. Nur dann sagt der Vergleich mit der Mitte, in welcher Hälfte weitergesucht wird. Auf unsortierten Daten bleibt nur die lineare Suche.</p>",
      "selbsterklaerung": "Erkläre in einem Satz, warum sich der Suchaufwand beim Halbieren nur logarithmisch mit $n$ erhöht.",
      "darstellungen": {
       "titel": "Binäre Suche in mehreren Sichtweisen:",
@@ -2544,7 +2596,13 @@
         "text": "Funktioniert nur auf einer sortierten Liste."
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "lineare Suche",
+       "lektion": "l11"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -3008,7 +3066,17 @@
        "material": "Zwei gleiche Stapel Spielkarten unterschiedlicher Größe (z. B. 5 und 10 Karten) zum Sortieren von Hand sowie eine Strichliste, auf der du jeden Vergleich zweier Karten mit einem Strich festhältst."
       }
      ],
-     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Bubble Sort als Sortierverfahren; Vergleichszahl als Maß für den Aufwand; Umgang mit Tabellen und einfachen Quotienten; Begriff des schlechtesten Falls.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Messreihen aufnehmen und ein Wachstumsverhalten aus Daten erschließen), Mit Mathematik umgehen (Verdopplungsquotienten bilden und mit der Formel $n\\cdot(n-1)/2$ vergleichen), Argumentieren (quadratisches gegen schwächeres Wachstum begründen).</p><p><strong>Erwartung:</strong> Die Lernenden stellen fest, dass sich bei Bubble Sort die Vergleichszahl beim Verdoppeln von $n$ etwa vervierfacht (Quotient $\\approx 4$, quadratisches Wachstum), während der Quotient bei Merge Sort deutlich kleiner ist. Sie schließen, dass Bubble Sort für große Datenmengen ungeeignet ist.</p><p><strong>Modellgrenzen:</strong> Gezählt werden Vergleiche, nicht echte Sekunden — reale Laufzeiten hängen zusätzlich von Hardware und Programmierung ab. Das Experiment ersetzt kein eigenes Programmieren und Messen, zeigt aber das entscheidende Wachstumsverhalten zuverlässig.</p>"
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Bubble Sort als Sortierverfahren; Vergleichszahl als Maß für den Aufwand; Umgang mit Tabellen und einfachen Quotienten; Begriff des schlechtesten Falls.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Messreihen aufnehmen und ein Wachstumsverhalten aus Daten erschließen), Mit Mathematik umgehen (Verdopplungsquotienten bilden und mit der Formel $n\\cdot(n-1)/2$ vergleichen), Argumentieren (quadratisches gegen schwächeres Wachstum begründen).</p><p><strong>Erwartung:</strong> Die Lernenden stellen fest, dass sich bei Bubble Sort die Vergleichszahl beim Verdoppeln von $n$ etwa vervierfacht (Quotient $\\approx 4$, quadratisches Wachstum), während der Quotient bei Merge Sort deutlich kleiner ist. Sie schließen, dass Bubble Sort für große Datenmengen ungeeignet ist.</p><p><strong>Modellgrenzen:</strong> Gezählt werden Vergleiche, nicht echte Sekunden — reale Laufzeiten hängen zusätzlich von Hardware und Programmierung ab. Das Experiment ersetzt kein eigenes Programmieren und Messen, zeigt aber das entscheidende Wachstumsverhalten zuverlässig.</p>",
+     "begriffe": [
+      {
+       "wort": "Bubble Sort",
+       "lektion": "l13"
+      },
+      {
+       "wort": "lineare Suche",
+       "lektion": "l11"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -3185,6 +3253,20 @@
        "titel": "Welches Verfahren wann?",
        "kern": "Daten <strong>unsortiert + einmalig</strong> gesucht → lineare Suche. Daten <strong>sortierbar + oft</strong> gesucht → einmal sortieren, dann binär suchen. Binäre Suche nur auf sortierten Daten.",
        "details": "<p>Frag dich bei jeder Aufgabe zuerst: Sind die Daten sortiert (oder sortierbar)? Und wie oft wird gesucht – einmal oder sehr oft? Daraus folgt die Wahl. Das Sortieren selbst erledigt Bubble Sort (quadratisch), die schnelle Suche danach die binäre Suche (logarithmisch).</p>"
+      }
+     ],
+     "begriffe": [
+      {
+       "wort": "lineare Suche",
+       "lektion": "l11"
+      },
+      {
+       "wort": "binäre Suche",
+       "lektion": "l12"
+      },
+      {
+       "wort": "Bubble Sort",
+       "lektion": "l13"
       }
      ]
     },
@@ -3656,7 +3738,13 @@
        ],
        "beispiel": "bba"
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "endlicher Automat",
+       "lektion": "l16"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -3836,7 +3924,7 @@
       }
      ],
      "erklaerseite": true,
-     "stolperstein": "Für „akzeptiert\" zählt <strong>nur der Zustand nach dem letzten Zeichen</strong> – nicht, ob der Automat unterwegs mal im Doppelkreis war. Das Wort <code>ba</code> berührt q1, endet aber in q0 und wird deshalb <strong>nicht</strong> akzeptiert.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Ein Wort werde akzeptiert, sobald der Automat <em>irgendwann</em> einmal einen Endzustand (Doppelkreis) berührt hat. <strong>Warum das naheliegt:</strong> Den Endzustand zu erreichen fühlt sich wie &bdquo;Ziel erreicht&ldquo; an &ndash; als wäre die Prüfung damit bestanden. <strong>Gegenbeispiel:</strong> Berührt ein Wort den Doppelkreis $q_1$ und liest danach noch ein Zeichen, das zurück nach $q_0$ führt, so <strong>endet</strong> es in $q_0$ &ndash; und wird trotz des Zwischenbesuchs <strong>abgelehnt</strong>. <strong>Richtig ist:</strong> Es zählt allein der Zustand <strong>nach dem letzten Zeichen</strong>. Ein Wort wird genau dann akzeptiert, wenn der Automat es vollständig liest und dabei <strong>in einem Endzustand endet</strong>.</p>",
      "selbsterklaerung": "Erkläre in einem Satz, warum der Automat zwei Wörter, die im gleichen Zustand enden, danach nicht mehr unterscheiden kann.",
      "darstellungen": {
       "titel": "Das Wort „ab\" durch den Prüfer:",
@@ -3914,7 +4002,13 @@
        "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
      ],
-     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriffe Zustand, Übergang, Startzustand und akzeptierender Zustand; Lesen eines Zustandsdiagramms; ein Wort als Folge von Eingabesymbolen.</p><p><strong>Angesprochene Kompetenzen:</strong> Algorithmisches Denken (einen Eingabestring schrittweise abarbeiten), Modellieren (Akzeptanz über den Endzustand erfassen), Argumentieren (akzeptiert/abgelehnt anhand der Übergänge begründen).</p><p><strong>Erwartung:</strong> Die Lernenden verfolgen die Zustandswechsel korrekt, lesen am Endzustand ab, ob ein Wort akzeptiert wird, und erkennen, dass der Automat sich nichts außer seinem aktuellen Zustand merkt. Sie übertragen das Vorgehen auf einen zweiten Automaten.</p><p><strong>Modellgrenzen:</strong> Die Simulation nutzt kleine Automaten über dem Alphabet {a, b}. Dass endliche Automaten nur endliches Gedächtnis haben und z. B. nicht beliebig weit zählen können (etwa gleich viele a wie b), ist eine grundsätzliche Grenze, die hier noch nicht vertieft wird.</p>"
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriffe Zustand, Übergang, Startzustand und akzeptierender Zustand; Lesen eines Zustandsdiagramms; ein Wort als Folge von Eingabesymbolen.</p><p><strong>Angesprochene Kompetenzen:</strong> Algorithmisches Denken (einen Eingabestring schrittweise abarbeiten), Modellieren (Akzeptanz über den Endzustand erfassen), Argumentieren (akzeptiert/abgelehnt anhand der Übergänge begründen).</p><p><strong>Erwartung:</strong> Die Lernenden verfolgen die Zustandswechsel korrekt, lesen am Endzustand ab, ob ein Wort akzeptiert wird, und erkennen, dass der Automat sich nichts außer seinem aktuellen Zustand merkt. Sie übertragen das Vorgehen auf einen zweiten Automaten.</p><p><strong>Modellgrenzen:</strong> Die Simulation nutzt kleine Automaten über dem Alphabet {a, b}. Dass endliche Automaten nur endliches Gedächtnis haben und z. B. nicht beliebig weit zählen können (etwa gleich viele a wie b), ist eine grundsätzliche Grenze, die hier noch nicht vertieft wird.</p>",
+     "begriffe": [
+      {
+       "wort": "Zustand",
+       "lektion": "l17"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -4163,7 +4257,13 @@
        ],
        "beispiel": "aab"
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Zustand",
+       "lektion": "l17"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -4346,7 +4446,13 @@
         "text": "nur endliches Gedächtnis → kann nicht beliebig weit zählen (z. B. verschachtelte Klammern nicht prüfen)."
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "endlicher Automat",
+       "lektion": "l16"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -4749,7 +4855,13 @@
         "text": "Bedingung (nach WENN) + Aktion (nach DANN); Verknüpfung mit UND/ODER."
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Verzweigung",
+       "lektion": "l3"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -5158,7 +5270,13 @@
         "html": "<table class='lb-mini-tab'><tr><th>Falle</th><td>unausgeglichene Klassen</td></tr><tr><th>Bias</th><td>einseitige Trainingsdaten</td></tr></table>"
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "maschinelles Lernen",
+       "lektion": "l23"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -5345,7 +5463,13 @@
         "text": "Transparenz · menschliche Letztentscheidung · Datenschutz."
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "maschinelles Lernen",
+       "lektion": "l23"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -5961,7 +6085,13 @@
        "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
      ],
-     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriffe Sensor und Aktor; Vorstellung von Eingabe&ndash;Verarbeitung&ndash;Ausgabe; Lesen eines einfachen Temperatur-Zeit-Diagramms.</p><p><strong>Angesprochene Kompetenzen:</strong> Modellieren (den Regelkreis mit Soll-/Istwert und Rückkopplung erfassen), Erkenntnisgewinnung (durch Variation der Hysterese deren Wirkung untersuchen), Kommunizieren (Steuern und Regeln mit Fachbegriffen abgrenzen).</p><p><strong>Erwartung:</strong> Die Lernenden beschreiben das Pendeln der Temperatur um den Sollwert, lesen Höchst- und Tiefstwerte ab und erkennen, dass eine kleinere Hysterese geringere Schwankungen, aber häufigeres Schalten bedeutet. Sie unterscheiden die geschlossene Rückkopplung des Regelns von der offenen Kette des Steuerns.</p><p><strong>Modellgrenzen:</strong> Der simulierte Raum erwärmt und kühlt nach einem vereinfachten Modell mit idealem Zweipunktregler. Reale Einflüsse wie Trägheit der Heizung, Wärmeverluste durch Fenster oder Messfehler des Sensors sind nicht abgebildet; es geht um das Prinzip des Regelkreises.</p>"
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriffe Sensor und Aktor; Vorstellung von Eingabe&ndash;Verarbeitung&ndash;Ausgabe; Lesen eines einfachen Temperatur-Zeit-Diagramms.</p><p><strong>Angesprochene Kompetenzen:</strong> Modellieren (den Regelkreis mit Soll-/Istwert und Rückkopplung erfassen), Erkenntnisgewinnung (durch Variation der Hysterese deren Wirkung untersuchen), Kommunizieren (Steuern und Regeln mit Fachbegriffen abgrenzen).</p><p><strong>Erwartung:</strong> Die Lernenden beschreiben das Pendeln der Temperatur um den Sollwert, lesen Höchst- und Tiefstwerte ab und erkennen, dass eine kleinere Hysterese geringere Schwankungen, aber häufigeres Schalten bedeutet. Sie unterscheiden die geschlossene Rückkopplung des Regelns von der offenen Kette des Steuerns.</p><p><strong>Modellgrenzen:</strong> Der simulierte Raum erwärmt und kühlt nach einem vereinfachten Modell mit idealem Zweipunktregler. Reale Einflüsse wie Trägheit der Heizung, Wärmeverluste durch Fenster oder Messfehler des Sensors sind nicht abgebildet; es geht um das Prinzip des Regelkreises.</p>",
+     "begriffe": [
+      {
+       "wort": "Sensor",
+       "lektion": "l27"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -6174,7 +6304,17 @@
         "text": "an bei < 19 °C, aus bei > 21 °C – kein Flattern."
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Steuerung",
+       "lektion": "l28"
+      },
+      {
+       "wort": "Verzweigung",
+       "lektion": "l3"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -6370,7 +6510,17 @@
         "text": "fester Einbau + fester Zweck + Mikrocontroller im Inneren."
        }
       ]
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Mikrocontroller",
+       "lektion": "l26"
+      },
+      {
+       "wort": "Sensor",
+       "lektion": "l27"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,

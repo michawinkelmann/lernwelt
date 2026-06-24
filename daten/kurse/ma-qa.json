@@ -188,7 +188,7 @@
       }
      ],
      "erklaerseite": true,
-     "stolperstein": "Die Rate $f$ ist <strong>nicht</strong> der Bestand. Aus „die Rate ist groß“ folgt nicht „es ist viel da“ — eine große Abflussrate kann auch heißen, dass gerade viel <em>verschwindet</em>. Bestand bekommst du erst durch <strong>Aufsummieren</strong> der Rate.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Zu einer Funktion $f$ gibt es <em>die</em> eine Stammfunktion – man integriert und erhält ein eindeutiges Ergebnis. <strong>Warum das naheliegt:</strong> Beim Ableiten kommt ja auch immer genau eine Ableitung heraus, also erwartet man die Umkehrung ebenso eindeutig. <strong>Gegenbeispiel:</strong> $F(x)=x^2$ und $G(x)=x^2+7$ haben beide die Ableitung $2x$ – beide sind Stammfunktionen von $f(x)=2x$, und es gibt unendlich viele weitere. <strong>Richtig ist:</strong> Stammfunktionen sind nur <strong>bis auf eine Konstante</strong> $+C$ bestimmt, weil die Ableitung jeder Konstanten $0$ ist. Deshalb schreibt man $\\int f(x)\\,dx = F(x)+C$. (Beim <em>bestimmten</em> Integral fällt $C$ in der Differenz $F(b)-F(a)$ wieder weg.)</p>",
      "selbsterklaerung": "Erkläre in einem Satz, warum man aus einer reinen Raten-Messung trotzdem die geflossene Gesamtmenge bestimmen kann.",
      "interaktiv": {
       "id": "funktionsplotter",
@@ -627,7 +627,13 @@
        },
        "formel": "f(x) = a·x² + b·x + c"
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Stammfunktion",
+       "lektion": "l2"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -817,7 +823,17 @@
       ]
      },
      "stolperstein": "Reihenfolge der Grenzen beachten: $F(b)-F(a)$, nicht umgekehrt. Vertauschte Grenzen drehen das Vorzeichen um. Und: das $+C$ entfällt beim bestimmten Integral — schreibe es hier <em>nicht</em> mit.",
-     "selbsterklaerung": "Erkläre in einem Satz, warum die Flächenfunktion eines Graphen gerade $f$ als Ableitung hat."
+     "selbsterklaerung": "Erkläre in einem Satz, warum die Flächenfunktion eines Graphen gerade $f$ als Ableitung hat.",
+     "begriffe": [
+      {
+       "wort": "Stammfunktion",
+       "lektion": "l2"
+      },
+      {
+       "wort": "bestimmtes Integral",
+       "lektion": "l3"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -1164,7 +1180,7 @@
        }
       }
      ],
-     "stolperstein": "Verführerisch ist es, einfach $\\int_a^b f(x)\\,dx$ über einen Vorzeichenwechsel hinweg zu rechnen. Dann zählen Flächenstücke unter der Achse negativ und kürzen Stücke darüber weg — das Ergebnis ist zu klein oder sogar $0$. Erst an den Nullstellen aufteilen, dann Beträge addieren.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Das bestimmte Integral $\\int_a^b f(x)\\,dx$ ist <em>immer</em> der Flächeninhalt zwischen Graph und $x$-Achse. <strong>Warum das naheliegt:</strong> So wird das Integral oft zuerst eingeführt – als „Fläche unter der Kurve“ – und ein Flächeninhalt ist nie negativ. <strong>Gegenbeispiel:</strong> $\\int_{0}^{2\\pi}\\sin(x)\\,dx = 0$, obwohl unter der Kurve sichtbar Fläche liegt: Der Bogen über der Achse und der unter der Achse heben sich auf. <strong>Richtig ist:</strong> Das Integral ist die Fläche <strong>mit Vorzeichen</strong> – Stücke unter der $x$-Achse zählen <em>negativ</em>. Für den echten Flächeninhalt erst die <strong>Nullstellen</strong> bestimmen, dort aufteilen und die <strong>Beträge</strong> der Teilintegrale addieren.</p>",
      "darstellungen": {
       "titel": "Dieselbe Frage „Fläche zwischen $f(x)=x^2-4$ und der $x$-Achse über $[0;3]$\" in vier Sichtweisen:",
       "eintraege": [
@@ -1220,7 +1236,17 @@
        "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
      ],
-     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Flächeninhalt von Rechtecken, Monotonie von $f(x)=x^2$ auf $[0;b]$, Vorstellung eines Grenzwerts von Summen.</p><p><strong>Angesprochene Kompetenzen:</strong> Approximieren und den Grenzübergang $n\\to\\infty$ deuten, Unter-/Obersumme als Schranken verstehen, das bestimmte Integral als gemeinsamen Grenzwert erfassen.</p><p><strong>Erwartung:</strong> Die Lernenden erkennen, dass Unter- und Obersumme die Fläche einschachteln und ihre Differenz mit wachsendem $n$ gegen $0$ geht. Für $f(x)=x^2$ streben beide gegen $\\int_0^b x^2\\,dx=\\frac{b^3}{3}$ (z. B. $b=2\\Rightarrow\\frac{8}{3}\\approx2{,}67$). Das motiviert das Integral als exakten Flächeninhalt.</p><p><strong>Modellgrenzen:</strong> Die Simulation zeigt nur endlich viele Rechtecke — der eigentliche Grenzwert $n\\to\\infty$ bleibt eine Idealisierung. Die Einschachtelung „Untersumme unter, Obersumme über der Fläche\" gilt so nur, weil $f$ hier monoton steigend ist; bei wechselnder Monotonie muss man genauer hinsehen.</p>"
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Flächeninhalt von Rechtecken, Monotonie von $f(x)=x^2$ auf $[0;b]$, Vorstellung eines Grenzwerts von Summen.</p><p><strong>Angesprochene Kompetenzen:</strong> Approximieren und den Grenzübergang $n\\to\\infty$ deuten, Unter-/Obersumme als Schranken verstehen, das bestimmte Integral als gemeinsamen Grenzwert erfassen.</p><p><strong>Erwartung:</strong> Die Lernenden erkennen, dass Unter- und Obersumme die Fläche einschachteln und ihre Differenz mit wachsendem $n$ gegen $0$ geht. Für $f(x)=x^2$ streben beide gegen $\\int_0^b x^2\\,dx=\\frac{b^3}{3}$ (z. B. $b=2\\Rightarrow\\frac{8}{3}\\approx2{,}67$). Das motiviert das Integral als exakten Flächeninhalt.</p><p><strong>Modellgrenzen:</strong> Die Simulation zeigt nur endlich viele Rechtecke — der eigentliche Grenzwert $n\\to\\infty$ bleibt eine Idealisierung. Die Einschachtelung „Untersumme unter, Obersumme über der Fläche\" gilt so nur, weil $f$ hier monoton steigend ist; bei wechselnder Monotonie muss man genauer hinsehen.</p>",
+     "begriffe": [
+      {
+       "wort": "bestimmtes Integral",
+       "lektion": "l3"
+      },
+      {
+       "wort": "Hauptsatz",
+       "lektion": "l4"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -1396,6 +1422,16 @@
         "Berechne $A=\\int_{-1}^{2} (x+2-x^2)\\,dx$.",
         "Schiebe beide Funktionen gedanklich um $+3$ nach oben und prüfe an drei Stellen, dass der senkrechte Abstand gleich bleibt."
        ]
+      }
+     ],
+     "begriffe": [
+      {
+       "wort": "Fläche unter Graphen",
+       "lektion": "l6"
+      },
+      {
+       "wort": "bestimmtes Integral",
+       "lektion": "l3"
       }
      ]
     },
@@ -1597,6 +1633,16 @@
         "Vergleiche mit der tatsächlich gefahrenen Strecke und erkläre, welche Rolle der Startpunkt (Anfangsweg) spielt."
        ]
       }
+     ],
+     "begriffe": [
+      {
+       "wort": "Bestand und Änderung",
+       "lektion": "l1"
+      },
+      {
+       "wort": "Hauptsatz",
+       "lektion": "l4"
+      }
      ]
     },
     "ueben": {
@@ -1772,6 +1818,12 @@
         "Schätze den Mittelwert als Fläche unter dem Verlauf geteilt durch die Zeitspanne.",
         "Vergleiche mit dem einfachen Durchschnitt aus Morgen- und Abendwert — wie groß ist der Unterschied?"
        ]
+      }
+     ],
+     "begriffe": [
+      {
+       "wort": "bestimmtes Integral",
+       "lektion": "l3"
       }
      ]
     },
@@ -1950,6 +2002,12 @@
         "Vergleiche die Stapelsumme mit dem Integralwert $\\pi\\int_0^4 x^2\\,dx$.",
         "Erkläre, warum dünnere Scheiben die Näherung an den glatten Körper verbessern."
        ]
+      }
+     ],
+     "begriffe": [
+      {
+       "wort": "bestimmtes Integral",
+       "lektion": "l3"
       }
      ]
     },
@@ -2133,6 +2191,12 @@
         "Vergleiche die beiden Zahlenfolgen: Welche nähert sich einer festen Zahl, welche wächst weiter?"
        ]
       }
+     ],
+     "begriffe": [
+      {
+       "wort": "bestimmtes Integral",
+       "lektion": "l3"
+      }
      ]
     },
     "ueben": {
@@ -2298,7 +2362,7 @@
        }
       }
      ],
-     "stolperstein": "$\\mathrm{e}$ ist <strong>keine</strong> Variable und nichts, das man „weiterrechnen\" muss: Es ist eine feste Zahl $\\approx 2{,}718$, genau wie $\\pi\\approx 3{,}14$. Und $\\mathrm{e}^x$ ist nicht $\\mathrm{e}\\cdot x$, sondern $\\mathrm{e}$ <em>hoch</em> $x$.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> $\\mathrm{e}$ ist eine Variable oder ein Rechenschritt, den man noch „auflösen“ muss; und $\\mathrm{e}^x$ bedeutet $\\mathrm{e}\\cdot x$. <strong>Warum das naheliegt:</strong> Ein einzelner Buchstabe sieht nach einer Unbekannten aus, und Faktoren wie $3x$ schreibt man genauso kurz. <strong>Gegenbeispiel:</strong> $\\mathrm{e}$ ist eine feste Zahl $\\approx 2{,}718$ wie $\\pi\\approx 3{,}14$; und $\\mathrm{e}^2\\approx 7{,}39$, nicht $\\mathrm{e}\\cdot 2\\approx 5{,}44$. <strong>Richtig ist:</strong> $\\mathrm{e}$ ist die eulersche Konstante und $\\mathrm{e}^x$ heißt „$\\mathrm{e}$ <em>hoch</em> $x$“. Das Besondere: Die natürliche Exponentialfunktion ist ihre eigene Ableitung, $(\\mathrm{e}^x)'=\\mathrm{e}^x$, und ihre Umkehrfunktion ist der natürliche Logarithmus $\\ln$.</p>",
      "darstellungen": {
       "titel": "Derselbe Zerfall $M(t)=100\\cdot\\mathrm{e}^{-0{,}35\\,t}$ — in vier Sichtweisen:",
       "eintraege": [
@@ -2566,7 +2630,13 @@
        "modus": "ableitung",
        "fn": "exp"
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Zahl e",
+       "lektion": "l11"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -2762,7 +2832,13 @@
       "id": "umkehr",
       "titel": "eˣ und ln",
       "params": {}
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "e-Funktion",
+       "lektion": "l11"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -2940,6 +3016,12 @@
         "Erkenne das Muster: Welcher Teil von $g(x)$ landet als Faktor vor der e-Funktion?",
         "Leite zur Probe $\\mathrm{e}^{4x-3}$ ab und prüfe deinen Faktor."
        ]
+      }
+     ],
+     "begriffe": [
+      {
+       "wort": "Ableitung der e-Funktion",
+       "lektion": "l12"
       }
      ]
     },
@@ -3145,7 +3227,17 @@
        "modus": "ableitung",
        "fn": "xexp"
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "Ableitung der e-Funktion",
+       "lektion": "l12"
+      },
+      {
+       "wort": "Kettenregel",
+       "lektion": "l14"
+      }
+     ]
     },
     "ueben": {
      "zeit": 20,
@@ -3432,7 +3524,7 @@
        }
       }
      ],
-     "stolperstein": "Beim exponentiellen Wachstum ist <strong>nicht</strong> der Zuwachs pro Zeit konstant, sondern der <em>Faktor</em>. In gleich langen Zeitschritten wird immer mit derselben Zahl multipliziert – deshalb dauert jede Verdopplung gleich lang, obwohl der absolute Zuwachs ständig größer wird.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Wachstum ist exponentiell, wenn in jedem Zeitschritt <em>gleich viel</em> dazukommt. <strong>Warum das naheliegt:</strong> „Immer mehr, immer gleich“ klingt nach festem Zuwachs – das ist aber genau das Kennzeichen von <em>linearem</em> Wachstum. <strong>Gegenbeispiel:</strong> Verdoppelt sich ein Bestand jährlich ($1\\to 2\\to 4\\to 8$), wächst er pro Jahr um $1$, dann $2$, dann $4$ – der Zuwachs steigt ständig, obwohl der <em>Faktor</em> immer $2$ bleibt. <strong>Richtig ist:</strong> Exponentielles Wachstum $N(t)=N_0\\,\\mathrm{e}^{kt}$ hat einen konstanten <strong>Faktor</strong> je Zeitschritt (deshalb feste Verdopplungszeit). Es wächst unbegrenzt – im Unterschied zu <strong>begrenztem/logistischem</strong> Wachstum, das sich einer Kapazitätsschranke $S$ annähert und dort abflacht.</p>",
      "darstellungen": {
       "titel": "Wachstumsfaktor und Konstante $k$ – dieselbe Kultur in mehreren Sichtweisen:",
       "eintraege": [
@@ -3516,7 +3608,13 @@
        },
        "formel": "N(t) = N0·b^t"
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "e-Funktion",
+       "lektion": "l11"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -3746,7 +3844,17 @@
        "modus": "ableitung",
        "fn": "exp"
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "exponentielles Wachstum",
+       "lektion": "l16"
+      },
+      {
+       "wort": "Ableitung der e-Funktion",
+       "lektion": "l12"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -3978,7 +4086,17 @@
        "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
      ],
-     "lehrkraft": "<p><strong>Voraussetzungen:</strong> exponentielles Wachstum $N'=k\\,N$, Ableitung als Wachstumsgeschwindigkeit, Begriff der Sättigungsgrenze.</p><p><strong>Angesprochene Kompetenzen:</strong> Modelle vergleichen und bewerten, den Einfluss der Parameter $k$ und $K$ deuten, den Wendepunkt als Stelle maximaler Wachstumsgeschwindigkeit erkennen.</p><p><strong>Erwartung:</strong> Die Lernenden sehen: Solange $N$ klein gegen $K$ ist, verhält sich logistisches wie exponentielles Wachstum; danach bremst der Faktor $(K-N)$. Die logistische Kurve ist eine S-Kurve mit Wendepunkt (maximaler Steigung) bei $N=\\frac{K}{2}$ und Grenzwert $K$.</p><p><strong>Modellgrenzen:</strong> Reale Bestände schwanken (Zufall, Saisonalität); die glatte S-Kurve ist eine Idealisierung mit konstanten $k$ und $K$. Über die Kapazität hinaus (Übersteigen von $K$) bildet das einfache Modell nichts ab, und negative Bestände sind ausgeschlossen.</p>"
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> exponentielles Wachstum $N'=k\\,N$, Ableitung als Wachstumsgeschwindigkeit, Begriff der Sättigungsgrenze.</p><p><strong>Angesprochene Kompetenzen:</strong> Modelle vergleichen und bewerten, den Einfluss der Parameter $k$ und $K$ deuten, den Wendepunkt als Stelle maximaler Wachstumsgeschwindigkeit erkennen.</p><p><strong>Erwartung:</strong> Die Lernenden sehen: Solange $N$ klein gegen $K$ ist, verhält sich logistisches wie exponentielles Wachstum; danach bremst der Faktor $(K-N)$. Die logistische Kurve ist eine S-Kurve mit Wendepunkt (maximaler Steigung) bei $N=\\frac{K}{2}$ und Grenzwert $K$.</p><p><strong>Modellgrenzen:</strong> Reale Bestände schwanken (Zufall, Saisonalität); die glatte S-Kurve ist eine Idealisierung mit konstanten $k$ und $K$. Über die Kapazität hinaus (Übersteigen von $K$) bildet das einfache Modell nichts ab, und negative Bestände sind ausgeschlossen.</p>",
+     "begriffe": [
+      {
+       "wort": "Wachstumsgeschwindigkeit",
+       "lektion": "l17"
+      },
+      {
+       "wort": "exponentielles Wachstum",
+       "lektion": "l16"
+      }
+     ]
     },
     "ueben": {
      "zeit": 18,
@@ -4194,7 +4312,17 @@
        },
        "formel": "N(t) = N₀ · b^t"
       }
-     }
+     },
+     "begriffe": [
+      {
+       "wort": "logistisches Wachstum",
+       "lektion": "l18"
+      },
+      {
+       "wort": "exponentielles Wachstum",
+       "lektion": "l16"
+      }
+     ]
     },
     "ueben": {
      "zeit": 20,
@@ -4533,7 +4661,7 @@
        }
       }
      ],
-     "stolperstein": "Ein Hoch- oder Tiefpunkt $(a\\mid b)$ ist <strong>nicht</strong> nur eine Gleichung. Er liefert immer zwei: $f(a)=b$ (die Lage) <em>und</em> $f'(a)=0$ (die waagerechte Tangente). Wer das zweite vergisst, hat zu wenige Gleichungen und kann das System nicht eindeutig lösen.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Ein im Steckbrief gegebener Hoch- oder Tiefpunkt $(a\\mid b)$ liefert genau eine Bedingung. <strong>Warum das naheliegt:</strong> Es ist ja „ein Punkt“, und jeder Punkt $(x\\mid y)$ schien bisher für eine Gleichung $f(x)=y$ zu stehen. <strong>Gegenbeispiel:</strong> Sucht man eine Parabel $f(x)=ax^2+bx+c$ mit Scheitel $(2\\mid 1)$, reicht $f(2)=1$ nicht – erst $f'(2)=0$ legt fest, dass dort wirklich der Scheitel und keine schräge Stelle liegt. <strong>Richtig ist:</strong> Ein Extrempunkt zählt <strong>doppelt</strong>: $f(a)=b$ (die Lage) <em>und</em> $f'(a)=0$ (die waagerechte Tangente). Eine Funktion vom Grad $n$ braucht $n+1$ solcher Bedingungen, sonst ist das Gleichungssystem nicht eindeutig lösbar.</p>",
      "darstellungen": {
       "titel": "Dieselbe Steckbrief-Bedingung „Hochpunkt bei $(20\\mid 10)$\" — in drei Sichtweisen:",
       "eintraege": [
@@ -4751,6 +4879,12 @@
         "Zeichne die gefundene Parabel und prüfe, ob sie wirklich durch alle drei Punkte verläuft."
        ]
       }
+     ],
+     "begriffe": [
+      {
+       "wort": "Steckbriefaufgaben",
+       "lektion": "l20"
+      }
      ]
     },
     "ueben": {
@@ -4935,6 +5069,16 @@
         "Schreibe für jede Funktion auf, welche Potenzen vorkommen — passt das zur beobachteten Symmetrie?",
         "Berechne zur Probe $f(-x)$ und $g(-x)$ und vergleiche mit $f(x)$ bzw. $-g(x)$."
        ]
+      }
+     ],
+     "begriffe": [
+      {
+       "wort": "Steckbriefaufgaben",
+       "lektion": "l20"
+      },
+      {
+       "wort": "LGS lösen",
+       "lektion": "l21"
       }
      ]
     },
@@ -5137,6 +5281,16 @@
         "Formuliere dein Urteil: Erfüllt die Funktion den Steckbrief vollständig — oder wo widerspricht sie?"
        ]
       }
+     ],
+     "begriffe": [
+      {
+       "wort": "Steckbriefaufgaben",
+       "lektion": "l20"
+      },
+      {
+       "wort": "LGS aufstellen",
+       "lektion": "l21"
+      }
      ]
     },
     "ueben": {
@@ -5281,7 +5435,7 @@
        }
       }
      ],
-     "stolperstein": "Verwechsle nicht, <em>wonach</em> abgeleitet wird: Es wird nach der Variablen $x$ abgeleitet, nicht nach $a$. Der Parameter $a$ ist dabei eine Konstante — er wird nicht „mit abgeleitet“. Aus $f_a(x)=a\\,x^2$ wird $f_a'(x)=2a\\,x$, nicht $x^2$.",
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Bei einer Schar $f_a$ leitet man irgendwie „nach allem“ ab, also auch nach dem Parameter $a$. <strong>Warum das naheliegt:</strong> $a$ steht als Buchstabe mitten im Term und sieht aus wie eine Variable, nach der man ableiten könnte. <strong>Gegenbeispiel:</strong> Aus $f_a(x)=a\\,x^2$ wird $f_a'(x)=2a\\,x$ – würde man fälschlich nach $a$ ableiten, käme $x^2$ heraus, was die Steigung der Kurve gar nicht beschreibt. <strong>Richtig ist:</strong> Abgeleitet wird nach der <strong>Variablen $x$</strong>; der Parameter $a$ ist dabei eine <strong>feste Konstante</strong> und bleibt als Faktor stehen. $a$ wählt nur aus, <em>welche</em> einzelne Scharkurve gemeint ist.</p>",
      "darstellungen": {
       "titel": "Dieselbe Schar $f_a(x)=a\\cdot x\\cdot(8-x)$ in vier Sichtweisen:",
       "eintraege": [
@@ -5577,6 +5731,12 @@
         "Prüfe, ob alle drei Kurven durch den Ursprung verlaufen — und begründe das mit dem Term."
        ]
       }
+     ],
+     "begriffe": [
+      {
+       "wort": "Funktionenschar",
+       "lektion": "l24"
+      }
      ]
     },
     "ueben": {
@@ -5768,6 +5928,16 @@
         "Vergleiche diese Linie mit der berechneten Ortskurve $y=-x^2$ — passt sie?"
        ]
       }
+     ],
+     "begriffe": [
+      {
+       "wort": "Funktionenschar",
+       "lektion": "l24"
+      },
+      {
+       "wort": "Extremstellen",
+       "lektion": "l25"
+      }
      ]
     },
     "ueben": {
@@ -5956,6 +6126,16 @@
         "Unterscheide die Fälle $a>0$, $a=0$ und $a<0$ und beschreibe je die Zahl der Nullstellen.",
         "Skizziere je eine Scharkurve aus jedem Fall und ordne sie deiner Fallunterscheidung zu."
        ]
+      }
+     ],
+     "begriffe": [
+      {
+       "wort": "Funktionenschar",
+       "lektion": "l24"
+      },
+      {
+       "wort": "Ortskurve",
+       "lektion": "l26"
       }
      ]
     },

@@ -1,292 +1,560 @@
 {
-  "thema": "in-10-programmieren",
-  "fach": "informatik",
-  "stufe": "klasse-10",
-  "aufgaben": [
+ "thema": "in-10-programmieren",
+ "fach": "informatik",
+ "stufe": "klasse-10",
+ "aufgaben": [
+  {
+   "id": "in-10-prog-001",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Vom Algorithmus zum Programm: Welche Aussagen sind richtig?",
+   "optionen": [
     {
-      "id": "in-10-prog-001",
-      "typ": "multiple-choice",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Vom Algorithmus zum Programm: Welche Aussagen sind richtig?",
-      "optionen": [
-        { "text": "Ein Programm ist ein Algorithmus, der in einer Programmiersprache aufgeschrieben ist.", "richtig": true, "erklaerung": "Richtig — erst die Programmiersprache mit ihren festen Regeln macht die Schrittfolge für den Computer ausführbar." },
-        { "text": "Pseudocode ist für Menschen gedacht und folgt keiner strengen Grammatik.", "richtig": true, "erklaerung": "Richtig: Pseudocode skizziert die Idee halb-formal auf Papier. Ein Computer kann ihn nicht ausführen." },
-        { "text": "Kleine Tippfehler im Programm gleicht der Computer von selbst aus.", "richtig": false, "erklaerung": "Nein — eine Programmiersprache hat strenge Regeln. Schon ein fehlender Doppelpunkt führt zu einer Fehlermeldung." },
-        { "text": "Mehrdeutige Anweisungen sind erlaubt — der Computer wählt die sinnvollste Deutung.", "richtig": false, "erklaerung": "Nein: Jede Anweisung muss eindeutig sein. Der Computer führt exakt aus, was dasteht — nicht, was gemeint war." }
-      ],
-      "tipps": [
-        "Pseudocode beschreibt die Idee für Menschen — ein Programm muss der Computer Schritt für Schritt ausführen können.",
-        "Computer denken nichts dazu: Sie führen nur aus, was exakt und eindeutig dasteht.",
-        "Zwei Aussagen sind richtig."
-      ],
-      "loesungsweg": "Richtig sind Aussage 1 und 2: Ein Programm ist ein in einer Programmiersprache formulierter Algorithmus, und Pseudocode ist die lockere Vorstufe für Menschen. Falsch sind Aussage 3 und 4: Programmiersprachen haben eine strenge Grammatik — Tippfehler und Mehrdeutigkeiten führen zu Fehlern, denn der Computer führt nur aus, was exakt und eindeutig dasteht.",
-      "kc": ["programmieren"]
+     "text": "Ein Programm ist ein Algorithmus, der in einer Programmiersprache aufgeschrieben ist.",
+     "richtig": true,
+     "erklaerung": "Richtig — erst die Programmiersprache mit ihren festen Regeln macht die Schrittfolge für den Computer ausführbar."
     },
     {
-      "id": "in-10-prog-002",
-      "typ": "zuordnung",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Ordne jedem Wert aus einem Python-Programm den passenden Datentyp zu.",
-      "paare": [
-        { "links": "<code>16</code>", "rechts": "ganze Zahl (int)" },
-        { "links": "<code>1.72</code>", "rechts": "Kommazahl (float)" },
-        { "links": "<code>\"Hallo\"</code>", "rechts": "Text / String (str)" },
-        { "links": "<code>True</code>", "rechts": "Wahrheitswert (bool)" }
-      ],
-      "tipps": [
-        "Anführungszeichen sind das sichere Erkennungszeichen für Text.",
-        "Kommazahlen schreibt Python mit Dezimalpunkt: 1.72.",
-        "True und False sind die beiden einzigen Wahrheitswerte."
-      ],
-      "loesungsweg": "16 ist eine ganze Zahl (int). 1.72 hat einen Dezimalpunkt — eine Kommazahl (float). \"Hallo\" steht in Anführungszeichen — ein Text (String, str). True ist einer der beiden Wahrheitswerte (bool). Achtung: \"16\" mit Anführungszeichen wäre dagegen ein Text — damit ließe sich nicht rechnen.",
-      "kc": ["programmieren"]
+     "text": "Pseudocode ist für Menschen gedacht und folgt keiner strengen Grammatik.",
+     "richtig": true,
+     "erklaerung": "Richtig: Pseudocode skizziert die Idee halb-formal auf Papier. Ein Computer kann ihn nicht ausführen."
     },
     {
-      "id": "in-10-prog-003",
-      "typ": "luecke",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Die Codezeile <code>alter = 16</code> ist eine Zuweisung. Ergänze den Text.",
-      "text": "Das Zeichen = bedeutet: Der Wert rechts wird in der Variablen links ___ . Die Variable heißt hier ___ , ihr Wert ist ___ . Nach der weiteren Zeile <code>alter = alter + 1</code> hat alter den Wert ___ .",
-      "luecken": [
-        { "art": "dropdown", "antwort": "gespeichert", "optionen": ["gespeichert", "verglichen"] },
-        { "art": "dropdown", "antwort": "alter", "optionen": ["alter", "16"] },
-        { "art": "dropdown", "antwort": "16", "optionen": ["16", "alter"] },
-        { "art": "dropdown", "antwort": "17", "optionen": ["17", "16"] }
-      ],
-      "tipps": [
-        "Links vom Gleichheitszeichen steht der Name der Variablen, rechts ihr Wert.",
-        "Das = ist ein Speicherbefehl, keine mathematische Gleichung.",
-        "Bei alter = alter + 1 wird zuerst die rechte Seite berechnet (16 + 1) und das Ergebnis dann gespeichert."
-      ],
-      "loesungsweg": "Eine Zuweisung speichert den Wert der rechten Seite in der Variablen links: Die Variable alter erhält den Wert 16. Die Zeile alter = alter + 1 berechnet zuerst rechts 16 + 1 = 17 und speichert das Ergebnis wieder in alter — danach hat alter den Wert 17.",
-      "kc": ["programmieren"]
+     "text": "Kleine Tippfehler im Programm gleicht der Computer von selbst aus.",
+     "richtig": false,
+     "erklaerung": "Nein — eine Programmiersprache hat strenge Regeln. Schon ein fehlender Doppelpunkt führt zu einer Fehlermeldung."
     },
     {
-      "id": "in-10-prog-004",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 2,
-      "frage": "Schreibtischtest: Welche Zahl gibt dieses Programm aus?<br><code>x = 5</code><br><code>y = x + 3</code><br><code>x = x * 2</code><br><code>print(x + y)</code>",
-      "eingaben": [
-        { "label": "Ausgabe", "antwort": 18, "toleranz": 0 }
-      ],
-      "tipps": [
-        "Führe das Programm Zeile für Zeile aus und notiere nach jeder Zeile die Werte von x und y.",
-        "y wird mit dem alten x berechnet — die spätere Änderung von x ändert y nicht mehr.",
-        "Nach der dritten Zeile gilt x = 10 und y = 8."
-      ],
-      "loesungsweg": "Schreibtischtest: Zeile 1: x = 5. Zeile 2: y = 5 + 3 = 8. Zeile 3: x = 5 * 2 = 10 — y bleibt dabei 8, denn y wurde schon vorher berechnet und gespeichert. Zeile 4: print(10 + 8) gibt 18 aus.",
-      "kc": ["programmieren"]
-    },
-    {
-      "id": "in-10-prog-005",
-      "typ": "zuordnung",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 1,
-      "frage": "Ordne jedem Vergleichsoperator seine Bedeutung zu.",
-      "paare": [
-        { "links": "<code>==</code>", "rechts": "ist gleich" },
-        { "links": "<code>!=</code>", "rechts": "ist ungleich" },
-        { "links": "<code>&lt;=</code>", "rechts": "kleiner oder gleich" },
-        { "links": "<code>&gt;</code>", "rechts": "echt größer" }
-      ],
-      "tipps": [
-        "Das doppelte Gleichheitszeichen == vergleicht — das einfache = speichert.",
-        "Das Ausrufezeichen in != steht für „nicht“.",
-        "Bei kleiner-oder-gleich ist der Fall „gleich“ ausdrücklich mit erlaubt."
-      ],
-      "loesungsweg": "== prüft auf Gleichheit (nicht mit der Zuweisung = verwechseln). != bedeutet „ungleich“. &lt;= bedeutet „kleiner oder gleich“: Der Vergleich 5 &lt;= 5 ist wahr. &gt; bedeutet „echt größer“: 5 &gt; 5 ist falsch.",
-      "kc": ["programmieren"]
-    },
-    {
-      "id": "in-10-prog-006",
-      "typ": "multiple-choice",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Was gibt dieses Programm aus?<br><code>punkte = 72</code><br><code>if punkte &gt;= 80:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;print(\"super\")</code><br><code>elif punkte &gt;= 50:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;print(\"bestanden\")</code><br><code>else:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;print(\"nicht bestanden\")</code>",
-      "optionen": [
-        { "text": "super", "richtig": false, "erklaerung": "Nein: 72 &gt;= 80 ist falsch — dieser Zweig wird übersprungen." },
-        { "text": "bestanden", "richtig": true, "erklaerung": "Richtig: 72 &gt;= 80 ist falsch, aber 72 &gt;= 50 ist wahr — der elif-Zweig wird ausgeführt." },
-        { "text": "nicht bestanden", "richtig": false, "erklaerung": "Nein: Der else-Zweig läuft nur, wenn keine Bedingung davor wahr ist — 72 &gt;= 50 ist aber wahr." },
-        { "text": "bestanden und danach zusätzlich nicht bestanden", "richtig": false, "erklaerung": "Nein: Bei if/elif/else wird immer genau ein Zweig ausgeführt — nie mehrere." }
-      ],
-      "tipps": [
-        "Setze punkte = 72 ein und prüfe die Bedingungen von oben nach unten.",
-        "Sobald eine Bedingung wahr ist, läuft nur dieser eine Zweig — alle weiteren werden übersprungen.",
-        "Ist 72 mindestens 80? Ist 72 mindestens 50?"
-      ],
-      "loesungsweg": "Python prüft von oben nach unten: 72 &gt;= 80 ist falsch, also weiter. 72 &gt;= 50 ist wahr — print(\"bestanden\") wird ausgeführt, alles Weitere übersprungen. Bei if/elif/else läuft immer genau ein Zweig. Ausgabe: bestanden.",
-      "kc": ["programmieren"]
-    },
-    {
-      "id": "in-10-prog-007",
-      "typ": "luecke",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Das Programm soll die Zahlen von 1 bis 10 addieren und das Ergebnis ausgeben. Vervollständige den Code und gib die Ausgabe an.",
-      "text": "<code>summe = 0</code><br><code>___ i in range(1, 11):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + ___</code><br><code>print(___)</code><br>Ausgabe des Programms: ___",
-      "luecken": [
-        { "art": "dropdown", "antwort": "for", "optionen": ["for", "while", "if"] },
-        { "art": "dropdown", "antwort": "i", "optionen": ["i", "summe", "range"] },
-        { "art": "dropdown", "antwort": "summe", "optionen": ["summe", "i", "0"] },
-        { "art": "eingabe", "antwort": "55" }
-      ],
-      "tipps": [
-        "Eine Zählschleife über eine Zahlenreihe beginnt mit dem Schlüsselwort for.",
-        "In jedem Durchlauf soll die aktuelle Zahl i zur Summe dazukommen.",
-        "range(1, 11) liefert die Zahlen 1 bis 10 — addiere 1 + 2 + … + 10."
-      ],
-      "loesungsweg": "Die Zählschleife lautet for i in range(1, 11): — sie durchläuft die Zahlen 1 bis 10 (der Endwert 11 ist nicht mehr dabei). Im Schleifenkörper wächst die Summe: summe = summe + i. Nach der Schleife gibt print(summe) das Ergebnis aus: 1 + 2 + … + 10 = 55.",
-      "kc": ["programmieren"]
-    },
-    {
-      "id": "in-10-prog-008",
-      "typ": "reihenfolge",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Die vier Codezeilen sind durcheinandergeraten. Bringe sie in die Reihenfolge, in der das Programm die Zahlen 1 bis 3 addiert und das Ergebnis ausgibt. (Die eingerückte Zeile ist der Schleifenkörper.)",
-      "elemente": [
-        "<code>summe = 0</code>",
-        "<code>for zahl in range(1, 4):</code>",
-        "<code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + zahl</code>",
-        "<code>print(summe)</code>"
-      ],
-      "tipps": [
-        "Die Variable summe muss angelegt sein, bevor die Schleife sie benutzen kann.",
-        "Der Schleifenkopf for … : steht direkt über seiner eingerückten Körperzeile.",
-        "Ausgegeben wird erst nach der Schleife — print(summe) ist die letzte Zeile."
-      ],
-      "loesungsweg": "Reihenfolge: (1) summe = 0 legt den Startwert an. (2) for zahl in range(1, 4): startet die Schleife über 1, 2, 3. (3) Die eingerückte Zeile summe = summe + zahl ist der Schleifenkörper und läuft dreimal. (4) print(summe) gibt nach der Schleife das Ergebnis aus: 1 + 2 + 3 = 6.",
-      "kc": ["programmieren"]
-    },
-    {
-      "id": "in-10-prog-009",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Schreibtischtest: Das Programm addiert 1 + 2 + 3 + … so lange, bis die Summe mindestens 20 beträgt. Welche zwei Zahlen gibt es aus?<br><code>zahl = 1</code><br><code>summe = 0</code><br><code>while summe &lt; 20:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + zahl</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;zahl = zahl + 1</code><br><code>print(summe)</code><br><code>print(zahl)</code>",
-      "eingaben": [
-        { "label": "Ausgabe von print(summe)", "antwort": 21, "toleranz": 0 },
-        { "label": "Ausgabe von print(zahl)", "antwort": 7, "toleranz": 0 }
-      ],
-      "tipps": [
-        "Lege eine Schreibtischtest-Tabelle mit den Spalten summe und zahl an und führe Durchlauf für Durchlauf aus.",
-        "Geprüft wird vor jedem Durchlauf: Die Schleife läuft nur weiter, solange summe &lt; 20 wahr ist.",
-        "Nach dem sechsten Durchlauf ist summe = 21 — und zahl wurde dabei noch einmal erhöht."
-      ],
-      "loesungsweg": "Schreibtischtest (summe, zahl): Start (0, 1). Nach Durchlauf 1: (1, 2). Nach 2: (3, 3). Nach 3: (6, 4). Nach 4: (10, 5). Nach 5: (15, 6). Nach 6: (21, 7). Jetzt ist 21 &lt; 20 falsch — die Schleife endet. print(summe) gibt 21 aus, print(zahl) gibt 7 aus.",
-      "kc": ["programmieren"]
-    },
-    {
-      "id": "in-10-prog-010",
-      "typ": "rechenweg",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Schreibtischtest in Schritten: Was gibt dieses Programm am Ende aus?<br><code>ergebnis = 0</code><br><code>for i in range(3):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;ergebnis = ergebnis + 2 * i</code><br><code>print(ergebnis)</code>",
-      "schritte": [
-        {
-          "frage": "Schritt 1: Welche Zahlen durchläuft die Schleifenvariable i bei range(3)?",
-          "eingaben": [
-            { "label": "erster Wert von i", "antwort": 0, "toleranz": 0 },
-            { "label": "letzter Wert von i", "antwort": 2, "toleranz": 0 }
-          ],
-          "tipps": ["range(3) beginnt bei 0 und endet vor der 3 — es liefert 0, 1, 2."]
-        },
-        {
-          "frage": "Schritt 2: Welchen Wert hat ergebnis nach dem Durchlauf mit i = 1?",
-          "eingaben": [
-            { "label": "ergebnis", "antwort": 2, "toleranz": 0 }
-          ],
-          "tipps": ["Durchlauf mit i = 0: ergebnis = 0 + 0 = 0. Durchlauf mit i = 1: ergebnis = 0 + 2 = 2."]
-        },
-        {
-          "frage": "Schritt 3: Welche Zahl gibt print(ergebnis) am Ende aus?",
-          "eingaben": [
-            { "label": "Ausgabe", "antwort": 6, "toleranz": 0 }
-          ],
-          "tipps": ["Im letzten Durchlauf (i = 2) kommt 2 * 2 = 4 dazu: 2 + 4 = 6."]
-        }
-      ],
-      "tipps": [
-        "range(3) startet bei 0, nicht bei 1 — und die 3 ist nicht mehr dabei.",
-        "Führe eine Tabelle mit den Spalten i und ergebnis: In jedem Durchlauf kommt 2 * i dazu.",
-        "Die drei Zuwächse sind 0, 2 und 4."
-      ],
-      "loesungsweg": "range(3) liefert 0, 1, 2. Durchlauf 1 (i = 0): ergebnis = 0 + 0 = 0. Durchlauf 2 (i = 1): ergebnis = 0 + 2 = 2. Durchlauf 3 (i = 2): ergebnis = 2 + 4 = 6. Die Ausgabe ist 6. Stolperstein: range(3) beginnt bei 0 — wer bei 1 beginnt, erhält fälschlich 2 + 4 + 6 = 12.",
-      "kc": ["programmieren"]
-    },
-    {
-      "id": "in-10-prog-011",
-      "typ": "freitext",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 3,
-      "frage": "Entwirf eine Funktion <code>mittelwert(a, b)</code>, die den Mittelwert zweier Zahlen zurückgibt. Schreibe den Python-Code auf: Funktionskopf mit def, Rechnung und Rückgabe mit return. Gib außerdem an, was <code>print(mittelwert(4, 7))</code> ausgibt.",
-      "musterloesung": "<code>def mittelwert(a, b):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;return (a + b) / 2</code><br><br>Der Funktionskopf def mittelwert(a, b): legt den Namen und die beiden Parameter fest. Die Klammern um a + b sind wichtig: Ohne sie würde Python wegen Punkt-vor-Strich nur b durch 2 teilen. return gibt das Ergebnis an den Aufrufer zurück. Der Aufruf print(mittelwert(4, 7)) gibt 5.5 aus, denn (4 + 7) / 2 = 11 / 2 = 5.5.",
-      "tipps": [
-        "Der Funktionskopf hat die Form def name(parameter1, parameter2): — mit Doppelpunkt am Ende.",
-        "Der Mittelwert ist die Summe geteilt durch 2 — denke an Klammern um die Summe.",
-        "Mit return gibt die Funktion ihr Ergebnis zurück; der Aufruf print(…) zeigt es an."
-      ],
-      "loesungsweg": "Kernpunkte: (1) Funktionskopf def mittelwert(a, b): mit zwei Parametern. (2) Eingerückter Körper mit return (a + b) / 2 — die Klammern sind entscheidend, sonst würde wegen Punkt-vor-Strich nur b halbiert. (3) print(mittelwert(4, 7)) gibt 5.5 aus. Zum Vergleich: Ohne Klammern käme 4 + 3.5 = 7.5 heraus — ein logischer Fehler.",
-      "kc": ["programmieren"]
-    },
-    {
-      "id": "in-10-prog-012",
-      "typ": "luecke",
-      "zweig": ["gym", "rs"],
-      "niveau": 3,
-      "afb": 3,
-      "frage": "Zusatz: Schreibtischtest mit Funktion — führe das Programm von Hand aus und ergänze die Werte.<br><code>def quadrat(x):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;return x * x</code><br><br><code>summe = 0</code><br><code>for i in range(1, 4):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + quadrat(i)</code><br><code>print(summe)</code>",
-      "text": "Durchlauf i = 1: quadrat(1) liefert ___ , summe ist danach ___ . Durchlauf i = 2: summe ist danach ___ . Durchlauf i = 3: summe ist danach ___ . Das Programm gibt ___ aus.",
-      "luecken": [
-        { "art": "eingabe", "antwort": "1" },
-        { "art": "eingabe", "antwort": "1" },
-        { "art": "eingabe", "antwort": "5" },
-        { "art": "eingabe", "antwort": "14" },
-        { "art": "eingabe", "antwort": "14" }
-      ],
-      "tipps": [
-        "quadrat(x) liefert x mal x: quadrat(2) ist 4, quadrat(3) ist 9.",
-        "range(1, 4) durchläuft die Zahlen 1, 2 und 3 — die 4 ist nicht mehr dabei.",
-        "summe wächst um die Quadratzahlen: erst + 1, dann + 4, dann + 9."
-      ],
-      "loesungsweg": "Die Schleife durchläuft i = 1, 2, 3. Durchlauf 1: quadrat(1) = 1, summe = 0 + 1 = 1. Durchlauf 2: quadrat(2) = 4, summe = 1 + 4 = 5. Durchlauf 3: quadrat(3) = 9, summe = 5 + 9 = 14. print(summe) gibt 14 aus — die Summe der ersten drei Quadratzahlen.",
-      "kc": ["programmieren"]
-    },
-    {
-      "id": "in-10-prog-013",
-      "typ": "multiple-choice",
-      "zweig": ["gym"],
-      "niveau": 3,
-      "afb": 3,
-      "frage": "Zusatz: Das Programm soll den Mittelwert von 4 und 7 ausgeben — erwartet wird 5.5. Es läuft ohne Fehlermeldung durch, gibt aber 7.5 aus.<br><code>a = 4</code><br><code>b = 7</code><br><code>mittel = a + b / 2</code><br><code>print(mittel)</code><br>Welche Aussagen sind richtig?",
-      "optionen": [
-        { "text": "Es liegt ein Syntaxfehler vor.", "richtig": false, "erklaerung": "Nein: Bei einem Syntaxfehler würde das Programm gar nicht erst starten. Es läuft aber durch — nur das Ergebnis ist falsch. Das ist ein logischer Fehler." },
-        { "text": "Python rechnet Punkt vor Strich: Erst wird b durch 2 geteilt, dann a addiert.", "richtig": true, "erklaerung": "Richtig: a + b / 2 bedeutet a + (b / 2) = 4 + 3.5 = 7.5." },
-        { "text": "Klammern um die Summe beheben den Fehler: mittel = (a + b) / 2.", "richtig": true, "erklaerung": "Richtig: (4 + 7) / 2 = 11 / 2 = 5.5 — genau das gewünschte Ergebnis." },
-        { "text": "Der Computer hat sich verrechnet — beim nächsten Start stimmt das Ergebnis.", "richtig": false, "erklaerung": "Nein: Der Computer führt exakt aus, was dasteht — und a + b / 2 ergibt nun einmal 7.5. Der Fehler steckt im Programm, nicht im Computer." }
-      ],
-      "tipps": [
-        "Das Programm startet und läuft komplett durch — was sagt das über die Art des Fehlers?",
-        "Rechne a + b / 2 mit der Punkt-vor-Strich-Regel von Hand aus.",
-        "Zwei Aussagen sind richtig."
-      ],
-      "loesungsweg": "Das Programm läuft ohne Abbruch — also kein Syntaxfehler, sondern ein logischer Fehler. Ursache ist Punkt-vor-Strich: a + b / 2 wird als a + (b / 2) = 4 + 3.5 = 7.5 berechnet. Korrektur: mittel = (a + b) / 2, denn (4 + 7) / 2 = 5.5. Gefunden wird so etwas durch systematisches Testen mit Fällen, deren Ergebnis man vorher kennt — hier: Der Mittelwert von 4 und 7 muss 5.5 sein.",
-      "kc": ["programmieren"]
+     "text": "Mehrdeutige Anweisungen sind erlaubt — der Computer wählt die sinnvollste Deutung.",
+     "richtig": false,
+     "erklaerung": "Nein: Jede Anweisung muss eindeutig sein. Der Computer führt exakt aus, was dasteht — nicht, was gemeint war."
     }
-  ]
+   ],
+   "tipps": [
+    "Pseudocode beschreibt die Idee für Menschen — ein Programm muss der Computer Schritt für Schritt ausführen können.",
+    "Computer denken nichts dazu: Sie führen nur aus, was exakt und eindeutig dasteht.",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussage 1 und 2: Ein Programm ist ein in einer Programmiersprache formulierter Algorithmus, und Pseudocode ist die lockere Vorstufe für Menschen. Falsch sind Aussage 3 und 4: Programmiersprachen haben eine strenge Grammatik — Tippfehler und Mehrdeutigkeiten führen zu Fehlern, denn der Computer führt nur aus, was exakt und eindeutig dasteht.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-002",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ordne jedem Wert aus einem Python-Programm den passenden Datentyp zu.",
+   "paare": [
+    {
+     "links": "<code>16</code>",
+     "rechts": "ganze Zahl (int)"
+    },
+    {
+     "links": "<code>1.72</code>",
+     "rechts": "Kommazahl (float)"
+    },
+    {
+     "links": "<code>\"Hallo\"</code>",
+     "rechts": "Text / String (str)"
+    },
+    {
+     "links": "<code>True</code>",
+     "rechts": "Wahrheitswert (bool)"
+    }
+   ],
+   "tipps": [
+    "Anführungszeichen sind das sichere Erkennungszeichen für Text.",
+    "Kommazahlen schreibt Python mit Dezimalpunkt: 1.72.",
+    "True und False sind die beiden einzigen Wahrheitswerte."
+   ],
+   "loesungsweg": "16 ist eine ganze Zahl (int). 1.72 hat einen Dezimalpunkt — eine Kommazahl (float). \"Hallo\" steht in Anführungszeichen — ein Text (String, str). True ist einer der beiden Wahrheitswerte (bool). Achtung: \"16\" mit Anführungszeichen wäre dagegen ein Text — damit ließe sich nicht rechnen.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-003",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Die Codezeile <code>alter = 16</code> ist eine Zuweisung. Ergänze den Text.",
+   "text": "Das Zeichen = bedeutet: Der Wert rechts wird in der Variablen links ___ . Die Variable heißt hier ___ , ihr Wert ist ___ . Nach der weiteren Zeile <code>alter = alter + 1</code> hat alter den Wert ___ .",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "gespeichert",
+     "optionen": [
+      "gespeichert",
+      "verglichen"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "alter",
+     "optionen": [
+      "alter",
+      "16"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "16",
+     "optionen": [
+      "16",
+      "alter"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "17",
+     "optionen": [
+      "17",
+      "16"
+     ]
+    }
+   ],
+   "tipps": [
+    "Links vom Gleichheitszeichen steht der Name der Variablen, rechts ihr Wert.",
+    "Das = ist ein Speicherbefehl, keine mathematische Gleichung.",
+    "Bei alter = alter + 1 wird zuerst die rechte Seite berechnet (16 + 1) und das Ergebnis dann gespeichert."
+   ],
+   "loesungsweg": "Eine Zuweisung speichert den Wert der rechten Seite in der Variablen links: Die Variable alter erhält den Wert 16. Die Zeile alter = alter + 1 berechnet zuerst rechts 16 + 1 = 17 und speichert das Ergebnis wieder in alter — danach hat alter den Wert 17.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-004",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 2,
+   "frage": "Schreibtischtest: Welche Zahl gibt dieses Programm aus?<br><code>x = 5</code><br><code>y = x + 3</code><br><code>x = x * 2</code><br><code>print(x + y)</code>",
+   "eingaben": [
+    {
+     "label": "Ausgabe",
+     "antwort": 18,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Führe das Programm Zeile für Zeile aus und notiere nach jeder Zeile die Werte von x und y.",
+    "y wird mit dem alten x berechnet — die spätere Änderung von x ändert y nicht mehr.",
+    "Nach der dritten Zeile gilt x = 10 und y = 8."
+   ],
+   "loesungsweg": "Schreibtischtest: Zeile 1: x = 5. Zeile 2: y = 5 + 3 = 8. Zeile 3: x = 5 * 2 = 10 — y bleibt dabei 8, denn y wurde schon vorher berechnet und gespeichert. Zeile 4: print(10 + 8) gibt 18 aus.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-005",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 1,
+   "frage": "Ordne jedem Vergleichsoperator seine Bedeutung zu.",
+   "paare": [
+    {
+     "links": "<code>==</code>",
+     "rechts": "ist gleich"
+    },
+    {
+     "links": "<code>!=</code>",
+     "rechts": "ist ungleich"
+    },
+    {
+     "links": "<code>&lt;=</code>",
+     "rechts": "kleiner oder gleich"
+    },
+    {
+     "links": "<code>&gt;</code>",
+     "rechts": "echt größer"
+    }
+   ],
+   "tipps": [
+    "Das doppelte Gleichheitszeichen == vergleicht — das einfache = speichert.",
+    "Das Ausrufezeichen in != steht für „nicht“.",
+    "Bei kleiner-oder-gleich ist der Fall „gleich“ ausdrücklich mit erlaubt."
+   ],
+   "loesungsweg": "== prüft auf Gleichheit (nicht mit der Zuweisung = verwechseln). != bedeutet „ungleich“. &lt;= bedeutet „kleiner oder gleich“: Der Vergleich 5 &lt;= 5 ist wahr. &gt; bedeutet „echt größer“: 5 &gt; 5 ist falsch.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-006",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Was gibt dieses Programm aus?<br><code>punkte = 72</code><br><code>if punkte &gt;= 80:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;print(\"super\")</code><br><code>elif punkte &gt;= 50:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;print(\"bestanden\")</code><br><code>else:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;print(\"nicht bestanden\")</code>",
+   "optionen": [
+    {
+     "text": "super",
+     "richtig": false,
+     "erklaerung": "Nein: 72 &gt;= 80 ist falsch — dieser Zweig wird übersprungen."
+    },
+    {
+     "text": "bestanden",
+     "richtig": true,
+     "erklaerung": "Richtig: 72 &gt;= 80 ist falsch, aber 72 &gt;= 50 ist wahr — der elif-Zweig wird ausgeführt."
+    },
+    {
+     "text": "nicht bestanden",
+     "richtig": false,
+     "erklaerung": "Nein: Der else-Zweig läuft nur, wenn keine Bedingung davor wahr ist — 72 &gt;= 50 ist aber wahr."
+    },
+    {
+     "text": "bestanden und danach zusätzlich nicht bestanden",
+     "richtig": false,
+     "erklaerung": "Nein: Bei if/elif/else wird immer genau ein Zweig ausgeführt — nie mehrere."
+    }
+   ],
+   "tipps": [
+    "Setze punkte = 72 ein und prüfe die Bedingungen von oben nach unten.",
+    "Sobald eine Bedingung wahr ist, läuft nur dieser eine Zweig — alle weiteren werden übersprungen.",
+    "Ist 72 mindestens 80? Ist 72 mindestens 50?"
+   ],
+   "loesungsweg": "Python prüft von oben nach unten: 72 &gt;= 80 ist falsch, also weiter. 72 &gt;= 50 ist wahr — print(\"bestanden\") wird ausgeführt, alles Weitere übersprungen. Bei if/elif/else läuft immer genau ein Zweig. Ausgabe: bestanden.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-007",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Das Programm soll die Zahlen von 1 bis 10 addieren und das Ergebnis ausgeben. Vervollständige den Code und gib die Ausgabe an.",
+   "text": "<code>summe = 0</code><br><code>___ i in range(1, 11):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + ___</code><br><code>print(___)</code><br>Ausgabe des Programms: ___",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "for",
+     "optionen": [
+      "for",
+      "while",
+      "if"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "i",
+     "optionen": [
+      "i",
+      "summe",
+      "range"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "summe",
+     "optionen": [
+      "summe",
+      "i",
+      "0"
+     ]
+    },
+    {
+     "art": "eingabe",
+     "antwort": "55"
+    }
+   ],
+   "tipps": [
+    "Eine Zählschleife über eine Zahlenreihe beginnt mit dem Schlüsselwort for.",
+    "In jedem Durchlauf soll die aktuelle Zahl i zur Summe dazukommen.",
+    "range(1, 11) liefert die Zahlen 1 bis 10 — addiere 1 + 2 + … + 10."
+   ],
+   "loesungsweg": "Die Zählschleife lautet for i in range(1, 11): — sie durchläuft die Zahlen 1 bis 10 (der Endwert 11 ist nicht mehr dabei). Im Schleifenkörper wächst die Summe: summe = summe + i. Nach der Schleife gibt print(summe) das Ergebnis aus: 1 + 2 + … + 10 = 55.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-008",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Die vier Codezeilen sind durcheinandergeraten. Bringe sie in die Reihenfolge, in der das Programm die Zahlen 1 bis 3 addiert und das Ergebnis ausgibt. (Die eingerückte Zeile ist der Schleifenkörper.)",
+   "elemente": [
+    "<code>summe = 0</code>",
+    "<code>for zahl in range(1, 4):</code>",
+    "<code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + zahl</code>",
+    "<code>print(summe)</code>"
+   ],
+   "tipps": [
+    "Die Variable summe muss angelegt sein, bevor die Schleife sie benutzen kann.",
+    "Der Schleifenkopf for … : steht direkt über seiner eingerückten Körperzeile.",
+    "Ausgegeben wird erst nach der Schleife — print(summe) ist die letzte Zeile."
+   ],
+   "loesungsweg": "Reihenfolge: (1) summe = 0 legt den Startwert an. (2) for zahl in range(1, 4): startet die Schleife über 1, 2, 3. (3) Die eingerückte Zeile summe = summe + zahl ist der Schleifenkörper und läuft dreimal. (4) print(summe) gibt nach der Schleife das Ergebnis aus: 1 + 2 + 3 = 6.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-009",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Schreibtischtest: Das Programm addiert 1 + 2 + 3 + … so lange, bis die Summe mindestens 20 beträgt. Welche zwei Zahlen gibt es aus?<br><code>zahl = 1</code><br><code>summe = 0</code><br><code>while summe &lt; 20:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + zahl</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;zahl = zahl + 1</code><br><code>print(summe)</code><br><code>print(zahl)</code>",
+   "eingaben": [
+    {
+     "label": "Ausgabe von print(summe)",
+     "antwort": 21,
+     "toleranz": 0
+    },
+    {
+     "label": "Ausgabe von print(zahl)",
+     "antwort": 7,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Lege eine Schreibtischtest-Tabelle mit den Spalten summe und zahl an und führe Durchlauf für Durchlauf aus.",
+    "Geprüft wird vor jedem Durchlauf: Die Schleife läuft nur weiter, solange summe &lt; 20 wahr ist.",
+    "Nach dem sechsten Durchlauf ist summe = 21 — und zahl wurde dabei noch einmal erhöht."
+   ],
+   "loesungsweg": "Schreibtischtest (summe, zahl): Start (0, 1). Nach Durchlauf 1: (1, 2). Nach 2: (3, 3). Nach 3: (6, 4). Nach 4: (10, 5). Nach 5: (15, 6). Nach 6: (21, 7). Jetzt ist 21 &lt; 20 falsch — die Schleife endet. print(summe) gibt 21 aus, print(zahl) gibt 7 aus.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-010",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Schreibtischtest in Schritten: Was gibt dieses Programm am Ende aus?<br><code>ergebnis = 0</code><br><code>for i in range(3):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;ergebnis = ergebnis + 2 * i</code><br><code>print(ergebnis)</code>",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Welche Zahlen durchläuft die Schleifenvariable i bei range(3)?",
+     "eingaben": [
+      {
+       "label": "erster Wert von i",
+       "antwort": 0,
+       "toleranz": 0
+      },
+      {
+       "label": "letzter Wert von i",
+       "antwort": 2,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "range(3) beginnt bei 0 und endet vor der 3 — es liefert 0, 1, 2."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Welchen Wert hat ergebnis nach dem Durchlauf mit i = 1?",
+     "eingaben": [
+      {
+       "label": "ergebnis",
+       "antwort": 2,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "Durchlauf mit i = 0: ergebnis = 0 + 0 = 0. Durchlauf mit i = 1: ergebnis = 0 + 2 = 2."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Welche Zahl gibt print(ergebnis) am Ende aus?",
+     "eingaben": [
+      {
+       "label": "Ausgabe",
+       "antwort": 6,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "Im letzten Durchlauf (i = 2) kommt 2 * 2 = 4 dazu: 2 + 4 = 6."
+     ]
+    }
+   ],
+   "tipps": [
+    "range(3) startet bei 0, nicht bei 1 — und die 3 ist nicht mehr dabei.",
+    "Führe eine Tabelle mit den Spalten i und ergebnis: In jedem Durchlauf kommt 2 * i dazu.",
+    "Die drei Zuwächse sind 0, 2 und 4."
+   ],
+   "loesungsweg": "range(3) liefert 0, 1, 2. Durchlauf 1 (i = 0): ergebnis = 0 + 0 = 0. Durchlauf 2 (i = 1): ergebnis = 0 + 2 = 2. Durchlauf 3 (i = 2): ergebnis = 2 + 4 = 6. Die Ausgabe ist 6. Stolperstein: range(3) beginnt bei 0 — wer bei 1 beginnt, erhält fälschlich 2 + 4 + 6 = 12.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-011",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "frage": "Entwirf eine Funktion <code>mittelwert(a, b)</code>, die den Mittelwert zweier Zahlen zurückgibt. Schreibe den Python-Code auf: Funktionskopf mit def, Rechnung und Rückgabe mit return. Gib außerdem an, was <code>print(mittelwert(4, 7))</code> ausgibt.",
+   "musterloesung": "<code>def mittelwert(a, b):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;return (a + b) / 2</code><br><br>Der Funktionskopf def mittelwert(a, b): legt den Namen und die beiden Parameter fest. Die Klammern um a + b sind wichtig: Ohne sie würde Python wegen Punkt-vor-Strich nur b durch 2 teilen. return gibt das Ergebnis an den Aufrufer zurück. Der Aufruf print(mittelwert(4, 7)) gibt 5.5 aus, denn (4 + 7) / 2 = 11 / 2 = 5.5.",
+   "tipps": [
+    "Der Funktionskopf hat die Form def name(parameter1, parameter2): — mit Doppelpunkt am Ende.",
+    "Der Mittelwert ist die Summe geteilt durch 2 — denke an Klammern um die Summe.",
+    "Mit return gibt die Funktion ihr Ergebnis zurück; der Aufruf print(…) zeigt es an."
+   ],
+   "loesungsweg": "Kernpunkte: (1) Funktionskopf def mittelwert(a, b): mit zwei Parametern. (2) Eingerückter Körper mit return (a + b) / 2 — die Klammern sind entscheidend, sonst würde wegen Punkt-vor-Strich nur b halbiert. (3) print(mittelwert(4, 7)) gibt 5.5 aus. Zum Vergleich: Ohne Klammern käme 4 + 3.5 = 7.5 heraus — ein logischer Fehler.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-012",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Zusatz: Schreibtischtest mit Funktion — führe das Programm von Hand aus und ergänze die Werte.<br><code>def quadrat(x):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;return x * x</code><br><br><code>summe = 0</code><br><code>for i in range(1, 4):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + quadrat(i)</code><br><code>print(summe)</code>",
+   "text": "Durchlauf i = 1: quadrat(1) liefert ___ , summe ist danach ___ . Durchlauf i = 2: summe ist danach ___ . Durchlauf i = 3: summe ist danach ___ . Das Programm gibt ___ aus.",
+   "luecken": [
+    {
+     "art": "eingabe",
+     "antwort": "1"
+    },
+    {
+     "art": "eingabe",
+     "antwort": "1"
+    },
+    {
+     "art": "eingabe",
+     "antwort": "5"
+    },
+    {
+     "art": "eingabe",
+     "antwort": "14"
+    },
+    {
+     "art": "eingabe",
+     "antwort": "14"
+    }
+   ],
+   "tipps": [
+    "quadrat(x) liefert x mal x: quadrat(2) ist 4, quadrat(3) ist 9.",
+    "range(1, 4) durchläuft die Zahlen 1, 2 und 3 — die 4 ist nicht mehr dabei.",
+    "summe wächst um die Quadratzahlen: erst + 1, dann + 4, dann + 9."
+   ],
+   "loesungsweg": "Die Schleife durchläuft i = 1, 2, 3. Durchlauf 1: quadrat(1) = 1, summe = 0 + 1 = 1. Durchlauf 2: quadrat(2) = 4, summe = 1 + 4 = 5. Durchlauf 3: quadrat(3) = 9, summe = 5 + 9 = 14. print(summe) gibt 14 aus — die Summe der ersten drei Quadratzahlen.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-013",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Zusatz: Das Programm soll den Mittelwert von 4 und 7 ausgeben — erwartet wird 5.5. Es läuft ohne Fehlermeldung durch, gibt aber 7.5 aus.<br><code>a = 4</code><br><code>b = 7</code><br><code>mittel = a + b / 2</code><br><code>print(mittel)</code><br>Welche Aussagen sind richtig?",
+   "optionen": [
+    {
+     "text": "Es liegt ein Syntaxfehler vor.",
+     "richtig": false,
+     "erklaerung": "Nein: Bei einem Syntaxfehler würde das Programm gar nicht erst starten. Es läuft aber durch — nur das Ergebnis ist falsch. Das ist ein logischer Fehler."
+    },
+    {
+     "text": "Python rechnet Punkt vor Strich: Erst wird b durch 2 geteilt, dann a addiert.",
+     "richtig": true,
+     "erklaerung": "Richtig: a + b / 2 bedeutet a + (b / 2) = 4 + 3.5 = 7.5."
+    },
+    {
+     "text": "Klammern um die Summe beheben den Fehler: mittel = (a + b) / 2.",
+     "richtig": true,
+     "erklaerung": "Richtig: (4 + 7) / 2 = 11 / 2 = 5.5 — genau das gewünschte Ergebnis."
+    },
+    {
+     "text": "Der Computer hat sich verrechnet — beim nächsten Start stimmt das Ergebnis.",
+     "richtig": false,
+     "erklaerung": "Nein: Der Computer führt exakt aus, was dasteht — und a + b / 2 ergibt nun einmal 7.5. Der Fehler steckt im Programm, nicht im Computer."
+    }
+   ],
+   "tipps": [
+    "Das Programm startet und läuft komplett durch — was sagt das über die Art des Fehlers?",
+    "Rechne a + b / 2 mit der Punkt-vor-Strich-Regel von Hand aus.",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Das Programm läuft ohne Abbruch — also kein Syntaxfehler, sondern ein logischer Fehler. Ursache ist Punkt-vor-Strich: a + b / 2 wird als a + (b / 2) = 4 + 3.5 = 7.5 berechnet. Korrektur: mittel = (a + b) / 2, denn (4 + 7) / 2 = 5.5. Gefunden wird so etwas durch systematisches Testen mit Fällen, deren Ergebnis man vorher kennt — hier: Der Mittelwert von 4 und 7 muss 5.5 sein.",
+   "kc": [
+    "programmieren"
+   ]
+  },
+  {
+   "id": "in-10-prog-014",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Dieses Programm soll mit einer <code>while</code>-Schleife die Zahlen von 1 bis n addieren und das Ergebnis ausgeben. Die fünf Zeilen sind durcheinander — bringe sie in die richtige Reihenfolge. (Die beiden eingerückten Zeilen bilden den Schleifenkörper.)",
+   "elemente": [
+    "<code>summe = 0</code>",
+    "<code>zaehler = 1</code>",
+    "<code>while zaehler &lt;= n:</code>",
+    "<code>&nbsp;&nbsp;&nbsp;&nbsp;summe = summe + zaehler</code>",
+    "<code>&nbsp;&nbsp;&nbsp;&nbsp;zaehler = zaehler + 1</code>",
+    "<code>print(summe)</code>"
+   ],
+   "tipps": [
+    "Beide Variablen — summe und zaehler — müssen ihren Startwert haben, bevor die Schleife beginnt.",
+    "Im Schleifenkörper wird erst zur Summe addiert und dann der Zähler um 1 erhöht; vergisst man das Erhöhen, läuft die Schleife endlos.",
+    "Ausgegeben wird erst, wenn die Schleife fertig ist — print(summe) ist die letzte Zeile ganz ohne Einrückung."
+   ],
+   "loesungsweg": "Reihenfolge: (1) summe = 0 und (2) zaehler = 1 legen die Startwerte an. (3) while zaehler <= n: prüft die Bedingung. Im Schleifenkörper wird (4) summe = summe + zaehler aufaddiert und (5) zaehler = zaehler + 1 hochgezählt, damit die Schleife irgendwann endet. (6) print(summe) gibt nach der Schleife das Ergebnis aus. Für n = 3 ergibt sich 1 + 2 + 3 = 6.",
+   "kc": [
+    "programmieren"
+   ]
+  }
+ ]
 }

@@ -107,6 +107,60 @@ function baueAusblick(l) {
   return sec;
 }
 
+// 🔀 „Gemischt üben" — Interleaving über den ganzen Themenblock.
+// Belege: Rohrer & Taylor 2007; Brunmair & Richter 2019 (Meta-Analyse): besonders wirksam
+// bei verwandten, leicht verwechselbaren Aufgabentypen — man übt das ERKENNEN des Lösungswegs.
+function baueGemischtUeben(daten, l, koerper) {
+  const quellen = [...new Set(SPUREN.flatMap(([s]) => (daten[s] || []).map(g => g.quelle)).filter(Boolean))];
+  if (!quellen.length) return;
+  // In dieser Lektion bereits sichtbare Aufgaben-IDs ausschließen (Radioname mc-<id> ist dokumentweit eindeutig).
+  const schonGezeigt = new Set();
+  const ph = l.phasen || {};
+  (ph.ankommen?.aufgaben || []).forEach(g => (g.ids || []).forEach(id => schonGezeigt.add(id)));
+  (ph.sichern?.aufgaben || []).forEach(g => (g.ids || []).forEach(id => schonGezeigt.add(id)));
+  SPUREN.forEach(([s]) => (ph.ueben?.[s] || []).forEach(g => (g.ids || []).forEach(id => schonGezeigt.add(id))));
+
+  const det = el(`<details class="lb-gemischt"><summary>🔀 Gemischt üben <span class="lb-gemischt-zusatz">– Aufgaben dieses Themas in zufälliger Mischung</span></summary></details>`);
+  const liste = el(`<div class="lb-gemischt-liste"></div>`);
+  det.append(liste);
+  let gefuellt = false;
+  det.addEventListener("toggle", () => {
+    if (!det.open || gefuellt) return;
+    gefuellt = true;
+    const zweig = aktuellerZweig();
+    const pool = [];
+    const gesehen = new Set();
+    quellen.forEach(q => {
+      const m = AUFGABEN.get(q);
+      if (!m) return;
+      m.forEach((a, id) => {
+        if (schonGezeigt.has(id) || gesehen.has(id)) return;
+        if (zweig !== "alle" && Array.isArray(a.zweig) && !a.zweig.includes(zweig)) return;
+        gesehen.add(id);
+        pool.push({ a, quelle: q });
+      });
+    });
+    if (!pool.length) {
+      liste.append(el(`<p class="lb-luecke">Für eine Mischung gibt es hier gerade keine weiteren Aufgaben.</p>`));
+      return;
+    }
+    // deterministisch mischen (pro Lektion stabil) – kleiner LCG, keine externe Abhängigkeit
+    let seed = 19;
+    for (const z of (l.id + ":gemischt")) seed = (seed * 31 + z.charCodeAt(0)) >>> 0;
+    const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+    for (let k = pool.length - 1; k > 0; k--) { const j = Math.floor(rnd() * (k + 1)); [pool[k], pool[j]] = [pool[j], pool[k]]; }
+    const wahl = pool.slice(0, 8);
+    liste.append(el(`<p class="lb-phase-hinweis">Verschiedene Aufgaben des Themas gemischt – so übst du, den passenden Lösungsweg selbst zu erkennen, statt immer „die nächste Aufgabe vom gleichen Typ" zu rechnen.</p>`));
+    wahl.forEach((x, i) => {
+      const art = baueAufgabe(x.a, i, x.quelle);
+      art.id = "lb-gem-" + l.id + "-" + x.a.id;
+      liste.append(art);
+    });
+    rendereMathe(liste);
+  });
+  koerper.append(det);
+}
+
 // ---------- Erklär-Abschnitt einbetten (Quelle bleibt die Erklärseite) ----------
 const erklaerSpeicher = new Map();   // themaPfad -> { doc, basis } | null
 async function ladeErklaerDoc(themaPfad) {
@@ -461,9 +515,23 @@ function baueBeispiel(b) {
   const box = el(`<div class="lb-beispiel"><span class="lb-etikett">✏️ Musterbeispiel</span></div>`);
   if (b.aufgabe) box.append(el(`<p class="lb-beispiel-aufgabe">${b.aufgabe}</p>`));
   if (Array.isArray(b.schritte) && b.schritte.length) {
-    const ol = el(`<ol class="lb-beispiel-schritte"></ol>`);
-    b.schritte.forEach(s => ol.append(el(`<li>${s}</li>`)));
-    box.append(ol);
+    const hatTeilziele = b.schritte.some(s => s && typeof s === "object" && s.teilziel);
+    if (!hatTeilziele) {
+      const ol = el(`<ol class="lb-beispiel-schritte"></ol>`);
+      b.schritte.forEach(s => ol.append(el(`<li>${s}</li>`)));
+      box.append(ol);
+    } else {
+      let ol = null;
+      b.schritte.forEach(s => {
+        if (s && typeof s === "object" && s.teilziel) {
+          box.append(el(`<p class="lb-teilziel">${s.teilziel}</p>`));
+          ol = el(`<ol class="lb-beispiel-schritte"></ol>`); box.append(ol);
+        } else {
+          if (!ol) { ol = el(`<ol class="lb-beispiel-schritte"></ol>`); box.append(ol); }
+          ol.append(el(`<li>${s}</li>`));
+        }
+      });
+    }
   }
   if (b.selbst) box.append(el(`<details class="lb-mehr lb-jetztdu"><summary>Jetzt du: ${b.selbst.frage}</summary><div class="lb-mehr-koerper">${b.selbst.loesung}</div></details>`));
   return box;
@@ -581,6 +649,7 @@ function bauePhase(l, key, label, pflicht, daten) {
     const neuFormat = Array.isArray(daten.schritte) && daten.schritte.some(s => s.kern);
     if (daten.text) koerper.append(el(`<p class="lb-phase-hinweis">${esc(daten.text)}</p>`));
     if (daten.vorueberlegung) koerper.append(el(`<div class="lb-vorueberlegung"><span class="lb-etikett">🧠 Vorüberlegungen</span><div class="lb-vorueberlegung-text">${daten.vorueberlegung}</div></div>`));
+    if (daten.grundwissen) koerper.append(el(`<div class="lb-grundwissen"><span class="lb-etikett">📖 Grundwissen</span><div class="lb-grundwissen-text">${daten.grundwissen}</div></div>`));
     if (daten.erkundenZuerst) rendereErkunden(daten, koerper);
     if (!neuFormat) {
       const eHalter = el(`<div class="lb-erklaer" aria-busy="true"><p class="lb-phase-hinweis">Abschnitt wird geladen …</p></div>`);
@@ -643,6 +712,15 @@ function bauePhase(l, key, label, pflicht, daten) {
       hb.append(ul);
       koerper.append(hb);
     }
+    // 🔗 Verwandte Begriffe (Querverlinkung, Serlo-Prinzip): Sprung zur einführenden Lektion desselben Kurses
+    if (Array.isArray(daten.begriffe) && daten.begriffe.length) {
+      const box = el(`<div class="lb-begriffe"><span class="lb-etikett">🔗 Verwandte Begriffe</span> <span class="lb-begriffe-hinweis">— kurz nachschlagen, wenn ein Begriff unklar ist:</span> </div>`);
+      daten.begriffe.forEach((b, i) => {
+        box.append(el(`<a class="lb-begriff-link" href="#lektion-${esc(b.lektion)}">${esc(b.wort)}</a>`));
+        if (i < daten.begriffe.length - 1) box.append(document.createTextNode(" · "));
+      });
+      koerper.append(box);
+    }
     // „Für die Lehrkraft"-Block (Lernaufgabe): einklappbar, Hinweise/Lösungen/Modellgrenzen
     if (daten.lehrkraft) koerper.append(el(`<details class="lb-lehrkraft"><summary>👩‍🏫 Für die Lehrkraft</summary><div class="lb-lehrkraft-koerper">${daten.lehrkraft}</div></details>`));
     // Selbsterklärung (Metakognition) – nur neues Format
@@ -652,7 +730,15 @@ function bauePhase(l, key, label, pflicht, daten) {
     // Selbstcheck (verstanden?) – Fragen mit aufklappbarer Antwort
     if (Array.isArray(daten.selbstcheck) && daten.selbstcheck.length) {
       const box = el(`<div class="lb-selbstcheck"><span class="lb-etikett">✅ Selbstcheck – verstanden?</span></div>`);
-      daten.selbstcheck.forEach(c => box.append(el(`<details class="lb-minicheck"><summary>${esc(c.frage)}</summary><div class="lb-minicheck-a">${c.antwort}</div></details>`)));
+      daten.selbstcheck.forEach(c => {
+        const item = el(`<div class="lb-sc-item"><p class="lb-sc-frage">${c.frage}</p></div>`);
+        const eingabe = el(`<textarea class="lb-sc-eingabe" rows="2" placeholder="Erst selbst beantworten …" aria-label="Deine Antwort"></textarea>`);
+        const knopf = el(`<button type="button" class="knopf zweitrangig klein lb-sc-zeigen">Antwort zeigen</button>`);
+        const loesung = el(`<div class="lb-sc-loesung" hidden><span class="lb-etikett">Musterantwort</span><div>${c.antwort}</div></div>`);
+        knopf.addEventListener("click", () => { loesung.hidden = false; knopf.hidden = true; });
+        item.append(eingabe, knopf, loesung);
+        box.append(item);
+      });
       koerper.append(box);
     }
   }
@@ -672,6 +758,7 @@ function bauePhase(l, key, label, pflicht, daten) {
       } else spur.append(el(`<p class="lb-luecke">${esc(luecke)}</p>`));
       koerper.append(spur);
     });
+    baueGemischtUeben(daten, l, koerper);
     if (daten.partner) koerper.append(el(`<div class="lb-partner"><span class="lb-etikett">👥 Partner-Auftrag</span> ${daten.partner}</div>`));
   }
   else if (key === "sichern") {
