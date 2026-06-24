@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automatisierung und KI — Klasse 10 · Informatik — Lernwelt</title>
+<meta name="description" content="Von der Waschmaschine zum lernenden System: Sensor, Verarbeitung, Aktor, Wenn-Dann-Regeln, maschinelles Lernen, Genauigkeit, Fehlertypen und Bias — und wie man KI verantwortungsvoll nutzt.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: ML-Pipeline-Schaubild */
+  .ki-figur { margin: var(--abstand-4) 0; }
+  .ki-figur svg { display: block; width: 100%; height: auto; margin: 0 auto; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); }
+  .ki-figur figcaption { text-align: center; font-size: .9rem; color: var(--text-leise); margin-top: var(--abstand-2); }
+</style>
+</head>
+<body data-seite="thema" data-fach="informatik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln und interaktive Elemente. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Automatisierung und KI</h1>
+  <p class="einleitung">Die Waschmaschine wäscht allein, der Saugroboter findet selbst zur Ladestation, und die Video-App scheint zu ahnen, was dir gefällt. Überall erledigen Maschinen Aufgaben „automatisch“ — aber automatisch ist nicht gleich intelligent. Auf dieser Seite lernst du zwei Bauarten kennen: Systeme mit <strong>festen Wenn-Dann-Regeln</strong> und <strong>lernende Systeme</strong>, die ihr Verhalten aus Daten gewinnen. Du rechnest nach, wie gut so ein gelerntes Modell wirklich ist, wo es danebenliegt — und worauf es ankommt, wenn du KI-Werkzeuge selbst benutzt.</p>
+
+  <section aria-labelledby="ki-alltag">
+    <h2 id="ki-alltag">1. Automatisierung im Alltag</h2>
+    <p>Automatisierung bedeutet: Eine Maschine übernimmt eine Aufgabe, ohne dass ein Mensch jeden Schritt selbst ausführen oder überwachen muss. Die <strong>Waschmaschine</strong> ist der Klassiker: Früher war Wäschewaschen stundenlange Handarbeit, heute startest du ein Programm — einweichen, waschen, spülen, schleudern laufen von allein ab. Ganz „blind“ arbeitet die Maschine dabei nicht: Sie misst zum Beispiel die Wassertemperatur und heizt nach, bis der eingestellte Wert erreicht ist.</p>
+    <p>Der <strong>Saugroboter</strong> kann mehr: Er reagiert laufend auf seine Umgebung. Stößt er gegen ein Stuhlbein, meldet das sein Kontaktsensor, und der Roboter wählt eine neue Richtung; erkennt der Bodensensor eine Treppenkante, stoppt er, bevor es abwärts geht. Hinter beidem steckt dasselbe Grundmuster, das sich in fast jedem automatisierten System wiederfindet:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Das Grundmuster: Sensor → Verarbeitung → Aktor</span>
+      <p><strong>Sensor:</strong> misst eine Größe aus der Umgebung — Temperatur, Helligkeit, Abstand, Berührung.<br>
+      <strong>Verarbeitung:</strong> ein Programm wertet die Messwerte aus und entscheidet, was zu tun ist.<br>
+      <strong>Aktor:</strong> führt die Entscheidung aus — ein Motor dreht, ein Ventil öffnet, eine Lampe schaltet.<br>
+      Dieser Kreislauf wiederholt sich viele Male pro Sekunde — deshalb wirken die Geräte so „aufmerksam“.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Eine Sekunde im Leben eines Saugroboters</span>
+      <p>Der Abstandssensor meldet: Vorn wird es eng (<strong>Sensor</strong>). Das Programm vergleicht den Messwert mit einem Grenzwert und beschließt eine Linkskurve (<strong>Verarbeitung</strong>). Die Radmotoren bekommen neue Drehbefehle (<strong>Aktor</strong>) — und schon beginnt die nächste Messung.</p>
+    </div>
+    <p>Je nach Gerät ist die Verarbeitung unterschiedlich klug. Damit sind wir bei der entscheidenden Frage dieser Seite: <em>Woher weiß das Programm, was zu tun ist?</em> Es gibt zwei Antworten — feste Regeln (Abschnitt 2) oder gelerntes Verhalten (Abschnitt 3).</p>
+  </section>
+
+  <section aria-labelledby="ki-regeln">
+    <h2 id="ki-regeln">2. Regelbasierte Systeme</h2>
+    <p>Die älteste und bis heute häufigste Antwort: Menschen schreiben dem System <strong>feste Regeln</strong> vor — Wenn-Dann-Anweisungen, die es zuverlässig und stur befolgt. Das <strong>Heizungsthermostat</strong> kommt mit zwei Regeln aus:</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Ein Thermostat braucht nur zwei Regeln</span>
+      <p><strong>WENN</strong> die Temperatur unter 20 °C sinkt, <strong>DANN</strong> Heizung einschalten.<br>
+      <strong>WENN</strong> die Temperatur über 21 °C steigt, <strong>DANN</strong> Heizung ausschalten.<br>
+      Dazwischen passiert nichts — die kleine Lücke verhindert, dass die Heizung im Minutentakt an- und ausspringt.</p>
+    </div>
+    <p>Auch ein <strong>Spamfilter</strong> lässt sich so bauen: <em>Wenn der Absender auf der Sperrliste steht → Spam. Wenn der Betreff „Gewinn“ und mehrere Ausrufezeichen enthält → Spam-Verdacht. Wenn der Absender in deinem Adressbuch steht → kein Spam.</em> Echte regelbasierte Filter kombinieren Dutzende solcher Regeln zu einer Punktzahl und sortieren ab einem Grenzwert aus.</p>
+    <p>Regelbasierte Systeme haben einen großen Vorzug: Sie sind <strong>nachvollziehbar</strong>. Jede Entscheidung lässt sich bis zur auslösenden Regel zurückverfolgen, Fehler kann man gezielt korrigieren, das Verhalten ist vorhersagbar. Auch die <a href="../endliche-automaten/index.html">endlichen Automaten</a> gehören in diese Familie: Ihre Übergänge sind nichts anderes als fest verdrahtete Wenn-Dann-Regeln.</p>
+    <p>Aber das Verfahren hat eine Grenze: <strong>Jemand muss alle Regeln aufschreiben.</strong> Versuche das einmal für die Aufgabe „Erkenne, ob auf einem Foto eine Katze ist“. Ein Foto besteht aus Millionen Pixeln; Katzen sind groß oder klein, hell oder dunkel, schlafen zusammengerollt oder springen durchs Bild. Welche Wenn-Dann-Regel über Pixelwerte soll das alles erfassen? Hier beißen sich handgeschriebene Regeln die Zähne aus. Und selbst der Regel-Spamfilter steckt in einem ständigen Wettlauf, weil Absender ihre Tricks ändern — aus „Gewinn“ wird „G3w1nn“, und die Regel greift ins Leere.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Wo hakt die Spam-Regel „enthält ‚Gewinn‘ → Spam“?</summary>
+      <div class="check-antwort"><p>An zwei Stellen. Erstens trifft sie auch harmlose Mails: Die Nachricht „Unsere Mannschaft feiert den Gewinn des Pokals“ landet fälschlich im Spam-Ordner. Zweitens ist sie leicht zu umgehen: Wer „G3winn“ oder „G-e-w-i-n-n“ schreibt, schlüpft durch. Feste Regeln sind präzise, aber starr — sie erfassen nur, woran ihre Autorinnen und Autoren gedacht haben.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ki-lernen">
+    <h2 id="ki-lernen">3. Lernende Systeme: maschinelles Lernen</h2>
+    <p>Beim <strong>maschinellen Lernen</strong> dreht man den Spieß um: Statt Regeln vorzugeben, zeigt man dem Computer <strong>viele Beispiele mitsamt der richtigen Antwort</strong> — und lässt ihn die Muster selbst finden. Für die Katzenfrage heißt das: tausende Fotos, jedes mit einem Etikett („Hund“ oder „Katze“). Ein Lernverfahren stellt daraufhin die inneren Einstellwerte (<strong>Parameter</strong>) eines <strong>Modells</strong> so ein, dass dessen Ausgaben möglichst oft zum Etikett passen. Dieses Einstellen heißt <strong>Training</strong>.</p>
+    <figure class="ki-figur" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schaubild des maschinellen Lernens: Trainingsbilder mit den Etiketten Hund oder Katze fließen in das Training, daraus entsteht das Modell. In der Anwendung erhält das fertige Modell ein neues Bild ohne Etikett und gibt eine Vorhersage aus — hier Hund mit 87 Prozent Sicherheit.">
+        <defs>
+          <marker id="ki-pfeil" markerWidth="11" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M 0 0 L 11 5 L 0 10 Z" style="fill: var(--text);"/>
+          </marker>
+        </defs>
+        <!-- Trainingsdaten: drei Bildkarten mit Etikett -->
+        <rect x="22" y="30" width="220" height="148" rx="10" style="fill: var(--hauch); stroke: var(--info); stroke-width: 2.5;"/>
+        <text x="132" y="56" text-anchor="middle" style="font-size: 15px; fill: var(--text);">Trainingsdaten</text>
+        <rect x="42" y="70" width="52" height="42" rx="4" style="fill: var(--flaeche); stroke: var(--linie); stroke-width: 1.5;"/>
+        <circle cx="54" cy="80" r="4" style="fill: var(--akzent);"/>
+        <path d="M 46 104 L 58 90 L 66 98 L 72 92 L 88 104" style="fill: none; stroke: var(--info); stroke-width: 1.5;"/>
+        <text x="68" y="130" text-anchor="middle" style="font-size: 13px; fill: var(--text);">Hund</text>
+        <rect x="106" y="70" width="52" height="42" rx="4" style="fill: var(--flaeche); stroke: var(--linie); stroke-width: 1.5;"/>
+        <circle cx="118" cy="80" r="4" style="fill: var(--akzent);"/>
+        <path d="M 110 104 L 122 90 L 130 98 L 136 92 L 152 104" style="fill: none; stroke: var(--info); stroke-width: 1.5;"/>
+        <text x="132" y="130" text-anchor="middle" style="font-size: 13px; fill: var(--text);">Katze</text>
+        <rect x="170" y="70" width="52" height="42" rx="4" style="fill: var(--flaeche); stroke: var(--linie); stroke-width: 1.5;"/>
+        <circle cx="182" cy="80" r="4" style="fill: var(--akzent);"/>
+        <path d="M 174 104 L 186 90 L 194 98 L 200 92 L 216 104" style="fill: none; stroke: var(--info); stroke-width: 1.5;"/>
+        <text x="196" y="130" text-anchor="middle" style="font-size: 13px; fill: var(--text);">Hund</text>
+        <text x="132" y="158" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">jedes Bild mit Etikett</text>
+        <!-- Pfeil 1: Training -->
+        <text x="281" y="104" text-anchor="middle" style="font-size: 13px; font-weight: 600; fill: var(--akzent);">1. Training</text>
+        <path d="M 248 120 H 314" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ki-pfeil)"/>
+        <!-- Modell mit Mini-Netz -->
+        <rect x="320" y="104" width="150" height="140" rx="12" style="fill: var(--hauch); stroke: var(--akzent); stroke-width: 2.5;"/>
+        <text x="395" y="136" text-anchor="middle" style="font-size: 17px; fill: var(--text);">Modell</text>
+        <line x1="357" y1="170" x2="395" y2="170" style="stroke: var(--text-leise); stroke-width: 1.5;"/>
+        <line x1="357" y1="170" x2="395" y2="206" style="stroke: var(--text-leise); stroke-width: 1.5;"/>
+        <line x1="357" y1="206" x2="395" y2="170" style="stroke: var(--text-leise); stroke-width: 1.5;"/>
+        <line x1="357" y1="206" x2="395" y2="206" style="stroke: var(--text-leise); stroke-width: 1.5;"/>
+        <line x1="395" y1="170" x2="433" y2="188" style="stroke: var(--text-leise); stroke-width: 1.5;"/>
+        <line x1="395" y1="206" x2="433" y2="188" style="stroke: var(--text-leise); stroke-width: 1.5;"/>
+        <circle cx="357" cy="170" r="7" style="fill: var(--flaeche); stroke: var(--info); stroke-width: 2;"/>
+        <circle cx="357" cy="206" r="7" style="fill: var(--flaeche); stroke: var(--info); stroke-width: 2;"/>
+        <circle cx="395" cy="170" r="7" style="fill: var(--flaeche); stroke: var(--info); stroke-width: 2;"/>
+        <circle cx="395" cy="206" r="7" style="fill: var(--flaeche); stroke: var(--info); stroke-width: 2;"/>
+        <circle cx="433" cy="188" r="7" style="fill: var(--flaeche); stroke: var(--info); stroke-width: 2;"/>
+        <text x="395" y="234" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">gelernte Muster</text>
+        <!-- Neue Eingabe -->
+        <rect x="22" y="240" width="220" height="72" rx="10" style="fill: var(--hauch); stroke: var(--info); stroke-width: 2.5;"/>
+        <rect x="42" y="254" width="52" height="42" rx="4" style="fill: var(--flaeche); stroke: var(--linie); stroke-width: 1.5;"/>
+        <circle cx="54" cy="264" r="4" style="fill: var(--akzent);"/>
+        <path d="M 46 288 L 58 274 L 66 282 L 72 276 L 88 288" style="fill: none; stroke: var(--info); stroke-width: 1.5;"/>
+        <text x="168" y="274" text-anchor="middle" style="font-size: 14px; fill: var(--text);">Neues Bild</text>
+        <text x="168" y="294" text-anchor="middle" style="font-size: 12.5px; fill: var(--text-leise);">Etikett: ?</text>
+        <!-- Pfeil 2: Anwendung -->
+        <path d="M 248 272 L 314 234" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ki-pfeil)"/>
+        <text x="286" y="300" text-anchor="middle" style="font-size: 13px; font-weight: 600; fill: var(--info);">2. Anwendung</text>
+        <!-- Pfeil 3: Ausgabe -->
+        <path d="M 476 174 H 530" style="fill: none; stroke: var(--text); stroke-width: 2;" marker-end="url(#ki-pfeil)"/>
+        <!-- Vorhersage -->
+        <rect x="536" y="128" width="146" height="92" rx="10" style="fill: var(--hauch); stroke: var(--ok); stroke-width: 2.5;"/>
+        <text x="609" y="154" text-anchor="middle" style="font-size: 14px; fill: var(--text);">Vorhersage</text>
+        <text x="609" y="180" text-anchor="middle" style="font-size: 17px; font-weight: 600; fill: var(--text);">„Hund“</text>
+        <text x="609" y="204" text-anchor="middle" style="font-size: 12.5px; fill: var(--text-leise);">Sicherheit: 87 %</text>
+      </svg>
+      <figcaption>Maschinelles Lernen in zwei Phasen: Im Training (1) entsteht aus vielen Bildern mit Etikett das Modell. In der Anwendung (2) erhält es ein neues Bild ohne Etikett und sagt voraus: „Hund“ — mit 87 % Sicherheit.</figcaption>
+    </figure>
+    <p>Das fertige Modell bekommt dann <strong>neue Eingaben</strong>, die es nie gesehen hat, und liefert eine <strong>Vorhersage</strong> — meist mit einem Sicherheitswert wie „Hund, 87 %“. Wichtig: Niemand hat dem Modell eine Regel wie „Katzen haben spitze Ohren“ einprogrammiert. Es hat Muster aus den Trainingsdaten übernommen — welche genau, lässt sich oft nur schwer nachvollziehen. Genau darin unterscheidet es sich vom regelbasierten System: leistungsfähiger bei unscharfen Aufgaben wie der Bilderkennung, aber schlechter erklärbar.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die vier Schritte des maschinellen Lernens</span>
+      <p><strong>Trainingsdaten:</strong> viele Beispiele mit bekannter richtiger Antwort (Etikett).<br>
+      <strong>Training:</strong> ein Lernverfahren stellt die Parameter des Modells anhand der Beispiele ein.<br>
+      <strong>Modell:</strong> das Ergebnis des Trainings — voller gelernter Muster statt handgeschriebener Regeln.<br>
+      <strong>Vorhersage:</strong> die Ausgabe des Modells zu einer neuen Eingabe — eine begründete Schätzung, keine Garantie.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Was braucht ein Modell, das Äpfel von Birnen trennt?</summary>
+      <div class="check-antwort"><p>Viele Beispielbilder <strong>beider</strong> Sorten, jedes mit dem richtigen Etikett „Apfel“ oder „Birne“ — am besten in allen Varianten, die später vorkommen sollen: rot und grün, ganz und angebissen, hell und dunkel fotografiert. Aus diesen Trainingsdaten stellt das Lernverfahren das Modell ein. Je vielfältiger die Beispiele, desto besser kommt das Modell mit neuen Bildern zurecht.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ki-guete">
+    <h2 id="ki-guete">4. Wie gut ist ein Modell?</h2>
+    <p>Woher weiß man, ob ein Modell etwas taugt? Man prüft es mit <strong>Testdaten</strong>: Beispiele mit bekannter Antwort, die im Training <em>nicht</em> vorkamen — wie eine Klassenarbeit mit neuen Aufgaben statt der geübten. Das wichtigste Maß ist die <strong>Genauigkeit</strong> (Trefferquote): der Anteil der richtigen Vorhersagen an allen Testfällen.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Genauigkeit eines Spamfilter-Modells</span>
+      <p>Ein gelernter Spamfilter bekommt 100 Test-E-Mails vorgelegt und sortiert 90 davon richtig ein. Genauigkeit: $\frac{90}{100} = 0{,}90$, also <strong>90 %</strong>.</p>
+    </div>
+    <p>Die Genauigkeit verrät aber nicht, <em>welche</em> Fehler passieren — und die sind verschieden schlimm. Beim Spamfilter bedeutet „positiv“: Die Mail wird als Spam eingestuft. Damit gibt es zwei Fehlertypen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Zwei Fehlertypen (Beispiel Spamfilter)</span>
+      <p><strong>Falsch positiv:</strong> Eine erwünschte Mail wird fälschlich als Spam aussortiert — die Einladung zur Geburtstagsfeier verschwindet im Spam-Ordner.<br>
+      <strong>Falsch negativ:</strong> Eine Spam-Mail wird nicht erkannt und landet im Postfach — lästig, aber meist harmloser.<br>
+      Welcher Fehler schwerer wiegt, hängt vom Einsatz ab: Beim Spamfilter ist falsch positiv ärgerlicher, bei einem Rauchmelder wäre falsch negativ gefährlich.</p>
+    </div>
+    <p>Zurück zum Beispiel: Angenommen, von den 100 Test-Mails waren 60 erwünscht und 40 Spam. Die 10 Fehler teilen sich auf in 4 erwünschte Mails im Spam-Ordner (falsch positiv) und 6 durchgerutschte Spam-Mails (falsch negativ). Zwei Filter mit derselben Genauigkeit können sich im Alltag also sehr unterschiedlich anfühlen — je nachdem, welche Fehlersorte überwiegt.</p>
+    <p>Eine zweite Schwachstelle sitzt in den Daten selbst: die <strong>Verzerrung</strong> (englisch <em>Bias</em>). Ein Modell kann nur lernen, was in seinen Trainingsdaten steckt. Wurde das Hund-Katze-Modell fast nur mit hellen Hunden bei Tageslicht trainiert, erkennt es dunkle Hunde im Schatten schlecht — nicht aus „Böswilligkeit“, sondern weil ihm die Beispiele fehlten. Das ist mehr als eine technische Randnotiz: Gesichtserkennungs-Systeme schnitten in Tests bei Personengruppen schlechter ab, die in den Trainingsdaten selten vorkamen. Dagegen helfen vielfältige, ausgewogene Trainingsdaten — und ehrliche Tests mit realistischen Daten, bevor ein System eingesetzt wird.</p>
+    <details class="check">
+      <summary>Verständnis-Check: 47 von 50 Testbildern richtig — welche Genauigkeit?</summary>
+      <div class="check-antwort"><p>$\frac{47}{50} = 0{,}94$ — die Genauigkeit beträgt <strong>94 %</strong>. Wichtig dabei: Die 50 Bilder müssen Testdaten sein, die das Modell im Training nie gesehen hat. Sonst ist der Wert geschönt — wie eine Klassenarbeit, deren Aufgaben vorher samt Lösung geübt wurden.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ki-verantwortung">
+    <h2 id="ki-verantwortung">5. KI verantwortungsvoll nutzen</h2>
+    <p><strong>Chatbots</strong> wie die großen Sprach-KIs sind ebenfalls gelernte Modelle — trainiert mit riesigen Textmengen. Sie berechnen, welche Fortsetzung eines Textes wahrscheinlich ist, und das so gut, dass flüssige Erklärungen, Zusammenfassungen und Übersetzungen entstehen. Beim Formulieren, Strukturieren, Ideensammeln oder Erklären in einfachen Worten sind sie starke Werkzeuge.</p>
+    <p>Ihre wichtigste Schwäche folgt direkt aus der Bauweise: Ein Sprachmodell prüft nicht, ob seine Aussagen wahr sind — es erzeugt plausiblen Text. Dabei entstehen <strong>Halluzinationen</strong>: erfundene Zahlen, Ereignisse oder Quellenangaben, die täuschend echt klingen. Dazu kommen ein begrenzter Wissensstand (das Training endet zu einem Stichtag) und mögliche Verzerrungen aus den Trainingstexten — Abschnitt 4 lässt grüßen. Deshalb gilt: Wichtige Angaben immer in einer unabhängigen Quelle gegenprüfen.</p>
+    <p>Für den Schulgebrauch kommen zwei rechtliche Punkte dazu. <strong>Datenschutz:</strong> Gib keine personenbezogenen Daten in einen Chatbot ein — keine vollen Namen, Fotos oder Noten von dir oder anderen. Du kannst nicht kontrollieren, wo diese Daten landen (mehr dazu auf der Seite <a href="../../klasse-9/internet-und-datenschutz/index.html">Internet und Datenschutz</a>). <strong>Urheberrecht und Ehrlichkeit:</strong> Lade keine fremden Werke einfach hoch, und gib KI-Texte nicht als deine eigene Leistung aus — das ist eine Täuschung. Kläre, was an deiner Schule erlaubt ist, und kennzeichne, wobei dir eine KI geholfen hat.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Vier Faustregeln für den KI-Einsatz</span>
+      <p>1. <strong>Prüfen:</strong> Wichtige Fakten und Quellen in einer zweiten, unabhängigen Quelle nachschlagen.<br>
+      2. <strong>Schützen:</strong> Keine personenbezogenen Daten eingeben — weder deine noch fremde.<br>
+      3. <strong>Kennzeichnen:</strong> Offenlegen, was die KI beigesteuert hat, und die Regeln der Schule beachten.<br>
+      4. <strong>Verantworten:</strong> Die Entscheidung triffst du — wer ein KI-Ergebnis verwendet, steht dafür gerade.</p>
+    </div>
+    <p>Der letzte Punkt ist der wichtigste: <strong>Die Verantwortung bleibt beim Menschen.</strong> Eine KI kann Vorschläge liefern, aber sie haftet nicht für Fehler — „das hat die KI gesagt“ zählt nicht, weder in der Schule noch später im Beruf. Richtig eingesetzt ist KI weder Zauberei noch Bedrohung, sondern ein mächtiges Werkzeug: Wie beim Taschenrechner hängt der Nutzen davon ab, dass man versteht, was das Werkzeug kann — und was nicht.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Wie ein künstliches Neuron rechnet — Summe und Schwelle</summary>
+    <div class="vertiefung-inhalt">
+      <p>Viele moderne Modelle — von der Bilderkennung bis zum Chatbot — bestehen aus <strong>künstlichen Neuronen</strong>, stark vereinfachten Nachbildungen von Nervenzellen. Ein einzelnes Neuron rechnet überraschend simpel: Es erhält mehrere Zahlen-Eingaben $x_1, x_2, x_3$. Jede Eingabe hat ein <strong>Gewicht</strong> $w_1, w_2, w_3$, das angibt, wie stark sie zählt. Das Neuron bildet die <strong>gewichtete Summe</strong> $w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3$ und vergleicht sie mit einer <strong>Schwelle</strong>: Erreicht oder übertrifft die Summe die Schwelle, „feuert“ das Neuron (Ausgabe 1), sonst bleibt es still (Ausgabe 0).</p>
+      <p>Ein Mini-Beispiel: Ein Neuron soll entscheiden, ob der Wochenend-Ausflug stattfindet. Eingaben (jeweils 1 = ja, 0 = nein): $x_1$ = gutes Wetter, $x_2$ = genug Zeit, $x_3$ = Freunde kommen mit. Gewichte: $w_1 = 3$, $w_2 = 2$, $w_3 = 2$ — das Wetter zählt am meisten. Schwelle: 4. Bei gutem Wetter, wenig Zeit und Freunden im Boot gilt: $3 \cdot 1 + 2 \cdot 0 + 2 \cdot 1 = 5$, und wegen $5 \geq 4$ feuert das Neuron — der Ausflug findet statt. Gutes Wetter allein ($3 \cdot 1 + 2 \cdot 0 + 2 \cdot 0 = 3$) reicht dagegen nicht: Die Schwelle 4 wird verfehlt.</p>
+      <p>Der Clou: Beim <strong>Training</strong> schreibt niemand die Gewichte von Hand. Ein Lernverfahren vergleicht die Ausgabe mit dem Etikett und verschiebt die Gewichte nach jedem Fehler ein kleines Stück in die bessere Richtung — millionenfach wiederholt. Schaltet man viele Neuronen in <strong>Schichten</strong> hintereinander (die Ausgaben der einen sind die Eingaben der nächsten), entsteht ein <strong>künstliches neuronales Netz</strong>; bei vielen Schichten spricht man von <em>Deep Learning</em>. Echte Netze verwenden statt der harten Schwelle weichere Funktionen und enthalten Millionen bis Milliarden Gewichte — das Rechenprinzip pro Neuron bleibt aber genau das hier gezeigte.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen — von der Wenn-Dann-Regel über Genauigkeit und Fehlertypen bis zum künstlichen Neuron.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+  <section class="sim-einbettung" aria-labelledby="sim-einbettung">
+    <h2 id="sim-einbettung">Selbst ausprobieren: Klassifikator (Perzeptron)</h2>
+    <p>Erkunde dieses Thema interaktiv in der Simulation — Schieberegler bewegen, beobachten, ausprobieren.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/informatik/klassifikator/index.html?einbettung=1" title="Interaktive Simulation: Klassifikator (Perzeptron)" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss"><a href="../../../simulationen/informatik/klassifikator/index.html" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a></div>
+    </div>
+  </section>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

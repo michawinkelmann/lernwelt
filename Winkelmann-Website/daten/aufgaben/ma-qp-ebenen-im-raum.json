@@ -1,0 +1,594 @@
+{
+  "thema": "ma-qp-ebenen-im-raum",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-eb-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über die Parameterform $E\\colon\\; \\vec{x} = \\vec{p} + r \\cdot \\vec{u} + s \\cdot \\vec{v}$ einer Ebene sind richtig?",
+      "optionen": [
+        {
+          "text": "Der Stützvektor p führt vom Ursprung zu einem Punkt der Ebene.",
+          "richtig": true,
+          "erklaerung": "Richtig: Der Stützvektor verankert die Ebene im Koordinatensystem — jeder Punkt der Ebene taugt als Stützpunkt."
+        },
+        {
+          "text": "Die Spannvektoren u und v dürfen keine Vielfachen voneinander sein.",
+          "richtig": true,
+          "erklaerung": "Richtig: Wären sie Vielfache, zeigten beide in dieselbe Richtung — sie spannten dann nur eine Gerade auf, keine Ebene."
+        },
+        {
+          "text": "Die Parameter r und s dürfen nur Werte zwischen 0 und 1 annehmen.",
+          "richtig": false,
+          "erklaerung": "r und s durchlaufen alle reellen Zahlen — nur so erreicht man jeden Punkt der unendlich ausgedehnten Ebene."
+        },
+        {
+          "text": "Jede Ebene besitzt genau eine Parameterform.",
+          "richtig": false,
+          "erklaerung": "Stützpunkt und Spannvektoren lassen sich auf viele Arten wählen — dieselbe Ebene hat unendlich viele gleichwertige Parameterformen."
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Ein <strong>Parameter</strong> ist eine feste, aber zunächst unbekannte Zahl in einem Term, z. B. $a$ in $f(x)=ax^2$.",
+        "Stell dir die Ebene als unendlich große, dünne Platte vor: Wie kommst du vom Ursprung zu einem beliebigen Punkt dieser Platte?",
+        "Zwei Vektoren, die Vielfache voneinander sind, zeigen in dieselbe Richtung — was spannen sie dann auf?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Der Stützvektor $\\vec{p}$ führt vom Ursprung zu einem festen Punkt der Ebene, und die Spannvektoren müssen in verschiedene Richtungen zeigen (keine Vielfachen voneinander), sonst entsteht nur eine Gerade. Aussage 3 ist falsch, weil $r$ und $s$ alle reellen Zahlen durchlaufen. Aussage 4 ist falsch: Jeder Punkt der Ebene kann Stützpunkt sein, und auch die Spannvektoren sind nicht eindeutig — es gibt unendlich viele richtige Parameterformen derselben Ebene.",
+      "kc": [
+        "parameterform-begriff"
+      ]
+    },
+    {
+      "id": "ma-qp-eb-002",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Die Ebene $E$ geht durch die Punkte $A(1\\,|\\,0\\,|\\,2)$, $B(3\\,|\\,1\\,|\\,2)$ und $C(1\\,|\\,2\\,|\\,5)$. Stelle die Parameterform mit Stützpunkt $A$ und den Spannvektoren $\\vec{u} = \\overrightarrow{AB}$ und $\\vec{v} = \\overrightarrow{AC}$ auf. Welchen Punkt $X$ der Ebene erreichst du für $r = 2$ und $s = 1$?",
+      "eingaben": [
+        {
+          "label": "$x_1$ von $X$",
+          "antwort": 5,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$x_2$ von $X$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$x_3$ von $X$",
+          "antwort": 5,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Ein <strong>Parameter</strong> ist eine feste, aber zunächst unbekannte Zahl in einem Term, z. B. $a$ in $f(x)=ax^2$.",
+        "Spannvektoren entstehen koordinatenweise: Endpunkt minus Anfangspunkt, also u aus B − A und v aus C − A.",
+        "u = (2 | 1 | 0) und v = (0 | 2 | 3) — jetzt X = A + 2·u + 1·v koordinatenweise ausrechnen.",
+        "Erste Koordinate: 1 + 2·2 + 1·0 = 5 — die beiden anderen genauso."
+      ],
+      "loesungsweg": "Spannvektoren: $\\vec{u} = B - A$ ergibt (2 | 1 | 0) und $\\vec{v} = C - A$ ergibt (0 | 2 | 3). Eine Parameterform lautet $$E\\colon\\; \\vec{x} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 2 \\end{pmatrix} + r \\cdot \\begin{pmatrix} 2 \\\\ 1 \\\\ 0 \\end{pmatrix} + s \\cdot \\begin{pmatrix} 0 \\\\ 2 \\\\ 3 \\end{pmatrix}$$ Für $r = 2$ und $s = 1$: $x_1 = 1 + 4 + 0 = 5$, $x_2 = 0 + 2 + 2 = 4$, $x_3 = 2 + 0 + 3 = 5$ — also $X(5\\,|\\,4\\,|\\,5)$.",
+      "kc": [
+        "parameterform-aufstellen"
+      ]
+    },
+    {
+      "id": "ma-qp-eb-003",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zu Normalenvektor, Koordinatenform und Punktprobe.",
+      "text": "Ein Normalenvektor n steht ___ auf der Ebene. Deshalb gilt für jeden Spannvektor: Das Skalarprodukt mit n ist ___. In der Koordinatenform ax + by + cz = d sind a, b und c genau die Koordinaten ___. Punktprobe: Die Koordinaten des Punktes einsetzen — der Punkt liegt in der Ebene, wenn die entstehende Aussage ___ ist.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "senkrecht",
+          "optionen": [
+            "senkrecht",
+            "parallel",
+            "schräg"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "null",
+          "optionen": [
+            "null",
+            "eins",
+            "negativ"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "eines Normalenvektors",
+          "optionen": [
+            "eines Normalenvektors",
+            "eines Spannvektors",
+            "des Stützvektors"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "wahr",
+          "optionen": [
+            "wahr",
+            "falsch",
+            "nach z auflösbar"
+          ]
+        }
+      ],
+      "tipps": [
+        "„Normal“ bedeutet in der Mathematik „senkrecht“ — der Normalenvektor zeigt aus der Ebene heraus wie ein Nagel aus einem Brett.",
+        "Welchen Wert hat das Skalarprodukt zweier zueinander senkrechter Vektoren?",
+        "Vergleiche: Die Koordinatenform x + 2y + 2z = 6 gehört zum Normalenvektor n = (1 | 2 | 2)."
+      ],
+      "loesungsweg": "senkrecht — null — eines Normalenvektors — wahr: Der Normalenvektor steht senkrecht auf der Ebene und damit auf jedem Vektor, der in der Ebene verläuft; das Skalarprodukt mit jedem Spannvektor ist null. Die Koeffizienten a, b und c der Koordinatenform sind genau die Koordinaten eines Normalenvektors. Bei der Punktprobe setzt man die Koordinaten ein: Entsteht eine wahre Aussage, liegt der Punkt in der Ebene.",
+      "kc": [
+        "normalenvektor-begriff",
+        "punktprobe"
+      ]
+    },
+    {
+      "id": "ma-qp-eb-004",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jeder Ebene in Koordinatenform einen passenden Normalenvektor zu.",
+      "paare": [
+        {
+          "links": "E₁: 2x − y + 3z = 5",
+          "rechts": "n = (2 | −1 | 3)"
+        },
+        {
+          "links": "E₂: x + 4z = 1",
+          "rechts": "n = (1 | 0 | 4)"
+        },
+        {
+          "links": "E₃: y = 3",
+          "rechts": "n = (0 | 1 | 0)"
+        },
+        {
+          "links": "E₄: 3x + 3y − 3z = 0",
+          "rechts": "n = (1 | 1 | −1)"
+        }
+      ],
+      "tipps": [
+        "Die Koeffizienten vor x, y und z sind die Koordinaten eines Normalenvektors — eine fehlende Variable hat den Koeffizienten 0.",
+        "Jedes Vielfache eines Normalenvektors ist wieder ein Normalenvektor derselben Ebene.",
+        "Bei E₃: y = 3 fehlen x und z — der Normalenvektor zeigt in reine y-Richtung."
+      ],
+      "loesungsweg": "Die Koeffizienten der Koordinatenform liefern direkt einen Normalenvektor: $2x - y + 3z = 5$ hat n = (2 | −1 | 3). Bei $x + 4z = 1$ fehlt y, also n = (1 | 0 | 4). Bei $y = 3$ fehlen x und z, also n = (0 | 1 | 0). Und $3x + 3y - 3z = 0$ hat n = (3 | 3 | −3) — jedes Vielfache ist ebenfalls Normalenvektor, also passt (1 | 1 | −1).",
+      "kc": [
+        "koordinatenform-normalenvektor"
+      ]
+    },
+    {
+      "id": "ma-qp-eb-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Ebene hat die Spannvektoren $$\\vec{u} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 0 \\end{pmatrix} \\quad \\text{und} \\quad \\vec{v} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 3 \\end{pmatrix}$$ Bestimme den Normalenvektor $\\vec{n}$, dessen dritte Koordinate $n_3 = 1$ ist.",
+      "eingaben": [
+        {
+          "label": "$n_1$",
+          "antwort": 6,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$n_2$",
+          "antwort": -3,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "n muss auf beiden Spannvektoren senkrecht stehen: $\\vec{u} \\cdot \\vec{n} = 0$ und $\\vec{v} \\cdot \\vec{n} = 0$ — das gibt ein LGS mit zwei Gleichungen.",
+        "Ausgeschrieben: $n_1 + 2n_2 = 0$ und $n_2 + 3n_3 = 0$. Setze $n_3 = 1$ und arbeite dich rückwärts durch.",
+        "Aus der zweiten Gleichung folgt $n_2 = -3$, daraus mit der ersten $n_1 = 6$."
+      ],
+      "loesungsweg": "Senkrecht-Bedingungen als LGS: $\\vec{u} \\cdot \\vec{n} = n_1 + 2n_2 = 0$ und $\\vec{v} \\cdot \\vec{n} = n_2 + 3n_3 = 0$. Mit $n_3 = 1$ liefert die zweite Gleichung $n_2 = -3$, die erste dann $n_1 = -2n_2 = 6$. Also n = (6 | −3 | 1). Probe: $\\vec{u} \\cdot \\vec{n} = 6 - 6 + 0 = 0$ und $\\vec{v} \\cdot \\vec{n} = 0 - 3 + 3 = 0$ — beide Bedingungen erfüllt. (eA: Das Kreuzprodukt $\\vec{u} \\times \\vec{v}$ liefert genau diesen Vektor in einem Schritt.)",
+      "kc": [
+        "normalenvektor-lgs"
+      ],
+      "cas": "<p>Der ClassPad II liefert den Normalenvektor über das Kreuzprodukt (eA):</p><ol><li>Im <b>Main</b>-Menü über <b>Action → Vektor → crossP</b> den Befehl einfügen.</li><li><code>crossP([1,2,0],[0,1,3])</code> eingeben — Vektoren stehen in eckigen Klammern — und mit <b>EXE</b> bestätigen.</li><li>Ergebnis: <code>[6,-3,1]</code> — genau der gesuchte Normalenvektor.</li><li>Kontrolle: <code>dotP([1,2,0],[6,-3,1])</code> ergibt 0, ebenso <code>dotP([0,1,3],[6,-3,1])</code>.</li></ol><p>Das Kreuzprodukt gehört zum erhöhten Anforderungsniveau — der LGS-Weg im Heft funktioniert auf beiden Niveaus und gehört in die Dokumentation.</p>"
+    },
+    {
+      "id": "ma-qp-eb-006",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Wandle die Ebene $$E\\colon\\; \\vec{x} = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix} + r \\cdot \\begin{pmatrix} 1 \\\\ 0 \\\\ 2 \\end{pmatrix} + s \\cdot \\begin{pmatrix} 2 \\\\ 1 \\\\ 0 \\end{pmatrix}$$ Schritt für Schritt in die Koordinatenform um und prüfe anschließend einen Punkt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Bestimme den Normalenvektor $\\vec{n}$ mit $n_3 = 1$ aus dem LGS $\\vec{u} \\cdot \\vec{n} = 0$ und $\\vec{v} \\cdot \\vec{n} = 0$.",
+          "eingaben": [
+            {
+              "label": "$n_1$",
+              "antwort": -2,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$n_2$",
+              "antwort": 4,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Das LGS lautet $n_1 + 2n_3 = 0$ und $2n_1 + n_2 = 0$ — mit $n_3 = 1$ folgt zuerst $n_1$, daraus $n_2$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die rechte Seite $d = \\vec{p} \\cdot \\vec{n}$ mit dem Stützvektor $\\vec{p}$.",
+          "eingaben": [
+            {
+              "label": "$d$",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$d = 1 \\cdot (-2) + 1 \\cdot 4 + 0 \\cdot 1$"
+          ]
+        },
+        {
+          "frage": "Schritt 3: Punktprobe für $Q(3\\,|\\,2\\,|\\,1)$ — berechne den Wert der linken Seite $-2x + 4y + z$.",
+          "eingaben": [
+            {
+              "label": "linke Seite für $Q$",
+              "antwort": 3,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$-2 \\cdot 3 + 4 \\cdot 2 + 1 \\cdot 1$ — vergleiche das Ergebnis mit der rechten Seite $d = 2$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Der Normalenvektor muss auf beiden Spannvektoren senkrecht stehen — zwei Skalarprodukt-Gleichungen, eine Koordinate darfst du frei wählen.",
+        "Koordinatenform: $n_1 x + n_2 y + n_3 z = d$ mit $d = \\vec{p} \\cdot \\vec{n}$ — der Stützpunkt muss die fertige Gleichung erfüllen.",
+        "Die fertige Gleichung lautet $-2x + 4y + z = 2$. Liefert $Q$ links denselben Wert wie rechts?"
+      ],
+      "loesungsweg": "Schritt 1: Aus $\\vec{u} \\cdot \\vec{n} = n_1 + 2n_3 = 0$ und $\\vec{v} \\cdot \\vec{n} = 2n_1 + n_2 = 0$ folgt mit $n_3 = 1$: $n_1 = -2$ und $n_2 = 4$, also n = (−2 | 4 | 1). Schritt 2: $d = \\vec{p} \\cdot \\vec{n} = -2 + 4 + 0 = 2$ — die Koordinatenform lautet $-2x + 4y + z = 2$. Schritt 3: Einsetzen von $Q(3\\,|\\,2\\,|\\,1)$ liefert $-6 + 8 + 1 = 3 \\ne 2$ — $Q$ liegt nicht in $E$. Kontrolle mit einem echten Ebenenpunkt ($r = s = 1$ ergibt $(4\\,|\\,2\\,|\\,2)$): $-8 + 8 + 2 = 2$ — stimmt.",
+      "kc": [
+        "parameterform-zu-koordinatenform",
+        "punktprobe"
+      ],
+      "cas": "<p>Umwandlung und Punktprobe mit dem ClassPad II kontrollieren:</p><ol><li><code>crossP([1,0,2],[2,1,0])</code> liefert <code>[-2,4,1]</code> — den Normalenvektor (eA, als reine Kontrolle auch im gA nützlich).</li><li>Probe für den Stützpunkt mit dem Mit-Operator: <code>-2x+4y+z | x=1 and y=1 and z=0</code> ergibt 2 — der Stützpunkt erfüllt die Gleichung.</li><li>Punktprobe für Q: <code>-2x+4y+z | x=3 and y=2 and z=1</code> ergibt 3, nicht 2 — Q liegt nicht in der Ebene.</li></ol><p>So bestätigt das CAS jede Zeile deiner Rechnung — der dokumentierte LGS-Weg gehört trotzdem ins Heft.</p>"
+    },
+    {
+      "id": "ma-qp-eb-007",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Gegeben ist die Ebene $E\\colon\\; 2x + 3y + 6z = 12$. Welche Aussagen über ihre Spurpunkte sind richtig?",
+      "optionen": [
+        {
+          "text": "S₁(6 | 0 | 0) ist der Spurpunkt auf der x-Achse.",
+          "richtig": true,
+          "erklaerung": "Richtig: y = z = 0 einsetzen ergibt 2x = 12, also x = 6."
+        },
+        {
+          "text": "S₂(0 | 4 | 0) ist der Spurpunkt auf der y-Achse.",
+          "richtig": true,
+          "erklaerung": "Richtig: x = z = 0 einsetzen ergibt 3y = 12, also y = 4."
+        },
+        {
+          "text": "S₃(0 | 0 | 3) ist der Spurpunkt auf der z-Achse.",
+          "richtig": false,
+          "erklaerung": "x = y = 0 liefert 6z = 12, also z = 2 — der Spurpunkt ist S₃(0 | 0 | 2). Probe für (0 | 0 | 3): 6 · 3 = 18 ≠ 12."
+        },
+        {
+          "text": "Für einen Spurpunkt setzt man jeweils zwei Koordinaten gleich null.",
+          "richtig": true,
+          "erklaerung": "Richtig: Auf einer Koordinatenachse sind die beiden anderen Koordinaten null — genau das nutzt die Rechnung aus."
+        }
+      ],
+      "tipps": [
+        "Ein Punkt auf der x-Achse hat die Form (x | 0 | 0) — entsprechend für die anderen Achsen.",
+        "Setze jeweils zwei Nullen in die Ebenengleichung ein und löse nach der verbleibenden Variablen auf.",
+        "Drei Aussagen sind richtig — kontrolliere besonders den Spurpunkt auf der z-Achse."
+      ],
+      "loesungsweg": "Spurpunkte entstehen, indem man jeweils zwei Koordinaten null setzt (Aussage 4 richtig). x-Achse: $2x = 12$, also $S_1(6\\,|\\,0\\,|\\,0)$ — richtig. y-Achse: $3y = 12$, also $S_2(0\\,|\\,4\\,|\\,0)$ — richtig. z-Achse: $6z = 12$ ergibt $z = 2$ — Aussage 3 ist falsch, denn $(0\\,|\\,0\\,|\\,3)$ liefert beim Einsetzen $18 \\ne 12$.",
+      "kc": [
+        "spurpunkte"
+      ]
+    },
+    {
+      "id": "ma-qp-eb-008",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Gerade $$g\\colon\\; \\vec{x} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 1 \\end{pmatrix} + t \\cdot \\begin{pmatrix} 2 \\\\ 1 \\\\ 1 \\end{pmatrix}$$ durchstößt die Ebene $E\\colon\\; 2x - y + z = 9$. Bestimme den Parameterwert $t$ und den Durchstoßpunkt $S$.",
+      "eingaben": [
+        {
+          "label": "$t$",
+          "antwort": 2,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$x$-Koordinate von $S$",
+          "antwort": 5,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$y$-Koordinate von $S$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$z$-Koordinate von $S$",
+          "antwort": 3,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Ein <strong>Parameter</strong> ist eine feste, aber zunächst unbekannte Zahl in einem Term, z. B. $a$ in $f(x)=ax^2$.",
+        "Lies die Koordinaten der Geradenpunkte ab ($x = 1 + 2t$, $y = 2 + t$, $z = 1 + t$) und setze sie in die Ebenengleichung ein.",
+        "$2 \\cdot (1 + 2t) - (2 + t) + (1 + t) = 9$ — fasse die linke Seite zusammen.",
+        "$1 + 4t = 9$ führt auf $t = 2$; diesen Wert in die Geradengleichung einsetzen."
+      ],
+      "loesungsweg": "Geradenpunkte: $x = 1 + 2t$, $y = 2 + t$, $z = 1 + t$. Einsetzen in $E$: $2(1 + 2t) - (2 + t) + (1 + t) = 1 + 4t = 9$, also $t = 2$. Einsetzen in die Geradengleichung: $S(1 + 4\\,|\\,2 + 2\\,|\\,1 + 2) = S(5\\,|\\,4\\,|\\,3)$. Probe in der Ebenengleichung: $2 \\cdot 5 - 4 + 3 = 9$ — der Durchstoßpunkt stimmt.",
+      "kc": [
+        "durchstosspunkt"
+      ],
+      "cas": "<p>Das Durchstoß-LGS löst der ClassPad II in einer Zeile:</p><ol><li>Die Geradenkoordinaten in die Ebenengleichung einsetzen und die Gleichung direkt eintippen: <code>solve(2(1+2t)-(2+t)+(1+t)=9,t)</code>.</li><li><b>EXE</b> liefert <code>{t=2}</code>.</li><li>Den Punkt bestimmt die Vektorrechnung: <code>[1,2,1]+2*[2,1,1]</code> ergibt <code>[5,4,3]</code>.</li><li>Probe: <code>2*5-4+3</code> ergibt 9 — Punkt bestätigt.</li></ol><p>In der Klausur zählt der dokumentierte Rechenweg — das CAS bestätigt Parameterwert und Punkt.</p>"
+    },
+    {
+      "id": "ma-qp-eb-009",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bringe die Schritte zur Bestimmung des Durchstoßpunkts einer Geraden mit einer Ebene (in Koordinatenform) in die richtige Reihenfolge.",
+      "elemente": [
+        "Die Geradenpunkte koordinatenweise ablesen: x, y und z jeweils in Abhängigkeit von t",
+        "Diese drei Terme in die Koordinatenform der Ebene einsetzen",
+        "Die entstandene Gleichung nach t auflösen",
+        "Den t-Wert in die Geradengleichung einsetzen — das ergibt den Durchstoßpunkt",
+        "Probe: Die Koordinaten des Punktes müssen die Ebenengleichung erfüllen"
+      ],
+      "tipps": [
+        "Gesucht ist der Punkt der Geraden, der die Ebenengleichung erfüllt — dafür braucht man zuerst die Geradenpunkte in Koordinaten.",
+        "Das Einsetzen macht aus Gerade und Ebene eine einzige Gleichung mit der einzigen Unbekannten t.",
+        "Der t-Wert allein ist noch kein Punkt — erst das Einsetzen in die Geradengleichung liefert die Koordinaten."
+      ],
+      "loesungsweg": "Zuerst werden die Geradenpunkte koordinatenweise notiert ($x$, $y$ und $z$ in Abhängigkeit von $t$) und in die Koordinatenform eingesetzt. Die entstehende lineare Gleichung wird nach $t$ aufgelöst, der $t$-Wert anschließend in die Geradengleichung eingesetzt — das ergibt den Durchstoßpunkt. Den Abschluss bildet die Probe: Seine Koordinaten müssen die Ebenengleichung erfüllen.",
+      "kc": [
+        "durchstosspunkt-ablauf"
+      ]
+    },
+    {
+      "id": "ma-qp-eb-010",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Ebene $E\\colon\\; x + y + 2z = 4$ hat den Normalenvektor n = (1 | 1 | 2). Untersucht werden drei Geraden: g₁ durch P₁(1 | 1 | 1) mit Richtung d₁ = (2 | 0 | −1), g₂ durch P₂(0 | 0 | 0) mit Richtung d₂ = (2 | 0 | −1) und g₃ durch P₃(3 | 0 | 1) mit Richtung d₃ = (1 | 1 | 1). Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "g₁ liegt vollständig in E.",
+          "richtig": true,
+          "erklaerung": "Richtig: d₁ · n = 2 + 0 − 2 = 0 (Richtung parallel zur Ebene) und die Punktprobe für P₁ stimmt: 1 + 1 + 2 = 4."
+        },
+        {
+          "text": "g₂ ist echt parallel zu E.",
+          "richtig": true,
+          "erklaerung": "Richtig: d₂ · n = 0, aber P₂ liegt nicht in E (0 + 0 + 0 = 0 ≠ 4) — parallel ohne gemeinsamen Punkt."
+        },
+        {
+          "text": "g₃ schneidet E in genau einem Punkt.",
+          "richtig": true,
+          "erklaerung": "Richtig: d₃ · n = 1 + 1 + 2 = 4 ≠ 0 — die Gerade verläuft nicht parallel zur Ebene und durchstößt sie daher in genau einem Punkt."
+        },
+        {
+          "text": "Gilt d · n = 0, so schneidet die Gerade die Ebene in genau einem Punkt.",
+          "richtig": false,
+          "erklaerung": "Genau umgekehrt: d · n = 0 bedeutet, dass die Richtung parallel zur Ebene verläuft — die Gerade ist dann echt parallel oder liegt ganz in E. Erst die Punktprobe mit dem Stützpunkt entscheidet."
+        }
+      ],
+      "tipps": [
+        "Schnelltest: Berechne d · n. Ist das Skalarprodukt ungleich null, durchstößt die Gerade die Ebene.",
+        "Bei d · n = 0 entscheidet die Punktprobe mit dem Stützpunkt: Liegt er in E, ist die Gerade enthalten — sonst echt parallel.",
+        "Drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Schnelltest mit $\\vec{d} \\cdot \\vec{n}$: Für g₁ und g₂ gilt $2 + 0 - 2 = 0$ — beide verlaufen parallel zur Ebene. Die Punktprobe entscheidet: $P_1$ erfüllt $1 + 1 + 2 = 4$, also liegt g₁ in $E$; $P_2$ liefert $0 \\ne 4$, also ist g₂ echt parallel. Für g₃ ist $\\vec{d} \\cdot \\vec{n} = 4 \\ne 0$ — g₃ durchstößt $E$ in genau einem Punkt. Aussage 4 vertauscht die Fälle: $\\vec{d} \\cdot \\vec{n} = 0$ heißt parallel oder enthalten, nicht „schneidet“.",
+      "kc": [
+        "lage-gerade-ebene"
+      ]
+    },
+    {
+      "id": "ma-qp-eb-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Leon vergleicht die Ebenen $E_1\\colon\\; 2x - 4y + 6z = 10$ und $E_2\\colon\\; -x + 2y - 3z = 5$ und behauptet: „Die linke Seite von $E_2$ ist das $\\left(-\\frac{1}{2}\\right)$-Fache der linken Seite von $E_1$ — die beiden Gleichungen beschreiben also dieselbe Ebene.“ Nimm Stellung: Prüfe Leons Argument, bestimme die tatsächliche Lage der beiden Ebenen und formuliere, woran man identische Ebenen sicher erkennt.",
+      "musterloesung": "Leons Beobachtung stimmt nur zur Hälfte: Multipliziert man die komplette Gleichung von $E_1$ mit $-\\frac{1}{2}$, entsteht links tatsächlich $-x + 2y - 3z$, rechts aber $-5$ und nicht $5$. Die Gleichung von $E_2$ ist also kein Vielfaches der Gleichung von $E_1$ — Leons Schluss ist falsch. Die Normalenvektoren (2 | −4 | 6) und (−1 | 2 | −3) sind dagegen sehr wohl Vielfache voneinander (Faktor $-\\frac{1}{2}$), die Ebenen sind deshalb parallel. Ob identisch oder echt parallel, klärt eine Punktprobe: $P(5\\,|\\,0\\,|\\,0)$ liegt in $E_1$ (denn $2 \\cdot 5 = 10$), aber in $E_2$ ergibt sich $-5 \\ne 5$ — $P$ liegt nicht in $E_2$. Die Ebenen sind also echt parallel und haben keinen gemeinsamen Punkt. Merkregel: Identisch sind zwei Ebenen genau dann, wenn die komplette Gleichung — linke und rechte Seite — mit demselben Faktor ineinander übergeht, oder wenn die Normalenvektoren Vielfache sind und zusätzlich die Punktprobe gelingt. Leons Fehler: Er hat den Faktor nur auf die linke Seite angewendet.",
+      "tipps": [
+        "Multipliziere die komplette Gleichung von E₁ mit −½ — auch die rechte Seite! Vergleiche dann mit E₂.",
+        "Die Normalenvektoren sind Vielfache voneinander — welche zwei Lagen sind dann noch möglich?",
+        "Punktprobe: Wähle einen einfachen Punkt von E₁, etwa (5 | 0 | 0), und teste ihn in E₂."
+      ],
+      "loesungsweg": "Der Faktor $-\\frac{1}{2}$ überführt nur die linke Seite von $E_1$ in die von $E_2$; rechts entsteht $-5 \\ne 5$ — die Gleichungen sind keine Vielfachen voneinander. Wegen der vielfachen Normalenvektoren sind die Ebenen parallel; die Punktprobe mit $P(5\\,|\\,0\\,|\\,0) \\in E_1$ scheitert in $E_2$ ($-5 \\ne 5$), also sind die Ebenen echt parallel. Identität erkennt man daran, dass die ganze Gleichung — beide Seiten — ein Vielfaches ist oder dass zusätzlich zur Parallelität eine Punktprobe gelingt.",
+      "kc": [
+        "lage-ebene-ebene"
+      ]
+    },
+    {
+      "id": "ma-qp-eb-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Die Ebenen $E_1\\colon\\; x + y + z = 4$ und $E_2\\colon\\; x - y + 2z = 2$ schneiden sich in einer Geraden $g$. Bestimme $g$ über zwei gemeinsame Punkte.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Setze $z = 0$ und löse das LGS $x + y = 4$, $x - y = 2$ — das liefert den ersten gemeinsamen Punkt $P(x\\,|\\,y\\,|\\,0)$.",
+          "eingaben": [
+            {
+              "label": "$x$",
+              "antwort": 3,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$y$",
+              "antwort": 1,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Addiere die beiden Gleichungen: $2x = 6$ — dann rückwärts einsetzen."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Setze $z = 2$ und löse erneut — das liefert den zweiten gemeinsamen Punkt $Q(x\\,|\\,y\\,|\\,2)$.",
+          "eingaben": [
+            {
+              "label": "$x$",
+              "antwort": 0,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$y$",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Mit $z = 2$ lauten die Gleichungen $x + y = 2$ und $x - y = -2$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Bestimme den Richtungsvektor $\\vec{d} = \\overrightarrow{PQ}$ der Schnittgeraden.",
+          "eingaben": [
+            {
+              "label": "$d_1$",
+              "antwort": -3,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$d_2$",
+              "antwort": 1,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$d_3$",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$\\vec{d} = Q - P$ koordinatenweise; Kontrolle: $\\vec{d}$ muss auf beiden Normalenvektoren senkrecht stehen."
+          ]
+        }
+      ],
+      "tipps": [
+        "Jeder Punkt der Schnittgeraden erfüllt beide Ebenengleichungen gleichzeitig — hältst du z fest, bleibt ein LGS mit zwei Unbekannten.",
+        "Zwei verschiedene z-Werte liefern zwei verschiedene Punkte der Schnittgeraden.",
+        "Geradengleichung: $\\vec{x} = \\vec{p} + t \\cdot \\vec{d}$ mit $P(3\\,|\\,1\\,|\\,0)$ und dem Richtungsvektor aus Schritt 3."
+      ],
+      "loesungsweg": "Schritt 1: $z = 0$ führt auf $x + y = 4$ und $x - y = 2$; Addieren ergibt $2x = 6$, also $x = 3$ und $y = 1$ — Punkt $P(3\\,|\\,1\\,|\\,0)$. Schritt 2: $z = 2$ führt auf $x + y = 2$ und $x - y = -2$; Addieren ergibt $x = 0$, also $y = 2$ — Punkt $Q(0\\,|\\,2\\,|\\,2)$. Schritt 3: $\\vec{d} = Q - P$ ergibt (−3 | 1 | 2). Damit lautet die Schnittgerade $$g\\colon\\; \\vec{x} = \\begin{pmatrix} 3 \\\\ 1 \\\\ 0 \\end{pmatrix} + t \\cdot \\begin{pmatrix} -3 \\\\ 1 \\\\ 2 \\end{pmatrix}$$ Kontrolle: $\\vec{d}$ steht senkrecht auf beiden Normalenvektoren ($-3 + 1 + 2 = 0$ und $-3 - 1 + 4 = 0$), und $P$ erfüllt beide Gleichungen ($3 + 1 + 0 = 4$ und $3 - 1 + 0 = 2$).",
+      "kc": [
+        "schnittgerade"
+      ]
+    },
+    {
+      "id": "ma-qp-eb-013",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Welche Aussagen über Lagebeziehungen von Ebenen im Raum sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Ebenen x + y = 2 und x + y = 5 sind echt parallel.",
+          "richtig": true,
+          "erklaerung": "Richtig: Beide haben den Normalenvektor (1 | 1 | 0) — z darf beliebig sein. Ein Punkt mit x + y = 2 kann nie x + y = 5 erfüllen, also gibt es keinen gemeinsamen Punkt."
+        },
+        {
+          "text": "Zwei nicht parallele Ebenen schneiden sich in genau einem Punkt.",
+          "richtig": false,
+          "erklaerung": "Zwei nicht parallele Ebenen schneiden sich immer in einer ganzen Geraden — ein einzelner Schnittpunkt ist bei zwei Ebenen unmöglich."
+        },
+        {
+          "text": "Die Ebenen 2x + 2y + 2z = 8 und x + y + z = 4 sind identisch.",
+          "richtig": true,
+          "erklaerung": "Richtig: Division der ersten Gleichung durch 2 liefert exakt die zweite — jede Lösung der einen Gleichung löst auch die andere."
+        },
+        {
+          "text": "Ist eine Gerade zu zwei sich schneidenden Ebenen parallel, dann ist sie auch zur Schnittgeraden parallel.",
+          "richtig": true,
+          "erklaerung": "Richtig: Ihr Richtungsvektor steht senkrecht auf beiden Normalenvektoren — im Raum gibt es bis auf Vielfache nur eine solche Richtung, und genau die hat auch die Schnittgerade."
+        }
+      ],
+      "tipps": [
+        "Vergleiche zuerst die Normalenvektoren: Vielfache voneinander bedeutet parallel oder identisch, sonst Schnittgerade.",
+        "Identisch heißt: Die komplette Gleichung geht mit einem einzigen Faktor in die andere über.",
+        "Drei Aussagen sind richtig — der Schnitt zweier Ebenen ist nie ein einzelner Punkt."
+      ],
+      "loesungsweg": "Aussage 1: Beide Ebenen haben den Normalenvektor (1 | 1 | 0), aber $2 \\ne 5$ — echt parallel, richtig. Aussage 2 ist falsch: Nicht parallele Ebenen schneiden sich stets in einer Geraden, nie in einem einzelnen Punkt. Aussage 3: Division durch 2 überführt die erste Gleichung vollständig in die zweite — identisch, richtig. Aussage 4: Eine zu beiden Ebenen parallele Gerade hat einen Richtungsvektor, der auf beiden Normalenvektoren senkrecht steht; diese Richtung ist im Raum bis auf Vielfache eindeutig und gehört genau der Schnittgeraden — richtig.",
+      "kc": [
+        "lage-ebene-ebene",
+        "schnittgerade"
+      ]
+    }
+  ]
+}

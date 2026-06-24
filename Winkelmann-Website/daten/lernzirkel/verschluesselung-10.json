@@ -1,0 +1,56 @@
+{
+ "id": "verschluesselung-10",
+ "titel": "Lernzirkel: Verschlüsselung",
+ "fach": "informatik",
+ "intro": "Wie macht man eine Nachricht geheim – und wie knackt man sie wieder? Hier verschiebst du Buchstaben mit der Caesar-Verschlüsselung, suchst nach Mustern, knobelst und übst. Die Reihenfolge wählst du selbst.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Caesar verschieben",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verschiebe jeden Buchstaben im Alphabet um eine feste Zahl $s$. Stelle verschiedene Schlüssel ein: Was passiert bei $s = 3$? Und was bei $s = 26$? Erkennst du, warum manche Schlüssel den Text gar nicht verändern?</p>",
+   "widget": {
+    "id": "caesar",
+    "params": {
+     "text": "HALLO WELT",
+     "shift": 3
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Caesar knacken",
+   "typ": "link",
+   "typLabel": "Experiment",
+   "html": "<p>Wer den Schlüssel nicht kennt, kann ihn oft trotzdem finden: Im Experiment zählst du, wie häufig die Buchstaben im Geheimtext vorkommen. Der häufigste Buchstabe verrät meist das verschobene <em>E</em> – und damit den Schlüssel.</p>",
+   "link": {
+    "pfad": "experimente/informatik/haeufigkeitsanalyse/index.html",
+    "label": "Häufigkeitsanalyse öffnen"
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Wie viele Schlüssel gibt es?",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Bei der Caesar-Verschlüsselung verschiebt man um $s$ Stellen. Wie viele <em>sinnvolle</em> Schlüssel gibt es, die den Text wirklich verändern? Warum ist die Verschlüsselung dadurch leicht zu knacken?</p><details><summary>Lösung anzeigen</summary><div><p>Das Alphabet hat $26$ Buchstaben, also gibt es Verschiebungen $s = 0, 1, \\dots, 25$. Bei $s = 0$ (und $s = 26$) bleibt der Text unverändert – das ist kein sinnvoller Schlüssel. Es bleiben also $25$ sinnvolle Schlüssel.</p><p>Weil das so wenige sind, kann man notfalls einfach alle $25$ Möglichkeiten durchprobieren („Brute Force“) und sieht schnell, welche einen lesbaren Text ergibt.</p></div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Schlüssel und Caesar-Tabelle",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "html": "<p>Wende dein Wissen zur Caesar-Verschlüsselung an.</p>",
+   "quelle": "in-10-verschluesselung",
+   "ids": [
+    "in-10-vs-005",
+    "in-10-vs-007"
+   ]
+  }
+ ]
+}

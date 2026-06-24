@@ -1,0 +1,920 @@
+{
+ "thema": "ma-qp-normalverteilung",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben für den Kurs ma-qs (Block 2: Normalverteilung). Fachliche Endprüfung ausstehend. Marker ergänzung:lernbüro. IDs beginnen ab 101.",
+ "aufgaben": [
+  {
+   "id": "ma-qp-nv-101",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Stetig oder diskret? Welche Beispiele beschreiben eine stetige Zufallsgröße?",
+   "optionen": [
+    {
+     "text": "Die Anzahl der Schülerinnen in einem Kurs",
+     "richtig": false,
+     "erklaerung": "Eine Anzahl kann nur ganze Zahlen annehmen -- das ist eine diskrete Zufallsgröße."
+    },
+    {
+     "text": "Die Füllmenge einer Flasche (in ml)",
+     "richtig": true,
+     "erklaerung": "Füllmengen können jeden Wert eines Intervalls annehmen (z. B. 998,7 ml, 998,72 ml ...) -- das ist eine stetige Zufallsgröße."
+    },
+    {
+     "text": "Die Zeit, die ein Pendel für einen Schwingungsvorgang braucht (in s)",
+     "richtig": true,
+     "erklaerung": "Messgrößen wie Zeiten, Längen oder Massen sind stetig: Zwischen zwei gemessenen Werten liegen stets weitere mögliche."
+    },
+    {
+     "text": "Die Augenzahl beim einmaligen Würfelwurf",
+     "richtig": false,
+     "erklaerung": "Ein Würfel zeigt nur die ganzen Zahlen 1 bis 6 -- das ist eine diskrete Zufallsgröße."
+    }
+   ],
+   "tipps": [
+    "Stetig = kann jeden Wert eines Intervalls annehmen. Diskret = nur einzelne, isolierte Werte (oft ganzzahlig).",
+    "Messgrößen (Länge, Masse, Zeit, Temperatur, Volumen) sind typischerweise stetig -- Anzahlen und Würfelergebnisse dagegen diskret.",
+    "Genau zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussagen 2 und 3: Füllmengen und Zeiten sind Messgrößen, die jeden Wert eines Intervalls annehmen können -- damit stetig. Die Schüleranzahl kann nur ganze Zahlen annehmen (diskret), die Augenzahl ebenso (nur 1 bis 6).",
+   "kc": [
+    "stetige-zufallsgroesse"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-102",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ergänze den Merktext zur stetigen Zufallsgröße und ihrer Dichtefunktion.",
+   "text": "Bei einer stetigen Zufallsgröße hat jeder einzelne Wert die Wahrscheinlichkeit ___. Wahrscheinlichkeiten werden als ___ unter der Dichtekurve berechnet. Die Gesamtfläche unter der Dichtekurve beträgt immer ___. Das Modell der Normalverteilung hat zwei Parameter: den Erwartungswert ___ und die Standardabweichung ___.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "0",
+     "optionen": [
+      "0",
+      "1",
+      "0,5"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Fläche",
+     "optionen": [
+      "Fläche",
+      "Höhe",
+      "Steigung"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "1",
+     "optionen": [
+      "1",
+      "0",
+      "σ"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "μ",
+     "optionen": [
+      "μ",
+      "σ",
+      "n"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "σ",
+     "optionen": [
+      "σ",
+      "μ",
+      "p"
+     ]
+    }
+   ],
+   "tipps": [
+    "Ein einzelner Wert wie 999,7 ml hat keine positive Wahrscheinlichkeit -- zwischen ihm und dem nächsten liegen unendlich viele weitere.",
+    "Fläche = Wahrscheinlichkeit: Was bei der Binomialverteilung die Säulenhöhe war, übernimmt bei stetigen Größen die Fläche unter der Kurve.",
+    "Die zwei Parameter steuern die Lage und die Breite der Glocke."
+   ],
+   "loesungsweg": "P(X = a) = 0 -- jeder Einzelwert hat die Wahrscheinlichkeit 0. Wahrscheinlichkeiten stecken in Flächen unter der Dichtekurve; die Gesamtfläche beträgt 1. Die Normalverteilung hat die Parameter $\\mu$ (Erwartungswert, steuert die Lage) und $\\sigma$ (Standardabweichung, steuert die Breite).",
+   "kc": [
+    "stetige-zufallsgroesse",
+    "glockenkurve-eigenschaften"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-103",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ordne jeder Eigenschaft der Gaußschen Glockenkurve die passende Beschreibung zu.",
+   "paare": [
+    {
+     "links": "Maximum der Kurve",
+     "rechts": "liegt an der Stelle x = μ"
+    },
+    {
+     "links": "Wendepunkte der Kurve",
+     "rechts": "liegen bei μ − σ und μ + σ"
+    },
+    {
+     "links": "P(X ≤ μ)",
+     "rechts": "= 0,5 (wegen Symmetrie)"
+    },
+    {
+     "links": "Gesamtfläche unter der Kurve",
+     "rechts": "= 1"
+    }
+   ],
+   "tipps": [
+    "Der Gipfel der Glocke liegt immer über dem Erwartungswert -- die häufigsten Werte sind die nächsten am Zentrum.",
+    "Die Wendepunkte verraten σ: von μ aus genau eine Standardabweichung nach links und rechts.",
+    "Wegen der Symmetrie liegen links und rechts von μ je die halbe Wahrscheinlichkeit -- zusammen ergibt das 1."
+   ],
+   "loesungsweg": "Das Maximum liegt bei $x = \\mu$ (Lageparameter). Die Wendepunkte liegen bei $\\mu \\pm \\sigma$ -- dort geht die Kurve vom Bauch in die Flanke über; so lässt sich $\\sigma$ direkt aus einer Skizze ablesen. Wegen der Symmetrie gilt $P(X \\le \\mu) = 0{,}5$, und die Gesamtfläche unter jeder Dichtekurve beträgt $1$.",
+   "kc": [
+    "glockenkurve-eigenschaften"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-104",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Eine Anlage füllt Mineralwasserflaschen; die Füllmenge $X$ (in ml) ist normalverteilt mit $\\mu = 500$ und $\\sigma = 5$. Berechne $P(495 \\le X \\le 510)$ und $P(X < 492)$ (je vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "$P(495 \\le X \\le 510)$",
+     "antwort": 0.8186,
+     "toleranz": 0.0005,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X < 492)$",
+     "antwort": 0.0548,
+     "toleranz": 0.0005,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Wahrscheinlichkeit = Fläche: normCDf(untere Grenze, obere Grenze, $\\sigma$, $\\mu$) -- Grenzen zuerst, dann $\\sigma$, dann $\\mu$.",
+    "Für $P(X < 492)$ ist die untere Grenze $-\\infty$ (über die mth-Tastatur oder $-10^{99}$).",
+    "Plausibilitätscheck: 492 liegt $\\frac{500 - 492}{5} = 1{,}6$ Standardabweichungen unter $\\mu$ -- selten, aber nicht extrem."
+   ],
+   "loesungsweg": "$X$ normalverteilt mit $\\mu = 500$, $\\sigma = 5$. normCDf(495, 510, 5, 500) $\\approx 0{,}8186$ -- über vier Fünftel aller Flaschen liegen in diesem Bereich. normCDf($-\\infty$, 492, 5, 500) $\\approx 0{,}0548$. Plausibilität: 492 liegt ca. $1{,}6\\\\,\\sigma$ unter $\\mu$, also zwischen $2{,}3\\\\,\\\\%$ (bei $2\\sigma$) und $15{,}9\\\\,\\\\%$ (bei $1\\sigma$) -- passt.",
+   "kc": [
+    "normcdf-anwenden"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-105",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Die Punktzahl $X$ eines Tests ist normalverteilt mit $\\mu = 330$ und $\\sigma = 6$. Bestimme mit den Sigma-Regeln das symmetrische $1\\sigma$-Intervall um $\\mu$ und gib die Wahrscheinlichkeit für einen Wert über $336$ an.",
+   "eingaben": [
+    {
+     "label": "untere Grenze",
+     "antwort": 324,
+     "toleranz": 0,
+     "einheit": "Punkte"
+    },
+    {
+     "label": "obere Grenze",
+     "antwort": 336,
+     "toleranz": 0,
+     "einheit": "Punkte"
+    },
+    {
+     "label": "$P(X > 336)$",
+     "antwort": 15.9,
+     "toleranz": 0.1,
+     "einheit": "%"
+    }
+   ],
+   "tipps": [
+    "Die $1\\sigma$-Umgebung lautet $[\\mu - \\sigma;\\; \\mu + \\sigma]$ -- setze $\\mu = 330$, $\\sigma = 6$ ein.",
+    "Außerhalb der $1\\sigma$-Umgebung liegen rund $31{,}7\\\\,\\\\%$ -- und die Glocke ist symmetrisch.",
+    "$336 = \\mu + \\sigma$: Rechts davon liegt genau die rechte Hälfte des Außenbereichs."
+   ],
+   "loesungsweg": "Die $1\\sigma$-Umgebung reicht von $330 - 6 = 324$ bis $330 + 6 = 336$ Punkte und enthält rund $68{,}3\\\\,\\\\%$ aller Werte. Außerhalb liegen $31{,}7\\\\,\\\\%$, wegen der Symmetrie je zur Hälfte: $P(X > 336) \\approx 15{,}9\\\\,\\\\%$. CAS-Kontrolle: normCDf(336, $\\infty$, 6, 330) $\\approx 0{,}1587$ bestätigt die Sigma-Regel.",
+   "kc": [
+    "sigma-regeln"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-106",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Die Füllmenge $X$ (in ml) einer Maschine ist normalverteilt mit $\\mu = 1000$ und $\\sigma = 8$. Der Hersteller will eine Mindestfüllmenge $m$ garantieren, die von $95\\\\,\\\\%$ aller Flaschen erreicht oder überschritten wird. Bestimme $m$ Schritt für Schritt.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Übersetze die Bedingung in eine Aussage über die Fläche links von $m$: Wie groß ist $P(X \\le m)$?",
+     "eingaben": [
+      {
+       "label": "$P(X \\le m)$",
+       "antwort": 0.05,
+       "toleranz": 0.001,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Wenn rechts von $m$ die Fläche $0{,}95$ liegt, bleibt links nur $1 - 0{,}95$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Bestimme $m$ mit invNormCDf (auf zwei Nachkommastellen).",
+     "eingaben": [
+      {
+       "label": "$m$",
+       "antwort": 986.84,
+       "toleranz": 0.05,
+       "einheit": "ml"
+      }
+     ],
+     "tipps": [
+      "invNormCDf-Dialog: Tail = Left, prob = 0.05, $\\sigma$ = 8, $\\mu$ = 1000."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Kontrolliere -- wie groß ist $P(X \\ge 986{,}84)$ in Prozent?",
+     "eingaben": [
+      {
+       "label": "$P(X \\ge 986{,}84)$",
+       "antwort": 95,
+       "toleranz": 0.1,
+       "einheit": "%"
+      }
+     ],
+     "tipps": [
+      "normCDf(986.84, $\\infty$, 8, 1000) sollte $0{,}95$ ergeben."
+     ]
+    }
+   ],
+   "tipps": [
+    "Umkehraufgabe: Gegeben ist die Wahrscheinlichkeit, gesucht ist die Grenze -- das ist der Job von invNormCDf.",
+    "95 % rechts von $m$ bedeutet: Nur 5 % sind links davon -- $P(X \\le m) = 0{,}05$.",
+    "Das Ergebnis muss deutlich unter $\\mu = 1000$ liegen."
+   ],
+   "loesungsweg": "Schritt 1: $P(X \\ge m) = 0{,}95 \\Rightarrow P(X \\le m) = 0{,}05$. Schritt 2: invNormCDf (Left, 0.05, 8, 1000) $\\approx 986{,}84$ ml. Schritt 3: normCDf(986.84, $\\infty$, 8, 1000) $\\approx 0{,}95$ ✓. Die Mindestfüllmenge liegt ca. $1{,}6$ Standardabweichungen unter $\\mu$.",
+   "kc": [
+    "invnormcdf-umkehraufgabe"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-107",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Bei $n = 150$ unabhängigen Würfen ($p = 0{,}4$) zählt $X$ die Treffer. Berechne $\\mu$ und $\\sigma$ (zwei Nachkommastellen) und prüfe die Laplace-Bedingung.",
+   "eingaben": [
+    {
+     "label": "$\\mu$",
+     "antwort": 60,
+     "toleranz": 0,
+     "einheit": "Treffer"
+    },
+    {
+     "label": "$\\sigma$",
+     "antwort": 6.0,
+     "toleranz": 0.01,
+     "einheit": "Treffer"
+    }
+   ],
+   "tipps": [
+    "$\\mu = n \\cdot p$ -- multipliziere Anzahl der Versuche mit Einzeltrefferwahrscheinlichkeit.",
+    "$\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ -- berechne erst das Produkt unter der Wurzel.",
+    "Laplace-Bedingung: $\\sigma > 3$ -- ist sie hier erfüllt?"
+   ],
+   "loesungsweg": "$\\mu = 150 \\cdot 0{,}4 = 60$. $\\sigma = \\sqrt{150 \\cdot 0{,}4 \\cdot 0{,}6} = \\sqrt{36} = 6{,}00 > 3$ -- die Laplace-Bedingung ist erfüllt, die Näherung durch die Normalverteilung ist zulässig.",
+   "kc": [
+    "moivre-laplace"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-108",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Im selben Versuch ($n = 150$, $p = 0{,}4$, $\\mu = 60$, $\\sigma = 6$) soll $P(55 \\le X \\le 70)$ näherungsweise mit der Normalverteilung berechnet werden. Führe die Rechnung Schritt für Schritt durch.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Bestimme die Grenzen mit Stetigkeitskorrektur (jede Säule zu $k$ reicht von $k - 0{,}5$ bis $k + 0{,}5$).",
+     "eingaben": [
+      {
+       "label": "untere Grenze (mit Korrektur)",
+       "antwort": 54.5,
+       "toleranz": 0.01,
+       "einheit": ""
+      },
+      {
+       "label": "obere Grenze (mit Korrektur)",
+       "antwort": 70.5,
+       "toleranz": 0.01,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Linke Grenze 55 wird um 0,5 nach links, rechte Grenze 70 wird um 0,5 nach rechts verschoben."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Berechne normCDf($54{,}5$, $70{,}5$, $6$, $60$) (vier Nachkommastellen).",
+     "eingaben": [
+      {
+       "label": "mit Korrektur",
+       "antwort": 0.7803,
+       "toleranz": 0.0005,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Parameterreihenfolge: normCDf(untere Grenze, obere Grenze, $\\sigma$, $\\mu$) -- $\\sigma$ vor $\\mu$!"
+     ]
+    },
+    {
+     "frage": "Schritt 3: Vergleich -- berechne normCDf($55$, $70$, $6$, $60$) ohne Stetigkeitskorrektur.",
+     "eingaben": [
+      {
+       "label": "ohne Korrektur",
+       "antwort": 0.7499,
+       "toleranz": 0.0005,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Dieselbe Funktion, nur mit den unverschobenen Grenzen 55 und 70."
+     ]
+    }
+   ],
+   "tipps": [
+    "Kurz erklärt: Ein <strong>Parameter</strong> ist eine feste, aber zunächst unbekannte Zahl in einem Term, z. B. $a$ in $f(x)=ax^2$.",
+    "Stetigkeitskorrektur: linke Grenze $- 0{,}5$, rechte Grenze $+ 0{,}5$ -- so werden die vollen Randsäulen mitgezählt.",
+    "Ohne Korrektur gehen am linken und rechten Rand je eine halbe Säule verloren.",
+    "Zum Vergleich: Der exakte Binomialwert liegt ebenfalls nahe $0{,}78$ -- mit Korrektur trifft die Näherung ihn fast exakt."
+   ],
+   "loesungsweg": "Schritt 1: Grenzen nach außen: $55 \\to 54{,}5$, $70 \\to 70{,}5$. Schritt 2: normCDf(54.5, 70.5, 6, 60) $\\approx 0{,}7803$. Schritt 3: normCDf(55, 70, 6, 60) $\\approx 0{,}7499$. Unterschied: ca. $3$ Prozentpunkte -- das sind die Flächen der halben Randsäulen, die ohne Korrektur abgeschnitten werden.",
+   "kc": [
+    "moivre-laplace",
+    "stetigkeitskorrektur"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine stetige Zufallsgröße $X$ ist normalverteilt mit $\\mu = 200$ und $\\sigma = 4$. Welche Aussagen sind richtig?",
+   "optionen": [
+    {
+     "text": "Die Glockenkurve ist symmetrisch zur senkrechten Geraden $x = 200$.",
+     "richtig": true,
+     "erklaerung": "Richtig: Die Symmetrieachse liegt bei $x = \\mu = 200$."
+    },
+    {
+     "text": "Es gilt $P(X = 200) = 0$.",
+     "richtig": true,
+     "erklaerung": "Richtig: Bei stetigen Größen ist die Wahrscheinlichkeit für einen einzelnen Wert immer null."
+    },
+    {
+     "text": "Die Wendepunkte der Dichtekurve liegen bei $x = 196$ und $x = 204$.",
+     "richtig": true,
+     "erklaerung": "Richtig: Die Wendepunkte liegen bei $\\mu \\pm \\sigma = 200 \\pm 4$."
+    },
+    {
+     "text": "Je größer $\\sigma$, desto höher und schmaler wird die Glocke.",
+     "richtig": false,
+     "erklaerung": "Falsch: Größeres $\\sigma$ macht die Glocke flacher und breiter; die Gesamtfläche bleibt stets 1."
+    }
+   ],
+   "tipps": [
+    "Die Symmetrieachse einer Normalverteilung liegt bei $x = \\mu$.",
+    "Bei stetigen Zufallsgrößen werden Wahrscheinlichkeiten als Flächen berechnet — ein einzelner Punkt hat die Fläche null.",
+    "Die Wendepunkte liegen bei $\\mu \\pm \\sigma$; größeres $\\sigma$ macht die Glocke breiter."
+   ],
+   "loesungsweg": "Richtig sind die ersten drei Aussagen: Symmetrieachse bei $x = 200$, $P(X = 200) = 0$ (stetige Größe) und Wendepunkte bei $200 \\pm 4$. Falsch ist die vierte Aussage: Größeres $\\sigma$ macht die Glocke flacher und breiter, nicht höher und schmaler.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Kaffeeautomat füllt Becher; die Füllmenge $X$ (in ml) ist normalverteilt mit $\\mu = 200$ und $\\sigma = 4$. Berechne $P(196 \\leq X \\leq 205)$ und $P(X < 195)$ (je vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "$P(196 \\leq X \\leq 205)$",
+     "antwort": 0.7357,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X < 195)$",
+     "antwort": 0.1056,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Verwende normCDf mit den Parametern: untere Grenze, obere Grenze, dann $\\sigma = 4$, dann $\\mu = 200$.",
+    "$P(196 \\leq X \\leq 205) = \\Phi\\!\\left(\\frac{205 - 200}{4}\\right) - \\Phi\\!\\left(\\frac{196 - 200}{4}\\right)$.",
+    "$P(X < 195)$ berechnest du als normCDf von $-\\infty$ (sehr kleine Zahl) bis $195$ — keine Grenzverschiebung nötig, da $X$ stetig ist."
+   ],
+   "loesungsweg": "$P(196 \\leq X \\leq 205) = \\text{normCDf}(196;\\,205;\\,4;\\,200) \\approx 0{,}7357$. $P(X < 195) = \\text{normCDf}(-10^{99};\\,195;\\,4;\\,200) \\approx 0{,}1056$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Masse $X$ (in g) von Äpfeln einer Sorte ist normalverteilt mit $\\mu = 85$ und $\\sigma = 8$. Berechne $P(X > 90)$ und $P(80 \\leq X \\leq 95)$ (je vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "$P(X > 90)$",
+     "antwort": 0.266,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$P(80 \\leq X \\leq 95)$",
+     "antwort": 0.6284,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$P(X > 90) = 1 - P(X \\leq 90)$, oder direkt normCDf von $90$ bis $+\\infty$.",
+    "Bei stetigen Größen gilt $P(X > 90) = P(X \\geq 90)$ — die Grenze muss nicht verschoben werden.",
+    "$P(80 \\leq X \\leq 95) = \\text{normCDf}(80;\\,95;\\,8;\\,85)$."
+   ],
+   "loesungsweg": "$P(X > 90) = 1 - \\text{normCDf}(-10^{99};\\,90;\\,8;\\,85) \\approx 1 - 0{,}7340 = 0{,}2660$. $P(80 \\leq X \\leq 95) = \\text{normCDf}(80;\\,95;\\,8;\\,85) \\approx 0{,}6284$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Laufzeit $X$ (in Stunden) eines Akkus ist normalverteilt mit $\\mu = 18$ und $\\sigma = 1{,}5$. Berechne $P(X \\geq 20)$, $P(16 \\leq X \\leq 19)$ und $P(X < 15)$ (je vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "$P(X \\geq 20)$",
+     "antwort": 0.0912,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$P(16 \\leq X \\leq 19)$",
+     "antwort": 0.6563,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X < 15)$",
+     "antwort": 0.0228,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$P(X \\geq 20) = 1 - P(X \\leq 20)$ — oder direkt normCDf von $20$ bis $+\\infty$.",
+    "Achte auf $\\sigma = 1{,}5$ als drittes Argument in normCDf.",
+    "$P(X < 15) = \\text{normCDf}(-10^{99};\\,15;\\,1{,}5;\\,18)$; der Wert $15$ liegt genau $2\\sigma$ unter $\\mu$."
+   ],
+   "loesungsweg": "$P(X \\geq 20) = 1 - \\text{normCDf}(-10^{99};\\,20;\\,1{,}5;\\,18) \\approx 0{,}0912$. $P(16 \\leq X \\leq 19) = \\text{normCDf}(16;\\,19;\\,1{,}5;\\,18) \\approx 0{,}6563$. $P(X < 15) = \\text{normCDf}(-10^{99};\\,15;\\,1{,}5;\\,18) \\approx 0{,}0228$ (das ist die Hälfte der $4{,}6\\,\\%$ außerhalb der $2\\sigma$-Umgebung).",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Körpergröße $X$ (in cm) erwachsener Frauen einer Region ist normalverteilt mit $\\mu = 168$ und $\\sigma = 7$. Gib die ganzzahligen Grenzen $a$ und $b$ der $1\\sigma$-Umgebung um $\\mu$ an und berechne $P(X > 175)$ (auf vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "untere Grenze $a$",
+     "antwort": 161,
+     "toleranz": 0,
+     "einheit": "cm"
+    },
+    {
+     "label": "obere Grenze $b$",
+     "antwort": 175,
+     "toleranz": 0,
+     "einheit": "cm"
+    },
+    {
+     "label": "$P(X > 175)$",
+     "antwort": 0.1587,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Die $1\\sigma$-Umgebung ist $[\\mu - \\sigma;\\ \\mu + \\sigma] = [168 - 7;\\ 168 + 7]$.",
+    "Nach den Sigma-Regeln liegen rund $68{,}3\\,\\%$ der Werte in der $1\\sigma$-Umgebung.",
+    "Der Wert $175 = \\mu + \\sigma$ ist die obere $1\\sigma$-Grenze; $P(X > \\mu + \\sigma) = \\frac{1 - 0{,}683}{2} \\approx 0{,}1587$."
+   ],
+   "loesungsweg": "$1\\sigma$-Umgebung: $[168 - 7;\\ 168 + 7] = [161;\\ 175]$, also $a = 161$, $b = 175$. $175$ liegt genau $1\\sigma$ über $\\mu$. Außerhalb der $1\\sigma$-Umgebung liegen $1 - 0{,}683 = 0{,}317$, je zur Hälfte oben und unten: $P(X > 175) = \\text{normCDf}(175;\\,10^{99};\\,7;\\,168) \\approx 0{,}1587$.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Punktzahl $X$ eines standardisierten Tests ist normalverteilt mit $\\mu = 500$ und $\\sigma = 100$. a) Bestimme mit invNormCDf die Punktzahl $x$, die von höchstens $90\\,\\%$ der Teilnehmenden erreicht wird (also $P(X \\leq x) = 0{,}90$). b) Bestimme die Grenze $g$, ab der die besten $5\\,\\%$ liegen (also $P(X \\geq g) = 0{,}05$). Runde jeweils auf zwei Nachkommastellen.",
+   "eingaben": [
+    {
+     "label": "a) $x$ mit $P(X \\leq x) = 0{,}90$",
+     "antwort": 628.16,
+     "toleranz": 0.2,
+     "einheit": "Punkte"
+    },
+    {
+     "label": "b) Grenze $g$ der besten $5\\,\\%$",
+     "antwort": 664.49,
+     "toleranz": 0.2,
+     "einheit": "Punkte"
+    }
+   ],
+   "tipps": [
+    "invNormCDf liefert zu einer Wahrscheinlichkeit $\\alpha$ die Stelle $x$ mit $P(X \\leq x) = \\alpha$.",
+    "a) Setze $\\alpha = 0{,}90$, $\\sigma = 100$, $\\mu = 500$ ein.",
+    "b) „Beste $5\\,\\%$“ heißt $P(X \\geq g) = 0{,}05$, also $P(X \\leq g) = 0{,}95$ — nutze $\\alpha = 0{,}95$."
+   ],
+   "loesungsweg": "a) $x = \\text{invNormCDf}(0{,}90;\\,100;\\,500) \\approx 628{,}16$ Punkte. b) Beste $5\\,\\%$: $P(X \\leq g) = 0{,}95$, also $g = \\text{invNormCDf}(0{,}95;\\,100;\\,500) \\approx 664{,}49$ Punkte.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Die Reißfestigkeit $X$ (in N) eines Garns ist normalverteilt mit $\\mu = 70$ und $\\sigma = 4$. a) Standardisiere den Wert $x = 78$, berechne also den $z$-Wert $z = \\frac{x - \\mu}{\\sigma}$. b) Bestimme mit $\\Phi$ die Wahrscheinlichkeit $P(X > 78)$ (auf vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "a) $z$-Wert von $x = 78$",
+     "antwort": 2,
+     "toleranz": 0.01,
+     "einheit": ""
+    },
+    {
+     "label": "b) $P(X > 78)$",
+     "antwort": 0.0228,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$z = \\frac{x - \\mu}{\\sigma} = \\frac{78 - 70}{4}$.",
+    "Es gilt $P(X > 78) = P(Z > z) = 1 - \\Phi(z)$.",
+    "$\\Phi(2) \\approx 0{,}9772$ ist ein Tabellenwert der Standardnormalverteilung."
+   ],
+   "loesungsweg": "a) $z = \\frac{78 - 70}{4} = \\frac{8}{4} = 2$. b) $P(X > 78) = 1 - \\Phi(2) \\approx 1 - 0{,}9772 = 0{,}0228$. Das entspricht der Hälfte der $4{,}6\\,\\%$ außerhalb der $2\\sigma$-Umgebung.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Zufallsgröße $X$ ist binomialverteilt mit $n = 400$ und $p = 0{,}45$. a) Berechne $\\mu$ und $\\sigma$ (auf zwei Nachkommastellen) und prüfe die Laplace-Bedingung. b) Berechne $P(X \\leq 190)$ näherungsweise mit der Normalverteilung und Stetigkeitskorrektur (auf vier Nachkommastellen).",
+   "eingaben": [
+    {
+     "label": "a) $\\mu$",
+     "antwort": 180,
+     "toleranz": 0.01,
+     "einheit": ""
+    },
+    {
+     "label": "a) $\\sigma$",
+     "antwort": 9.95,
+     "toleranz": 0.02,
+     "einheit": ""
+    },
+    {
+     "label": "b) $P(X \\leq 190)$ (Näherung)",
+     "antwort": 0.8544,
+     "toleranz": 0.0015,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$\\mu = n \\cdot p = 400 \\cdot 0{,}45$ und $\\sigma = \\sqrt{n \\cdot p \\cdot (1 - p)}$; Laplace-Bedingung: $\\sigma > 3$.",
+    "Stetigkeitskorrektur: Für $P(X \\leq 190)$ rechnest du mit der oberen Grenze $190{,}5$.",
+    "$P(X \\leq 190) \\approx \\Phi\\!\\left(\\frac{190{,}5 - \\mu}{\\sigma}\\right) = \\text{normCDf}(-10^{99};\\,190{,}5;\\,\\sigma;\\,\\mu)$."
+   ],
+   "loesungsweg": "a) $\\mu = 400 \\cdot 0{,}45 = 180$. $\\sigma = \\sqrt{400 \\cdot 0{,}45 \\cdot 0{,}55} = \\sqrt{99} \\approx 9{,}95$. Wegen $\\sigma \\approx 9{,}95 > 3$ ist die Laplace-Bedingung erfüllt. b) Mit Stetigkeitskorrektur: $P(X \\leq 190) \\approx \\text{normCDf}(-10^{99};\\,190{,}5;\\,9{,}95;\\,180) \\approx 0{,}8544$ (der exakte Binomialwert ist $\\approx 0{,}8543$).",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-301",
+   "typ": "freitext",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Schülerin modelliert die Wartezeit $X$ (in Minuten) an einer Bushaltestelle als normalverteilt mit $\\mu = 4$ und $\\sigma = 3$ und rechnet daraus $P(X < 0) \\approx 0{,}091$ als „Wahrscheinlichkeit für negative Wartezeit“. Nimm Stellung: Was ist an Modell und Rechnung problematisch, und woran erkennt man hier, dass die Normalverteilung kein passendes Modell ist?",
+   "musterloesung": "Die Rechnung selbst ist formal korrekt — eine $N(4;\\,3)$-verteilte Größe hat tatsächlich $P(X < 0) = \\Phi\\!\\left(\\frac{0-4}{3}\\right) = \\Phi(-1{,}33) \\approx 0{,}091$. Genau das deckt aber den Modellfehler auf: Eine Wartezeit kann nie negativ werden, die Normalverteilung ordnet dem unmöglichen Ereignis „negative Wartezeit“ aber rund $9\\,\\%$ Wahrscheinlichkeit zu. Die Normalverteilung ist auf allen reellen Zahlen definiert und symmetrisch um $\\mu$; eine Größe, die nur nichtnegative Werte annehmen kann und zudem rechtsschief ist (kurze Wartezeiten häufig, lange Wartezeiten als seltener „Schwanz“), passt schlecht dazu — vor allem, wenn $\\sigma$ im Vergleich zu $\\mu$ groß ist, sodass ein merklicher Teil der Glocke links der Null liegt ($\\mu - \\sigma = 1 > 0$, aber $\\mu - 2\\sigma = -2 < 0$). Faustregel: Eine Normalverteilung ist als Modell für eine nach unten beschränkte Größe nur brauchbar, wenn $\\mu - 3\\sigma$ noch deutlich oberhalb der Schranke liegt — hier ist $\\mu - 3\\sigma = -5$, also klar verletzt. Besser geeignet wären für Wartezeiten z. B. eine eigens angepasste, nur auf $[0;\\infty)$ definierte Verteilung. Die negative Wahrscheinlichkeit ist somit kein Rechenfehler, sondern ein Warnsignal des Modells.",
+   "tipps": [
+    "Prüfe zuerst, ob die Rechnung mit den Sigma-Werten überhaupt stimmt — der Fehler steckt nicht im Rechnen.",
+    "Welchen Wertebereich kann eine Wartezeit annehmen, und welchen die Normalverteilung?",
+    "Vergleiche $\\mu$ mit $\\sigma$: Wie weit reicht $\\mu - 3\\sigma$? Liegt dieser Bereich noch im Sinnvollen?"
+   ],
+   "loesungsweg": "Die Rechnung ist korrekt ($\\Phi(-1{,}33) \\approx 0{,}091$), entlarvt aber das Modell: Eine Wartezeit ist nichtnegativ und typischerweise rechtsschief, die Normalverteilung dagegen symmetrisch und auf allen reellen Zahlen definiert. Weil $\\sigma = 3$ gegenüber $\\mu = 4$ groß ist, liegt ein spürbarer Teil der Glocke links der Null ($\\mu - 3\\sigma = -5$). Eine Normalverteilung taugt als Modell für eine nach unten beschränkte Größe nur, wenn $\\mu - 3\\sigma$ klar oberhalb der Schranke bleibt — hier verletzt. Die $9\\,\\%$ für „negative Wartezeit“ sind also ein Modellfehler, kein Rechenfehler.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-302",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Vom Sachtext zur Wahrscheinlichkeit: Die Abfüllmenge $X$ (in ml) einer Maschine ist normalverteilt mit $\\mu = 250$ und $\\sigma = 5$. Gesucht ist der Anteil der Flaschen mit weniger als 245 ml. Bringe die Bearbeitungsschritte in die richtige Reihenfolge.",
+   "elemente": [
+    "Modell notieren: X ist normalverteilt mit μ = 250 und σ = 5",
+    "Die Frage in einen Term übersetzen: gesucht ist P(X < 245)",
+    "Die Grenze standardisieren: z = (245 − 250) / 5 = −1",
+    "Den Wert bestimmen: P(X < 245) = Φ(−1) ≈ 0,1587 (mit normCDf oder Tabelle)",
+    "Das Ergebnis im Sachzusammenhang deuten: rund 16 % der Flaschen enthalten weniger als 245 ml"
+   ],
+   "tipps": [
+    "Zuerst Modell und Term festhalten, bevor gerechnet wird.",
+    "Standardisieren heißt: $z = \\frac{x - \\mu}{\\sigma}$ bilden.",
+    "Ganz am Ende steht die Deutung des Zahlenwerts im Sachkontext."
+   ],
+   "loesungsweg": "Zuerst hält man das Modell fest ($X$ normalverteilt, $\\mu = 250$, $\\sigma = 5$) und übersetzt die Frage „weniger als 245 ml“ in $P(X < 245)$. Dann standardisiert man die Grenze: $z = \\frac{245 - 250}{5} = -1$. Anschließend liest man $P(X < 245) = \\Phi(-1) \\approx 0{,}1587$ ab (normCDf oder Tabelle). Zuletzt deutet man das Ergebnis: Rund $16\\,\\%$ der Flaschen enthalten weniger als 245 ml. Diese feste Schrittfolge — Modell, Term, Standardisierung, Wert, Deutung — passt auf jede Normalverteilungsaufgabe.",
+   "kc": [
+    "KC Mathematik GO (2018): Lernbereich Daten und Zufall (QP) -- Normalverteilung (eA)"
+   ]
+  },
+  {
+   "id": "ma-qp-nv-109",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ergänze den Merktext zum Übergang von diskreten zu stetigen Zufallsgrößen.",
+   "text": "Eine ___ Zufallsgröße kann jeden Wert eines ganzen Intervalls annehmen, eine diskrete dagegen nur einzelne, getrennte Werte. Bei einer stetigen Zufallsgröße hat jeder einzelne Wert die Wahrscheinlichkeit ___. Wahrscheinlichkeiten werden deshalb nicht mehr aufsummiert, sondern als ___ unter der Dichtekurve bestimmt. Sinnvoll ist daher nur die Frage nach einem ___, etwa $P(a \\le X \\le b)$.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "stetige",
+     "optionen": [
+      "stetige",
+      "diskrete",
+      "ganzzahlige"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "0",
+     "optionen": [
+      "0",
+      "1",
+      "0,5"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Fläche",
+     "optionen": [
+      "Fläche",
+      "Höhe",
+      "Steigung"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Intervall",
+     "optionen": [
+      "Intervall",
+      "Einzelwert",
+      "Mittelwert"
+     ]
+    }
+   ],
+   "tipps": [
+    "Messgrößen wie Länge, Masse oder Zeit sind stetig; Anzahlen sind diskret.",
+    "Weil zwischen zwei Werten immer unendlich viele weitere liegen, entfällt auf einen einzelnen Wert die Wahrscheinlichkeit 0.",
+    "Bei stetigen Größen steckt Wahrscheinlichkeit in Flächenstücken, nicht in einzelnen Punkten."
+   ],
+   "loesungsweg": "Eine stetige Zufallsgröße nimmt jeden Wert eines Intervalls an (z. B. Füllmengen, Zeiten); ein einzelner Wert hat dabei die Wahrscheinlichkeit $0$. Wahrscheinlichkeiten werden als Flächen unter der Dichtekurve berechnet, und sinnvoll ist nur die Frage nach einem Intervall wie $P(a \\le X \\le b)$. Genau deshalb gilt bei stetigen Größen $P(X < b) = P(X \\le b)$.",
+   "kc": [
+    "stetige-zufallsgroesse"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-110",
+   "typ": "freitext",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "frage": "Zwei Schülerinnen vergleichen zwei normalverteilte Größen: Größe $A$ hat $\\mu_A = 50$ und $\\sigma_A = 4$, Größe $B$ hat $\\mu_B = 50$ und $\\sigma_B = 8$. Beide Glockenkurven werden in dasselbe Koordinatensystem gezeichnet. Beschreibe ohne zu rechnen, wie sich die beiden Kurven in Lage, Höhe und Breite unterscheiden, und erkläre, woran man $\\sigma$ in jeder Skizze unmittelbar ablesen kann.",
+   "musterloesung": "Beide Kurven haben dieselbe Lage, denn $\\mu_A = \\mu_B = 50$: Ihr Maximum (Hochpunkt) sitzt jeweils über $x = 50$, und beide sind symmetrisch zu dieser Stelle. Die Kurven unterscheiden sich nur in der Form, weil $\\sigma$ verschieden ist. Größe $B$ mit dem größeren $\\sigma_B = 8$ streut stärker: Ihre Glocke ist breiter und flacher. Größe $A$ mit $\\sigma_A = 4$ ist schmaler und höher. Das ist kein Zufall, sondern eine Folge davon, dass die Gesamtfläche unter jeder Dichtekurve $1$ beträgt — wird die Kurve breiter, muss sie zwangsläufig flacher werden, damit die Fläche gleich bleibt. Ablesen lässt sich $\\sigma$ an den Wendepunkten: Sie liegen genau bei $\\mu - \\sigma$ und $\\mu + \\sigma$. Bei $A$ also bei $46$ und $54$, bei $B$ bei $42$ und $58$. Der waagerechte Abstand vom Hochpunkt bis zu einem Wendepunkt ist gerade $\\sigma$.",
+   "tipps": [
+    "$\\mu$ bestimmt die Lage (wo der Hochpunkt sitzt), $\\sigma$ die Form (breit/schmal).",
+    "Die Gesamtfläche unter jeder Dichtekurve ist 1 — breiter bedeutet darum flacher.",
+    "Die Wendepunkte liegen bei $\\mu - \\sigma$ und $\\mu + \\sigma$; ihr Abstand vom Hochpunkt ist $\\sigma$."
+   ],
+   "loesungsweg": "Gleiches $\\mu$ heißt gleiche Lage: beide Hochpunkte über $x = 50$, beide symmetrisch dazu. Verschiedenes $\\sigma$ heißt verschiedene Form: $B$ ($\\sigma = 8$) ist breiter und flacher, $A$ ($\\sigma = 4$) schmaler und höher; die feste Gesamtfläche $1$ erzwingt den Tausch von Breite gegen Höhe. $\\sigma$ liest man an den Wendepunkten $\\mu \\pm \\sigma$ ab (bei $A$: $46$ und $54$; bei $B$: $42$ und $58$).",
+   "kc": [
+    "glockenkurve-eigenschaften",
+    "glockenkurve-ablesen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-111",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Die Dichtekurve einer normalverteilten Größe $X$ hat ihren Hochpunkt über $x = 60$; ihre Wendepunkte liegen bei $x = 55$ und $x = 65$. Bestimme $\\mu$ und $\\sigma$ allein aus der Skizze, gib die Grenzen des Intervalls $[\\mu - \\sigma;\\ \\mu + \\sigma]$ an und nenne $P(X \\le \\mu)$. (Keine CAS-Rechnung mit normCDf nötig.)",
+   "eingaben": [
+    {
+     "label": "$\\mu$",
+     "antwort": 60,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "$\\sigma$",
+     "antwort": 5,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "untere Grenze $\\mu - \\sigma$",
+     "antwort": 55,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "obere Grenze $\\mu + \\sigma$",
+     "antwort": 65,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "$P(X \\le \\mu)$",
+     "antwort": 0.5,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Der Hochpunkt einer Glockenkurve sitzt immer über $x = \\mu$.",
+    "Die Wendepunkte liegen bei $\\mu - \\sigma$ und $\\mu + \\sigma$; daraus folgt $\\sigma$ als Abstand zum Hochpunkt.",
+    "Wegen der Symmetrie liegt links von $\\mu$ genau die halbe Fläche."
+   ],
+   "loesungsweg": "Der Hochpunkt liegt über dem Erwartungswert: $\\mu = 60$. Die Wendepunkte liegen bei $\\mu \\pm \\sigma$, also $\\sigma = 65 - 60 = 5$ (ebenso $60 - 55 = 5$). Damit reicht die $1\\sigma$-Umgebung von $\\mu - \\sigma = 55$ bis $\\mu + \\sigma = 65$. Wegen der Symmetrie der Glockenkurve liegt links von $\\mu$ genau die Hälfte der Gesamtfläche $1$, also $P(X \\le \\mu) = 0{,}5$. All das liest man direkt aus der Skizze ab, ohne zu rechnen.",
+   "kc": [
+    "glockenkurve-ablesen",
+    "glockenkurve-eigenschaften"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-qp-nv-112",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Die Abfüllmenge $X$ (in ml) einer Maschine ist normalverteilt mit $\\mu = 500$ und $\\sigma = 4$. a) Gib mit den Sigma-Regeln das symmetrische Intervall um $\\mu$ an, das rund $95{,}4\\,\\%$ aller Mengen enthält (also die $2\\sigma$-Umgebung). b) Bestimme mit invNormCDf die Menge $m$, die von höchstens $10\\,\\%$ aller Flaschen unterschritten wird (also $P(X \\le m) = 0{,}10$).",
+   "eingaben": [
+    {
+     "label": "untere Grenze der $2\\sigma$-Umgebung",
+     "antwort": 492,
+     "toleranz": 0,
+     "einheit": "ml"
+    },
+    {
+     "label": "obere Grenze der $2\\sigma$-Umgebung",
+     "antwort": 508,
+     "toleranz": 0,
+     "einheit": "ml"
+    },
+    {
+     "label": "$m$ (10-%-Quantil)",
+     "antwort": 494.9,
+     "toleranz": 0.3,
+     "einheit": "ml"
+    }
+   ],
+   "tipps": [
+    "Die $2\\sigma$-Umgebung reicht von $\\mu - 2\\sigma$ bis $\\mu + 2\\sigma$ und enthält rund $95{,}4\\,\\%$.",
+    "Für b) suchst du das $10\\,\\%$-Quantil: $m = $ invNormCDf($0{,}10$, $\\sigma$, $\\mu$).",
+    "invNormCDf($0{,}10$, $4$, $500$) $\\approx 494{,}9$; zur Kontrolle: $m$ liegt etwa $1{,}28\\sigma$ unter $\\mu$."
+   ],
+   "loesungsweg": "a) $2\\sigma$-Umgebung: $[\\mu - 2\\sigma;\\ \\mu + 2\\sigma] = [500 - 8;\\ 500 + 8] = [492;\\ 508]$; sie enthält rund $95{,}4\\,\\%$ aller Mengen. b) Gesucht ist das $10\\,\\%$-Quantil $m$ mit $P(X \\le m) = 0{,}10$. Mit invNormCDf($0{,}10$, $4$, $500$) ergibt sich $m \\approx 494{,}9$ ml. Plausibilität: Das $10\\,\\%$-Quantil der Standardnormalverteilung liegt bei $z \\approx -1{,}28$, also $m \\approx 500 - 1{,}28 \\cdot 4 \\approx 494{,}9$ ml.",
+   "kc": [
+    "sigma-regeln",
+    "invnormcdf-umkehraufgabe"
+   ],
+   "ergaenzung": "lernbuero"
+  }
+ ]
+}

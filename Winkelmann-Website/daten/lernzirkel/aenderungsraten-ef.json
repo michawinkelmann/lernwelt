@@ -1,0 +1,58 @@
+{
+ "id": "aenderungsraten-ef",
+ "titel": "Lernzirkel: Änderungsraten und Ableitung",
+ "fach": "mathematik",
+ "intro": "An diesen Stationen entdeckst du den Weg von der mittleren Änderungsrate über die Sekante bis zur Ableitung. Wähle die Reihenfolge selbst — kein Druck, keine Noten.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Sekante und mittlere Änderungsrate",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verschiebe die beiden Punkte auf der Parabel und beobachte die Sekante. Ihre Steigung ist die mittlere Änderungsrate im Intervall. Wie verändert sie sich, wenn du die Punkte näher zusammenrückst?</p>",
+   "widget": {
+    "id": "ableitung",
+    "params": {
+     "modus": "sekante",
+     "fn": "parabel"
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Von der Sekante zur Ableitungsfunktion",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Schalte in den Ableitungs-Modus. Beobachte, wie an jeder Stelle die Tangentensteigung abgelesen und zu einer neuen Funktion $f'$ zusammengesetzt wird.</p>",
+   "widget": {
+    "id": "ableitung",
+    "params": {
+     "modus": "ableitung",
+     "fn": "parabel"
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Sekante wird Tangente",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Für $f(x)=x^2$ soll die Steigung an der Stelle $x_0=2$ bestimmt werden. Berechne die mittlere Änderungsrate auf $[2;\\,2{,}1]$ und auf $[2;\\,2{,}01]$. Welchem Wert nähern sich die Sekantensteigungen?</p><details><summary>Lösung anzeigen</summary><div>Auf $[2;\\,2{,}1]$: $\\frac{2{,}1^2-2^2}{0{,}1}=\\frac{4{,}41-4}{0{,}1}=4{,}1$. Auf $[2;\\,2{,}01]$: $\\frac{2{,}01^2-2^2}{0{,}01}=\\frac{4{,}0401-4}{0{,}01}=4{,}01$. Die Sekantensteigungen nähern sich $4$. Das ist die Ableitung $f'(2)=2\\cdot 2=4$.</div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Änderungsraten berechnen",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ma-ep-aenderungsraten-und-ableitung",
+   "ids": [
+    "ma-ep-abl-002",
+    "ma-ep-abl-005"
+   ]
+  }
+ ]
+}

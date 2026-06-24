@@ -1,0 +1,56 @@
+{
+ "id": "binomial-qs",
+ "titel": "Lernzirkel: Binomialverteilung",
+ "fach": "mathematik",
+ "intro": "An diesen Stationen lernst du die Binomialverteilung von verschiedenen Seiten kennen — vom einzelnen Versuch bis zum Histogramm. Wähle selbst, wo du startest.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Das Histogramm der Binomialverteilung",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verändere die Länge $n$ und die Trefferwahrscheinlichkeit $p$ und beobachte, wie sich das Histogramm verschiebt und formt. Wann liegt der höchste Balken in der Mitte, wann am Rand?</p>",
+   "widget": {
+    "id": "histogramm",
+    "params": {
+     "ninit": 10,
+     "pinit": 0.5,
+     "nmax": 20
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Galton-Brett",
+   "typ": "link",
+   "typLabel": "Experiment",
+   "html": "<p>Beim Galton-Brett fallen viele Kugeln zufällig nach links oder rechts. Beobachte, wie sich die Häufigkeiten zu einer Glockenform sammeln — das ist die Binomialverteilung in Aktion.</p>",
+   "link": {
+    "pfad": "experimente/mathematik/galton-brett/index.html",
+    "label": "Galton-Brett öffnen"
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Münzwurf",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Eine faire Münze wird $4$-mal geworfen. Mit welcher Wahrscheinlichkeit fällt <em>genau zweimal</em> Zahl? Nutze die Formel von Bernoulli.</p><details><summary>Lösung anzeigen</summary><div>$n=4$, $k=2$, $p=\\tfrac12$. Formel von Bernoulli:<br>$P(X=2)=\\binom{4}{2}\\cdot\\left(\\tfrac12\\right)^2\\cdot\\left(\\tfrac12\\right)^2=6\\cdot\\tfrac{1}{16}=\\tfrac{6}{16}=\\tfrac{3}{8}=0{,}375$.<br>Es fällt also mit Wahrscheinlichkeit $37{,}5\\,\\%$ genau zweimal Zahl.</div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Binomialverteilung",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ma-qp-binomialverteilung",
+   "ids": [
+    "ma-qp-bv-002",
+    "ma-qp-bv-005"
+   ]
+  }
+ ]
+}

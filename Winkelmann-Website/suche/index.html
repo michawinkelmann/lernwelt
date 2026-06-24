@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suche — Lernwelt</title>
+<meta name="description" content="Durchsuche alle Themen, Übungen, Simulationen, Klassenarbeiten und Spiele der Lernwelt — Mathematik, Physik und Informatik.">
+<link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/print.css" media="print">
+</head>
+<body data-seite="suche">
+<noscript><p class="noscript-hinweis">Die Suche benötigt JavaScript. <a href="../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Suche</h1>
+  <p class="einleitung">Finde Themen, Übungen, Simulationen, Klassenarbeiten und Spiele — einfach lostippen. Groß- und Kleinschreibung spielt keine Rolle, Umlaute findest du in beiden Schreibweisen (ä oder ae).</p>
+  <form class="suchformular" role="search">
+    <label for="suchfeld">Wonach suchst du?</label>
+    <input id="suchfeld" type="search" autocomplete="off" spellcheck="false" placeholder="z. B. Brüche, Fotoeffekt, Caesar …" autofocus>
+  </form>
+  <div class="suche-chips" aria-label="Beispielsuchen">
+    <button type="button" data-suche="quadratische Funktionen">quadratische Funktionen</button>
+    <button type="button" data-suche="Energie">Energie</button>
+    <button type="button" data-suche="Simulation">Simulation</button>
+    <button type="button" data-suche="Klassenarbeit">Klassenarbeit</button>
+  </div>
+  <p id="suche-status" role="status"></p>
+  <div id="suche-einfuehrung">
+    <p>Die Suche umfasst alle freigeschalteten Themen mit ihren Übungen, alle Simulationen, die Klassenarbeiten zum Üben und den Pausenraum. Der Zweig-Filter oben (Alle/Gym/RS) wirkt auch auf die Trefferliste.</p>
+  </div>
+  <div id="suche-ergebnisse"></div>
+</main>
+<script type="module" src="../assets/js/komponenten.js"></script>
+</body>
+</html>

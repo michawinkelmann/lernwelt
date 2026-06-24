@@ -1,0 +1,519 @@
+{
+  "thema": "ma-qp-wachstumsmodelle",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-wm-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Eine Größe wächst exponentiell nach $N(t) = N_0 \\cdot e^{k t}$ mit $k > 0$. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Zum Zeitpunkt $t = 0$ ist der Bestand $N_0$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Wegen $e^0 = 1$ ist $N(0) = N_0$ — der Anfangsbestand."
+        },
+        {
+          "text": "Die momentane Änderungsrate ist proportional zum aktuellen Bestand: $N'(t) = k \\cdot N(t)$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Ableiten mit der Kettenregel liefert $N'(t) = k \\cdot N_0 \\cdot e^{kt} = k \\cdot N(t)$ — die Kerneigenschaft exponentiellen Wachstums."
+        },
+        {
+          "text": "Die Verdopplungszeit hängt davon ab, wie groß der Bestand schon ist.",
+          "richtig": false,
+          "erklaerung": "Die Verdopplungszeit $T_D = \\frac{\\ln 2}{k}$ hängt nur von $k$ ab — von $100$ auf $200$ dauert es genauso lange wie von $5000$ auf $10\\,000$."
+        },
+        {
+          "text": "Für große $t$ nähert sich $N(t)$ einer Sättigungsgrenze.",
+          "richtig": false,
+          "erklaerung": "Reines exponentielles Wachstum kennt keine Grenze — es überschreitet jede noch so große Schranke. Sättigungsgrenzen bringen erst das begrenzte und das logistische Modell ins Spiel."
+        }
+      ],
+      "tipps": [
+        "Setze $t = 0$ ein und denke an $e^0 = 1$.",
+        "Leite $N(t) = N_0 \\cdot e^{k t}$ mit der Kettenregel ab und vergleiche das Ergebnis mit $N(t)$.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: $N(0) = N_0 \\cdot e^0 = N_0$, und die Ableitung $N'(t) = k \\cdot N_0 \\cdot e^{kt} = k \\cdot N(t)$ ist proportional zum Bestand. Die Verdopplungszeit $T_D = \\frac{\\ln 2}{k}$ ist dagegen für alle Bestände und Zeitpunkte gleich — das ist gerade das Markenzeichen exponentiellen Wachstums. Und eine Sättigungsgrenze gibt es nicht: $e^{kt}$ wächst für $k > 0$ über jede Schranke hinaus.",
+      "kc": [
+        "e-funktion-wachstum"
+      ]
+    },
+    {
+      "id": "ma-qp-wm-002",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Rechne zwischen Wachstumsfaktor $b$ und Wachstumskonstante $k$ um: a) Ein Bestand wächst um $5\\,\\%$ pro Jahr — gib $k$ auf vier Nachkommastellen an. b) Für einen Abbauprozess gilt $k = -0{,}25$ pro Stunde — um wie viel Prozent nimmt der Bestand pro Stunde ab (eine Nachkommastelle)?",
+      "eingaben": [
+        {
+          "label": "a) $k$",
+          "antwort": 0.0488,
+          "toleranz": 0.0005,
+          "einheit": "pro Jahr"
+        },
+        {
+          "label": "b) Abnahme",
+          "antwort": 22.1,
+          "toleranz": 0.2,
+          "einheit": "%"
+        }
+      ],
+      "tipps": [
+        "Zusammenhang: $b = e^{k}$ und $k = \\ln b$. Bei $+5\\,\\%$ pro Jahr ist $b = 1{,}05$.",
+        "a) $k = \\ln 1{,}05$ — Taschenrechner.",
+        "b) $b = e^{-0{,}25} \\approx 0{,}779$: Es bleiben rund $77{,}9\\,\\%$ übrig — wie viel Prozent fehlen dann?"
+      ],
+      "loesungsweg": "a) $k = \\ln 1{,}05 \\approx 0{,}0488$ pro Jahr. b) $b = e^{-0{,}25} \\approx 0{,}7788$ — pro Stunde bleiben etwa $77{,}9\\,\\%$ des Bestands übrig, er nimmt also um rund $22{,}1\\,\\%$ ab. Merke: Für kleine Raten liegt $k$ nahe an der Prozentzahl ($0{,}0488 \\approx 0{,}05$), für größere weichen Faktor- und e-Schreibweise deutlich voneinander ab — deshalb immer sauber mit $\\ln$ umrechnen.",
+      "kc": [
+        "wachstumsfaktor-und-konstante"
+      ]
+    },
+    {
+      "id": "ma-qp-wm-003",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Hefekultur wächst exponentiell: $N(t) = 300 \\cdot e^{k t}$ ($t$ in Stunden). Nach $5$ Stunden werden $2400$ Zellen gezählt. Bestimme die Wachstumskonstante $k$ (vier Nachkommastellen) und die Verdopplungszeit $T_D$ (zwei Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "$k$",
+          "antwort": 0.4159,
+          "toleranz": 0.002,
+          "einheit": "pro Stunde"
+        },
+        {
+          "label": "$T_D$",
+          "antwort": 1.67,
+          "toleranz": 0.02,
+          "einheit": "h"
+        }
+      ],
+      "tipps": [
+        "Setze ein: $300 \\cdot e^{5k} = 2400$ — und teile zuerst durch $300$.",
+        "$e^{5k} = 8$: Der Logarithmus holt den Exponenten herunter: $5k = \\ln 8$.",
+        "Verdopplungszeit: $T_D = \\frac{\\ln 2}{k}$ — wegen $8 = 2^3$ kommt ein erstaunlich glatter Wert heraus."
+      ],
+      "loesungsweg": "$300 \\cdot e^{5k} = 2400 \\Rightarrow e^{5k} = 8 \\Rightarrow 5k = \\ln 8 \\Rightarrow k = \\frac{\\ln 8}{5} \\approx 0{,}4159$ pro Stunde. Verdopplungszeit: $T_D = \\frac{\\ln 2}{k} = \\frac{5 \\cdot \\ln 2}{\\ln 8} = \\frac{5 \\cdot \\ln 2}{3 \\cdot \\ln 2} = \\frac{5}{3} \\approx 1{,}67\\,\\text{h}$ — alle $100$ Minuten verdoppelt sich die Kultur. Probe: In $5$ Stunden stecken genau $3$ Verdopplungszeiten, und $300 \\cdot 2^3 = 2400$ passt.",
+      "kc": [
+        "parameter-bestimmen",
+        "verdopplungszeit"
+      ],
+      "cas": "<p>Beide Werte liefert der ClassPad II im <b>Main</b>-Menü:</p><ol><li><code>solve(300*e^(5*k)=2400,k)</code> eingeben — das e über die Softtastatur (<b>Math1</b> → <code>e^</code>), Dezimalzahlen immer mit <b>Punkt</b> statt Komma — und <b>EXE</b> drücken: k = ln(8)/5 ≈ 0.4159.</li><li>Verdopplungszeit direkt rechnen: <code>ln(2)/(ln(8)/5)</code> ergibt 5/3 ≈ 1.67.</li><li>Kontrolle: <code>300*e^((ln(8)/5)*5)</code> muss 2400 ergeben.</li></ol>"
+    },
+    {
+      "id": "ma-qp-wm-004",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zu den drei Wachstumsmodellen.",
+      "text": "Beim exponentiellen Wachstum ist die momentane Änderungsrate proportional zum ___ . Beim begrenzten Wachstum ist sie proportional zum ___ zur Sättigungsgrenze S. Das logistische Modell kombiniert beide Einflüsse: Seine Kurve hat die Form eines ___ , und am schnellsten wächst der Bestand auf halber Höhe, also bei ___ .",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "aktuellen Bestand",
+          "optionen": [
+            "aktuellen Bestand",
+            "Restabstand",
+            "Quadrat der Zeit"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Restabstand",
+          "optionen": [
+            "Restabstand",
+            "aktuellen Bestand",
+            "Anfangsbestand"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "S",
+          "optionen": [
+            "S",
+            "U",
+            "W"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "S/2",
+          "optionen": [
+            "S/2",
+            "S",
+            "N₀"
+          ]
+        }
+      ],
+      "tipps": [
+        "Exponentiell: Doppelt so viele Bakterien teilen sich doppelt so oft — wovon hängt das Tempo ab?",
+        "Begrenzt: Je näher an der Grenze, desto langsamer — welcher Abstand wird dabei immer kleiner?",
+        "Die logistische Kurve heißt auch S-Kurve; ihr Wendepunkt liegt auf halber Höhe der Sättigungsgrenze."
+      ],
+      "loesungsweg": "aktuellen Bestand — Restabstand — S — S/2: Exponentielles Wachstum gehorcht $N' = k \\cdot N$ (proportional zum Bestand), begrenztes Wachstum $N' = k \\cdot (S - N)$ (proportional zum Restabstand). Das logistische Modell kombiniert beides: $N' = k \\cdot N \\cdot (S - N)$. Seine S-förmige Kurve wächst beim Bestand $\\frac{S}{2}$ am schnellsten — dort liegt ihr Wendepunkt.",
+      "kc": [
+        "modelleigenschaften"
+      ]
+    },
+    {
+      "id": "ma-qp-wm-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Nach der Einnahme einer Tablette gilt für die Wirkstoffmenge im Blut $M(t) = 240 \\cdot e^{-0{,}32 t}$ ($M$ in mg, $t$ in Stunden). Berechne die Wirkstoffmenge nach $5$ Stunden und die Halbwertszeit (jeweils zwei Nachkommastellen).",
+      "eingaben": [
+        {
+          "label": "$M(5)$",
+          "antwort": 48.46,
+          "toleranz": 0.2,
+          "einheit": "mg"
+        },
+        {
+          "label": "Halbwertszeit",
+          "antwort": 2.17,
+          "toleranz": 0.02,
+          "einheit": "h"
+        }
+      ],
+      "tipps": [
+        "Für die Menge: $t = 5$ einsetzen und zuerst den Exponenten $-0{,}32 \\cdot 5 = -1{,}6$ ausrechnen.",
+        "Halbwertszeit: Ansatz $e^{-0{,}32 \\, T_H} = 0{,}5$ — dann logarithmieren.",
+        "$T_H = \\frac{\\ln 2}{0{,}32}$ — das Minuszeichen hebt sich beim Umstellen auf, denn $\\ln 0{,}5 = -\\ln 2$."
+      ],
+      "loesungsweg": "$M(5) = 240 \\cdot e^{-1{,}6} \\approx 240 \\cdot 0{,}2019 \\approx 48{,}46\\,\\text{mg}$. Halbwertszeit: $240 \\cdot e^{-0{,}32\\,T_H} = 120 \\Rightarrow e^{-0{,}32\\,T_H} = 0{,}5 \\Rightarrow -0{,}32\\,T_H = \\ln 0{,}5 = -\\ln 2 \\Rightarrow T_H = \\frac{\\ln 2}{0{,}32} \\approx 2{,}17\\,\\text{h}$. Alle gut zwei Stunden halbiert sich die Wirkstoffmenge — nach rund $4{,}3$ Stunden ist nur noch ein Viertel der Dosis im Blut.",
+      "kc": [
+        "halbwertszeit",
+        "exponentielle-abnahme"
+      ]
+    },
+    {
+      "id": "ma-qp-wm-006",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ordne jeder Situation das passende Wachstumsmodell zu.",
+      "paare": [
+        {
+          "links": "Bakterien mit unbegrenztem Nährstoffangebot",
+          "rechts": "exponentielles Wachstum"
+        },
+        {
+          "links": "Bierschaum: pro Minute zerfällt ein fester Anteil",
+          "rechts": "exponentielle Abnahme"
+        },
+        {
+          "links": "Kalter Saft nähert sich im warmen Raum der Zimmertemperatur",
+          "rechts": "begrenztes Wachstum"
+        },
+        {
+          "links": "Grippewelle: erst immer schneller, am Ende kaum noch Neuinfektionen",
+          "rechts": "logistisches Wachstum"
+        }
+      ],
+      "tipps": [
+        "Frage jeweils: Wovon hängt das Tempo ab — vom Bestand, vom Restabstand zu einer Grenze oder von beidem?",
+        "„Fester Anteil pro Zeitschritt“ heißt fester Faktor — das ist exponentiell, wachsend oder fallend.",
+        "Die Grippewelle hat zwei Phasen: anfangs wie exponentiell, später gebremst — welches Modell vereint beides?"
+      ],
+      "loesungsweg": "Bakterien ohne Begrenzung → exponentielles Wachstum (Tempo proportional zum Bestand). Bierschaum → exponentielle Abnahme (fester Anteil pro Minute, also fester Faktor kleiner als 1). Saft im warmen Raum → begrenztes Wachstum: Die Temperatur nähert sich der Zimmertemperatur als Sättigungsgrenze, das Tempo ist proportional zum Restabstand. Grippewelle → logistisches Wachstum: anfangs fast exponentiell, dann bremst der schrumpfende Vorrat an Ansteckbaren das Wachstum — die typische S-Kurve.",
+      "kc": [
+        "modellwahl"
+      ]
+    },
+    {
+      "id": "ma-qp-wm-007",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Becher Kakao ($85\\,^\\circ\\text{C}$) steht in einem $21\\,^\\circ\\text{C}$ warmen Raum. Die Temperatur folgt dem begrenzten Modell $T(t) = 21 + 64 \\cdot e^{-0{,}08 t}$ ($t$ in Minuten). Untersuche den Abkühlvorgang Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Wie groß ist der Temperaturabstand zur Raumtemperatur zu Beginn?",
+          "eingaben": [
+            {
+              "label": "Abstand",
+              "antwort": 64,
+              "toleranz": 0,
+              "einheit": "°C"
+            }
+          ],
+          "tipps": [
+            "Setze $t = 0$ ein: $T(0) = 21 + 64 \\cdot e^0 = 85$ — der Abstand ist $85 - 21$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Temperatur nach $10$ Minuten (eine Nachkommastelle).",
+          "eingaben": [
+            {
+              "label": "$T(10)$",
+              "antwort": 49.8,
+              "toleranz": 0.1,
+              "einheit": "°C"
+            }
+          ],
+          "tipps": [
+            "$T(10) = 21 + 64 \\cdot e^{-0{,}8}$ — zuerst $e^{-0{,}8} \\approx 0{,}449$ berechnen."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Nach wie vielen Minuten ist der Kakao auf Trinktemperatur $35\\,^\\circ\\text{C}$ abgekühlt (eine Nachkommastelle)?",
+          "eingaben": [
+            {
+              "label": "$t$",
+              "antwort": 19,
+              "toleranz": 0.2,
+              "einheit": "min"
+            }
+          ],
+          "tipps": [
+            "$21 + 64 \\cdot e^{-0{,}08 t} = 35 \\Rightarrow e^{-0{,}08 t} = \\frac{14}{64}$ — jetzt logarithmieren."
+          ]
+        }
+      ],
+      "tipps": [
+        "Im Modell $T(t) = 21 + 64 \\cdot e^{-0{,}08t}$ ist $21$ die Sättigungsgrenze (Raumtemperatur) und $64$ der Anfangsabstand, der exponentiell schrumpft.",
+        "Für Schritt 2 einfach einsetzen — Struktur beachten: Grenze plus Rest mal e-Term.",
+        "Schritt 3: $e^{-0{,}08t} = 0{,}21875 \\Rightarrow -0{,}08\\,t = \\ln 0{,}21875 \\Rightarrow t = \\frac{\\ln(64/14)}{0{,}08}$."
+      ],
+      "loesungsweg": "Schritt 1: $T(0) = 21 + 64 = 85\\,^\\circ\\text{C}$ — die $21$ ist die Raumtemperatur (Sättigungsgrenze), $64$ der anfängliche Abstand. Schritt 2: $T(10) = 21 + 64 \\cdot e^{-0{,}8} \\approx 21 + 28{,}8 \\approx 49{,}8\\,^\\circ\\text{C}$. Schritt 3: $21 + 64 \\cdot e^{-0{,}08t} = 35 \\Rightarrow e^{-0{,}08t} = \\frac{14}{64} = 0{,}21875 \\Rightarrow t = \\frac{\\ln(64/14)}{0{,}08} \\approx 19{,}0\\,\\text{min}$. Nach rund $19$ Minuten ist der Kakao trinkbar — die letzten Grad bis zur Raumtemperatur würden dagegen sehr lange dauern.",
+      "kc": [
+        "begrenztes-wachstum"
+      ],
+      "cas": "<p>Schritt 3 mit dem ClassPad II:</p><ol><li>Im <b>Main</b>-Menü: <code>solve(21+64*e^(-0.08*t)=35,t)</code> — Dezimalzahlen mit <b>Punkt</b> eingeben (0.08, nicht 0,08!).</li><li><b>EXE</b> liefert t ≈ 19.0 Minuten.</li><li>Grafische Kontrolle: y1 = <code>21+64*e^(-0.08*x)</code> und y2 = <code>35</code> zeichnen, dann <b>Analyse → Grafische Lösung → Schnittpunkt</b>.</li></ol>"
+    },
+    {
+      "id": "ma-qp-wm-008",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Für die Zahl der Haushalte mit Glasfaseranschluss in einer Gemeinde gilt das Modell $N(t) = 500 - 420 \\cdot e^{-0{,}3 t}$ ($t$ in Jahren). Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Zu Beginn haben $80$ Haushalte einen Anschluss.",
+          "richtig": true,
+          "erklaerung": "Richtig: $N(0) = 500 - 420 \\cdot e^0 = 500 - 420 = 80$."
+        },
+        {
+          "text": "Langfristig nähert sich die Zahl der Grenze $500$, ohne sie zu überschreiten.",
+          "richtig": true,
+          "erklaerung": "Richtig: Für $t \\to \\infty$ geht $e^{-0{,}3t} \\to 0$, also $N(t) \\to 500$ — Annäherung von unten."
+        },
+        {
+          "text": "Die Anschlusszahl wächst anfangs langsam und später immer schneller.",
+          "richtig": false,
+          "erklaerung": "Umgekehrt: Beim begrenzten Wachstum ist das Tempo am Anfang am größten — der Restabstand $500 - N$ ist dann maximal ($N'(0) = 0{,}3 \\cdot 420 = 126$ Haushalte pro Jahr) und schrumpft danach."
+        },
+        {
+          "text": "$N'(t) = 0{,}3 \\cdot N(t)$ — die Änderungsrate ist proportional zum Bestand.",
+          "richtig": false,
+          "erklaerung": "Beim begrenzten Wachstum ist die Änderungsrate proportional zum Rest, nicht zum Bestand: $N'(t) = 0{,}3 \\cdot \\left(500 - N(t)\\right)$."
+        }
+      ],
+      "tipps": [
+        "Setze $t = 0$ ein ($e^0 = 1$) und überlege, was mit $e^{-0{,}3t}$ für sehr große $t$ passiert.",
+        "Begrenztes Wachstum: Die Änderungsrate ist proportional zum Restabstand $500 - N(t)$ — wann ist der am größten?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "$N(0) = 500 - 420 = 80$ — Aussage 1 stimmt. Für $t \\to \\infty$ verschwindet der e-Term, $N$ nähert sich $500$ von unten — Aussage 2 stimmt. Aussage 3 ist falsch: Das Tempo ist proportional zum Restabstand und damit am Anfang am höchsten ($N'(0) = 0{,}3 \\cdot 420 = 126$ pro Jahr), danach wird es stetig kleiner. Aussage 4 verwechselt die Modelle: $N' = 0{,}3 \\cdot N$ wäre exponentielles Wachstum; hier gilt $N'(t) = 0{,}3 \\cdot (500 - N(t))$.",
+      "kc": [
+        "begrenztes-wachstum"
+      ]
+    },
+    {
+      "id": "ma-qp-wm-009",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Algenfläche wächst nach $N(t) = 50 \\cdot e^{0{,}2 t}$ ($N$ in m², $t$ in Tagen). Wann erreicht sie $400$ m²? Bringe die Lösungsschritte in die richtige Reihenfolge.",
+      "elemente": [
+        "Gleichung aufstellen: $50 \\cdot e^{0{,}2 t} = 400$",
+        "Durch $50$ teilen: $e^{0{,}2 t} = 8$",
+        "Logarithmieren: $0{,}2 t = \\ln 8$",
+        "Durch $0{,}2$ teilen: $t = \\frac{\\ln 8}{0{,}2}$",
+        "Ausrechnen: $t \\approx 10{,}4$ Tage"
+      ],
+      "tipps": [
+        "Erst die Gleichung aufstellen, dann die e-Potenz isolieren.",
+        "Der Logarithmus darf erst angewendet werden, wenn die e-Potenz allein auf einer Seite steht.",
+        "$\\ln$ holt den Exponenten herunter — danach bleibt eine ganz normale lineare Gleichung."
+      ],
+      "loesungsweg": "$50 \\cdot e^{0{,}2t} = 400 \\Rightarrow e^{0{,}2t} = 8 \\Rightarrow 0{,}2t = \\ln 8 \\Rightarrow t = \\frac{\\ln 8}{0{,}2} \\approx 10{,}4$ Tage. Diese Strategie löst jede Exponentialgleichung: e-Potenz isolieren, logarithmieren, nach $t$ auflösen.",
+      "kc": [
+        "exponentialgleichung-loesen"
+      ]
+    },
+    {
+      "id": "ma-qp-wm-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Zwei Bakterienkulturen starten gleichzeitig: Kultur A wächst exponentiell mit $N_A(t) = 100 \\cdot e^{0{,}4 t}$, Kultur B begrenzt mit $N_B(t) = 900 - 800 \\cdot e^{-0{,}5 t}$ ($t$ in Stunden). Berechne beide Bestände nach $2$ Stunden (ganze Zellen) und bestimme — mit CAS oder systematischem Probieren — den Zeitpunkt, zu dem beide Kulturen gleich groß sind (eine Nachkommastelle).",
+      "eingaben": [
+        {
+          "label": "$N_A(2)$",
+          "antwort": 222.55,
+          "toleranz": 1,
+          "einheit": "Zellen"
+        },
+        {
+          "label": "$N_B(2)$",
+          "antwort": 605.7,
+          "toleranz": 1,
+          "einheit": "Zellen"
+        },
+        {
+          "label": "Zeitpunkt",
+          "antwort": 5.33,
+          "toleranz": 0.15,
+          "einheit": "h"
+        }
+      ],
+      "tipps": [
+        "Einsetzen: $N_A(2) = 100 \\cdot e^{0{,}8}$ und $N_B(2) = 900 - 800 \\cdot e^{-1}$.",
+        "Nach $2$ Stunden liegt B klar vorn — aber A wird immer schneller, B immer langsamer. Irgendwann muss A überholen.",
+        "Probiere systematisch: $t = 5$: A $\\approx 739$, B $\\approx 834$; $t = 5{,}5$: A $\\approx 903$, B $\\approx 849$ — der Schnitt liegt dazwischen."
+      ],
+      "loesungsweg": "Nach $2$ Stunden: $N_A(2) = 100 \\cdot e^{0{,}8} \\approx 223$ und $N_B(2) = 900 - 800 \\cdot e^{-1} \\approx 606$ Zellen — die begrenzt wachsende Kultur liegt zunächst deutlich vorn. Die Gleichung $100 \\cdot e^{0{,}4t} = 900 - 800 \\cdot e^{-0{,}5t}$ lässt sich nicht algebraisch nach $t$ auflösen — hier helfen CAS-Plot oder Probiertabelle: Bei $t \\approx 5{,}3$ Stunden sind beide Kulturen mit rund $844$ Zellen gleich groß. Danach übernimmt Kultur A die Führung — bis ihr exponentielles Modell selbst an reale Grenzen stößt.",
+      "kc": [
+        "modellvergleich"
+      ],
+      "cas": "<p>Schnittpunkt zweier Modelle mit dem ClassPad II (<b>Grafik &amp; Tabelle</b>):</p><ol><li>y1 = <code>100*e^(0.4*x)</code> und y2 = <code>900-800*e^(-0.5*x)</code> eingeben — Dezimalzahlen mit <b>Punkt</b> statt Komma.</li><li>Betrachtungsfenster etwa 0 ≤ x ≤ 8 und 0 ≤ y ≤ 1000 wählen, zeichnen lassen.</li><li><b>Analyse → Grafische Lösung → Schnittpunkt</b>: x ≈ 5.33, y ≈ 844.</li><li>Werteabgleich: In der Wertetabelle (Schrittweite 0.5) siehst du, wie Kultur A zunächst zurückliegt und kurz nach x = 5.3 an B vorbeizieht.</li></ol>"
+    },
+    {
+      "id": "ma-qp-wm-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Ein Videokanal hat $20\\,000$ Abonnenten und wächst seit einem Jahr stabil um $8\\,\\%$ pro Monat. Der Betreiber rechnet hoch: „$20\\,000 \\cdot 1{,}08^{120} \\approx 205$ Millionen — in zehn Jahren habe ich mehr Abonnenten, als Deutschland und Frankreich zusammen Einwohner haben.“ Beurteile Rechnung und Prognose: Welche Modellannahme steckt dahinter, warum ist das Ergebnis trotzdem unrealistisch, und welches Wachstumsmodell wäre langfristig angemessener?",
+      "musterloesung": "Die Rechnung selbst ist korrekt: Konstantes prozentuales Wachstum bedeutet exponentielles Wachstum mit dem Faktor $b = 1{,}08$ pro Monat (als e-Funktion: $k = \\ln 1{,}08 \\approx 0{,}077$), und $20\\,000 \\cdot 1{,}08^{120} \\approx 205$ Millionen stimmt numerisch. Unrealistisch ist die Modellannahme, dass der Faktor $1{,}08$ zehn Jahre lang konstant bleibt. Exponentielles Wachstum setzt voraus, dass die Änderungsrate dauerhaft proportional zum Bestand ist — tatsächlich ist die Zahl möglicher Abonnenten aber begrenzt (Menschen mit Internetzugang, passender Sprache und Interesse am Thema), und je mehr den Kanal schon abonniert haben, desto weniger kommen als Neue infrage: Das Wachstum bremst sich selbst. Langfristig angemessener ist ein logistisches Modell: Es startet nahezu exponentiell — das passt zu den bisherigen Daten — und flacht nach einem Wendepunkt gegen eine Sättigungsgrenze $S$ ab. Allgemein gilt: Ein exponentielles Modell beschreibt höchstens die Anfangsphase eines realen Wachstumsprozesses; Prognosen weit über den Datenbereich hinaus sind unseriös.",
+      "tipps": [
+        "Prüfe zuerst die Rechnung: Ist $20\\,000 \\cdot 1{,}08^{120}$ für konstantes $8\\,\\%$-Wachstum der richtige Ansatz?",
+        "Welche Annahme steckt in „konstant $8\\,\\%$ pro Monat“ — und wovon hängt die Zahl möglicher neuer Abonnenten in Wirklichkeit ab?",
+        "Denke an die S-Kurve: Welches Modell startet wie das exponentielle und flacht später gegen eine Grenze ab?"
+      ],
+      "loesungsweg": "Rechnerisch korrekt ($b = 1{,}08$, $20\\,000 \\cdot 1{,}08^{120} \\approx 205$ Mio.), aber die Modellannahme „konstanter Faktor über zehn Jahre“ trägt nicht: Die Zahl potenzieller Abonnenten ist endlich, das Wachstum bremst sich mit zunehmender Sättigung selbst. Das exponentielle Modell beschreibt nur die Anfangsphase; langfristig passt ein logistisches Modell mit Sättigungsgrenze $S$ (anfangs fast exponentiell, dann Wendepunkt und Abflachen). Prognosen weit über den Datenbereich hinaus sind nicht belastbar.",
+      "kc": [
+        "modellgrenzen"
+      ]
+    },
+    {
+      "id": "ma-qp-wm-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (erhöhtes Anforderungsniveau): An einer Schule mit $1200$ Personen breitet sich ein Gerücht logistisch aus: $N(t) = \\frac{1200}{1 + 99 \\cdot e^{-0{,}75 t}}$ ($t$ in Tagen). Untersuche die Ausbreitung.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Wie viele Personen kennen das Gerücht zu Beginn?",
+          "eingaben": [
+            {
+              "label": "$N(0)$",
+              "antwort": 12,
+              "toleranz": 0,
+              "einheit": "Personen"
+            }
+          ],
+          "tipps": [
+            "$e^0 = 1$, also $N(0) = \\frac{1200}{1 + 99}$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Bei welchem Bestand breitet sich das Gerücht am schnellsten aus?",
+          "eingaben": [
+            {
+              "label": "Bestand",
+              "antwort": 600,
+              "toleranz": 0,
+              "einheit": "Personen"
+            }
+          ],
+          "tipps": [
+            "Merksatz: Der Wendepunkt der logistischen Kurve liegt bei $\\frac{S}{2}$ — und $S$ liest du für $t \\to \\infty$ ab."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne den Zeitpunkt, zu dem dieser Bestand erreicht ist (zwei Nachkommastellen).",
+          "eingaben": [
+            {
+              "label": "$t$",
+              "antwort": 6.13,
+              "toleranz": 0.05,
+              "einheit": "Tage"
+            }
+          ],
+          "tipps": [
+            "$\\frac{1200}{1 + 99 \\cdot e^{-0{,}75t}} = 600 \\Rightarrow 1 + 99 \\cdot e^{-0{,}75t} = 2 \\Rightarrow e^{-0{,}75t} = \\frac{1}{99}$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Lies zuerst $S$ ab: Für $t \\to \\infty$ verschwindet der e-Term im Nenner — der Bruch strebt gegen $1200$.",
+        "Der Wendepunkt einer logistischen Kurve liegt immer auf halber Höhe der Sättigungsgrenze.",
+        "In Schritt 3 führt das Gleichsetzen auf $e^{-0{,}75t} = \\frac{1}{99}$ — logarithmieren ergibt $t = \\frac{\\ln 99}{0{,}75}$."
+      ],
+      "loesungsweg": "Schritt 1: $N(0) = \\frac{1200}{1 + 99} = 12$ Personen. Schritt 2: Die Sättigungsgrenze ist $S = 1200$ (für $t \\to \\infty$ geht $e^{-0{,}75t} \\to 0$); am schnellsten wächst der Bestand am Wendepunkt, also bei $\\frac{S}{2} = 600$ Personen. Schritt 3: $\\frac{1200}{1 + 99 \\cdot e^{-0{,}75t}} = 600 \\Rightarrow 1 + 99 \\cdot e^{-0{,}75t} = 2 \\Rightarrow e^{-0{,}75t} = \\frac{1}{99} \\Rightarrow t = \\frac{\\ln 99}{0{,}75} \\approx 6{,}13$ Tage. Nach knapp einer Schulwoche kippt die Ausbreitung: Vorher wird sie von Tag zu Tag schneller, danach — die Hälfte weiß schon Bescheid — von Tag zu Tag langsamer.",
+      "kc": [
+        "logistisches-wachstum"
+      ]
+    },
+    {
+      "id": "ma-qp-wm-013",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (erhöhtes Anforderungsniveau): a) Zeige durch eine Probe (Ableiten und Einsetzen), dass $N(t) = N_0 \\cdot e^{k t}$ die Differentialgleichung $N'(t) = k \\cdot N(t)$ erfüllt. b) Zeige ebenso, dass $F(t) = S - (S - N_0) \\cdot e^{-k t}$ die Differentialgleichung $F'(t) = k \\cdot \\left(S - F(t)\\right)$ des begrenzten Wachstums erfüllt. c) Erfüllt auch $g(t) = N_0 \\cdot e^{k t} + 10$ die Differentialgleichung aus a)? Begründe.",
+      "musterloesung": "a) Ableiten mit der Kettenregel: $N'(t) = N_0 \\cdot e^{kt} \\cdot k = k \\cdot \\left(N_0 \\cdot e^{kt}\\right) = k \\cdot N(t)$ — die Gleichung ist für alle $t$ erfüllt, und der Anfangswert passt: $N(0) = N_0 \\cdot e^0 = N_0$. b) Ableiten: $F'(t) = -(S - N_0) \\cdot e^{-kt} \\cdot (-k) = k \\cdot (S - N_0) \\cdot e^{-kt}$. Andererseits ist $S - F(t) = S - \\left(S - (S - N_0) \\cdot e^{-kt}\\right) = (S - N_0) \\cdot e^{-kt}$. Beides zusammen ergibt $F'(t) = k \\cdot \\left(S - F(t)\\right)$ — die Probe gelingt. c) Nein: $g'(t) = k \\cdot N_0 \\cdot e^{kt}$, aber $k \\cdot g(t) = k \\cdot N_0 \\cdot e^{kt} + 10k$. Wegen des zusätzlichen Summanden $10k \\neq 0$ gilt $g'(t) \\neq k \\cdot g(t)$: Das Verschieben um $+10$ zerstört die Proportionalität von Bestand und Änderungsrate. Nur die reinen Exponentialfunktionen $c \\cdot e^{kt}$ lösen $N' = k \\cdot N$ — verschobene e-Funktionen wie $g$ gehören stattdessen zum begrenzten Wachstum.",
+      "tipps": [
+        "Probe heißt: linke Seite ($N'$) und rechte Seite ($k \\cdot N$) getrennt ausrechnen und vergleichen — Kettenregel nicht vergessen.",
+        "b) Berechne zuerst den Term $S - F(t)$ und vergleiche ihn mit deiner Ableitung $F'(t)$.",
+        "c) Der Summand $+10$ fällt beim Ableiten weg — fällt er auf der rechten Seite $k \\cdot g(t)$ auch weg, oder bleibt er dort stehen?"
+      ],
+      "loesungsweg": "a) $N'(t) = k \\cdot N_0 \\cdot e^{kt} = k \\cdot N(t)$ — Probe bestanden. b) $F'(t) = k \\cdot (S - N_0) \\cdot e^{-kt}$ und $S - F(t) = (S - N_0) \\cdot e^{-kt}$, also $F' = k \\cdot (S - F)$ — Probe bestanden. c) Nein: $g' = k \\cdot N_0 \\cdot e^{kt}$, aber $k \\cdot g = k \\cdot N_0 \\cdot e^{kt} + 10k$ — der Summand $10k$ stört. Nur Funktionen der Form $c \\cdot e^{kt}$ erfüllen $N' = k \\cdot N$.",
+      "kc": [
+        "differentialgleichung"
+      ]
+    }
+  ]
+}

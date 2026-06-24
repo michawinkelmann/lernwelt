@@ -1,0 +1,74 @@
+{
+ "id": "motor-generator-10",
+ "titel": "Lernzirkel: Motor, Generator und Energieversorgung",
+ "fach": "physik",
+ "intro": "Elektromotor, Generator und Transformator – erkunde den Trafo, knobel über Induktion und rechne an frei wählbaren Stationen.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Transformator erkunden",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verändere das Verhältnis aus Eingangsspannung und Windungszahl und beobachte, wie die Ausgangsspannung mit der Windungszahl der zweiten Spule wächst. So funktioniert ein Trafo.</p>",
+   "widget": {
+    "id": "funktionsplotter",
+    "params": {
+     "form": "proportional",
+     "regler": [
+      {
+       "sym": "a",
+       "label": "U1/n1",
+       "min": 0.5,
+       "max": 5,
+       "step": 0.5,
+       "init": 2,
+       "einheit": "V"
+      }
+     ],
+     "x": [
+      0,
+      100
+     ],
+     "y": [
+      0,
+      500
+     ],
+     "achsen": {
+      "x": "n2 (Windungen)",
+      "y": "U2 in V"
+     },
+     "formel": "U2 = (U1/n1) · n2"
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Beobachten: Wann wird Strom induziert?",
+   "typ": "knobel",
+   "typLabel": "Beobachten",
+   "html": "<p>Stell dir vor: Du schiebst einen Stabmagneten in eine Spule, die an ein Spannungsmessgerät angeschlossen ist. Beobachte gedanklich drei Situationen: (a) Der Magnet ruht in der Spule. (b) Du schiebst ihn schnell hinein. (c) Du ziehst ihn langsam heraus. Wann zeigt das Messgerät einen Ausschlag, und wann ist er am größten?</p><details><summary>Lösung anzeigen</summary><div>Eine Spannung wird nur <strong>induziert, solange sich das Magnetfeld in der Spule ändert</strong> (elektromagnetische Induktion). <br>(a) ruhender Magnet → keine Änderung → <strong>kein Ausschlag</strong>. <br>(b) schnelles Hineinschieben → schnelle Änderung → <strong>großer Ausschlag</strong>. <br>(c) langsames Herausziehen → langsame Änderung, andere Richtung → <strong>kleinerer Ausschlag mit umgekehrtem Vorzeichen</strong>. <br>Je schneller die Änderung, desto größer die induzierte Spannung – das ist das Prinzip des Generators.</div></details>"
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Warum Hochspannung beim Transport?",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Strom wird über weite Strecken mit sehr hoher Spannung (mehrere 100 000 V) durch Leitungen geschickt. Warum nicht einfach mit der Steckdosenspannung von 230 V?</p><details><summary>Lösung anzeigen</summary><div>Bei gleicher übertragener Leistung gilt <em>P = U · I</em>. Eine <strong>hohe Spannung bedeutet eine kleine Stromstärke</strong>. Die Verluste in der Leitung entstehen durch den Widerstand und wachsen mit dem Quadrat der Stromstärke (Wärme ~ I²). Kleiner Strom → viel kleinere Verluste. Deshalb transformiert man hoch, transportiert mit kleinem Strom und transformiert beim Verbraucher wieder herunter.</div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Trafo & Energieweg",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ph-10-motor-generator-energieversorgung",
+   "ids": [
+    "ph-10-mg-005",
+    "ph-10-mg-006"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bruchrechnung — Klasse 6 · Mathematik — Lernwelt</title>
+<meta name="description" content="Brüche als Anteile am Kreis- und Rechteckmodell verstehen, gleichwertige Brüche durch Erweitern und Kürzen finden, Brüche vergleichen und ordnen sowie sicher addieren, subtrahieren, multiplizieren und dividieren — mit Ausblick auf Dezimalzahlen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Bruchrechnung</h1>
+  <p class="einleitung">Eine halbe Stunde Pause, drei Viertel der Pizza, ein Viertelliter Milch im Rezept — Brüche beschreiben Anteile und stecken überall im Alltag. Hier lernst du, was Zähler und Nenner bedeuten, wie du Brüche erweiterst, kürzt und vergleichst — und wie du mit ihnen genauso sicher rechnest wie mit ganzen Zahlen.</p>
+
+  <section aria-labelledby="br-bedeutung">
+    <h2 id="br-bedeutung">1. Was ein Bruch bedeutet</h2>
+    <p>Eine Pizza wird in $4$ gleich große Stücke geschnitten, und du bekommst $3$ davon: Dein Anteil ist <strong>drei Viertel</strong>, geschrieben $\frac{3}{4}$. So ein <strong>Bruch</strong> beschreibt einen Anteil von einem Ganzen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Zähler und Nenner</span>
+      <p class="formel-abgesetzt">$$\frac{\text{Zähler}}{\text{Nenner}}$$</p>
+      <p>Der <strong>Nenner</strong> steht unter dem Bruchstrich. Er gibt an, in wie viele <em>gleich große</em> Teile das Ganze geteilt ist — er <em>benennt</em> die Teile (z. B. Viertel). Der <strong>Zähler</strong> steht über dem Bruchstrich und <em>zählt</em>, wie viele dieser Teile gemeint sind.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 185" width="340" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zwei Anteilsmodelle für Brüche. Links ein Kreis, in vier gleich große Stücke geteilt; drei Stücke sind gefärbt und zeigen den Bruch drei Viertel. Rechts ein Rechteck, in acht gleich große Felder geteilt; drei Felder sind gefärbt und zeigen den Bruch drei Achtel.">
+        <!-- Kreismodell: 3 von 4 Stücken gefärbt -->
+        <g stroke="var(--mathe)" stroke-width="2" stroke-linejoin="round">
+          <path d="M70 75 L70 20 A55 55 0 0 1 125 75 Z" fill="var(--mathe)" fill-opacity="0.35"/>
+          <path d="M70 75 L125 75 A55 55 0 0 1 70 130 Z" fill="var(--mathe)" fill-opacity="0.35"/>
+          <path d="M70 75 L70 130 A55 55 0 0 1 15 75 Z" fill="var(--mathe)" fill-opacity="0.35"/>
+          <path d="M70 75 L15 75 A55 55 0 0 1 70 20 Z" fill="var(--mathe)" fill-opacity="0.07"/>
+        </g>
+        <!-- Beschriftung 3/4 -->
+        <g fill="var(--mathe)" text-anchor="middle" font-weight="700">
+          <text x="70" y="157" font-size="15">3</text>
+          <line x1="61" y1="162" x2="79" y2="162" stroke="var(--mathe)" stroke-width="1.5"/>
+          <text x="70" y="178" font-size="15">4</text>
+        </g>
+        <!-- Rechteckmodell: 3 von 8 Feldern gefärbt -->
+        <rect x="175" y="35" width="160" height="80" fill="var(--mathe)" fill-opacity="0.07"/>
+        <rect x="175" y="35" width="40" height="40" fill="var(--mathe)" fill-opacity="0.35"/>
+        <rect x="215" y="35" width="40" height="40" fill="var(--mathe)" fill-opacity="0.35"/>
+        <rect x="255" y="35" width="40" height="40" fill="var(--mathe)" fill-opacity="0.35"/>
+        <g stroke="var(--mathe)" stroke-width="1.5">
+          <line x1="215" y1="35" x2="215" y2="115"/>
+          <line x1="255" y1="35" x2="255" y2="115"/>
+          <line x1="295" y1="35" x2="295" y2="115"/>
+          <line x1="175" y1="75" x2="335" y2="75"/>
+        </g>
+        <rect x="175" y="35" width="160" height="80" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <!-- Beschriftung 3/8 -->
+        <g fill="var(--mathe)" text-anchor="middle" font-weight="700">
+          <text x="255" y="157" font-size="15">3</text>
+          <line x1="246" y1="162" x2="264" y2="162" stroke="var(--mathe)" stroke-width="1.5"/>
+          <text x="255" y="178" font-size="15">8</text>
+        </g>
+      </svg>
+    </div>
+    <p>Links das <strong>Kreismodell</strong>: Von $4$ gleich großen Pizzastücken sind $3$ gefärbt — der Anteil $\frac{3}{4}$. Rechts das <strong>Rechteckmodell</strong>: Von $8$ gleich großen Stücken einer Schokoladentafel sind $3$ gefärbt — der Anteil $\frac{3}{8}$. Wichtig bei beiden Modellen: Alle Teile müssen <em>gleich groß</em> sein.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Bruchteil einer Größe</span>
+      <p>Wie viel sind $\frac{3}{4}$ von $20\,\text{€}$? Teile erst durch den Nenner, nimm dann mit dem Zähler mal:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} 20\,\text{€} : 4 = 5\,\text{€} \\[4pt] 5\,\text{€} \cdot 3 = 15\,\text{€} \end{gathered}$$</p>
+      <p>Ein Viertel von $20\,\text{€}$ sind $5\,\text{€}$, drei Viertel also $15\,\text{€}$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Was ist mehr — $\frac{1}{3}$ oder $\frac{1}{4}$ einer Pizza?</summary>
+      <div class="check-antwort"><p>$\frac{1}{3}$ ist mehr. Teilst du die Pizza in nur $3$ Stücke, ist jedes Stück größer, als wenn du sie in $4$ Stücke teilst. Bei gleichem Zähler ist der Bruch mit dem <em>kleineren</em> Nenner der größere.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="br-erweitern-kuerzen">
+    <h2 id="br-erweitern-kuerzen">2. Erweitern und Kürzen</h2>
+    <p>$\frac{1}{2}$ Pizza oder $\frac{2}{4}$ Pizza — das ist gleich viel, nur anders geschnitten. Brüche, die denselben Anteil beschreiben, heißen <strong>gleichwertig</strong>. Zwischen ihnen wechselst du durch Erweitern und Kürzen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Erweitern und Kürzen</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} \text{Erweitern: } \frac{2}{3} = \frac{2 \cdot 4}{3 \cdot 4} = \frac{8}{12} \\[4pt] \text{Kürzen: } \frac{12}{18} = \frac{12 : 6}{18 : 6} = \frac{2}{3} \end{gathered}$$</p>
+      <p>Beim <strong>Erweitern</strong> werden Zähler <em>und</em> Nenner mit derselben Zahl multipliziert, beim <strong>Kürzen</strong> durch dieselbe Zahl geteilt. Der Wert des Bruchs ändert sich dabei nicht — nur die Einteilung wird feiner oder gröber.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: vollständig kürzen</span>
+      <p>Kürze $\frac{24}{36}$ so weit wie möglich — schrittweise oder direkt:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} \frac{24}{36} = \frac{24 : 2}{36 : 2} = \frac{12}{18} \\[4pt] \frac{12}{18} = \frac{12 : 6}{18 : 6} = \frac{2}{3} \end{gathered}$$</p>
+      <p>Schneller geht es in einem Schritt mit der $12$, dem größten gemeinsamen Teiler von $24$ und $36$. Ein Bruch ist <strong>vollständig gekürzt</strong>, wenn Zähler und Nenner außer der $1$ keinen gemeinsamen Teiler mehr haben.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Kürze $\frac{20}{30}$ vollständig.</summary>
+      <div class="check-antwort"><p>$\frac{20}{30} = \frac{20 : 10}{30 : 10} = \frac{2}{3}$. Der größte gemeinsame Teiler von $20$ und $30$ ist $10$ — danach lässt sich nichts mehr kürzen.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="br-vergleichen">
+    <h2 id="br-vergleichen">3. Brüche vergleichen und ordnen</h2>
+    <p>Bei <strong>gleichnamigen</strong> Brüchen (gleicher Nenner) entscheidet der Zähler: $\frac{5}{8} \gt \frac{3}{8}$. Bei gleichem Zähler entscheidet der Nenner — je kleiner der Nenner, desto größer die Stücke: $\frac{1}{3} \gt \frac{1}{4}$. In allen anderen Fällen machst du die Brüche zuerst <strong>gleichnamig</strong>: Du erweiterst beide auf einen gemeinsamen Nenner, den <strong>Hauptnenner</strong>.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Ungleichnamige Brüche vergleichen</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} \frac{2}{3} = \frac{8}{12} \quad \text{und} \quad \frac{3}{4} = \frac{9}{12} \\[4pt] \frac{8}{12} \lt \frac{9}{12}, \text{ also } \frac{2}{3} \lt \frac{3}{4} \end{gathered}$$</p>
+      <p>Der Hauptnenner ist das kleinste gemeinsame Vielfache der Nenner — für $3$ und $4$ ist das $12$. Danach vergleichst du nur noch die Zähler. Mehrere Brüche <strong>ordnest</strong> du genauso: alle auf den Hauptnenner erweitern, dann nach den Zählern sortieren.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Wer ist auf dem Schulweg weiter?</span>
+      <p>Ben hat $\frac{2}{3}$ seines Schulwegs geschafft, Ayla $\frac{3}{4}$ ihres gleich langen Wegs. Hauptnenner $12$: Ben ist bei $\frac{8}{12}$, Ayla bei $\frac{9}{12}$ — Ayla ist genau ein Zwölftel des Weges weiter.</p>
+    </div>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 108" width="340" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zahlenstrahl von null bis eins, in Zwölftel eingeteilt. Markiert sind zwei Drittel, das sind acht Zwölftel, und drei Viertel, das sind neun Zwölftel. Drei Viertel liegt weiter rechts als zwei Drittel, ist also größer.">
+        <line x1="12" y1="58" x2="348" y2="58" stroke="var(--mathe)" stroke-width="2"/>
+        <!-- Zwölftel-Striche -->
+        <g stroke="var(--mathe)" stroke-width="1.5">
+          <line x1="46.7" y1="53" x2="46.7" y2="63"/>
+          <line x1="73.3" y1="53" x2="73.3" y2="63"/>
+          <line x1="100" y1="53" x2="100" y2="63"/>
+          <line x1="126.7" y1="53" x2="126.7" y2="63"/>
+          <line x1="153.3" y1="53" x2="153.3" y2="63"/>
+          <line x1="180" y1="53" x2="180" y2="63"/>
+          <line x1="206.7" y1="53" x2="206.7" y2="63"/>
+          <line x1="233.3" y1="53" x2="233.3" y2="63"/>
+          <line x1="260" y1="53" x2="260" y2="63"/>
+          <line x1="286.7" y1="53" x2="286.7" y2="63"/>
+          <line x1="313.3" y1="53" x2="313.3" y2="63"/>
+        </g>
+        <g stroke="var(--mathe)" stroke-width="2.5">
+          <line x1="20" y1="50" x2="20" y2="66"/>
+          <line x1="340" y1="50" x2="340" y2="66"/>
+        </g>
+        <text x="20" y="85" font-size="15" font-weight="700" fill="var(--mathe)" text-anchor="middle">0</text>
+        <text x="340" y="85" font-size="15" font-weight="700" fill="var(--mathe)" text-anchor="middle">1</text>
+        <!-- Markierung 2/3 = 8/12 (Beschriftung oben) -->
+        <circle cx="233.3" cy="58" r="4.5" fill="var(--mathe)"/>
+        <line x1="233.3" y1="46" x2="233.3" y2="52" stroke="var(--mathe)" stroke-width="1"/>
+        <g fill="var(--mathe)" text-anchor="middle" font-weight="700">
+          <text x="233.3" y="22" font-size="14">2</text>
+          <line x1="225.3" y1="27" x2="241.3" y2="27" stroke="var(--mathe)" stroke-width="1.5"/>
+          <text x="233.3" y="42" font-size="14">3</text>
+        </g>
+        <!-- Markierung 3/4 = 9/12 (Beschriftung unten) -->
+        <circle cx="260" cy="58" r="4.5" fill="var(--mathe)"/>
+        <line x1="260" y1="64" x2="260" y2="70" stroke="var(--mathe)" stroke-width="1"/>
+        <g fill="var(--mathe)" text-anchor="middle" font-weight="700">
+          <text x="260" y="84" font-size="14">3</text>
+          <line x1="252" y1="89" x2="268" y2="89" stroke="var(--mathe)" stroke-width="1.5"/>
+          <text x="260" y="104" font-size="14">4</text>
+        </g>
+      </svg>
+    </div>
+    <p>Auch der <strong>Zahlenstrahl</strong> zeigt es: Je weiter rechts ein Bruch liegt, desto größer ist er. $\frac{3}{4} = \frac{9}{12}$ liegt ein Zwölftel rechts von $\frac{2}{3} = \frac{8}{12}$.</p>
+  </section>
+
+  <section aria-labelledby="br-add-sub">
+    <h2 id="br-add-sub">4. Addieren und Subtrahieren</h2>
+    <p>Gleichnamige Brüche bestehen aus gleich großen Stücken — deshalb kannst du einfach die <strong>Zähler</strong> addieren oder subtrahieren. Der Nenner bleibt stehen, denn die Stückgröße ändert sich nicht.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Gleichnamig addieren und subtrahieren</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} \frac{2}{8} + \frac{3}{8} = \frac{5}{8} \\[4pt] \frac{7}{8} - \frac{3}{8} = \frac{4}{8} = \frac{1}{2} \end{gathered}$$</p>
+      <p>Nur die Zähler werden addiert oder subtrahiert — <strong>niemals die Nenner!</strong> Ungleichnamige Brüche machst du vorher gleichnamig. Kürze das Ergebnis am Ende, wenn es geht.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Pizzareste zusammenlegen</span>
+      <p>Vom Abendessen sind $\frac{1}{4}$ Pizza und $\frac{3}{8}$ Pizza übrig. Wie viel ist das zusammen? Hauptnenner $8$:</p>
+      <p class="formel-abgesetzt">$$\frac{1}{4} + \frac{3}{8} = \frac{2}{8} + \frac{3}{8} = \frac{5}{8}$$</p>
+    </div>
+    <p>Eine <strong>gemischte Zahl</strong> wie $1\frac{1}{2}$ bedeutet $1 + \frac{1}{2}$. Zum Rechnen wandelst du sie in einen Bruch um: $1\frac{1}{2} = \frac{3}{2}$, denn $1 = \frac{2}{2}$.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: mit gemischten Zahlen rechnen</span>
+      <p>$2\frac{1}{4} - \frac{3}{4}$: Wandle zuerst um — $2$ Ganze sind $\frac{8}{4}$, also $2\frac{1}{4} = \frac{9}{4}$. Dann:</p>
+      <p class="formel-abgesetzt">$$\frac{9}{4} - \frac{3}{4} = \frac{6}{4} = \frac{3}{2} = 1\frac{1}{2}$$</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Berechne $\frac{5}{6} - \frac{1}{2}$.</summary>
+      <div class="check-antwort"><p>Hauptnenner $6$: $\frac{1}{2} = \frac{3}{6}$. Also $\frac{5}{6} - \frac{3}{6} = \frac{2}{6} = \frac{1}{3}$ — das Kürzen am Ende nicht vergessen.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="br-mal-geteilt">
+    <h2 id="br-mal-geteilt">5. Multiplizieren und Dividieren</h2>
+    <p>Multiplizieren ist bei Brüchen einfacher als Addieren: Du brauchst keinen Hauptnenner. Das Wort <strong>„von“</strong> bedeutet dabei „mal“: $\frac{1}{2}$ von $\frac{3}{4}$ heißt $\frac{1}{2} \cdot \frac{3}{4}$ — ein Anteil von einem Anteil.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Multiplizieren und Dividieren</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} \frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d} \\[4pt] \frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c} \end{gathered}$$</p>
+      <p>Multiplizieren: Zähler mal Zähler, Nenner mal Nenner. Dividieren: mit dem <strong>Kehrwert</strong> multiplizieren — beim Kehrwert werden Zähler und Nenner vertauscht (aus $\frac{c}{d}$ wird $\frac{d}{c}$).</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: halbes Rezept (Anteil vom Anteil)</span>
+      <p>Ein Rezept verlangt $\frac{3}{4}\,\text{l}$ Milch, du kochst nur die halbe Menge:</p>
+      <p class="formel-abgesetzt">$$\frac{1}{2} \cdot \frac{3}{4} = \frac{1 \cdot 3}{2 \cdot 4} = \frac{3}{8}$$</p>
+      <p>Du brauchst $\frac{3}{8}\,\text{l}$ Milch. Tipp: Vor dem Multiplizieren lohnt sich das Kürzen über Kreuz — bei $\frac{2}{3} \cdot \frac{9}{10}$ kürzt du die $2$ mit der $10$ und die $9$ mit der $3$, übrig bleibt $\frac{1 \cdot 3}{1 \cdot 5} = \frac{3}{5}$.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Saft in Gläser füllen (Division)</span>
+      <p>In einer Kanne sind $\frac{3}{4}\,\text{l}$ Saft, ein Glas fasst $\frac{1}{8}\,\text{l}$. Wie oft passt $\frac{1}{8}$ in $\frac{3}{4}$?</p>
+      <p class="formel-abgesetzt">$$\frac{3}{4} : \frac{1}{8} = \frac{3}{4} \cdot \frac{8}{1} = \frac{24}{4} = 6$$</p>
+      <p>Es werden genau $6$ Gläser voll.</p>
+    </div>
+  <p>Spielerisch festigen: <a href="../../../lernspiele/bruch-paare/index.html">Bruch-Paare</a> (Memory mit Bruch, Dezimalzahl und Prozent) und der <a href="../../../lernspiele/zahlenstrahl-schuetze/index.html">Zahlenstrahl-Scharfschütze</a> warten im Trainingsraum.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Brüche und Dezimalzahlen — ein Ausblick</summary>
+    <div class="vertiefung-inhalt">
+      <p>Jeder Bruch ist auch eine <strong>Division</strong>: $\frac{3}{4}$ bedeutet $3 : 4$. Rechnest du das aus, erhältst du eine <strong>Dezimalzahl</strong>: $\frac{3}{4} = 0{,}75$. Besonders leicht geht das Umwandeln, wenn du den Nenner auf $10$, $100$ oder $1000$ erweitern kannst:</p>
+      <p class="formel-abgesetzt">$$\begin{gathered} \frac{1}{2} = \frac{5}{10} = 0{,}5 \\[4pt] \frac{3}{4} = \frac{75}{100} = 0{,}75 \\[4pt] \frac{7}{20} = \frac{35}{100} = 0{,}35 \end{gathered}$$</p>
+      <p>Nicht jeder Bruch geht so glatt auf: Bei $\frac{1}{3} = 1 : 3 = 0{,}333\ldots$ wiederholt sich die $3$ unendlich. Man schreibt kurz $0{,}\overline{3}$ und nennt das eine <strong>periodische</strong> Dezimalzahl.</p>
+      <p>Für den Gymnasialzweig zum Weiterdenken: Ob die Dezimalzahl abbricht oder periodisch wird, verrät der <em>vollständig gekürzte</em> Nenner. Enthält er nur die Primfaktoren $2$ und $5$ (wie $4 = 2 \cdot 2$ oder $20 = 2 \cdot 2 \cdot 5$), bricht die Dezimalzahl ab — sonst wird sie periodisch (etwa bei den Nennern $3$, $6$ oder $7$). Mit Dezimalzahlen rechnest du in Klasse 6 gleich weiter, und in Klasse 7 helfen dir Brüche bei der Prozentrechnung: $\frac{3}{4} = 75\,\%$.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Anteil am Kreismodell über Erweitern, Kürzen und Vergleichen bis zum Multiplizieren und Dividieren — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+  <section class="sim-einbettung" aria-labelledby="sim-einbettung">
+    <h2 id="sim-einbettung">Selbst ausprobieren: Bruch-Werkstatt</h2>
+    <p>Erkunde dieses Thema interaktiv in der Simulation — Schieberegler bewegen, beobachten, ausprobieren.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/bruch-werkstatt/index.html?einbettung=1" title="Interaktive Simulation: Bruch-Werkstatt" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss"><a href="../../../simulationen/mathematik/bruch-werkstatt/index.html" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a></div>
+    </div>
+  </section>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

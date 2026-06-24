@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zweipunktregler (Thermostat) — Simulation — Lernwelt</title>
+<meta name="description" content="Ein Thermostat regelt die Raumtemperatur über einen Zweipunktregler mit Hysterese: Sollwert und Schaltdifferenz einstellen und beobachten, wie die Temperatur als Sägezahn um den Sollwert pendelt.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/sim.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="simulation" data-fach="informatik">
+<noscript><p class="noscript-hinweis">Diese Simulation benötigt JavaScript. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Zweipunktregler (Thermostat)</h1>
+  <p class="einleitung">Ein Thermostat ist ein einfacher Regelkreis: Er misst die Raumtemperatur und kann die Heizung nur an- oder ausschalten — daher der Name <strong>Zweipunktregler</strong>. Damit die Heizung nicht ständig flattert, schaltet sie erst um, wenn die Temperatur eine obere bzw. untere Schwelle erreicht (<strong>Hysterese</strong>). Stelle Sollwert und Schaltdifferenz ein und beobachte, wie die Temperatur als Sägezahn im Hysterese-Band um den Sollwert pendelt.</p>
+  <div id="sim"></div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSimulation } from "../../../assets/js/sim/engine.js";
+  import * as sim from "./sim.js";
+  starteSimulation(sim, document.getElementById("sim"));
+</script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+{
+  "thema": "in-10-steuern-und-regeln",
+  "fach": "informatik",
+  "stufe": "klasse-10",
+  "aufgaben": [
+    {
+      "id": "in-10-sr-001",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "kc-neu",
+      "frage": "Welche Aussagen über das EVA-Prinzip und den Mikrocontroller sind richtig?",
+      "optionen": [
+        { "text": "EVA steht für Eingabe, Verarbeitung, Ausgabe.", "richtig": true, "erklaerung": "Richtig — jedes Informatiksystem durchläuft diese drei Schritte." },
+        { "text": "Bei einem automatisierten Prozess übernimmt der Sensor die Eingabe und der Aktor die Ausgabe.", "richtig": true, "erklaerung": "Richtig — der Sensor liefert die Messwerte (Eingabe), der Aktor führt die Aktion aus (Ausgabe). Dazwischen verarbeitet der Mikrocontroller." },
+        { "text": "Ein Mikrocontroller ist ein winziger Computer mit Prozessor und Speicher auf einem Chip.", "richtig": true, "erklaerung": "Richtig — er ist klein, aber vollwertig genug, um Sensoren auszulesen und Aktoren zu steuern." },
+        { "text": "Die Ausgabe eines Systems ist immer eine Anzeige auf einem Bildschirm.", "richtig": false, "erklaerung": "Nein — die Ausgabe kann auch ein Befehl an einen Aktor sein, etwa ein Motor, der dreht, oder ein Ventil, das öffnet." }
+      ],
+      "tipps": [
+        "Überlege, wofür die drei Buchstaben E, V und A stehen.",
+        "Welcher Baustein misst (Eingabe), welcher handelt (Ausgabe)?",
+        "Drei der vier Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind die Aussagen 1, 2 und 3: EVA = Eingabe, Verarbeitung, Ausgabe; beim automatisierten Prozess liefert der Sensor die Eingabe und der Aktor die Ausgabe; ein Mikrocontroller ist ein vollständiger kleiner Computer auf einem Chip. Falsch ist Aussage 4 — die Ausgabe kann auch ein Befehl an einen Aktor sein, nicht nur eine Bildschirmanzeige.",
+      "kc": ["eva-prinzip"]
+    },
+    {
+      "id": "in-10-sr-002",
+      "typ": "zuordnung",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "kc-neu",
+      "frage": "Ordne jedes Bauteil dem richtigen Schritt des EVA-Prinzips zu.",
+      "paare": [
+        { "links": "Temperatursensor", "rechts": "Eingabe" },
+        { "links": "Mikrocontroller", "rechts": "Verarbeitung" },
+        { "links": "Heizventil", "rechts": "Ausgabe" },
+        { "links": "Lichtsensor", "rechts": "Eingabe" }
+      ],
+      "tipps": [
+        "Eingabe = messen, Verarbeitung = entscheiden, Ausgabe = handeln.",
+        "Sensoren liefern Eingaben, Aktoren erzeugen Ausgaben.",
+        "Der Mikrocontroller sitzt immer in der Mitte: Er verarbeitet."
+      ],
+      "loesungsweg": "Temperatursensor und Lichtsensor messen Größen der Umgebung — sie gehören zur Eingabe. Der Mikrocontroller wertet die Werte aus und entscheidet — das ist die Verarbeitung. Das Heizventil führt die Entscheidung aus — es gehört zur Ausgabe.",
+      "kc": ["eva-prinzip"]
+    },
+    {
+      "id": "in-10-sr-003",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "kc-neu",
+      "frage": "Ergänze den Text zum Aufbau eines automatisierten Systems.",
+      "text": "Ein Bauteil, das eine Größe der Umgebung misst und in ein elektrisches Signal umwandelt, heißt ___. Ein Bauteil, das eine Aktion in der Welt ausführt, heißt ___. Dazwischen entscheidet der ___ nach seinem Programm.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "Sensor", "optionen": ["Sensor", "Aktor", "Mikrocontroller"] },
+        { "art": "dropdown", "antwort": "Aktor", "optionen": ["Aktor", "Sensor", "Mikrocontroller"] },
+        { "art": "dropdown", "antwort": "Mikrocontroller", "optionen": ["Mikrocontroller", "Sensor", "Aktor"] }
+      ],
+      "tipps": [
+        "Welt → Signal: messen. Signal → Welt: handeln.",
+        "Der Fotowiderstand misst Helligkeit — was für ein Bauteil ist das?",
+        "Der Baustein, der entscheidet, ist der kleine Computer im System."
+      ],
+      "loesungsweg": "Das messende Bauteil ist der Sensor (Welt → Signal). Das handelnde Bauteil ist der Aktor (Signal → Welt). Dazwischen entscheidet der Mikrocontroller anhand seines Programms.",
+      "kc": ["sensor-aktor"]
+    },
+    {
+      "id": "in-10-sr-004",
+      "typ": "zuordnung",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "kc-neu",
+      "frage": "Sensor oder Aktor? Ordne jedem Bauteil seinen Typ zu.",
+      "paare": [
+        { "links": "Fotowiderstand (Lichtsensor)", "rechts": "Sensor" },
+        { "links": "Elektromotor", "rechts": "Aktor" },
+        { "links": "Taster (Knopf)", "rechts": "Sensor" },
+        { "links": "Lautsprecher", "rechts": "Aktor" }
+      ],
+      "tipps": [
+        "Sensor misst, Aktor handelt.",
+        "Ein Knopf meldet eine Berührung — ist das eine Messung oder eine Aktion?",
+        "Merkhilfe: Sensor → Signal hinein, Aktor → Aktion hinaus."
+      ],
+      "loesungsweg": "Fotowiderstand und Taster liefern dem Mikrocontroller Eingaben (Helligkeit, Berührung) — sie sind Sensoren. Elektromotor und Lautsprecher führen eine Aktion aus (Bewegung, Ton) — sie sind Aktoren.",
+      "kc": ["sensor-aktor"]
+    },
+    {
+      "id": "in-10-sr-005",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "kc-neu",
+      "frage": "Worin unterscheiden sich Steuern und Regeln? Welche Aussagen sind richtig?",
+      "optionen": [
+        { "text": "Beim Regeln misst das System sein eigenes Ergebnis und vergleicht es mit dem Sollwert.", "richtig": true, "erklaerung": "Richtig — diese Rückmessung (Rückkopplung) ist genau das, was Regeln vom Steuern unterscheidet." },
+        { "text": "Beim Steuern gibt es eine Rückkopplung, beim Regeln nicht.", "richtig": false, "erklaerung": "Nein — genau umgekehrt: Die Rückkopplung gehört zum Regeln. Steuern ist eine offene Wirkungskette ohne Rückmeldung." },
+        { "text": "Ein Dämmerungsschalter, der bei Dunkelheit das Licht einschaltet, ohne das Ergebnis zu prüfen, ist eine Steuerung.", "richtig": true, "erklaerung": "Richtig — er folgt stur der Eingabe „dunkel“ und misst nicht nach, ob es dadurch heller wird: offene Kette, also Steuerung." },
+        { "text": "Eine Heizung, die die Raumtemperatur auf einem Sollwert hält, ist eine Regelung.", "richtig": true, "erklaerung": "Richtig — der Istwert (Temperatur) wird laufend gemessen und mit dem Sollwert verglichen, bei Abweichung wird nachgestellt: geschlossener Regelkreis." }
+      ],
+      "tipps": [
+        "Der Unterschied liegt darin, ob das Ergebnis zurückgemessen wird.",
+        "Regeln = Steuern + Rückkopplung.",
+        "Drei der vier Aussagen sind richtig — eine verwechselt Steuern und Regeln."
+      ],
+      "loesungsweg": "Richtig sind die Aussagen 1, 3 und 4: Regeln bedeutet, das eigene Ergebnis zu messen und mit dem Sollwert zu vergleichen; der Dämmerungsschalter ohne Rückmessung ist eine Steuerung; die Heizung, die einen Sollwert hält, ist eine Regelung. Falsch ist Aussage 2 — sie vertauscht die Begriffe: Die Rückkopplung gehört zum Regeln, nicht zum Steuern.",
+      "kc": ["steuern-regeln"]
+    },
+    {
+      "id": "in-10-sr-006",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "kc-neu",
+      "frage": "Ergänze die Begriffe zum Regelkreis am Beispiel der Heizungsregelung (Ziel: 21 °C).",
+      "text": "Die gewünschte Temperatur von 21 °C ist der ___. Die tatsächlich gemessene Temperatur ist der ___. Der Sensor meldet diesen Wert an den Mikrocontroller — dieser Weg zurück heißt ___. Diese geschlossene Kette nennt man ___.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "Sollwert", "optionen": ["Sollwert", "Istwert", "Rückkopplung", "Regelkreis"] },
+        { "art": "dropdown", "antwort": "Istwert", "optionen": ["Istwert", "Sollwert", "Rückkopplung", "Regelkreis"] },
+        { "art": "dropdown", "antwort": "Rückkopplung", "optionen": ["Rückkopplung", "Sollwert", "Istwert", "Regelkreis"] },
+        { "art": "dropdown", "antwort": "Regelkreis", "optionen": ["Regelkreis", "Sollwert", "Istwert", "Rückkopplung"] }
+      ],
+      "tipps": [
+        "Soll = gewünscht, Ist = tatsächlich gemessen.",
+        "Der Weg vom gemessenen Ergebnis zurück zum Controller hat einen eigenen Namen.",
+        "Die geschlossene Kette aus Messen, Vergleichen und Nachstellen ist der ..."
+      ],
+      "loesungsweg": "Die gewünschten 21 °C sind der Sollwert. Die gemessene Temperatur ist der Istwert. Der Weg des gemessenen Ergebnisses zurück zum Controller ist die Rückkopplung. Die geschlossene Kette aus Messen, Vergleichen und Nachstellen heißt Regelkreis.",
+      "kc": ["steuern-regeln"]
+    },
+    {
+      "id": "in-10-sr-007",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "kc-neu",
+      "frage": "Ein Backofen soll 180 °C halten. Welche Aussage beschreibt ihn korrekt?",
+      "optionen": [
+        { "text": "Es ist eine Regelung: Ein Sensor misst die Ofentemperatur, der Controller vergleicht sie mit 180 °C und schaltet das Heizelement bei Abweichung an oder aus.", "richtig": true, "erklaerung": "Richtig — der Istwert wird laufend gemessen und mit dem Sollwert verglichen: ein geschlossener Regelkreis." },
+        { "text": "Es ist eine Steuerung, weil das Heizelement einfach durchgehend heizt.", "richtig": false, "erklaerung": "Nein — würde es nur durchgehend heizen, würde der Ofen immer heißer. Gerade weil er 180 °C hält, muss er die Temperatur zurückmessen — das ist Regeln." },
+        { "text": "Ob der Ofen steuert oder regelt, hängt nur davon ab, wie heiß er wird.", "richtig": false, "erklaerung": "Nein — entscheidend ist nicht die Höhe der Temperatur, sondern ob das Ergebnis zurückgemessen und nachgestellt wird." },
+        { "text": "Es kann keine Regelung sein, weil ein Ofen keinen Sensor besitzt.", "richtig": false, "erklaerung": "Nein — ein Backofen, der eine Temperatur halten soll, besitzt einen Temperatursensor; sonst könnte er den Sollwert gar nicht halten." }
+      ],
+      "tipps": [
+        "Frage dich: Wird die Temperatur zurückgemessen?",
+        "Ein Gerät, das einen Wert hält, muss diesen Wert kennen — also messen.",
+        "Nur eine Aussage ist richtig."
+      ],
+      "loesungsweg": "Richtig ist Aussage 1: Der Backofen regelt. Ein Temperatursensor misst den Istwert, der Mikrocontroller vergleicht ihn mit dem Sollwert von 180 °C und schaltet das Heizelement bei Bedarf — ein geschlossener Regelkreis mit Rückkopplung. Die anderen Aussagen sind falsch: Durchgehendes Heizen würde den Ofen überhitzen, die Höhe der Temperatur entscheidet nicht über Steuern oder Regeln, und ein temperaturhaltender Ofen besitzt sehr wohl einen Sensor.",
+      "kc": ["steuern-regeln"]
+    },
+    {
+      "id": "in-10-sr-008",
+      "typ": "reihenfolge",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "kc-neu",
+      "frage": "Bringe die Schritte des Steuerungsalgorithmus eines Dämmerungsschalters in die richtige Reihenfolge (ein Schleifendurchlauf).",
+      "elemente": [
+        "Lichtsensor auslesen: aktuelle Helligkeit messen (Istwert holen)",
+        "Helligkeit mit dem Grenzwert vergleichen (entscheiden)",
+        "Lampe je nach Vergleich ein- oder ausschalten (Aktor ansteuern)",
+        "Zurück zum Anfang: den nächsten Durchlauf beginnen"
+      ],
+      "tipps": [
+        "Erst messen, dann entscheiden, dann handeln.",
+        "Ohne einen frischen Messwert kann der Controller nichts entscheiden — was steht also am Anfang?",
+        "Am Ende eines Durchlaufs beginnt die Schleife von vorn."
+      ],
+      "loesungsweg": "Die richtige Reihenfolge ist: (1) Lichtsensor auslesen (messen), (2) Helligkeit mit dem Grenzwert vergleichen (entscheiden), (3) Lampe ein- oder ausschalten (handeln), (4) zurück zum Anfang. Diese Schleife wiederholt der Mikrocontroller viele Male pro Sekunde — deshalb reagiert der Schalter scheinbar sofort.",
+      "kc": ["steuerungsalgorithmus"]
+    },
+    {
+      "id": "in-10-sr-009",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "kc-neu",
+      "frage": "Ergänze den Pseudocode für eine automatische Bewässerung. Die Pumpe soll laufen, wenn der Boden zu trocken ist.",
+      "text": "wiederhole immer: feuchte = lies Feuchtesensor — danach prüfe: wenn feuchte ___ grenzwert, dann schalte Pumpe ___, sonst schalte Pumpe ___.",
+      "luecken": [
+        { "art": "dropdown", "antwort": "kleiner als", "optionen": ["kleiner als", "größer als"] },
+        { "art": "dropdown", "antwort": "ein", "optionen": ["ein", "aus"] },
+        { "art": "dropdown", "antwort": "aus", "optionen": ["aus", "ein"] }
+      ],
+      "tipps": [
+        "„Zu trocken“ bedeutet: Die gemessene Feuchte ist niedrig — also kleiner als der Grenzwert.",
+        "Wenn der Boden zu trocken ist, soll Wasser kommen.",
+        "Ist genug Feuchte da, muss die Pumpe nicht laufen."
+      ],
+      "loesungsweg": "Zu trocken heißt: Die gemessene Feuchte ist kleiner als der Grenzwert. Dann soll die Pumpe ein. Andernfalls (genug Feuchte) bleibt die Pumpe aus. So gießt das System nur bei Bedarf — und weil die Feuchte nach dem Gießen erneut gemessen wird, ist es sogar eine kleine Regelung.",
+      "kc": ["steuerungsalgorithmus"]
+    },
+    {
+      "id": "in-10-sr-010",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "kc-neu",
+      "frage": "Eingebettete Systeme — welche Aussagen sind richtig?",
+      "optionen": [
+        { "text": "Ein eingebettetes System ist ein Computer, der fest in ein Gerät eingebaut ist und dort eine bestimmte Aufgabe erfüllt.", "richtig": true, "erklaerung": "Richtig — genau das ist die Definition: fester Einbau, fester Zweck." },
+        { "text": "In einer Waschmaschine, einem Backofen und einem Auto stecken eingebettete Systeme.", "richtig": true, "erklaerung": "Richtig — überall dort steuern fest eingebaute Mikrocontroller die Abläufe; im Auto sogar viele gleichzeitig." },
+        { "text": "Ein eingebettetes System ist ein gewöhnlicher PC, auf dem man beliebige Programme installieren kann.", "richtig": false, "erklaerung": "Nein — gerade das Gegenteil: Es ist auf eine Aufgabe festgelegt und nicht für allgemeine Nutzung gedacht." },
+        { "text": "Eingebettete Systeme sind oft klein, stromsparend und arbeiten unauffällig im Hintergrund.", "richtig": true, "erklaerung": "Richtig — weil sie nur eine Sache können müssen, kann man sie klein, billig und sparsam bauen." }
+      ],
+      "tipps": [
+        "Das Wort „eingebettet“ verrät schon: Der Computer steckt fest in etwas anderem.",
+        "Kann man auf der Waschmaschinen-Steuerung ein Spiel installieren?",
+        "Drei der vier Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind die Aussagen 1, 2 und 4: Ein eingebettetes System ist ein fest eingebauter Computer mit festem Zweck; es steckt in Waschmaschine, Backofen und Auto; und es ist meist klein, stromsparend und unauffällig. Falsch ist Aussage 3 — ein eingebettetes System ist kein frei nutzbarer PC, sondern auf seine eine Aufgabe festgelegt.",
+      "kc": ["eingebettete-systeme"]
+    },
+    {
+      "id": "in-10-sr-011",
+      "typ": "freitext",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "kc-neu",
+      "frage": "Eine Klimaanlage soll einen Raum auf 22 °C kühlen. Erkläre, warum das eine Regelung und keine reine Steuerung ist. Benenne dabei Sensor, Aktor, Sollwert, Istwert und die Rolle der Rückkopplung.",
+      "musterloesung": "Es ist eine Regelung, weil die Klimaanlage ihr eigenes Ergebnis — die Raumtemperatur — laufend zurückmisst und mit dem Zielwert vergleicht (Rückkopplung). Der Sensor ist der Temperaturfühler, der die aktuelle Raumtemperatur misst (Istwert). Der Sollwert ist die eingestellte Zieltemperatur von 22 °C. Der Aktor ist der Kompressor bzw. das Kühlaggregat, das den Raum kühlt. Ablauf: Der Mikrocontroller vergleicht Istwert und Sollwert. Ist es wärmer als 22 °C (Istwert > Sollwert), schaltet er die Kühlung ein; ist die Zieltemperatur erreicht oder unterschritten, schaltet er sie aus. Genau diese ständige Rückmessung und das Nachstellen machen aus der offenen Steuerkette einen geschlossenen Regelkreis. Eine reine Steuerung würde nur stur kühlen, ohne zu prüfen, ob die 22 °C erreicht sind — der Raum würde immer kälter.",
+      "tipps": [
+        "Was unterscheidet Regeln vom Steuern? Denke an die Rückmessung des Ergebnisses.",
+        "Ordne zu: Was misst (Sensor), was kühlt (Aktor), was ist gewünscht (Soll), was ist gemessen (Ist)?",
+        "Beschreibe, was passiert, wenn der Istwert über dem Sollwert liegt — und was, wenn er ihn erreicht."
+      ],
+      "loesungsweg": "Kernpunkte: (1) Regelung statt Steuerung, weil das Ergebnis (Raumtemperatur) zurückgemessen wird — Rückkopplung. (2) Sensor = Temperaturfühler (liefert den Istwert), Aktor = Kühlaggregat/Kompressor, Sollwert = 22 °C, Istwert = aktuell gemessene Temperatur. (3) Der Controller vergleicht beide Werte und schaltet die Kühlung bei Abweichung ein bzw. aus — der Regelkreis schließt sich. Eine reine Steuerung ohne Rückmessung würde den Raum unkontrolliert auskühlen.",
+      "kc": ["steuern-regeln"]
+    },
+    {
+      "id": "in-10-sr-012",
+      "typ": "rechenweg",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 2,
+      "ergaenzung": "kc-neu",
+      "frage": "Zusatz: Ein Zweipunkt-Regler steuert eine Heizung mit einer Schaltlücke (Hysterese). Er schaltet die Heizung EIN, sobald die Temperatur unter 20 °C fällt, und wieder AUS, sobald sie über 23 °C steigt. Dazwischen bleibt der Zustand erhalten. Bestimme das Verhalten Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Wie breit ist die Schaltlücke (Hysterese) in °C? Gib die Differenz zwischen oberer und unterer Schaltschwelle an.",
+          "eingaben": [
+            { "label": "Schaltlücke in °C", "antwort": 3, "toleranz": 0 }
+          ],
+          "tipps": [
+            "Obere Schwelle minus untere Schwelle: 23 °C − 20 °C."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Die Heizung ist gerade AUS, und der Sensor misst 21 °C. Schaltet die Heizung jetzt EIN? Gib 1 für ja oder 0 für nein an.",
+          "eingaben": [
+            { "label": "Heizung schaltet ein (1 = ja, 0 = nein)", "antwort": 0, "toleranz": 0 }
+          ],
+          "tipps": [
+            "Eingeschaltet wird erst unter 20 °C. Liegt 21 °C darunter? In der Lücke bleibt der bisherige Zustand (AUS) erhalten."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Die Heizung ist EIN, die Temperatur steigt langsam. Bei welcher Temperatur (in °C) schaltet sie wieder AUS?",
+          "eingaben": [
+            { "label": "Ausschalt-Temperatur in °C", "antwort": 23, "toleranz": 0 }
+          ],
+          "tipps": [
+            "Ausgeschaltet wird erst über der oberen Schwelle — und die liegt bei 23 °C."
+          ]
+        }
+      ],
+      "tipps": [
+        "Die Schaltlücke ist der Abstand zwischen Einschalt- und Ausschaltschwelle.",
+        "Innerhalb der Lücke ändert sich der Schaltzustand nicht — er bleibt, wie er war.",
+        "Einschalten unter 20 °C, Ausschalten über 23 °C: zwei verschiedene Schwellen."
+      ],
+      "loesungsweg": "Schritt 1: Die Schaltlücke beträgt 23 °C − 20 °C = 3 °C. Schritt 2: Bei 21 °C bleibt die ausgeschaltete Heizung aus, denn eingeschaltet wird erst unter 20 °C — 21 °C liegt in der Lücke, also keine Änderung (0). Schritt 3: Die eingeschaltete Heizung schaltet erst über der oberen Schwelle ab, also bei 23 °C. Diese Schaltlücke verhindert, dass die Heizung bei kleinen Temperaturschwankungen ständig an- und ausspringt.",
+      "kc": ["steuerungsalgorithmus"]
+    },
+    {
+      "id": "in-10-sr-013",
+      "typ": "freitext",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "kc-neu",
+      "frage": "Zusatz: Du sollst mit einem Calliope mini eine automatische Treppenhausbeleuchtung bauen, die nur bei Dunkelheit angeht, wenn jemand vorbeikommt. Beschreibe das System nach dem EVA-Prinzip (welche Sensoren, welcher Aktor) und schreibe den Steuerungsalgorithmus als Pseudocode in der Schleife messen – entscheiden – handeln. Begründe, ob es sich um Steuern oder Regeln handelt.",
+      "musterloesung": "Aufbau nach EVA: Eingabe sind zwei Sensoren — der eingebaute Lichtsensor (misst die Helligkeit) und ein Bewegungssensor bzw. ersatzweise ein Taster (meldet, ob jemand da ist). Verarbeitung ist der Calliope-Mikrocontroller. Ausgabe ist ein Aktor — die RGB-LED des Calliope oder eine über ein Relais geschaltete echte Lampe. Steuerungsalgorithmus (Pseudocode): wiederhole immer: helligkeit = lies Lichtsensor; bewegung = lies Bewegungssensor; wenn (helligkeit < grenzwert) UND (bewegung erkannt) dann schalte Licht ein, warte einige Sekunden, sonst schalte Licht aus; zurück zum Anfang. Es handelt sich um eine Steuerung: Das System reagiert nur auf seine Eingaben (Helligkeit und Bewegung), misst aber nicht zurück, ob durch das eingeschaltete Licht ein gewünschter Helligkeits-Sollwert erreicht wird. Es gibt also keine Rückkopplung auf eine Regelgröße — eine offene Wirkungskette und damit Steuern, nicht Regeln.",
+      "tipps": [
+        "Welche zwei Bedingungen müssen gleichzeitig gelten, damit das Licht angeht?",
+        "Ordne erst die Bauteile dem EVA-Prinzip zu, dann schreibe die Schleife messen – entscheiden – handeln.",
+        "Frage für Steuern/Regeln: Misst das System sein eigenes Ergebnis zurück (Rückkopplung)?"
+      ],
+      "loesungsweg": "Kernpunkte: (1) EVA: Eingabe = Lichtsensor + Bewegungssensor (bzw. Taster), Verarbeitung = Calliope, Ausgabe = LED/Lampe (Aktor). (2) Algorithmus in der Schleife: messen (beide Sensoren lesen) → entscheiden (Licht nur an, wenn dunkel UND Bewegung) → handeln (Licht ein, kurz warten; sonst aus) → wiederholen. (3) Es ist eine Steuerung: Das System reagiert auf Eingaben, misst aber das Ergebnis nicht zurück — keine Rückkopplung auf eine Regelgröße, also offene Wirkungskette.",
+      "kc": ["steuerungsalgorithmus"]
+    }
+  ]
+}

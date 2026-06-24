@@ -1,0 +1,81 @@
+{
+ "id": "vierfeldertafel-9",
+ "titel": "Lernzirkel: Vierfeldertafel und Baumdiagramme",
+ "fach": "mathematik",
+ "intro": "An diesen Stationen ordnest du Daten in Vierfeldertafeln und liest Wahrscheinlichkeiten ab. Außerdem erkundest du zweistufige Zufallsversuche im Baumdiagramm. Wähle deine Reihenfolge selbst.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Vierfeldertafel füllen",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Trage Häufigkeiten ein und beobachte, wie sich die Randsummen ergeben. Lies ab, wie viele Personen z. B. eine Brille tragen.</p>",
+   "widget": {
+    "id": "vierfeldertafel",
+    "params": {
+     "merkmalA": [
+      "Brille",
+      "keine Brille"
+     ],
+     "merkmalB": [
+      "Junge",
+      "Mädchen"
+     ],
+     "init": [
+      [
+       6,
+       8
+      ],
+      [
+       9,
+       7
+      ]
+     ],
+     "max": 99
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Zweistufiger Zufallsversuch",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Ziehe zweimal aus einer Urne und verfolge die Pfade im Baumdiagramm. Wie multiplizierst du Wahrscheinlichkeiten entlang eines Pfades?</p>",
+   "widget": {
+    "id": "zweistufig",
+    "params": {
+     "rot": 3,
+     "blau": 2,
+     "ziehen": "mit",
+     "namen": [
+      "A",
+      "B"
+     ]
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Brille und Klasse",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>In einer Klasse mit $30$ Kindern tragen $12$ eine Brille. Von den Brillenträgern sind $5$ Mädchen. Insgesamt sind $16$ Mädchen in der Klasse. Wie viele Jungen tragen <em>keine</em> Brille?</p><details><summary>Lösung anzeigen</summary><div><p>Mädchen mit Brille: $5$. Also Jungen mit Brille: $12 - 5 = 7$. Jungen insgesamt: $30 - 16 = 14$.</p><p>Jungen ohne Brille: $14 - 7 = 7$. Es tragen also $7$ Jungen keine Brille.</p></div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Tafel und Wahrscheinlichkeit",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "html": "<p>Vervollständige Vierfeldertafeln und lies Wahrscheinlichkeiten ab.</p>",
+   "quelle": "ma-09-vierfeldertafel-und-baumdiagramme",
+   "ids": [
+    "ma-09-vb-004",
+    "ma-09-vb-002"
+   ]
+  }
+ ]
+}

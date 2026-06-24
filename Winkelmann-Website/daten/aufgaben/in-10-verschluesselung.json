@@ -1,0 +1,493 @@
+{
+ "thema": "in-10-verschluesselung",
+ "fach": "informatik",
+ "stufe": "klasse-10",
+ "aufgaben": [
+  {
+   "id": "in-10-vs-001",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Welche Aussagen über Klartext, Geheimtext und Schlüssel sind richtig?",
+   "optionen": [
+    {
+     "text": "Der Klartext ist die ursprüngliche, direkt lesbare Nachricht.",
+     "richtig": true,
+     "erklaerung": "Richtig — „klar“ heißt hier: unverschlüsselt und für jeden lesbar."
+    },
+    {
+     "text": "Der Geheimtext entsteht, wenn man den Klartext mit einem Verfahren und einem Schlüssel verschlüsselt.",
+     "richtig": true,
+     "erklaerung": "Richtig: Verfahren plus Schlüssel machen aus HALLO zum Beispiel KDOOR."
+    },
+    {
+     "text": "Bei der Caesar-Verschlüsselung darf der Schlüssel öffentlich bekannt sein, ohne dass die Sicherheit leidet.",
+     "richtig": false,
+     "erklaerung": "Wer den Schlüssel kennt, entschlüsselt sofort — bei Caesar und Vigenère muss er geheim bleiben."
+    },
+    {
+     "text": "Verschlüsselung sorgt dafür, dass eine Nachricht schneller übertragen wird.",
+     "richtig": false,
+     "erklaerung": "Verschlüsselung schützt die Vertraulichkeit — mit der Übertragungsgeschwindigkeit hat sie nichts zu tun."
+    }
+   ],
+   "tipps": [
+    "Denke an das Beispiel von der Erklärseite: HALLO wird zu KDOOR.",
+    "Was kann ein Angreifer tun, der den Schlüssel kennt?",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussage 1 und 2: Der Klartext ist die lesbare Ausgangsnachricht, und der Geheimtext entsteht daraus mit Verfahren und Schlüssel. Der Schlüssel muss bei Caesar geheim bleiben — und mit der Übertragungsgeschwindigkeit hat Verschlüsselung nichts zu tun.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-002",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Wie viele sinnvolle Schlüssel gibt es bei der Caesar-Verschlüsselung im Alphabet mit 26 Buchstaben? (Die Verschiebung um 0 zählt nicht — sie verändert nichts.)",
+   "eingaben": [
+    {
+     "label": "Anzahl Schlüssel",
+     "antwort": 25,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Mögliche Verschiebungen: 1, 2, 3, … — bis das Alphabet einmal herum ist.",
+    "Die Verschiebung um 26 wäre dasselbe wie die um 0: Jeder Buchstabe bliebe, wo er ist.",
+    "Zähle die Verschiebungen von 1 bis 25."
+   ],
+   "loesungsweg": "Sinnvoll sind die Verschiebungen 1 bis 25 — das sind 25 Schlüssel. Die Verschiebung 0 (und genauso 26) bildet jeden Buchstaben auf sich selbst ab und verschlüsselt gar nichts. Wegen dieser winzigen Schlüsselzahl lässt sich Caesar durch simples Durchprobieren knacken.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-003",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ordne jedem Fachbegriff die passende Bedeutung zu.",
+   "paare": [
+    {
+     "links": "Klartext",
+     "rechts": "Die ursprüngliche, lesbare Nachricht"
+    },
+    {
+     "links": "Geheimtext",
+     "rechts": "Die verschlüsselte, ohne Schlüssel unlesbare Nachricht"
+    },
+    {
+     "links": "Schlüssel",
+     "rechts": "Die geheime Zusatzinformation, bei Caesar eine Verschiebezahl"
+    },
+    {
+     "links": "Häufigkeitsanalyse",
+     "rechts": "Knackmethode: Buchstaben zählen und mit der Sprache vergleichen"
+    }
+   ],
+   "tipps": [
+    "„Klar“ bedeutet: direkt lesbar, noch nicht verschlüsselt.",
+    "Bei Caesar ist der Schlüssel eine Zahl zwischen 1 und 25.",
+    "Die Häufigkeitsanalyse nutzt aus, dass E im Deutschen am häufigsten vorkommt."
+   ],
+   "loesungsweg": "Klartext = lesbare Ausgangsnachricht; Geheimtext = verschlüsselte Nachricht; Schlüssel = geheime Zusatzinformation (bei Caesar die Verschiebezahl); Häufigkeitsanalyse = Knackmethode, die Buchstaben im Geheimtext zählt und mit den typischen Häufigkeiten der Sprache vergleicht.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-004",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ergänze den Text zur Caesar-Verschlüsselung.",
+   "text": "Bei der Caesar-Verschlüsselung wird jeder Buchstabe im Alphabet um eine feste Zahl von Stellen ___. Kommt man dabei hinter das Z, geht es vorn bei ___ weiter. Mit dem Schlüssel 3 wird aus dem Klartext HALLO der Geheimtext ___.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "verschoben",
+     "optionen": [
+      "verschoben",
+      "gespiegelt",
+      "verdoppelt"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "A",
+     "optionen": [
+      "A",
+      "M",
+      "Z"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "KDOOR",
+     "optionen": [
+      "KDOOR",
+      "EXIIL",
+      "HBNLP"
+     ]
+    }
+   ],
+   "tipps": [
+    "„Verschiebechiffre“ — der Name verrät die Grundidee.",
+    "Das Alphabet wird wie ein Kreis gedacht: Nach dem Z folgt wieder der Anfang.",
+    "Rechne nach: H → K, A → D, L → O, O → R."
+   ],
+   "loesungsweg": "Jeder Buchstabe wird verschoben; nach dem Z geht es bei A weiter (Modulo-Idee). Mit Schlüssel 3: H→K, A→D, L→O, L→O, O→R — also KDOOR. (EXIIL wäre die Verschiebung um 3 rückwärts, HBNLP ist das Vigenère-Ergebnis mit Schlüsselwort ABC.)",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-005",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Vervollständige die Caesar-Tabelle für den Schlüssel 5. Zwei Beispiele sind gegeben: M→R und O→T. Trage jeweils den Geheimtext-Buchstaben ein.",
+   "text": "Mit Schlüssel 5 gilt: H → ___, U → ___ und X → ___ (Achtung: Hinter dem Z geht es vorn im Alphabet weiter).",
+   "luecken": [
+    {
+     "art": "eingabe",
+     "antwort": "M"
+    },
+    {
+     "art": "eingabe",
+     "antwort": "Z"
+    },
+    {
+     "art": "eingabe",
+     "antwort": "C"
+    }
+   ],
+   "tipps": [
+    "Zähle vom Buchstaben aus 5 Stellen im Alphabet weiter: Aus A würde F, aus B würde G.",
+    "H → I, J, K, L, M. Und U liegt genau 5 Stellen vor dem Alphabetende.",
+    "Bei X kommst du über Y und Z hinaus — zähle vorn bei A weiter."
+   ],
+   "loesungsweg": "H + 5 → M (H→I→J→K→L→M). U + 5 → Z (U→V→W→X→Y→Z). X + 5: über Y und Z hinaus, dann vorn weiter mit A, B, C — also C. In Positionen gerechnet: $(23 + 5) \\bmod 26 = 2$, und Position 2 ist C.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-006",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ein Text wird mit dem Vigenère-Verfahren und dem Schlüsselwort LICHT verschlüsselt. Nach wie vielen Buchstaben wiederholt sich das Muster der Verschiebungen (Periodenlänge)?",
+   "eingaben": [
+    {
+     "label": "Periodenlänge",
+     "antwort": 5,
+     "toleranz": 0,
+     "einheit": "Buchstaben"
+    }
+   ],
+   "tipps": [
+    "Jeder Buchstabe des Schlüsselworts steht für eine eigene Caesar-Verschiebung.",
+    "Das Schlüsselwort wird unter den Klartext geschrieben und ständig wiederholt: LICHTLICHTLICHT…",
+    "Zähle die Buchstaben von LICHT."
+   ],
+   "loesungsweg": "LICHT hat 5 Buchstaben, also wechseln sich 5 Caesar-Verschiebungen ab (L=11, I=8, C=2, H=7, T=19). Ab dem 6. Buchstaben beginnt das Muster von vorn — die Periodenlänge ist 5. Genau diese Wiederholung ist später der Ansatzpunkt zum Knacken.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-007",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Caesar mit Zahlen: Jeder Buchstabe erhält eine Position ($A = 0$, $B = 1$, …, $Z = 25$). Verschlüsselt wird mit der Regel $\\text{Geheimposition} = (\\text{Klarposition} + s) \\bmod 26$ — „mod 26“ ist der Rest beim Teilen durch 26. Der Buchstabe H (Position 7) wird mit dem Schlüssel $s = 19$ verschlüsselt.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Berechne die Position des Geheimtext-Buchstabens: $(7 + 19) \\bmod 26$.",
+     "eingaben": [
+      {
+       "label": "Position Geheimtext",
+       "antwort": 0,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "$7 + 19 = 26$ — und beim Teilen von 26 durch 26 bleibt der Rest 0. Position 0 gehört zum Buchstaben A."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Probe durch Entschlüsseln — rechne $(0 - 19 + 26) \\bmod 26$. (Weil $0 - 19$ negativ wäre, addiert man einmal 26.)",
+     "eingaben": [
+      {
+       "label": "Position Klartext",
+       "antwort": 7,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "$0 - 19 = -19$, plus 26 ergibt 7 — genau die Position von H. Die Probe stimmt."
+     ]
+    }
+   ],
+   "tipps": [
+    "Schreibe dir die Positionen auf: H ist der 8. Buchstabe, hat aber Position 7, weil A die 0 bekommt.",
+    "„mod 26“: Ziehe so oft 26 ab (oder addiere 26), bis das Ergebnis zwischen 0 und 25 liegt.",
+    "Entschlüsseln ist die Umkehrung: Schlüssel abziehen statt addieren."
+   ],
+   "loesungsweg": "Schritt 1: $(7 + 19) \\bmod 26 = 26 \\bmod 26 = 0$ — der Geheimtext-Buchstabe ist A (Position 0). Schritt 2 (Probe): $(0 - 19 + 26) \\bmod 26 = 7$ — wieder die Position von H. Entschlüsseln ist also einfach Zurückrechnen: Schlüssel abziehen und bei negativem Ergebnis 26 addieren.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-008",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ein langer Caesar-Geheimtext soll mit der Häufigkeitsanalyse geknackt werden. Bringe die Schritte in die richtige Reihenfolge.",
+   "elemente": [
+    "Zähle, wie oft jeder Buchstabe im Geheimtext vorkommt",
+    "Bestimme den häufigsten Buchstaben des Geheimtexts",
+    "Nimm an, dass dieser Buchstabe für das E steht",
+    "Berechne daraus die Verschiebung und entschlüssele den ganzen Text"
+   ],
+   "tipps": [
+    "Am Anfang steht das Auszählen — ohne Daten keine Analyse.",
+    "Die Annahme „häufigster Buchstabe = E“ funktioniert, weil E im Deutschen mit Abstand am häufigsten ist.",
+    "Erst wenn die Verschiebung bekannt ist, lässt sich der gesamte Text entschlüsseln."
+   ],
+   "loesungsweg": "Erst alle Buchstaben zählen, dann den häufigsten bestimmen, diesen als E annehmen und daraus die Verschiebung berechnen — damit wird der gesamte Text entschlüsselt. Beispiel: Ist H am häufigsten, beträgt die Verschiebung 3 (E→H).",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-009",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Beim Vigenère-Verfahren ist jedes Schlüsselwort der Länge 4 aus den 26 Großbuchstaben erlaubt — auch sinnlose wie QQXZ. Wie viele verschiedene Schlüsselwörter der Länge 4 gibt es?",
+   "eingaben": [
+    {
+     "label": "Anzahl Schlüsselwörter",
+     "antwort": 456976,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Für die erste Stelle gibt es 26 Möglichkeiten — und für jede weitere Stelle ebenfalls.",
+    "Die Möglichkeiten multiplizieren sich: $26 \\cdot 26 \\cdot 26 \\cdot 26$.",
+    "$26^2 = 676$, also rechne $676 \\cdot 676$."
+   ],
+   "loesungsweg": "Jede der 4 Stellen kann unabhängig von den anderen einen von 26 Buchstaben tragen: $26^4 = 456\\,976$ Schlüsselwörter. Zum Vergleich: Caesar hat nur 25 Schlüssel — reines Durchprobieren wird bei Vigenère also schon deutlich mühsamer, und längere Schlüsselwörter verschärfen das weiter.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-010",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ein Angreifer hat einen längeren deutschen Text abgefangen, der mit Caesar verschlüsselt wurde. Welche Aussagen sind richtig?",
+   "optionen": [
+    {
+     "text": "Der Angreifer kann einfach alle 25 möglichen Schlüssel durchprobieren.",
+     "richtig": true,
+     "erklaerung": "Richtig — bei nur 25 Kandidaten ist von Hand und erst recht per Computer schnell der lesbare Text gefunden."
+    },
+    {
+     "text": "Der häufigste Buchstabe im Geheimtext entspricht sehr wahrscheinlich dem E.",
+     "richtig": true,
+     "erklaerung": "Richtig: E ist im Deutschen mit Abstand der häufigste Buchstabe, und dieses Muster überlebt die Verschiebung."
+    },
+    {
+     "text": "Ohne Kenntnis des Schlüssels bleibt der Text für immer unlesbar.",
+     "richtig": false,
+     "erklaerung": "Gerade nicht: Durchprobieren oder Häufigkeitsanalyse liefern den Schlüssel in kürzester Zeit."
+    },
+    {
+     "text": "Die Häufigkeitsanalyse funktioniert bei einem sehr kurzen Text (z. B. 5 Buchstaben) besonders zuverlässig.",
+     "richtig": false,
+     "erklaerung": "Bei so wenigen Buchstaben ist die Statistik unzuverlässig — der häufigste Buchstabe muss dann kein E sein."
+    }
+   ],
+   "tipps": [
+    "Wie viele Schlüssel müsste man höchstens testen?",
+    "Caesar verschiebt alle Buchstaben gleich — Häufigkeitsmuster bleiben dadurch erhalten.",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussage 1 und 2: Nur 25 Schlüssel lassen sich vollständig durchprobieren, und in längeren deutschen Texten zeigt der häufigste Geheimtext-Buchstabe fast sicher auf das E. Kurze Texte liefern dagegen keine verlässliche Statistik — und „für immer unlesbar“ ist ein Caesar-Text erst recht nicht.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-011",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "frage": "Begründe, warum die Caesar-Verschlüsselung heute als unsicher gilt. Nenne mindestens zwei verschiedene Gründe.",
+   "musterloesung": "Erstens gibt es nur 25 mögliche Schlüssel: Ein Angreifer probiert einfach alle Verschiebungen durch — von Hand in wenigen Minuten, mit dem Computer in Sekundenbruchteilen. Zweitens bleibt das Häufigkeitsmuster der Sprache erhalten, weil jeder Buchstabe immer auf denselben Geheimbuchstaben abgebildet wird: Der häufigste Geheimtext-Buchstabe verrät das E, daraus folgt sofort die Verschiebung — der Text lässt sich also sogar ohne Durchprobieren knacken. (Zusätzlich bleiben Wortlängen und Doppelbuchstaben sichtbar und liefern weitere Hinweise.)",
+   "tipps": [
+    "Wie viele Schlüssel müsste ein Angreifer höchstens testen?",
+    "Was passiert mit dem häufigen Buchstaben E, wenn alle Buchstaben gleich verschoben werden?",
+    "Zwei Angriffswege: stures Durchprobieren und kluges Zählen."
+   ],
+   "loesungsweg": "Kernpunkte: (1) Nur 25 Schlüssel — vollständiges Durchprobieren ist trivial. (2) Die Buchstabenhäufigkeiten bleiben erhalten — die Häufigkeitsanalyse (häufigster Buchstabe entspricht dem E) liefert den Schlüssel direkt. Jeder der beiden Gründe reicht für sich schon zum Knacken.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-012",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Zusatz: Der Geheimtext TACE wurde mit dem Vigenère-Verfahren und dem Schlüsselwort MAI verschlüsselt. Entschlüssele ihn. Rechne mit Positionen ($A = 0$, …, $Z = 25$): Klarposition = Geheimposition minus Schlüsselposition; wird das Ergebnis negativ, addiere 26. Der erste Buchstabe ist vorgerechnet: T(19) − M(12) = 7 → H.",
+   "text": "Schreibe das Schlüsselwort wiederholt unter den Geheimtext (M, A, I, M). Entschlüssele die restlichen Buchstaben: A − A → ___, C − I → ___, E − M → ___.",
+   "luecken": [
+    {
+     "art": "eingabe",
+     "antwort": "A"
+    },
+    {
+     "art": "eingabe",
+     "antwort": "U"
+    },
+    {
+     "art": "eingabe",
+     "antwort": "S"
+    }
+   ],
+   "tipps": [
+    "Die Paare sind: T↔M, A↔A, C↔I, E↔M. Positionen: A=0, C=2, E=4, I=8, M=12, T=19.",
+    "C − I: $2 - 8 = -6$, also $-6 + 26 = 20$. Welcher Buchstabe hat Position 20?",
+    "E − M: $4 - 12 = -8$, also $-8 + 26 = 18$. Zähle: A=0, B=1, … bis Position 18."
+   ],
+   "loesungsweg": "Schlüsselwort unter den Geheimtext: T/M, A/A, C/I, E/M. — T: $19 - 12 = 7$ → H (vorgegeben). A: $0 - 0 = 0$ → A. C: $2 - 8 = -6$, $-6 + 26 = 20$ → U. E: $4 - 12 = -8$, $-8 + 26 = 18$ → S. Der Klartext lautet HAUS. Probe (Verschlüsseln): H+M: $7 + 12 = 19$ → T, A+A → A, U+I: $20 + 8 = 28$, $28 - 26 = 2$ → C, S+M: $18 + 12 = 30$, $30 - 26 = 4$ → E — zusammen wieder TACE.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-013",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Zusatz: Das One-Time-Pad (Einmalschlüssel-Verfahren) gilt als beweisbar sicher. Welche Aussagen über dieses Verfahren sind richtig?",
+   "optionen": [
+    {
+     "text": "Der Schlüssel ist eine zufällige Buchstabenfolge, die mindestens so lang ist wie die Nachricht.",
+     "richtig": true,
+     "erklaerung": "Richtig — wie ein Vigenère, dessen Schlüsselwort so lang wie der Text ist: Jede Position bekommt ihre eigene zufällige Verschiebung."
+    },
+    {
+     "text": "Jeder Schlüssel darf nur ein einziges Mal verwendet werden.",
+     "richtig": true,
+     "erklaerung": "Richtig — daher der Name. Bei Wiederverwendung entstehen Muster zwischen den Nachrichten, die Angreifer ausnutzen können."
+    },
+    {
+     "text": "Das One-Time-Pad lässt sich mit der Häufigkeitsanalyse knacken.",
+     "richtig": false,
+     "erklaerung": "Nein: Da jede Position eine eigene zufällige Verschiebung hat, entsteht kein Häufigkeitsmuster — es gibt nichts auszuzählen."
+    },
+    {
+     "text": "Wegen seiner Sicherheit verschlüsseln Messenger heute alle Nachrichten mit dem One-Time-Pad.",
+     "richtig": false,
+     "erklaerung": "Unpraktisch: Für jede Nachricht müsste vorher ein ebenso langer Zufallsschlüssel sicher ausgetauscht werden. Messenger nutzen stattdessen Verfahren wie AES mit kurzen Schlüsseln."
+    }
+   ],
+   "tipps": [
+    "„One time“ = einmal: Was sagt der Name über die Verwendung des Schlüssels?",
+    "Die Häufigkeitsanalyse braucht Muster — gibt es welche, wenn jede Position ihre eigene Zufalls-Verschiebung hat?",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussage 1 und 2: Der Schlüssel muss mindestens nachrichtenlang, echt zufällig und einmalig sein — dann ist das Verfahren beweisbar sicher. Genau diese Bedingungen machen es aber unpraktisch, denn der lange Schlüssel muss sicher ausgetauscht werden. Und die Häufigkeitsanalyse läuft mangels Muster ins Leere.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  },
+  {
+   "id": "in-10-vs-014",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "So verschlüsselt Caesar einen einzelnen Buchstaben mit dem Schlüssel k (Positionen A = 0, B = 1, …, Z = 25). Bringe die Rechenschritte in die richtige Reihenfolge – als Beispiel verschlüsseln wir X mit dem Schlüssel 5.",
+   "elemente": [
+    "Wandle den Klarbuchstaben in seine Position um (X → 23)",
+    "Addiere den Schlüssel k zur Position (23 + 5 = 28)",
+    "Rechne das Ergebnis modulo 26, falls es über 25 hinausgeht (28 mod 26 = 2)",
+    "Wandle die neue Position zurück in einen Buchstaben (2 → C)"
+   ],
+   "tipps": [
+    "Gerechnet wird mit Zahlen, nicht mit Buchstaben — der erste Schritt ist also die Umwandlung Buchstabe → Position.",
+    "Erst nachdem der Schlüssel addiert wurde, kann ein Überlauf über das Z hinaus entstehen — genau dafür ist das Modulo 26 da.",
+    "Ganz am Ende steht das Ergebnis als Zahl fest und wird wieder in einen Buchstaben übersetzt."
+   ],
+   "loesungsweg": "Caesar verschlüsselt buchstabenweise über Positionen ($A = 0, \\dots, Z = 25$). Schritt 1: Klarbuchstabe → Position, hier $X = 23$. Schritt 2: Schlüssel addieren, $23 + 5 = 28$. Schritt 3: Modulo 26, damit man nach dem Z wieder vorn bei A landet: $28 \\bmod 26 = 2$. Schritt 4: Position → Buchstabe, $2 \\to C$. Kompakt ist das die Regel $\\text{Geheimposition} = (\\text{Klarposition} + k) \\bmod 26$.",
+   "kc": [
+    "daten-und-ihre-spuren"
+   ]
+  }
+ ]
+}

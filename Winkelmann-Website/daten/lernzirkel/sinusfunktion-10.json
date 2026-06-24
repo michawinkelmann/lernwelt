@@ -1,0 +1,97 @@
+{
+ "id": "sinusfunktion-10",
+ "titel": "Lernzirkel: Sinusfunktion und periodische Vorgänge",
+ "fach": "mathematik",
+ "intro": "Hier siehst du, wie aus der Drehung am Einheitskreis die Sinuskurve entsteht, und wie Amplitude und Periode sie formen. Du erkundest, knobelst und übst – ganz frei in der Reihenfolge.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Vom Kreis zur Kurve",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Drehe den Winkel am Einheitskreis und verfolge, wie der Sinuswert die Höhe des Punktes angibt. So entsteht die Sinuskurve Punkt für Punkt.</p>",
+   "widget": {
+    "id": "einheitskreis",
+    "params": {
+     "init": 30
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Amplitude und Periode einstellen",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verändere $a$, $b$ und $d$ in $f(x) = a\\cdot\\sin(b\\cdot x) + d$. Welcher Parameter dehnt die Kurve in die Höhe, welcher staucht sie in die Breite?</p>",
+   "widget": {
+    "id": "funktionsplotter",
+    "params": {
+     "form": "sinus",
+     "regler": [
+      {
+       "sym": "a",
+       "label": "a",
+       "min": 0.5,
+       "max": 3,
+       "step": 0.5,
+       "init": 1
+      },
+      {
+       "sym": "b",
+       "label": "b",
+       "min": 1,
+       "max": 3,
+       "step": 1,
+       "init": 1
+      },
+      {
+       "sym": "c",
+       "label": "d",
+       "min": -2,
+       "max": 2,
+       "step": 0.5,
+       "init": 0
+      }
+     ],
+     "x": [
+      0,
+      360
+     ],
+     "y": [
+      -3,
+      3
+     ],
+     "schrittX": 90,
+     "achsen": {
+      "x": "Winkel in °",
+      "y": "y"
+     },
+     "formel": "f(x) = a·sin(b·x) + d"
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Riesenrad",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Eine Gondel an einem Riesenrad ist im tiefsten Punkt $2\\,\\text{m}$ und im höchsten Punkt $40\\,\\text{m}$ über dem Boden. Wie groß ist die Amplitude der Höhen-Schwingung, und um welche mittlere Höhe schwankt sie?</p><details><summary>Lösung anzeigen</summary><div><p>Die Höhe schwankt zwischen $2\\,\\text{m}$ und $40\\,\\text{m}$.</p><p>Mittlere Höhe (Mittellinie $d$): $\\dfrac{2 + 40}{2} = 21\\,\\text{m}$. Amplitude $a$: $\\dfrac{40 - 2}{2} = 19\\,\\text{m}$.</p><p>Die Höhe lässt sich also durch $h = 19 \\cdot \\sin(\\dots) + 21$ beschreiben.</p></div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Sinuswerte und Zuordnung",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "html": "<p>Gib Sinuswerte an und ordne Winkeln ihre Sinuswerte zu.</p>",
+   "quelle": "ma-10-sinusfunktion",
+   "ids": [
+    "ma-10-sf-004",
+    "ma-10-sf-002"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,561 @@
+{
+  "thema": "ma-qp-q2-geometrie",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-q2-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Einmal quer durch die Grundbegriffe: Welche Aussagen über Punkte, Vektoren und Geraden im Raum sind richtig?",
+      "optionen": [
+        {
+          "text": "Der Ortsvektor des Punktes $P(2 \\mid 3 \\mid 5)$ führt vom Ursprung zu $P$ — seine Koordinaten sind genau die Koordinaten des Punktes.",
+          "richtig": true,
+          "erklaerung": "Richtig: Der Ortsvektor ist der Pfeil vom Ursprung zum Punkt; Punkt und Ortsvektor enthalten dieselben drei Zahlen."
+        },
+        {
+          "text": "In der Geradengleichung $\\vec x = \\vec p + t \\cdot \\vec u$ kann jeder Punkt der Geraden als Stützpunkt dienen — dieselbe Gerade hat also viele verschiedene Gleichungen.",
+          "richtig": true,
+          "erklaerung": "Richtig: Stützpunkt und Richtungsvektor sind nicht eindeutig. Ob zwei Gleichungen dieselbe Gerade beschreiben, klären kollineare Richtungsvektoren plus eine Punktprobe."
+        },
+        {
+          "text": "Der Richtungsvektor einer Geraden ist eindeutig bestimmt.",
+          "richtig": false,
+          "erklaerung": "Jedes Vielfache außer dem Nullvektor beschreibt dieselbe Richtung: $(2 \\mid 1 \\mid 1)$ und $(4 \\mid 2 \\mid 2)$ gehören zur selben Geraden."
+        },
+        {
+          "text": "Für die Punktprobe genügt es, wenn eine der drei Koordinatenzeilen einen passenden Parameterwert $t$ liefert.",
+          "richtig": false,
+          "erklaerung": "Alle drei Zeilen müssen denselben $t$-Wert liefern — genau daran scheitern Punkte, die nur in der Nähe der Geraden liegen."
+        }
+      ],
+      "tipps": [
+        "Ortsvektor = Pfeil vom Ursprung zum Punkt; Richtungsvektoren dürfen beliebig skaliert werden, solange sie nicht der Nullvektor sind.",
+        "Punktprobe: Ein Punkt liegt nur dann auf der Geraden, wenn ein einziger $t$-Wert alle drei Zeilen gleichzeitig erfüllt.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Der Ortsvektor von $P$ trägt die Koordinaten des Punktes, und als Stützpunkt einer Geradengleichung taugt jeder Geradenpunkt — dieselbe Gerade hat unendlich viele Gleichungen. Aussage 3 ist falsch, weil jedes Vielfache des Richtungsvektors (außer $\\vec 0$) dieselbe Gerade beschreibt. Aussage 4 ist falsch: Die Punktprobe verlangt einen gemeinsamen Parameterwert für alle drei Zeilen — eine einzelne passende Zeile reicht nicht.",
+      "kc": [
+        "geraden-grundbegriffe"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-002",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Das Glasdach eines Museumshofs ist eine quadratische Pyramide mit der Grundfläche $A(0 \\mid 0 \\mid 0)$, $B(6 \\mid 0 \\mid 0)$, $C(6 \\mid 6 \\mid 0)$, $D(0 \\mid 6 \\mid 0)$ und der Spitze $S(3 \\mid 3 \\mid 6)$ (Angaben in m). a) Berechne die Länge der Seitenkante $\\overline{AS}$. b) Bestimme den Winkel $\\alpha$, unter dem die Seitenkante $\\overline{AS}$ im Punkt $A$ auf die Grundkante $\\overline{AB}$ trifft.",
+      "eingaben": [
+        {
+          "label": "a) Kantenlänge",
+          "antwort": 7.35,
+          "toleranz": 0.02,
+          "einheit": "m"
+        },
+        {
+          "label": "b) Winkel $\\alpha$",
+          "antwort": 65.9,
+          "toleranz": 0.2,
+          "einheit": "°"
+        }
+      ],
+      "tipps": [
+        "a) $\\overrightarrow{AS} = (3 \\mid 3 \\mid 6)$ — der Betrag ist $\\sqrt{3^2 + 3^2 + 6^2}$.",
+        "b) Winkelformel: $\\cos\\alpha = \\frac{\\overrightarrow{AB} \\cdot \\overrightarrow{AS}}{|\\overrightarrow{AB}| \\cdot |\\overrightarrow{AS}|}$ mit $\\overrightarrow{AB} = (6 \\mid 0 \\mid 0)$.",
+        "b) Skalarprodukt $6 \\cdot 3 + 0 + 0 = 18$, Beträge $6$ und $\\sqrt{54}$ — also $\\cos\\alpha = \\frac{18}{6\\sqrt{54}} \\approx 0{,}408$."
+      ],
+      "loesungsweg": "a) $\\overrightarrow{AS} = (3 \\mid 3 \\mid 6)$, also $|\\overrightarrow{AS}| = \\sqrt{9 + 9 + 36} = \\sqrt{54} = 3\\sqrt{6} \\approx 7{,}35\\,\\text{m}$. b) Mit $\\overrightarrow{AB} = (6 \\mid 0 \\mid 0)$ liefert das Skalarprodukt $\\overrightarrow{AB} \\cdot \\overrightarrow{AS} = 18$; die Beträge sind $6$ und $\\sqrt{54}$. Also $\\cos\\alpha = \\frac{18}{6 \\cdot \\sqrt{54}} \\approx 0{,}408$ und damit $\\alpha \\approx 65{,}9^\\circ$. Plausibel: Die Pyramide ist steil — die Höhe $6$ m ist deutlich größer als die halbe Diagonale $\\approx 4{,}24$ m —, darum liegt der Kantenwinkel klar über $45^\\circ$.",
+      "kc": [
+        "betrag-winkel"
+      ],
+      "cas": "<p>Beträge und Winkel prüft der ClassPad II in zwei Zeilen — Vektoren gibst du als Listen in eckigen Klammern ein:</p><ol><li>Im <b>Main</b>-Menü <b>Aktion → Vektor → norm</b>: <code>norm([3,3,6])</code> liefert $3\\sqrt{6} \\approx 7{,}35$.</li><li>Winkelmodus <b>Degree</b> in der Statusleiste einstellen, dann <b>Aktion → Vektor → angle</b>: <code>angle([6,0,0],[3,3,6])</code> liefert $\\approx 65{,}9^\\circ$.</li><li>Wer den Formelweg nachbauen will: <code>cos⁻¹(dotP([6,0,0],[3,3,6])/(norm([6,0,0])×norm([3,3,6])))</code> ergibt denselben Winkel.</li></ol><p>In der Klausur gilt: Das CAS kontrolliert — Skalarprodukt und Winkelformel gehören aufs Papier.</p>"
+    },
+    {
+      "id": "ma-qp-q2-003",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Lage zweier Geraden im Raum: Ordne jedem Untersuchungsergebnis die richtige Lagebeziehung zu.",
+      "paare": [
+        {
+          "links": "Richtungsvektoren kollinear, Punktprobe erfüllt",
+          "rechts": "identisch"
+        },
+        {
+          "links": "Richtungsvektoren kollinear, Punktprobe nicht erfüllt",
+          "rechts": "echt parallel"
+        },
+        {
+          "links": "nicht kollinear, LGS hat genau eine Lösung",
+          "rechts": "Schnittpunkt"
+        },
+        {
+          "links": "nicht kollinear, LGS hat keine Lösung",
+          "rechts": "windschief"
+        }
+      ],
+      "tipps": [
+        "Erste Frage immer: Sind die Richtungsvektoren Vielfache voneinander (kollinear)?",
+        "Bei kollinearen Richtungsvektoren entscheidet die Punktprobe — liegt der Stützpunkt der einen Geraden auf der anderen?",
+        "Bei nicht kollinearen Richtungsvektoren entscheidet das LGS aus dem Gleichsetzen: Lösung mit bestandener Probe in der dritten Zeile → Schnittpunkt, Widerspruch → windschief."
+      ],
+      "loesungsweg": "Der Entscheidungsbaum hat zwei Etagen. Etage 1: Richtungsvektoren vergleichen. Sind sie kollinear, verlaufen die Geraden parallel — die Punktprobe trennt dann „identisch“ (Stützpunkt liegt auf der anderen Geraden) von „echt parallel“. Sind sie nicht kollinear, setzt man die Geraden gleich: Hat das LGS genau eine Lösung (alle drei Zeilen passen), schneiden sich die Geraden in einem Punkt; führt es auf einen Widerspruch, sind die Geraden windschief — der Fall, den es nur im Raum gibt.",
+      "kc": [
+        "lagebeziehung-geraden"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-004",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zur Koordinatenform und zu den Spurpunkten.",
+      "text": "Aus der Koordinatenform 3x + 2y + 6z = 18 liest man direkt den Normalenvektor ___ ab. Die Spurpunkte einer Ebene sind ihre Schnittpunkte mit den ___. Für den Spurpunkt auf der y-Achse setzt man ___ und erhält hier den Punkt ___.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "(3|2|6)",
+          "optionen": [
+            "(3|2|6)",
+            "(18|18|18)",
+            "(2|6|18)"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Koordinatenachsen",
+          "optionen": [
+            "Koordinatenachsen",
+            "Koordinatenebenen",
+            "Spurgeraden"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "x = 0 und z = 0",
+          "optionen": [
+            "x = 0 und z = 0",
+            "y = 0",
+            "x = 0 und y = 0"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "S₂(0|9|0)",
+          "optionen": [
+            "S₂(0|9|0)",
+            "S₂(0|6|0)",
+            "S₂(0|18|0)"
+          ]
+        }
+      ],
+      "tipps": [
+        "Die Koeffizienten vor x, y und z sind genau die Koordinaten des Normalenvektors.",
+        "Auf einer Koordinatenachse sind die beiden anderen Koordinaten null.",
+        "Nach dem Nullsetzen bleibt 2y = 18 übrig — daraus folgt der y-Wert des Spurpunkts."
+      ],
+      "loesungsweg": "(3|2|6) — Koordinatenachsen — x = 0 und z = 0 — S₂(0|9|0): Die Koeffizienten der Koordinatenform bilden den Normalenvektor $(3 \\mid 2 \\mid 6)$. Spurpunkte sind die Schnittpunkte mit den Koordinatenachsen; dort sind jeweils zwei Koordinaten null. Für die y-Achse bleibt $2y = 18$, also $y = 9$ und $S_2(0 \\mid 9 \\mid 0)$. Genauso findest du $S_1(6 \\mid 0 \\mid 0)$ auf der x-Achse und $S_3(0 \\mid 0 \\mid 3)$ auf der z-Achse.",
+      "kc": [
+        "koordinatenform-spurpunkte"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Zwei Lieferdrohnen fliegen geradlinig (Koordinaten in m, Parameter in s): Drohne 1 auf $g\\colon \\vec x = (1 \\mid 2 \\mid 0) + t \\cdot (2 \\mid 1 \\mid 1)$, Drohne 2 auf $h\\colon \\vec x = (5 \\mid 7 \\mid 5) + s \\cdot (0 \\mid {-1} \\mid {-1})$. Begründe zunächst, dass die Richtungsvektoren nicht kollinear sind, und berechne dann den Schnittpunkt $S$ der beiden Flugbahnen — Probe in der dritten Zeile nicht vergessen!",
+      "eingaben": [
+        {
+          "label": "$x$-Koordinate von $S$",
+          "antwort": 5,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$y$-Koordinate von $S$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$z$-Koordinate von $S$",
+          "antwort": 2,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Ein <strong>Parameter</strong> ist eine feste, aber zunächst unbekannte Zahl in einem Term, z. B. $a$ in $f(x)=ax^2$.",
+        "Gleichsetzen liefert drei Gleichungen. Die erste Zeile $1 + 2t = 5$ enthält nur $t$ — starte dort.",
+        "Mit $t = 2$ liefert die zweite Zeile $2 + t = 7 - s$ den Wert $s = 3$.",
+        "Probe in der dritten Zeile: $0 + t = 5 - s$ — passt $2 = 2$? Dann $t = 2$ in $g$ einsetzen."
+      ],
+      "loesungsweg": "Die Richtungsvektoren $(2 \\mid 1 \\mid 1)$ und $(0 \\mid {-1} \\mid {-1})$ sind nicht kollinear — kein Faktor macht aus der $2$ eine $0$. Gleichsetzen: Zeile I: $1 + 2t = 5$, also $t = 2$. Zeile II: $2 + t = 7 - s$, also $4 = 7 - s$ und $s = 3$. Probe in Zeile III: $0 + 2 = 5 - 3 = 2$ — erfüllt, die Bahnen schneiden sich wirklich. Einsetzen von $t = 2$ in $g$: $S(5 \\mid 4 \\mid 2)$. Kontrolle über $h$ mit $s = 3$: $(5 \\mid 7 - 3 \\mid 5 - 3) = (5 \\mid 4 \\mid 2)$ — derselbe Punkt.",
+      "kc": [
+        "geraden-schnittpunkt"
+      ],
+      "cas": "<p>Das Schnittpunkt-LGS löst der ClassPad II in einem Schritt:</p><ol><li>Im <b>Main</b>-Menü den <b>solve</b>-Befehl mit Mengenklammern verwenden: <code>solve({1+2t=5, 2+t=7-s},{t,s})</code> liefert t = 2 und s = 3.</li><li>Probe von Hand in der dritten Zeile: $0 + t = 5 - s$ wird zu $2 = 2$ — erfüllt, also existiert der Schnittpunkt.</li><li>Schnittpunkt als Vektorrechnung: <code>[1,2,0]+2*[2,1,1]</code> ergibt [5,4,2], also S(5|4|2).</li></ol><p>Achtung: <b>solve</b> mit nur zwei Gleichungen ersetzt die Probe in der dritten Zeile nicht — erst sie unterscheidet „Schnittpunkt“ von „windschief“.</p>"
+    },
+    {
+      "id": "ma-qp-q2-006",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Dachausbau: Die schräge Dachfläche eines Hauses liegt in der Ebene $E$ durch die Traufpunkte $A(4 \\mid 0 \\mid 3)$ und $B(4 \\mid 8 \\mid 3)$ sowie den Firstpunkt $C(0 \\mid 0 \\mid 6)$ (Angaben in m). Bestimme die Koordinatenform von $E$ und prüfe, ob der Eckpunkt $G(2 \\mid 5 \\mid 4{,}5)$ der geplanten Dachgaube in der Dachfläche liegt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne den Normalenvektor $\\vec n = \\overrightarrow{AB} \\times \\overrightarrow{AC}$.",
+          "eingaben": [
+            {
+              "label": "1. Koordinate von $\\vec n$",
+              "antwort": 24,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "2. Koordinate von $\\vec n$",
+              "antwort": 0,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "3. Koordinate von $\\vec n$",
+              "antwort": 32,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$\\overrightarrow{AB} = (0 \\mid 8 \\mid 0)$ und $\\overrightarrow{AC} = ({-4} \\mid 0 \\mid 3)$ — darauf die Komponentenformel des Vektorprodukts anwenden."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Mit dem gekürzten Normalenvektor $\\vec n_0 = (3 \\mid 0 \\mid 4)$ lautet der Ansatz $E\\colon 3x + 4z = d$. Bestimme $d$ durch Einsetzen von $A$.",
+          "eingaben": [
+            {
+              "label": "$d$",
+              "antwort": 24,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$d = 3 \\cdot 4 + 4 \\cdot 3$ — und zur Sicherheit auch $B$ und $C$ einsetzen: Beide müssen denselben Wert liefern."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Punktprobe für den Gauben-Eckpunkt $G(2 \\mid 5 \\mid 4{,}5)$ — berechne den Wert der linken Seite $3x + 4z$.",
+          "eingaben": [
+            {
+              "label": "Wert für $G$",
+              "antwort": 24,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$3 \\cdot 2 + 4 \\cdot 4{,}5$ — stimmt das Ergebnis mit $d$ überein, liegt $G$ in $E$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Spannvektoren zuerst: $\\overrightarrow{AB}$ und $\\overrightarrow{AC}$, beide von $A$ aus gebildet — „Spitze minus Fuß“.",
+        "Das Vektorprodukt der Spannvektoren steht senkrecht auf beiden — es liefert den Normalenvektor; gemeinsame Faktoren darfst du kürzen.",
+        "Koordinatenform $n_1 x + n_2 y + n_3 z = d$: Den Wert $d$ liefert ein Punkt der Ebene — die Probe mit den übrigen Punkten ist Pflicht."
+      ],
+      "loesungsweg": "Schritt 1: $\\overrightarrow{AB} = (0 \\mid 8 \\mid 0)$ und $\\overrightarrow{AC} = ({-4} \\mid 0 \\mid 3)$ ergeben $\\vec n = (8 \\cdot 3 - 0 \\cdot 0 \\mid 0 \\cdot ({-4}) - 0 \\cdot 3 \\mid 0 \\cdot 0 - 8 \\cdot ({-4})) = (24 \\mid 0 \\mid 32)$. Schritt 2: Kürzen durch $8$ liefert $\\vec n_0 = (3 \\mid 0 \\mid 4)$, Ansatz $3x + 4z = d$. $A$ einsetzen: $d = 12 + 12 = 24$, also $E\\colon 3x + 4z = 24$. Probe: $B$ liefert $12 + 12 = 24$, $C$ liefert $0 + 24 = 24$ — beide bestanden. Schritt 3: $G$ einsetzen: $3 \\cdot 2 + 4 \\cdot 4{,}5 = 6 + 18 = 24$ — der Gaubenpunkt liegt in der Dachebene, die Gaube kann dort ansetzen. (Dass $y$ in der Gleichung fehlt, passt zur Situation: Die Dachfläche verläuft parallel zur $y$-Achse, dem First entlang.)",
+      "kc": [
+        "ebene-aus-drei-punkten"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-007",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Drohne sinkt im Landeanflug geradlinig längs $g\\colon \\vec x = (0 \\mid 2 \\mid 6) + t \\cdot (2 \\mid 1 \\mid {-2})$ (Angaben in m). Das Wiesengelände eines Hangs wird durch die Ebene $E\\colon 2x - y + 3z = 10$ modelliert. Berechne den Landepunkt $L$ — den Durchstoßpunkt von $g$ durch $E$.",
+      "eingaben": [
+        {
+          "label": "$x$-Koordinate von $L$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$y$-Koordinate von $L$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$z$-Koordinate von $L$",
+          "antwort": 2,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Geradenzeilen ablesen: $x = 2t$, $y = 2 + t$, $z = 6 - 2t$ — und in die Ebenengleichung einsetzen.",
+        "$2 \\cdot 2t - (2 + t) + 3 \\cdot (6 - 2t) = 10$ vereinfacht sich zu $16 - 3t = 10$.",
+        "$t = 2$ in die Geradengleichung einsetzen — und den Punkt zur Probe in $E$ einsetzen."
+      ],
+      "loesungsweg": "Vorab der Parallel-Check: $\\vec n \\cdot \\vec u = 2 \\cdot 2 + ({-1}) \\cdot 1 + 3 \\cdot ({-2}) = -3 \\neq 0$ — die Gerade durchstößt die Ebene also wirklich. Einsetzen der Zeilen $x = 2t$, $y = 2 + t$ und $z = 6 - 2t$ in $E$: $4t - 2 - t + 18 - 6t = 10$, also $16 - 3t = 10$ und $t = 2$. Damit ist $L = (0 \\mid 2 \\mid 6) + 2 \\cdot (2 \\mid 1 \\mid {-2}) = (4 \\mid 4 \\mid 2)$. Probe in $E$: $2 \\cdot 4 - 4 + 3 \\cdot 2 = 10$ — erfüllt. Die Drohne setzt im Punkt $L(4 \\mid 4 \\mid 2)$ auf dem Hang auf.",
+      "kc": [
+        "durchstosspunkt"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-008",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Für eine Schrägbild-Skizze der Ebene $E\\colon 3x + 4y + 6z = 12$ brauchst du ihre Spurpunkte $S_1(x_1 \\mid 0 \\mid 0)$ auf der x-Achse, $S_2(0 \\mid y_2 \\mid 0)$ auf der y-Achse und $S_3(0 \\mid 0 \\mid z_3)$ auf der z-Achse. Bestimme die drei fehlenden Koordinaten.",
+      "eingaben": [
+        {
+          "label": "$x_1$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$y_2$",
+          "antwort": 3,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$z_3$",
+          "antwort": 2,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Auf jeder Koordinatenachse sind die beiden anderen Koordinaten null — setze sie in die Gleichung ein.",
+        "x-Achse: $3x = 12$. y-Achse: $4y = 12$. z-Achse: $6z = 12$.",
+        "Die drei Spurpunkte bilden das Spurdreieck — damit skizzierst du die Ebene im Schrägbild."
+      ],
+      "loesungsweg": "Jeweils zwei Koordinaten null setzen: Aus $3x = 12$ folgt $S_1(4 \\mid 0 \\mid 0)$, aus $4y = 12$ folgt $S_2(0 \\mid 3 \\mid 0)$ und aus $6z = 12$ folgt $S_3(0 \\mid 0 \\mid 2)$. Verbindet man die drei Punkte, entsteht das Spurdreieck — die Ebene liegt damit anschaulich im Koordinatensystem. Schnelle Probe: Alle drei Punkte erfüllen die Ausgangsgleichung, z. B. $3 \\cdot 4 + 0 + 0 = 12$.",
+      "kc": [
+        "spurpunkte"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-009",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bringe die Schritte zur Berechnung des Durchstoßpunkts einer Geraden $g$ durch eine Ebene $E$ (Koordinatenform) in die richtige Reihenfolge.",
+      "elemente": [
+        "Die drei Koordinatenzeilen der Geradengleichung ablesen: x, y und z jeweils als Term mit t",
+        "Diese drei Terme in die Koordinatenform der Ebene einsetzen",
+        "Die entstandene lineare Gleichung nach t auflösen",
+        "Den t-Wert in die Geradengleichung einsetzen — das liefert den Durchstoßpunkt",
+        "Probe: Die Koordinaten des Punkts müssen die Ebenengleichung erfüllen"
+      ],
+      "tipps": [
+        "Am Anfang steht das Übersetzen: Jeder Geradenpunkt hat die Form $x(t)$, $y(t)$, $z(t)$ — erst damit lässt sich überhaupt einsetzen.",
+        "Nach dem Einsetzen bleibt eine einzige lineare Gleichung mit der Unbekannten $t$ übrig.",
+        "Die Probe ist der letzte Schritt — sie fängt Einsetz- und Vorzeichenfehler ab."
+      ],
+      "loesungsweg": "Zuerst werden die drei Geradenzeilen abgelesen und in die Koordinatenform eingesetzt; daraus entsteht eine lineare Gleichung, die nach $t$ aufgelöst wird. Der gefundene $t$-Wert wandert zurück in die Geradengleichung und liefert den Durchstoßpunkt, der zum Schluss per Probe in der Ebenengleichung bestätigt wird. Übrigens verraten die Sonderfälle sich beim Auflösen: Fällt $t$ weg und bleibt eine falsche Aussage, ist $g$ echt parallel zu $E$; bleibt eine wahre Aussage, liegt $g$ vollständig in $E$.",
+      "kc": [
+        "durchstosspunkt-ablauf"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-010",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Gegeben sind die Ebenen $E_1\\colon 2x - y + 2z = 6$, $E_2\\colon 4x - 2y + 4z = 12$, $E_3\\colon 4x - 2y + 4z = 7$ und $E_4\\colon x + y + z = 3$. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "$E_1$ und $E_2$ sind identisch, denn die Gleichung von $E_2$ ist genau das Doppelte der Gleichung von $E_1$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Multipliziert man $2x - y + 2z = 6$ mit $2$, entsteht exakt $4x - 2y + 4z = 12$ — beide Gleichungen beschreiben dieselbe Punktmenge."
+        },
+        {
+          "text": "$E_1$ und $E_3$ sind echt parallel.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Normalenvektoren $(2 \\mid {-1} \\mid 2)$ und $(4 \\mid {-2} \\mid 4)$ sind kollinear, aber der Punkt $(3 \\mid 0 \\mid 0)$ aus $E_1$ liefert in $E_3$ den Wert $12 \\neq 7$ — parallel ohne gemeinsame Punkte."
+        },
+        {
+          "text": "$E_1$ und $E_4$ schneiden sich in genau einem Punkt.",
+          "richtig": false,
+          "erklaerung": "Die Normalenvektoren $(2 \\mid {-1} \\mid 2)$ und $(1 \\mid 1 \\mid 1)$ sind nicht kollinear — die Ebenen schneiden sich, aber niemals in nur einem Punkt: Der Schnitt zweier nicht paralleler Ebenen ist immer eine ganze Gerade."
+        },
+        {
+          "text": "Sind die Normalenvektoren zweier Ebenen kollinear, dann sind die Ebenen stets identisch.",
+          "richtig": false,
+          "erklaerung": "Kollineare Normalenvektoren bedeuten nur: parallel oder identisch. Erst die Punktprobe entscheidet — $E_1$ und $E_3$ sind das Gegenbeispiel in dieser Aufgabe."
+        }
+      ],
+      "tipps": [
+        "Vergleiche zuerst die Normalenvektoren: Sind sie Vielfache voneinander?",
+        "Bei kollinearen Normalenvektoren entscheidet eine Punktprobe zwischen identisch und echt parallel — teste etwa den Punkt $(3 \\mid 0 \\mid 0)$ aus $E_1$.",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. $E_2$ ist das Doppelte von $E_1$ — identisch. $E_3$ hat denselben (doppelten) Normalenvektor, aber die rechte Seite passt nicht: $(3 \\mid 0 \\mid 0)$ erfüllt $E_1$, liefert in $E_3$ jedoch $12 \\neq 7$ — echt parallel. Aussage 3 ist falsch, weil sich nicht parallele Ebenen immer in einer Schnittgeraden schneiden, nie in einem einzelnen Punkt. Aussage 4 ist falsch: Kollineare Normalenvektoren lassen noch beide Fälle zu — parallel oder identisch —, erst die Punktprobe entscheidet.",
+      "kc": [
+        "lage-ebenen"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Zurück zu den Lieferdrohnen: Drohne 1 ist zur Zeit $t$ am Ort $(1 + 2t \\mid 2 + t \\mid t)$, Drohne 2 am Ort $(5 \\mid 7 - t \\mid 5 - t)$ ($t$ in s, Koordinaten in m). Die beiden Flugbahnen schneiden sich im Punkt $S(5 \\mid 4 \\mid 2)$. Mia warnt: „Die Bahnen schneiden sich — die Drohnen stoßen also zusammen!“ Nimm Stellung: Untersuche, ob es wirklich zu einer Kollision kommt, und erkläre den Unterschied zwischen einem Schnittpunkt der Bahnen und einem Zusammenstoß.",
+      "musterloesung": "Ein Schnittpunkt der Bahnen bedeutet nur: Beide Geraden enthalten den Punkt $S$ — eine rein geometrische Aussage. Für eine Kollision müssten die Drohnen dagegen zur selben Zeit am selben Ort sein. Drohne 1 erreicht $S$ aus $1 + 2t = 5$ zur Zeit $t = 2$; Drohne 2 ist wegen $7 - t = 4$ erst bei $t = 3$ dort — eine Sekunde später. Noch grundsätzlicher: Gleichsetzen der Orte zur selben Zeit $t$ verlangt $1 + 2t = 5$, also $t = 2$; dann ist aber die zweite Koordinate $2 + 2 = 4$ bei Drohne 1 und $7 - 2 = 5$ bei Drohne 2 — Widerspruch. Es gibt also keinen Zeitpunkt, zu dem beide am selben Ort sind: Mias Schluss ist falsch, ein Schnittpunkt der Bahnen bedeutet noch keine Kollision. Ganz unberechtigt ist ihre Warnung trotzdem nicht: Bei $t = 2$ ist Drohne 1 in $S(5 \\mid 4 \\mid 2)$ und Drohne 2 in $(5 \\mid 5 \\mid 3)$ — der Abstand beträgt nur $\\sqrt{0 + 1 + 1} = \\sqrt{2} \\approx 1{,}4$ m. Sicherheitsabstände betrachten deshalb immer die Orte zu gleichen Zeiten, nicht nur die Bahnen.",
+      "tipps": [
+        "Unterscheide die Geometrie (Schnittpunkt der Bahnen) von der Bewegung (Ort zur Zeit $t$).",
+        "Wann ist Drohne 1 im Punkt $S$, wann Drohne 2? Vergleiche die beiden Zeitpunkte.",
+        "Für eine Kollision müsste dasselbe $t$ alle drei Koordinaten beider Orte gleich machen — setze die Orte gleich und prüfe das."
+      ],
+      "loesungsweg": "Schnittpunkt heißt: Beide Bahnen enthalten $S$ — aber Drohne 1 ist dort bei $t = 2$, Drohne 2 erst bei $t = 3$. Gleichsetzen der Orte zur selben Zeit führt auf den Widerspruch $4 \\neq 5$ in der zweiten Koordinate: Es gibt keinen gemeinsamen Zeitpunkt, also keine Kollision. Mias Fehler: Sie verwechselt die Bahn (alle jemals besuchten Punkte) mit der Bewegung (Ort zu jeder Zeit). Knapp wird es trotzdem — bei $t = 2$ trennen die Drohnen nur etwa $1{,}4$ m.",
+      "kc": [
+        "modellieren-flugbahnen"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Die Glaspyramide aus dem Museumshof hat die Grundfläche $A(0 \\mid 0 \\mid 0)$, $B(6 \\mid 0 \\mid 0)$, $C(6 \\mid 6 \\mid 0)$, $D(0 \\mid 6 \\mid 0)$ und die Spitze $S(3 \\mid 3 \\mid 6)$ (Angaben in m). Die Seitenfläche durch $B$, $C$ und $S$ liegt in der Ebene $E$. Untersuche, wie weit der Eckpunkt $D$ und der Mittelpunkt $M(3 \\mid 3 \\mid 0)$ der Grundfläche von dieser Glasfläche entfernt sind.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne den Normalenvektor $\\vec n = \\overrightarrow{BC} \\times \\overrightarrow{BS}$ von $E$.",
+          "eingaben": [
+            {
+              "label": "1. Koordinate von $\\vec n$",
+              "antwort": 36,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "2. Koordinate von $\\vec n$",
+              "antwort": 0,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "3. Koordinate von $\\vec n$",
+              "antwort": 18,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$\\overrightarrow{BC} = (0 \\mid 6 \\mid 0)$ und $\\overrightarrow{BS} = ({-3} \\mid 3 \\mid 6)$ — Komponentenformel des Vektorprodukts anwenden."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Mit $\\vec n_0 = (2 \\mid 0 \\mid 1)$ lautet die Ebene $E\\colon 2x + z = 12$. Berechne mit der Hesseschen Normalenform den Abstand $d(D, E)$.",
+          "eingaben": [
+            {
+              "label": "$d(D, E)$",
+              "antwort": 5.37,
+              "toleranz": 0.02,
+              "einheit": "m"
+            }
+          ],
+          "tipps": [
+            "$d(D, E) = \\frac{|2 \\cdot 0 + 0 \\cdot 6 + 1 \\cdot 0 - 12|}{\\sqrt{2^2 + 0^2 + 1^2}} = \\frac{12}{\\sqrt{5}}$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne ebenso den Abstand des Grundflächen-Mittelpunkts: $d(M, E)$.",
+          "eingaben": [
+            {
+              "label": "$d(M, E)$",
+              "antwort": 2.68,
+              "toleranz": 0.02,
+              "einheit": "m"
+            }
+          ],
+          "tipps": [
+            "Gleiche Formel, neuer Zähler: $|2 \\cdot 3 + 0 - 12| = 6$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Erst die Ebene greifbar machen: Normalenvektor über das Vektorprodukt der Spannvektoren, dann Koordinatenform — $B$, $C$ und $S$ müssen die Gleichung erfüllen.",
+        "Hessesche Normalenform: $d(P, E) = \\frac{|n_1 p_1 + n_2 p_2 + n_3 p_3 - d|}{|\\vec n|}$ — den Betrag nicht vergessen.",
+        "$\\sqrt{5} \\approx 2{,}236$ — beide Abstände haben denselben Nenner, nur der Zähler wechselt."
+      ],
+      "loesungsweg": "Schritt 1: $\\overrightarrow{BC} = (0 \\mid 6 \\mid 0)$ und $\\overrightarrow{BS} = ({-3} \\mid 3 \\mid 6)$ liefern $\\vec n = (6 \\cdot 6 - 0 \\cdot 3 \\mid 0 \\cdot ({-3}) - 0 \\cdot 6 \\mid 0 \\cdot 3 - 6 \\cdot ({-3})) = (36 \\mid 0 \\mid 18)$, gekürzt $\\vec n_0 = (2 \\mid 0 \\mid 1)$. Einsetzen von $B(6 \\mid 0 \\mid 0)$ ergibt $E\\colon 2x + z = 12$; auch $C$ ($12 + 0 = 12$) und $S$ ($6 + 6 = 12$) bestehen die Probe. Schritt 2: $d(D, E) = \\frac{|2 \\cdot 0 + 0 \\cdot 6 + 1 \\cdot 0 - 12|}{\\sqrt{5}} = \\frac{12}{\\sqrt{5}} \\approx 5{,}37$ m. Schritt 3: $d(M, E) = \\frac{|2 \\cdot 3 + 0 - 12|}{\\sqrt{5}} = \\frac{6}{\\sqrt{5}} \\approx 2{,}68$ m. Plausibel: $M$ liegt mitten unter der Spitze und damit deutlich näher an der Seitenfläche als die gegenüberliegende Ecke $D$ — ihr Abstand ist exakt doppelt so groß wie der von $M$.",
+      "kc": [
+        "abstand-punkt-ebene"
+      ]
+    },
+    {
+      "id": "ma-qp-q2-013",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Auf einer Baustelle spannt eine Materialseilbahn ihr Tragseil längs $g\\colon \\vec x = (0 \\mid 1 \\mid 1) + t \\cdot (1 \\mid 2 \\mid 2)$; in der Nähe verläuft ein Stromkabel längs $h\\colon \\vec x = (3 \\mid 0 \\mid 2) + s \\cdot (2 \\mid 1 \\mid {-2})$ (Angaben in m). Die beiden Geraden sind windschief. Berechne ihren Abstand und beurteile, ob der vorgeschriebene Mindestabstand von $2{,}5$ m eingehalten ist.",
+      "eingaben": [
+        {
+          "label": "$d(g, h)$",
+          "antwort": 3,
+          "toleranz": 0.01,
+          "einheit": "m"
+        }
+      ],
+      "tipps": [
+        "Formel: $d = \\frac{|(\\vec u \\times \\vec v) \\cdot \\overrightarrow{AB}|}{|\\vec u \\times \\vec v|}$ mit den Aufpunkten $A$ von $g$ und $B$ von $h$.",
+        "$\\vec u \\times \\vec v = ({-6} \\mid 6 \\mid {-3})$ mit Betrag $\\sqrt{36 + 36 + 9} = 9$.",
+        "$\\overrightarrow{AB} = (3 \\mid {-1} \\mid 1)$ — Skalarprodukt mit dem Vektorprodukt bilden, Betrag nehmen, durch $9$ teilen."
+      ],
+      "loesungsweg": "Gemeinsame Lotrichtung: $\\vec n = \\vec u \\times \\vec v = (2 \\cdot ({-2}) - 2 \\cdot 1 \\mid 2 \\cdot 2 - 1 \\cdot ({-2}) \\mid 1 \\cdot 1 - 2 \\cdot 2) = ({-6} \\mid 6 \\mid {-3})$ mit Betrag $|\\vec n| = \\sqrt{36 + 36 + 9} = 9$. Verbindungsvektor der Aufpunkte: $\\overrightarrow{AB} = (3 \\mid {-1} \\mid 1)$. Skalarprodukt: $\\vec n \\cdot \\overrightarrow{AB} = -18 - 6 - 3 = -27$. Abstand: $d = \\frac{|{-27}|}{9} = 3$ m. Der Mindestabstand von $2{,}5$ m ist also eingehalten — mit $0{,}5$ m Reserve. (Nebenbei bestätigt $d \\neq 0$, dass sich die Leitungen wirklich nicht schneiden; zusammen mit den nicht kollinearen Richtungsvektoren sind die Geraden windschief.)",
+      "kc": [
+        "abstand-windschief"
+      ],
+      "cas": "<p>Die komplette Abstandsformel als Befehlskette im <b>Main</b>-Menü des ClassPad II:</p><ol><li>Lotrichtung: <code>crossP([1,2,2],[2,1,-2])</code> liefert <code>[-6,6,-3]</code>; der Betrag <code>norm(crossP([1,2,2],[2,1,-2]))</code> ergibt 9.</li><li>Skalarprodukt mit dem Verbindungsvektor der Aufpunkte: <code>dotP(crossP([1,2,2],[2,1,-2]),[3,-1,1])</code> ergibt −27.</li><li>Alles in einer Zeile: <code>abs(dotP(crossP([1,2,2],[2,1,-2]),[3,-1,1]))/norm(crossP([1,2,2],[2,1,-2]))</code> liefert 3.</li></ol><p>Tipp: Mit <code>crossP([1,2,2],[2,1,-2])⇒n</code> speicherst du die Lotrichtung in einer Variablen — danach genügt <code>abs(dotP(n,[3,-1,1]))/norm(n)</code>. In der Klausur gilt wie immer: Das CAS kontrolliert, die dokumentierte Rechnung gehört aufs Papier.</p>"
+    }
+  ]
+}

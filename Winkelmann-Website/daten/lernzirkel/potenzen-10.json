@@ -1,0 +1,74 @@
+{
+ "id": "potenzen-10",
+ "titel": "Lernzirkel: Potenzen und Potenzfunktionen",
+ "fach": "mathematik",
+ "intro": "Hier erkundest du, wie der Exponent die Form einer Potenzfunktion bestimmt, und übst die Potenzgesetze. Stelle die Parameter ein, knoble und übe – in deiner Reihenfolge.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Potenzfunktionen formen",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verändere den Vorfaktor $a$ und den Exponenten $n$ in $f(x) = a\\cdot x^{\\,n}$. Wie unterscheiden sich gerade und ungerade Exponenten im Verlauf?</p>",
+   "widget": {
+    "id": "funktionsplotter",
+    "params": {
+     "form": "potenz",
+     "regler": [
+      {
+       "sym": "a",
+       "label": "a",
+       "min": -2,
+       "max": 2,
+       "step": 0.5,
+       "init": 1
+      },
+      {
+       "sym": "b",
+       "label": "n",
+       "min": 1,
+       "max": 5,
+       "step": 1,
+       "init": 2
+      }
+     ],
+     "x": [
+      -3,
+      3
+     ],
+     "y": [
+      -10,
+      10
+     ],
+     "achsen": {
+      "x": "x",
+      "y": "y"
+     },
+     "formel": "f(x) = a·x^n"
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Knobeln: Potenzgesetze entdecken",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Schreibe $\\dfrac{2^{7}}{2^{3}}$ als einzelne Zweierpotenz und prüfe das Ergebnis durch Ausrechnen. Welches Potenzgesetz steckt dahinter?</p><details><summary>Lösung anzeigen</summary><div><p>Beim Dividieren von Potenzen mit gleicher Basis werden die Exponenten subtrahiert: $\\dfrac{2^{7}}{2^{3}} = 2^{7-3} = 2^{4} = 16$.</p><p>Kontrolle: $2^{7} = 128$, $2^{3} = 8$, und $128 : 8 = 16$. Das Gesetz lautet $\\dfrac{a^{m}}{a^{n}} = a^{m-n}$.</p></div></details>"
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Üben: Potenzen und Potenzterme",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "html": "<p>Rechne mit Potenzen und ordne gleichwertige Potenzterme zu.</p>",
+   "quelle": "ma-10-potenzen-und-potenzfunktionen",
+   "ids": [
+    "ma-10-pp-004",
+    "ma-10-pp-002"
+   ]
+  }
+ ]
+}

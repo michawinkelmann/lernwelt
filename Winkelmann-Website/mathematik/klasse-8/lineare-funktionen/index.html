@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lineare Funktionen — Klasse 8 · Mathematik — Lernwelt</title>
+<meta name="description" content="Lineare Funktionen verstehen: Steigung und Steigungsdreieck, y-Achsenabschnitt, Geradengleichung aufstellen, Nullstelle und Schnittpunkt zweier Geraden — mit Alltagsbeispielen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Lineare Funktionen</h1>
+  <p class="einleitung">Ein Handytarif mit Grundgebühr, eine Kerze, die gleichmäßig abbrennt, ein Taxi mit Kilometerpreis: Überall, wo etwas in gleichen Schritten wächst oder schrumpft, steckt eine <strong>lineare Funktion</strong> dahinter. Ihr Markenzeichen: Der Graph ist immer eine <strong>Gerade</strong>.</p>
+
+  <section aria-labelledby="ue-begriff">
+    <h2 id="ue-begriff">1. Was ist eine lineare Funktion?</h2>
+    <p>Bei einer linearen Funktion ändert sich der Funktionswert bei jedem Schritt nach rechts um denselben Betrag. Alle linearen Funktionen haben dieselbe Form:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Funktionsgleichung</span>
+      <p class="formel-abgesetzt">$$f(x) = m \cdot x + b$$</p>
+      <p>Dabei ist $m$ die <strong>Steigung</strong> (wie steil die Gerade verläuft) und $b$ der <strong>$y$-Achsenabschnitt</strong> (wo die Gerade die $y$-Achse schneidet).</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Handytarif</span>
+      <p>Ein Tarif kostet $8$ Euro Grundgebühr plus $2$ Euro pro Gigabyte. Die Monatskosten (in Euro) bei $x$ Gigabyte:</p>
+      <p class="formel-abgesetzt">$$f(x) = 2x + 8$$</p>
+      <p>Ohne Daten zahlst du $f(0) = 8$ Euro, bei $5$ GB sind es $f(5) = 2 \cdot 5 + 8 = 18$ Euro. Pro Gigabyte kommen immer genau $2$ Euro dazu — deshalb liegen alle Punkte auf einer Geraden.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein anderer Tarif kostet $g(x) = 1{,}5x + 10$. Was bedeuten die beiden Zahlen?</summary>
+      <div class="check-antwort"><p>Die $10$ ist die Grundgebühr ($g(0) = 10$ Euro, auch ganz ohne Daten) — also der $y$-Achsenabschnitt $b$. Die $1{,}5$ ist die Steigung $m$: Jedes Gigabyte kostet zusätzlich $1{,}50$ Euro.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ue-steigung">
+    <h2 id="ue-steigung">2. Die Steigung m</h2>
+    <p>Die Steigung sagt, wie sich $y$ ändert, wenn $x$ um $1$ wächst. Ablesen und berechnen kannst du sie mit dem <strong>Steigungsdreieck</strong>: Gehe von einem Punkt der Geraden ein Stück nach rechts ($\Delta x$) und miss, wie weit es dabei nach oben oder unten geht ($\Delta y$).</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Steigungsdreieck</span>
+      <p class="formel-abgesetzt">$$m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}$$</p>
+      <p>Das Zeichen $\Delta$ (Delta) steht für „Unterschied“. Am Vorzeichen erkennst du den Verlauf: $m > 0$: die Gerade <strong>steigt</strong> · $m &lt; 0$: die Gerade <strong>fällt</strong> · $m = 0$: die Gerade verläuft <strong>waagerecht</strong>.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Steigung aus zwei Punkten</span>
+      <p>Eine Gerade verläuft durch $P(1\,|\,3)$ und $Q(3\,|\,7)$. Das Steigungsdreieck zwischen den Punkten: $\Delta x = 3 - 1 = 2$ nach rechts, $\Delta y = 7 - 3 = 4$ nach oben.</p>
+      <p class="formel-abgesetzt">$$m = \frac{7 - 3}{3 - 1} = \frac{4}{2} = 2$$</p>
+      <p>Pro Schritt nach rechts geht es $2$ nach oben — die Gerade steigt.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: negative Steigung</span>
+      <p>Durch $P(0\,|\,4)$ und $Q(2\,|\,1)$ verläuft eine fallende Gerade:</p>
+      <p class="formel-abgesetzt">$$m = \frac{1 - 4}{2 - 0} = \frac{-3}{2} = -1{,}5$$</p>
+      <p>Das Minuszeichen zeigt: Pro Schritt nach rechts geht es $1{,}5$ nach <em>unten</em>. Die Reihenfolge der Punkte ist egal — wichtig ist nur, dass Zähler und Nenner zur selben Reihenfolge gehören.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ue-achsenabschnitt">
+    <h2 id="ue-achsenabschnitt">3. Der y-Achsenabschnitt b</h2>
+    <p>Setzt du $x = 0$ ein, bleibt $f(0) = m \cdot 0 + b = b$ übrig. Der Graph schneidet die $y$-Achse also immer im Punkt $(0\,|\,b)$. Im Alltag ist $b$ der <strong>Startwert</strong>: die Grundgebühr, die Anfangslänge, das Startguthaben.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Kerze</span>
+      <p>Eine $12$ cm lange Kerze brennt pro Stunde $1{,}5$ cm ab. Ihre Länge (in cm) nach $x$ Stunden:</p>
+      <p class="formel-abgesetzt">$$f(x) = -1{,}5x + 12$$</p>
+      <p>Der Startwert $b = 12$ ist die Länge zu Beginn, die negative Steigung $m = -1{,}5$ beschreibt das Abbrennen.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Sonderfall b = 0: proportionale Funktionen</span>
+      <p>Ist $b = 0$, wird aus $f(x) = mx + b$ einfach $f(x) = m \cdot x$ — eine <strong>proportionale Funktion</strong>, wie du sie aus Klasse 7 kennst. Ihr Graph ist eine <strong>Ursprungsgerade</strong>: Sie geht durch $(0\,|\,0)$, und zum doppelten $x$-Wert gehört der doppelte Funktionswert. Beispiel: Äpfel für $3$ Euro pro Kilogramm, also $f(x) = 3x$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: In welchem Punkt schneidet der Graph von $g(x) = 2x - 3$ die $y$-Achse?</summary>
+      <div class="check-antwort"><p>Im Punkt $(0\,|\,-3)$, denn $g(0) = 2 \cdot 0 - 3 = -3$. Der $y$-Achsenabschnitt ist $b = -3$ — er kann also auch negativ sein; dann schneidet die Gerade die $y$-Achse unterhalb des Ursprungs.</p></div>
+    </details>
+    <h3>m und b live erkunden</h3>
+    <p>Im folgenden Plotter stellst du $m$ und $b$ mit Reglern ein. Die Simulation zeichnet die Gerade, das <strong>Steigungsdreieck</strong> ab dem Punkt $(0\,|\,b)$ — $1$ nach rechts, $m$ nach oben oder unten — und markiert die <strong>Nullstelle</strong>. Bearbeite dabei die Aufträge unter der Simulation.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/linearer-plotter/index.html?einbettung=1#m=1&b=1"
+        title="Interaktive Simulation: Linearer Funktionenplotter mit Steigungsdreieck" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/mathematik/linearer-plotter/index.html#m=1&b=1" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Lies am Steigungsdreieck ab: $1$ nach rechts — wie weit geht es nach oben? Stelle $m = 2$ und danach $m = 0{,}5$ ein und vergleiche jeweils mit dem Dreieck.<br>
+      2. Verschiebe nur $b$: Die Gerade wandert parallel nach oben oder unten. Erkläre, warum sich das Steigungsdreieck — und damit die Steigung — dabei nicht ändert.<br>
+      3. Stelle $m = -1{,}5$ und $b = 3$ ein und lies die <strong>Nullstelle</strong> ab. Prüfe sie durch Einsetzen in $f(x) = -1{,}5x + 3$: Kommt wirklich $0$ heraus?</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ue-aufstellen">
+    <h2 id="ue-aufstellen">4. Geradengleichung aufstellen</h2>
+    <p>Oft kennst du nicht die Gleichung, sondern nur zwei Punkte — etwa zwei Messwerte. Daraus findest du $m$ und $b$ in drei Schritten:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Rezept: Gerade durch zwei Punkte</span>
+      <p>1. <strong>Steigung berechnen:</strong> $m = \frac{y_2 - y_1}{x_2 - x_1}$<br>
+      2. <strong>$b$ bestimmen:</strong> einen der beiden Punkte in $y = mx + b$ einsetzen und nach $b$ auflösen<br>
+      3. <strong>Gleichung notieren</strong> — und mit dem zweiten Punkt die Probe machen.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Gerade durch $A(1\,|\,2)$ und $B(3\,|\,8)$</span>
+      <p class="formel-abgesetzt">$$m = \frac{8 - 2}{3 - 1} = \frac{6}{2} = 3$$</p>
+      <p>Punkt $A$ einsetzen: $2 = 3 \cdot 1 + b$, also $b = -1$. Die Gleichung lautet $f(x) = 3x - 1$. Probe mit $B$: $f(3) = 3 \cdot 3 - 1 = 8$ ✓</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ue-nullstelle">
+    <h2 id="ue-nullstelle">5. Nullstelle und Schnittpunkt zweier Geraden</h2>
+    <p>Die <strong>Nullstelle</strong> ist der $x$-Wert, an dem der Graph die $x$-Achse schneidet — dort gilt $f(x) = 0$. Aus $mx + b = 0$ folgt durch Umstellen:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Nullstelle</span>
+      <p class="formel-abgesetzt">$$x_0 = -\frac{b}{m} \qquad (m \neq 0)$$</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Wann ist die Kerze abgebrannt?</span>
+      <p>Für die Kerze aus Abschnitt 3 gilt $f(x) = -1{,}5x + 12$. Nullstelle:</p>
+      <p class="formel-abgesetzt">$$-1{,}5x + 12 = 0 \;\Rightarrow\; x_0 = -\frac{12}{-1{,}5} = 8$$</p>
+      <p>Nach $8$ Stunden ist die Kerze vollständig abgebrannt.</p>
+    </div>
+    <p>Wo sich <strong>zwei Geraden schneiden</strong>, haben beide denselben $y$-Wert. Deshalb findest du den Schnittpunkt durch <strong>Gleichsetzen</strong> der Funktionsterme:</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Schnittpunkt von $f(x) = 2x + 1$ und $g(x) = -x + 7$</span>
+      <p class="formel-abgesetzt">$$2x + 1 = -x + 7 \;\Rightarrow\; 3x = 6 \;\Rightarrow\; x = 2$$</p>
+      <p>Den $y$-Wert liefert Einsetzen: $f(2) = 2 \cdot 2 + 1 = 5$ (Probe: $g(2) = -2 + 7 = 5$ ✓). Der Schnittpunkt ist $S(2\,|\,5)$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Wo schneidet der Graph von $f(x) = 4x - 8$ die $x$-Achse?</summary>
+      <div class="check-antwort"><p>Ansatz $f(x) = 0$: Aus $4x - 8 = 0$ folgt $x_0 = 2$ — oder direkt mit der Formel $x_0 = -\frac{b}{m} = -\frac{-8}{4} = 2$. Der Schnittpunkt mit der $x$-Achse ist also $(2\,|\,0)$.</p></div>
+    </details>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung (Gymnasialzweig): Parallele Geraden und Lagebeziehungen</summary>
+    <div class="vertiefung-inhalt">
+      <p>Zwei Geraden $f(x) = m_1 x + b_1$ und $g(x) = m_2 x + b_2$ können auf drei Arten zueinander liegen:</p>
+      <p>1. $m_1 \neq m_2$: genau <strong>ein Schnittpunkt</strong> — der Normalfall.<br>
+      2. $m_1 = m_2$ und $b_1 \neq b_2$: <strong>echt parallel</strong> — gleiche Steigung, nur verschoben; kein Schnittpunkt.<br>
+      3. $m_1 = m_2$ und $b_1 = b_2$: <strong>identisch</strong> — jeder Punkt ist gemeinsam.</p>
+      <p>Beim Gleichsetzen merkst du das sofort: Für $f(x) = 2x + 1$ und $g(x) = 2x - 3$ führt $2x + 1 = 2x - 3$ auf die falsche Aussage $1 = -3$ — das $x$ verschwindet, es gibt keine Lösung, die Geraden sind parallel. Entsteht dagegen eine wahre Aussage wie $0 = 0$, sind beide Geraden identisch.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben von der Steigung bis zum Tarifvergleich — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

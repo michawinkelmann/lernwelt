@@ -1,0 +1,2646 @@
+{
+ "version": 1,
+ "kurs": "ph-qe",
+ "fach": "physik",
+ "stufe": "qualifikationsphase",
+ "titel": "Physik · Qualifikationsphase — Elektrische Felder",
+ "untertitel": "Lernbüro: Elektrische Felder als Selbstlern-Einheit",
+ "zweig": [
+  "gym"
+ ],
+ "stand": "2026-06-13",
+ "taktung": "wochenplan",
+ "checkpoints": "freischalten",
+ "werkzeuge": [
+  "ampel",
+  "lerntagebuch"
+ ],
+ "hinweis": "Fachliche Endprüfung der Inhalte durch die Lehrkraft.",
+ "stoffverteilung": [
+  {
+   "wochen": "1–5",
+   "thema": "Elektrische Felder",
+   "lektionen": "6",
+   "kc": "KC Physik GO (2022): Sachgebiet Elektrizität (QP)"
+  },
+  {
+   "wochen": "6–11",
+   "thema": "Magnetfelder und Lorentzkraft",
+   "lektionen": "6",
+   "kc": "KC Physik GO (2022): Sachgebiet Elektrizität (QP)"
+  }
+ ],
+ "wochen": [
+  {
+   "nr": 1,
+   "spanne": "Diese Woche",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3"
+   ]
+  },
+  {
+   "nr": 2,
+   "spanne": "Nächste Woche",
+   "lektionen": [
+    "l4",
+    "l5"
+   ]
+  },
+  {
+   "nr": 3,
+   "spanne": "Block 2 — Woche 1",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8"
+   ]
+  },
+  {
+   "nr": 4,
+   "spanne": "Block 2 — Woche 2",
+   "lektionen": [
+    "l9",
+    "l10"
+   ]
+  }
+ ],
+ "lektionen": [
+  {
+   "id": "l1",
+   "nr": 1,
+   "titel": "Der Feldbegriff",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-feldbegriff",
+   "ziele": [
+    "Ich kann erklären, was ein elektrisches Feld ist.",
+    "Ich kann Feldlinienbilder lesen und die Regeln für Feldlinien benennen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Kurze Auffrischung aus Klasse 7: Stromstärke und Spannung – die Grundgrößen, mit denen elektrische Ladung beschrieben wird.",
+     "aufgaben": [
+      {
+       "quelle": "ph-07-stromstaerke-und-spannung",
+       "ids": [
+        "ph-07-str-001",
+        "ph-07-str-002"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Ein geladener Luftballon hebt deine Haare an, <strong>ohne sie zu berühren</strong>. Genauso zieht ein geriebener Plastikstab kleine Papierschnipsel an, bevor er sie erreicht. Zwischen Ladung und Papier liegt scheinbar nur leere Luft.</p>",
+      "figur": "<svg viewBox=\"0 0 300 182\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"55\" y1=\"25\" x2=\"55\" y2=\"150\" style=\"stroke-width:4\"/><line class=\"achse\" x1=\"245\" y1=\"25\" x2=\"245\" y2=\"150\" style=\"stroke-width:4\"/><text x=\"42.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><line class=\"gerade-a\" x1=\"59\" y1=\"48\" x2=\"241\" y2=\"48\"/><polygon points=\"159,48 149,44 149,52\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"75\" x2=\"241\" y2=\"75\"/><polygon points=\"159,75 149,71 149,79\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"100\" x2=\"241\" y2=\"100\"/><polygon points=\"159,100 149,96 149,104\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"127\" x2=\"241\" y2=\"127\"/><polygon points=\"159,127 149,123 149,131\" style=\"fill:var(--physik)\"/><text x=\"55.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+ Platte</text><text x=\"245.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">– Platte</text></svg>",
+      "figurAlt": "Zwei senkrechte Platten, links mit Plus, rechts mit Minus geladen. Dazwischen verlaufen waagerechte Pfeile von der Plus- zur Minusplatte.",
+      "vorhersage": "Wodurch wird die Kraft über den leeren Zwischenraum hinweg übertragen – und ist im Zwischenraum schon etwas vorhanden, bevor das Papier dort ankommt?",
+      "optionen": [
+       "Nur dort, wo das Papier ist, passiert etwas",
+       "Der ganze Raum um die Ladung ist verändert",
+       "Die Luft leitet die Kraft weiter"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#ue-feldbegriff",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Der Raum um eine Ladung ist verändert",
+       "kern": "Eine Ladung verändert den Raum um sich herum: An jeder Stelle herrscht eine gerichtete Wirkung, die auf andere Ladungen eine Kraft ausübt. Diesen Zustand nennt man <strong>elektrisches Feld</strong>.",
+       "details": "<p>Das Feld ist real und vermittelt die Kraft, ohne dass sich die Ladungen berühren – das ist die <strong>Nahwirkung</strong> (im Gegensatz zur Vorstellung einer „Fernwirkung\" durch den leeren Raum). Es existiert auch dort, wo gerade keine zweite Ladung sitzt; eine Probeladung macht das Feld nur spürbar.</p>",
+       "minicheck": {
+        "frage": "Existiert das Feld auch dort, wo gerade keine zweite Ladung sitzt?",
+        "antwort": "Ja. Das Feld ist eine Eigenschaft des Raumes um die felderzeugende Ladung. Die Probeladung macht es nur sichtbar, erzeugt es aber nicht."
+       }
+      },
+      {
+       "titel": "Feldlinien lesen",
+       "kern": "Feldlinien veranschaulichen das Feld: Ihre <strong>Tangente</strong> gibt die Kraftrichtung auf eine positive Probeladung an, ihre <strong>Dichte</strong> die Stärke des Feldes.",
+       "details": "<p>Feldlinien beginnen an positiven und enden an negativen Ladungen. Wo sie dicht beieinander liegen, ist das Feld stark; wo sie auseinanderlaufen, schwächer. Sie sind ein <em>Modell</em> – in Wirklichkeit ist das Feld an jeder Stelle vorhanden, nicht nur „auf den Linien\".</p>",
+       "minicheck": {
+        "frage": "Woran erkennst du im Feldlinienbild, wo das Feld besonders stark ist?",
+        "antwort": "Dort, wo die Feldlinien besonders dicht beieinander liegen."
+       }
+      },
+      {
+       "titel": "Die drei Feldlinienregeln",
+       "kern": "Feldlinien verlaufen <strong>von Plus nach Minus</strong>, sie <strong>schneiden sich nie</strong> und treffen <strong>senkrecht</strong> auf eine Leiteroberfläche.",
+       "details": "<p>Schnitten sich zwei Linien, gäbe es an dieser Stelle zwei Kraftrichtungen für dieselbe Probeladung – unmöglich. Ein gleichmäßiger, paralleler Verlauf bedeutet ein <strong>homogenes</strong> Feld (das schaust du dir am Plattenkondensator genauer an).</p>",
+       "minicheck": {
+        "frage": "Warum können sich zwei Feldlinien nicht kreuzen?",
+        "antwort": "An einem Schnittpunkt hätte die Kraft auf eine Probeladung zwei Richtungen zugleich. Die Feldrichtung ist an jeder Stelle eindeutig."
+       }
+      }
+     ],
+     "stolperstein": "Eine Feldlinie ist nicht das Feld selbst. Das Feld ist <strong>überall</strong> im Raum vorhanden, auch zwischen den gezeichneten Linien – die Linien sind nur eine Zeichenhilfe, die Richtung und (über ihre Dichte) Stärke sichtbar macht.",
+     "darstellungen": {
+      "titel": "Dasselbe Feld – in drei Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Zwei entgegengesetzt geladene Platten ziehen einen Papierschnipsel dazwischen an, ohne ihn zu berühren."
+       },
+       {
+        "art": "Feldlinienbild",
+        "figur": "<svg viewBox=\"0 0 300 182\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"55\" y1=\"25\" x2=\"55\" y2=\"150\" style=\"stroke-width:4\"/><line class=\"achse\" x1=\"245\" y1=\"25\" x2=\"245\" y2=\"150\" style=\"stroke-width:4\"/><text x=\"42.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><line class=\"gerade-a\" x1=\"59\" y1=\"48\" x2=\"241\" y2=\"48\"/><polygon points=\"159,48 149,44 149,52\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"75\" x2=\"241\" y2=\"75\"/><polygon points=\"159,75 149,71 149,79\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"100\" x2=\"241\" y2=\"100\"/><polygon points=\"159,100 149,96 149,104\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"127\" x2=\"241\" y2=\"127\"/><polygon points=\"159,127 149,123 149,131\" style=\"fill:var(--physik)\"/><text x=\"55.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+ Platte</text><text x=\"245.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">– Platte</text></svg>",
+        "figurAlt": "Plus-Platte links, Minus-Platte rechts; waagerechte, parallele, gleich dichte Feldlinien von Plus nach Minus."
+       },
+       {
+        "art": "Regel",
+        "text": "Feldlinien: von $+$ nach $-$, nie kreuzend, Dichte zeigt die Stärke."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre einer Mitschülerin in einem Satz den Unterschied zwischen dem elektrischen Feld und einer gezeichneten Feldlinie.",
+     "merksatz": "Das <strong>elektrische Feld</strong> ist der Zustand des Raumes um eine Ladung, der auf andere Ladungen eine Kraft ausübt. <strong>Feldlinien</strong> sind nur ein Modell: Tangente = Kraftrichtung, Dichte = Stärke; sie verlaufen von Plus nach Minus und schneiden sich nie.",
+     "selbstcheck": [
+      {
+       "frage": "Was ist der Unterschied zwischen dem elektrischen Feld und einer Feldlinie?",
+       "antwort": "Das Feld ist die physikalische Wirkung im Raum (überall vorhanden). Eine Feldlinie ist nur eine gezeichnete Hilfslinie, die Richtung und Stärke veranschaulicht."
+      },
+      {
+       "frage": "In welche Richtung zeigt die Kraft auf eine positive Probeladung?",
+       "antwort": "In Richtung der Feldlinie (Tangente), also vom Pluspol zum Minuspol des Feldes."
+      },
+      {
+       "frage": "Was bedeuten parallele, gleich dichte Feldlinien?",
+       "antwort": "Ein homogenes Feld – Betrag und Richtung der Feldstärke sind überall gleich."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Feldlinien sichtbar machen",
+       "material": "Zwei Elektroden an einer Hochspannungsquelle, eine flache Schale mit Rizinusöl und feinem Grieß – alternativ als Gedankenexperiment.",
+       "auftraege": [
+        "Beschreibe das Muster zwischen zwei punktförmigen Elektroden (Plus und Minus): Wo laufen die Linien zusammen?",
+        "Vergleiche es mit zwei gleichnamigen Ladungen – wie sieht das Bild dort aus?",
+        "Erkläre, warum sich die länglichen Grießkrümel entlang der Feldrichtung ausrichten."
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-001"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-110"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-107"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-111"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin: Existiert das elektrische Feld auch dann, wenn keine Probeladung darin sitzt?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zum Luftballon und den Papierschnipseln: Beschreibe in zwei Sätzen, wodurch die Kraft über den leeren Zwischenraum übertragen wird. Skizziere dazu die Feldlinien zwischen einer positiven und einer negativen Ladung – und prüfe deine Vermutung vom Anfang.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-112"
+       ]
+      }
+     ],
+     "transfer": "Nenne zwei Alltagssituationen, in denen elektrische Felder eine Rolle spielen – ohne Kondensator."
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du beschreibst das elektrische Feld als Eigenschaft des Raumes um eine Ladung und unterscheidest es vom Feldlinienbild als Darstellungsmittel."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du liest Feldlinienbilder und begründest die Feldlinienregeln (von + nach −, keine Schnitte, Dichte zeigt Stärke)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du erkennst, dass Feldlinien ein Modell sind, und benennst seine Grenzen."
+    }
+   ]
+  },
+  {
+   "id": "l2",
+   "nr": 2,
+   "titel": "Die elektrische Feldstärke",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-feldstaerke",
+   "ziele": [
+    "Ich kann die elektrische Feldstärke als Kraft pro Ladung definieren.",
+    "Ich kann $E$, $F$ und $q$ ineinander umrechnen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 1: Feldlinien zeigen mit ihrer Tangente die Kraftrichtung, mit ihrer Dichte die Stärke des Feldes.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-004"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Zwei Schülerinnen messen dasselbe elektrische Feld. Die eine bringt eine kleine geladene Kugel hinein und misst die Kraft auf sie. Die andere nimmt eine Kugel mit <strong>doppelt so großer Ladung</strong> und misst ebenfalls die Kraft. Beide wollen daraus eine Zahl für die „Stärke des Feldes\" gewinnen.</p>",
+      "figur": "<svg viewBox=\"0 0 300 182\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"55\" y1=\"25\" x2=\"55\" y2=\"150\" style=\"stroke-width:4\"/><line class=\"achse\" x1=\"245\" y1=\"25\" x2=\"245\" y2=\"150\" style=\"stroke-width:4\"/><text x=\"42.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><line class=\"gerade-a\" x1=\"59\" y1=\"48\" x2=\"241\" y2=\"48\"/><polygon points=\"159,48 149,44 149,52\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"75\" x2=\"241\" y2=\"75\"/><polygon points=\"159,75 149,71 149,79\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"100\" x2=\"241\" y2=\"100\"/><polygon points=\"159,100 149,96 149,104\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"127\" x2=\"241\" y2=\"127\"/><polygon points=\"159,127 149,123 149,131\" style=\"fill:var(--physik)\"/><circle cx=\"150\" cy=\"88\" r=\"8\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"92.0\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:11px;font-weight:bold\">+q</text><line x1=\"160.0\" y1=\"88.0\" x2=\"194.0\" y2=\"88.0\" style=\"stroke:var(--ok);stroke-width:2.4\"/><polygon points=\"202.0,88.0 194.0,92.4 194.0,83.6\" style=\"fill:var(--ok)\"/><text x=\"184.0\" y=\"79.0\" text-anchor=\"middle\" style=\"fill:var(--ok);font-family:var(--schrift);font-size:13px;font-weight:normal\">F</text><text x=\"55.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+ Platte</text><text x=\"245.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">– Platte</text></svg>",
+      "figurAlt": "Plattenkondensator mit Feldlinien; in der Mitte eine positive Probeladung q, auf die ein Kraftpfeil F in Feldrichtung wirkt.",
+      "vorhersage": "Erhalten beide für die Feldstärke denselben Wert – oder misst die mit der doppelten Ladung ein „doppelt so starkes\" Feld?",
+      "optionen": [
+       "Doppelte Ladung → doppelter Wert",
+       "Beide erhalten denselben Wert",
+       "Das lässt sich nicht vergleichen"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#ue-feldstaerke",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Feldstärke als Kraft pro Ladung",
+       "kern": "Bringt man eine kleine positive <strong>Probeladung</strong> $q$ ins Feld und misst die Kraft $F$ auf sie, so ist die <strong>elektrische Feldstärke</strong> $$E=\\frac{F}{q}.$$ Sie zeigt in Richtung der Kraft auf eine positive Ladung.",
+       "details": "<p>$E$ ist ein Vektor. Ihre Einheit folgt direkt aus der Definition: $\\frac{\\text{N}}{\\text{C}}$ (Newton pro Coulomb). Später zeigt sich, dass das gleichbedeutend mit $\\frac{\\text{V}}{\\text{m}}$ ist.</p>",
+       "minicheck": {
+        "frage": "Welche Einheit hat die Feldstärke nach dieser Definition?",
+        "antwort": "$\\text{N/C}$ (Newton pro Coulomb)."
+       }
+      },
+      {
+       "titel": "Warum E nicht von q abhängt",
+       "kern": "Verdoppelt man die Probeladung $q$, verdoppelt sich auch die Kraft $F$ – der Quotient $E=\\frac{F}{q}$ bleibt <strong>gleich</strong>. $E$ beschreibt das Feld selbst, nicht die hineingebrachte Ladung.",
+       "details": "<p>Genau das beantwortet die Einstiegsfrage: Beide Schülerinnen erhalten denselben Wert. Die Probeladung muss nur klein genug sein, damit sie das zu messende Feld nicht selbst merklich stört.</p>",
+       "minicheck": {
+        "frage": "Du misst mit einer doppelt so großen Probeladung. Ändert sich der Wert von $E$?",
+        "antwort": "Nein. Kraft und Ladung verdoppeln sich gemeinsam, der Quotient $E=F/q$ bleibt unverändert."
+       }
+      },
+      {
+       "titel": "Umstellen und rechnen",
+       "kern": "Aus $E=\\frac{F}{q}$ folgt die Kraft auf eine beliebige Ladung im Feld: $$F=q\\cdot E.$$",
+       "beispiel": {
+        "aufgabe": "Ein Elektron ($q=1{,}6\\cdot10^{-19}\\,\\text{C}$) befindet sich in einem Feld $E=500\\,\\frac{\\text{N}}{\\text{C}}$. Wie groß ist die Kraft, und in welche Richtung wirkt sie?",
+        "schritte": [
+         "Betrag: $F=q\\cdot E=1{,}6\\cdot10^{-19}\\,\\text{C}\\cdot 500\\,\\frac{\\text{N}}{\\text{C}}$.",
+         "Ausrechnen: $F=8{,}0\\cdot10^{-17}\\,\\text{N}$.",
+         "Richtung: entgegen der Feldrichtung, weil das Elektron negativ geladen ist."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Welche Kraft wirkt auf eine Ladung $q=3{,}0\\cdot10^{-9}\\,\\text{C}$ im Feld $E=2000\\,\\frac{\\text{N}}{\\text{C}}$?",
+         "loesung": "<p>$F=q\\cdot E=3{,}0\\cdot10^{-9}\\,\\text{C}\\cdot 2000\\,\\frac{\\text{N}}{\\text{C}}=6{,}0\\cdot10^{-6}\\,\\text{N}$, in Feldrichtung (positive Ladung).</p>"
+        }
+       },
+       "minicheck": {
+        "frage": "In welche Richtung wirkt die Kraft auf ein Elektron im Feld?",
+        "antwort": "Entgegengesetzt zur Feldrichtung, weil das Elektron negativ geladen ist."
+       }
+      }
+     ],
+     "stolperstein": "$E=\\frac{F}{q}$ heißt <strong>nicht</strong>, dass $E$ von $q$ abhängt – obwohl $q$ in der Formel steht. $q$ und $F$ ändern sich immer gemeinsam, der Quotient bleibt gleich. $E$ ist eine Eigenschaft des Feldes an dieser Stelle.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum man für die Feldstärke <em>durch</em> die Probeladung teilt – statt einfach die gemessene Kraft als Feldstärke zu nehmen.",
+     "merksatz": "Die <strong>elektrische Feldstärke</strong> ist die Kraft pro Probeladung: $E=\\frac{F}{q}$ (Einheit $\\text{N/C}$). Sie beschreibt das Feld unabhängig von der Probeladung. Die Kraft auf eine Ladung ist $F=q\\cdot E$.",
+     "selbstcheck": [
+      {
+       "frage": "Definiere die elektrische Feldstärke in Worten und als Formel.",
+       "antwort": "Feldstärke = Kraft pro Probeladung, $E=\\frac{F}{q}$. Sie ist ein Vektor in Richtung der Kraft auf eine positive Probeladung."
+      },
+      {
+       "frage": "Auf eine Ladung $q=2{,}0\\cdot10^{-8}\\,\\text{C}$ wirkt die Kraft $F=6{,}0\\cdot10^{-6}\\,\\text{N}$. Wie groß ist $E$?",
+       "antwort": "$E=\\frac{F}{q}=\\frac{6{,}0\\cdot10^{-6}\\,\\text{N}}{2{,}0\\cdot10^{-8}\\,\\text{C}}=300\\,\\frac{\\text{N}}{\\text{C}}$."
+      },
+      {
+       "frage": "Warum darf die Probeladung nicht zu groß sein?",
+       "antwort": "Eine zu große Ladung würde das zu messende Feld selbst verändern. Die Probeladung soll das Feld nur abtasten, nicht stören."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Probeladung im Feld",
+       "material": "Geladene Kunststoffkugel an einem Faden, ein geladener Stab oder eine Plattenanordnung – als Real- oder Gedankenexperiment.",
+       "auftraege": [
+        "Bringe die geladene Kugel ins Feld und beobachte die Richtung, in die sie ausgelenkt wird.",
+        "Überlege, wie sich die Kraft (Auslenkung) ändert, wenn du die Kugelladung erhöhst.",
+        "Begründe, warum die berechnete Feldstärke $E=F/q$ trotzdem gleich bleibt."
+       ]
+      }
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Kraft und Ladung",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "E",
+         "min": 100,
+         "max": 2000,
+         "step": 100,
+         "init": 500,
+         "einheit": "N/C"
+        }
+       ],
+       "x": [
+        0,
+        5
+       ],
+       "y": [
+        0,
+        10000
+       ],
+       "achsen": {
+        "x": "q in nC",
+        "y": "F in N"
+       },
+       "formel": "F = E · q"
+      }
+     },
+     "begriffe": [
+      {
+       "wort": "Feldbegriff",
+       "lektion": "l1"
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-116"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-102"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-006"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-113"
+       ]
+      }
+     ],
+     "partner": "Gebt euch eine Aufgabe: Einer nennt $E$ und $q$ – der andere berechnet die Kraft $F=qE$ und nennt ihre Richtung für eine positive und für eine negative Ladung."
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zu den beiden Schülerinnen: Begründe in einem Satz, warum beide für die Feldstärke denselben Wert erhalten – obwohl die eine die doppelte Ladung benutzt. Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-114"
+       ]
+      }
+     ],
+     "transfer": "Auf eine Ladung $q=2\\,\\text{nC}$ wirkt im Feld die Kraft $F=6\\,\\mu\\text{N}$. Wie groß ist die Feldstärke?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du definierst die elektrische Feldstärke als Kraft pro Ladung $E=\\frac{F}{q}$ und gibst ihre Einheit N/C an."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du begründest, warum $E$ nicht von der Größe der Probeladung abhängt."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du rechnest sicher zwischen $E$, $F$ und $q$ um und gibst Ergebnisse mit Einheit an."
+    }
+   ]
+  },
+  {
+   "id": "l3",
+   "nr": 3,
+   "titel": "Das homogene Feld im Plattenkondensator",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-kondensator",
+   "ziele": [
+    "Ich kann erklären, warum das Feld im Plattenkondensator homogen ist.",
+    "Ich kann $E$, $U$ und $d$ mit $E = U/d$ berechnen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 2: Die Kraft auf eine Ladung im Feld ist $F=q\\cdot E$.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-002"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>An einem Plattenkondensator liegt eine feste Spannung. Du ziehst die beiden Platten <strong>weiter auseinander</strong>, ohne die Spannung zu ändern. Eine kleine Probeladung zwischen den Platten spürt dabei die Feldkraft.</p>",
+      "figur": "<svg viewBox=\"0 0 300 182\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"55\" y1=\"25\" x2=\"55\" y2=\"150\" style=\"stroke-width:4\"/><line class=\"achse\" x1=\"245\" y1=\"25\" x2=\"245\" y2=\"150\" style=\"stroke-width:4\"/><text x=\"42.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><line class=\"gerade-a\" x1=\"59\" y1=\"48\" x2=\"241\" y2=\"48\"/><polygon points=\"159,48 149,44 149,52\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"75\" x2=\"241\" y2=\"75\"/><polygon points=\"159,75 149,71 149,79\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"100\" x2=\"241\" y2=\"100\"/><polygon points=\"159,100 149,96 149,104\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"127\" x2=\"241\" y2=\"127\"/><polygon points=\"159,127 149,123 149,131\" style=\"fill:var(--physik)\"/><circle cx=\"150\" cy=\"88\" r=\"8\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"92.0\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:11px;font-weight:bold\">+q</text><text x=\"55.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+ Platte</text><text x=\"245.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">– Platte</text></svg>",
+      "figurAlt": "Plattenkondensator: Plus-Platte links, Minus-Platte rechts, parallele Feldlinien, dazwischen eine positive Probeladung.",
+      "vorhersage": "Wird die Kraft auf die Probeladung dabei größer, kleiner oder bleibt sie gleich?",
+      "optionen": [
+       "Größer",
+       "Kleiner",
+       "Bleibt gleich"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#ue-kondensator",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Warum das Feld homogen ist",
+       "kern": "Zwischen zwei parallelen, eng stehenden Platten verlaufen die Feldlinien (außer am Rand) <strong>gerade, parallel und gleich dicht</strong> von Plus nach Minus. Betrag und Richtung der Feldstärke sind dort überall gleich – das Feld ist <strong>homogen</strong>.",
+       "details": "<p>Am Plattenrand wölben sich die Feldlinien nach außen (Streufeld); dort ist das Feld nicht mehr homogen. Im Inneren aber kannst du an jeder Stelle mit demselben $E$ rechnen.</p>",
+       "minicheck": {
+        "frage": "Woran erkennst du am Feldlinienbild, dass das Feld homogen ist?",
+        "antwort": "Die Feldlinien sind gerade, parallel und überall gleich dicht – gleicher Betrag und gleiche Richtung der Feldstärke an jeder Stelle."
+       }
+      },
+      {
+       "titel": "Die Beziehung E = U/d",
+       "kern": "Im homogenen Feld hängen Feldstärke, Spannung und Plattenabstand einfach zusammen: $$E=\\frac{U}{d}.$$ Daraus folgt die Einheit $\\frac{\\text{V}}{\\text{m}}$ – gleichwertig mit $\\frac{\\text{N}}{\\text{C}}$ aus Lektion 2.",
+       "beispiel": {
+        "aufgabe": "Berechne die Feldstärke für $U=600\\,\\text{V}$ und $d=2{,}0\\,\\text{cm}$.",
+        "schritte": [
+         "Abstand in Meter: $d=2{,}0\\,\\text{cm}=0{,}020\\,\\text{m}$.",
+         "Einsetzen: $E=\\frac{U}{d}=\\frac{600\\,\\text{V}}{0{,}020\\,\\text{m}}$.",
+         "Ergebnis: $E=3{,}0\\cdot10^{4}\\,\\frac{\\text{V}}{\\text{m}}$."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Wie groß ist $E$ für $U=300\\,\\text{V}$ und $d=1{,}5\\,\\text{cm}$?",
+         "loesung": "<p>$d=0{,}015\\,\\text{m}$, also $E=\\frac{300\\,\\text{V}}{0{,}015\\,\\text{m}}=2{,}0\\cdot10^{4}\\,\\frac{\\text{V}}{\\text{m}}$.</p>"
+        }
+       },
+       "minicheck": {
+        "frage": "Welche Einheit liest du direkt aus $E=U/d$ ab?",
+        "antwort": "Volt pro Meter, $\\text{V/m}$ – dieselbe Größe wie $\\text{N/C}$."
+       }
+      },
+      {
+       "titel": "Abhängigkeiten durchdenken",
+       "kern": "Bei <strong>fester Spannung</strong> wird das Feld schwächer, wenn man die Platten weiter auseinanderzieht ($E\\sim 1/d$). Verdoppelt man $d$, halbiert sich $E$; verdoppelt man $U$, verdoppelt sich $E$.",
+       "details": "<p>Genau das beantwortet die Einstiegsfrage: Da $F=qE$ und $E$ kleiner wird, sinkt auch die Kraft auf die Probeladung, wenn du die Platten bei fester Spannung auseinanderziehst.</p>",
+       "minicheck": {
+        "frage": "Du verdoppelst den Plattenabstand bei gleicher Spannung. Was passiert mit $E$?",
+        "antwort": "Die Feldstärke halbiert sich, denn $E=U/d$ und $U$ bleibt konstant."
+       }
+      }
+     ],
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Im Plattenkondensator sei das Feld direkt an den Platten am stärksten und in der Mitte schwächer. <strong>Warum das naheliegt:</strong> Vom Magneten und von Punktladungen kennt man, dass die Wirkung mit der Entfernung abnimmt – „nah an der Quelle = stärker“ scheint also logisch. <strong>Gegenbeispiel:</strong> Setzt man eine Probeladung an verschiedene Stellen <em>zwischen</em> die Platten, erfährt sie überall dieselbe Kraft – ob dicht an einer Platte oder in der Mitte. Die Feldlinien sind genau deshalb gerade, parallel und gleich dicht gezeichnet. <strong>Richtig ist:</strong> Das homogene Feld ist überall gleich stark: $E=\\frac{U}{d}$ hängt nur von Spannung und Plattenabstand ab, nicht vom Ort. Auf eine Ladung wirkt dort die konstante Kraft $F=q\\cdot E$. (Nur ganz am Rand der Platten verbiegt sich das Feld – diesen Randbereich klammern wir aus.)</p>",
+     "darstellungen": {
+      "titel": "Der Zusammenhang $E=U/d$ – in mehreren Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Feste Spannung $U=600\\,\\text{V}$, Platten im Abstand $d$ – wie stark ist das Feld?"
+       },
+       {
+        "art": "Tabelle",
+        "html": "<table class='lb-mini-tab'><tr><th>d in cm</th><td>1</td><td>2</td><td>3</td></tr><tr><th>E in kV/m</th><td>60</td><td>30</td><td>20</td></tr></table>"
+       },
+       {
+        "art": "Gleichung",
+        "text": "$E=\\frac{U}{d}$ – bei festem $U$ ist $E$ umgekehrt proportional zu $d$."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum man den Plattenabstand vor dem Einsetzen in $E=U/d$ in Meter umrechnen muss.",
+     "merksatz": "Im <strong>Plattenkondensator</strong> ist das Feld <strong>homogen</strong> (Feldlinien gerade, parallel, gleich dicht). Es gilt $E=\\frac{U}{d}$ (Einheit $\\text{V/m}=\\text{N/C}$): $E$ wächst mit der Spannung und sinkt mit dem Plattenabstand.",
+     "selbstcheck": [
+      {
+       "frage": "Berechne $E$ für $U=600\\,\\text{V}$ und $d=2{,}0\\,\\text{cm}$.",
+       "antwort": "$E=\\frac{U}{d}=\\frac{600\\,\\text{V}}{0{,}020\\,\\text{m}}=3{,}0\\cdot10^{4}\\,\\frac{\\text{V}}{\\text{m}}$."
+      },
+      {
+       "frage": "Warum ist das Feld am Plattenrand nicht mehr homogen?",
+       "antwort": "Am Rand wölben sich die Feldlinien nach außen (Streufeld); sie sind dort nicht mehr parallel und gleich dicht. $E=U/d$ gilt streng nur im Inneren."
+      },
+      {
+       "frage": "Wie hängt $E$ vom Plattenabstand ab, wenn die Spannung konstant bleibt?",
+       "antwort": "Umgekehrt proportional: $E\\sim 1/d$. Doppelter Abstand bedeutet halbe Feldstärke."
+      }
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Feldstärke und Abstand",
+      "params": {
+       "form": "antiproportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "U",
+         "min": 50,
+         "max": 500,
+         "step": 50,
+         "init": 200,
+         "einheit": "V"
+        }
+       ],
+       "x": [
+        0.5,
+        10
+       ],
+       "y": [
+        0,
+        500
+       ],
+       "achsen": {
+        "x": "d in mm",
+        "y": "E in V/mm"
+       },
+       "formel": "E = U / d"
+      }
+     },
+     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Im Plattenkondensator vermuten wir ein <strong>homogenes</strong> Feld — überall gleich starke, parallele Feldlinien. Aus $E=\\frac{U}{d}$ erwarten wir zwei klare Zusammenhänge: Verdoppeln wir die Spannung $U$, sollte sich auch die Feldstärke $E$ verdoppeln; vergrößern wir dagegen den Plattenabstand $d$, sollte $E$ kleiner werden. Unsere Vermutung: $E$ ist zu $U$ direkt und zu $d$ umgekehrt proportional, und das Probeladungs-Pfeilbild bleibt im Inneren überall gleich lang.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Feld im Plattenkondensator erkunden",
+       "vorhersage": "Was passiert mit der Feldstärke $E$, wenn du bei festem Abstand die Spannung $U$ verdoppelst — und was, wenn du bei fester Spannung den Plattenabstand $d$ verdoppelst?",
+       "auftraege": [
+        "Stelle eine Spannung ein und lies $E$ ab. Verdopple dann $U$ und prüfe, ob sich $E$ ebenfalls verdoppelt.",
+        "Halte $U$ fest und vergrößere den Plattenabstand $d$ schrittweise. Trage drei Wertepaare $(d, E)$ auf und prüfe, ob $E\\cdot d$ konstant bleibt.",
+        "Beobachte die Feldlinien im Inneren und am Rand: Wo ist das Feld homogen, wo nicht? Begründe mit dem Feldlinienbild."
+       ],
+       "pfad": "simulationen/physik/plattenkondensator/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Feldbegriff und Feldlinienbild (l1), elektrische Feldstärke $E=F/q$ (l2); Umgang mit Proportionalitäten.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Parameter gezielt variieren), mathematisieren (Proportionalität $E\\propto U$ und $E\\propto 1/d$ aus Messreihen ablesen), bewerten (Homogenität am Feldlinienbild beurteilen).</p><p><strong>Erwartung:</strong> Doppelte Spannung $\\Rightarrow$ doppelte Feldstärke; doppelter Abstand $\\Rightarrow$ halbe Feldstärke. Das Produkt $E\\cdot d=U$ bleibt konstant. Im Inneren sind die Pfeile überall gleich lang (homogen).</p><p><strong>Modellgrenzen:</strong> $E=U/d$ gilt nur für das idealisierte homogene Innenfeld. An den Plattenrändern wölbt sich das Feld (Randeffekte), die die Simulation andeutet, die Formel aber nicht erfasst.</p>",
+     "begriffe": [
+      {
+       "wort": "elektrische Feldstärke",
+       "lektion": "l2"
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-001"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-008"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-013"
+       ]
+      }
+     ],
+     "partner": "Prüft gegenseitig: Was verändert sich am Feld, wenn man bei fester Spannung die Platten weiter auseinanderschiebt?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zum Auseinanderziehen der Platten: Begründe mit $E=U/d$ und $F=qE$, warum die Kraft auf die Probeladung dabei kleiner wird. Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-115"
+       ]
+      }
+     ],
+     "transfer": "$E=U/d$ – stelle die Formel nach $d$ um. Was sagt dir das Ergebnis physikalisch?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du begründest, warum das Feld im Plattenkondensator homogen ist, und berechnest $E$ mit $E=\\frac{U}{d}$."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du untersuchst, wie $E$ von Spannung und Plattenabstand abhängt, und leitest die Einheit V/m her."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du gibst Feldstärken mit korrekter Einheit an und unterscheidest homogenes von inhomogenem Feld."
+    }
+   ]
+  },
+  {
+   "id": "l4",
+   "nr": 4,
+   "titel": "Energie im Feld: Ladungen beschleunigen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-energie",
+   "ziele": [
+    "Ich kann die Energieübertragung $W = q \\cdot U$ auf eine Ladung berechnen.",
+    "Ich kann die Endgeschwindigkeit eines beschleunigten Elektrons bestimmen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 3: Im Plattenkondensator gilt $E=\\frac{U}{d}$.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-005"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>In einer Elektronenkanone werden Elektronen aus der Ruhe durch eine Spannung beschleunigt. Bei einem Aufbau ist der Plattenabstand klein, bei einem anderen <strong>doppelt so groß</strong> – aber bei beiden liegt <strong>dieselbe Spannung</strong> an.</p>",
+      "figur": "<svg viewBox=\"-6.8 0 313.6 176\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"50\" y1=\"28\" x2=\"50\" y2=\"140\" style=\"stroke-width:4\"/><line class=\"achse\" x1=\"250\" y1=\"28\" x2=\"250\" y2=\"140\" style=\"stroke-width:4\"/><text x=\"38.0\" y=\"44.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"262.0\" y=\"44.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"38.0\" y=\"70.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"262.0\" y=\"70.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"38.0\" y=\"96.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"262.0\" y=\"96.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"38.0\" y=\"122.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"262.0\" y=\"122.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><line class=\"gerade-a\" x1=\"54\" y1=\"46\" x2=\"246\" y2=\"46\"/><polygon points=\"141,46 151,42 151,50\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"54\" y1=\"68\" x2=\"246\" y2=\"68\"/><polygon points=\"141,68 151,64 151,72\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"54\" y1=\"90\" x2=\"246\" y2=\"90\"/><polygon points=\"141,90 151,86 151,94\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"54\" y1=\"112\" x2=\"246\" y2=\"112\"/><polygon points=\"141,112 151,108 151,116\" style=\"fill:var(--physik)\"/><circle cx=\"70\" cy=\"84\" r=\"6\" style=\"fill:var(--akzent)\"/><text x=\"70.0\" y=\"87.5\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:10px;font-weight:bold\">–</text><line x1=\"78.0\" y1=\"84.0\" x2=\"84.0\" y2=\"84.0\" style=\"stroke:var(--ok);stroke-width:2.2\"/><polygon points=\"91.0,84.0 84.0,87.8 84.0,80.2\" style=\"fill:var(--ok)\"/><circle cx=\"135\" cy=\"84\" r=\"6\" style=\"fill:var(--akzent)\"/><text x=\"135.0\" y=\"87.5\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:10px;font-weight:bold\">–</text><line x1=\"143.0\" y1=\"84.0\" x2=\"162.0\" y2=\"84.0\" style=\"stroke:var(--ok);stroke-width:2.2\"/><polygon points=\"169.0,84.0 162.0,87.8 162.0,80.2\" style=\"fill:var(--ok)\"/><circle cx=\"205\" cy=\"84\" r=\"6\" style=\"fill:var(--akzent)\"/><text x=\"205.0\" y=\"87.5\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:10px;font-weight:bold\">–</text><line x1=\"213.0\" y1=\"84.0\" x2=\"248.0\" y2=\"84.0\" style=\"stroke:var(--ok);stroke-width:2.2\"/><polygon points=\"255.0,84.0 248.0,87.8 248.0,80.2\" style=\"fill:var(--ok)\"/><text x=\"40.0\" y=\"82.0\" text-anchor=\"end\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11px;font-weight:normal\">Start</text><text x=\"150.0\" y=\"164.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:12px;font-weight:normal\">Elektron wird zur + Platte hin schneller</text></svg>",
+      "figurAlt": "Zwischen einer Minus- und einer Plus-Platte wird ein Elektron von links nach rechts immer schneller; sein Geschwindigkeitspfeil wächst.",
+      "vorhersage": "Bei welchem Aufbau ist das Elektron am Ende schneller – beim kleinen oder beim großen Plattenabstand?",
+      "optionen": [
+       "Beim kleinen Abstand",
+       "Beim großen Abstand",
+       "Bei beiden gleich schnell"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#ue-energie",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Energie aus der Spannung",
+       "kern": "Durchläuft eine Ladung $q$ die Spannung $U$, verrichtet das Feld an ihr die Arbeit $$W=q\\cdot U.$$ Diese Energie wird der Ladung zugeführt – unabhängig vom Weg.",
+       "details": "<p>Für ein Elektron gilt $q=e=1{,}6\\cdot10^{-19}\\,\\text{C}$. Wichtig: In $W=qU$ steht der Plattenabstand <strong>nicht</strong> – nur die durchlaufene Spannung und die Ladung zählen.</p>",
+       "minicheck": {
+        "frage": "Wovon hängt die übertragene Energie ab – von der Spannung oder vom Plattenabstand?",
+        "antwort": "Nur von der durchlaufenen Spannung $U$ und der Ladung $q$: $W=q\\cdot U$. Der Plattenabstand geht nicht ein."
+       }
+      },
+      {
+       "titel": "Energie wird Bewegung",
+       "kern": "Startet das Elektron in Ruhe, wird die zugeführte Energie vollständig in <strong>kinetische Energie</strong> umgewandelt: $$q\\cdot U=\\frac{1}{2}m v^2.$$",
+       "details": "<p>Das ist der Energieerhaltungssatz für das beschleunigte Teilchen: elektrische Energie $\\to$ Bewegungsenergie. Aufgelöst nach $v$ folgt $v=\\sqrt{\\frac{2qU}{m}}$.</p>",
+       "minicheck": {
+        "frage": "Welche Energieform wandelt das Feld beim beschleunigten Elektron um?",
+        "antwort": "Die elektrische Energie $q\\cdot U$ wird in kinetische Energie $\\frac{1}{2}mv^2$ umgewandelt."
+       }
+      },
+      {
+       "titel": "Endgeschwindigkeit berechnen",
+       "kern": "Aus $qU=\\frac{1}{2}mv^2$ folgt $$v=\\sqrt{\\frac{2\\,q\\,U}{m}}.$$ Da nur $q$, $U$ und $m$ vorkommen, hängt die Endgeschwindigkeit <strong>nicht</strong> vom Plattenabstand ab.",
+       "beispiel": {
+        "aufgabe": "Ein Elektron ($e=1{,}6\\cdot10^{-19}\\,\\text{C}$, $m_e=9{,}11\\cdot10^{-31}\\,\\text{kg}$) durchläuft $U=1000\\,\\text{V}$. Wie schnell ist es danach?",
+        "schritte": [
+         "Ansatz: $v=\\sqrt{\\frac{2eU}{m_e}}$.",
+         "Einsetzen: $v=\\sqrt{\\frac{2\\cdot 1{,}6\\cdot10^{-19}\\,\\text{C}\\cdot 1000\\,\\text{V}}{9{,}11\\cdot10^{-31}\\,\\text{kg}}}$.",
+         "Ergebnis: $v\\approx 1{,}9\\cdot10^{7}\\,\\frac{\\text{m}}{\\text{s}}$ (rund $6\\,\\%$ der Lichtgeschwindigkeit)."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Um welchen Faktor steigt $v$, wenn $U$ vervierfacht wird?",
+         "loesung": "<p>$v\\sim\\sqrt{U}$, also wird $v$ um den Faktor $\\sqrt{4}=2$ größer – doppelt so schnell.</p>"
+        }
+       },
+       "minicheck": {
+        "frage": "Zwei Kondensatoren haben gleiche Spannung, aber verschiedenen Plattenabstand. Bei welchem ist das Elektron am Ende schneller?",
+        "antwort": "Bei beiden gleich schnell. Die Endgeschwindigkeit hängt nur von $U$ (und $q$, $m$) ab, nicht vom Abstand."
+       }
+      }
+     ],
+     "stolperstein": "Die Endgeschwindigkeit wächst <strong>nicht</strong> proportional zur Spannung, sondern mit $\\sqrt{U}$: Vierfache Spannung gibt nur doppelte Geschwindigkeit. Und der Plattenabstand spielt für $v$ keine Rolle – größerer Abstand = schwächeres Feld, aber längerer Weg, beides hebt sich auf.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum der Plattenabstand die Endgeschwindigkeit nicht beeinflusst, obwohl ein größerer Abstand das Feld schwächt.",
+     "merksatz": "Beim Durchlaufen der Spannung $U$ erhält eine Ladung die Energie $W=q\\cdot U$. Aus der Ruhe wird daraus kinetische Energie: $q\\,U=\\frac{1}{2}mv^2$, also $v=\\sqrt{\\frac{2qU}{m}}$. Die Endgeschwindigkeit hängt nur von der Spannung ab, nicht vom Plattenabstand.",
+     "selbstcheck": [
+      {
+       "frage": "Welche Energie nimmt ein Elektron auf, das $U=200\\,\\text{V}$ durchläuft?",
+       "antwort": "$W=e\\cdot U=1{,}6\\cdot10^{-19}\\,\\text{C}\\cdot200\\,\\text{V}=3{,}2\\cdot10^{-17}\\,\\text{J}$."
+      },
+      {
+       "frage": "Wie hängt die Endgeschwindigkeit von der Spannung ab?",
+       "antwort": "$v=\\sqrt{\\frac{2qU}{m}}$, also $v\\sim\\sqrt{U}$. Vierfache Spannung ergibt doppelte Geschwindigkeit."
+      },
+      {
+       "frage": "Warum ist der Plattenabstand für die Endgeschwindigkeit egal?",
+       "antwort": "Größerer Abstand = schwächeres Feld, aber längerer Weg. Die Arbeit $W=qU$ bleibt gleich, also auch $v$."
+      }
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Geschwindigkeit aus Spannung",
+      "params": {
+       "form": "wurzel",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "k",
+         "min": 1,
+         "max": 8,
+         "step": 0.5,
+         "init": 5.9
+        }
+       ],
+       "x": [
+        0,
+        1000
+       ],
+       "y": [
+        0,
+        200
+       ],
+       "achsen": {
+        "x": "U in V",
+        "y": "v in Mm/s"
+       },
+       "formel": "v = k · √U"
+      }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Ein geladener Kondensator ist ein Energie- und Ladungsspeicher. Entlädt er sich über einen Widerstand, fließt anfangs viel Strom — mit sinkender Spannung wird der Strom immer kleiner. Unsere Vermutung: Die Spannung sinkt <strong>nicht</strong> geradlinig, sondern immer langsamer, also exponentiell. Außerdem erwarten wir, dass ein größerer Widerstand $R$ oder eine größere Kapazität $C$ die Entladung verlangsamt — der Zusammenhang $U(t)=U_0\\cdot e^{-t/(RC)}$ legt nahe, dass nach der Zeit $\\tau=R\\cdot C$ noch etwa $37\\,\\%$ der Anfangsspannung übrig sind.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Kondensator-Entladung am RC-Glied messen",
+       "material": "Ein Kondensator (z. B. $1000\\,\\mu\\text{F}$), ein Widerstand (z. B. $10\\,\\text{k}\\Omega$), eine Spannungsquelle, ein Voltmeter und eine Stoppuhr.",
+       "vorhersage": "Wie verläuft die Kondensatorspannung beim Entladen über der Zeit — linear, oder immer langsamer fallend? Und wie ändert sich der Verlauf, wenn du $R$ vergrößerst?",
+       "auftraege": [
+        "Lade den Kondensator auf $U_0$ und miss beim Entladen alle paar Sekunden die Spannung. Trage $U(t)$ in ein Diagramm ein.",
+        "Lies aus deiner Kurve ab, nach welcher Zeit die Spannung auf etwa $37\\,\\%$ von $U_0$ gesunken ist, und vergleiche sie mit $\\tau=R\\cdot C$.",
+        "Wiederhole die Messung mit einem größeren Widerstand und beschreibe, wie sich die Entladedauer ändert."
+       ],
+       "pfad": "experimente/physik/rc-entladung/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriff der elektrischen Energie $W=q\\cdot U$ aus dieser Lektion, Grundvorstellung von Strom als Ladungsfluss; Ablesen und Auftragen von Messwerten.</p><p><strong>Angesprochene Kompetenzen:</strong> experimentieren (zeitaufgelöst messen, protokollieren), mathematisieren (exponentiellen Abfall erkennen, Zeitkonstante $\\tau=RC$ bestimmen), bewerten (Modellvorhersage mit Messung vergleichen).</p><p><strong>Erwartung:</strong> Die Spannung fällt exponentiell. Nach $\\tau=R\\cdot C$ sind noch rund $37\\,\\%$ von $U_0$ übrig; mit $1000\\,\\mu\\text{F}$ und $10\\,\\text{k}\\Omega$ ist $\\tau\\approx10\\,\\text{s}$. Größerer Widerstand $\\Rightarrow$ langsamere Entladung.</p><p><strong>Modellgrenzen:</strong> Das ideale Modell vernachlässigt den Innenwiderstand des Voltmeters und Leckströme des Kondensators. Die Reaktionszeit beim Ablesen erzeugt die größte Messunsicherheit — durch viele Messpunkte und Mittelung klein zu halten.</p>",
+     "begriffe": [
+      {
+       "wort": "homogenes Feld",
+       "lektion": "l3"
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-007"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-105"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-109",
+        "ph-qp-ef-301"
+       ]
+      }
+     ],
+     "partner": "Erkläre: Warum ist ein Elektron nach der Beschleunigung durch $U=1000\\,\\text{V}$ schon auf über 6 % der Lichtgeschwindigkeit?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zu den beiden Kanonen mit gleicher Spannung, aber verschiedenem Plattenabstand: Begründe mit $v=\\sqrt{2qU/m}$, warum das Elektron in beiden gleich schnell wird. Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-104"
+       ]
+      }
+     ],
+     "transfer": "Ein Elektron durchläuft $U=500\\,\\text{V}$, ein zweites $U=2000\\,\\text{V}$. Um welchen Faktor ist das zweite schneller?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die im Feld auf eine Ladung übertragene Energie mit $W=q\\cdot U$."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du bestimmst die Endgeschwindigkeit eines beschleunigten Elektrons aus dem Energieansatz und begründest die Unabhängigkeit vom Plattenabstand."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du führst die Rechnung über den Energieerhaltungssatz nachvollziehbar und mit Einheiten durch."
+    }
+   ]
+  },
+  {
+   "id": "l5",
+   "nr": 5,
+   "titel": "Elektronen im Querfeld ablenken",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "anker": "#ue-ablenkung",
+   "ziele": [
+    "Ich kann erklären, warum ein Elektron im Querfeld eine Parabel durchläuft.",
+    "Ich kann Messwerte aus der Simulation ablesen und mit der Theorie vergleichen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 4: Die Kraft auf eine Ladung im Feld ist $F=q\\cdot E$ (mit $E=U/d$).",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-102"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Ein Elektron fliegt waagerecht mit hoher Geschwindigkeit in den Zwischenraum eines Plattenkondensators ein. Die obere Platte ist positiv, die untere negativ – das Feld zeigt also quer zur Flugrichtung nach unten.</p>",
+      "figur": "<svg viewBox=\"0 -1 300 169\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40\" y1=\"22\" x2=\"250\" y2=\"22\" style=\"stroke-width:4\"/><line class=\"achse\" x1=\"40\" y1=\"120\" x2=\"250\" y2=\"120\" style=\"stroke-width:4\"/><text x=\"58.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"58.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"88.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"88.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"118.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"118.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"148.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"148.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"178.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"178.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"208.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"208.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"238.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"238.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><polyline points=\"40.0,50.0 45.2,50.0 50.5,50.1 55.8,50.3 61.0,50.6 66.2,50.9 71.5,51.4 76.8,51.8 82.0,52.4 87.2,53.0 92.5,53.8 97.8,54.5 103.0,55.4 108.2,56.3 113.5,57.4 118.8,58.4 124.0,59.6 129.2,60.8 134.5,62.1 139.8,63.5 145.0,65.0 150.2,66.5 155.5,68.2 160.8,69.8 166.0,71.6 171.2,73.4 176.5,75.3 181.8,77.3 187.0,79.4 192.2,81.5 197.5,83.8 202.8,86.0 208.0,88.4 213.2,90.8 218.5,93.3 223.8,95.9 229.0,98.6 234.2,101.3 239.5,104.2 244.8,107.0 250.0,110.0\" style=\"fill:none;stroke:var(--akzent);stroke-width:2.6\"/><line x1=\"38.0\" y1=\"50.0\" x2=\"59.0\" y2=\"50.0\" style=\"stroke:var(--mathe);stroke-width:2.2\"/><polygon points=\"66.0,50.0 59.0,53.9 59.0,46.1\" style=\"fill:var(--mathe)\"/><text x=\"52.0\" y=\"42.0\" text-anchor=\"middle\" style=\"fill:var(--mathe);font-family:var(--schrift);font-size:12px;font-weight:normal\">v₀</text><circle cx=\"250\" cy=\"110\" r=\"5\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"158.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:12px;font-weight:normal\">Parabelbahn im Querfeld</text></svg>",
+      "figurAlt": "Ein Elektron tritt links waagerecht in einen Plattenkondensator ein (Pfeil v0) und folgt einer nach unten gekrümmten Bahn bis zur rechten Seite.",
+      "vorhersage": "Welche Bahn beschreibt das Elektron zwischen den Platten – eine schräge Gerade, einen Kreisbogen oder eine andere Kurve?",
+      "optionen": [
+       "Eine schräge Gerade",
+       "Einen Kreisbogen",
+       "Eine Parabel wie beim waagerechten Wurf"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#ue-ablenkung",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Zwei Bewegungen überlagern sich",
+       "kern": "In Flugrichtung ($x$) behält das Elektron seine <strong>gleichförmige</strong> Bewegung mit $v_0$. Quer dazu ($y$) wirkt die konstante Feldkraft $F=eE$ und beschleunigt es <strong>gleichmäßig</strong>. Beide Bewegungen sind unabhängig.",
+       "details": "<p>Die Feldkraft hat keine Komponente in Flugrichtung, also bleibt $v_0$ dort konstant. Genau wie beim waagerechten Wurf in der Mechanik: vorwärts gleichförmig, nach unten beschleunigt.</p>",
+       "minicheck": {
+        "frage": "Ändert das Querfeld die Geschwindigkeit in Flugrichtung ($x$)?",
+        "antwort": "Nein. Die Feldkraft wirkt nur quer (in $y$). In $x$-Richtung bleibt $v_0$ konstant."
+       }
+      },
+      {
+       "titel": "Warum eine Parabel entsteht",
+       "kern": "In $x$ gilt $x=v_0 t$, in $y$ gilt $y=\\frac{1}{2}a t^2$ mit $a=\\frac{eE}{m}$. Setzt man $t=x/v_0$ ein, folgt $$y=\\frac{eE}{2m v_0^2}\\,x^2.$$ Das ist eine <strong>Parabel</strong>.",
+       "details": "<p>Dieselbe Mathematik wie beim waagerechten Wurf: $y$ wächst mit $x^2$. Das beantwortet die Einstiegsfrage – die Bahn ist gekrümmt, und zwar eine Parabel.</p>",
+       "minicheck": {
+        "frage": "Welcher Bewegung aus der Mechanik entspricht der Elektronenflug im Querfeld?",
+        "antwort": "Dem waagerechten Wurf: gleichförmig in eine Richtung, gleichmäßig beschleunigt senkrecht dazu – die Bahn ist eine Parabel."
+       }
+      },
+      {
+       "titel": "Wovon die Ablenkung abhängt",
+       "kern": "Am Plattenende wächst die Ablenkung $y$ mit der Ablenkspannung $U_a$ (über $E=U_a/d$) und sinkt, je schneller das Elektron eintritt: $y\\sim U_a$ und $y\\sim \\frac{1}{v_0^2}$.",
+       "details": "<p>Eine größere Eintrittsenergie (größeres $U_0$, also größeres $v_0$) macht die Ablenkung also kleiner – das schnellere Elektron ist kürzer im Feld.</p>",
+       "minicheck": {
+        "frage": "Du verdoppelst die Ablenkspannung $U_a$ bei gleichem $v_0$. Wie ändert sich die Ablenkung $y$?",
+        "antwort": "Sie verdoppelt sich, denn $y\\sim E\\sim U_a$ bei festem Plattenabstand und festem $v_0$."
+       }
+      }
+     ],
+     "stolperstein": "Die Bahn im Querfeld ist <strong>keine schräge Gerade</strong>. Solange das Elektron im Feld ist, wächst die Querauslenkung mit $x^2$ (Parabel). Erst <em>hinter</em> den Platten, wo keine Kraft mehr wirkt, fliegt es geradlinig weiter.",
+     "darstellungen": {
+      "titel": "Die Ablenkung – in mehreren Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Elektron tritt waagerecht ein; das Querfeld zieht es zur positiven Platte."
+       },
+       {
+        "art": "Graph",
+        "figur": "<svg viewBox=\"0 -1 300 169\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"40\" y1=\"22\" x2=\"250\" y2=\"22\" style=\"stroke-width:4\"/><line class=\"achse\" x1=\"40\" y1=\"120\" x2=\"250\" y2=\"120\" style=\"stroke-width:4\"/><text x=\"58.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"58.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"88.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"88.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"118.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"118.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"148.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"148.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"178.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"178.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"208.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"208.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"238.0\" y=\"17.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"238.0\" y=\"133.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><polyline points=\"40.0,50.0 45.2,50.0 50.5,50.1 55.8,50.3 61.0,50.6 66.2,50.9 71.5,51.4 76.8,51.8 82.0,52.4 87.2,53.0 92.5,53.8 97.8,54.5 103.0,55.4 108.2,56.3 113.5,57.4 118.8,58.4 124.0,59.6 129.2,60.8 134.5,62.1 139.8,63.5 145.0,65.0 150.2,66.5 155.5,68.2 160.8,69.8 166.0,71.6 171.2,73.4 176.5,75.3 181.8,77.3 187.0,79.4 192.2,81.5 197.5,83.8 202.8,86.0 208.0,88.4 213.2,90.8 218.5,93.3 223.8,95.9 229.0,98.6 234.2,101.3 239.5,104.2 244.8,107.0 250.0,110.0\" style=\"fill:none;stroke:var(--akzent);stroke-width:2.6\"/><line x1=\"38.0\" y1=\"50.0\" x2=\"59.0\" y2=\"50.0\" style=\"stroke:var(--mathe);stroke-width:2.2\"/><polygon points=\"66.0,50.0 59.0,53.9 59.0,46.1\" style=\"fill:var(--mathe)\"/><text x=\"52.0\" y=\"42.0\" text-anchor=\"middle\" style=\"fill:var(--mathe);font-family:var(--schrift);font-size:12px;font-weight:normal\">v₀</text><circle cx=\"250\" cy=\"110\" r=\"5\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"158.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:12px;font-weight:normal\">Parabelbahn im Querfeld</text></svg>",
+        "figurAlt": "Parabelförmige Elektronenbahn im Querfeld eines Plattenkondensators."
+       },
+       {
+        "art": "Gleichung",
+        "text": "$y=\\frac{eE}{2m v_0^2}\\,x^2$ – $y$ wächst mit dem Quadrat von $x$."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum die Geschwindigkeit in Flugrichtung konstant bleibt, obwohl das Elektron quer beschleunigt wird.",
+     "merksatz": "Im Querfeld überlagern sich eine <strong>gleichförmige</strong> Bewegung längs ($x=v_0 t$) und eine <strong>beschleunigte</strong> quer ($y=\\frac{1}{2}at^2$). Daraus folgt die <strong>Parabel</strong> $y=\\frac{eE}{2mv_0^2}x^2$ – wie beim waagerechten Wurf. Die Ablenkung wächst mit $U_a$ und sinkt mit $v_0^2$.",
+     "selbstcheck": [
+      {
+       "frage": "Warum bleibt die Geschwindigkeit in Flugrichtung konstant?",
+       "antwort": "Die Feldkraft wirkt nur senkrecht zur Flugrichtung. In Flugrichtung gibt es keine Kraftkomponente, also keine Beschleunigung – $v_0$ bleibt konstant."
+      },
+      {
+       "frage": "Welche Bahnform durchläuft das Elektron im Querfeld?",
+       "antwort": "Eine Parabel, $y=\\frac{eE}{2mv_0^2}x^2$ – die Überlagerung einer gleichförmigen und einer gleichmäßig beschleunigten Bewegung."
+      },
+      {
+       "frage": "Wie wirkt sich eine größere Eintrittsgeschwindigkeit auf die Ablenkung aus?",
+       "antwort": "Die Ablenkung wird kleiner, und zwar mit $1/v_0^2$. Schnellere Elektronen sind kürzer im Feld und werden weniger abgelenkt."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Plattenkondensator: Ablenkung von Elektronen",
+       "pfad": "simulationen/physik/plattenkondensator/index.html",
+       "auftraege": [
+        "Lass den Strahl laufen und beschreibe die Form der Bahnkurve im Feld.",
+        "Verdopple $U_a$ und vergleiche die abgelesene Ablenkung mit deiner Vorhersage.",
+        "Erhöhe $U_0$ (also $v_0$) und beobachte, wie sich die Ablenkung ändert – passt das zu $y\\sim 1/v_0^2$?",
+        "Lies einen Messwert ab und prüfe ihn mit $y=\\frac{eE}{2mv_0^2}x^2$ nach."
+       ]
+      }
+     ],
+     "interaktiv": {
+      "id": "wurfparabel",
+      "titel": "Elektron im Querfeld",
+      "params": {
+       "v0init": 12,
+       "alphainit": 0,
+       "g": 9.81,
+       "vmax": 25
+      }
+     },
+     "begriffe": [
+      {
+       "wort": "homogenes Feld",
+       "lektion": "l3"
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-106"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-009"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-012"
+       ]
+      }
+     ],
+     "partner": "Vergleicht eure Messwerte aus der Simulation – stimmen die abgelesenen Ablenkungen überein? Woher könnten kleine Unterschiede kommen?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zum einfliegenden Elektron: Begründe in zwei Sätzen, warum seine Bahn im Feld eine Parabel ist (nicht eine schräge Gerade). Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-010"
+       ]
+      }
+     ],
+     "transfer": "Nenne einen technischen Einsatz, bei dem Elektronen im elektrischen Querfeld abgelenkt werden."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Vertiefung und Klassenarbeitsvorbereitung:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst, warum ein Elektron im transversalen Feld eine Parabelbahn durchläuft (gleichförmige Längs-, beschleunigte Querbewegung)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du liest Messwerte aus der Simulation ab und vergleichst die Ablenkung mit der Theorie."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du beschreibst die Bewegung als Überlagerung zweier unabhängiger Teilbewegungen."
+    }
+   ]
+  },
+  {
+   "id": "l5b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Elektrische Felder",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-elektrische-felder",
+   "themaPfad": "physik/qualifikationsphase/elektrische-felder/",
+   "ziele": [
+    "Ich kann sicher mit Feldstärke, Kraft, Spannung und Plattenabstand im Kondensator rechnen.",
+    "Ich kann Kapazität, gespeicherte Ladung und Energie des Kondensators auf Anwendungen anwenden."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zum Plattenkondensator – danach mischst und vertiefst du das ganze Thema.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-201"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Eine Klausuraufgabe nennt drei Größen – etwa Spannung, Plattenabstand und eine Ladung – und fragt nach einer vierten. Drei Schülerinnen rechnen los, jede mit einer anderen Formel. Am Ende kommen drei verschiedene Ergebnisse heraus.</p>",
+      "figur": "<svg viewBox=\"0 0 300 182\" xmlns=\"http://www.w3.org/2000/svg\"><line class=\"achse\" x1=\"55\" y1=\"25\" x2=\"55\" y2=\"150\" style=\"stroke-width:4\"/><line class=\"achse\" x1=\"245\" y1=\"25\" x2=\"245\" y2=\"150\" style=\"stroke-width:4\"/><text x=\"42.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"43.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"71.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><text x=\"42.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+</text><text x=\"258.0\" y=\"127.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">–</text><line class=\"gerade-a\" x1=\"59\" y1=\"48\" x2=\"241\" y2=\"48\"/><polygon points=\"159,48 149,44 149,52\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"75\" x2=\"241\" y2=\"75\"/><polygon points=\"159,75 149,71 149,79\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"100\" x2=\"241\" y2=\"100\"/><polygon points=\"159,100 149,96 149,104\" style=\"fill:var(--physik)\"/><line class=\"gerade-a\" x1=\"59\" y1=\"127\" x2=\"241\" y2=\"127\"/><polygon points=\"159,127 149,123 149,131\" style=\"fill:var(--physik)\"/><circle cx=\"150\" cy=\"88\" r=\"8\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"92.0\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:11px;font-weight:bold\">+q</text><line x1=\"160.0\" y1=\"88.0\" x2=\"194.0\" y2=\"88.0\" style=\"stroke:var(--ok);stroke-width:2.4\"/><polygon points=\"202.0,88.0 194.0,92.4 194.0,83.6\" style=\"fill:var(--ok)\"/><text x=\"184.0\" y=\"79.0\" text-anchor=\"middle\" style=\"fill:var(--ok);font-family:var(--schrift);font-size:13px;font-weight:normal\">F</text><text x=\"55.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">+ Platte</text><text x=\"245.0\" y=\"168.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:13px;font-weight:normal\">– Platte</text></svg>",
+      "figurAlt": "Plattenkondensator mit Probeladung und Kraftpfeil – das Standardbild für alle Kondensatoraufgaben.",
+      "vorhersage": "Was hilft am meisten, um nicht die falsche Formel zu wählen – schneller rechnen, mehr Formeln auswendig können oder zuerst klären, was gesucht ist?",
+      "optionen": [
+       "Schneller rechnen",
+       "Mehr Formeln auswendig",
+       "Zuerst Gegeben/Gesucht klären und dann die passende Formel wählen"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 12,
+     "schritte": [
+      {
+       "titel": "Welche Formel wann?",
+       "kern": "Drei Werkzeuge decken fast alle Aufgaben ab: <strong>Feld im Kondensator</strong> $E=\\frac{U}{d}$, <strong>Kraft auf eine Ladung</strong> $F=qE$ und <strong>Energie/Geschwindigkeit</strong> $qU=\\frac{1}{2}mv^2$.",
+       "details": "<p>Frage dich zuerst: Wird etwas <em>beschleunigt</em> (dann Energieansatz) oder geht es um <em>Feldstärke/Kraft</em>? Die Kapazität $C=\\varepsilon_0\\frac{A}{d}$ kommt nur ins Spiel, wenn nach gespeicherter Ladung $Q=CU$ oder Energie $E=\\frac{1}{2}CU^2$ gefragt ist.</p>",
+       "minicheck": {
+        "frage": "Eine Aufgabe fragt nach der Endgeschwindigkeit eines Elektrons. Welcher Ansatz?",
+        "antwort": "Der Energieansatz $qU=\\frac{1}{2}mv^2$, aufgelöst zu $v=\\sqrt{2qU/m}$."
+       }
+      },
+      {
+       "titel": "Einheiten im Blick behalten",
+       "kern": "Rechne konsequent in SI-Einheiten: Abstände in <strong>Metern</strong>, Spannungen in Volt, Ladungen in Coulomb. Dann kommt $E$ in $\\text{V/m}$, $F$ in Newton, $W$ in Joule heraus.",
+       "details": "<p>Ein häufiger Fehler ist, den Plattenabstand in Zentimetern stehen zu lassen – dann ist die Feldstärke um den Faktor 100 falsch.</p>",
+       "minicheck": {
+        "frage": "Du hast $d=2{,}5\\,\\text{cm}$. Womit rechnest du in $E=U/d$?",
+        "antwort": "Mit $d=0{,}025\\,\\text{m}$, sonst ist die Feldstärke um den Faktor 100 falsch."
+       }
+      }
+     ],
+     "stolperstein": "Nicht zwei Größen verwechseln, die beide den Plattenabstand enthalten: $E=\\frac{U}{d}$ (Feldstärke) und $C=\\varepsilon_0\\frac{A}{d}$ (Kapazität) beschreiben Verschiedenes. Vor dem Rechnen klären, welche Größe wirklich gesucht ist.",
+     "selbsterklaerung": "Erkläre in einem Satz, woran du erkennst, ob eine Aufgabe den Energieansatz ($qU=\\frac{1}{2}mv^2$) oder die Feldformel ($E=U/d$) verlangt.",
+     "merksatz": "Drei Werkzeuge für das Kondensatorkapitel: $E=\\frac{U}{d}$ (Feld), $F=qE$ (Kraft), $qU=\\frac{1}{2}mv^2$ (Energie/Geschwindigkeit). Für Speicheraufgaben zusätzlich $C=\\varepsilon_0\\frac{A}{d}$, $Q=CU$, $E=\\frac{1}{2}CU^2$. Immer in SI-Einheiten rechnen – Abstände in Metern.",
+     "selbstcheck": [
+      {
+       "frage": "Welcher Ansatz passt zu 'Feldstärke aus Spannung und Abstand'?",
+       "antwort": "$E=\\frac{U}{d}$."
+      },
+      {
+       "frage": "Welcher Ansatz passt zu 'Geschwindigkeit eines beschleunigten Elektrons'?",
+       "antwort": "$qU=\\frac{1}{2}mv^2$, also $v=\\sqrt{2qU/m}$."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Lösungsweg planen statt drauflosrechnen",
+       "material": "Nur Stift und Papier – ein kurzes Strategie-Training vor den Aufgaben.",
+       "auftraege": [
+        "Notiere zu einer selbst gewählten Aufgabe zuerst Gegeben/Gesucht.",
+        "Wähle die passende Formel und stelle sie nach der gesuchten Größe um.",
+        "Prüfe am Ende die Einheit und die Größenordnung des Ergebnisses."
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-202",
+        "ph-qp-ef-203",
+        "ph-qp-ef-304"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-204",
+        "ph-qp-ef-205",
+        "ph-qp-ef-206",
+        "ph-qp-ef-303"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig an einem selbst gewählten Beispiel den Unterschied zwischen der Feldstärke $E=U/d$ und der Kapazität $C=\\varepsilon_0\\cdot A/d$ – beide enthalten den Plattenabstand, beschreiben aber Verschiedenes."
+    },
+    "sichern": {
+     "zeit": 15,
+     "rueckbezug": "Zurück zu den drei Schülerinnen mit den drei Ergebnissen: Beschreibe in zwei Sätzen den ersten Schritt, mit dem man die richtige Formel sicher findet (Gegeben/Gesucht klären). Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-elektrische-felder",
+       "ids": [
+        "ph-qp-ef-208"
+       ]
+      }
+     ],
+     "transfer": "Merke dir die Kette für den geladenen Kondensator: aus Fläche und Abstand folgt die Kapazität $C=\\varepsilon_0 A/d$, daraus mit der Spannung die Ladung $Q=C\\cdot U$ und die gespeicherte Energie $E=\\frac{1}{2}CU^2$."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: Plattenkondensator mit Elektronenstrahl",
+       "href": "simulationen/physik/plattenkondensator/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du rechnest sicher mit Feldstärke, Kraft, Spannung und Plattenabstand im Kondensator."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du wählst zu jeder Aufgabe den passenden Ansatz ($E=U/d$, $W=qU$, Parabelbahn) und prüfst Ergebnisse auf Plausibilität."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du dokumentierst Lösungswege nachvollziehbar mit Einheiten."
+    }
+   ]
+  },
+  {
+   "id": "l6",
+   "nr": 1,
+   "titel": "Das Magnetfeld beschreiben",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-beschreiben",
+   "ziele": [
+    "Ich kann Magnetfelder mithilfe von Feldlinien beschreiben und die Regeln benennen.",
+    "Ich kann die magnetische Flussdichte $B$ in Tesla einordnen und typische Größenordnungen vergleichen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 4,
+     "hinweis": "Kurze Auffrischung aus der Mittelstufe: Magnete haben einen Nord- und einen Südpol; gleiche Pole stoßen sich ab, ungleiche ziehen sich an; eine Kompassnadel richtet sich im Feld aus.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-001"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Streut man Eisenspäne auf ein Blatt über einem Stabmagneten und klopft leicht, ordnen sie sich zu einem regelmäßigen Muster. An den Enden des Magneten drängen sich viele Späne, in der Mitte deutlich weniger.</p>",
+      "figur": "<svg viewBox=\"-18.1 0 336.2 198\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"80.0\" y=\"78.0\" width=\"70.0\" height=\"34\" rx=\"3\" style=\"fill:color-mix(in srgb, var(--physik) 22%, transparent);stroke:var(--text-leise);stroke-width:1.4\"/><rect x=\"150\" y=\"78.0\" width=\"70.0\" height=\"34\" rx=\"3\" style=\"fill:color-mix(in srgb, var(--ok) 22%, transparent);stroke:var(--text-leise);stroke-width:1.4\"/><text x=\"115.0\" y=\"100.0\" text-anchor=\"middle\" style=\"fill:var(--text);font-family:var(--schrift);font-size:15px;font-weight:bold\">N</text><text x=\"185.0\" y=\"100.0\" text-anchor=\"middle\" style=\"fill:var(--text);font-family:var(--schrift);font-size:15px;font-weight:bold\">S</text><path d=\"M 80.0 95 C 67.0 69, 233.0 69, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><path d=\"M 80.0 95 C 67.0 121, 233.0 121, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><polygon points=\"156,70 146,65 146,75\" style=\"fill:var(--akzent)\"/><path d=\"M 80.0 95 C 56.0 47, 244.0 47, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><path d=\"M 80.0 95 C 56.0 143, 244.0 143, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><polygon points=\"156,48 146,43 146,53\" style=\"fill:var(--akzent)\"/><path d=\"M 80.0 95 C 45.0 25, 255.0 25, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><path d=\"M 80.0 95 C 45.0 165, 255.0 165, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><polygon points=\"156,26 146,21 146,31\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"186.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11.5px;font-weight:normal\">Feldlinien: außen von N nach S, geschlossen</text></svg>",
+      "figurAlt": "Stabmagnet mit Nordpol links und Südpol rechts; geschlossene Feldlinien laufen außen vom Nord- zum Südpol.",
+      "vorhersage": "Was bedeutet es, dass sich die Späne (und damit die Feldlinien) an den Polen dichter drängen als in der Mitte?",
+      "optionen": [
+       "Dort ist das Feld stärker",
+       "Dort ist das Feld schwächer",
+       "Die Dichte sagt nichts über die Stärke"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#mf-beschreiben",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Magnetfeld und Feldlinien",
+       "kern": "Um Magnete und stromdurchflossene Leiter herrscht ein <strong>Magnetfeld</strong>. Feldlinien zeigen mit ihrer Tangente die Richtung, in die ein kleiner Kompass-Nordpol weist, mit ihrer Dichte die Stärke. Außerhalb eines Magneten verlaufen sie von <strong>Nord nach Süd</strong>.",
+       "details": "<p>Die Spänedichte aus dem Einstieg ist genau die Feldliniendichte: An den Polen liegen die Linien dicht, dort ist das Feld stark; zur Mitte hin laufen sie auseinander, dort ist es schwächer.</p>",
+       "minicheck": {
+        "frage": "In welche Richtung zeigt eine Kompassnadel im Magnetfeld?",
+        "antwort": "Ihr Nordpol zeigt entlang der Feldlinie, also außerhalb des Magneten in Richtung Südpol des Feldes."
+       }
+      },
+      {
+       "titel": "Geschlossene Feldlinien",
+       "kern": "Anders als beim elektrischen Feld haben magnetische Feldlinien <strong>keinen Anfang und kein Ende</strong>: Sie sind stets <strong>geschlossen</strong> und laufen im Magneten von Süd nach Nord weiter.",
+       "details": "<p>Es gibt keine einzelnen magnetischen Ladungen (keine <strong>Monopole</strong>) – deshalb können die Linien nirgends „anfangen\" oder „aufhören\". Zerbricht man einen Magneten, entstehen zwei vollständige Magnete mit je Nord- und Südpol.</p>",
+       "minicheck": {
+        "frage": "Was ist der zentrale Unterschied zwischen elektrischen und magnetischen Feldlinien?",
+        "antwort": "Elektrische Feldlinien beginnen und enden an Ladungen; magnetische sind immer geschlossen, weil es keine magnetischen Einzelpole gibt."
+       }
+      },
+      {
+       "titel": "Flussdichte B in Tesla",
+       "kern": "Die Stärke des Magnetfeldes ist die <strong>magnetische Flussdichte</strong> $B$ mit der Einheit <strong>Tesla</strong> ($\\text{T}$).",
+       "details": "<p>Größenordnungen helfen beim Einordnen: Erdmagnetfeld $\\approx 50\\,\\mu\\text{T}$, Hufeisenmagnet $\\approx 0{,}1\\,\\text{T}$, MRT $\\approx 1{-}3\\,\\text{T}$.</p>",
+       "minicheck": {
+        "frage": "Um welchen Faktor ist ein MRT-Feld ($3\\,\\text{T}$) stärker als das Erdmagnetfeld ($50\\,\\mu\\text{T}$)?",
+        "antwort": "$\\frac{3\\,\\text{T}}{50\\cdot10^{-6}\\,\\text{T}}=6\\cdot10^{4}$ – etwa 60 000-fach stärker."
+       }
+      }
+     ],
+     "stolperstein": "Magnetische Feldlinien sind <strong>nicht</strong> wie elektrische: Sie beginnen und enden nicht an „Polen\", sondern sind geschlossen. Ein magnetischer Monopol (ein einzelner Nord- oder Südpol) existiert nicht.",
+     "darstellungen": {
+      "titel": "Das Stabmagnetfeld – in mehreren Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Eisenspäne über einem Stabmagneten bilden Bögen von Pol zu Pol, dicht an den Enden."
+       },
+       {
+        "art": "Feldlinienbild",
+        "figur": "<svg viewBox=\"-18.1 0 336.2 198\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"80.0\" y=\"78.0\" width=\"70.0\" height=\"34\" rx=\"3\" style=\"fill:color-mix(in srgb, var(--physik) 22%, transparent);stroke:var(--text-leise);stroke-width:1.4\"/><rect x=\"150\" y=\"78.0\" width=\"70.0\" height=\"34\" rx=\"3\" style=\"fill:color-mix(in srgb, var(--ok) 22%, transparent);stroke:var(--text-leise);stroke-width:1.4\"/><text x=\"115.0\" y=\"100.0\" text-anchor=\"middle\" style=\"fill:var(--text);font-family:var(--schrift);font-size:15px;font-weight:bold\">N</text><text x=\"185.0\" y=\"100.0\" text-anchor=\"middle\" style=\"fill:var(--text);font-family:var(--schrift);font-size:15px;font-weight:bold\">S</text><path d=\"M 80.0 95 C 67.0 69, 233.0 69, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><path d=\"M 80.0 95 C 67.0 121, 233.0 121, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><polygon points=\"156,70 146,65 146,75\" style=\"fill:var(--akzent)\"/><path d=\"M 80.0 95 C 56.0 47, 244.0 47, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><path d=\"M 80.0 95 C 56.0 143, 244.0 143, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><polygon points=\"156,48 146,43 146,53\" style=\"fill:var(--akzent)\"/><path d=\"M 80.0 95 C 45.0 25, 255.0 25, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><path d=\"M 80.0 95 C 45.0 165, 255.0 165, 220.0 95\" style=\"fill:none;stroke:var(--akzent);stroke-width:1.8\"/><polygon points=\"156,26 146,21 146,31\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"186.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11.5px;font-weight:normal\">Feldlinien: außen von N nach S, geschlossen</text></svg>",
+        "figurAlt": "Geschlossene Feldlinien außen von Nord nach Süd um einen Stabmagneten."
+       },
+       {
+        "art": "Regel",
+        "text": "Außen von N nach S, geschlossen, Dichte zeigt die Stärke (in Tesla)."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum eine magnetische Feldlinie weder Anfang noch Ende hat.",
+     "merksatz": "Magnetfelder werden durch <strong>geschlossene Feldlinien</strong> dargestellt (außen von Nord nach Süd); es gibt keine magnetischen Monopole. Die Stärke ist die <strong>Flussdichte</strong> $B$ in <strong>Tesla</strong> – vom Erdfeld ($50\\,\\mu\\text{T}$) bis zum MRT ($\\sim 3\\,\\text{T}$).",
+     "selbstcheck": [
+      {
+       "frage": "Warum sind magnetische Feldlinien immer geschlossen?",
+       "antwort": "Weil es keine magnetischen Monopole gibt, an denen sie beginnen oder enden könnten. Sie laufen durch den Magneten hindurch weiter."
+      },
+      {
+       "frage": "Nenne die Einheit der Flussdichte und eine typische Größenordnung.",
+       "antwort": "Tesla ($\\text{T}$). Typisch: Erdmagnetfeld $\\approx 50\\,\\mu\\text{T}$, ein starker Permanentmagnet $\\approx 0{,}1{-}1\\,\\text{T}$."
+      },
+      {
+       "frage": "Wie liest du die Feldstärke aus einem Feldlinienbild ab?",
+       "antwort": "An der Dichte der Linien: Wo sie dicht beieinander liegen (z. B. an den Polen), ist die Flussdichte groß."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Magnetfeld sichtbar machen",
+       "material": "Stabmagnet, Blatt Papier, Eisenspäne und eine kleine Kompassnadel – als Real- oder Gedankenexperiment.",
+       "auftraege": [
+        "Streue die Eisenspäne über den Magneten und beschreibe, wo das Muster am dichtesten ist.",
+        "Lege die Kompassnadel an verschiedene Stellen und prüfe, dass ihr Nordpol außen von N nach S zeigt.",
+        "Begründe, warum die Feldlinien geschlossen sein müssen (kein Anfang/Ende sichtbar)."
+       ]
+      }
+     ],
+     "begriffe": [
+      {
+       "wort": "Feldbegriff",
+       "lektion": "l1"
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-101"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-112"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-113"
+       ]
+      }
+     ],
+     "partner": "Erkläre deiner Sitznachbarin in einem Satz: Warum hat eine magnetische Feldlinie weder Anfang noch Ende?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zu den Eisenspänen: Begründe in einem Satz, warum sie sich an den Polen dichter drängen als in der Mitte. Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-114"
+       ]
+      }
+     ],
+     "transfer": "Ein Schulhufeisenmagnet hat $B\\approx 0{,}1\\,\\text{T}$. Schätze ab: Wie viele solcher Magnete bräuchtest du, um die Flussdichte eines MRT-Geräts ($3\\,\\text{T}$) zu erreichen?"
+    },
+    "extra": {
+     "zeit": 4,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du beschreibst Magnetfelder mit Feldlinien und benennst die Feldlinienregeln (von Nord nach Süd, geschlossen)."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du ordnest die magnetische Flussdichte $B$ in Tesla ein und vergleichst typische Größenordnungen."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du machst Magnetfelder mit einer Kompassnadel oder Eisenspänen sichtbar und deutest das Muster."
+    }
+   ]
+  },
+  {
+   "id": "l7",
+   "nr": 2,
+   "titel": "Kraft auf stromdurchflossene Leiter",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-leiter",
+   "ziele": [
+    "Ich kann die Kraft $F = B \\cdot I \\cdot L$ auf einen Leiter berechnen.",
+    "Ich kann die Dreifingerregel anwenden und die Kraftrichtung bestimmen."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 6: Magnetische Feldlinien sind geschlossen, die Flussdichte $B$ misst man in Tesla.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-003"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Ein gerader Draht hängt locker zwischen den Polen eines Hufeisenmagneten – senkrecht zu den Feldlinien. Schaltet man einen Strom durch den Draht, beginnt er sich zu bewegen. Genau dieser Effekt treibt jeden Elektromotor an.</p>",
+      "figur": "<svg viewBox=\"0 -6 300 176\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"60.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"60.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"60.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"60.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"98.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"98.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"98.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"98.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"136.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"136.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"136.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"136.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"174.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"174.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"174.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"174.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"212.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"212.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"212.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"212.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><line x1=\"150\" y1=\"22\" x2=\"150\" y2=\"158\" style=\"stroke:var(--physik);stroke-width:4\"/><line x1=\"150.0\" y1=\"60.0\" x2=\"150.0\" y2=\"99.0\" style=\"stroke:var(--mathe);stroke-width:2.6\"/><polygon points=\"150.0,108.0 145.1,99.0 154.9,99.0\" style=\"fill:var(--mathe)\"/><text x=\"164.0\" y=\"90.0\" text-anchor=\"start\" style=\"fill:var(--mathe);font-family:var(--schrift);font-size:12px;font-weight:normal\">v (e⁻)</text><line x1=\"144.0\" y1=\"135.0\" x2=\"101.0\" y2=\"135.0\" style=\"stroke:var(--ok);stroke-width:2.8\"/><polygon points=\"92.0,135.0 101.0,130.1 101.0,139.9\" style=\"fill:var(--ok)\"/><text x=\"116.0\" y=\"128.0\" text-anchor=\"middle\" style=\"fill:var(--ok);font-family:var(--schrift);font-size:13px;font-weight:bold\">F</text><text x=\"150.0\" y=\"12.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11.5px;font-weight:normal\">B in die Ebene (⊗)</text></svg>",
+      "figurAlt": "Senkrechter Leiter in einem Magnetfeld, das in die Ebene zeigt (⊗-Symbole). Die Elektronen bewegen sich nach unten, die Kraft auf den Leiter zeigt nach links.",
+      "vorhersage": "In welche Richtung bewegt sich der Draht – entlang des Feldes, entlang des Stroms oder senkrecht zu beiden?",
+      "optionen": [
+       "Entlang der Feldlinien",
+       "Entlang des Stroms",
+       "Senkrecht zu Feld und Strom"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#mf-leiter",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Kraft auf den Leiter",
+       "kern": "Steht ein stromdurchflossener Leiter <strong>senkrecht</strong> zum Feld, wirkt auf ihn die Kraft $$F=B\\cdot I\\cdot L$$ mit Flussdichte $B$, Stromstärke $I$ und der im Feld liegenden Leiterlänge $L$.",
+       "beispiel": {
+        "aufgabe": "Berechne die Kraft auf einen Leiter mit $L=0{,}10\\,\\text{m}$ und $I=4{,}0\\,\\text{A}$ in einem Feld $B=0{,}25\\,\\text{T}$.",
+        "schritte": [
+         "Ansatz: $F=B\\cdot I\\cdot L$.",
+         "Einsetzen: $F=0{,}25\\,\\text{T}\\cdot 4{,}0\\,\\text{A}\\cdot 0{,}10\\,\\text{m}$.",
+         "Ergebnis: $F=0{,}10\\,\\text{N}$."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Wie groß ist $F$, wenn du die Stromstärke auf $8{,}0\\,\\text{A}$ verdoppelst?",
+         "loesung": "<p>$F=0{,}25\\,\\text{T}\\cdot 8{,}0\\,\\text{A}\\cdot 0{,}10\\,\\text{m}=0{,}20\\,\\text{N}$ – die Kraft verdoppelt sich, weil $F\\sim I$.</p>"
+        }
+       },
+       "minicheck": {
+        "frage": "Du verdoppelst die Stromstärke im Leiter. Wie ändert sich die Kraft?",
+        "antwort": "Sie verdoppelt sich, denn $F=B\\cdot I\\cdot L$ ist proportional zu $I$."
+       }
+      },
+      {
+       "titel": "Richtung mit der Dreifingerregel (linke Hand)",
+       "kern": "Die Kraft steht senkrecht auf Strom und Feld. Mit der <strong>linken Hand</strong> (für die Bewegungsrichtung der Elektronen, also von − nach +): <strong>Daumen = Elektronenbewegung</strong>, Zeigefinger = Feld $B$, Mittelfinger = Kraft $F$.",
+       "details": "<p>Hinweis: Hier wird die <em>physikalische</em> Stromrichtung (Elektronenfluss von − nach +) zugrunde gelegt. Mit der <em>technischen</em> Stromrichtung (von + nach −) gilt dieselbe Regel mit der <strong>rechten</strong> Hand. Beide Wege liefern dieselbe Kraftrichtung – nur die benutzte Hand unterscheidet sich.</p>",
+       "minicheck": {
+        "frage": "Welche drei Größen ordnest du Daumen, Zeigefinger und Mittelfinger zu (linke Hand)?",
+        "antwort": "Daumen = Elektronen-Bewegungsrichtung, Zeigefinger = Magnetfeld $B$, Mittelfinger = Kraft $F$. Alle drei stehen senkrecht zueinander."
+       }
+      },
+      {
+       "titel": "Tesla als Messdefinition",
+       "kern": "Stellt man $B=\\frac{F}{I\\cdot L}$ um, erhält man die <strong>Messvorschrift</strong> für die Flussdichte.",
+       "details": "<p>Ein Feld ist genau $1\\,\\text{T}$ stark, wenn auf einen Leiter von $1\\,\\text{m}$ Länge bei $1\\,\\text{A}$ Stromstärke die Kraft $1\\,\\text{N}$ wirkt: $1\\,\\text{T}=1\\,\\frac{\\text{N}}{\\text{A}\\cdot\\text{m}}$.</p>",
+       "minicheck": {
+        "frage": "Wann ist ein Magnetfeld genau $1\\,\\text{T}$ stark?",
+        "antwort": "Wenn auf $L=1\\,\\text{m}$ Leiterlänge bei $I=1\\,\\text{A}$ die Kraft $F=1\\,\\text{N}$ wirkt: $1\\,\\text{T}=1\\,\\frac{\\text{N}}{\\text{A}\\cdot\\text{m}}$."
+       }
+      }
+     ],
+     "stolperstein": "$F=B\\cdot I\\cdot L$ gilt nur, wenn der Leiter <strong>senkrecht</strong> zum Feld liegt. Liegt er parallel zu den Feldlinien, wirkt <strong>keine</strong> Kraft. Und: Mit der linken Hand zeigt der Daumen die <em>Elektronenrichtung</em> (− nach +), nicht die technische Stromrichtung.",
+     "darstellungen": {
+      "titel": "Kraft auf den Leiter – in mehreren Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Stromdurchflossener Draht senkrecht zum Feld eines Hufeisenmagneten wird seitlich ausgelenkt."
+       },
+       {
+        "art": "Anordnung",
+        "figur": "<svg viewBox=\"0 -6 300 176\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"60.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"60.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"60.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"60.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"98.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"98.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"98.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"98.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"136.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"136.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"136.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"136.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"174.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"174.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"174.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"174.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"212.0\" y=\"40.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"212.0\" y=\"74.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"212.0\" y=\"108.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><text x=\"212.0\" y=\"142.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊗</text><line x1=\"150\" y1=\"22\" x2=\"150\" y2=\"158\" style=\"stroke:var(--physik);stroke-width:4\"/><line x1=\"150.0\" y1=\"60.0\" x2=\"150.0\" y2=\"99.0\" style=\"stroke:var(--mathe);stroke-width:2.6\"/><polygon points=\"150.0,108.0 145.1,99.0 154.9,99.0\" style=\"fill:var(--mathe)\"/><text x=\"164.0\" y=\"90.0\" text-anchor=\"start\" style=\"fill:var(--mathe);font-family:var(--schrift);font-size:12px;font-weight:normal\">v (e⁻)</text><line x1=\"144.0\" y1=\"135.0\" x2=\"101.0\" y2=\"135.0\" style=\"stroke:var(--ok);stroke-width:2.8\"/><polygon points=\"92.0,135.0 101.0,130.1 101.0,139.9\" style=\"fill:var(--ok)\"/><text x=\"116.0\" y=\"128.0\" text-anchor=\"middle\" style=\"fill:var(--ok);font-family:var(--schrift);font-size:13px;font-weight:bold\">F</text><text x=\"150.0\" y=\"12.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11.5px;font-weight:normal\">B in die Ebene (⊗)</text></svg>",
+        "figurAlt": "Leiter senkrecht im Feld (⊗); Elektronen nach unten, Kraft nach links."
+       },
+       {
+        "art": "Gleichung",
+        "text": "$F=B\\cdot I\\cdot L$, Richtung über die Dreifingerregel der linken Hand."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum auf einen Leiter, der parallel zu den Feldlinien liegt, keine Kraft wirkt.",
+     "merksatz": "Auf einen senkrecht zum Feld liegenden, stromdurchflossenen Leiter wirkt $F=B\\cdot I\\cdot L$. Die Richtung folgt aus der <strong>Dreifingerregel der linken Hand</strong> (Daumen = Elektronenrichtung − nach +). Umgestellt ist $B=\\frac{F}{IL}$ die Messdefinition von Tesla.",
+     "selbstcheck": [
+      {
+       "frage": "Berechne die Kraft auf einen Leiter mit $L=0{,}10\\,\\text{m}$, $I=4{,}0\\,\\text{A}$ in $B=0{,}25\\,\\text{T}$.",
+       "antwort": "$F=B\\cdot I\\cdot L=0{,}25\\,\\text{T}\\cdot4{,}0\\,\\text{A}\\cdot0{,}10\\,\\text{m}=0{,}10\\,\\text{N}$."
+      },
+      {
+       "frage": "Was passiert mit der Kraftrichtung, wenn du die Stromrichtung umkehrst?",
+       "antwort": "Die Kraft kehrt sich ebenfalls um, weil sie von der Stromrichtung abhängt."
+      },
+      {
+       "frage": "Warum verschwindet die Kraft, wenn der Leiter parallel zum Feld liegt?",
+       "antwort": "$F=BIL$ gilt für einen Leiter senkrecht zum Feld. Parallel gibt es keine Querkomponente – die Kraft wird null."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Leiterschaukel im Hufeisenmagnet",
+       "material": "Hufeisenmagnet, eine als Schaukel aufgehängte Leiterstange, regelbare Stromquelle, Amperemeter – als Real- oder Gedankenexperiment.",
+       "auftraege": [
+        "Schalte den Strom ein und beobachte die Auslenkung – stimmt sie mit der Dreifingerregel überein?",
+        "Polung des Stroms umkehren: Wie ändert sich die Kraftrichtung?",
+        "Erhöhe die Stromstärke und beschreibe, wie sich die Auslenkung (die Kraft) ändert."
+       ]
+      }
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Kraft und Strom",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "B·L",
+         "min": 0.05,
+         "max": 1,
+         "step": 0.05,
+         "init": 0.3
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        10
+       ],
+       "achsen": {
+        "x": "I in A",
+        "y": "F in N"
+       },
+       "formel": "F = (B · L) · I"
+      }
+     },
+     "begriffe": [
+      {
+       "wort": "Magnetfeld",
+       "lektion": "l6"
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-103"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-104"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-004"
+       ]
+      }
+     ],
+     "partner": "Gebt euch gegenseitig eine Aufgabe: Einer nennt $B$, $I$ und $L$ – der andere berechnet $F$ und zeigt mit der Dreifingerregel der linken Hand die Richtung."
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zum bewegten Draht im Hufeisenmagnet: Begründe mit der Dreifingerregel, warum er sich senkrecht zu Feld und Strom bewegt. Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-005"
+       ]
+      }
+     ],
+     "transfer": "Auf welchem Prinzip beruht ein Elektromotor? Welche Rolle spielen $F=B\\cdot I\\cdot L$ und die Dreifingerregel dabei?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die Kraft auf einen stromdurchflossenen Leiter mit $F=B\\cdot I\\cdot L$ (Leiter senkrecht zum Feld)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du bestimmst die Kraftrichtung mit der Dreifingerregel und deutest die Definition von Tesla als Messvorschrift."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du gibst Richtung und Betrag der Kraft begründet an und beachtest die technische Stromrichtung."
+    }
+   ]
+  },
+  {
+   "id": "l8",
+   "nr": 3,
+   "titel": "Lorentzkraft auf bewegte Ladungen",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-lorentz",
+   "ziele": [
+    "Ich kann die Lorentzkraft mit $F_L = q \\cdot v \\cdot B$ berechnen.",
+    "Ich kann erklären, warum die Lorentzkraft keine Arbeit verrichtet."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 7: Auf einen Leiter senkrecht zum Feld wirkt $F=B\\cdot I\\cdot L$ – und was passiert, wenn der Leiter parallel zu den Feldlinien liegt?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-002"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Ein Strom ist nichts anderes als bewegte Ladungen. Im stromdurchflossenen Leiter erfahren diese Ladungen im Magnetfeld eine Kraft – die sich als Kraft auf den ganzen Draht zeigt. Nun fliegt ein einzelnes Elektron <strong>frei</strong> durch ein Magnetfeld, ganz ohne Draht.</p>",
+      "figur": "<svg viewBox=\"0 0 300 168\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"45.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"45.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"45.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"45.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"85.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"85.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"85.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"85.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"125.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"125.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"125.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"125.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"165.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"165.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"165.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"165.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"205.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"205.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"205.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"205.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"245.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"245.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"245.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"245.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><circle cx=\"120\" cy=\"95\" r=\"9\" style=\"fill:var(--akzent)\"/><text x=\"120.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:13px;font-weight:bold\">+</text><line x1=\"131.0\" y1=\"95.0\" x2=\"173.0\" y2=\"95.0\" style=\"stroke:var(--mathe);stroke-width:2.6\"/><polygon points=\"182.0,95.0 173.0,100.0 173.0,90.0\" style=\"fill:var(--mathe)\"/><text x=\"158.0\" y=\"111.0\" text-anchor=\"middle\" style=\"fill:var(--mathe);font-family:var(--schrift);font-size:13px;font-weight:normal\">v</text><line x1=\"120.0\" y1=\"84.0\" x2=\"120.0\" y2=\"46.0\" style=\"stroke:var(--ok);stroke-width:2.8\"/><polygon points=\"120.0,37.0 125.0,46.0 115.0,46.0\" style=\"fill:var(--ok)\"/><text x=\"132.0\" y=\"55.0\" text-anchor=\"start\" style=\"fill:var(--ok);font-family:var(--schrift);font-size:13px;font-weight:bold\">F</text><text x=\"150.0\" y=\"156.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11.5px;font-weight:normal\">B aus der Ebene (⊙)</text></svg>",
+      "figurAlt": "Eine positive Ladung bewegt sich nach rechts durch ein Magnetfeld, das aus der Ebene herauszeigt (⊙). Die Kraft auf sie zeigt nach oben.",
+      "vorhersage": "Wirkt auf das frei fliegende Elektron im Magnetfeld eine Kraft – und wenn ja, wovon hängt sie ab?",
+      "optionen": [
+       "Nein, ohne Draht keine Kraft",
+       "Ja, sie hängt von der Geschwindigkeit ab",
+       "Ja, aber nur wenn das Elektron ruht"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#mf-lorentz",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Von F=BIL zu F=qvB",
+       "kern": "Überträgt man die Leiterkraft auf ein einzelnes Teilchen, ergibt sich die <strong>Lorentzkraft</strong> $$F_L=q\\cdot v\\cdot B$$ (Geschwindigkeit $v$ senkrecht zum Feld $B$). Sie wirkt auf jede bewegte Ladung im Magnetfeld.",
+       "details": "<p>Im Leiter ist $I\\cdot L$ gerade die Wirkung aller bewegten Ladungen zusammen; pro Teilchen bleibt $q\\cdot v\\cdot B$. Das beantwortet den Einstieg: Auch das freie Elektron spürt eine Kraft – solange es sich bewegt.</p>",
+       "minicheck": {
+        "frage": "Wirkt die Lorentzkraft auch auf eine ruhende Ladung?",
+        "antwort": "Nein. $F_L=qvB$ ist proportional zu $v$. Eine ruhende Ladung ($v=0$) erfährt keine Lorentzkraft."
+       }
+      },
+      {
+       "titel": "Immer senkrecht zur Geschwindigkeit",
+       "kern": "Die Lorentzkraft steht stets <strong>senkrecht</strong> auf $v$ und auf $B$. Sie ändert deshalb nur die <strong>Richtung</strong> der Bewegung, nicht den Betrag der Geschwindigkeit. Die Richtung findet man mit der Dreifingerregel der linken Hand (Daumen = Elektronenbewegung, − nach +).",
+       "details": "<p>Eine Kraft senkrecht zur Bewegung lenkt nur ab, sie beschleunigt nicht in Bewegungsrichtung – wie eine Schnur, die einen Stein im Kreis hält. Für die technische Stromrichtung (+ nach −) gilt wieder dieselbe Regel mit der rechten Hand.</p>",
+       "minicheck": {
+        "frage": "Warum ändert die Lorentzkraft nicht den Betrag der Geschwindigkeit?",
+        "antwort": "Weil sie immer senkrecht zur Geschwindigkeit steht. Eine Kraft senkrecht zur Bewegung lenkt nur ab."
+       }
+      },
+      {
+       "titel": "Keine Arbeit",
+       "kern": "Da die Kraft senkrecht zur Bewegung wirkt, ist die verrichtete Arbeit $W=F\\cdot s\\cdot\\cos 90^\\circ=0$. Die Lorentzkraft <strong>verrichtet keine Arbeit</strong> und ändert die kinetische Energie nicht.",
+       "details": "<p>Ein Magnetfeld kann ein Teilchen also auf eine gekrümmte Bahn zwingen, es aber nicht schneller machen. Das ist eine zentrale Eigenschaft, die du in der nächsten Lektion bei der Kreisbahn brauchst.</p>",
+       "minicheck": {
+        "frage": "Kann ein Magnetfeld ein Elektron schneller machen?",
+        "antwort": "Nein. Die Lorentzkraft verrichtet keine Arbeit (sie steht senkrecht zur Bewegung). Das Feld ändert nur die Richtung."
+       }
+      }
+     ],
+     "stolperstein": "<p><strong>Häufiger Irrtum:</strong> Die Lorentzkraft sei eine Kraft wie jede andere und mache ein geladenes Teilchen schneller – „eine Kraft beschleunigt eben“. <strong>Warum das naheliegt:</strong> Aus der Mechanik gilt: Kraft in Bewegungsrichtung bedeutet mehr Tempo. Dass eine Kraft ein Teilchen <em>nur umlenkt</em>, ohne es schneller zu machen, wirkt zunächst widersprüchlich. <strong>Gegenbeispiel:</strong> Ein Elektron, das senkrecht ins homogene Magnetfeld eintritt, läuft auf einer <em>Kreisbahn</em> – sein Tempo bleibt dabei konstant, nur die Richtung ändert sich ständig. Auf eine <em>ruhende</em> Ladung wirkt überhaupt keine Lorentzkraft. <strong>Richtig ist:</strong> Die Lorentzkraft $F_L=q\\cdot v\\cdot B$ (für $v\\perp B$) steht stets senkrecht zu $v$ <em>und</em> zu $B$. Senkrecht zur Bewegung verrichtet sie keine Arbeit: Sie ändert nur die Richtung (lenkt ab, krümmt zur Kreisbahn), nicht den Betrag der Geschwindigkeit.</p>",
+     "darstellungen": {
+      "titel": "Die Lorentzkraft – in mehreren Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Ein Elektronenstrahl wird quer zu seiner Flugrichtung von einem Magnetfeld abgelenkt."
+       },
+       {
+        "art": "Anordnung",
+        "figur": "<svg viewBox=\"0 0 300 168\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"45.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"45.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"45.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"45.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"85.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"85.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"85.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"85.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"125.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"125.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"125.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"125.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"165.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"165.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"165.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"165.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"205.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"205.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"205.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"205.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"245.0\" y=\"45.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"245.0\" y=\"77.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"245.0\" y=\"109.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><text x=\"245.0\" y=\"141.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:15px;font-weight:normal\">⊙</text><circle cx=\"120\" cy=\"95\" r=\"9\" style=\"fill:var(--akzent)\"/><text x=\"120.0\" y=\"99.0\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:13px;font-weight:bold\">+</text><line x1=\"131.0\" y1=\"95.0\" x2=\"173.0\" y2=\"95.0\" style=\"stroke:var(--mathe);stroke-width:2.6\"/><polygon points=\"182.0,95.0 173.0,100.0 173.0,90.0\" style=\"fill:var(--mathe)\"/><text x=\"158.0\" y=\"111.0\" text-anchor=\"middle\" style=\"fill:var(--mathe);font-family:var(--schrift);font-size:13px;font-weight:normal\">v</text><line x1=\"120.0\" y1=\"84.0\" x2=\"120.0\" y2=\"46.0\" style=\"stroke:var(--ok);stroke-width:2.8\"/><polygon points=\"120.0,37.0 125.0,46.0 115.0,46.0\" style=\"fill:var(--ok)\"/><text x=\"132.0\" y=\"55.0\" text-anchor=\"start\" style=\"fill:var(--ok);font-family:var(--schrift);font-size:13px;font-weight:bold\">F</text><text x=\"150.0\" y=\"156.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11.5px;font-weight:normal\">B aus der Ebene (⊙)</text></svg>",
+        "figurAlt": "Bewegte Ladung im Feld aus der Ebene (⊙); v nach rechts, Kraft nach oben."
+       },
+       {
+        "art": "Gleichung",
+        "text": "$F_L=q\\cdot v\\cdot B$ (für $v\\perp B$), Richtung über die Dreifingerregel."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum ein Magnetfeld ein geladenes Teilchen ablenken, aber nicht beschleunigen kann.",
+     "merksatz": "Auf eine bewegte Ladung wirkt die <strong>Lorentzkraft</strong> $F_L=q\\cdot v\\cdot B$ (für $v\\perp B$). Sie steht stets senkrecht zu $v$ und $B$, <strong>verrichtet keine Arbeit</strong> und ändert nur die Bewegungsrichtung. Richtung: Dreifingerregel der linken Hand (Daumen = Elektronenbewegung).",
+     "selbstcheck": [
+      {
+       "frage": "Wie groß ist die Lorentzkraft auf ein Elektron mit $v=2{,}0\\cdot10^{7}\\,\\frac{\\text{m}}{\\text{s}}$ in $B=0{,}010\\,\\text{T}$?",
+       "antwort": "$F_L=q\\,v\\,B=1{,}6\\cdot10^{-19}\\,\\text{C}\\cdot2{,}0\\cdot10^{7}\\,\\frac{\\text{m}}{\\text{s}}\\cdot0{,}010\\,\\text{T}=3{,}2\\cdot10^{-14}\\,\\text{N}$."
+      },
+      {
+       "frage": "Warum verrichtet die Lorentzkraft keine Arbeit?",
+       "antwort": "Sie steht immer senkrecht zur Geschwindigkeit, also ist $W=F\\,s\\,\\cos 90^\\circ=0$. Die kinetische Energie bleibt konstant."
+      },
+      {
+       "frage": "Wovon hängt der Betrag der Lorentzkraft ab?",
+       "antwort": "Von Ladung $q$, Geschwindigkeit $v$ und Flussdichte $B$: $F_L=qvB$ (für $v\\perp B$). Bei $v=0$ ist sie null."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Elektronenstrahl im Magnetfeld",
+       "material": "Vorstellung einer Elektronenstrahlröhre zwischen den Polen eines Magneten – als Gedankenexperiment; real im Fadenstrahlrohr.",
+       "auftraege": [
+        "Schalte (in Gedanken) das Querfeld ein und beschreibe, wie sich der Strahl krümmt.",
+        "Bestimme mit der Dreifingerregel der linken Hand, in welche Richtung der Strahl abgelenkt wird (negative Elektronenladung beachten).",
+        "Begründe, warum der Leuchtfleck nicht heller/dunkler, sondern nur verschoben erscheint (keine Energieänderung)."
+       ]
+      }
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Lorentzkraft und Tempo",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "q·B",
+         "min": 0.05,
+         "max": 1,
+         "step": 0.05,
+         "init": 0.4
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        10
+       ],
+       "achsen": {
+        "x": "v in Mm/s",
+        "y": "F in fN"
+       },
+       "formel": "F = (q · B) · v"
+      }
+     },
+     "begriffe": [
+      {
+       "wort": "Kraft auf Leiter",
+       "lektion": "l7"
+      },
+      {
+       "wort": "Magnetfeld",
+       "lektion": "l6"
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-105"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-106",
+        "ph-qp-mf-302"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-115"
+       ]
+      },
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-301"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Warum wird ein Elektron, das sich parallel zu den Feldlinien bewegt, von der Lorentzkraft überhaupt nicht abgelenkt?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zum frei fliegenden Elektron: Begründe in zwei Sätzen, dass auf es eine Kraft wirkt (solange es sich bewegt) und dass diese Kraft es nicht schneller macht. Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-116"
+       ]
+      }
+     ],
+     "transfer": "Die Lorentzkraft verrichtet keine Arbeit. Was bedeutet das für die Geschwindigkeit eines Teilchens auf der Kreisbahn – wird es schneller, langsamer oder bleibt $|v|$ konstant?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest die Lorentzkraft auf eine bewegte Ladung mit $F_L=q\\cdot v\\cdot B$ (Bewegung senkrecht zum Feld)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du begründest, warum die Lorentzkraft keine Arbeit verrichtet, und leitest $F_L=qvB$ aus $F=BIL$ her."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du bestimmst die Richtung der Lorentzkraft mit der Dreifingerregel und beachtest das Vorzeichen der Ladung."
+    }
+   ]
+  },
+  {
+   "id": "l9",
+   "nr": 4,
+   "titel": "Die Kreisbahn im Magnetfeld",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-kreisbahn",
+   "ziele": [
+    "Ich kann den Kreisbahnradius mit $r = \\frac{m \\cdot v}{q \\cdot B}$ berechnen.",
+    "Ich kann erklären, warum die Umlaufdauer $T = \\frac{2\\pi m}{qB}$ nicht von der Geschwindigkeit abhängt."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 8: Die Lorentzkraft $F_L=q v B$ steht senkrecht zur Bewegung und verrichtet keine Arbeit.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-005"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Ein Elektron tritt senkrecht zu den Feldlinien in ein ausgedehntes, gleichmäßiges Magnetfeld ein. Die Lorentzkraft steht in jedem Moment senkrecht zur Bewegung und zeigt zur Seite.</p>",
+      "figur": "<svg viewBox=\"-55.8 0 411.6 194\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"40.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"40.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"40.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"40.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><circle cx=\"150\" cy=\"95\" r=\"58\" style=\"fill:none;stroke:var(--akzent);stroke-width:2.4\"/><circle cx=\"150\" cy=\"37\" r=\"6\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"40.5\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:10px;font-weight:bold\">–</text><line x1=\"156.0\" y1=\"37.0\" x2=\"190.0\" y2=\"37.0\" style=\"stroke:var(--mathe);stroke-width:2.4\"/><polygon points=\"198.0,37.0 190.0,41.4 190.0,32.6\" style=\"fill:var(--mathe)\"/><text x=\"180.0\" y=\"29.0\" text-anchor=\"middle\" style=\"fill:var(--mathe);font-family:var(--schrift);font-size:12px;font-weight:normal\">v</text><line x1=\"150.0\" y1=\"45.0\" x2=\"150.0\" y2=\"63.0\" style=\"stroke:var(--ok);stroke-width:2.6\"/><polygon points=\"150.0,71.0 145.6,63.0 154.4,63.0\" style=\"fill:var(--ok)\"/><text x=\"162.0\" y=\"63.0\" text-anchor=\"start\" style=\"fill:var(--ok);font-family:var(--schrift);font-size:12px;font-weight:bold\">F</text><text x=\"150.0\" y=\"182.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11px;font-weight:normal\">Lorentzkraft als Zentripetalkraft, B in die Ebene (⊗)</text></svg>",
+      "figurAlt": "Ein Elektron läuft auf einer Kreisbahn in einem Magnetfeld, das in die Ebene zeigt (⊗). Seine Geschwindigkeit zeigt tangential, die Lorentzkraft zum Kreismittelpunkt.",
+      "vorhersage": "Welche Bahn beschreibt das Elektron, wenn die Kraft immer senkrecht zur Bewegung zeigt – eine Spirale, eine Kreisbahn oder eine immer weitere Kurve?",
+      "optionen": [
+       "Eine Spirale nach außen",
+       "Eine geschlossene Kreisbahn",
+       "Eine immer weiter werdende Kurve"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#mf-kreisbahn",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Lorentzkraft als Zentripetalkraft",
+       "kern": "Weil die Lorentzkraft stets senkrecht zur Bewegung wirkt, zwingt sie das Teilchen auf eine <strong>Kreisbahn</strong>. Sie ist dabei die <strong>Zentripetalkraft</strong>: $$q\\,v\\,B=\\frac{m\\,v^2}{r}.$$",
+       "details": "<p>Das beantwortet die Einstiegsfrage: Da der Betrag von $v$ konstant bleibt (keine Arbeit) und die Kraft immer gleich groß zum Mittelpunkt zeigt, entsteht ein geschlossener Kreis – keine Spirale.</p>",
+       "minicheck": {
+        "frage": "Welche Rolle spielt die Lorentzkraft bei der Kreisbewegung?",
+        "antwort": "Sie ist die Zentripetalkraft: Sie zeigt zum Kreismittelpunkt und hält das Teilchen auf der Bahn, ohne es schneller zu machen."
+       }
+      },
+      {
+       "titel": "Der Radius",
+       "kern": "Löst man $qvB=\\frac{mv^2}{r}$ nach $r$ auf, folgt $$r=\\frac{m\\,v}{q\\,B}.$$ Der Radius wächst mit Geschwindigkeit und Masse, er sinkt mit Ladung und Feldstärke.",
+       "beispiel": {
+        "aufgabe": "Ein Elektron ($m_e=9{,}11\\cdot10^{-31}\\,\\text{kg}$, $e=1{,}6\\cdot10^{-19}\\,\\text{C}$) fliegt mit $v=2{,}0\\cdot10^{7}\\,\\frac{\\text{m}}{\\text{s}}$ senkrecht in ein Feld $B=1{,}0\\,\\text{mT}$. Wie groß ist der Bahnradius?",
+        "schritte": [
+         "Ansatz: $r=\\frac{m_e v}{eB}$.",
+         "Einsetzen: $r=\\frac{9{,}11\\cdot10^{-31}\\,\\text{kg}\\cdot 2{,}0\\cdot10^{7}\\,\\frac{\\text{m}}{\\text{s}}}{1{,}6\\cdot10^{-19}\\,\\text{C}\\cdot 1{,}0\\cdot10^{-3}\\,\\text{T}}$.",
+         "Ergebnis: $r\\approx 0{,}11\\,\\text{m}=11\\,\\text{cm}$."
+        ],
+        "selbst": {
+         "frage": "Jetzt du: Wie ändert sich der Radius, wenn du die Geschwindigkeit verdoppelst?",
+         "loesung": "<p>$r\\sim v$, also verdoppelt sich der Radius auf etwa $22\\,\\text{cm}$.</p>"
+        }
+       },
+       "minicheck": {
+        "frage": "Du verdoppelst die Geschwindigkeit. Wie ändert sich der Radius?",
+        "antwort": "Er verdoppelt sich, denn $r=\\frac{mv}{qB}$ ist proportional zu $v$ (bei festem $B$)."
+       }
+      },
+      {
+       "titel": "Umlaufdauer unabhängig von v",
+       "kern": "Für die Umlaufdauer gilt $T=\\frac{2\\pi r}{v}$. Setzt man $r=\\frac{mv}{qB}$ ein, kürzt sich $v$ heraus: $$T=\\frac{2\\pi m}{q\\,B}.$$ Die Umlaufdauer hängt <strong>nicht</strong> von der Geschwindigkeit ab.",
+       "details": "<p>Schnellere Teilchen laufen größere Kreise, brauchen aber genauso lange pro Umlauf – der größere Weg gleicht die höhere Geschwindigkeit aus. Auf dieser Eigenschaft beruht das Zyklotron.</p>",
+       "minicheck": {
+        "frage": "Zwei Elektronen haben verschiedene Geschwindigkeiten im selben Feld. Wer braucht länger für einen Umlauf?",
+        "antwort": "Beide gleich lange. $T=\\frac{2\\pi m}{qB}$ hängt nicht von $v$ ab."
+       }
+      }
+     ],
+     "stolperstein": "Der Radius hängt von $v$ ab, die Umlaufdauer <strong>nicht</strong>. Das wirkt zuerst widersprüchlich, ist aber kein Fehler: In $T=\\frac{2\\pi r}{v}$ wachsen $r$ und $v$ gemeinsam, sodass sich $v$ herauskürzt.",
+     "darstellungen": {
+      "titel": "Die Kreisbahn – in mehreren Sichtweisen:",
+      "eintraege": [
+       {
+        "art": "Situation",
+        "text": "Elektron tritt senkrecht ins Feld ein und läuft auf einem leuchtenden Kreis."
+       },
+       {
+        "art": "Anordnung",
+        "figur": "<svg viewBox=\"-55.8 0 411.6 194\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"40.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"40.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"40.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"40.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><circle cx=\"150\" cy=\"95\" r=\"58\" style=\"fill:none;stroke:var(--akzent);stroke-width:2.4\"/><circle cx=\"150\" cy=\"37\" r=\"6\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"40.5\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:10px;font-weight:bold\">–</text><line x1=\"156.0\" y1=\"37.0\" x2=\"190.0\" y2=\"37.0\" style=\"stroke:var(--mathe);stroke-width:2.4\"/><polygon points=\"198.0,37.0 190.0,41.4 190.0,32.6\" style=\"fill:var(--mathe)\"/><text x=\"180.0\" y=\"29.0\" text-anchor=\"middle\" style=\"fill:var(--mathe);font-family:var(--schrift);font-size:12px;font-weight:normal\">v</text><line x1=\"150.0\" y1=\"45.0\" x2=\"150.0\" y2=\"63.0\" style=\"stroke:var(--ok);stroke-width:2.6\"/><polygon points=\"150.0,71.0 145.6,63.0 154.4,63.0\" style=\"fill:var(--ok)\"/><text x=\"162.0\" y=\"63.0\" text-anchor=\"start\" style=\"fill:var(--ok);font-family:var(--schrift);font-size:12px;font-weight:bold\">F</text><text x=\"150.0\" y=\"182.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11px;font-weight:normal\">Lorentzkraft als Zentripetalkraft, B in die Ebene (⊗)</text></svg>",
+        "figurAlt": "Kreisbahn im Feld (⊗); v tangential, Lorentzkraft zum Mittelpunkt."
+       },
+       {
+        "art": "Gleichung",
+        "text": "$r=\\frac{mv}{qB}$ (Radius) und $T=\\frac{2\\pi m}{qB}$ (Umlaufdauer)."
+       }
+      ]
+     },
+     "selbsterklaerung": "Erkläre in einem Satz, warum schnellere Teilchen zwar größere Kreise laufen, aber trotzdem gleich lange für einen Umlauf brauchen.",
+     "merksatz": "Im homogenen Magnetfeld ist die Lorentzkraft die Zentripetalkraft: $qvB=\\frac{mv^2}{r}$, also $r=\\frac{m\\,v}{q\\,B}$. Die Umlaufdauer $T=\\frac{2\\pi m}{qB}$ hängt <strong>nicht</strong> von der Geschwindigkeit ab.",
+     "selbstcheck": [
+      {
+       "frage": "Aus welchem Ansatz folgt die Radiusformel?",
+       "antwort": "Aus 'Lorentzkraft = Zentripetalkraft': $qvB=\\frac{mv^2}{r}$. Auflösen nach $r$ ergibt $r=\\frac{mv}{qB}$."
+      },
+      {
+       "frage": "Wie wirkt sich ein stärkeres Magnetfeld auf den Radius aus?",
+       "antwort": "Der Radius wird kleiner: $r\\sim 1/B$. Doppelte Flussdichte ergibt halben Radius."
+      },
+      {
+       "frage": "Warum ist die Umlaufdauer geschwindigkeitsunabhängig?",
+       "antwort": "Weil sich in $T=\\frac{2\\pi r}{v}$ mit $r\\sim v$ die Geschwindigkeit herauskürzt: $T=\\frac{2\\pi m}{qB}$."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "simulation",
+       "titel": "Elektron auf Kreisbahn (Fadenstrahlrohr)",
+       "pfad": "simulationen/physik/teilchen-kreisbahn/index.html",
+       "auftraege": [
+        "Verdopple die Geschwindigkeit und vergleiche den abgelesenen Radius mit deiner Vorhersage.",
+        "Verdopple stattdessen die Flussdichte $B$ und beschreibe, wie sich der Radius ändert.",
+        "Lies einen Radius ab und prüfe ihn rechnerisch mit $r=\\frac{mv}{qB}$ nach.",
+        "Beobachte die Umlaufdauer bei verschiedenen Geschwindigkeiten – bleibt sie wirklich gleich?"
+       ]
+      }
+     ],
+     "interaktiv": {
+      "id": "funktionsplotter",
+      "titel": "Radius und Geschwindigkeit",
+      "params": {
+       "form": "proportional",
+       "regler": [
+        {
+         "sym": "a",
+         "label": "m/(q·B)",
+         "min": 0.5,
+         "max": 5,
+         "step": 0.5,
+         "init": 2
+        }
+       ],
+       "x": [
+        0,
+        10
+       ],
+       "y": [
+        0,
+        50
+       ],
+       "achsen": {
+        "x": "v in Mm/s",
+        "y": "r in cm"
+       },
+       "formel": "r = m/(q · B) · v"
+      }
+     },
+     "begriffe": [
+      {
+       "wort": "Lorentzkraft",
+       "lektion": "l8"
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-107"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-108"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-009",
+        "ph-qp-mf-010"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch: Warum können im Zyklotron immer schneller werdende Teilchen trotzdem mit einem fest getakteten Wechselfeld beschleunigt werden?"
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zum eintretenden Elektron: Begründe in zwei Sätzen, warum es eine geschlossene Kreisbahn (keine Spirale) beschreibt. Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-008"
+       ]
+      }
+     ],
+     "transfer": "Ein Proton kreist im selben Feld wie ein Elektron mit gleicher Geschwindigkeit. Welches hat den größeren Radius – und um welchen Faktor? (Tipp: $m_p/m_e\\approx 1836$.)"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Wenn Zeit bleibt:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest den Kreisbahnradius einer Ladung im Magnetfeld mit $r=\\frac{m\\cdot v}{q\\cdot B}$."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du leitest den Radius aus dem Kräfteansatz $F_L=F_Z$ her und begründest, warum die Umlaufdauer nicht von $v$ abhängt."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du wertest die Kreisbahn in der Simulation aus und vergleichst Messung und Formel."
+    }
+   ]
+  },
+  {
+   "id": "l10",
+   "nr": 5,
+   "titel": "Spezifische Ladung: das Fadenstrahlrohr",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "anker": "#mf-em",
+   "ziele": [
+    "Ich kann erklären, wie das Fadenstrahlrohr $e/m_e$ bestimmt.",
+    "Ich kann die Formel $e/m_e = 2U_0 / (B^2 r^2)$ anwenden und auswerten."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 3,
+     "hinweis": "Wiederholung aus Lektion 9: Der Bahnradius im Magnetfeld ist $r=\\frac{m v}{q B}$.",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-006"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Man möchte die <strong>Masse eines Elektrons</strong> bestimmen – aber ein einzelnes Elektron lässt sich nicht auf eine Waage legen. Im Fadenstrahlrohr werden Elektronen erst durch eine Spannung beschleunigt und dann im Magnetfeld auf einen leuchtenden Kreis gezwungen, dessen Radius man messen kann.</p>",
+      "figur": "<svg viewBox=\"0 0 330 172\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 60 40 Q 40 92 60 144\" style=\"fill:none;stroke:var(--text-leise);stroke-width:1.4;stroke-dasharray:4 3\"/><path d=\"M 280 40 Q 300 92 280 144\" style=\"fill:none;stroke:var(--text-leise);stroke-width:1.4;stroke-dasharray:4 3\"/><rect x=\"78\" y=\"120\" width=\"34\" height=\"20\" rx=\"2\" style=\"fill:color-mix(in srgb,var(--physik) 20%,transparent);stroke:var(--text-leise);stroke-width:1.2\"/><text x=\"95.0\" y=\"134.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:9px;font-weight:normal\">Kanone</text><circle cx=\"170\" cy=\"92\" r=\"46\" style=\"fill:none;stroke:var(--akzent);stroke-width:2.4\"/><line x1=\"112.0\" y1=\"128.0\" x2=\"124.0\" y2=\"106.9\" style=\"stroke:var(--akzent);stroke-width:2.2\"/><polygon points=\"128.0,100.0 127.9,109.1 120.2,104.8\" style=\"fill:var(--akzent)\"/><line x1=\"170\" y1=\"92\" x2=\"216\" y2=\"92\" style=\"stroke:var(--text-leise);stroke-width:1.2;stroke-dasharray:3 2\"/><text x=\"193.0\" y=\"87.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:12px;font-weight:normal\">r</text><circle cx=\"170\" cy=\"92\" r=\"2.5\" style=\"fill:var(--text)\"/><text x=\"170.0\" y=\"30.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:10.5px;font-weight:normal\">Helmholtz-Spulen (Feld B)</text><text x=\"95.0\" y=\"158.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:10px;font-weight:normal\">U₀ beschleunigt</text></svg>",
+      "figurAlt": "Schema des Fadenstrahlrohrs: Elektronenkanone unten links, kreisförmiger Leuchtstrahl mit eingezeichnetem Radius r, Helmholtz-Spulen für das Feld B.",
+      "vorhersage": "Welche Größe muss man am leuchtenden Kreis <strong>messen</strong>, um etwas über das Elektron zu erfahren – und welche stellt man am Gerät selbst ein?",
+      "optionen": [
+       "Man misst die Spannung, stellt den Radius ein",
+       "Man misst den Radius, stellt Spannung und Feld ein",
+       "Alle drei werden gemessen"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 14,
+     "anker": "#mf-em",
+     "erklaerseite": true,
+     "schritte": [
+      {
+       "titel": "Zwei Gleichungen kombinieren",
+       "kern": "Im Fadenstrahlrohr gelten gleichzeitig die Beschleunigung $eU_0=\\frac{1}{2}m_e v^2$ und die Kreisbahn $r=\\frac{m_e v}{eB}$. Eliminiert man die unbekannte Geschwindigkeit $v$, erhält man die <strong>spezifische Ladung</strong> $e/m_e$.",
+       "details": "<p>Die Geschwindigkeit $v$ lässt sich nicht direkt messen – deshalb kombiniert man beide Gleichungen so, dass $v$ verschwindet und nur messbare Größen übrig bleiben.</p>",
+       "minicheck": {
+        "frage": "Welche Größe wird beim Kombinieren der beiden Gleichungen eliminiert?",
+        "antwort": "Die Geschwindigkeit $v$ – sie lässt sich nicht direkt messen und wird herausgekürzt."
+       }
+      },
+      {
+       "titel": "Die Auswerteformel",
+       "kern": "Setzt man die Geschwindigkeit aus der Kreisbahn in den Energieansatz ein, folgt $$\\frac{e}{m_e}=\\frac{2\\,U_0}{B^2\\,r^2}.$$ Alle Größen rechts sind messbar oder einstellbar.",
+       "details": "<p>So ergibt sich $e/m_e\\approx 1{,}76\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$. Kennt man zusätzlich die Ladung $e$ (aus dem Millikan-Versuch), kann man daraus die Masse $m_e$ berechnen – das beantwortet den Einstieg.</p>",
+       "minicheck": {
+        "frage": "Welche Größen brauchst du, um $e/m_e$ zu berechnen?",
+        "antwort": "Die Beschleunigungsspannung $U_0$, die Flussdichte $B$ und den Bahnradius $r$."
+       }
+      },
+      {
+       "titel": "Messen und Einstellen unterscheiden",
+       "kern": "$U_0$ und $B$ (über den Spulenstrom) <strong>stellst du selbst ein</strong>, den <strong>Radius $r$ misst du</strong> am leuchtenden Kreis.",
+       "details": "<p>Das Leuchten entsteht, weil die schnellen Elektronen die wenigen Gasatome im Rohr anregen – so wird die Kreisbahn als leuchtender Faden sichtbar. Das beantwortet die Vorhersage: gemessen wird nur der Radius.</p>",
+       "minicheck": {
+        "frage": "Welche Größe liest du am leuchtenden Strahl ab?",
+        "antwort": "Den Bahnradius $r$ des Kreises. $U_0$ und $B$ werden am Gerät eingestellt."
+       }
+      }
+     ],
+     "stolperstein": "Das Fadenstrahlrohr misst zunächst nur das <strong>Verhältnis</strong> $e/m_e$, nicht $e$ und $m_e$ einzeln. Erst mit der separat bestimmten Elementarladung $e$ (Millikan) lässt sich daraus die Elektronenmasse berechnen.",
+     "selbsterklaerung": "Erkläre in einem Satz, warum man die Geschwindigkeit $v$ der Elektronen aus den beiden Gleichungen herauskürzt, statt sie zu messen.",
+     "merksatz": "Das <strong>Fadenstrahlrohr</strong> kombiniert Beschleunigung ($eU_0=\\frac{1}{2}m_e v^2$) und Kreisbahn ($r=\\frac{m_e v}{eB}$) zu $\\frac{e}{m_e}=\\frac{2U_0}{B^2 r^2}$. Man stellt $U_0$ und $B$ ein und misst den Radius $r$ – Ergebnis: $e/m_e\\approx 1{,}76\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$.",
+     "selbstcheck": [
+      {
+       "frage": "Welche zwei physikalischen Vorgänge werden im Fadenstrahlrohr verknüpft?",
+       "antwort": "Die Beschleunigung der Elektronen durch die Spannung $U_0$ und ihre Ablenkung auf eine Kreisbahn durch das Magnetfeld."
+      },
+      {
+       "frage": "Gib die Auswerteformel an und nenne die Messgrößen.",
+       "antwort": "$\\frac{e}{m_e}=\\frac{2U_0}{B^2 r^2}$. Eingestellt werden $U_0$ und $B$, gemessen wird der Radius $r$."
+      },
+      {
+       "frage": "Warum kann man das Elektron im Rohr überhaupt sehen?",
+       "antwort": "Die schnellen Elektronen regen die wenigen Gasatome im Rohr zum Leuchten an, sodass die Kreisbahn als leuchtender Faden sichtbar wird."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Auswertung im Fadenstrahlrohr",
+       "material": "Vorstellung des Fadenstrahlrohrs (Glaskolben mit Gasrest, Elektronenkanone, Helmholtz-Spulenpaar) und ein Beispiel-Messsatz $U_0$, $B$, $r$ – als Auswertungs-Gedankenexperiment.",
+       "auftraege": [
+        "Überlege, welche zwei Größen du einstellst und welche eine du misst.",
+        "Setze einen Beispiel-Messsatz in $\\frac{e}{m_e}=\\frac{2U_0}{B^2 r^2}$ ein und berechne $e/m_e$.",
+        "Vergleiche dein Ergebnis mit dem Literaturwert $1{,}76\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$ und nenne mögliche Messunsicherheiten."
+       ],
+       "pfad": "experimente/physik/em-bestimmung/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "<p>Bevor wir auswerten, klären wir die Strategie: Im Fadenstrahlrohr durchlaufen Elektronen die Beschleunigungsspannung $U_0$ (Energieansatz $eU_0=\\frac{1}{2}m_e v^2$) und werden danach vom homogenen Magnetfeld $B$ der Helmholtz-Spulen auf eine <strong>Kreisbahn</strong> gezwungen (Lorentzkraft als Zentripetalkraft, $evB=\\frac{m_e v^2}{r}$). Vermutung: Aus den drei <em>messbaren</em> Größen $U_0$, $B$ und Bahnradius $r$ lässt sich die spezifische Ladung allein bestimmen — Geschwindigkeit und Masse fallen heraus. Eliminiert man $v$ aus beiden Gleichungen, erwarten wir $\\dfrac{e}{m_e}=\\dfrac{2U_0}{B^2 r^2}$.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Energieansatz für die Beschleunigung, Lorentzkraft als Zentripetalkraft, Helmholtz-Feld als (nahezu) homogen.</p><p><strong>Angesprochene Kompetenzen:</strong> mathematisieren ($v$ eliminieren), auswerten (Messsatz $\\to e/m_e$), bewerten (Vergleich mit Literaturwert, Messunsicherheiten).</p><p><strong>Erwartung:</strong> Aus $eU_0=\\frac{1}{2} m_e v^2$ und $evB=\\frac{m_e v^2}{r}$ folgt $\\frac{e}{m_e}=\\frac{2U_0}{B^2r^2}$. Ein typischer Satz $U_0=200\\,\\text{V}$, $B=0{,}80\\,\\text{mT}$, $r=4{,}0\\,\\text{cm}$ liefert rund $1{,}6\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$, nahe am Literaturwert $1{,}76\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$.</p><p><strong>Modellgrenzen:</strong> $B$ nur im Zentrum des Spulenpaars homogen; Gasrest für die Leuchtspur stört minimal; Radiusablesung ist die größte Unsicherheitsquelle (geht quadratisch ein). Relativistische Korrekturen sind bei diesen Spannungen vernachlässigbar.</p>",
+     "begriffe": [
+      {
+       "wort": "Kreisbahn",
+       "lektion": "l9"
+      },
+      {
+       "wort": "Lorentzkraft",
+       "lektion": "l8"
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 18,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-109"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-110"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-111"
+       ]
+      }
+     ],
+     "partner": "Diskutiert: Im Fadenstrahlrohr kürzt sich die unbekannte Geschwindigkeit $v$ heraus. Zeigt einander die Herleitung – Schritt für Schritt."
+    },
+    "sichern": {
+     "zeit": 7,
+     "rueckbezug": "Zurück zur Frage nach der Elektronenmasse: Erkläre in zwei Sätzen, warum das Fadenstrahlrohr zunächst nur $e/m_e$ liefert und was zusätzlich nötig ist, um $m_e$ zu erhalten. Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-012"
+       ]
+      }
+     ],
+     "transfer": "Thomson bestimmte 1897 $e/m_e$ und erkannte: Die Kathodenstrahlen bestehen aus winzigen, immer gleichen Teilchen. Was brauchte er zusätzlich, um dann $m_e$ selbst zu berechnen?"
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zur Vertiefung und Klausurvorbereitung:",
+     "links": [
+      {
+       "label": "Tagesmischung Physik",
+       "href": "lernspiele/tagesmischung/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du erklärst, wie das Fadenstrahlrohr die spezifische Ladung $e/m_e$ des Elektrons bestimmt."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du kombinierst Beschleunigung und Kreisbahn zu $\\frac{e}{m_e}=\\frac{2U_0}{B^2 r^2}$ und wertest Messungen aus."
+    },
+    {
+     "bereich": "Bewertung",
+     "text": "Du ordnest das Experiment historisch ein und beurteilst die Bedeutung der spezifischen Ladung."
+    }
+   ]
+  },
+  {
+   "id": "l10b",
+   "nr": 6,
+   "titel": "Üben & Anwenden: Magnetfelder und Lorentzkraft",
+   "dauer": 45,
+   "status": "online",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "themaPfad": "physik/qualifikationsphase/magnetfelder-und-lorentzkraft/",
+   "ziele": [
+    "Ich kann sicher die Kraft auf stromdurchflossene Leiter und die Lorentzkraft auf bewegte Ladungen berechnen.",
+    "Ich kann Kreisbahnradius, Umlaufdauer und Geschwindigkeitsfilter auf Anwendungen geladener Teilchen anwenden."
+   ],
+   "phasen": {
+    "ankommen": {
+     "zeit": 5,
+     "hinweis": "Kurzer Aufwärmer zur Dreifingerregel der linken Hand – danach mischst und vertiefst du das ganze Thema.",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-201"
+       ]
+      }
+     ],
+     "einstieg": {
+      "problem": "<p>Vier Geräte aus diesem Kapitel: ein Elektromotor, ein Fadenstrahlrohr, ein Geschwindigkeitsfilter und ein Massenspektrometer. Jedes nutzt eine Kraft im Magnetfeld – aber nicht jede Aufgabe braucht dieselbe Formel.</p>",
+      "figur": "<svg viewBox=\"-55.8 0 411.6 194\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"40.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"40.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"40.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"40.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"82.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"124.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"166.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"208.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"33.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"73.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"113.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><text x=\"250.0\" y=\"153.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:14px;font-weight:normal\">⊗</text><circle cx=\"150\" cy=\"95\" r=\"58\" style=\"fill:none;stroke:var(--akzent);stroke-width:2.4\"/><circle cx=\"150\" cy=\"37\" r=\"6\" style=\"fill:var(--akzent)\"/><text x=\"150.0\" y=\"40.5\" text-anchor=\"middle\" style=\"fill:#fff;font-family:var(--schrift);font-size:10px;font-weight:bold\">–</text><line x1=\"156.0\" y1=\"37.0\" x2=\"190.0\" y2=\"37.0\" style=\"stroke:var(--mathe);stroke-width:2.4\"/><polygon points=\"198.0,37.0 190.0,41.4 190.0,32.6\" style=\"fill:var(--mathe)\"/><text x=\"180.0\" y=\"29.0\" text-anchor=\"middle\" style=\"fill:var(--mathe);font-family:var(--schrift);font-size:12px;font-weight:normal\">v</text><line x1=\"150.0\" y1=\"45.0\" x2=\"150.0\" y2=\"63.0\" style=\"stroke:var(--ok);stroke-width:2.6\"/><polygon points=\"150.0,71.0 145.6,63.0 154.4,63.0\" style=\"fill:var(--ok)\"/><text x=\"162.0\" y=\"63.0\" text-anchor=\"start\" style=\"fill:var(--ok);font-family:var(--schrift);font-size:12px;font-weight:bold\">F</text><text x=\"150.0\" y=\"182.0\" text-anchor=\"middle\" style=\"fill:var(--text-leise);font-family:var(--schrift);font-size:11px;font-weight:normal\">Lorentzkraft als Zentripetalkraft, B in die Ebene (⊗)</text></svg>",
+      "figurAlt": "Kreisbahn eines geladenen Teilchens im Magnetfeld – das wiederkehrende Bild für Teilchen-im-Feld-Aufgaben.",
+      "vorhersage": "Woran erkennst du am schnellsten, welche Formel eine Aufgabe verlangt – an den gegebenen Zahlen, am gesuchten Gerät oder daran, ob die Bahn gerade oder gekrümmt ist?",
+      "optionen": [
+       "An den Zahlenwerten",
+       "Am Namen des Geräts",
+       "Daran, ob es um Kraft (gerade) oder um eine Kreisbahn (gekrümmt) geht"
+      ]
+     }
+    },
+    "verstehen": {
+     "zeit": 12,
+     "schritte": [
+      {
+       "titel": "Welche Formel wann?",
+       "kern": "Kräfte: $F=B I L$ (Leiter) und $F_L=q v B$ (bewegte Ladung). Kreisbahn: $r=\\frac{mv}{qB}$ und $T=\\frac{2\\pi m}{qB}$.",
+       "details": "<p>Frage zuerst: Geht es um einen <em>Leiter mit Strom</em> oder um ein <em>einzelnes Teilchen</em>? Und ist die Bahn <em>gerade</em> (dann Kraft) oder <em>gekrümmt</em> (dann Radius/Umlaufdauer)? Das beantwortet schon die Einstiegsfrage.</p>",
+       "minicheck": {
+        "frage": "Eine Aufgabe fragt nach dem Bahnradius eines Protons im Magnetfeld. Welcher Ansatz?",
+        "antwort": "$r=\\frac{mv}{qB}$ aus dem Kräfteansatz Lorentzkraft = Zentripetalkraft."
+       }
+      },
+      {
+       "titel": "Der Geschwindigkeitsfilter",
+       "kern": "Im <strong>Geschwindigkeitsfilter</strong> (Wien-Filter) wirken elektrisches und magnetisches Feld gegeneinander. Nur Teilchen, bei denen sich die Kräfte aufheben ($qE=qvB$), fliegen geradeaus durch: $$v=\\frac{E}{B}.$$",
+       "details": "<p>Das filtert eine bestimmte Geschwindigkeit heraus – unabhängig von Ladung und Masse. Im Massenspektrometer schließt sich daran oft eine Kreisbahn ($r=\\frac{mv}{qB}$) an, aus der die Masse folgt.</p>",
+       "minicheck": {
+        "frage": "Welche Bedingung erfüllt ein Teilchen, das den Geschwindigkeitsfilter unabgelenkt durchquert?",
+        "antwort": "Elektrische und magnetische Kraft sind gleich groß: $qE=qvB$, also $v=E/B$."
+       }
+      }
+     ],
+     "stolperstein": "Bei der Kreisbahn wirkt sich die Geschwindigkeit auf den Radius aus ($r\\sim v$), auf die Umlaufdauer aber <strong>nicht</strong> ($T=\\frac{2\\pi m}{qB}$). Diese beiden Formeln nicht verwechseln.",
+     "selbsterklaerung": "Erkläre in einem Satz, wie du entscheidest, ob eine Aufgabe $F=BIL$ (Leiter) oder $F_L=qvB$ (Teilchen) verlangt.",
+     "merksatz": "Werkzeugkasten Magnetfelder: $F=BIL$ (Leiter), $F_L=qvB$ (Teilchen), $r=\\frac{mv}{qB}$ und $T=\\frac{2\\pi m}{qB}$ (Kreisbahn). Im <strong>Geschwindigkeitsfilter</strong> gilt $qE=qvB$, also $v=\\frac{E}{B}$.",
+     "selbstcheck": [
+      {
+       "frage": "Welche Formel verbindet Geschwindigkeit, Feld und Bahnradius eines Teilchens?",
+       "antwort": "$r=\\frac{mv}{qB}$."
+      },
+      {
+       "frage": "Wie bestimmt der Geschwindigkeitsfilter die durchgelassene Geschwindigkeit?",
+       "antwort": "Aus dem Gleichgewicht $qE=qvB$ folgt $v=\\frac{E}{B}$ – unabhängig von Ladung und Masse."
+      }
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Ansatz vor der Rechnung wählen",
+       "material": "Stift und Papier – ein kurzes Strategie-Training für Teilchen-im-Feld-Aufgaben.",
+       "auftraege": [
+        "Ordne einer selbst gewählten Aufgabe einen der vier Ansätze zu (Leiter, Teilchen, Kreisbahn, Filter).",
+        "Stelle die Formel nach der gesuchten Größe um, bevor du Zahlen einsetzt.",
+        "Prüfe Einheit und Größenordnung des Ergebnisses auf Plausibilität."
+       ]
+      }
+     ]
+    },
+    "ueben": {
+     "zeit": 20,
+     "basis": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-202",
+        "ph-qp-mf-203"
+       ]
+      }
+     ],
+     "standard": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-204",
+        "ph-qp-mf-205",
+        "ph-qp-mf-206",
+        "ph-qp-mf-303",
+        "ph-qp-mf-304"
+       ]
+      }
+     ],
+     "plus": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-207"
+       ]
+      }
+     ],
+     "partner": "Erklärt euch gegenseitig, warum sich beim Kreisbahnradius $r=\\frac{m v}{q B}$ die Geschwindigkeit auswirkt, bei der Umlaufdauer $T=\\frac{2\\pi m}{q B}$ aber nicht."
+    },
+    "sichern": {
+     "zeit": 15,
+     "rueckbezug": "Zurück zu den vier Geräten: Ordne jedem (Motor, Fadenstrahlrohr, Filter, Massenspektrometer) seine Leitformel zu und nenne den ersten Entscheidungsschritt (Leiter oder Teilchen, gerade oder gekrümmt). Passt das zu deiner Vermutung vom Anfang?",
+     "aufgaben": [
+      {
+       "quelle": "lernbuero/ph-qp-magnetfelder-und-lorentzkraft",
+       "ids": [
+        "ph-qp-mf-208"
+       ]
+      }
+     ],
+     "transfer": "Merke dir die Brücke vom Leiter zum Teilchen: aus $F=B I L$ wird für einzelne Ladungen die Lorentzkraft $F_L=q v B$; wirkt sie als Zentripetalkraft, ergibt sich die Kreisbahn mit $r=\\frac{m v}{q B}$."
+    },
+    "extra": {
+     "zeit": 5,
+     "text": "Zum Vertiefen:",
+     "links": [
+      {
+       "label": "Simulation: geladenes Teilchen auf der Kreisbahn",
+       "href": "simulationen/physik/teilchen-kreisbahn/index.html"
+      }
+     ]
+    }
+   },
+   "kompetenzen": [
+    {
+     "bereich": "Fachwissen",
+     "text": "Du berechnest sicher die Kraft auf stromdurchflossene Leiter ($F=BIL$) und die Lorentzkraft auf bewegte Ladungen ($F_L=qvB$)."
+    },
+    {
+     "bereich": "Erkenntnisgewinnung",
+     "text": "Du wendest Kreisbahnradius, Umlaufdauer und das Prinzip des Geschwindigkeitsfilters auf Anwendungen geladener Teilchen an."
+    },
+    {
+     "bereich": "Kommunikation",
+     "text": "Du wählst den passenden Ansatz und stellst Lösungswege mit Einheiten nachvollziehbar dar."
+    }
+   ]
+  }
+ ],
+ "bloecke": [
+  {
+   "titel": "Elektrische Felder",
+   "thema": "ph-qp-elektrische-felder",
+   "lektionen": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l5b"
+   ]
+  },
+  {
+   "titel": "Magnetfelder und Lorentzkraft",
+   "thema": "ph-qp-magnetfelder-und-lorentzkraft",
+   "lektionen": [
+    "l6",
+    "l7",
+    "l8",
+    "l9",
+    "l10",
+    "l10b"
+   ]
+  }
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Feldbegriff",
+    "x": 90,
+    "y": 70,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Plattenkondensator",
+    "x": 255,
+    "y": 70,
+    "lektion": "l3"
+   },
+   {
+    "id": "k3",
+    "label": "Beschl. & Ablenkung",
+    "x": 420,
+    "y": 70,
+    "lektion": "l5"
+   },
+   {
+    "id": "k4",
+    "label": "Magnetfeld",
+    "x": 90,
+    "y": 210,
+    "lektion": "l6"
+   },
+   {
+    "id": "k5",
+    "label": "Lorentzkraft",
+    "x": 300,
+    "y": 210,
+    "lektion": "l8"
+   },
+   {
+    "id": "k6",
+    "label": "e/m im Fadenstrahlrohr",
+    "x": 510,
+    "y": 210,
+    "lektion": "l10"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k1",
+    "k4"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k5",
+    "k6"
+   ]
+  ]
+ }
+}

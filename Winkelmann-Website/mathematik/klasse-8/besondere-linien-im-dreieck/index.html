@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Besondere Linien im Dreieck — Klasse 8 · Mathematik — Lernwelt</title>
+<meta name="description" content="Mittelsenkrechte, Winkelhalbierende, Seitenhalbierende und Höhen: die vier besonderen Linien im Dreieck mit Umkreis, Inkreis, Schwerpunkt und Höhenschnittpunkt — mit Konstruktionsanleitungen, Beispielen und Verständnis-Checks.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: Dreiecks-Figuren mit Bildunterschrift + Uebersichtstabelle */
+  .bl-figur { margin: var(--abstand-4) auto; max-width: 480px; }
+  .bl-figur svg { display: block; width: 100%; height: auto; }
+  .bl-figur figcaption { text-align: center; font-size: .9rem; color: var(--text-leise); margin-top: var(--abstand-2); }
+  .bl-tabelle { width: 100%; border-collapse: collapse; margin: var(--abstand-4) 0; font-size: .95rem; display: block; overflow-x: auto; }
+  .bl-tabelle th, .bl-tabelle td { border: 1px solid var(--linie); padding: var(--abstand-2); text-align: left; vertical-align: top; }
+  .bl-tabelle th { background: var(--hauch); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Besondere Linien im Dreieck</h1>
+  <p class="einleitung">Wo bohrst du einen Brunnen, der von drei Höfen gleich weit entfernt ist? Und an welchem Punkt balanciert ein Pappdreieck auf der Bleistiftspitze? Beide Fragen beantworten die <strong>besonderen Linien im Dreieck</strong>: Mittelsenkrechte, Winkelhalbierende, Seitenhalbierende und Höhe. Von jeder Sorte gibt es drei — und jedes Mal schneiden sich alle drei in <strong>einem einzigen Punkt</strong>. Wie man Dreiecke mit Zirkel und Geodreieck zeichnet, kennst du aus <a href="../../klasse-7/dreiecke-und-konstruktionen/index.html">Dreiecke und Konstruktionen (Klasse 7)</a> — hier kommen jetzt die Linien dazu.</p>
+
+  <section aria-labelledby="bl-mittelsenkrechte">
+    <h2 id="bl-mittelsenkrechte">1. Die Mittelsenkrechte</h2>
+    <p>Stell dir die Strecke $\overline{AB}$ vor — etwa die direkte Verbindung zwischen zwei Orten $A$ und $B$. Die <strong>Mittelsenkrechte</strong> ist die Gerade, die genau in der Mitte „Wache steht“. Ihr eigentlicher Trick ist aber ihre <strong>Ortslinien-Eigenschaft</strong>:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Mittelsenkrechte als Ortslinie</span>
+      <p>Die <strong>Mittelsenkrechte</strong> von $\overline{AB}$ steht <strong>senkrecht</strong> auf der Strecke und geht durch deren <strong>Mittelpunkt</strong>. Sie ist die <strong>Ortslinie</strong> aller Punkte, die von $A$ und $B$ <strong>gleich weit entfernt</strong> sind: Jeder Punkt auf ihr hat zu beiden Endpunkten denselben Abstand — und jeder Punkt mit dieser Eigenschaft liegt auf ihr.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">So konstruierst du die Mittelsenkrechte mit dem Zirkel</span>
+      <p>1. Stich in $A$ ein und schlage einen Bogen. Die Zirkelspanne muss <strong>größer als die halbe Streckenlänge</strong> sein.<br>
+      2. Schlage mit <strong>derselben Spanne</strong> einen Bogen um $B$.<br>
+      3. Die beiden Bögen schneiden sich in zwei Punkten — verbinde sie. Fertig!</p>
+      <p>Das klappt ganz ohne Messen: Beide Bogen-Schnittpunkte sind automatisch gleich weit von $A$ und $B$ entfernt, liegen also auf der Mittelsenkrechten.</p>
+    </div>
+    <p>Überall, wo etwas <strong>gleich weit von zwei Orten</strong> liegen soll, ist die Mittelsenkrechte zuständig: Ein Spielplatz, der von zwei Wohnblocks gleich weit entfernt sein soll, muss irgendwo auf der Mittelsenkrechten zwischen ihnen gebaut werden.</p>
+  </section>
+
+  <section aria-labelledby="bl-umkreis">
+    <h2 id="bl-umkreis">2. Der Umkreis</h2>
+    <p>Ein Dreieck hat drei Seiten, also auch drei Mittelsenkrechten — und jetzt passiert etwas Erstaunliches: <strong>Alle drei schneiden sich in einem einzigen Punkt.</strong> Warum? Der Schnittpunkt $M$ der Mittelsenkrechten von $\overline{AB}$ und $\overline{BC}$ ist gleich weit von $A$ und $B$ entfernt <em>und</em> gleich weit von $B$ und $C$. Damit hat er zu allen drei Ecken denselben Abstand — und liegt deshalb automatisch auch auf der dritten Mittelsenkrechten.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Umkreis</span>
+      <p>Die drei Mittelsenkrechten eines Dreiecks schneiden sich im <strong>Umkreismittelpunkt</strong> $M$. Der Kreis um $M$ durch eine Ecke verläuft durch <strong>alle drei Ecken</strong> — das ist der <strong>Umkreis</strong>. Sein Radius ist der Abstand von $M$ zu jeder der drei Ecken.</p>
+    </div>
+    <figure class="bl-figur" id="bl-figur-umkreis">
+      <svg id="bl-svg-umkreis" viewBox="55 60 340 330" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Dreieck A B C mit den drei gestrichelten Mittelsenkrechten der Seiten. Sie schneiden sich in einem gemeinsamen Punkt M im Inneren des Dreiecks. Um M ist der Umkreis gezeichnet, der durch alle drei Ecken verläuft. Die Seitenmitten sind markiert, an der Mitte der Seite AB zeigen ein kleines Quadrat den rechten Winkel und zwei Striche die gleich langen Hälften an.">
+        <!-- Umkreis -->
+        <circle cx="220" cy="225" r="150" fill="none" stroke="var(--mathe)" stroke-width="2.5"/>
+        <!-- Dreieck -->
+        <polygon points="100,315 340,315 130,105" fill="var(--mathe)" fill-opacity="0.06" stroke="var(--text)" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- Mittelsenkrechten (Konstruktionslinien, gestrichelt) -->
+        <g stroke="var(--text-leise)" stroke-width="1.8" stroke-dasharray="7 5" fill="none">
+          <line x1="220" y1="85" x2="220" y2="348"/>
+          <line x1="66" y1="203" x2="304" y2="237"/>
+          <line x1="270" y1="175" x2="160" y2="285"/>
+        </g>
+        <!-- Rechter-Winkel-Marke und gleiche Haelften auf AB -->
+        <path d="M212 315 V307 H220" fill="none" stroke="var(--text-leise)" stroke-width="1.5"/>
+        <circle cx="216" cy="311" r="1.6" fill="var(--text-leise)"/>
+        <g stroke="var(--akzent)" stroke-width="2">
+          <line x1="160" y1="309" x2="160" y2="321"/>
+          <line x1="280" y1="309" x2="280" y2="321"/>
+        </g>
+        <!-- Seitenmitten -->
+        <g fill="var(--text-leise)">
+          <circle cx="220" cy="315" r="3"/>
+          <circle cx="115" cy="210" r="3"/>
+          <circle cx="235" cy="210" r="3"/>
+        </g>
+        <!-- Ecken -->
+        <g fill="var(--text)">
+          <circle cx="100" cy="315" r="3.5"/>
+          <circle cx="340" cy="315" r="3.5"/>
+          <circle cx="130" cy="105" r="3.5"/>
+        </g>
+        <!-- Umkreismittelpunkt -->
+        <circle cx="220" cy="225" r="4.5" fill="var(--mathe)"/>
+        <!-- Beschriftungen -->
+        <g font-size="16" font-weight="600" fill="var(--text)" text-anchor="middle">
+          <text x="85" y="336">A</text>
+          <text x="355" y="336">B</text>
+          <text x="117" y="97">C</text>
+        </g>
+        <text x="235" y="243" font-size="17" font-weight="700" fill="var(--mathe)" text-anchor="middle">M</text>
+        <text x="352" y="100" font-size="14" font-weight="600" fill="var(--mathe)" text-anchor="middle">Umkreis</text>
+        <text x="210" y="150" font-size="12" fill="var(--text-leise)" text-anchor="middle" transform="rotate(-90 210 150)">Mittelsenkrechte von AB</text>
+      </svg>
+      <figcaption>Die drei Mittelsenkrechten (gestrichelt) treffen sich im Umkreismittelpunkt M. Der Umkreis um M verläuft durch alle drei Ecken — M ist von A, B und C gleich weit entfernt.</figcaption>
+    </figure>
+    <p>Wo $M$ liegt, hängt von der Dreiecksart ab:</p>
+    <ul>
+      <li><strong>spitzwinkliges Dreieck:</strong> $M$ liegt <strong>im Inneren</strong>,</li>
+      <li><strong>stumpfwinkliges Dreieck:</strong> $M$ liegt <strong>außerhalb</strong> des Dreiecks,</li>
+      <li><strong>rechtwinkliges Dreieck:</strong> $M$ liegt genau auf der <strong>Mitte der Hypotenuse</strong> — so heißt die längste Seite, die dem rechten Winkel gegenüberliegt. Der Umkreisradius ist dann einfach die halbe Hypotenuse!</li>
+    </ul>
+    <p>Und der Brunnen aus der Einleitung? Die drei Höfe bilden ein Dreieck. Der Umkreismittelpunkt ist von allen drei Ecken gleich weit entfernt — genau dort sollte der Brunnen liegen.</p>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Brunnen soll von drei Höfen gleich weit entfernt sein — welche Linien konstruierst du?</summary>
+      <div class="check-antwort"><p>Die <strong>Mittelsenkrechten</strong> der Verbindungsstrecken zwischen den Höfen (zwei genügen!). Ihr Schnittpunkt ist der <strong>Umkreismittelpunkt</strong> des Hof-Dreiecks — er hat zu allen drei Höfen denselben Abstand. Dort kommt der Brunnen hin.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="bl-inkreis">
+    <h2 id="bl-inkreis">3. Winkelhalbierende und Inkreis</h2>
+    <p>Die <strong>Winkelhalbierende</strong> teilt einen Winkel in zwei gleich große Hälften. Auch sie ist eine Ortslinie — diesmal geht es aber nicht um den Abstand zu Punkten, sondern zu den beiden <strong>Schenkeln</strong> des Winkels:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Winkelhalbierende als Ortslinie</span>
+      <p>Die <strong>Winkelhalbierende</strong> ist die Ortslinie aller Punkte, die von <strong>beiden Schenkeln</strong> des Winkels gleich weit entfernt sind. (Der Abstand eines Punktes zu einer Geraden wird dabei immer <strong>senkrecht</strong> gemessen.)</p>
+    </div>
+    <p>Ein Dreieck hat drei Innenwinkel, also drei Winkelhalbierende — und wieder treffen sich alle drei in einem Punkt $W$. Er ist von allen drei <strong>Seiten</strong> gleich weit entfernt. Deshalb passt um ihn ein Kreis, der alle drei Seiten <strong>von innen berührt</strong>: der <strong>Inkreis</strong> mit dem <strong>Inkreismittelpunkt</strong> $W$.</p>
+    <figure class="bl-figur" id="bl-figur-inkreis">
+      <svg id="bl-svg-inkreis" viewBox="25 35 390 365" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Dreieck A B C mit den drei gestrichelten Winkelhalbierenden. Sie schneiden sich im Punkt W. Um W ist der Inkreis gezeichnet, der alle drei Seiten von innen berührt; die drei Berührpunkte sind markiert. Am Winkel bei A zeigen zwei kleine Bögen mit Strichen die beiden gleich großen Winkelhälften.">
+        <!-- Inkreis -->
+        <circle cx="195" cy="260" r="100" fill="var(--mathe)" fill-opacity="0.06" stroke="var(--mathe)" stroke-width="2.5"/>
+        <!-- Dreieck -->
+        <polygon points="45,360 395,360 170,60" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- Winkelhalbierende (Konstruktionslinien, gestrichelt) -->
+        <g stroke="var(--text-leise)" stroke-width="1.8" stroke-dasharray="7 5" fill="none">
+          <line x1="45" y1="360" x2="278.3" y2="204.4"/>
+          <line x1="395" y1="360" x2="105.3" y2="215.2"/>
+          <line x1="170" y1="60" x2="207.5" y2="360"/>
+        </g>
+        <!-- Gleiche Winkelhaelften bei A -->
+        <g fill="none" stroke="var(--akzent)" stroke-width="2">
+          <path d="M79 360 A34 34 0 0 0 73.3 341.1"/>
+          <path d="M73.3 341.1 A34 34 0 0 0 58.1 328.6"/>
+          <line x1="71.8" y1="351.9" x2="83.3" y2="348.4"/>
+          <line x1="62.8" y1="338.4" x2="70.4" y2="329.1"/>
+        </g>
+        <!-- Beruehrpunkte des Inkreises -->
+        <g fill="var(--mathe)">
+          <circle cx="195" cy="360" r="3.2"/>
+          <circle cx="102.7" cy="221.5" r="3.2"/>
+          <circle cx="275" cy="200" r="3.2"/>
+        </g>
+        <!-- Ecken -->
+        <g fill="var(--text)">
+          <circle cx="45" cy="360" r="3.5"/>
+          <circle cx="395" cy="360" r="3.5"/>
+          <circle cx="170" cy="60" r="3.5"/>
+        </g>
+        <!-- Inkreismittelpunkt -->
+        <circle cx="195" cy="260" r="4.5" fill="var(--mathe)"/>
+        <!-- Beschriftungen -->
+        <g font-size="16" font-weight="600" fill="var(--text)" text-anchor="middle">
+          <text x="33" y="381">A</text>
+          <text x="399" y="381">B</text>
+          <text x="160" y="50">C</text>
+        </g>
+        <text x="209" y="287" font-size="17" font-weight="700" fill="var(--mathe)" text-anchor="middle">W</text>
+        <text x="150" y="318" font-size="14" font-weight="600" fill="var(--mathe)" text-anchor="middle">Inkreis</text>
+      </svg>
+      <figcaption>Die drei Winkelhalbierenden (gestrichelt) schneiden sich im Inkreismittelpunkt W. Der Inkreis berührt alle drei Seiten von innen — die Berührpunkte sind markiert.</figcaption>
+    </figure>
+    <div class="merkkasten">
+      <span class="merk-etikett">Umkreis und Inkreis — nicht verwechseln</span>
+      <p>Der <strong>Umkreis</strong> geht <strong>durch die Ecken</strong> (gleicher Abstand zu den Ecken → Mittelsenkrechten). Der <strong>Inkreis</strong> berührt <strong>die Seiten</strong> (gleicher Abstand zu den Seiten → Winkelhalbierende). Merkhilfe: Der Umkreis liegt <em>um</em> das Dreieck herum, der Inkreis steckt <em>in</em> ihm.</p>
+    </div>
+    <p>Auch hierzu gibt es eine Alltagsfrage: Eine Laterne soll zwei Straßen, die sich kreuzen, gleichmäßig beleuchten — also von beiden Straßenrändern gleich weit entfernt stehen. Ihr Platz liegt auf der <strong>Winkelhalbierenden</strong> zwischen den Straßen.</p>
+  </section>
+
+  <section aria-labelledby="bl-schwerpunkt">
+    <h2 id="bl-schwerpunkt">4. Seitenhalbierende und Schwerpunkt</h2>
+    <p>Die <strong>Seitenhalbierende</strong> verbindet eine <strong>Ecke</strong> mit dem <strong>Mittelpunkt der gegenüberliegenden Seite</strong>. Drei Ecken, drei Seitenhalbierende — und auch sie treffen sich in einem einzigen Punkt: dem <strong>Schwerpunkt</strong> $S$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Die 2:1-Regel</span>
+      <p>Der Schwerpunkt teilt <strong>jede</strong> Seitenhalbierende im Verhältnis $2:1$ — der <strong>längere Abschnitt liegt an der Ecke</strong>. Ist eine Seitenhalbierende zum Beispiel $9$ cm lang, dann ist die Ecke $6$ cm und die Seitenmitte $3$ cm von $S$ entfernt.</p>
+    </div>
+    <p>Seinen Namen trägt der Schwerpunkt zu Recht — probier es aus: Schneide ein Dreieck aus Pappe aus, zeichne zwei Seitenhalbierende ein und lege das Dreieck mit ihrem Schnittpunkt auf eine Bleistiftspitze. Es <strong>balanciert</strong>! Im Schwerpunkt ist das Dreieck perfekt im Gleichgewicht.</p>
+    <p>Liegt das Dreieck in einem Koordinatensystem, brauchst du nicht einmal zu zeichnen — der Schwerpunkt ist einfach der <strong>Mittelwert der Eckkoordinaten</strong>:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Schwerpunkt rechnerisch</span>
+      <p class="formel-abgesetzt">$$x_S = \frac{x_A + x_B + x_C}{3} \qquad y_S = \frac{y_A + y_B + y_C}{3}$$</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: Schwerpunkt berechnen</span><p>Ein Dreieck hat die Ecken $A(1\,|\,1)$, $B(7\,|\,1)$ und $C(4\,|\,7)$. Dann ist</p><p class="formel-abgesetzt">$$x_S = \frac{1 + 7 + 4}{3} = \frac{12}{3} = 4 \qquad y_S = \frac{1 + 1 + 7}{3} = \frac{9}{3} = 3$$</p><p>Der Schwerpunkt liegt bei $S(4\,|\,3)$ — dort würde das Dreieck auf der Stiftspitze balancieren.</p></div><details class="check"><summary>Verständnis-Check: Eine Seitenhalbierende ist $12$ cm lang. Wie weit ist der Schwerpunkt von der Ecke entfernt?</summary><div class="check-antwort"><p>$8$ cm. Das Verhältnis $2:1$ zerlegt die $12$ cm in drei gleiche Teile zu je $4$ cm. Der längere Abschnitt liegt an der Ecke: $2 \cdot 4 = 8$ cm — von der Seitenmitte sind es nur $4$ cm.</p></div></details></section><section aria-labelledby="bl-hoehen"><h2 id="bl-hoehen">5. Höhen und Überblick</h2><p>Die vierte besondere Linie kennst du heimlich schon aus der Flächenberechnung: die<strong>Höhe</strong>. Sie entsteht, wenn du von einer Ecke das<strong>Lot</strong>auf die gegenüberliegende Seite fällst — also die Strecke zeichnest, die<strong>senkrecht</strong>auf der Gegenseite steht. Ihre Länge ist der Abstand der Ecke von der Gegenseite.</p><p>Beim<strong>stumpfwinkligen</strong>Dreieck gibt es eine Überraschung: Zwei der drei Höhen treffen die Gegenseite gar nicht direkt, sondern erst ihre<strong>Verlängerung</strong>— ihr Fußpunkt liegt<strong>außerhalb</strong>des Dreiecks. Verlängert man alle drei Höhen zu Geraden, schneiden sie sich trotzdem in einem Punkt: dem<strong>Höhenschnittpunkt</strong>$H$. Beim stumpfwinkligen Dreieck liegt auch er außerhalb, beim rechtwinkligen fällt er genau auf die Ecke mit dem rechten Winkel.</p><div class="merkkasten"><span class="merk-etikett">Höhe und Flächeninhalt</span><p class="formel-abgesetzt">$$A = \frac{g \cdot h}{2}$$</p><p>In der Flächenformel ist $g$ eine Seite (die<strong>Grundseite</strong>) und $h$ die<strong>zu ihr gehörende Höhe</strong>. Jede der drei Seiten hat ihre eigene Höhe — aber alle drei Paare ergeben denselben Flächeninhalt.</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: Höhe aus der Fläche zurückrechnen</span><p>Ein Dreieck hat die Grundseite $g = 6$ cm mit Höhe $h = 4$ cm, also $A = \frac{6 \cdot 4}{2} = 12$ cm². Wie lang ist die Höhe zur Seite $b = 8$ cm? Aus $A = \frac{b \cdot h_b}{2}$ folgt</p><p class="formel-abgesetzt">$$h_b = \frac{2 \cdot A}{b} = \frac{2 \cdot 12}{8} = 3$$</p><p>Die Höhe zur Seite $b$ ist $3$ cm lang. Probe: $\frac{8 \cdot 3}{2} = 12$ cm² ✓</p></div><p>Zum Schluss alle vier Linien im Überblick:</p><table class="bl-tabelle"><thead><tr><th scope="col">Linie</th><th scope="col">Schnittpunkt</th><th scope="col">Das Besondere</th></tr></thead><tbody><tr><td>Mittelsenkrechte</td><td>Umkreismittelpunkt $M$</td><td>Umkreis durch alle drei Ecken</td></tr><tr><td>Winkelhalbierende</td><td>Inkreismittelpunkt $W$</td><td>Inkreis berührt alle drei Seiten</td></tr><tr><td>Seitenhalbierende</td><td>Schwerpunkt $S$</td><td>teilt im Verhältnis $2:1$; Balancierpunkt</td></tr><tr><td>Höhe</td><td>Höhenschnittpunkt $H$</td><td>steckt in der Formel $A = \frac{g \cdot h}{2}$</td></tr></tbody></table><details class="check"><summary>Verständnis-Check: In welchem Dreieck fallen alle vier besonderen Punkte zusammen?</summary><div class="check-antwort"><p>Im<strong>gleichseitigen</strong>Dreieck. Dort ist für jede Seite die Mittelsenkrechte zugleich Winkelhalbierende, Seitenhalbierende und Höhe — deshalb fallen Umkreismittelpunkt, Inkreismittelpunkt, Schwerpunkt und Höhenschnittpunkt in einem einzigen Punkt zusammen.</p></div></details></section><details class="vertiefung"><summary>Vertiefung: Die Euler-Gerade</summary><div class="vertiefung-inhalt"><p>Konstruiert man in einem beliebigen Dreieck den Höhenschnittpunkt $H$, den Schwerpunkt $S$ und den Umkreismittelpunkt $M$, entdeckt man etwas Verblüffendes: Die drei Punkte liegen<strong>immer auf einer gemeinsamen Geraden</strong>— egal, wie schief das Dreieck ist. Diese Gerade heißt<strong>Euler-Gerade</strong>.</p><p>Und es kommt noch besser: Auch hier taucht das Verhältnis $2:1$ wieder auf! Der Schwerpunkt $S$ teilt die Strecke von $H$ nach $M$ im Verhältnis $2:1$ — der Abstand von $H$ zu $S$ ist also doppelt so groß wie der von $S$ zu $M$. Das kannst du selbst prüfen: Konstruiere in einem großen, schiefen Dreieck alle drei Punkte, lege ein Lineal an und miss nach.</p>
+      <p>Nur der <strong>Inkreismittelpunkt tanzt aus der Reihe</strong>: Er liegt im Allgemeinen <em>nicht</em> auf der Euler-Geraden — nur bei gleichschenkligen Dreiecken reiht er sich ein, denn dort liegen alle vier Punkte auf der Symmetrieachse. Entdeckt hat den Zusammenhang der Schweizer Mathematiker <strong>Leonhard Euler</strong> (1707–1783), einer der produktivsten Mathematiker aller Zeiten: Er rechnete im 18. Jahrhundert die Lage der besonderen Punkte allgemein durch und stieß dabei auf diese verborgene Ordnung. Im gleichseitigen Dreieck übrigens fallen alle Punkte zusammen — dort gibt es keine eindeutige Euler-Gerade mehr.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben vom Ortslinien-Steckbrief bis zum Schwerpunkt im Koordinatensystem — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+  <section class="sim-einbettung" aria-labelledby="sim-einbettung">
+    <h2 id="sim-einbettung">Selbst ausprobieren: Besondere Linien im Dreieck</h2>
+    <p>Erkunde dieses Thema interaktiv in der Simulation — Schieberegler bewegen, beobachten, ausprobieren.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/dreieck-transversalen/index.html?einbettung=1" title="Interaktive Simulation: Besondere Linien im Dreieck" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss"><a href="../../../simulationen/mathematik/dreieck-transversalen/index.html" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a></div>
+    </div>
+  </section>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

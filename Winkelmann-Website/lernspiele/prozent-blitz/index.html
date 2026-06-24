@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prozent-Blitz — Trainingsraum · Lernwelt</title>
+<meta name="description" content="Rabatte, Anteile, Prozentwerte im Kopf: "20 % von 60 €?" — je schneller, desto mehr Punkte.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Lernspiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Prozent-Blitz</h1>
+  <p class="einleitung">Rabatte, Anteile, Prozentwerte im Kopf: „20 % von 60 €?“ — je schneller, desto mehr Punkte. Wie Prozentwert, Grundwert und Prozentsatz zusammenhängen, erklärt das Thema <a href="../../mathematik/klasse-7/prozent-und-zinsrechnung/index.html">Prozent- und Zinsrechnung (Klasse 7)</a>.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert’s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Regeln:</strong> Wähle ein Level — dann läuft die Uhr: 60 Sekunden Prozent-Sprint. Level 1 fragt glatte Prozentsätze (10, 25, 50, 75, 100 %), Level 2 alle Fünfer-Prozente, Level 3 dreht den Spieß um: Grundwert gesucht und Rabatt-Preise. Richtig gelöst heißt sofort weiter; bei einem Fehler siehst du 1,2 Sekunden lang die richtige Lösung.</p>
+      <p><strong>Steuerung:</strong> Antwort eintippen und mit <kbd>Enter</kbd> oder dem Knopf „Prüfen“ abschicken — nur die Zahl, ohne Einheit. Komma und Punkt zählen beide. Mit „Neustart“ geht es zurück zur Levelwahl.</p>
+      <p><strong>Punktesystem:</strong> Jede richtige Antwort bringt 10 Punkte mal Levelnummer (Level 3 also 30 Punkte). Ab der dritten richtigen Antwort in Folge gibt es Combo-Punkte: +2 extra, und mit jedem weiteren Treffer wächst der Bonus um 2 (4. Treffer +4, 5. Treffer +6 …). Ein Fehler bricht die Serie. Die zehn besten Ergebnisse landen in der Bestenliste auf diesem Gerät.</p>
+      <p><strong>Lerntipp:</strong> Rechne über die 10-Prozent-Brücke: 10 % findest du, indem du durch 10 teilst — 5 % ist die Hälfte davon, 20 % das Doppelte. Bei Rabatten hilft der Restwert: „25 % gesenkt“ heißt „75 % bleiben“. Die Formeln samt Beispielen stehen unter <a href="../../mathematik/klasse-7/prozent-und-zinsrechnung/index.html">Prozent- und Zinsrechnung</a>.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+import * as spiel from "./spiel.js";
+starteSpielSeite(spiel);
+</script>
+</body>
+</html>

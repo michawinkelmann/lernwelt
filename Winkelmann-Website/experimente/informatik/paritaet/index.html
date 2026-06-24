@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Übertragungsfehler und Paritätsbit — Experiment · Lernwelt</title>
+<meta name="description" content="Bitfolgen mit Störungen übertragen, Fehler mit Paritätsbits aufspüren — und die Grenzen der Methode austesten.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="experiment" data-fach="informatik">
+<noscript><p class="noscript-hinweis">Dieses Experiment benötigt JavaScript. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Experiment: Übertragungsfehler und Paritätsbit</h1>
+  <p class="einleitung">Bei jeder Übertragung können einzelne Bits kippen — aus einem „K“ wird stillschweigend ein „C“. Hier schickst du Bytes durch einen gestörten Kanal, bestimmst das <strong>Paritätsbit selbst</strong> und zählst nach, welche Fehler auffliegen — und welche durchrutschen. Die Grundlagen stehen im Thema <a href="../../../informatik/klasse-9/daten-und-codierung/index.html">Daten und Codierung</a>; wenn dir Bits und Binärzahlen noch nicht geläufig sind, wärm dich kurz im <a href="../../../simulationen/informatik/binaer-trainer/index.html">Binär-Trainer</a> auf.</p>
+  <div id="experiment-wurzel"></div>
+  <div class="merkkasten">
+    <span class="merk-etikett">Kein Spielzeug — echte Technik</span>
+    <p>Was du hier nachbaust, ist seit Jahrzehnten im Dauereinsatz: Genau nach diesem Prinzip sichern Hauptspeicher, Festplatten und Netzwerkprotokolle ihre Daten — vom Paritätsbit der ersten seriellen Leitungen bis zu Prüfsummen, CRC und ECC-Speicher heute. Wer das Paritätsbit verstanden hat, versteht den Kern jeder Fehlererkennung.</p>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteExperiment } from "./experiment.js";
+  starteExperiment();
+</script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+/* print.css — Druckansicht.
+   Übungsseiten drucken als sauberes Aufgabenblatt: ohne Lösungen, Tipps und Bedienelemente,
+   mit Namens- und Datumsfeld. Übersichtsseiten drucken schlicht und schwarz auf weiß. */
+@media print {
+  body { background: #fff !important; color: #000; font-size: 11pt; display: block; }
+  /* .hauptnav einzeln: komponenten.js hebt die Nav aus der .kopfzeile heraus (mobile Einblendung) */
+  .kopfzeile, .hauptnav, .fusszeile, .brotkruemel, .nav-toggle, .zweig, .thema-knopf, .knopfzeile, .sprung-link { display: none !important; }
+  .inhalt { max-width: none; padding: 0; }
+  a { color: #000; text-decoration: none; }
+  .kachel, .merkkasten { border: 1px solid #999; box-shadow: none; break-inside: avoid; }
+
+  /* Aufgabenblatt: alles Lösende und Interaktive ausblenden */
+  .filterleiste, .fortschrittsbalken, .tipp-bereich, .tipp,
+  details.loesungsweg, .rueckmeldung, .selbstcheck,
+  .freitext-aufloesung, .geloest-tag, .abzeichen.zweig-tag { display: none !important; }
+
+  /* Namens- und Datumszeile nur auf Übungsseiten */
+  body[data-seite="uebungen"] .inhalt::before {
+    content: "Name: ____________________________    Datum: ______________    Klasse: ________";
+    display: block;
+    margin: 0 0 14pt;
+    padding-bottom: 8pt;
+    border-bottom: 1pt solid #000;
+    font-size: 11pt;
+  }
+
+  .aufgabe { border: 1pt solid #999; break-inside: avoid; page-break-inside: avoid; margin-bottom: 10pt; max-width: none; }
+  .aufgabe.ist-geloest { border-left: 1pt solid #999; }
+  .aufgabe input, .aufgabe select, .aufgabe textarea {
+    border: none; border-bottom: 1pt solid #000; border-radius: 0; background: #fff; color: #000; min-height: 0;
+  }
+  .freitext-feld { border: 1pt solid #999 !important; min-height: 120pt; }
+  .optionen label, .reihenfolge li, .schritt { border-color: #999; }
+  .optionen li.richtig-markiert > label, .optionen li.falsch-markiert > label { border-color: #999; }
+  .schritt.gesperrt { opacity: 1; }
+  .abzeichen { border-color: #999; color: #000; }
+
+  /* ---- Lehrkraft-Moderationsseite als sauberer A4-Handzettel ---- */
+  .kein-druck { display: none !important; }            /* per JS markierte Navigations-Absaetze */
+  body[data-seite="lehrkraft"] .nur-druck { display: block !important; } /* nur im Druck sichtbar */
+  body[data-seite="lehrkraft"] .lehrkraft-sperre { display: none !important; }
+
+  @page { size: A4; margin: 18mm 16mm; }
+  body[data-seite="lehrkraft"] { font-size: 10.5pt; }
+  body[data-seite="lehrkraft"] .inhalt { max-width: none; padding: 0; }
+
+  body[data-seite="lehrkraft"] h1 {
+    font-size: 18pt; line-height: 1.2; margin: 0 0 2pt;
+    padding-bottom: 6pt; border-bottom: 2pt solid #000;
+  }
+  body[data-seite="lehrkraft"] .druck-stand {
+    margin: 0 0 12pt; font-size: 9pt; color: #333; letter-spacing: .02em;
+  }
+  body[data-seite="lehrkraft"] h2 {
+    font-size: 13pt; margin: 16pt 0 6pt; padding-bottom: 3pt;
+    border-bottom: 1pt solid #999; break-after: avoid; page-break-after: avoid;
+  }
+
+  body[data-seite="lehrkraft"] .merkkasten,
+  body[data-seite="lehrkraft"] section.merkkasten {
+    border: 1pt solid #999 !important; border-radius: 0; box-shadow: none;
+    background: #fff !important; padding: 7pt 10pt; margin: 0 0 8pt;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  body[data-seite="lehrkraft"] .merk-etikett {
+    display: block; margin: 0 0 4pt; padding: 0; border: 0; background: none;
+    font-weight: 700; font-size: 11pt; color: #000;
+  }
+  body[data-seite="lehrkraft"] .merkkasten p { margin: 0; line-height: 1.4; }
+
+  body[data-seite="lehrkraft"] details.lb-stoff { border: 0; padding: 0; margin: 0 0 8pt; }
+  body[data-seite="lehrkraft"] details.lb-stoff > summary {
+    font-weight: 700; margin-bottom: 4pt; list-style: none; cursor: auto;
+  }
+  body[data-seite="lehrkraft"] summary::-webkit-details-marker { display: none; }
+  body[data-seite="lehrkraft"] summary::marker { content: ""; }
+
+  body[data-seite="lehrkraft"] table {
+    width: 100%; border-collapse: collapse; font-size: 9.5pt;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  body[data-seite="lehrkraft"] th,
+  body[data-seite="lehrkraft"] td {
+    border: 0.5pt solid #999; padding: 3pt 6pt; text-align: left; vertical-align: top;
+  }
+  body[data-seite="lehrkraft"] thead th { background: #eee !important; font-weight: 700; }
+  body[data-seite="lehrkraft"] tr { break-inside: avoid; page-break-inside: avoid; }
+  body[data-seite="lehrkraft"] tr.ist-pilot td { font-weight: 700; }
+
+  body[data-seite="lehrkraft"] .druck-fuss {
+    margin-top: 14pt; padding-top: 6pt; border-top: 0.5pt solid #999;
+    font-size: 8.5pt; color: #555; font-style: italic;
+  }
+
+  /* ---- Druckmaterial-Generator (Arbeitsblatt aus Lernbuero-Kurs) ---- */
+  body[data-seite="druck"] { font-size: 11pt; }
+  body[data-seite="druck"] .inhalt { max-width: none; padding: 0; }
+  body[data-seite="druck"] .druck-leiste { display: none !important; }
+
+  body[data-seite="druck"] .dr-kopf {
+    margin: 0 0 14pt; padding-bottom: 8pt; border-bottom: 1.5pt solid #000;
+    break-after: avoid; page-break-after: avoid;
+  }
+  body[data-seite="druck"] .dr-titel { font-size: 18pt; line-height: 1.2; margin: 0 0 2pt; }
+  body[data-seite="druck"] .dr-untertitel { margin: 0 0 6pt; font-size: 10pt; color: #333; }
+  body[data-seite="druck"] .dr-felder {
+    display: flex; flex-wrap: wrap; gap: 18pt; margin: 8pt 0 4pt; font-size: 11pt;
+  }
+  body[data-seite="druck"] .dr-felder span { white-space: nowrap; }
+  body[data-seite="druck"] .dr-spurinfo { margin: 4pt 0 0; font-size: 9pt; color: #444; }
+  body[data-seite="druck"] .dr-exemplar { font-weight: 700; color: #000; }
+
+  /* Bloecke fliessen natuerlich (KEIN erzwungener Seitenumbruch pro Block -> keine halbleeren Seiten).
+     Schutz: Aufgaben nicht zerreissen, Ueberschriften nicht allein am Seitenende lassen. */
+  body[data-seite="druck"] .dr-block-bereich { break-before: auto; page-break-before: auto; }
+  body[data-seite="druck"] .dr-block {
+    font-size: 14pt; margin: 14pt 0 8pt; padding-bottom: 3pt; border-bottom: 1pt solid #000;
+    break-after: avoid; page-break-after: avoid; break-inside: avoid;
+  }
+  body[data-seite="druck"] .dr-block-bereich:first-of-type .dr-block { margin-top: 0; }
+  body[data-seite="druck"] .dr-lektion-titel {
+    font-size: 12pt; margin: 12pt 0 6pt;
+    break-after: avoid; page-break-after: avoid; break-inside: avoid;
+  }
+  /* Lektion zusammenhalten, aber Umbruch erlauben, wenn sie laenger als eine Seite ist:
+     der Schutz greift auf Ueberschrift + erste Aufgabe (siehe .dr-aufgabe break-inside). */
+  body[data-seite="druck"] .dr-lektion-titel + .dr-aufgabe { break-before: avoid; page-break-before: avoid; }
+
+  body[data-seite="druck"] .dr-aufgabe {
+    border: 0.5pt solid #999; padding: 7pt 10pt; margin: 0 0 8pt;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  body[data-seite="druck"] .dr-aufgabe-kopf {
+    display: flex; align-items: baseline; gap: 8pt; margin-bottom: 4pt;
+  }
+  body[data-seite="druck"] .dr-nummer { font-weight: 700; }
+  body[data-seite="druck"] .dr-nummer::before { content: "Aufgabe "; font-weight: 700; }
+  body[data-seite="druck"] .dr-meta { font-size: 8.5pt; color: #555; }
+  body[data-seite="druck"] .dr-frage { margin: 0 0 6pt; }
+  body[data-seite="druck"] .dr-aufgabe p { line-height: 1.4; }
+
+  /* Antwortlinien und Kaesten */
+  body[data-seite="druck"] .dr-linie {
+    display: inline-block; min-width: 120pt; border-bottom: 0.75pt solid #000;
+    height: 1.1em; vertical-align: bottom; margin: 0 2pt;
+  }
+  body[data-seite="druck"] .dr-luecke {
+    display: inline-block; min-width: 70pt; border-bottom: 0.75pt solid #000;
+    height: 1em; vertical-align: bottom; margin: 0 2pt;
+  }
+  body[data-seite="druck"] .dr-einheit { color: #333; }
+  body[data-seite="druck"] .dr-antwortzeile { margin: 4pt 0; }
+  body[data-seite="druck"] .dr-optionen, body[data-seite="druck"] .dr-reihenfolge {
+    list-style: none; margin: 4pt 0; padding: 0;
+  }
+  body[data-seite="druck"] .dr-option, body[data-seite="druck"] .dr-reihe-el {
+    margin: 3pt 0; display: flex; gap: 6pt; align-items: flex-start;
+  }
+  body[data-seite="druck"] .dr-kasten { font-size: 12pt; line-height: 1; }
+  body[data-seite="druck"] .dr-nrkasten {
+    display: inline-block; width: 14pt; height: 14pt; border: 0.75pt solid #000; flex: 0 0 auto;
+  }
+  body[data-seite="druck"] .dr-zu-hinweis { font-size: 9.5pt; color: #444; margin: 4pt 0; }
+  body[data-seite="druck"] .dr-zuordnung { width: 100%; border-collapse: collapse; margin: 4pt 0; }
+  body[data-seite="druck"] .dr-zuordnung td { padding: 4pt 8pt; vertical-align: middle; border: 0; }
+  body[data-seite="druck"] .dr-zu-mitte { text-align: center; color: #000; white-space: nowrap; }
+  body[data-seite="druck"] .dr-zu-rechts { text-align: right; }
+  body[data-seite="druck"] .dr-schritte { margin: 4pt 0 4pt 16pt; padding: 0; }
+  body[data-seite="druck"] .dr-schritt { margin: 4pt 0; }
+  body[data-seite="druck"] .dr-schritt-frage { margin: 0 0 2pt; }
+  body[data-seite="druck"] .dr-schreibfeld { margin: 4pt 0; }
+  body[data-seite="druck"] .dr-schreibfeld .dr-linie { display: block; min-width: 0; width: 100%; margin: 7pt 0; }
+
+  /* Loesungsblock im Druck dezent (duenner Rahmen, kein Grau-Hintergrund) */
+  body[data-seite="druck"] .dr-loesung {
+    margin: 6pt 0 0; padding: 5pt 8pt; border: 0.5pt solid #999; border-left: 2pt solid #000;
+    font-size: 9.5pt; break-inside: avoid; page-break-inside: avoid;
+  }
+  body[data-seite="druck"] .dr-loes-etikett {
+    display: block; font-weight: 700; font-size: 9pt; margin-bottom: 2pt;
+  }
+  body[data-seite="druck"] .dr-loes-label { font-weight: 700; margin: 4pt 0 1pt; }
+  body[data-seite="druck"] .dr-loesung p { margin: 1pt 0; line-height: 1.35; }
+  body[data-seite="druck"] .dr-loes-liste { margin: 2pt 0 2pt 16pt; padding: 0; }
+  body[data-seite="druck"] .dr-leer, body[data-seite="druck"] .dr-fehler { font-style: italic; }
+}
+
+/* ===== Druckmaterial-Generator: Bildschirmansicht (NICHT im Druck) =====
+   Liegt bewusst AUSSERHALB von @media print, damit die Vorschau am Bildschirm
+   so ansprechend aussieht wie die Website. Alles ueber CSS-Variablen -> dunkelmodus-fest.
+   Im Druck ueberschreiben die Regeln in @media print diese Werte. */
+
+/* Bedienleiste oben (im Druck per @media print ausgeblendet) */
+body[data-seite="druck"] .druck-leiste {
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  padding: var(--abstand-3);
+  margin-bottom: var(--abstand-4);
+  max-width: 820px;
+}
+body[data-seite="druck"] .druck-leiste-titel {
+  font-family: var(--display); font-weight: 700; margin: 0 0 4px; font-size: 1.15rem; color: var(--text);
+}
+body[data-seite="druck"] .druck-leiste-hinweis { color: var(--text-leise); margin: 0 0 var(--abstand-3); font-size: .95rem; }
+body[data-seite="druck"] .druck-optionen {
+  display: flex; flex-wrap: wrap; gap: var(--abstand-4); margin-bottom: var(--abstand-3);
+}
+body[data-seite="druck"] .druck-feld {
+  border: 1px solid var(--linie); border-radius: var(--radius);
+  padding: var(--abstand-2) var(--abstand-3); margin: 0; background: var(--bg);
+}
+body[data-seite="druck"] .druck-feld legend { font-weight: 700; padding: 0 4px; font-size: .95rem; color: var(--text); }
+body[data-seite="druck"] .druck-feld label {
+  display: flex; align-items: center; gap: 8px; margin: 6px 0; min-height: 28px; cursor: pointer; color: var(--text);
+}
+body[data-seite="druck"] .druck-feld input { width: 18px; height: 18px; accent-color: var(--akzent); }
+
+/* Das Arbeitsblatt selbst als zentriertes "Blatt" auf der Flaeche darstellen */
+body[data-seite="druck"] #druckbereich {
+  background: var(--flaeche);
+  color: var(--text);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  padding: var(--abstand-5) var(--abstand-5) var(--abstand-4);
+  max-width: 820px;
+  margin: 0 auto;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 8px 24px rgba(0, 0, 0, .08);
+  line-height: 1.55;
+}
+body[data-seite="druck"] .lade-hinweis,
+body[data-seite="druck"] .dr-leer { color: var(--text-leise); font-style: italic; }
+body[data-seite="druck"] .dr-fehler { color: var(--fehler); font-weight: 600; }
+
+/* Kopf des Arbeitsblatts */
+body[data-seite="druck"] .dr-kopf {
+  margin: 0 0 var(--abstand-4); padding-bottom: var(--abstand-3); border-bottom: 2px solid var(--text);
+}
+body[data-seite="druck"] .dr-titel { font-family: var(--display); font-size: 1.7rem; line-height: 1.2; margin: 0 0 4px; color: var(--text); }
+body[data-seite="druck"] .dr-untertitel { color: var(--text-leise); margin: 0 0 var(--abstand-2); }
+body[data-seite="druck"] .dr-felder { display: flex; flex-wrap: wrap; gap: var(--abstand-4); margin: var(--abstand-2) 0; }
+body[data-seite="druck"] .dr-felder span { white-space: nowrap; }
+body[data-seite="druck"] .dr-spurinfo { color: var(--text-leise); font-size: .9rem; margin: var(--abstand-2) 0 0; }
+body[data-seite="druck"] .dr-exemplar { color: var(--fehler); font-weight: 700; }
+
+/* Block- und Lektionsueberschriften klar gestuft */
+body[data-seite="druck"] .dr-block {
+  font-family: var(--display); font-size: 1.35rem; line-height: 1.2;
+  margin: var(--abstand-5) 0 var(--abstand-3); padding-bottom: 4px;
+  border-bottom: 2px solid var(--linie); color: var(--text);
+}
+body[data-seite="druck"] .dr-block-bereich:first-of-type .dr-block { margin-top: 0; }
+body[data-seite="druck"] .dr-lektion-titel {
+  font-family: var(--display); font-size: 1.12rem; font-weight: 700;
+  margin: var(--abstand-4) 0 var(--abstand-2); color: var(--akzent);
+}
+
+/* Aufgabe als Karte wie .aufgabe/.kachel auf der Website */
+body[data-seite="druck"] .dr-aufgabe {
+  background: var(--bg);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  padding: var(--abstand-3);
+  margin: 0 0 var(--abstand-3);
+}
+body[data-seite="druck"] .dr-aufgabe-kopf {
+  display: flex; flex-wrap: wrap; gap: var(--abstand-2); align-items: baseline; margin-bottom: var(--abstand-2);
+}
+body[data-seite="druck"] .dr-nummer { font-family: var(--display); font-weight: 700; font-size: 1.05rem; color: var(--text); }
+body[data-seite="druck"] .dr-nummer::before { content: "Aufgabe "; }
+body[data-seite="druck"] .dr-meta { font-size: .82rem; color: var(--text-leise); }
+body[data-seite="druck"] .dr-frage { margin: 0 0 var(--abstand-2); }
+body[data-seite="druck"] .dr-aufgabe-inhalt p { line-height: 1.55; }
+
+/* Antwort-Schreiblinien sichtbar */
+body[data-seite="druck"] .dr-linie {
+  display: inline-block; min-width: 160px; border-bottom: 1px solid var(--text-leise);
+  height: 1.2em; vertical-align: bottom; margin: 0 3px;
+}
+body[data-seite="druck"] .dr-luecke {
+  display: inline-block; min-width: 90px; border-bottom: 1px solid var(--text-leise);
+  height: 1.1em; vertical-align: bottom; margin: 0 3px;
+}
+body[data-seite="druck"] .dr-luecketext { margin: 0 0 var(--abstand-2); }
+body[data-seite="druck"] .dr-einheit { color: var(--text-leise); }
+body[data-seite="druck"] .dr-antwortzeile { margin: var(--abstand-2) 0; }
+
+/* Auswahl-/Reihenfolgelisten */
+body[data-seite="druck"] .dr-optionen, body[data-seite="druck"] .dr-reihenfolge {
+  list-style: none; margin: var(--abstand-2) 0; padding: 0;
+}
+body[data-seite="druck"] .dr-option, body[data-seite="druck"] .dr-reihe-el {
+  display: flex; gap: 8px; align-items: flex-start; margin: var(--abstand-2) 0;
+}
+body[data-seite="druck"] .dr-kasten { font-size: 1.2rem; line-height: 1; color: var(--text-leise); }
+body[data-seite="druck"] .dr-nrkasten {
+  display: inline-block; width: 18px; height: 18px; border: 1px solid var(--text-leise);
+  border-radius: var(--radius-klein); flex: 0 0 auto;
+}
+
+/* Zuordnungstabelle */
+body[data-seite="druck"] .dr-zu-hinweis { color: var(--text-leise); font-size: .9rem; margin: var(--abstand-2) 0; }
+body[data-seite="druck"] .dr-zuordnung { width: 100%; border-collapse: collapse; margin: var(--abstand-2) 0; }
+body[data-seite="druck"] .dr-zuordnung td { padding: 6px 10px; vertical-align: middle; }
+body[data-seite="druck"] .dr-zu-mitte { text-align: center; color: var(--text-leise); white-space: nowrap; }
+body[data-seite="druck"] .dr-zu-rechts { text-align: right; }
+
+/* Rechenweg-Schritte / Freitext-Schreibfeld */
+body[data-seite="druck"] .dr-schritte { margin: var(--abstand-2) 0 var(--abstand-2) var(--abstand-3); padding: 0; }
+body[data-seite="druck"] .dr-schritt { margin: var(--abstand-2) 0; }
+body[data-seite="druck"] .dr-schritt-frage { margin: 0 0 4px; }
+body[data-seite="druck"] .dr-schreibfeld .dr-linie { display: block; min-width: 0; width: 100%; margin: 10px 0; }
+
+/* Loesungsblock deutlich abgesetzt: linker Akzentstreifen + leichter Hauch-Hintergrund */
+body[data-seite="druck"] .dr-loesung {
+  margin: var(--abstand-3) 0 0; padding: var(--abstand-2) var(--abstand-3);
+  border: 1px solid var(--ok); border-left: 4px solid var(--ok);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--ok) 10%, var(--flaeche));
+  font-size: .95rem;
+}
+body[data-seite="druck"] .dr-loes-etikett { display: block; font-family: var(--display); font-weight: 700; color: var(--ok); margin-bottom: 4px; }
+body[data-seite="druck"] .dr-loes-label { font-weight: 700; margin: var(--abstand-2) 0 2px; color: var(--text); }
+body[data-seite="druck"] .dr-loes-liste { margin: 4px 0 4px var(--abstand-3); }
+body[data-seite="druck"] .dr-loesung p { margin: 4px 0; line-height: 1.5; }
+
+/* Schmale Bildschirme: Blatt nutzt volle Breite, kompakteres Polster */
+@media (max-width: 880px) {
+  body[data-seite="druck"] #druckbereich { padding: var(--abstand-4) var(--abstand-3) var(--abstand-3); }
+}
+@media (max-width: 480px) {
+  body[data-seite="druck"] .druck-optionen { flex-direction: column; gap: var(--abstand-3); }
+  body[data-seite="druck"] #druckbereich { padding: var(--abstand-3); }
+  body[data-seite="druck"] .dr-linie { min-width: 100px; }
+}

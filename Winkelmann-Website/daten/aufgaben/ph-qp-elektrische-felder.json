@@ -1,0 +1,491 @@
+{
+  "thema": "ph-qp-elektrische-felder",
+  "fach": "physik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ph-qp-ef-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über elektrische Feldlinien sind richtig?",
+      "optionen": [
+        {
+          "text": "Sie zeigen die Richtung der Kraft auf eine positive Probeladung.",
+          "richtig": true,
+          "erklaerung": "Richtig — das ist die Definitionskonvention."
+        },
+        {
+          "text": "Wo die Feldlinien dichter liegen, ist das Feld stärker.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Liniendichte veranschaulicht den Betrag der Feldstärke."
+        },
+        {
+          "text": "Feldlinien können sich kreuzen.",
+          "richtig": false,
+          "erklaerung": "An einem Kreuzungspunkt hätte die Kraft zwei Richtungen zugleich — unmöglich."
+        },
+        {
+          "text": "Das Feld existiert nur, solange sich eine Probeladung darin befindet.",
+          "richtig": false,
+          "erklaerung": "Das Feld ist ein Zustand des Raums um die felderzeugende Ladung — die Probeladung weist es nur nach."
+        }
+      ],
+      "tipps": [
+        "Erinnere dich an die Definitionskonvention: positive Probeladung.",
+        "Was würde ein Kreuzungspunkt zweier Feldlinien physikalisch bedeuten?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Feldlinien kreuzen sich nie (eindeutige Kraftrichtung), und das Feld existiert unabhängig von der Probeladung.",
+      "kc": [
+        "elektrisches-feld"
+      ]
+    },
+    {
+      "id": "ph-qp-ef-002",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jeder Größe die passende Formel bzw. Einheit zu.",
+      "paare": [
+        {
+          "links": "Elektrische Feldstärke $E$",
+          "rechts": "E = F/q  (Einheit V/m)"
+        },
+        {
+          "links": "Kraft auf Ladung im Feld",
+          "rechts": "F = q · E"
+        },
+        {
+          "links": "Feld im Plattenkondensator",
+          "rechts": "E = U/d"
+        },
+        {
+          "links": "Energie beim Durchlaufen von $U$",
+          "rechts": "W = q · U"
+        }
+      ],
+      "tipps": [
+        "Die Feldstärke ist als Kraft pro Ladung definiert.",
+        "$E = U/d$ gilt nur im homogenen Feld zwischen den Platten.",
+        "Energie = Ladung mal durchlaufene Spannung."
+      ],
+      "loesungsweg": "$E = F/q$ (Definition, V/m), $F = qE$ (Umstellung), $E = U/d$ (Plattenkondensator), $W = qU$ (Energieübertrag).",
+      "kc": [
+        "elektrisches-feld"
+      ]
+    },
+    {
+      "id": "ph-qp-ef-003",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "An einem Plattenkondensator liegt $U = 200\\,\\text{V}$ an, der Plattenabstand beträgt $d = 4{,}0\\,\\text{cm}$. Berechne die elektrische Feldstärke.",
+      "eingaben": [
+        {
+          "label": "$E$",
+          "antwort": 5000,
+          "toleranz": 10,
+          "einheit": "V/m"
+        }
+      ],
+      "tipps": [
+        "Im homogenen Feld gilt $E = \\frac{U}{d}$.",
+        "Rechne den Plattenabstand zuerst in Meter um: $4{,}0\\,\\text{cm} = 0{,}04\\,\\text{m}$.",
+        "$E = \\frac{200}{0{,}04}$"
+      ],
+      "loesungsweg": "$E = \\frac{U}{d} = \\frac{200\\,\\text{V}}{0{,}04\\,\\text{m}} = 5000\\,\\frac{\\text{V}}{\\text{m}}$.",
+      "kc": [
+        "elektrisches-feld"
+      ]
+    },
+    {
+      "id": "ph-qp-ef-004",
+      "typ": "parametrisiert",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 2,
+      "generator": "feldstaerke-kondensator",
+      "frage": "",
+      "tipps": [
+        "Im homogenen Feld gilt $E = \\frac{U}{d}$.",
+        "Plattenabstand in Meter umrechnen (1 cm = 0,01 m).",
+        "Spannung durch Abstand teilen — fertig."
+      ],
+      "loesungsweg": "",
+      "kc": [
+        "elektrisches-feld"
+      ]
+    },
+    {
+      "id": "ph-qp-ef-005",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Text zum homogenen Feld.",
+      "text": "Im Plattenkondensator verlaufen die Feldlinien ___ und in gleichen Abständen. Die Feldstärke ist deshalb überall ___ . Verdoppelt man bei fester Spannung den Plattenabstand, so ___ sich die Feldstärke.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "parallel",
+          "optionen": [
+            "parallel",
+            "kreisförmig",
+            "strahlenförmig"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "gleich groß",
+          "optionen": [
+            "gleich groß",
+            "verschieden",
+            "null"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "halbiert",
+          "optionen": [
+            "halbiert",
+            "verdoppelt",
+            "vervierfacht"
+          ]
+        }
+      ],
+      "tipps": [
+        "„Homogen“ bedeutet: überall gleich.",
+        "Schau auf die Formel $E = U/d$.",
+        "$d$ steht im Nenner."
+      ],
+      "loesungsweg": "Die Feldlinien verlaufen parallel, die Feldstärke ist überall gleich groß (homogenes Feld). Wegen $E = U/d$ halbiert doppelter Abstand die Feldstärke.",
+      "kc": [
+        "elektrisches-feld"
+      ]
+    },
+    {
+      "id": "ph-qp-ef-006",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "In einem Feld der Stärke $E = 5000\\,\\frac{\\text{V}}{\\text{m}}$ befindet sich ein Elektron ($e = 1{,}602 \\cdot 10^{-19}\\,\\text{C}$). Berechne den Betrag der Kraft auf das Elektron. Gib das Ergebnis in $10^{-16}\\,\\text{N}$ an.",
+      "eingaben": [
+        {
+          "label": "$F$",
+          "antwort": 8.01,
+          "toleranz": 0.05,
+          "einheit": "· 10⁻¹⁶ N"
+        }
+      ],
+      "tipps": [
+        "Kraft auf eine Ladung im Feld: $F = q \\cdot E$.",
+        "$F = 1{,}602 \\cdot 10^{-19} \\cdot 5000$",
+        "$5000 = 5 \\cdot 10^3$, also $F = 8{,}01 \\cdot 10^{-16}\\,\\text{N}$ — gib nur die Vorzahl ein."
+      ],
+      "loesungsweg": "$F = e \\cdot E = 1{,}602 \\cdot 10^{-19}\\,\\text{C} \\cdot 5000\\,\\frac{\\text{V}}{\\text{m}} = 8{,}01 \\cdot 10^{-16}\\,\\text{N}$.",
+      "kc": [
+        "elektrisches-feld"
+      ]
+    },
+    {
+      "id": "ph-qp-ef-007",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Elektron wird aus der Ruhe durch die Spannung $U = 1000\\,\\text{V}$ beschleunigt ($e = 1{,}602 \\cdot 10^{-19}\\,\\text{C}$, $m_e = 9{,}109 \\cdot 10^{-31}\\,\\text{kg}$).",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne die übertragene Energie $W = e \\cdot U$ in $10^{-16}\\,\\text{J}$.",
+          "eingaben": [
+            {
+              "label": "$W$",
+              "antwort": 1.602,
+              "toleranz": 0.01,
+              "einheit": "· 10⁻¹⁶ J"
+            }
+          ],
+          "tipps": [
+            "$W = 1{,}602 \\cdot 10^{-19} \\cdot 1000$ — die Zehnerpotenz wandert um 3 nach oben."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Die Energie wird vollständig kinetisch. Berechne die Endgeschwindigkeit $v = \\sqrt{2W/m_e}$ in $10^7\\,\\frac{\\text{m}}{\\text{s}}$.",
+          "eingaben": [
+            {
+              "label": "$v$",
+              "antwort": 1.875,
+              "toleranz": 0.01,
+              "einheit": "· 10⁷ m/s"
+            }
+          ],
+          "tipps": [
+            "$v = \\sqrt{\\frac{2 \\cdot 1{,}602 \\cdot 10^{-16}}{9{,}109 \\cdot 10^{-31}}} = \\sqrt{3{,}517 \\cdot 10^{14}}\\,\\frac{\\text{m}}{\\text{s}}$"
+          ]
+        }
+      ],
+      "tipps": [
+        "Energiesatz: Die elektrische Energie $W = eU$ wird zu kinetischer Energie.",
+        "$\\frac{1}{2} m v^2 = e U$ nach $v$ umstellen.",
+        "Achte konsequent auf die Zehnerpotenzen."
+      ],
+      "loesungsweg": "$W = eU = 1{,}602 \\cdot 10^{-16}\\,\\text{J}$. Aus $\\frac{1}{2}mv^2 = W$ folgt $v = \\sqrt{2W/m_e} = \\sqrt{3{,}517 \\cdot 10^{14}} \\approx 1{,}875 \\cdot 10^7\\,\\frac{\\text{m}}{\\text{s}}$.",
+      "kc": [
+        "elektrisches-feld",
+        "energie"
+      ],
+      "cas": "<p>Der ClassPad rechnet ohne Einheiten — gib alles in SI-Einheiten ein (U in V, m in kg, W in J), dann kommt v in m/s heraus:</p><ol><li>Zehnerpotenzen gibst du über die <b>EXP</b>-Taste unten auf dem Tastenfeld ein: für e = 1,602 · 10⁻¹⁹ C tippe <code>1.602</code>, dann <b>EXP</b>, dann <b>(−)</b> und <code>19</code> — in der Eingabezeile erscheint <code>1.602E-19</code> (kleines ᴇ).</li><li>Schritt 1 ist damit eine Zeile im <b>Main</b>-Menü: <code>1.602E-19×1000</code> und <b>EXE</b> — Ergebnis 1,602 · 10⁻¹⁶ J.</li><li>Schritt 2 erledigt solve ohne Umstellen von Hand (<b>Interactive → Gleich./Ungleich. → solve</b>): <code>solve(0.5×9.109E-31×v^2=1.602E-16,v)</code> und <b>EXE</b>.</li><li>Der ClassPad liefert zwei Lösungen ±1,875 · 10⁷ — physikalisch sinnvoll ist die positive: v ≈ 1,875 · 10⁷ m/s.</li></ol><p>Im Heft zählt der Energieansatz $\\frac{1}{2} m_e v^2 = e \\cdot U$ samt Umstellung nach v — solve ersetzt den dokumentierten Rechenweg nicht.</p>"
+    },
+    {
+      "id": "ph-qp-ef-008",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Schwebeversuch: Ein geladenes Kügelchen ($m = 0{,}8\\,\\text{mg}$, $q = 4{,}0\\,\\text{nC}$) soll im Feld eines Plattenkondensators ($d = 5{,}0\\,\\text{cm}$, Platten waagerecht) schweben. Berechne die nötige Feldstärke und die Spannung ($g = 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$).",
+      "eingaben": [
+        {
+          "label": "$E$",
+          "antwort": 1962,
+          "toleranz": 5,
+          "einheit": "V/m"
+        },
+        {
+          "label": "$U$",
+          "antwort": 98.1,
+          "toleranz": 0.5,
+          "einheit": "V"
+        }
+      ],
+      "tipps": [
+        "Schweben heißt Kräftegleichgewicht: elektrische Kraft = Gewichtskraft, also $qE = mg$.",
+        "$E = \\frac{mg}{q}$ mit $m = 0{,}8 \\cdot 10^{-6}\\,\\text{kg}$ und $q = 4{,}0 \\cdot 10^{-9}\\,\\text{C}$.",
+        "Danach $U = E \\cdot d$ mit $d = 0{,}05\\,\\text{m}$."
+      ],
+      "loesungsweg": "$qE = mg \\Rightarrow E = \\frac{mg}{q} = \\frac{0{,}8 \\cdot 10^{-6} \\cdot 9{,}81}{4{,}0 \\cdot 10^{-9}} = 1962\\,\\frac{\\text{V}}{\\text{m}}$. Spannung: $U = E \\cdot d = 1962 \\cdot 0{,}05 \\approx 98{,}1\\,\\text{V}$.",
+      "kc": [
+        "elektrisches-feld",
+        "kraefte"
+      ],
+      "cas": "<p>Schwebebedingung einheitenfrei in SI: m = 0,8 mg = <code>0.8E-6</code> kg, q = 4,0 nC = <code>4.0E-9</code> C, g = 9,81 — dann liefert der ClassPad E in V/m und U in V:</p><ol><li>Feldstärke direkt im <b>Main</b>-Menü (Zehnerpotenzen über die <b>EXP</b>-Taste): <code>0.8E-6×9.81/4.0E-9</code> und <b>EXE</b> — 1962, also E = 1962 V/m.</li><li>Spannung gleich anschließen, <code>ans</code> (letztes Ergebnis, <b>Math1</b>-Tastatur) ist noch die Feldstärke: <code>ans×0.05</code> und <b>EXE</b> — 98,1, also U ≈ 98,1 V.</li><li>Magst du lieber die Gleichung hinschreiben, übernimmt solve das Umstellen (<b>Interactive → Gleich./Ungleich. → solve</b>): <code>solve(4.0E-9×x=0.8E-6×9.81,x)</code> liefert <code>{x=1962}</code> — x steht hier für die gesuchte Feldstärke.</li><li>Zeigt die Anzeige einen Bruch statt 98.1, schalte in der Symbolleiste von <b>Standard</b> auf <b>Dezimal</b> um (Knopf ½↔0,5).</li></ol><p>Dokumentiere den Ansatz $q \\cdot E = m \\cdot g$ und die Umstellung nach E trotzdem vollständig — das CAS bestätigt nur.</p>"
+    },
+    {
+      "id": "ph-qp-ef-009",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Elektron fliegt quer durch das homogene Feld eines Plattenkondensators. Welche Aussagen über seine Bahn sind richtig?",
+      "optionen": [
+        {
+          "text": "Zwischen den Platten durchläuft es eine Parabelbahn.",
+          "richtig": true,
+          "erklaerung": "Richtig: konstante Querkraft + konstante Längsgeschwindigkeit = Parabel (wie beim waagerechten Wurf)."
+        },
+        {
+          "text": "Nach Verlassen der Platten fliegt es geradlinig weiter.",
+          "richtig": true,
+          "erklaerung": "Richtig: Ohne Feld keine Kraft — Trägheitsgesetz."
+        },
+        {
+          "text": "Seine Geschwindigkeit in Flugrichtung (längs) nimmt im Feld zu.",
+          "richtig": false,
+          "erklaerung": "Die Kraft wirkt quer — die Längskomponente bleibt unverändert."
+        },
+        {
+          "text": "Hinter den Platten krümmt sich die Bahn weiter.",
+          "richtig": false,
+          "erklaerung": "Außerhalb des Felds wirkt (idealisiert) keine Kraft mehr — die Bahn ist eine Gerade."
+        }
+      ],
+      "tipps": [
+        "Vergleiche mit dem waagerechten Wurf: Was übernimmt hier die Rolle der Gewichtskraft?",
+        "In welche Richtung wirkt die Feldkraft — und welche Geschwindigkeitskomponente ändert sie?",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Im Feld: Parabelbahn (Aussage 1), danach geradlinig (Aussage 2). Die Längsgeschwindigkeit bleibt konstant, weil die Kraft senkrecht dazu wirkt.",
+      "kc": [
+        "elektrisches-feld",
+        "bewegung-geladener-teilchen"
+      ]
+    },
+    {
+      "id": "ph-qp-ef-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Messaufgabe: Öffne die <a href=\"../../../simulationen/physik/plattenkondensator/index.html#ub=2000&ua=100&d=4\" target=\"_blank\" rel=\"noopener\">Simulation mit $U_0 = 2000\\,\\text{V}$, $U_a = 100\\,\\text{V}$, $d = 4\\,\\text{cm}$</a>, lass das Elektron bis zum Schirm fliegen und lies die Ablenkung am Schirm ab.",
+      "eingaben": [
+        {
+          "label": "Ablenkung",
+          "antwort": 8.0,
+          "toleranz": 0.1,
+          "einheit": "mm"
+        }
+      ],
+      "tipps": [
+        "Starte die Simulation und warte, bis die Bilanz erscheint.",
+        "Der Wert steht in der Bilanzanzeige „Ablenkung am Schirm“.",
+        "Zur Kontrolle: $y = \\frac{U_a \\, L \\, (L/2 + s)}{2\\,U_0\\,d}$ mit $L = 8\\,\\text{cm}$, $s = 12\\,\\text{cm}$."
+      ],
+      "loesungsweg": "Die Simulation liefert $8{,}00\\,\\text{mm}$. Rechnerisch: $y = \\frac{100 \\cdot 0{,}08 \\cdot 0{,}16}{2 \\cdot 2000 \\cdot 0{,}04} = 0{,}008\\,\\text{m} = 8{,}0\\,\\text{mm}$ — Messung und Theorie stimmen überein.",
+      "kc": [
+        "elektrisches-feld",
+        "bewegung-geladener-teilchen"
+      ]
+    },
+    {
+      "id": "ph-qp-ef-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Erkläre den Unterschied zwischen elektrischer Feldstärke $E$ und Spannung $U$ am Plattenkondensator — und wie die beiden Größen zusammenhängen.",
+      "musterloesung": "Die Feldstärke $E$ beschreibt das Feld lokal: Sie gibt an, welche Kraft pro Ladung an einem Punkt wirkt ($E = F/q$, Einheit V/m). Die Spannung $U$ ist dagegen eine Größe zwischen zwei Punkten: Sie gibt an, wie viel Energie pro Ladung beim Durchlaufen vom einen zum anderen Punkt übertragen wird ($U = W/q$, Einheit V). Im homogenen Feld des Plattenkondensators hängen beide einfach zusammen: $E = U/d$ — die Spannung verteilt sich gleichmäßig über den Plattenabstand. Die Feldstärke ist also das „Spannungsgefälle“ pro Meter.",
+      "tipps": [
+        "Welche Größe beschreibt einen Punkt im Feld, welche den Weg zwischen zwei Punkten?",
+        "Vergleiche die Einheiten: V/m gegenüber V.",
+        "Der Zusammenhang steckt in der Formel $E = U/d$."
+      ],
+      "loesungsweg": "Kern: $E$ = Kraft pro Ladung (lokal, V/m), $U$ = Energie pro Ladung zwischen zwei Punkten (V); im homogenen Feld verbunden durch $E = U/d$.",
+      "kc": [
+        "elektrisches-feld"
+      ]
+    },
+    {
+      "id": "ph-qp-ef-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Berechne die Ablenkung beim Querfeld-Durchflug schrittweise — $U_0 = 2000\\,\\text{V}$, $U_a = 100\\,\\text{V}$, $d = 4{,}0\\,\\text{cm}$, Plattenlänge $L = 8{,}0\\,\\text{cm}$, $\\frac{e}{m_e} = 1{,}7588 \\cdot 10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Eintrittsgeschwindigkeit $v_0 = \\sqrt{2 \\cdot \\frac{e}{m_e} \\cdot U_0}$ in $10^7\\,\\frac{\\text{m}}{\\text{s}}$.",
+          "eingaben": [
+            {
+              "label": "$v_0$",
+              "antwort": 2.65,
+              "toleranz": 0.01,
+              "einheit": "· 10⁷ m/s"
+            }
+          ],
+          "tipps": [
+            "$v_0 = \\sqrt{2 \\cdot 1{,}7588 \\cdot 10^{11} \\cdot 2000} = \\sqrt{7{,}035 \\cdot 10^{14}}$"
+          ]
+        },
+        {
+          "frage": "Schritt 2: Verweilzeit im Feld $t_1 = L / v_0$ in Nanosekunden.",
+          "eingaben": [
+            {
+              "label": "$t_1$",
+              "antwort": 3.02,
+              "toleranz": 0.02,
+              "einheit": "ns"
+            }
+          ],
+          "tipps": [
+            "$t_1 = \\frac{0{,}08}{2{,}65 \\cdot 10^7}\\,\\text{s} \\approx 3{,}0 \\cdot 10^{-9}\\,\\text{s}$"
+          ]
+        },
+        {
+          "frage": "Schritt 3: Querablenkung am Plattenende $y_1 = \\frac{1}{2} a t_1^2$ mit $a = \\frac{e}{m_e} \\cdot \\frac{U_a}{d}$, in Millimetern.",
+          "eingaben": [
+            {
+              "label": "$y_1$",
+              "antwort": 2.0,
+              "toleranz": 0.05,
+              "einheit": "mm"
+            }
+          ],
+          "tipps": [
+            "$a = 1{,}7588 \\cdot 10^{11} \\cdot \\frac{100}{0{,}04} = 4{,}397 \\cdot 10^{14}\\,\\frac{\\text{m}}{\\text{s}^2}$, dann $y_1 = \\frac{1}{2} a t_1^2$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Zerlege die Bewegung: längs gleichförmig, quer gleichmäßig beschleunigt.",
+        "Erst $v_0$ aus der Beschleunigungsspannung, dann Verweilzeit, dann Querablenkung.",
+        "Kontrolle: Am Schirm (12 cm hinter den Platten) ergeben sich insgesamt 8 mm."
+      ],
+      "loesungsweg": "$v_0 = 2{,}65 \\cdot 10^7\\,\\frac{\\text{m}}{\\text{s}}$; $t_1 = \\frac{0{,}08}{v_0} = 3{,}02\\,\\text{ns}$; $a = 4{,}397 \\cdot 10^{14}\\,\\frac{\\text{m}}{\\text{s}^2}$; $y_1 = \\frac{1}{2} a t_1^2 \\approx 2{,}0\\,\\text{mm}$. Mit Driftstrecke ergibt sich am Schirm $8{,}0\\,\\text{mm}$ — wie in der Simulation.",
+      "kc": [
+        "elektrisches-feld",
+        "bewegung-geladener-teilchen"
+      ],
+      "cas": "<p>Alle Längen in Metern eingeben (L = <code>0.08</code>, d = <code>0.04</code>), die spezifische Ladung mit der <b>EXP</b>-Taste als <code>1.7588E11</code> — dann kommen v₀ in m/s, t₁ in s und y₁ in m heraus:</p><ol><li>Schritt 1 im <b>Main</b>-Menü mit dem Wurzel-Template der <b>Math1</b>-Tastatur: <code>√(2×1.7588E11×2000)</code> und <b>EXE</b> — v₀ ≈ 2,652 · 10⁷ m/s.</li><li>Schritt 2 nutzt das letzte Ergebnis: <code>0.08/ans</code> und <b>EXE</b> — t₁ ≈ 3,016 · 10⁻⁹ s ≈ 3,02 ns.</li><li>Schritt 3 gleich anschließen, denn jetzt ist <code>ans</code> die Zeit t₁: <code>0.5×1.7588E11×100/0.04×ans^2</code> und <b>EXE</b> — y₁ ≈ 0,002 m = 2,0 mm.</li><li>Kontrolle am Schirm (12 cm Driftstrecke): <code>ans+100×0.08/(2×2000×0.04)×0.12</code> und <b>EXE</b> — 0,008 m: genau die 8,0 mm aus der Simulation.</li></ol><p>Achtung Klausur: Die Kette v₀ → t₁ → a → y₁ gehört mit Formeln aufs Papier — der ClassPad liefert nur die Zahlenwerte.</p>"
+    },
+    {
+      "id": "ph-qp-ef-013",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Beim Schwebeversuch (Aufgabe 8) wird die Spannung versehentlich verdoppelt. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Die elektrische Kraft ist jetzt doppelt so groß wie die Gewichtskraft.",
+          "richtig": true,
+          "erklaerung": "Richtig: $F_{el} = qE = q\\frac{U}{d}$ ist proportional zu $U$."
+        },
+        {
+          "text": "Das Kügelchen beschleunigt nach oben mit $a = g$.",
+          "richtig": true,
+          "erklaerung": "Richtig: Resultierende Kraft $= 2mg - mg = mg$, also $a = g$ aufwärts."
+        },
+        {
+          "text": "Das Kügelchen schwebt weiterhin, weil sich das Gleichgewicht automatisch neu einstellt.",
+          "richtig": false,
+          "erklaerung": "Es gibt keinen Rückstellmechanismus — das Gleichgewicht gilt nur bei genau passender Spannung."
+        },
+        {
+          "text": "Die Gewichtskraft verdoppelt sich ebenfalls.",
+          "richtig": false,
+          "erklaerung": "Die Gewichtskraft $mg$ hängt nicht von der Spannung ab."
+        }
+      ],
+      "tipps": [
+        "Wie hängt die elektrische Kraft von der Spannung ab?",
+        "Stelle die Kräftebilanz nach der Verdopplung auf: $F_{el} - F_G = ?$",
+        "Zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Vorher galt $qE = mg$. Nach Verdopplung: $F_{el} = 2mg$. Resultierende Kraft $mg$ nach oben → Beschleunigung $a = g$. Aussagen 1 und 2 sind richtig.",
+      "kc": [
+        "elektrisches-feld",
+        "kraefte"
+      ]
+    }
+  ]
+}

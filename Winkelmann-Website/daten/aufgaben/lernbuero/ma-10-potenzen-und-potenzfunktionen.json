@@ -1,0 +1,833 @@
+{
+ "thema": "ma-10-potenzen-und-potenzfunktionen",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben — fachliche Prüfung ausstehend",
+ "aufgaben": [
+  {
+   "id": "ma-10-pp-101",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Berechne $2^5$ ohne Taschenrechner.",
+   "eingaben": [
+    {
+     "label": "Ergebnis",
+     "antwort": 32,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Schreibe $2^5$ als Produkt: $2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2$.",
+    "Berechne schrittweise: $2 \\cdot 2 = 4$, $4 \\cdot 2 = 8$, $8 \\cdot 2 = 16$, $16 \\cdot 2 = ?$",
+    "$2^5 = 32$."
+   ],
+   "loesungsweg": "$2^5 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2 = 32$.",
+   "kc": [
+    "Zahlen und Operationen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-pp-102",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Was ergibt $3^{-2}$?",
+   "optionen": [
+    {
+     "text": "$-9$",
+     "richtig": false,
+     "erklaerung": "Negative Exponenten erzeugen keine negativen Zahlen, sondern Kehrwerte."
+    },
+    {
+     "text": "$\\frac{1}{9}$",
+     "richtig": true,
+     "erklaerung": "$3^{-2} = \\frac{1}{3^2} = \\frac{1}{9}$."
+    },
+    {
+     "text": "$-\\frac{1}{9}$",
+     "richtig": false,
+     "erklaerung": "Die Basis $3$ ist positiv, also ist auch $3^{-2}$ positiv."
+    },
+    {
+     "text": "$\\frac{1}{6}$",
+     "richtig": false,
+     "erklaerung": "$3^{-2}$ bedeutet Kehrwert von $3^2 = 9$, nicht von $3 \\cdot 2 = 6$."
+    }
+   ],
+   "tipps": [
+    "Das Potenzgesetz für negative Exponenten: $a^{-n} = \\frac{1}{a^n}$.",
+    "Berechne zuerst $3^2$, dann bilde den Kehrwert.",
+    "$3^2 = 9$, also $3^{-2} = \\frac{1}{9}$."
+   ],
+   "loesungsweg": "Nach dem Potenzgesetz gilt $3^{-2} = \\frac{1}{3^2} = \\frac{1}{9}$.",
+   "kc": [
+    "Zahlen und Operationen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-pp-103",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Berechne $8^{2/3}$ ohne Taschenrechner. Hinweis: Erst die dritte Wurzel, dann quadrieren.",
+   "eingaben": [
+    {
+     "label": "Ergebnis",
+     "antwort": 4,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Schreibe $8^{2/3} = \\left(\\sqrt[3]{8}\\right)^2$.",
+    "Was ergibt $\\sqrt[3]{8}$? Welche Zahl ergibt mit sich selbst dreimal multipliziert $8$?",
+    "$\\sqrt[3]{8} = 2$, also $8^{2/3} = 2^2 = 4$."
+   ],
+   "loesungsweg": "$8^{2/3} = \\left(\\sqrt[3]{8}\\right)^2 = 2^2 = 4$. Der Nenner des Exponenten ($3$) gibt die Wurzel an, der Zähler ($2$) die anschließende Potenz.",
+   "kc": [
+    "Zahlen und Operationen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-pp-104",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Vereinfache mit den Potenzgesetzen: $2^3 \\cdot 2^4$. Gib den Exponenten des Ergebnisses an.",
+   "eingaben": [
+    {
+     "label": "Ergebnis als Zahl",
+     "antwort": 128,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Bei gleicher Basis gilt: $a^m \\cdot a^n = a^{m+n}$.",
+    "$2^3 \\cdot 2^4 = 2^{3+4} = 2^7$.",
+    "$2^7 = 128$."
+   ],
+   "loesungsweg": "Gleiche Basis, Exponenten addieren: $2^3 \\cdot 2^4 = 2^{3+4} = 2^7 = 128$.",
+   "kc": [
+    "Zahlen und Operationen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-pp-105",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Vereinfache vollständig und berechne: $\\frac{(4 \\cdot 10^3) \\cdot (2 \\cdot 10^5)}{10^6}$. Schreibe das Ergebnis in wissenschaftlicher Notation.",
+   "schritte": [
+    {
+     "frage": "Wie lautet das Produkt im Zähler (Vorzahl und Zehner-Exponent)?",
+     "eingaben": [
+      {
+       "label": "Vorzahl",
+       "antwort": 8,
+       "toleranz": 0
+      },
+      {
+       "label": "Zehner-Exponent im Zähler",
+       "antwort": 8,
+       "toleranz": 0
+      }
+     ]
+    },
+    {
+     "frage": "Wie lautet das Ergebnis nach der Division durch $10^6$ (Vorzahl und Zehner-Exponent)?",
+     "eingaben": [
+      {
+       "label": "Vorzahl",
+       "antwort": 8,
+       "toleranz": 0
+      },
+      {
+       "label": "Zehner-Exponent",
+       "antwort": 2,
+       "toleranz": 0
+      }
+     ]
+    }
+   ],
+   "tipps": [
+    "Multipliziere die Vorzahlen ($4 \\cdot 2$) und addiere die Zehnerpotenz-Exponenten ($3 + 5$) getrennt.",
+    "Im Zähler steht $8 \\cdot 10^8$. Beim Dividieren durch $10^6$ werden die Exponenten subtrahiert.",
+    "$\\frac{8 \\cdot 10^8}{10^6} = 8 \\cdot 10^{8-6} = 8 \\cdot 10^2$."
+   ],
+   "loesungsweg": "Zähler: $(4 \\cdot 10^3) \\cdot (2 \\cdot 10^5) = (4 \\cdot 2) \\cdot 10^{3+5} = 8 \\cdot 10^8$. Division: $\\frac{8 \\cdot 10^8}{10^6} = 8 \\cdot 10^{8-6} = 8 \\cdot 10^2 = 800$.",
+   "kc": [
+    "Zahlen und Operationen"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-10-pp-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Aussagen über Potenzen und die Potenzgesetze sind richtig?",
+   "optionen": [
+    {
+     "text": "$a^m\\cdot a^n=a^{m+n}$",
+     "richtig": true,
+     "erklaerung": "Beim Multiplizieren gleicher Basen werden die Exponenten addiert."
+    },
+    {
+     "text": "$(a^m)^n=a^{m\\cdot n}$",
+     "richtig": true,
+     "erklaerung": "Beim Potenzieren einer Potenz werden die Exponenten multipliziert."
+    },
+    {
+     "text": "$a^0=0$ für jede Basis $a\\neq 0$",
+     "richtig": false,
+     "erklaerung": "Falsch: $a^0=1$ für jede Basis $a\\neq 0$."
+    },
+    {
+     "text": "$a^{-n}=\\frac{1}{a^n}$ für $a\\neq 0$",
+     "richtig": true,
+     "erklaerung": "Ein negativer Exponent bedeutet den Kehrwert der Potenz."
+    }
+   ],
+   "tipps": [
+    "Beim Multiplizieren gleicher Basen: Exponenten addieren.",
+    "Denk an $a^0$: Jede Zahl (außer $0$) hoch null ergibt $1$.",
+    "Eine Aussage verwechselt $a^0=1$ mit $a^0=0$."
+   ],
+   "loesungsweg": "Richtig sind $a^m\\cdot a^n=a^{m+n}$, $(a^m)^n=a^{m\\cdot n}$ und $a^{-n}=\\frac{1}{a^n}$. Falsch ist nur $a^0=0$ (richtig: $a^0=1$).",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Berechne ohne Taschenrechner: a) $2^6$, b) $3^4$.",
+   "eingaben": [
+    {
+     "label": "a) 2 hoch 6",
+     "antwort": 64,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) 3 hoch 4",
+     "antwort": 81,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Eine Potenz $a^n$ bedeutet: $a$ wird $n$-mal mit sich selbst multipliziert.",
+    "a) $2\\cdot 2\\cdot 2\\cdot 2\\cdot 2\\cdot 2$.",
+    "b) $3\\cdot 3\\cdot 3\\cdot 3$."
+   ],
+   "loesungsweg": "a) $2^6=64$. b) $3^4=81$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Berechne ohne Taschenrechner: a) $4^{-2}$ als Dezimalzahl, b) $7^0$.",
+   "eingaben": [
+    {
+     "label": "a) 4 hoch -2",
+     "antwort": 0.0625,
+     "einheit": "",
+     "toleranz": 0.0001
+    },
+    {
+     "label": "b) 7 hoch 0",
+     "antwort": 1,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Negativer Exponent: $a^{-n}=\\frac{1}{a^n}$.",
+    "a) $4^{-2}=\\frac{1}{4^2}=\\frac{1}{16}$.",
+    "b) Jede Zahl außer $0$ hoch null ergibt $1$."
+   ],
+   "loesungsweg": "a) $4^{-2}=\\frac{1}{4^2}=\\frac{1}{16}=0{,}0625$. b) $7^0=1$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Berechne ohne Taschenrechner mithilfe der Wurzelschreibweise: $27^{2/3}$.",
+   "eingaben": [
+    {
+     "label": "Wert von 27 hoch 2/3",
+     "antwort": 9,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "$a^{m/n}=\\left(\\sqrt[n]{a}\\right)^m$.",
+    "Erst die dritte Wurzel: $\\sqrt[3]{27}=3$.",
+    "Dann quadrieren: $3^2$."
+   ],
+   "loesungsweg": "$27^{2/3}=\\left(\\sqrt[3]{27}\\right)^2=3^2=9$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Vereinfache mit den Potenzgesetzen zu einer einzigen Potenz: $\\frac{a^4\\cdot a^3}{a^2}$ (mit $a\\neq 0$). Gib den Exponenten des Ergebnisses an.",
+   "eingaben": [
+    {
+     "label": "Exponent des Ergebnisses",
+     "antwort": 5,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Zähler zuerst: $a^4\\cdot a^3=a^{4+3}$.",
+    "Beim Dividieren gleicher Basen: Exponenten subtrahieren.",
+    "$a^{7}:a^2=a^{7-2}$."
+   ],
+   "loesungsweg": "$\\frac{a^4\\cdot a^3}{a^2}=\\frac{a^{7}}{a^2}=a^{7-2}=a^5$. Der Exponent ist $5$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Berechne $(3\\cdot 10^4)\\cdot(2\\cdot 10^3)$ und gib das Ergebnis in wissenschaftlicher Notation $v\\cdot 10^n$ an (mit $1\\le v<10$). a) Wert von $v$, b) Wert von $n$.",
+   "eingaben": [
+    {
+     "label": "a) Vorfaktor v",
+     "antwort": 6,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) Exponent n",
+     "antwort": 7,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Vorfaktoren und Zehnerpotenzen getrennt multiplizieren.",
+    "$3\\cdot 2=6$ und $10^4\\cdot 10^3=10^{4+3}$.",
+    "Ergebnis: $6\\cdot 10^{7}$."
+   ],
+   "loesungsweg": "$(3\\cdot 10^4)\\cdot(2\\cdot 10^3)=(3\\cdot 2)\\cdot(10^4\\cdot 10^3)=6\\cdot 10^{7}$. Also $v=6$, $n=7$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Vereinfache vollständig und berechne den Wert: $\\frac{2^3\\cdot 2^5}{(2^2)^3}\\cdot 2$.",
+   "eingaben": [
+    {
+     "label": "Wert des Terms",
+     "antwort": 8,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Kurz erklärt: Ein <strong>Term</strong> ist ein Rechenausdruck mit Zahlen und Variablen (ohne Gleichheitszeichen), z. B. $3x+5$.",
+    "Zähler: $2^3\\cdot 2^5=2^{3+5}$.",
+    "Nenner: $(2^2)^3=2^{2\\cdot 3}=2^6$.",
+    "Alles zusammen: $2^{8}:2^{6}\\cdot 2^{1}=2^{8-6+1}$."
+   ],
+   "loesungsweg": "$\\frac{2^3\\cdot 2^5}{(2^2)^3}\\cdot 2=\\frac{2^{8}}{2^{6}}\\cdot 2^{1}=2^{8-6+1}=2^{3}=8$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein massiver Würfel hat das Volumen $V=512\\,\\text{cm}^3$. a) Berechne die Kantenlänge $a=V^{1/3}$. b) Berechne die Oberfläche $O=6\\cdot a^2$.",
+   "eingaben": [
+    {
+     "label": "a) Kantenlänge a",
+     "antwort": 8,
+     "einheit": "cm",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) Oberfläche O",
+     "antwort": 384,
+     "einheit": "cm²",
+     "toleranz": 0.5
+    }
+   ],
+   "tipps": [
+    "Die Kantenlänge ist die dritte Wurzel des Volumens: $a=\\sqrt[3]{512}$.",
+    "Welche Zahl hoch $3$ ergibt $512$? Probiere $8^3$.",
+    "Oberfläche: $6$ Quadratflächen, also $6\\cdot a^2$."
+   ],
+   "loesungsweg": "a) $a=\\sqrt[3]{512}=8\\,\\text{cm}$ (denn $8^3=512$). b) $O=6\\cdot 8^2=6\\cdot 64=384\\,\\text{cm}^2$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-301",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Lina und Tom vereinfachen Potenzterme. Welche der folgenden Umformungen sind <strong>richtig</strong>?",
+   "optionen": [
+    {
+     "text": "$a^3 \\cdot a^4 = a^{12}$",
+     "richtig": false,
+     "erklaerung": "Falsch: Bei gleicher Basis werden die Exponenten addiert, nicht multipliziert: $a^3\\cdot a^4=a^{7}$."
+    },
+    {
+     "text": "$(a^3)^4 = a^{12}$",
+     "richtig": true,
+     "erklaerung": "Richtig: Potenz einer Potenz bedeutet Exponenten multiplizieren: $3\\cdot 4=12$."
+    },
+    {
+     "text": "$\\frac{a^7}{a^2} = a^{5}$",
+     "richtig": true,
+     "erklaerung": "Richtig: Bei gleicher Basis im Quotienten werden die Exponenten subtrahiert: $7-2=5$."
+    },
+    {
+     "text": "$a^4 + a^4 = a^{8}$",
+     "richtig": false,
+     "erklaerung": "Falsch: Eine Summe gleicher Potenzen fasst man nicht im Exponenten zusammen. Richtig ist $a^4+a^4=2a^4$."
+    }
+   ],
+   "tipps": [
+    "Bei <em>Multiplikation</em> gleicher Basen werden die Exponenten addiert, bei <em>Division</em> subtrahiert.",
+    "Achte auf den Unterschied zwischen einem Produkt $a^3\\cdot a^4$ und einer Summe $a^4+a^4$.",
+    "Genau zwei der vier Umformungen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind $(a^3)^4=a^{12}$ (Exponenten mal) und $\\frac{a^7}{a^2}=a^5$ (Exponenten minus). Falsch sind $a^3\\cdot a^4=a^{12}$ (richtig wäre $a^7$, Exponenten plus) und $a^4+a^4=a^8$ (eine Summe, richtig wäre $2a^4$). Merke: Die Potenzgesetze gelten nur bei Produkten und Quotienten, nicht bei Summen.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-302",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Mitschüler behauptet: „$2^0$ muss $0$ sein, denn man multipliziert die $2$ ja nullmal.“ Erkläre, warum stattdessen $2^0 = 1$ gilt. Begründe mit dem Potenzgesetz für die Division und beschreibe das Muster der Zweierpotenzen.",
+   "musterloesung": "Die Behauptung ist falsch. Aus dem Divisionsgesetz folgt $\\frac{2^3}{2^3}=2^{3-3}=2^0$. Da jede Zahl durch sich selbst $1$ ergibt, ist $\\frac{2^3}{2^3}=1$, also muss $2^0=1$ sein. Auch das Muster der Zweierpotenzen zeigt es: $2^3=8$, $2^2=4$, $2^1=2$ — bei jedem Schritt nach unten wird halbiert. Der nächste Schritt führt von $2^1=2$ auf $2^0=2:2=1$, nicht auf $0$. So bleibt die Regel $a^m:a^n=a^{m-n}$ lückenlos gültig (Permanenzprinzip).",
+   "tipps": [
+    "Schreibe $\\frac{2^3}{2^3}$ einmal mit dem Potenzgesetz und einmal als Zahl aus.",
+    "Stelle die Zweierpotenzen $2^3, 2^2, 2^1$ untereinander — was passiert bei jedem Schritt nach unten?",
+    "Der Schritt von $2^1$ nach $2^0$ ist eine Halbierung, also $2:2=1$, nicht $0$."
+   ],
+   "loesungsweg": "Vollständige Begründung s. Musterlösung. Kernpunkte: Divisionsgesetz $\\frac{2^3}{2^3}=2^0$ ist gleichzeitig $=1$; Halbierungsmuster führt von $2^1=2$ auf $2^0=1$; Permanenzprinzip.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-303",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jedem Potenzausdruck seinen Wert zu (jeweils ohne Taschenrechner berechenbar).",
+   "paare": [
+    {
+     "links": "$2^{-3}$",
+     "rechts": "ein Achtel"
+    },
+    {
+     "links": "$25^{1/2}$",
+     "rechts": "fünf"
+    },
+    {
+     "links": "$4^0$",
+     "rechts": "eins"
+    },
+    {
+     "links": "$8^{2/3}$",
+     "rechts": "vier"
+    },
+    {
+     "links": "$10^{-2}$",
+     "rechts": "null Komma null eins"
+    }
+   ],
+   "tipps": [
+    "Negative Exponenten bedeuten den Kehrwert: $a^{-n}=\\frac{1}{a^n}$.",
+    "Der Nenner eines Bruchexponenten ist die Wurzel: $25^{1/2}=\\sqrt{25}$.",
+    "Bei $8^{2/3}$ erst die dritte Wurzel ($\\sqrt[3]{8}=2$), dann quadrieren."
+   ],
+   "loesungsweg": "$2^{-3}=\\frac{1}{2^3}=\\frac{1}{8}$ (ein Achtel). $25^{1/2}=\\sqrt{25}=5$ (fünf). $4^0=1$ (eins). $8^{2/3}=(\\sqrt[3]{8})^2=2^2=4$ (vier). $10^{-2}=\\frac{1}{100}=0{,}01$ (null Komma null eins).",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-304",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze die Regeln zum Rechnen mit Potenzen.",
+   "text": "Beim Multiplizieren von Potenzen mit gleicher Basis werden die Exponenten ___ . Beim Dividieren werden sie ___ . Eine negative Hochzahl bedeutet den ___ der Potenz, also $a^{-n}=\\frac{1}{a^n}$. Außerdem gilt für jede Basis $a\\neq 0$, dass $a^0=$ ___ ist.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "addiert",
+     "optionen": [
+      "addiert",
+      "multipliziert",
+      "subtrahiert"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "subtrahiert",
+     "optionen": [
+      "subtrahiert",
+      "addiert",
+      "dividiert"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Kehrwert",
+     "optionen": [
+      "Kehrwert",
+      "Gegenwert",
+      "Nachfolger"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "1",
+     "optionen": [
+      "1",
+      "0",
+      "a"
+     ]
+    }
+   ],
+   "tipps": [
+    "$a^m\\cdot a^n=a^{m+n}$ — was passiert mit den Exponenten?",
+    "$\\frac{a^m}{a^n}=a^{m-n}$ — Plus oder Minus?",
+    "$a^{-n}=\\frac{1}{a^n}$ ist genau der Kehrwert; und jede Potenz mit Exponent null ergibt $1$."
+   ],
+   "loesungsweg": "Multiplizieren: Exponenten <em>addieren</em> ($a^m\\cdot a^n=a^{m+n}$). Dividieren: Exponenten <em>subtrahieren</em> ($\\frac{a^m}{a^n}=a^{m-n}$). Negative Hochzahl = <em>Kehrwert</em> ($a^{-n}=\\frac{1}{a^n}$). $a^0=1$.",
+   "kc": [
+    "KC Mathematik Sek I (2015): Zahl und Operation, Potenzen und Potenzgesetze (Klasse 10)"
+   ]
+  },
+  {
+   "id": "ma-10-pp-110",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche der folgenden Funktionen sind <strong>Potenzfunktionen</strong> der Form $f(x)=x^n$ (Variable in der Basis)?",
+   "optionen": [
+    {
+     "text": "$f(x)=x^3$",
+     "richtig": true,
+     "erklaerung": "Richtig: Die Variable $x$ steht in der Basis, der Exponent ist fest."
+    },
+    {
+     "text": "$f(x)=2^x$",
+     "richtig": false,
+     "erklaerung": "Falsch: Hier steht $x$ im Exponenten — das ist eine Exponentialfunktion."
+    },
+    {
+     "text": "$f(x)=x^{-2}$",
+     "richtig": true,
+     "erklaerung": "Richtig: auch mit negativem festen Exponenten ist es eine Potenzfunktion."
+    },
+    {
+     "text": "$f(x)=5^x$",
+     "richtig": false,
+     "erklaerung": "Falsch: Variable im Exponenten → Exponentialfunktion."
+    }
+   ],
+   "tipps": [
+    "Schau, wo das $x$ steht: in der Basis oder im Exponenten?",
+    "Potenzfunktion: $x$ in der Basis, fester Exponent.",
+    "Exponentialfunktion: feste Basis, $x$ im Exponenten."
+   ],
+   "loesungsweg": "Potenzfunktionen haben $x$ in der Basis und einen festen Exponenten: $x^3$ und $x^{-2}$. Bei $2^x$ und $5^x$ steht $x$ im Exponenten — das sind Exponentialfunktionen.",
+   "kc": [
+    "zahlen-und-operationen",
+    "funktionaler-zusammenhang"
+   ]
+  },
+  {
+   "id": "ma-10-pp-111",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jeder Potenzfunktion die Symmetrie ihres Graphen zu.",
+   "paare": [
+    {
+     "links": "$f(x)=x^2$",
+     "rechts": "achsensymmetrisch zur y-Achse"
+    },
+    {
+     "links": "$f(x)=x^3$",
+     "rechts": "punktsymmetrisch zum Ursprung"
+    },
+    {
+     "links": "$f(x)=x^4$",
+     "rechts": "achsensymmetrisch zur y-Achse"
+    },
+    {
+     "links": "$f(x)=x^5$",
+     "rechts": "punktsymmetrisch zum Ursprung"
+    }
+   ],
+   "tipps": [
+    "Gerader Exponent (2, 4, ...) oder ungerader Exponent (3, 5, ...)?",
+    "Gerade Exponenten: $f(-x)=f(x)$ → Achsensymmetrie.",
+    "Ungerade Exponenten: $f(-x)=-f(x)$ → Punktsymmetrie."
+   ],
+   "loesungsweg": "Gerade Exponenten ($x^2$, $x^4$) ergeben Achsensymmetrie zur y-Achse; ungerade Exponenten ($x^3$, $x^5$) ergeben Punktsymmetrie zum Ursprung.",
+   "kc": [
+    "zahlen-und-operationen",
+    "funktionaler-zusammenhang"
+   ]
+  },
+  {
+   "id": "ma-10-pp-112",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Aussagen über die Graphen von $f(x)=\\sqrt{x}$ und $g(x)=\\frac{1}{x}$ sind <strong>richtig</strong>?",
+   "optionen": [
+    {
+     "text": "$f(x)=\\sqrt{x}$ ist nur für $x\\ge 0$ definiert.",
+     "richtig": true,
+     "erklaerung": "Richtig: Aus negativen Zahlen lässt sich keine (reelle) Quadratwurzel ziehen."
+    },
+    {
+     "text": "$g(x)=\\frac{1}{x}$ ist auch an der Stelle $x=0$ definiert.",
+     "richtig": false,
+     "erklaerung": "Falsch: Durch $0$ darf man nicht teilen; bei $x=0$ ist die Hyperbel nicht definiert."
+    },
+    {
+     "text": "Der Graph von $\\sqrt{x}$ steigt, wird aber immer flacher.",
+     "richtig": true,
+     "erklaerung": "Richtig: Die Wurzelfunktion wächst monoton, aber immer langsamer."
+    },
+    {
+     "text": "Der Graph von $\\frac{1}{x}$ besteht aus zwei getrennten Ästen.",
+     "richtig": true,
+     "erklaerung": "Richtig: Für $x>0$ und $x<0$ gibt es je einen Ast; sie nähern sich den Achsen an."
+    }
+   ],
+   "tipps": [
+    "Aus welchen Zahlen darfst du die Wurzel ziehen?",
+    "Welche Zahl darf im Nenner nie stehen?",
+    "Überlege, wie sich $\\frac{1}{x}$ für sehr große und sehr kleine $x$ verhält."
+   ],
+   "loesungsweg": "$\\sqrt{x}$ ist nur für $x\\ge 0$ definiert und steigt immer flacher. $\\frac{1}{x}$ ist bei $x=0$ nicht definiert und hat zwei Äste (für $x>0$ und $x<0$), die sich den Achsen nähern. Falsch ist nur die zweite Aussage.",
+   "kc": [
+    "zahlen-und-operationen",
+    "funktionaler-zusammenhang"
+   ]
+  },
+  {
+   "id": "ma-10-pp-113",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Lies aus den Funktionsgleichungen ab. a) $f(x)=\\sqrt{x}$: Berechne $f(9)$. b) $g(x)=\\frac{1}{x}$: Berechne $g(4)$ als Dezimalzahl.",
+   "eingaben": [
+    {
+     "label": "a) f(9)",
+     "antwort": 3,
+     "toleranz": 0.001
+    },
+    {
+     "label": "b) g(4)",
+     "antwort": 0.25,
+     "toleranz": 0.001
+    }
+   ],
+   "tipps": [
+    "$\\sqrt{9}$ ist die Zahl, die mit sich selbst malgenommen $9$ ergibt.",
+    "$\\frac{1}{4}$ als Dezimalzahl.",
+    "Kontrolle: $3\\cdot 3=9$ und $\\frac{1}{4}=0{,}25$."
+   ],
+   "loesungsweg": "a) $f(9)=\\sqrt{9}=3$. b) $g(4)=\\frac{1}{4}=0{,}25$.",
+   "kc": [
+    "zahlen-und-operationen",
+    "funktionaler-zusammenhang"
+   ]
+  },
+  {
+   "id": "ma-10-pp-114",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Schreibe in wissenschaftlicher Notation $v\\cdot 10^n$ mit $1\\le v<10$. a) $47\\,000$ — gib $v$ und $n$ an. b) $0{,}0036$ — gib $v$ und $n$ an.",
+   "eingaben": [
+    {
+     "label": "a) v",
+     "antwort": 4.7,
+     "toleranz": 0.001
+    },
+    {
+     "label": "a) n",
+     "antwort": 4,
+     "toleranz": 0.001
+    },
+    {
+     "label": "b) v",
+     "antwort": 3.6,
+     "toleranz": 0.001
+    },
+    {
+     "label": "b) n",
+     "antwort": -3,
+     "toleranz": 0.001
+    }
+   ],
+   "tipps": [
+    "Verschiebe das Komma so, dass genau eine Ziffer ungleich Null davor steht.",
+    "Nach links verschoben → positiver Exponent; nach rechts → negativer.",
+    "$47\\,000=4{,}7\\cdot 10^4$; $0{,}0036=3{,}6\\cdot 10^{-3}$."
+   ],
+   "loesungsweg": "a) $47\\,000=4{,}7\\cdot 10^4$, also $v=4{,}7$, $n=4$. b) $0{,}0036=3{,}6\\cdot 10^{-3}$, also $v=3{,}6$, $n=-3$.",
+   "kc": [
+    "zahlen-und-operationen",
+    "funktionaler-zusammenhang"
+   ]
+  }
+ ]
+}

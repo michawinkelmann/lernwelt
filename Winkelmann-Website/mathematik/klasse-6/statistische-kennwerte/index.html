@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statistische Kennwerte — Klasse 6 · Mathematik — Lernwelt</title>
+<meta name="description" content="Arithmetisches Mittel, Median und Spannweite verstehen und berechnen, den Ausreißer-Effekt am Taschengeld-Beispiel entdecken und Diagramme sowie Durchschnitts-Schlagzeilen kritisch lesen.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Statistische Kennwerte</h1>
+  <p class="einleitung">Wie viele Tore schießt deine Mannschaft „normalerweise“? Wie warm war der Juni „im Schnitt“? Statistische Kennwerte fassen eine ganze Datenliste in einer einzigen Zahl zusammen. Hier lernst du das arithmetische Mittel, den Median und die Spannweite kennen — und du erfährst, wie man mit dem „Durchschnitt“ tricksen kann und wie du solche Tricks durchschaust.</p>
+
+  <section aria-labelledby="sk-blick">
+    <h2 id="sk-blick">1. Daten auf einen Blick</h2>
+    <p>In Klasse 5 hast du gelernt, wie man <a href="../../klasse-5/daten-erheben-und-darstellen/index.html">Daten erhebt und darstellt</a>: mit Strichlisten zählen, Säulendiagramme zeichnen — und alle Messwerte zuerst als <strong>Urliste</strong> notieren. So heißt die rohe, unsortierte Liste aller Werte. Aber eine lange Liste ist unhandlich: Wer wissen will, wie gut eine Mannschaft spielt, möchte nicht acht Zahlen hören, sondern eine.</p>
+    <p>Genau das leisten <strong>statistische Kennwerte</strong>: Eine einzige Zahl fasst die ganze Liste zusammen. Unser Beispiel für diese Seite — Jonas’ Fußballmannschaft hat in den letzten 8 Spielen so viele Tore geschossen:</p>
+    <p class="formel-abgesetzt">$$0,\; 2,\; 1,\; 3,\; 2,\; 4,\; 2,\; 2$$</p><div class="merkkasten"><span class="merk-etikett">Zur Erinnerung: das arithmetische Mittel</span><p class="formel-abgesetzt">$$\bar{x} = \frac{\text{Summe aller Werte}}{\text{Anzahl der Werte}}$$</p><p>Das Zeichen $\bar{x}$ (sprich: „x quer“) steht für das<strong>arithmetische Mittel</strong>— im Alltag sagt man „Durchschnitt“. Anschaulich: Alle Werte werden zusammengelegt und dann gerecht auf alle verteilt, als hätte jeder gleich viel.</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: das Mittel der Tor-Liste</span><p>Summe der Tore: $0+2+1+3+2+4+2+2 = 16$. Anzahl der Spiele: 8. Also:</p><p class="formel-abgesetzt">$$\bar{x} = \frac{16}{8} = 2$$</p><p>Im Mittel schießt die Mannschaft 2 Tore pro Spiel. Das Mittel muss übrigens kein Wert aus der Liste sein: Für die kurze Liste 1, 2 ist es $1{,}5$ — anderthalb Tore kann man gar nicht schießen, als Kennwert ist das trotzdem völlig in Ordnung.</p></div></section><section aria-labelledby="sk-median"><h2 id="sk-median">2. Der Median</h2><p>Der<strong>Median</strong>ist der Wert, der in der Mitte steht. Aber Achtung, der wichtigste Schritt kommt zuerst:<strong>sortieren!</strong>In der unsortierten Urliste darf man die Mitte nicht einfach ablesen.</p><div class="merkkasten"><span class="merk-etikett">Median bestimmen — das Rezept</span><p><strong>Schritt 1:</strong>Die Liste der Größe nach sortieren.<br><strong>Schritt 2:</strong>Bei<em>ungerader</em>Anzahl von Werten ist der Median der mittlere Wert. Bei<em>gerader</em>Anzahl bildest du das arithmetische Mittel der beiden mittleren Werte.</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: der Median der Tor-Liste</span><p>Sortiert lautet die Liste: 0, 1, 2, 2, 2, 2, 3, 4. Das sind 8 Werte — eine gerade Anzahl. In der Mitte stehen der 4. und der 5. Wert: beide 2. Ihr Mittel ist</p><p class="formel-abgesetzt">$$\frac{2+2}{2} = 2$$</p><p>Der Median ist 2: Die eine Hälfte der Spiele lief höchstens so gut, die andere mindestens so gut.</p></div><details class="check"><summary>Verständnis-Check: Bestimme den Median von 3, 8, 5, 1, 9.</summary><div class="check-antwort"><p>Erst sortieren: 1, 3, 5, 8, 9. Das sind fünf Werte — ungerade Anzahl, also ist der 3. Wert die Mitte: Der Median ist<strong>5</strong>. (Dass hier auch in der Urliste zufällig die 5 in der Mitte steht, ist Glück — verlass dich nie darauf, sortiere immer zuerst!)</p></div></details></section><section aria-labelledby="sk-spannweite"><h2 id="sk-spannweite">3. Die Spannweite</h2><p>Mittel und Median verraten, wo die Daten ungefähr liegen — aber nicht, wie weit sie<strong>streuen</strong>. Dafür gibt es einen dritten Kennwert: die<strong>Spannweite</strong>.</p><div class="merkkasten"><span class="merk-etikett">Spannweite</span><p class="formel-abgesetzt">$$\text{Spannweite} = \text{größter Wert} - \text{kleinster Wert}$$</p><p>Je größer die Spannweite, desto weiter liegen die Daten auseinander. Für die Tor-Liste: $4 - 0 = 4$.</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: gleiches Mittel — ganz anderes Wetter</span><p>Ein Wüstenort und ein Küstenort melden am selben Tag beide eine Mitteltemperatur von 20&nbsp;°C. Fühlt sich das gleich an? Bestimmt nicht: An der Küste schwankt die Temperatur nur zwischen 16&nbsp;°C und 24&nbsp;°C — in der Wüste zwischen 2&nbsp;°C in der Nacht und 38&nbsp;°C am Mittag!</p><p class="formel-abgesetzt">$$\begin{gathered} \text{Küste: } 24\,^\circ\text{C} - 16\,^\circ\text{C} = 8\,^\circ\text{C} \\[4pt] \text{Wüste: } 38\,^\circ\text{C} - 2\,^\circ\text{C} = 36\,^\circ\text{C} \end{gathered}$$</p><p>Erst die Spannweite zeigt den Unterschied: 8&nbsp;°C gegen 36&nbsp;°C. Ein Kennwert allein erzählt eben nie die ganze Geschichte — oft braucht man zwei.</p></div><details class="check"><summary>Verständnis-Check: Morgens 3&nbsp;°C, mittags 12&nbsp;°C — wie groß ist die Spannweite der Tagestemperatur?</summary><div class="check-antwort"><p>Größter minus kleinster Wert: $12 - 3 = 9$. Die Spannweite beträgt<strong>9&nbsp;°C</strong>.</p></div></details></section><section aria-labelledby="sk-ausreisser"><h2 id="sk-ausreisser">4. Mittel oder Median? Der Ausreißer-Effekt</h2><p>Fünf Kinder vergleichen ihr monatliches Taschengeld: 5, 5, 6, 7 und 7 €. Das Mittel ist $\frac{30}{5} = 6$ €, und auch der Median ist 6 € — die Liste ist schon sortiert, der mittlere Wert ist die 6. Beide Kennwerte erzählen dieselbe Geschichte: Typisch sind etwa 6 €.</p><p>Dann zieht eines der Kinder mit 7 € weg, und ein neues Kind kommt in die Gruppe — es bekommt satte 30 € im Monat. Die neue Liste heißt 5, 5, 6, 7, 30. Rechne mit:</p><p class="formel-abgesetzt">$$\bar{x} = \frac{5+5+6+7+30}{5} = \frac{53}{5} = 10{,}60\,\text{€}$$</p>
+    <p>Das Mittel springt von 6 € auf 10,60 € — obwohl vier der fünf Kinder höchstens 7 € bekommen! Der Median bleibt dagegen gelassen: Sortiert steht in der Mitte nach wie vor die 6. Ein einzelner extremer Wert — ein <strong>Ausreißer</strong> — zieht das Mittel zu sich herüber. Der Median rührt sich kaum.</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 222" width="340" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zwei Zahlenstrahlen übereinander. Oben Liste A: 5, 5, 6, 7, 7 Euro — der Median-Strich und das Mittel-Dreieck stehen beide bei 6 Euro. Unten Liste B: 5, 5, 6, 7, 30 Euro — der Median-Strich bleibt bei 6 Euro, aber das Mittel-Dreieck ist zum Ausreißer hin auf 10,60 Euro gerutscht.">
+        <!-- Liste A: 5, 5, 6, 7, 7 -->
+        <text x="25" y="16" font-size="12" font-weight="700" fill="var(--mathe)">Liste A: 5, 5, 6, 7, 7 (in €)</text>
+        <text x="82" y="30" font-size="11" font-weight="700" fill="var(--mathe)" text-anchor="middle">Median 6 €</text>
+        <line x1="82" y1="38" x2="82" y2="70" stroke="var(--mathe)" stroke-width="3.5"/>
+        <line x1="25" y1="66" x2="335" y2="66" stroke="var(--mathe)" stroke-width="2"/>
+        <g stroke="var(--mathe)" stroke-width="1.25">
+          <line x1="25" y1="61" x2="25" y2="71"/>
+          <line x1="72.5" y1="61" x2="72.5" y2="71"/>
+          <line x1="120" y1="61" x2="120" y2="71"/>
+          <line x1="167.5" y1="61" x2="167.5" y2="71"/>
+          <line x1="215" y1="61" x2="215" y2="71"/>
+          <line x1="262.5" y1="61" x2="262.5" y2="71"/>
+          <line x1="310" y1="61" x2="310" y2="71"/>
+        </g>
+        <g fill="var(--mathe)" font-size="10" text-anchor="middle">
+          <text x="25" y="84">0</text>
+          <text x="167.5" y="84">15</text>
+          <text x="310" y="84">30</text>
+        </g>
+        <g fill="var(--mathe)">
+          <circle cx="72.5" cy="58" r="5"/>
+          <circle cx="72.5" cy="46" r="5"/>
+          <circle cx="82" cy="58" r="5"/>
+          <circle cx="91.5" cy="58" r="5"/>
+          <circle cx="91.5" cy="46" r="5"/>
+        </g>
+        <polygon points="82,73 75.5,85 88.5,85" fill="var(--mathe)"/>
+        <text x="82" y="98" font-size="11" font-weight="700" fill="var(--mathe)" text-anchor="middle">Mittel 6 €</text>
+        <!-- Liste B: 5, 5, 6, 7, 30 -->
+        <text x="25" y="126" font-size="12" font-weight="700" fill="var(--mathe)">Liste B: 5, 5, 6, 7, 30 — mit Ausreißer</text>
+        <text x="82" y="140" font-size="11" font-weight="700" fill="var(--mathe)" text-anchor="middle">Median 6 €</text>
+        <line x1="82" y1="148" x2="82" y2="180" stroke="var(--mathe)" stroke-width="3.5"/>
+        <line x1="25" y1="176" x2="335" y2="176" stroke="var(--mathe)" stroke-width="2"/>
+        <g stroke="var(--mathe)" stroke-width="1.25">
+          <line x1="25" y1="171" x2="25" y2="181"/>
+          <line x1="72.5" y1="171" x2="72.5" y2="181"/>
+          <line x1="120" y1="171" x2="120" y2="181"/>
+          <line x1="167.5" y1="171" x2="167.5" y2="181"/>
+          <line x1="215" y1="171" x2="215" y2="181"/>
+          <line x1="262.5" y1="171" x2="262.5" y2="181"/>
+          <line x1="310" y1="171" x2="310" y2="181"/>
+        </g>
+        <g fill="var(--mathe)" font-size="10" text-anchor="middle">
+          <text x="25" y="194">0</text>
+          <text x="167.5" y="194">15</text>
+          <text x="310" y="194">30</text>
+        </g>
+        <text x="310" y="152" font-size="10.5" font-weight="700" fill="var(--mathe)" text-anchor="middle">Ausreißer</text>
+        <g fill="var(--mathe)">
+          <circle cx="72.5" cy="168" r="5"/>
+          <circle cx="72.5" cy="156" r="5"/>
+          <circle cx="82" cy="168" r="5"/>
+          <circle cx="91.5" cy="168" r="5"/>
+          <circle cx="310" cy="168" r="5"/>
+        </g>
+        <polygon points="125.7,183 119.2,195 132.2,195" fill="var(--mathe)"/>
+        <text x="125.7" y="209" font-size="11" font-weight="700" fill="var(--mathe)" text-anchor="middle">Mittel 10,60 €</text>
+      </svg>
+    </div>
+    <p>Beide Listen als Punktediagramm auf dem Zahlenstrahl — gestapelte Punkte bedeuten gleiche Werte. Der senkrechte <strong>Strich</strong> markiert den Median, das <strong>Dreieck</strong> das arithmetische Mittel: In Liste B zerrt der Ausreißer bei 30 € das Dreieck nach rechts auf 10,60 €, während der Median-Strich bei 6 € stehen bleibt.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Wann nimmst du welchen Kennwert?</span>
+      <p>Das <strong>arithmetische Mittel</strong> passt, wenn jeder einzelne Wert zählen soll — etwa wenn eine Gesamtsumme gerecht verteilt wird. Der <strong>Median</strong> passt, wenn du den <em>typischen</em> Wert suchst und Ausreißer nicht stören sollen. Am besten gibst du beide an: Liegen sie weit auseinander, ist das selbst schon ein Hinweis auf Ausreißer!</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Der größte Wert einer Liste wird verzehnfacht. Was passiert mit Median und Spannweite?</summary>
+      <div class="check-antwort"><p>Der <strong>Median ändert sich nicht</strong>: Der größte Wert bleibt auch verzehnfacht der größte, die Mitte der sortierten Liste bleibt dieselbe. Die <strong>Spannweite wächst dagegen stark</strong>. Beispiel: Aus 2, 3, 5, 9 wird 2, 3, 5, 90 — der Median bleibt 4, die Spannweite springt von 7 auf 88.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="sk-kritisch">
+    <h2 id="sk-kritisch">5. Kennwerte und Diagramme kritisch lesen</h2>
+    <p>„Durchschnittstaschengeld in der Gruppe: 10,60 €!“ — diese Schlagzeile wäre nicht einmal gelogen. Trotzdem führt sie in die Irre, denn vier der fünf Kinder bekommen höchstens 7 €. Wenn dir jemand einen „Durchschnitt“ präsentiert, frag nach: <em>Wer oder was zieht den Schnitt nach oben — und wo liegt der Median?</em></p>
+    <p>Auch Diagramme können denselben Zahlen eine ganz andere Botschaft verpassen. Den beliebtesten Trick kennst du schon aus Klasse 5: die <strong>abgeschnittene Achse</strong>. Bei der Altpapier-Sammlung bringt die Klasse 6a 48 kg zusammen, die 6b 52 kg — fast gleich viel. Sieh dir an, was die Achse daraus machen kann:</p>
+    <div class="formel-abgesetzt">
+      <svg viewBox="0 0 360 205" width="340" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zwei Säulendiagramme mit denselben Daten: Klasse 6a sammelt 48 Kilogramm Altpapier, Klasse 6b 52 Kilogramm. Im linken Diagramm beginnt die Achse bei null — die Säulen wirken fast gleich hoch. Im rechten Diagramm beginnt die Achse erst bei 45 — dieselbe Säule der 6b wirkt nun mehr als doppelt so hoch wie die der 6a. Unterschrift: Gleiche Zahlen — anderer Eindruck.">
+        <!-- linkes Diagramm: Achse beginnt bei 0 -->
+        <g stroke="var(--mathe)" stroke-width="2">
+          <line x1="30" y1="26" x2="30" y2="150"/>
+          <line x1="30" y1="150" x2="168" y2="150"/>
+        </g>
+        <g stroke="var(--mathe)" stroke-width="1.25">
+          <line x1="26" y1="110" x2="30" y2="110"/>
+          <line x1="26" y1="70" x2="30" y2="70"/>
+          <line x1="26" y1="30" x2="30" y2="30"/>
+        </g>
+        <g fill="var(--mathe)" font-size="9.5" text-anchor="end">
+          <text x="23" y="153">0</text>
+          <text x="23" y="113">20</text>
+          <text x="23" y="73">40</text>
+          <text x="23" y="33">60</text>
+        </g>
+        <g fill="var(--mathe)" fill-opacity="0.35" stroke="var(--mathe)" stroke-width="2">
+          <rect x="52" y="54" width="34" height="96"/>
+          <rect x="110" y="46" width="34" height="104"/>
+        </g>
+        <g fill="var(--mathe)" font-size="10.5" font-weight="700" text-anchor="middle">
+          <text x="69" y="48">48</text>
+          <text x="127" y="40">52</text>
+        </g>
+        <g fill="var(--mathe)" font-size="10.5" text-anchor="middle">
+          <text x="69" y="164">6a</text>
+          <text x="127" y="164">6b</text>
+        </g>
+        <text x="99" y="181" font-size="11" font-weight="700" fill="var(--mathe)" text-anchor="middle">Achse beginnt bei 0</text>
+        <!-- rechtes Diagramm: Achse beginnt erst bei 45 -->
+        <g stroke="var(--mathe)" stroke-width="2">
+          <line x1="215" y1="26" x2="215" y2="150"/>
+          <line x1="215" y1="150" x2="353" y2="150"/>
+        </g>
+        <g stroke="var(--mathe)" stroke-width="1.25">
+          <line x1="211" y1="110" x2="215" y2="110"/>
+          <line x1="211" y1="70" x2="215" y2="70"/>
+          <line x1="211" y1="30" x2="215" y2="30"/>
+        </g>
+        <g stroke="var(--mathe)" stroke-width="1.5">
+          <line x1="210" y1="139" x2="220" y2="133"/>
+          <line x1="210" y1="145" x2="220" y2="139"/>
+        </g>
+        <g fill="var(--mathe)" font-size="9.5" text-anchor="end">
+          <text x="208" y="153">45</text>
+          <text x="208" y="113">50</text>
+          <text x="208" y="73">55</text>
+          <text x="208" y="33">60</text>
+        </g>
+        <g fill="var(--mathe)" fill-opacity="0.35" stroke="var(--mathe)" stroke-width="2">
+          <rect x="237" y="126" width="34" height="24"/>
+          <rect x="295" y="94" width="34" height="56"/>
+        </g>
+        <g fill="var(--mathe)" font-size="10.5" font-weight="700" text-anchor="middle">
+          <text x="254" y="120">48</text>
+          <text x="312" y="88">52</text>
+        </g>
+        <g fill="var(--mathe)" font-size="10.5" text-anchor="middle">
+          <text x="254" y="164">6a</text>
+          <text x="312" y="164">6b</text>
+        </g>
+        <text x="284" y="181" font-size="11" font-weight="700" fill="var(--mathe)" text-anchor="middle">Achse beginnt bei 45</text>
+        <text x="180" y="200" font-size="12.5" font-weight="700" fill="var(--mathe)" text-anchor="middle">Gleiche Zahlen — anderer Eindruck!</text>
+      </svg>
+    </div>
+    <p>Zweimal exakt dieselben Daten: Links beginnt die Achse bei 0 — die Säulen sind fast gleich hoch, so wie es den Zahlen 48 und 52 entspricht. Rechts ist die Achse bei 45 abgeschnitten (die kleinen Schrägstriche zeigen das an) — plötzlich ragt die Säule der 6b scheinbar haushoch über die der 6a. Gleiche Zahlen, anderer Eindruck!</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Checkliste: Daten kritisch lesen</span>
+      <p><strong>1.</strong> Beginnt die senkrechte Achse bei 0 — oder ist sie abgeschnitten? <strong>2.</strong> Ist mit „Durchschnitt“ das Mittel gemeint, und könnte ein Ausreißer es verzerren? Wo läge der Median? <strong>3.</strong> Wie viele Daten stecken dahinter, wer hat sie erhoben — und was will er dir damit sagen?</p>
+    </div>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Der Modalwert — und welcher Kennwert wofür</summary>
+    <div class="vertiefung-inhalt">
+      <p>Neben Mittel und Median gibt es noch einen dritten „Mittelwert“: den <strong>Modalwert</strong> — der Wert, der in der Liste <em>am häufigsten</em> vorkommt. In der Tor-Liste 0, 1, 2, 2, 2, 2, 3, 4 ist das die 2. Richtig wichtig wird der Modalwert, wenn Mittelwerte gar keinen Sinn ergeben: Ein Sportgeschäft, das Turnschuhe nachbestellt, kann mit einer „mittleren Schuhgröße 39,4“ nichts anfangen — bestellt wird die Größe, die am häufigsten verkauft wurde, zum Beispiel die 39. Genau das ist der Modalwert.</p>
+      <p>Jeder Kennwert beantwortet seine eigene Frage — diese Gegenüberstellung hilft dir beim Auswählen:</p>
+      <ul>
+        <li><strong>Arithmetisches Mittel:</strong> „Wie viel bekäme jeder, wenn alle gleich viel hätten?“ — jeder Wert zählt, aber Ausreißer verzerren es.</li>
+        <li><strong>Median:</strong> „Welcher Wert ist typisch?“ — die Mitte der sortierten Liste, robust gegen Ausreißer.</li>
+        <li><strong>Modalwert:</strong> „Was kommt am häufigsten vor?“ — ideal, wenn man wie bei Schuhgrößen ganze, echte Werte braucht.</li>
+        <li><strong>Spannweite:</strong> „Wie weit liegen die Werte auseinander?“ — misst die Streuung, nicht die Lage.</li>
+      </ul>
+      <p>Und wie geht es weiter? Median und Spannweite begleiten dich durch alle Klassenstufen, wenn Daten im Spiel sind. In Klasse 8 kommt dann der Zufall dazu: Mit <strong>Wahrscheinlichkeiten</strong> fragst du nicht mehr nur, wie erhobene Daten aussehen, sondern wie ein Würfelwurf, ein Glücksrad oder eine Umfrage <em>vermutlich ausgehen wird</em> — und deine Kennwerte helfen dir dabei, Vorhersage und Wirklichkeit zu vergleichen.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom arithmetischen Mittel über Median und Spannweite bis zum Ausreißer-Effekt und zur kritischen Schlagzeile — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+  <section class="sim-einbettung" aria-labelledby="sim-einbettung">
+    <h2 id="sim-einbettung">Selbst ausprobieren: Mittelwert und Median</h2>
+    <p>Erkunde dieses Thema interaktiv in der Simulation — Schieberegler bewegen, beobachten, ausprobieren.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/mittelwert-median/index.html?einbettung=1" title="Interaktive Simulation: Mittelwert und Median" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss"><a href="../../../simulationen/mathematik/mittelwert-median/index.html" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a></div>
+    </div>
+  </section>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

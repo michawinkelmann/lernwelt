@@ -1,0 +1,87 @@
+{
+ "id": "statistik-ef",
+ "titel": "Lernzirkel: Beschreibende Statistik",
+ "fach": "mathematik",
+ "intro": "An diesen Stationen lernst du, Datensätze darzustellen und mit Kennzahlen zu beschreiben. Wähle frei, womit du beginnst — kein Druck, keine Noten.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Daten als Balken darstellen",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Lies aus dem Balkendiagramm die einzelnen Werte ab. Bestimme von Hand den Mittelwert und vergleiche ihn mit dem, was du im Diagramm „in der Mitte“ vermutest.</p>",
+   "widget": {
+    "id": "datenbalken",
+    "params": {
+     "daten": [
+      3,
+      5,
+      5,
+      6,
+      8,
+      9
+     ],
+     "max": 12,
+     "einheit": ""
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Lage und Streuung vergleichen",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Hier ist ein anderer Datensatz. Bestimme Minimum, Maximum und Spannweite. Wo liegt der Median? Vergleiche mit dem Mittelwert.</p>",
+   "widget": {
+    "id": "datenbalken",
+    "params": {
+     "daten": [
+      2,
+      5,
+      6,
+      8,
+      9,
+      11,
+      14
+     ],
+     "max": 16,
+     "einheit": ""
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Galton-Brett: Zufall wird zur Glocke",
+   "typ": "link",
+   "typLabel": "Simulation",
+   "html": "<p>Lass viele Kugeln durch das Galton-Brett fallen und beobachte, welche Form sich aus dem reinen Zufall ergibt. Diese Form begegnet dir in der Statistik immer wieder.</p>",
+   "link": {
+    "pfad": "experimente/mathematik/galton-brett/index.html",
+    "label": "Galton-Brett öffnen"
+   }
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Knobeln: Der Ausreißer",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>In einer Gruppe verdienen fünf Personen 1800 €, 2000 €, 2100 €, 2200 € und 2400 € im Monat. Dann kommt eine sechste Person mit 12000 € dazu. Wie ändern sich Mittelwert und Median? Welche Kennzahl beschreibt die Gruppe ehrlicher?</p><details><summary>Lösung anzeigen</summary><div>Ohne die sechste Person: Mittelwert $=\\frac{1800+2000+2100+2200+2400}{5}=2100\\text{ €}$, Median $=2100\\text{ €}$. Mit ihr: Mittelwert $=\\frac{22500}{6}=3750\\text{ €}$, Median $=\\frac{2100+2200}{2}=2150\\text{ €}$. Der Mittelwert springt durch den Ausreißer stark nach oben, der Median bleibt fast gleich — er beschreibt die Gruppe hier ehrlicher.</div></details>"
+  },
+  {
+   "id": "s5",
+   "nr": "5",
+   "titel": "Üben: Kennzahlen berechnen",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ma-ep-beschreibende-statistik",
+   "ids": [
+    "ma-ep-bst-004",
+    "ma-ep-bst-007"
+   ]
+  }
+ ]
+}

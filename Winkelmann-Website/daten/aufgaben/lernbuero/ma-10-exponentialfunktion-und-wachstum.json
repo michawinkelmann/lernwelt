@@ -1,0 +1,606 @@
+{
+  "thema": "ma-10-exponentialfunktion-und-wachstum",
+  "hinweis": "Lernbüro-Ergänzungsaufgaben zum Füllen dünner Spuren. Zur fachlichen Prüfung durch die Lehrkraft.",
+  "aufgaben": [
+    {
+      "id": "ma-10-exp-101",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Bakterienbestand umfasst zu Beginn $200$ Zellen. Er wächst mit dem Faktor $1{,}5$ pro Stunde – das heißt: nach jeder Stunde ist der Bestand $1{,}5$-mal so groß wie zuvor.<br><strong>(a)</strong> Wie viele Zellen sind es nach <strong>1 Stunde</strong>?<br><strong>(b)</strong> Wie viele Zellen sind es nach <strong>2 Stunden</strong>?",
+      "eingaben": [
+        {
+          "label": "Bestand nach 1 Stunde",
+          "antwort": 300,
+          "toleranz": 0,
+          "einheit": "Zellen"
+        },
+        {
+          "label": "Bestand nach 2 Stunden",
+          "antwort": 450,
+          "toleranz": 0,
+          "einheit": "Zellen"
+        }
+      ],
+      "tipps": [
+        "Für einen Schritt multiplizierst du den Anfangsbestand mit dem Wachstumsfaktor: $200 \\cdot 1{,}5$.",
+        "Für zwei Schritte multiplizierst du zweimal hintereinander mit $1{,}5$: $200 \\cdot 1{,}5 \\cdot 1{,}5$.",
+        "Alternativ nutze den Termaufbau $f(n) = 200 \\cdot 1{,}5^n$: für $n = 1$ gibt das $200 \\cdot 1{,}5 = 300$, für $n = 2$ ergibt sich $200 \\cdot 1{,}5^2 = 200 \\cdot 2{,}25 = 450$."
+      ],
+      "loesungsweg": "Der Funktionsterm lautet $f(n) = 200 \\cdot 1{,}5^n$. Nach $n = 1$ Stunde: $f(1) = 200 \\cdot 1{,}5 = 300$ Zellen. Nach $n = 2$ Stunden: $f(2) = 200 \\cdot 1{,}5^2 = 200 \\cdot 2{,}25 = 450$ Zellen.",
+      "kc": [
+        "KC Mathematik Gym Sek I (Nds. 2015): Funktionaler Zusammenhang – Exponentielle Zusammenhänge, Wachstum berechnen (Klasse 9/10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-102",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Zwei Wertetabellen beschreiben jeweils eine Größe, die sich von Schritt zu Schritt verändert:<br><br><strong>Tabelle A</strong><br>$x$: $0 \\mid 1 \\mid 2 \\mid 3$<br>$y$: $5 \\mid 10 \\mid 20 \\mid 40$<br><br><strong>Tabelle B</strong><br>$x$: $0 \\mid 1 \\mid 2 \\mid 3$<br>$y$: $4 \\mid 10 \\mid 16 \\mid 22$<br><br>Entscheide für jede Tabelle: lineares oder exponentielles Wachstum? Begründe rechnerisch.",
+      "schritte": [
+        {
+          "frage": "Untersuche <strong>Tabelle A</strong>: Berechne die aufeinanderfolgenden Quotienten $\\frac{y_{n+1}}{y_n}$ und die aufeinanderfolgenden Differenzen $y_{n+1} - y_n$. Was stellst du fest?",
+          "eingaben": [
+            {
+              "label": "Quotient von Schritt 0 zu Schritt 1 (10 ÷ 5)",
+              "antwort": 2,
+              "toleranz": 0
+            },
+            {
+              "label": "Quotient von Schritt 1 zu Schritt 2 (20 ÷ 10)",
+              "antwort": 2,
+              "toleranz": 0
+            },
+            {
+              "label": "Quotient von Schritt 2 zu Schritt 3 (40 ÷ 20)",
+              "antwort": 2,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Teile immer den nächsten y-Wert durch den vorherigen: $\\frac{10}{5}$, dann $\\frac{20}{10}$, dann $\\frac{40}{20}$.",
+            "Sind die Quotienten alle gleich? Dann liegt ein konstanter Faktor vor.",
+            "Alle drei Quotienten ergeben $2$ – der Faktor ist konstant."
+          ]
+        },
+        {
+          "frage": "Untersuche <strong>Tabelle B</strong>: Berechne die aufeinanderfolgenden Differenzen $y_{n+1} - y_n$. Was stellst du fest?",
+          "eingaben": [
+            {
+              "label": "Differenz von Schritt 0 zu Schritt 1 (10 − 4)",
+              "antwort": 6,
+              "toleranz": 0
+            },
+            {
+              "label": "Differenz von Schritt 1 zu Schritt 2 (16 − 10)",
+              "antwort": 6,
+              "toleranz": 0
+            },
+            {
+              "label": "Differenz von Schritt 2 zu Schritt 3 (22 − 16)",
+              "antwort": 6,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Ziehe immer den vorherigen y-Wert vom nächsten ab: $10 - 4$, dann $16 - 10$, dann $22 - 16$.",
+            "Sind die Differenzen alle gleich? Dann wächst die Größe um einen konstanten Summanden.",
+            "Alle drei Differenzen ergeben $6$ – konstante Differenz, also lineares Wachstum."
+          ]
+        }
+      ],
+      "loesungsweg": "Tabelle A: Die Quotienten aufeinanderfolgender Werte sind $\\frac{10}{5} = 2$, $\\frac{20}{10} = 2$, $\\frac{40}{20} = 2$ – stets der Faktor $2$. Das ist das Kennzeichen exponentiellen Wachstums; der Funktionsterm lautet $f(x) = 5 \\cdot 2^x$. Tabelle B: Die Differenzen betragen $10 - 4 = 6$, $16 - 10 = 6$, $22 - 16 = 6$ – stets $+6$. Konstante Differenz bedeutet lineares Wachstum; der Funktionsterm lautet $f(x) = 4 + 6x$.",
+      "kc": [
+        "KC Mathematik Gym Sek I (Nds. 2015): Funktionaler Zusammenhang – Lineare und Exponentielle Zusammenhänge unterscheiden, Modellieren (Klasse 9/10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-103",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Exponentialfunktion der Form $f(x) = a \\cdot b^x$ verläuft durch die Punkte $P(0 \\mid 3)$ und $Q(2 \\mid 12)$. Bestimme die Werte von $a$ und $b$ und berechne anschließend $f(3)$.",
+      "schritte": [
+        {
+          "frage": "Bestimme den Startwert $a$, indem du $x = 0$ in $f(x) = a \\cdot b^x$ einsetzt.",
+          "eingaben": [
+            {
+              "label": "Startwert a",
+              "antwort": 3,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Setze $x = 0$ ein: $f(0) = a \\cdot b^0$. Was ist $b^0$?",
+            "$b^0 = 1$ für jede Basis $b \\neq 0$. Also gilt $f(0) = a \\cdot 1 = a$.",
+            "Der Punkt $P(0 \\mid 3)$ sagt: $f(0) = 3$, also $a = 3$."
+          ]
+        },
+        {
+          "frage": "Bestimme den Wachstumsfaktor $b$, indem du den Punkt $Q(2 \\mid 12)$ und den bereits gefundenen Wert $a = 3$ verwendest.",
+          "eingaben": [
+            {
+              "label": "Wachstumsfaktor b",
+              "antwort": 2,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Setze $Q(2 \\mid 12)$ in $f(x) = 3 \\cdot b^x$ ein: $12 = 3 \\cdot b^2$.",
+            "Teile beide Seiten durch $3$: $b^2 = 4$.",
+            "$b^2 = 4$ und $b > 0$ ergibt $b = 2$."
+          ]
+        },
+        {
+          "frage": "Berechne $f(3)$ mit dem gefundenen Funktionsterm $f(x) = 3 \\cdot 2^x$.",
+          "eingaben": [
+            {
+              "label": "f(3)",
+              "antwort": 24,
+              "toleranz": 0
+            }
+          ],
+          "tipps": [
+            "Setze $x = 3$ in $f(x) = 3 \\cdot 2^x$ ein.",
+            "$2^3 = 8$.",
+            "$f(3) = 3 \\cdot 8 = 24$."
+          ]
+        }
+      ],
+      "loesungsweg": "Schritt 1 – Startwert: Aus $P(0 \\mid 3)$ folgt $f(0) = a \\cdot b^0 = a = 3$. Schritt 2 – Wachstumsfaktor: Einsetzen von $Q(2 \\mid 12)$ liefert $12 = 3 \\cdot b^2$, also $b^2 = 4$ und damit $b = 2$ (da $b > 0$). Der Funktionsterm lautet $f(x) = 3 \\cdot 2^x$. Schritt 3 – Funktionswert: $f(3) = 3 \\cdot 2^3 = 3 \\cdot 8 = 24$.",
+      "kc": [
+        "KC Mathematik Gym Sek I (Nds. 2015): Funktionaler Zusammenhang – Exponentialfunktion, Parameter bestimmen, Modellieren (Klasse 9/10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-201",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Welche Aussagen über exponentielles Wachstum und Abnahme sind richtig?",
+      "optionen": [
+        {
+          "text": "Bei exponentiellem Wachstum wird mit jedem Schritt mit demselben Faktor $b>1$ multipliziert.",
+          "richtig": true,
+          "erklaerung": "Genau das kennzeichnet exponentielles Wachstum: gleicher Faktor pro Schritt."
+        },
+        {
+          "text": "Eine Abnahme um $8\\,\\%$ pro Schritt entspricht dem Faktor $b=0{,}92$.",
+          "richtig": true,
+          "erklaerung": "$100\\,\\%-8\\,\\%=92\\,\\%$, also $b=0{,}92$."
+        },
+        {
+          "text": "Eine Zunahme um $6\\,\\%$ pro Schritt entspricht dem Faktor $b=6$.",
+          "richtig": false,
+          "erklaerung": "Falsch: $+6\\,\\%$ bedeutet $b=1{,}06$, nicht $6$."
+        },
+        {
+          "text": "Bei exponentieller Abnahme gilt $0<b<1$.",
+          "richtig": true,
+          "erklaerung": "Ein Faktor zwischen $0$ und $1$ verkleinert den Wert in jedem Schritt."
+        }
+      ],
+      "tipps": [
+        "Wachstumsfaktor: $b=1+\\frac{p}{100}$ bei Zunahme, $b=1-\\frac{p}{100}$ bei Abnahme.",
+        "Prüfe jede Prozentangabe: Wird der Wert größer ($b>1$) oder kleiner ($0<b<1$)?",
+        "Drei Aussagen sind richtig, eine verwechselt Prozentsatz und Faktor."
+      ],
+      "loesungsweg": "Exponentielles Wachstum bedeutet: pro Schritt mal demselben Faktor $b$. $-8\\,\\%\\Rightarrow b=0{,}92$ und $0<b<1$ bei Abnahme sind richtig. Falsch ist nur $+6\\,\\%\\Rightarrow b=6$ (richtig wäre $b=1{,}06$).",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-202",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Gib zu jeder Änderung den Wachstumsfaktor $b$ an: a) Zunahme um $6\\,\\%$ pro Jahr, b) Abnahme um $8\\,\\%$ pro Jahr.",
+      "eingaben": [
+        {
+          "label": "a) Faktor bei +6 %",
+          "antwort": 1.06,
+          "einheit": "",
+          "toleranz": 0.001
+        },
+        {
+          "label": "b) Faktor bei -8 %",
+          "antwort": 0.92,
+          "einheit": "",
+          "toleranz": 0.001
+        }
+      ],
+      "tipps": [
+        "Zunahme: $b=1+\\frac{p}{100}$.",
+        "Abnahme: $b=1-\\frac{p}{100}$.",
+        "a) $1+0{,}06$  b) $1-0{,}08$"
+      ],
+      "loesungsweg": "a) $b=1+\\frac{6}{100}=1{,}06$. b) $b=1-\\frac{8}{100}=0{,}92$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-203",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Pflanzenkultur startet mit $50$ Pflanzen und wächst pro Woche mit dem Faktor $1{,}2$. Wie viele Pflanzen sind es nach $3$ Wochen? Runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Anzahl nach 3 Wochen",
+          "antwort": 86.4,
+          "einheit": "",
+          "toleranz": 0.2
+        }
+      ],
+      "tipps": [
+        "Setze in $f(t)=a\\cdot b^t$ ein mit $a=50$ und $b=1{,}2$.",
+        "Nach $3$ Wochen: $t=3$, also $50\\cdot 1{,}2^3$.",
+        "$1{,}2^3=1{,}728$, dann mal $50$."
+      ],
+      "loesungsweg": "$f(3)=50\\cdot 1{,}2^3=50\\cdot 1{,}728=86{,}4$. Es sind etwa $86{,}4$ Pflanzen (gerundet $86$).",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-204",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Guthaben von $1200\\,\\text{€}$ wird mit $4\\,\\%$ Zinsen pro Jahr angelegt; die Zinsen bleiben auf dem Konto (Zinseszins). Wie viel Guthaben ist nach $5$ Jahren vorhanden? Runde auf Cent.",
+      "eingaben": [
+        {
+          "label": "Guthaben nach 5 Jahren",
+          "antwort": 1459.98,
+          "einheit": "€",
+          "toleranz": 0.05
+        }
+      ],
+      "tipps": [
+        "Wachstumsfaktor: $b=1{,}04$.",
+        "$f(t)=1200\\cdot 1{,}04^t$.",
+        "Setze $t=5$ ein: $1200\\cdot 1{,}04^5$."
+      ],
+      "loesungsweg": "$b=1+\\frac{4}{100}=1{,}04$. $f(5)=1200\\cdot 1{,}04^5=1200\\cdot 1{,}21665\\ldots\\approx 1459{,}98\\,\\text{€}$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-205",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Patient erhält $600\\,\\text{mg}$ eines Wirkstoffs. Der Körper baut pro Stunde $25\\,\\%$ des jeweils vorhandenen Wirkstoffs ab (Faktor $0{,}75$). Wie viel Wirkstoff ist nach $4$ Stunden noch vorhanden? Runde auf eine Nachkommastelle.",
+      "eingaben": [
+        {
+          "label": "Wirkstoff nach 4 h",
+          "antwort": 189.8,
+          "einheit": "mg",
+          "toleranz": 0.2
+        }
+      ],
+      "tipps": [
+        "Abnahme um $25\\,\\%$ bedeutet Faktor $b=0{,}75$.",
+        "$f(t)=600\\cdot 0{,}75^t$.",
+        "Setze $t=4$ ein: $600\\cdot 0{,}75^4$."
+      ],
+      "loesungsweg": "$b=1-0{,}25=0{,}75$. $f(4)=600\\cdot 0{,}75^4=600\\cdot 0{,}31640625\\approx 189{,}8\\,\\text{mg}$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-206",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Stadt hat $50\\,000$ Einwohner und wächst pro Jahr um $3\\,\\%$. Wie viele Einwohner sind es nach $10$ Jahren? Runde auf ganze Personen.",
+      "eingaben": [
+        {
+          "label": "Einwohner nach 10 Jahren",
+          "antwort": 67196,
+          "einheit": "",
+          "toleranz": 5
+        }
+      ],
+      "tipps": [
+        "Wachstumsfaktor: $b=1{,}03$.",
+        "$f(t)=50000\\cdot 1{,}03^t$.",
+        "Setze $t=10$ ein und runde am Ende."
+      ],
+      "loesungsweg": "$b=1{,}03$. $f(10)=50000\\cdot 1{,}03^{10}=50000\\cdot 1{,}34392\\ldots\\approx 67\\,196$ Einwohner.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-207",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein radioaktiver Stoff zerfällt pro Jahr um $12\\,\\%$ (Faktor $0{,}88$). Nach wie vielen ganzen Jahren ist erstmals weniger als die Hälfte der Anfangsmenge vorhanden?",
+      "eingaben": [
+        {
+          "label": "Anzahl Jahre",
+          "antwort": 6,
+          "einheit": "Jahre",
+          "toleranz": 0.01
+        }
+      ],
+      "tipps": [
+        "Gesucht ist das kleinste ganze $n$ mit $0{,}88^n<0{,}5$.",
+        "Probiere systematisch: $0{,}88^1, 0{,}88^2, \\ldots$",
+        "Bei $n=5$ ist $0{,}88^5\\approx 0{,}528$ (noch über der Hälfte), bei $n=6$ darunter."
+      ],
+      "loesungsweg": "Gesucht: kleinstes $n$ mit $0{,}88^n<0{,}5$. $0{,}88^5\\approx 0{,}528>0{,}5$, aber $0{,}88^6\\approx 0{,}464<0{,}5$. Also nach $6$ Jahren.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-208",
+      "typ": "numerisch",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Ein Neuwagen kostet $18\\,000\\,\\text{€}$ und verliert pro Jahr $14\\,\\%$ seines jeweiligen Wertes (Faktor $0{,}86$). a) Welchen Wert hat er nach $3$ Jahren? b) Welchen Wert nach $6$ Jahren? Runde jeweils auf Cent.",
+      "eingaben": [
+        {
+          "label": "a) Wert nach 3 Jahren",
+          "antwort": 11449.01,
+          "einheit": "€",
+          "toleranz": 0.5
+        },
+        {
+          "label": "b) Wert nach 6 Jahren",
+          "antwort": 7282.21,
+          "einheit": "€",
+          "toleranz": 0.5
+        }
+      ],
+      "tipps": [
+        "Abnahme um $14\\,\\%$: Faktor $b=0{,}86$, also $f(t)=18000\\cdot 0{,}86^t$.",
+        "a) $t=3$: $18000\\cdot 0{,}86^3$.",
+        "b) $t=6$: $18000\\cdot 0{,}86^6$."
+      ],
+      "loesungsweg": "$b=1-0{,}14=0{,}86$, $f(t)=18000\\cdot 0{,}86^t$. a) $f(3)=18000\\cdot 0{,}86^3=18000\\cdot 0{,}636056\\approx 11\\,449{,}01\\,\\text{€}$. b) $f(6)=18000\\cdot 0{,}86^6=18000\\cdot 0{,}404567\\approx 7282{,}21\\,\\text{€}$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-301",
+      "typ": "freitext",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Anna legt $1000\\,\\text{€}$ für $3\\,\\%$ Zinsen pro Jahr an (Zinseszins). Ben sagt: „Nach $10$ Jahren hat sie genau $300\\,\\text{€}$ Zinsen, also $30\\,\\text{€}$ pro Jahr.“ Erkläre, warum Bens Rechnung zu wenig ergibt, und beschreibe, worin sich Zinseszins von einer festen jährlichen Zugabe unterscheidet.",
+      "musterloesung": "Ben rechnet linear ($10\\cdot 30\\,\\text{€}=300\\,\\text{€}$), aber beim Zinseszins werden auch die bereits gutgeschriebenen Zinsen wieder verzinst. Im ersten Jahr gibt es $30\\,\\text{€}$ Zinsen ($3\\,\\%$ von $1000$), im zweiten Jahr aber $3\\,\\%$ von $1030\\,\\text{€}$, also schon $30{,}90\\,\\text{€}$ usw. Das Kapital wächst mit dem festen Faktor $b=1{,}03$ pro Jahr: $K_{10}=1000\\cdot 1{,}03^{10}\\approx 1343{,}92\\,\\text{€}$. Das sind rund $343{,}92\\,\\text{€}$ Zinsen — mehr als Bens $300\\,\\text{€}$. Unterschied: Eine feste Zugabe (z. B. jedes Jahr $30\\,\\text{€}$) ist lineares Wachstum mit gleichbleibender Differenz; Zinseszins ist exponentielles Wachstum mit gleichbleibendem Faktor, weil sich die Zinsen mitverzinsen.",
+      "tipps": [
+        "Rechne die Zinsen für das erste und das zweite Jahr getrennt aus — sind sie gleich groß?",
+        "Beim Zinseszins wird jedes Jahr mit demselben Faktor $b=1{,}03$ multipliziert.",
+        "Vergleiche: gleiche Differenz pro Jahr (linear) gegen gleicher Faktor pro Jahr (exponentiell)."
+      ],
+      "loesungsweg": "Vollständige Begründung s. Musterlösung. Kern: $K_{10}=1000\\cdot 1{,}03^{10}\\approx 1343{,}92\\,\\text{€}$, also ca. $343{,}92\\,\\text{€}$ Zinsen statt $300\\,\\text{€}$; Zinseszins = fester Faktor (exponentiell), feste Zugabe = feste Differenz (linear).",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-302",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "ergaenzung": "lernbuero",
+      "frage": "Eine Seerosen-Fläche verdoppelt sich täglich und bedeckt einen Teich nach $30$ Tagen vollständig; man beschreibt sie mit $f(t)=a\\cdot 2^t$. Welche Aussagen über dieses Modell sind <strong>richtig</strong>?",
+      "optionen": [
+        {
+          "text": "Am Tag $29$ ist der Teich erst zur Hälfte bedeckt.",
+          "richtig": true,
+          "erklaerung": "Richtig: Beim nächsten Verdoppeln wird aus der Hälfte das Ganze — also Tag 29 halb, Tag 30 voll."
+        },
+        {
+          "text": "Das Modell beschreibt auch für $t=100$ Tage noch sinnvoll die Fläche.",
+          "richtig": false,
+          "erklaerung": "Falsch: Der Teich ist nach 30 Tagen voll. Mehr Fläche als der Teich kann es nicht geben — das exponentielle Modell gilt nur, solange Platz ist."
+        },
+        {
+          "text": "Das exponentielle Wachstum kann nicht unbegrenzt weitergehen, weil der Teich begrenzt ist.",
+          "richtig": true,
+          "erklaerung": "Richtig: Reale Ressourcen (hier die Teichfläche) setzen dem Wachstum eine Grenze; die reale Kurve flacht ab."
+        },
+        {
+          "text": "Verdoppeln pro Tag bedeutet eine Zunahme um $100\\,\\%$ pro Tag.",
+          "richtig": true,
+          "erklaerung": "Richtig: Faktor $2$ entspricht $+100\\,\\%$, denn $b=1+\\frac{100}{100}=2$."
+        }
+      ],
+      "tipps": [
+        "Überlege rückwärts: Wenn sich die Fläche täglich verdoppelt, wie groß war sie einen Tag vor „voll“?",
+        "Frage dich bei jeder Aussage: Kann die Fläche größer werden als der Teich?",
+        "Faktor $2$ und Prozentzunahme: $b=1+\\frac{p}{100}$ — welches $p$ gehört zu $b=2$?"
+      ],
+      "loesungsweg": "Richtig sind: Tag 29 halb voll (Rückwärts-Verdopplung), Wachstum nicht unbegrenzt (Teich begrenzt → Modellgrenze), Verdoppeln = $+100\\,\\%$ ($b=2$). Falsch ist die Aussage, das Modell gelte auch bei $t=100$ noch sinnvoll: Spätestens bei voller Bedeckung verliert es seine Gültigkeit.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-303",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Ordne jeder prozentualen Änderung pro Schritt den passenden Wachstumsfaktor $b$ zu.",
+      "paare": [
+        {
+          "links": "Zunahme um $5\\,\\%$",
+          "rechts": "1,05"
+        },
+        {
+          "links": "Abnahme um $5\\,\\%$",
+          "rechts": "0,95"
+        },
+        {
+          "links": "Zunahme um $20\\,\\%$",
+          "rechts": "1,2"
+        },
+        {
+          "links": "Abnahme um $25\\,\\%$",
+          "rechts": "0,75"
+        },
+        {
+          "links": "Verdopplung",
+          "rechts": "2"
+        }
+      ],
+      "tipps": [
+        "Zunahme um $p\\,\\%$ bedeutet $b=1+\\frac{p}{100}$.",
+        "Abnahme um $p\\,\\%$ bedeutet $b=1-\\frac{p}{100}$.",
+        "Eine Verdopplung ist eine Zunahme um $100\\,\\%$, also $b=2$."
+      ],
+      "loesungsweg": "$+5\\,\\%\\Rightarrow b=1{,}05$; $-5\\,\\%\\Rightarrow b=0{,}95$; $+20\\,\\%\\Rightarrow b=1{,}2$; $-25\\,\\%\\Rightarrow b=0{,}75$; Verdopplung $=+100\\,\\%\\Rightarrow b=2$. Faustregel: Zunahme $b>1$, Abnahme $0<b<1$.",
+      "kc": [
+        "KC Mathematik Sek I (2015): Funktionaler Zusammenhang, exponentielles Wachstum (Klasse 10)"
+      ]
+    },
+    {
+      "id": "ma-10-exp-209",
+      "typ": "luecke",
+      "zweig": [
+        "gym",
+        "rs"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "ergaenzung": "lernbuero",
+      "frage": "Vergleiche zwei Sparpläne. Plan A: jeden Monat kommen $20\\,\\text{€}$ dazu. Plan B: jeden Monat verdoppelt sich der Betrag. Ergänze den Merktext.",
+      "text": "Bei Plan A kommt in jedem Schritt derselbe ___ dazu — das ist ___ Wachstum. Bei Plan B wird in jedem Schritt mit demselben ___ multipliziert — das ist ___ Wachstum. Anfangs liegt Plan ___ vorn, doch nach genügend vielen Schritten überholt ihn das exponentielle Wachstum endgültig.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Betrag (Summand)",
+          "optionen": [
+            "Betrag (Summand)",
+            "Faktor",
+            "Exponent"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "lineares",
+          "optionen": [
+            "lineares",
+            "exponentielles",
+            "gar kein"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Faktor",
+          "optionen": [
+            "Faktor",
+            "Betrag (Summand)",
+            "Exponenten"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "exponentielles",
+          "optionen": [
+            "exponentielles",
+            "lineares",
+            "abnehmendes"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "A",
+          "optionen": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "tipps": [
+        "Linear heißt: in jedem Schritt kommt immer gleich viel dazu (fester Summand).",
+        "Exponentiell heißt: in jedem Schritt mal demselben Faktor.",
+        "Verdoppeln startet langsam (1, 2, 4, 8, …) und überholt das gleichmäßige Aufaddieren erst nach einigen Schritten."
+      ],
+      "loesungsweg": "Plan A: fester <strong>Summand</strong> $+20$ pro Schritt → <strong>lineares</strong> Wachstum. Plan B: fester <strong>Faktor</strong> $2$ pro Schritt → <strong>exponentielles</strong> Wachstum. Zu Beginn liegt Plan <strong>A</strong> vorn (z. B. nach 6 Monaten $120\\,€$ gegen $1+2+4+8+16+32=63\\,€$ angesparten Betrag bzw. $64\\,€$ aktueller Stand), doch exponentielles Wachstum überholt lineares schließlich endgültig.",
+      "kc": [
+        "KC Mathematik Gym Sek I (Nds. 2015): Funktionaler Zusammenhang – Lineare und Exponentielle Zusammenhänge unterscheiden, Modellieren (Klasse 9/10)"
+      ]
+    }
+  ]
+}

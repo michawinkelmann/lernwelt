@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Körper und Volumen — Klasse 6 · Mathematik — Lernwelt</title>
+<meta name="description" content="Rauminhalt und Oberflächeninhalt von Quadern verstehen: Einheitswürfel zählen, die Volumenformel V = l · b · h entdecken, Volumeneinheiten und Liter umrechnen sowie Netze und Schrägbilder zeichnen — mit interaktiver Füll-Simulation.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung und die Simulation. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Körper und Volumen</h1>
+  <p class="einleitung">Wie viel Wasser passt in ein Aquarium? Wie viel Geschenkpapier braucht ein Karton? Das sind zwei völlig verschiedene Fragen — und genau darum geht es hier: Du füllst Quader mit Einheitswürfeln und entdeckst dabei die Volumenformel, du rechnest mit Volumeneinheiten und Litern, und du lernst, wie man Körper als Netz und als Schrägbild aufs Papier bringt.</p>
+
+  <section aria-labelledby="kv-rauminhalt">
+    <h2 id="kv-rauminhalt">1. Rauminhalt: Wie viel passt hinein?</h2>
+    <p>Schuhkarton, Aquarium, Umzugskiste — alle drei sind <strong>Körper</strong>: Sie nehmen Platz im Raum ein, und in sie hinein passt etwas. Wie viel hineinpasst, gibt der <strong>Rauminhalt</strong> an, den man auch <strong>Volumen</strong> nennt (kurz $V$).</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Der Einheitswürfel</span>
+      <p>Gemessen wird das Volumen mit einem kleinen Würfel: Der <strong>Einheitswürfel</strong> mit der Kantenlänge $1\,\text{cm}$ hat das Volumen $1\,\text{cm}^3$ (sprich: „ein Kubikzentimeter“) — etwa so groß wie ein Stück Würfelzucker. Das Volumen eines Körpers sagt, wie viele solcher Würfel hineinpassen.</p>
+    </div>
+    <p>Einen Quader kannst du vollständig mit Einheitswürfeln <strong>auslegen</strong> — am geschicktesten in Schichten: Zuerst bedeckst du den Boden mit einer kompletten Würfelschicht, dann stapelst du Schicht auf Schicht, bis der Quader voll ist. Die Würfelzahl <em>einer</em> Schicht mal der <em>Anzahl der Schichten</em> ergibt das Volumen. Probiere es aus — die Simulation legt die Würfel Reihe für Reihe und Schicht für Schicht:</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/quader-fuellen/index.html?einbettung=1#l=5&b=4&h=3"
+        title="Interaktive Simulation: Quader mit Einheitswürfeln füllen" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss">
+        <a href="../../../simulationen/mathematik/quader-fuellen/index.html#l=5&b=4&h=3" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a>
+      </div>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufträge zur Simulation</span>
+      <p>1. Lass den voreingestellten Quader ($l = 5$, $b = 4$, $h = 3$) vollständig füllen. Zähle die Würfel einer Schicht ($5 \cdot 4 = 20$) und die Schichten ($3$) — wie viele Würfel sind es insgesamt?<br>
+      2. Vertausche Länge und Breite ($l = 4$, $b = 5$) und fülle erneut. Ändert sich der Rauminhalt? Beobachte die Anzeige „Würfel bisher“.<br>
+      3. Stelle $l = 10$, $b = 1$, $h = 1$ ein. Warum ist das Volumen trotz der „langen Stange“ kleiner als beim $5 \cdot 4 \cdot 3$-Quader?</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="kv-formel">
+    <h2 id="kv-formel">2. Die Volumenformel</h2>
+    <p>Das Schichten-Zählen aus der Simulation steckt in einer Formel: Eine Bodenschicht besteht aus $l \cdot b$ Würfeln (Länge mal Breite), und davon liegen $h$ Schichten übereinander (Höhe). Also ist das Volumen „Würfel pro Schicht mal Schichtenzahl“ — kurz $l \cdot b \cdot h$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Volumen von Quader und Würfel</span>
+      <p class="formel-abgesetzt">$$\begin{gathered} V_{\text{Quader}} = l \cdot b \cdot h \\[4pt] V_{\text{Würfel}} = a \cdot a \cdot a = a^3 \end{gathered}$$</p><p>Dabei müssen alle drei Längen in<em>derselben Einheit</em>stehen — drei Zentimeterangaben ergeben $\text{cm}^3$, drei Meterangaben $\text{m}^3$. Beim Würfel sind alle Kanten gleich lang, deshalb genügt eine einzige Angabe $a$.</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: Volumen berechnen</span><p>Eine Stiftebox ist $8\,\text{cm}$ lang, $5\,\text{cm}$ breit und $2\,\text{cm}$ hoch:</p><p class="formel-abgesetzt">$$V = 8\,\text{cm} \cdot 5\,\text{cm} \cdot 2\,\text{cm} = 80\,\text{cm}^3$$</p><p>In die Box passen $80$ Einheitswürfel. Und weil beim Malnehmen die Reihenfolge egal ist ($8 \cdot 5 \cdot 2 = 2 \cdot 5 \cdot 8$), darfst du den Quader gedanklich beliebig drehen und hinlegen — das Volumen bleibt gleich.</p></div><details class="check"><summary>Verständnis-Check: Ein Würfel hat die Kantenlänge $a = 4\,\text{cm}$. Wie groß ist sein Volumen?</summary><div class="check-antwort"><p>$V = 4\,\text{cm} \cdot 4\,\text{cm} \cdot 4\,\text{cm} = 64\,\text{cm}^3$. Beim Würfel sind alle drei Kanten gleich lang — deshalb $V = a^3$.</p></div></details></section><section aria-labelledby="kv-einheiten"><h2 id="kv-einheiten">3. Volumeneinheiten und Liter</h2><p>Für kleine Körper passt der Kubikzentimeter, für ein ganzes Zimmer wäre er viel zu winzig. Deshalb gibt es eine Familie von<strong>Volumeneinheiten</strong>: Kubikmillimeter ($\text{mm}^3$), Kubikzentimeter ($\text{cm}^3$), Kubikdezimeter ($\text{dm}^3$) und Kubikmeter ($\text{m}^3$). Von Stufe zu Stufe ist die<strong>Umrechnungszahl 1000</strong>— denn ein Würfel mit $1\,\text{dm} = 10\,\text{cm}$ Kantenlänge fasst $10 \cdot 10 \cdot 10 = 1000$ Zentimeterwürfel.</p><div class="merkkasten"><span class="merk-etikett">Die Liter-Brücke</span><p class="formel-abgesetzt">$$1\,\text{l} = 1\,\text{dm}^3 \qquad 1\,\text{ml} = 1\,\text{cm}^3$$</p><p>Flüssigkeiten misst man in<strong>Litern</strong>— und der Liter ist nichts anderes als ein Kubikdezimeter. Ein Milchkarton fasst $1\,\text{l}$, also genau einen Würfel von $1\,\text{dm}$ Kantenlänge. Eine volle Badewanne fasst etwa $150\,\text{l}$, ein Teelöffel ungefähr $5\,\text{ml} = 5\,\text{cm}^3$.</p></div><table class="vergleich-tabelle"><caption class="nur-screenreader">Stufentabelle der Volumeneinheiten Kubikmillimeter, Kubikzentimeter, Kubikdezimeter und Kubikmeter mit der Umrechnungszahl 1000 von Stufe zu Stufe und den passenden Liter-Angaben Milliliter, Liter und 1000 Liter</caption><thead><tr><th scope="col">Stufe</th><th scope="col">mm³</th><th scope="col">cm³</th><th scope="col">dm³</th><th scope="col">m³</th></tr></thead><tbody><tr><th scope="row">umrechnen</th><td>—</td><td>1 cm³ = 1000 mm³</td><td>1 dm³ = 1000 cm³</td><td>1 m³ = 1000 dm³</td></tr><tr><th scope="row">als Liter</th><td>—</td><td>1 ml</td><td>1 l</td><td>1000 l</td></tr></tbody></table><p>In die<em>kleinere</em>Nachbareinheit rechnest du<strong>mal $1000$</strong>, in die<em>größere</em><strong>durch $1000$</strong>— das Komma wandert also um drei Stellen.</p><div class="beispiel"><span class="beispiel-etikett">Beispiel: Einheiten umrechnen</span><p class="formel-abgesetzt">$$\begin{gathered} 3\,\text{dm}^3 = 3 \cdot 1000\,\text{cm}^3 = 3000\,\text{cm}^3 \\[4pt] 0{,}2\,\text{l} = 200\,\text{ml} = 200\,\text{cm}^3 \\[4pt] 7500\,\text{dm}^3 = 7500 : 1000\,\text{m}^3 = 7{,}5\,\text{m}^3 \end{gathered}$$</p><p>Der Saft aus der $0{,}2$-Liter-Packung würde also einen Quader von $10\,\text{cm} \cdot 5\,\text{cm} \cdot 4\,\text{cm}$ genau füllen — rechne nach!</p></div><details class="check"><summary>Verständnis-Check: In einem Topf sind $2500\,\text{cm}^3$ Suppe. Wie viele Liter sind das?</summary><div class="check-antwort"><p>$2500\,\text{cm}^3 = 2{,}5\,\text{dm}^3 = 2{,}5\,\text{l}$. Von $\text{cm}^3$ zu $\text{dm}^3$ teilst du durch $1000$ — und ein Kubikdezimeter ist genau ein Liter.</p></div></details></section><section aria-labelledby="kv-oberflaeche"><h2 id="kv-oberflaeche">4. Oberflächeninhalt</h2><p>Schneidest du einen Karton an einigen Kanten auf und klappst ihn flach auseinander, entsteht sein<strong>Netz</strong>. Es zeigt alle $6$ Begrenzungsflächen des Quaders auf einen Blick — und zwar als<strong>drei Paare</strong>gleich großer Rechtecke: Boden und Deckel ($l \cdot b$), Vorder- und Rückseite ($l \cdot h$) sowie die beiden Seitenflächen ($b \cdot h$).</p>
+    <figure style="max-width: 430px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 400 374" width="350" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Netz eines Quaders mit den Kantenlängen 5 Zentimeter, 4 Zentimeter und 3 Zentimeter, aufgeklappt zu einem Kreuz aus sechs Rechtecken. Boden und Deckel mit 5 mal 4 gleich 20 Quadratzentimetern sind kräftig gefärbt, Vorder- und Rückseite mit 5 mal 3 gleich 15 Quadratzentimetern mittel, die beiden Seitenflächen mit 4 mal 3 gleich 12 Quadratzentimetern hell. Gleich gefärbte Rechtecke sind gleich groß und bilden ein Flächenpaar.">
+        <!-- Flächenpaar l mal b (Deckel und Boden): kräftig gefärbt -->
+        <g fill="var(--mathe)" fill-opacity="0.38" stroke="var(--mathe)" stroke-width="2" stroke-linejoin="round">
+          <rect x="132" y="28" width="120" height="96"/>
+          <rect x="132" y="196" width="120" height="96"/>
+        </g>
+        <!-- Flächenpaar l mal h (Vorder- und Rückseite): mittel gefärbt -->
+        <g fill="var(--mathe)" fill-opacity="0.18" stroke="var(--mathe)" stroke-width="2" stroke-linejoin="round">
+          <rect x="132" y="124" width="120" height="72"/>
+          <rect x="132" y="292" width="120" height="72"/>
+        </g>
+        <!-- Flächenpaar b mal h (linke und rechte Seitenfläche): hell gefärbt -->
+        <g fill="var(--mathe)" fill-opacity="0.07" stroke="var(--mathe)" stroke-width="2" stroke-linejoin="round">
+          <rect x="36" y="124" width="96" height="72"/>
+          <rect x="252" y="124" width="96" height="72"/>
+        </g>
+        <!-- Flächeninhalte in den Rechtecken -->
+        <g fill="var(--text)" font-size="13" text-anchor="middle">
+          <text x="192" y="80">5 · 4 = 20</text>
+          <text x="192" y="248">5 · 4 = 20</text>
+          <text x="192" y="164">5 · 3 = 15</text>
+          <text x="192" y="332">5 · 3 = 15</text>
+          <text x="84" y="164">4 · 3 = 12</text>
+          <text x="300" y="164">4 · 3 = 12</text>
+        </g>
+        <!-- Maße -->
+        <g fill="var(--mathe)" font-size="13" font-weight="700">
+          <text x="192" y="18" text-anchor="middle">5 cm</text>
+          <text x="258" y="80">4 cm</text>
+          <text x="30" y="164" text-anchor="end">3 cm</text>
+          <text x="84" y="216" text-anchor="middle">4 cm</text>
+        </g>
+      </svg>
+      <figcaption>Das Netz des 5·4·3-Quaders: Gleich gefärbte Rechtecke bilden ein Flächenpaar — jede Fläche kommt doppelt vor. Alle sechs zusammen ergeben die Oberfläche O = 2 · (20 + 15 + 12) cm² = 94 cm².</figcaption>
+    </figure>
+    <div class="merkkasten">
+      <span class="merk-etikett">Oberflächeninhalt des Quaders</span>
+      <p class="formel-abgesetzt">$$O = 2 \cdot (l \cdot b + l \cdot h + b \cdot h)$$</p><p>Der<strong>Oberflächeninhalt</strong>$O$ ist der Flächeninhalt des kompletten Netzes: drei verschiedene Rechtecksflächen, jede doppelt. Als Fläche wird er in $\text{cm}^2$, $\text{dm}^2$ oder $\text{m}^2$ gemessen —<em>nicht</em>in $\text{cm}^3$!</p></div><div class="beispiel"><span class="beispiel-etikett">Beispiel: Oberfläche des 5·4·3-Quaders</span><p>Für den Quader aus der Simulation ($l = 5\,\text{cm}$, $b = 4\,\text{cm}$, $h = 3\,\text{cm}$) gilt:</p><p class="formel-abgesetzt">$$O = 2 \cdot (5 \cdot 4 + 5 \cdot 3 + 4 \cdot 3)\,\text{cm}^2 = 2 \cdot (20 + 15 + 12)\,\text{cm}^2 = 2 \cdot 47\,\text{cm}^2 = 94\,\text{cm}^2$$</p><p>Zum Bekleben dieses Kartons brauchst du also $94\,\text{cm}^2$ Papier. Sein Volumen kennst du schon aus der Simulation: $5 \cdot 4 \cdot 3 = 60\,\text{cm}^3$ — zwei Größen, zwei völlig verschiedene Fragen.</p></div><div class="merkkasten"><span class="merk-etikett">Volumen oder Oberfläche?</span><p><strong>Volumen $V$</strong>beantwortet die Frage „Wie viel passt hinein?“ — füllen, gemessen in $\text{cm}^3$.<strong>Oberfläche $O$</strong>beantwortet die Frage „Wie viel Material braucht die Hülle?“ — bekleben oder anstreichen, gemessen in $\text{cm}^2$. Andere Frage, andere Formel, andere Einheit: Verwechsle die beiden nie!</p></div><details class="check"><summary>Verständnis-Check: Verdoppelt man beim $5 \cdot 4 \cdot 3$-Quader nur die Höhe, verdoppelt sich das Volumen. Verdoppelt sich auch die Oberfläche?</summary><div class="check-antwort"><p>Nein — rechne nach! Volumen: $5 \cdot 4 \cdot 6 = 120\,\text{cm}^3$, tatsächlich das Doppelte von $60\,\text{cm}^3$. Oberfläche: $O = 2 \cdot (5 \cdot 4 + 5 \cdot 6 + 4 \cdot 6)\,\text{cm}^2 = 2 \cdot (20 + 30 + 24)\,\text{cm}^2 = 148\,\text{cm}^2$ — das Doppelte von $94\,\text{cm}^2$ wäre aber $188\,\text{cm}^2$. Boden und Deckel wachsen nämlich nicht mit, wenn nur die Höhe wächst.</p></div></details></section><section aria-labelledby="kv-netze"><h2 id="kv-netze">5. Netze und Schrägbilder</h2><p>Auch den Würfel kannst du aufklappen — und weil alle $6$ Flächen gleich große Quadrate sind, gibt es dafür erstaunlich viele Möglichkeiten: Es existieren genau<strong>11 verschiedene Würfelnetze</strong>. Aber Vorsicht: Nicht jede Anordnung aus $6$ Quadraten lässt sich zu einem Würfel falten! Liegen etwa alle $6$ Quadrate in einer langen Reihe, überlappen sich beim Falten zwei Flächen, und eine Seite bleibt offen. Teste ein Netz, indem du es gedanklich Fläche für Fläche zusammenfaltest — oder schneide es aus Papier aus und probiere es echt.</p><p>Und wie zeichnet man einen Körper räumlich, obwohl das Heft flach ist? Mit einem<strong>Schrägbild</strong>:</p><div class="merkkasten"><span class="merk-etikett">Schrägbild zeichnen — in vier Schritten</span><ol><li>Die<strong>Vorderfläche</strong>in wahrer Größe zeichnen (beim $5 \cdot 4 \cdot 3$-Quader: ein Rechteck aus Länge $l$ und Höhe $h$).</li><li>Die<strong>Tiefenkanten</strong>im $45^\circ$-Winkel ansetzen und nur <strong>halb so lang</strong> zeichnen, wie sie wirklich sind.</li>
+        <li>Die <strong>hintere Fläche</strong> parallel zur Vorderfläche verbinden.</li>
+        <li><strong>Verdeckte Kanten gestrichelt</strong> nachziehen — sie wären am echten Körper nicht zu sehen.</li>
+      </ol>
+    </div>
+    <figure style="max-width: 420px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 360 280" width="340" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Schrägbild eines Quaders mit Länge 5 Zentimeter, Breite 4 Zentimeter und Höhe 3 Zentimeter auf einem angedeuteten Karoraster. Die Vorderfläche ist in wahrer Größe gezeichnet. Die Tiefenkanten verlaufen im 45-Grad-Winkel nach hinten rechts und sind halbiert dargestellt. Die drei verdeckten Kanten am hinteren unteren Eck sind gestrichelt gezeichnet.">
+        <defs>
+          <pattern id="kv-karo-muster" width="15" height="15" patternUnits="userSpaceOnUse">
+            <path d="M 15 0 L 0 0 0 15" fill="none" stroke="var(--karo)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <!-- angedeutetes Karoraster -->
+        <rect x="15" y="15" width="330" height="240" fill="url(#kv-karo-muster)" stroke="var(--karo)" stroke-width="1"/>
+        <!-- Flächen für die räumliche Wirkung -->
+        <polygon points="60,135 210,135 255,90 105,90" fill="var(--mathe)" fill-opacity="0.2"/>
+        <polygon points="210,225 210,135 255,90 255,180" fill="var(--mathe)" fill-opacity="0.12"/>
+        <rect x="60" y="135" width="150" height="90" fill="var(--mathe)" fill-opacity="0.06"/>
+        <!-- verdeckte Kanten: gestrichelt -->
+        <g stroke="var(--mathe)" stroke-width="2" stroke-dasharray="6 5" fill="none">
+          <path d="M60 225 L105 180"/>
+          <path d="M105 180 L255 180"/>
+          <path d="M105 180 L105 90"/>
+        </g>
+        <!-- sichtbare Kanten -->
+        <g stroke="var(--mathe)" stroke-width="2.5" fill="none" stroke-linejoin="round">
+          <rect x="60" y="135" width="150" height="90"/>
+          <path d="M60 135 L105 90 L255 90 L210 135"/>
+          <path d="M255 90 L255 180 L210 225"/>
+        </g>
+        <!-- 45-Grad-Winkel am vorderen rechten Eck -->
+        <path d="M210 225 L262 225" stroke="var(--text-leise)" stroke-width="1" stroke-dasharray="2 3"/>
+        <path d="M236 225 A 26 26 0 0 0 228.4 206.6" fill="none" stroke="var(--text-leise)" stroke-width="1"/>
+        <text x="244" y="212" font-size="12" fill="var(--text-leise)">45°</text>
+        <!-- Maße -->
+        <g fill="var(--mathe)" font-size="13" font-weight="700">
+          <text x="135" y="272" text-anchor="middle">l = 5 cm</text>
+          <text x="54" y="184" text-anchor="end">h = 3 cm</text>
+          <text x="74" y="106" text-anchor="end">b = 4 cm</text>
+        </g>
+      </svg>
+      <figcaption>Schrägbild des 5·4·3-Quaders auf Karoraster: Die Vorderfläche erscheint in wahrer Größe, die Tiefenkanten (b) sind im 45°-Winkel angesetzt und halbiert gezeichnet, verdeckte Kanten gestrichelt.</figcaption>
+    </figure>
+    <p>Auf Karopapier geht das besonders leicht, denn die Kästchendiagonalen schenken dir den $45^\circ$-Winkel. Und denk daran: Im Schrägbild kannst du Länge und Höhe direkt ablesen — die Tiefenkanten aber <em>nicht</em>, sie sind ja absichtlich verkürzt gezeichnet.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Warum die Umrechnungszahl 1000 ist</summary>
+    <div class="vertiefung-inhalt">
+      <p>Bei den Längen ist die Umrechnungszahl $10$: $1\,\text{dm} = 10\,\text{cm}$. Ein Würfel mit $1\,\text{dm}$ Kantenlänge ist deshalb $10\,\text{cm}$ lang, $10\,\text{cm}$ breit und $10\,\text{cm}$ hoch — in ihn passen $10 \cdot 10 \cdot 10 = 1000$ Zentimeterwürfel, also ist $1\,\text{dm}^3 = 1000\,\text{cm}^3$. Die $1000$ entsteht, weil die $10$ in <em>alle drei</em> Raumrichtungen wirkt. (Zum Vergleich: Bei Flächen wirkt sie nur zweimal — $1\,\text{dm}^2 = 10 \cdot 10\,\text{cm}^2 = 100\,\text{cm}^2$.)</p>
+      <p>So entsteht die Einheitenkette $1\,\text{m}^3 = 1000\,\text{dm}^3 = 1\,000\,000\,\text{cm}^3$, und jede Stufe von $\text{mm}^3$ über $\text{cm}^3$ und $\text{dm}^3$ bis $\text{m}^3$ bedeutet „mal $1000$“. Daneben gibt es die Liter-Familie: $1\,\text{l} = 1000\,\text{ml}$, und $100\,\text{l}$ heißen $1\,\text{hl}$ (Hektoliter — steht auf manchen Tankwagen). Über die Brücke $1\,\text{l} = 1\,\text{dm}^3$ und $1\,\text{ml} = 1\,\text{cm}^3$ passen beide Welten nahtlos zusammen: Eine $0{,}5$-Liter-Flasche fasst $500\,\text{cm}^3$.</p>
+      <p>Zum Schluss eine Größenvorstellung: Ein Liter Wasser wiegt ungefähr $1\,\text{kg}$. Ein Kubikmeter Wasser sind $1000$ Liter — er wiegt also rund $1000\,\text{kg}$, eine ganze Tonne, so viel wie ein Kleinwagen! Stell dir $1000$ Milchkartons vor, ordentlich gestapelt zu einem Würfel von einem Meter Kantenlänge. Selbst deine Badewanne bringt es gefüllt auf etwa $150\,\text{kg}$ Wasser — deshalb fühlt sich ein voller Wassereimer auch so schwer an.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben — vom Würfelzählen über Volumeneinheiten und Liter bis zu Oberfläche, Netz und Schrägbild — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

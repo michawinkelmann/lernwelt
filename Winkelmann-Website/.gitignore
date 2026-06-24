@@ -1,0 +1,55 @@
+# KC-PDFs nicht veröffentlichen (Urheberrecht)
+kc-quellen/
+
+# Lokaler Entwicklungs-Helfer (gehört nicht auf die Live-Seite)
+start-lokal.bat
+
+# Windows-Systemdateien
+Thumbs.db
+desktop.ini
+
+# macOS (falls je relevant)
+.DS_Store
+
+# Klassenarbeiten-Ablage (Originale mit Klassen-/Datumsbezug: nicht veröffentlichen!)
+# Veröffentlicht werden nur die bereinigten PDFs unter klassenarbeiten/pdf/.
+# ACHTUNG: NICHT "Klassenarbeiten/" ignorieren! Auf Windows (core.ignorecase=true) würde
+# dieses Muster case-insensitiv auch den VERÖFFENTLICHTEN Ordner "klassenarbeiten/" treffen.
+# Nur die Ablage mit eindeutigem Namen ausschließen:
+Klassenarbeiten-Ablage/
+
+# Interne QA-Werkzeuge und Prüfpläne (gehören nicht auf die Live-Seite)
+werkzeuge/
+
+# Archiv für Aussortiertes (z. B. ungenutzte Fonts)
+_archiv/
+
+# Spiele-Arbeitskopie des Betreibers (Quelle; veröffentlicht wird nur pausenraum/)
+# Achtung Groß-/Kleinschreibung: deshalb heißt der veröffentlichte Ordner "pausenraum",
+# nicht "spiele" — Windows würde "Spiele" und "spiele" verschmelzen.
+Spiele/
+
+# Entwürfe neuer Klassenarbeiten zur Sichtung (mit Lösungen) – nicht veröffentlichen
+0Ablage/
+
+# Interne Planungs-/Status-Dokumente: bleiben lokal, sollen NICHT veröffentlicht werden.
+# (Bereits getrackte Dateien zusätzlich mit `git rm --cached <datei>` aus der Veröffentlichung nehmen.)
+STATUS.md
+OFFENE-PUNKTE.md
+UMSETZUNGSPLAN.md
+KC-ABGLEICH.md
+KLASSENARBEITEN.md
+KLASSENARBEITEN-PLAN.md
+RS-KLASSENARBEITEN-TODO.md
+LERNBUERO-AUFGABEN.md
+LERNBUERO-3.0-LEITFADEN.md
+SELBSTLERNEN-KONZEPT.md
+SPIELE.md
+QC-PRUEFBERICHT-2026-06-20.md
+
+# Alle internen QC-/Prüfberichte (nicht veröffentlichen)
+QC-*.md
+
+# Python-Cache (z. B. werkzeuge/)
+__pycache__/
+*.pyc

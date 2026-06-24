@@ -1,0 +1,37 @@
+{
+ "id": "steuern-10",
+ "titel": "Lernzirkel: Steuern und Regeln (Mikrocontroller)",
+ "fach": "informatik",
+ "intro": "Wie nimmt ein Mikrocontroller seine Umgebung wahr und reagiert darauf? Hier beobachtest du einen Regelkreis, knobelst über Steuern und Regeln und übst. Die Reihenfolge wählst du selbst.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Beobachten: Der Regelkreis am Backofen",
+   "typ": "knobel",
+   "typLabel": "Beobachten",
+   "html": "<p>Ein Backofen soll $180\\,°\\mathrm{C}$ halten. Ein Sensor misst ständig die Temperatur, der Mikrocontroller vergleicht sie mit dem Sollwert und schaltet die Heizung an oder aus. Beschreibe, was passiert, wenn die Tür kurz geöffnet wird und die Temperatur auf $150\\,°\\mathrm{C}$ fällt.</p><details><summary>Lösung anzeigen</summary><div><p>Der Sensor misst $150\\,°\\mathrm{C}$ (Istwert). Der Mikrocontroller vergleicht: Istwert $<$ Sollwert ($180\\,°\\mathrm{C}$). Also schaltet er die Heizung <strong>an</strong>.</p><p>Die Temperatur steigt wieder. Sobald der Sensor $180\\,°\\mathrm{C}$ meldet, schaltet der Controller die Heizung <strong>aus</strong>. Dieses ständige Messen–Vergleichen–Nachsteuern ist ein <strong>Regelkreis</strong>: Das Ergebnis wirkt über die Rückmeldung auf das System zurück.</p></div></details>"
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Knobeln: Steuern oder Regeln?",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Eine Gartenbewässerung läuft jeden Morgen genau $10$ Minuten – egal, ob der Boden trocken oder nass ist. Eine zweite Anlage misst die Bodenfeuchte und bewässert nur, wenn der Boden zu trocken ist. Welche Anlage <em>steuert</em>, welche <em>regelt</em>?</p><details><summary>Lösung anzeigen</summary><div><p>Die erste Anlage <strong>steuert</strong>: Sie führt einen festen Ablauf aus, ohne das Ergebnis zu prüfen (keine Rückmeldung).</p><p>Die zweite Anlage <strong>regelt</strong>: Sie misst die Bodenfeuchte (Istwert), vergleicht mit einem Sollwert und passt ihr Verhalten an. Der entscheidende Unterschied ist die <strong>Rückmeldung</strong> (Messung), die beim Regeln vorhanden ist und beim Steuern fehlt.</p></div></details>"
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Üben: EVA-Prinzip, Sensoren, Regelkreis",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "html": "<p>Wende dein Wissen zu Mikrocontroller, Sensoren/Aktoren und dem Regelkreis an.</p>",
+   "quelle": "in-10-steuern-und-regeln",
+   "ids": [
+    "in-10-sr-004",
+    "in-10-sr-006"
+   ]
+  }
+ ]
+}

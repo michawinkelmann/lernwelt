@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beschleunigte Bewegung und Anhalteweg — Klasse 10 · Physik — Lernwelt</title>
+<meta name="description" content="Gleichmäßig beschleunigte Bewegung, Beschleunigung a = Δv/Δt, v-t- und s-t-Diagramme deuten, freier Fall und der Anhalteweg aus Reaktionsweg und Bremsweg mit den Faustformeln — mit Schaubildern, Beispielen und Verständnis-Checks. Realschulzweig.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: Diagramm-Schaubilder, Anhalteweg-Tabelle und Streckenbalken */
+  .bb-figur { margin: var(--abstand-4) 0; }
+  .bb-figur svg { display: block; width: 100%; height: auto; margin: 0 auto; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); }
+  .bb-figur figcaption { text-align: center; font-size: .9rem; color: var(--text-leise); margin-top: var(--abstand-2); }
+  .bb-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; }
+  .bb-tabelle th, .bb-tabelle td { border: 1px solid var(--linie); padding: 6px 14px; text-align: left; }
+  .bb-tabelle th { background: var(--hauch); }
+  .bb-tabelle td:nth-child(n+2) { text-align: right; font-variant-numeric: tabular-nums; }
+  .bb-tabelle caption { caption-side: bottom; font-size: .9rem; color: var(--text-leise); padding-top: var(--abstand-2); }
+</style>
+</head>
+<body data-seite="thema" data-fach="physik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Beschleunigte Bewegung und Anhalteweg</h1>
+  <p class="einleitung">Die Ampel springt auf Grün, das Auto zieht los und wird immer schneller. Ein Stein fällt vom Brückengeländer und beschleunigt nach unten. Vor dem Zebrastreifen tritt die Fahrerin auf die Bremse — und das Auto wird langsamer, steht aber nicht sofort. In all diesen Fällen <strong>ändert sich die Geschwindigkeit</strong>: Die Bewegung ist <strong>beschleunigt</strong>. Auf dieser Seite lernst du, wie man die <strong>Beschleunigung</strong> $a = \frac{\Delta v}{\Delta t}$ berechnet, wie man eine beschleunigte Bewegung im <strong>v-t-</strong> und <strong>s-t-Diagramm</strong> erkennt, was beim <strong>freien Fall</strong> passiert — und warum der <strong>Anhalteweg</strong> eines Autos so wichtig für deine Sicherheit im Straßenverkehr ist.</p>
+
+  <section aria-labelledby="bb-gleichmaessig">
+    <h2 id="bb-gleichmaessig">1. Wenn die Geschwindigkeit sich ändert</h2>
+    <p>In Klasse 8 hast du die <strong>gleichförmige Bewegung</strong> kennengelernt: gleiches Tempo die ganze Zeit, in gleichen Zeiten gleiche Wege. Im echten Verkehr ist das aber die Ausnahme — an der Ampel anfahren, vor der Kurve bremsen, auf der Geraden Gas geben: Ständig ändert sich das Tempo. Eine Bewegung, bei der sich die Geschwindigkeit ändert, heißt <strong>beschleunigte Bewegung</strong>.</p>
+    <p>Dabei meint „beschleunigt“ in der Physik beides: <strong>schneller werden</strong> (anfahren) und <strong>langsamer werden</strong> (bremsen). Das Bremsen ist nur eine beschleunigte Bewegung „mit negativem Vorzeichen“ — man nennt es auch <strong>Verzögerung</strong>. Besonders einfach ist der Fall, bei dem das Tempo <strong>gleichmäßig</strong> zunimmt oder abnimmt: in jeder Sekunde immer um denselben Betrag. Das nennt man eine <strong>gleichmäßig beschleunigte Bewegung</strong> — und genau die rechnen wir hier.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p>Bei einer <strong>beschleunigten Bewegung</strong> ändert sich die Geschwindigkeit. Das gilt für <strong>schneller werden</strong> (Anfahren) und für <strong>langsamer werden</strong> (Bremsen, auch Verzögerung genannt). Nimmt das Tempo in jeder Sekunde um denselben Betrag zu oder ab, ist die Bewegung <strong>gleichmäßig beschleunigt</strong>.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Auto fährt mit konstant 50 km/h durch eine lange Baustelle. Ist das eine beschleunigte Bewegung?</summary>
+      <div class="check-antwort"><p>Nein. Das Tempo ändert sich nicht — es bleibt die ganze Zeit bei $50\,\text{km/h}$. Das ist eine <strong>gleichförmige</strong> Bewegung. Eine beschleunigte Bewegung läge erst vor, wenn das Auto schneller oder langsamer würde. Vorsicht vor dem Alltagswort „beschleunigen“: In der Physik zählt auch das Bremsen dazu.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="bb-a">
+    <h2 id="bb-a">2. Die Beschleunigung a</h2>
+    <p>Wie stark eine Bewegung beschleunigt ist, sagt die <strong>Beschleunigung</strong> $a$. Sie gibt an, um wie viel sich die Geschwindigkeit in jeder Sekunde ändert. Man rechnet: <strong>Geschwindigkeitsänderung geteilt durch die dafür benötigte Zeit</strong>.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Beschleunigung</span>
+      <p class="formel-abgesetzt">$$a = \frac{\Delta v}{\Delta t}$$</p>
+      <p>$a$: Beschleunigung in $\frac{\text{m}}{\text{s}^2}$ · $\Delta v$: Geschwindigkeitsänderung in m/s (also Endgeschwindigkeit minus Anfangsgeschwindigkeit) · $\Delta t$: dafür benötigte Zeit in s.<br>Das Zeichen $\Delta$ („Delta“) bedeutet immer „Änderung von“ oder „Unterschied“.</p>
+    </div>
+    <p>Die Einheit $1\,\frac{\text{m}}{\text{s}^2}$ liest man „ein Meter pro Sekunde-Quadrat“ und versteht sie am besten so: <strong>$a = 1\,\frac{\text{m}}{\text{s}^2}$ bedeutet, dass das Tempo in jeder Sekunde um $1\,\frac{\text{m}}{\text{s}}$ zunimmt.</strong> Bei $a = 2\,\frac{\text{m}}{\text{s}^2}$ kommt also pro Sekunde $2\,\frac{\text{m}}{\text{s}}$ dazu: nach $1\,\text{s}$ sind es $2\,\frac{\text{m}}{\text{s}}$, nach $2\,\text{s}$ schon $4\,\frac{\text{m}}{\text{s}}$, nach $3\,\text{s}$ dann $6\,\frac{\text{m}}{\text{s}}$ und so weiter.</p>
+    <p>Beim <strong>Bremsen</strong> nimmt das Tempo ab — dann ist $\Delta v$ negativ, und auch $a$ wird negativ. Man spricht dann von einer <strong>Verzögerung</strong>. Für die Rechnung reicht oft der Betrag: „Wie viel m/s verliert das Fahrzeug pro Sekunde?“</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Anfahren an der Ampel</span>
+      <p>Ein Auto fährt an der Ampel los und erreicht nach $\Delta t = 10\,\text{s}$ eine Geschwindigkeit von $100\,\text{km/h}$. Zuerst die Geschwindigkeit in m/s umrechnen (geteilt durch 3,6): $100 : 3{,}6 \approx 27{,}8\,\text{m/s}$. Da das Auto aus dem Stand startet ($v_{\text{Anfang}} = 0$), ist $\Delta v \approx 27{,}8\,\text{m/s}$. Damit:</p>
+      <p class="formel-abgesetzt">$$a = \frac{\Delta v}{\Delta t} = \frac{27{,}8\,\frac{\text{m}}{\text{s}}}{10\,\text{s}} \approx 2{,}8\,\frac{\text{m}}{\text{s}^2}$$</p>
+      <p>In jeder Sekunde wird das Auto also um rund $2{,}8\,\frac{\text{m}}{\text{s}}$ schneller — das sind etwa $10\,\text{km/h}$ pro Sekunde.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Radfahrer beschleunigt aus dem Stand in 4 s auf 8 m/s. Wie groß ist seine Beschleunigung?</summary>
+      <div class="check-antwort"><p>$a = \frac{\Delta v}{\Delta t} = \frac{8\,\frac{\text{m}}{\text{s}}}{4\,\text{s}} = 2\,\frac{\text{m}}{\text{s}^2}$. Das heißt: In jeder Sekunde wird der Radfahrer um $2\,\frac{\text{m}}{\text{s}}$ schneller — nach $1\,\text{s}$ fährt er $2\,\frac{\text{m}}{\text{s}}$, nach $2\,\text{s}$ schon $4\,\frac{\text{m}}{\text{s}}$ und nach $4\,\text{s}$ die vollen $8\,\frac{\text{m}}{\text{s}}$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="bb-vt-diagramm">
+    <h2 id="bb-vt-diagramm">3. Das v-t-Diagramm und der Weg</h2>
+    <p>Am besten erkennt man eine beschleunigte Bewegung im <strong>v-t-Diagramm</strong> (Zeit-Geschwindigkeit-Diagramm): Nach rechts läuft die Zeit $t$, nach oben wird die Geschwindigkeit $v$ aufgetragen. Bei einer <strong>gleichmäßig beschleunigten</strong> Bewegung ist der Graph eine <strong>ansteigende Gerade</strong> — das Tempo wächst gleichmäßig. Beim <strong>Bremsen fällt</strong> die Gerade ab, bis sie die Zeitachse erreicht: Dort ist $v = 0$, das Fahrzeug steht. Eine <strong>waagerechte</strong> Linie bedeutet dagegen konstantes Tempo (gleichförmige Bewegung).</p>
+    <figure class="bb-figur" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="v-t-Diagramm eines Autos mit drei Abschnitten. Die Zeitachse reicht von 0 bis 30 Sekunden, die Geschwindigkeitsachse von 0 bis 20 Meter pro Sekunde. Abschnitt 1: Von Sekunde 0 bis 10 steigt die Linie als Gerade von 0 auf 20 Meter pro Sekunde — das Anfahren mit konstanter Beschleunigung. Abschnitt 2: Von Sekunde 10 bis 20 verläuft die Linie waagerecht bei 20 Meter pro Sekunde — konstante Fahrt. Abschnitt 3: Von Sekunde 20 bis 30 fällt die Linie als Gerade zurück auf 0 — das Bremsen bis zum Stillstand.">
+        <defs>
+          <marker id="bb-achspfeil-1" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M 0 0 L 8 4 L 0 8 Z" style="fill: var(--text);"/>
+          </marker>
+        </defs>
+        <text x="370" y="30" text-anchor="middle" style="font-size: 15px; font-weight: 600; fill: var(--text);">v-t-Diagramm einer Autofahrt</text>
+        <!-- Gitterlinien -->
+        <path d="M 210 330 L 210 60 M 330 330 L 330 60 M 450 330 L 450 60 M 570 330 L 570 60 M 90 270 L 650 270 M 90 210 L 650 210 M 90 150 L 650 150 M 90 90 L 650 90" style="fill: none; stroke: var(--linie); stroke-width: 1; stroke-dasharray: 3 4;"/>
+        <!-- Achsen mit Pfeilen -->
+        <line x1="90" y1="330" x2="668" y2="330" style="stroke: var(--text); stroke-width: 2;" marker-end="url(#bb-achspfeil-1)"/>
+        <line x1="90" y1="330" x2="90" y2="46" style="stroke: var(--text); stroke-width: 2;" marker-end="url(#bb-achspfeil-1)"/>
+        <text x="668" y="366" text-anchor="end" style="font-size: 13.5px; font-weight: 600; fill: var(--text);">t in s</text>
+        <text x="100" y="42" text-anchor="start" style="font-size: 13.5px; font-weight: 600; fill: var(--text);">v in m/s</text>
+        <!-- Skalenstriche und Werte: Zeitachse -->
+        <path d="M 210 330 L 210 336 M 330 330 L 330 336 M 450 330 L 450 336 M 570 330 L 570 336" style="fill: none; stroke: var(--text); stroke-width: 1.5;"/>
+        <text x="90" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">0</text>
+        <text x="210" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">10</text>
+        <text x="330" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">15</text>
+        <text x="450" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">20</text>
+        <text x="570" y="352" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">25</text>
+        <!-- Skalenstriche und Werte: Geschwindigkeitsachse -->
+        <path d="M 84 270 L 90 270 M 84 210 L 90 210 M 84 150 L 90 150 M 84 90 L 90 90" style="fill: none; stroke: var(--text); stroke-width: 1.5;"/>
+        <text x="78" y="274" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">5</text>
+        <text x="78" y="214" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">10</text>
+        <text x="78" y="154" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">15</text>
+        <text x="78" y="94" text-anchor="end" style="font-size: 12px; fill: var(--text-leise);">20</text>
+        <!-- Flaeche unter dem Graphen (Weg) leicht angedeutet -->
+        <path d="M 90 330 L 210 90 L 450 90 L 570 330 Z" style="fill: var(--physik); opacity: 0.10;"/>
+        <!-- Graph: 0->20 m/s in 10 s (anfahren), konstant bis 20 s, bremsen bis 30 s -->
+        <path d="M 90 330 L 210 90 L 450 90 L 570 330" style="fill: none; stroke: var(--physik); stroke-width: 3.5; stroke-linejoin: round; stroke-linecap: round;"/>
+        <circle cx="90" cy="330" r="4.5" style="fill: var(--physik);"/>
+        <circle cx="210" cy="90" r="4.5" style="fill: var(--physik);"/>
+        <circle cx="450" cy="90" r="4.5" style="fill: var(--physik);"/>
+        <circle cx="570" cy="330" r="4.5" style="fill: var(--physik);"/>
+        <!-- Abschnitts-Nummern -->
+        <circle cx="135" cy="215" r="12" style="fill: var(--flaeche); stroke: var(--physik); stroke-width: 2;"/>
+        <text x="135" y="220" text-anchor="middle" style="font-size: 13px; font-weight: 700; fill: var(--physik);">1</text>
+        <text x="153" y="220" text-anchor="start" style="font-size: 12.5px; fill: var(--text-leise);">Anfahren</text>
+        <circle cx="330" cy="68" r="12" style="fill: var(--flaeche); stroke: var(--physik); stroke-width: 2;"/>
+        <text x="330" y="73" text-anchor="middle" style="font-size: 13px; font-weight: 700; fill: var(--physik);">2</text>
+        <text x="348" y="73" text-anchor="start" style="font-size: 12.5px; fill: var(--text-leise);">konstant</text>
+        <circle cx="535" cy="215" r="12" style="fill: var(--flaeche); stroke: var(--physik); stroke-width: 2;"/>
+        <text x="535" y="220" text-anchor="middle" style="font-size: 13px; font-weight: 700; fill: var(--physik);">3</text>
+        <text x="517" y="220" text-anchor="end" style="font-size: 12.5px; fill: var(--text-leise);">Bremsen</text>
+      </svg>
+      <figcaption>Eine Autofahrt im v-t-Diagramm. Abschnitt 1: Anfahren — die Geschwindigkeit steigt gleichmäßig von 0 auf 20 m/s in 10 s (ansteigende Gerade). Abschnitt 2: konstante Fahrt mit 20 m/s (waagerecht). Abschnitt 3: Bremsen — das Tempo fällt gleichmäßig zurück auf 0 (fallende Gerade).</figcaption>
+    </figure>
+    <p>Aus dem v-t-Diagramm liest du die <strong>Beschleunigung</strong> als Steigung der Geraden ab: Im Anfahr-Abschnitt wächst das Tempo um $20\,\frac{\text{m}}{\text{s}}$ in $10\,\text{s}$, also $a = 20 : 10 = 2\,\frac{\text{m}}{\text{s}^2}$. Je steiler die Gerade, desto stärker die Beschleunigung.</p>
+    <p>Wie sieht dieselbe beschleunigte Bewegung im <strong>s-t-Diagramm</strong> aus? Bei gleichförmiger Bewegung war das eine Gerade. Beim Anfahren wird das Fahrzeug aber immer schneller, also kommt in jeder Sekunde <em>mehr</em> Weg dazu — die Linie wird <strong>immer steiler</strong> und ist keine Gerade mehr, sondern eine gekrümmte Kurve. Sie bedeutet: schneller werden. Beim Bremsen wird die Kurve dagegen <strong>immer flacher</strong>.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Beschleunigte Bewegung in beiden Diagrammen</span>
+      <p>Im <strong>v-t-Diagramm</strong>: ansteigende Gerade = gleichmäßig schneller · fallende Gerade = gleichmäßig bremsen · waagerecht = konstantes Tempo. Im <strong>s-t-Diagramm</strong>: immer steilere Kurve = schneller werden · immer flachere Kurve = langsamer werden · Gerade = gleichförmig.</p>
+    </div>
+    <p>Eine beschleunigte Bewegung aus dem Stand legt in der Startphase noch wenig Weg zurück und holt dann mächtig auf. Für den <strong>Weg</strong> bei gleichmäßiger Beschleunigung <em>aus dem Stand</em> gibt es eine eigene Formel:</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Weg bei Beschleunigung aus dem Stand</span>
+      <p class="formel-abgesetzt">$$s = \frac{1}{2} \cdot a \cdot t^2$$</p>
+      <p>$s$: zurückgelegter Weg in m · $a$: Beschleunigung in $\frac{\text{m}}{\text{s}^2}$ · $t$: Zeit in s.<br>Weil die Zeit hier <strong>quadriert</strong> wird, gilt: <strong>doppelte Zeit, vierfacher Weg.</strong> In der doppelten Zeit kommt also nicht doppelt so viel Weg dazu, sondern viermal so viel.</p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Weg beim Anfahren</span>
+      <p>Ein Auto fährt aus dem Stand mit $a = 2\,\frac{\text{m}}{\text{s}^2}$ los. Wie weit kommt es in den ersten $6\,\text{s}$?</p>
+      <p class="formel-abgesetzt">$$s = \frac{1}{2} \cdot a \cdot t^2 = \frac{1}{2} \cdot 2\,\frac{\text{m}}{\text{s}^2} \cdot (6\,\text{s})^2 = \frac{1}{2} \cdot 2 \cdot 36\,\text{m} = 36\,\text{m}$$</p>
+      <p>In $6\,\text{s}$ legt das Auto also $36\,\text{m}$ zurück. Rechne nach: In den ersten $3\,\text{s}$ wären es nur $\frac{1}{2} \cdot 2 \cdot 9 = 9\,\text{m}$ — bei doppelter Zeit (6 statt 3 s) der vierfache Weg (36 statt 9 m).</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Im v-t-Diagramm verläuft die Linie als ansteigende Gerade. Was tut das Fahrzeug?</summary>
+      <div class="check-antwort"><p>Es wird <strong>gleichmäßig schneller</strong> — es beschleunigt. Die Steigung der Geraden ist die Beschleunigung $a$: Je steiler, desto stärker beschleunigt. Vorsicht, nicht mit dem s-t-Diagramm verwechseln: Dort wäre eine Gerade eine gleichförmige Bewegung mit konstantem Tempo. Schau immer zuerst auf die Achsenbeschriftung.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="bb-fall">
+    <h2 id="bb-fall">4. Der freie Fall</h2>
+    <p>Lässt man einen Gegenstand einfach los, fällt er nach unten und wird dabei immer schneller — auch das ist eine gleichmäßig beschleunigte Bewegung, der berühmteste Sonderfall überhaupt: der <strong>freie Fall</strong>. Die Beschleunigung wird dabei von der Erdanziehung verursacht und heißt <strong>Fallbeschleunigung</strong> oder <strong>Ortsfaktor</strong> $g$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Freier Fall</span>
+      <p class="formel-abgesetzt">$$g \approx 9{,}81\,\frac{\text{m}}{\text{s}^2} \approx 10\,\frac{\text{m}}{\text{s}^2}$$</p>
+      <p>In jeder Sekunde wird ein fallender Körper um etwa $10\,\frac{\text{m}}{\text{s}}$ schneller. Für überschlägige Rechnungen darf man mit $g \approx 10\,\frac{\text{m}}{\text{s}^2}$ arbeiten. Es gelten dieselben Formeln wie bei jeder Beschleunigung aus dem Stand: $v = g \cdot t$ für die Geschwindigkeit und $s = \frac{1}{2} \cdot g \cdot t^2$ für den Fallweg.</p>
+    </div>
+    <p>Das Erstaunliche: Ohne Luftwiderstand fallen <strong>alle Körper gleich schnell</strong> — ein schwerer Stein genauso wie eine leichte Murmel. Die Masse spielt keine Rolle! Im Alltag bremst der Luftwiderstand leichte, großflächige Dinge wie eine Feder oder ein Blatt Papier zwar aus, aber das ist eine Folge der Luft, nicht der Schwerkraft. Auf dem Mond, wo es keine Luft gibt, fielen ein Hammer und eine Vogelfeder im berühmten Experiment von 1971 tatsächlich gleich schnell zu Boden.</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Stein vom Brückengeländer</span>
+      <p>Ein Stein fällt von einer Brücke und braucht $t = 2\,\text{s}$ bis zum Wasser. Wir rechnen mit $g \approx 10\,\frac{\text{m}}{\text{s}^2}$. Geschwindigkeit beim Aufprall:</p>
+      <p class="formel-abgesetzt">$$v = g \cdot t = 10\,\frac{\text{m}}{\text{s}^2} \cdot 2\,\text{s} = 20\,\frac{\text{m}}{\text{s}} \;(= 72\,\text{km/h})$$</p>
+      <p>Und der Fallweg — also die Höhe der Brücke:</p>
+      <p class="formel-abgesetzt">$$s = \frac{1}{2} \cdot g \cdot t^2 = \frac{1}{2} \cdot 10\,\frac{\text{m}}{\text{s}^2} \cdot (2\,\text{s})^2 = 20\,\text{m}$$</p>
+      <p>Die Brücke ist also rund $20\,\text{m}$ hoch, und der Stein trifft mit $72\,\text{km/h}$ auf. (Mit dem genauen Wert $g = 9{,}81\,\frac{\text{m}}{\text{s}^2}$ käme man auf etwa $19{,}6\,\text{m}$ — der Unterschied ist klein.)</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Eine schwere Stahlkugel und eine leichte Glasmurmel fallen gleichzeitig vom Tisch. Welche kommt zuerst unten an?</summary>
+      <div class="check-antwort"><p>Beide gleichzeitig (Luftwiderstand vernachlässigt). Beim freien Fall ist die Fallbeschleunigung $g$ für alle Körper gleich — die Masse kommt in den Formeln $v = g \cdot t$ und $s = \frac{1}{2} g t^2$ gar nicht vor. Dass im Alltag manches langsamer fällt (Feder, Papier), liegt allein am Luftwiderstand, nicht am Gewicht.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="bb-anhalteweg">
+    <h2 id="bb-anhalteweg">5. Der Anhalteweg im Straßenverkehr</h2>
+    <p>Eine Gefahr taucht auf — doch ein Auto steht nicht sofort. Der <strong>Anhalteweg</strong> ist die Strecke, die ein Fahrzeug vom Erkennen der Gefahr bis zum völligen Stillstand zurücklegt. Er besteht aus <strong>zwei Teilen</strong>:</p>
+    <ul>
+      <li><strong>Reaktionsweg:</strong> In der <strong>Schrecksekunde</strong> — der Reaktionszeit von etwa $1\,\text{s}$ vom Erkennen bis zum Tritt aufs Bremspedal — fährt das Auto noch völlig <em>ungebremst</em> weiter (gleichförmig). Diese Strecke heißt Reaktionsweg.</li>
+      <li><strong>Bremsweg:</strong> Erst danach wirken die Bremsen, und das Auto wird langsamer (beschleunigte Bewegung mit Verzögerung), bis es steht. Diese Strecke heißt Bremsweg.</li>
+    </ul>
+    <div class="merkkasten">
+      <span class="merk-etikett">Anhalteweg = Reaktionsweg + Bremsweg</span>
+      <p>Die Fahrschule rechnet mit einfachen <strong>Faustformeln</strong> ($v$ in km/h, Ergebnisse in Metern):</p>
+      <p class="formel-abgesetzt">$$\text{Reaktionsweg} = \frac{v}{10} \cdot 3 \qquad \text{Bremsweg} = \left(\frac{v}{10}\right)^2$$</p>
+      <p class="formel-abgesetzt">$$\text{Anhalteweg} = \text{Reaktionsweg} + \text{Bremsweg}$$</p>
+      <p>Beim Bremsweg wird die Zahl $\frac{v}{10}$ <strong>quadriert</strong>. Das hat eine wichtige Folge: <strong>Doppelte Geschwindigkeit bedeutet vierfacher Bremsweg.</strong></p>
+    </div>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: Anhalteweg aus 50 km/h</span>
+      <p>Ein Auto fährt $v = 50\,\text{km/h}$. Mit den Faustformeln:</p>
+      <p class="formel-abgesetzt">$$\text{Reaktionsweg} = \frac{50}{10} \cdot 3 = 5 \cdot 3 = 15\,\text{m}$$</p>
+      <p class="formel-abgesetzt">$$\text{Bremsweg} = \left(\frac{50}{10}\right)^2 = 5^2 = 25\,\text{m}$$</p>
+      <p class="formel-abgesetzt">$$\text{Anhalteweg} = 15\,\text{m} + 25\,\text{m} = 40\,\text{m}$$</p>
+      <p>Vom Erkennen der Gefahr bis zum Stillstand vergehen also rund $40\,\text{m}$ — etwa zehn Autolängen.</p>
+    </div>
+    <figure class="bb-figur" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vergleich der Anhaltewege als waagerechte Streckenbalken. Bei 30 km/h: 9 Meter Reaktionsweg plus 9 Meter Bremsweg ergeben 18 Meter Anhalteweg. Bei 50 km/h: 15 Meter Reaktionsweg plus 25 Meter Bremsweg ergeben 40 Meter Anhalteweg. Bei 70 km/h: 21 Meter Reaktionsweg plus 49 Meter Bremsweg ergeben 70 Meter Anhalteweg. Je schneller das Auto, desto stärker wächst vor allem der Bremsweg.">
+        <text x="350" y="26" text-anchor="middle" style="font-size: 15px; font-weight: 600; fill: var(--text);">Anhalteweg im Vergleich (Faustformeln)</text>
+        <!-- Massstab: 1 m = 4 px, Start x=140 -->
+        <!-- Legende -->
+        <rect x="140" y="42" width="16" height="12" style="fill: var(--physik); opacity: 0.45;"/>
+        <text x="162" y="52" text-anchor="start" style="font-size: 12px; fill: var(--text-leise);">Reaktionsweg</text>
+        <rect x="300" y="42" width="16" height="12" style="fill: var(--physik);"/>
+        <text x="322" y="52" text-anchor="start" style="font-size: 12px; fill: var(--text-leise);">Bremsweg</text>
+        <!-- 30 km/h: Reakt 9 m (36 px), Brems 9 m (36 px) -->
+        <text x="130" y="92" text-anchor="end" style="font-size: 13px; font-weight: 600; fill: var(--text);">30 km/h</text>
+        <rect x="140" y="78" width="36" height="22" style="fill: var(--physik); opacity: 0.45;"/>
+        <rect x="176" y="78" width="36" height="22" style="fill: var(--physik);"/>
+        <text x="222" y="94" text-anchor="start" style="font-size: 12.5px; fill: var(--text-leise);">18 m</text>
+        <!-- 50 km/h: Reakt 15 m (60 px), Brems 25 m (100 px) -->
+        <text x="130" y="140" text-anchor="end" style="font-size: 13px; font-weight: 600; fill: var(--text);">50 km/h</text>
+        <rect x="140" y="126" width="60" height="22" style="fill: var(--physik); opacity: 0.45;"/>
+        <rect x="200" y="126" width="100" height="22" style="fill: var(--physik);"/>
+        <text x="310" y="142" text-anchor="start" style="font-size: 12.5px; fill: var(--text-leise);">40 m</text>
+        <!-- 70 km/h: Reakt 21 m (84 px), Brems 49 m (196 px) -->
+        <text x="130" y="188" text-anchor="end" style="font-size: 13px; font-weight: 600; fill: var(--text);">70 km/h</text>
+        <rect x="140" y="174" width="84" height="22" style="fill: var(--physik); opacity: 0.45;"/>
+        <rect x="224" y="174" width="196" height="22" style="fill: var(--physik);"/>
+        <text x="430" y="190" text-anchor="start" style="font-size: 12.5px; fill: var(--text-leise);">70 m</text>
+        <!-- Massstabsleiste -->
+        <line x1="140" y1="222" x2="220" y2="222" style="stroke: var(--text); stroke-width: 1.5;"/>
+        <path d="M 140 218 L 140 226 M 220 218 L 220 226" style="stroke: var(--text); stroke-width: 1.5;"/>
+        <text x="180" y="242" text-anchor="middle" style="font-size: 12px; fill: var(--text-leise);">20 m</text>
+      </svg>
+      <figcaption>Anhaltewege im Vergleich: Bei 30 km/h sind es 18 m, bei 50 km/h schon 40 m, bei 70 km/h ganze 70 m. Der helle Balken ist der Reaktionsweg, der kräftige der Bremsweg — und vor allem der Bremsweg wächst stark, weil die Geschwindigkeit beim Bremsweg quadriert wird.</figcaption>
+    </figure>
+    <p>Genau deshalb gilt vor Schulen und Kindergärten oft <strong>Tempo 30</strong>: Wo ein Auto mit $50\,\text{km/h}$ erst nach $40\,\text{m}$ steht, kommt es mit $30\,\text{km/h}$ schon nach $18\,\text{m}$ zum Stehen — fast eine Halbierung. Und an der Stelle, an der das schnellere Auto noch mit voller Wucht fährt, steht das langsamere bereits still. Tempolimits sind also keine Schikane, sondern gewonnene Meter, die im Ernstfall über Leben entscheiden.</p>
+    <table class="bb-tabelle">
+      <caption>Anhaltewege nach den Faustformeln (Reaktionszeit 1 s, normale Bremsung).</caption>
+      <thead><tr><th scope="col">Tempo</th><th scope="col">Reaktionsweg</th><th scope="col">Bremsweg</th><th scope="col">Anhalteweg</th></tr></thead>
+      <tbody>
+        <tr><td>30 km/h</td><td>9 m</td><td>9 m</td><td>18 m</td></tr>
+        <tr><td>50 km/h</td><td>15 m</td><td>25 m</td><td>40 m</td></tr>
+        <tr><td>70 km/h</td><td>21 m</td><td>49 m</td><td>70 m</td></tr>
+        <tr><td>100 km/h</td><td>30 m</td><td>100 m</td><td>130 m</td></tr>
+      </tbody>
+    </table>
+    <div class="merkkasten">
+      <span class="merk-etikett">Merke</span>
+      <p>Der <strong>Anhalteweg</strong> setzt sich aus <strong>Reaktionsweg</strong> (ungebremst während der Schrecksekunde) und <strong>Bremsweg</strong> (bis zum Stillstand) zusammen. Weil der Bremsweg vom Quadrat der Geschwindigkeit abhängt, bedeutet <strong>doppeltes Tempo den vierfachen Bremsweg</strong>. Deshalb sind niedrige Tempolimits ein wirksamer Schutz.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Ein Auto fährt statt 30 km/h plötzlich 60 km/h. Wie verändert sich der Bremsweg?</summary>
+      <div class="check-antwort"><p>Er wird <strong>viermal so lang</strong>, nicht doppelt so lang. Im Bremsweg steht die Geschwindigkeit im Quadrat: $\left(\frac{30}{10}\right)^2 = 9\,\text{m}$ werden zu $\left(\frac{60}{10}\right)^2 = 36\,\text{m}$. Doppeltes Tempo, vierfacher Bremsweg — genau das macht hohe Geschwindigkeit im Verkehr so gefährlich.</p></div>
+    </details>
+  <p>Wie lang ist DEINE Schrecksekunde? Der <a href="../../../lernspiele/reaktionszeit-tester/index.html">Reaktionszeit-Tester</a> im Trainingsraum misst sie — und rechnet sie direkt in Meter Reaktionsweg um.</p>
+  </section>
+
+  <details class="vertiefung">
+    <summary>Vertiefung: Die Faustformeln der Fahrschule</summary>
+    <div class="vertiefung-inhalt">
+      <p>In der Fahrschule lernt man Faustformeln, mit denen sich der Anhalteweg im Kopf abschätzen lässt — ganz ohne Taschenrechner. Sie sind nichts anderes als die Physik dieser Stunde, handlich verpackt. Man rechnet mit der Tempozahl $\frac{v}{10}$, also der Geschwindigkeit in $\text{km/h}$ geteilt durch zehn.</p>
+      <p class="formel-abgesetzt">$$\text{Reaktionsweg} = \frac{v}{10} \cdot 3 \qquad \text{Bremsweg} = \left(\frac{v}{10}\right)^2$$</p>
+      <p>Der Reaktionsweg wächst <strong>proportional</strong> zur Geschwindigkeit — in der Schrecksekunde fährt das Auto ja mit gleichbleibendem Tempo geradeaus weiter. Der Bremsweg dagegen steht im <strong>Quadrat</strong>: doppeltes Tempo bedeutet vierfacher Bremsweg. Genau diesen Unterschied hast du oben schon gesehen.</p>
+      <p>Beispiel für $v = 50\,\text{km/h}$ (Tempozahl $5$): Reaktionsweg $5 \cdot 3 = 15\,\text{m}$, Bremsweg $5^2 = 25\,\text{m}$, zusammen also ein Anhalteweg von</p>
+      <p class="formel-abgesetzt">$$s_{\text{anhalte}} = 15\,\text{m} + 25\,\text{m} = 40\,\text{m}.$$</p>
+      <p>Bei einer <strong>Gefahrenbremsung</strong> (Vollbremsung) halbiert sich der Bremsweg ungefähr — die Faustformel lautet dann $\left(\frac{v}{10}\right)^2 : 2$. Aus $25\,\text{m}$ werden so rund $12{,}5\,\text{m}$. Der Reaktionsweg bleibt gleich: Bremsen kann erst, wer reagiert hat.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben von der Beschleunigung über das Lesen der v-t-Diagramme und den freien Fall bis zum Anhalteweg — mit gestuften Tipps und vollständigen Lösungswegen.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+
+  <p style="margin-top: var(--abstand-4);"><a href="../index.html">← Zurück zur Übersicht Klasse 10</a></p>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

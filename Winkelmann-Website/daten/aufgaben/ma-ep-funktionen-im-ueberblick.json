@@ -1,0 +1,524 @@
+{
+  "thema": "ma-ep-funktionen-im-ueberblick",
+  "fach": "mathematik",
+  "stufe": "einfuehrungsphase",
+  "aufgaben": [
+    {
+      "id": "ma-ep-fkt-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Eine Funktion ordnet jedem $x$-Wert genau einen $y$-Wert zu. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "Die Zuordnung „Tag des Jahres → Tageshöchsttemperatur in Hannover“ ist eine Funktion.",
+          "richtig": true,
+          "erklaerung": "Richtig: Jeder Tag hat genau eine Höchsttemperatur — die Zuordnung ist eindeutig."
+        },
+        {
+          "text": "Auf dem Graphen einer Funktion dürfen zwei Punkte denselben $y$-Wert haben.",
+          "richtig": true,
+          "erklaerung": "Richtig: Bei $f(x) = x^2$ liegen $(3\\,|\\,9)$ und $(-3\\,|\\,9)$ beide auf dem Graphen. Verboten ist nur ein $x$ mit zwei $y$-Werten."
+        },
+        {
+          "text": "Die Zuordnung „Körpergröße → Person der Klasse“ ist in jedem Fall eine Funktion.",
+          "richtig": false,
+          "erklaerung": "Sobald zwei Personen gleich groß sind, gehören zu einer Größe zwei Personen — die Zuordnung ist dann nicht eindeutig."
+        },
+        {
+          "text": "Ein Kreis um den Ursprung ist der Graph einer Funktion.",
+          "richtig": false,
+          "erklaerung": "Eine senkrechte Gerade schneidet den Kreis zweimal: Zu einem $x$ gehören zwei $y$-Werte — der Senkrechten-Test scheitert."
+        }
+      ],
+      "tipps": [
+        "Entscheidend ist die Eindeutigkeit: Zu jedem $x$ darf nur ein $y$ gehören — in der anderen Richtung ist alles erlaubt.",
+        "Prüfe Kurven mit dem Senkrechten-Test: Schneidet eine senkrechte Gerade die Kurve mehr als einmal?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2. Jeder Tag hat genau eine Höchsttemperatur — eindeutig, also Funktion. Gleiche $y$-Werte für verschiedene $x$ sind erlaubt: $f(3) = f(-3) = 9$ bei $f(x) = x^2$. Die Zuordnung Größe → Person scheitert, sobald zwei Personen gleich groß sind. Und der Kreis fällt durch den Senkrechten-Test: Bei $x = 0$ etwa gehören die beiden Punkte oben und unten auf dem Kreis zum selben $x$-Wert.",
+      "kc": [
+        "funktionsbegriff"
+      ]
+    },
+    {
+      "id": "ma-ep-fkt-002",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zu Definitions- und Wertebereich.",
+      "text": "Die Menge aller erlaubten x-Werte heißt ___ . Bei f(x) = √x lautet er ___ , denn Quadratwurzeln aus negativen Zahlen sind nicht definiert. Bei f(x) = 1/x ist ___ ausgeschlossen. Die Menge aller Funktionswerte heißt ___ .",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "Definitionsbereich",
+          "optionen": [
+            "Definitionsbereich",
+            "Wertebereich",
+            "Funktionsterm"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "x ≥ 0",
+          "optionen": [
+            "x ≥ 0",
+            "x > 0",
+            "alle reellen Zahlen"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "x = 0",
+          "optionen": [
+            "x = 0",
+            "x = 1",
+            "kein einziger Wert"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Wertebereich",
+          "optionen": [
+            "Wertebereich",
+            "Definitionsbereich",
+            "Graph"
+          ]
+        }
+      ],
+      "tipps": [
+        "Definitionsbereich = erlaubte Eingaben ($x$-Werte), Wertebereich = mögliche Ergebnisse ($y$-Werte).",
+        "$\\sqrt{0} = 0$ ist erlaubt — die Grenze gehört mit dazu.",
+        "Durch null kann man nicht teilen."
+      ],
+      "loesungsweg": "Definitionsbereich — x ≥ 0 — x = 0 — Wertebereich: Der Definitionsbereich sammelt alle erlaubten Eingaben. Bei $\\sqrt{x}$ sind das alle $x \\ge 0$ (auch $x = 0$, denn $\\sqrt{0} = 0$). Bei $\\frac{1}{x}$ ist genau $x = 0$ verboten, weil Division durch null nicht erklärt ist. Die Menge der Ergebnisse heißt Wertebereich.",
+      "kc": [
+        "definitionsbereich"
+      ]
+    },
+    {
+      "id": "ma-ep-fkt-003",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Gegeben ist $f(x) = 2 \\cdot (x - 3)^2 + 1$. Berechne die Funktionswerte $f(5)$ und $f(0)$.",
+      "eingaben": [
+        {
+          "label": "$f(5)$",
+          "antwort": 9,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$f(0)$",
+          "antwort": 19,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Setze den $x$-Wert überall ein, wo $x$ steht — und rechne die Klammer zuerst aus.",
+        "$f(5) = 2 \\cdot (5 - 3)^2 + 1$ — erst $(5-3)^2$ bestimmen.",
+        "$f(0) = 2 \\cdot (0 - 3)^2 + 1$ — Achtung: $(-3)^2 = 9$."
+      ],
+      "loesungsweg": "$f(5) = 2 \\cdot (5-3)^2 + 1 = 2 \\cdot 4 + 1 = 9$ und $f(0) = 2 \\cdot (0-3)^2 + 1 = 2 \\cdot 9 + 1 = 19$. Die Punkte $(5\\,|\\,9)$ und $(0\\,|\\,19)$ liegen also auf dem Graphen.",
+      "kc": [
+        "funktionswerte"
+      ]
+    },
+    {
+      "id": "ma-ep-fkt-004",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jedem Funktionsterm den passenden Funktionstyp zu.",
+      "paare": [
+        {
+          "links": "f(x) = 3x − 2",
+          "rechts": "lineare Funktion"
+        },
+        {
+          "links": "f(x) = (x − 1)² + 4",
+          "rechts": "quadratische Funktion"
+        },
+        {
+          "links": "f(x) = 5 · 2ˣ",
+          "rechts": "Exponentialfunktion"
+        },
+        {
+          "links": "f(x) = 1/x",
+          "rechts": "Kehrwertfunktion"
+        }
+      ],
+      "tipps": [
+        "Schau auf die Rolle von $x$: Faktor, Quadrat, Exponent oder Nenner?",
+        "Steht $x$ im Exponenten, wird pro Schritt mit einem festen Faktor multipliziert.",
+        "Das Quadrat einer Klammer mit $x$ erzeugt eine Parabel."
+      ],
+      "loesungsweg": "$3x - 2$: $x$ steht in der ersten Potenz — lineare Funktion (Gerade). $(x-1)^2 + 4$: Scheitelpunktform einer Parabel — quadratische Funktion. $5 \\cdot 2^x$: $x$ steht im Exponenten — Exponentialfunktion. $\\frac{1}{x}$: $x$ steht im Nenner — Kehrwertfunktion (Hyperbel).",
+      "kc": [
+        "funktionstypen"
+      ]
+    },
+    {
+      "id": "ma-ep-fkt-005",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Welche Aussagen über die Symmetrie der Grundfunktionen sind richtig?",
+      "optionen": [
+        {
+          "text": "Der Graph von $f(x) = x^2$ ist achsensymmetrisch zur $y$-Achse.",
+          "richtig": true,
+          "erklaerung": "Richtig: $f(-x) = (-x)^2 = x^2 = f(x)$ — links und rechts dieselben Werte."
+        },
+        {
+          "text": "Der Graph von $f(x) = x^3$ ist punktsymmetrisch zum Ursprung.",
+          "richtig": true,
+          "erklaerung": "Richtig: $f(-x) = -x^3 = -f(x)$, zum Beispiel $f(2) = 8$ und $f(-2) = -8$."
+        },
+        {
+          "text": "Der Graph von $f(x) = \\frac{1}{x}$ ist achsensymmetrisch zur $y$-Achse.",
+          "richtig": false,
+          "erklaerung": "$f(-2) = -0{,}5$, aber $f(2) = 0{,}5$ — die Hyperbel ist punktsymmetrisch zum Ursprung, nicht achsensymmetrisch."
+        },
+        {
+          "text": "Der Graph von $f(x) = \\sqrt{x}$ ist achsensymmetrisch zur $y$-Achse.",
+          "richtig": false,
+          "erklaerung": "Links der $y$-Achse existiert der Graph gar nicht — der Definitionsbereich ist $x \\ge 0$."
+        }
+      ],
+      "tipps": [
+        "Achsensymmetrie zur $y$-Achse: $f(-x) = f(x)$. Punktsymmetrie zum Ursprung: $f(-x) = -f(x)$.",
+        "Setze konkrete Zahlen ein und vergleiche $f(2)$ mit $f(-2)$.",
+        "Bei $\\sqrt{x}$ lohnt zuerst ein Blick auf den Definitionsbereich."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: $(-x)^2 = x^2$ liefert die Achsensymmetrie der Parabel, $(-x)^3 = -x^3$ die Punktsymmetrie der kubischen Funktion. Die Hyperbel erfüllt $f(-x) = -f(x)$ und ist deshalb punktsymmetrisch — nicht achsensymmetrisch. Und $\\sqrt{x}$ ist für negative $x$ gar nicht definiert, von Spiegelbildern links der $y$-Achse kann keine Rede sein.",
+      "kc": [
+        "symmetrie"
+      ]
+    },
+    {
+      "id": "ma-ep-fkt-006",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Eine Gerade verläuft durch die Punkte $P(-1\\,|\\,5)$ und $Q(3\\,|\\,{-3})$. Bestimme Steigung $m$ und $y$-Achsenabschnitt $b$ der zugehörigen linearen Funktion $f(x) = m \\cdot x + b$.",
+      "eingaben": [
+        {
+          "label": "$m$",
+          "antwort": -2,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "$b$",
+          "antwort": 3,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Steigung: $m = \\frac{y_Q - y_P}{x_Q - x_P}$ — beide Differenzen in derselben Reihenfolge bilden.",
+        "$m = \\frac{-3 - 5}{3 - (-1)}$ — Vorzeichen sorgfältig mitnehmen.",
+        "Setze $m$ und die Koordinaten von $P$ in $y = m \\cdot x + b$ ein und löse nach $b$ auf."
+      ],
+      "loesungsweg": "$m = \\frac{-3 - 5}{3 - (-1)} = \\frac{-8}{4} = -2$. Einsetzen von $P(-1\\,|\\,5)$: $5 = -2 \\cdot (-1) + b = 2 + b$, also $b = 3$. Funktionsgleichung: $f(x) = -2x + 3$. Probe mit $Q$: $f(3) = -6 + 3 = -3$ — passt.",
+      "kc": [
+        "lineare-funktion"
+      ]
+    },
+    {
+      "id": "ma-ep-fkt-007",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Gegeben ist $f(x) = 0{,}5 \\cdot (x - 2)^2 - 8$. Bestimme den Scheitelpunkt und die Nullstellen.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Lies den Scheitelpunkt $S(x_S\\,|\\,y_S)$ aus der Scheitelpunktform ab.",
+          "eingaben": [
+            {
+              "label": "$x_S$",
+              "antwort": 2,
+              "toleranz": 0,
+              "einheit": ""
+            },
+            {
+              "label": "$y_S$",
+              "antwort": -8,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "In $a \\cdot (x - d)^2 + e$ liegt der Scheitel bei $S(d\\,|\\,e)$ — das Vorzeichen in der Klammer beachten."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Löse $f(x) = 0$ und gib die Nullstellen an ($x_1 < x_2$).",
+          "eingaben": [
+            {
+              "label": "$x_1$",
+              "antwort": -2,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "$x_2$",
+              "antwort": 6,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$0{,}5 \\cdot (x-2)^2 = 8$, also $(x-2)^2 = 16$ — beim Wurzelziehen beide Vorzeichen berücksichtigen."
+          ]
+        }
+      ],
+      "tipps": [
+        "Die Scheitelpunktform verrät den Scheitel ohne jede Rechnung: $d$ und $e$ ablesen.",
+        "Für die Nullstellen die Gleichung schrittweise nach der Klammer auflösen.",
+        "$(x-2)^2 = 16$ hat zwei Lösungen: $x - 2 = 4$ oder $x - 2 = -4$."
+      ],
+      "loesungsweg": "Scheitel: $S(2\\,|\\,{-8})$, direkt abgelesen. Nullstellen: $0{,}5 \\cdot (x-2)^2 - 8 = 0 \\Rightarrow (x-2)^2 = 16 \\Rightarrow x - 2 = \\pm 4$, also $x_1 = -2$ und $x_2 = 6$. Probe: $f(6) = 0{,}5 \\cdot 16 - 8 = 0$ — stimmt.",
+      "kc": [
+        "scheitelpunktform"
+      ],
+      "cas": "<p>Nullstellen-Kontrolle mit dem ClassPad II:</p><ol><li>Im <b>Main</b>-Menü eingeben: <code>solve(0.5×(x-2)^2-8=0,x)</code> und <b>EXE</b> (den Befehl tippen oder über <b>Interactive → Gleich./Ungleich. → solve</b> einfügen) — Ergebnis: <code>x=-2</code> und <code>x=6</code>, genau die beiden Nullstellen aus dem Lösungsweg.</li><li>Den Scheitel liest du am besten grafisch ab: Im Menü <b>Graph & Tabelle</b> den Term bei y1 eintragen, Häkchen setzen und das Graph-Symbol antippen.</li><li><b>Analyse → Grafische Lösung → Minimum</b> liefert (2|-8) — ein Minimum, weil die Parabel wegen 0,5 > 0 nach oben geöffnet ist. Über <b>Analyse → Grafische Lösung → Nullstelle</b> findest du auch -2 und 6 wieder (die Cursortaste rechts springt zur zweiten Nullstelle).</li></ol><p>Die Umformung (x-2)² = 16 gehört trotzdem ins Heft — solve ersetzt den Rechenweg nicht, es kontrolliert ihn.</p>"
+    },
+    {
+      "id": "ma-ep-fkt-008",
+      "typ": "reihenfolge",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Graph von $g(x) = -2 \\cdot (x - 3)^2 + 5$ soll aus der Normalparabel aufgebaut werden. Bringe die Umformungsschritte in eine sinnvolle Reihenfolge (erst Form, dann Lage).",
+      "elemente": [
+        "Start: Normalparabel f(x) = x²",
+        "In y-Richtung mit Faktor 2 strecken: 2x²",
+        "An der x-Achse spiegeln: −2x²",
+        "Um 3 nach rechts, 5 nach oben: −2(x − 3)² + 5"
+      ],
+      "tipps": [
+        "Bewährte Reihenfolge: zuerst strecken und spiegeln (Faktor $a$), ganz zum Schluss verschieben.",
+        "Im Faktor $-2$ stecken zwei Schritte: Streckung mit $2$ und Spiegelung an der $x$-Achse.",
+        "Die Verschiebungen $d = 3$ und $e = 5$ kommen als Letztes."
+      ],
+      "loesungsweg": "Von $x^2$ aus zuerst die Form ändern: Streckung mit Faktor $2$ ergibt $2x^2$, die Spiegelung an der $x$-Achse macht daraus $-2x^2$. Zum Schluss die Lage: um $3$ nach rechts und $5$ nach oben — fertig ist $g(x) = -2 \\cdot (x-3)^2 + 5$ mit Scheitel $S(3\\,|\\,5)$.",
+      "kc": [
+        "transformationen"
+      ],
+      "cas": "<p>Die Wirkung jedes Umformungsschritts kannst du dir im ClassPad II per Graph-Vergleich ansehen:</p><ol><li>Im Menü <b>Graph & Tabelle</b> nacheinander bei y1 bis y4 eintragen: <code>x^2</code>, <code>2x^2</code>, <code>-2x^2</code> und <code>-2×(x-3)^2+5</code>.</li><li>Alle Häkchen setzen und das Graph-Symbol antippen — vergleiche: y2 ist schmaler als die Normalparabel (Streckung mit Faktor 2), y3 nach unten geöffnet (Spiegelung an der x-Achse), y4 schließlich um 3 nach rechts und 5 nach oben gewandert, Scheitel (3|5).</li><li>Tipp: Schalte die Häkchen einzeln aus und wieder ein, dann siehst du jeden Schritt isoliert.</li></ol><p>Der ClassPad zeigt nur das Ergebnis jedes Schritts — die Reihenfolge „erst Form, dann Lage“ begründest du selbst.</p>"
+    },
+    {
+      "id": "ma-ep-fkt-009",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Graph von $f$ wird verändert. Ordne jedem neuen Term die passende Wirkung zu.",
+      "paare": [
+        {
+          "links": "f(x) + 4",
+          "rechts": "4 nach oben"
+        },
+        {
+          "links": "f(x − 4)",
+          "rechts": "4 nach rechts"
+        },
+        {
+          "links": "f(x + 4)",
+          "rechts": "4 nach links"
+        },
+        {
+          "links": "−f(x)",
+          "rechts": "Spiegelung an der x-Achse"
+        }
+      ],
+      "tipps": [
+        "Außen angefügt (am Ende des Terms) wirkt senkrecht, innen in der Klammer waagerecht.",
+        "In der Klammer wirkt das Vorzeichen „verkehrt herum“: $x - 4$ schiebt nach rechts.",
+        "Ein Minus vor der ganzen Funktion kehrt alle Funktionswerte um."
+      ],
+      "loesungsweg": "$f(x) + 4$ erhöht jeden Funktionswert um $4$: Verschiebung nach oben. $f(x - 4)$ verschiebt um $4$ nach rechts, $f(x + 4) = f(x - (-4))$ um $4$ nach links — in der Klammer gilt das Gegenteil des Vorzeichens. $-f(x)$ macht aus jedem $y$-Wert sein Negatives: Spiegelung an der $x$-Achse.",
+      "kc": [
+        "transformationen"
+      ]
+    },
+    {
+      "id": "ma-ep-fkt-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Der Graph von $f(x) = \\sqrt{x}$ wird in $y$-Richtung mit Faktor $3$ gestreckt, um $2$ nach rechts und um $1$ nach oben verschoben: $g(x) = 3 \\cdot \\sqrt{x - 2} + 1$. Berechne $g(6)$ und gib den kleinsten $x$-Wert des Definitionsbereichs von $g$ an.",
+      "eingaben": [
+        {
+          "label": "$g(6)$",
+          "antwort": 7,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "kleinstes $x$",
+          "antwort": 2,
+          "toleranz": 0,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "$g(6) = 3 \\cdot \\sqrt{6 - 2} + 1$ — zuerst den Term unter der Wurzel ausrechnen.",
+        "$\\sqrt{4} = 2$ — dann mit $3$ multiplizieren und $1$ addieren.",
+        "Unter der Wurzel darf nichts Negatives stehen: $x - 2 \\ge 0$."
+      ],
+      "loesungsweg": "$g(6) = 3 \\cdot \\sqrt{6-2} + 1 = 3 \\cdot 2 + 1 = 7$. Der Radikand darf nicht negativ werden: $x - 2 \\ge 0$, also $x \\ge 2$ — kleinster erlaubter Wert $x = 2$. Dort startet der Graph im Punkt $(2\\,|\\,1)$: dem um $2$ nach rechts und $1$ nach oben verschobenen Startpunkt der Wurzelfunktion.",
+      "kc": [
+        "transformationen"
+      ]
+    },
+    {
+      "id": "ma-ep-fkt-011",
+      "typ": "freitext",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "Jana zeichnet einen Kreis mit Radius $5$ um den Ursprung und behauptet: „Das ist der Graph einer Funktion.“ Nimm Stellung — und erkläre, wie man mit senkrechten Geraden bei jeder Kurve prüfen kann, ob sie Funktionsgraph ist.",
+      "musterloesung": "Janas Behauptung ist falsch. Eine Funktion ordnet jedem $x$-Wert genau einen $y$-Wert zu. Auf dem Kreis liegen aber zum Beispiel die Punkte $(3\\,|\\,4)$ und $(3\\,|\\,{-4})$ — beide erfüllen $x^2 + y^2 = 25$ —, also gehören zu $x = 3$ zwei verschiedene $y$-Werte. Allgemein prüft das der Senkrechten-Test: Eine Kurve ist genau dann Funktionsgraph, wenn jede senkrechte Gerade sie höchstens einmal schneidet. Beim Kreis schneidet jede Senkrechte zwischen $x = -5$ und $x = 5$ zweimal — der Test scheitert. Der obere Halbkreis allein wäre dagegen ein Funktionsgraph, nämlich der von $f(x) = \\sqrt{25 - x^2}$.",
+      "tipps": [
+        "Welche Punkte des Kreises liegen über und unter $x = 3$? Denke an $3^2 + 4^2 = 25$.",
+        "Formuliere die Definition — jedem $x$ genau ein $y$ — und prüfe sie am Kreis.",
+        "Senkrechten-Test: Was bedeutet es, wenn eine senkrechte Gerade die Kurve zweimal trifft?"
+      ],
+      "loesungsweg": "Zu $x = 3$ gehören auf dem Kreis die beiden Punkte $(3\\,|\\,4)$ und $(3\\,|\\,{-4})$ — die Zuordnung ist nicht eindeutig, der Kreis ist kein Funktionsgraph. Senkrechten-Test: Jede senkrechte Gerade darf den Graphen höchstens einmal schneiden; beim Kreis passiert das für $-5 < x < 5$ zweimal. Erst ein halber Kreis (oben oder unten) besteht den Test.",
+      "kc": [
+        "funktionsbegriff"
+      ]
+    },
+    {
+      "id": "ma-ep-fkt-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Der Graph von $g$ entsteht aus der Normalparabel durch Spiegelung an der $x$-Achse, Stauchung in $y$-Richtung mit Faktor $0{,}5$, Verschiebung um $4$ nach links und um $3$ nach oben — also $g(x) = -0{,}5 \\cdot (x + 4)^2 + 3$. Analysiere den Graphen.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Gib den Scheitelpunkt $S(x_S\\,|\\,y_S)$ an.",
+          "eingaben": [
+            {
+              "label": "$x_S$",
+              "antwort": -4,
+              "toleranz": 0,
+              "einheit": ""
+            },
+            {
+              "label": "$y_S$",
+              "antwort": 3,
+              "toleranz": 0,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "„4 nach links, 3 nach oben“ schiebt den Scheitel von $(0\\,|\\,0)$ nach $S(-4\\,|\\,3)$ — die Klammer $(x + 4)$ bestätigt $d = -4$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die Nullstellen von $g$, gerundet auf zwei Nachkommastellen ($x_1 < x_2$).",
+          "eingaben": [
+            {
+              "label": "$x_1$",
+              "antwort": -6.45,
+              "toleranz": 0.01,
+              "einheit": ""
+            },
+            {
+              "label": "$x_2$",
+              "antwort": -1.55,
+              "toleranz": 0.01,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$-0{,}5 \\cdot (x+4)^2 + 3 = 0 \\Rightarrow (x+4)^2 = 6$ — Wurzel ziehen mit beiden Vorzeichen."
+          ]
+        }
+      ],
+      "tipps": [
+        "Kurz erklärt: Der <strong>Scheitelpunkt</strong> ist der höchste bzw. tiefste Punkt einer Parabel.",
+        "Spiegelung und Stauchung lassen den Scheitel im Ursprung — erst die Verschiebungen bewegen ihn.",
+        "Für die Nullstellen $g(x) = 0$ setzen und nach der Klammer auflösen.",
+        "$(x+4)^2 = 6$ liefert $x = -4 \\pm \\sqrt{6}$ mit $\\sqrt{6} \\approx 2{,}449$."
+      ],
+      "loesungsweg": "Scheitel: Spiegelung an der $x$-Achse und Stauchung wirken auf die unverschobene Parabel und lassen ihren Scheitel im Ursprung; die Verschiebungen bringen ihn nach $S(-4\\,|\\,3)$. Nullstellen: $-0{,}5 \\cdot (x+4)^2 + 3 = 0 \\Rightarrow (x+4)^2 = 6 \\Rightarrow x = -4 \\pm \\sqrt{6}$. Mit $\\sqrt{6} \\approx 2{,}449$ folgt $x_1 \\approx -6{,}45$ und $x_2 \\approx -1{,}55$. Plausibel: Wegen $a = -0{,}5 < 0$ ist die Parabel nach unten geöffnet, der Scheitel liegt oberhalb der $x$-Achse — das passt zu genau zwei Nullstellen.",
+      "kc": [
+        "transformationen"
+      ],
+      "cas": "<p>Kontrolle mit dem ClassPad II:</p><ol><li>Im <b>Main</b>-Menü eingeben: <code>solve(-1/2×(x+4)^2+3=0,x)</code> und <b>EXE</b> — der ClassPad liefert die exakten Lösungen <code>x=-√6-4</code> und <code>x=√6-4</code>, also genau die Form x = -4 ± √6 aus dem Lösungsweg.</li><li>Für die Näherungswerte in der Symbolleiste von <b>Standard</b> auf <b>Dezimal</b> umschalten (Knopf ½↔0,5): x ≈ -6,449 und x ≈ -1,551 — gerundet -6,45 und -1,55. (Tippst du gleich <code>-0.5</code> statt <code>-1/2</code>, antwortet der ClassPad sofort dezimal.)</li><li>Den Scheitel bestätigt der Graph: Im Menü <b>Graph & Tabelle</b> den Term bei y1 eintragen, zeichnen lassen und <b>Analyse → Grafische Lösung → Maximum</b> wählen — Ergebnis (-4|3), ein Maximum, weil die Parabel nach unten geöffnet ist.</li></ol><p>Spiegelung, Stauchung und Verschiebung musst du trotzdem selbst am Term erklären können — der ClassPad prüft nur die Zahlen.</p>"
+    },
+    {
+      "id": "ma-ep-fkt-013",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Die Funktion $h$ entsteht durch Verkettung: Auf $x$ wird zuerst die innere Funktion $u(x) = 2x - 6$ angewendet, auf das Ergebnis dann die Wurzelfunktion — also $h(x) = \\sqrt{2x - 6}$. Bestimme den kleinsten $x$-Wert des Definitionsbereichs von $h$ und berechne $h(11)$.",
+      "eingaben": [
+        {
+          "label": "kleinstes $x$",
+          "antwort": 3,
+          "toleranz": 0,
+          "einheit": ""
+        },
+        {
+          "label": "$h(11)$",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Die äußere Wurzel verlangt: Das Ergebnis der inneren Funktion darf nicht negativ sein.",
+        "Löse die Ungleichung $2x - 6 \\ge 0$.",
+        "$h(11) = \\sqrt{2 \\cdot 11 - 6}$ — zuerst innen ausrechnen."
+      ],
+      "loesungsweg": "Die Wurzel ist nur für nichtnegative Radikanden definiert: $2x - 6 \\ge 0 \\Leftrightarrow x \\ge 3$ — der kleinste erlaubte Wert ist $x = 3$, dort gilt $h(3) = \\sqrt{0} = 0$. Außerdem $h(11) = \\sqrt{2 \\cdot 11 - 6} = \\sqrt{16} = 4$. Merke: Bei Verkettungen bestimmt die äußere Funktion, welche Ergebnisse die innere liefern darf.",
+      "kc": [
+        "verkettung"
+      ]
+    }
+  ]
+}

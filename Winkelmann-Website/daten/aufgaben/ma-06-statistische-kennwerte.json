@@ -1,0 +1,278 @@
+{
+  "thema": "ma-06-statistische-kennwerte",
+  "fach": "mathematik",
+  "stufe": "klasse-6",
+  "aufgaben": [
+    {
+      "id": "ma-06-sk-001",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Mittel, Median, Spannweite — was stimmt? Wähle alle richtigen Aussagen.",
+      "optionen": [
+        { "text": "Für den Median muss man die Liste zuerst der Größe nach sortieren.", "richtig": true, "erklaerung": "Richtig: Erst sortieren, dann die Mitte suchen — in der unsortierten Urliste darf man die Mitte nicht ablesen." },
+        { "text": "Die Spannweite ist größter Wert minus kleinster Wert.", "richtig": true, "erklaerung": "Richtig: Die Spannweite misst, wie weit die Daten auseinanderliegen." },
+        { "text": "Der Median ist immer gleich dem arithmetischen Mittel.", "richtig": false, "erklaerung": "Nein: Oft liegen beide nah beieinander, aber z. B. bei 1, 2, 9 ist der Median 2 und das Mittel $\\frac{12}{3} = 4$." },
+        { "text": "Die Spannweite ist der größte Wert der Liste.", "richtig": false, "erklaerung": "Nein: Der kleinste Wert wird vom größten abgezogen. Steigt die Temperatur von 3 °C auf 12 °C, ist die Spannweite 9 °C — nicht 12 °C." }
+      ],
+      "tipps": [
+        "Denk an das Median-Rezept: Was ist der allererste Schritt?",
+        "Spannweite: Wie weit ist es vom kleinsten bis zum größten Wert?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Der Median braucht eine sortierte Liste, und die Spannweite ist die Differenz aus größtem und kleinstem Wert. Falsch sind Aussage 3 (Beispiel 1, 2, 9: Median 2, Mittel 4 — die Kennwerte können sich deutlich unterscheiden) und Aussage 4 (der größte Wert allein ist keine Spannweite, der kleinste muss abgezogen werden).",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-002",
+      "typ": "zuordnung",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jedem Begriff seine Beschreibung zu.",
+      "paare": [
+        { "links": "arithmetisches Mittel", "rechts": "Summe durch Anzahl" },
+        { "links": "Median", "rechts": "mittlerer Wert nach Sortieren" },
+        { "links": "Spannweite", "rechts": "größter minus kleinster Wert" },
+        { "links": "Urliste", "rechts": "alle Werte, unsortiert" }
+      ],
+      "tipps": [
+        "„Ur-“ wie ursprünglich: die Daten genau so, wie sie erhoben wurden.",
+        "Beim Mittel wird alles zusammengezählt und gerecht verteilt.",
+        "Der Median steht in der Mitte — aber erst nach dem Sortieren."
+      ],
+      "loesungsweg": "Arithmetisches Mittel: Summe aller Werte geteilt durch ihre Anzahl. Median: der mittlere Wert der sortierten Liste. Spannweite: größter minus kleinster Wert. Urliste: alle erhobenen Werte in ihrer ursprünglichen, unsortierten Reihenfolge.",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-003",
+      "typ": "luecke",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze das Median-Rezept.",
+      "text": "Für den Median wird die Liste zuerst ___ . Bei einer ungeraden Anzahl von Werten ist der Median ___ . Bei einer geraden Anzahl bildet man ___ . Ein einzelner Ausreißer stört den Median ___ .",
+      "luecken": [
+        { "art": "dropdown", "antwort": "der Größe nach sortiert", "optionen": ["der Größe nach sortiert", "zusammengezählt", "halbiert"] },
+        { "art": "dropdown", "antwort": "der mittlere Wert", "optionen": ["der mittlere Wert", "der häufigste Wert", "der größte Wert"] },
+        { "art": "dropdown", "antwort": "das Mittel der beiden mittleren", "optionen": ["das Mittel der beiden mittleren", "das Mittel aus erstem und letztem", "die Summe der beiden mittleren"] },
+        { "art": "dropdown", "antwort": "kaum", "optionen": ["kaum", "sehr stark", "genauso stark wie das Mittel"] }
+      ],
+      "tipps": [
+        "Schritt 1 ist immer das Sortieren.",
+        "Bei gerader Anzahl teilen sich zwei Werte die Mitte — was macht man dann mit ihnen?",
+        "Denk ans Taschengeld-Beispiel: Der Ausreißer mit 30 € hat den Median nicht bewegt."
+      ],
+      "loesungsweg": "Zuerst wird die Liste der Größe nach sortiert. Bei ungerader Anzahl ist der Median der mittlere Wert, bei gerader Anzahl das Mittel der beiden mittleren Werte. Ausreißer stören den Median kaum — das ist seine große Stärke gegenüber dem arithmetischen Mittel.",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-004",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ben übt Freiwürfe. An fünf Tagen trifft er von je 10 Würfen: 4, 9, 6, 4 und 7 Treffer. Bestimme das arithmetische Mittel, den Median und die Spannweite.",
+      "eingaben": [
+        { "label": "Mittel", "antwort": 6, "toleranz": 0, "einheit": "Treffer" },
+        { "label": "Median", "antwort": 6, "toleranz": 0, "einheit": "Treffer" },
+        { "label": "Spannweite", "antwort": 5, "toleranz": 0, "einheit": "Treffer" }
+      ],
+      "tipps": [
+        "Mittel: alle fünf Werte addieren und durch 5 teilen.",
+        "Für den Median zuerst sortieren: 4, 4, 6, 7, 9 — fünf Werte, der mittlere zählt.",
+        "Spannweite: größter minus kleinster Wert, also $9 - 4$."
+      ],
+      "loesungsweg": "Mittel: $(4+9+6+4+7) : 5 = 30 : 5 = 6$ Treffer. Median: sortiert 4, 4, 6, 7, 9 — bei fünf Werten ist der 3. Wert die Mitte, also 6 Treffer. Spannweite: $9 - 4 = 5$ Treffer.",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-005",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Vier Freundinnen brauchen für den Schulweg 3, 5, 8 und 10 Minuten. Bestimme den Median der vier Zeiten. Achtung: gerade Anzahl!",
+      "eingaben": [
+        { "label": "Median", "antwort": 6.5, "toleranz": 0, "einheit": "min" }
+      ],
+      "tipps": [
+        "Die Liste ist schon sortiert — zähle zuerst die Werte.",
+        "Bei vier Werten teilen sich der 2. und der 3. Wert die Mitte.",
+        "Bilde das arithmetische Mittel von 5 und 8."
+      ],
+      "loesungsweg": "Vier Werte — gerade Anzahl, also gibt es zwei mittlere Werte: 5 und 8. Ihr Mittel ist $\\frac{5+8}{2} = \\frac{13}{2} = 6{,}5$. Der Median beträgt $6{,}5$ Minuten — er muss kein Wert aus der Liste sein.",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-006",
+      "typ": "multiple-choice",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ausreißer in Datenlisten: Welche Aussagen sind richtig?",
+      "optionen": [
+        { "text": "Ein Ausreißer verändert das arithmetische Mittel stark, den Median kaum.", "richtig": true, "erklaerung": "Richtig: In das Mittel geht jeder Wert ein, also zieht ein Extremwert es zu sich. Der Median schaut nur auf die Mitte der sortierten Liste." },
+        { "text": "Bei einer ungeraden Anzahl von Werten ist der Median immer ein echter Wert aus der Liste.", "richtig": true, "erklaerung": "Richtig: Er ist der mittlere Wert der sortierten Liste. Nur bei gerader Anzahl wird gemittelt — dann kann z. B. 6,5 herauskommen." },
+        { "text": "Mittel und Median unterscheiden sich nie stark.", "richtig": false, "erklaerung": "Nein: Beim Taschengeld 5, 5, 6, 7, 30 ist das Mittel 10,60 €, der Median nur 6 € — der Ausreißer macht den Unterschied." },
+        { "text": "Die Spannweite ignoriert Ausreißer.", "richtig": false, "erklaerung": "Nein, im Gegenteil: Die Spannweite hängt nur vom größten und kleinsten Wert ab — ein Ausreißer verändert sie sofort und stark." }
+      ],
+      "tipps": [
+        "Denk ans Taschengeld-Beispiel: 5, 5, 6, 7, 30.",
+        "Überlege bei jedem Kennwert: Gehen alle Werte ein — oder nur bestimmte?",
+        "Genau zwei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1 und 2: Das Mittel verrechnet jeden Wert und wird darum vom Ausreißer verschoben, der Median bleibt als mittlerer Wert der sortierten Liste fast unverändert — und bei ungerader Anzahl ist er stets ein echter Listenwert. Falsch sind Aussage 3 (siehe Taschengeld: 10,60 € gegen 6 €) und Aussage 4 (die Spannweite reagiert besonders empfindlich auf Ausreißer, weil sie nur größten und kleinsten Wert benutzt).",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-007",
+      "typ": "zuordnung",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Welcher Kennwert beantwortet welche Frage? Ordne zu. (Der Modalwert ist der Wert, der am häufigsten vorkommt.)",
+      "paare": [
+        { "links": "typisches Taschengeld trotz eines sehr hohen Werts", "rechts": "Median" },
+        { "links": "Gesamtsumme gerecht auf alle aufteilen", "rechts": "Mittel" },
+        { "links": "Wie stark schwanken die Temperaturen?", "rechts": "Spannweite" },
+        { "links": "meistverkaufte Schuhgröße", "rechts": "Modalwert" }
+      ],
+      "tipps": [
+        "Ein „sehr hoher Wert“ ist ein Ausreißer — welcher Kennwert lässt sich davon nicht stören?",
+        "„Gerecht aufteilen“ heißt: Summe durch Anzahl.",
+        "„Schwanken“ fragt nach dem Abstand zwischen kleinstem und größtem Wert."
+      ],
+      "loesungsweg": "Typisches Taschengeld trotz Ausreißer: der Median, denn er bleibt von Extremwerten fast unberührt. Gerecht aufteilen: das Mittel, denn es verteilt die Summe gleichmäßig auf alle. Schwankung der Temperaturen: die Spannweite, größter minus kleinster Wert. Meistverkaufte Schuhgröße: der Modalwert, der häufigste Wert der Liste.",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-008",
+      "typ": "rechenweg",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Jonas’ Mannschaft hat in 8 Spielen diese Tore geschossen: 0, 2, 1, 3, 2, 4, 2, 2. Bestimme die drei Kennwerte Schritt für Schritt.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Berechne das arithmetische Mittel der Tore.",
+          "eingaben": [{ "label": "Mittel", "antwort": 2, "toleranz": 0, "einheit": "Tore" }],
+          "tipps": ["Summe: $0+2+1+3+2+4+2+2 = 16$ — und das durch die Anzahl der Spiele teilen."]
+        },
+        {
+          "frage": "Schritt 2: Bestimme den Median. Sortiere zuerst!",
+          "eingaben": [{ "label": "Median", "antwort": 2, "toleranz": 0, "einheit": "Tore" }],
+          "tipps": ["Sortiert: 0, 1, 2, 2, 2, 2, 3, 4 — bei 8 Werten zählen der 4. und der 5. Wert."]
+        },
+        {
+          "frage": "Schritt 3: Berechne die Spannweite.",
+          "eingaben": [{ "label": "Spannweite", "antwort": 4, "toleranz": 0, "einheit": "Tore" }],
+          "tipps": ["Bestes Spiel: 4 Tore. Schlechtestes Spiel: 0 Tore."]
+        }
+      ],
+      "tipps": [
+        "Mittel: Summe aller Tore geteilt durch die Anzahl der Spiele.",
+        "Median bei 8 Werten: das Mittel des 4. und 5. Werts der sortierten Liste.",
+        "Spannweite: bestes Spiel minus schlechtestes Spiel."
+      ],
+      "loesungsweg": "Mittel: $16 : 8 = 2$ Tore. Median: sortiert 0, 1, 2, 2, 2, 2, 3, 4 — der 4. und der 5. Wert sind beide 2, also $\\frac{2+2}{2} = 2$ Tore. Spannweite: $4 - 0 = 4$ Tore. Mittel und Median stimmen hier überein — die Liste hat keinen Ausreißer.",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-009",
+      "typ": "reihenfolge",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Bringe die Schritte zum Bestimmen des Medians in die richtige Reihenfolge.",
+      "elemente": [
+        "Urliste notieren",
+        "Werte der Größe nach sortieren",
+        "Prüfen: Ist die Anzahl der Werte gerade oder ungerade?",
+        "Mittleren Wert ablesen — bei gerader Anzahl das Mittel der beiden mittleren bilden"
+      ],
+      "tipps": [
+        "Am Anfang stehen die rohen Daten, genau so, wie du sie erhoben hast.",
+        "Ohne Sortieren findest du die echte Mitte nicht.",
+        "Ob du einen oder zwei mittlere Werte brauchst, entscheidet die Anzahl."
+      ],
+      "loesungsweg": "Zuerst wird die Urliste notiert, dann der Größe nach sortiert. Anschließend prüfst du die Anzahl der Werte: Bei ungerader Anzahl liest du den mittleren Wert direkt ab, bei gerader Anzahl bildest du das Mittel der beiden mittleren Werte.",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-010",
+      "typ": "freitext",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 3,
+      "frage": "In der Zeitung steht: „Durchschnittsgehalt in der Firma Sonnenblick: 4500 €.“ Trotzdem verdient die Hälfte der Beschäftigten weniger als 2800 €. Erkläre mit den Begriffen Mittel, Median und Ausreißer, wie beides zugleich stimmen kann.",
+      "musterloesung": "Das „Durchschnittsgehalt“ ist das arithmetische Mittel: die Summe aller Gehälter geteilt durch die Anzahl der Beschäftigten. Wenige sehr hohe Gehälter — etwa der Chefin und der Abteilungsleiter — sind Ausreißer nach oben und ziehen das Mittel kräftig hoch. Der Median ist dagegen das Gehalt in der Mitte der sortierten Liste: Die eine Hälfte verdient höchstens so viel, die andere mindestens so viel. Verdient die Hälfte weniger als 2800 €, liegt der Median unter 2800 €. Beispiel: Die fünf Gehälter 2400 €, 2600 €, 2700 €, 3000 € und 11800 € haben das Mittel $22500 : 5 = 4500$ €, aber den Median 2700 €. Beide Angaben stimmen also gleichzeitig — das hohe Mittel kommt von den Ausreißern, der Median beschreibt das typische Gehalt.",
+      "tipps": [
+        "„Durchschnitt“ in Schlagzeilen meint fast immer das arithmetische Mittel.",
+        "Was machen wenige sehr hohe Gehälter mit dem Mittel — und was mit dem Median?",
+        "Erfinde eine kleine Beispiel-Liste mit fünf Gehältern und rechne beide Kennwerte nach."
+      ],
+      "loesungsweg": "Das Mittel verrechnet alle Gehälter — wenige sehr hohe Gehälter (Ausreißer) heben es auf 4500 €. Der Median ist die Mitte der sortierten Liste: Wenn die Hälfte weniger als 2800 € verdient, liegt er unter 2800 €. Beispiel: 2400, 2600, 2700, 3000, 11800 € ergibt Mittel 4500 €, aber Median 2700 €. Beide Aussagen passen also zusammen.",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-011",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Fünf Kinder bekommen 5, 5, 6, 7 und 7 € Taschengeld. Berechne zuerst das Mittel. Dann wird die letzte 7 durch 37 ersetzt — die Liste heißt nun 5, 5, 6, 7, 37. Berechne das neue Mittel und den neuen Median.",
+      "eingaben": [
+        { "label": "Mittel (alte Liste)", "antwort": 6, "toleranz": 0, "einheit": "€" },
+        { "label": "neues Mittel", "antwort": 12, "toleranz": 0, "einheit": "€" },
+        { "label": "neuer Median", "antwort": 6, "toleranz": 0, "einheit": "€" }
+      ],
+      "tipps": [
+        "Alte Liste: Die Summe ist $5+5+6+7+7 = 30$.",
+        "Neue Summe: $30 - 7 + 37 = 60$.",
+        "Für den neuen Median sortieren: 5, 5, 6, 7, 37 — der mittlere Wert zählt."
+      ],
+      "loesungsweg": "Altes Mittel: $30 : 5 = 6$ €. Neues Mittel: $(5+5+6+7+37) : 5 = 60 : 5 = 12$ € — der Ausreißer 37 verdoppelt das Mittel. Neuer Median: Die sortierte Liste 5, 5, 6, 7, 37 hat in der Mitte die 6, der Median bleibt also bei 6 €.",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-012",
+      "typ": "numerisch",
+      "zweig": ["gym", "rs"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Fünf Werte haben das arithmetische Mittel 8. Vier davon sind 6, 7, 9 und 10. Bestimme den fünften Wert und den Median der vollständigen Liste.",
+      "eingaben": [
+        { "label": "fünfter Wert", "antwort": 8, "toleranz": 0 },
+        { "label": "Median", "antwort": 8, "toleranz": 0 }
+      ],
+      "tipps": [
+        "Rückwärts denken: Mittel mal Anzahl ergibt die Summe aller fünf Werte.",
+        "$8 \\cdot 5 = 40$ — und die vier bekannten Werte haben zusammen die Summe 32.",
+        "Sortiere am Ende die vollständige Liste: 6, 7, ?, 9, 10."
+      ],
+      "loesungsweg": "Aus dem Mittel 8 folgt: Die Summe aller fünf Werte ist $8 \\cdot 5 = 40$. Die vier bekannten Werte ergeben $6+7+9+10 = 32$, also ist der fünfte Wert $40 - 32 = 8$. Sortierte Liste: 6, 7, 8, 9, 10 — der mittlere Wert ist 8, der Median also ebenfalls 8. Probe: $40 : 5 = 8$. ✓",
+      "kc": ["daten-und-zufall"]
+    },
+    {
+      "id": "ma-06-sk-013",
+      "typ": "numerisch",
+      "zweig": ["gym"],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz: Merve läuft viermal die 100 m und stoppt: 12,8 s; 13,0 s; 13,4 s; 15,8 s — beim letzten Lauf ist sie gestolpert. Bestimme den Median und das arithmetische Mittel der vier Zeiten.",
+      "eingaben": [
+        { "label": "Median", "antwort": 13.2, "toleranz": 0, "einheit": "s" },
+        { "label": "Mittel", "antwort": 13.75, "toleranz": 0, "einheit": "s" }
+      ],
+      "tipps": [
+        "Die Zeiten sind schon sortiert — vier Werte, also gerade Anzahl.",
+        "Median: das Mittel der beiden mittleren Zeiten 13,0 s und 13,4 s.",
+        "Mittel: Die Summe ist $12{,}8 + 13{,}0 + 13{,}4 + 15{,}8 = 55{,}0$ — davon ein Viertel."
+      ],
+      "loesungsweg": "Median: Die beiden mittleren Zeiten sind 13,0 s und 13,4 s, also $\\frac{13{,}0 + 13{,}4}{2} = 13{,}2$ s. Mittel: $55{,}0 : 4 = 13{,}75$ s. Der Patzer mit 15,8 s hebt das Mittel deutlich an — der Median 13,2 s beschreibt Merves typische Leistung fairer.",
+      "kc": ["daten-und-zufall"]
+    }
+  ]
+}

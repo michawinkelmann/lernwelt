@@ -1,0 +1,652 @@
+{
+  "thema": "ma-qp-matrizen",
+  "fach": "mathematik",
+  "stufe": "qualifikationsphase",
+  "aufgaben": [
+    {
+      "id": "ma-qp-mx-001",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Welche Aussagen über Matrizen und ihre Rechenregeln sind richtig?",
+      "optionen": [
+        {
+          "text": "Zwei Matrizen werden nur dann addiert, wenn sie dieselbe Größe haben.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Addition läuft eintragsweise — dafür müssen Zeilen- und Spaltenzahl übereinstimmen."
+        },
+        {
+          "text": "Das Produkt A·B ist definiert, wenn A so viele Spalten hat, wie B Zeilen hat.",
+          "richtig": true,
+          "erklaerung": "Richtig: Nur dann passt jede Zeile von A zu jeder Spalte von B (Skalarprodukt gleicher Länge)."
+        },
+        {
+          "text": "Für Matrizen gilt immer A·B = B·A.",
+          "richtig": false,
+          "erklaerung": "Die Matrizenmultiplikation ist im Allgemeinen nicht kommutativ — die Reihenfolge zählt."
+        },
+        {
+          "text": "Die Einheitsmatrix E verändert beim Multiplizieren nichts: A·E = A.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Einheitsmatrix wirkt wie die Zahl 1, A·E = E·A = A."
+        }
+      ],
+      "tipps": [
+        "Denk an die Voraussetzung „gleiche Größe“ bei der Addition und „Zeile mal Spalte“ beim Produkt.",
+        "Probiere ein kleines Beispiel: Ist A·B wirklich dasselbe wie B·A?",
+        "Drei Aussagen sind richtig."
+      ],
+      "loesungsweg": "Richtig sind Aussage 1, 2 und 4. Addition läuft eintragsweise und braucht gleiche Größe. Das Produkt $A \\cdot B$ ist definiert, wenn die Spaltenzahl von $A$ gleich der Zeilenzahl von $B$ ist. Die Einheitsmatrix lässt jede Matrix unverändert. Aussage 3 ist falsch: Die Matrizenmultiplikation ist im Allgemeinen nicht kommutativ, $A \\cdot B \\ne B \\cdot A$.",
+      "kc": [
+        "matrix-begriff",
+        "matrizenmultiplikation"
+      ],
+      "ergaenzung": "kc-neu"
+    },
+    {
+      "id": "ma-qp-mx-002",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Berechne das Matrix-Vektor-Produkt $$\\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 2 \\\\ 0 & 1 & 4 \\end{pmatrix} \\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix}.$$ Gib die drei Koordinaten des Ergebnisvektors an.",
+      "eingaben": [
+        {
+          "label": "1. Koordinate",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "2. Koordinate",
+          "antwort": 13,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "3. Koordinate",
+          "antwort": 14,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Jede Zeile der Matrix wird mit dem Vektor „Zeile mal Spalte“ verrechnet.",
+        "Erste Zeile: 2·1 + 1·2 + 0·3.",
+        "Zweite Zeile: 1·1 + 3·2 + 2·3 = 13; dritte Zeile genauso."
+      ],
+      "loesungsweg": "Zeile mal Spalte für jede der drei Zeilen: 1. Zeile $2 \\cdot 1 + 1 \\cdot 2 + 0 \\cdot 3 = 4$, 2. Zeile $1 \\cdot 1 + 3 \\cdot 2 + 2 \\cdot 3 = 13$, 3. Zeile $0 \\cdot 1 + 1 \\cdot 2 + 4 \\cdot 3 = 14$. Ergebnis: $\\begin{pmatrix} 4 \\\\ 13 \\\\ 14 \\end{pmatrix}$.",
+      "kc": [
+        "matrix-vektor-produkt"
+      ],
+      "ergaenzung": "kc-neu"
+    },
+    {
+      "id": "ma-qp-mx-003",
+      "typ": "luecke",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ergänze den Merktext zur Matrizenrechnung.",
+      "text": "Zwei Matrizen werden addiert, indem man die Einträge ___ addiert; das geht nur bei ___ Größe. Beim Produkt A·B rechnet man ___ mal Spalte. Die Matrizenmultiplikation ist im Allgemeinen ___ — die Reihenfolge der Faktoren darf man nicht vertauschen.",
+      "luecken": [
+        {
+          "art": "dropdown",
+          "antwort": "eintragsweise",
+          "optionen": [
+            "eintragsweise",
+            "zeilenweise",
+            "über Kreuz"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "gleicher",
+          "optionen": [
+            "gleicher",
+            "beliebiger",
+            "quadratischer"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "Zeile",
+          "optionen": [
+            "Zeile",
+            "Spalte",
+            "Diagonale"
+          ]
+        },
+        {
+          "art": "dropdown",
+          "antwort": "nicht kommutativ",
+          "optionen": [
+            "nicht kommutativ",
+            "kommutativ",
+            "nicht definiert"
+          ]
+        }
+      ],
+      "tipps": [
+        "Addition: Jeder Eintrag wird mit dem an gleicher Stelle stehenden Eintrag verrechnet.",
+        "Die Multiplikationsregel heißt „Zeile mal Spalte“.",
+        "Erinnere dich: A·B und B·A liefern meist verschiedene Ergebnisse."
+      ],
+      "loesungsweg": "eintragsweise — gleicher — Zeile — nicht kommutativ: Matrizen gleicher Größe werden eintragsweise addiert. Das Produkt entsteht nach der Regel „Zeile mal Spalte“. Da $A \\cdot B$ und $B \\cdot A$ im Allgemeinen verschieden sind, ist die Matrizenmultiplikation nicht kommutativ.",
+      "kc": [
+        "matrizenaddition",
+        "matrizenmultiplikation"
+      ],
+      "ergaenzung": "kc-neu"
+    },
+    {
+      "id": "ma-qp-mx-004",
+      "typ": "zuordnung",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 1,
+      "afb": 1,
+      "frage": "Ordne jeder Abbildung der Ebene ihre Abbildungsmatrix zu. (Die Spalten einer Abbildungsmatrix sind die Bilder der Einheitsvektoren.)",
+      "paare": [
+        {
+          "links": "Spiegelung an der x-Achse",
+          "rechts": "( 1  0 ; 0  −1 )"
+        },
+        {
+          "links": "Spiegelung an der y-Achse",
+          "rechts": "( −1  0 ; 0  1 )"
+        },
+        {
+          "links": "Drehung um 90° gegen den Uhrzeigersinn",
+          "rechts": "( 0  −1 ; 1  0 )"
+        },
+        {
+          "links": "Zentrische Streckung mit Faktor 2",
+          "rechts": "( 2  0 ; 0  2 )"
+        }
+      ],
+      "tipps": [
+        "Überlege für jede Abbildung: Wohin wandert e1 = (1|0) und wohin e2 = (0|1)?",
+        "Das Bild von e1 bildet die erste Spalte, das Bild von e2 die zweite Spalte.",
+        "Bei der Drehung um 90° geht (1|0) auf (0|1) und (0|1) auf (−1|0)."
+      ],
+      "loesungsweg": "Die Spalten sind die Bilder der Einheitsvektoren. Spiegelung an der x-Achse: $e_1$ bleibt, $e_2 \\mapsto (0|{-1})$, also $\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$. Spiegelung an der y-Achse: $e_1 \\mapsto ({-1}|0)$, $e_2$ bleibt: $\\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$. Drehung um $90^\\circ$: $e_1 \\mapsto (0|1)$, $e_2 \\mapsto ({-1}|0)$: $\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$. Streckung mit Faktor $2$: beide Einheitsvektoren verdoppelt: $\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}$.",
+      "kc": [
+        "abbildungsmatrix"
+      ],
+      "ergaenzung": "kc-neu"
+    },
+    {
+      "id": "ma-qp-mx-005",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Berechne das Produkt $$A \\cdot B = \\begin{pmatrix} 1 & 2 \\\\ 3 & 0 \\end{pmatrix} \\cdot \\begin{pmatrix} 2 & 1 \\\\ 1 & 4 \\end{pmatrix}.$$ Gib die vier Einträge des Ergebnisses an.",
+      "eingaben": [
+        {
+          "label": "oben links",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "oben rechts",
+          "antwort": 9,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "unten links",
+          "antwort": 6,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "unten rechts",
+          "antwort": 3,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Jeder Eintrag ist „Zeile von A mal Spalte von B“.",
+        "Oben links: 1. Zeile (1 2) mal 1. Spalte (2 1) = 1·2 + 2·1.",
+        "Unten links: (3 0) mal (2 1) = 6; unten rechts: (3 0) mal (1 4) = 3."
+      ],
+      "loesungsweg": "Oben links: $1 \\cdot 2 + 2 \\cdot 1 = 4$. Oben rechts: $1 \\cdot 1 + 2 \\cdot 4 = 9$. Unten links: $3 \\cdot 2 + 0 \\cdot 1 = 6$. Unten rechts: $3 \\cdot 1 + 0 \\cdot 4 = 3$. Also $A \\cdot B = \\begin{pmatrix} 4 & 9 \\\\ 6 & 3 \\end{pmatrix}$.",
+      "kc": [
+        "matrizenmultiplikation"
+      ],
+      "ergaenzung": "kc-neu",
+      "cas": "<p>Der ClassPad II multipliziert Matrizen direkt:</p><ol><li>Im <b>Main</b>-Menü die Matrizen mit der Vorlage aus dem <b>Math2</b>-Reiter eingeben, z. B. <code>[[1,2][3,0]]</code> und <code>[[2,1][1,4]]</code>.</li><li>Mit dem Multiplikationszeichen verknüpfen: <code>[[1,2][3,0]]*[[2,1][1,4]]</code> und <b>EXE</b>.</li><li>Ergebnis: <code>[[4,9][6,3]]</code>.</li><li>Test der Nichtkommutativität: <code>[[2,1][1,4]]*[[1,2][3,0]]</code> liefert <code>[[5,2][13,2]]</code> — ein anderes Ergebnis.</li></ol>"
+    },
+    {
+      "id": "ma-qp-mx-006",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Multipliziere $$A = \\begin{pmatrix} 1 & 0 & 2 \\\\ 2 & 1 & 1 \\end{pmatrix}, \\qquad B = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\\\ 3 & 0 \\end{pmatrix}$$ schrittweise. Bestimme zuerst die Größe des Produkts, dann seine Einträge.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: $A$ ist eine $2 \\times 3$-Matrix, $B$ eine $3 \\times 2$-Matrix. Wie viele Zeilen und Spalten hat $A \\cdot B$?",
+          "eingaben": [
+            {
+              "label": "Zeilen",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "Spalten",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Aus $(m \\times n) \\cdot (n \\times p)$ entsteht eine $(m \\times p)$-Matrix — außen ablesen."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Berechne die obere Zeile von $A \\cdot B$ (1. Zeile von $A$ mal beide Spalten von $B$).",
+          "eingaben": [
+            {
+              "label": "oben links",
+              "antwort": 7,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "oben rechts",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "(1 0 2) mal (1 0 3) = 1·1 + 0·0 + 2·3; dann (1 0 2) mal (2 1 0)."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Berechne die untere Zeile von $A \\cdot B$ (2. Zeile von $A$ mal beide Spalten von $B$).",
+          "eingaben": [
+            {
+              "label": "unten links",
+              "antwort": 5,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "unten rechts",
+              "antwort": 5,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "(2 1 1) mal (1 0 3) = 2·1 + 1·0 + 1·3 = 5; dann (2 1 1) mal (2 1 0)."
+          ]
+        }
+      ],
+      "tipps": [
+        "Die Größe des Produkts steht in den „äußeren“ Zahlen: (2×3)·(3×2) ergibt (2×2).",
+        "Jeder Eintrag ist ein Skalarprodukt aus einer Zeile von A und einer Spalte von B.",
+        "Kontrolle: Das fertige Produkt ist ( 7 2 ; 5 5 )."
+      ],
+      "loesungsweg": "Schritt 1: $(2 \\times 3) \\cdot (3 \\times 2)$ ergibt eine $2 \\times 2$-Matrix. Schritt 2: oben links $1 \\cdot 1 + 0 \\cdot 0 + 2 \\cdot 3 = 7$, oben rechts $1 \\cdot 2 + 0 \\cdot 1 + 2 \\cdot 0 = 2$. Schritt 3: unten links $2 \\cdot 1 + 1 \\cdot 0 + 1 \\cdot 3 = 5$, unten rechts $2 \\cdot 2 + 1 \\cdot 1 + 1 \\cdot 0 = 5$. Also $A \\cdot B = \\begin{pmatrix} 7 & 2 \\\\ 5 & 5 \\end{pmatrix}$.",
+      "kc": [
+        "matrizenmultiplikation",
+        "matrix-format"
+      ],
+      "ergaenzung": "kc-neu"
+    },
+    {
+      "id": "ma-qp-mx-007",
+      "typ": "multiple-choice",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Gegeben ist die Matrix $U = \\begin{pmatrix} 0{,}8 & 0{,}1 \\\\ 0{,}2 & 0{,}9 \\end{pmatrix}$ als Übergangsmatrix eines Prozesses mit zwei Zuständen. Welche Aussagen sind richtig?",
+      "optionen": [
+        {
+          "text": "U ist stochastisch, weil jede Spalte die Summe 1 hat.",
+          "richtig": true,
+          "erklaerung": "Richtig: 0,8 + 0,2 = 1 und 0,1 + 0,9 = 1 — beide Spaltensummen sind 1."
+        },
+        {
+          "text": "Der Eintrag 0,2 bedeutet: 20 % von Zustand 1 wechseln in Zustand 2.",
+          "richtig": true,
+          "erklaerung": "Richtig: Spalte = von wo, Zeile = wohin. 0,2 steht in Spalte 1, Zeile 2 — also von Zustand 1 nach Zustand 2."
+        },
+        {
+          "text": "Den Folgezustand erhält man durch v_neu = U · v_alt.",
+          "richtig": true,
+          "erklaerung": "Richtig: Die Übergangsmatrix wird von links an den Zustandsvektor multipliziert."
+        },
+        {
+          "text": "Bei einer stochastischen Matrix darf die Summe einer Zeile niemals von 1 abweichen.",
+          "richtig": false,
+          "erklaerung": "Bei spaltenstochastischen Matrizen müssen die Spalten — nicht die Zeilen — die Summe 1 haben. Hier ist die 1. Zeilensumme 0,9."
+        }
+      ],
+      "tipps": [
+        "Prüfe die Spaltensummen: Ergibt jede Spalte zusammen 1?",
+        "Merke: Spalte = von welchem Zustand, Zeile = in welchen Zustand.",
+        "Drei Aussagen sind richtig — achte auf Zeile vs. Spalte."
+      ],
+      "loesungsweg": "Aussage 1 ist richtig: beide Spaltensummen sind $1$, also ist $U$ (spalten-)stochastisch. Aussage 2 ist richtig: $0{,}2$ steht in Spalte 1 (von Zustand 1) und Zeile 2 (nach Zustand 2). Aussage 3 ist richtig: der Folgezustand ist $\\vec{v}_{\\text{neu}} = U \\cdot \\vec{v}_{\\text{alt}}$. Aussage 4 ist falsch: stochastisch heißt hier spaltenstochastisch — die Spalten summieren zu $1$, die Zeilen müssen das nicht (1. Zeilensumme $= 0{,}9$).",
+      "kc": [
+        "uebergangsmatrix",
+        "stochastische-matrix"
+      ],
+      "ergaenzung": "kc-neu"
+    },
+    {
+      "id": "ma-qp-mx-008",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Die Matrix $D = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$ beschreibt die Drehung um $90^\\circ$ gegen den Uhrzeigersinn um den Ursprung. Bestimme den Bildpunkt $P'$ des Punktes $P(4\\,|\\,1)$.",
+      "eingaben": [
+        {
+          "label": "x-Koordinate von P'",
+          "antwort": -1,
+          "toleranz": 0.001,
+          "einheit": ""
+        },
+        {
+          "label": "y-Koordinate von P'",
+          "antwort": 4,
+          "toleranz": 0.001,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Berechne D · (4 | 1) nach „Zeile mal Spalte“.",
+        "Obere Zeile: 0·4 + (−1)·1.",
+        "Untere Zeile: 1·4 + 0·1 = 4."
+      ],
+      "loesungsweg": "$D \\cdot \\begin{pmatrix} 4 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 0 \\cdot 4 + (-1) \\cdot 1 \\\\ 1 \\cdot 4 + 0 \\cdot 1 \\end{pmatrix} = \\begin{pmatrix} -1 \\\\ 4 \\end{pmatrix}$. Der Bildpunkt ist $P'(-1\\,|\\,4)$ — eine Vierteldrehung gegen den Uhrzeigersinn.",
+      "kc": [
+        "abbildungsmatrix",
+        "abbildung-anwenden"
+      ],
+      "ergaenzung": "kc-neu"
+    },
+    {
+      "id": "ma-qp-mx-009",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Punkt wird zuerst um $90^\\circ$ gegen den Uhrzeigersinn gedreht ($D = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$) und das Ergebnis anschließend zentrisch mit Faktor $2$ gestreckt ($Z = \\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}$). Bestimme die Gesamtmatrix und den Bildpunkt von $P(3\\,|\\,1)$.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Bestimme die Gesamtmatrix $M = Z \\cdot D$ (zuerst ausgeführte Abbildung steht rechts). Gib die vier Einträge an.",
+          "eingaben": [
+            {
+              "label": "oben links",
+              "antwort": 0,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "oben rechts",
+              "antwort": -2,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "unten links",
+              "antwort": 2,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "unten rechts",
+              "antwort": 0,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$Z \\cdot D$ nach „Zeile mal Spalte“ — oben links $2 \\cdot 0 + 0 \\cdot 1 = 0$, oben rechts $2 \\cdot (-1) + 0 \\cdot 0 = -2$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Wende $M$ auf $P(3\\,|\\,1)$ an und gib den Bildpunkt an.",
+          "eingaben": [
+            {
+              "label": "x-Koordinate",
+              "antwort": -2,
+              "toleranz": 0.001,
+              "einheit": ""
+            },
+            {
+              "label": "y-Koordinate",
+              "antwort": 6,
+              "toleranz": 0.001,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$M \\cdot (3|1)$: obere Zeile $0 \\cdot 3 + (-2) \\cdot 1 = -2$, untere Zeile $2 \\cdot 3 + 0 \\cdot 1 = 6$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Beim Verketten steht die zuerst ausgeführte Abbildung rechts: M = Z·D.",
+        "Berechne erst die Gesamtmatrix, dann multipliziere sie mit dem Punkt.",
+        "Kontrolle: erst drehen ((3|1)→(−1|3)), dann verdoppeln ((−1|3)→(−2|6)) liefert denselben Bildpunkt."
+      ],
+      "loesungsweg": "Schritt 1: $M = Z \\cdot D = \\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix} \\cdot \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix} = \\begin{pmatrix} 0 & -2 \\\\ 2 & 0 \\end{pmatrix}$. Schritt 2: $M \\cdot \\begin{pmatrix} 3 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 0 \\cdot 3 + (-2) \\cdot 1 \\\\ 2 \\cdot 3 + 0 \\cdot 1 \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 6 \\end{pmatrix}$. Der Bildpunkt ist $P'(-2\\,|\\,6)$ — dasselbe Ergebnis wie erst drehen, dann strecken.",
+      "kc": [
+        "verkettung",
+        "abbildung-anwenden"
+      ],
+      "ergaenzung": "kc-neu",
+      "cas": "<p>Die Verkettung kontrolliert der ClassPad II durch Matrizenprodukt:</p><ol><li><code>[[2,0][0,2]]*[[0,-1][1,0]]</code> liefert die Gesamtmatrix <code>[[0,-2][2,0]]</code>.</li><li>Bildpunkt: <code>[[0,-2][2,0]]*[[3][1]]</code> ergibt <code>[[-2][6]]</code>.</li><li>Achtung auf die Reihenfolge: <code>[[0,-1][1,0]]*[[2,0][0,2]]</code> liefert dieselbe Matrix nur, weil die Streckung ein Vielfaches der Einheitsmatrix ist — bei anderen Abbildungen ist die Reihenfolge entscheidend.</li></ol>"
+    },
+    {
+      "id": "ma-qp-mx-010",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Zwei Anbieter A und B teilen sich einen Markt. Jährlich bleiben $70\\,\\%$ der A-Kunden bei A, $30\\,\\%$ wechseln zu B; bei B bleiben $80\\,\\%$, $20\\,\\%$ wechseln zu A. Die Übergangsmatrix ist $U = \\begin{pmatrix} 0{,}7 & 0{,}2 \\\\ 0{,}3 & 0{,}8 \\end{pmatrix}$. Zu Beginn haben beide je $500$ Kunden. Bestimme die Kundenzahlen nach einem Jahr.",
+      "eingaben": [
+        {
+          "label": "Kunden bei A nach 1 Jahr",
+          "antwort": 450,
+          "toleranz": 0.5,
+          "einheit": ""
+        },
+        {
+          "label": "Kunden bei B nach 1 Jahr",
+          "antwort": 550,
+          "toleranz": 0.5,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Rechne v1 = U · v0 mit v0 = (500 | 500).",
+        "A danach: 0,7·500 + 0,2·500.",
+        "B danach: 0,3·500 + 0,8·500 = 550. Kontrolle: Die Summe bleibt 1000."
+      ],
+      "loesungsweg": "$\\vec{v}_1 = U \\cdot \\vec{v}_0 = \\begin{pmatrix} 0{,}7 \\cdot 500 + 0{,}2 \\cdot 500 \\\\ 0{,}3 \\cdot 500 + 0{,}8 \\cdot 500 \\end{pmatrix} = \\begin{pmatrix} 450 \\\\ 550 \\end{pmatrix}$. Nach einem Jahr hat A $450$ und B $550$ Kunden; die Gesamtzahl bleibt $1000$.",
+      "kc": [
+        "uebergangsmatrix",
+        "zustandsvektor"
+      ],
+      "ergaenzung": "kc-neu"
+    },
+    {
+      "id": "ma-qp-mx-011",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 2,
+      "afb": 2,
+      "frage": "Ein Pfandbecher ist „im Umlauf“ (U) oder „im Lager“ (L). Pro Woche bleiben $90\\,\\%$ der Umlaufbecher im Umlauf, $10\\,\\%$ gehen ins Lager; aus dem Lager kommen $40\\,\\%$ in den Umlauf, $60\\,\\%$ bleiben. Übergangsmatrix $\\begin{pmatrix} 0{,}9 & 0{,}4 \\\\ 0{,}1 & 0{,}6 \\end{pmatrix}$, Start $\\begin{pmatrix} 200 \\\\ 300 \\end{pmatrix}$. Bestimme die Verteilung nach $2$ Wochen.",
+      "eingaben": [
+        {
+          "label": "im Umlauf nach 2 Wochen",
+          "antwort": 350,
+          "toleranz": 0.5,
+          "einheit": ""
+        },
+        {
+          "label": "im Lager nach 2 Wochen",
+          "antwort": 150,
+          "toleranz": 0.5,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Rechne in zwei Schritten: erst v1 = U·v0, dann v2 = U·v1 (oder gleich v2 = U²·v0).",
+        "Nach 1 Woche: Umlauf 0,9·200 + 0,4·300 = 300, Lager 0,1·200 + 0,6·300 = 200.",
+        "Nach 2 Wochen: Umlauf 0,9·300 + 0,4·200 = 350, Lager 0,1·300 + 0,6·200 = 150."
+      ],
+      "loesungsweg": "Erster Schritt: $\\vec{v}_1 = U \\cdot \\vec{v}_0 = \\begin{pmatrix} 0{,}9 \\cdot 200 + 0{,}4 \\cdot 300 \\\\ 0{,}1 \\cdot 200 + 0{,}6 \\cdot 300 \\end{pmatrix} = \\begin{pmatrix} 300 \\\\ 200 \\end{pmatrix}$. Zweiter Schritt: $\\vec{v}_2 = U \\cdot \\vec{v}_1 = \\begin{pmatrix} 0{,}9 \\cdot 300 + 0{,}4 \\cdot 200 \\\\ 0{,}1 \\cdot 300 + 0{,}6 \\cdot 200 \\end{pmatrix} = \\begin{pmatrix} 350 \\\\ 150 \\end{pmatrix}$. Gleichwertig über die Potenz: $U^2 = \\begin{pmatrix} 0{,}85 & 0{,}6 \\\\ 0{,}15 & 0{,}4 \\end{pmatrix}$, und $U^2 \\cdot \\vec{v}_0 = \\begin{pmatrix} 350 \\\\ 150 \\end{pmatrix}$. Nach zwei Wochen sind $350$ Becher im Umlauf und $150$ im Lager.",
+      "kc": [
+        "mehrstufiger-prozess",
+        "matrixpotenz"
+      ],
+      "ergaenzung": "kc-neu",
+      "cas": "<p>Mehrere Stufen rechnet der ClassPad II über Matrixpotenzen:</p><ol><li>Die Matrix eingeben und potenzieren: <code>[[0.9,0.4][0.1,0.6]]^2</code> liefert <code>[[0.85,0.6][0.15,0.4]]</code>.</li><li>Mit dem Startvektor multiplizieren: <code>[[0.9,0.4][0.1,0.6]]^2*[[200][300]]</code> ergibt <code>[[350][150]]</code>.</li><li>Für viele Wochen einfach den Exponenten anpassen, z. B. <code>^10</code> — das spart alle Zwischenschritte.</li></ol>"
+    },
+    {
+      "id": "ma-qp-mx-012",
+      "typ": "rechenweg",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Ein Prozess mit zwei Zuständen A und B hat die Übergangsmatrix $U = \\begin{pmatrix} 0{,}6 & 0{,}3 \\\\ 0{,}4 & 0{,}7 \\end{pmatrix}$. Bestimme den Fixvektor bei einer Gesamtzahl von $7000$.",
+      "schritte": [
+        {
+          "frage": "Schritt 1: Stelle aus der ersten Zeile von $U \\cdot \\vec{f} = \\vec{f}$ die Bedingung auf. Aus $0{,}6\\,a + 0{,}3\\,b = a$ folgt $b = k \\cdot a$. Wie groß ist $k$?",
+          "eingaben": [
+            {
+              "label": "k (mit b = k·a)",
+              "antwort": 1.3333333333333333,
+              "toleranz": 0.01,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$0{,}6a + 0{,}3b = a$ umstellen: $0{,}3b = 0{,}4a$, also $b = \\frac{0{,}4}{0{,}3}a$."
+          ]
+        },
+        {
+          "frage": "Schritt 2: Nutze die Gesamtsumme $a + b = 7000$ und das Verhältnis aus Schritt 1. Bestimme $a$ (Bestand in Zustand A).",
+          "eingaben": [
+            {
+              "label": "a",
+              "antwort": 3000,
+              "toleranz": 0.5,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "Mit $b = \\frac{4}{3}a$ wird $a + \\frac{4}{3}a = 7000$, also $\\frac{7}{3}a = 7000$."
+          ]
+        },
+        {
+          "frage": "Schritt 3: Bestimme $b$ (Bestand in Zustand B).",
+          "eingaben": [
+            {
+              "label": "b",
+              "antwort": 4000,
+              "toleranz": 0.5,
+              "einheit": ""
+            }
+          ],
+          "tipps": [
+            "$b = 7000 - a$ — oder direkt $b = \\frac{4}{3} \\cdot 3000$."
+          ]
+        }
+      ],
+      "tipps": [
+        "Der Fixvektor erfüllt U·f = f; das liefert ein Verhältnis von a zu b.",
+        "Die zweite Zeile gibt dieselbe Bedingung — du brauchst eine Zusatzbedingung wie die Gesamtsumme.",
+        "Kontrolle: U · (3000 | 4000) muss wieder (3000 | 4000) ergeben."
+      ],
+      "loesungsweg": "Aus $U \\cdot \\vec{f} = \\vec{f}$ liefert die erste Zeile $0{,}6a + 0{,}3b = a$, also $0{,}3b = 0{,}4a$ und damit $b = \\frac{4}{3}a$ (Verhältnis $a:b = 3:4$). Mit $a + b = 7000$ folgt $a + \\frac{4}{3}a = \\frac{7}{3}a = 7000$, also $a = 3000$ und $b = 4000$. Probe: $U \\cdot \\begin{pmatrix} 3000 \\\\ 4000 \\end{pmatrix} = \\begin{pmatrix} 0{,}6 \\cdot 3000 + 0{,}3 \\cdot 4000 \\\\ 0{,}4 \\cdot 3000 + 0{,}7 \\cdot 4000 \\end{pmatrix} = \\begin{pmatrix} 3000 \\\\ 4000 \\end{pmatrix}$ — der Vektor bleibt fest.",
+      "kc": [
+        "fixvektor",
+        "grenzverhalten"
+      ],
+      "ergaenzung": "kc-neu",
+      "cas": "<p>Den Fixvektor findet der ClassPad II als Lösung des Gleichungssystems:</p><ol><li><code>solve(0.6*a+0.3*b=a and a+b=7000,{a,b})</code> mit <b>EXE</b>.</li><li>Ergebnis: <code>{a=3000, b=4000}</code>.</li><li>Probe: <code>[[0.6,0.3][0.4,0.7]]*[[3000][4000]]</code> liefert wieder <code>[[3000][4000]]</code>.</li></ol><p>Die Grenzmatrix sieht man, indem man eine hohe Potenz berechnet, z. B. <code>[[0.6,0.3][0.4,0.7]]^50</code> — die Spalten nähern sich den Anteilen 3/7 und 4/7.</p>"
+    },
+    {
+      "id": "ma-qp-mx-013",
+      "typ": "numerisch",
+      "zweig": [
+        "gym"
+      ],
+      "niveau": 3,
+      "afb": 3,
+      "frage": "Zusatz (eA): Ein Mobilfunkmarkt mit drei Anbietern 1, 2 und 3 hat die Übergangsmatrix $$U = \\begin{pmatrix} 0{,}5 & 0{,}2 & 0{,}1 \\\\ 0{,}3 & 0{,}6 & 0{,}3 \\\\ 0{,}2 & 0{,}2 & 0{,}6 \\end{pmatrix}.$$ Der Fixvektor hat (in Anteilen) die Form $\\frac{1}{21}\\begin{pmatrix} 5 \\\\ 9 \\\\ 7 \\end{pmatrix}$. Bestimme die Kundenzahlen im Gleichgewicht bei insgesamt $4200$ Kunden.",
+      "eingaben": [
+        {
+          "label": "Kunden bei Anbieter 1",
+          "antwort": 1000,
+          "toleranz": 0.5,
+          "einheit": ""
+        },
+        {
+          "label": "Kunden bei Anbieter 2",
+          "antwort": 1800,
+          "toleranz": 0.5,
+          "einheit": ""
+        },
+        {
+          "label": "Kunden bei Anbieter 3",
+          "antwort": 1400,
+          "toleranz": 0.5,
+          "einheit": ""
+        }
+      ],
+      "tipps": [
+        "Multipliziere jeden Anteil mit der Gesamtzahl 4200.",
+        "Anbieter 1: 5/21 · 4200 = 5 · 200.",
+        "Kontrolle: Die drei Zahlen müssen zusammen 4200 ergeben."
+      ],
+      "loesungsweg": "Die Gesamtzahl $4200$ wird im Verhältnis $5 : 9 : 7$ aufgeteilt. Da $5 + 9 + 7 = 21$ und $4200 : 21 = 200$, entfällt auf einen Anteil $200$ Kunden. Anbieter 1: $5 \\cdot 200 = 1000$, Anbieter 2: $9 \\cdot 200 = 1800$, Anbieter 3: $7 \\cdot 200 = 1400$. Probe der Summe: $1000 + 1800 + 1400 = 4200$. Diese Verteilung ist der Fixvektor: $U \\cdot \\begin{pmatrix} 1000 \\\\ 1800 \\\\ 1400 \\end{pmatrix} = \\begin{pmatrix} 1000 \\\\ 1800 \\\\ 1400 \\end{pmatrix}$. Für große $n$ strebt $U^n$ gegen die Grenzmatrix, deren Spalten jeweils die Anteile $\\frac{5}{21}, \\frac{9}{21}, \\frac{7}{21}$ tragen.",
+      "kc": [
+        "fixvektor",
+        "grenzmatrix",
+        "grenzverhalten"
+      ],
+      "ergaenzung": "kc-neu",
+      "cas": "<p>Bei drei Zuständen löst der ClassPad II das Fixvektor-System bequem:</p><ol><li><code>solve(0.5*a+0.2*b+0.1*c=a and 0.3*a+0.6*b+0.3*c=b and a+b+c=4200,{a,b,c})</code>.</li><li>Ergebnis: <code>{a=1000, b=1800, c=1400}</code> (die dritte Übergangs-Gleichung ist von den beiden anderen abhängig).</li><li>Grenzmatrix prüfen: <code>[[0.5,0.2,0.1][0.3,0.6,0.3][0.2,0.2,0.6]]^80</code> — alle Spalten nähern sich denselben Anteilen.</li></ol>"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vierfeldertafel und Baumdiagramme — Klasse 9 · Mathematik — Lernwelt</title>
+<meta name="description" content="Vierfeldertafeln ausfüllen und lesen, zwischen Baumdiagramm und Tafel wechseln, Anteile unter einer Bedingung verstehen und Trugschlüsse entlarven.">
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../../assets/css/main.css">
+<link rel="stylesheet" href="../../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: schmale Vierfeldertafeln und Abbildungen mit Bildunterschrift */
+  .vergleich-tabelle { border-collapse: collapse; margin: var(--abstand-3) auto; display: block; overflow-x: auto; max-width: 100%; width: fit-content; }
+  .vergleich-tabelle th, .vergleich-tabelle td { border: 1px solid var(--linie); padding: .3rem .7rem; text-align: center; }
+  .vergleich-tabelle th { background: var(--hauch); }
+  .vergleich-tabelle .randsumme { background: var(--hauch); font-weight: 600; }
+  .vb-figur { margin: var(--abstand-4) auto; max-width: 660px; }
+  .vb-figur svg { display: block; width: 100%; height: auto; }
+  .vb-figur figcaption { text-align: center; font-size: .9rem; color: var(--text-leise); margin-top: var(--abstand-2); }
+</style>
+</head>
+<body data-seite="thema" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für die Formeldarstellung. <a href="../../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt themenseite">
+  <h1>Vierfeldertafel und Baumdiagramme</h1>
+  <p class="einleitung">„Bist du im Sportverein?“ — „Fährst du mit dem Rad zur Schule?“ Zwei einfache Ja-Nein-Fragen, gestellt an 100 Jugendliche. Wer beide Antworten gleichzeitig im Blick behalten will, braucht das richtige Werkzeug: die <strong>Vierfeldertafel</strong>. Auf dieser Seite lernst du, wie du sie aus wenigen Angaben vollständig ausfüllst, wie sie mit dem <strong>Baumdiagramm</strong> zusammenhängt — und wie du damit Anteile richtig deutest, statt auf Zeitungs-Trugschlüsse hereinzufallen.</p>
+
+  <section aria-labelledby="vb-tabelle">
+    <h2 id="vb-tabelle">1. Zwei Merkmale, eine Tabelle</h2>
+    <p>Bei unserer Umfrage werden an jeder Person <strong>zwei Merkmale</strong> erhoben: „Mitglied im Sportverein“ (kurz <strong>V</strong>) und „fährt mit dem Rad zur Schule“ (kurz <strong>R</strong>) — beide mit den Ausprägungen <em>ja</em> oder <em>nein</em>. Damit fällt jede Person in genau <strong>eine</strong> von vier Kombinationen: beides, nur Verein, nur Rad oder keins von beidem. Die Vierfeldertafel gibt jeder Kombination ein eigenes Feld:</p>
+    <figure class="vb-figur">
+      <svg id="vb-schema-tafel" viewBox="0 0 680 410" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Schema einer Vierfeldertafel mit den Merkmalen Sportverein und Radfahren: vier farbig hinterlegte Innenfelder für die Kombinationen im Verein und fährt Rad, im Verein ohne Rad, kein Verein aber Rad sowie weder noch. Außen liegen die Randsummen: alle im Verein, alle ohne Verein, alle Radfahrer, alle ohne Rad. Ganz unten rechts steht die Gesamtzahl aller Befragten.">
+        <!-- Kopfzeile und Zeilenköpfe -->
+        <g stroke="var(--linie)" stroke-width="1.5">
+          <rect x="20" y="30" width="150" height="42" fill="var(--flaeche)"/>
+          <rect x="170" y="30" width="150" height="42" fill="var(--hauch)"/>
+          <rect x="320" y="30" width="150" height="42" fill="var(--hauch)"/>
+          <rect x="470" y="30" width="150" height="42" fill="var(--hauch)"/>
+          <rect x="20" y="72" width="150" height="70" fill="var(--hauch)"/>
+          <rect x="20" y="142" width="150" height="70" fill="var(--hauch)"/>
+          <rect x="20" y="212" width="150" height="52" fill="var(--hauch)"/>
+        </g>
+        <!-- vier Innenfelder -->
+        <g fill="var(--mathe)" fill-opacity="0.12" stroke="var(--mathe)" stroke-width="1.5">
+          <rect x="170" y="72" width="150" height="70"/>
+          <rect x="320" y="72" width="150" height="70"/>
+          <rect x="170" y="142" width="150" height="70"/>
+          <rect x="320" y="142" width="150" height="70"/>
+        </g>
+        <!-- Randsummen-Felder -->
+        <g fill="var(--hauch)" stroke="var(--linie)" stroke-width="1.5">
+          <rect x="470" y="72" width="150" height="70"/>
+          <rect x="470" y="142" width="150" height="70"/>
+          <rect x="170" y="212" width="150" height="52"/>
+          <rect x="320" y="212" width="150" height="52"/>
+        </g>
+        <!-- Gesamtzahl-Feld -->
+        <rect x="470" y="212" width="150" height="52" fill="var(--mathe)" fill-opacity="0.2" stroke="var(--mathe)" stroke-width="2.5"/>
+        <!-- Beschriftungen -->
+        <g font-size="14" fill="var(--text)" text-anchor="middle">
+          <text x="95" y="56" fill="var(--text-leise)" font-style="italic">Anzahl</text>
+          <text x="245" y="56" font-weight="600">Rad: ja</text>
+          <text x="395" y="56" font-weight="600">Rad: nein</text>
+          <text x="545" y="56" font-weight="600">gesamt</text>
+          <text x="95" y="112" font-weight="600">im Verein</text>
+          <text x="95" y="182" font-weight="600">kein Verein</text>
+          <text x="95" y="243" font-weight="600">gesamt</text>
+        </g>
+        <g font-size="13.5" fill="var(--text)" text-anchor="middle">
+          <text x="245" y="103">im Verein,<tspan x="245" y="123">fährt Rad</tspan></text>
+          <text x="395" y="103">im Verein,<tspan x="395" y="123">fährt kein Rad</tspan></text>
+          <text x="245" y="173">kein Verein,<tspan x="245" y="193">fährt Rad</tspan></text>
+          <text x="395" y="173">kein Verein,<tspan x="395" y="193">fährt kein Rad</tspan></text>
+          <text x="545" y="102">alle im Verein<tspan x="545" y="124" font-size="11" fill="var(--text-leise)">(Zeilensumme)</tspan></text>
+          <text x="545" y="172">alle ohne Verein<tspan x="545" y="194" font-size="11" fill="var(--text-leise)">(Zeilensumme)</tspan></text>
+          <text x="245" y="233">alle Radfahrer<tspan x="245" y="255" font-size="11" fill="var(--text-leise)">(Spaltensumme)</tspan></text>
+          <text x="395" y="233">alle ohne Rad<tspan x="395" y="255" font-size="11" fill="var(--text-leise)">(Spaltensumme)</tspan></text>
+          <text x="545" y="243" font-weight="700">Gesamtzahl</text>
+        </g>
+        <!-- Legende -->
+        <g font-size="13.5" fill="var(--text)">
+          <rect x="20" y="300" width="26" height="26" fill="var(--mathe)" fill-opacity="0.12" stroke="var(--mathe)" stroke-width="1.5"/>
+          <text x="58" y="318">Innenfelder: zählen jeweils eine Kombination aus beiden Merkmalen</text>
+          <rect x="20" y="338" width="26" height="26" fill="var(--hauch)" stroke="var(--linie)" stroke-width="1.5"/>
+          <text x="58" y="356">Ränder: Zeilen- bzw. Spaltensummen der Innenfelder</text>
+          <rect x="20" y="376" width="26" height="26" fill="var(--mathe)" fill-opacity="0.2" stroke="var(--mathe)" stroke-width="2"/>
+          <text x="58" y="394">ganz unten rechts: die Gesamtzahl aller Befragten</text>
+        </g>
+      </svg>
+      <figcaption>Schema der Vierfeldertafel: vier Innenfelder für die Kombinationen, außen die Randsummen, unten rechts die Gesamtzahl.</figcaption>
+    </figure>
+    <p>Kleines <strong>Lesetraining</strong> — jedes Feld beantwortet eine eigene Frage:</p>
+    <ul>
+      <li>Das Innenfeld in der Zeile „im Verein“ und der Spalte „Rad: ja“ zählt alle, auf die <strong>beides</strong> zutrifft.</li>
+      <li>Die Randsumme am Ende der Zeile „im Verein“ zählt <strong>alle Vereinsmitglieder</strong> — egal, wie sie zur Schule kommen.</li>
+      <li>Die Randsumme unter der Spalte „Rad: ja“ zählt <strong>alle Radfahrer</strong> — egal, ob im Verein oder nicht.</li>
+    </ul>
+    <div class="merkkasten">
+      <span class="merk-etikett">Aufbau der Vierfeldertafel</span>
+      <p>Eine Vierfeldertafel ordnet <strong>zwei Merkmale</strong> mit je zwei Ausprägungen: Die vier <strong>Innenfelder</strong> zählen die Kombinationen, die <strong>Randsummen</strong> sind die Zeilen- bzw. Spaltensummen der Innenfelder, und ganz unten rechts steht die <strong>Gesamtzahl</strong>. Alles muss zusammenpassen — das ist die eingebaute Kontrolle.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="vb-ausfuellen">
+    <h2 id="vb-ausfuellen">2. Tafel ausfüllen wie ein Profi</h2>
+    <p>Das Schöne: Du brauchst <strong>nicht alle</strong> Zahlen, um die Tafel zu füllen. Unsere Umfrage liefert nur vier Angaben — 100 Befragte, 40 davon im Verein, 25 Vereinsmitglieder fahren Rad, insgesamt fahren 60 mit dem Rad. In die Tafel eingetragen sieht das so aus:</p>
+    <table class="vergleich-tabelle">
+      <caption class="nur-screenreader">Vierfeldertafel mit den bekannten Angaben: 25 im Verein mit Rad, 40 im Verein gesamt, 60 Radfahrer, 100 Befragte — die übrigen Felder sind noch offen</caption>
+      <thead>
+        <tr><th scope="col">Anzahl</th><th scope="col">Rad: ja</th><th scope="col">Rad: nein</th><th scope="col">gesamt</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">im Verein</th><td>25</td><td>?</td><td class="randsumme">40</td></tr>
+        <tr><th scope="row">kein Verein</th><td>?</td><td>?</td><td class="randsumme">?</td></tr>
+        <tr><th scope="row">gesamt</th><td class="randsumme">60</td><td class="randsumme">?</td><td class="randsumme">100</td></tr>
+      </tbody>
+    </table>
+    <p>Jedes Fragezeichen ergibt sich jetzt als <strong>Differenz zu einer Randsumme</strong> — du arbeitest dich von außen nach innen vor:</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Beispiel: die Tafel Schritt für Schritt füllen</span>
+      <p><strong>Erst die Ränder:</strong> kein Verein: $100 - 40 = 60$ &nbsp;·&nbsp; kein Rad: $100 - 60 = 40$.</p>
+      <p><strong>Dann die Lücken innen:</strong> im Verein ohne Rad: $40 - 25 = 15$ &nbsp;·&nbsp; Rad ohne Verein: $60 - 25 = 35$ &nbsp;·&nbsp; weder Verein noch Rad: $60 - 35 = 25$ (Zeile „kein Verein“) — oder über die Spalte: $40 - 15 = 25$. Beide Wege liefern dasselbe. ✓</p>
+      <p><strong>Kontrolle:</strong> $25 + 15 + 35 + 25 = 100$ — alle vier Innenfelder zusammen ergeben die Gesamtzahl.</p>
+    </div>
+    <table class="vergleich-tabelle">
+      <caption class="nur-screenreader">Vollständige Vierfeldertafel: im Verein mit Rad 25, im Verein ohne Rad 15, Zeilensumme 40; kein Verein mit Rad 35, kein Verein ohne Rad 25, Zeilensumme 60; Spaltensummen 60 und 40, gesamt 100</caption>
+      <thead>
+        <tr><th scope="col">Anzahl</th><th scope="col">Rad: ja</th><th scope="col">Rad: nein</th><th scope="col">gesamt</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">im Verein</th><td>25</td><td>15</td><td class="randsumme">40</td></tr>
+        <tr><th scope="row">kein Verein</th><td>35</td><td>25</td><td class="randsumme">60</td></tr>
+        <tr><th scope="row">gesamt</th><td class="randsumme">60</td><td class="randsumme">40</td><td class="randsumme">100</td></tr>
+      </tbody>
+    </table>
+    <div class="merkkasten">
+      <span class="merk-etikett">Strategie: erst Ränder, dann Lücken</span>
+      <p>1. Bekannte Zahlen eintragen. &nbsp;2. <strong>Randsummen</strong> vervollständigen (Differenz zur Gesamtzahl). &nbsp;3. Jede innere Lücke als <strong>Differenz zur passenden Randsumme</strong> berechnen. &nbsp;4. Zum Schluss <strong>Kontrolle</strong>: Alle Zeilen und Spalten müssen aufgehen.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Wie viele Jugendliche fahren mit dem Rad, sind aber nicht im Verein?</summary>
+      <div class="check-antwort"><p>Das steht im Innenfeld „kein Verein / Rad: ja“: <strong>35</strong>. Wenn du es nicht direkt abliest, rechnest du über die Spalte der Radfahrer: $60 - 25 = 35$.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="vb-relativ">
+    <h2 id="vb-relativ">3. Relative Häufigkeiten</h2>
+    <p>Absolute Anzahlen sind gut zum Rechnen — zum <strong>Vergleichen</strong> sind Anteile oft praktischer. Teilst du jedes Feld durch die Gesamtzahl 100, erhältst du die <strong>relativen Häufigkeiten</strong>:</p>
+    <p class="formel-abgesetzt">$$\text{relative Häufigkeit} = \frac{\text{Anzahl im Feld}}{\text{Gesamtzahl}}\,, \qquad \text{z.\,B.} \quad \frac{25}{100} = 0{,}25 = 25\,\%$$</p><table class="vergleich-tabelle"><caption class="nur-screenreader">Vierfeldertafel mit relativen Häufigkeiten in Prozent: im Verein mit Rad 25 Prozent, im Verein ohne Rad 15 Prozent, Zeilensumme 40 Prozent; kein Verein mit Rad 35 Prozent, kein Verein ohne Rad 25 Prozent, Zeilensumme 60 Prozent; Spaltensummen 60 und 40 Prozent, gesamt 100 Prozent</caption><thead><tr><th scope="col">Anteil</th><th scope="col">Rad: ja</th><th scope="col">Rad: nein</th><th scope="col">gesamt</th></tr></thead><tbody><tr><th scope="row">im Verein</th><td>25&nbsp;%</td><td>15&nbsp;%</td><td class="randsumme">40&nbsp;%</td></tr><tr><th scope="row">kein Verein</th><td>35&nbsp;%</td><td>25&nbsp;%</td><td class="randsumme">60&nbsp;%</td></tr><tr><th scope="row">gesamt</th><td class="randsumme">60&nbsp;%</td><td class="randsumme">40&nbsp;%</td><td class="randsumme">100&nbsp;%</td></tr></tbody></table><p>Bei 100 Befragten ist das bequem — Anzahl und Prozentwert sehen gleich aus. Aber Achtung, jetzt kommt der wichtigste Gedanke des Themas:<strong>„25 % fahren Rad und sind im Verein“</strong>ist ein Anteil<em>an allen</em>Befragten. Fragt man dagegen nur<em>innerhalb</em>der Vereinsmitglieder, ändert sich der Grundwert: Von den 40 Vereinsmitgliedern fahren 25 mit dem Rad — das sind $\frac{25}{40} = 62{,}5\,\%$.</p><div class="merkkasten"><span class="merk-etikett">Anteil an allen ≠ Anteil in einer Gruppe</span><p>Beim<strong>Anteil an allen</strong>steht die Gesamtzahl im Nenner. Beim<strong>Anteil innerhalb einer Gruppe</strong>steht die<strong>Randsumme dieser Gruppe</strong>im Nenner. Dasselbe Innenfeld (hier: 25) kann also je nach Frage ganz verschiedene Prozentwerte liefern.</p></div><details class="check"><summary>Verständnis-Check: Wie groß ist der Anteil der Vereinsmitglieder unter den Radfahrern?</summary><div class="check-antwort"><p>Jetzt ist die Gruppe der Radfahrer der Grundwert: 60 fahren Rad, davon sind 25 im Verein. Also $\frac{25}{60} \approx 0{,}417$, das sind ungefähr <strong>41,7 %</strong> — deutlich weniger als die 62,5 % aus der umgekehrten Frage!</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="vb-baum">
+    <h2 id="vb-baum">4. Vom Baum zur Tafel — und zurück</h2>
+    <p>Zweistufige Baumdiagramme kennst du von den <a href="../../klasse-8/mehrstufige-zufallsversuche/index.html">mehrstufigen Zufallsversuchen</a> aus Klasse 8. Unsere Umfrage lässt sich genauso darstellen: In der ersten Stufe wird nach dem <strong>Verein</strong> sortiert, in der zweiten nach dem <strong>Rad</strong>. An jedem Ast steht, welcher Anteil der jeweiligen Gruppe diesen Weg nimmt:</p>
+    <figure class="vb-figur">
+      <svg id="vb-baum-diagramm" viewBox="0 0 680 360" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Zweistufiges Baumdiagramm zur Umfrage: Von 100 Befragten sind 40 Prozent im Verein und 60 Prozent nicht. Von den Vereinsmitgliedern fahren davon 62,5 Prozent Rad und 37,5 Prozent nicht; von den Nicht-Mitgliedern fahren davon 58,3 Prozent Rad und 41,7 Prozent nicht. Die vier Pfad-Enden entsprechen den Innenfeldern der Vierfeldertafel: 25, 15, 35 und 25 von 100.">
+        <!-- Stufen-Überschriften -->
+        <g font-size="12" fill="var(--text-leise)" text-anchor="middle">
+          <text x="285" y="16">1. Stufe: Verein?</text>
+          <text x="565" y="16">2. Stufe: Rad?</text>
+        </g>
+        <!-- Äste -->
+        <g stroke="var(--text-leise)" stroke-width="1.8">
+          <line x1="140" y1="178" x2="220" y2="89"/>
+          <line x1="140" y1="178" x2="220" y2="267"/>
+          <line x1="350" y1="89" x2="470" y2="46"/>
+          <line x1="350" y1="89" x2="470" y2="132"/>
+          <line x1="350" y1="267" x2="470" y2="222"/>
+          <line x1="350" y1="267" x2="470" y2="312"/>
+        </g>
+        <!-- Ast-Beschriftungen -->
+        <g font-size="13" font-weight="600" fill="var(--mathe)" text-anchor="middle">
+          <text x="180" y="126">40 %</text>
+          <text x="180" y="215">60 %</text>
+          <text x="410" y="60">davon 62,5 %</text>
+          <text x="410" y="103">davon 37,5 %</text>
+          <text x="410" y="237">davon 58,3 %</text>
+          <text x="410" y="282">davon 41,7 %</text>
+        </g>
+        <!-- Wurzel und Stufe 1 -->
+        <g fill="var(--hauch)" stroke="var(--linie)" stroke-width="1.5">
+          <rect x="20" y="156" width="120" height="44" rx="6"/>
+          <rect x="220" y="67" width="130" height="44" rx="6"/>
+          <rect x="220" y="245" width="130" height="44" rx="6"/>
+        </g>
+        <!-- Pfad-Enden = Innenfelder -->
+        <g fill="var(--mathe)" fill-opacity="0.12" stroke="var(--mathe)" stroke-width="1.5">
+          <rect x="470" y="24" width="190" height="44" rx="6"/>
+          <rect x="470" y="110" width="190" height="44" rx="6"/>
+          <rect x="470" y="200" width="190" height="44" rx="6"/>
+          <rect x="470" y="290" width="190" height="44" rx="6"/>
+        </g>
+        <!-- Knotentexte -->
+        <g font-size="13" fill="var(--text)" text-anchor="middle">
+          <text x="80" y="174">alle Befragten<tspan x="80" y="192" font-weight="700">100</tspan></text>
+          <text x="285" y="85">im Verein<tspan x="285" y="103" font-weight="700">40</tspan></text>
+          <text x="285" y="263">kein Verein<tspan x="285" y="281" font-weight="700">60</tspan></text>
+          <text x="565" y="42">Verein und Rad<tspan x="565" y="60" font-weight="700">25 von 100 = 25 %</tspan></text>
+          <text x="565" y="128">Verein, kein Rad<tspan x="565" y="146" font-weight="700">15 von 100 = 15 %</tspan></text>
+          <text x="565" y="218">Rad, kein Verein<tspan x="565" y="236" font-weight="700">35 von 100 = 35 %</tspan></text>
+          <text x="565" y="308">weder noch<tspan x="565" y="326" font-weight="700">25 von 100 = 25 %</tspan></text>
+        </g>
+      </svg>
+      <figcaption>Zweistufiger Baum zur Umfrage: Die Ast-Anteile der zweiten Stufe beziehen sich auf die Gruppe davor („davon …“); im Zweig „kein Verein“ sind sie gerundet (35 von 60 ≈ 58,3 %).</figcaption>
+    </figure>
+    <p><strong>Vom Baum zur Tafel:</strong> Entlang eines Pfades wird „geschachtelt“ gerechnet — 40 % von 100 sind 40 Personen, davon 62,5 % sind 25 Personen. Dieses Pfad-Ende ist genau das Innenfeld „Verein und Rad“. <strong>Von der Tafel zum Baum:</strong> Den Ast-Anteil der zweiten Stufe erhältst du, indem du das Innenfeld durch die Randsumme seiner Gruppe teilst, z.&nbsp;B. $\frac{25}{40} = 62{,}5\,\%$.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Wann glänzt welche Darstellung?</span>
+      <p>Der <strong>Baum</strong> zeigt die <strong>Reihenfolge</strong> der Fragen und macht „davon“-Anteile (Anteile unter einer Bedingung) direkt sichtbar. Die <strong>Tafel</strong> liefert den <strong>Überblick</strong>: alle vier Kombinationen, beide Randsummen und eine schnelle Rechenkontrolle auf einen Blick. Profis wechseln je nach Frage zwischen beiden.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="vb-bedingung">
+    <h2 id="vb-bedingung">5. Anteile unter einer Bedingung — und beliebte Trugschlüsse</h2>
+    <p>„Von den Vereinsmitgliedern fahren 62,5 % mit dem Rad“ und „von den Radfahrern sind 41,7 % im Verein“ — beide Sätze nutzen <strong>dasselbe Innenfeld 25</strong>, klingen ähnlich und sind doch völlig verschieden. Der Unterschied steckt im <strong>Grundwert</strong>, also in der Gruppe nach dem „von“:</p>
+    <p class="formel-abgesetzt">$$\underbrace{\frac{25}{40} = 62{,}5\,\%}_{\text{Grundwert: 40 Vereinsmitglieder}} \qquad \underbrace{\frac{25}{60} \approx 41{,}7\,\%}_{\text{Grundwert: 60 Radfahrer}}$$</p><p>Wer den Grundwert unterschlägt, kann mit korrekten Zahlen falsche Eindrücke erzeugen — ein Klassiker in Schlagzeilen:</p><div class="beispiel"><span class="beispiel-etikett">Beispiel: Zeitungs-Trugschluss</span><p>„<em>80 % aller Fahrradunfälle passieren in der Nähe des Wohnorts — dort ist Radfahren also besonders gefährlich!</em>“ Klingt logisch? Eben nicht: In Wohnortnähe findet auch der allergrößte Teil<strong>aller Fahrten</strong>statt. Der hohe Anteil sagt nur,<em>wo</em>viel gefahren wird — nicht, wie riskant eine einzelne Fahrt dort ist. Fair vergleichen kann man erst mit einer Vierfeldertafel („wohnortnah / weiter weg“ gegen „Unfall / kein Unfall“) und den<strong>Unfallanteilen je Gruppe</strong>.</p></div><div class="merkkasten"><span class="merk-etikett">Frage immer: Anteil WOVON?</span><p>Bevor du einem Prozentwert glaubst, kläre den Grundwert:<strong>Anteil wovon?</strong>„62,5 % der Vereinsmitglieder“ (von 40) ist etwas anderes als „62,5 % der Radfahrer“ (von 60). In der Vierfeldertafel erkennst du den Grundwert an der Randsumme, durch die geteilt wird.</p></div><details class="check"><summary>Verständnis-Check: Bedeuten „62,5 % der Vereinsmitglieder fahren Rad“ und „62,5 % der Radfahrer sind im Verein“ dasselbe?</summary><div class="check-antwort"><p>Nein! Die Sätze haben verschiedene Grundwerte: einmal die 40 Vereinsmitglieder, einmal die 60 Radfahrer. Der erste Satz stimmt in unserer Umfrage ($\frac{25}{40} = 62{,}5\,\%$), der zweite nicht — von den Radfahrern sind nur $\frac{25}{60} \approx 41{,}7\,\%$ im Verein.</p></div></details></section><details class="vertiefung"><summary>Vertiefung: Der überraschende Schnelltest</summary><div class="vertiefung-inhalt"><p>Ein medizinischer Schnelltest wird an 10&nbsp;000 Personen erprobt; 1 % von ihnen — also 100 Personen — sind wirklich krank, 9900 sind gesund. Der Test ist ziemlich gut: Er erkennt 95 % der Kranken, das sind 95 echte Treffer (5 Kranke übersieht er). Aber er schlägt auch bei 5 % der Gesunden fälschlich an: $0{,}05 \cdot 9900 = 495$ Fehlalarme. In der Vierfeldertafel („krank / gesund“ gegen „Test positiv / negativ“) stehen damit in der Spalte „positiv“ insgesamt $95 + 495 = 590$ Personen.</p><p>Jetzt die entscheidende Frage unter einer Bedingung: Wie groß ist der Anteil der wirklich Kranken<em>unter den positiv Getesteten</em>? Grundwert ist die Spalte „positiv“: $\frac{95}{590} \approx 16\,\%$. Obwohl der Test 95 % der Kranken findet, ist ein positives Ergebnis hier in gut 8 von 10 Fällen ein Fehlalarm — die beiden Prozentwerte beziehen sich auf völlig verschiedene Grundwerte.</p>
+      <p>Der Grund ist die <strong>Seltenheit</strong> der Krankheit: Die riesige Gruppe der Gesunden produziert selbst bei einer kleinen Fehlerquote mehr Fehlalarme, als die kleine Gruppe der Kranken echte Treffer liefern kann. Deshalb „arbeiten“ Tests bei seltenen Ereignissen gegen einen schweren Gegner — und deshalb wird ein positiver Schnelltest in der Praxis durch einen genaueren Zweittest geprüft. In der Oberstufe untersuchst du solche Situationen präzise mit bedingten Wahrscheinlichkeiten.</p>
+    </div>
+  </details>
+
+  <div class="weiter-karte">
+    <p><strong>Bereit zum Üben?</strong> 13 Aufgaben mit gestuften Tipps und vollständigen Lösungswegen warten auf dich.</p>
+    <a class="knopf" href="uebungen.html">Zu den Übungen</a>
+  </div>
+  <section class="sim-einbettung" aria-labelledby="sim-einbettung">
+    <h2 id="sim-einbettung">Selbst ausprobieren: Baumdiagramm und Vierfeldertafel</h2>
+    <p>Erkunde dieses Thema interaktiv in der Simulation — Schieberegler bewegen, beobachten, ausprobieren.</p>
+    <div class="sim-rahmen">
+      <iframe src="../../../simulationen/mathematik/baumdiagramm/index.html?einbettung=1" title="Interaktive Simulation: Baumdiagramm und Vierfeldertafel" loading="lazy"></iframe>
+      <div class="sim-rahmen-fuss"><a href="../../../simulationen/mathematik/baumdiagramm/index.html" target="_blank" rel="noopener">Simulation in eigenem Tab öffnen (Vollbild, Beamer)</a></div>
+    </div>
+  </section>
+</main>
+<script type="module" src="../../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { rendereMathe } from "../../../assets/js/mathe-render.js";
+  rendereMathe(document.body);
+</script>
+</body>
+</html>

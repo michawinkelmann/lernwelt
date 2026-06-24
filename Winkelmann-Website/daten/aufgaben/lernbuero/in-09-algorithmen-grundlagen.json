@@ -1,0 +1,1014 @@
+{
+ "thema": "in-09-algorithmen-grundlagen",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben zum Füllen dünner Spuren. Zur fachlichen Prüfung durch die Lehrkraft.",
+ "aufgaben": [
+  {
+   "id": "in-09-alg-101",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche der folgenden Beschreibungen ist <strong>kein</strong> Algorithmus?",
+   "optionen": [
+    {
+     "text": "Falte das Blatt genau in der Mitte, sodass die kurzen Kanten zusammenpassen.",
+     "richtig": false,
+     "erklaerung": "Das ist ein Algorithmus: Die Anweisung ist eindeutig, ausführbar und endet nach einem Schritt."
+    },
+    {
+     "text": "Gib 200 g Mehl, 3 Eier und 100 ml Milch in eine Schüssel und rühre 2 Minuten.",
+     "richtig": false,
+     "erklaerung": "Das ist ein Algorithmus: Alle Mengen und Zeiten sind klar angegeben — eindeutig, ausführbar, endlich."
+    },
+    {
+     "text": "Mach das Zimmer schön ordentlich.",
+     "richtig": true,
+     "erklaerung": "Richtig — das ist kein Algorithmus: Was \"ordentlich\" bedeutet, ist nicht eindeutig. Zwei Personen würden dasselbe Zimmer sehr unterschiedlich aufräumen."
+    },
+    {
+     "text": "Vergleiche den ersten und den zweiten Eintrag der Liste; tausche sie, falls der erste größer ist.",
+     "richtig": false,
+     "erklaerung": "Das ist ein Algorithmus: ein einzelner, klar beschriebener Vergleichs- und Tauschschritt."
+    }
+   ],
+   "tipps": [
+    "Ein Algorithmus muss eindeutig sein: Jede Person führt exakt dieselben Schritte aus.",
+    "Prüfe jede Beschreibung: Gibt es Wörter wie \"schön\", \"gut\" oder \"nach Gefühl\"?",
+    "Drei Beschreibungen sind Algorithmen — eine ist es nicht."
+   ],
+   "loesungsweg": "\"Mach das Zimmer schön ordentlich\" ist kein Algorithmus: \"Schön ordentlich\" ist keine eindeutige, messbare Anweisung. Was das bedeutet, entscheidet jede Person anders — der erste Grundsatz des Algorithmusbegriffs (Eindeutigkeit) ist verletzt. Die anderen drei Beschreibungen enthalten messbare Angaben und klare Handlungsschritte.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-102",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze den Text zu den Symbolen im Flussdiagramm.",
+   "text": "Im Flussdiagramm markieren abgerundete Rechtecke den ___ und das Ende des Ablaufs. Normale Rechtecke stehen für eine ___. Eine Raute zeigt an, dass eine ___ getroffen wird — der Ablauf gabelt sich in ja und nein.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Start",
+     "optionen": [
+      "Start",
+      "Schritt",
+      "Ausgang"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Anweisung",
+     "optionen": [
+      "Anweisung",
+      "Verzweigung",
+      "Schleife"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Entscheidung",
+     "optionen": [
+      "Entscheidung",
+      "Anweisung",
+      "Eingabe"
+     ]
+    }
+   ],
+   "tipps": [
+    "Abgerundete Ecken stehen für Anfang und Ende — wie ein Knopf zum Ein- und Ausschalten.",
+    "Im Rechteck steht immer eine Aktion, z. B. \"max ← a\" oder \"summe ← summe + note\".",
+    "Die Raute hat zwei Ausgänge: ja und nein — sie muss also eine Entscheidung darstellen."
+   ],
+   "loesungsweg": "Abgerundete Rechtecke markieren den Start (und das Ende) des Ablaufs. Normale Rechtecke stehen für eine Anweisung, die einfach ausgeführt wird. Die Raute zeigt eine Entscheidung: An ihr gabelt sich der Ablauf in zwei Wege (ja/nein). Diese drei Grundsymbole reichen, um jeden Algorithmus zu zeichnen.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-103",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Bringe die vier Phasen \"Vom Problem zum Algorithmus\" in die richtige Reihenfolge — genau wie auf der Erklärseite beschrieben.",
+   "elemente": [
+    "Problem verstehen: Was ist gegeben, was ist gesucht?",
+    "Lösungsschritte und Variablen planen",
+    "Algorithmus als Pseudocode aufschreiben",
+    "Schreibtischtest durchführen"
+   ],
+   "tipps": [
+    "Bevor du planst, musst du genau wissen, was das Problem überhaupt ist.",
+    "Erst planen, dann aufschreiben — nicht umgekehrt.",
+    "Der Test kommt ganz zuletzt: Er prüft, ob das Aufgeschriebene auch wirklich funktioniert."
+   ],
+   "loesungsweg": "Phase 1: Problem verstehen (Was ist gegeben, was gesucht?). Phase 2: Lösungsschritte und Variablen planen. Phase 3: Algorithmus als Pseudocode aufschreiben. Phase 4: Schreibtischtest — Zeile für Zeile prüfen, ob der Algorithmus das Richtige tut. Diese Reihenfolge ist verbindlich, weil spätere Phasen auf frühere aufbauen.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-104",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Schreibtischtest: Ein Algorithmus startet mit <code>summe ← 0</code> und <code>zaehler ← 0</code>. Danach werden in einer Schleife die Anweisungen <code>summe ← summe + zaehler</code> und <code>zaehler ← zaehler + 1</code> wiederholt, <strong>solange</strong> <code>zaehler &lt; 5</code> gilt. Welchen Wert hat <code>summe</code> am Ende?",
+   "eingaben": [
+    {
+     "label": "summe am Ende",
+     "antwort": 10,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Lege eine Schreibtischtest-Tabelle an: je eine Spalte für summe und zaehler, eine Zeile pro Durchlauf.",
+    "Die Bedingung wird <em>vor</em> jedem Durchlauf geprüft. Bei zaehler = 0 gilt 0 < 5 → Durchlauf; bei zaehler = 5 gilt 5 < 5 nicht mehr → Stopp.",
+    "Durchlauf 1: summe = 0 + 0 = 0, zaehler = 1. Durchlauf 2: summe = 0 + 1 = 1, zaehler = 2. Weiter bis zaehler = 5."
+   ],
+   "loesungsweg": "Schreibtischtest: Start summe = 0, zaehler = 0. Durchlauf 1 (zaehler=0): summe = 0, zaehler = 1. Durchlauf 2 (zaehler=1): summe = 1, zaehler = 2. Durchlauf 3 (zaehler=2): summe = 3, zaehler = 3. Durchlauf 4 (zaehler=3): summe = 6, zaehler = 4. Durchlauf 5 (zaehler=4): summe = 10, zaehler = 5. Jetzt gilt 5 < 5 nicht mehr — die Schleife stoppt mit summe = 10. Das ist die Summe 0+1+2+3+4.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-105",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jeder Situation die passende Aussage über Algorithmen zu.",
+   "paare": [
+    {
+     "links": "Lineare Suche in 1 000 Einträgen",
+     "rechts": "Bis zu 1 000 Vergleiche nötig"
+    },
+    {
+     "links": "Zwei korrekte Algorithmen, gleiches Problem",
+     "rechts": "Schrittzahl kann sich stark unterscheiden"
+    },
+    {
+     "links": "Bubble Sort verdoppelt die Listenlänge",
+     "rechts": "Schrittzahl wächst etwa auf das Vierfache"
+    },
+    {
+     "links": "Algorithmus für jedes Problem der Welt",
+     "rechts": "Gibt es beweisbar nicht (Halteproblem)"
+    }
+   ],
+   "tipps": [
+    "Die lineare Suche prüft im schlimmsten Fall jeden Eintrag einmal.",
+    "Bubble Sort ist ein Beispiel für quadratisches Wachstum: doppelt so lang → viermal so viele Schritte.",
+    "Das Halteproblem (Alan Turing, 1936) beweist, dass manche Probleme prinzipiell unlösbar sind."
+   ],
+   "loesungsweg": "Lineare Suche in 1 000 Einträgen: schlimmstenfalls 1 000 Vergleiche (einer pro Eintrag). Zwei korrekte Algorithmen für dasselbe Problem können sehr unterschiedlich viele Schritte brauchen — z. B. lineare vs. binäre Suche. Bubble Sort wächst quadratisch: doppelte Listenlänge → rund vierfache Schrittzahl. Einen Algorithmus, der jedes berechenbare Problem löst, gibt es beweisbar nicht — Alan Turing zeigte das 1936 am Halteproblem.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Aussagen über Algorithmen sind richtig?",
+   "optionen": [
+    {
+     "text": "Ein Algorithmus muss nach endlich vielen Schritten enden.",
+     "richtig": true,
+     "erklaerung": "Richtig – Endlichkeit ist eine Grundeigenschaft jedes Algorithmus."
+    },
+    {
+     "text": "Jeder Schritt muss eindeutig festgelegt sein.",
+     "richtig": true,
+     "erklaerung": "Richtig – nur bei eindeutigen Schritten kommt immer dasselbe Ergebnis heraus."
+    },
+    {
+     "text": "Ein Algorithmus darf Anweisungen wie „mache es ungefähr passend“ enthalten.",
+     "richtig": false,
+     "erklaerung": "Falsch – solche unklaren Anweisungen widersprechen der Eindeutigkeit."
+    },
+    {
+     "text": "Ein Algorithmus funktioniert nur für genau eine einzige Eingabe.",
+     "richtig": false,
+     "erklaerung": "Falsch – ein guter Algorithmus löst eine ganze Klasse von Aufgaben, nicht nur ein Beispiel."
+    }
+   ],
+   "tipps": [
+    "Denk an die drei Eigenschaften: eindeutig, ausführbar, endlich.",
+    "Eine Anleitung mit dem Wort „ungefähr“ ist meistens nicht eindeutig.",
+    "Genau zwei der vier Aussagen treffen zu."
+   ],
+   "loesungsweg": "Ein Algorithmus ist endlich und besteht aus eindeutigen Schritten – beide ersten Aussagen stimmen. Unklare Anweisungen („ungefähr“) verletzen die Eindeutigkeit, und ein Algorithmus soll für viele Eingaben gelten – die beiden letzten Aussagen sind falsch.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Verfolge diesen Ablauf mit dem Schreibtischtest: Setze $\\texttt{summe}=0$. Wiederhole für $i = 1, 2, 3$: addiere $i$ zu $\\texttt{summe}$. Welchen Wert hat $\\texttt{summe}$ am Ende?",
+   "eingaben": [
+    {
+     "label": "summe am Ende",
+     "antwort": 6,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Schreibe nach jedem Durchlauf den neuen Wert von summe auf.",
+    "Nach $i=1$ ist summe $=1$, nach $i=2$ ist summe $=3$.",
+    "Im letzten Durchlauf ($i=3$) wird $3$ addiert: $3 + 3 = 6$."
+   ],
+   "loesungsweg": "Start: $\\texttt{summe}=0$. Durchlauf $i=1$: $0+1=1$. Durchlauf $i=2$: $1+2=3$. Durchlauf $i=3$: $3+3=6$. Also $\\texttt{summe}=6$.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Algorithmus zählt, wie viele Zahlen einer Liste größer als $10$ sind. Die Liste lautet: $12, 7, 15, 3, 20$. Welchen Wert hat der Zähler am Ende?",
+   "eingaben": [
+    {
+     "label": "Zähler am Ende",
+     "antwort": 3,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Gehe die Liste der Reihe nach durch und prüfe jede Zahl einzeln.",
+    "Erhöhe den Zähler nur, wenn die Zahl wirklich größer als $10$ ist (nicht gleich $10$).",
+    "Größer als $10$ sind: $12$, $15$ und $20$."
+   ],
+   "loesungsweg": "Geprüft werden $12$ (>10, Zähler $=1$), $7$ (nein), $15$ (>10, Zähler $=2$), $3$ (nein), $20$ (>10, Zähler $=3$). Am Ende steht der Zähler auf $3$.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Verfolge die Schleife: Setze $\\texttt{wert}=1$. Wiederhole genau $4$-mal: verdopple $\\texttt{wert}$ (also $\\texttt{wert} = \\texttt{wert} \\cdot 2$). Welchen Wert hat $\\texttt{wert}$ nach dem letzten Durchlauf?",
+   "eingaben": [
+    {
+     "label": "wert nach 4 Durchläufen",
+     "antwort": 16,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Verdoppeln heißt: den aktuellen Wert mit $2$ malnehmen.",
+    "Schreibe alle Zwischenwerte auf: $1 \\to 2 \\to 4 \\to \\dots$",
+    "Nach vier Verdopplungen: $1, 2, 4, 8, 16$."
+   ],
+   "loesungsweg": "Start $\\texttt{wert}=1$. 1. Durchlauf: $1 \\cdot 2 = 2$. 2.: $2 \\cdot 2 = 4$. 3.: $4 \\cdot 2 = 8$. 4.: $8 \\cdot 2 = 16$. Nach vier Verdopplungen ist $\\texttt{wert}=16$.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-205",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Welcher Grundbaustein steckt in der Anweisung „Solange noch schmutziges Geschirr da ist, spüle einen Teller“?",
+   "optionen": [
+    {
+     "text": "Schleife (Wiederholung mit Bedingung)",
+     "richtig": true,
+     "erklaerung": "Richtig – „solange … ist“ wiederholt einen Schritt, bis die Bedingung nicht mehr gilt."
+    },
+    {
+     "text": "Sequenz (Schritte nacheinander)",
+     "richtig": false,
+     "erklaerung": "Falsch – eine reine Sequenz hätte keine Bedingung, die das Wiederholen steuert."
+    },
+    {
+     "text": "Verzweigung (einmalige Wenn-dann-Entscheidung)",
+     "richtig": false,
+     "erklaerung": "Falsch – die Verzweigung entscheidet nur einmal, hier wird aber wiederholt."
+    },
+    {
+     "text": "Hier steckt überhaupt kein Grundbaustein.",
+     "richtig": false,
+     "erklaerung": "Falsch – jeder Algorithmus besteht aus genau diesen Bausteinen, hier ist es die Schleife."
+    }
+   ],
+   "tipps": [
+    "Achte auf das Signalwort am Satzanfang: „Solange …“.",
+    "Wird ein Schritt einmal oder mehrfach ausgeführt?",
+    "Eine Bedingung, die das Wiederholen steuert, gehört zur Schleife."
+   ],
+   "loesungsweg": "Das Wort „Solange“ kennzeichnet eine Schleife: Der Schritt „spüle einen Teller“ wird so oft wiederholt, bis die Bedingung („schmutziges Geschirr da“) nicht mehr erfüllt ist.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Algorithmus berechnet einen Bonus: Setze $\\texttt{bonus}=0$. Gehe die Käufe $40, 90, 60, 120$ durch. Bei jedem Kauf von mehr als $50$ erhöhe $\\texttt{bonus}$ um $5$. Welchen Wert hat $\\texttt{bonus}$ am Ende?",
+   "eingaben": [
+    {
+     "label": "bonus am Ende",
+     "antwort": 15,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Prüfe für jeden Kauf die Bedingung „mehr als $50$“.",
+    "Nur bei erfüllter Bedingung wird $5$ dazugezählt.",
+    "Mehr als $50$ sind die Käufe $90$, $60$ und $120$ – also dreimal $+5$."
+   ],
+   "loesungsweg": "Kauf $40$ (nein), $90$ (ja, $\\texttt{bonus}=5$), $60$ (ja, $\\texttt{bonus}=10$), $120$ (ja, $\\texttt{bonus}=15$). Dreimal wurde die Bedingung erfüllt: $3 \\cdot 5 = 15$.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Algorithmus sucht das Maximum: Setze $\\texttt{max}$ auf das erste Element. Vergleiche dann jedes weitere Element und übernimm es, falls es größer ist. Liste: $4, 9, 2, 9, 7$. a) Welchen Wert hat $\\texttt{max}$ am Ende? b) Wie oft wird der Wert von $\\texttt{max}$ während des Durchlaufs neu gesetzt (das erste Setzen mitgezählt)?",
+   "eingaben": [
+    {
+     "label": "a) max am Ende",
+     "antwort": 9,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "b) Anzahl Zuweisungen an max",
+     "antwort": 2,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Starte mit $\\texttt{max}=4$ (erstes Element) und gehe dann Element für Element weiter.",
+    "Eine Zuweisung passiert beim ersten Setzen und immer dann, wenn ein größeres Element auftaucht.",
+    "Das zweite $9$ ist nicht größer als das bereits gespeicherte $9$ – also keine neue Zuweisung."
+   ],
+   "loesungsweg": "Start $\\texttt{max}=4$ (1. Zuweisung). $9>4 \\Rightarrow \\texttt{max}=9$ (2. Zuweisung). $2$ nein, $9$ ist nicht größer als $9$ (keine Zuweisung), $7$ nein. a) $\\texttt{max}=9$. b) Es gab genau $2$ Zuweisungen.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zwei Variablen sollen ihre Werte tauschen. Start: $a=3$ und $b=8$. Der Algorithmus nutzt eine Hilfsvariable: $\\texttt{temp}=a$; dann $a=b$; dann $b=\\texttt{temp}$. a) Welchen Wert hat $a$ am Ende? b) Welchen Wert hat $b$ am Ende?",
+   "eingaben": [
+    {
+     "label": "a) Wert von a",
+     "antwort": 8,
+     "toleranz": 0,
+     "einheit": ""
+    },
+    {
+     "label": "b) Wert von b",
+     "antwort": 3,
+     "toleranz": 0,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Die Hilfsvariable $\\texttt{temp}$ merkt sich den alten Wert von $a$, bevor er überschrieben wird.",
+    "Führe die drei Zeilen streng der Reihe nach aus und notiere nach jeder Zeile alle Werte.",
+    "Nach $\\texttt{temp}=a$ gilt $\\texttt{temp}=3$; danach wird $a=b=8$ und schließlich $b=\\texttt{temp}=3$."
+   ],
+   "loesungsweg": "$\\texttt{temp}=a=3$. Dann $a=b=8$. Dann $b=\\texttt{temp}=3$. Am Ende ist $a=8$ und $b=3$ – die Werte wurden getauscht. Ohne die Hilfsvariable würde der erste Wert beim Überschreiben verloren gehen.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-301",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Eine Schule will in einer Datei mit 1 000 000 Schuelernamen einen bestimmten Namen finden. Schueler A sagt: „Wir kaufen einfach einen doppelt so schnellen Computer, dann ist die lineare Suche schnell genug.“ Schuelerin B sagt: „Besser ist ein cleverer Suchalgorithmus.“ Begruende, wer den überzeugenderen Standpunkt hat.",
+   "musterloesung": "Schuelerin B hat den überzeugenderen Standpunkt. Begründung: Ein doppelt so schneller Computer halbiert die Rechenzeit nur einmalig – der Aufwand der linearen Suche bleibt aber proportional zur Anzahl der Einträge (schlimmstenfalls eine Million Vergleiche). Verzehnfacht sich die Datenmenge, verzehnfacht sich auch die Schrittzahl, und der Geschwindigkeitsvorteil der besseren Hardware ist schnell aufgebraucht. Ein Algorithmus mit langsamer wachsendem Aufwand (etwa die binäre Suche auf sortierten Daten, die den Bereich jedes Mal halbiert) braucht dagegen nur rund 20 Vergleiche für eine Million Einträge. Der bessere Algorithmus gewinnt also gerade bei großen Datenmengen deutlich – unabhängig davon, wie schnell der einzelne Schritt ausgeführt wird. Schuelers A Idee hilft nur kurzfristig und löst das eigentliche Problem nicht.",
+   "tipps": [
+    "Überlege, was passiert, wenn die Datenmenge später noch größer wird.",
+    "Schnellere Hardware beschleunigt jeden einzelnen Schritt – die Anzahl der Schritte ändert sie aber nicht.",
+    "Vergleiche: lineare Suche braucht bis zu n Schritte, die binäre Suche nur rund 20 bei einer Million Einträge."
+   ],
+   "loesungsweg": "Kernpunkte: (1) Klare Position beziehen (Schuelerin B). (2) Hardware beschleunigt nur den einzelnen Schritt, nicht die Schrittzahl – der Vorteil ist einmalig und konstant. (3) Der Aufwand der linearen Suche wächst mit der Datenmenge (schlimmstenfalls n Vergleiche); ein besserer Algorithmus wächst langsamer (z. B. binäre Suche). (4) Gerade bei großen Datenmengen schlägt der bessere Algorithmus die schnellere Hardware. Jede Begründung, die diese Punkte fachlich richtig trifft, ist vollwertig.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-302",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Lea hat einen Algorithmus geschrieben und mit der Eingabe 5 erfolgreich getestet. Sie sagt: „Er läuft, also ist er fertig.“ Welche Bewertung dieser Aussage ist fachlich am besten begründet?",
+   "optionen": [
+    {
+     "text": "Ein einzelner gelungener Test reicht nicht; man sollte auch Sonderfälle prüfen, etwa die 0, gleiche Werte oder eine leere Eingabe.",
+     "richtig": true,
+     "erklaerung": "Richtig – Fehler treten oft gerade bei Sonderfällen auf. Erst mehrere, bewusst verschiedene Testfälle machen den Algorithmus glaubwürdig."
+    },
+    {
+     "text": "Stimmt: Sobald ein Algorithmus bei einer Eingabe das Richtige liefert, arbeitet er bei jeder Eingabe korrekt.",
+     "richtig": false,
+     "erklaerung": "Falsch – ein einzelner Treffer beweist nichts über andere Eingaben, besonders nicht über Sonderfälle."
+    },
+    {
+     "text": "Sie hat recht, weil ein Algorithmus, der einmal läuft, nie wieder getestet werden muss.",
+     "richtig": false,
+     "erklaerung": "Falsch – Testen ist Teil eines Kreislaufs; bei Änderungen oder neuen Eingaben prüft man erneut."
+    },
+    {
+     "text": "Die Aussage ist egal, weil das Ergebnis bei Algorithmen ohnehin nicht überprüfbar ist.",
+     "richtig": false,
+     "erklaerung": "Falsch – mit dem Schreibtischtest lässt sich das Ergebnis Schritt für Schritt sehr wohl überprüfen."
+    }
+   ],
+   "tipps": [
+    "Denk an die Phase „Testen“: Welche Eingaben sind besonders heikel?",
+    "Wo treten Fehler erfahrungsgemäß am häufigsten auf?",
+    "Ein einziger Testfall deckt nur einen winzigen Teil der Möglichkeiten ab."
+   ],
+   "loesungsweg": "Ein erfolgreicher Test mit einer „normalen“ Eingabe sagt wenig über das Verhalten bei Sonderfällen aus. Gerade Randfälle wie 0, gleiche Werte oder leere Eingaben decken die meisten Fehler auf. Deshalb ist die erste Bewertung tragfähig: weiter testen mit bewusst gewählten, verschiedenen Fällen, bevor man den Algorithmus für fertig erklärt.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-303",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein Algorithmus zählt Treffer und summiert Punkte. Start: <code>treffer = 0</code> und <code>punkte = 0</code>. Für jeden Wurf mit mehr als 7 Ringen wird <code>treffer = treffer + 1</code> und <code>punkte = punkte + ringe</code> ausgeführt. Eingegeben werden nacheinander die Würfe 9, 5, 8, 10. Führe den Schreibtischtest durch.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Wie viele Treffer (Würfe mit mehr als 7 Ringen) zählt der Algorithmus?",
+     "eingaben": [
+      {
+       "label": "treffer",
+       "antwort": 3,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "Prüfe jeden Wurf einzeln: 9, 5, 8, 10 – welche sind größer als 7?"
+     ]
+    },
+    {
+     "frage": "Schritt 2: Welchen Wert hat punkte am Ende (Summe der Ringe nur bei Treffern)?",
+     "eingaben": [
+      {
+       "label": "punkte",
+       "antwort": 27,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "Addiere nur die Treffer-Würfe: 9 + 8 + 10. Der Wurf mit 5 zählt nicht."
+     ]
+    }
+   ],
+   "tipps": [
+    "Lege eine Tabelle mit den Spalten treffer und punkte an, eine Zeile pro Wurf.",
+    "Nur Würfe mit mehr als 7 Ringen verändern die Variablen – die 5 wird übersprungen.",
+    "treffer zählt die gültigen Würfe, punkte addiert deren Ringe."
+   ],
+   "loesungsweg": "Schreibtischtest Wurf für Wurf: Wurf 9 (&gt;7): treffer = 1, punkte = 9. Wurf 5 (nicht &gt;7): unverändert, treffer = 1, punkte = 9. Wurf 8 (&gt;7): treffer = 2, punkte = 17. Wurf 10 (&gt;7): treffer = 3, punkte = 27. Am Ende gilt also treffer = 3 und punkte = 9 + 8 + 10 = 27. Der Wurf mit 5 Ringen erfüllt die Bedingung nicht und wird übersprungen.",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-110",
+   "typ": "zuordnung",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ordne jeder Anleitung zu, ob sie ein Algorithmus ist oder nicht.",
+   "paare": [
+    {
+     "links": "Drücke den Lichtschalter genau einmal nach unten.",
+     "rechts": "Algorithmus"
+    },
+    {
+     "links": "Koche das Ei genau 7 Minuten lang.",
+     "rechts": "Algorithmus"
+    },
+    {
+     "links": "Mache den Salat irgendwie lecker an.",
+     "rechts": "kein Algorithmus"
+    },
+    {
+     "links": "Laufe immer weiter geradeaus.",
+     "rechts": "kein Algorithmus"
+    }
+   ],
+   "tipps": [
+    "Prüfe: Ist jeder Schritt eindeutig, ausführbar und endet die Anleitung?",
+    "Wörter wie „irgendwie\" oder „lecker\" sind nicht eindeutig.",
+    "„Immer weiter\" hat kein Ende — die Endlichkeit fehlt."
+   ],
+   "loesungsweg": "„Lichtschalter einmal drücken\" und „Ei 7 Minuten kochen\" sind eindeutig, ausführbar und enden — also Algorithmen. „Salat irgendwie lecker anmachen\" ist nicht eindeutig (jeder versteht etwas anderes). „Immer weiter geradeaus\" endet nie — die Endlichkeit fehlt. Beide letzten sind deshalb keine Algorithmen.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-111",
+   "typ": "luecke",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ergänze die drei Eigenschaften, die eine Anleitung zu einem Algorithmus machen.",
+   "text": "Damit eine Anleitung ein Algorithmus ist, muss jeder Schritt ___ beschrieben sein, also unmissverständlich. Außerdem muss jeder Schritt ___ sein, das heißt tatsächlich durchführbar. Und das Verfahren muss nach ___ vielen Schritten enden.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "eindeutig",
+     "optionen": [
+      "eindeutig",
+      "schön",
+      "schnell"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "ausführbar",
+     "optionen": [
+      "ausführbar",
+      "teuer",
+      "lang"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "endlich",
+     "optionen": [
+      "endlich",
+      "unendlich",
+      "bunt"
+     ]
+    }
+   ],
+   "loesungsweg": "Ein Algorithmus muss eindeutig sein (jeder Schritt ist klar und lässt keinen Spielraum), ausführbar (jeder Schritt ist praktisch machbar) und endlich (die Anleitung endet nach endlich vielen Schritten). Fehlt eine dieser drei Eigenschaften, ist es kein Algorithmus.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ],
+   "tipps": [
+    "Denke an die drei Wörter, die jede gute Anleitung erfüllen muss.",
+    "Eindeutig heißt: kein Spielraum. Ausführbar heißt: praktisch machbar.",
+    "Endlich heißt: Die Anleitung endet nach endlich vielen Schritten."
+   ]
+  },
+  {
+   "id": "in-09-alg-112",
+   "typ": "freitext",
+   "niveau": 2,
+   "afb": 3,
+   "frage": "Eine App zeigt an: „Rühre den Teig, bis er gut ist.\" Erkläre, welche der drei Eigenschaften (eindeutig, ausführbar, endlich) hier verletzt ist, und schreibe die Anweisung so um, dass sie zu einem Algorithmus passt.",
+   "musterloesung": "Verletzt ist die Eindeutigkeit: „bis er gut ist\" ist nicht messbar — jede Person beurteilt „gut\" anders, also führen verschiedene Personen die Anweisung unterschiedlich aus. Eine eindeutige Umformulierung wäre zum Beispiel: „Rühre den Teig 2 Minuten lang.\" Jetzt ist die Anweisung eindeutig (klare Zeitangabe), ausführbar und endlich.",
+   "tipps": [
+    "Frage dich: Würden zwei Personen genau dasselbe tun?",
+    "„Gut\" ist Ansichtssache — das verletzt eine der drei Eigenschaften.",
+    "Ersetze die unklare Angabe durch etwas Messbares (z. B. eine Zeit- oder Mengenangabe)."
+   ],
+   "loesungsweg": "Kernpunkte: (1) Die Eindeutigkeit ist verletzt, weil „bis er gut ist\" nicht messbar/objektiv ist. (2) Eine korrekte Umformulierung ersetzt das unklare Kriterium durch eine messbare Angabe, z. B. eine feste Rührzeit oder eine sichtbare, eindeutige Bedingung. Jede Antwort, die die Eindeutigkeit benennt und eine messbare Umformulierung liefert, ist richtig.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-113",
+   "typ": "multiple-choice",
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Bei welcher Anleitung ist die <strong>Endlichkeit</strong> verletzt — die Anleitung endet also nie von selbst?",
+   "optionen": [
+    {
+     "text": "Zähle laut von 1 bis 10 und höre dann auf.",
+     "richtig": false,
+     "erklaerung": "Endet nach der 10 — die Endlichkeit ist erfüllt."
+    },
+    {
+     "text": "Wiederhole „klatsche in die Hände\", ohne jemals aufzuhören.",
+     "richtig": true,
+     "erklaerung": "Richtig — ohne Abbruchbedingung endet die Anleitung nie. Die Endlichkeit ist verletzt."
+    },
+    {
+     "text": "Lege drei Karten nacheinander auf den Tisch.",
+     "richtig": false,
+     "erklaerung": "Endet nach drei Karten — endlich."
+    },
+    {
+     "text": "Schreibe deinen Namen einmal auf das Blatt.",
+     "richtig": false,
+     "erklaerung": "Endet nach einem Schritt — endlich."
+    }
+   ],
+   "tipps": [
+    "Endlich heißt: Die Anleitung kommt nach endlich vielen Schritten zu einem Ende.",
+    "Suche die Anleitung, die kein Abbruchkriterium hat.",
+    "„Ohne jemals aufzuhören\" ist ein deutliches Signal."
+   ],
+   "loesungsweg": "„Wiederhole klatsche in die Hände, ohne jemals aufzuhören\" hat keine Bedingung, die das Ende festlegt — die Anleitung läuft endlos. Damit ist die Endlichkeit verletzt. Alle anderen Anleitungen enden nach einer festen Anzahl von Schritten.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-114",
+   "typ": "multiple-choice",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Welcher Grundbaustein steckt im Satz „Wenn es draußen kalt ist, ziehe eine Jacke an\"?",
+   "optionen": [
+    {
+     "text": "Verzweigung (eine Bedingung entscheidet)",
+     "richtig": true,
+     "erklaerung": "Richtig — „Wenn … ist\" prüft eine Bedingung und entscheidet einmal, ob die Jacke angezogen wird."
+    },
+    {
+     "text": "Sequenz (Schritte nacheinander)",
+     "richtig": false,
+     "erklaerung": "Falsch — hier hängt der Schritt von einer Bedingung ab, es ist keine reine Abfolge."
+    },
+    {
+     "text": "Schleife (Wiederholung mit Bedingung)",
+     "richtig": false,
+     "erklaerung": "Falsch — es wird nichts wiederholt, sondern nur einmal entschieden."
+    },
+    {
+     "text": "Kein Grundbaustein",
+     "richtig": false,
+     "erklaerung": "Falsch — die Wenn-dann-Form ist genau eine Verzweigung."
+    }
+   ],
+   "tipps": [
+    "Achte auf das Signalwort am Anfang: „Wenn …\".",
+    "Wird etwas wiederholt oder nur einmal entschieden?",
+    "Eine einmalige Wenn-dann-Entscheidung gehört zur Verzweigung."
+   ],
+   "loesungsweg": "„Wenn es kalt ist, ziehe eine Jacke an\" ist eine Verzweigung: Eine Bedingung (kalt?) entscheidet einmalig, ob der Schritt ausgeführt wird. Es wird nichts wiederholt (keine Schleife) und es ist keine reine Abfolge (keine Sequenz).",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-115",
+   "typ": "zuordnung",
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ordne jeder Alltagssituation den passenden Grundbaustein zu.",
+   "paare": [
+    {
+     "links": "Erst Zähne putzen, danach Gesicht waschen",
+     "rechts": "Sequenz"
+    },
+    {
+     "links": "Wenn die Ampel grün ist, gehe los",
+     "rechts": "Verzweigung"
+    },
+    {
+     "links": "Mache Hampelmänner, bis du 20 geschafft hast",
+     "rechts": "Schleife"
+    },
+    {
+     "links": "Wenn der Akku leer ist, lade das Handy, sonst nutze es weiter",
+     "rechts": "Verzweigung"
+    }
+   ],
+   "tipps": [
+    "„Erst …, danach …\" ohne Bedingung ist eine Sequenz.",
+    "„Wenn …\" mit einer einmaligen Entscheidung ist eine Verzweigung.",
+    "„… bis …\" mit Wiederholung ist eine Schleife."
+   ],
+   "loesungsweg": "„Erst Zähne putzen, danach Gesicht waschen\" ist eine Sequenz (Schritte nacheinander). „Wenn die Ampel grün ist, gehe los\" und „Wenn der Akku leer ist, lade …, sonst …\" sind Verzweigungen (eine Bedingung entscheidet). „Hampelmänner, bis 20 geschafft\" ist eine Schleife (Wiederholung mit Abbruchbedingung).",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-116",
+   "typ": "luecke",
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ergänze den passenden Grundbaustein (Sequenz, Verzweigung oder Schleife).",
+   "text": "„Wiederhole 10-mal: gehe einen Schritt vor“ ist eine ___. Mehrere Befehle, die einfach nacheinander abgearbeitet werden, bilden eine ___. „Wenn es regnet, nimm den Schirm, sonst die Sonnenbrille“ ist eine ___.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Schleife",
+     "optionen": [
+      "Schleife",
+      "Sequenz",
+      "Verzweigung"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Sequenz",
+     "optionen": [
+      "Sequenz",
+      "Schleife",
+      "Verzweigung"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Verzweigung",
+     "optionen": [
+      "Verzweigung",
+      "Sequenz",
+      "Schleife"
+     ]
+    }
+   ],
+   "loesungsweg": "„Werfe den Würfel erneut, solange du keine Sechs hast\" wiederholt einen Schritt mit Bedingung — das ist eine Schleife. „Lege das Spielbrett auf, verteile dann die Figuren\" ist eine reine Abfolge — eine Sequenz. „Wenn du eine Sechs würfelst, darfst du noch einmal\" entscheidet einmal über den weiteren Verlauf — eine Verzweigung.",
+   "hinweis": "Reihenfolge der Lücken: (1) „Werfe den Würfel erneut, solange du keine Sechs hast\" = ___. (2) „Lege das Spielbrett auf, verteile dann die Figuren\" = ___. (3) „Wenn du eine Sechs würfelst, darfst du noch einmal\" = ___.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ],
+   "tipps": [
+    "Achte auf die Signalwörter: „solange\", „erst … dann\", „wenn\".",
+    "Wird etwas wiederholt (Schleife) oder nur einmal entschieden (Verzweigung)?",
+    "Eine reine Abfolge ohne Bedingung ist eine Sequenz."
+   ]
+  },
+  {
+   "id": "in-09-alg-117",
+   "typ": "reihenfolge",
+   "niveau": 1,
+   "afb": 2,
+   "frage": "Bringe die Schritte des Alltags-Ablaufs „Eine Tasse Tee kochen\" in eine sinnvolle Reihenfolge.",
+   "elemente": [
+    "Wasser in den Wasserkocher füllen",
+    "Wasser zum Kochen bringen",
+    "Teebeutel in die Tasse legen",
+    "Heißes Wasser in die Tasse gießen",
+    "Den Teebeutel nach einigen Minuten herausnehmen"
+   ],
+   "loesungsweg": "Sinnvoll ist die Abfolge: zuerst Wasser einfüllen, dann erhitzen, den Teebeutel in die Tasse legen, das heiße Wasser aufgießen und schließlich den Beutel wieder herausnehmen. Die Schritte folgen als Sequenz aufeinander — die Reihenfolge ist wichtig, weil man z. B. erst Wasser braucht, bevor man es erhitzen kann.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ],
+   "tipps": [
+    "Überlege, was du zuerst brauchst, bevor der nächste Schritt möglich ist.",
+    "Man kann das Wasser erst erhitzen, wenn es im Kocher ist.",
+    "Der Teebeutel wird zuletzt wieder herausgenommen."
+   ]
+  },
+  {
+   "id": "in-09-alg-118",
+   "typ": "zuordnung",
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ordne jedem Flussdiagramm-Symbol seine Bedeutung zu.",
+   "paare": [
+    {
+     "links": "Abgerundetes Rechteck",
+     "rechts": "Start oder Ende"
+    },
+    {
+     "links": "Rechteck",
+     "rechts": "Anweisung ausführen"
+    },
+    {
+     "links": "Raute",
+     "rechts": "Verzweigung (Bedingung mit ja/nein)"
+    },
+    {
+     "links": "Pfeil",
+     "rechts": "Reihenfolge des Ablaufs"
+    }
+   ],
+   "tipps": [
+    "Das abgerundete Rechteck markiert Anfang und Schluss eines Ablaufs.",
+    "Im normalen Rechteck steht eine Anweisung.",
+    "Die Raute hat zwei Ausgänge: ja und nein."
+   ],
+   "loesungsweg": "Das abgerundete Rechteck steht für Start oder Ende. Das normale Rechteck enthält eine Anweisung, die ausgeführt wird. Die Raute ist eine Verzweigung mit einer Bedingung und den beiden Ausgängen ja/nein. Die Pfeile geben die Reihenfolge an, in der die Symbole durchlaufen werden.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-119",
+   "typ": "zuordnung",
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ordne jeder der vier Phasen der Algorithmusentwicklung die passende Leitfrage bzw. Tätigkeit zu.",
+   "paare": [
+    {
+     "links": "Verstehen",
+     "rechts": "Was ist die Eingabe, was die Ausgabe?"
+    },
+    {
+     "links": "Planen",
+     "rechts": "In welche Teilschritte zerlege ich das Problem?"
+    },
+    {
+     "links": "Aufschreiben",
+     "rechts": "Den Plan eindeutig als Pseudocode notieren"
+    },
+    {
+     "links": "Testen",
+     "rechts": "Mit dem Schreibtischtest Zeile für Zeile prüfen"
+    }
+   ],
+   "tipps": [
+    "Zuerst klärt man, was hinein- und herauskommt.",
+    "Danach plant man die Teilschritte, bevor man etwas notiert.",
+    "Geprüft wird ganz am Schluss."
+   ],
+   "loesungsweg": "Phase 1 Verstehen: klären, was Eingabe und Ausgabe sind. Phase 2 Planen: das Problem in Teilschritte zerlegen. Phase 3 Aufschreiben: den Plan eindeutig als Pseudocode (oder Flussdiagramm) notieren. Phase 4 Testen: mit dem Schreibtischtest Zeile für Zeile prüfen, ob alles stimmt.",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "ergaenzung": "lernbuero",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  },
+  {
+   "id": "in-09-alg-120",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jedes Signalwort dem passenden Grundbaustein zu.",
+   "paare": [
+    {
+     "links": "erst ..., dann ...",
+     "rechts": "Sequenz"
+    },
+    {
+     "links": "wenn ..., dann ...",
+     "rechts": "Verzweigung"
+    },
+    {
+     "links": "solange ...",
+     "rechts": "Schleife"
+    },
+    {
+     "links": "wiederhole 5-mal",
+     "rechts": "Schleife"
+    }
+   ],
+   "tipps": [
+    "„erst …, dann …\" beschreibt eine feste Abfolge.",
+    "„wenn …\" trifft eine Entscheidung.",
+    "„solange …\" und „wiederhole …\" stehen für Wiederholungen."
+   ],
+   "loesungsweg": "„erst …, dann …\" ist eine Sequenz (Schritte nacheinander). „wenn …, dann …\" ist eine Verzweigung (eine Bedingung entscheidet). „solange …\" und „wiederhole 5-mal\" sind beide Schleifen (Wiederholungen, einmal mit Bedingung, einmal mit fester Anzahl).",
+   "kc": [
+    "KC Informatik Sek I: Lernfeld Algorithmisches Problemloesen"
+   ]
+  }
+ ]
+}

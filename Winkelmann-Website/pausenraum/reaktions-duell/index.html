@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reaktions-Duell — Pausenraum · Lernwelt</title>
+<meta name="description" content="Zwei Spieler, eine Ampel: Beide warten auf Grün, wer zuerst drückt, holt die Runde — Frühstart verliert. Best of 5 an einer Tastatur oder am Touchscreen.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+<style>
+  /* Seitenlokale Stile: Splitscreen des Reaktions-Duells */
+  .rd-buehne { position: relative; display: grid; grid-template-columns: 1fr 1fr; min-height: 400px; border-radius: inherit; overflow: hidden; user-select: none; -webkit-user-select: none; cursor: pointer; }
+  .rd-haelfte { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 16px 8px; background: var(--flaeche); }
+  .rd-haelfte:first-child { border-right: 2px dashed var(--linie); }
+  .rd-name { margin: 0; font-weight: 800; font-size: 1.35rem; }
+  .rd-taste { margin: 0; color: var(--text-leise); font-size: .92rem; }
+  .rd-stand { margin: 8px 0 0; font-weight: 800; font-size: 3.4rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  .rd-zeit { margin: 6px 0 0; min-height: 1.5em; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .rd-buehne[data-phase="warten"] .rd-haelfte { background: var(--hauch); }
+  .rd-buehne[data-phase="gruen"] .rd-haelfte { background: var(--ok); color: var(--bg); }
+  .rd-buehne[data-phase="gruen"] .rd-taste { color: inherit; }
+  .rd-haelfte.rd-sieger { box-shadow: inset 0 0 0 5px var(--ok); }
+  .rd-mitte { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--flaeche); border: 2px solid var(--linie); border-radius: var(--radius); padding: 12px 18px; text-align: center; max-width: min(90%, 440px); }
+  .rd-mitte .rd-symbol { font-size: 2.4rem; line-height: 1; margin: 0; }
+  .rd-mitte .rd-gross { font-size: clamp(1.3rem, 5vw, 2rem); font-weight: 800; margin: 2px 0 0; }
+  .rd-mitte .rd-klein { margin: 4px 0 0; color: var(--text-leise); font-size: .98rem; }
+  .rd-start { margin-top: 10px; font-size: 1.1rem; min-height: 50px; padding: 10px 26px; }
+  @media (max-width: 480px) {
+    .rd-name { font-size: 1.1rem; }
+    .rd-stand { font-size: 2.4rem; }
+    .rd-mitte { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Reaktions-Duell</h1>
+  <p class="einleitung">Zwei Spieler, eine Ampel, null Gnade: Beide warten auf Grün — wer zuerst drückt, holt die Runde. Wer zu früh zuckt, schenkt sie dem Gegner. Spieler <strong>Links</strong> nimmt die Taste <kbd>A</kbd>, Spieler <strong>Rechts</strong> die Taste <kbd>L</kbd>; am Touchscreen tippt jeder auf seine Bildschirmhälfte. Best of 5 — wer zuerst drei Runden hat, gewinnt das Match.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert’s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Regeln:</strong> Nach der Runden-Ansage heißt es warten — die Pause bis Grün ist jedes Mal zufällig (1,5 bis 4 Sekunden), Vorausahnen klappt also nicht. Wird die Fläche grün („JETZT!“), gewinnt die schnellere Reaktion die Runde; beide Zeiten werden in Millisekunden angezeigt. Ein <strong>Frühstart</strong> beendet die Runde sofort: Punkt für die Gegenseite. Drücken exakt beide gleich schnell (oder niemand), wird die Runde wiederholt.</p>
+      <p><strong>Fair für beide:</strong> Beide Spieler sehen dasselbe Signal zur selben Zeit und werden über dieselbe Millisekunden-Uhr des Browsers gemessen — es zählt wirklich nur die Reaktion. Tipp für Tastatur-Duelle: Links legt den Zeigefinger auf <kbd>A</kbd>, Rechts auf <kbd>L</kbd>, beide Hände bleiben ruhig liegen.</p>
+      <p><strong>Übrigens:</strong> Typische Reaktionszeiten liegen bei 200–300&nbsp;ms. Wie viel Weg ein Auto in dieser Zeit zurücklegt, kannst du im <a href="../../lernspiele/reaktionszeit-tester/index.html">Reaktionszeit-Tester</a> im Trainingsraum ausmessen.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module" src="spiel.js"></script>
+</body>
+</html>

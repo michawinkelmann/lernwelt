@@ -1,0 +1,1053 @@
+{
+ "thema": "ma-ep-ableitungsregeln-und-anwendungen",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben — erstellt zur Füllung dünner Spuren; fachliche Prüfung durch die Lehrkraft ausstehend.",
+ "aufgaben": [
+  {
+   "id": "ma-ep-ablr-101",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Leite $f(x) = 3x^4 - 2x^2 + 5x - 1$ ab und berechne $f'(1)$ und $f'(-1)$.",
+   "eingaben": [
+    {
+     "label": "$f'(1)$",
+     "antwort": 13,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$f'(-1)$",
+     "antwort": -3,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Summand für Summand: $3x^4 \\to 12x^3$, $-2x^2 \\to -4x$, $5x \\to 5$, $-1 \\to 0$.",
+    "$f'(x) = 12x^3 - 4x + 5$ — jetzt die Werte einsetzen.",
+    "$f'(1) = 12 - 4 + 5$; $f'(-1) = 12 \\cdot (-1)^3 - 4 \\cdot (-1) + 5 = -12 + 4 + 5$."
+   ],
+   "loesungsweg": "Mit Potenz-, Faktor- und Summenregel: $f'(x) = 12x^3 - 4x + 5$ (die Konstante $-1$ fällt weg). Einsetzen: $f'(1) = 12 - 4 + 5 = 13$ — an der Stelle $1$ steigt der Graph steil. $f'(-1) = -12 + 4 + 5 = -3$: Bei $x = -1$ fällt der Graph leicht.",
+   "kc": [
+    "ableitungsregeln"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-ep-ablr-102",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Bestimme für $f(x) = x^2 + 2x - 1$ an der Stelle $x_0 = 1$ die Tangentensteigung $m$ und den $y$-Achsenabschnitt $b$ der Tangente.",
+   "eingaben": [
+    {
+     "label": "Steigung $m$",
+     "antwort": 4,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$y$-Achsenabschnitt $b$",
+     "antwort": -2,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Berechne zuerst den Berührpunkt: $f(1) = 1 + 2 - 1$.",
+    "Die Steigung ist $m = f'(x_0)$ mit $f'(x) = 2x + 2$.",
+    "Punktprobe: $f(1) = m \\cdot 1 + b$ nach $b$ auflösen."
+   ],
+   "loesungsweg": "Berührpunkt: $f(1) = 1 + 2 - 1 = 2$, also $P(1 \\mid 2)$. Ableiten: $f'(x) = 2x + 2$, daher $m = f'(1) = 4$. Punktprobe mit $y = 4x + b$: $2 = 4 \\cdot 1 + b$ liefert $b = -2$. Die Tangente lautet $y = 4x - 2$.",
+   "kc": [
+    "tangente-und-normale"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-ep-ablr-103",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Bestimme für $f(x) = x^2 - 4x + 3$ die Nullstelle von $f'$ und entscheide: Ist der Punkt bei dieser Stelle ein Hoch- oder Tiefpunkt? Berechne auch $f$ an dieser Stelle.",
+   "eingaben": [
+    {
+     "label": "Nullstelle von $f'$",
+     "antwort": 2,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$f$ an dieser Stelle",
+     "antwort": -1,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Kurz erklärt: Eine <strong>Nullstelle</strong> ist ein x-Wert, an dem der Funktionswert $0$ ist (Schnittpunkt mit der x-Achse).",
+    "$f'(x) = 2x - 4$ — gleich null setzen.",
+    "Prüfe mit $f''(x) = 2$: Ist der Wert positiv oder negativ? Was bedeutet das?",
+    "$f(2) = 4 - 8 + 3$."
+   ],
+   "loesungsweg": "$f'(x) = 2x - 4 = 0$ liefert $x = 2$. Mit $f''(x) = 2 > 0$ liegt dort ein Tiefpunkt. $f(2) = 4 - 8 + 3 = -1$. Der Tiefpunkt ist $T(2 \\mid -1)$. Der Graph der Parabel hat genau diesen einen tiefsten Punkt.",
+   "kc": [
+    "monotonie",
+    "extrempunkte"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-ep-ablr-104",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Bestimme die Extrempunkte von $f(x) = x^3 - 3x^2 - 9x + 2$.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Löse die notwendige Bedingung $f'(x) = 0$. Gib die kleinere und die größere Lösung an.",
+     "eingaben": [
+      {
+       "label": "kleinere Lösung",
+       "antwort": -1,
+       "toleranz": 0,
+       "einheit": ""
+      },
+      {
+       "label": "größere Lösung",
+       "antwort": 3,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$f'(x) = 3x^2 - 6x - 9 = 3(x^2 - 2x - 3)$ — p-q-Formel oder Faktorisieren."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Berechne $f''(-1)$ und $f''(3)$.",
+     "eingaben": [
+      {
+       "label": "$f''(-1)$",
+       "antwort": -12,
+       "toleranz": 0,
+       "einheit": ""
+      },
+      {
+       "label": "$f''(3)$",
+       "antwort": 12,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$f''(x) = 6x - 6$ — einsetzen."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Berechne die $y$-Koordinaten $f(-1)$ und $f(3)$.",
+     "eingaben": [
+      {
+       "label": "$f(-1)$",
+       "antwort": 7,
+       "toleranz": 0,
+       "einheit": ""
+      },
+      {
+       "label": "$f(3)$",
+       "antwort": -25,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$f(-1) = -1 - 3 + 9 + 2$ und $f(3) = 27 - 27 - 27 + 2$."
+     ]
+    }
+   ],
+   "tipps": [
+    "Notwendig: $f'(x) = 0$ gibt die Kandidaten. Hinreichend: Vorzeichen von $f''$ entscheidet.",
+    "$x^2 - 2x - 3 = (x-3)(x+1)$ — einfach faktorisierbar.",
+    "$f''(-1) < 0$ bedeutet Hochpunkt, $f''(3) > 0$ Tiefpunkt."
+   ],
+   "loesungsweg": "$f'(x) = 3x^2 - 6x - 9 = 3(x^2 - 2x - 3) = 3(x - 3)(x + 1) = 0$ liefert $x = -1$ und $x = 3$. Mit $f''(x) = 6x - 6$: $f''(-1) = -12 < 0$ (Hochpunkt), $f''(3) = 12 > 0$ (Tiefpunkt). $y$-Koordinaten: $f(-1) = -1 - 3 + 9 + 2 = 7$, $f(3) = 27 - 27 - 27 + 2 = -25$. Ergebnis: $H(-1 \\mid 7)$ und $T(3 \\mid -25)$.",
+   "kc": [
+    "extrempunkte"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-ep-ablr-105",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Für $f(x) = x^3 + 3x^2 - 1$ gilt $f''(x) = 6x + 6$. Bestimme die Wendestelle $x_W$ und berechne die Koordinaten des Wendepunkts $W$.",
+   "eingaben": [
+    {
+     "label": "Wendestelle $x_W$",
+     "antwort": -1,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$y$-Koordinate von $W$",
+     "antwort": 1,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Setze $f''(x) = 6x + 6 = 0$ und löse nach $x$ auf.",
+    "Prüfe den Vorzeichenwechsel: $f''(-2) = ?$ und $f''(0) = ?$.",
+    "Berechne $f(-1) = (-1)^3 + 3 \\cdot (-1)^2 - 1$."
+   ],
+   "loesungsweg": "$f''(x) = 6x + 6 = 0$ liefert $x_W = -1$. Vorzeichenprüfung: $f''(-2) = -6 < 0$ und $f''(0) = 6 > 0$ — das Vorzeichen wechselt, es liegt wirklich ein Wendepunkt vor. $y$-Koordinate: $f(-1) = -1 + 3 - 1 = 1$. Der Wendepunkt ist $W(-1 \\mid 1)$.",
+   "kc": [
+    "kruemmung-wendepunkte"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-ep-ablr-106",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ein Hühnergehege soll mit $30\\,\\text{m}$ Zaun eingezäunt werden. Eine Seite wird durch eine Wand gebildet (kein Zaun nötig), die anderen drei Seiten bestehen aus Zaun. Die Breite sei $x$, die Länge $y$. Aus der Nebenbedingung $2x + y = 30$ folgt die Zielfunktion $A(x) = x \\cdot (30 - 2x)$ für $0 < x < 15$. Für welches $x$ wird die Fläche maximal, wie groß ist dann $y$, und wie groß ist die maximale Fläche?",
+   "eingaben": [
+    {
+     "label": "Breite $x$",
+     "antwort": 7.5,
+     "toleranz": 0.01,
+     "einheit": "m"
+    },
+    {
+     "label": "Länge $y$",
+     "antwort": 15,
+     "toleranz": 0.01,
+     "einheit": "m"
+    },
+    {
+     "label": "Maximale Fläche",
+     "antwort": 112.5,
+     "toleranz": 0.01,
+     "einheit": "m²"
+    }
+   ],
+   "tipps": [
+    "Ausmultiplizieren: $A(x) = 30x - 2x^2$ — dann ableiten.",
+    "$A'(x) = 30 - 4x = 0$ lösen und mit $A''(x) = -4 < 0$ das Maximum bestätigen.",
+    "$y$ steckt in der Nebenbedingung: $y = 30 - 2 \\cdot 7{,}5$."
+   ],
+   "loesungsweg": "Zielfunktion: $A(x) = x \\cdot (30 - 2x) = 30x - 2x^2$ für $0 < x < 15$. Ableiten: $A'(x) = 30 - 4x = 0$ liefert $x = 7{,}5\\,\\text{m}$. Wegen $A''(x) = -4 < 0$ liegt ein Maximum vor. Aus der Nebenbedingung: $y = 30 - 2 \\cdot 7{,}5 = 15\\,\\text{m}$. Maximale Fläche: $A(7{,}5) = 7{,}5 \\cdot 15 = 112{,}5\\,\\text{m}^2$.",
+   "kc": [
+    "optimierung"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-ep-ablr-107",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Aus einem quadratischen Stück Pappe mit Seitenlänge $10\\,\\text{cm}$ werden an jeder Ecke Quadrate der Seitenlänge $x$ ausgeschnitten und die Ränder hochgeklappt. Das Volumen ist $V(x) = x \\cdot (10 - 2x)^2$ für $0 < x < 5$. Für welches $x$ wird das Volumen maximal? Runde auf zwei Dezimalstellen.",
+   "eingaben": [
+    {
+     "label": "Seitenlänge $x$",
+     "antwort": 1.67,
+     "toleranz": 0.01,
+     "einheit": "cm"
+    },
+    {
+     "label": "Maximales Volumen",
+     "antwort": 74.07,
+     "toleranz": 0.1,
+     "einheit": "cm³"
+    }
+   ],
+   "tipps": [
+    "Ausmultiplizieren: $V(x) = x(100 - 40x + 4x^2) = 4x^3 - 40x^2 + 100x$.",
+    "$V'(x) = 12x^2 - 80x + 100 = 0$; durch $4$ teilen: $3x^2 - 20x + 25 = 0$ — p-q-Formel.",
+    "Kandidaten $x = 5$ (Rand, $V = 0$) und $x = \\frac{5}{3} \\approx 1{,}67$ — prüfe $V''$ für das Maximum."
+   ],
+   "loesungsweg": "$V(x) = 4x^3 - 40x^2 + 100x$. Ableiten: $V'(x) = 12x^2 - 80x + 100 = 0 \\;\\Leftrightarrow\\; 3x^2 - 20x + 25 = 0$. p-q-Formel: $x = \\frac{20 \\pm \\sqrt{400 - 300}}{6} = \\frac{20 \\pm 10}{6}$, also $x = 5$ (Rand, $V = 0$) und $x = \\frac{5}{3} \\approx 1{,}67$. Hinreichend: $V''(x) = 24x - 80$, $V''\\!\\left(\\frac{5}{3}\\right) = 40 - 80 = -40 < 0$ — Maximum. $V\\!\\left(\\frac{5}{3}\\right) = \\frac{5}{3} \\cdot \\left(\\frac{20}{3}\\right)^2 = \\frac{2000}{27} \\approx 74{,}07\\,\\text{cm}^3$.",
+   "kc": [
+    "optimierung"
+   ],
+   "ergaenzung": "lernbuero"
+  },
+  {
+   "id": "ma-ep-ablr-201",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Welche Ableitungen ganzrationaler Funktionen sind korrekt?",
+   "optionen": [
+    {
+     "text": "Aus $f(x)=x^5$ folgt $f'(x)=5x^4$.",
+     "richtig": true,
+     "erklaerung": "Potenzregel: Exponent als Faktor nach vorn, Exponent um 1 verringern."
+    },
+    {
+     "text": "Aus $f(x)=7x$ folgt $f'(x)=7$.",
+     "richtig": true,
+     "erklaerung": "Die Ableitung von $7x$ ist die konstante Steigung 7."
+    },
+    {
+     "text": "Aus $f(x)=4$ folgt $f'(x)=4$.",
+     "richtig": false,
+     "erklaerung": "Die Ableitung einer Konstanten ist 0, nicht 4."
+    },
+    {
+     "text": "Aus $f(x)=3x^2$ folgt $f'(x)=6x$.",
+     "richtig": true,
+     "erklaerung": "Faktorregel und Potenzregel: $3\\cdot 2x=6x$."
+    }
+   ],
+   "tipps": [
+    "Potenzregel: $\\left(x^n\\right)'=n\\cdot x^{n-1}$.",
+    "Die Ableitung einer Konstanten ist immer 0.",
+    "Drei Aussagen sind richtig, eine ist falsch."
+   ],
+   "loesungsweg": "Richtig: $\\left(x^5\\right)'=5x^4$, $(7x)'=7$ und $\\left(3x^2\\right)'=6x$. Falsch: die Ableitung der Konstanten $4$ ist $0$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-202",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Gegeben ist $f(x)=2x^3-4x^2+x-5$. Bestimme mit der Potenz-, Faktor- und Summenregel $f'(1)$ und $f'(2)$.",
+   "eingaben": [
+    {
+     "label": "f'(1)",
+     "antwort": -1,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "f'(2)",
+     "antwort": 9,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Leite zunächst summandenweise ab: $f'(x)=6x^2-8x+1$.",
+    "Setze dann $x=1$ ein.",
+    "Setze anschließend $x=2$ ein."
+   ],
+   "loesungsweg": "$f'(x)=6x^2-8x+1$. $f'(1)=6-8+1=-1$. $f'(2)=6\\cdot 4-16+1=24-16+1=9$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-203",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Bestimme für $f(x)=x^2-2x$ die Gleichung der Tangente an der Stelle $x_0=3$. Gib die Steigung $m$ und den y-Achsenabschnitt $b$ der Tangente $y=mx+b$ an.",
+   "eingaben": [
+    {
+     "label": "Steigung m",
+     "antwort": 4,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "y-Achsenabschnitt b",
+     "antwort": -9,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Ableitung $f'(x)=2x-2$, damit $m=f'(3)$.",
+    "$f(3)=3^2-2\\cdot 3=3$, Berührpunkt $P(3\\,|\\,3)$.",
+    "Setze $P$ in $y=mx+b$ ein: $3=4\\cdot 3+b$."
+   ],
+   "loesungsweg": "$f'(x)=2x-2$, also $m=f'(3)=4$. Berührpunkt: $f(3)=3$. Aus $3=4\\cdot 3+b$ folgt $b=3-12=-9$. Tangente: $y=4x-9$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-204",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Gegeben ist $f(x)=x^2-6x+5$. Bestimme die Stelle des Extrempunkts, die zugehörige y-Koordinate und gib an, ob es sich um einen Tiefpunkt handelt (1 für ja, 0 für nein).",
+   "eingaben": [
+    {
+     "label": "x-Stelle des Extrempunkts",
+     "antwort": 3,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "y-Koordinate",
+     "antwort": -4,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "Tiefpunkt? (1 = ja, 0 = nein)",
+     "antwort": 1,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Notwendige Bedingung: $f'(x)=0$ mit $f'(x)=2x-6$.",
+    "Aus $2x-6=0$ folgt $x=3$; dann $f(3)$ berechnen.",
+    "Da $f''(x)=2>0$, ist die Parabel nach oben geöffnet, also ein Tiefpunkt."
+   ],
+   "loesungsweg": "$f'(x)=2x-6=0 \\Rightarrow x=3$. $f(3)=9-18+5=-4$. Wegen $f''(x)=2>0$ liegt ein Tiefpunkt $T(3\\,|\\,-4)$ vor.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-205",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Bestimme die Extrempunkte von $f(x)=x^3-3x^2-9x+5$. Gib die x-Stelle des Hochpunkts und die x-Stelle des Tiefpunkts an.",
+   "eingaben": [
+    {
+     "label": "x-Stelle des Hochpunkts",
+     "antwort": -1,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "x-Stelle des Tiefpunkts",
+     "antwort": 3,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "$f'(x)=3x^2-6x-9=3(x^2-2x-3)=3(x-3)(x+1)$.",
+    "Nullstellen von $f'$: $x=-1$ und $x=3$.",
+    "$f''(x)=6x-6$: bei $x=-1$ negativ (Hochpunkt), bei $x=3$ positiv (Tiefpunkt)."
+   ],
+   "loesungsweg": "$f'(x)=3x^2-6x-9=0 \\Rightarrow x^2-2x-3=0 \\Rightarrow x=-1$ oder $x=3$. $f''(x)=6x-6$: $f''(-1)=-12<0$ (Hochpunkt bei $x=-1$), $f''(3)=12>0$ (Tiefpunkt bei $x=3$).",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-206",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Gegeben ist $f(x)=x^3-6x^2+9x$. Bestimme die x-Stelle und die y-Koordinate des Hochpunkts.",
+   "eingaben": [
+    {
+     "label": "x-Stelle des Hochpunkts",
+     "antwort": 1,
+     "einheit": "",
+     "toleranz": 0.01
+    },
+    {
+     "label": "y-Koordinate des Hochpunkts",
+     "antwort": 4,
+     "einheit": "",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "$f'(x)=3x^2-12x+9=3(x-1)(x-3)$, Nullstellen $x=1$ und $x=3$.",
+    "$f''(x)=6x-12$: bei $x=1$ ist $f''(1)=-6<0$, also Hochpunkt.",
+    "y-Koordinate: $f(1)$ berechnen."
+   ],
+   "loesungsweg": "$f'(x)=3x^2-12x+9=0 \\Rightarrow x=1$ oder $x=3$. $f''(1)=-6<0 \\Rightarrow$ Hochpunkt bei $x=1$. $f(1)=1-6+9=4$, also $H(1\\,|\\,4)$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-207",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Ein rechteckiges Gehege soll mit $24\\,\\text{m}$ Zaun (vier Seiten) umschlossen werden. Mit der Breite $x$ und der Nebenbedingung $2x+2y=24$ ergibt sich die Flächenfunktion $A(x)=x\\cdot(12-x)$ für $0<x<12$. Bestimme die Breite $x$, bei der die Fläche maximal wird, und die maximale Fläche.",
+   "eingaben": [
+    {
+     "label": "optimale Breite x (in m)",
+     "antwort": 6,
+     "einheit": "m",
+     "toleranz": 0.01
+    },
+    {
+     "label": "maximale Fläche (in m^2)",
+     "antwort": 36,
+     "einheit": "m^2",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Multipliziere aus: $A(x)=12x-x^2$.",
+    "Notwendige Bedingung: $A'(x)=12-2x=0$.",
+    "Aus $x=6$ folgt $y=12-6=6$; dann $A(6)$ berechnen."
+   ],
+   "loesungsweg": "$A(x)=12x-x^2$, $A'(x)=12-2x=0 \\Rightarrow x=6$. Wegen $A''(x)=-2<0$ liegt ein Maximum vor. $A(6)=6\\cdot 6=36\\,\\text{m}^2$ (Quadrat mit Seitenlänge $6\\,\\text{m}$).",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-208",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Aus einem quadratischen Stück Pappe mit Seitenlänge $12\\,\\text{cm}$ wird an jeder Ecke ein Quadrat der Seitenlänge $x$ ausgeschnitten und der Rand zu einer offenen Schachtel hochgeklappt. Das Volumen ist $V(x)=x\\cdot(12-2x)^2$ für $0<x<6$. a) Für welches $x$ wird das Volumen maximal? b) Wie groß ist das maximale Volumen?",
+   "eingaben": [
+    {
+     "label": "a) optimales x (in cm)",
+     "antwort": 2,
+     "einheit": "cm",
+     "toleranz": 0.01
+    },
+    {
+     "label": "b) maximales Volumen (in cm^3)",
+     "antwort": 128,
+     "einheit": "cm^3",
+     "toleranz": 0.01
+    }
+   ],
+   "tipps": [
+    "Multipliziere aus: $V(x)=4x^3-48x^2+144x$.",
+    "$V'(x)=12x^2-96x+144=12(x^2-8x+12)=12(x-2)(x-6)$.",
+    "Nur $x=2$ liegt im Bereich $0<x<6$; dann $V(2)$ berechnen."
+   ],
+   "loesungsweg": "$V(x)=4x^3-48x^2+144x$, $V'(x)=12(x-2)(x-6)=0 \\Rightarrow x=2$ (im Bereich) oder $x=6$ (Rand, ausgeschlossen). Bei $x=2$ liegt das Maximum: $V(2)=2\\cdot(12-4)^2=2\\cdot 64=128\\,\\text{cm}^3$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-301",
+   "typ": "freitext",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Tim behauptet: „Wenn $f'(x_0)=0$ gilt, dann hat $f$ an der Stelle $x_0$ immer einen Hoch- oder Tiefpunkt.“ Beurteile diese Aussage. Gib ein Gegenbeispiel an und erkläre den Unterschied zwischen notwendiger und hinreichender Bedingung.",
+   "musterloesung": "Tims Aussage ist falsch. $f'(x_0)=0$ ist nur die <em>notwendige</em> Bedingung für einen Extrempunkt: An jedem Hoch- oder Tiefpunkt verläuft die Tangente zwar waagerecht, aber nicht jede waagerechte Tangente gehört zu einem Extrempunkt. Gegenbeispiel: $f(x)=x^3$ hat $f'(x)=3x^2$, also $f'(0)=0$, aber bei $x=0$ liegt ein Sattelpunkt und kein Extrempunkt — der Graph steigt davor und danach. Ob wirklich ein Extrempunkt vorliegt, entscheidet erst die <em>hinreichende</em> Bedingung: ein Vorzeichenwechsel von $f'$ oder $f''(x_0)\\neq 0$ ($f''(x_0)<0$ Hochpunkt, $f''(x_0)>0$ Tiefpunkt). „Notwendig“ heißt: muss an jedem Extrempunkt gelten, garantiert aber nichts. „Hinreichend“ heißt: ist die Bedingung erfüllt, liegt sicher ein Extrempunkt vor.",
+   "tipps": [
+    "Denke an $f(x)=x^3$ an der Stelle $x=0$.",
+    "Notwendig = gilt an jedem Extrempunkt; hinreichend = sichert den Extrempunkt zu.",
+    "Bei $x^3$ ist $f'(0)=0$, aber es ist ein Sattelpunkt."
+   ],
+   "loesungsweg": "Falsch. $f'(x_0)=0$ ist nur notwendig. Gegenbeispiel $f(x)=x^3$: $f'(0)=0$, aber Sattelpunkt statt Extrempunkt. Erst die hinreichende Bedingung (Vorzeichenwechsel von $f'$ bzw. $f''(x_0)\\neq 0$) sichert einen Hoch- oder Tiefpunkt.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-302",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Aus einem Stück Draht der Länge $20\\,\\text{cm}$ soll ein Rechteck mit größtmöglicher Fläche gebogen werden. Bringe die Schritte zur Lösung dieser Optimierungsaufgabe in die richtige Reihenfolge.",
+   "elemente": [
+    "Nebenbedingung aus dem Umfang aufstellen: $2x+2y=20$, also $y=10-x$",
+    "Zielfunktion auf eine Variable bringen: $A(x)=x\\cdot(10-x)=10x-x^2$",
+    "Definitionsbereich aus dem Sachkontext festlegen: $0<x<10$",
+    "Ableiten und Extremstelle bestimmen: $A'(x)=10-2x=0\\Rightarrow x=5$",
+    "Mit $A''$ prüfen und Antwortsatz formulieren: $A''=-2<0$, größte Fläche $25\\,\\text{cm}^2$"
+   ],
+   "tipps": [
+    "Zuerst brauchst du die Nebenbedingung, um eine der beiden Variablen zu ersetzen.",
+    "Erst danach lässt sich die Zielfunktion mit nur einer Variablen aufstellen und ableiten.",
+    "Die Prüfung mit $f''$ und der Antwortsatz stehen ganz am Ende."
+   ],
+   "loesungsweg": "Reihenfolge: Nebenbedingung $2x+2y=20$, daraus $y=10-x$; Zielfunktion $A(x)=10x-x^2$; Definitionsbereich $0<x<10$; $A'(x)=10-2x=0\\Rightarrow x=5$; $A''=-2<0$ bestätigt das Maximum, $A(5)=25\\,\\text{cm}^2$ (Quadrat mit Seite $5\\,\\text{cm}$).",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-303",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Ordne jeder Bedingung an einer Stelle $x_0$ ihre Bedeutung für den Graphen von $f$ zu.",
+   "paare": [
+    {
+     "links": "$f'(x_0)>0$",
+     "rechts": "Der Graph steigt an dieser Stelle"
+    },
+    {
+     "links": "$f'(x_0)=0$ und $f''(x_0)<0$",
+     "rechts": "Hochpunkt"
+    },
+    {
+     "links": "$f'(x_0)=0$ und $f''(x_0)>0$",
+     "rechts": "Tiefpunkt"
+    },
+    {
+     "links": "$f''(x_0)=0$ mit Vorzeichenwechsel von $f''$",
+     "rechts": "Wendepunkt"
+    }
+   ],
+   "tipps": [
+    "Das Vorzeichen von $f'$ entscheidet über Steigen und Fallen.",
+    "Bei waagerechter Tangente entscheidet $f''$ über Hoch- oder Tiefpunkt.",
+    "Ein Vorzeichenwechsel von $f''$ kennzeichnet einen Wechsel der Krümmung."
+   ],
+   "loesungsweg": "$f'(x_0)>0$ bedeutet steigend. $f'(x_0)=0$ mit $f''(x_0)<0$ ergibt einen Hochpunkt, mit $f''(x_0)>0$ einen Tiefpunkt. $f''(x_0)=0$ mit Vorzeichenwechsel von $f''$ kennzeichnet einen Wendepunkt (Krümmungswechsel).",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-304",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze die Lücken zum Vorgehen bei der Bestimmung von Extrempunkten.",
+   "text": "Für die Extrempunkte einer Funktion $f$ setzt man zuerst die ___ Ableitung gleich null: $f'(x)=0$. Diese Gleichung liefert die ___. Ob wirklich ein Extrempunkt vorliegt, prüft man mit der ___ Ableitung. Ist $f''(x_0)<0$, so liegt ein ___ vor; ist $f''(x_0)>0$, so liegt ein ___ vor.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "erste",
+     "optionen": [
+      "erste",
+      "zweite",
+      "dritte"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Kandidaten",
+     "optionen": [
+      "Kandidaten",
+      "Wendepunkte",
+      "Nullstellen von f"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "zweite",
+     "optionen": [
+      "erste",
+      "zweite",
+      "dritte"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Hochpunkt",
+     "optionen": [
+      "Hochpunkt",
+      "Tiefpunkt",
+      "Sattelpunkt"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Tiefpunkt",
+     "optionen": [
+      "Hochpunkt",
+      "Tiefpunkt",
+      "Sattelpunkt"
+     ]
+    }
+   ],
+   "tipps": [
+    "Die notwendige Bedingung arbeitet mit $f'(x)=0$.",
+    "Die Art des Extrempunkts entscheidet das Vorzeichen von $f''$.",
+    "Merke: $f''<0$ wie eine nach unten geöffnete Parabel — ein Hochpunkt."
+   ],
+   "loesungsweg": "Notwendige Bedingung: erste Ableitung $f'(x)=0$ liefert die Kandidaten. Hinreichende Prüfung mit der zweiten Ableitung: $f''(x_0)<0$ ergibt einen Hochpunkt, $f''(x_0)>0$ einen Tiefpunkt.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-110",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz: Gegeben ist $f(x)=x^4-2x^3+3x^2-5$. a) Bilde die erste Ableitung und berechne $f'(1)$. b) Bilde die zweite Ableitung $f''$ und berechne $f''(1)$ und $f''(0)$.",
+   "eingaben": [
+    {
+     "label": "$f'(1)$",
+     "antwort": 4,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$f''(1)$",
+     "antwort": 6,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$f''(0)$",
+     "antwort": 6,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "Erste Ableitung Glied für Glied mit Potenz-, Faktor- und Summenregel: $f'(x)=4x^3-6x^2+6x$.",
+    "Die zweite Ableitung ist die Ableitung der ersten: $f''(x)=12x^2-12x+6$.",
+    "Setze die Stellen ein, z. B. $f''(0)=12\\cdot 0-12\\cdot 0+6$."
+   ],
+   "loesungsweg": "a) $f'(x)=4x^3-6x^2+6x$ (die Konstante $-5$ fällt weg). $f'(1)=4-6+6=4$. b) $f''(x)=12x^2-12x+6$. $f''(1)=12-12+6=6$ und $f''(0)=6$. Die zweite Ableitung entsteht durch nochmaliges Ableiten und beschreibt das Krümmungsverhalten von $f$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-111",
+   "typ": "luecke",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Ergänze den Merktext zu den Ableitungsregeln und zur zweiten Ableitung.",
+   "text": "Nach der Potenzregel wird beim Ableiten von $x^n$ der ___ als Faktor nach vorne gezogen und anschließend um eins verkleinert. Ein konstanter Vorfaktor bleibt dabei einfach ___. Die Ableitung einer reinen Konstante ist ___. Das Krümmungsverhalten eines Graphen untersucht man mit der ___ Ableitung.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Exponent",
+     "optionen": [
+      "Exponent",
+      "Vorfaktor",
+      "Funktionswert"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "stehen",
+     "optionen": [
+      "stehen",
+      "weg",
+      "ins Quadrat"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "0",
+     "optionen": [
+      "0",
+      "1",
+      "der Funktionswert"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "zweite",
+     "optionen": [
+      "zweite",
+      "erste",
+      "dritte"
+     ]
+    }
+   ],
+   "tipps": [
+    "Potenzregel: $\\left(x^n\\right)'=n\\cdot x^{\\,n-1}$ — was wandert als Faktor nach vorn?",
+    "Bei der Faktorregel $(c\\cdot f)'=c\\cdot f'$ wird der konstante Vorfaktor nicht abgeleitet.",
+    "Eine reine Zahl ohne $x$ hat die Ableitung $0$. Die Ableitung von $f'$ heißt zweite Ableitung."
+   ],
+   "loesungsweg": "Exponent — stehen — 0 — zweite: Bei der Potenzregel kommt der Exponent als Faktor nach vorn. Bei der Faktorregel bleibt der konstante Vorfaktor stehen. Eine konstante Funktion hat die Ableitung $0$. Leitet man $f'$ noch einmal ab, erhält man die zweite Ableitung $f''$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-112",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "ergaenzung": "lernbuero",
+   "frage": "Auffrischung: Leite $f(x)=2x^3-4x+1$ mit Potenz-, Faktor- und Summenregel ab und berechne $f'(2)$ und $f'(-1)$.",
+   "eingaben": [
+    {
+     "label": "$f'(2)$",
+     "antwort": 20,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "$f'(-1)$",
+     "antwort": 2,
+     "toleranz": 0.001,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$(2x^3)'=6x^2$, $(-4x)'=-4$, $(1)'=0$. Also $f'(x)=6x^2-4$.",
+    "$f'(2)=6\\cdot 4-4$.",
+    "$f'(-1)=6\\cdot 1-4=2$."
+   ],
+   "loesungsweg": "$f'(x)=6x^2-4$ (die Konstante $+1$ fällt weg). $f'(2)=6\\cdot 4-4=20$ — an der Stelle $2$ steigt der Graph steil. $f'(-1)=6\\cdot 1-4=2$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-113",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz: Gegeben ist $f(x)=x^2-2x$. Bestimme die Tangente und die Normale im Punkt $P(3\\mid f(3))$.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Berechne $f(3)$ und die Tangentensteigung $m=f'(3)$.",
+     "eingaben": [
+      {
+       "label": "$f(3)$",
+       "antwort": 3,
+       "toleranz": 0,
+       "einheit": ""
+      },
+      {
+       "label": "$m=f'(3)$",
+       "antwort": 4,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$f(3)=3^2-2\\cdot 3$. Ableitung: $f'(x)=2x-2$, also $m=f'(3)$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Bestimme den $y$-Achsenabschnitt $b$ der Tangente $y=mx+b$.",
+     "eingaben": [
+      {
+       "label": "$b$",
+       "antwort": -9,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Punktprobe mit $P(3\\mid 3)$: $3=4\\cdot 3+b$."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Gib die Steigung $m_n$ der Normalen in $P$ an.",
+     "eingaben": [
+      {
+       "label": "$m_n$",
+       "antwort": -0.25,
+       "toleranz": 0.001,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "Die Normale steht senkrecht auf der Tangente: $m_n=-\\frac{1}{m}=-\\frac{1}{4}$."
+     ]
+    }
+   ],
+   "tipps": [
+    "Berührpunkt und Steigung kommen aus $f$ bzw. $f'$.",
+    "Für die Tangente $y=mx+b$ nutzt du die Punktprobe.",
+    "Für die Normale gilt $m_t\\cdot m_n=-1$, also $m_n=-\\frac{1}{m}$."
+   ],
+   "loesungsweg": "Berührpunkt: $f(3)=9-6=3$, also $P(3\\mid 3)$. Steigung: $f'(x)=2x-2$, daher $m=f'(3)=4$. Punktprobe $3=4\\cdot 3+b$ liefert $b=-9$ — Tangente $y=4x-9$. Normalensteigung: $m_n=-\\frac{1}{4}=-0{,}25$. (Ihre Gleichung wäre $y=-0{,}25x+b_n$ mit $3=-0{,}25\\cdot 3+b_n$, also $b_n=3{,}75$.)",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-114",
+   "typ": "numerisch",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "ergaenzung": "lernbuero",
+   "frage": "Gegeben ist $f(x)=x^2+x$. Bestimme im Punkt $P(1\\mid f(1))$: a) die Tangentensteigung $m$, b) den $y$-Achsenabschnitt $b$ der Tangente, c) die Steigung $m_n$ der Normalen.",
+   "eingaben": [
+    {
+     "label": "a) Steigung $m$",
+     "antwort": 3,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "b) $y$-Achsenabschnitt $b$",
+     "antwort": -1,
+     "toleranz": 0.001,
+     "einheit": ""
+    },
+    {
+     "label": "c) Normalensteigung $m_n$",
+     "antwort": -0.3333,
+     "toleranz": 0.01,
+     "einheit": ""
+    }
+   ],
+   "tipps": [
+    "$f(1)=1+1=2$, also $P(1\\mid 2)$. Ableitung: $f'(x)=2x+1$.",
+    "Tangente $y=mx+b$: Punktprobe $2=3\\cdot 1+b$.",
+    "Normale: $m_n=-\\frac{1}{m}=-\\frac{1}{3}\\approx -0{,}33$."
+   ],
+   "loesungsweg": "$f(1)=2$, $f'(x)=2x+1$, also $m=f'(1)=3$. Punktprobe $2=3\\cdot 1+b$ ergibt $b=-1$ — Tangente $y=3x-1$. Normalensteigung: $m_n=-\\frac{1}{3}\\approx -0{,}33$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  },
+  {
+   "id": "ma-ep-ablr-115",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "ergaenzung": "lernbuero",
+   "frage": "Zusatz: Bestimme die Extrempunkte von $f(x)=x^3-3x^2-9x+5$.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Löse die notwendige Bedingung $f'(x)=0$. Gib die kleinere und die größere Lösung an.",
+     "eingaben": [
+      {
+       "label": "kleinere Lösung",
+       "antwort": -1,
+       "toleranz": 0,
+       "einheit": ""
+      },
+      {
+       "label": "größere Lösung",
+       "antwort": 3,
+       "toleranz": 0,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$f'(x)=3x^2-6x-9=3(x^2-2x-3)=3(x+1)(x-3)$. Setze gleich null."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Prüfe mit $f''(x)=6x-6$ die Art der Extrempunkte und gib die $y$-Koordinate des Hochpunkts an.",
+     "eingaben": [
+      {
+       "label": "$y$ des Hochpunkts (bei der kleineren Stelle)",
+       "antwort": 10,
+       "toleranz": 0.001,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$f''(-1)=-12<0$ → Hochpunkt. Berechne $f(-1)=-1-3+9+5$."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Gib die $y$-Koordinate des Tiefpunkts an (bei der größeren Stelle).",
+     "eingaben": [
+      {
+       "label": "$y$ des Tiefpunkts",
+       "antwort": -22,
+       "toleranz": 0.001,
+       "einheit": ""
+      }
+     ],
+     "tipps": [
+      "$f''(3)=12>0$ → Tiefpunkt. Berechne $f(3)=27-27-27+5$."
+     ]
+    }
+   ],
+   "tipps": [
+    "Notwendige Bedingung: $f'(x)=0$ liefert die Kandidaten.",
+    "Hinreichende Bedingung: das Vorzeichen von $f''$ an den Kandidaten unterscheidet Hoch- und Tiefpunkt.",
+    "Setze die Stellen anschließend in $f$ ein, um die $y$-Koordinaten zu erhalten."
+   ],
+   "loesungsweg": "$f'(x)=3x^2-6x-9=3(x+1)(x-3)=0$ liefert $x=-1$ und $x=3$. Mit $f''(x)=6x-6$: $f''(-1)=-12<0$ (Hochpunkt), $f''(3)=12>0$ (Tiefpunkt). $y$-Koordinaten: $f(-1)=-1-3+9+5=10$ und $f(3)=27-27-27+5=-22$. Ergebnis: Hochpunkt $H(-1\\mid 10)$ und Tiefpunkt $T(3\\mid -22)$.",
+   "kc": [
+    "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Einfuehrungsphase, Leitidee Funktionaler Zusammenhang (Ableitungsregeln, Extremwerte)"
+   ]
+  }
+ ]
+}
