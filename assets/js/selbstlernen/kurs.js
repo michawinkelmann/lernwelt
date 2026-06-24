@@ -10,7 +10,8 @@ import { baueAufgabe } from "../aufgaben-engine.js";
 import {
   holeAufgabenStatus, holeLektionStand, setzePhase, setzeCheckpoint, setzeFreigabe,
   setzeAmpel, istLektionFrei, holeTagebuch, ergaenzeTagebuch, entferneTagebuch,
-  holeFeedback, speichereFeedback, exportiereFeedback
+  holeFeedback, speichereFeedback, exportiereFeedback, setzeVorhersage, holeVorhersage,
+  holeRegelheft, ergaenzeRegelheft, entferneRegelheft
 } from "../fortschritt.js";
 
 let KURS = null;
@@ -183,6 +184,7 @@ function rendereLandkarte() {
 
   const reihenfolge = (KURS.bloecke || KURS.wochen || []).flatMap(b => b.lektionen);
   const lektionVon = new Map(KURS.lektionen.map(l => [l.id, l]));
+  if (KURS.landkarte) { const lkEl = baueLernlandkarte(reihenfolge); if (lkEl) wrap.append(lkEl); }
 
   // Themenblöcke (Lernlandkarte gruppiert nach Thema; Rückfall auf wochen)
   const bloecke = KURS.bloecke || KURS.wochen || [];
@@ -218,12 +220,46 @@ function rendereLandkarte() {
 
   // Lerntagebuch
   wrap.append(baueTagebuch(null));
+  wrap.append(baueRegelheft());
 
   // Diskreter Link zum (passwortgeschützten) Lehrkraft-Bereich
   wrap.append(el(`<p class="lb-lehrkraft-link"><a href="lehrkraft.html">🔒 Lehrkraft-Bereich</a></p>`));
 
   HALTER.append(wrap);
   rendereMathe(wrap);
+}
+
+function baueLernlandkarte(reihenfolge) {
+  const lk = KURS.landkarte;
+  if (!lk || !Array.isArray(lk.knoten) || !lk.knoten.length) return null;
+  const NS = "http://www.w3.org/2000/svg";
+  const W = lk.breite || 640, H = lk.hoehe || 320, bw = lk.knotenBreite || 124, bh = lk.knotenHoehe || 42;
+  const det = el(`<details class="lb-lernlandkarte" open><summary>🗺️ Lernlandkarte – der rote Faden</summary></details>`);
+  const svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Lernlandkarte: Themenübersicht mit deinem Fortschritt");
+  svg.style.cssText = "width:100%;height:auto;display:block;background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--radius);margin-top:.5rem";
+  const pos = new Map(lk.knoten.map(n => [n.id, n]));
+  let s = "";
+  (lk.kanten || []).forEach(([a, b]) => { const A = pos.get(a), B = pos.get(b); if (A && B) s += `<line x1="${A.x}" y1="${A.y}" x2="${B.x}" y2="${B.y}" stroke="var(--linie)" stroke-width="2"/>`; });
+  lk.knoten.forEach(n => {
+    let fill = "var(--hauch)", rand = "var(--linie)", tf = "var(--text-leise)", klick = "";
+    if (n.lektion) {
+      const st = holeLektionStand(KURS_ID, n.lektion);
+      const frei = istLektionFrei(KURS_ID, reihenfolge, reihenfolge.indexOf(n.lektion));
+      if (st.checkpoint) { fill = "var(--ok)"; tf = "#fff"; rand = "var(--ok)"; }
+      else if (frei) { fill = "var(--flaeche)"; rand = "var(--akzent)"; tf = "var(--text)"; }
+      klick = ` data-lektion="${esc(n.lektion)}" style="cursor:pointer"`;
+    }
+    const teile = String(n.label).split("\n");
+    const txt = teile.map((t, i) => `<text x="${n.x}" y="${n.y + 4 + (i - (teile.length - 1) / 2) * 14}" text-anchor="middle" font-size="12" fill="${tf}">${esc(t)}</text>`).join("");
+    s += `<g${klick}><rect x="${n.x - bw / 2}" y="${n.y - bh / 2}" width="${bw}" height="${bh}" rx="9" fill="${fill}" stroke="${rand}" stroke-width="2"/>${txt}</g>`;
+  });
+  svg.innerHTML = s;
+  svg.querySelectorAll("g[data-lektion]").forEach(g => g.addEventListener("click", () => gehe("#lektion-" + g.dataset.lektion)));
+  det.append(svg);
+  det.append(el(`<p class="lb-phase-hinweis">Tipp: Tippe auf ein freigeschaltetes Feld, um direkt zur Lektion zu springen. <span style="color:var(--ok)">Grün</span> = abgeschlossen.</p>`));
+  return det;
 }
 
 function baueLektionsKarte(l, index, reihenfolge) {
@@ -298,6 +334,7 @@ function rendereLektion(lektionId) {
     <h2 class="lb-lektion-h2" data-lb-fokus tabindex="-1">Lektion ${l.nr}: ${esc(l.titel)}</h2>
     <p class="lb-untertitel">${KURS.titel} · Lernbüro · ${l.dauer}′</p>
     <ul class="lb-ziele">${l.ziele.map(z => `<li><span>${z.replace(/^Ich kann\s+/, "")}</span></li>`).join("")}</ul>
+    <p class="lb-ziel-transparenz">Die <strong>Basis-Aufgaben</strong> sind dein Pflichtziel. <strong>Standard</strong> und <strong>Plus</strong> bringen dich weiter – für „🟢 sicher“ in der Ampel solltest du auch die Standard-Aufgaben schaffen.</p>
   </div>`);
   // Lernbüro 2.0: KC-Kompetenzen (optional, abwärtskompatibel)
   if (Array.isArray(l.kompetenzen) && l.kompetenzen.length) {
@@ -395,7 +432,7 @@ function baueFigur(svg, alt) {
   return f;
 }
 
-function baueEinstieg(e) {
+function baueEinstieg(e, l) {
   const box = el(`<div class="lb-einstieg"><span class="lb-etikett">💡 Worum geht’s?</span></div>`);
   if (e.problem) box.append(el(`<div class="lb-einstieg-text">${e.problem}</div>`));
   if (e.figur) box.append(baueFigur(e.figur, e.figurAlt));
@@ -408,6 +445,7 @@ function baueEinstieg(e) {
         const b = el(`<button type="button" class="lb-tipp-knopf" aria-pressed="false">${esc(opt)}</button>`);
         b.addEventListener("click", () => {
           grp.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+          if (l) setzeVorhersage(KURS_ID, l.id, opt);
           status.textContent = "Notiert. Am Ende der Lektion (Sichern) prüfst du deine Vermutung.";
         });
         grp.append(b);
@@ -446,6 +484,75 @@ function baueDarstellungen(d) {
   return box;
 }
 
+function rendereErkunden(daten, koerper) {
+  const erkunden = Array.isArray(daten.erkunden) ? daten.erkunden : (daten.erkunden ? [daten.erkunden] : []);
+  erkunden.forEach(e => {
+      const istExp = e.typ === "experiment" || e.typ === "real";
+      const card = el(`<div class="lb-erkunden ${istExp ? "exp" : "sim"}"><span class="lb-etikett">${istExp ? "🧪 Real-Experiment" : "🔬 Simulation"}: ${esc(e.titel || "")}</span></div>`);
+      if (e.hinweis) card.append(el(`<p class="lb-erkunden-hinweis">${e.hinweis}</p>`));
+      if (e.material) card.append(el(`<p class="lb-erkunden-material"><strong>Material:</strong> ${e.material}</p>`));
+      if (e.vorhersage) card.append(el(`<div class="lb-poe-vorhersage"><strong>Erst vorhersagen:</strong> ${e.vorhersage}</div>`));
+      if (e.pfad) card.append(el(`<p><a class="knopf zweitrangig klein" href="${url(e.pfad)}">${e.linkLabel || (istExp ? "Versuchsanleitung öffnen" : "Simulation öffnen")} ↗</a></p>`));
+      if (Array.isArray(e.auftraege) && e.auftraege.length) {
+        const ul = el(`<ul class="lb-auftraege"></ul>`);
+        e.auftraege.forEach(a => ul.append(el(`<li>${a}</li>`)));
+        card.append(el(`<p class="lb-poe-label"><strong>${istExp ? "Durchführen & beobachten:" : "Beobachtungsaufträge:"}</strong></p>`), ul);
+      }
+      if (e.interaktiv) {
+        const iid = typeof e.interaktiv === "string" ? e.interaktiv : e.interaktiv.id;
+        const ititel = (e.interaktiv && e.interaktiv.titel) ? e.interaktiv.titel : "Messwerte auswerten";
+        const ik = el(`<div class="lb-erkunden-mess"><span class="lb-etikett">🔬 ${esc(ititel)}</span><div class="lb-interaktiv" aria-busy="true"><p class="lb-phase-hinweis">Element wird geladen …</p></div></div>`);
+        const ip = (e.interaktiv && typeof e.interaktiv === "object") ? (e.interaktiv.params || {}) : {};
+        card.append(ik);
+        bindeInteraktivEin(ik.querySelector(".lb-interaktiv"), iid, ip);
+      }
+      koerper.append(card);
+  });
+}
+
+function zahlAusEingabe(text) {
+  const t = String(text).trim().replace(",", ".");
+  if (!/^[+-]?(\d+(\.\d*)?|\.\d+)$/.test(t)) return null;
+  return parseFloat(t);
+}
+// Interaktive Blütenaufgabe: gemeinsamer Kontext + gestufte Blätter (a–d) mit Eingabefeld + Prüfen je Teil.
+function baueBluete(b) {
+  const box = el(`<div class="lb-bluete"><span class="lb-etikett">🌸 Aufgabe rund um einen Kontext</span></div>`);
+  if (b.kontext) box.append(el(`<div class="lb-bluete-kontext">${b.kontext}</div>`));
+  if (b.figur) box.append(baueFigur(b.figur, b.figurAlt));
+  (b.blaetter || []).forEach(bl => {
+    const blatt = el(`<div class="lb-bluete-blatt"></div>`);
+    blatt.append(el(`<p class="lb-bluete-frage"><span class="lb-bluete-label">${esc(bl.label || "")}</span> ${bl.frage || ""}</p>`));
+    const felder = Array.isArray(bl.felder) ? bl.felder : (bl.antwort != null ? [{ antwort: bl.antwort, toleranz: bl.toleranz, einheit: bl.einheit }] : []);
+    if (felder.length) {
+      const zeile = el(`<div class="lb-bluete-eingabe"></div>`);
+      const inputs = felder.map((fld, i) => {
+        const lab = el(`<label class="lb-bluete-feld">${fld.label ? esc(fld.label) + " " : ""}<input type="text" inputmode="decimal" autocomplete="off" aria-label="Antwort ${esc(bl.label || "")} Feld ${i + 1}">${fld.einheit ? " " + esc(fld.einheit) : ""}</label>`);
+        zeile.append(lab);
+        return lab.querySelector("input");
+      });
+      const knopf = el(`<button type="button" class="knopf klein">Prüfen</button>`);
+      const status = el(`<span class="lb-bluete-status" role="status"></span>`);
+      knopf.addEventListener("click", () => {
+        let ok = true;
+        felder.forEach((fld, i) => {
+          const w = zahlAusEingabe(inputs[i].value);
+          const gut = w !== null && Math.abs(w - fld.antwort) <= (fld.toleranz || 0) + 1e-9;
+          inputs[i].style.borderColor = gut ? "var(--ok)" : "var(--fehler)";
+          inputs[i].setAttribute("aria-invalid", String(!gut));
+          if (!gut) ok = false;
+        });
+        status.innerHTML = ok ? '<strong style="color:var(--ok)">✓ richtig!</strong>' : '<strong style="color:var(--fehler)">✗ noch nicht – probier es nochmal oder sieh die Lösung.</strong>';
+      });
+      zeile.append(knopf, status);
+      blatt.append(zeile);
+    }
+    if (bl.loesung) blatt.append(el(`<details class="lb-mehr"><summary>Lösung</summary><div class="lb-mehr-koerper">${bl.loesung}</div></details>`));
+    box.append(blatt);
+  });
+  return box;
+}
+
 function bauePhase(l, key, label, pflicht, daten) {
   const sec = el(`<section class="lb-phase" data-phase="${key}">
     <div class="lb-phase-kopf">
@@ -468,11 +575,13 @@ function bauePhase(l, key, label, pflicht, daten) {
     if (daten.hinweis) koerper.append(el(`<p class="lb-phase-hinweis">${esc(daten.hinweis)}</p>`));
     koerper.append(rendereAufgaben(daten.aufgaben, l.id + "-ank"));
     // Problemorientierter Einstieg mit Anschauung und Vorhersage
-    if (daten.einstieg) koerper.append(baueEinstieg(daten.einstieg));
+    if (daten.einstieg) koerper.append(baueEinstieg(daten.einstieg, l));
   }
   else if (key === "verstehen") {
     const neuFormat = Array.isArray(daten.schritte) && daten.schritte.some(s => s.kern);
     if (daten.text) koerper.append(el(`<p class="lb-phase-hinweis">${esc(daten.text)}</p>`));
+    if (daten.vorueberlegung) koerper.append(el(`<div class="lb-vorueberlegung"><span class="lb-etikett">🧠 Vorüberlegungen</span><div class="lb-vorueberlegung-text">${daten.vorueberlegung}</div></div>`));
+    if (daten.erkundenZuerst) rendereErkunden(daten, koerper);
     if (!neuFormat) {
       const eHalter = el(`<div class="lb-erklaer" aria-busy="true"><p class="lb-phase-hinweis">Abschnitt wird geladen …</p></div>`);
       koerper.append(eHalter);
@@ -514,25 +623,32 @@ function bauePhase(l, key, label, pflicht, daten) {
       }
       if (daten.erklaerseite && l.themaPfad) koerper.append(el(`<p class="lb-erklaer-knopf"><a href="${url(l.themaPfad + "index.html" + (daten.anker || ""))}" target="_blank" rel="noopener">Ausführliche Erklärseite mit interaktiven Elementen öffnen ↗</a></p>`));
     }
-    // Merksatz
-    if (daten.merksatz) koerper.append(el(`<div class="lb-merksatz"><span class="lb-etikett">📌 Merksatz</span><div>${daten.merksatz}</div></div>`));
+    // Merksatz (mit Knopf „In mein Regelheft" – Dokumentation/Vernetzung)
+    if (daten.merksatz) {
+      const mk = el(`<div class="lb-merksatz"><span class="lb-etikett">📌 Merksatz</span><div class="lb-merksatz-text">${daten.merksatz}</div></div>`);
+      const merkBtn = el(`<button type="button" class="knopf zweitrangig klein lb-regelheft-add">📒 In mein Regelheft</button>`);
+      merkBtn.addEventListener("click", () => {
+        if (ergaenzeRegelheft({ kurs: KURS_ID, lektion: l.id, titel: "Lektion " + l.nr + ": " + l.titel, html: daten.merksatz })) {
+          merkBtn.textContent = "✓ Im Regelheft"; merkBtn.disabled = true;
+        } else { merkBtn.textContent = "✓ schon im Regelheft"; merkBtn.disabled = true; }
+      });
+      mk.append(merkBtn);
+      koerper.append(mk);
+    }
+    // Problemlöse-Strategien (Heurismen) – optional
+    if (Array.isArray(daten.heurismen) && daten.heurismen.length) {
+      const hb = el(`<div class="lb-heurismen"><span class="lb-etikett">🧠 Problemlöse-Strategien</span></div>`);
+      const ul = el(`<ul></ul>`);
+      daten.heurismen.forEach(h => ul.append(el(`<li>${h}</li>`)));
+      hb.append(ul);
+      koerper.append(hb);
+    }
+    // „Für die Lehrkraft"-Block (Lernaufgabe): einklappbar, Hinweise/Lösungen/Modellgrenzen
+    if (daten.lehrkraft) koerper.append(el(`<details class="lb-lehrkraft"><summary>👩‍🏫 Für die Lehrkraft</summary><div class="lb-lehrkraft-koerper">${daten.lehrkraft}</div></details>`));
     // Selbsterklärung (Metakognition) – nur neues Format
     if (daten.selbsterklaerung) koerper.append(el(`<div class="lb-selbsterklaerung"><span class="lb-etikett">🗣️ In eigenen Worten</span><p>${daten.selbsterklaerung}</p></div>`));
-    // POE-Erkunden: Simulation und/oder Realexperiment (Vorhersagen → Beobachten → Erklären)
-    const erkunden = Array.isArray(daten.erkunden) ? daten.erkunden : (daten.erkunden ? [daten.erkunden] : []);
-    erkunden.forEach(e => {
-      const istExp = e.typ === "experiment" || e.typ === "real";
-      const card = el(`<div class="lb-erkunden ${istExp ? "exp" : "sim"}"><span class="lb-etikett">${istExp ? "🧪 Real-Experiment" : "🔬 Simulation"}: ${esc(e.titel || "")}</span></div>`);
-      if (e.material) card.append(el(`<p class="lb-erkunden-material"><strong>Material:</strong> ${e.material}</p>`));
-      if (e.vorhersage) card.append(el(`<div class="lb-poe-vorhersage"><strong>Erst vorhersagen:</strong> ${e.vorhersage}</div>`));
-      if (e.pfad) card.append(el(`<p><a class="knopf zweitrangig klein" href="${url(e.pfad)}">${istExp ? "Anleitung öffnen" : "Simulation öffnen"} ↗</a></p>`));
-      if (Array.isArray(e.auftraege) && e.auftraege.length) {
-        const ul = el(`<ul class="lb-auftraege"></ul>`);
-        e.auftraege.forEach(a => ul.append(el(`<li>${a}</li>`)));
-        card.append(el(`<p class="lb-poe-label"><strong>${istExp ? "Durchführen & beobachten:" : "Beobachtungsaufträge:"}</strong></p>`), ul);
-      }
-      koerper.append(card);
-    });
+    // POE-Erkunden (Position über daten.erkundenZuerst steuerbar)
+    if (!daten.erkundenZuerst) rendereErkunden(daten, koerper);
     // Selbstcheck (verstanden?) – Fragen mit aufklappbarer Antwort
     if (Array.isArray(daten.selbstcheck) && daten.selbstcheck.length) {
       const box = el(`<div class="lb-selbstcheck"><span class="lb-etikett">✅ Selbstcheck – verstanden?</span></div>`);
@@ -541,6 +657,8 @@ function bauePhase(l, key, label, pflicht, daten) {
     }
   }
   else if (key === "ueben") {
+    // Blütenaufgabe: gemeinsamer Kontext über Basis/Standard/Plus (selbstdifferenzierend)
+    if (daten.bluete) koerper.append(baueBluete(daten.bluete));
     SPUREN.forEach(([s, slabel, sinfo]) => {
       const groups = daten[s] || [];
       const luecke = daten[s + "Luecke"];
@@ -559,6 +677,8 @@ function bauePhase(l, key, label, pflicht, daten) {
   else if (key === "sichern") {
     // Rückbezug auf die Einstiegsfrage (Soll-Ist, schließt den roten Faden)
     if (daten.rueckbezug) koerper.append(el(`<div class="lb-rueckbezug"><span class="lb-etikett">🎯 Zurück zur Einstiegsfrage</span><div class="lb-rueckbezug-text">${daten.rueckbezug}</div></div>`));
+    const poeVh = holeVorhersage(KURS_ID, l.id);
+    if (poeVh) koerper.append(el(`<div class="lb-poe-rueckblick"><span class="lb-etikett">🔮 Deine Vorhersage</span><p>Am Anfang hast du <strong>${esc(poeVh)}</strong> vermutet. Passt das zu deinem Ergebnis? Begründe in einem Satz.</p></div>`));
     koerper.append(rendereAufgaben(daten.aufgaben, l.id + "-sich"));
     if (daten.transfer) koerper.append(el(`<div class="lb-beobachtung"><span class="lb-etikett">💭 Transferfrage</span><p>${daten.transfer}</p></div>`));
   }
@@ -575,6 +695,14 @@ function bauePhase(l, key, label, pflicht, daten) {
 
 function baueAmpel(l) {
   const stand = holeLektionStand(KURS_ID, l.id);
+  // Adaptives Routing (Selbsteinschätzung → naechster Schritt): Links zur Erklaerstelle und zu Uebungen.
+  const verstehen = l.phasen && l.phasen.verstehen;
+  const vAnker = (verstehen && verstehen.anker) ? verstehen.anker : "";
+  const erklaerLink = l.themaPfad ? url(l.themaPfad + "index.html" + vAnker) : "";
+  const uebenLink = l.themaPfad ? url(l.themaPfad + "uebungen.html") : "";
+  const routing = (erklaerLink || uebenLink)
+    ? ` <span class="lb-ampel-routing">${erklaerLink ? `<a href="${erklaerLink}" target="_blank" rel="noopener">Erklärung ansehen ↗</a>` : ""}${erklaerLink && uebenLink ? " · " : ""}${uebenLink ? `<a href="${uebenLink}" target="_blank" rel="noopener">gezielt üben ↗</a>` : ""}</span>`
+    : "";
   const sec = el(`<section class="lb-ampel" aria-label="Selbsteinschätzung">
     <h2>🚦 Wie sicher fühlst du dich?</h2></section>`);
   l.ziele.forEach((ziel, i) => {
@@ -587,9 +715,9 @@ function baueAmpel(l) {
     const optionen = [["gruen", "🟢", "sicher"], ["gelb", "🟡", "unsicher"], ["rot", "🔴", "brauche Hilfe"]];
     const setze = wert => {
       knoepfe.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.wert === wert)));
-      if (wert === "gruen") hinweis.textContent = "Stark – weiter so!";
-      else if (wert === "gelb") hinweis.innerHTML = "Übe dieses Ziel mit einer <strong>Plus-Aufgabe</strong> oder lies den Abschnitt noch einmal.";
-      else hinweis.innerHTML = '<strong>Hol die Lehrkraft.</strong> Schreib deine Frage unten ins Lerntagebuch, dann geht sie nicht verloren.';
+      if (wert === "gruen") hinweis.innerHTML = "Stark – weiter so! Wenn du magst, festige es mit einer <strong>Plus-Aufgabe</strong>.";
+      else if (wert === "gelb") hinweis.innerHTML = "Fast sicher – so kommst du weiter:" + (routing || " Lies den Abschnitt noch einmal und übe eine Aufgabe mehr.");
+      else hinweis.innerHTML = "<strong>Hol dir Hilfe</strong> und schreib deine Frage unten ins Lerntagebuch (geht nicht verloren)." + (routing ? " Davor hilft vielleicht:" + routing : "");
     };
     optionen.forEach(([w, sym, txt]) => {
       const b = el(`<button type="button" class="lb-ampel-knopf ${w}" data-wert="${w}" aria-pressed="${stand.ampel[i] === w}">${sym} ${txt}</button>`);
@@ -652,6 +780,26 @@ function baueTagebuch(lektion) {
     ev.preventDefault();
     if (ergaenzeTagebuch({ text: eingabe.value, kurs: KURS_ID, lektion: lektion ? lektion.id : "" })) { eingabe.value = ""; zeichne(); }
   });
+  zeichne();
+  return sec;
+}
+
+// ---------- Mein Regelheft (gesammelte Merksätze, geteilt) ----------
+function baueRegelheft() {
+  const sec = el(`<details class="lb-regelheft"><summary>📒 Mein Regelheft (gesammelte Merksätze)</summary><div class="lb-regelheft-koerper"></div></details>`);
+  const koerper = sec.querySelector(".lb-regelheft-koerper");
+  const zeichne = () => {
+    const eintraege = holeRegelheft().filter(e => e.kurs === KURS_ID).reverse();
+    koerper.innerHTML = "";
+    if (!eintraege.length) { koerper.append(el(`<p class="lb-leer">Noch keine Merksätze gesammelt. Tippe in einer Lektion beim Merksatz auf „In mein Regelheft".</p>`)); return; }
+    eintraege.forEach(e => {
+      const eintrag = el(`<div class="lb-regelheft-eintrag"><div class="lb-regelheft-titel"></div><div class="lb-regelheft-satz">${e.html}</div><button type="button" class="lb-tagebuch-loeschen" aria-label="Aus Regelheft entfernen" title="Entfernen">×</button></div>`);
+      eintrag.querySelector(".lb-regelheft-titel").textContent = e.titel || "";
+      eintrag.querySelector("button").addEventListener("click", () => { entferneRegelheft(e.id); zeichne(); });
+      koerper.append(eintrag);
+    });
+    rendereMathe(koerper);
+  };
   zeichne();
   return sec;
 }

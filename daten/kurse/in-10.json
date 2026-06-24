@@ -2562,7 +2562,50 @@
        ]
       }
      ],
-     "partner": "Erklärt euch gegenseitig: Warum funktioniert die binäre Suche auf einer unsortierten Liste nicht — auch wenn ihr wolltet?"
+     "partner": "Erklärt euch gegenseitig: Warum funktioniert die binäre Suche auf einer unsortierten Liste nicht — auch wenn ihr wolltet?",
+     "bluete": {
+      "kontext": "<p><strong>Im sortierten Telefonbuch suchen.</strong> Die binäre Suche halbiert nach jedem Vergleich den Suchbereich. Bei <em>n</em> Einträgen braucht sie höchstens etwa log<sub>2</sub>(<em>n</em>) Vergleiche. Arbeite dich Schritt für Schritt vor.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Eine sortierte Liste hat 64 Einträge. Wie viele Vergleiche braucht die binäre Suche höchstens?",
+        "felder": [
+         {
+          "antwort": 6,
+          "einheit": "Vergleiche"
+         }
+        ],
+        "loesung": "Halbieren von 64: 64 → 32 → 16 → 8 → 4 → 2 → 1, das sind 6 Schritte. Es gilt log₂(64) = 6."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie viele Einträge kann die binäre Suche mit höchstens 10 Vergleichen sicher durchsuchen?",
+        "felder": [
+         {
+          "antwort": 1024,
+          "einheit": "Einträge"
+         }
+        ],
+        "loesung": "Mit 10 Halbierungen erreicht man 2^10 = 1024 Einträge. Darum genügen für 1000 Einträge ungefähr 10 Vergleiche."
+       },
+       {
+        "label": "c)",
+        "frage": "Die lineare Suche prüft im schlechtesten Fall jeden Eintrag einzeln. Wie viele Vergleiche braucht sie bei 64 Einträgen höchstens?",
+        "felder": [
+         {
+          "antwort": 64,
+          "einheit": "Vergleiche"
+         }
+        ],
+        "loesung": "Die lineare Suche geht im schlechtesten Fall alle 64 Einträge durch, also 64 Vergleiche – gegenüber 6 bei der binären Suche."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Knifflig:</em> Verdoppelt man die Anzahl der Einträge von 1000 auf 2000, wie verändert sich die Zahl der Vergleiche bei der binären Suche – und warum ist das anders als bei der linearen Suche?",
+        "loesung": "Bei der binären Suche kommt nur ein einziger Vergleich hinzu (eine weitere Halbierung): aus etwa 10 werden etwa 11. Bei der linearen Suche verdoppelt sich der Aufwand dagegen mit (von ~1000 auf ~2000). Logarithmisches Wachstum reagiert auf Verdopplung also nur mit „+1\"."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -2977,7 +3020,51 @@
        ]
       }
      ],
-     "partner": "Erklärt euch: Warum sortiert man eine Liste nicht mit binärer Suche — und was sortiert man stattdessen mit Bubble Sort?"
+     "partner": "Erklärt euch: Warum sortiert man eine Liste nicht mit binärer Suche — und was sortiert man stattdessen mit Bubble Sort?",
+     "bluete": {
+      "kontext": "<p><strong>Spielkarten sortieren.</strong> Bubble Sort vergleicht im schlechtesten Fall etwa <em>n</em>·(<em>n</em>−1)/2 Mal benachbarte Elemente. Arbeite dich Schritt für Schritt vor – nutze die Formel.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Wie viele Vergleiche braucht Bubble Sort im schlechtesten Fall bei 5 Karten?",
+        "felder": [
+         {
+          "antwort": 10,
+          "einheit": "Vergleiche"
+         }
+        ],
+        "loesung": "n·(n−1)/2 = 5·4/2 = 10 Vergleiche."
+       },
+       {
+        "label": "b)",
+        "frage": "Und bei 10 Karten?",
+        "felder": [
+         {
+          "antwort": 45,
+          "einheit": "Vergleiche"
+         }
+        ],
+        "loesung": "10·9/2 = 45 Vergleiche."
+       },
+       {
+        "label": "c)",
+        "frage": "Um welchen Faktor ist der Aufwand von 5 auf 10 Karten ungefähr gestiegen?",
+        "felder": [
+         {
+          "antwort": 4.5,
+          "toleranz": 0.1,
+          "einheit": "(Faktor)"
+         }
+        ],
+        "loesung": "45 : 10 = 4,5. Beim Verdoppeln von n steigt der Aufwand also etwa auf das Vierfache – typisch für quadratisches Wachstum (n²)."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Knifflig:</em> Für 1000 Karten bräuchte Bubble Sort rund 500 000 Vergleiche, die binäre Suche dagegen nur etwa 10 Vergleiche zum Finden. Warum ist dieser Vergleich trotzdem unfair?",
+        "loesung": "Sortieren und Suchen sind verschiedene Aufgaben: Bubble Sort ordnet die ganze Liste, die binäre Suche findet nur einen Eintrag – und setzt eine bereits sortierte Liste voraus. Fair vergleichbar sind nur Algorithmen, die dasselbe Problem lösen. Der eigentliche Punkt: quadratischer Aufwand wächst viel schneller als logarithmischer."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -7160,5 +7247,88 @@
     "l30b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Programmieren",
+    "x": 75,
+    "y": 60,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Verschlüsselung",
+    "x": 75,
+    "y": 210,
+    "lektion": "l6"
+   },
+   {
+    "id": "k3",
+    "label": "Suchen & Sortieren",
+    "x": 290,
+    "y": 60,
+    "lektion": "l11"
+   },
+   {
+    "id": "k4",
+    "label": "Aufwand zählen",
+    "x": 290,
+    "y": 210,
+    "lektion": "l14"
+   },
+   {
+    "id": "k5",
+    "label": "Endliche Automaten",
+    "x": 500,
+    "y": 60,
+    "lektion": "l16"
+   },
+   {
+    "id": "k6",
+    "label": "Automatisierung & KI",
+    "x": 500,
+    "y": 150,
+    "lektion": "l21"
+   },
+   {
+    "id": "k7",
+    "label": "Steuern & Regeln",
+    "x": 500,
+    "y": 240,
+    "lektion": "l26"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k1",
+    "k3"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k3",
+    "k5"
+   ],
+   [
+    "k5",
+    "k6"
+   ],
+   [
+    "k6",
+    "k7"
+   ]
+  ]
+ }
 }

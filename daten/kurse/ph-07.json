@@ -397,8 +397,10 @@
        "auftraege": [
         "Baue den Stromkreis und schalte das Amperemeter in Reihe vor das Lämpchen – notiere den angezeigten Wert mit Einheit.",
         "Lies ab, ob das Gerät in A oder mA anzeigt, und rechne den Wert in die jeweils andere Einheit um.",
-        "Setze das Amperemeter an eine zweite Stelle des Kreises (z. B. hinter das Lämpchen): Zeigt es denselben Wert? Erkläre, warum."
-       ]
+        "Setze das Amperemeter an eine zweite Stelle des Kreises (z. B. hinter das Lämpchen): Zeigt es denselben Wert? Erkläre, warum.",
+        "Miss die Stromstärke an <strong>zwei</strong> Stellen im Kreis (vor und hinter dem Lämpchen) und vergleiche die beiden Werte. Was bedeutet dein Ergebnis für die Aussage „Strom wird verbraucht“?"
+       ],
+       "vorhersage": "Du misst die Stromstärke einmal <strong>vor</strong> und einmal <strong>hinter</strong> dem Lämpchen. Was vermutest du: Ist der zweite Wert kleiner, gleich groß oder größer? Notiere deine Vorhersage, bevor du misst."
       }
      ],
      "interaktiv": {
@@ -408,7 +410,10 @@
        "modus": "schalter",
        "U": 12
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, klären wir eine häufige Vermutung: Viele denken, der Strom werde im Lämpchen „aufgebraucht“ und sei <strong>hinter</strong> dem Lämpchen schwächer als <strong>davor</strong>. Wir prüfen genau das: Wir bauen das Amperemeter einmal <strong>vor</strong> und einmal <strong>hinter</strong> dem Lämpchen ein und vergleichen die Stromstärke $I$. Unsere physikalische Erwartung: In einem unverzweigten Stromkreis ist die Stromstärke <strong>überall gleich groß</strong>.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Amperemeter in Reihe schalten und ablesen; einfachen Stromkreis aufbauen.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Vermutung gezielt prüfen), Kommunikation (Messwerte vergleichen und deuten), Bewerten einer Alltagsvorstellung.</p><p><strong>Erwartung:</strong> Beide Messwerte sind (im Rahmen der Ablesegenauigkeit) gleich groß. Daraus folgt: Strom wird nicht verbraucht; gleich viel Ladung fließt pro Sekunde hin und zurück.</p><p><strong>Modellgrenzen:</strong> Gilt für den unverzweigten Kreis. In verzweigten Schaltungen (später) teilt sich die Stromstärke auf. „Verbraucht“ wird ohnehin nicht der Strom, sondern Energie.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 20,
@@ -585,7 +590,7 @@
       ]
      },
      "selbsterklaerung": "Erkläre in einem Satz den Unterschied: Was „fließt“ im Stromkreis, und was „liegt nur an“?",
-     "merksatz": "Die <strong>Spannung $U$</strong> (Einheit <strong>Volt</strong>, V) ist der <strong>Antrieb</strong> für den Strom; sie liegt <strong>zwischen zwei Punkten</strong> an und „fließt“ nicht. Gemessen wird sie mit dem <strong>Voltmeter parallel</strong>. In Reihe geschaltete Quellen addieren ihre Spannungen.",
+     "merksatz": "Die <strong>Spannung $U$</strong> (Einheit <strong>Volt</strong>, V) ist der <strong>Antrieb</strong> für den Strom; sie liegt <strong>zwischen zwei Punkten</strong> an und „fließt“ nicht. Gemessen wird sie mit dem <strong>Voltmeter parallel</strong>. In Reihe geschaltete Quellen addieren ihre Spannungen. <em>(Die Quelle heißt deshalb genauer <strong>Spannungsquelle</strong>: Sie liefert die Spannung, nicht „den Strom“.)</em>",
      "selbstcheck": [
       {
        "frage": "Nenne Formelzeichen, Einheit und Aufgabe der Spannung.",
@@ -2055,7 +2060,50 @@
        ]
       }
      ],
-     "partner": "Sammelt gemeinsam: Welche drei Energiespar-Massnahmen könntet ihr zuhause sofort umsetzen? Welche hängt mit Entwertung zusammen?"
+     "partner": "Sammelt gemeinsam: Welche drei Energiespar-Massnahmen könntet ihr zuhause sofort umsetzen? Welche hängt mit Entwertung zusammen?",
+     "bluete": {
+      "kontext": "<p><strong>Lampen vergleichen.</strong> In einem Flur brennt das Licht jeden Tag $5\\ \\text{Stunden}$. Eine alte Glühlampe hat die Leistung $60\\ \\text{W}$, eine moderne LED-Lampe nur $6\\ \\text{W}$ bei gleicher Helligkeit. Es gilt $E = P \\cdot t$; die übertragene Energie in Wattstunden ist Leistung mal Zeit.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Wie viele Wattstunden Energie überträgt die alte Glühlampe an einem Tag (5 Stunden)?",
+        "felder": [
+         {
+          "antwort": 300,
+          "einheit": "Wh"
+         }
+        ],
+        "loesung": "$E = P \\cdot t = 60\\ \\text{W} \\cdot 5\\ \\text{h} = 300\\ \\text{Wh}$."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie viele Wattstunden überträgt die LED-Lampe an einem Tag?",
+        "felder": [
+         {
+          "antwort": 30,
+          "einheit": "Wh"
+         }
+        ],
+        "loesung": "$E = 6\\ \\text{W} \\cdot 5\\ \\text{h} = 30\\ \\text{Wh}$."
+       },
+       {
+        "label": "c)",
+        "frage": "Wie viele Wattstunden Energie spart die LED an einem Tag gegenüber der Glühlampe?",
+        "felder": [
+         {
+          "antwort": 270,
+          "einheit": "Wh"
+         }
+        ],
+        "loesung": "$300\\ \\text{Wh} - 30\\ \\text{Wh} = 270\\ \\text{Wh}$ pro Tag."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Beide Lampen machen gleich viel Licht. Wohin geht dann die zusätzliche Energie der Glühlampe – und was bedeutet das für „Energiesparen“?",
+        "loesung": "Die Glühlampe gibt den größten Teil als <strong>Wärme</strong> ab (sie wird heiß) – diese Energie ist für die Beleuchtung entwertet. „Energiesparen“ heißt hier: unnötige Entwertung in Wärme vermeiden, indem man die LED nimmt. Verloren geht die Energie nie, aber sie wird weniger nutzbar."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 4,
@@ -2488,5 +2536,95 @@
     "l10b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Stromkreis",
+    "x": 80,
+    "y": 55,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Stromstärke I",
+    "x": 235,
+    "y": 55,
+    "lektion": "l2"
+   },
+   {
+    "id": "k3",
+    "label": "Spannung U",
+    "x": 390,
+    "y": 55,
+    "lektion": "l3"
+   },
+   {
+    "id": "k4",
+    "label": "Reihe & parallel",
+    "x": 535,
+    "y": 55,
+    "lektion": "l4"
+   },
+   {
+    "id": "k5",
+    "label": "Was Energie ist",
+    "x": 80,
+    "y": 215,
+    "lektion": "l6"
+   },
+   {
+    "id": "k6",
+    "label": "Energieformen",
+    "x": 235,
+    "y": 215,
+    "lektion": "l7"
+   },
+   {
+    "id": "k7",
+    "label": "Umwandlung",
+    "x": 390,
+    "y": 215,
+    "lektion": "l8"
+   },
+   {
+    "id": "k8",
+    "label": "Entwertung & Sparen",
+    "x": 535,
+    "y": 215,
+    "lektion": "l9"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k5",
+    "k6"
+   ],
+   [
+    "k6",
+    "k7"
+   ],
+   [
+    "k7",
+    "k8"
+   ]
+  ]
+ }
 }

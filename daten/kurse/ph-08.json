@@ -616,10 +616,36 @@
        "pfad": "experimente/physik/hookesches-gesetz/index.html",
        "vorhersage": "Wenn du an einer Federwaage Massen von $100\\,\\text{g}$, $200\\,\\text{g}$, $300\\,\\text{g}$ anhängst — in welchem Verhältnis stehen die abgelesenen Kräfte zueinander? Notiere deine Vermutung.",
        "auftraege": [
+        "<strong>Versuchsaufbau:</strong> Hänge die Federwaage senkrecht auf und befestige unten ein Massestück. Lies in Ruhe die Kraft in Newton ab — das ist die Gewichtskraft $F_G$, mit der die Erde an dieser Masse zieht.",
         "Hänge bekannte Massen an und vergleiche die abgelesene Kraft mit deiner Rechnung $F_G = m \\cdot g$ (mit $g = 9{,}81\\,\\text{N/kg}$).",
         "Verdopple die Masse: Verdoppelt sich auch die angezeigte Kraft? Das zeigt die Proportionalität von $F_G$ und $m$.",
         "Bestimme aus einer abgelesenen Kraft umgekehrt die Masse, indem du $m = \\frac{F_G}{g}$ rechnest, und vergleiche mit dem Aufdruck."
-       ]
+       ],
+       "material": "Eine Federwaage (Newtonmeter, z. B. 0–10 N), mehrere bekannte Massestücke (z. B. 100 g, 200 g, 500 g), eine Haltevorrichtung oder ein Stativ.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Masse m und Gewichtskraft F_G",
+        "params": {
+         "xLabel": "m",
+         "yLabel": "F_G",
+         "xEinheit": "kg",
+         "yEinheit": "N",
+         "zeilen": 5,
+         "xVorgabe": [
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          1.0
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "g",
+          "einheit": "N/kg",
+          "ausSteigung": "direkt"
+         }
+        }
+       }
       }
      ],
      "interaktiv": {
@@ -652,7 +678,10 @@
        },
        "formel": "F_G = m · g"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Hängt man an einen Kraftmesser immer schwerere Massen, erwarten wir eine größere Gewichtskraft. Vermutung: Masse $m$ und Gewichtskraft $F_G$ sind <strong>proportional</strong>, also $F_G = m \\cdot g$ mit einem festen Ortsfaktor $g$. Trägt man $F_G$ über $m$ auf, müsste sich eine <strong>Ursprungsgerade</strong> ergeben – ihre Steigung ist der Ortsfaktor $g$ (in $\\frac{\\text{N}}{\\text{kg}}$).</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Masse in kg, Kraft mit dem Newtonmeter ablesen; Proportionalität als Ursprungsgerade deuten.</p><p><strong>Angesprochene Kompetenzen:</strong> auswerten (Messreihe → $m$-$F_G$-Diagramm), mathematisieren (Steigung = Ortsfaktor $g$).</p><p><strong>Erwartung:</strong> Die Punkte liegen auf einer Ursprungsgeraden; die Steigung ist $g \\approx 9{,}81\\,\\frac{\\text{N}}{\\text{kg}}$. Beispiel: $0{,}5\\,\\text{kg}$ ziehen mit etwa $4{,}9\\,\\text{N}$.</p><p><strong>Modellgrenzen:</strong> Der Ortsfaktor ist nur am gleichen Ort konstant (Erde $\\approx 9{,}81$, Mond $\\approx 1{,}62\\,\\frac{\\text{N}}{\\text{kg}}$). Reibung im Messgerät und Ablesefehler bleiben außen vor.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 17,
@@ -1459,36 +1488,31 @@
       }
      ],
      "interaktiv": {
-      "id": "funktionsplotter",
-      "titel": "Weg und Zeit",
+      "id": "messreihe",
+      "titel": "Messlabor: Weg s und Zeit t",
       "params": {
-       "form": "proportional",
-       "regler": [
-        {
-         "sym": "a",
-         "label": "v",
-         "min": 0,
-         "max": 20,
-         "step": 0.5,
-         "init": 5,
-         "einheit": "m/s"
-        }
+       "xLabel": "t",
+       "yLabel": "s",
+       "xEinheit": "s",
+       "yEinheit": "m",
+       "zeilen": 5,
+       "xVorgabe": [
+        1,
+        2,
+        3,
+        4,
+        5
        ],
-       "x": [
-        0,
-        10
-       ],
-       "y": [
-        0,
-        120
-       ],
-       "achsen": {
-        "x": "t in s",
-        "y": "s in m"
-       },
-       "formel": "s = v · t"
+       "modell": "proportional",
+       "groesse": {
+        "name": "v",
+        "einheit": "m/s",
+        "ausSteigung": "direkt"
+       }
       }
-     }
+     },
+     "vorueberlegung": "<p>Bei einer gleichförmigen Bewegung legt ein Körper in gleichen Zeiten gleiche Strecken zurück. Vermutung: Weg $s$ und Zeit $t$ sind <strong>proportional</strong>, also $s = v \\cdot t$. Trägt man $s$ über $t$ auf, sollte sich eine <strong>Ursprungsgerade</strong> ergeben – ihre Steigung ist die Geschwindigkeit $v$.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Strecke und Zeit messen; Proportionalität als Ursprungsgerade.</p><p><strong>Kompetenzen:</strong> auswerten (Messreihe → $s$-$t$-Diagramm), mathematisieren (Steigung = Geschwindigkeit).</p><p><strong>Erwartung:</strong> Bei gleichförmiger Bewegung liegen die Punkte auf einer Ursprungsgeraden; $v$ ist die Steigung. Beispiel: $10\\ \\text{m}$ in $5\\ \\text{s}$ → $v = 2\\ \\tfrac{m}{s}$.</p><p><strong>Modellgrenzen:</strong> Gilt nur für gleichförmige (konstante) Bewegung; Anlauf-/Bremsphasen und Messunsicherheiten bleiben außen vor.</p>"
     },
     "ueben": {
      "zeit": 17,
@@ -2213,7 +2237,58 @@
        ]
       }
      ],
-     "partner": "Erklärt einander: Was misst der Tacho im Auto – und was misst das Navi, wenn es die „Restzeit“ berechnet?"
+     "partner": "Erklärt einander: Was misst der Tacho im Auto – und was misst das Navi, wenn es die „Restzeit“ berechnet?",
+     "bluete": {
+      "kontext": "<p><strong>Tagesausflug mit dem Rad.</strong> Lena fährt vormittags $18\\,\\text{km}$ zum See und braucht dafür $1{,}5\\,\\text{h}$ reine Fahrzeit. Am See macht sie $1\\,\\text{h}$ Pause. Auf demselben Weg zurück braucht sie wieder $1{,}5\\,\\text{h}$ reine Fahrzeit.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Wie groß ist Lenas Durchschnittsgeschwindigkeit während der reinen Fahrt (ohne Pause)?",
+        "felder": [
+         {
+          "label": "v =",
+          "antwort": 12,
+          "einheit": "km/h"
+         }
+        ],
+        "loesung": "Hinweg: $v = \\frac{18\\,\\text{km}}{1{,}5\\,\\text{h}} = 12\\,\\frac{\\text{km}}{\\text{h}}$ – ebenso auf dem Rückweg."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie lang ist die gesamte zurückgelegte Strecke und wie groß ist die Gesamtzeit einschließlich Pause?",
+        "felder": [
+         {
+          "label": "Strecke:",
+          "antwort": 36,
+          "einheit": "km"
+         },
+         {
+          "label": "Gesamtzeit:",
+          "antwort": 4,
+          "einheit": "h"
+         }
+        ],
+        "loesung": "Strecke: $18\\,\\text{km} + 18\\,\\text{km} = 36\\,\\text{km}$. Gesamtzeit: $1{,}5\\,\\text{h} + 1\\,\\text{h} + 1{,}5\\,\\text{h} = 4\\,\\text{h}$."
+       },
+       {
+        "label": "c)",
+        "frage": "Berechne die Durchschnittsgeschwindigkeit über den ganzen Ausflug (Pause zählt mit).",
+        "felder": [
+         {
+          "label": "v =",
+          "antwort": 9,
+          "einheit": "km/h"
+         }
+        ],
+        "loesung": "$v = \\frac{\\text{Gesamtweg}}{\\text{Gesamtzeit}} = \\frac{36\\,\\text{km}}{4\\,\\text{h}} = 9\\,\\frac{\\text{km}}{\\text{h}}$ – weniger als die $12\\,\\frac{\\text{km}}{\\text{h}}$ beim Fahren, weil die Pause mitzählt."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Lena möchte beim nächsten Mal auf einen Gesamtschnitt von $12\\,\\frac{\\text{km}}{\\text{h}}$ kommen. Nenne zwei Möglichkeiten und begründe sie mit der Formel.",
+        "loesung": "z. B. die Pause weglassen (dann zählt nur die Fahrzeit) oder schneller fahren, sodass die reine Fahrzeit sinkt. In $v=\\frac{\\text{Gesamtweg}}{\\text{Gesamtzeit}}$ muss dafür die Gesamtzeit kleiner werden."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 6,
@@ -2301,7 +2376,7 @@
       {
        "titel": "Was der Widerstand beschreibt",
        "kern": "Bauteile lassen den Strom <strong>unterschiedlich gut</strong> hindurch — sie setzen ihm einen unterschiedlich großen <strong>Widerstand</strong> $R$ entgegen (von englisch <em>resistance</em>).",
-       "details": "<p>Am selben $6\\,\\text{V}$-Netzgerät fließen durch ein Lämpchen vielleicht $0{,}4\\,\\text{A}$, durch einen dünnen Eisendraht nur $0{,}1\\,\\text{A}$. Je größer der Widerstand, desto kleiner der Strom bei gleicher Spannung.</p>",
+       "details": "<p>Am selben $6\\,\\text{V}$-Netzgerät fließen durch ein Lämpchen vielleicht $0{,}4\\,\\text{A}$, durch einen dünnen Eisendraht nur $0{,}1\\,\\text{A}$. Je größer der Widerstand, desto kleiner der Strom bei gleicher Spannung.</p><p><strong>Genauer:</strong> Das Netzgerät (oder eine Batterie) ist eine <strong>Spannungsquelle</strong> – es gibt die <em>Spannung</em> $U$ vor, hier $6\\,\\text{V}$. Wie viel <em>Strom</em> dann fließt, bestimmt der Widerstand des angeschlossenen Bauteils. Man sagt deshalb genauer „Spannungsquelle“ statt „Stromquelle“.</p>",
        "minicheck": {
         "frage": "Was gibt der elektrische Widerstand eines Bauteils an?",
         "antwort": "Wie stark es den Strom behindert — je größer der Widerstand, desto kleiner der Strom bei gleicher Spannung."
@@ -2377,43 +2452,43 @@
        "pfad": "experimente/physik/ui-kennlinie/index.html",
        "vorhersage": "Wenn du an einem Metalldraht (gleiche Temperatur) die Spannung verdoppelst, was passiert mit der Stromstärke — und welche Form hat die Kennlinie? Notiere deine Vermutung.",
        "auftraege": [
-        "Nimm zu mehreren Spannungswerten die zugehörige Stromstärke auf und trage die Wertepaare als Kennlinie auf.",
-        "Prüfe: Ergibt sich eine Ursprungsgerade? Berechne aus mehreren Wertepaaren jeweils $R = \\frac{U}{I}$ — bleibt $R$ gleich?",
-        "Vergleiche, falls möglich, mit einem Glühlämpchen: Bleibt dort die Kennlinie gerade oder krümmt sie sich (Widerstand ändert sich mit der Temperatur)?"
-       ]
+        "<strong>Versuchsaufbau:</strong> Schalte Netzgerät, Amperemeter und Draht in <strong>Reihe</strong> (das Amperemeter misst die Stromstärke im Kreis). Schließe das Voltmeter <strong>parallel</strong> zum Draht an (es misst die Spannung am Draht).",
+        "Stelle am Netzgerät nacheinander mehrere Spannungen ein (z. B. 1 V, 2 V, 3 V, …) und lies jeweils die Stromstärke $I$ ab. Halte den Draht nur kurz unter Spannung, damit er sich nicht erwärmt (sonst ändert sich der Widerstand).",
+        "Trage die Wertepaare unten ins <strong>Messlabor</strong> ein und prüfe: Liegen die Punkte auf einer Ursprungsgeraden? Berechne aus mehreren Paaren $R = \\frac{U}{I}$ — bleibt $R$ gleich?",
+        "Vergleiche, falls möglich, mit einem Glühlämpchen: Bleibt die Kennlinie gerade oder krümmt sie sich (der Widerstand steigt mit der Temperatur)?"
+       ],
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: U-I-Messreihe auswerten",
+        "params": {
+         "xLabel": "U",
+         "yLabel": "I",
+         "xEinheit": "V",
+         "yEinheit": "A",
+         "zeilen": 5,
+         "xVorgabe": [
+          1,
+          2,
+          3,
+          4,
+          5
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "R",
+          "einheit": "Ω",
+          "ausSteigung": "kehrwert"
+         }
+        }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "material": "Regelbares Netzgerät (0–6 V), ein Konstantandraht (z. B. 1 m, Ø 0,3 mm) oder ein fester Widerstand (z. B. 10 Ω), Amperemeter, Voltmeter, Verbindungskabel — zum Vergleich optional ein Glühlämpchen."
       }
      ],
-     "interaktiv": {
-      "id": "funktionsplotter",
-      "titel": "Ohmsches Gesetz",
-      "params": {
-       "form": "proportional",
-       "regler": [
-        {
-         "sym": "a",
-         "label": "R",
-         "min": 1,
-         "max": 20,
-         "step": 1,
-         "init": 5,
-         "einheit": "Ω"
-        }
-       ],
-       "x": [
-        0,
-        5
-       ],
-       "y": [
-        0,
-        60
-       ],
-       "achsen": {
-        "x": "I in A",
-        "y": "U in V"
-       },
-       "formel": "U = R · I"
-      }
-     }
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Erhöht man an einem Draht die Spannung $U$, erwarten wir eine größere Stromstärke $I$. Vermutung: $U$ und $I$ sind <strong>proportional</strong>, also $U = R \\cdot I$ mit einer Materialkonstante $R$ (dem <em>Widerstand</em>). Trägt man $I$ über $U$ auf, müsste sich eine <strong>Ursprungsgerade</strong> ergeben – aus ihrer Steigung bestimmen wir $R$ (denn $R = U/I$).</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Stromstärke und Spannung messen; Proportionalität als Ursprungsgerade deuten.</p><p><strong>Angesprochene Kompetenzen:</strong> mathematisieren (Steigung deuten), auswerten (Messreihe → Diagramm → $R$), Modell prüfen.</p><p><strong>Erwartung:</strong> Beim ohmschen Leiter liegen die Punkte auf einer Ursprungsgeraden. Im $I$-über-$U$-Diagramm ist die Steigung $1/R$; bei einer Steigung von $0{,}4\\ \\tfrac{A}{V}$ folgt $R = 2{,}5\\ \\Omega$.</p><p><strong>Modellgrenzen:</strong> Gilt nur für ohmsche Leiter bei (nahezu) konstanter Temperatur. Eine Glühlampe hat eine gekrümmte Kennlinie (Erwärmung). Innenwiderstände der Messgeräte werden vernachlässigt.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 17,
@@ -3903,5 +3978,99 @@
     "l15b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Kräfte erkennen",
+    "x": 95,
+    "y": 60,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Gewichtskraft $F_G$",
+    "x": 95,
+    "y": 160,
+    "lektion": "l3"
+   },
+   {
+    "id": "k3",
+    "label": "Reibung",
+    "x": 95,
+    "y": 255,
+    "lektion": "l5"
+   },
+   {
+    "id": "k4",
+    "label": "Geschwindigkeit",
+    "x": 300,
+    "y": 60,
+    "lektion": "l7"
+   },
+   {
+    "id": "k5",
+    "label": "t-s-Diagramm",
+    "x": 300,
+    "y": 160,
+    "lektion": "l8"
+   },
+   {
+    "id": "k6",
+    "label": "Beschleunigung",
+    "x": 300,
+    "y": 255,
+    "lektion": "l9"
+   },
+   {
+    "id": "k7",
+    "label": "Widerstand $R$",
+    "x": 505,
+    "y": 110,
+    "lektion": "l11"
+   },
+   {
+    "id": "k8",
+    "label": "Schaltungen",
+    "x": 505,
+    "y": 210,
+    "lektion": "l13"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k1",
+    "k4"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k5",
+    "k6"
+   ],
+   [
+    "k4",
+    "k7"
+   ],
+   [
+    "k7",
+    "k8"
+   ]
+  ]
+ }
 }

@@ -414,3 +414,55 @@ body[data-seite="lehrkraft"] tbody tr:nth-child(even) td { background: color-mix
 .lb-mini-tab{border-collapse:collapse;font-size:.9rem}
 .lb-mini-tab th,.lb-mini-tab td{border:1px solid var(--linie);padding:.15rem .5rem;text-align:center}
 .lb-mini-tab th{background:var(--hauch)}
+
+/* ---- Welle 1: adaptive Ampel-Routing · POE-Selbstabgleich · Zieltransparenz ---- */
+.lb-ziel-transparenz { margin: .5rem 0 0; font-size: .92rem; color: var(--text-leise); }
+.lb-ampel-routing { display: inline-block; }
+.lb-ampel-routing a { margin: 0 .2rem; white-space: nowrap; }
+.lb-poe-rueckblick { margin: 1rem 0; padding: .7rem 1rem; background: var(--hauch); border: 1px solid var(--linie); border-radius: var(--radius); }
+.lb-poe-rueckblick p { margin: .35rem 0 0; }
+
+/* ---- Welle 2: Mein Regelheft · Heurismen-Box · Blütenaufgaben ---- */
+.lb-regelheft-add { margin-top: .6rem; }
+.lb-heurismen { margin: 1rem 0; padding: .7rem 1rem; background: var(--hauch); border: 1px solid var(--linie); border-radius: var(--radius); }
+.lb-heurismen ul { margin: .4rem 0 0; padding-left: 1.2rem; }
+.lb-heurismen li { margin: .2rem 0; }
+.lb-bluete { margin: 0 0 1rem; padding: .8rem 1rem; background: var(--hauch); border: 1px solid var(--linie); border-radius: var(--radius); }
+.lb-bluete-kontext { margin: .3rem 0; }
+.lb-regelheft { margin: 1.2rem 0; }
+.lb-regelheft > summary { cursor: pointer; font-weight: 600; }
+.lb-regelheft-eintrag { position: relative; margin: .6rem 0; padding: .6rem 2rem .6rem .8rem; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); }
+.lb-regelheft-titel { font-size: .85rem; color: var(--text-leise); margin-bottom: .25rem; }
+.lb-regelheft-eintrag .lb-tagebuch-loeschen { position: absolute; top: .4rem; right: .5rem; }
+
+/* ---- Lernaufgabe: Vorüberlegungen + Für-die-Lehrkraft-Block ---- */
+.lb-vorueberlegung { margin: 1rem 0; padding: .7rem 1rem; background: var(--hauch); border: 1px solid var(--linie); border-radius: var(--radius); }
+.lb-vorueberlegung-text { margin-top: .35rem; }
+.lb-lehrkraft { margin: 1rem 0; border: 1px dashed var(--linie); border-radius: var(--radius); padding: .4rem .85rem; }
+.lb-lehrkraft > summary { cursor: pointer; font-weight: 600; color: var(--text-leise); }
+.lb-lehrkraft-koerper { margin-top: .5rem; }
+
+/* ---- Didaktische Lernlandkarte (Concept-Map) ---- */
+.lb-lernlandkarte { margin: 1rem 0; }
+.lb-lernlandkarte > summary { cursor: pointer; font-weight: 600; }
+.lb-lernlandkarte g[data-lektion]:hover rect { stroke-width: 3; }
+
+/* ---- Lernzirkel / Stationen ---- */
+.lz-status { font-weight: 600; margin: .3rem 0 1rem; }
+.lz-station { border: 1px solid var(--linie); border-radius: var(--radius); padding: .8rem 1rem; margin: 0 0 1rem; background: var(--flaeche); }
+.lz-station-kopf { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.lz-station-kopf h2 { margin: 0; font-size: 1.15rem; }
+.lz-station-nr { display: inline-flex; align-items: center; justify-content: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--akzent); color: #fff; font-weight: 700; }
+.lz-typ { margin-left: auto; font-size: .8rem; color: var(--text-leise); border: 1px solid var(--linie); border-radius: 999px; padding: .1rem .6rem; }
+.lz-station-koerper { margin: .6rem 0; }
+.lz-erledigt { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; }
+
+/* ---- Interaktive Blütenaufgabe + erkunden-Erweiterungen ---- */
+.lb-bluete-blatt { margin: .8rem 0; }
+.lb-bluete-frage { margin: .3rem 0; }
+.lb-bluete-label { font-weight: 700; color: var(--akzent); margin-right: .2rem; }
+.lb-bluete-eingabe { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: .3rem 0 .2rem; }
+.lb-bluete-feld input { width: 6em; }
+.lb-bluete-status { font-size: .95rem; }
+.lb-erkunden-hinweis { margin: .3rem 0; font-style: italic; color: var(--text-leise); }
+.lb-erkunden-mess { margin-top: .7rem; }

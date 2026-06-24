@@ -216,12 +216,15 @@
      },
      "selbsterklaerung": "Erkläre in einem Satz, woran man im Bruch erkennt, in wie viele Teile geteilt wurde – und woran, wie viele davon gemeint sind.",
      "interaktiv": {
-      "id": "bruchbalken",
-      "titel": "Was ein Bruch ist",
+      "id": "anteil-faerben",
+      "titel": "Anteile färben und ablesen",
       "params": {
-       "nennerMax": 12,
-       "zInit": 3,
-       "nInit": 4
+       "teile": 8,
+       "spalten": 4,
+       "ziel": {
+        "z": 3,
+        "n": 8
+       }
       }
      }
     },
@@ -630,12 +633,10 @@
      },
      "selbsterklaerung": "Erkläre in einem Satz, wie du zwei Brüche mit verschiedenen Nennern vergleichbar machst.",
      "interaktiv": {
-      "id": "bruchbalken",
-      "titel": "Brüche vergleichen",
+      "id": "bruchstreifen",
+      "titel": "Bruchstreifen vergleichen",
       "params": {
-       "nennerMax": 12,
-       "zInit": 3,
-       "nInit": 5
+       "nennerMax": 6
       }
      }
     },
@@ -4683,7 +4684,51 @@
        ]
       }
      ],
-     "partner": "Nennt euch Volumen in verschiedenen Einheiten – wer rechnet sie am schnellsten um?"
+     "partner": "Nennt euch Volumen in verschiedenen Einheiten – wer rechnet sie am schnellsten um?",
+     "bluete": {
+      "kontext": "<p><strong>Ein neues Aquarium.</strong> Familie Berg kauft ein quaderförmiges Aquarium: 50 cm lang, 30 cm breit und 40 cm hoch. Arbeite dich Schritt für Schritt vor – nach jeder Teilaufgabe kannst du dein Ergebnis prüfen.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Berechne das Volumen des Aquariums in Kubikzentimetern. Nutze $V = l \\cdot b \\cdot h$.",
+        "felder": [
+         {
+          "antwort": 60000,
+          "einheit": "cm³"
+         }
+        ],
+        "loesung": "$V = 50\\;\\text{cm} \\cdot 30\\;\\text{cm} \\cdot 40\\;\\text{cm} = 60000\\;\\text{cm}^3$."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie viele Liter fasst das Aquarium randvoll? Denke daran: 1 dm³ = 1 Liter und 1000 cm³ = 1 dm³.",
+        "felder": [
+         {
+          "antwort": 60,
+          "einheit": "l"
+         }
+        ],
+        "loesung": "60000 cm³ = 60 dm³ = 60 Liter, denn 1 dm³ = 1000 cm³ = 1 Liter."
+       },
+       {
+        "label": "c)",
+        "frage": "Familie Berg füllt das Aquarium nur bis 5 cm unter den Rand mit Wasser. Wie viele Liter Wasser sind das?",
+        "felder": [
+         {
+          "antwort": 52.5,
+          "toleranz": 0.1,
+          "einheit": "l"
+         }
+        ],
+        "loesung": "Wasserhöhe: 40 cm − 5 cm = 35 cm. $V = 50 \\cdot 30 \\cdot 35 = 52500\\;\\text{cm}^3 = 52,5\\;\\text{Liter}$."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Knifflig:</em> Ein zweites Aquarium hat genau die doppelte Länge, Breite und Höhe. Fasst es doppelt so viel Wasser? Begründe.",
+        "loesung": "Nein, viel mehr: Verdoppelt man alle drei Kantenlängen, wird das Volumen mit $2 \\cdot 2 \\cdot 2 = 8$ vervielfacht. Das zweite Aquarium fasst also das Achtfache, nicht das Doppelte (8 · 60 Liter = 480 Liter)."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -7015,5 +7060,92 @@
     "l29b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Bruch = Anteil",
+    "x": 95,
+    "y": 70,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Erweitern/Kürzen",
+    "x": 255,
+    "y": 70,
+    "lektion": "l2"
+   },
+   {
+    "id": "k3",
+    "label": "Vergleichen",
+    "x": 420,
+    "y": 40,
+    "lektion": "l3"
+   },
+   {
+    "id": "k4",
+    "label": "Addieren/Subtr.",
+    "x": 420,
+    "y": 115,
+    "lektion": "l4"
+   },
+   {
+    "id": "k5",
+    "label": "Mult./Division",
+    "x": 575,
+    "y": 115,
+    "lektion": "l5"
+   },
+   {
+    "id": "k6",
+    "label": "Dezimalzahlen",
+    "x": 95,
+    "y": 210,
+    "lektion": "l6"
+   },
+   {
+    "id": "k7",
+    "label": "Bruch ↔ Dezimal",
+    "x": 420,
+    "y": 210,
+    "lektion": "l10"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k2",
+    "k4"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k1",
+    "k6"
+   ],
+   [
+    "k6",
+    "k7"
+   ],
+   [
+    "k5",
+    "k7"
+   ]
+  ]
+ }
 }

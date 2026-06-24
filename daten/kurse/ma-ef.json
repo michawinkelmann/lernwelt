@@ -2052,7 +2052,54 @@
        ]
       }
      ],
-     "partner": "Stellt euch gegenseitig ein Optimierungsproblem auf (Zaun, Schachtel, Fläche) — der andere formuliert Zielfunktion und Definitionsbereich."
+     "partner": "Stellt euch gegenseitig ein Optimierungsproblem auf (Zaun, Schachtel, Fläche) — der andere formuliert Zielfunktion und Definitionsbereich.",
+     "bluete": {
+      "kontext": "<p><strong>Die größtmögliche Schachtel.</strong> Aus einem rechteckigen Karton der Größe $30\\,\\text{cm} \\times 20\\,\\text{cm}$ wird eine oben offene Schachtel gefaltet: An jeder Ecke schneidet man ein Quadrat der Seitenlänge $x$ heraus und klappt die Ränder hoch.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Wie groß sind nach dem Hochklappen Länge, Breite und Höhe der Schachtel in Abhängigkeit von $x$? Stelle damit die Volumenfunktion $V(x)$ auf (Zielfunktion).",
+        "loesung": "Länge $30-2x$, Breite $20-2x$, Höhe $x$. Damit $V(x) = x\\,(30-2x)(20-2x) = 4x^3 - 100x^2 + 600x$."
+       },
+       {
+        "label": "b)",
+        "frage": "Welcher Definitionsbereich ist im Sachzusammenhang sinnvoll? Gib die obere Grenze als Zahl an (in cm).",
+        "felder": [
+         {
+          "label": "$x <$",
+          "antwort": 10,
+          "toleranz": 0,
+          "einheit": "cm"
+         }
+        ],
+        "loesung": "Es muss $x>0$ und $20-2x>0$ gelten, also $0 < x < 10$. Die kleinere Seite begrenzt: $x<10$."
+       },
+       {
+        "label": "c)",
+        "frage": "Bestimme über $V'(x)=0$ die Höhe $x$, für die das Volumen maximal wird, und das zugehörige maximale Volumen.",
+        "felder": [
+         {
+          "label": "$x \\approx$",
+          "antwort": 3.92,
+          "toleranz": 0.05,
+          "einheit": "cm"
+         },
+         {
+          "label": "$V_{\\max} \\approx$",
+          "antwort": 1056,
+          "toleranz": 6,
+          "einheit": "cm³"
+         }
+        ],
+        "loesung": "$V'(x) = 12x^2 - 200x + 600 = 0 \\Rightarrow 3x^2 - 50x + 150 = 0$. Mit der abc-Formel: $x = \\frac{50 - \\sqrt{700}}{6} \\approx 3{,}92$ (die zweite Lösung $\\approx 12{,}7$ liegt außerhalb des Definitionsbereichs). Einsetzen: $V(3{,}92) \\approx 1056\\,\\text{cm}^3$. Der Vorzeichenwechsel von $V'$ von $+$ nach $-$ bestätigt das Maximum."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Ändere die Kartonmaße auf ein Quadrat $24\\,\\text{cm} \\times 24\\,\\text{cm}$. Begründe ohne erneute Rechnung eine Vermutung für die optimale Höhe und überprüfe sie anschließend.",
+        "loesung": "Beim Quadrat ist $V(x)=x(24-2x)^2$. Rechnung: $V'(x)=12x^2-192x+576=0 \\Rightarrow x^2-16x+48=0 \\Rightarrow x=4$. Das Optimum liegt bei $x=4$, also bei einem Sechstel der Seitenlänge ($\\tfrac{24}{6}=4$) – nicht etwa bei einem Viertel."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -4976,5 +5023,114 @@
     "l10b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 124,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Mittlere\nÄnderungsrate",
+    "x": 95,
+    "y": 70,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Ableitung an\neiner Stelle",
+    "x": 255,
+    "y": 70,
+    "lektion": "l3"
+   },
+   {
+    "id": "k3",
+    "label": "Ableitungs-\nfunktion",
+    "x": 255,
+    "y": 150,
+    "lektion": "l4"
+   },
+   {
+    "id": "k4",
+    "label": "Ableitungs-\nregeln",
+    "x": 420,
+    "y": 110,
+    "lektion": "l6"
+   },
+   {
+    "id": "k5",
+    "label": "Extrem- &\nWendepunkte",
+    "x": 565,
+    "y": 70,
+    "lektion": "l8"
+   },
+   {
+    "id": "k6",
+    "label": "Optimierung\nim Sachkontext",
+    "x": 565,
+    "y": 150,
+    "lektion": "l10"
+   },
+   {
+    "id": "k7",
+    "label": "Funktionen\nim Überblick",
+    "x": 95,
+    "y": 220,
+    "lektion": "l11"
+   },
+   {
+    "id": "k8",
+    "label": "Beschreibende\nStatistik",
+    "x": 300,
+    "y": 230,
+    "lektion": "l16"
+   },
+   {
+    "id": "k9",
+    "label": "Boxplot &\nRegression",
+    "x": 505,
+    "y": 230,
+    "lektion": "l19"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k2",
+    "k4"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k4",
+    "k6"
+   ],
+   [
+    "k5",
+    "k6"
+   ],
+   [
+    "k7",
+    "k8"
+   ],
+   [
+    "k8",
+    "k9"
+   ]
+  ]
+ }
 }

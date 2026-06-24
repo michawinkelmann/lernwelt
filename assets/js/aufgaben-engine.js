@@ -378,7 +378,7 @@ function zeigeMeldung(kontext, ok, text) {
 function melde(kontext, ok, eigenerText) {
   const text = eigenerText || (ok
     ? LOB[Math.floor(Math.random() * LOB.length)]
-    : MUT[Math.min(kontext.fehlversuche, MUT.length - 1)]);
+    : (kontext._fehlerhinweis || MUT[Math.min(kontext.fehlversuche, MUT.length - 1)]));
   zeigeMeldung(kontext, ok, text);
   // Zentrales Antwort-Ereignis (z. B. für Tagesmischung/Wiedervorlage)
   document.dispatchEvent(new CustomEvent("aufgabe-beantwortet", {
@@ -433,9 +433,34 @@ function pruefeNumerischeFelder(eingaben, kasten) {
   return alleOk;
 }
 
+// Misconception-Feedback (Hattie/Timperley, Shute): Eine Eingabe kann optional
+// `fehler: [{ wert, hinweis, toleranz? }]` tragen. Trifft die (falsche) Antwort einen
+// dieser typischen Fehlwerte, wird der gezielte Hinweis statt der allgemeinen Meldung gezeigt.
+function ermittleFehlerhinweis(eingaben, kasten) {
+  if (!Array.isArray(eingaben)) return null;
+  for (let i = 0; i < eingaben.length; i++) {
+    const e = eingaben[i];
+    if (!Array.isArray(e.fehler) || !e.fehler.length) continue;
+    const feld = kasten.querySelector(`input[data-index="${i}"]`);
+    if (!feld) continue;
+    const wert = zahlAusText(feld.value);
+    if (wert === null) continue;
+    if (Math.abs(wert - e.antwort) <= (e.toleranz || 0) + 1e-9) continue; // korrekt → kein Fehlerhinweis
+    for (const fh of e.fehler) {
+      const tol = (fh.toleranz != null) ? fh.toleranz : (e.toleranz || 0);
+      if (Math.abs(wert - fh.wert) <= tol + 1e-9) return fh.hinweis;
+    }
+  }
+  return null;
+}
+
 function baueNumerisch(kontext) {
   const kasten = baueNumerischeFelder(kontext.aufgabe.eingaben, kontext.koerper);
-  return () => pruefeNumerischeFelder(kontext.aufgabe.eingaben, kasten);
+  return () => {
+    const ok = pruefeNumerischeFelder(kontext.aufgabe.eingaben, kasten);
+    kontext._fehlerhinweis = ok ? null : ermittleFehlerhinweis(kontext.aufgabe.eingaben, kasten);
+    return ok;
+  };
 }
 
 // ---------- Typ: multiple-choice ----------

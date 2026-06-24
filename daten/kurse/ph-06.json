@@ -165,8 +165,34 @@
        "auftraege": [
         "Halte nacheinander Papier, Spiegel und Handfläche schräg ins Lampenlicht: Siehst du das Spiegelbild der Lampe oder nur eine helle Stelle?",
         "Ordne jede Fläche den Wörtern „spiegeln\" und „streuen\" zu und begründe mit der Oberfläche (glatt oder rau).",
-        "Kippe den Spiegel langsam: Verfolge, wie der helle Fleck an der Wand wandert — der Reflexionswinkel ändert sich genau mit dem Einfallswinkel."
-       ]
+        "Kippe den Spiegel langsam: Verfolge, wie der helle Fleck an der Wand wandert — der Reflexionswinkel ändert sich genau mit dem Einfallswinkel.",
+        "Stelle im interaktiven Modell „Reflexion am Spiegel“ (oben auf dieser Seite) nacheinander mehrere Einfallswinkel ein und lies jeweils den Reflexionswinkel ab. Trage die Wertepaare unten ins <strong>Messlabor</strong> ein."
+       ],
+       "vorhersage": "Trifft ein Strahl unter $50^\\circ$ (zum Lot) auf einen ebenen Spiegel – unter welchem Winkel läuft er weg? Und welche Form hat das Diagramm, wenn du Reflexionswinkel über Einfallswinkel aufträgst? Notiere deine Vermutung.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Reflexionswinkel über Einfallswinkel",
+        "params": {
+         "xLabel": "Einfallswinkel",
+         "yLabel": "Reflexionswinkel",
+         "xEinheit": "°",
+         "yEinheit": "°",
+         "zeilen": 5,
+         "xVorgabe": [
+          20,
+          30,
+          40,
+          50,
+          60
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "Verhältnis (Refl./Einf.)",
+          "einheit": "",
+          "ausSteigung": "direkt"
+         }
+        }
+       }
       }
      ],
      "interaktiv": {
@@ -176,7 +202,10 @@
        "modus": "reflexion",
        "winkel": 40
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, stellen wir eine Vermutung auf: Ein Lichtstrahl trifft auf einen ebenen Spiegel. Wir vermuten, dass der <strong>Reflexionswinkel</strong> (zwischen Lot und zurückgeworfenem Strahl) genauso groß ist wie der <strong>Einfallswinkel</strong> (zwischen einfallendem Strahl und Lot) – beide zum <strong>Einfallslot</strong> gemessen. Trägt man den Reflexionswinkel über dem Einfallswinkel auf, müssten die Punkte auf einer <strong>Ursprungsgeraden mit der Steigung 1</strong> liegen.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Winkel zum Lot (zur Senkrechten) ablesen; eine Messreihe in ein Diagramm übertragen.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Vermutung prüfen, messen, auswerten), Mathematisieren (Steigung als Verhältnis deuten).</p><p><strong>Erwartung:</strong> Die Wertepaare liegen auf einer Ursprungsgeraden; das Verhältnis Reflexionswinkel/Einfallswinkel ist rund $1$, also Einfallswinkel = Reflexionswinkel.</p><p><strong>Modellgrenzen:</strong> Gilt nur am <strong>ebenen</strong> Spiegel. An rauen Flächen wird das Licht gestreut (kein einzelner Reflexionswinkel). Ableseungenauigkeiten von wenigen Grad sind normal.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 16,
@@ -1764,7 +1793,44 @@
        ]
       }
      ],
-     "partner": "Erkläre deiner Nachbarin: Warum hat ein Fußballspieler im Flutlichtstadion gleich vier Schatten?"
+     "partner": "Erkläre deiner Nachbarin: Warum hat ein Fußballspieler im Flutlichtstadion gleich vier Schatten?",
+     "bluete": {
+      "kontext": "<p><strong>Schattentheater.</strong> Eine kleine, punktförmige Lampe steht $200\\ \\text{cm}$ von einer weißen Wand entfernt. Genau in der Mitte zwischen Lampe und Wand (also $100\\ \\text{cm}$ vor der Wand) hältst du einen undurchsichtigen Pappkreis mit einem Durchmesser von $6\\ \\text{cm}$ senkrecht ins Licht. Auf der Wand entsteht ein runder Schatten.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Warum entsteht überhaupt ein scharf begrenzter Schatten? Begründe mit der Ausbreitung des Lichts.",
+        "loesung": "Licht breitet sich geradlinig aus. Die Pappe lässt das Licht nicht durch, deshalb erreicht hinter ihr kein Licht die Wand – dort bleibt es dunkel (Schatten). Weil die Lampe (fast) punktförmig ist, gibt es nur Kernschatten und einen scharfen Rand."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie viele Zentimeter beträgt der Abstand von der Lampe zur Pappe?",
+        "felder": [
+         {
+          "antwort": 100,
+          "einheit": "cm"
+         }
+        ],
+        "loesung": "Die Pappe steht in der Mitte: $200\\ \\text{cm} : 2 = 100\\ \\text{cm}$ von der Lampe entfernt."
+       },
+       {
+        "label": "c)",
+        "frage": "Wie groß ist der Durchmesser des Schattens auf der Wand? (Tipp: Von der Lampe aus gesehen ist die Wand doppelt so weit weg wie die Pappe.)",
+        "felder": [
+         {
+          "antwort": 12,
+          "einheit": "cm"
+         }
+        ],
+        "loesung": "Die Strahlen laufen von der Lampe geradlinig auseinander. Die Wand ist doppelt so weit weg wie die Pappe ($200\\ \\text{cm}$ statt $100\\ \\text{cm}$), also wird der Schatten doppelt so groß: $2 \\cdot 6\\ \\text{cm} = 12\\ \\text{cm}$."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Du schiebst die Pappe näher an die Lampe heran. Was passiert mit der Größe des Schattens? Begründe ohne zu rechnen.",
+        "loesung": "Der Schatten wird größer: Je näher der Gegenstand an der punktförmigen Lampe ist, desto stärker laufen die Randstrahlen bis zur Wand auseinander – der dunkle Bereich auf der Wand wächst."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 4,
@@ -2356,5 +2422,95 @@
     "l5b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 118,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Reflexion",
+    "x": 80,
+    "y": 55,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Spiegelbild",
+    "x": 230,
+    "y": 55,
+    "lektion": "l2"
+   },
+   {
+    "id": "k3",
+    "label": "Brechung",
+    "x": 380,
+    "y": 55,
+    "lektion": "l3"
+   },
+   {
+    "id": "k4",
+    "label": "Linsen",
+    "x": 530,
+    "y": 55,
+    "lektion": "l4"
+   },
+   {
+    "id": "k5",
+    "label": "Farben",
+    "x": 530,
+    "y": 140,
+    "lektion": "l5"
+   },
+   {
+    "id": "k6",
+    "label": "Licht geradlinig",
+    "x": 80,
+    "y": 215,
+    "lektion": "l7"
+   },
+   {
+    "id": "k7",
+    "label": "Schatten",
+    "x": 255,
+    "y": 215,
+    "lektion": "l8"
+   },
+   {
+    "id": "k8",
+    "label": "Kern- & Halbschatten",
+    "x": 430,
+    "y": 215,
+    "lektion": "l9"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k6",
+    "k7"
+   ],
+   [
+    "k7",
+    "k8"
+   ]
+  ]
+ }
 }

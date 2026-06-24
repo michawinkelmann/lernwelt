@@ -3539,7 +3539,56 @@
        ]
       }
      ],
-     "partner": "Diskutiert: Was bedeutet es konkret, wenn $k = 0{,}2$? Wie viele Prozent Zuwachs pro Zeiteinheit ergibt das ungefähr?"
+     "partner": "Diskutiert: Was bedeutet es konkret, wenn $k = 0{,}2$? Wie viele Prozent Zuwachs pro Zeiteinheit ergibt das ungefähr?",
+     "bluete": {
+      "kontext": "<p><strong>Abbau eines Medikaments.</strong> Nach einer Spritze befinden sich $80\\,\\text{mg}$ eines Wirkstoffs im Blut. Die Wirkstoffmenge zerfällt exponentiell mit einer Halbwertszeit von $6$ Stunden: $\\;N(t) = 80 \\cdot \\mathrm{e}^{k\\,t}$ (mit $t$ in Stunden).</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Bestimme die Zerfallskonstante $k$ (auf vier Nachkommastellen) aus der Halbwertszeit.",
+        "felder": [
+         {
+          "label": "$k \\approx$",
+          "antwort": -0.1155,
+          "toleranz": 0.0005,
+          "einheit": "1/h"
+         }
+        ],
+        "loesung": "Aus $N(6) = \\tfrac{1}{2}\\cdot 80$ folgt $\\mathrm{e}^{6k} = \\tfrac{1}{2}$, also $k = \\frac{\\ln(0{,}5)}{6} \\approx -0{,}1155\\;\\tfrac{1}{\\text{h}}$."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie viel Wirkstoff ist nach $9$ Stunden noch im Blut?",
+        "felder": [
+         {
+          "label": "$N(9) \\approx$",
+          "antwort": 28.3,
+          "toleranz": 0.4,
+          "einheit": "mg"
+         }
+        ],
+        "loesung": "$N(9) = 80\\cdot \\mathrm{e}^{-0{,}1155\\cdot 9} = 80\\cdot \\mathrm{e}^{-1{,}0397} \\approx 28{,}3\\,\\text{mg}$."
+       },
+       {
+        "label": "c)",
+        "frage": "Eine neue Dosis ist nötig, sobald weniger als $10\\,\\text{mg}$ vorhanden sind. Nach wie vielen Stunden ist das der Fall?",
+        "felder": [
+         {
+          "label": "$t \\approx$",
+          "antwort": 18,
+          "toleranz": 0.3,
+          "einheit": "h"
+         }
+        ],
+        "loesung": "$10 = 80\\cdot\\mathrm{e}^{kt} \\Rightarrow \\mathrm{e}^{kt} = \\tfrac{1}{8} \\Rightarrow t = \\frac{\\ln(1/8)}{k} \\approx 18{,}0\\,\\text{h}$. Anschaulich: $80 \\to 40 \\to 20 \\to 10$ sind genau drei Halbwertszeiten $= 18$ Stunden."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Die Ableitung $N'(t) = k\\cdot N(t)$ beschreibt die Abbaugeschwindigkeit. Erkläre, warum der Abbau anfangs am schnellsten verläuft und später immer langsamer wird – obwohl $k$ konstant bleibt.",
+        "loesung": "Wegen $N'(t)=k\\cdot N(t)$ ist die Abbaurate proportional zur noch vorhandenen Menge. Solange viel Wirkstoff da ist (großes $N$), ist $|N'|$ groß; mit sinkendem $N$ sinkt auch der Betrag der Geschwindigkeit. Der Graph wird flacher und nähert sich der $t$-Achse, ohne sie zu erreichen."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -7343,5 +7392,103 @@
     "l32b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 124,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Stamm-\nfunktion",
+    "x": 95,
+    "y": 65,
+    "lektion": "l2"
+   },
+   {
+    "id": "k2",
+    "label": "Bestimmtes\nIntegral",
+    "x": 250,
+    "y": 65,
+    "lektion": "l3"
+   },
+   {
+    "id": "k3",
+    "label": "Hauptsatz",
+    "x": 405,
+    "y": 65,
+    "lektion": "l4"
+   },
+   {
+    "id": "k4",
+    "label": "Flächen &\nBestände",
+    "x": 555,
+    "y": 65,
+    "lektion": "l7"
+   },
+   {
+    "id": "k5",
+    "label": "e-Funktion\n& ln",
+    "x": 95,
+    "y": 160,
+    "lektion": "l11"
+   },
+   {
+    "id": "k6",
+    "label": "Ableiten der\ne-Funktion",
+    "x": 250,
+    "y": 160,
+    "lektion": "l12"
+   },
+   {
+    "id": "k7",
+    "label": "Wachstums-\nmodelle",
+    "x": 420,
+    "y": 160,
+    "lektion": "l16"
+   },
+   {
+    "id": "k8",
+    "label": "Steckbrief &\nScharen",
+    "x": 300,
+    "y": 245,
+    "lektion": "l20"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k5",
+    "k6"
+   ],
+   [
+    "k6",
+    "k7"
+   ],
+   [
+    "k1",
+    "k5"
+   ],
+   [
+    "k4",
+    "k8"
+   ],
+   [
+    "k7",
+    "k8"
+   ]
+  ]
+ }
 }

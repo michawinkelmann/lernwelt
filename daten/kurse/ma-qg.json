@@ -844,7 +844,60 @@
        ]
       }
      ],
-     "partner": "Erkläre: Warum gibt es unendlich viele Parameterdarstellungen für dieselbe Gerade?"
+     "partner": "Erkläre: Warum gibt es unendlich viele Parameterdarstellungen für dieselbe Gerade?",
+     "bluete": {
+      "kontext": "<p><strong>Eine Seilbahn als Gerade im Raum.</strong> Die Talstation liegt im Punkt $P(0\\mid 0\\mid 0)$, die Bergstation in $Q(120\\mid 80\\mid 45)$ (alle Koordinaten in Metern). Die Kabine bewegt sich geradlinig von $P$ nach $Q$.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Gib den Richtungsvektor $\\vec{PQ}$ an und stelle eine Parametergleichung der Geraden $g$ durch $P$ und $Q$ auf.",
+        "loesung": "$\\vec{PQ} = \\begin{pmatrix}120\\\\80\\\\45\\end{pmatrix}$. Eine Gleichung: $g:\\ \\vec{x} = \\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix} + r\\cdot\\begin{pmatrix}120\\\\80\\\\45\\end{pmatrix},\\ r\\in[0;1]$."
+       },
+       {
+        "label": "b)",
+        "frage": "An welchem Punkt befindet sich die Kabine bei $r = 0{,}5$? Gib die drei Koordinaten an.",
+        "felder": [
+         {
+          "label": "$x_1 =$",
+          "antwort": 60,
+          "toleranz": 0,
+          "einheit": "m"
+         },
+         {
+          "label": "$x_2 =$",
+          "antwort": 40,
+          "toleranz": 0,
+          "einheit": "m"
+         },
+         {
+          "label": "$x_3 =$",
+          "antwort": 22.5,
+          "toleranz": 0,
+          "einheit": "m"
+         }
+        ],
+        "loesung": "Einsetzen von $r=0{,}5$: $\\vec{x} = 0{,}5\\cdot\\begin{pmatrix}120\\\\80\\\\45\\end{pmatrix} = \\begin{pmatrix}60\\\\40\\\\22{,}5\\end{pmatrix}$ – die Kabine ist genau auf halber Strecke."
+       },
+       {
+        "label": "c)",
+        "frage": "Eine Stütze trägt das Seil im Punkt $R(72\\mid 48\\mid 27)$. Prüfe mit der Punktprobe, ob $R$ auf $g$ liegt, und gib den Parameter $r$ an.",
+        "felder": [
+         {
+          "label": "$r =$",
+          "antwort": 0.6,
+          "toleranz": 0,
+          "einheit": ""
+         }
+        ],
+        "loesung": "Punktprobe: $\\frac{72}{120}=0{,}6$, $\\frac{48}{80}=0{,}6$, $\\frac{27}{45}=0{,}6$. Alle drei Gleichungen liefern denselben Wert $r=0{,}6$, also liegt $R$ auf $g$."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Eine zweite, waagerechte Materialseilbahn verläuft auf der Geraden $h:\\ \\vec{x} = \\begin{pmatrix}0\\\\80\\\\30\\end{pmatrix} + s\\cdot\\begin{pmatrix}120\\\\0\\\\0\\end{pmatrix}$. Untersuche ohne vollständige Rechnung, ob sich die beiden Seilbahnen kreuzen können, und beschreibe das Vorgehen für den Nachweis.",
+        "loesung": "Die Richtungsvektoren $(120;80;45)$ und $(120;0;0)$ sind nicht parallel. Man setzt $g=h$ gleich. Aus der dritten Zeile $45r = 30$ folgt $r=\\tfrac{2}{3}$; eingesetzt in Zeile 2: $80\\cdot\\tfrac{2}{3}\\approx 53{,}3 \\ne 80$. Das System ist nicht lösbar – die Geraden sind windschief und kreuzen sich nicht."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -5659,5 +5712,92 @@
     "l25b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 124,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Punkte &\nVektoren",
+    "x": 95,
+    "y": 65,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Skalar-\nprodukt",
+    "x": 255,
+    "y": 65,
+    "lektion": "l3"
+   },
+   {
+    "id": "k3",
+    "label": "Geraden\nim Raum",
+    "x": 415,
+    "y": 65,
+    "lektion": "l4"
+   },
+   {
+    "id": "k4",
+    "label": "Ebenen\nim Raum",
+    "x": 415,
+    "y": 150,
+    "lektion": "l6"
+   },
+   {
+    "id": "k5",
+    "label": "Abstände\n& Winkel",
+    "x": 565,
+    "y": 150,
+    "lektion": "l11"
+   },
+   {
+    "id": "k6",
+    "label": "Lage-\nbeziehungen",
+    "x": 255,
+    "y": 150,
+    "lektion": "l9"
+   },
+   {
+    "id": "k7",
+    "label": "Matrizen &\nProzesse",
+    "x": 150,
+    "y": 235,
+    "lektion": "l22"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k4",
+    "k6"
+   ],
+   [
+    "k3",
+    "k6"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k1",
+    "k7"
+   ]
+  ]
+ }
 }

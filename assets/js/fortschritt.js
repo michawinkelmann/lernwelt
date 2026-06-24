@@ -8,7 +8,7 @@ const SCHLUESSEL = "lernwelt-fortschritt";
 // ---------- Laden & Speichern ----------
 
 function leererStand() {
-  return { version: 1, aufgaben: {}, themen: {}, lernbuero: { kurse: {}, tagebuch: [] }, projekte: {}, feedback: {} };
+  return { version: 1, aufgaben: {}, themen: {}, lernbuero: { kurse: {}, tagebuch: [] }, projekte: {}, feedback: {}, regelheft: [] };
 }
 
 function lade() {
@@ -24,6 +24,7 @@ function lade() {
     if (!Array.isArray(daten.lernbuero.tagebuch)) daten.lernbuero.tagebuch = [];
     if (!daten.projekte || typeof daten.projekte !== "object") daten.projekte = {};
     if (!daten.feedback || typeof daten.feedback !== "object") daten.feedback = {};
+    if (!Array.isArray(daten.regelheft)) daten.regelheft = [];
     return daten;
   } catch (e) {
     return leererStand();
@@ -83,7 +84,7 @@ export function holeThemenFortschritt(themaId) {
 // ---------- Lernbüro: Lektions-Stand ----------
 
 function leereLektion() {
-  return { phasen: {}, checkpoint: false, freigabe: false, ampel: {} };
+  return { phasen: {}, checkpoint: false, freigabe: false, ampel: {}, vorhersage: "" };
 }
 
 // Liefert eine Kopie des gespeicherten Lektionsstands (oder Standard).
@@ -119,6 +120,15 @@ export function setzeAmpel(kursId, lektionId, zielIndex, wert) {
   aendereLektion(kursId, lektionId, l => { l.ampel[zielIndex] = wert; });
 }
 
+// POE-Vorhersage (Selbstabgleich): Vermutung aus dem Einstieg lokal merken und
+// in der Sichern-Phase zur Aufloesung zeigen.
+export function setzeVorhersage(kursId, lektionId, text) {
+  aendereLektion(kursId, lektionId, l => { l.vorhersage = String(text || "").slice(0, 200); });
+}
+export function holeVorhersage(kursId, lektionId) {
+  return holeLektionStand(kursId, lektionId).vorhersage || "";
+}
+
 // Freischalt-Logik: erste Lektion ODER Vorgänger bestanden ODER eigene Lehrkraft-Freigabe.
 export function istLektionFrei(kursId, lektionIds, index) {
   if (index <= 0) return true;
@@ -152,6 +162,26 @@ export function ergaenzeTagebuch(eintrag) {
 export function entferneTagebuch(id) {
   const daten = lade();
   daten.lernbuero.tagebuch = daten.lernbuero.tagebuch.filter(e => e.id !== id);
+  speichere(daten);
+}
+
+// ---------- Lernbüro: Regelheft (gesammelte Merksätze, lokal, exportierbar) ----------
+export function holeRegelheft() {
+  return lade().regelheft.slice();
+}
+export function ergaenzeRegelheft(eintrag) {
+  const html = (eintrag && eintrag.html || "").trim();
+  if (!html) return null;
+  const daten = lade();
+  if (daten.regelheft.some(e => e.kurs === eintrag.kurs && e.lektion === eintrag.lektion && e.titel === eintrag.titel)) return null;
+  const neu = { id: "r" + Date.now() + "-" + Math.floor(Math.random() * 1000), kurs: eintrag.kurs || "", lektion: eintrag.lektion || "", titel: eintrag.titel || "", html, datum: new Date().toISOString() };
+  daten.regelheft.push(neu);
+  speichere(daten);
+  return neu;
+}
+export function entferneRegelheft(id) {
+  const daten = lade();
+  daten.regelheft = daten.regelheft.filter(e => e.id !== id);
   speichere(daten);
 }
 
@@ -297,6 +327,9 @@ export function importiereFortschritt(datei) {
     fuehreLernbueroZusammen(daten.lernbuero, fremd.lernbuero);
     fuehreProjekteZusammen(daten.projekte, fremd.projekte);
     fuehreFeedbackZusammen(daten.feedback, fremd.feedback);
+    (Array.isArray(fremd.regelheft) ? fremd.regelheft : []).forEach(e => {
+      if (e && e.id && !daten.regelheft.some(x => x.id === e.id)) daten.regelheft.push(e);
+    });
     speichere(daten);
     return Object.keys(fremd.aufgaben).length;
   });

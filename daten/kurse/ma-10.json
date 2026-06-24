@@ -590,6 +590,52 @@
        "weniger als 30 %"
       ],
       "figurAlt": "Ein Säulendiagramm: links eine volle Säule mit 800 € (heute), rechts eine gestrichelte Säule mit Fragezeichen für das Guthaben in 10 Jahren bei 3 % Zinsen pro Jahr."
+     },
+     "bluete": {
+      "kontext": "<p><strong>Sparbuch mit Zinseszins.</strong> Auf einem Konto liegen $1200\\,€$. Die Bank zahlt $2{,}5\\,\\%$ Zinsen pro Jahr, und die Zinsen bleiben liegen (sie werden mitverzinst). Wir verfolgen das Guthaben über mehrere Jahre.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Mit welchem Faktor $b$ wird das Guthaben jedes Jahr multipliziert?",
+        "felder": [
+         {
+          "label": "b =",
+          "antwort": 1.025,
+          "toleranz": 0.001
+         }
+        ],
+        "loesung": "$2{,}5\\,\\%$ Zuwachs bedeutet Faktor $b = 1 + \\dfrac{2{,}5}{100} = 1{,}025$."
+       },
+       {
+        "label": "b)",
+        "frage": "Stelle den Funktionsterm für das Guthaben nach $n$ Jahren auf und berechne das Guthaben nach $5$ Jahren (auf Cent gerundet).",
+        "felder": [
+         {
+          "antwort": 1357.69,
+          "toleranz": 0.1,
+          "einheit": "€"
+         }
+        ],
+        "loesung": "$f(n) = 1200 \\cdot 1{,}025^{\\,n}$. Für $n=5$: $1200 \\cdot 1{,}025^{5} \\approx 1200 \\cdot 1{,}13141 \\approx 1357{,}69\\,€$."
+       },
+       {
+        "label": "c)",
+        "frage": "Um wie viel Prozent ist das Guthaben nach diesen $5$ Jahren insgesamt gewachsen? (auf $0{,}1$ genau)",
+        "felder": [
+         {
+          "antwort": 13.1,
+          "toleranz": 0.2,
+          "einheit": "%"
+         }
+        ],
+        "loesung": "$1{,}025^{5} \\approx 1{,}1314$, also rund $13{,}1\\,\\%$ Zuwachs — mehr als $5 \\cdot 2{,}5\\,\\% = 12{,}5\\,\\%$, weil Zinsen auf Zinsen anfallen."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Nach wie vielen vollen Jahren hat sich das Guthaben ungefähr verdoppelt? Beschreibe, wie du das durch Probieren findest.",
+        "loesung": "Man sucht $n$ mit $1{,}025^{\\,n} \\approx 2$. Probieren: $1{,}025^{28} \\approx 1{,}996$ (knapp darunter), $1{,}025^{29} \\approx 2{,}046$. Nach etwa $29$ Jahren ist das Guthaben verdoppelt. (Exakt löst man das später mit dem Logarithmus.)"
+       }
+      ]
      }
     },
     "verstehen": {
@@ -749,7 +795,52 @@
        ]
       }
      ],
-     "partner": "Einer nennt Startwert, Prozentsatz und Jahre, der andere rechnet $a\\cdot b^n$ aus. Dann tauschen."
+     "partner": "Einer nennt Startwert, Prozentsatz und Jahre, der andere rechnet $a\\cdot b^n$ aus. Dann tauschen.",
+     "bluete": {
+      "kontext": "<p><strong>Sparbuch mit Zinseszins.</strong> Auf einem Konto liegen 1200 €, die jährlich mit 2,5 % verzinst werden (Zinsen bleiben auf dem Konto).</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Mit welchem Faktor wird das Guthaben pro Jahr multipliziert (Wachstumsfaktor)?",
+        "felder": [
+         {
+          "antwort": 1.025,
+          "toleranz": 0.001
+         }
+        ],
+        "loesung": "100 % + 2,5 % = 102,5 % = 1,025."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie viel Guthaben ist nach 5 Jahren auf dem Konto?",
+        "felder": [
+         {
+          "antwort": 1357.69,
+          "toleranz": 0.5,
+          "einheit": "€"
+         }
+        ],
+        "loesung": "1200 € · 1,025⁵ ≈ 1200 € · 1,1314 ≈ 1357,69 €."
+       },
+       {
+        "label": "c)",
+        "frage": "Um wie viel Prozent ist das Guthaben in diesen 5 Jahren insgesamt gewachsen?",
+        "felder": [
+         {
+          "antwort": 13.1,
+          "toleranz": 0.3,
+          "einheit": "%"
+         }
+        ],
+        "loesung": "1,025⁵ ≈ 1,1314, also etwa 13,1 % Zuwachs (mehr als 5 · 2,5 % = 12,5 % wegen Zinseszins)."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Knifflig:</em> Nach wie vielen Jahren hat sich das Guthaben ungefähr verdoppelt? Wie findest du das heraus?",
+        "loesung": "Lösen von 1,025ⁿ = 2 (Probieren oder Logarithmus): n = ln2 / ln1,025 ≈ 28 Jahre."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -7339,5 +7430,77 @@
     "gym"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 300,
+  "knotenBreite": 130,
+  "knotenHoehe": 42,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Exponent. Wachstum",
+    "x": 110,
+    "y": 70,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Potenzen & -funktionen",
+    "x": 330,
+    "y": 70,
+    "lektion": "l11"
+   },
+   {
+    "id": "k3",
+    "label": "Trigonometrie",
+    "x": 550,
+    "y": 70,
+    "lektion": "l6"
+   },
+   {
+    "id": "k4",
+    "label": "Körperberechnungen",
+    "x": 110,
+    "y": 230,
+    "lektion": "l16"
+   },
+   {
+    "id": "k5",
+    "label": "Sinusfunktion",
+    "x": 330,
+    "y": 230,
+    "lektion": "l21"
+   },
+   {
+    "id": "k6",
+    "label": "Grenzprozesse",
+    "x": 550,
+    "y": 230,
+    "lektion": "l26"
+   }
+  ],
+  "kanten": [
+   [
+    "k2",
+    "k1"
+   ],
+   [
+    "k3",
+    "k5"
+   ],
+   [
+    "k5",
+    "k4"
+   ],
+   [
+    "k2",
+    "k6"
+   ],
+   [
+    "k1",
+    "k3"
+   ]
+  ]
+ }
 }

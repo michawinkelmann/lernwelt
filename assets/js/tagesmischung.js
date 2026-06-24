@@ -16,6 +16,10 @@ export const WIEDERVORLAGE_SCHLUESSEL = "lernwelt-wiedervorlage";
 // Hoechstens zwei Aufgaben je Thema, damit die Mischung breit streut.
 const MAX_PRO_THEMA = 2;
 
+// Expandierende Wiedervorlage-Intervalle in Tagen (Leitner / spaced retrieval, Cepeda 2006):
+// falsch → Stufe 1 (morgen faellig); bei richtiger Wiederholung 3 Tage, dann 7 Tage, dann graduiert.
+export const WV_INTERVALLE = [1, 3, 7];
+
 const STUFEN = [
   ["klasse-5", "Klasse 5"],
   ["klasse-6", "Klasse 6"],
@@ -90,6 +94,13 @@ export function morgenIso(heuteIso) {
   return morgen.toISOString().slice(0, 10);
 }
 
+// N Tage auf ein ISO-Datum addieren (fuer expandierende Wiedervorlage-Intervalle).
+export function plusTage(heuteIso, tage) {
+  const [jahr, monat, tag] = String(heuteIso).split("-").map(Number);
+  const ziel = new Date(Date.UTC(jahr, (monat || 1) - 1, (tag || 1) + (tage | 0)));
+  return ziel.toISOString().slice(0, 10);
+}
+
 // Faellig, sobald faelligAb erreicht oder ueberschritten ist (ISO-Strings vergleichen sich lexikografisch).
 export function istFaellig(eintrag, heuteIso) {
   return !!(eintrag && typeof eintrag.faelligAb === "string" &&
@@ -129,14 +140,28 @@ export function filtereThemen(themen, auswahl, meineThemenIds) {
 
 // ---------- Wiedervorlage-Pflege (reine Funktion) ----------
 
-// Antwort einarbeiten: richtig → Eintrag entfernen; falsch → ab morgen vormerken
-// (vorhandene Eintraege behalten ihr Faelligkeitsdatum, keine Dubletten).
-export function wendeAntwortAufWiedervorlage(liste, antwort, morgen) {
+// Antwort einarbeiten (Leitner-Prinzip, expandierende Intervalle):
+//  falsch               → Stufe 1, morgen faellig (Lapse setzt eine vorhandene Karte zurueck).
+//  richtig & vorgemerkt → naechste Stufe, spaeter faellig; nach der letzten Stufe graduiert (raus).
+//  richtig & nicht drin → nichts tun (nur falsch beantwortete Aufgaben kommen in die Wiedervorlage).
+// `heute` ist das ISO-Datum von heute; die Faelligkeit wird daraus berechnet.
+export function wendeAntwortAufWiedervorlage(liste, antwort, heute) {
   const sauber = (Array.isArray(liste) ? liste : []).filter(e => e && e.id);
   if (!antwort || !antwort.id) return sauber;
-  if (antwort.ok) return sauber.filter(e => e.id !== antwort.id);
-  if (sauber.some(e => e.id === antwort.id)) return sauber;
-  return sauber.concat([{ id: antwort.id, themaId: antwort.themaId || "", faelligAb: morgen }]);
+  const idx = sauber.findIndex(e => e.id === antwort.id);
+  if (antwort.ok) {
+    if (idx < 0) return sauber;                                  // war nicht vorgemerkt → nichts tun
+    const naechste = (sauber[idx].stufe || 1) + 1;
+    if (naechste > WV_INTERVALLE.length) return sauber.filter(e => e.id !== antwort.id); // graduiert
+    const kopie = sauber.slice();
+    kopie[idx] = Object.assign({}, sauber[idx], { stufe: naechste, faelligAb: plusTage(heute, WV_INTERVALLE[naechste - 1]) });
+    return kopie;
+  }
+  const eintrag = { id: antwort.id, themaId: antwort.themaId || "", stufe: 1, faelligAb: plusTage(heute, WV_INTERVALLE[0]) };
+  if (idx < 0) return sauber.concat([eintrag]);                  // neu anlegen
+  const kopie = sauber.slice();
+  kopie[idx] = eintrag;                                          // Lapse: zuruecksetzen
+  return kopie;
 }
 
 // ---------- Ziehlogik ----------
@@ -326,14 +351,20 @@ export const TESTS = [
     }
   },
   {
-    name: "Wiedervorlage-Pflege: falsch traegt ein (ohne Dublette), richtig entfernt",
+    name: "Wiedervorlage-Pflege: falsch legt an, expandierende Intervalle 1/3/7, graduiert",
     ok: () => {
-      const morgen = "2026-06-13";
-      const nach1 = wendeAntwortAufWiedervorlage([], { id: "a1", themaId: "t1", ok: false }, morgen);
-      const nach2 = wendeAntwortAufWiedervorlage(nach1, { id: "a1", themaId: "t1", ok: false }, "2026-06-20");
-      const nach3 = wendeAntwortAufWiedervorlage(nach2, { id: "a1", themaId: "t1", ok: true }, morgen);
-      return nach1.length === 1 && nach1[0].faelligAb === morgen && nach1[0].themaId === "t1" &&
-        nach2.length === 1 && nach2[0].faelligAb === morgen && nach3.length === 0;
+      const nach1 = wendeAntwortAufWiedervorlage([], { id: "a1", themaId: "t1", ok: false }, "2026-06-12");
+      const nach2 = wendeAntwortAufWiedervorlage(nach1, { id: "a1", themaId: "t1", ok: false }, "2026-06-19"); // Lapse → Stufe 1
+      const nach3 = wendeAntwortAufWiedervorlage(nach2, { id: "a1", themaId: "t1", ok: true }, "2026-06-20");  // → Stufe 2 (+3)
+      const nach4 = wendeAntwortAufWiedervorlage(nach3, { id: "a1", themaId: "t1", ok: true }, "2026-06-23");  // → Stufe 3 (+7)
+      const nach5 = wendeAntwortAufWiedervorlage(nach4, { id: "a1", themaId: "t1", ok: true }, "2026-06-30");  // graduiert
+      const fremd = wendeAntwortAufWiedervorlage([], { id: "z9", themaId: "t1", ok: true }, "2026-06-12");     // nicht drin → nichts
+      return nach1.length === 1 && nach1[0].stufe === 1 && nach1[0].faelligAb === "2026-06-13" && nach1[0].themaId === "t1" &&
+        nach2.length === 1 && nach2[0].stufe === 1 && nach2[0].faelligAb === "2026-06-20" &&
+        nach3.length === 1 && nach3[0].stufe === 2 && nach3[0].faelligAb === "2026-06-23" &&
+        nach4.length === 1 && nach4[0].stufe === 3 && nach4[0].faelligAb === "2026-06-30" &&
+        nach5.length === 0 && fremd.length === 0 &&
+        plusTage("2026-06-30", 1) === "2026-07-01" && plusTage("2026-12-31", 1) === "2027-01-01";
     }
   },
   {
@@ -603,12 +634,12 @@ export async function starteTagesmischung() {
   neuKnopf.addEventListener("click", () => { salt++; ziehe(); });
   document.addEventListener("zweig-geaendert", () => { ziehe(); });
 
-  // Antworten in die Wiedervorlage einarbeiten: falsch → morgen faellig, richtig → raus.
+  // Antworten in die Wiedervorlage einarbeiten: falsch → Stufe 1 (morgen), richtig → naechste Stufe bzw. graduiert.
   document.addEventListener("aufgabe-beantwortet", ereignis => {
     const detail = (ereignis && ereignis.detail) || {};
     if (!detail.id) return;
     const alt = liesJson(WIEDERVORLAGE_SCHLUESSEL, []);
-    const neu = wendeAntwortAufWiedervorlage(alt, detail, morgenIso(datumIso()));
+    const neu = wendeAntwortAufWiedervorlage(alt, detail, datumIso());
     schreibeJson(WIEDERVORLAGE_SCHLUESSEL, neu);
   });
 

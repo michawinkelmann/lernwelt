@@ -249,7 +249,14 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum „10-mal mit Zurücklegen ziehen“ eine Bernoulli-Kette ist, „10-mal ohne Zurücklegen“ aber nicht."
+     "selbsterklaerung": "Erkläre in einem Satz, warum „10-mal mit Zurücklegen ziehen“ eine Bernoulli-Kette ist, „10-mal ohne Zurücklegen“ aber nicht.",
+     "interaktiv": {
+      "id": "konvergenz",
+      "titel": "Treffer-Wahrscheinlichkeit als relative Häufigkeit",
+      "params": {
+       "seiten": 6
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -913,7 +920,56 @@
        ]
       }
      ],
-     "partner": "Berechnet für $n = 40$, $p = 0{,}5$ gemeinsam $\\mu$ und $\\sigma$ und prüft die Laplace-Bedingung – einer leitet, der andere kontrolliert."
+     "partner": "Berechnet für $n = 40$, $p = 0{,}5$ gemeinsam $\\mu$ und $\\sigma$ und prüft die Laplace-Bedingung – einer leitet, der andere kontrolliert.",
+     "bluete": {
+      "kontext": "<p><strong>Qualitätskontrolle in der LED-Fertigung.</strong> Erfahrungsgemäß sind $4\\,\\%$ der produzierten LEDs defekt. Für eine Stichprobe werden $n = 50$ LEDs zufällig entnommen. Die Anzahl $X$ der defekten LEDs ist binomialverteilt mit $p = 0{,}04$.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Wie viele defekte LEDs sind in der Stichprobe zu erwarten? Berechne den Erwartungswert $\\mu = n\\cdot p$.",
+        "felder": [
+         {
+          "label": "$\\mu =$",
+          "antwort": 2,
+          "toleranz": 0,
+          "einheit": ""
+         }
+        ],
+        "loesung": "$\\mu = n\\cdot p = 50\\cdot 0{,}04 = 2$. Im Mittel sind also $2$ der $50$ LEDs defekt."
+       },
+       {
+        "label": "b)",
+        "frage": "Berechne die Standardabweichung $\\sigma = \\sqrt{n\\,p\\,(1-p)}$ (auf zwei Nachkommastellen).",
+        "felder": [
+         {
+          "label": "$\\sigma \\approx$",
+          "antwort": 1.39,
+          "toleranz": 0.02,
+          "einheit": ""
+         }
+        ],
+        "loesung": "$\\sigma = \\sqrt{50\\cdot 0{,}04\\cdot 0{,}96} = \\sqrt{1{,}92} \\approx 1{,}39$."
+       },
+       {
+        "label": "c)",
+        "frage": "Mit welcher Wahrscheinlichkeit ist in der Stichprobe keine einzige LED defekt? Gib das Ergebnis als Prozentwert an.",
+        "felder": [
+         {
+          "label": "$P(X=0) \\approx$",
+          "antwort": 13,
+          "toleranz": 0.5,
+          "einheit": "%"
+         }
+        ],
+        "loesung": "$P(X=0) = \\binom{50}{0}\\cdot 0{,}04^{0}\\cdot 0{,}96^{50} = 0{,}96^{50} \\approx 0{,}130 = 13{,}0\\,\\%$."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Die Fertigung wird verbessert, der Ausschuss sinkt auf $2\\,\\%$. Erläutere, wie sich Erwartungswert und Standardabweichung dadurch verändern, und begründe, warum $\\sigma$ <em>nicht</em> einfach halbiert wird.",
+        "loesung": "Neu: $\\mu = 50\\cdot 0{,}02 = 1$ (halbiert), $\\sigma = \\sqrt{50\\cdot 0{,}02\\cdot 0{,}98} = \\sqrt{0{,}98} \\approx 0{,}99$. Der Erwartungswert halbiert sich, weil er linear von $p$ abhängt. $\\sigma$ hängt über die Wurzel von $p(1-p)$ ab und sinkt nur von $\\approx 1{,}39$ auf $\\approx 0{,}99$ – also schwächer als auf die Hälfte."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -5232,5 +5288,92 @@
     "l21b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 124,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Bernoulli-\nKette",
+    "x": 95,
+    "y": 65,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Formel von\nBernoulli",
+    "x": 255,
+    "y": 65,
+    "lektion": "l2"
+   },
+   {
+    "id": "k3",
+    "label": "Binomial-\nverteilung",
+    "x": 415,
+    "y": 65,
+    "lektion": "l4"
+   },
+   {
+    "id": "k4",
+    "label": "Sigma-\nUmgebungen",
+    "x": 565,
+    "y": 65,
+    "lektion": "l5"
+   },
+   {
+    "id": "k5",
+    "label": "Normal-\nverteilung",
+    "x": 415,
+    "y": 150,
+    "lektion": "l7"
+   },
+   {
+    "id": "k6",
+    "label": "Sigma-\nRegeln",
+    "x": 565,
+    "y": 150,
+    "lektion": "l9"
+   },
+   {
+    "id": "k7",
+    "label": "Hypothesen-\ntests",
+    "x": 255,
+    "y": 235,
+    "lektion": "l12"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k3",
+    "k5"
+   ],
+   [
+    "k5",
+    "k6"
+   ],
+   [
+    "k4",
+    "k6"
+   ],
+   [
+    "k3",
+    "k7"
+   ]
+  ]
+ }
 }

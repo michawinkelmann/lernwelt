@@ -261,7 +261,50 @@
        ]
       }
      ],
-     "partner": "Erkläre deinem Nachbarn, warum $25\\,\\% = \\frac14 = 0{,}25$ dasselbe ist."
+     "partner": "Erkläre deinem Nachbarn, warum $25\\,\\% = \\frac14 = 0{,}25$ dasselbe ist.",
+     "bluete": {
+      "kontext": "<p><strong>Im Elektromarkt.</strong> Ein Fernseher kostet 800 €. Arbeite dich Stück für Stück vor – nach jeder Teilaufgabe kannst du dein Ergebnis prüfen:</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Berechne 20 % von 800 €.",
+        "felder": [
+         {
+          "antwort": 160,
+          "einheit": "€"
+         }
+        ],
+        "loesung": "0,20 · 800 € = 160 €."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie viel kostet der Fernseher nach 20 % Rabatt?",
+        "felder": [
+         {
+          "antwort": 640,
+          "einheit": "€"
+         }
+        ],
+        "loesung": "800 € − 160 € = 640 €."
+       },
+       {
+        "label": "c)",
+        "frage": "Im Schlussverkauf kostet er nur noch 560 €. Wie viel Prozent Rabatt sind das?",
+        "felder": [
+         {
+          "antwort": 30,
+          "einheit": "%"
+         }
+        ],
+        "loesung": "(800 − 560) / 800 = 0,30 = 30 %."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Knifflig:</em> Ist „erst 10 %, dann nochmal 10 % Rabatt\" dasselbe wie „20 % auf einmal\"? Begründe.",
+        "loesung": "Nein: 10 % dann 10 % ergibt 800 → 720 → 648 € (effektiv 19 %); 20 % auf einmal ergibt 640 €. Prozente vom jeweils neuen Wert sind nicht einfach addierbar."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -840,7 +883,50 @@
        ]
       }
      ],
-     "partner": "Erkläre: Warum teilt man bei $90$ Tagen Laufzeit durch $360$?"
+     "partner": "Erkläre: Warum teilt man bei $90$ Tagen Laufzeit durch $360$?",
+     "bluete": {
+      "kontext": "<p><strong>Lenas Sparkonto.</strong> Lena legt 600 € auf ein Sparkonto mit einem Zinssatz von 2 % pro Jahr. Arbeite dich Schritt für Schritt vor – nach jeder Teilaufgabe kannst du dein Ergebnis prüfen.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Wie viel Zinsen bekommt Lena nach einem ganzen Jahr?",
+        "felder": [
+         {
+          "antwort": 12,
+          "einheit": "€"
+         }
+        ],
+        "loesung": "$2\\,\\%$ von $600\\;€ = 0{,}02 \\cdot 600\\;€ = 12\\;€$."
+       },
+       {
+        "label": "b)",
+        "frage": "Lena lässt das Geld nur 6 Monate liegen. Wie viel Zinsen erhält sie für ein halbes Jahr?",
+        "felder": [
+         {
+          "antwort": 6,
+          "einheit": "€"
+         }
+        ],
+        "loesung": "Für 6 von 12 Monaten gibt es die Hälfte der Jahreszinsen: $12\\;€ \\cdot \\frac{6}{12} = 6\\;€$."
+       },
+       {
+        "label": "c)",
+        "frage": "Auf einem anderen Konto bekäme Lena für 600 € im Jahr 18 € Zinsen. Welcher Zinssatz ist das?",
+        "felder": [
+         {
+          "antwort": 3,
+          "einheit": "%"
+         }
+        ],
+        "loesung": "$\\frac{18}{600} = 0{,}03 = 3\\,\\%$. Der Prozentsatz ist also $3\\,\\%$ pro Jahr."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Zum Nachdenken:</em> Lena lässt die 12 € Zinsen aus dem ersten Jahr auf dem Konto liegen. Bekommt sie im zweiten Jahr wieder genau 12 € Zinsen? Begründe.",
+        "loesung": "Nein, etwas mehr: Im zweiten Jahr verzinst sich das gewachsene Guthaben von $612\\;€$. $2\\,\\%$ von $612\\;€ = 12{,}24\\;€$. Weil auch die Zinsen mitverzinst werden (Zinseszins), steigen die Zinsen Jahr für Jahr leicht an."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -5364,7 +5450,14 @@
        "frage": "Ist die relative Häufigkeit dasselbe wie die Wahrscheinlichkeit?",
        "antwort": "Nein - sie schätzt die Wahrscheinlichkeit und nähert sich ihr erst bei vielen Versuchen."
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "konvergenz",
+      "titel": "Gesetz der großen Zahlen erleben",
+      "params": {
+       "seiten": 6
+      }
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -6716,5 +6809,95 @@
     "l30"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 300,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Prozente",
+    "x": 110,
+    "y": 60,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Zinsrechnung",
+    "x": 110,
+    "y": 150,
+    "lektion": "l4"
+   },
+   {
+    "id": "k3",
+    "label": "Dreisatz",
+    "x": 300,
+    "y": 60,
+    "lektion": "l8"
+   },
+   {
+    "id": "k4",
+    "label": "Terme",
+    "x": 300,
+    "y": 150,
+    "lektion": "l11"
+   },
+   {
+    "id": "k5",
+    "label": "Gleichungen",
+    "x": 300,
+    "y": 240,
+    "lektion": "l14"
+   },
+   {
+    "id": "k6",
+    "label": "Negative Zahlen",
+    "x": 500,
+    "y": 150,
+    "lektion": "l16"
+   },
+   {
+    "id": "k7",
+    "label": "Dreiecke",
+    "x": 500,
+    "y": 60,
+    "lektion": "l22"
+   },
+   {
+    "id": "k8",
+    "label": "Wahrscheinlichkeit",
+    "x": 500,
+    "y": 240,
+    "lektion": "l28"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k1",
+    "k3"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k4",
+    "k6"
+   ],
+   [
+    "k5",
+    "k6"
+   ]
+  ]
+ }
 }

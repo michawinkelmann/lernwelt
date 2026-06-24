@@ -4141,10 +4141,36 @@
        "pfad": "experimente/physik/lichtschranken/index.html",
        "vorhersage": "Ein Wagen rollt eine schiefe Bahn hinab und wird dabei schneller. Glaubst du, er gewinnt in jeder Sekunde gleich viel Tempo dazu — oder immer mehr? Schreibe deine Vermutung auf, bevor du misst.",
        "auftraege": [
+        "<strong>Versuchsaufbau:</strong> Stelle die Fahrbahn leicht schräg und montiere die beiden Lichtschranken in bekanntem Abstand. Lass den Wagen aus der Ruhe starten; die Lichtschranken messen die Geschwindigkeit an verschiedenen Zeitpunkten der Fahrt.",
         "Lass den Wagen anrollen und miss mit den Lichtschranken die Geschwindigkeit an zwei Stellen sowie die Zeit dazwischen.",
         "Berechne $a = \\frac{\\Delta v}{\\Delta t}$ aus deinen Messwerten.",
         "Verändere die Neigung der Bahn: Wird die Beschleunigung größer oder kleiner? Notiere zwei Werte."
-       ]
+       ],
+       "material": "Eine schiefe Fahrbahn, ein Rollwagen, zwei Lichtschranken mit Zeitmessung (oder Stoppuhr und Markierungen), ein Maßband.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Zeit t und Geschwindigkeit v",
+        "params": {
+         "xLabel": "t",
+         "yLabel": "v",
+         "xEinheit": "s",
+         "yEinheit": "m/s",
+         "zeilen": 5,
+         "xVorgabe": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "a",
+          "einheit": "m/s²",
+          "ausSteigung": "direkt"
+         }
+        }
+       }
       }
      ],
      "selbstcheck": [
@@ -4212,7 +4238,10 @@
        },
        "formel": "v = a · t"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Ein Wagen rollt eine schiefe Bahn hinab und wird gleichmäßig schneller. Vermutung: Die Geschwindigkeit $v$ wächst <strong>proportional zur Zeit</strong> $t$, also $v = a\\cdot t$. Trägt man $v$ über $t$ auf, müsste sich eine <strong>Ursprungsgerade</strong> ergeben – ihre Steigung ist die Beschleunigung $a$ (in $\\frac{\\text{m}}{\\text{s}^2}$).</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Geschwindigkeit und Zeit mit Lichtschranken messen; Proportionalität als Ursprungsgerade deuten; $a=\\frac{\\Delta v}{\\Delta t}$.</p><p><strong>Angesprochene Kompetenzen:</strong> auswerten (Messreihe → $t$-$v$-Diagramm), mathematisieren (Steigung = Beschleunigung $a$).</p><p><strong>Erwartung:</strong> Bei gleichmäßiger Beschleunigung liegen die Punkte auf einer Ursprungsgeraden; die Steigung ist $a$. Auf einer steileren Bahn wird $a$ größer.</p><p><strong>Modellgrenzen:</strong> Gilt für gleichmäßig beschleunigte Bewegung; Rollreibung und Messunsicherheiten der Lichtschranken bleiben außen vor.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 18,
@@ -4616,10 +4645,36 @@
        "pfad": "experimente/physik/lichtschranken/index.html",
        "vorhersage": "Du lässt eine schwere und eine leichte Kugel fallen. Treffen sie (ohne nennenswerten Luftwiderstand) etwa gleichzeitig oder kommt die schwere deutlich früher an? Schreibe deine Vermutung auf, bevor du misst.",
        "auftraege": [
+        "<strong>Versuchsaufbau:</strong> Befestige die Lichtschranke unter dem Loslasspunkt und miss die Fallhöhe mit dem Maßband. Lass die Kugel aus der Ruhe fallen; aus Höhe und Fallzeit bestimmst du die Fallgeschwindigkeit.",
         "Miss mit der Lichtschranke die Fallzeit für eine bestimmte Fallhöhe und berechne daraus $v = g\\cdot t$.",
         "Lass eine leichtere und eine schwerere Kugel aus derselben Höhe fallen und vergleiche die Fallzeiten.",
         "Prüfe deine Messung gegen die Rechnung $s = \\frac{1}{2}\\,g\\,t^2$ und überlege, woher kleine Abweichungen kommen könnten."
-       ]
+       ],
+       "material": "Eine Fallvorrichtung mit Lichtschranke (oder Lineal und Stoppuhr), Kugeln verschiedener Masse, ein Maßband für die Fallhöhe.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Fallzeit t und Fallgeschwindigkeit v",
+        "params": {
+         "xLabel": "t",
+         "yLabel": "v",
+         "xEinheit": "s",
+         "yEinheit": "m/s",
+         "zeilen": 5,
+         "xVorgabe": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "g",
+          "einheit": "m/s²",
+          "ausSteigung": "direkt"
+         }
+        }
+       }
       }
      ],
      "selbstcheck": [
@@ -4684,7 +4739,10 @@
        },
        "formel": "s = ½ · g · t²"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Beim freien Fall (ohne nennenswerten Luftwiderstand) sollte die Geschwindigkeit gleichmäßig zunehmen. Vermutung: $v$ ist <strong>proportional zur Fallzeit</strong> $t$, also $v = g\\cdot t$ mit der <strong>Fallbeschleunigung</strong> $g$. Trägt man $v$ über $t$ auf, müsste sich eine <strong>Ursprungsgerade</strong> ergeben – ihre Steigung ist $g$, und sie ist für leichte und schwere Körper gleich.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Fallzeit mit der Lichtschranke messen; $v=g\\cdot t$; Steigung einer Ursprungsgeraden deuten.</p><p><strong>Angesprochene Kompetenzen:</strong> auswerten (Messreihe → $t$-$v$-Diagramm), mathematisieren (Steigung = $g$), Modell prüfen (Masse spielt keine Rolle).</p><p><strong>Erwartung:</strong> Die Punkte liegen auf einer Ursprungsgeraden mit Steigung $g \\approx 9{,}81\\,\\frac{\\text{m}}{\\text{s}^2}$; schwere und leichte Kugel liefern dieselbe Gerade.</p><p><strong>Modellgrenzen:</strong> Gilt nur bei vernachlässigbarem Luftwiderstand; bei leichten, großflächigen Körpern bremst die Luft, und die Gerade knickt ab.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 18,
@@ -4957,7 +5015,53 @@
        ]
       }
      ],
-     "partner": "Diskutiert: Warum gilt vor Schulen und Kindergärten oft Tempo 30? Begründet mit dem Anhalteweg."
+     "partner": "Diskutiert: Warum gilt vor Schulen und Kindergärten oft Tempo 30? Begründet mit dem Anhalteweg.",
+     "bluete": {
+      "kontext": "<p><strong>Anhalteweg innerorts.</strong> Es gelten die Faustformeln: Reaktionsweg $s_R = \\frac{v}{10}\\cdot 3$ und Bremsweg $s_B = \\left(\\frac{v}{10}\\right)^2$ (mit $v$ in $\\frac{\\text{km}}{\\text{h}}$, Ergebnis in $\\text{m}$). Ein Auto fährt mit $v = 50\\,\\frac{\\text{km}}{\\text{h}}$.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Berechne den Reaktionsweg bei $50\\,\\frac{\\text{km}}{\\text{h}}$.",
+        "felder": [
+         {
+          "label": "s_R =",
+          "antwort": 15,
+          "einheit": "m"
+         }
+        ],
+        "loesung": "$s_R = \\frac{50}{10}\\cdot 3 = 5\\cdot 3 = 15\\,\\text{m}$."
+       },
+       {
+        "label": "b)",
+        "frage": "Berechne den Bremsweg bei $50\\,\\frac{\\text{km}}{\\text{h}}$.",
+        "felder": [
+         {
+          "label": "s_B =",
+          "antwort": 25,
+          "einheit": "m"
+         }
+        ],
+        "loesung": "$s_B = \\left(\\frac{50}{10}\\right)^2 = 5^2 = 25\\,\\text{m}$."
+       },
+       {
+        "label": "c)",
+        "frage": "Wie groß ist der gesamte Anhalteweg?",
+        "felder": [
+         {
+          "label": "s =",
+          "antwort": 40,
+          "einheit": "m"
+         }
+        ],
+        "loesung": "$s = s_R + s_B = 15\\,\\text{m} + 25\\,\\text{m} = 40\\,\\text{m}$."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Bei $100\\,\\frac{\\text{km}}{\\text{h}}$ ist der Bremsweg $100\\,\\text{m}$. Vergleiche mit $50\\,\\frac{\\text{km}}{\\text{h}}$ und erkläre, warum doppeltes Tempo den Bremsweg vervierfacht.",
+        "loesung": "Bei $100\\,\\frac{\\text{km}}{\\text{h}}$: $s_B = 10^2 = 100\\,\\text{m}$, das Vierfache von $25\\,\\text{m}$. Grund: Im Bremsweg geht $v$ <strong>quadratisch</strong> ein ($\\left(\\frac{v}{10}\\right)^2$), doppeltes $v$ ergibt das Vierfache."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -5246,5 +5350,87 @@
     "rs"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Atombau",
+    "x": 80,
+    "y": 60,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Radioaktivität",
+    "x": 80,
+    "y": 180,
+    "lektion": "l2"
+   },
+   {
+    "id": "k3",
+    "label": "Motorprinzip",
+    "x": 250,
+    "y": 60,
+    "lektion": "l6"
+   },
+   {
+    "id": "k4",
+    "label": "Generator & Trafo",
+    "x": 250,
+    "y": 180,
+    "lektion": "l8"
+   },
+   {
+    "id": "k5",
+    "label": "Temperatur & Wärme",
+    "x": 420,
+    "y": 60,
+    "lektion": "l11"
+   },
+   {
+    "id": "k6",
+    "label": "Gasgesetze",
+    "x": 420,
+    "y": 180,
+    "lektion": "l13"
+   },
+   {
+    "id": "k7",
+    "label": "Beschleunigung",
+    "x": 585,
+    "y": 60,
+    "lektion": "l17"
+   },
+   {
+    "id": "k8",
+    "label": "Freier Fall",
+    "x": 585,
+    "y": 180,
+    "lektion": "l19"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k5",
+    "k6"
+   ],
+   [
+    "k7",
+    "k8"
+   ]
+  ]
+ }
 }

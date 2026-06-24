@@ -2238,7 +2238,10 @@
         "Vergleiche dein Ergebnis mit dem Literaturwert $1{,}76\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$ und nenne mögliche Messunsicherheiten."
        ]
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "<p>Bevor wir auswerten, klären wir die Strategie: Im Fadenstrahlrohr durchlaufen Elektronen die Beschleunigungsspannung $U_0$ (Energieansatz $eU_0=\\tfrac{1}{2}m_e v^2$) und werden danach vom homogenen Magnetfeld $B$ der Helmholtz-Spulen auf eine <strong>Kreisbahn</strong> gezwungen (Lorentzkraft als Zentripetalkraft, $evB=\\tfrac{m_e v^2}{r}$). Vermutung: Aus den drei <em>messbaren</em> Größen $U_0$, $B$ und Bahnradius $r$ lässt sich die spezifische Ladung allein bestimmen — Geschwindigkeit und Masse fallen heraus. Eliminiert man $v$ aus beiden Gleichungen, erwarten wir $\\dfrac{e}{m_e}=\\dfrac{2U_0}{B^2 r^2}$.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Energieansatz für die Beschleunigung, Lorentzkraft als Zentripetalkraft, Helmholtz-Feld als (nahezu) homogen.</p><p><strong>Angesprochene Kompetenzen:</strong> mathematisieren ($v$ eliminieren), auswerten (Messsatz $\\to e/m_e$), bewerten (Vergleich mit Literaturwert, Messunsicherheiten).</p><p><strong>Erwartung:</strong> Aus $eU_0=\\tfrac12 m_e v^2$ und $evB=\\tfrac{m_e v^2}{r}$ folgt $\\tfrac{e}{m_e}=\\tfrac{2U_0}{B^2r^2}$. Ein typischer Satz $U_0=200\\,\\text{V}$, $B=0{,}80\\,\\text{mT}$, $r=4{,}0\\,\\text{cm}$ liefert rund $1{,}6\\cdot10^{11}\\,\\tfrac{\\text{C}}{\\text{kg}}$, nahe am Literaturwert $1{,}76\\cdot10^{11}\\,\\tfrac{\\text{C}}{\\text{kg}}$.</p><p><strong>Modellgrenzen:</strong> $B$ nur im Zentrum des Spulenpaars homogen; Gasrest für die Leuchtspur stört minimal; Radiusablesung ist die größte Unsicherheitsquelle (geht quadratisch ein). Relativistische Korrekturen sind bei diesen Spannungen vernachlässigbar.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -2489,5 +2492,77 @@
     "l10b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Feldbegriff",
+    "x": 90,
+    "y": 70,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Plattenkondensator",
+    "x": 255,
+    "y": 70,
+    "lektion": "l3"
+   },
+   {
+    "id": "k3",
+    "label": "Beschl. & Ablenkung",
+    "x": 420,
+    "y": 70,
+    "lektion": "l5"
+   },
+   {
+    "id": "k4",
+    "label": "Magnetfeld",
+    "x": 90,
+    "y": 210,
+    "lektion": "l6"
+   },
+   {
+    "id": "k5",
+    "label": "Lorentzkraft",
+    "x": 300,
+    "y": 210,
+    "lektion": "l8"
+   },
+   {
+    "id": "k6",
+    "label": "e/m im Fadenstrahlrohr",
+    "x": 510,
+    "y": 210,
+    "lektion": "l10"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k1",
+    "k4"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k5",
+    "k6"
+   ]
+  ]
+ }
 }

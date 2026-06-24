@@ -298,6 +298,14 @@ else if (seite === "lernbuero") {
   // Lernbüro-Kurs: Lernlandkarte + Lektions-Player
   import("./selbstlernen/kurs.js").then(m => m.starteKurs());
 }
+else if (seite === "lernzirkel") {
+  // Stationen-/Lernzirkel-Seitentyp
+  import("./selbstlernen/lernzirkel.js").then(m => m.starteLernzirkel());
+}
+else if (seite === "lernzirkel-uebersicht") {
+  // Lernzirkel-Übersicht (Trainingsraum), nach Fach/Klasse
+  import("./selbstlernen/lernzirkel-uebersicht.js").then(m => m.rendereLernzirkelUebersicht());
+}
 else if (seite === "projekte") {
   // Lernbüro-Projektkarten (Scratch/Calliope)
   import("./selbstlernen/projekte.js").then(m => m.starteProjekte());

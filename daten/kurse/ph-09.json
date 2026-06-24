@@ -332,10 +332,35 @@
        "titel": "Höhe verdoppeln, Energie verdoppeln",
        "material": "Ein Buch oder eine kleine Wasserflasche, ein Maßband, ein Tisch.",
        "auftraege": [
+        "<strong>Versuchsaufbau:</strong> Lege das Maßband senkrecht an die Tischkante und bestimme die Masse des Körpers (Aufdruck oder Schätzung). Lege als Nullniveau den Fußboden fest, ab dem du die Höhe $h$ misst.",
         "Bestimme die Masse des Buchs (Aufdruck oder Schätzung) und miss die Höhe der Tischkante über dem Boden.",
         "Berechne $E_{\\text{pot}}$ für die Tischhöhe und für die doppelte Höhe – vergleiche die Werte.",
         "Erkläre mit der Formel, warum sich die Lageenergie genau verdoppelt, wenn sich die Höhe verdoppelt."
-       ]
+       ],
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Höhe h und Lageenergie E_pot",
+        "params": {
+         "xLabel": "h",
+         "yLabel": "E_pot",
+         "xEinheit": "m",
+         "yEinheit": "J",
+         "zeilen": 5,
+         "xVorgabe": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "m·g",
+          "einheit": "N",
+          "ausSteigung": "direkt"
+         }
+        }
+       }
       }
      ],
      "interaktiv": {
@@ -368,7 +393,10 @@
        },
        "formel": "E_pot = m · g · h"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Hebt man denselben Körper immer höher, sollte seine Lageenergie wachsen. Vermutung: Höhe $h$ und Lageenergie $E_{\\text{pot}}$ sind <strong>proportional</strong>, also $E_{\\text{pot}} = (m\\cdot g)\\cdot h$. Trägt man $E_{\\text{pot}}$ über $h$ auf, müsste sich eine <strong>Ursprungsgerade</strong> ergeben – ihre Steigung ist das Produkt $m\\cdot g$ (in $\\frac{\\text{N}}{\\text{kg}}\\cdot\\text{kg}=\\text{N}$).</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Masse (Aufdruck/Waage) und Höhe mit dem Maßband; Proportionalität als Ursprungsgerade deuten; $E_{\\text{pot}}=m\\cdot g\\cdot h$ berechnen.</p><p><strong>Angesprochene Kompetenzen:</strong> auswerten (Messreihe → $h$-$E_{\\text{pot}}$-Diagramm), mathematisieren (Steigung = $m\\cdot g$).</p><p><strong>Erwartung:</strong> Die Punkte liegen auf einer Ursprungsgeraden; die Steigung ist $m\\cdot g$. Beispiel: $0{,}5\\,\\text{kg}$ ergeben eine Steigung von etwa $4{,}9\\,\\text{N}$ (also $4{,}9\\,\\text{J}$ je Meter).</p><p><strong>Modellgrenzen:</strong> Gilt nur, solange $g$ konstant ist und das Nullniveau festliegt; die Energie wird hier nicht direkt gemessen, sondern aus $m$, $g$ und $h$ berechnet.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 18,
@@ -1052,7 +1080,53 @@
        ]
       }
      ],
-     "partner": "Diskutiert: Eine Glühlampe hat $\\eta \\approx 5\\,\\%$, eine LED $\\eta \\approx 30\\,\\%$. Wie groß ist der Unterschied im Alltag?"
+     "partner": "Diskutiert: Eine Glühlampe hat $\\eta \\approx 5\\,\\%$, eine LED $\\eta \\approx 30\\,\\%$. Wie groß ist der Unterschied im Alltag?",
+     "bluete": {
+      "kontext": "<p><strong>Wasserkocher.</strong> Ein Wasserkocher erwärmt $1{,}5\\,\\text{kg}$ Wasser. Dafür sind $E_{\\text{nutz}} = 480\\,\\text{kJ}$ nötig. Aus dem Stromnetz nimmt er in dieser Zeit $E_{\\text{zu}} = 600\\,\\text{kJ}$ auf und braucht dafür $200\\,\\text{s}$.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Welche elektrische Leistung nimmt der Wasserkocher auf?",
+        "felder": [
+         {
+          "label": "P =",
+          "antwort": 3000,
+          "einheit": "W"
+         }
+        ],
+        "loesung": "$P = \\frac{E_{\\text{zu}}}{t} = \\frac{600000\\,\\text{J}}{200\\,\\text{s}} = 3000\\,\\text{W} = 3\\,\\text{kW}$."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie groß ist der Wirkungsgrad des Wasserkochers?",
+        "felder": [
+         {
+          "label": "η =",
+          "antwort": 80,
+          "einheit": "%"
+         }
+        ],
+        "loesung": "$\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}} = \\frac{480\\,\\text{kJ}}{600\\,\\text{kJ}} = 0{,}8 = 80\\,\\%$."
+       },
+       {
+        "label": "c)",
+        "frage": "Wie viel Energie geht (vor allem als Wärme an Kanne und Umgebung) verloren?",
+        "felder": [
+         {
+          "label": "Verlust:",
+          "antwort": 120,
+          "einheit": "kJ"
+         }
+        ],
+        "loesung": "$E_{\\text{zu}} - E_{\\text{nutz}} = 600\\,\\text{kJ} - 480\\,\\text{kJ} = 120\\,\\text{kJ}$."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Nenne zwei Maßnahmen, mit denen man den Wirkungsgrad eines Wasserkochers erhöhen könnte, und begründe sie mit der Energiebilanz.",
+        "loesung": "z. B. die Kanne gut isolieren oder nur so viel Wasser erhitzen wie nötig (weniger Wärme verlässt das System) – dann sinkt $E_{\\text{zu}}$ bei gleichem Nutzen $E_{\\text{nutz}}$, und $\\eta$ steigt."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -1560,7 +1634,12 @@
         "Begründe, warum eine LED ohne Vorwiderstand zerstört würde."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "led-energiestufen",
+      "titel": "LED-Farbe, Schwellenspannung und Photonenenergie",
+      "params": {}
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -1930,7 +2009,12 @@
         "Ordne jedem gefundenen Bauteil zu: Sensor, Energiewandler oder Rechenbaustein."
        ]
       }
-     ]
+     ],
+     "interaktiv": {
+      "id": "led-energiestufen",
+      "titel": "LED-Farbe, Spannung und Energie",
+      "params": {}
+     }
     },
     "ueben": {
      "zeit": 18,
@@ -2302,5 +2386,110 @@
     "l10b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Energieformen",
+    "x": 80,
+    "y": 55,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Lageenergie",
+    "x": 80,
+    "y": 150,
+    "lektion": "l2"
+   },
+   {
+    "id": "k3",
+    "label": "Bewegungsenergie",
+    "x": 80,
+    "y": 245,
+    "lektion": "l3"
+   },
+   {
+    "id": "k4",
+    "label": "Energieerhaltung",
+    "x": 260,
+    "y": 100,
+    "lektion": "l4"
+   },
+   {
+    "id": "k5",
+    "label": "Leistung & Wirkungsgrad",
+    "x": 260,
+    "y": 200,
+    "lektion": "l5"
+   },
+   {
+    "id": "k6",
+    "label": "Leiter/Halbleiter",
+    "x": 470,
+    "y": 55,
+    "lektion": "l6"
+   },
+   {
+    "id": "k7",
+    "label": "Dotieren",
+    "x": 470,
+    "y": 150,
+    "lektion": "l7"
+   },
+   {
+    "id": "k8",
+    "label": "Diode & LED",
+    "x": 470,
+    "y": 245,
+    "lektion": "l8"
+   },
+   {
+    "id": "k9",
+    "label": "Transistor",
+    "x": 585,
+    "y": 200,
+    "lektion": "l9"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k1",
+    "k3"
+   ],
+   [
+    "k2",
+    "k4"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k6",
+    "k7"
+   ],
+   [
+    "k7",
+    "k8"
+   ],
+   [
+    "k8",
+    "k9"
+   ]
+  ]
+ }
 }

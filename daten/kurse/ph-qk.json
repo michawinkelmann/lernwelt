@@ -636,7 +636,10 @@
        },
        "formel": "N(t) = N₀ · b^t"
       }
-     }
+     },
+     "erkundenZuerst": true,
+     "vorueberlegung": "<p>Bevor wir würfeln, überlegen wir: Jeder Würfel zerfällt pro Runde mit gleicher Wahrscheinlichkeit ($\\tfrac16$ bei „eine 6 entfernen“) — ganz unabhängig davon, wie viele schon weg sind. Vermutung: In jeder Runde verschwindet etwa derselbe <strong>Anteil</strong>, sodass die verbleibende Anzahl <strong>exponentiell</strong> fällt, $N(n)=N_0\\cdot q^{\\,n}$ mit $q\\approx\\tfrac56$. Trägt man stattdessen $\\ln N$ über der Rundenzahl auf, erwarten wir eine <strong>fallende Gerade</strong> — ihre Steigung ist $\\ln q$ und entspricht der negativen Zerfallskonstante.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Zufall und relative Häufigkeit; Exponentialfunktion; Logarithmus als Linearisierungswerkzeug.</p><p><strong>Angesprochene Kompetenzen:</strong> experimentieren (Würfelreihe protokollieren), auswerten ($N$-$n$- und $\\ln N$-$n$-Diagramm), mathematisieren (Halbwertszeit aus $q$ bzw. der Geradensteigung).</p><p><strong>Erwartung:</strong> Pro Runde bleiben rund $\\tfrac56\\approx83\\,\\%$ übrig; die Halbwertszeit liegt bei etwa $n_{1/2}=\\tfrac{\\ln 2}{\\ln(6/5)}\\approx3{,}8$ Runden. Im halblogarithmischen Diagramm ergibt sich eine Gerade.</p><p><strong>Modellgrenzen:</strong> Das Würfelmodell ist diskret (ganze Runden, ganze Würfel) und statistisch — bei nur 100 Würfeln streuen die Punkte deutlich; echter radioaktiver Zerfall läuft kontinuierlich und mit gewaltig größeren Teilchenzahlen.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -2490,5 +2493,99 @@
     "l10b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 290,
+  "knotenBreite": 120,
+  "knotenHoehe": 44,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Atomkern",
+    "x": 90,
+    "y": 70,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Zerfall α, β, γ",
+    "x": 255,
+    "y": 70,
+    "lektion": "l2"
+   },
+   {
+    "id": "k3",
+    "label": "Zerfallsgesetz",
+    "x": 420,
+    "y": 70,
+    "lektion": "l3"
+   },
+   {
+    "id": "k4",
+    "label": "C-14-Datierung",
+    "x": 575,
+    "y": 70,
+    "lektion": "l4"
+   },
+   {
+    "id": "k5",
+    "label": "Linienspektren",
+    "x": 90,
+    "y": 210,
+    "lektion": "l6"
+   },
+   {
+    "id": "k6",
+    "label": "Termschema",
+    "x": 255,
+    "y": 210,
+    "lektion": "l7"
+   },
+   {
+    "id": "k7",
+    "label": "Franck-Hertz",
+    "x": 420,
+    "y": 210,
+    "lektion": "l8"
+   },
+   {
+    "id": "k8",
+    "label": "Wasserstoffatom",
+    "x": 575,
+    "y": 210,
+    "lektion": "l9"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k3",
+    "k4"
+   ],
+   [
+    "k1",
+    "k5"
+   ],
+   [
+    "k5",
+    "k6"
+   ],
+   [
+    "k6",
+    "k7"
+   ],
+   [
+    "k6",
+    "k8"
+   ]
+  ]
+ }
 }

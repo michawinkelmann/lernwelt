@@ -282,7 +282,50 @@
        ]
       }
      ],
-     "partner": "Erkläre deinem Nachbarn: Warum ist $f(x) = x^2 + 1$ keine lineare Funktion, obwohl sie ein Plus-Zeichen enthält?"
+     "partner": "Erkläre deinem Nachbarn: Warum ist $f(x) = x^2 + 1$ keine lineare Funktion, obwohl sie ein Plus-Zeichen enthält?",
+     "bluete": {
+      "kontext": "<p><strong>Handytarife vergleichen.</strong> Tarif A: 5 € Grundgebühr pro Monat plus 0,10 € je Minute. Tarif B: keine Grundgebühr, aber 0,25 € je Minute.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Was kosten 20 Gesprächsminuten bei Tarif A und bei Tarif B?",
+        "felder": [
+         {
+          "label": "A:",
+          "antwort": 7,
+          "einheit": "€"
+         },
+         {
+          "label": "B:",
+          "antwort": 5,
+          "einheit": "€"
+         }
+        ],
+        "loesung": "A: 5 € + 20 · 0,10 € = 7 €; B: 20 · 0,25 € = 5 €."
+       },
+       {
+        "label": "b)",
+        "frage": "Stelle für beide Tarife die Funktionsgleichung der Monatskosten in Abhängigkeit von der Minutenzahl x auf.",
+        "loesung": "A: f(x) = 5 + 0,10 · x; B: g(x) = 0,25 · x."
+       },
+       {
+        "label": "c)",
+        "frage": "Ab wie vielen vollen Minuten ist Tarif A günstiger als Tarif B?",
+        "felder": [
+         {
+          "antwort": 34,
+          "einheit": "min"
+         }
+        ],
+        "loesung": "5 + 0,10·x = 0,25·x → 5 = 0,15·x → x ≈ 33,3; ab 34 Minuten ist A günstiger."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Entwirf einen Tarif C, der für Wenig-Telefonierer am besten ist, und begründe mit den Geraden.",
+        "loesung": "z. B. Tarif C ohne Grundgebühr und mit kleinem Minutenpreis – für Wenignutzer bleibt die Gerade beim Start am flachsten."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -1671,6 +1714,43 @@
        "nein, man braucht beide",
        "gar nicht bestimmbar"
       ]
+     },
+     "bluete": {
+      "kontext": "<p><strong>Kinokasse.</strong> An einem Abend werden nur zwei Kartensorten verkauft: <em>Erwachsene</em> für $11\\,€$ und <em>Kinder</em> für $7\\,€$. Am Ende der Vorstellung wurden $50$ Karten verkauft, die Einnahmen betragen $478\\,€$. Gesucht ist, wie viele Erwachsene und wie viele Kinder im Saal waren.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Stelle ein Gleichungssystem auf. Sei $x$ die Anzahl der Erwachsenen und $y$ die Anzahl der Kinder. Wie lautet die <em>Stückzahl-Gleichung</em>?",
+        "loesung": "Über die Anzahl der Karten: $x + y = 50$. (Die zweite Gleichung beschreibt die Einnahmen.)"
+       },
+       {
+        "label": "b)",
+        "frage": "Wie lautet die <em>Einnahmen-Gleichung</em>? Gib den Wert ein, der rechts vom Gleichheitszeichen steht (in €).",
+        "felder": [
+         {
+          "antwort": 478,
+          "einheit": "€"
+         }
+        ],
+        "loesung": "Jede Erwachsenenkarte bringt $11\\,€$, jede Kinderkarte $7\\,€$: $11x + 7y = 478$."
+       },
+       {
+        "label": "c)",
+        "frage": "Löse das System und gib die Anzahl der <em>Erwachsenen</em> an.",
+        "felder": [
+         {
+          "label": "x =",
+          "antwort": 32
+         }
+        ],
+        "loesung": "Aus $x+y=50$ folgt $y=50-x$. Einsetzen: $11x + 7(50-x) = 478 \\Rightarrow 11x + 350 - 7x = 478 \\Rightarrow 4x = 128 \\Rightarrow x = 32$. Also $y = 18$."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Offen:</em> Begründe, warum die einzelne Angabe „$50$ Karten\" allein nicht ausreicht, um $x$ und $y$ zu bestimmen.",
+        "loesung": "Zu $x+y=50$ passen viele Paare ($0{\\mid}50$, $1{\\mid}49$, …, $50{\\mid}0$). Erst die zweite Bedingung (die Einnahmen) legt das Paar eindeutig fest — zwei Unbekannte brauchen zwei Gleichungen."
+       }
+      ]
      }
     },
     "verstehen": {
@@ -1794,7 +1874,42 @@
        ]
       }
      ],
-     "partner": "Gebt euch gegenseitig ein Zahlenpaar vor. Euer Nachbar prüft, ob es die Lösung eines vorgegebenen LGS ist — und begründet, warum beide Gleichungen stimmen müssen."
+     "partner": "Gebt euch gegenseitig ein Zahlenpaar vor. Euer Nachbar prüft, ob es die Lösung eines vorgegebenen LGS ist — und begründet, warum beide Gleichungen stimmen müssen.",
+     "bluete": {
+      "kontext": "<p><strong>Kinokasse.</strong> An einem Abend werden 50 Karten verkauft, die Einnahmen betragen 478 €. Eine Erwachsenenkarte kostet 11 €, eine Kinderkarte 7 €.</p>",
+      "blaetter": [
+       {
+        "label": "a)",
+        "frage": "Stelle die beiden Gleichungen auf (x = Anzahl Erwachsene, y = Anzahl Kinder): eine für die <em>Anzahl</em> der Karten, eine für das <em>Geld</em>.",
+        "loesung": "Anzahl: x + y = 50. &nbsp; Geld: 11·x + 7·y = 478."
+       },
+       {
+        "label": "b)",
+        "frage": "Wie viele Erwachsene (x) waren im Kino?",
+        "felder": [
+         {
+          "antwort": 32
+         }
+        ],
+        "loesung": "Aus x + y = 50 folgt y = 50 − x; einsetzen: 11x + 7(50−x) = 478 → 4x + 350 = 478 → x = 32."
+       },
+       {
+        "label": "c)",
+        "frage": "Wie viele Kinder (y) waren es?",
+        "felder": [
+         {
+          "antwort": 18
+         }
+        ],
+        "loesung": "y = 50 − 32 = 18."
+       },
+       {
+        "label": "d)",
+        "frage": "<em>Kontrolle:</em> Wie kannst du dein Ergebnis ohne erneutes Lösen prüfen?",
+        "loesung": "Einsetzen in beide Gleichungen: 32 + 18 = 50 ✓ und 11·32 + 7·18 = 352 + 126 = 478 ✓."
+       }
+      ]
+     }
     },
     "sichern": {
      "zeit": 7,
@@ -7071,5 +7186,77 @@
     "l30b"
    ]
   }
- ]
+ ],
+ "landkarte": {
+  "breite": 660,
+  "hoehe": 300,
+  "knotenBreite": 130,
+  "knotenHoehe": 42,
+  "knoten": [
+   {
+    "id": "k1",
+    "label": "Lineare Funktionen",
+    "x": 110,
+    "y": 70,
+    "lektion": "l1"
+   },
+   {
+    "id": "k2",
+    "label": "Lineare Gleichungen",
+    "x": 330,
+    "y": 70,
+    "lektion": "l6"
+   },
+   {
+    "id": "k3",
+    "label": "Binomische Formeln",
+    "x": 550,
+    "y": 70,
+    "lektion": "l11"
+   },
+   {
+    "id": "k4",
+    "label": "Flächen & Rauminhalte",
+    "x": 110,
+    "y": 230,
+    "lektion": "l16"
+   },
+   {
+    "id": "k5",
+    "label": "Linien im Dreieck",
+    "x": 330,
+    "y": 230,
+    "lektion": "l21"
+   },
+   {
+    "id": "k6",
+    "label": "Zufall & Bäume",
+    "x": 550,
+    "y": 230,
+    "lektion": "l26"
+   }
+  ],
+  "kanten": [
+   [
+    "k1",
+    "k2"
+   ],
+   [
+    "k2",
+    "k3"
+   ],
+   [
+    "k2",
+    "k4"
+   ],
+   [
+    "k4",
+    "k5"
+   ],
+   [
+    "k5",
+    "k6"
+   ]
+  ]
+ }
 }
