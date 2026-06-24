@@ -1,0 +1,82 @@
+{
+ "id": "wellen-qsw",
+ "titel": "Lernzirkel: Wellen",
+ "fach": "physik",
+ "intro": "An diesen Stationen erkundest du mechanische Wellen: die Wellengrundgleichung $c = \\lambda \\cdot f$, die Überlagerung zweier Wellen und die Interferenz. Wähle die Reihenfolge selbst und hak ab, was du geschafft hast. Kein Druck, keine Noten.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Wellengrundgleichung",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verschiebe den Regler für die Frequenz $f$. Wie hängen Ausbreitungsgeschwindigkeit $c$ und Wellenlänge $\\lambda$ zusammen? Was passiert mit $c$, wenn bei fester Wellenlänge die Frequenz steigt?</p>",
+   "widget": {
+    "id": "funktionsplotter",
+    "params": {
+     "form": "proportional",
+     "regler": [
+      {
+       "sym": "a",
+       "label": "f",
+       "min": 50,
+       "max": 500,
+       "step": 10,
+       "init": 200,
+       "einheit": "Hz"
+      }
+     ],
+     "x": [
+      0,
+      4
+     ],
+     "y": [
+      0,
+      2000
+     ],
+     "schrittX": 1,
+     "schrittY": 500,
+     "achsen": {
+      "x": "Wellenlänge λ in m",
+      "y": "Ausbreitungsgeschw. c in m/s"
+     },
+     "formel": "c = λ · f"
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Superposition erkunden",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verschiebe die Phase und beobachte, wie sich zwei Wellen überlagern. Wann entsteht eine Welle mit doppelter Amplitude, wann löschen sich die Wellen aus?</p>",
+   "widget": {
+    "id": "welle",
+    "params": {
+     "phiInit": 0
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Frequenz verdoppelt",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Ein Lautsprecher sendet einen Ton aus; die Schallgeschwindigkeit in Luft ist fest (rund $343\\,\\tfrac{\\text{m}}{\\text{s}}$). Du verdoppelst die Frequenz des Tons. Was passiert mit der Wellenlänge?</p><details><summary>Lösung anzeigen</summary><div>Aus $c = \\lambda \\cdot f$ folgt $\\lambda = \\frac{c}{f}$. Die Schallgeschwindigkeit $c$ bleibt (gleiches Medium, gleiche Temperatur) konstant. Verdoppelt sich $f$, so <strong>halbiert</strong> sich die Wellenlänge $\\lambda$. Höhere Töne haben also kürzere Wellenlängen.</div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Wellengrößen und Überlagerung",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ph-qp-wellen",
+   "ids": [
+    "ph-qp-we-004",
+    "ph-qp-we-005"
+   ]
+  }
+ ]
+}

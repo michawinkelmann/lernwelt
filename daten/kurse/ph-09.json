@@ -360,7 +360,8 @@
           "ausSteigung": "direkt"
          }
         }
-       }
+       },
+       "hinweis": "Kein Material zur Hand? Trag deine Werte direkt unten ins <strong>Messlabor</strong> ein — die Auswertung läuft genauso."
       }
      ],
      "interaktiv": {
@@ -991,18 +992,6 @@
        "antwort": "Weil bei jeder Umwandlung ein Teil der Energie entwertet wird – meist als Wärme, die nicht zum Nutzen beiträgt. Es bleibt also immer $\\eta < 100\\,\\%$."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Energiefluss und Wirkungsgrad",
-       "pfad": "simulationen/physik/energiefluss/index.html",
-       "auftraege": [
-        "Stelle einen niedrigen und einen hohen Wirkungsgrad ein und vergleiche, wie breit der Nutz- und der Verluststrom werden.",
-        "Lies ab: Welcher Anteil der zugeführten Energie wird bei einer Glühlampe zu Licht, welcher zu Wärme?",
-        "Begründe mit der Simulation, warum $\\eta = 100\\,\\%$ in der Praxis nie erreicht wird."
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "funktionsplotter",
       "titel": "Leistung erkunden",
@@ -1033,7 +1022,26 @@
        },
        "formel": "P = E / t"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir den Energiefluss durch ein Gerät verfolgen, überlegen wir: Jeder Wandler nimmt Energie auf und gibt sie wieder ab – ein Teil als <strong>Nutzenergie</strong>, der Rest meist als Wärme. Vermutung: Die zugeführte Energie verteilt sich vollständig auf Nutz- und Verlustenergie, also $E_{\\text{zu}} = E_{\\text{nutz}} + E_{\\text{verlust}}$. Wir erwarten deshalb, dass der Wirkungsgrad $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$ <strong>immer kleiner als $100\\,\\%$</strong> bleibt, und dass ein größerer Verluststrom $\\eta$ sinken lässt.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Energiefluss durch einen Wandler",
+       "vorhersage": "Eine Glühlampe nimmt elektrische Energie auf und gibt Licht und Wärme ab. Schätze: Welcher Anteil wird wirklich zu Licht – die Hälfte, ein Zehntel, fast alles? Schreibe deine Vermutung auf, bevor du den Energiefluss verfolgst.",
+       "auftraege": [
+        "Stelle eine zugeführte Leistung ein und lies ab, wie viel davon als Nutzenergie und wie viel als Verlustwärme abfließt.",
+        "Berechne aus den abgelesenen Werten den Wirkungsgrad $\\eta = \\frac{E_{\\text{nutz}}}{E_{\\text{zu}}}$ und gib ihn in Prozent an.",
+        "Erhöhe den Verluststrom (z. B. mehr Abwärme) und beobachte, wie sich $\\eta$ verändert.",
+        "Prüfe an deinen Werten, ob $E_{\\text{zu}} = E_{\\text{nutz}} + E_{\\text{verlust}}$ gilt, und erkläre, warum $\\eta$ nie $100\\,\\%$ erreicht."
+       ],
+       "pfad": "simulationen/physik/energiefluss/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Energieformen unterscheiden; den Energieerhaltungssatz qualitativ kennen; einen Bruch in Prozent umrechnen.</p><p><strong>Angesprochene Kompetenzen:</strong> auswerten (Energiebilanz aus abgelesenen Strömen aufstellen), mathematisieren ($\\eta$ berechnen), bewerten (Energieentwertung als Grund für $\\eta<100\\,\\%$).</p><p><strong>Erwartung:</strong> Die Summe aus Nutz- und Verlustenergie ergibt die zugeführte Energie; $\\eta$ liegt stets unter $100\\,\\%$ und sinkt, wenn der Verluststrom wächst. Bei einer Glühlampe sind nur wenige Prozent Nutzlicht.</p><p><strong>Modellgrenzen:</strong> Das Sankey-Modell zeigt nur eine Momentaufnahme idealisierter Energieströme; reale Geräte haben zusätzliche, schwer trennbare Verlustpfade, und Energie wird hier nicht gemessen, sondern bilanziert.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1623,23 +1631,31 @@
        "antwort": "Es fließt ein viel zu großer Strom — die LED brennt durch. Der Vorwiderstand begrenzt den Strom auf einen sicheren Wert."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "LED mit Vorwiderstand erproben",
-       "material": "Simulation „LED mit Vorwiderstand“ (simulationen/physik/led-vorwiderstand/index.html).",
-       "auftraege": [
-        "Stelle verschiedene Vorwiderstände ein und beobachte Stromstärke und Helligkeit der LED.",
-        "Berechne mit $R_V = \\frac{U_{\\text{ges}} - U_{\\text{LED}}}{I}$ den passenden Widerstand für $20\\,\\text{mA}$ und prüfe ihn in der Simulation.",
-        "Begründe, warum eine LED ohne Vorwiderstand zerstört würde."
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "led-energiestufen",
       "titel": "LED-Farbe, Schwellenspannung und Photonenenergie",
       "params": {}
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir eine LED an eine Spannungsquelle hängen, überlegen wir: Eine LED leitet erst ab ihrer Schwellenspannung und verträgt nur kleine Ströme. Vermutung: Die überschüssige Spannung muss am <strong>Vorwiderstand</strong> abfallen, also $U_R = U_{\\text{ges}} - U_{\\text{LED}}$. Mit dem ohmschen Gesetz erwarten wir für den gewünschten Strom $I=20\\,\\text{mA}$ den Widerstand $R_V = \\frac{U_{\\text{ges}} - U_{\\text{LED}}}{I}$ – und dass ein zu kleiner $R_V$ den Strom gefährlich groß werden lässt.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "LED mit Vorwiderstand dimensionieren",
+       "vorhersage": "Du schließt eine LED über einen Vorwiderstand an $5\\,\\text{V}$ an. Was passiert mit dem Strom, wenn du den Widerstand verkleinerst – bleibt er gleich, weil die LED ja eine feste Schwellenspannung hat, oder steigt er stark an? Schreibe deine Vermutung auf.",
+       "auftraege": [
+        "<strong>Versuchsaufbau:</strong> Schalte LED und Vorwiderstand in Reihe an die Spannungsquelle. Stelle $U_{\\text{ges}}$ ein und notiere die Schwellenspannung $U_{\\text{LED}}$ der LED.",
+        "Wähle einen Vorwiderstand und lies den Strom $I$ durch die LED ab.",
+        "Berechne den Vorwiderstand für $I=20\\,\\text{mA}$ mit $R_V = \\frac{U_{\\text{ges}} - U_{\\text{LED}}}{I}$ und vergleiche mit dem eingestellten Wert.",
+        "Verkleinere $R_V$ schrittweise und beobachte, wie der Strom ansteigt – ab wann wird es für die LED kritisch?"
+       ],
+       "material": "Eine LED, mehrere Widerstände (z. B. $150\\,\\Omega$ … $1\\,\\text{k}\\Omega$), eine $5\\,\\text{V}$-Spannungsquelle, ein Strommessgerät, Kabel.",
+       "pfad": "simulationen/physik/led-vorwiderstand/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> ohmsches Gesetz $U=R\\cdot I$; Reihenschaltung (gleicher Strom, Spannungen addieren sich); Schwellenspannung der Diode kennen.</p><p><strong>Angesprochene Kompetenzen:</strong> mathematisieren (Formel $R_V$ herleiten und anwenden), auswerten (Strom-Werte vergleichen), bewerten (Schutzfunktion des Vorwiderstands beurteilen).</p><p><strong>Erwartung:</strong> Für $U_{\\text{ges}}=5\\,\\text{V}$, $U_{\\text{LED}}\\approx 2\\,\\text{V}$ und $I=20\\,\\text{mA}$ ergibt sich $R_V=\\frac{3\\,\\text{V}}{0{,}02\\,\\text{A}}=150\\,\\Omega$. Ein kleinerer Widerstand treibt den Strom über den Grenzwert.</p><p><strong>Modellgrenzen:</strong> Die LED wird vereinfacht über eine feste Schwellenspannung beschrieben; in Wirklichkeit ist die Kennlinie gekrümmt und temperaturabhängig, und sehr kleine Widerstände würden die reale LED zerstören.</p>"
     },
     "ueben": {
      "zeit": 18,

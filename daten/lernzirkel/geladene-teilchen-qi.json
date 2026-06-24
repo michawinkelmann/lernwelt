@@ -1,0 +1,94 @@
+{
+ "id": "geladene-teilchen-qi",
+ "titel": "Lernzirkel: Bewegung geladener Teilchen",
+ "fach": "physik",
+ "intro": "An diesen Stationen verfolgst du den Weg geladener Teilchen durch elektrische und magnetische Felder: vom Beschleunigen im Längsfeld über die Parabelbahn im Ablenkkondensator bis zur Messung der spezifischen Ladung. Wähle die Reihenfolge selbst und hak ab, was du geschafft hast. Kein Druck, keine Noten.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Geschwindigkeit aus Spannung",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Ein Elektron wird aus der Ruhe durch eine Spannung $U$ beschleunigt. Erkunde, wie die Endgeschwindigkeit von der Beschleunigungsspannung abhängt. Wächst $v$ proportional zu $U$ — oder anders?</p>",
+   "widget": {
+    "id": "funktionsplotter",
+    "params": {
+     "form": "wurzel",
+     "regler": [
+      {
+       "sym": "a",
+       "label": "k",
+       "min": 1,
+       "max": 8,
+       "step": 0.5,
+       "init": 5.9
+      }
+     ],
+     "x": [
+      0,
+      1000
+     ],
+     "y": [
+      0,
+      200
+     ],
+     "achsen": {
+      "x": "U in V",
+      "y": "v in Mm/s"
+     },
+     "formel": "v = k · √U"
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Bahn im Kondensator",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Ein Elektron fliegt in den Ablenkkondensator. Verändere die Anfangsgeschwindigkeit und beobachte die Bahn im Querfeld. Welche typische Bahnform entsteht?</p>",
+   "widget": {
+    "id": "wurfparabel",
+    "params": {
+     "v0init": 10,
+     "alphainit": 0,
+     "g": 9.81,
+     "vmax": 25
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Experiment: e/m-Bestimmung",
+   "typ": "link",
+   "typLabel": "Experiment",
+   "html": "<p>Am Fadenstrahlrohr werden beschleunigte Elektronen durch ein Magnetfeld auf eine Kreisbahn gezwungen. Daraus bestimmst du die spezifische Ladung $\\frac{e}{m}$ des Elektrons. Probiere es aus.</p>",
+   "link": {
+    "pfad": "experimente/physik/em-bestimmung/index.html",
+    "label": "e/m-Bestimmung öffnen"
+   }
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Knobeln: Spannung vervierfacht",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Ein Elektron wird aus der Ruhe durch die Spannung $U_0$ beschleunigt. Du vervierfachst die Beschleunigungsspannung. Um welchen Faktor ändert sich die Endgeschwindigkeit?</p><details><summary>Lösung anzeigen</summary><div>Aus der Energiebilanz $e \\cdot U_0 = \\tfrac{1}{2} m v^2$ folgt $v = \\sqrt{\\tfrac{2 e U_0}{m}}$, also ist $v$ proportional zu $\\sqrt{U_0}$. Bei vierfacher Spannung wächst die Geschwindigkeit nur um den Faktor $\\sqrt{4} = 2$ — sie <strong>verdoppelt</strong> sich.</div></details>"
+  },
+  {
+   "id": "s5",
+   "nr": "5",
+   "titel": "Üben: Beschleunigen und Ablenken",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ph-qp-bewegung-geladener-teilchen",
+   "ids": [
+    "ph-qp-bt-004",
+    "ph-qp-bt-006"
+   ]
+  }
+ ]
+}

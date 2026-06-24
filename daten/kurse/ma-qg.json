@@ -233,19 +233,24 @@
        "antwort": "Der Betrag $|\\overrightarrow{AB}|=\\sqrt{v_1^2+v_2^2+v_3^2}$ ist genau der Abstand der Punkte $A$ und $B$."
       }
      ],
+     "vorueberlegung": "<p>Bevor wir mit Vektoren im Raum rechnen, überlegen wir: Ein Punkt $P(x\\mid y\\mid z)$ braucht drei Koordinaten, sein Ortsvektor trägt dieselben Zahlen. Die Länge eines Vektors $\\vec v=(v_1\\mid v_2\\mid v_3)$ ist $|\\vec v|=\\sqrt{v_1^2+v_2^2+v_3^2}$. Vermutung: Stehen zwei Vektoren senkrecht aufeinander, ist der Winkel $90^\\circ$; zeigen sie in dieselbe Richtung, ist er $0^\\circ$. Wir erwarten, dass sich diese Lagebeziehungen im räumlichen Bild und über den Winkel $\\varphi$ ablesen lassen.</p>",
+     "erkundenZuerst": true,
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Der Raum als Zimmerecke",
-       "material": "Eine Zimmerecke (zwei Wände + Boden), ein Maßband oder Lineal, drei kleine Klebezettel.",
+       "titel": "Vektoren im Raum: Länge, Richtung, Winkel",
+       "vorhersage": "Welcher Winkel $\\varphi$ stellt sich ein, wenn zwei Vektoren senkrecht aufeinander stehen, und welcher, wenn sie parallel sind?",
        "auftraege": [
-        "Klebe einen Zettel als Punkt $P$ an eine Wand (z. B. 2 Schritte nach vorne, keiner zur Seite, 2 in die Höhe) und lies seine drei Koordinaten ab.",
-        "Klebe einen zweiten Zettel $Q$ und bestimme $\\overrightarrow{PQ}=Q-P$ rechnerisch aus den abgelesenen Koordinaten.",
-        "Miss die Strecke $\\overline{PQ}$ mit dem Maßband und vergleiche sie mit dem berechneten Betrag $|\\overrightarrow{PQ}|$.",
-        "Prüfe deine Vorhersage: Berechne $|\\overrightarrow{OP}|$ und $|\\overrightarrow{OQ}|$ und entscheide, welcher Punkt wirklich weiter weg liegt."
-       ]
+        "Stelle die Presets „senkrecht\", „parallel\" und „gleich\" ein und lies jeweils den Winkel $\\varphi$ zwischen $\\vec v_1$ und $\\vec v_2$ ab.",
+        "Verändere die Komponenten von $\\vec v_1$ und prüfe an der Anzeige, ob die Länge $|\\vec v_1|=\\sqrt{a_x^2+a_y^2+a_z^2}$ stimmt.",
+        "Drehe die Ansicht (Azimut) und beschreibe, wie das Schrägbild die räumliche Lage der beiden Vektoren sichtbar macht."
+       ],
+       "pfad": "simulationen/mathematik/vektoren-3d/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
-     ]
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Koordinaten im Raum $P(x\\mid y\\mid z)$, Ortsvektor, Satz des Pythagoras für die Länge, anschauliche Vorstellung von senkrecht/parallel.</p><p><strong>Angesprochene Kompetenzen:</strong> räumliches Vorstellungsvermögen, Länge und Richtung eines Vektors bestimmen, Lagebeziehungen über den Winkel $\\varphi$ deuten.</p><p><strong>Erwartung:</strong> Die Lernenden lesen ab: Bei senkrechten Vektoren ist $\\varphi=90^\\circ$, bei parallelen/gleichgerichteten $\\varphi=0^\\circ$, bei entgegengesetzten $180^\\circ$. Die Länge $\\sqrt{a_x^2+a_y^2+a_z^2}$ stimmt mit der Anzeige überein. Das Schrägbild macht die räumliche Lage durch Drehen greifbar und bereitet Skalarprodukt und Geraden vor.</p><p><strong>Modellgrenzen:</strong> Ein Schrägbild ist eine ebene Projektion des Raums — Längen und Winkel erscheinen perspektivisch verzerrt und sollten rechnerisch geprüft werden. Der ablesbare Winkel ist auf die ganze Gradzahl gerundet; exakte Werte liefert erst die Rechnung mit dem Skalarprodukt.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -4250,19 +4255,6 @@
        "antwort": "Man berechnet die Bilder von $\\vec{e_1}$ und $\\vec{e_2}$ und schreibt sie als Spalten."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Einheitsquadrat abbilden",
-       "material": "Karopapier; das Einheitsquadrat mit den Ecken $(0|0),(1|0),(1|1),(0|1)$; die Matrix $A=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$.",
-       "auftraege": [
-        "Berechne die Bilder der vier Ecken mit $A\\cdot\\vec{P}$.",
-        "Zeichne Original und Bild ins Koordinatensystem.",
-        "Beschreibe die Abbildung in Worten (welche Drehung?).",
-        "Prüfe deine Vorhersage."
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "matrixabb",
       "titel": "Matrix als Abbildung",
@@ -4273,7 +4265,25 @@
        "d": 1,
        "bereich": 4
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir Abbildungsmatrizen aufstellen, überlegen wir: Eine Matrix $M=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$ bildet jeden Punkt $\\vec P$ auf $\\vec P\\,'=M\\cdot\\vec P$ ab. Die Spalten von $M$ sind die Bilder der Einheitsvektoren $\\vec e_1,\\vec e_2$. Vermutung: Dreh-, Spiegel- und Scherungsmatrizen verformen das Einheitsquadrat auf charakteristische Weise, und die Determinante $\\det M=ad-bc$ misst, wie sich dabei der Flächeninhalt ändert. Bei einer reinen Drehung erwarten wir $\\det M=1$ (Fläche bleibt erhalten).</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Was Matrizen mit dem Einheitsquadrat machen",
+       "vorhersage": "Wohin wandern die Einheitsvektoren bei einer Drehung um $90^\\circ$, und wie groß ist dann die Fläche des Bildquadrats?",
+       "auftraege": [
+        "Wähle nacheinander die Presets Drehung $90^\\circ$, Spiegelung (x-Achse), Streckung und Scherung und beschreibe, wie sich das Einheitsquadrat verformt.",
+        "Lies jeweils die Determinante $\\det M=a\\,d-b\\,c$ und die Fläche des Bildquadrats ab und stelle den Zusammenhang her.",
+        "Verändere die Einträge $a,b,c,d$ frei und finde eine Matrix mit $\\det M=0$ — was passiert geometrisch mit dem Quadrat?"
+       ],
+       "pfad": "simulationen/mathematik/matrix-abbildung/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Matrix-Vektor-Produkt $\\vec P\\,'=M\\cdot\\vec P$, Einheitsvektoren, Begriff der Determinante einer $2\\times2$-Matrix.</p><p><strong>Angesprochene Kompetenzen:</strong> Matrizen geometrisch als Abbildungen deuten, Spalten als Bilder der Einheitsvektoren erkennen, die Determinante als Flächenfaktor interpretieren.</p><p><strong>Erwartung:</strong> Die Lernenden erkennen die Spalten als Bilder von $\\vec e_1,\\vec e_2$. Die Drehung $\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$ hat $\\det M=1$ (Fläche erhalten), die Streckung $\\begin{pmatrix}2&0\\\\0&3\\end{pmatrix}$ hat $\\det M=6$ (sechsfache Fläche), eine Spiegelung liefert $\\det M=-1$ (Orientierung kehrt um). Bei $\\det M=0$ kollabiert das Quadrat auf eine Strecke.</p><p><strong>Modellgrenzen:</strong> Die Simulation zeigt nur Abbildungen der Ebene ($2\\times2$); Verschiebungen sind keine linearen Abbildungen und werden nicht erfasst. Das Vorzeichen der Determinante (Orientierung) ist an der reinen Flächenanzeige nicht direkt ablesbar und muss mitgedacht werden.</p>"
     },
     "ueben": {
      "zeit": 18,

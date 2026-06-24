@@ -5240,18 +5240,6 @@
        }
       ]
      },
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Ergebnisraum bestimmen",
-       "material": "Ein Würfel, eine Münze, Papier.",
-       "auftraege": [
-        "Schreibe den Ergebnisraum für einen Würfelwurf und für einen Münzwurf auf.",
-        "Nenne zu jedem ein Ereignis, das mehrere Ergebnisse umfasst.",
-        "Wirf den Würfel $10$-mal und notiere, welche Ergebnisse tatsächlich auftreten."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Was ist der Ergebnisraum?",
@@ -5265,7 +5253,26 @@
        "frage": "Worin unterscheiden sich Ergebnis und Ereignis?",
        "antwort": "Ein Ergebnis ist ein einzelner Ausgang, ein Ereignis fasst mehrere Ergebnisse zusammen."
       }
-     ]
+     ],
+     "vorueberlegung": "<p>Bevor wir Nadeln werfen, überlegen wir: Jeder einzelne Wurf ist <strong>nicht vorhersehbar</strong> — mal kreuzt die Nadel eine Linie, mal nicht. Trotzdem vermuten wir: Über sehr viele Würfe ergibt sich eine <strong>stabile Trefferquote</strong>. Erstaunlicherweise erwarten wir, dass in dieser Quote die Kreiszahl $\\pi$ steckt.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Zufallsversuch „Nadelwurf“ und seine Ergebnisse erkunden",
+       "vorhersage": "Wie oft von 20 Würfen wird eine Nadel wohl eine Linie kreuzen — eher selten, etwa die Hälfte oder fast immer? Notiere deine Vermutung.",
+       "auftraege": [
+        "Beschreibe den Zufallsversuch genau: Was ist ein einzelner Wurf, und welche zwei Ergebnisse gibt es („Nadel kreuzt eine Linie“ / „Nadel kreuzt keine Linie“)?",
+        "Wirf 20 Nadeln und führe eine Strichliste: Notiere die Anzahl der Treffer (Kreuzungen) und der Nicht-Treffer.",
+        "Wiederhole, bis du etwa 100 Würfe hast, und berechne die relative Häufigkeit der Treffer. Halte fest, wie sich der Wert mit mehr Würfen verändert."
+       ],
+       "pfad": "experimente/mathematik/buffon/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso.",
+       "material": "Mehrere gleich lange Nadeln oder Zahnstocher und ein Blatt Papier mit parallelen Linien, deren Abstand genau der Nadellänge entspricht."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriff der relativen Häufigkeit (Anteil); sorgfältiges Führen einer Strichliste. Eine Begründung über $\\pi$ ist hier noch <strong>nicht</strong> nötig.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (einen Zufallsversuch durchführen und protokollieren), Begriffsbildung (Ergebnis und Ereignis unterscheiden, Ergebnisraum benennen), Kommunikation (Beobachtungen ordnen und festhalten).</p><p><strong>Erwartung:</strong> Die Lernenden benennen den Ergebnisraum $\\{\\text{Treffer},\\,\\text{kein Treffer}\\}$, führen die Strichliste sauber und beobachten, dass die relative Häufigkeit der Treffer mit wachsender Wurfzahl ruhiger wird (Hinführung zum Gesetz der großen Zahlen).</p><p><strong>Modellgrenzen:</strong> Die schöne $\\pi$-Verbindung gilt nur, wenn Nadellänge und Linienabstand <strong>gleich</strong> sind und die Würfe wirklich zufällig liegen. Kleine Wurfzahlen schwanken stark; verlässliche Quoten entstehen erst bei vielen Würfen.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -5425,18 +5432,6 @@
        }
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Reißzwecke werfen",
-       "material": "Eine Reißzwecke (oder ein Kronkorken), Papier für eine Strichliste.",
-       "auftraege": [
-        "Wirf die Reißzwecke $20$-mal und notiere mit einer Strichliste, wie oft die Spitze oben landet.",
-        "Berechne die relative Häufigkeit; wirf danach weitere $20$-mal und berechne sie erneut.",
-        "Beschreibe, wie sich die relative Häufigkeit mit mehr Würfen verhält."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Wie berechnest du die relative Häufigkeit?",
@@ -5457,7 +5452,25 @@
       "params": {
        "seiten": 6
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir drehen, überlegen wir: Bei einem Glücksrad mit $3$ von $10$ Gewinnfeldern ist die Gewinnwahrscheinlichkeit $P=0{,}3$. Nach wenigen Drehungen kann die <strong>relative Häufigkeit</strong> aber noch weit daneben liegen. Vermutung: Je <strong>mehr</strong> Drehungen wir machen, desto näher rückt die relative Häufigkeit an $P$ heran.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Relative Häufigkeit und das Gesetz der großen Zahlen erkunden",
+       "vorhersage": "Liegt die relative Häufigkeit nach 10 Drehungen schon dicht an $P=0{,}3$ — oder erst nach vielen hundert Drehungen? Was vermutest du?",
+       "auftraege": [
+        "Stelle das Preset „3 von 10“ ein, drehe zunächst nur $10$-mal und lies die relative Häufigkeit $h$ sowie den Abstand $|h-P|$ ab.",
+        "Lass die Automatik bis etwa $1000$ Drehungen laufen und notiere $h$ und $|h-P|$ bei $50$, $200$ und $1000$ Drehungen.",
+        "Beschreibe, wie sich der Abstand $|h-P|$ insgesamt verhält, und prüfe mit einem zweiten Preset (z. B. „1 von 6“), ob deine Beobachtung auch dort gilt."
+       ],
+       "pfad": "simulationen/mathematik/gluecksrad/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Berechnung der relativen Häufigkeit $h=\\frac{\\text{Treffer}}{\\text{Drehungen}}$; Vorstellung einer Wahrscheinlichkeit als Anteil zwischen $0$ und $1$.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (eine Gesetzmäßigkeit durch Variieren der Versuchszahl entdecken), Darstellen (Häufigkeitskurve und Abstand $|h-P|$ deuten), Argumentieren (relative Häufigkeit und Wahrscheinlichkeit klar trennen).</p><p><strong>Erwartung:</strong> Die Lernenden beobachten, dass $h$ anfangs stark schwankt und sich mit wachsender Drehzahl dem theoretischen Wert $P$ nähert ($|h-P|$ wird tendenziell kleiner) — das Gesetz der großen Zahlen.</p><p><strong>Modellgrenzen:</strong> Annäherung heißt <strong>nicht</strong>, dass $h$ irgendwann exakt $P$ erreicht; einzelne Werte dürfen wieder ausreißen. Die relative Häufigkeit bleibt eine <strong>Schätzung</strong> der Wahrscheinlichkeit, kein fester Wert.</p>"
     },
     "ueben": {
      "zeit": 18,

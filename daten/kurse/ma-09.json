@@ -350,18 +350,6 @@
       }
      ],
      "merksatz": "<strong>Satz des Pythagoras:</strong> In jedem rechtwinkligen Dreieck gilt $a^2 + b^2 = c^2$, wobei $c$ die Hypotenuse ist. Die Hypotenuse berechnet man mit $c = \\sqrt{a^2 + b^2}$.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Das 3-4-5-Dreieck mit Schnur",
-       "material": "Ein Stück Schnur (ca. 1,5 m), ein Stift, ein Maßband oder Lineal.",
-       "auftraege": [
-        "Knote die Schnur zu einer Schleife und markiere mit Knoten 12 gleiche Abschnitte.",
-        "Spanne ein Dreieck mit den Seitenlängen 3, 4 und 5 Abschnitten auf — miss den größten Winkel.",
-        "Rechne nach: Stimmt $3^2 + 4^2 = 5^2$? Erkläre, warum das 3-4-5-Dreieck rechtwinklig ist."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Schreibe den Satz des Pythagoras als Formel auf.",
@@ -412,7 +400,25 @@
        "einheit": "cm",
        "trig": false
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir mit $a^2+b^2=c^2$ rechnen, überlegen wir: Setzen wir auf jede Seite eines rechtwinkligen Dreiecks ein Quadrat, so messen ihre Flächen $a^2$, $b^2$ und $c^2$. Vermutung: Die beiden kleinen Quadrate zusammen sind <strong>genauso groß</strong> wie das große über der Hypotenuse. Wir erwarten, dass das nur bei rechtem Winkel gilt.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Quadrate an den Seiten – die Flächen vergleichen",
+       "vorhersage": "Wie verhält sich die Summe der beiden kleinen Quadratflächen zur großen Quadratfläche über der Hypotenuse?",
+       "auftraege": [
+        "Stelle die Katheten $a$ und $b$ ein und lies die drei Quadratflächen ab.",
+        "Vergleiche die Summe $a^2+b^2$ mit der Fläche $c^2$ über der längsten Seite.",
+        "Verändere das Dreieck so, dass der Winkel nicht mehr $90^\\circ$ ist, und beobachte, ob die Flächengleichung noch stimmt."
+       ],
+       "pfad": "simulationen/mathematik/pythagoras-quadrate/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Rechtwinklige Dreiecke und die Begriffe Kathete/Hypotenuse (Lektion 1); Flächeninhalt des Quadrats.</p><p><strong>Angesprochene Kompetenzen:</strong> Mathematisch argumentieren (einen Satz über Flächen begründen), Darstellungen wechseln (Figur ↔ Gleichung).</p><p><strong>Erwartung:</strong> Die Lernenden stellen fest, dass $a^2+b^2=c^2$ genau im rechtwinkligen Fall gilt, und deuten den Satz als Flächengleichheit der Quadrate.</p><p><strong>Modellgrenzen:</strong> Die Simulation zeigt die Gleichheit nur an Beispielen; ein allgemeiner Beweis (z. B. durch Zerlegung) folgt erst danach.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1631,18 +1637,6 @@
       }
      ],
      "merksatz": "In der <strong>Scheitelpunktform</strong> $f(x)=a(x-d)^2+e$ liest man den Scheitel direkt als $S(d\\,|\\,e)$ ab. Achtung: $(x-d)$ heißt Verschiebung um $+d$ nach rechts; $e$ verschiebt nach oben.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Scheitelpunkte vorhersagen und prüfen",
-       "material": "Millimeterpapier, Lineal, Taschenrechner.",
-       "auftraege": [
-        "Lies aus $f(x)=(x-2)^2-1$ den Scheitel ab und markiere ihn.",
-        "Zeichne den Graphen über eine Wertetabelle und prüfe, ob der Scheitel stimmt.",
-        "Verändere $d$ und $e$ in zwei eigenen Beispielen und beschreibe, wie sich der Scheitel mitbewegt."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Wie liest du den Scheitel aus $f(x)=a(x-d)^2+e$ ab?",
@@ -1723,7 +1717,25 @@
        },
        "formel": "f(x) = a·(x − d)² + e"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir Parabeln verschieben, überlegen wir: In $f(x)=a(x-d)^2+e$ stehen zwei neue Zahlen $d$ und $e$. Vermutung: $d$ verschiebt die Parabel waagerecht, $e$ senkrecht, und der Scheitel liegt genau bei $S(d\\mid e)$. Wir erwarten, dass $(x-d)$ eine Verschiebung nach <strong>rechts</strong> bedeutet.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wie $d$ und $e$ die Parabel verschieben",
+       "vorhersage": "Verschiebt $(x-d)$ mit positivem $d$ die Parabel nach rechts oder nach links?",
+       "auftraege": [
+        "Stelle $a=1$, $e=0$ ein und ziehe $d$; beschreibe, in welche Richtung sich die Parabel bewegt.",
+        "Setze $d$ fest und ziehe $e$; lies jeweils die Koordinaten des Scheitels ab.",
+        "Finde Werte von $d$ und $e$, sodass der Scheitel bei $S(3\\mid -2)$ liegt, und notiere den Funktionsterm."
+       ],
+       "pfad": "simulationen/mathematik/funktionsplotter/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Normalparabel und der Streckfaktor $a$ (Lektionen 6–7); Ablesen von Koordinaten.</p><p><strong>Angesprochene Kompetenzen:</strong> Darstellungen wechseln (Term ↔ Graph), Erkenntnisgewinnung (Parametereinfluss systematisch untersuchen).</p><p><strong>Erwartung:</strong> Die Lernenden ordnen $d$ der waagerechten und $e$ der senkrechten Verschiebung zu, lesen den Scheitel als $S(d\\mid e)$ ab und erkennen, dass $(x-d)$ mit positivem $d$ nach rechts verschiebt.</p><p><strong>Modellgrenzen:</strong> Der Plotter zeigt nur einen Ausschnitt; das verbreitete Vorzeichen-Missverständnis bei $(x-d)$ klärt erst die bewusste Probe an einzelnen Punkten.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -5034,18 +5046,6 @@
       }
      ],
      "merksatz": "Bei <strong>Sonnenlicht</strong> (parallele Strahlen) misst man Höhen über ähnliche Dreiecke: $\\frac{h}{\\text{Schatten}}=\\frac{\\text{Stab}}{\\text{Stabschatten}}$. Bei einer <strong>Punktlichtquelle</strong> nutzt man den Strahlensatz mit dem Lichtpunkt als Zentrum.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Höhe über den Schatten messen",
-       "material": "Ein Messstab oder Stock bekannter Länge, Maßband, sonniger Tag (oder eine starke Lampe).",
-       "auftraege": [
-        "Miss bei Sonnenschein den Schatten eines senkrechten Stabes bekannter Höhe.",
-        "Miss den Schatten eines höheren Objekts (Mast, Baum) zur gleichen Zeit.",
-        "Berechne die Höhe mit der Verhältnisgleichung und vergleiche zwei Messungen."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Warum gelten bei Sonnenschein ähnliche Dreiecke?",
@@ -5069,7 +5069,26 @@
       "params": {
        "kInit": 2.5
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir einen Baum vermessen, überlegen wir: Stab und Stabschatten bilden ein kleines Dreieck, Baum und Baumschatten ein großes – beide sind <strong>ähnlich</strong>. Vermutung: Aus dem Verhältnis $\\frac{\\text{Stab}}{\\text{Stabschatten}}$ können wir die unbekannte Höhe berechnen. Wir erwarten, dass das Verhältnis von Höhe zu Schatten bei allen Gegenständen gleich ist.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Baumhöhe über den Schatten bestimmen",
+       "vorhersage": "Ist das Verhältnis von Höhe zu Schattenlänge für einen kurzen Stab und einen hohen Baum gleich oder verschieden?",
+       "auftraege": [
+        "Miss zur gleichen Zeit die Länge eines senkrechten Stabes und seines Schattens.",
+        "Miss den Schatten des Baums und berechne seine Höhe mit $\\frac{h}{\\text{Schatten}}=\\frac{\\text{Stab}}{\\text{Stabschatten}}$.",
+        "Wiederhole die Messung mit einem zweiten Gegenstand und vergleiche die Verhältnisse."
+       ],
+       "material": "Ein gerader Messstab (oder Zollstock), ein Maßband, ein sonniger Standort mit deutlichem Schatten.",
+       "pfad": "experimente/mathematik/hoehenmessung/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Ähnliche Dreiecke und Strahlensätze (Lektionen 21–22); Umgang mit Maßband und Dreisatz.</p><p><strong>Angesprochene Kompetenzen:</strong> Mathematisch modellieren (reale Höhe über ein Verhältnis bestimmen), Erkenntnisgewinnung (Messwerte gewinnen und auswerten).</p><p><strong>Erwartung:</strong> Die Lernenden erkennen die Schattendreiecke als ähnlich, halten das Verhältnis Höhe zu Schatten konstant und berechnen damit die Baumhöhe.</p><p><strong>Modellgrenzen:</strong> Das Verfahren setzt parallele Sonnenstrahlen und ebenen Boden voraus; Mess- und Ablesefehler sowie unscharfe Schattenränder begrenzen die Genauigkeit.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -5574,18 +5593,6 @@
       }
      ],
      "merksatz": "<strong>Umfang:</strong> $u=2\\pi r=\\pi d$. Die Kreiszahl $\\pi\\approx 3{,}14$ ist das irrationale Verhältnis von Umfang zu Durchmesser. Es gilt $d=2r$.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Die Kreiszahl selbst entdecken",
-       "material": "Runde Gegenstände (Dose, Becher, Teller), ein Maßband oder Faden, Lineal, Taschenrechner.",
-       "auftraege": [
-        "Miss bei drei runden Gegenständen jeweils Umfang und Durchmesser.",
-        "Teile bei jedem den Umfang durch den Durchmesser — was fällt dir auf?",
-        "Vergleiche deine Werte mit $\\pi\\approx 3{,}14$ und erkläre Abweichungen."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Wie lautet die Umfangsformel?",
@@ -5634,7 +5641,26 @@
        "einheit": "cm",
        "zeige": "umfang"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir Kreise vermessen, überlegen wir: Wir messen bei mehreren runden Gegenständen jeweils Umfang $u$ und Durchmesser $d$. Vermutung: Der Quotient $\\frac{u}{d}$ ist bei jedem Kreis <strong>gleich</strong> – egal wie groß er ist. Wir erwarten einen Wert nahe $3{,}14$.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Die Kreiszahl $\\pi$ selbst vermessen",
+       "vorhersage": "Wird der Quotient aus Umfang und Durchmesser bei einer kleinen Münze und einem großen Eimer derselbe sein – oder hängt er von der Größe ab?",
+       "auftraege": [
+        "Miss bei mindestens drei runden Gegenständen den Umfang $u$ (Faden umlegen) und den Durchmesser $d$.",
+        "Berechne für jeden Gegenstand den Quotienten $\\frac{u}{d}$ und trage ihn in eine Tabelle ein.",
+        "Vergleiche deine Werte mit $\\pi\\approx 3{,}14$ und erkläre kleine Abweichungen."
+       ],
+       "material": "Mehrere runde Gegenstände (Dose, Becher, Münze), ein Faden, ein Lineal oder Maßband.",
+       "pfad": "experimente/mathematik/pi-messen/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Umfang als Randlänge; Division und Runden; Begriff Durchmesser/Radius.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Messreihe planen und auswerten), mathematisch argumentieren (eine Konstante aus Daten erschließen).</p><p><strong>Erwartung:</strong> Die Lernenden erhalten für $\\frac{u}{d}$ stets Werte um $3{,}1$ und erkennen $\\pi$ als das von der Größe unabhängige Verhältnis von Umfang zu Durchmesser.</p><p><strong>Modellgrenzen:</strong> $\\pi$ ist irrational und lässt sich durch Messung nie exakt treffen; Faden- und Ablesefehler erklären die Streuung der Quotienten.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -7248,18 +7274,6 @@
       }
      ],
      "merksatz": "Ein <strong>Baumdiagramm</strong> zeigt mehrstufige Versuche; an jeder Verzweigung summieren sich die Wahrscheinlichkeiten zu $1$. <strong>Pfadregel:</strong> entlang eines Astes <strong>multiplizieren</strong>. Baum und Vierfeldertafel sind ineinander überführbar.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Zwei Münzen werfen",
-       "material": "Zwei Münzen, Papier, Stift, Strichliste.",
-       "auftraege": [
-        "Zeichne das zweistufige Baumdiagramm für zwei Münzwürfe mit allen Wahrscheinlichkeiten.",
-        "Berechne die Pfadwahrscheinlichkeit für „Kopf–Kopf\" mit der Pfadregel.",
-        "Wirf 20-mal zwei Münzen, führe Strichliste und vergleiche mit der berechneten Wahrscheinlichkeit."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Wie berechnest du eine Pfadwahrscheinlichkeit?",
@@ -7307,7 +7321,25 @@
         "B"
        ]
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir zwischen Baumdiagramm und Vierfeldertafel wechseln, überlegen wir: Beide Darstellungen beschreiben denselben zweistufigen Versuch. Vermutung: Die vier Pfad-Endwerte des Baums sind genau die vier inneren Felder der Tafel. Wir erwarten, dass sich diese vier Werte sowohl im Baum als auch in der Tafel zu $1$ ergänzen.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Baumdiagramm und Vierfeldertafel ineinander übersetzen",
+       "vorhersage": "Welche Stelle im Baumdiagramm entspricht einem inneren Feld der Vierfeldertafel?",
+       "auftraege": [
+        "Stelle die Wahrscheinlichkeiten der ersten Stufe ein und lies die vier Pfadwahrscheinlichkeiten ab.",
+        "Übertrage diese vier Werte in die vier inneren Felder der Vierfeldertafel und prüfe die Randsummen.",
+        "Verändere einen Astwert und beobachte, welche Felder der Tafel sich mitändern."
+       ],
+       "pfad": "simulationen/mathematik/baumdiagramm/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Pfadmultiplikationsregel und Vierfeldertafel (Lektionen 30–32); Bruch- und Prozentrechnung.</p><p><strong>Angesprochene Kompetenzen:</strong> Darstellungen wechseln (Baum ↔ Tafel), mit Modellen arbeiten (zweistufige Versuche strukturieren).</p><p><strong>Erwartung:</strong> Die Lernenden identifizieren die Pfad-Endwerte des Baums mit den inneren Feldern der Tafel und nutzen die Randsummen zur Kontrolle (Gesamtsumme $1$).</p><p><strong>Modellgrenzen:</strong> Beide Darstellungen passen nur bei abzählbar wenigen Ausgängen je Stufe; bei sehr vielen Stufen werden Baum und Tafel unübersichtlich.</p>"
     },
     "ueben": {
      "zeit": 18,

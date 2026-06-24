@@ -2801,7 +2801,26 @@
        "g": 9.81,
        "vmax": 30
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir den schiefen Wurf untersuchen, überlegen wir: Die Bewegung lässt sich in einen waagerechten und einen senkrechten Teil zerlegen. Vermutung: Waagerecht bewegt sich der Körper gleichförmig mit $v_{0x}=v_0\\cos\\alpha$, senkrecht wie ein Wurf nach oben mit $v_{0y}=v_0\\sin\\alpha$ und Verzögerung $g$. Wir erwarten daraus eine <strong>Parabelbahn</strong> und die Wurfweite $x_w=\\frac{v_0^2\\sin(2\\alpha)}{g}$ – mit einem <strong>Maximum bei $\\alpha=45^\\circ$</strong>.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wurfweite in Abhängigkeit vom Abwurfwinkel",
+       "vorhersage": "Du wirfst mit gleichem Tempo, aber unter verschiedenen Winkeln. Bei welchem Winkel fliegt der Körper am weitesten – $30^\\circ$, $45^\\circ$ oder $60^\\circ$? Schreibe deine Vermutung auf, bevor du es ausprobierst.",
+       "auftraege": [
+        "Halte $v_0$ fest und stelle nacheinander mehrere Abwurfwinkel ein; lies jeweils Steighöhe, Flugzeit und Wurfweite ab.",
+        "Trage die Wurfweite gegen den Winkel auf und bestimme, bei welchem Winkel sie maximal ist.",
+        "Vergleiche zwei zueinander ergänzende Winkel (z. B. $30^\\circ$ und $60^\\circ$) und beschreibe, was dir auffällt.",
+        "Prüfe einen Wert rechnerisch mit $x_w=\\frac{v_0^2\\sin(2\\alpha)}{g}$ und vergleiche mit der Ablesung."
+       ],
+       "pfad": "simulationen/physik/schiefer-wurf/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Überlagerungsprinzip; gleichförmige und gleichmäßig beschleunigte Bewegung; Sinus und Kosinus am rechtwinkligen Dreieck.</p><p><strong>Angesprochene Kompetenzen:</strong> mathematisieren (Geschwindigkeit zerlegen, $x_w$ berechnen), auswerten (Weite-Winkel-Zusammenhang), Zusammenhänge erkennen (Maximum bei $45^\\circ$, ergänzende Winkel).</p><p><strong>Erwartung:</strong> Die Wurfweite ist bei $\\alpha=45^\\circ$ maximal, weil dort $\\sin(2\\alpha)=1$; Winkelpaare wie $30^\\circ$ und $60^\\circ$ liefern dieselbe Weite. Ein Rechenwert stimmt mit der Ablesung überein.</p><p><strong>Modellgrenzen:</strong> Das Modell vernachlässigt den Luftwiderstand und setzt gleiche Abwurf- und Landehöhe voraus; mit Luftwiderstand liegt der optimale Winkel unter $45^\\circ$, und die Bahn ist keine exakte Parabel mehr.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -3643,18 +3662,6 @@
        "antwort": "Er vergleicht nur Anfangs- und Endzustand und benötigt den genauen Bahnverlauf nicht."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Pendel und seine Umkehrhöhe",
-       "material": "Ein Faden (ca. 1 m), eine kleine Masse (Mutter, Knete) als Pendelkörper, ein fester Aufhängepunkt, Maßband.",
-       "auftraege": [
-        "Lass das Pendel aus einer markierten Höhe los und beobachte, wie hoch es auf der Gegenseite steigt.",
-        "Erkläre mit der Energieerhaltung, warum es (fast) die gleiche Höhe erreicht.",
-        "Beobachte über viele Schwingungen, wie die Umkehrhöhe langsam abnimmt, und benenne die Ursache (Reibung/Luftwiderstand)."
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "funktionsplotter",
       "titel": "Pendel: v aus Höhe",
@@ -3681,7 +3688,26 @@
        },
        "formel": "v = √(2 · g · h)"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir das Pendel schwingen lassen, überlegen wir: Ohne Reibung kann Energie nur die Form wechseln, nicht verschwinden. Vermutung: Lage- und Bewegungsenergie wandeln sich ständig ineinander um, ihre <strong>Summe bleibt konstant</strong> ($E_{\\text{pot}}+E_{\\text{kin}}=\\text{const}$). Wir erwarten: Am <strong>Umkehrpunkt</strong> ist die Geschwindigkeit null (nur Lageenergie), im <strong>Tiefpunkt</strong> ist sie maximal (nur Bewegungsenergie), und es gilt dort $m\\,g\\,h=\\frac{1}{2}m\\,v^2$, also $v=\\sqrt{2\\,g\\,h}$.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Energieumwandlung am schwingenden Pendel",
+       "vorhersage": "Ein Pendel schwingt aus einer bestimmten Höhe los. Glaubst du, es erreicht auf der anderen Seite genau dieselbe Höhe, oder weniger? Und wo ist es am schnellsten? Schreibe deine Vermutung auf, bevor du es beobachtest.",
+       "auftraege": [
+        "Stelle eine Auslenkungshöhe ein und beobachte, wie sich Lage- und Bewegungsenergie über eine Schwingung verteilen.",
+        "Lies an Umkehrpunkt und Tiefpunkt die Werte ab und prüfe, ob die Gesamtenergie konstant bleibt.",
+        "Bestimme die Geschwindigkeit im Tiefpunkt und vergleiche sie mit $v=\\sqrt{2\\,g\\,h}$.",
+        "Schalte (falls möglich) Reibung dazu und beschreibe, wie sich die Energiebilanz dann verändert."
+       ],
+       "pfad": "simulationen/physik/energie-erhaltung/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Lageenergie $E_{\\text{pot}}=m\\,g\\,h$ und Bewegungsenergie $E_{\\text{kin}}=\\frac{1}{2}m\\,v^2$; Energieerhaltungssatz; Wurzel ziehen.</p><p><strong>Angesprochene Kompetenzen:</strong> auswerten (Energiebilanz über die Schwingung), mathematisieren (Energieansatz nach $v$ auflösen), bewerten (Reibung als Energieentwertung).</p><p><strong>Erwartung:</strong> Im reibungsfreien Modell bleibt $E_{\\text{pot}}+E_{\\text{kin}}$ konstant; das Pendel erreicht dieselbe Höhe, im Tiefpunkt gilt $v=\\sqrt{2\\,g\\,h}$. Mit Reibung sinkt die Gesamtenergie, die Umkehrhöhe nimmt ab.</p><p><strong>Modellgrenzen:</strong> Die ideale Energieerhaltung gilt nur ohne Reibung und Luftwiderstand; reale Pendel werden gedämpft, und die einfache Beziehung $v=\\sqrt{2\\,g\\,h}$ setzt voraus, dass die gesamte Lageenergie in Bewegungsenergie übergeht.</p>"
     },
     "ueben": {
      "zeit": 18,

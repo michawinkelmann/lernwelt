@@ -62,3 +62,40 @@ Beim Erstellen von Klassenarbeiten mit dem `klassenarbeit`-Skill gilt für diese
 - **Realschulzweig (R):** insgesamt etwas einfacher als Gymnasialzweig — kleinschrittiger, mehr AFB I/II und weniger AFB III, einfachere Kontexte/Zahlen, klarere Sprache.
 - **Layout (Pflicht, Lehren aus Welle 1):** vor dem Speichern `repariere_layout(doc)` aus `werkzeuge/kab_layout_fix.py` aufrufen — bindet Abschnittsüberschriften (Verwendete Operatoren / Erwartungshorizont / Benotung) per keep-with-next an ihre Tabelle, verhindert das Aufspalten von Operatoren- und Benotungstabelle über Seitenumbrüche, hält das Kontrollergebnis bei seiner Teilaufgabe, stellt alle BE-Angaben einheitlich rechtsbündig.
 - **Ablage:** Entwürfe nach `0Ablage/` (gitignored), zur Sichtung durch den Betreiber.
+
+## Lernzirkel (Trainingsraum)
+
+Frei wählbare Stationen mit Laufzettel (localStorage). Eigener Bereich; Übersicht `lernspiele/lernzirkel/index.html` (`data-seite="lernzirkel-uebersicht"`), gegliedert nach Fach → Stufe. Vom Trainingsraum aus verlinkt.
+
+- **Registry** `daten/lernzirkel.json`: je Eintrag `id, fach, stufe` („Klasse 5"…„Klasse 10" · „Einführungsphase" · „Qualifikationsphase"), `titel` (ohne „Lernzirkel:"-Präfix), `kurz`, `ordner`.
+- **Je Zirkel:** `daten/lernzirkel/<id>.json` + Seite `selbstlernen/lernzirkel-<id>/index.html` (`data-seite="lernzirkel" data-zirkel="<id>"`, Pfade `../../assets`).
+- **Stationstypen:** `widget` (interaktiv-Widget `id`+`params` — nur erprobte Params 1:1 aus bestehenden Lektionen kopieren, **nie erfinden**) · `link` (root-relativer Pfad zu Experiment/Sim/Spiel, **muss existieren**) · `knobel` (HTML endet mit `<details><summary>Lösung anzeigen</summary><div>…</div></details>`) · `aufgaben` (`quelle` = `daten/aufgaben`-Schlüssel + **echte** `ids`). Pflicht je Zirkel: ≥1 Erkunden (widget/link) + 1 knobel + 1 aufgaben.
+- **Ziel:** je Klasse × Fach × Themenblock mindestens ein Zirkel (außer reinen „Vermischt/Überblick"-Blöcken). Gate: `werkzeuge/check-lernzirkel.py`.
+
+## Lektionstyp „Lernaufgabe"
+
+Eine Lernaufgabe ist eine reguläre Lektion, deren `verstehen`-Block vier zusätzliche Felder trägt (bestehende Inhalte bleiben):
+
+1. `vorueberlegung` — Hypothese im Stil „Bevor wir … überlegen wir: … Vermutung: … erwarten wir …".
+2. `erkundenZuerst: true` — erst erkunden, dann erklären (Erkunden rendert vor den Schritten).
+3. `erkunden: [ … ]` — **genau ein** Experiment/Simulations-Objekt.
+4. `lehrkraft` — vier Absätze: Voraussetzungen · Angesprochene Kompetenzen · Erwartung · Modellgrenzen.
+
+**erkunden-Objekt:** `typ:"experiment"` (auch bei Simulationen!), `titel`, `vorhersage` (POE-Frage), `auftraege` (2–4), `pfad`, `linkLabel`, `hinweis`, optional `material`, optional `interaktiv` (eingebettetes Mess-Widget). Standardtexte (verbindlich):
+- **Experiment:** `linkLabel` = „Digitales Experiment öffnen"; `hinweis` = „Kein Material zur Hand? Öffne das **digitale Experiment** — die Auswertung läuft genauso."
+- **Simulation:** `linkLabel` = „Simulation öffnen"; `hinweis` = „Kein Material zur Hand? Nutze die **Simulation** — die Auswertung läuft genauso."
+- **Nur Mess-Widget (kein externer Link):** `hinweis` = „Kein Material zur Hand? Trag deine Werte direkt unten ins **Messlabor** ein — die Auswertung läuft genauso."
+
+**Regel:** Zu **jedem** digitalen Experiment und **jeder** Simulation gehört (mindestens) eine Lernaufgabe. Gate: `werkzeuge/check-lernaufgaben.py`. (KaTeX: kein `\tfrac`, nur `\frac`.)
+
+## Experimente (digitale Nachbau-Experimente)
+
+Je Experiment: `experimente/<fach>/<name>/index.html` (`data-seite="experiment"`) + eigenes `experiment.js` (exportiert `starteExperiment()`, mountet in `#experiment-wurzel`). Gemeinsame Bausteine: `assets/js/experiment/helfer.js`. Prinzip: realitätsnahe Messpraxis (selbst ablesen, protokollieren, auswerten), deterministische Mess-Streuung, reine Logik + `TESTS`/`pruefFaelle` (Node-testbar). Registry `daten/experimente.json` (`id, fach, stufe, status, titel, kurz, pfad, themen`).
+
+## Einstellungen / Fortschritt
+
+Seite `einstellungen/index.html` (`data-seite="einstellungen"`, Renderer `assets/js/einstellungen.js`), erreichbar über das **⚙-Symbol in der Kopfzeile** (kein Menüwort in der Hauptnav). Fortschritt **sichern / laden / zurücksetzen** — geräteübergreifend per JSON-Datei; Import führt zusammen („gelöst" gewinnt). Funktionen in `fortschritt.js`: `exportiereFortschritt`, `importiereFortschritt`, `setzeFortschrittZurueck`, `holeFortschrittUebersicht`. Schnellzugriff Export/Import zusätzlich in der Fußzeile. Alles bleibt lokal (kein Server, keine Konten).
+
+## Automatische Gates (`werkzeuge/check-website.py`)
+
+Ein Lauf prüft nacheinander: Links/Pfade/keine externen Requests · Wiederholungen (`check-wiederholungen.py`) · Aufgaben-Render-Fallen (`check-aufgaben.py`) · **Lernzirkel-Konsistenz (`check-lernzirkel.py`)** · **Lernaufgaben-Abdeckung (`check-lernaufgaben.py`)**. Muss mit „ALLES OK" enden. **Datenpflege-Konvention:** Änderungen in `daten/` per Skript vornehmen und mit Roundtrip absichern (`neu=json.dumps(d,ensure_ascii=False,indent=1); assert json.loads(neu)==d`), keine abschließende Leerzeile; danach immer das Gate laufen lassen.

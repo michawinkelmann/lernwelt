@@ -1,0 +1,86 @@
+{
+ "id": "matrizen-qg",
+ "titel": "Lernzirkel: Matrizen — Abbildungen und Prozesse",
+ "fach": "mathematik",
+ "intro": "Hier entdeckst du Matrizen von zwei Seiten: als Abbildungen der Ebene und als Beschreibung mehrstufiger Prozesse. Wähle die Reihenfolge selbst.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Matrizen als Abbildungen",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verändere die Einträge der Matrix und beobachte, wie sich das Bild verzerrt, dreht oder spiegelt. Welche Einträge bewirken eine Streckung, welche eine Scherung?</p>",
+   "widget": {
+    "id": "matrixabb",
+    "params": {
+     "a": 1,
+     "b": 1,
+     "c": 0,
+     "d": 1,
+     "bereich": 4
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Übergangsprozess Stadt und Land",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Eine Übergangsmatrix beschreibt, wie sich ein System Schritt für Schritt verändert. Lass den Prozess mehrere Schritte laufen: Pendelt sich die Verteilung auf einen festen Wert ein?</p>",
+   "widget": {
+    "id": "markov",
+    "params": {
+     "zustaende": [
+      "Stadt",
+      "Land",
+      "Ausl."
+     ],
+     "matrix": [
+      [
+       0.7,
+       0.1,
+       0.2
+      ],
+      [
+       0.2,
+       0.8,
+       0.2
+      ],
+      [
+       0.1,
+       0.1,
+       0.6
+      ]
+     ],
+     "start": [
+      1,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Wetter-Prozess",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Auf einen Sonnentag folgt mit Wahrscheinlichkeit $0{,}8$ wieder Sonne, sonst Regen. Auf einen Regentag folgt mit Wahrscheinlichkeit $0{,}6$ wieder Regen, sonst Sonne. Heute ist Sonne. Mit welcher Wahrscheinlichkeit ist es <em>übermorgen</em> sonnig?</p><details><summary>Lösung anzeigen</summary><div>Morgen: $P(\\text{Sonne})=0{,}8$, $P(\\text{Regen})=0{,}2$.<br>Übermorgen sonnig: $0{,}8\\cdot0{,}8 + 0{,}2\\cdot0{,}4 = 0{,}64 + 0{,}08 = 0{,}72$.<br>Es ist also mit Wahrscheinlichkeit $0{,}72$ (72 %) übermorgen sonnig.</div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Matrizen",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ma-qp-matrizen",
+   "ids": [
+    "ma-qp-mx-002",
+    "ma-qp-mx-005"
+   ]
+  }
+ ]
+}

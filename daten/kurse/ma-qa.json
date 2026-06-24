@@ -1203,19 +1203,24 @@
        "antwort": "Nullstelle suchen: $4-x^2=0$ liefert $x=2$ (im Intervall). Dort aufteilen, dann Beträge addieren."
       }
      ],
+     "vorueberlegung": "<p>Bevor wir Flächen unter Graphen exakt berechnen, überlegen wir: Wir nähern die Fläche unter $f(x)=x^2$ durch Rechtecke an. Wählen wir die Rechteckhöhe links (kleinster Funktionswert), bleibt die <strong>Untersumme</strong> stets unter der Fläche; rechts (größter Wert) liegt die <strong>Obersumme</strong> darüber. Vermutung: Je mehr Rechtecke $n$ wir nehmen, desto kleiner wird der Abstand Obersumme − Untersumme. Wir erwarten, dass beide Summen für wachsendes $n$ gegen denselben Wert streben — den Flächeninhalt bzw. das Integral.</p>",
+     "erkundenZuerst": true,
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Die Falle selbst erzeugen",
-       "material": "Taschenrechner, Papier, Lineal.",
-       "vorhersage": "Du untersuchst $f(x)=x^3-x$ auf $[-1;1]$. Vermute: Welchen Wert liefert $\\int_{-1}^1 f\\,dx$, und warum könnte er die Fläche nicht richtig wiedergeben?",
+       "titel": "Rechtecke verfeinern: Unter- und Obersumme treffen sich",
+       "vorhersage": "Was passiert mit Untersumme, Obersumme und ihrer Differenz, wenn du die Anzahl der Rechtecke $n$ stark erhöhst?",
        "auftraege": [
-        "Berechne das direkte Integral $\\int_{-1}^1 (x^3-x)\\,dx$ — welcher Wert kommt heraus?",
-        "Bestimme die Nullstellen, teile auf und addiere die Beträge der Teilintegrale zur echten Fläche.",
-        "Erkläre, warum gerade die <em>Symmetrie</em> hier das direkte Integral zu $0$ macht."
-       ]
+        "Starte grob (Preset $n=4$) und notiere Untersumme, Obersumme und ihre Differenz.",
+        "Erhöhe $n$ schrittweise (fein $n=40$, sehr fein $n=100$) und beschreibe, wie sich die Differenz Obersumme − Untersumme entwickelt.",
+        "Vergleiche beide Summen mit dem angezeigten exakten Integral $\\frac{b^3}{3}$ und begründe, warum die Fläche genau dazwischen liegt."
+       ],
+       "pfad": "simulationen/mathematik/riemann-summen/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
-     ]
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Flächeninhalt von Rechtecken, Monotonie von $f(x)=x^2$ auf $[0;b]$, Vorstellung eines Grenzwerts von Summen.</p><p><strong>Angesprochene Kompetenzen:</strong> Approximieren und den Grenzübergang $n\\to\\infty$ deuten, Unter-/Obersumme als Schranken verstehen, das bestimmte Integral als gemeinsamen Grenzwert erfassen.</p><p><strong>Erwartung:</strong> Die Lernenden erkennen, dass Unter- und Obersumme die Fläche einschachteln und ihre Differenz mit wachsendem $n$ gegen $0$ geht. Für $f(x)=x^2$ streben beide gegen $\\int_0^b x^2\\,dx=\\frac{b^3}{3}$ (z. B. $b=2\\Rightarrow\\frac{8}{3}\\approx2{,}67$). Das motiviert das Integral als exakten Flächeninhalt.</p><p><strong>Modellgrenzen:</strong> Die Simulation zeigt nur endlich viele Rechtecke — der eigentliche Grenzwert $n\\to\\infty$ bleibt eine Idealisierung. Die Einschachtelung „Untersumme unter, Obersumme über der Fläche\" gilt so nur, weil $f$ hier monoton steigend ist; bei wechselnder Monotonie muss man genauer hinsehen.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -3956,19 +3961,24 @@
        "antwort": "Begrenztes Wachstum ist von Anfang an am schnellsten und wird stetig langsamer. Logistisches Wachstum startet langsam, wird steiler (S-Form) und flacht erst spät ab."
       }
      ],
+     "vorueberlegung": "<p>Bevor wir die Modelle vergleichen, überlegen wir: Exponentielles Wachstum $N'=k\\cdot N$ wächst ungebremst immer schneller. In der Realität gibt es aber meist eine Kapazitätsgrenze $K$. Beim logistischen Wachstum $N'=k\\,N\\,(K-N)$ bremst der Bestand sich selbst, je näher er an $K$ kommt. Vermutung: Beide Kurven starten fast gleich, doch das logistische Wachstum knickt ab und nähert sich der Geraden $N=K$. Wir erwarten beim logistischen Modell eine S-Form mit der schnellsten Zunahme etwa bei $N=\\frac{K}{2}$.</p>",
+     "erkundenZuerst": true,
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Abkühlung als begrenztes Wachstum",
-       "material": "Eine Tasse heißes Wasser, ein Thermometer, eine Stoppuhr.",
-       "vorhersage": "Heißes Wasser kühlt zur Raumtemperatur ab. Vermute: Kühlt es gleichmäßig ab, oder anfangs schnell und dann immer langsamer? Welche Rolle spielt die Raumtemperatur als „Grenze“?",
+       "titel": "Exponentiell gegen logistisch: wann die Kurve abknickt",
+       "vorhersage": "Bis wann verlaufen exponentielles und logistisches Wachstum fast deckungsgleich, und wo trennen sie sich?",
        "auftraege": [
-        "Miss die Wassertemperatur alle $2$ Minuten über etwa $20$ Minuten und notiere die Werte.",
-        "Trage die Temperatur gegen die Zeit auf – nähert sich der Verlauf der Raumtemperatur als waagerechter Grenze $G$?",
-        "Beobachte: Wo ist die Abkühlung am schnellsten – bei großem oder kleinem Abstand zur Raumtemperatur?"
-       ]
+        "Vergleiche bei gleichem $N_0$ und $k$ die exponentielle und die logistische Kurve: Ab wann weichen sie sichtbar voneinander ab?",
+        "Variiere die Kapazität $K$ und beobachte, gegen welchen Wert sich die logistische Kurve langfristig anschmiegt.",
+        "Lies ab, bei welchem Bestand die logistische Kurve am steilsten ist, und vergleiche mit der Vermutung $N=\\frac{K}{2}$."
+       ],
+       "pfad": "simulationen/mathematik/wachstumsmodelle/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
-     ]
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> exponentielles Wachstum $N'=k\\,N$, Ableitung als Wachstumsgeschwindigkeit, Begriff der Sättigungsgrenze.</p><p><strong>Angesprochene Kompetenzen:</strong> Modelle vergleichen und bewerten, den Einfluss der Parameter $k$ und $K$ deuten, den Wendepunkt als Stelle maximaler Wachstumsgeschwindigkeit erkennen.</p><p><strong>Erwartung:</strong> Die Lernenden sehen: Solange $N$ klein gegen $K$ ist, verhält sich logistisches wie exponentielles Wachstum; danach bremst der Faktor $(K-N)$. Die logistische Kurve ist eine S-Kurve mit Wendepunkt (maximaler Steigung) bei $N=\\frac{K}{2}$ und Grenzwert $K$.</p><p><strong>Modellgrenzen:</strong> Reale Bestände schwanken (Zufall, Saisonalität); die glatte S-Kurve ist eine Idealisierung mit konstanten $k$ und $K$. Über die Kapazität hinaus (Übersteigen von $K$) bildet das einfache Modell nichts ab, und negative Bestände sind ausgeschlossen.</p>"
     },
     "ueben": {
      "zeit": 18,

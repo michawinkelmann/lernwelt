@@ -161,18 +161,6 @@
        }
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Nuklidkarte selbst erkunden (Trockenübung)",
-       "material": "Ausschnitt einer Nuklidkarte (Schulbuch oder Ausdruck), Lineal, Buntstifte.",
-       "auftraege": [
-        "Trage für fünf stabile Kerne (z. B. He, C, Ca, Fe, Pb) jeweils $Z$ und $N$ ab und markiere sie.",
-        "Zeichne die Diagonale $N = Z$ ein und vergleiche sie mit der Lage deiner Punkte — ab wann weicht das stabile Gebiet deutlich nach oben ab?",
-        "Suche zwei Isotope desselben Elements und beschreibe, wie sie in der Karte zueinander liegen (waagerecht? senkrecht?)."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Was unterscheidet Protonenzahl und Massenzahl?",
@@ -186,7 +174,26 @@
        "frage": "Was entscheidet, ob zwei Kerne Isotope sind?",
        "antwort": "Sie müssen dieselbe Protonenzahl $Z$ (gleiches Element) haben, sich aber in der Neutronenzahl unterscheiden."
       }
-     ]
+     ],
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Ein Kern $^{A}_{Z}\\text{X}$ trägt die Ladung $Z\\cdot e$ — aber wie groß ist diese Grundeinheit $e$ überhaupt? Unsere Vermutung: Elektrische Ladung tritt nicht in beliebigen Mengen auf, sondern stets als ganzzahliges Vielfaches einer kleinsten, <strong>unteilbaren</strong> Elementarladung $e$. Misst man die Ladung vieler winziger Öltröpfchen, sollten sich also keine beliebigen Werte ergeben, sondern nur Vielfache $q=n\\cdot e$ mit ganzzahligem $n$. Der größte gemeinsame Abstand dieser Werte wäre dann die Elementarladung selbst.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Elementarladung mit dem Millikan-Versuch bestimmen",
+       "material": "Eine Millikan-Apparatur (Plattenkondensator mit Öltröpfchen-Zerstäuber), eine regelbare Hochspannungsquelle und ein Messmikroskop mit Skala.",
+       "vorhersage": "Können die gemessenen Tröpfchenladungen jeden beliebigen Wert annehmen, oder treten nur ganzzahlige Vielfache eines kleinsten Betrags auf?",
+       "auftraege": [
+        "Bringe mehrere Öltröpfchen nacheinander durch Anlegen der Spannung zum Schweben und bestimme jeweils ihre Ladung $q$.",
+        "Trage die gemessenen Ladungen der Größe nach auf und suche den größten gemeinsamen Abstand zwischen den Werten.",
+        "Teile jede Ladung durch diesen Abstand und prüfe, ob sich (nahezu) ganze Zahlen $n$ ergeben — der Abstand ist dann die Elementarladung $e$."
+       ],
+       "pfad": "experimente/physik/millikan/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Kräftegleichgewicht im Plattenkondensator (Gewichts- und elektrische Kraft), Begriff der Ladung; hier vorbereitend für die Kernladung $Z\\cdot e$.</p><p><strong>Angesprochene Kompetenzen:</strong> experimentieren (Tröpfchen zum Schweben bringen, ablesen), auswerten (gemeinsamen Teiler einer Messreihe finden), bewerten (Quantelung der Ladung als Befund erkennen).</p><p><strong>Erwartung:</strong> Die Ladungen sind ganzzahlige Vielfache einer kleinsten Einheit. Der größte gemeinsame Abstand liefert $e\\approx1{,}6\\cdot10^{-19}\\,\\text{C}$ — die Ladung ist gequantelt.</p><p><strong>Modellgrenzen:</strong> Die Auftriebskraft der Luft und die Abweichung vom Stokes-Gesetz bei sehr kleinen Tröpfchen werden im einfachen Modell vernachlässigt. Streuung der Einzelmessungen macht erst die Auswertung vieler Tröpfchen aussagekräftig.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -582,7 +589,10 @@
         "Würfle alle Würfel, entferne jeden mit einer 6, notiere die verbleibende Anzahl. Wiederhole über mindestens 8 Runden.",
         "Trage die verbleibende Anzahl über der Rundenzahl auf — erkennst du den exponentiellen Verlauf?",
         "Trage $\\ln N$ über der Rundenzahl auf und prüfe, ob sich eine Gerade ergibt; schätze die „Halbwertszeit“ in Runden ab."
-       ]
+       ],
+       "pfad": "simulationen/physik/zerfall/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -1480,18 +1490,6 @@
        }
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Aus einem Termschema die Spektrallinien konstruieren",
-       "material": "Selbst gezeichnetes Termschema mit drei bis vier Niveaus (Energiewerte in eV), Lineal, Buntstifte, Taschenrechner.",
-       "auftraege": [
-        "Zeichne alle möglichen Abwärts-Übergänge als Pfeile ein und notiere jeweils $\\Delta E$.",
-        "Berechne mit $\\lambda = \\frac{h c}{\\Delta E}$ die Wellenlängen und markiere, welche im Sichtbaren liegen.",
-        "Ordne die Linien nach Wellenlänge und prüfe, welcher Übergang die kurzwelligste Linie liefert."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Welche Beziehung verbindet Energiedifferenz und Frequenz eines Photons?",
@@ -1513,7 +1511,25 @@
        "nEnd": 2,
        "nStartInit": 3
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Wenn ein Atom nur ganz bestimmte, diskrete Energieniveaus besitzt, dann kann es beim Übergang von einem Niveau zum anderen nur ganz bestimmte Energiebeträge abgeben oder aufnehmen. Über $\\Delta E = h\\cdot f = \\frac{h\\,c}{\\lambda}$ erwarten wir: Ein großer Energiesprung erzeugt eine Linie mit <strong>kurzer</strong> Wellenlänge, ein kleiner Sprung eine mit langer Wellenlänge. Unsere Vermutung: Genau dieselben Übergänge erscheinen bei Emission als helle und bei Absorption als dunkle Linien — bei identischen Wellenlängen.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Energieniveaus und Spektrallinien verknüpfen",
+       "vorhersage": "Welcher Übergang im Termschema erzeugt die kurzwelligste Spektrallinie — der mit der größten oder der kleinsten Energiedifferenz?",
+       "auftraege": [
+        "Wähle im Termschema verschiedene Übergänge und beobachte, an welcher Stelle des Spektrums die zugehörige Linie erscheint.",
+        "Ordne den größten Energiesprung der kürzesten Wellenlänge zu und prüfe diese Zuordnung mit $\\lambda=\\frac{h\\,c}{\\Delta E}$ rechnerisch nach.",
+        "Schalte zwischen Emission und Absorption um und beschreibe, was sich am Linienbild ändert und was gleich bleibt."
+       ],
+       "pfad": "simulationen/physik/atomhuelle/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Linienspektren als Fingerabdruck der Elemente (l6), Photonenenergie $E=h\\,f$, Zusammenhang $c=\\lambda\\,f$; Lesen eines Termschemas.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Übergänge im Termschema gezielt auswählen), mathematisieren (Wellenlänge aus Energiedifferenz berechnen), bewerten (Emission und Absorption als dieselben Übergänge erkennen).</p><p><strong>Erwartung:</strong> Der größte Energiesprung liefert die kürzeste Wellenlänge. Emissions- und Absorptionslinien liegen bei identischen Wellenlängen, weil dieselben Niveaupaare beteiligt sind — nur einmal hell, einmal dunkel.</p><p><strong>Modellgrenzen:</strong> Die Simulation zeigt ideale, unendlich scharfe Linien. Reale Linien sind verbreitert (Doppler- und Druckverbreiterung) und unterschiedlich hell, je nach Übergangswahrscheinlichkeit — das bildet das Modell nicht ab.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1684,18 +1700,6 @@
        }
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Franck-Hertz-Kennlinie aufnehmen oder deuten",
-       "material": "Franck-Hertz-Röhre mit Steuergerät (Demonstration durch die Lehrkraft) oder eine aufgezeichnete Kennlinie zur Auswertung.",
-       "auftraege": [
-        "Nimm (oder lies aus der gegebenen Kurve) die Spannungen der Stromeinbrüche ab und bestimme ihren Abstand.",
-        "Bestätige, dass der Abstand der ersten Anregungsenergie in $\\text{eV}$ entspricht.",
-        "Begründe, warum ein anderer Stoffabstand auf eine andere Anregungsenergie schließen lässt."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Was zeigt der periodische Stromeinbruch in der Kennlinie?",
@@ -1709,7 +1713,26 @@
        "frage": "Welche Größe liest man aus dem Spannungsabstand der Einbrüche ab?",
        "antwort": "Die erste Anregungsenergie des Gases (bei Quecksilber etwa $4{,}9\\,\\text{eV}$)."
       }
-     ]
+     ],
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Wären die Energieniveaus der Atome <strong>nicht</strong> diskret, könnten Elektronen bei jedem Stoß beliebig viel Energie an die Atome abgeben — der Auffängerstrom würde mit steigender Beschleunigungsspannung einfach immer weiter ansteigen. Unsere Vermutung dagegen: Atome nehmen nur ein <strong>festes</strong> Energiequantum auf. Dann sollte der Strom in regelmäßigen Spannungsabständen einbrechen, weil die Elektronen gerade genug Energie für einen unelastischen Stoß gesammelt haben. Bei Quecksilber erwarten wir Einbrüche im Abstand von etwa $4{,}9\\,\\text{V}$.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Franck-Hertz-Kennlinie aufnehmen",
+       "material": "Eine Franck-Hertz-Röhre mit Quecksilber- oder Neonfüllung, Heiz- und Beschleunigungsspannungsquelle, ein empfindliches Messgerät für den Auffängerstrom.",
+       "vorhersage": "Steigt der Auffängerstrom mit der Beschleunigungsspannung stetig an, oder zeigt er regelmäßige Einbrüche? Welchen Spannungsabstand erwartest du zwischen zwei Einbrüchen?",
+       "auftraege": [
+        "Erhöhe die Beschleunigungsspannung langsam und nimm den Auffängerstrom auf. Trage die Kennlinie $I(U)$ auf.",
+        "Bestimme die Spannungsabstände zwischen aufeinanderfolgenden Strommaxima (oder -minima) und bilde den Mittelwert.",
+        "Deute die Einbrüche als unelastische Stöße und berechne aus dem Spannungsabstand die Anregungsenergie $\\Delta E = e\\cdot\\Delta U$ in Elektronenvolt."
+       ],
+       "pfad": "experimente/physik/franck-hertz/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> diskrete Energieniveaus und Termschema (l7), Energieeinheit Elektronenvolt, Begriff des unelastischen Stoßes; Ablesen einer Strom-Spannungs-Kennlinie.</p><p><strong>Angesprochene Kompetenzen:</strong> experimentieren (Kennlinie systematisch aufnehmen), auswerten (Spannungsabstände bestimmen und mitteln), deuten (Stromeinbrüche als Beleg diskreter Niveaus erklären).</p><p><strong>Erwartung:</strong> Die Kennlinie zeigt regelmäßige Einbrüche im Abstand von etwa $4{,}9\\,\\text{V}$ (Hg). Daraus folgt eine Anregungsenergie von rund $4{,}9\\,\\text{eV}$ — der Versuch belegt diskrete Niveaus unabhängig von Spektralmessungen.</p><p><strong>Modellgrenzen:</strong> Reale Kennlinien sind durch die Kontaktspannung verschoben und durch die thermische Geschwindigkeitsverteilung der Elektronen verschmiert; die Minima sinken nie auf null. Diese Effekte werden im Grundmodell vernachlässigt.</p>"
     },
     "ueben": {
      "zeit": 18,

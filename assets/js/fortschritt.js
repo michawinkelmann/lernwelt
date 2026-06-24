@@ -334,3 +334,30 @@ export function importiereFortschritt(datei) {
     return Object.keys(fremd.aufgaben).length;
   });
 }
+
+// ---------- Zurücksetzen & Übersicht (Einstellungsseite) ----------
+
+// Löscht den gesamten lokalen Fortschritt (Aufgaben, Lernbüro, Projekte, Feedback, Regelheft).
+export function setzeFortschrittZurueck() {
+  try { localStorage.removeItem(SCHLUESSEL); } catch (e) { /* blockiert */ }
+  document.dispatchEvent(new CustomEvent("fortschritt-geaendert"));
+}
+
+// Kurze Zusammenfassung des gespeicherten Fortschritts (für die Einstellungsseite).
+export function holeFortschrittUebersicht() {
+  const d = lade();
+  const auf = Object.values(d.aufgaben || {});
+  const istGeloest = a => a && (a.s === "g" || a.s === "geloest");
+  const istVersucht = a => a && (a.s === "v" || a.s === "versucht");
+  const geloest = auf.filter(istGeloest).length;
+  const versucht = auf.filter(istVersucht).length;
+  let lektionen = 0;
+  const kurse = (d.lernbuero && d.lernbuero.kurse) || {};
+  for (const k in kurse) for (const l in kurse[k]) lektionen++;
+  return {
+    geloest, versucht, lektionen,
+    regelheft: Array.isArray(d.regelheft) ? d.regelheft.length : 0,
+    tagebuch: (d.lernbuero && Array.isArray(d.lernbuero.tagebuch)) ? d.lernbuero.tagebuch.length : 0,
+    leer: geloest === 0 && versucht === 0 && lektionen === 0
+  };
+}

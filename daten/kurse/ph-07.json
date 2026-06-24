@@ -388,7 +388,8 @@
         "Stelle „Reihe“ ein und schiebe die Quellenspannung $U$ langsam von $1\\,\\text{V}$ auf $12\\,\\text{V}$ – lies dabei am Amperemeter ab, wie sich $I$ verändert.",
         "Lass $U$ fest und vergrößere den Widerstand $R_1$: Wird der Strom größer oder kleiner? Notiere zwei Wertepaare.",
         "Rechne eine abgelesene Stromstärke einmal in Milliampere um (z. B. $0{,}4\\,\\text{A} = 400\\,\\text{mA}$)."
-       ]
+       ],
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       },
       {
        "typ": "experiment",
@@ -1613,33 +1614,31 @@
        "antwort": "Wärme, die an die Umgebung abgegeben wird – deshalb werden Geräte im Betrieb warm."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Energiefluss und Wirkungsgrad",
-       "pfad": "simulationen/physik/energiefluss/index.html",
-       "auftraege": [
-        "Wähle das Preset „Glühlampe“ und lies ab, wie viel der zugeführten Energie zu Nutzenergie und wie viel zu Verlustwärme wird.",
-        "Schiebe den Wirkungsgrad höher und tiefer und beobachte, wie sich Nutzen- und Verlustanteil verändern – ihre Summe bleibt gleich.",
-        "Vergleiche „Glühlampe“ und „LED-Lampe“: Bei welcher wird mehr von der Energie zu nützlichem Licht?"
-       ]
-      },
-      {
-       "typ": "experiment",
-       "titel": "Umwandlungskette beim Leuchten",
-       "material": "Eine Taschenlampe (oder ein anderes batteriebetriebenes Gerät).",
-       "auftraege": [
-        "Schalte die Taschenlampe ein und notiere die Umwandlungskette mit Energieformen und Pfeilen.",
-        "Fühle nach einiger Zeit vorsichtig am Gehäuse: Wo merkst du, dass auch Wärme entsteht?",
-        "Erkläre, welcher Teil der Kette „erwünscht“ ist (das Licht) und welcher Teil nebenbei abfällt (die Wärme)."
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "energiekette",
       "titel": "Energie umwandeln",
       "params": {}
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Beim Heizen führen wir dem Wasser ständig Energie zu, und diese Energie wird in das Wasser <em>umgewandelt</em>. Vermutung: Solange wir erwärmen, steigt die Temperatur. Sobald das Wasser aber siedet, erwarten wir ein <strong>Plateau</strong> — die Temperatur bleibt bei rund $100\\,^{\\circ}\\mathrm{C}$ stehen, weil die zugeführte Energie nun das Verdampfen bewirkt statt die Temperatur weiter zu erhöhen.</p>",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Was passiert mit der Temperatur, während Wasser siedet?",
+       "vorhersage": "Du heizt Wasser gleichmäßig weiter, auch nachdem es zu sieden beginnt — steigt die Temperatur dann immer weiter, oder bleibt sie eine Weile stehen?",
+       "auftraege": [
+        "Heize das Wasser gleichmäßig und lies die Temperatur in festen Zeitschritten ab. Trage Zeit und Temperatur in eine Tabelle ein.",
+        "Zeichne die Siedekurve (Temperatur über der Zeit) und markiere den Bereich, in dem das Wasser siedet.",
+        "Beschreibe, was mit der Temperatur geschieht, sobald das Wasser kocht, obwohl du weiter heizt.",
+        "Erkläre mit dem Energie-Gedanken, wohin die zugeführte Energie während des Siedens fließt."
+       ],
+       "pfad": "experimente/physik/siedekurve/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso.",
+       "material": "Ein Becherglas mit Wasser, eine Heizplatte, ein Thermometer (bis 110 °C) und eine Uhr."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Energie wird zugeführt und umgewandelt; Wärme als Energieform; sicheres Ablesen von Temperatur und Zeit. Sicherheitshinweis: heißes Wasser und Heizplatte.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (zeitlichen Verlauf einer Messgröße aufnehmen und als Kurve darstellen), Kommunikation (ein Plateau im Diagramm erkennen und energetisch deuten).</p><p><strong>Erwartung:</strong> Die Temperatur steigt zunächst, bleibt während des Siedens nahezu konstant bei etwa $100\\,^{\\circ}\\mathrm{C}$. Die Lernenden erkennen, dass die Energie beim Sieden in die Umwandlung flüssig→gasförmig geht.</p><p><strong>Modellgrenzen:</strong> Die Siedetemperatur hängt vom Luftdruck ab (in der Höhe niedriger). Verunreinigungen und Wärmeverluste verändern die reale Kurve; das Modell zeigt den idealisierten, glatten Verlauf.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 15,

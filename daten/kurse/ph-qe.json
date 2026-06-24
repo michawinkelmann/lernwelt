@@ -589,18 +589,6 @@
        "antwort": "Umgekehrt proportional: $E\\sim 1/d$. Doppelter Abstand bedeutet halbe Feldstärke."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Spannung und Abstand am Kondensator",
-       "material": "Plattenkondensator mit verstellbarem Abstand, regelbare Hochspannungsquelle, Feldstärkemessgerät oder hängende Probeladung – als Real- oder Gedankenexperiment.",
-       "auftraege": [
-        "Halte den Abstand fest und erhöhe die Spannung schrittweise – wie verändert sich die abgelesene Feldstärke?",
-        "Halte die Spannung fest und vergrößere den Abstand – was beobachtest du?",
-        "Prüfe, ob $E\\cdot d$ bei fester Spannung konstant bleibt, und vergleiche mit $E=U/d$."
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "funktionsplotter",
       "titel": "Feldstärke und Abstand",
@@ -631,7 +619,25 @@
        },
        "formel": "E = U / d"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Im Plattenkondensator vermuten wir ein <strong>homogenes</strong> Feld — überall gleich starke, parallele Feldlinien. Aus $E=\\frac{U}{d}$ erwarten wir zwei klare Zusammenhänge: Verdoppeln wir die Spannung $U$, sollte sich auch die Feldstärke $E$ verdoppeln; vergrößern wir dagegen den Plattenabstand $d$, sollte $E$ kleiner werden. Unsere Vermutung: $E$ ist zu $U$ direkt und zu $d$ umgekehrt proportional, und das Probeladungs-Pfeilbild bleibt im Inneren überall gleich lang.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Feld im Plattenkondensator erkunden",
+       "vorhersage": "Was passiert mit der Feldstärke $E$, wenn du bei festem Abstand die Spannung $U$ verdoppelst — und was, wenn du bei fester Spannung den Plattenabstand $d$ verdoppelst?",
+       "auftraege": [
+        "Stelle eine Spannung ein und lies $E$ ab. Verdopple dann $U$ und prüfe, ob sich $E$ ebenfalls verdoppelt.",
+        "Halte $U$ fest und vergrößere den Plattenabstand $d$ schrittweise. Trage drei Wertepaare $(d, E)$ auf und prüfe, ob $E\\cdot d$ konstant bleibt.",
+        "Beobachte die Feldlinien im Inneren und am Rand: Wo ist das Feld homogen, wo nicht? Begründe mit dem Feldlinienbild."
+       ],
+       "pfad": "simulationen/physik/plattenkondensator/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Feldbegriff und Feldlinienbild (l1), elektrische Feldstärke $E=F/q$ (l2); Umgang mit Proportionalitäten.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Parameter gezielt variieren), mathematisieren (Proportionalität $E\\propto U$ und $E\\propto 1/d$ aus Messreihen ablesen), bewerten (Homogenität am Feldlinienbild beurteilen).</p><p><strong>Erwartung:</strong> Doppelte Spannung $\\Rightarrow$ doppelte Feldstärke; doppelter Abstand $\\Rightarrow$ halbe Feldstärke. Das Produkt $E\\cdot d=U$ bleibt konstant. Im Inneren sind die Pfeile überall gleich lang (homogen).</p><p><strong>Modellgrenzen:</strong> $E=U/d$ gilt nur für das idealisierte homogene Innenfeld. An den Plattenrändern wölbt sich das Feld (Randeffekte), die die Simulation andeutet, die Formel aber nicht erfasst.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -804,18 +810,6 @@
        "antwort": "Größerer Abstand = schwächeres Feld, aber längerer Weg. Die Arbeit $W=qU$ bleibt gleich, also auch $v$."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Beschleunigung im Gedankenexperiment",
-       "material": "Vorstellung einer Elektronenkanone: Glühkathode, Beschleunigungsspannung $U$, Loch in der Anode – als Gedankenexperiment (reale Bauform in einer Braunschen Röhre).",
-       "auftraege": [
-        "Stelle den Energieansatz $qU=\\frac{1}{2}mv^2$ auf und löse ihn nach $v$ auf.",
-        "Prüfe rechnerisch: Wie ändert sich $v$, wenn $U$ vervierfacht wird?",
-        "Begründe mit Feldstärke und Weg, warum der Plattenabstand bei fester Spannung keine Rolle spielt."
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "funktionsplotter",
       "titel": "Geschwindigkeit aus Spannung",
@@ -845,7 +839,26 @@
        },
        "formel": "v = k · √U"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Ein geladener Kondensator ist ein Energie- und Ladungsspeicher. Entlädt er sich über einen Widerstand, fließt anfangs viel Strom — mit sinkender Spannung wird der Strom immer kleiner. Unsere Vermutung: Die Spannung sinkt <strong>nicht</strong> geradlinig, sondern immer langsamer, also exponentiell. Außerdem erwarten wir, dass ein größerer Widerstand $R$ oder eine größere Kapazität $C$ die Entladung verlangsamt — der Zusammenhang $U(t)=U_0\\cdot e^{-t/(RC)}$ legt nahe, dass nach der Zeit $\\tau=R\\cdot C$ noch etwa $37\\,\\%$ der Anfangsspannung übrig sind.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Kondensator-Entladung am RC-Glied messen",
+       "material": "Ein Kondensator (z. B. $1000\\,\\mu\\text{F}$), ein Widerstand (z. B. $10\\,\\text{k}\\Omega$), eine Spannungsquelle, ein Voltmeter und eine Stoppuhr.",
+       "vorhersage": "Wie verläuft die Kondensatorspannung beim Entladen über der Zeit — linear, oder immer langsamer fallend? Und wie ändert sich der Verlauf, wenn du $R$ vergrößerst?",
+       "auftraege": [
+        "Lade den Kondensator auf $U_0$ und miss beim Entladen alle paar Sekunden die Spannung. Trage $U(t)$ in ein Diagramm ein.",
+        "Lies aus deiner Kurve ab, nach welcher Zeit die Spannung auf etwa $37\\,\\%$ von $U_0$ gesunken ist, und vergleiche sie mit $\\tau=R\\cdot C$.",
+        "Wiederhole die Messung mit einem größeren Widerstand und beschreibe, wie sich die Entladedauer ändert."
+       ],
+       "pfad": "experimente/physik/rc-entladung/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriff der elektrischen Energie $W=q\\cdot U$ aus dieser Lektion, Grundvorstellung von Strom als Ladungsfluss; Ablesen und Auftragen von Messwerten.</p><p><strong>Angesprochene Kompetenzen:</strong> experimentieren (zeitaufgelöst messen, protokollieren), mathematisieren (exponentiellen Abfall erkennen, Zeitkonstante $\\tau=RC$ bestimmen), bewerten (Modellvorhersage mit Messung vergleichen).</p><p><strong>Erwartung:</strong> Die Spannung fällt exponentiell. Nach $\\tau=R\\cdot C$ sind noch rund $37\\,\\%$ von $U_0$ übrig; mit $1000\\,\\mu\\text{F}$ und $10\\,\\text{k}\\Omega$ ist $\\tau\\approx10\\,\\text{s}$. Größerer Widerstand $\\Rightarrow$ langsamere Entladung.</p><p><strong>Modellgrenzen:</strong> Das ideale Modell vernachlässigt den Innenwiderstand des Voltmeters und Leckströme des Kondensators. Die Reaktionszeit beim Ablesen erzeugt die größte Messunsicherheit — durch viele Messpunkte und Mittelung klein zu halten.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -2236,7 +2249,10 @@
         "Überlege, welche zwei Größen du einstellst und welche eine du misst.",
         "Setze einen Beispiel-Messsatz in $\\frac{e}{m_e}=\\frac{2U_0}{B^2 r^2}$ ein und berechne $e/m_e$.",
         "Vergleiche dein Ergebnis mit dem Literaturwert $1{,}76\\cdot10^{11}\\,\\frac{\\text{C}}{\\text{kg}}$ und nenne mögliche Messunsicherheiten."
-       ]
+       ],
+       "pfad": "experimente/physik/em-bestimmung/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "erkundenZuerst": true,

@@ -1,0 +1,96 @@
+{
+ "id": "quadratische-funktionen-9",
+ "titel": "Lernzirkel: Quadratische Funktionen",
+ "fach": "mathematik",
+ "intro": "An diesen Stationen formst du Parabeln selbst: Du streckst, stauchst und verschiebst sie und liest ihren Scheitelpunkt ab. Wähle deine Reihenfolge frei.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Die Normalparabel",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Erkunde die Normalparabel $f(x) = x^2$. Welche typische Form hat sie, und wo liegt ihr tiefster Punkt?</p>",
+   "widget": {
+    "id": "normalparabel",
+    "params": {
+     "xmax": 4
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Parabel formen und verschieben",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Stelle $a$, $d$ und $e$ in der Scheitelform $f(x) = a\\,(x-d)^2 + e$ ein. Beobachte, wie sich Öffnung und Scheitelpunkt verändern.</p>",
+   "widget": {
+    "id": "funktionsplotter",
+    "params": {
+     "form": "scheitel",
+     "regler": [
+      {
+       "sym": "a",
+       "label": "a",
+       "min": -2,
+       "max": 2,
+       "step": 0.25,
+       "init": 1
+      },
+      {
+       "sym": "b",
+       "label": "d",
+       "min": -4,
+       "max": 4,
+       "step": 1,
+       "init": 0
+      },
+      {
+       "sym": "c",
+       "label": "e",
+       "min": -5,
+       "max": 5,
+       "step": 1,
+       "init": 0
+      }
+     ],
+     "x": [
+      -6,
+      6
+     ],
+     "y": [
+      -6,
+      10
+     ],
+     "achsen": {
+      "x": "x",
+      "y": "y"
+     },
+     "formel": "f(x) = a·(x − d)² + e"
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Scheitelpunkt finden",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Gegeben ist $f(x) = (x+1)^2 - 4$. Wo liegt der Scheitelpunkt? Schneidet die Parabel die $x$-Achse, und wenn ja, wo?</p><details><summary>Lösung anzeigen</summary><div><p>Scheitelform $f(x) = (x-d)^2 + e$ mit $d = -1$ und $e = -4$, also Scheitelpunkt $S(-1\\,|\\,-4)$.</p><p>Nullstellen: $(x+1)^2 - 4 = 0 \\Rightarrow (x+1)^2 = 4 \\Rightarrow x+1 = \\pm 2$, also $x = 1$ oder $x = -3$. Die Parabel schneidet die $x$-Achse bei $1$ und $-3$.</p></div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Scheitelpunkt und Zuordnung",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "html": "<p>Lies Scheitelpunkte ab und ordne Funktionstermen ihre Graphen zu.</p>",
+   "quelle": "ma-09-quadratische-funktionen",
+   "ids": [
+    "ma-09-qf-003",
+    "ma-09-qf-002"
+   ]
+  }
+ ]
+}

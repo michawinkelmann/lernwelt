@@ -1,0 +1,88 @@
+{
+ "id": "e-funktion-qa",
+ "titel": "Lernzirkel: Die natürliche Exponentialfunktion",
+ "fach": "mathematik",
+ "intro": "An diesen Stationen lernst du die Zahl $e$, die natürliche Exponentialfunktion und ihre besondere Ableitung kennen. Wähle die Reihenfolge selbst — kein Druck, keine Noten.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Die Basis variieren",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verändere die Basis $b$ in $f(x)=a\\cdot b^x$. Stelle $b$ in die Nähe von $2{,}7$ — das ist ungefähr die Eulersche Zahl $e$. Wie verändert sich die Kurve?</p>",
+   "widget": {
+    "id": "funktionsplotter",
+    "params": {
+     "form": "exponentiell",
+     "regler": [
+      {
+       "sym": "a",
+       "label": "a",
+       "min": 0.5,
+       "max": 3,
+       "step": 0.5,
+       "init": 1
+      },
+      {
+       "sym": "b",
+       "label": "b",
+       "min": 1.5,
+       "max": 3,
+       "step": 0.1,
+       "init": 2.7
+      }
+     ],
+     "x": [
+      -3,
+      3
+     ],
+     "y": [
+      0,
+      12
+     ],
+     "achsen": {
+      "x": "x",
+      "y": "y"
+     },
+     "formel": "f(x) = a·b^x"
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Die e-Funktion und ihre Ableitung",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Schau dir die Ableitung der e-Funktion an. Was fällt dir auf, wenn du Funktion und Ableitung vergleichst?</p>",
+   "widget": {
+    "id": "ableitung",
+    "params": {
+     "modus": "ableitung",
+     "fn": "exp"
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Gleichungen mit e und ln",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Löse $e^x=5$ und $3\\cdot e^{-2x}=0{,}6$. Runde auf drei Dezimalen.</p><details><summary>Lösung anzeigen</summary><div>$e^x=5 \\Rightarrow x=\\ln 5 \\approx 1{,}609$. Bei $3\\cdot e^{-2x}=0{,}6$: erst durch $3$ teilen: $e^{-2x}=0{,}2$, dann $\\ln$: $-2x=\\ln 0{,}2 \\Rightarrow x=-\\frac12\\ln 0{,}2 \\approx 0{,}805$.</div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: e-Funktion und ln",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ma-qp-e-funktion",
+   "ids": [
+    "ma-qp-ef-004",
+    "ma-qp-ef-006"
+   ]
+  }
+ ]
+}

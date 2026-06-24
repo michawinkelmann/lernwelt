@@ -390,18 +390,6 @@
       }
      ],
      "merksatz": "<strong>Erweitern</strong>: Zähler und Nenner mit derselben Zahl <em>malnehmen</em>. <strong>Kürzen</strong>: durch dieselbe Zahl <em>teilen</em>. Der Wert bleibt gleich, weil man mit $1$ rechnet.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Falten zeigt Wertgleichheit",
-       "material": "Zwei gleich große Papierstreifen, Stift.",
-       "auftraege": [
-        "Färbe auf Streifen 1 die Hälfte und falte ihn danach in insgesamt 4 Felder. Welcher Bruch ist nun gefärbt? Vergleiche mit 1/2.",
-        "Falte Streifen 2 sofort in 8 Felder und färbe so viel wie die Hälfte. Wie heißt der Bruch? Was fällt dir auf?",
-        "Notiere drei wertgleiche Brüche zu 1/2, die du am Papier siehst."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Erweitere $\\frac{3}{5}$ mit $3$.",
@@ -427,7 +415,25 @@
        "zInit": 1,
        "nInit": 2
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir mit Brüchen rechnen, überlegen wir: $\\frac{1}{2}$ einer Pizza und $\\frac{2}{4}$ einer Pizza sehen verschieden geschrieben aus — aber ist das gleich viel? Vermutung: Multipliziert man Zähler und Nenner mit derselben Zahl, ändert sich nur die <strong>Schreibweise</strong>, nicht der <strong>Wert</strong>. Wir erwarten, dass die Dezimalzahlen dann gleich bleiben.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wertgleiche Brüche durch Erweitern und Kürzen erkunden",
+       "vorhersage": "Hat $\\frac{1}{2}$ denselben Wert wie $\\frac{2}{4}$ und wie $\\frac{3}{6}$? Was vermutest du, bevor du es prüfst?",
+       "auftraege": [
+        "Stelle Bruch 1 auf $\\frac{1}{2}$ und Bruch 2 nacheinander auf $\\frac{2}{4}$, $\\frac{3}{6}$, $\\frac{4}{8}$ ein. Lies jedes Mal die „Dezimalzahl“ ab und notiere sie.",
+        "Erweitere $\\frac{2}{3}$ Schritt für Schritt (mit $2$, mit $3$, mit $4$) und beobachte, ob sich die Dezimalzahl ändert.",
+        "Suche einen Bruch, der sich kürzen lässt (z. B. $\\frac{4}{8}$ oder $\\frac{6}{9}$), und beschreibe, durch welche Zahl du teilst und welcher gekürzte Bruch herauskommt."
+       ],
+       "pfad": "simulationen/mathematik/bruch-werkstatt/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Bedeutung eines Bruchs (Zähler/Nenner) aus der vorherigen Lektion; sicheres Multiplizieren und Dividieren im kleinen Einmaleins.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Wertgleichheit durch Vergleich der Dezimalwerte prüfen), Darstellen (zwischen Bruch- und Dezimalschreibweise wechseln), Argumentieren (begründen, warum der Wert erhalten bleibt).</p><p><strong>Erwartung:</strong> Die Lernenden stellen fest, dass alle erweiterten Formen denselben Dezimalwert ($0{,}5$) liefern, und erklären: Erweitern bedeutet Multiplizieren mit $1$ in der Form $\\frac{2}{2}, \\frac{3}{3}, \\dots$ — der Wert bleibt gleich.</p><p><strong>Modellgrenzen:</strong> Die angezeigte Dezimalzahl ist auf wenige Stellen <strong>gerundet</strong>. Bei Brüchen wie $\\frac{1}{3}=0{,}333\\dots$ sieht man die Gleichheit nur näherungsweise; die exakte Begründung läuft über das Erweitern, nicht über die Dezimaldarstellung.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -3568,18 +3574,6 @@
       }
      ],
      "merksatz": "Beim Messen: <strong>Mitte</strong> auf den Scheitel, <strong>Nulllinie</strong> auf einen Schenkel, am zweiten Schenkel ablesen. Das Geodreieck hat <strong>zwei Skalen</strong> – die richtige über die Winkelart (spitz/stumpf) wählen.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Messen und Gegenmessen",
-       "material": "Geodreieck, Bleistift, Papier.",
-       "auftraege": [
-        "Zeichne Winkel von 30, 90 und 120 Grad. Miss jeden anschließend nach: Stimmen die Werte?",
-        "Lass dir von jemandem drei Winkel zeichnen und miss sie. Prüfe mit dem Plausibilitätscheck (spitz/stumpf), ob du die richtige Skala genommen hast.",
-        "Zeichne absichtlich einmal mit der falschen Skala. Welcher Wert kommt heraus, und wie hängt er mit dem richtigen zusammen?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Wohin legst du die Mitte des Geodreiecks?",
@@ -3596,7 +3590,25 @@
      ],
      "erklaerseite": true,
      "stolperstein": "Das Geodreieck hat <strong>zwei</strong> Skalen. Wer die falsche abliest, erhält $180^\\circ$ minus den richtigen Wert (z. B. $125^\\circ$ statt $55^\\circ$). Immer mit der Winkelart abgleichen: spitz unter $90^\\circ$, stumpf darüber.",
-     "selbsterklaerung": "Erkläre in einem Satz, wie du entscheidest, welche der beiden Skalen am Geodreieck die richtige ist."
+     "selbsterklaerung": "Erkläre in einem Satz, wie du entscheidest, welche der beiden Skalen am Geodreieck die richtige ist.",
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Ein Winkel öffnet sich umso weiter, je größer er ist — von einem schmalen Spalt bis zur halben Drehung. Vermutung: Es gibt feste <strong>Grenzen</strong>, an denen ein Winkel seinen Namen wechselt (etwa bei $90^\\circ$ und $180^\\circ$). Wir erwarten, dass wir jedem Winkel über seine Gradzahl eindeutig eine Winkelart zuordnen können.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Winkelgröße und Winkelart erkunden",
+       "vorhersage": "Ab welcher Gradzahl ist ein Winkel nicht mehr „spitz“, sondern „stumpf“? Was vermutest du?",
+       "auftraege": [
+        "Stelle am Regler nacheinander $30^\\circ$, $90^\\circ$, $120^\\circ$, $180^\\circ$ und $270^\\circ$ ein. Notiere zu jedem Winkel die angezeigte Winkelart.",
+        "Finde durch vorsichtiges Verstellen möglichst genau die Grenzen, an denen die Benennung umspringt (spitz → rechter → stumpf → gestreckt → überstumpf).",
+        "Beschreibe, wie der Winkelmesser am Scheitel und an einem Schenkel anliegt, und erkläre, warum man die richtige der beiden Skalen wählen muss."
+       ],
+       "pfad": "simulationen/mathematik/winkel-messen/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriffe Scheitel und Schenkel; Grundvorstellung „Winkel als Drehung“; Lesen einer Skala.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Grenzen zwischen Winkelarten experimentell bestimmen), Werkzeuge nutzen (Winkelmesser/Geodreieck korrekt anlegen und ablesen), Begriffsbildung (Winkelarten ihren Gradbereichen zuordnen).</p><p><strong>Erwartung:</strong> Die Lernenden ordnen zu: spitz $0^\\circ<\\alpha<90^\\circ$, rechter $\\alpha=90^\\circ$, stumpf $90^\\circ<\\alpha<180^\\circ$, gestreckt $\\alpha=180^\\circ$, überstumpf $180^\\circ<\\alpha<360^\\circ$. Sie begründen die Wahl der richtigen Skala.</p><p><strong>Modellgrenzen:</strong> Die Simulation misst <strong>fehlerfrei</strong>. Auf Papier entstehen beim Anlegen des Geodreiecks Ablesefehler von ein, zwei Grad — das Messen muss dort geübt und mehrfach kontrolliert werden.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -4147,18 +4159,6 @@
       }
      ],
      "merksatz": "Das <strong>Volumen</strong> misst, wie viel Raum ein Körper einnimmt (in $\\text{cm}^3$). Es unterscheidet sich von <strong>Fläche</strong> und <strong>Oberfläche</strong> (in $\\text{cm}^2$). Man bestimmt es durch <strong>Auszählen von Einheitswürfeln</strong>.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Würfel stapeln",
-       "material": "Mehrere gleich große Würfel (Bauklötze, Zuckerwürfel) oder kleine Kästchen.",
-       "auftraege": [
-        "Baue den Quader 3 x 2 x 2 und zähle die Würfel. Stimmt deine Vermutung?",
-        "Baue eine einzelne Schicht (3 x 2) und zähle sie. Wie kommst du von der Schicht zum ganzen Quader?",
-        "Verändere die Höhe auf 3 Schichten. Wie viele Würfel sind es jetzt? Was bleibt gleich, was ändert sich?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "In welcher Einheit gibt man Volumen an?",
@@ -4203,7 +4203,25 @@
        "ainit": 4,
        "amax": 8
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir Volumen berechnen, überlegen wir: Wie viele kleine Würfel mit $1\\,\\text{cm}$ Kantenlänge passen wohl in einen Quader, der $4\\,\\text{cm}$ lang, $3\\,\\text{cm}$ breit und $2\\,\\text{cm}$ hoch ist? Vermutung: Man kann ihn <strong>schichtweise</strong> füllen, und die Gesamtzahl der Würfel hängt nur von Länge, Breite und Höhe ab.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Einen Quader mit Einheitswürfeln füllen",
+       "vorhersage": "Wie viele $1\\text{-cm}$-Würfel passen in einen Quader mit $l=4\\,\\text{cm}$, $b=3\\,\\text{cm}$, $h=2\\,\\text{cm}$? Schätze zuerst.",
+       "auftraege": [
+        "Stelle das Preset „Beispiel 4·3·2“ ein und fülle den Quader Schritt für Schritt. Beobachte, wie viele Würfel eine <strong>Reihe</strong> und eine ganze <strong>Schicht</strong> enthalten.",
+        "Notiere: Wie viele Würfel liegen in einer Schicht (Grundfläche)? Wie viele Schichten gibt es? Multipliziere beide Zahlen und vergleiche mit dem Anzeigewert „Volumen“.",
+        "Wähle das Preset „Lange Stange 10·1·1“ und ein quaderförmiges Preset und beschreibe, wie sich das Volumen ändert, wenn du nur die Höhe veränderst."
+       ],
+       "pfad": "simulationen/mathematik/quader-fuellen/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Flächeninhalt eines Rechtecks (Grundfläche $l\\cdot b$); Begriff des Würfels als Einheitskörper.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Volumen durch systematisches Auszählen erschließen), Modellieren (vom Zählen zur Formel $V=l\\cdot b\\cdot h$ gelangen), Darstellen (Schicht-, Reihen- und Würfelbild verknüpfen).</p><p><strong>Erwartung:</strong> Die Lernenden zählen $4\\cdot3=12$ Würfel pro Schicht und $2$ Schichten, also $24$ Würfel, und erkennen $V=l\\cdot b\\cdot h$. Sie unterscheiden Volumen ($\\text{cm}^3$) von Fläche ($\\text{cm}^2$).</p><p><strong>Modellgrenzen:</strong> Die Würfelfüllung funktioniert anschaulich nur bei <strong>ganzzahligen</strong> Kantenlängen. Bei krummen Maßen oder anderen Körpern (Kugel, Zylinder) reicht das Auszählen nicht — dort braucht man später eigene Formeln.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -5691,18 +5709,6 @@
       }
      ],
      "merksatz": "Ein <strong>Ausreißer</strong> zieht das <strong>arithmetische Mittel</strong> stark mit, lässt den <strong>Median</strong> aber fast unverändert. Bei Ausreißern beschreibt der Median die Gruppe meist besser.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Taschengeld mit einem Reichen",
-       "material": "Papier, Stift, optional Bausteine zum Stapeln.",
-       "auftraege": [
-        "Berechne Mittel und Median der ersten fünf Werte (5, 5, 6, 7, 7).",
-        "Füge 30 Euro hinzu und berechne Mittel und Median neu. Vergleiche, welcher Kennwert sich stärker verändert.",
-        "Welcher Kennwert beschreibt das 'typische' Taschengeld der Gruppe besser? Begründe mit deinen Zahlen."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Welcher Kennwert reagiert empfindlich auf Ausreißer?",
@@ -5752,7 +5758,25 @@
        "max": 12,
        "einheit": ""
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir entscheiden, überlegen wir: In einer Gruppe verdienen alle ähnlich viel — bis auf eine Person mit einem sehr hohen Betrag. Vermutung: Dieser eine <strong>Ausreißer</strong> zieht das <strong>arithmetische Mittel</strong> deutlich nach oben, während der <strong>Median</strong> kaum reagiert. Wir erwarten, dass der Median die „typische“ Gruppe oft besser beschreibt.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Den Ausreißer-Effekt auf Mittelwert und Median erkunden",
+       "vorhersage": "Was passiert mit Mittelwert und Median, wenn ein einziger Wert plötzlich sehr groß wird? Vermute, welcher der beiden sich stärker ändert.",
+       "auftraege": [
+        "Stelle das Preset „symmetrisch“ ein und notiere Mittelwert und Median. Wähle dann „mit Ausreißer“ und notiere beide erneut — welcher Kennwert springt, welcher bleibt fast gleich?",
+        "Erhöhe bei einem Wert (z. B. $x_5$) schrittweise von $12$ bis $30$ und beobachte, wie Mittelwert und Median reagieren.",
+        "Beschreibe eine Alltagssituation (z. B. Taschengeld in einer Gruppe), in der der Median die Gruppe ehrlicher beschreibt als das arithmetische Mittel."
+       ],
+       "pfad": "simulationen/mathematik/mittelwert-median/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Berechnung des arithmetischen Mittels und Bestimmung des Medians (mittlerer Wert der geordneten Reihe) aus den vorherigen Lektionen.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Robustheit zweier Kennwerte experimentell vergleichen), Argumentieren (begründet einen geeigneten Kennwert wählen), Modellieren (Kennwerte auf Alltagssituationen beziehen).</p><p><strong>Erwartung:</strong> Die Lernenden stellen fest, dass das Mittel beim Ausreißer stark steigt, der Median dagegen fast unverändert bleibt, und folgern: Bei Ausreißern beschreibt der Median die Gruppe meist treffender.</p><p><strong>Modellgrenzen:</strong> Die Simulation nutzt nur <strong>fünf</strong> Werte. Bei großen Datenmengen sind Effekte weniger drastisch, und keiner der beiden Kennwerte beschreibt allein die ganze Verteilung — Spannweite und Streuung gehören dazu.</p>"
     },
     "ueben": {
      "zeit": 18,

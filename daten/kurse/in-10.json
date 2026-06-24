@@ -1469,19 +1469,6 @@
       }
      ],
      "merksatz": "Bei der <strong>Caesar-Chiffre</strong> wird jeder Buchstabe um den festen Schlüssel s im Alphabet verschoben. Rechnerisch: <code>G = (K + s) mod 26</code> zum Verschlüsseln und <code>K = (G - s) mod 26</code> zum Entschlüsseln, mit A = 0 bis Z = 25.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Die Caesar-Scheibe",
-       "material": "Papier, Bleistift, Schere und eine Klammer: Bastle eine Caesar-Scheibe aus zwei drehbaren Kreisen, auf deren Rändern je das ganze Alphabet steht; den inneren Kreis kannst du gegen den äußeren verdrehen.",
-       "auftraege": [
-        "Verschlüssle deinen Vornamen mit s = 3, indem du für jeden Buchstaben außen abliest, was innen darunter steht.",
-        "Tausche deinen Geheimtext mit einer Mitschülerin und entschlüssle ihren – ihr braucht denselben Schlüssel.",
-        "Prüfe drei deiner Buchstaben zusätzlich mit der Formel G = (K + s) mod 26 nach. Kommt dasselbe heraus wie auf der Scheibe?",
-        "Untersuche, was passiert, wenn du s = 26 oder s = 0 einstellst – warum ist das als Verschlüsselung sinnlos?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Verschlüssle das Wort EI mit dem Schlüssel s = 4.",
@@ -1524,7 +1511,25 @@
        "text": "HALLO WELT",
        "shift": 3
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir mit der Caesar-Chiffre rechnen, überlegen wir: Verschiebt man jeden Buchstaben um einen festen Schlüssel $s$ im Alphabet, wird aus dem Klartext ein Geheimtext. Vermutung: Mit $A=0,\\;B=1,\\;\\dots,\\;Z=25$ lässt sich das als Rechnung $G=(K+s)\\bmod 26$ fassen. Wir erwarten, dass beim Schlüssel $s=3$ aus &bdquo;HALLO&ldquo; das Wort &bdquo;KDOOR&ldquo; entsteht.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Mit der Caesar-Scheibe verschlüsseln",
+       "vorhersage": "Welches Geheimwort liefert die Caesar-Scheibe für HALLO mit dem Schlüssel s = 3? Schreib deine Vermutung auf, bevor du die Scheibe drehst.",
+       "auftraege": [
+        "Stelle die Verschiebung auf $s=3$ (Preset &bdquo;Caesars Original&ldquo;) und verschlüssle ein Übungswort. Lies den Geheimtext ab und vergleiche mit deiner Vermutung.",
+        "Prüfe die Rechnung $G=(K+s)\\bmod 26$ an einem einzelnen Buchstaben (z. B. dem letzten des Alphabets) und beobachte, wie die Scheibe am Z &bdquo;herumläuft&ldquo;.",
+        "Stelle das Preset &bdquo;ROT13&ldquo; ($s=13$) ein und begründe, warum hier Verschlüsseln und Entschlüsseln dieselbe Drehung sind."
+       ],
+       "pfad": "simulationen/informatik/caesar-scheibe/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Reihenfolge des Alphabets; Grundbegriffe Klartext, Geheimtext und Schlüssel; einfache Rechnung mit dem Rest (modulo), wie sie über die Scheibe anschaulich wird.</p><p><strong>Angesprochene Kompetenzen:</strong> Modellieren (das Verschieben als Rechnung $\\bmod 26$ fassen), Algorithmisches Denken (ein Verfahren Buchstabe für Buchstabe ausführen), Darstellen (zwischen Scheibe, Buchstabe und Zahl wechseln).</p><p><strong>Erwartung:</strong> Die Lernenden verschlüsseln Wörter korrekt, bestätigen die Formel $G=(K+s)\\bmod 26$ und verstehen das &bdquo;Herumlaufen&ldquo; am Alphabetende als Modulo-Rechnung. Beim Schlüssel 13 (ROT13) erkennen sie, dass Ver- und Entschlüsseln zusammenfallen.</p><p><strong>Modellgrenzen:</strong> Die Scheibe verschiebt nur die Buchstaben A&ndash;Z mit einem einzigen, festen Schlüssel. Genau diese Einfachheit macht das Verfahren leicht zu knacken — das ist Thema der folgenden Lektion und nicht der Anspruch dieses Einstiegs.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1678,19 +1683,6 @@
       }
      ],
      "merksatz": "Caesar ist <strong>doppelt unsicher</strong>: Nur 25 Schlüssel lassen sich per <strong>Brute Force</strong> durchprobieren, und die <strong>Häufigkeitsanalyse</strong> verrät den Schlüssel direkt – der häufigste Geheimbuchstabe steht fast immer für E, also <code>s = (Position - 4) mod 26</code>.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Knack den Geheimtext",
-       "material": "Ein längerer deutscher Caesar-Geheimtext (mindestens 150 Buchstaben), den eine andere Person mit einem dir unbekannten Schlüssel erstellt hat, sowie Papier für eine Strichliste.",
-       "auftraege": [
-        "Mache eine Strichliste, wie oft jeder Buchstabe im Geheimtext vorkommt, und finde den häufigsten.",
-        "Berechne mit s = (Position des häufigsten Buchstabens - 4) mod 26 deinen Schlüssel-Tipp.",
-        "Entschlüssle die ersten zwei Zeilen mit diesem s. Ergibt sich lesbarer deutscher Text? Falls nicht, probiere den zweithäufigsten Buchstaben als E.",
-        "Vergleiche mit einer Gruppe, die denselben Text per reinem Durchprobieren (Brute Force) geknackt hat: Welcher Weg war schneller?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Erkläre in eigenen Worten, warum die Häufigkeitsanalyse bei Caesar funktioniert.",
@@ -1728,7 +1720,26 @@
        "text": "KDOOR ZHOW",
        "shift": 3
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir einen Caesar-Geheimtext knacken, überlegen wir: In deutschen Texten ist der Buchstabe <strong>E</strong> mit Abstand am häufigsten. Vermutung: Verschiebt Caesar alle Buchstaben gleich, dann ist auch im Geheimtext der häufigste Buchstabe meist das verschobene E. Wir erwarten, dass man aus der Position des häufigsten Geheimbuchstabens den Schlüssel direkt bestimmen kann: $s=(\\text{Position}-4)\\bmod 26$.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Einen Geheimtext mit Häufigkeitsanalyse knacken",
+       "vorhersage": "Du hast einen deutschen Caesar-Geheimtext, aber nicht den Schlüssel. Reicht es, den häufigsten Buchstaben zu zählen, um den Schlüssel zu finden? Notiere deine Vermutung.",
+       "auftraege": [
+        "Zähle im ersten Geheimtext, wie oft jeder Buchstabe vorkommt, und bestimme den häufigsten. Nimm an, er steht für E.",
+        "Berechne aus seiner Position den Schlüssel $s=(\\text{Position}-4)\\bmod 26$, entschlüssle damit und prüfe, ob lesbarer Klartext entsteht.",
+        "Wende das Verfahren auf einen zweiten Text an. Untersuche dann den dritten Text (eine Falle): Hier ist der häufigste Buchstabe <em>nicht</em> E — begründe, woran die einfache Annahme scheitern kann."
+       ],
+       "pfad": "experimente/informatik/haeufigkeitsanalyse/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso.",
+       "material": "Ein ausgedruckter oder abgeschriebener deutscher Caesar-Geheimtext (nur Großbuchstaben A–Z) sowie eine Strichliste mit 26 Feldern (A bis Z), in der du beim Lesen für jeden Buchstaben einen Strich machst."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Caesar-Verfahren mit fester Verschiebung und die Formel $G=(K+s)\\bmod 26$; Vorstellung, dass Buchstaben in Texten unterschiedlich häufig sind; Auszählen und Ordnen von Häufigkeiten.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (aus Daten — einer Häufigkeitsverteilung — auf den Schlüssel schließen), Argumentieren (begründen, warum und wann die E-Annahme trägt), Mit Mathematik umgehen (Schlüssel über die Restrechnung bestimmen).</p><p><strong>Erwartung:</strong> Die Lernenden zählen die Buchstabenhäufigkeiten, bestimmen über den häufigsten Buchstaben den Schlüssel und entschlüsseln die ersten beiden Texte. Am dritten Text erkennen sie, dass die einfache &bdquo;häufigster = E&ldquo;-Regel bei kurzen oder untypischen Texten fehlschlagen kann und man weitere Hypothesen prüfen muss.</p><p><strong>Modellgrenzen:</strong> Die Häufigkeitsanalyse funktioniert gut bei genügend langen, typischen deutschen Texten. Bei sehr kurzen Texten, ungewöhnlichem Wortschatz oder Verfahren mit wechselndem Schlüssel (z. B. Vigenère) versagt sie — das wird hier bewusst nur angedeutet.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -2732,19 +2743,6 @@
       }
      ],
      "merksatz": "<strong>Bubble Sort</strong> vergleicht benachbarte Elemente und tauscht sie bei falscher Reihenfolge. Nach dem ersten Durchlauf steht das <strong>größte Element ganz rechts</strong> (es „blubbert“ hoch). In jedem weiteren Durchlauf wird der unsortierte Teil kleiner. Der Algorithmus <strong>endet</strong>, sobald ein Durchlauf ohne Tausch bleibt. Ein erster Durchlauf von $n$ Elementen braucht <code>n − 1</code> Vergleiche.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Karten von Hand sortieren",
-       "material": "Ein Stapel von 8 nummerierten Karteikarten in zufälliger Reihenfolge, nebeneinander in einer Reihe ausgelegt.",
-       "auftraege": [
-        "Lege die 8 Karten in zufälliger Reihenfolge nebeneinander. Vergleiche von links beginnend immer zwei Nachbarn und tausche sie, wenn die linke größer ist.",
-        "Mach einen kompletten Durchlauf bis zum rechten Rand und prüfe: Steht die größte Zahl jetzt ganz rechts?",
-        "Wiederhole Durchläufe, bis einer ganz ohne Tausch bleibt — zähle die Durchläufe mit. Stimmt es mit deiner Vorhersage überein?",
-        "Lege die Karten danach absteigend sortiert (8, 7, 6, ...) und sortiere erneut: Brauchst du jetzt mehr oder weniger Tausche als beim ersten Mal?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Beschreibe den Ablauf eines Durchlaufs von Bubble Sort in eigenen Worten.",
@@ -2779,7 +2777,25 @@
         "text": "Nachbarn vergleichen, bei linke > rechte tauschen, bis tauschfreier Durchlauf."
        }
       ]
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir Bubble Sort von Hand durchspielen, überlegen wir: Das Verfahren vergleicht benachbarte Elemente und tauscht sie bei falscher Reihenfolge. Vermutung: Nach dem ersten Durchlauf steht das <strong>größte Element ganz rechts</strong>, weil es Schritt für Schritt nach hinten &bdquo;blubbert&ldquo;. Wir erwarten, dass eine bereits sortierte Liste deutlich weniger Tausche braucht als eine absteigend sortierte.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Bubble Sort beim Sortieren beobachten",
+       "vorhersage": "Du startest Bubble Sort mit einer absteigend sortierten Liste (schlechtester Fall) und einer bereits sortierten (bester Fall). Bei welcher gibt es mehr Tausche — und warum? Notiere deine Vermutung.",
+       "auftraege": [
+        "Lade das Preset &bdquo;Bereits sortiert (bester Fall)&ldquo; und danach &bdquo;Absteigend (schlechtester Fall)&ldquo; bei gleicher Anzahl Elemente. Notiere jeweils die angezeigten Vergleiche und Tausche.",
+        "Beobachte einen Durchlauf Schritt für Schritt und beschreibe, wie das größte Element nach rechts wandert.",
+        "Verändere die Anzahl der Elemente und beschreibe, wie sich Vergleiche und Tausche im schlechtesten Fall verändern, wenn die Liste länger wird."
+       ],
+       "pfad": "simulationen/informatik/sortieren/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriff einer geordneten Liste; Vergleich zweier Zahlen (kleiner/größer); Grundidee einer Schleife/eines wiederholten Durchlaufs.</p><p><strong>Angesprochene Kompetenzen:</strong> Algorithmisches Denken (einen Sortieralgorithmus Schritt für Schritt verfolgen), Erkenntnisgewinnung (besten und schlechtesten Fall durch Variation der Startanordnung untersuchen), Darstellen (Vergleiche und Tausche als Maß für den Aufwand lesen).</p><p><strong>Erwartung:</strong> Die Lernenden beschreiben den Ablauf von Bubble Sort, erkennen das &bdquo;Hochblubbern&ldquo; des größten Elements und stellen fest, dass der bereits sortierte Fall am wenigsten, der absteigende Fall am meisten Tausche erfordert.</p><p><strong>Modellgrenzen:</strong> Die Simulation veranschaulicht das Prinzip an kurzen Listen und zählt Vergleiche/Tausche. Wie sich der Aufwand bei sehr großen $n$ verhält und wie Bubble Sort gegen schnellere Verfahren abschneidet, ist Thema der folgenden Lektionen.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -2939,19 +2955,6 @@
       }
      ],
      "merksatz": "Im schlechtesten Fall braucht Bubble Sort etwa <code>n · (n − 1) / 2</code> Vergleiche — sein Aufwand wächst <strong>quadratisch</strong> (wie $n^2$): Verdoppelt man $n$, vervierfacht sich der Aufwand etwa. Die <strong>lineare Suche</strong> wächst nur <strong>linear</strong> (mit $n$), die <strong>binäre Suche</strong> sogar nur <strong>logarithmisch</strong> (<code>log2(n)</code>). Darum wird Bubble Sort bei großem $n$ schnell teuer.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Aufwandstabelle selbst aufstellen",
-       "material": "Ein Taschenrechner und ein Blatt für eine Tabelle mit den Spalten n, Bubble Sort, lineare Suche und binäre Suche.",
-       "auftraege": [
-        "Berechne für n = 8, 16, 32, 64 jeweils den schlechtesten Fall von Bubble Sort mit der Formel n · (n − 1) / 2 und trage die Werte in die Tabelle ein.",
-        "Trage daneben für jedes n den schlechtesten Fall der linearen Suche ein (das ist einfach n).",
-        "Trage für jedes n die höchste Vergleichszahl der binären Suche ein, indem du zählst, wie oft sich n halbieren lässt (bei 8 sind es 3, bei 64 sind es 6).",
-        "Vergleiche die letzte Zeile (n = 64): Wie oft passt die Vergleichszahl der binären Suche in die von Bubble Sort? Passt das zu deiner Vorhersage?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Mit welcher Formel berechnest du den Aufwand von Bubble Sort im schlechtesten Fall, und was ergibt sie für $n = 100$?",
@@ -2986,7 +2989,26 @@
         "text": "Bubble Sort: n · (n − 1) / 2 (quadratisch)"
        }
       ]
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir den Aufwand zweier Sortierverfahren vergleichen, überlegen wir: Verdoppelt man die Anzahl $n$ der zu sortierenden Elemente, steigt die Zahl der nötigen Vergleiche. Vermutung: Bei Bubble Sort wächst der Aufwand <strong>quadratisch</strong> (wie $n^2$) — verdoppelt man $n$, <strong>vervierfacht</strong> sich die Vergleichszahl. Bei einem geschickteren Verfahren (Merge Sort) erwarten wir ein viel langsameres Wachstum.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Laufzeiten messen: Bubble Sort gegen Merge Sort",
+       "vorhersage": "Wenn sich die Anzahl der Elemente verdoppelt — um welchen Faktor steigt dann die Zahl der Vergleiche bei Bubble Sort? Schreib deine Vermutung auf, bevor du misst.",
+       "auftraege": [
+        "Miss für Verfahren A (Bubble) die Vergleichszahl bei mehreren Größen $n$ (z. B. 500, 1000, 2000) und trage sie in eine Tabelle ein.",
+        "Bilde den Verdopplungsquotienten (Vergleiche bei $2n$ geteilt durch Vergleiche bei $n$) und prüfe, ob er nahe bei 4 liegt.",
+        "Wiederhole die Messung für Verfahren B (Merge) und vergleiche die Quotienten. Begründe, warum B bei großen $n$ gewinnt."
+       ],
+       "pfad": "experimente/informatik/laufzeitmessung/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso.",
+       "material": "Zwei gleiche Stapel Spielkarten unterschiedlicher Größe (z. B. 5 und 10 Karten) zum Sortieren von Hand sowie eine Strichliste, auf der du jeden Vergleich zweier Karten mit einem Strich festhältst."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Bubble Sort als Sortierverfahren; Vergleichszahl als Maß für den Aufwand; Umgang mit Tabellen und einfachen Quotienten; Begriff des schlechtesten Falls.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Messreihen aufnehmen und ein Wachstumsverhalten aus Daten erschließen), Mit Mathematik umgehen (Verdopplungsquotienten bilden und mit der Formel $n\\cdot(n-1)/2$ vergleichen), Argumentieren (quadratisches gegen schwächeres Wachstum begründen).</p><p><strong>Erwartung:</strong> Die Lernenden stellen fest, dass sich bei Bubble Sort die Vergleichszahl beim Verdoppeln von $n$ etwa vervierfacht (Quotient $\\approx 4$, quadratisches Wachstum), während der Quotient bei Merge Sort deutlich kleiner ist. Sie schließen, dass Bubble Sort für große Datenmengen ungeeignet ist.</p><p><strong>Modellgrenzen:</strong> Gezählt werden Vergleiche, nicht echte Sekunden — reale Laufzeiten hängen zusätzlich von Hardware und Programmierung ab. Das Experiment ersetzt kein eigenes Programmieren und Messen, zeigt aber das entscheidende Wachstumsverhalten zuverlässig.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -3799,19 +3821,6 @@
       }
      ],
      "merksatz": "Ein Automat liest ein Wort <strong>von links nach rechts</strong> Zeichen für Zeichen und wechselt dabei den Zustand. Das Wort wird <strong>akzeptiert</strong>, wenn er <strong>nach dem letzten Zeichen</strong> in einem akzeptierenden Zustand steht. Sein gesamtes Gedächtnis ist dabei <strong>nur der aktuelle Zustand</strong>.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Wörter mit der Spielfigur prüfen",
-       "material": "Papier, um ein Zustandsdiagramm zu zeichnen (Kreise und beschriftete Pfeile), und ein Stift als Spielfigur, die du von Zustand zu Zustand bewegst; nutze den Automaten mit q0 (Start), q1 und q2 (akzeptierend) aus dem Text.",
-       "auftraege": [
-        "Lege die Spielfigur auf den Startzustand q0 und wandere mit ihr Zeichen für Zeichen durch das Wort „ab“. Notiere nach jedem Zeichen den Zustand.",
-        "Prüfe so auch die Wörter „a“, „b“ und „aba“ und entscheide jeweils: akzeptiert oder nicht?",
-        "Suche zwei verschiedene Wörter, die beide im selben Zustand enden, und begründe, warum der Automat sie danach nicht mehr unterscheiden kann.",
-        "Erkläre einem Mitschüler in eigenen Worten, warum nur der letzte Zustand über „akzeptiert“ entscheidet."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Wann genau gilt ein Wort als akzeptiert?",
@@ -3887,7 +3896,25 @@
        ],
        "beispiel": "aab"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir einen Automaten Wörter prüfen lassen, überlegen wir: Ein endlicher Automat liest ein Wort Zeichen für Zeichen von links nach rechts und wechselt dabei seinen Zustand. Vermutung: Ein Wort wird genau dann <strong>akzeptiert</strong>, wenn der Automat <em>nach dem letzten Zeichen</em> in einem akzeptierenden Zustand steht. Wir erwarten, dass sein gesamtes &bdquo;Gedächtnis&ldquo; nur der aktuelle Zustand ist.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wörter durch einen endlichen Automaten verfolgen",
+       "vorhersage": "Der Automat A1 akzeptiert Wörter mit einer geraden Anzahl von a. Akzeptiert er das Wort &bdquo;abab&ldquo;? Und &bdquo;aaa&ldquo;? Notiere deine Vermutung, bevor du es prüfst.",
+       "auftraege": [
+        "Wähle Automat A1 und lass das Wort &bdquo;abab&ldquo; Zeichen für Zeichen einlesen. Notiere nach jedem Schritt den aktuellen Zustand und am Ende, ob das Wort akzeptiert wird.",
+        "Lass A1 das Wort &bdquo;aaa&ldquo; prüfen und begründe das Ergebnis mit der Anzahl der gelesenen a.",
+        "Wechsle zu Automat A2 (akzeptiert Wörter, die auf &bdquo;ab&ldquo; enden) und prüfe ein selbst gewähltes Wort. Beschreibe, woran man am Endzustand die Akzeptanz erkennt."
+       ],
+       "pfad": "simulationen/informatik/endlicher-automat/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriffe Zustand, Übergang, Startzustand und akzeptierender Zustand; Lesen eines Zustandsdiagramms; ein Wort als Folge von Eingabesymbolen.</p><p><strong>Angesprochene Kompetenzen:</strong> Algorithmisches Denken (einen Eingabestring schrittweise abarbeiten), Modellieren (Akzeptanz über den Endzustand erfassen), Argumentieren (akzeptiert/abgelehnt anhand der Übergänge begründen).</p><p><strong>Erwartung:</strong> Die Lernenden verfolgen die Zustandswechsel korrekt, lesen am Endzustand ab, ob ein Wort akzeptiert wird, und erkennen, dass der Automat sich nichts außer seinem aktuellen Zustand merkt. Sie übertragen das Vorgehen auf einen zweiten Automaten.</p><p><strong>Modellgrenzen:</strong> Die Simulation nutzt kleine Automaten über dem Alphabet {a, b}. Dass endliche Automaten nur endliches Gedächtnis haben und z. B. nicht beliebig weit zählen können (etwa gleich viele a wie b), ist eine grundsätzliche Grenze, die hier noch nicht vertieft wird.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -4878,19 +4905,6 @@
       }
      ],
      "merksatz": "Beim <strong>maschinellen Lernen</strong> erstellt ein Algorithmus aus gelabelten <strong>Beispieldaten</strong> selbst ein <strong>Modell</strong>. Man lernt mit <strong>Trainingsdaten</strong> und prüft mit ungesehenen <strong>Testdaten</strong>. Auswendiglernen statt Verstehen heißt <strong>Overfitting</strong>.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Werde selbst zum Lern-Algorithmus",
-       "material": "Stift, Papier und zehn Steckbriefe von Tieren (Größe, Ohrenform, Schwanzlänge), die du als Katze oder Hund einsortierst und aus denen du selbst eine Trennregel ableitest.",
-       "auftraege": [
-        "Schau dir sieben der zehn Steckbriefe mit Label an (das sind deine Trainingsdaten) und leite eine Regel ab, die Katze von Hund trennt.",
-        "Decke die Label der übrigen drei Steckbriefe ab (deine Testdaten) und sage mit deiner Regel jeweils Katze oder Hund vorher.",
-        "Decke nun die echten Label auf und zähle, wie viele der drei du richtig hattest.",
-        "Überlege: Hättest du deine Regel auch an den sieben Trainings-Steckbriefen geprüft, wäre sie vermutlich besser ausgefallen. Erkläre, warum die Prüfung an den ungesehenen drei aussagekräftiger ist."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Was erstellt ein lernender Algorithmus aus den Beispieldaten?",
@@ -4925,7 +4939,25 @@
         "text": "Beispiele + Labels → Training → Modell → auf Testdaten prüfen."
        }
       ]
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir ein lernendes System betrachten, überlegen wir: Ein einfacher Klassifikator trennt Punkte zweier Klassen durch eine <strong>gerade Linie</strong>. Vermutung: Verschiebt und dreht man diese Trennlinie über drei Stellschrauben (zwei Gewichte und eine Schwelle), kann man die Punkte besser oder schlechter trennen. Wir erwarten, dass es eine Linie gibt, die <em>alle</em> Beispielpunkte richtig einordnet.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Die Trennlinie eines Klassifikators einstellen",
+       "vorhersage": "Lässt sich eine einzige Gerade so legen, dass sie alle sechs Beispielpunkte richtig in zwei Klassen trennt? Notiere deine Vermutung, bevor du an den Reglern drehst.",
+       "auftraege": [
+        "Lade das Preset &bdquo;Schlechte Linie&ldquo; und verändere die Gewichte $w_1, w_2$ und die Schwelle $b$, bis möglichst viele der sechs Punkte richtig klassifiziert sind. Notiere die erreichte Genauigkeit.",
+        "Lade das Preset &bdquo;Perfekte Trennung&ldquo; und beschreibe, woran man erkennt, dass nun alle Punkte richtig liegen (Genauigkeit, Seite der Punkte).",
+        "Verschiebe die Linie minimal aus der perfekten Lage heraus und beobachte, wie sich die Zahl richtig klassifizierter Punkte ändert. Begründe, warum die Lage der Trennlinie entscheidend ist."
+       ],
+       "pfad": "simulationen/informatik/klassifikator/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Punkte in einem Koordinatensystem; Idee einer Geraden als Trennlinie; Grundbegriff von Beispieldaten mit zwei Klassen (Labels).</p><p><strong>Angesprochene Kompetenzen:</strong> Modellieren (Klassifikation als Trennlinie auffassen), Erkenntnisgewinnung (durch systematisches Verstellen der Parameter eine gute Trennung finden), Mit Mathematik umgehen (Gewichte und Schwelle als Lage der Geraden deuten).</p><p><strong>Erwartung:</strong> Die Lernenden finden durch Probieren eine Trennlinie mit hoher Genauigkeit und erkennen am Preset &bdquo;Perfekte Trennung&ldquo;, dass eine geeignete Gerade alle Beispielpunkte korrekt einordnen kann. Sie verstehen, dass &bdquo;Lernen&ldquo; hier das Einstellen dieser Parameter bedeutet.</p><p><strong>Modellgrenzen:</strong> Hier werden die Parameter von Hand eingestellt; ein echtes lernendes System würde sie selbst aus den Daten anpassen. Außerdem trennt eine einzige Gerade nur <em>linear trennbare</em> Daten — verschränkte Klassen sind so nicht zu trennen. Das wird bewusst nicht vertieft.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -5877,19 +5909,6 @@
       }
      ],
      "merksatz": "<strong>Steuern</strong> = offene Kette ohne Rückmeldung (WENN dunkel DANN Licht an). <strong>Regeln</strong> = geschlossener Kreis mit Rückkopplung: Istwert messen, mit Sollwert vergleichen, über die Regelabweichung den Aktor stellen, der wieder den Istwert verändert.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Vom Steuern zum Regeln",
-       "material": "Ein Calliope mini (oder die Online-Simulation im Editor) mit Temperatursensor und LED-Matrix, gedanklich als Modell einer Heizungssteuerung.",
-       "auftraege": [
-        "Beschreibe einen Dämmerungsschalter als offene Kette: Was ist die Eingangsgröße, was der Aktor?",
-        "Ergänze das Heizungsbeispiel zu einem vollständigen Regelkreis und benenne Sollwert, Istwert und Rückkopplung.",
-        "Lass den Calliope mini die Temperatur messen und ein Symbol zeigen, wenn der Istwert unter einem festen Sollwert liegt. Notiere, an welcher Stelle die Rückkopplung fehlt oder vorhanden ist.",
-        "Begründe an deinem Sonnen-Beispiel, warum die Regelung der reinen Steuerung überlegen ist."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Erkläre Steuern und Regeln in je einem Satz.",
@@ -5924,7 +5943,25 @@
         "text": "Steuern: Dämmerungsschalter — Regeln: Heizung/Backofen mit Sollwert."
        }
       ]
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir Steuern und Regeln unterscheiden, überlegen wir: Ein Thermostat misst die Raumtemperatur (Istwert), vergleicht sie mit dem gewünschten Sollwert und schaltet die Heizung. Vermutung: Weil der Aktor über die <strong>Rückkopplung</strong> wieder den Istwert verändert, pendelt die Temperatur um den Sollwert. Wir erwarten, dass eine <em>engere</em> Schaltdifferenz (Hysterese) ein <em>häufigeres</em> Schalten bei kleinerer Schwankung bedeutet.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Den Regelkreis eines Thermostats beobachten",
+       "vorhersage": "Wie verändert sich das Verhalten der Raumtemperatur, wenn man die Hysterese h von 2 °C auf 0,5 °C verkleinert? Schaltet die Heizung dann häufiger oder seltener? Notiere deine Vermutung.",
+       "auftraege": [
+        "Starte mit dem Preset &bdquo;Standard (20 °C, h = 2)&ldquo; und beschreibe, wie die Raumtemperatur um den Sollwert pendelt und wann die Heizung an- bzw. ausgeht.",
+        "Wechsle zu &bdquo;Enge Hysterese (h = 0,5)&ldquo; und danach zu &bdquo;Weite Hysterese (h = 3)&ldquo;. Notiere jeweils höchste und tiefste eingeschwungene Temperatur und wie oft geschaltet wird.",
+        "Erkläre an deinen Beobachtungen den Unterschied zwischen Steuern (offene Kette) und Regeln (geschlossener Kreis mit Rückkopplung)."
+       ],
+       "pfad": "simulationen/informatik/regelkreis/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriffe Sensor und Aktor; Vorstellung von Eingabe&ndash;Verarbeitung&ndash;Ausgabe; Lesen eines einfachen Temperatur-Zeit-Diagramms.</p><p><strong>Angesprochene Kompetenzen:</strong> Modellieren (den Regelkreis mit Soll-/Istwert und Rückkopplung erfassen), Erkenntnisgewinnung (durch Variation der Hysterese deren Wirkung untersuchen), Kommunizieren (Steuern und Regeln mit Fachbegriffen abgrenzen).</p><p><strong>Erwartung:</strong> Die Lernenden beschreiben das Pendeln der Temperatur um den Sollwert, lesen Höchst- und Tiefstwerte ab und erkennen, dass eine kleinere Hysterese geringere Schwankungen, aber häufigeres Schalten bedeutet. Sie unterscheiden die geschlossene Rückkopplung des Regelns von der offenen Kette des Steuerns.</p><p><strong>Modellgrenzen:</strong> Der simulierte Raum erwärmt und kühlt nach einem vereinfachten Modell mit idealem Zweipunktregler. Reale Einflüsse wie Trägheit der Heizung, Wärmeverluste durch Fenster oder Messfehler des Sensors sind nicht abgebildet; es geht um das Prinzip des Regelkreises.</p>"
     },
     "ueben": {
      "zeit": 18,

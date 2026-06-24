@@ -404,7 +404,25 @@
        "modus": "tangente",
        "fn": "parabel"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir den Grenzübergang vollziehen, überlegen wir: Die Sekante durch die Punkte bei $x_0$ und $x_0+h$ hat die Steigung $\\frac{f(x_0+h)-f(x_0)}{h}$. Lassen wir $h$ immer kleiner werden, rücken beide Punkte zusammen. Vermutung: Die Sekante dreht sich in eine Grenzlage, die Tangente, und die Sekantensteigung nähert sich einem festen Wert — der momentanen Änderungsrate $f'(x_0)$. Wir erwarten, dass dieser Wert für $h\\to0$ stabil wird.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Die Schrittweite h gegen 0 schicken",
+       "vorhersage": "Welchem Wert nähert sich die Sekantensteigung, wenn du $h$ bei festem $x_0$ immer kleiner machst?",
+       "auftraege": [
+        "Halte $x_0=1$ fest und verkleinere $h$ schrittweise (Presets „Startbild\" $h=1$, dann „h fast 0\" $h=0{,}01$). Notiere die Sekantensteigung bei mehreren $h$.",
+        "Beschreibe, wie sich die Sekante dabei zur Tangente dreht und wie sich der Unterschied Sekante − Tangente entwickelt.",
+        "Wiederhole das für $x_0=-2$ und vergleiche die Grenzwerte: Hängt die Tangentensteigung von der Stelle $x_0$ ab?"
+       ],
+       "pfad": "simulationen/mathematik/sekante-tangente/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Sekantensteigung als mittlere Änderungsrate, Differenzenquotient $\\frac{f(x_0+h)-f(x_0)}{h}$, anschauliche Vorstellung eines Grenzwerts.</p><p><strong>Angesprochene Kompetenzen:</strong> Grenzprozess $h\\to0$ deuten, numerisch beobachten und mit der geometrischen Drehung der Sekante verknüpfen, lokale Steigung als stellenabhängige Größe erfassen.</p><p><strong>Erwartung:</strong> Die Lernenden sehen, dass die Sekantensteigung für $h\\to0$ gegen einen festen Wert strebt (z. B. bei $f(x)=x^2$ ist $f'(1)=2$, $f'(-2)=-4$) und dass die Sekante in die Tangente übergeht. Der Grenzwert hängt von $x_0$ ab — das motiviert die Ableitungsfunktion.</p><p><strong>Modellgrenzen:</strong> $h$ wird nie exakt $0$ (dort ist der Quotient $\\frac{0}{0}$ undefiniert); die Simulation veranschaulicht nur die Annäherung. Der Grenzwert existiert zudem nur, wenn die Funktion an der Stelle differenzierbar ist — bei Knicken oder Sprüngen versagt das Bild.</p>"
     },
     "ueben": {
      "zeit": 18,

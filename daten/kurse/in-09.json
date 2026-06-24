@@ -1190,13 +1190,17 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Karten-Bits: Muster mit drei Karten",
-       "material": "Drei Spielkarten oder Papierkärtchen, jeweils Vorderseite = 1, Rückseite = 0.",
+       "titel": "Übertragungsfehler erkennen mit dem Paritätsbit",
+       "vorhersage": "Wenn bei einer Übertragung genau ein Bit kippt — merkt man das am angehängten Paritätsbit? Und was passiert, wenn gleich zwei Bits im selben Wort kippen? Notiere deine Vermutung.",
        "auftraege": [
-        "Lege systematisch alle Muster von 000 bis 111 und zähle sie.",
-        "Vergleiche dein Ergebnis mit deiner Vorhersage &ndash; sind es 8?",
-        "Überlege: Wie viele Muster wären es mit 4 Karten? Prüfe deine Regel."
-       ]
+        "Bestimme zu drei selbst gelegten Bytes jeweils das gerade Paritätsbit (Anzahl der Einsen soll insgesamt gerade sein) und prüfe deine Lösung.",
+        "Kippe in einem Wort genau ein Bit und stelle fest, ob der Empfänger den Fehler erkennt. Wiederhole es für eine andere Position.",
+        "Kippe nun <strong>zwei</strong> Bits im selben Wort und beobachte: Wird der Fehler noch erkannt? Begründe dein Ergebnis mit der Anzahl der Einsen."
+       ],
+       "pfad": "experimente/informatik/paritaet/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso.",
+       "material": "Acht Karten oder Münzen in einer Reihe (Vorderseite = 1, Rückseite = 0) als ein Byte sowie eine neunte Karte als Paritätsbit; lege Wörter, mache sie durch Umdrehen &bdquo;gerade&ldquo; und drehe einzelne Karten zum Simulieren von Kippfehlern um."
       }
      ],
      "selbstcheck": [
@@ -1241,7 +1245,10 @@
        "bits": 8,
        "init": 0
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir Bits durch eine Leitung schicken, überlegen wir: Auf dem Weg kann ein einzelnes Bit unbemerkt von 0 auf 1 (oder umgekehrt) <strong>kippen</strong> — aus einem &bdquo;K&ldquo; wird stillschweigend ein anderes Zeichen. Vermutung: Hängt man an jedes Wort <em>ein</em> zusätzliches <strong>Prüf-Bit</strong> an, das die Anzahl der Einsen immer gerade macht, dann fällt ein einzelner Kipp auf. Wir erwarten, dass sich so jeder Einzelfehler erkennen lässt.</p>",
+     "erkundenZuerst": true,
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Bit als kleinste Informationseinheit mit zwei Werten (0/1); Bytes als Folge von acht Bits; Abzählen, ob eine Anzahl gerade oder ungerade ist.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (durch gezieltes Manipulieren herausfinden, was die Prüfung leistet und wo ihre Grenze liegt), Modellieren (Fehlererkennung als Paritätsregel fassen), Argumentieren (Erkennen bzw. Nicht-Erkennen über die Anzahl der Einsen begründen).</p><p><strong>Erwartung:</strong> Die Lernenden ergänzen das gerade Paritätsbit korrekt, stellen fest, dass jeder <em>einzelne</em> Kipp erkannt wird, und erkennen, dass ein <em>doppelter</em> Kipp im selben Wort unentdeckt bleibt, weil die Parität wieder stimmt.</p><p><strong>Modellgrenzen:</strong> Ein einzelnes Paritätsbit kann Fehler nur <em>erkennen</em>, nicht <em>korrigieren</em>, und übersieht eine gerade Anzahl von Kippern. Echte Systeme nutzen stärkere Prüf- und Korrekturverfahren (z. B. mehrdimensionale Parität oder Prüfsummen); das gehört bewusst nicht zu diesem Einstieg.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1609,18 +1616,6 @@
       }
      ],
      "merksatz": "Von dezimal nach binär: <strong>wiederholt durch 2 teilen</strong> und die <strong>Reste</strong> notieren, bis 0 herauskommt. Die Binärzahl liest man <strong>von unten nach oben</strong> &ndash; der erste Rest ist die 1er-Stelle, der letzte die höchste Stelle.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Halbierungs-Verfahren üben",
-       "material": "Papier und Stift.",
-       "auftraege": [
-        "Führe das fortgesetzte Halbieren für 25 durch und notiere alle Reste.",
-        "Lies die Reste von unten nach oben und mache die Probe durch Addieren der Stellenwerte.",
-        "Wandle auch 44 um und prüfe das Ergebnis durch Rückrechnung."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Beschreibe das Verfahren des fortgesetzten Halbierens in einem Satz.",
@@ -1663,7 +1658,25 @@
        "bits": 8,
        "init": 42
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir das Verfahren des fortgesetzten Halbierens üben, überlegen wir: Jede Stelle einer 8-Bit-Zahl steht für eine <strong>Zweierpotenz</strong> (128, 64, 32, 16, 8, 4, 2, 1). Vermutung: Man kann jede Dezimalzahl von 0 bis 255 darstellen, indem man genau die Bits auf 1 setzt, deren Stellenwerte zusammen die Zahl ergeben. Wir erwarten, dass es zu jeder Dezimalzahl <em>genau eine</em> solche Bitfolge gibt.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Dezimalzahlen als 8-Bit-Muster legen",
+       "vorhersage": "Welche acht Bits muss man setzen, um die Zahl 100 darzustellen? Überlege mit den Stellenwerten 128, 64, 32, 16, 8, 4, 2, 1 und notiere deine Vermutung, bevor du es im Trainer prüfst.",
+       "auftraege": [
+        "Stelle nacheinander die Dezimalwerte 11, 100 und 200 ein und lies jeweils die 8-Bit-Folge ab. Notiere, welche Stellenwerte (gesetzte Bits) zusammen den Wert ergeben.",
+        "Prüfe das fortgesetzte Halbieren an einer Zahl: Teile sie wiederholt durch 2, notiere die Reste von unten nach oben und vergleiche das Ergebnis mit der angezeigten Bitfolge.",
+        "Lade das Preset &bdquo;Nur das höchste Bit&ldquo; und danach &bdquo;Alle an: Maximum&ldquo; und begründe, warum dabei 128 bzw. 255 herauskommt."
+       ],
+       "pfad": "simulationen/informatik/binaer-trainer/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Stellenwerte als Zweierpotenzen (1, 2, 4, 8, …); Umrechnung binär&rarr;dezimal durch Addieren der gesetzten Stellenwerte; Division mit Rest.</p><p><strong>Angesprochene Kompetenzen:</strong> Darstellen (zwischen Dezimal- und Binärdarstellung wechseln), Erkenntnisgewinnung (das Halbierungsverfahren am Trainer überprüfen), Algorithmisches Denken (ein Verfahren Schritt für Schritt korrekt ausführen).</p><p><strong>Erwartung:</strong> Die Lernenden setzen zu gegebenen Dezimalzahlen die richtigen Bits, bestätigen das Verfahren des fortgesetzten Halbierens und erkennen, dass die Reste von unten nach oben die Binärzahl bilden. Sie sehen die Eindeutigkeit der 8-Bit-Darstellung.</p><p><strong>Modellgrenzen:</strong> Der Trainer arbeitet mit genau 8 Bit, also nur mit den Werten 0 bis 255. Größere Zahlen, negative Zahlen oder Kommazahlen werden hier nicht dargestellt — dafür braucht es mehr Bits bzw. andere Codierungen.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -2101,18 +2114,6 @@
       }
      ],
      "merksatz": "<strong>ASCII</strong> ordnet jedem Zeichen eine Zahl zu (A = 65, B = 66, &hellip;). Da die Buchstaben fortlaufend sind, berechnet man weitere Codes aus dem von A. Im ASCII belegt jedes Zeichen <strong>1 Byte</strong>, also Speicherbedarf = Zeichenzahl mal 1 Byte.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Geheimbotschaft mit ASCII",
-       "material": "Papier und Stift; eine ASCII-Tabelle der Großbuchstaben oder die Regel A = 65.",
-       "auftraege": [
-        "Codiere deinen Vornamen Buchstabe für Buchstabe als ASCII-Zahlen.",
-        "Tausche mit einer Partnerin oder einem Partner und decodiere die fremde Zahlenfolge zurück.",
-        "Bestimme den Speicherbedarf beider Namen in Byte."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Welche Zahl steht in ASCII für den Buchstaben A?",
@@ -2527,18 +2528,6 @@
       }
      ],
      "merksatz": "Der <strong>Prozessor</strong> (CPU) führt die Befehle aus (rechnen, entscheiden). Der <strong>Arbeitsspeicher</strong> (RAM) hält die aktuell benötigten Daten bereit &ndash; wie ein Schreibtisch. RAM ist <strong>flüchtig</strong>: Ohne Strom ist sein Inhalt weg; deshalb muss man speichern.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Schreibtisch-Modell nachstellen",
-       "material": "Ein Tisch (= Arbeitsspeicher), du selbst (= Prozessor), ein Regal oder eine Schublade (= Massenspeicher) und einige Blätter (= Daten).",
-       "auftraege": [
-        "Hole nur die Blätter auf den Tisch, die du gerade brauchst &ndash; bearbeite sie (= Prozessor rechnet).",
-        "Lege bewusst einige Blätter ins Regal (= speichern) und lass andere nur auf dem Tisch liegen.",
-        "&bdquo;Strom aus&ldquo;: räume den Tisch komplett ab. Welche Blätter sind noch da, welche &bdquo;verloren&ldquo;?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Welche Aufgabe hat der Prozessor, welche der Arbeitsspeicher?",
@@ -2572,7 +2561,25 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, was &bdquo;flüchtiger Speicher&ldquo; bedeutet und welche Folge er hat."
+     "selbsterklaerung": "Erkläre in einem Satz, was &bdquo;flüchtiger Speicher&ldquo; bedeutet und welche Folge er hat.",
+     "vorueberlegung": "<p>Bevor wir ins Innenleben des Prozessors schauen, überlegen wir: Ein Prozessor &bdquo;entscheidet&ldquo; und &bdquo;rechnet&ldquo; — aber wie kann ein Stück Technik das überhaupt? Vermutung: Solche Entscheidungen lassen sich auf wenige <strong>Grundbausteine</strong> zurückführen, die aus Eingangs-Bits (0/1) nach einer festen Regel ein Ausgangs-Bit machen. Wir erwarten, dass etwa ein <strong>UND</strong>-Baustein nur dann eine 1 liefert, wenn <em>beide</em> Eingänge 1 sind.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Logik-Gatter: aus Bits wird eine Entscheidung",
+       "vorhersage": "Welches Ausgangs-Bit Q liefert ein UND-Gatter bei A=1, B=0? Und welches ein ODER-Gatter bei denselben Eingängen? Schreib deine Vermutung auf, bevor du es einstellst.",
+       "auftraege": [
+        "Wähle das <strong>UND</strong>-Gatter und probiere alle vier Eingangskombinationen (A,B) = (0,0), (0,1), (1,0), (1,1) durch. Notiere jeweils den Ausgang Q in einer kleinen Tabelle.",
+        "Stelle nun das <strong>ODER</strong>- und danach das <strong>XOR</strong>-Gatter ein und fülle für jedes dieselbe Tabelle aus. Vergleiche mit deiner Vermutung.",
+        "Lade das Preset &bdquo;XOR (A=1, B=0)&ldquo; und beschreibe in einem Satz, wann XOR eine 1 ausgibt — und wodurch es sich von ODER unterscheidet."
+       ],
+       "pfad": "simulationen/informatik/logik-gatter/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriff des Bits (0/1) aus dem Block &bdquo;Daten und Codierung&ldquo;; die Vorstellung, dass der Prozessor Befehle ausführt und Entscheidungen trifft.</p><p><strong>Angesprochene Kompetenzen:</strong> Modellieren (eine Entscheidung als Wahrheitstabelle erfassen), Erkenntnisgewinnung (durch systematisches Durchprobieren aller Eingaben eine Regel finden), Darstellen (zwischen Gattersymbol und Wahrheitstabelle wechseln).</p><p><strong>Erwartung:</strong> Die Lernenden stellen für UND, ODER und XOR die vollständige Wahrheitstabelle auf und erkennen, dass jedes Gatter eine feste Bit-Regel umsetzt. Sie verstehen so, dass die &bdquo;Rechen- und Entscheidungsarbeit&ldquo; des Prozessors aus vielen solchen einfachen Bausteinen entsteht.</p><p><strong>Modellgrenzen:</strong> Der Baukasten zeigt nur einzelne Gatter, nicht die Schaltwerke und das Taktgeschehen eines echten Prozessors. Geschwindigkeit, Register und das Zusammenspiel von Millionen Gattern bleiben außen vor — es geht ausschließlich um das Grundprinzip einer logischen Entscheidung.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -3676,18 +3683,6 @@
       }
      ],
      "merksatz": "Daten reisen als <strong>Pakete</strong> (mit Absender-IP, Ziel-IP, Nummer). <strong>Protokolle</strong> sind gemeinsame Regeln: <strong>IP</strong> adressiert/leitet, <strong>TCP</strong> sichert Vollständigkeit und Reihenfolge, <strong>HTTP</strong> überträgt Webseiten, <strong>HTTPS</strong> tut dies verschlüsselt.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Paket-Post im Klassenzimmer",
-       "material": "Mehrere Zettel (= Pakete), auf die man einen kurzen Satz aufteilt; Mitschuelerinnen und Mitschueler als &bdquo;Zwischenstationen&ldquo;.",
-       "auftraege": [
-        "Nummeriere die Zettel und schicke sie absichtlich über verschiedene Wege zum Ziel.",
-        "Lass das Ziel sie nur anhand der Nummern wieder ordnen &ndash; klappt es (TCP-Aufgabe)?",
-        "Halte einen Zettel zurück (Paketverlust): Wie merkt das Ziel, dass etwas fehlt, und was müsste passieren?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Was enthält jedes Datenpaket im Briefkopf?",
@@ -3718,7 +3713,25 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum man Passwörter nur über HTTPS eingeben sollte."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man Passwörter nur über HTTPS eingeben sollte.",
+     "vorueberlegung": "<p>Bevor wir verfolgen, wie Daten durchs Netz reisen, überlegen wir: Eine Nachricht wird in <strong>Pakete</strong> zerlegt, die jeweils Absender- und Ziel-IP tragen und über mehrere Zwischenstationen (Router) springen. Vermutung: Weil es <em>mehrere</em> Wege gibt, kommt ein Paket auch dann noch an, wenn unterwegs ein Router ausfällt. Wir erwarten, dass das Netz dann automatisch eine andere Route nutzt.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Ein Datenpaket auf seiner Reise verfolgen",
+       "vorhersage": "Ein Paket reist vom Laptop zum Server. Was passiert mit der Route, wenn der Router R3 ausfällt — und was, wenn R1 ausfällt? Schreib deine Vermutung auf, bevor du es einstellst.",
+       "auftraege": [
+        "Starte mit dem Preset &bdquo;Alles in Betrieb&ldquo; und notiere die Route des Pakets sowie die Anzahl der Hops (Sprünge) bis zum Server.",
+        "Lass nun R3 ausfallen (Preset &bdquo;R3 fällt aus&ldquo;) und beschreibe, ob und wie sich die Route ändert. Vergleiche mit deiner Vermutung.",
+        "Lass R1 ausfallen (Preset &bdquo;R1 fällt aus&ldquo;) und beschreibe die Ausweichroute. Begründe, warum gerade hier ein anderer Weg nötig wird."
+       ],
+       "pfad": "simulationen/informatik/paket-reise/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Internet als dezentraler Verbund vieler Rechner; IP-Adresse als Geräteadresse; Grundidee, dass Daten zwischen Geräten ausgetauscht werden.</p><p><strong>Angesprochene Kompetenzen:</strong> Modellieren (Netz als Knoten und Verbindungen begreifen), Erkenntnisgewinnung (durch gezieltes Ausschalten von Routern die Ausfallsicherheit untersuchen), Kommunizieren (Routen und Hops mit Fachbegriffen beschreiben).</p><p><strong>Erwartung:</strong> Die Lernenden lesen Route und Hop-Zahl ab und erkennen, dass das Paket bei einem Routerausfall über eine andere Verbindung ans Ziel gelangt, solange ein alternativer Weg existiert. So wird die Dezentralität und Ausfallsicherheit des Internets erfahrbar.</p><p><strong>Modellgrenzen:</strong> Die Simulation zeigt ein winziges Netz mit festen Routern und verfolgt ein einzelnes Paket. Echte Vorgänge wie das Aufteilen in viele Pakete, das Routing-Protokoll, Laufzeiten oder Paketverluste werden stark vereinfacht und sind hier nicht abgebildet.</p>"
     },
     "ueben": {
      "zeit": 18,

@@ -1,0 +1,49 @@
+{
+ "id": "sortieren-10",
+ "titel": "Lernzirkel: Suchen und Sortieren",
+ "fach": "informatik",
+ "intro": "Wie findet ein Computer schnell etwas in einer Liste und wie sortiert er? Hier misst du den Aufwand verschiedener Verfahren, knobelst über Bubble Sort und übst. Die Reihenfolge wählst du selbst.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Aufwand messen",
+   "typ": "link",
+   "typLabel": "Experiment",
+   "html": "<p>Im Experiment misst du, wie viele Schritte die lineare und die binäre Suche brauchen. Vergrößere die Liste: Welches Verfahren wird bei vielen Einträgen deutlich schneller – und warum?</p>",
+   "link": {
+    "pfad": "experimente/informatik/laufzeitmessung/index.html",
+    "label": "Laufzeitmessung öffnen"
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Knobeln: Halbieren statt Durchprobieren",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Eine <em>sortierte</em> Liste enthält $1000$ Einträge. Wie viele Schritte braucht die binäre Suche höchstens, um einen Eintrag zu finden? Erkläre, warum es so wenige sind.</p><details><summary>Lösung anzeigen</summary><div><p>Bei der binären Suche wird der Suchbereich in jedem Schritt halbiert: $1000 \\to 500 \\to 250 \\to 125 \\to 63 \\to 32 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1$. Das sind etwa $10$ Schritte.</p><p>Genauer: Man sucht das kleinste $k$ mit $2^k \\ge 1000$. Wegen $2^{10} = 1024$ reichen $10$ Halbierungsschritte. Die lineare Suche bräuchte im schlechtesten Fall dagegen $1000$ Schritte.</p></div></details>"
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Bubble Sort von Hand",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Bubble Sort sortiert die Liste $[3, 1, 2]$ aufsteigend. Es vergleicht immer zwei benachbarte Zahlen und vertauscht sie, wenn die linke größer ist. Führe den ersten Durchlauf von links nach rechts aus. Wie sieht die Liste danach aus?</p><details><summary>Lösung anzeigen</summary><div><p>Start: $[3, 1, 2]$.</p><p>Vergleiche $3$ und $1$: $3 > 1$, also tauschen $\\to [1, 3, 2]$. Vergleiche $3$ und $2$: $3 > 2$, also tauschen $\\to [1, 2, 3]$.</p><p>Nach dem ersten Durchlauf steht die größte Zahl ($3$) ganz rechts – wie eine Blase ist sie nach oben gestiegen. Hier ist die Liste schon vollständig sortiert: $[1, 2, 3]$.</p></div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Suchen, Sortieren, Aufwand",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "html": "<p>Wende dein Wissen zu Such- und Sortierverfahren und ihrem Aufwand an.</p>",
+   "quelle": "in-10-suchen-und-sortieren",
+   "ids": [
+    "in-10-ss-002",
+    "in-10-ss-005"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "id": "algorithmen-9",
+ "titel": "Lernzirkel: Algorithmen-Grundlagen",
+ "fach": "informatik",
+ "intro": "Was macht eine Anleitung zu einem Algorithmus? Hier erkundest du Schritt-für-Schritt-Abläufe, vergleichst, wie viele Schritte ein Verfahren braucht, knobelst und übst. Die Reihenfolge der Stationen wählst du selbst.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Schritte zählen",
+   "typ": "link",
+   "typLabel": "Experiment",
+   "html": "<p>Im Experiment misst du, wie viele Schritte verschiedene Verfahren brauchen, um eine Zahl in einer Liste zu finden. Probiere kurze und lange Listen aus: Wie verändert sich die Schrittzahl?</p>",
+   "link": {
+    "pfad": "experimente/informatik/laufzeitmessung/index.html",
+    "label": "Laufzeitmessung öffnen"
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Knobeln: Eindeutig oder nicht?",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Eine Anleitung lautet: <em>„Gehe ein Stück geradeaus, dann ungefähr nach rechts, bis du beim Ziel bist.“</em> Erfüllt sie alle drei Eigenschaften eines Algorithmus (eindeutig, ausführbar, endlich)? Begründe und verbessere die Anleitung so, dass sie eindeutig wird.</p><details><summary>Lösung anzeigen</summary><div><p>Die Anleitung ist nicht <strong>eindeutig</strong>: „ein Stück“ und „ungefähr nach rechts“ lassen offen, wie weit und in welche Richtung genau. Ausführbar und (mit Ziel als Abbruch) endlich wäre sie zwar, aber zwei Personen kämen zu verschiedenen Ergebnissen.</p><p>Eindeutig wäre z. B.: <em>„Gehe 10 Schritte geradeaus. Drehe dich 90° nach rechts. Gehe 5 Schritte geradeaus.“</em> Jede Anweisung ist nun unmissverständlich und in derselben Weise wiederholbar.</p></div></details>"
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Schreibtischtest",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Ein Algorithmus startet mit $zahl \\leftarrow 1$. Solange $zahl < 20$ gilt, wird wiederholt: $zahl \\leftarrow zahl \\cdot 2$. Welche Werte nimmt $zahl$ nacheinander an und welcher Wert wird am Ende gespeichert?</p><details><summary>Lösung anzeigen</summary><div><p>Schreibtischtest (Werte der Reihe nach): $1 \\to 2 \\to 4 \\to 8 \\to 16 \\to 32$.</p><p>Bei $zahl = 16$ ist die Bedingung $16 < 20$ noch wahr, also wird verdoppelt: $32$. Jetzt ist $32 < 20$ falsch, die Schleife endet. Am Ende ist $zahl = 32$ gespeichert.</p></div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Bausteine und Abläufe",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "html": "<p>Wende dein Wissen zu den Grundbausteinen und zum Ablauf von Algorithmen an.</p>",
+   "quelle": "in-09-algorithmen-grundlagen",
+   "ids": [
+    "in-09-alg-002",
+    "in-09-alg-007"
+   ]
+  }
+ ]
+}

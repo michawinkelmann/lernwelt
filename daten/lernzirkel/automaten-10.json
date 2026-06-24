@@ -1,0 +1,85 @@
+{
+ "id": "automaten-10",
+ "titel": "Lernzirkel: Endliche Automaten",
+ "fach": "informatik",
+ "intro": "Ein endlicher Automat liest ein Wort Zeichen für Zeichen und wechselt dabei seine Zustände. Hier prüfst du Wörter mit einem Automaten, knobelst über Akzeptanz und übst. Die Reihenfolge wählst du selbst.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Wort-Prüfer ausprobieren",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Gib ein Wort aus $a$ und $b$ ein und lass den Automaten es Zeichen für Zeichen lesen. In welchen Zuständen landet er? Probiere die Wörter $ab$, $aab$ und $ba$. Welche werden am Ende akzeptiert (Zustand $q_1$)?</p>",
+   "widget": {
+    "id": "automat",
+    "params": {
+     "zustaende": [
+      "q0",
+      "q1"
+     ],
+     "start": "q0",
+     "akzept": [
+      "q1"
+     ],
+     "alphabet": [
+      "a",
+      "b"
+     ],
+     "uebergaenge": [
+      {
+       "von": "q0",
+       "zeichen": "a",
+       "nach": "q0"
+      },
+      {
+       "von": "q0",
+       "zeichen": "b",
+       "nach": "q1"
+      },
+      {
+       "von": "q1",
+       "zeichen": "a",
+       "nach": "q0"
+      },
+      {
+       "von": "q1",
+       "zeichen": "b",
+       "nach": "q1"
+      }
+     ],
+     "beispiel": "aab"
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Knobeln: Welche Wörter werden akzeptiert?",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Der Wort-Prüfer oben startet in $q_0$ und akzeptiert, wenn er am Ende in $q_1$ steht. Beschreibe in Worten: Welche Wörter über $\\{a, b\\}$ akzeptiert er? Prüfe deine Vermutung mit dem Automaten.</p><details><summary>Lösung anzeigen</summary><div><p>Bei einem $b$ wechselt der Automat nach $q_1$ (akzeptierend), bei einem $a$ zurück nach $q_0$. Der Endzustand hängt also nur vom <strong>letzten</strong> gelesenen Zeichen ab.</p><p>Akzeptiert werden genau die Wörter, die auf $b$ enden – z. B. $b$, $ab$, $aab$, $bbb$. Wörter, die auf $a$ enden (oder das leere Wort), werden nicht akzeptiert.</p></div></details>"
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Schritte zählen",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Ein endlicher Automat liest das Wort $babba$ der Länge $5$. Wie viele Zeichen liest er, und wie oft wechselt er höchstens den Zustand? Was bedeutet „endlich“ bei diesem Automaten?</p><details><summary>Lösung anzeigen</summary><div><p>Der Automat liest genau ein Zeichen pro Schritt, bei Länge $5$ also $5$ Schritte. Bei jedem Schritt führt er genau einen Übergang aus – höchstens $5$ Zustandswechsel.</p><p>„Endlich“ heißt: Der Automat hat nur <strong>endlich viele Zustände</strong> (hier zwei). Er merkt sich nur, in welchem Zustand er gerade ist – nicht das ganze bisher gelesene Wort.</p></div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Automaten lesen und prüfen",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "html": "<p>Wende dein Wissen zu Zuständen, Übergängen und Akzeptanz an.</p>",
+   "quelle": "in-10-endliche-automaten",
+   "ids": [
+    "in-10-ea-002",
+    "in-10-ea-006"
+   ]
+  }
+ ]
+}

@@ -350,18 +350,6 @@
       }
      ],
      "merksatz": "Das Feder-Masse-Pendel schwingt <strong>harmonisch</strong>, weil die Federkraft $F = -D\\,s$ proportional zur Auslenkung ist. Es gilt $T = 2\\pi\\sqrt{\\frac{m}{D}}$: große Masse → träger (größer $T$), steife Feder → schneller (kleiner $T$); beide nur unter der Wurzel.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Masse und Federkonstante variieren",
-       "material": "Eine Schraubenfeder, ein Stativ, mehrere gleiche Massestücke (z. B. $50\\,\\text{g}$), eine Stoppuhr.",
-       "auftraege": [
-        "Hänge eine Masse an, lenke leicht aus und miss $T$ über 10 Schwingungen. Verdopple dann die Masse und miss erneut. Vergleiche mit deiner Vorhersage und mit dem Faktor $\\sqrt{2}\\approx 1{,}41$.",
-        "Hänge zwei gleiche Federn parallel — die effektive Federkonstante verdoppelt sich. Wie ändert sich $T$? Deute es mit der Formel.",
-        "Lenke dieselbe Masse einmal weit, einmal nur wenig aus. Bleibt $T$ gleich? Was sagt das über die Amplitudenunabhängigkeit?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Warum schwingt das Feder-Masse-Pendel harmonisch?",
@@ -408,7 +396,25 @@
        },
        "formel": "T = 2π · √(m/D)"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Beim Feder-Masse-Pendel ist die rücktreibende Kraft $F=-D\\cdot s$ proportional zur Auslenkung — das ist die Bedingung für eine harmonische Schwingung. Aus $T=2\\pi\\sqrt{\\frac{m}{D}}$ erwarten wir zwei prüfbare Vorhersagen: Eine größere Masse $m$ macht das Pendel träger (größeres $T$), eine steifere Feder (größeres $D$) macht es schneller (kleineres $T$). Weil beide Größen <strong>unter der Wurzel</strong> stehen, vermuten wir: Vervierfacht man die Masse, verdoppelt sich erst die Periode — und die Amplitude beeinflusst $T$ gar nicht.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Schwingungsdauer des Federpendels erkunden",
+       "vorhersage": "Wie ändert sich die Schwingungsdauer, wenn du die Masse vervierfachst — und hat die Amplitude einen Einfluss auf $T$?",
+       "auftraege": [
+        "Variiere die Masse $m$ bei fester Federkonstante und lies die Periode ab. Prüfe, ob bei vierfacher Masse die Periode doppelt so groß wird.",
+        "Ändere die Federkonstante $D$ und beschreibe, wie sich die Periode verhält.",
+        "Stelle bei festen $m$ und $D$ verschiedene Amplituden ein und prüfe, ob die Schwingungsdauer wirklich unabhängig von der Amplitude bleibt."
+       ],
+       "pfad": "simulationen/physik/federpendel/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriffe Elongation, Amplitude, Periodendauer (l1), lineares Kraftgesetz der Feder $F=-D\\,s$; Umgang mit Wurzelzusammenhängen.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Masse, Federkonstante und Amplitude getrennt variieren), mathematisieren (Wurzelzusammenhang $T\\propto\\sqrt{m}$ ablesen), bewerten (Amplitudenunabhängigkeit prüfen).</p><p><strong>Erwartung:</strong> Vierfache Masse $\\Rightarrow$ doppelte Periode; steifere Feder $\\Rightarrow$ kleinere Periode. Die Amplitude hat keinen Einfluss auf $T$ (Kennzeichen der harmonischen Schwingung).</p><p><strong>Modellgrenzen:</strong> Das Modell vernachlässigt die Eigenmasse der Feder und jede Reibung; deshalb klingt die Schwingung nicht ab. Bei sehr großen Auslenkungen verlässt eine reale Feder den linearen Bereich, und das Gesetz $F=-D\\,s$ gilt nicht mehr.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -578,7 +584,10 @@
         "Stelle die berechnete Länge ein und überprüfe durch Messen (10 Schwingungen, durch 10 teilen), ob $T \\approx 1\\,\\text{s}$ herauskommt.",
         "Hänge nacheinander eine leichte und eine schwere Masse an dieselbe Fadenlänge. Bestätigt die Messung die Massenunabhängigkeit?",
         "Lenke das Pendel einmal nur wenige Grad, einmal weit (über $30^\\circ$) aus. Beobachte, ob $T$ bei großer Auslenkung merklich abweicht — und erkläre es mit der Kleinwinkelnäherung."
-       ]
+       ],
+       "pfad": "experimente/physik/fadenpendel/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -1999,18 +2008,6 @@
       }
      ],
      "merksatz": "Stehende Wellen entstehen aus gegenläufigen Wellen; sie haben ortsfeste <strong>Knoten</strong> (Auslöschung) und <strong>Bäuche</strong> (Verstärkung) im Abstand $\\lambda/2$. Eine beidseitig eingespannte Saite hat $\\lambda_n = \\frac{2l}{n}$ und Eigenfrequenzen $f_n = n\\cdot\\frac{c}{2l}$ (Grundton + Obertöne).",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Stehende Wellen auf einer Saite hören und sehen",
-       "material": "Ein gespanntes Gummiband oder eine einzelne Gitarren-/Saiteninstrument-Saite, optional ein Lineal zum Abgreifen.",
-       "auftraege": [
-        "Zupfe die volle Saite — das ist der Grundton. Greife sie genau in der Mitte ab und zupfe die Hälfte: Höre, dass der Ton um eine Oktave steigt (Frequenz verdoppelt).",
-        "Greife bei $1/3$ und $2/3$ der Länge ab und vergleiche die Tonhöhen. Wie passt das zu $f_n \\sim 1/l$?",
-        "Erzeuge (z. B. mit Tonband oder vorsichtigem Anregen) am gespannten Gummiband eine stehende Welle mit zwei Bäuchen. Wo liegen die Knoten? Stimmt der Knotenabstand $\\lambda/2$?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Was sind Knoten und Bäuche einer stehenden Welle?",
@@ -2027,7 +2024,25 @@
      ],
      "stolperstein": "Eine stehende Welle <strong>wandert nicht</strong> — anders als die Wellen vorher. Knoten und Bäuche bleiben ortsfest. Außerdem ist der Abstand zweier benachbarter Knoten nur eine <strong>halbe</strong> Wellenlänge ($\\lambda/2$), nicht eine ganze; das wird oft verwechselt.",
      "selbsterklaerung": "Erkläre in einem Satz, warum auf eine eingespannte Saite nur bestimmte Wellenlängen passen.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Eine stehende Welle entsteht, wenn sich zwei gegenläufige Wellen gleicher Wellenlänge überlagern. Wir vermuten ortsfeste <strong>Knoten</strong> (dauernde Auslöschung) und <strong>Bäuche</strong> (maximale Schwingung) im Abstand $\\frac{\\lambda}{2}$. Auf einer beidseitig eingespannten Saite passen nur bestimmte Wellenlängen $\\lambda_n=\\frac{2l}{n}$, also nur bestimmte Eigenfrequenzen $f_n=n\\cdot\\frac{c}{2l}$. Unsere Vermutung: Erhöht man die Frequenz schrittweise, bilden sich nacheinander Grundton und Obertöne mit einem, zwei, drei … Bäuchen aus.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Stehende Wellen und Eigenfrequenzen erkunden",
+       "vorhersage": "Bei welchen Frequenzen bilden sich stabile stehende Wellen aus — bei beliebigen, oder nur bei ganz bestimmten Werten? Wie viele Bäuche erwartest du beim Grundton?",
+       "auftraege": [
+        "Erhöhe die Frequenz langsam und finde die Werte, bei denen ein klares, stabiles Muster aus Knoten und Bäuchen stehen bleibt.",
+        "Zähle bei jeder dieser Eigenfrequenzen die Bäuche und prüfe, ob die Frequenzen ganzzahlige Vielfache der Grundfrequenz sind.",
+        "Miss den Abstand zweier benachbarter Knoten und vergleiche ihn mit $\\frac{\\lambda}{2}$."
+       ],
+       "pfad": "simulationen/physik/stehende-welle/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Superpositionsprinzip und Reflexion (l8), Grundgleichung $c=\\lambda\\,f$; Begriffe Knoten und Bauch.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Eigenfrequenzen durch Variation finden), mathematisieren (Zusammenhang $f_n=n\\cdot c/(2l)$ und $\\lambda_n=2l/n$ prüfen), bewerten (ganzzahliges Frequenzverhältnis erkennen).</p><p><strong>Erwartung:</strong> Stabile Muster nur bei den Eigenfrequenzen; diese sind ganzzahlige Vielfache der Grundfrequenz. Knotenabstand $=\\frac{\\lambda}{2}$. Der Grundton hat einen Bauch, der erste Oberton zwei.</p><p><strong>Modellgrenzen:</strong> Die Simulation idealisiert verlustfreie Reflexion und eine masselose, ideal biegsame Saite. Reale Saiten zeigen Dämpfung und leichte Abweichungen der Obertöne von den exakt ganzzahligen Verhältnissen (Inharmonizität).</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -2193,18 +2208,6 @@
       }
      ],
      "merksatz": "Schall ist eine Longitudinalwelle. <strong>Tonhöhe ↔ Frequenz</strong>, <strong>Lautstärke ↔ Amplitude</strong>. Beim <strong>Echolot</strong> mit Laufzeit $t$ gilt $d = \\frac{c\\cdot t}{2}$ (Hin- und Rückweg).",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Schallgeschwindigkeit über ein Echo abschätzen",
-       "material": "Eine große, glatte Wand im Freien (mind. $30\\,\\text{m}$ entfernt), zwei Holzbretter oder die eigenen Hände zum Klatschen, eine Stoppuhr.",
-       "auftraege": [
-        "Klatsche in regelmäßigem Takt so, dass jeder neue Klatsch genau mit dem zurückkommenden Echo zusammenfällt. Miss mit der Stoppuhr die Zeit für 10 Klatsch-Echo-Abstände und teile durch 10 — das ist die Laufzeit $t$ für Hin- und Rückweg.",
-        "Miss (oder schätze) die Entfernung $d$ zur Wand und berechne die Schallgeschwindigkeit $c = \\frac{2d}{t}$. Vergleiche mit $343\\,\\frac{\\text{m}}{\\text{s}}$.",
-        "Erkläre, warum in der Formel der Faktor 2 steht — und wie ein Echolot mit demselben Prinzip die Wassertiefe bestimmt."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Wie hängen Tonhöhe und Lautstärke mit Frequenz und Amplitude zusammen?",
@@ -2221,7 +2224,26 @@
      ],
      "stolperstein": "Beim Echolot rechnet man oft die <strong>doppelte</strong> Tiefe aus, weil man den Faktor $\\frac{1}{2}$ vergisst. Der Schall läuft <strong>hin und zurück</strong> — also die doppelte Strecke. Deshalb ist die Tiefe nur die halbe Laufstrecke: $d = \\frac{c\\cdot t}{2}$.",
      "selbsterklaerung": "Erkläre in einem Satz, warum in der Echolot-Formel der Faktor $\\frac{1}{2}$ steht.",
-     "erklaerseite": true
+     "erklaerseite": true,
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Schall ist eine Longitudinalwelle und breitet sich in Luft mit endlicher, aber recht hoher Geschwindigkeit aus. Aus $c=\\frac{s}{t}$ erwarten wir: Misst man die Laufzeit $t$ über eine bekannte Strecke $s$, lässt sich die Schallgeschwindigkeit bestimmen. Unsere Vermutung: In Luft ergibt sich ein Wert in der Größenordnung von etwa $340\\,\\frac{\\text{m}}{\\text{s}}$ — viel langsamer als Licht, weshalb man Gewitterblitz und Donner zeitversetzt wahrnimmt. Verdoppelt man die Messstrecke, sollte sich auch die gemessene Laufzeit verdoppeln.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Schallgeschwindigkeit über die Laufzeit messen",
+       "material": "Zwei Mikrofone (oder Schallsensoren) mit bekanntem Abstand, ein lautes, kurzes Schallsignal (z. B. Klatschen) und ein Messgerät für kurze Zeitdifferenzen.",
+       "vorhersage": "Welchen Wert erwartest du für die Schallgeschwindigkeit in Luft — und wie ändert sich die gemessene Laufzeit, wenn du den Abstand der Mikrofone verdoppelst?",
+       "auftraege": [
+        "Stelle einen festen Abstand $s$ zwischen den Mikrofonen ein und miss die Zeit $t$, die der Schall von einem zum anderen braucht.",
+        "Berechne $c=\\frac{s}{t}$ und vergleiche den Wert mit dem Literaturwert für Luft.",
+        "Verdopple den Abstand und prüfe, ob sich die gemessene Laufzeit ebenfalls verdoppelt — die berechnete Geschwindigkeit aber gleich bleibt."
+       ],
+       "pfad": "experimente/physik/schallgeschwindigkeit/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Schall als Longitudinalwelle, Grundgleichung der Bewegung $c=s/t$; Umgang mit kurzen Zeitdifferenzen und Mittelwertbildung.</p><p><strong>Angesprochene Kompetenzen:</strong> experimentieren (Laufzeit über bekannte Strecke messen), auswerten (Geschwindigkeit berechnen, mehrere Messungen mitteln), bewerten (Größenordnung einschätzen, mit Lichtgeschwindigkeit vergleichen).</p><p><strong>Erwartung:</strong> Es ergibt sich rund $340\\,\\frac{\\text{m}}{\\text{s}}$ (bei Zimmertemperatur). Doppelte Strecke $\\Rightarrow$ doppelte Laufzeit, gleiche Geschwindigkeit.</p><p><strong>Modellgrenzen:</strong> Die Schallgeschwindigkeit hängt von der Lufttemperatur ab (etwa $+0{,}6\\,\\frac{\\text{m}}{\\text{s}}$ pro Grad), was das einfache Modell ignoriert. Echos und die Reaktionszeit der Sensoren sind die Hauptquellen der Messunsicherheit.</p>"
     },
     "ueben": {
      "zeit": 18,

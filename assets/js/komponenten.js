@@ -33,7 +33,7 @@ function pfadSegmente() {
   return p.split("/").filter(s => s && s !== "index.html");
 }
 
-const FACH_LABEL = { mathematik: "Mathematik", physik: "Physik", informatik: "Informatik", simulationen: "Simulationen", experimente: "Experimente", klassenarbeiten: "Klassenarbeiten", pausenraum: "Pausenraum", lernspiele: "Trainingsraum", selbstlernen: "Lernbüro", suche: "Suche" };
+const FACH_LABEL = { mathematik: "Mathematik", physik: "Physik", informatik: "Informatik", simulationen: "Simulationen", experimente: "Experimente", klassenarbeiten: "Klassenarbeiten", pausenraum: "Pausenraum", lernspiele: "Trainingsraum", selbstlernen: "Lernbüro", suche: "Suche", einstellungen: "Einstellungen" };
 
 // ---------- Kopfzeile ----------
 
@@ -59,6 +59,7 @@ function baueKopfzeile() {
           <button type="button" data-zweig="rs">RS</button>
         </div>
         <button class="thema-knopf" type="button" aria-pressed="false" title="Dunkelmodus umschalten" aria-label="Dunkelmodus umschalten">☾</button>
+        <a class="einstellung-knopf" href="${WURZEL.href}einstellungen/index.html" title="Einstellungen" aria-label="Einstellungen"${aktivesFach === "einstellungen" ? ' aria-current="true"' : ""}>⚙</a>
       </div>
     </div>`;
   document.body.prepend(kopf);
@@ -289,6 +290,10 @@ else if (seite === "lernspiele") {
 else if (seite === "suche") {
   // Suchseite erst bei Bedarf laden (Index ueber die vier daten/-Registries)
   import("./suche.js").then(m => m.rendereSuche());
+}
+else if (seite === "einstellungen") {
+  // Einstellungen: Fortschritt sichern/laden/zurücksetzen
+  import("./einstellungen.js").then(m => m.rendereEinstellungen());
 }
 else if (seite === "selbstlernen") {
   // Lernbüro-Einstieg: Kursliste aus daten/kurse.json

@@ -148,20 +148,6 @@
       }
      ],
      "merksatz": "Beim Photoeffekt zeigt Licht <strong>Teilchencharakter</strong>: Es gibt eine <strong>Grenzfrequenz</strong>, die maximale Elektronenenergie steigt <strong>linear mit der Frequenz</strong> (nicht der Intensität), die Auslösung erfolgt <strong>sofort</strong>, und die Intensität bestimmt nur die <strong>Anzahl</strong> der Elektronen. Das klassische Wellenmodell kann das nicht erklären.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Hallwachs-Versuch mit dem Zinkblech",
-       "material": "Frisch geschmirgeltes Zinkblech auf einem Elektroskop, Reibstab zum Aufladen, UV-Lampe (Quecksilberdampflampe) und eine starke Weißlicht- bzw. Rotlichtquelle, Glasscheibe als UV-Filter.",
-       "vorhersage": "Sage vorher: Bei welcher Lichtquelle entlädt sich das negativ geladene Zinkblech — und passiert mit positiver Ladung dasselbe? Notiere deine Vermutung, bevor du beobachtest.",
-       "auftraege": [
-        "Lade das Zinkblech negativ auf und bestrahle es mit UV-Licht — beobachte den Zeigerausschlag des Elektroskops.",
-        "Wiederhole mit Rot- bzw. Weißlicht und vergleiche: Welche Frequenz löst aus, welche nicht?",
-        "Schiebe eine Glasscheibe (hält UV zurück) zwischen Lampe und Blech — was ändert sich und warum?",
-        "Lade das Blech positiv auf und bestrahle erneut mit UV: Erkläre, warum sich nun nichts entlädt."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Nenne alle vier experimentellen Befunde des Photoeffekts.",
@@ -236,7 +222,25 @@
        },
        "formel": "E_kin = h · f − W_A"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Nach dem klassischen Wellenmodell müsste hellere (intensivere) Strahlung den herausgelösten Elektronen <strong>mehr</strong> Energie geben. Wir vermuten dagegen das Gegenteil: Die maximale Energie der Elektronen hängt nur von der <strong>Frequenz</strong> des Lichts ab, nicht von der Intensität. In der Gegenfeldmethode bremst eine Gegenspannung die Elektronen; die Spannung, bei der gerade kein Strom mehr fließt, misst ihre maximale Energie. Unsere Vermutung: Diese Grenzspannung steigt <strong>linear</strong> mit der Frequenz, und unterhalb einer Grenzfrequenz fließt gar kein Strom — egal wie hell das Licht ist.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Photoeffekt mit der Gegenfeldmethode erkunden",
+       "vorhersage": "Wovon hängt die Gegenspannung ab, bei der der Photostrom gerade verschwindet — von der Lichtintensität oder von der Lichtfrequenz?",
+       "auftraege": [
+        "Stelle eine Frequenz ein und erhöhe die Gegenspannung, bis der Strom null wird. Notiere diese Grenzspannung $U_0$.",
+        "Wiederhole das für mehrere Frequenzen und trage $U_0$ über der Frequenz $f$ auf — prüfe, ob ein linearer Zusammenhang entsteht.",
+        "Ändere die Intensität bei fester Frequenz und beobachte, ob sich die Grenzspannung $U_0$ verändert (oder nur die Stromstärke)."
+       ],
+       "pfad": "simulationen/physik/gegenfeld/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Grundvorstellung vom Photoeffekt, Energieeinheit Elektronenvolt, Zusammenhang von Energie und Gegenspannung $E_{\\max}=e\\cdot U_0$; Ablesen eines Photostroms.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Frequenz und Intensität getrennt variieren), auswerten (Grenzspannung über Frequenz auftragen), bewerten (Scheitern des Wellenmodells erkennen).</p><p><strong>Erwartung:</strong> Die Grenzspannung $U_0$ steigt linear mit der Frequenz; aus der Steigung folgt $h/e$. Höhere Intensität erhöht nur die Stromstärke, nicht $U_0$. Unterhalb der Grenzfrequenz fließt kein Strom.</p><p><strong>Modellgrenzen:</strong> Die Simulation idealisiert eine einheitliche Austrittsarbeit der Kathode; reale Oberflächen liefern eine verschmierte Grenzkante und einen kleinen Reststrom durch thermische Elektronen.</p>"
     },
     "ueben": {
      "zeit": 17,
@@ -410,7 +414,10 @@
         "Rechne jede Wellenlänge in eine Frequenz um und trage $U_0$ über $f$ auf.",
         "Lege eine Ausgleichsgerade und bestimme aus der Steigung $\\frac{h}{e}$ das Wirkungsquantum $h$.",
         "Lies die Grenzfrequenz (Schnittpunkt mit der $f$-Achse) ab und berechne daraus die Austrittsarbeit $W_\\text{A}$."
-       ]
+       ],
+       "pfad": "experimente/physik/photoeffekt/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -1457,20 +1464,6 @@
       }
      ],
      "merksatz": "Gangunterschied am Doppelspalt: $\\Delta s = g\\cdot\\sin\\alpha$. <strong>Maxima</strong> bei $g\\cdot\\sin\\alpha_k = k\\cdot\\lambda$ (ganzzahliges Vielfaches), <strong>Minima</strong> bei $g\\cdot\\sin\\alpha_k = (k-\\frac{1}{2})\\cdot\\lambda$. Die Ordnung $k$ zählt die Streifen vom zentralen Maximum ($k=0$) aus.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Gangunterschied am Doppelspalt vermessen",
-       "material": "Laser, Doppelspalt bekannten Spaltabstands $g$, Schirm in großem, gemessenem Abstand, Maßband, Bleistift und Geodreieck für die Skizze.",
-       "vorhersage": "Sage vorher: Was passiert mit dem Abstand der hellen Streifen, wenn du den Spaltabstand $g$ vergrößerst? Werden die Streifen enger oder weiter?",
-       "auftraege": [
-        "Zeichne die Gangunterschied-Geometrie (zwei Spalte, paralleler Strahlengang, Beugungswinkel $\\alpha$, Gangunterschied $\\Delta s = g\\sin\\alpha$) sauber beschriftet.",
-        "Markiere am Schirm das zentrale Maximum ($k=0$) und die Maxima erster Ordnung links und rechts.",
-        "Tausche den Doppelspalt gegen einen mit größerem $g$ und beobachte, wie sich der Streifenabstand ändert.",
-        "Begründe mit $g\\sin\\alpha_k = k\\lambda$, warum größeres $g$ die Maxima näher zusammenrücken lässt."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Leite die Formel für den Gangunterschied $\\Delta s = g\\cdot\\sin\\alpha$ in eigenen Worten her.",
@@ -1496,7 +1489,25 @@
        "g": 2000,
        "lambda": 550
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Am Doppelspalt überlagern sich zwei kohärente Lichtwellen. Wo ihr Gangunterschied $\\Delta s=g\\cdot\\sin\\alpha$ ein ganzzahliges Vielfaches der Wellenlänge ist, verstärken sie sich (Maximum), bei einem halbzahligen Vielfachen löschen sie sich aus (Minimum). Unsere Vermutung: Vergrößert man den Spaltabstand $g$, rücken die Maxima <strong>enger</strong> zusammen; vergrößert man die Wellenlänge $\\lambda$, rücken sie weiter <strong>auseinander</strong>. Die Streifen sollten gleichmäßig und symmetrisch um das zentrale Maximum ($k=0$) liegen.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Interferenzstreifen am Doppelspalt erkunden",
+       "vorhersage": "Rücken die hellen Streifen enger zusammen oder weiter auseinander, wenn du den Spaltabstand $g$ vergrößerst? Und was bewirkt eine größere Wellenlänge?",
+       "auftraege": [
+        "Variiere den Spaltabstand $g$ und beobachte, wie sich der Abstand der Maxima ändert. Halte den Zusammenhang in Worten fest.",
+        "Ändere die Wellenlänge (Farbe) und prüfe, ob die Streifen wie erwartet auseinanderrücken.",
+        "Lies für eine Einstellung den Winkel $\\alpha_1$ des ersten Maximums ab und prüfe ihn mit $g\\cdot\\sin\\alpha_1=\\lambda$."
+       ],
+       "pfad": "simulationen/physik/doppelspalt/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Wellenüberlagerung und Gangunterschied, Begriff der Kohärenz (l6); geometrische Bedeutung des Winkels $\\alpha$.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Spaltabstand und Wellenlänge variieren), mathematisieren (Maximabedingung $g\\sin\\alpha_k=k\\lambda$ anwenden), bewerten (Streifenabstand qualitativ und quantitativ deuten).</p><p><strong>Erwartung:</strong> Größeres $g$ $\\Rightarrow$ engere Streifen; größeres $\\lambda$ $\\Rightarrow$ weitere Streifen. Die abgelesenen Winkel passen zur Maximabedingung. Das Muster ist symmetrisch um $k=0$.</p><p><strong>Modellgrenzen:</strong> Die ideale Doppelspalt-Simulation vernachlässigt die endliche Spaltbreite, die in Wirklichkeit eine Helligkeits-Einhüllende erzeugt (Beugung am Einzelspalt). Reale Streifen sind daher nicht alle gleich hell.</p>"
     },
     "ueben": {
      "zeit": 17,
@@ -1854,20 +1865,6 @@
       }
      ],
      "merksatz": "Gitter-Maxima: $d\\cdot\\sin\\alpha_k = k\\cdot\\lambda$. Viele Spalte erzeugen <strong>sehr scharfe</strong> Maxima. Da $d$ klein ist, werden die Winkel groß — <strong>keine Kleinwinkelnäherung</strong>. Weißes Licht wird in ein Spektrum zerlegt, <strong>Rot aussen</strong> (stärker abgelenkt als Violett).",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Gitterspektrum und Wellenlängenmessung",
-       "material": "Optisches Gitter mit bekannter Gitterkonstante (z. B. 600 Linien/mm), Laser sowie eine Weißlichtquelle (z. B. Halogenlampe mit Spalt), Schirm, Winkelmesser oder Maßband für $a_k$ und $e$.",
-       "vorhersage": "Sage vorher: Wird beim Gitter Rot oder Violett stärker zur Seite abgelenkt? Und liegen die Maxima enger oder weiter als beim Doppelspalt?",
-       "auftraege": [
-        "Beleuchte das Gitter mit dem Laser, miss $a_k$ und $e$ für mehrere Ordnungen und berechne $\\lambda$ mit dem echten $\\sin\\alpha_k$ (ohne Näherung).",
-        "Vergleiche die Schärfe der Maxima mit dem Doppelspalt-Bild aus der letzten Stunde.",
-        "Beleuchte das Gitter mit weißem Licht und beschreibe das Spektrum — wo liegt Rot, wo Violett?",
-        "Begründe mit $\\sin\\alpha_k = k\\lambda/d$, warum Rot aussen liegt."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Ein Gitter mit $600$ Linien pro mm wird mit Laserlicht bestrahlt; das Maximum 1. Ordnung erscheint unter $\\alpha_1 = 22{,}7^\\circ$. Wie groß ist $\\lambda$?",
@@ -1911,7 +1908,26 @@
        "lambda": 550,
        "N": 5
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Ein optisches Gitter mit sehr vielen, eng benachbarten Spalten erzeugt schmale, helle Maxima. Aus der Gittergleichung $d\\cdot\\sin\\alpha_k=k\\cdot\\lambda$ erwarten wir: Je kleiner die Gitterkonstante $d$, desto größer die Ablenkwinkel — sie werden so groß, dass die Kleinwinkelnäherung <strong>nicht</strong> mehr gilt und wir wirklich mit dem Sinus rechnen müssen. Unsere Vermutung: Misst man Ordnung $k$ und Winkel $\\alpha_k$, lässt sich $\\lambda$ präzise bestimmen — und weißes Licht wird in ein Spektrum zerlegt, in dem Rot weiter außen liegt als Violett.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wellenlänge am optischen Gitter messen",
+       "material": "Ein Laserpointer bekannter Farbe, ein optisches Gitter mit angegebener Gitterkonstante, ein Maßband und ein Schirm (Wand).",
+       "vorhersage": "Wie verändern sich die Abstände der hellen Punkte auf dem Schirm, wenn du ein Gitter mit mehr Strichen pro Millimeter (kleinerem $d$) verwendest?",
+       "auftraege": [
+        "Miss den Abstand Gitter–Schirm und die Abstände der Maxima 1. und 2. Ordnung von der Mitte.",
+        "Berechne aus diesen Strecken die Ablenkwinkel $\\alpha_k$ über den Tangens und daraus mit $d\\cdot\\sin\\alpha_k=k\\cdot\\lambda$ die Wellenlänge.",
+        "Vergleiche die Wellenlängen aus 1. und 2. Ordnung und prüfe, ob sie übereinstimmen — und begründe, warum hier die Kleinwinkelnäherung versagt."
+       ],
+       "pfad": "experimente/physik/gitter/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Maximabedingung am Doppelspalt (l7), Geometrie am Schirm ($\\tan\\alpha=a/e$), Begriff der Gitterkonstante; Umgang mit Winkelfunktionen ohne Näherung.</p><p><strong>Angesprochene Kompetenzen:</strong> experimentieren (Strecken sorgfältig messen), mathematisieren (Winkel und Wellenlänge berechnen), bewerten (Ergebnisse mehrerer Ordnungen vergleichen, Näherungsgrenze erkennen).</p><p><strong>Erwartung:</strong> Die berechneten Wellenlängen aus verschiedenen Ordnungen stimmen überein und liegen für sichtbares Licht zwischen etwa $400$ und $700\\,\\text{nm}$. Kleineres $d$ $\\Rightarrow$ größere Winkel und Abstände.</p><p><strong>Modellgrenzen:</strong> Die Gittergleichung setzt ideal gleichmäßige Spaltabstände und exakt senkrechten Lichteinfall voraus. Die Strichzahl-Angabe des Gitters und das Ablesen der Maxima-Mitte sind die Hauptquellen der Messunsicherheit.</p>"
     },
     "ueben": {
      "zeit": 17,

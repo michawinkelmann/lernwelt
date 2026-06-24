@@ -1,0 +1,71 @@
+{
+ "id": "beschleunigung-10",
+ "titel": "Lernzirkel: Beschleunigte Bewegung und Anhalteweg",
+ "fach": "physik",
+ "intro": "Beschleunigung, v-t-Diagramme und der Anhalteweg – nimm Messreihen auf, knobel und rechne an frei wählbaren Stationen.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Messlabor: Geschwindigkeit und Zeit",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Trage Messwerte für Zeit und Geschwindigkeit ein und finde die Beschleunigung als Steigung der Geraden. Wie hängen v und t bei gleichmäßiger Beschleunigung zusammen?</p>",
+   "widget": {
+    "id": "messreihe",
+    "params": {
+     "xLabel": "t",
+     "yLabel": "v",
+     "xEinheit": "s",
+     "yEinheit": "m/s",
+     "zeilen": 5,
+     "xVorgabe": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+     ],
+     "modell": "proportional",
+     "groesse": {
+      "name": "a",
+      "einheit": "m/s²",
+      "ausSteigung": "direkt"
+     }
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Geschwindigkeit mit Lichtschranken",
+   "typ": "link",
+   "typLabel": "Experiment",
+   "html": "<p>Miss mit Lichtschranken, wie schnell ein Wagen an verschiedenen Stellen ist. So machst du die zunehmende Geschwindigkeit einer beschleunigten Bewegung sichtbar.</p>",
+   "link": {
+    "pfad": "experimente/physik/lichtschranken/index.html",
+    "label": "Experiment Lichtschranken öffnen"
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Doppelte Geschwindigkeit",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Ein Auto fährt mit 30 km/h und braucht dabei einen bestimmten Bremsweg. Wie verändert sich der Bremsweg, wenn es mit 60 km/h fährt – doppelt, dreifach oder vierfach so lang?</p><details><summary>Lösung anzeigen</summary><div>Der Bremsweg wächst mit dem <strong>Quadrat der Geschwindigkeit</strong> (Bremsweg ~ v²). Doppelte Geschwindigkeit bedeutet also <strong>2² = 4-fachen Bremsweg</strong>. Deshalb ist zu schnelles Fahren so gefährlich: Schon eine kleine Erhöhung der Geschwindigkeit verlängert den Bremsweg stark.</div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Bremsen & Beschleunigen",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ph-10-beschleunigte-bewegung",
+   "ids": [
+    "ph-10-bb-005",
+    "ph-10-bb-006"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "id": "normalverteilung-qs",
+ "titel": "Lernzirkel: Normalverteilung",
+ "fach": "mathematik",
+ "intro": "Hier erkundest du die Gaußsche Glockenkurve und die Normalverteilung. Du veränderst Erwartungswert und Standardabweichung und bestimmst Wahrscheinlichkeiten als Flächen. Wähle deinen Weg selbst.",
+ "stationen": [
+  {
+   "id": "s1",
+   "nr": "1",
+   "titel": "Die Glockenkurve formen",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Verändere den Erwartungswert $\\mu$ und die Standardabweichung $\\sigma$. Wie wandert die Kurve, wie wird sie breiter oder schmaler? Welcher Regler verschiebt, welcher staucht?</p>",
+   "widget": {
+    "id": "glocke",
+    "params": {
+     "muinit": 0,
+     "sinit": 1,
+     "mumin": -4,
+     "mumax": 4,
+     "smin": 0.5,
+     "smax": 3
+    }
+   }
+  },
+  {
+   "id": "s2",
+   "nr": "2",
+   "titel": "Wahrscheinlichkeit als Fläche",
+   "typ": "widget",
+   "typLabel": "Erkunden",
+   "html": "<p>Bei stetigen Größen ist die Wahrscheinlichkeit die Fläche unter der Kurve. Verschiebe die Grenzen $a$ und $b$ und beobachte, wie sich die markierte Fläche und damit $P(a\\le X\\le b)$ ändert.</p>",
+   "widget": {
+    "id": "normalflaeche",
+    "params": {
+     "mu": 0,
+     "sigma": 1,
+     "aInit": -1,
+     "bInit": 1
+    }
+   }
+  },
+  {
+   "id": "s3",
+   "nr": "3",
+   "titel": "Knobeln: Sigma-Regel",
+   "typ": "knobel",
+   "typLabel": "Knobeln",
+   "html": "<p>Die Füllmenge einer Maschine ist normalverteilt mit $\\mu=500\\,\\text{g}$ und $\\sigma=5\\,\\text{g}$. In welchem Bereich liegen rund $95\\,\\%$ aller Packungen? Nutze die Sigma-Regeln.</p><details><summary>Lösung anzeigen</summary><div>Etwa $95\\,\\%$ liegen im Bereich $[\\mu-2\\sigma;\\ \\mu+2\\sigma]$.<br>$\\mu-2\\sigma=500-10=490\\,\\text{g}$ und $\\mu+2\\sigma=500+10=510\\,\\text{g}$.<br>Rund $95\\,\\%$ aller Packungen wiegen also zwischen $490\\,\\text{g}$ und $510\\,\\text{g}$.</div></details>"
+  },
+  {
+   "id": "s4",
+   "nr": "4",
+   "titel": "Üben: Normalverteilung",
+   "typ": "aufgaben",
+   "typLabel": "Üben",
+   "quelle": "ma-qp-normalverteilung",
+   "ids": [
+    "ma-qp-nv-002",
+    "ma-qp-nv-005"
+   ]
+  }
+ ]
+}

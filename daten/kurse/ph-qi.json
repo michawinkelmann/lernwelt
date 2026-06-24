@@ -603,7 +603,10 @@
         "Bewege den Stab langsam und dann schnell durch das Feld und vergleiche die Voltmeter-Ausschläge.",
         "Halte den Stab ruhig im Feld – welche Spannung misst du, und passt das zum Gesetz?",
         "Schätze aus $l$, $B$ und einer abgeschätzten Geschwindigkeit eine Spannung ab und vergleiche mit der Messung."
-       ]
+       ],
+       "pfad": "experimente/physik/induktionsgesetz/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -825,18 +828,6 @@
       }
      ],
      "merksatz": "Lenzsche Regel: Der Induktionsstrom ist stets so gerichtet, dass er seiner <strong>Ursache entgegenwirkt</strong>. Sie folgt aus der Energieerhaltung – andernfalls entstünde Energie aus dem Nichts.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Fallender Magnet im Kupferrohr",
-       "material": "Ein Kupfer- oder Aluminiumrohr (nicht magnetisch), ein passender starker Magnet, zum Vergleich ein gleich schwerer unmagnetischer Körper, eine Stoppuhr.",
-       "auftraege": [
-        "Lasse den Magneten und den unmagnetischen Körper durch das Rohr fallen und vergleiche die Fallzeiten.",
-        "Erkläre die Verzögerung mit Wirbelströmen und der Energieerhaltung.",
-        "Überlege, was passieren würde, wenn der Induktionsstrom die Bewegung verstärken würde – und warum das unmöglich ist."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Formuliere die lenzsche Regel in einem Satz.",
@@ -870,7 +861,25 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum die lenzsche Regel keine Zusatzannahme ist, sondern aus der Energieerhaltung zwingend folgt."
+     "selbsterklaerung": "Erkläre in einem Satz, warum die lenzsche Regel keine Zusatzannahme ist, sondern aus der Energieerhaltung zwingend folgt.",
+     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Bewegt sich ein Leiter quer durch ein Magnetfeld, werden die freien Ladungen im Leiter durch die Lorentzkraft längs des Leiters geschoben — es entsteht eine Induktionsspannung. Unsere Vermutung: Diese Spannung wächst, wenn die Geschwindigkeit $v$, die Flussdichte $B$ oder die Leiterlänge $l$ größer werden, gemäß $U_{\\text{ind}}=B\\,l\\,v$. Schließt man den Stromkreis, fließt nach der lenzschen Regel ein Strom, dessen Kraft der Bewegung <strong>entgegenwirkt</strong> — der Leiter wird also gebremst, niemals beschleunigt.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Bewegten Leiter im Magnetfeld erkunden",
+       "vorhersage": "In welche Richtung wirkt die Kraft auf den stromdurchflossenen Leiter, nachdem der Stromkreis geschlossen ist — in Bewegungsrichtung oder dagegen? Und wovon hängt die induzierte Spannung ab?",
+       "auftraege": [
+        "Variiere die Geschwindigkeit $v$ und lies die Induktionsspannung ab. Prüfe, ob $U_{\\text{ind}}$ proportional zu $v$ wächst.",
+        "Ändere nacheinander Flussdichte $B$ und Leiterlänge $l$ und prüfe die Beziehung $U_{\\text{ind}}=B\\,l\\,v$.",
+        "Schließe den Stromkreis und beobachte die Kraftrichtung auf den Leiter. Begründe sie mit der lenzschen Regel und der Energieerhaltung."
+       ],
+       "pfad": "simulationen/physik/leiterschaukel/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Lorentzkraft auf bewegte Ladungen, Bewegungsinduktion $U_{\\text{ind}}=B\\,l\\,v$, magnetischer Fluss; Drei-Finger-Regel.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Spannung in Abhängigkeit von $v$, $B$, $l$ messen), bewerten (Kraftrichtung mit der lenzschen Regel begründen), argumentieren (Energieerhaltung als Begründung der Regel).</p><p><strong>Erwartung:</strong> $U_{\\text{ind}}$ wächst proportional zu $v$, $B$ und $l$. Bei geschlossenem Kreis wirkt die Kraft der Bewegung entgegen (Bremswirkung) — sonst entstünde Energie aus dem Nichts.</p><p><strong>Modellgrenzen:</strong> Reibung und der ohmsche Widerstand der Zuleitungen sind idealisiert; das Magnetfeld gilt als homogen. Reale Leiterschaukeln zeigen zusätzlich Wirbelströme und Wärmeverluste.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1783,18 +1792,6 @@
       }
      ],
      "merksatz": "Vollständiger Rechenweg im Querfeld: Verweilzeit $t_1 = \\frac{L}{v_0}$, Ablenkung $y_1 = \\frac{1}{2} a \\cdot t_1^2$, Austrittswinkel über $\\tan\\theta = \\frac{a \\cdot t_1}{v_0}$. Reihenfolge: $v_0 \\to t_1 \\to a \\to y_1$.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Ablenkung am Schirm ausmessen",
-       "material": "Eine Elektronenstrahlröhre mit Ablenkkondensator und Leuchtschirm, ein Lineal, bekannte Werte für $L$, $d$, $U_a$ und $U_0$.",
-       "auftraege": [
-        "Berechne aus $U_0$ zuerst $v_0$, daraus $t_1$ und mit $a$ schließlich $y_1$.",
-        "Vergleiche deinen berechneten Austrittswinkel $\\theta$ mit dem geschätzten Verlauf des Strahls.",
-        "Diskutiere, welche Größe ($U_a$, $L$, $v_0$) die Ablenkung am stärksten beeinflusst."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Gib die Formel für die Verweilzeit im Kondensator an.",
@@ -1838,7 +1835,25 @@
        "g": 9.81,
        "vmax": 25
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Ein Elektron, das senkrecht in ein homogenes Magnetfeld eintritt, erfährt die Lorentzkraft stets senkrecht zu seiner Geschwindigkeit. Eine Kraft, die immer quer zur Bewegung zeigt, lenkt nur ab, ohne zu bremsen — daraus erwarten wir eine <strong>Kreisbahn</strong> mit konstantem Tempo. Setzt man Lorentzkraft gleich Zentripetalkraft, folgt der Radius $r=\\frac{m\\,v}{e\\,B}$. Unsere Vermutung: Größere Geschwindigkeit $v$ vergrößert den Radius, ein stärkeres Feld $B$ verkleinert ihn — und zwar jeweils proportional.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Elektronenbahn im Magnetfeld erkunden",
+       "vorhersage": "Wie ändert sich der Bahnradius, wenn du die Geschwindigkeit (Beschleunigungsspannung) erhöhst — und wie, wenn du die magnetische Flussdichte $B$ verdoppelst?",
+       "auftraege": [
+        "Stelle eine feste Flussdichte ein und erhöhe die Geschwindigkeit. Lies drei Wertepaare $(v, r)$ ab und prüfe, ob $r/v$ konstant bleibt.",
+        "Halte die Geschwindigkeit fest und verdopple $B$. Beobachte, ob sich der Radius wie erwartet halbiert.",
+        "Bestimme aus einem Wertepaar $(v, r, B)$ die spezifische Ladung $\\frac{e}{m}=\\frac{v}{r\\,B}$ und vergleiche sie mit dem Literaturwert $1{,}76\\cdot10^{11}\\,\\text{C/kg}$."
+       ],
+       "pfad": "simulationen/physik/teilchen-kreisbahn/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Lorentzkraft $F=e\\,v\\,B$ und Kreisbahnbedingung (Lorentz- als Zentripetalkraft); Beschleunigung im Längsfeld $e\\,U_0=\\frac12 m v^2$.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Parameter systematisch variieren), mathematisieren (Proportionalitäten $r\\propto v$, $r\\propto 1/B$ ablesen), auswerten (spezifische Ladung $e/m$ aus Messgrößen bestimmen).</p><p><strong>Erwartung:</strong> Es entsteht eine Kreisbahn mit konstanter Bahngeschwindigkeit. Doppelte Geschwindigkeit $\\Rightarrow$ doppelter Radius; doppeltes $B$ $\\Rightarrow$ halber Radius. Die Auswertung liefert $e/m\\approx1{,}76\\cdot10^{11}\\,\\text{C/kg}$.</p><p><strong>Modellgrenzen:</strong> Das Modell setzt ein streng homogenes Feld und eine exakt senkrechte Einschussrichtung voraus. Energieverluste durch Stöße mit dem Füllgas (im echten Fadenstrahlrohr sichtbar als Leuchtspur) sind vernachlässigt.</p>"
     },
     "ueben": {
      "zeit": 18,

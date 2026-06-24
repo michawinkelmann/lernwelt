@@ -192,7 +192,8 @@
           "ausSteigung": "direkt"
          }
         }
-       }
+       },
+       "hinweis": "Kein Material zur Hand? Trag deine Werte direkt unten ins <strong>Messlabor</strong> ein — die Auswertung läuft genauso."
       }
      ],
      "interaktiv": {
@@ -384,18 +385,6 @@
        "antwort": "Damit es im Rückspiegel des vorausfahrenden Autos richtig herum erscheint."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Schrift vor dem Spiegel",
-       "material": "Ein Taschenspiegel, Papier und Stift, ein kleiner Gegenstand, ein Lineal.",
-       "auftraege": [
-        "Schreibe RETTUNG aufs Blatt und halte es vor den Spiegel. Was wird vertauscht — oben/unten oder links/rechts?",
-        "Stelle einen Gegenstand verschieden weit vor den Spiegel und prüfe mit dem Lineal: Ist der Bildabstand wirklich immer gleich dem Gegenstandsabstand?",
-        "Versuche, das Spiegelbild mit dem Finger hinter dem Spiegel zu „berühren\" — erkläre, warum das nicht geht."
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "optik",
       "titel": "Das Spiegelbild",
@@ -403,7 +392,27 @@
        "modus": "reflexion",
        "winkel": 40
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir konstruieren, überlegen wir: Wir kennen schon das <strong>scheinbare</strong> Bild im ebenen Spiegel. Eine Sammellinse kann dagegen ein <strong>wirkliches (reelles)</strong> Bild erzeugen, das man auf einem Schirm auffangen kann. Vermutung: Bewegt sich der Gegenstand auf die Linse zu, wandert das Bild von der Linse weg und wird größer — bis der Gegenstand zu nah ist und gar kein Schirmbild mehr entsteht.</p>",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wo entsteht das Bild hinter einer Sammellinse?",
+       "vorhersage": "Wenn du den Gegenstand weit von der Linse weg stellst und ihn dann langsam näher schiebst — wandert das Bild zur Linse hin oder von ihr weg, und wird es größer oder kleiner?",
+       "auftraege": [
+        "Zeichne mit der Simulation den Parallel- und den Brennpunktstrahl ein und finde ihren Schnittpunkt — dort liegt das Bild.",
+        "Verändere die Gegenstandsweite in mehreren Schritten und notiere jeweils Bildweite und Bildgröße in einer Tabelle.",
+        "Beschreibe, wie sich das Bild bewegt und verändert, wenn der Gegenstand der Linse näher kommt.",
+        "Halte fest, ab welcher Gegenstandsweite (innerhalb der Brennweite) kein reelles Bild mehr auf einem Schirm entsteht."
+       ],
+       "pfad": "simulationen/physik/linsen-strahlengang/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso.",
+       "material": "Eine optische Bank mit Sammellinse, einem beleuchteten Gegenstand (Pfeil) und einem Schirm."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Bildbegriff (reell/scheinbar) aus der Spiegel-Lektion; Brennpunkt und Brennweite der Sammellinse; Lesen einer Skala.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (Bildlage über die Strahlkonstruktion vorhersagen und prüfen), Kommunikation (Abhängigkeit Bildlage/Bildgröße von der Gegenstandsweite beschreiben).</p><p><strong>Erwartung:</strong> Mit kleiner werdender Gegenstandsweite wandert das reelle Bild von der Linse weg und wird größer; innerhalb der Brennweite entsteht kein reelles, sondern ein vergrößertes scheinbares Bild (Lupe).</p><p><strong>Modellgrenzen:</strong> Die Konstruktion nutzt die Näherung der dünnen Linse und achsennaher Strahlen. Reale Linsen zeigen Verzeichnungen und Unschärfen; die Simulation idealisiert den Strahlengang.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 12,
@@ -576,28 +585,6 @@
        "antwort": "Das Licht vom Boden wird beim Austritt gebrochen; das Gehirn nimmt geraden Verlauf an und „verlegt\" den Boden näher an die Oberfläche."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Brechung an der Halbscheibe",
-       "pfad": "experimente/physik/brechung/index.html",
-       "auftraege": [
-        "Stelle verschiedene Einfallswinkel ein und lies jeweils den Brechungswinkel ab — knickt der Strahl im Glas immer zum Lot hin?",
-        "Vergrößere den Einfallswinkel schrittweise: Wächst der Brechungswinkel mit, und bleibt er immer kleiner als der Einfallswinkel?",
-        "Stelle den Einfallswinkel auf $0^\\circ$ (Strahl genau auf dem Lot): Was passiert mit der Richtung?"
-       ]
-      },
-      {
-       "typ": "experiment",
-       "titel": "Der verschwundene Münzen-Trick",
-       "material": "Eine undurchsichtige Tasse, eine Münze, etwas Wasser.",
-       "auftraege": [
-        "Lege die Münze in den leeren Becher und gehe zurück, bis der Rand sie gerade verdeckt.",
-        "Lass langsam Wasser eingießen, ohne den Kopf zu bewegen — ab wann taucht die Münze wieder auf?",
-        "Erkläre mit den Wörtern „Brechung\", „Lot\" und „Becherrand\", warum die Münze sichtbar wird."
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "optik",
       "titel": "Brechung Luft→Wasser",
@@ -606,7 +593,27 @@
        "winkel": 40,
        "n2": 1.33
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Beim Übergang in ein <strong>optisch dichteres</strong> Medium wird Licht langsamer und ändert seine Richtung — es wird <strong>gebrochen</strong>. Vermutung: Tritt der Strahl von Luft in das dichtere Plexiglas, knickt er <strong>zum Lot hin</strong> ab. Wir erwarten außerdem, dass ein größerer Einfallswinkel auch einen größeren Brechungswinkel ergibt, der Unterschied zwischen beiden Winkeln aber wächst.</p>",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Wie stark knickt das Licht beim Übergang ab?",
+       "vorhersage": "Wenn der Lichtstrahl aus Luft schräg in das Plexiglas eintritt — knickt er zum Lot hin oder vom Lot weg, und wird die Ablenkung bei größerem Einfallswinkel stärker?",
+       "auftraege": [
+        "Richte den Laser auf den Mittelpunkt der ebenen Seite der Halbscheibe und lies Einfalls- und Brechungswinkel an der Winkelscheibe ab.",
+        "Miss für mindestens vier Einfallswinkel den zugehörigen Brechungswinkel und trage beide in eine Tabelle ein.",
+        "Beschreibe, in welche Richtung (zum Lot oder vom Lot) der Strahl beim Eintritt in das dichtere Medium abknickt.",
+        "Vergleiche, ob die Brechung bei großem Einfallswinkel stärker oder schwächer ausfällt als bei kleinem."
+       ],
+       "pfad": "experimente/physik/brechung/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso.",
+       "material": "Eine halbrunde Plexiglas- oder Wasserscheibe, eine 360°-Winkelscheibe und ein schmaler Laserstrahl (Laser-Box)."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Begriff des Lichtstrahls und der geradlinigen Ausbreitung; Ablesen von Winkeln an einer Skala; erste Vorstellung von „optisch dichter“.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (systematische Messreihe Einfalls- gegen Brechungswinkel), Kommunikation (Richtung der Brechung präzise mit Bezug auf das Lot beschreiben).</p><p><strong>Erwartung:</strong> Der Strahl wird beim Eintritt in das dichtere Medium zum Lot hin gebrochen; der Brechungswinkel ist stets kleiner als der Einfallswinkel und wächst mit ihm mit.</p><p><strong>Modellgrenzen:</strong> Die quantitative Beziehung (Brechungsgesetz von Snellius) wird hier noch nicht hergeleitet — auf dieser Stufe genügen Richtung und qualitative Tendenz. Ein Teil des Lichts wird zudem reflektiert, was im Modell vernachlässigt wird.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 13,
@@ -784,28 +791,6 @@
        "antwort": "Im Brennpunkt ist die Energie auf einen winzigen Fleck konzentriert und wird sehr heiß — Brandgefahr."
       }
      ],
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Sammellinse: Bildkonstruktion",
-       "pfad": "simulationen/physik/linsen-strahlengang/index.html",
-       "auftraege": [
-        "Schiebe den Gegenstand langsam auf die Linse zu (außerhalb der Brennweite): Wie ändern sich Größe und Abstand des umgekehrten Bildes?",
-        "Lass den Gegenstand bei $20\\ \\text{cm}$ stehen und probiere verschiedene Brennweiten — bei welcher wird das Bild am größten?",
-        "Wähle das Preset „Lupe\": Jetzt ist der Gegenstand näher als der Brennpunkt. Beschreibe das Bild (aufrecht, vergrößert, gestrichelt = scheinbar)."
-       ]
-      },
-      {
-       "typ": "experiment",
-       "titel": "Brennweite einer Sammellinse",
-       "pfad": "experimente/physik/brennweite/index.html",
-       "auftraege": [
-        "Stelle das scharfe Bild eines weit entfernten Gegenstands ein und lies den Abstand Linse–Schirm ab — das ist ungefähr die Brennweite.",
-        "Rücke den Gegenstand näher an die Linse und stelle erneut scharf: Wandert der Schirm näher heran oder weiter weg?",
-        "Vergleiche zwei Linsen: Welche hat die kleinere Brennweite, und woran erkennst du das?"
-       ]
-      }
-     ],
      "interaktiv": {
       "id": "optik",
       "titel": "Sammellinse",
@@ -814,7 +799,27 @@
        "f": 4,
        "g": 12
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Eine <strong>Sammellinse</strong> bündelt parallel einfallendes Licht in einem Punkt — dem <strong>Brennpunkt</strong>. Sein Abstand zur Linse ist die <strong>Brennweite</strong> $f$. Vermutung: Je weiter der beleuchtete Gegenstand entfernt ist, desto paralleler treffen seine Strahlen ein. Wir erwarten, dass das scharfe Bild dann fast genau im Abstand $f$ hinter der Linse liegt.</p>",
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Die Brennweite einer Sammellinse bestimmen",
+       "vorhersage": "Wenn du den Gegenstand sehr weit von der Linse entfernst — bei welchem Abstand hinter der Linse entsteht das scharfe Bild, und was bedeutet dieser Abstand?",
+       "auftraege": [
+        "Stelle eine weit entfernte, helle Lichtquelle ein und verschiebe den Schirm, bis das Bild scharf ist. Lies die Bildweite an der Skala ab.",
+        "Wiederhole die Messung für mehrere Gegenstandsweiten und notiere jeweils Gegenstands- und Bildweite in einer Tabelle.",
+        "Bestimme die Brennweite $f$ — bei sehr weit entferntem Gegenstand entspricht die Bildweite ungefähr $f$.",
+        "Vergleiche deine Brennweite mit dem aufgedruckten Wert der Linse und benenne mögliche Ablesefehler."
+       ],
+       "pfad": "experimente/physik/brennweite/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso.",
+       "material": "Eine Sammellinse mit Halter, ein Schirm, eine helle Lichtquelle (Kerze oder Lampe mit Gegenstand) und eine optische Bank mit Zentimeter-Skala."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Brechung des Lichts und die bündelnde Wirkung der Sammellinse (vorausgehende Lektionen); sauberes Einstellen der Bildschärfe und Ablesen an der Skala.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (eine physikalische Größe durch eine Messreihe bestimmen), Bewerten (gemessenen Wert mit einem Sollwert vergleichen und Messunsicherheiten benennen).</p><p><strong>Erwartung:</strong> Bei großer Gegenstandsweite nähert sich die Bildweite der Brennweite; die ermittelte Brennweite stimmt im Rahmen der Ablesegenauigkeit mit dem Linsenwert überein.</p><p><strong>Modellgrenzen:</strong> Das Experiment behandelt die Linse als dünn und fehlerfrei. Reale Linsen zeigen Abbildungsfehler (Unschärfe am Rand, Farbsäume); die Schärfe lässt sich nie auf einen mathematischen Punkt einstellen.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 12,
@@ -1558,28 +1563,26 @@
        "antwort": "Er wird größer, weil der Gegenstand nah an der Lampe einen breiteren Teil des auseinanderlaufenden Lichts versperrt."
       }
      ],
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Licht breitet sich <strong>geradlinig</strong> aus. Ein undurchsichtiger Gegenstand hält die Strahlen auf — dahinter bleibt es dunkel. Vermutung: Schieben wir den Gegenstand näher an die Lampe, fängt er einen größeren Teil des aufgefächerten Lichts ab. Wir erwarten daher einen <strong>größeren</strong> Schatten, je näher der Gegenstand an der Lampe steht.</p>",
      "erkunden": [
       {
-       "typ": "simulation",
-       "titel": "Schattenwerfer",
-       "pfad": "simulationen/physik/schattenwerfer/index.html",
-       "auftraege": [
-        "Lies die Schattenlänge bei Lampenhöhe $2\\ \\text{m}$, Abstand $2\\ \\text{m}$ und Stabhöhe $1\\ \\text{m}$ ab.",
-        "Verdopple die Stabhöhe (von $0{,}5\\ \\text{m}$ auf $1\\ \\text{m}$): Wird der Schatten genau doppelt so lang? Schau genau hin.",
-        "Schiebe den Stab näher an die Lampe und dann näher an die Wand: Beschreibe, wie sich die Schattenlänge jeweils ändert."
-       ]
-      },
-      {
        "typ": "experiment",
-       "titel": "Eigenes Schattentheater",
-       "material": "Eine Taschenlampe (kleine Lichtquelle), deine Hand oder eine Pappfigur, eine helle Wand.",
+       "titel": "Wie verändert sich der Schatten mit dem Abstand?",
+       "vorhersage": "Wenn du den Gegenstand näher an die Lampe schiebst — wird sein Schatten auf der Wand größer, kleiner oder bleibt er gleich?",
        "auftraege": [
-        "Bewege die Hand langsam von der Lampe zur Wand und beobachte, wie der Schatten wächst oder schrumpft.",
-        "Suche die Stelle, an der der Schatten ungefähr so groß ist wie deine Hand selbst.",
-        "Erkläre einem Mitschüler, warum der Schatten nahe an der Lampe so groß wird."
-       ]
+        "Stelle eine Lampe, einen Gegenstand und eine Wand auf. Miss die Schattenhöhe bei drei verschiedenen Abständen Gegenstand–Lampe.",
+        "Trage die Werte in eine Tabelle „Abstand zur Lampe — Schattenhöhe“ ein.",
+        "Beschreibe in einem Satz, wie sich die Schattengröße ändert, wenn der Gegenstand näher an die Lampe rückt.",
+        "Erkläre mithilfe geradlinig verlaufender Lichtstrahlen, warum der Schatten so entsteht."
+       ],
+       "pfad": "simulationen/physik/schattenwerfer/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso.",
+       "material": "Eine kleine Lampe (punktförmig), ein undurchsichtiger Gegenstand (z. B. ein Klötzchen oder eine Kugel), eine helle Wand oder ein Schirm und ein Lineal."
       }
-     ]
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> geradlinige Lichtausbreitung und das Strahlenmodell (vorangegangene Lektionen); sauberes Ablesen einer Länge mit dem Lineal.</p><p><strong>Angesprochene Kompetenzen:</strong> Erkenntnisgewinnung (eine Abhängigkeit durch gezielte Variation eines Parameters untersuchen), Kommunikation (Messwerte tabellieren und einen Zusammenhang beschreiben).</p><p><strong>Erwartung:</strong> Mit kleinerem Abstand Gegenstand–Lampe wächst die Schattenhöhe deutlich; die Lernenden begründen dies über die vom Gegenstand abgefangenen geradlinigen Strahlen.</p><p><strong>Modellgrenzen:</strong> Die Simulation nimmt eine ideal punktförmige Lichtquelle an, deshalb entsteht ein scharf begrenzter Kernschatten. Reale, ausgedehnte Lampen erzeugen zusätzlich einen Halbschatten — das ist Thema der folgenden Lektion.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 13,

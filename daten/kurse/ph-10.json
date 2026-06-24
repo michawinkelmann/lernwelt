@@ -799,19 +799,6 @@
       }
      ],
      "merksatz": "Strahlung umgibt uns ständig (Radon, kosmische Strahlung, Nahrung, Medizin). Die <strong>Dosis</strong> in <strong>Millisievert (mSv)</strong> misst die biologische Wirkung; in Deutschland sind es rund $2\\,\\text{mSv}$ pro Jahr aus der Natur. Ionisierende Strahlung kann Zellen und Erbgut schädigen — <strong>die Dosis entscheidet</strong>, deshalb vermeidet man unnötige Strahlung.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Strahlenbelastung im Alltag abschätzen",
-       "material": "Eine Übersicht typischer Dosiswerte (z. B. $2\\,\\text{mSv}$ pro Jahr natürlich, Röntgen Zahn $\\approx 0{,}01\\,\\text{mSv}$, CT $\\approx 5{-}10\\,\\text{mSv}$, Atlantikflug $\\approx 0{,}05\\,\\text{mSv}$) und Papier/Stift.",
-       "vorhersage": "Was bringt dir vermutlich mehr Strahlung: ein Jahr ganz normales Leben oder ein einziger Atlantikflug? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Schätze deine persönliche Jahresdosis aus natürlichen Quellen und vergleiche sie mit der eines Atlantikflugs.",
-        "Ordne mehrere Beispiele (Banane, Zahnröntgen, Flug, CT) nach ihrer Dosis.",
-        "Begründe, warum man bei einem CT eine deutlich höhere Dosis in Kauf nimmt — was ist der Nutzen?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Nenne zwei natürliche Strahlungsquellen, denen wir ständig ausgesetzt sind.",
@@ -845,7 +832,27 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum man unnötige Strahlung meidet, aber vor der natürlichen Grundbelastung keine Angst haben muss."
+     "selbsterklaerung": "Erkläre in einem Satz, warum man unnötige Strahlung meidet, aber vor der natürlichen Grundbelastung keine Angst haben muss.",
+     "vorueberlegung": "<p>Bevor wir die Strahlung in verschiedenen Abständen messen, überlegen wir: Eine Quelle sendet ihre Strahlung gleichmäßig in alle Richtungen aus. Vermutung: Verteilt sich dieselbe Strahlung über immer größere Kugelflächen, sollte die gemessene Intensität mit dem <strong>Quadrat des Abstands</strong> abnehmen, also $I \\sim \\frac{1}{r^2}$. Wir erwarten: Verdoppeln wir den Abstand, sinkt die Zählrate auf etwa ein <strong>Viertel</strong> – das begründet die Schutzregel „Abstand halten\".</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Zählrate in Abhängigkeit vom Abstand",
+       "vorhersage": "Du verdoppelst den Abstand zwischen Präparat und Zählrohr. Glaubst du, die Zählrate halbiert sich oder fällt sie noch stärker? Schreibe deine Vermutung auf, bevor du misst.",
+       "auftraege": [
+        "<strong>Versuchsaufbau:</strong> Stelle das Zählrohr in mehreren festen Abständen $r$ vor das Präparat und miss je die Zählrate über eine feste Zeit. Bestimme zuerst die Nullrate (Untergrund) ohne Präparat und ziehe sie ab.",
+        "Nimm eine Messreihe für mehrere Abstände auf und notiere die korrigierte Zählrate.",
+        "Trage die Zählrate gegen $\\frac{1}{r^2}$ auf und prüfe, ob sich näherungsweise eine Ursprungsgerade ergibt.",
+        "Vergleiche zwei Abstände im Verhältnis $1:2$ und prüfe, ob die Zählrate auf etwa ein Viertel fällt."
+       ],
+       "material": "Ein schwaches Schulpräparat, ein Zählrohr mit Zählgerät, ein Maßband oder eine Bank mit Abstandsskala, eine Stoppuhr.",
+       "pfad": "experimente/physik/abstandsgesetz/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Zählrate und Untergrund kennen; Messwerte in ein Diagramm eintragen; den Begriff „proportional zu $\\frac{1}{r^2}$\" verstehen.</p><p><strong>Angesprochene Kompetenzen:</strong> experimentieren (Messreihe mit Untergrundkorrektur), auswerten (Linearisierung über $\\frac{1}{r^2}$), bewerten (Schutzregel Abstand physikalisch begründen).</p><p><strong>Erwartung:</strong> Die Zählrate fällt mit wachsendem Abstand stark ab; gegen $\\frac{1}{r^2}$ aufgetragen liegen die Punkte näherungsweise auf einer Ursprungsgeraden. Doppelter Abstand bedeutet etwa ein Viertel der Zählrate.</p><p><strong>Modellgrenzen:</strong> Das reine $\\frac{1}{r^2}$-Gesetz gilt für eine punktförmige Quelle ohne Absorption; Luftabsorption, Strahlerausdehnung und die statistische Streuung der Zerfälle führen zu Abweichungen, deshalb die Untergrundkorrektur und ausreichende Messzeiten.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1770,30 +1777,6 @@
       }
      ],
      "merksatz": "<strong>Elektromagnetische Induktion:</strong> Ändert sich das Magnetfeld in einer Spule, entsteht eine <strong>Induktionsspannung</strong> — umso größer, je schneller die Änderung und je mehr Windungen. Ohne Änderung: keine Spannung. Der <strong>Generator</strong> ist ein umgekehrt betriebener Motor: Eine gedrehte Spule im Magnetfeld liefert <strong>Wechselspannung</strong> ($230\\,\\text{V}$, $50\\,\\text{Hz}$).",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Generator: Induktionsspannung",
-       "pfad": "simulationen/physik/generator/index.html",
-       "vorhersage": "Wenn du die Spule schneller drehst — wird die induzierte Spannung größer oder kleiner? Und glaubst du, sie bleibt konstant oder wechselt sie ihr Vorzeichen? Schreibe deine Vermutung auf, bevor du die Regler bewegst.",
-       "auftraege": [
-        "Drehe die Spule langsam und dann schnell — beobachte, wie sich die Höhe der Induktionsspannung ändert.",
-        "Achte auf das Vorzeichen: Wechselt die Spannung beim Drehen regelmäßig die Polung (Wechselspannung)?",
-        "Erhöhe (falls einstellbar) die Windungszahl und prüfe, wie sich die Spannung verändert."
-       ]
-      },
-      {
-       "typ": "experiment",
-       "titel": "Induktionsgesetz: Magnet und Spule",
-       "pfad": "experimente/physik/induktionsgesetz/index.html",
-       "vorhersage": "Du bewegst einen Magneten unterschiedlich schnell in eine Spule. Hängt die angezeigte Spannung von der Geschwindigkeit ab? Schreibe deine Vermutung auf.",
-       "auftraege": [
-        "Bewege den Magneten langsam und dann schnell in die Spule und vergleiche die Anzeige.",
-        "Halte den Magneten still und prüfe, ob eine Spannung anliegt.",
-        "Untersuche, wie sich die Spannung ändert, wenn du die Windungszahl der Spule veränderst."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Was ist die Bedingung dafür, dass in einer Spule eine Spannung induziert wird?",
@@ -1827,7 +1810,26 @@
        }
       ]
      },
-     "selbsterklaerung": "Erkläre in einem Satz, warum der Generator als „umgekehrter Motor“ bezeichnet wird."
+     "selbsterklaerung": "Erkläre in einem Satz, warum der Generator als „umgekehrter Motor“ bezeichnet wird.",
+     "vorueberlegung": "<p>Bevor wir eine Spule im Magnetfeld drehen, überlegen wir: Eine Induktionsspannung entsteht nur, wenn sich das Magnetfeld in der Spule <strong>ändert</strong>. Vermutung: Drehen wir die Spule gleichmäßig, schwankt die Spannung periodisch – sie ist <strong>maximal</strong>, wenn sich der Fluss am schnellsten ändert, und <strong>null</strong> am Umkehrpunkt der Änderung. Wir erwarten außerdem: schnelleres Drehen und mehr Windungen vergrößern die Scheitelspannung, und der Generator liefert <strong>Wechselspannung</strong>.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Induktionsspannung am drehenden Generator",
+       "vorhersage": "Du drehst die Generatorspule doppelt so schnell. Glaubst du, die erzeugte Spannung bleibt gleich, verdoppelt sich oder ändert sich gar nicht? Schreibe deine Vermutung auf, bevor du es ausprobierst.",
+       "auftraege": [
+        "Stelle eine Drehfrequenz ein und beobachte den Verlauf der Induktionsspannung über die Zeit – wo ist sie maximal, wo null?",
+        "Verdopple die Drehfrequenz und vergleiche die Scheitelspannung mit dem vorigen Wert.",
+        "Erhöhe die Windungszahl und beobachte, wie sich die erzeugte Spannung verändert.",
+        "Begründe mit dem Verlauf, warum der Generator Wechselspannung liefert und kein Kommutator nötig ist."
+       ],
+       "pfad": "simulationen/physik/generator/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Magnetfeld einer Spule; elektromagnetische Induktion qualitativ; Begriffe Scheitelwert, Periode, Frequenz.</p><p><strong>Angesprochene Kompetenzen:</strong> auswerten (Spannungs-Zeit-Verlauf deuten), Zusammenhänge erkennen (Abhängigkeit von Drehfrequenz und Windungszahl), kommunizieren (Wechselspannung begründen).</p><p><strong>Erwartung:</strong> Die Spannung verläuft sinusförmig; sie ist null, wenn die Spulenfläche parallel zum Feld steht, und maximal beim schnellsten Flusswechsel. Doppelte Drehfrequenz verdoppelt die Scheitelspannung, mehr Windungen erhöhen sie proportional.</p><p><strong>Modellgrenzen:</strong> Das Modell vernachlässigt ohmschen Spulenwiderstand, Belastung und Eisenverluste; die ideale Sinusform und die strenge Proportionalität gelten nur für eine homogen durchsetzte, gleichmäßig gedrehte Spule.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -2808,19 +2810,6 @@
       }
      ],
      "merksatz": "Die <strong>innere Energie $U$</strong> steckt in Bewegung und Bindungen aller Teilchen. Sie ändert sich durch <strong>Wärme $Q$</strong> und/oder <strong>Arbeit $W$</strong>: der <strong>1. Hauptsatz</strong> $\\Delta U = Q + W$ (zugeführt positiv, abgegeben negativ). Er ist die Energieerhaltung der Wärmelehre — Energie geht nie verloren.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Luftpumpe: Arbeit erwärmt das Gas",
-       "material": "Eine Fahrradluftpumpe (Ventil mit dem Daumen zuhalten) oder eine Spraydose.",
-       "vorhersage": "Du hältst das Pumpenventil zu und drückst den Kolben mehrmals kräftig hinein. Wird die Pumpe wärmer, kälter oder bleibt sie gleich? Schreibe deine Vermutung auf, bevor du es ausprobierst.",
-       "auftraege": [
-        "Halte das Ventil zu, drücke den Kolben mehrmals zügig und fühle danach am unteren Ende der Pumpe — was stellst du fest?",
-        "Erkläre die Beobachtung mit $\\Delta U = Q + W$: Welches Vorzeichen hat hier die Arbeit?",
-        "Sprühe (kurz!) aus einer Spraydose und fühle die Dose: Warum kühlt sie ab? Welcher Term aus dem 1. Hauptsatz erklärt das?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Was versteht man unter der inneren Energie eines Körpers?",
@@ -2885,7 +2874,27 @@
        },
        "formel": "Q = c · m · ΔT"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir warmes und kaltes Wasser mischen, überlegen wir: Energie geht nicht verloren – die abgegebene Wärme des heißen Wassers muss das kalte Wasser aufnehmen. Vermutung: Es stellt sich eine <strong>Mischtemperatur</strong> zwischen beiden Ausgangstemperaturen ein, und es gilt $Q_{\\text{ab}} = Q_{\\text{auf}}$, also $c\\,m_1(T_1-T_m) = c\\,m_2(T_m-T_2)$. Daraus erwarten wir die spezifische Wärmekapazität $c$ von Wasser in der Nähe von $4{,}2\\,\\frac{\\text{kJ}}{\\text{kg}\\cdot\\text{K}}$.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Spezifische Wärmekapazität im Mischversuch bestimmen",
+       "vorhersage": "Du gießt gleich viel heißes und kaltes Wasser zusammen. Liegt die Mischtemperatur genau in der Mitte der beiden Ausgangstemperaturen oder näher an einer Seite? Schreibe deine Vermutung auf, bevor du misst.",
+       "auftraege": [
+        "<strong>Versuchsaufbau:</strong> Wiege im isolierten Becher die Masse $m_2$ kalten Wassers ein und miss seine Temperatur $T_2$. Erhitze separat Wasser der Masse $m_1$ auf $T_1$.",
+        "Gieße das heiße Wasser zügig dazu, rühre um und miss die sich einstellende Mischtemperatur $T_m$.",
+        "Stelle die Energiebilanz $c\\,m_1(T_1-T_m)=c\\,m_2(T_m-T_2)$ auf und löse nach $T_m$ bzw. $c$ auf.",
+        "Vergleiche dein $c$ mit dem Tabellenwert und überlege, warum die Mischtemperatur in der Praxis etwas niedriger ausfällt."
+       ],
+       "material": "Ein isolierter Becher (Kalorimeter oder Styroporbecher), eine Waage, zwei Thermometer, ein Wasserkocher, ein Messbecher.",
+       "pfad": "experimente/physik/waermekapazitaet/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Wärmeformel $Q=c\\cdot m\\cdot\\Delta T$; Energieerhaltung; Masse und Temperatur messen.</p><p><strong>Angesprochene Kompetenzen:</strong> experimentieren (Mischversuch protokollieren), mathematisieren (Energiebilanz nach $c$ auflösen), bewerten (Wärmeverluste als Fehlerquelle).</p><p><strong>Erwartung:</strong> Die Mischtemperatur liegt zwischen $T_2$ und $T_1$; bei gleichen Massen näherungsweise mittig. Für Wasser ergibt sich $c\\approx 4{,}2\\,\\frac{\\text{kJ}}{\\text{kg}\\cdot\\text{K}}$ – etwas niedriger gemessen wegen Wärmeabgabe an Becher und Umgebung.</p><p><strong>Modellgrenzen:</strong> Die Bilanz setzt ein ideal isoliertes System voraus; Wärmekapazität des Bechers und der Thermometer sowie Verluste an die Umgebung verschieben das Ergebnis und erklären systematische Abweichungen.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -3028,19 +3037,6 @@
       }
      ],
      "merksatz": "Gasdruck entsteht durch <strong>Teilchenstöße</strong> auf die Wände. Für das ideale Gas gilt $\\frac{p\\cdot V}{T}=\\text{konstant}$ (mit <strong>Kelvin</strong>-Temperatur!). Spezialfälle: <strong>isotherm</strong> $p\\cdot V=\\text{konst.}$, <strong>isobar</strong> $\\frac{V}{T}=\\text{konst.}$, <strong>isochor</strong> $\\frac{p}{T}=\\text{konst.}$",
-     "erkunden": [
-      {
-       "typ": "simulation",
-       "titel": "Gasgesetze erkunden",
-       "pfad": "simulationen/physik/gasgesetze/index.html",
-       "vorhersage": "Du verkleinerst bei gleicher Temperatur das Volumen eines Gases auf die Hälfte. Was passiert mit dem Druck — bleibt er gleich, verdoppelt oder halbiert er sich? Schreibe deine Vermutung auf, bevor du den Regler bewegst.",
-       "auftraege": [
-        "Halte die Temperatur fest und halbiere das Volumen (isotherm): Verdoppelt sich der Druck wirklich? Notiere zwei Wertepaare und prüfe $p\\cdot V$.",
-        "Halte den Druck fest und erhöhe die Temperatur (isobar): Wie ändert sich das Volumen?",
-        "Halte das Volumen fest und erwärme das Gas (isochor): Wie verändert sich der Druck? Beobachte dabei die Teilchen."
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Erkläre den Gasdruck mit dem Teilchenmodell.",
@@ -3105,7 +3101,26 @@
        },
        "formel": "p · V = konstant"
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir das Gas in einem Kolben zusammendrücken, überlegen wir: Der Druck entsteht durch Teilchenstöße auf die Wände. Vermutung: Halten wir die Temperatur konstant und verkleinern das Volumen, treffen die Teilchen häufiger auf die Wand – der Druck sollte <strong>steigen</strong>. Genauer erwarten wir bei konstanter Temperatur $p\\cdot V=\\text{konstant}$, also <strong>halbes Volumen, doppelter Druck</strong>; im $p$-$V$-Diagramm müsste sich dann eine fallende <strong>Hyperbel</strong> ergeben.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Druck und Volumen am Kolben (isotherm)",
+       "vorhersage": "Du drückst den Kolben bei gleicher Temperatur auf das halbe Volumen zusammen. Glaubst du, der Druck verdoppelt sich genau, oder steigt er stärker bzw. schwächer? Schreibe deine Vermutung auf, bevor du es ausprobierst.",
+       "auftraege": [
+        "Halte die Temperatur konstant und stelle nacheinander verschiedene Volumina ein; lies jeweils den Druck ab.",
+        "Trage die Wertepaare ins $p$-$V$-Diagramm ein und prüfe, ob $p\\cdot V$ in etwa konstant bleibt.",
+        "Vergleiche zwei Zustände mit Volumenverhältnis $2:1$ und prüfe, ob sich der Druck verdoppelt.",
+        "Erhöhe nun bei festem Volumen die Temperatur (in Kelvin!) und beobachte, wie der Druck reagiert."
+       ],
+       "pfad": "simulationen/physik/gasgesetze/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Teilchenmodell des Gasdrucks; Kelvin-Temperatur; Wertepaare in ein $p$-$V$-Diagramm eintragen.</p><p><strong>Angesprochene Kompetenzen:</strong> auswerten (Produkt $p\\cdot V$ prüfen), mathematisieren (allgemeines Gasgesetz anwenden), Zusammenhänge erkennen (isotherm/isochor unterscheiden).</p><p><strong>Erwartung:</strong> Bei konstanter Temperatur ist $p\\cdot V$ näherungsweise konstant; halbes Volumen ergibt doppelten Druck (Hyperbel im $p$-$V$-Diagramm). Bei festem Volumen steigt der Druck proportional zur Kelvin-Temperatur.</p><p><strong>Modellgrenzen:</strong> Es gilt das Modell des idealen Gases; reale Gase weichen bei hohem Druck und tiefer Temperatur ab, und die Stoffmenge muss konstant bleiben (kein Gas entweicht).</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -4170,7 +4185,9 @@
           "ausSteigung": "direkt"
          }
         }
-       }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -4674,7 +4691,9 @@
           "ausSteigung": "direkt"
          }
         }
-       }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [

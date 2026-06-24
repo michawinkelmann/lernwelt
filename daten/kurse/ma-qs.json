@@ -1683,18 +1683,6 @@
       }
      ],
      "merksatz": "Die Glockenkurve ist symmetrisch um $x = \\mu$ (Maximum), hat ihre Wendepunkte bei $\\mu \\pm \\sigma$ und die Gesamtfläche $1$. $\\mu$ steuert die <strong>Lage</strong>, $\\sigma$ die <strong>Breite</strong>: kleines $\\sigma$ ⇒ schmal und hoch.",
-     "erkunden": [
-      {
-       "typ": "experiment",
-       "titel": "Glocken vergleichen",
-       "material": "Drei vorbereitete (oder selbst gezeichnete) Glockenkurven mit unterschiedlichem $\\mu$ und $\\sigma$, Lineal.",
-       "auftraege": [
-        "Lies bei jeder Glocke $\\mu$ (Lage des Maximums) ab.",
-        "Bestimme $\\sigma$, indem du den waagerechten Abstand vom Maximum zum Wendepunkt misst.",
-        "Ordne die drei Kurven nach wachsendem $\\sigma$ und prüfe: Ist die mit dem größten $\\sigma$ tatsächlich die flachste?"
-       ]
-      }
-     ],
      "selbstcheck": [
       {
        "frage": "Welche vier Eigenschaften kennzeichnen die Glockenkurve?",
@@ -1745,7 +1733,25 @@
        "smin": 0.5,
        "smax": 3
       }
-     }
+     },
+     "vorueberlegung": "<p>Bevor wir die Glockenkurve untersuchen, überlegen wir: Die Gaußsche Dichte ist symmetrisch zu $x=\\mu$ und hat dort ihr Maximum; die Gesamtfläche unter der Kurve ist $1$. Vermutung: $\\mu$ verschiebt die Glocke nach links oder rechts (Lage), $\\sigma$ steuert ihre Breite — ein kleines $\\sigma$ macht sie schmal und hoch, ein großes flach und breit. Außerdem erwarten wir, dass im Bereich $\\mu\\pm\\sigma$ rund $68\\,\\%$, in $\\mu\\pm2\\sigma$ rund $95\\,\\%$ der Fläche liegen.</p>",
+     "erkundenZuerst": true,
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Lage und Breite der Glockenkurve",
+       "vorhersage": "Wie verändern sich Lage, Breite und Höhe der Glockenkurve, wenn du $\\mu$ und $\\sigma$ getrennt veränderst?",
+       "auftraege": [
+        "Verschiebe $\\mu$ bei festem $\\sigma$ und beschreibe, was sich an der Kurve ändert und was gleich bleibt.",
+        "Verändere $\\sigma$ bei festem $\\mu$ und beobachte Breite, Höhe und die Lage der Wendepunkte bei $\\mu\\pm\\sigma$.",
+        "Lies mit den Presets $\\pm1\\sigma$ und $\\pm2\\sigma$ die Wahrscheinlichkeit $P(a\\le X\\le b)$ ab und vergleiche mit $68\\,\\%$ bzw. $95\\,\\%$."
+       ],
+       "pfad": "simulationen/mathematik/normalverteilung/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Dichtefunktion und Fläche als Wahrscheinlichkeit, Symmetrie eines Graphen, Begriffe Erwartungswert $\\mu$ und Standardabweichung $\\sigma$.</p><p><strong>Angesprochene Kompetenzen:</strong> Parameter einer Funktion deuten ($\\mu$ Lage, $\\sigma$ Breite), Flächen als Wahrscheinlichkeiten lesen, die Sigma-Regeln experimentell entdecken.</p><p><strong>Erwartung:</strong> Die Lernenden erkennen: $\\mu$ verschiebt die Glocke (Maximum bei $x=\\mu$), $\\sigma$ staucht/streckt sie bei konstanter Gesamtfläche $1$; Wendepunkte liegen bei $\\mu\\pm\\sigma$. Im Bereich $\\mu\\pm1\\sigma$ liegen $\\approx68\\,\\%$, in $\\mu\\pm2\\sigma$ $\\approx95\\,\\%$ der Fläche — die Sigma-Regeln.</p><p><strong>Modellgrenzen:</strong> Die Normalverteilung ist stetig und auf der gesamten Zahlengeraden definiert; reale Daten sind oft begrenzt oder diskret und nur näherungsweise normalverteilt. Einzelwahrscheinlichkeiten $P(X=a)$ sind hier $0$ — sinnvoll sind nur Intervalle. Die abgelesenen Prozentwerte sind gerundet.</p>"
     },
     "ueben": {
      "zeit": 18,
