@@ -1,0 +1,50 @@
+/* beamer.css — Großdarstellung für Klassen-/Beamerspiele im Pausenraum.
+   Eine digitale Tafel, von vorn bedient: Begriffe, Punkte und Timer groß.
+   Farben aus design-tokens.css → Hell/Dunkel automatisch. */
+.bm-leiste { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 8px; }
+.bm-buehne { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: clamp(12px,2vw,28px); min-height: 62vh; display: flex; flex-direction: column; gap: clamp(10px,2vh,22px); }
+.bm-vollbild-an .bm-buehne { min-height: 100vh; border-radius: 0; justify-content: center; }
+
+.bm-setup { display: grid; gap: 18px; max-width: 780px; margin: 0 auto; width: 100%; }
+.bm-setup h2 { margin: 0; }
+.bm-zeile { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.bm-zeile > span.bm-label { min-width: 9em; font-weight: 600; }
+.bm-wahl { display: inline-flex; gap: 8px; flex-wrap: wrap; }
+.bm-chip { padding: 8px 16px; border: 2px solid var(--linie); border-radius: 999px; background: var(--bg); cursor: pointer; font: inherit; min-height: var(--beruehrziel); }
+.bm-chip.bm-an { border-color: var(--akzent); background: color-mix(in srgb, var(--akzent) 14%, transparent); font-weight: 700; }
+.bm-chip:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; }
+
+.bm-teams { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.bm-team { display: flex; flex-direction: column; align-items: center; min-width: 120px; padding: 8px 18px; border: 2px solid var(--linie); border-radius: 14px; }
+.bm-team.bm-aktiv { border-color: var(--akzent); background: color-mix(in srgb, var(--akzent) 12%, transparent); }
+.bm-team-name { font-size: clamp(.9rem,2vw,1.2rem); color: var(--text-leise); }
+.bm-team-punkte { font-size: clamp(1.6rem,5vw,3rem); font-weight: 800; line-height: 1; }
+
+.bm-timer { text-align: center; }
+.bm-timer-zahl { font-size: clamp(2.4rem,11vw,6.5rem); font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1; }
+.bm-timer.bm-knapp .bm-timer-zahl { color: var(--fehler); }
+
+.bm-wort { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; }
+.bm-wort-text { font-size: clamp(2.2rem,9vw,5.5rem); font-weight: 800; line-height: 1.05; }
+.bm-wort-kat { font-size: clamp(.9rem,2.5vw,1.4rem); color: var(--text-leise); }
+.bm-knopfzeile { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.bm-knopfzeile .knopf { font-size: clamp(1rem,2.2vw,1.3rem); padding: 14px 24px; }
+.bm-info { text-align: center; color: var(--text-leise); }
+.bm-gross { font-size: clamp(1.2rem,3vw,1.8rem); font-weight: 700; text-align: center; }
+
+.bm-geheim { text-align: center; display: grid; gap: 8px; justify-items: center; }
+.bm-warn { color: var(--fehler); font-weight: 700; margin: 0; }
+.bm-geheim-text { font-size: clamp(1.6rem,6vw,3rem); font-weight: 800; }
+/* Tafel-Quiz: Frage + vier Antworten A–D groß. */
+.bm-frage-text { font-size: clamp(1.6rem,5vw,3.2rem); font-weight: 800; line-height: 1.15; text-align: center; max-width: 22ch; margin: 0 auto; }
+.bm-optionen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(8px,1.6vw,16px); width: 100%; max-width: 980px; margin: 0 auto; }
+@media (max-width: 600px) { .bm-optionen { grid-template-columns: 1fr; } }
+.bm-option { display: flex; align-items: center; gap: 12px; padding: clamp(10px,1.6vw,18px) clamp(12px,2vw,22px); border: 2px solid var(--linie); border-radius: 14px; background: var(--bg); font-size: clamp(1.1rem,2.6vw,1.8rem); font-weight: 600; }
+.bm-option-marke { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 1.7em; height: 1.7em; border-radius: 50%; background: color-mix(in srgb, var(--akzent) 16%, transparent); color: var(--akzent); font-weight: 800; }
+.bm-option-text { flex: 1; }
+.bm-option.bm-richtig { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 16%, transparent); }
+.bm-option.bm-richtig .bm-option-marke { background: var(--ok); color: #fff; }
+.bm-option.bm-falsch { opacity: .55; }
+.bm-erklaerung { max-width: 40ch; margin: 0 auto; font-size: clamp(.95rem,2.2vw,1.3rem); }
+.bm-punkte-vergabe { display: grid; gap: 10px; justify-items: center; }
+.knopf.bm-vergeben { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 16%, transparent); }

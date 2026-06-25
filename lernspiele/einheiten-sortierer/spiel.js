@@ -5,6 +5,7 @@
 // im Browser über starteSpielSeite() aus dem gemeinsamen Gerüst startet.
 
 import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+import { zeigeStufenwahl } from "../../assets/js/spiel/stufenwahl.js";
 
 // ===== Datensatz: 12 physikalische Größen mit je 4 Attributen =====
 // Jeder Attributtext ist über alle Größen hinweg eindeutig und zusammen mit
@@ -96,6 +97,19 @@ export const LEVELS = {
 
 export const RUNDENDAUER_S = 60;
 
+// ===== Klassenstufen =====
+// Eine Klassenstufe legt fest, welche Größen in einer Runde vorkommen können;
+// je Runde werden daraus vier Spalten gezogen. Höhere Klassen nehmen die
+// kleineren Größen weiter mit und ergänzen neue.
+export const STUFEN = [
+  { klasse: "Klasse 5/6", kurz: "Länge, Zeit, Masse, Temperatur",
+    groessen: ["laenge", "zeit", "masse", "temperatur"] },
+  { klasse: "Klasse 7/8", kurz: "auch Geschwindigkeit, Kraft, Energie, Leistung",
+    groessen: ["laenge", "zeit", "masse", "temperatur", "geschwindigkeit", "kraft", "energie", "leistung"] },
+  { klasse: "Klasse 9/10", kurz: "auch Strom, Spannung, Widerstand, Druck",
+    groessen: ["laenge", "zeit", "masse", "temperatur", "geschwindigkeit", "kraft", "energie", "leistung", "stromstaerke", "spannung", "widerstand", "druck"] }
+];
+
 // ===== Reine Logik (in Node testbar) =====
 
 // Fisher-Yates auf einer Kopie — Original bleibt unverändert.
@@ -150,6 +164,17 @@ export function spaltenFuerLevel(level, rng = Math.random) {
   return mischen(auswahl, rng);
 }
 
+// Liefert die 4 Spalten-Größen einer Klassenstufe — vier verschiedene, zufällig
+// aus den in der Stufe erlaubten Größen (stufe.groessen) gezogen und in zufälliger
+// Spaltenreihenfolge. Hat eine Stufe genau vier Größen, kommen stets diese vier.
+export function spaltenFuerStufe(stufe, rng = Math.random) {
+  const erlaubt = (stufe && Array.isArray(stufe.groessen) ? stufe.groessen : [])
+    .map(id => GROESSEN.find(g => g.id === id))
+    .filter(Boolean);
+  const basis = erlaubt.length >= 4 ? erlaubt : GROESSEN;
+  return mischen(basis, rng).slice(0, 4);
+}
+
 // Kartenpool einer Runde: je Spalten-Größe alle 4 Attribute → 16 Karten.
 export function erzeugePool(spalten) {
   const pool = [];
@@ -181,6 +206,23 @@ export function klemmePunkte(punkte) {
   return Math.max(0, punkte);
 }
 
+// ===== Selbsttests (in Node / im Verifikations-Gerüst) =====
+
+export const TESTS = [
+  { name: "Datensatz: 12 Größen, Attribute eindeutig (datensatzFehler leer)",
+    ok: () => datensatzFehler().length === 0 },
+  { name: "STUFEN: jede Stufe referenziert nur existierende GRÖSSEN-ids",
+    ok: () => STUFEN.length >= 3 && STUFEN.every(s =>
+      Array.isArray(s.groessen) && s.groessen.length > 0 &&
+      s.groessen.every(id => GROESSEN.some(g => g.id === id))) },
+  { name: "STUFEN: kleinste Stufe hat mindestens 3 Größen",
+    ok: () => Math.min(...STUFEN.map(s => s.groessen.length)) >= 3 },
+  { name: "spaltenFuerStufe: liefert je Stufe vier verschiedene erlaubte Größen",
+    ok: () => STUFEN.every(s => { const sp = spaltenFuerStufe(s, Math.random);
+      const ids = sp.map(g => g.id);
+      return sp.length === 4 && new Set(ids).size === 4 && ids.every(id => s.groessen.includes(id)); }) }
+];
+
 // ===== DOM-Teil (läuft nur im Browser) =====
 
 const manifest = {
@@ -200,7 +242,7 @@ function esc(s) {
 
 function starte(api) {
   let aktiv = false, punkte = 0, rest = RUNDENDAUER_S, combo = 0, besteSerie = 0;
-  let richtigAnz = 0, falschAnz = 0, level = 1;
+  let richtigAnz = 0, falschAnz = 0, stufe = STUFEN[0];
   let spalten = [], pool = [], karte = null, letzterText = "";
 
   api.neustartCb(zeigeLevelwahl);
@@ -214,25 +256,17 @@ function starte(api) {
     api.loopStopp();
     api.setzePunkte(0);
     api.setzeZeit(RUNDENDAUER_S + " s");
-    api.flaeche.innerHTML = `
-      <div class="es-wahl">
-        <h2 class="es-ueberschrift">Wähle dein Level</h2>
-        <p class="es-hinweis">${RUNDENDAUER_S} Sekunden lang erscheinen Karten — tippe die Spalte der passenden Größe an. Richtig: +10 (ab 3 Treffern in Serie +12), daneben: −5.</p>
-        <div class="es-levels">
-          ${[1, 2, 3, 4].map(l => `
-            <button type="button" class="es-level" data-level="${l}">
-              <b>Level ${l} · ${esc(LEVELS[l].name)}</b>
-              <span>${esc(LEVELS[l].hinweis)}</span>
-            </button>`).join("")}
-        </div>
-      </div>`;
-    api.flaeche.querySelectorAll(".es-level").forEach(k =>
-      k.addEventListener("click", () => starteRunde(Number(k.dataset.level))));
+    zeigeStufenwahl(api.flaeche, {
+      titel: "Wähle deine Klasse:",
+      hinweis: `${RUNDENDAUER_S} Sekunden lang erscheinen Karten — tippe die Spalte der passenden Größe an. Richtig: +10 (ab 3 Treffern in Serie +12), daneben: −5. Höhere Klassen bringen mehr Größen ins Spiel.`,
+      stufen: STUFEN,
+      aufWahl: s => starteRunde(s)
+    });
   }
 
-  function starteRunde(neuesLevel) {
-    level = neuesLevel;
-    spalten = spaltenFuerLevel(level);
+  function starteRunde(neueStufe) {
+    stufe = neueStufe;
+    spalten = spaltenFuerStufe(stufe);
     pool = erzeugePool(spalten);
     punkte = 0; combo = 0; besteSerie = 0; richtigAnz = 0; falschAnz = 0;
     rest = RUNDENDAUER_S; letzterText = ""; karte = null; aktiv = true;
@@ -320,7 +354,7 @@ function starte(api) {
       ? "Stark sortiert! Schaffst du beim nächsten Mal eine noch längere Serie?"
       : "Gut drangeblieben — mit jeder Runde sitzen Einheiten und Formelzeichen besser.";
     api.vorbei(punkte, `
-      <p>Level ${level} (${esc(LEVELS[level].name)}) · ✓ ${richtigAnz} richtig · ✗ ${falschAnz} daneben · längste Serie: ${besteSerie}</p>
+      <p>${esc(stufe.klasse)} · ✓ ${richtigAnz} richtig · ✗ ${falschAnz} daneben · längste Serie: ${besteSerie}</p>
       <p>${lob}</p>`);
   }
 

@@ -163,11 +163,11 @@ export function starteExperiment() {
   if (!wurzel) return;
 
   // ---------- Canvas-Geometrie (Aufsicht: Kanone → Doppelspalt → Schirm) ----------
-  const W = 360, H = 460;
+  const W = 360, H = 330;
   const SPALT_X = 96;          // x des Doppelspalts
   const SCHIRM_X = 312;        // x des Leuchtschirms
-  const ACHSE_Y = 150;         // optische Achse (Mitte des Strahlengangs)
-  const SKALA_OBEN = 250, SKALA_UNTEN = 446; // mm-Skala am Schirm (vertikal)
+  const ACHSE_Y = 200;         // optische Achse (Mitte des Strahlengangs)
+  const SKALA_OBEN = 102, SKALA_UNTEN = 298; // mm-Skala am Schirm (vertikal, mittig auf der Achse)
   const SCHIRM_MITTE = (SKALA_OBEN + SKALA_UNTEN) / 2;
   const PX_PRO_MM = 150;       // Maßstab am Schirm: 1 mm Streifenabstand ≙ 150 px (Δx ist klein!)
 
@@ -242,7 +242,7 @@ export function starteExperiment() {
     ctx.fill(); ctx.stroke();
     ctx.fillStyle = cText; ctx.fillRect(58, ACHSE_Y - 4, 8, 8);
     ctx.fillStyle = cLeise; ctx.textAlign = "center";
-    ctx.fillText("Elektronen-", 38, ACHSE_Y - 26); ctx.fillText("kanone", 38, ACHSE_Y - 13);
+    ctx.fillText("Elektronen-", 38, ACHSE_Y - 34); ctx.fillText("kanone", 38, ACHSE_Y - 21);
 
     // Doppelspalt (Blende mit zwei Lücken)
     ctx.fillStyle = cText;

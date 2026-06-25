@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stadt-Land-Fluss — Pausenraum · Lernwelt</title>
+<meta name="description" content="Klassenspiel im Beamermodus: Die Tafel zieht einen großen Zufallsbuchstaben und zeigt die Kategorien an. Alle füllen auf Papier, ein optionaler Countdown läuft groß mit.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Stadt-Land-Fluss <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Der Klassiker für die digitale Tafel: Die Tafel zieht einen großen <strong>Zufallsbuchstaben</strong> und zeigt die gewählten Kategorien an. Alle füllen ihr Blatt aus — wenn jemand fertig ist (oder die Zeit abläuft), wird gemeinsam aufgelöst und Punkte werden vergeben. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Stellt zuerst die Kategorien und die Rundenzeit ein. Pro Runde zeigt die Tafel einen großen Buchstaben und darunter die Kategorien. Alle schreiben zu jeder Kategorie ein Wort mit diesem Anfangsbuchstaben auf ihr Blatt. Mit <strong>„Stopp"</strong> haltet ihr einen laufenden Countdown an; <strong>„Nächster Buchstabe"</strong> startet eine neue Runde mit einem neuen Buchstaben.</p>
+      <p>Die Tafel ist nur die Spielleitung: Sie gibt Buchstabe und Kategorien vor und stoppt die Zeit. Das <strong>Auflösen und Punktezählen</strong> macht ihr gemeinsam mündlich oder per Hand. Bewährte Regel: 10 Punkte für ein Wort, das niemand sonst hat, 5 Punkte, wenn es jemand auch hat, 0 Punkte für leere oder falsche Felder.</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

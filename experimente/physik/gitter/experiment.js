@@ -302,10 +302,10 @@ export function starteExperiment() {
     ctx.beginPath(); ctx.moveTo(330, SCHIRM_Y + 2); ctx.lineTo(342, SCHIRM_Y + 2); ctx.stroke();
     ctx.beginPath(); ctx.moveTo(330, gy); ctx.lineTo(342, gy); ctx.stroke();
     ctx.save();
-    ctx.translate(350, (SCHIRM_Y + gy) / 2); ctx.rotate(-Math.PI / 2);
-    ctx.fillStyle = cAkzent; ctx.font = "bold 12px system-ui, sans-serif"; ctx.textAlign = "center";
+    ctx.translate(348, (SCHIRM_Y + gy) / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillStyle = cAkzent; ctx.font = "bold 12px system-ui, sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
     ctx.fillText("Maßband " + komma(massbandAnzeigeM(zustand.eWahr), 3) + " m", 0, 0);
-    ctx.restore();
+    ctx.textBaseline = "alphabetic"; ctx.restore();
 
     // Laserstrahl bis zum Gitter
     ctx.strokeStyle = lambdaFarbe(zustand.laser.lambdaNm, 0.9); ctx.lineWidth = 3;

@@ -139,11 +139,11 @@ export function starteExperiment() {
   if (!wurzel) return;
 
   // ---------- Canvas-Geometrie (Seitenansicht des Plattenkondensators) ----------
-  const PLATTE_X1 = 92, PLATTE_X2 = 268;   // x der beiden senkrechten Platten
-  const PLATTE_OBEN = 70, PLATTE_UNTEN = 300; // y-Bereich der Platten
-  const MITTE_X = (PLATTE_X1 + PLATTE_X2) / 2;
-  const KUGEL_Y0 = 150;                    // Ruhelage der Kugel (Aufhängepunkt-nah)
-  const F_PX_PRO_MN = 150;                 // Ausschlag-Skala der Kraftmesser-Anzeige
+  const PLATTE_LINKS = 92, PLATTE_RECHTS = 268; // x-Ausdehnung der beiden WAAGERECHTEN Platten
+  const PLATTE_Y_OBEN = 96, PLATTE_Y_UNTEN = 300; // y der oberen (+) und unteren (−) Platte
+  const MITTE_X = (PLATTE_LINKS + PLATTE_RECHTS) / 2;
+  const KUGEL_Y0 = 150;                    // Ruhelage der Kugel (nahe der oberen Platte)
+  const F_PX_PRO_MN = 150;                 // Ausschlag-Skala (senkrecht) der Kugel
 
   const zustand = {
     phase: "aufbau",
@@ -164,7 +164,7 @@ export function starteExperiment() {
   wurzel.insertAdjacentHTML("beforeend", `
     <div class="exp-flaeche">
       <div class="exp-links">
-        <canvas id="exp-canvas" width="360" height="460" aria-label="Seitenansicht eines Plattenkondensators: zwei senkrechte Platten im festen Abstand von 5 Zentimetern, dazwischen hängt an einem dünnen Faden eine kleine geladene Probekugel am empfindlichen Kraftmesser. In der Durchführung baut die Plattenspannung ein waagerechtes elektrisches Feld auf; die Kraft zieht die Kugel zur Gegenplatte und schlägt am Kraftmesser aus. Unten Anzeigen für Plattenspannung und abgelesene Kraft."></canvas>
+        <canvas id="exp-canvas" width="360" height="460" aria-label="Seitenansicht eines Plattenkondensators mit zwei WAAGERECHTEN Platten im festen Abstand von 5 Zentimetern (Plusplatte oben, Minusplatte unten). Mittig hängt an einem senkrechten Faden eine kleine geladene Probekugel am Kraftmesser darüber. In der Durchführung baut die Plattenspannung ein senkrechtes elektrisches Feld auf; die Kraft zieht die Kugel senkrecht nach unten zur Minusplatte, in einer Linie mit dem Kraftmesser, der den Ausschlag misst. Unten Anzeigen für Plattenspannung und abgelesene Kraft."></canvas>
       </div>
       <div class="exp-rechts" id="exp-panel"></div>
     </div>`);
@@ -186,67 +186,69 @@ export function starteExperiment() {
 
     const messend = zustand.phase !== "aufbau";
     const fMN = messend ? kraftIdeal(zustand.U) * 1000 : 0;   // glatter Wert für die Zeichnung
-    // Ausschlag der Kugel nach rechts (zur negativen Platte), gedeckelt für die Optik
-    const ausschlag = Math.min(fMN * F_PX_PRO_MN, (PLATTE_X2 - MITTE_X) - 22);
-    const kugelX = MITTE_X + ausschlag;
+    // Ausschlag der Kugel nach UNTEN (zur negativen Platte), gedeckelt für die Optik
+    const ausschlag = Math.min(fMN * F_PX_PRO_MN, (PLATTE_Y_UNTEN - KUGEL_Y0) - 48);
+    const kugelY = KUGEL_Y0 + ausschlag;
 
-    // Feldlinien (waagerecht, + → −) nur wenn Spannung anliegt
+    // Feldlinien (senkrecht, + oben → − unten) nur wenn Spannung anliegt
     if (messend && zustand.U > 0) {
       ctx.strokeStyle = cLeise; ctx.lineWidth = 1; ctx.globalAlpha = 0.7;
+      const ym = (PLATTE_Y_OBEN + PLATTE_Y_UNTEN) / 2;
       for (let i = 0; i < 5; i++) {
-        const y = PLATTE_OBEN + 30 + i * 50;
-        ctx.beginPath(); ctx.moveTo(PLATTE_X1 + 6, y); ctx.lineTo(PLATTE_X2 - 6, y); ctx.stroke();
-        // Pfeilspitze in der Mitte
+        const x = PLATTE_LINKS + 18 + i * ((PLATTE_RECHTS - PLATTE_LINKS - 36) / 4);
+        ctx.beginPath(); ctx.moveTo(x, PLATTE_Y_OBEN + 6); ctx.lineTo(x, PLATTE_Y_UNTEN - 6); ctx.stroke();
+        // Pfeilspitze in der Mitte (nach unten)
         ctx.beginPath();
-        ctx.moveTo(MITTE_X + 6, y); ctx.lineTo(MITTE_X - 2, y - 4); ctx.lineTo(MITTE_X - 2, y + 4);
+        ctx.moveTo(x, ym + 6); ctx.lineTo(x - 4, ym - 2); ctx.lineTo(x + 4, ym - 2);
         ctx.closePath(); ctx.fillStyle = cLeise; ctx.fill();
       }
       ctx.globalAlpha = 1;
     }
 
-    // Platten (links +, rechts −)
+    // Platten (oben +, unten −) — waagerecht; obere Platte mit Lücke für den Faden
     ctx.strokeStyle = cText; ctx.fillStyle = cText; ctx.lineWidth = 5;
-    ctx.beginPath(); ctx.moveTo(PLATTE_X1, PLATTE_OBEN); ctx.lineTo(PLATTE_X1, PLATTE_UNTEN); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(PLATTE_X2, PLATTE_OBEN); ctx.lineTo(PLATTE_X2, PLATTE_UNTEN); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(PLATTE_LINKS, PLATTE_Y_OBEN); ctx.lineTo(MITTE_X - 16, PLATTE_Y_OBEN); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(MITTE_X + 16, PLATTE_Y_OBEN); ctx.lineTo(PLATTE_RECHTS, PLATTE_Y_OBEN); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(PLATTE_LINKS, PLATTE_Y_UNTEN); ctx.lineTo(PLATTE_RECHTS, PLATTE_Y_UNTEN); ctx.stroke();
     ctx.lineWidth = 1.5;
     ctx.font = "bold 16px system-ui, sans-serif"; ctx.textAlign = "center";
-    ctx.fillText("+", PLATTE_X1 - 14, PLATTE_OBEN + 22);
-    ctx.fillText("–", PLATTE_X2 + 14, PLATTE_OBEN + 22);
+    ctx.fillText("+", PLATTE_RECHTS + 16, PLATTE_Y_OBEN + 6);
+    ctx.fillText("–", PLATTE_RECHTS + 16, PLATTE_Y_UNTEN + 6);
     ctx.font = "12px system-ui, sans-serif";
 
-    // Abstandsmaß d unter den Platten
+    // Abstandsmaß d senkrecht links neben den Platten
     ctx.strokeStyle = cLeise; ctx.lineWidth = 1;
-    const yMass = PLATTE_UNTEN + 18;
-    ctx.beginPath(); ctx.moveTo(PLATTE_X1, yMass); ctx.lineTo(PLATTE_X2, yMass); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(PLATTE_X1, yMass - 4); ctx.lineTo(PLATTE_X1, yMass + 4); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(PLATTE_X2, yMass - 4); ctx.lineTo(PLATTE_X2, yMass + 4); ctx.stroke();
-    ctx.fillStyle = cLeise; ctx.textAlign = "center";
-    ctx.fillText("d = 5,0 cm (fest)", MITTE_X, yMass + 16);
+    const xMass = PLATTE_LINKS - 16;
+    ctx.beginPath(); ctx.moveTo(xMass, PLATTE_Y_OBEN); ctx.lineTo(xMass, PLATTE_Y_UNTEN); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(xMass - 4, PLATTE_Y_OBEN); ctx.lineTo(xMass + 4, PLATTE_Y_OBEN); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(xMass - 4, PLATTE_Y_UNTEN); ctx.lineTo(xMass + 4, PLATTE_Y_UNTEN); ctx.stroke();
+    ctx.save(); ctx.translate(xMass - 8, (PLATTE_Y_OBEN + PLATTE_Y_UNTEN) / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillStyle = cLeise; ctx.textAlign = "center"; ctx.fillText("d = 5,0 cm (fest)", 0, 0); ctx.restore();
 
     // Kraftmesser oben (Feder + Aufhängung über der Kugel)
     ctx.strokeStyle = cText; ctx.fillStyle = cFlaeche; ctx.lineWidth = 2;
     ctx.beginPath();
     if (ctx.roundRect) ctx.roundRect(MITTE_X - 26, 16, 52, 30, 5); else ctx.rect(MITTE_X - 26, 16, 52, 30);
     ctx.fill(); ctx.stroke();
-    ctx.fillStyle = cLeise; ctx.font = "10px system-ui, sans-serif";
+    ctx.fillStyle = cLeise; ctx.font = "10px system-ui, sans-serif"; ctx.textAlign = "center";
     ctx.fillText("Kraftmesser", MITTE_X, 33); ctx.font = "12px system-ui, sans-serif";
-    // dünner Faden von der Aufhängung schräg zur ausgelenkten Kugel
+    // senkrechter Faden von der Aufhängung durch die Plattenlücke zur Kugel (in einer Linie!)
     ctx.strokeStyle = cText; ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.moveTo(MITTE_X, 46); ctx.lineTo(kugelX, KUGEL_Y0); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(MITTE_X, 46); ctx.lineTo(MITTE_X, kugelY); ctx.stroke();
 
     // Probekugel (geladen)
     ctx.fillStyle = cAkzent; ctx.strokeStyle = cText; ctx.lineWidth = 1.5;
-    ctx.beginPath(); ctx.arc(kugelX, KUGEL_Y0, 9, 0, 7); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.arc(MITTE_X, kugelY, 9, 0, 7); ctx.fill(); ctx.stroke();
     ctx.fillStyle = cFlaeche; ctx.font = "bold 11px system-ui, sans-serif"; ctx.textAlign = "center";
-    ctx.fillText("q", kugelX, KUGEL_Y0 + 4); ctx.font = "12px system-ui, sans-serif";
+    ctx.fillText("q", MITTE_X, kugelY + 4); ctx.font = "12px system-ui, sans-serif";
 
-    // Kraftpfeil an der Kugel (nach rechts), wenn Feld anliegt
+    // Kraftpfeil an der Kugel (nach UNTEN, zur Minusplatte), wenn Feld anliegt
     if (messend && zustand.U > 0) {
       ctx.strokeStyle = cAkzent; ctx.fillStyle = cAkzent; ctx.lineWidth = 2;
-      const px2 = kugelX + 30;
-      ctx.beginPath(); ctx.moveTo(kugelX + 10, KUGEL_Y0); ctx.lineTo(px2, KUGEL_Y0); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(px2 + 8, KUGEL_Y0); ctx.lineTo(px2, KUGEL_Y0 - 5); ctx.lineTo(px2, KUGEL_Y0 + 5); ctx.closePath(); ctx.fill();
-      ctx.fillText("F", px2 + 14, KUGEL_Y0 + 4);
+      const py2 = kugelY + 34;
+      ctx.beginPath(); ctx.moveTo(MITTE_X, kugelY + 10); ctx.lineTo(MITTE_X, py2); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(MITTE_X, py2 + 8); ctx.lineTo(MITTE_X - 5, py2); ctx.lineTo(MITTE_X + 5, py2); ctx.closePath(); ctx.fill();
+      ctx.fillText("F", MITTE_X + 14, kugelY + 26);
     }
 
     // Netzgeräte-/Anzeige-Kästen unten
@@ -279,7 +281,7 @@ export function starteExperiment() {
     panel.innerHTML = `
       <h2>Aufbau und Geräte</h2>
       <p>Zwei parallele Metallplatten stehen im <strong>festen Abstand d = 5,0 cm = 0,050 m</strong> einander gegenüber. Ein Netzgerät legt eine regelbare <strong>Plattenspannung U</strong> (0–6000 V) an — dadurch entsteht zwischen den Platten ein nahezu <strong>homogenes elektrisches Feld</strong> der Stärke E = U/d, das von der Plus- zur Minusplatte zeigt.</p>
-      <p>Genau in der Mitte hängt an einem dünnen Faden eine winzige <strong>geladene Probekugel</strong> mit einer festen Ladung q — <em>wie groß q ist, weißt du noch nicht</em>; das sollst du herausfinden. Die Kugel hängt am <strong>empfindlichen Kraftmesser</strong>: Das Feld zieht sie zur Gegenplatte, der Kraftmesser zeigt die waagerechte <strong>Kraft F</strong> in Millinewton (mN) an.</p>
+      <p>Genau in der Mitte hängt an einem dünnen Faden eine winzige <strong>geladene Probekugel</strong> mit einer festen Ladung q — <em>wie groß q ist, weißt du noch nicht</em>; das sollst du herausfinden. Die Kugel hängt am <strong>empfindlichen Kraftmesser</strong>: Das Feld zieht sie senkrecht nach unten zur Gegenplatte — in einer Linie mit dem Faden; der Kraftmesser zeigt die <strong>Kraft F</strong> in Millinewton (mN) an.</p>
       <p><strong>Idee der Messung:</strong> Auf eine Ladung im Feld wirkt F = q · E. Mit dem selbst gerechneten E = U/d kannst du F gegen E auftragen — die <strong>Steigung</strong> dieser Geraden ist die gesuchte Ladung: <strong>q = F / E</strong>.</p>
       <p><strong>Plan:</strong> Stelle mindestens ${MIN_MESSUNGEN} verschiedene Spannungen U ein und lies jedes Mal die Kraft F am Kraftmesser ab. In der Auswertung berechnest du E und bestimmst daraus q.</p>
       <h3>Vorhersage zuerst!</h3>

@@ -7,6 +7,8 @@
 // nach Konstruktion immer ganzzahlig; der Wert in der großen Einheit hat
 // höchstens eine Nachkommastelle (z. B. 3,5 km = 3500 m). Kein Rundungsrest.
 
+import { zeigeStufenwahl } from "../../assets/js/spiel/stufenwahl.js";
+
 export const manifest = {
   id: "ls-einheiten-meister",
   titel: "Einheiten-Meister",
@@ -22,6 +24,14 @@ export const LEVELS = [
   { nr: 1, name: "Länge und Zeit", kurz: "mm, cm, m, km und s, min, h" },
   { nr: 2, name: "Masse und Fläche dazu", kurz: "zusätzlich g, kg, t und cm², m²" },
   { nr: 3, name: "Volumen dazu — alles gemischt", kurz: "zusätzlich ml, l, m³" }
+];
+
+// Klassenstufen → Levels (Blend). Jede Klasse zieht ihre Aufgaben aus diesen Levels.
+export const STUFEN = [
+  { klasse: "Klasse 5", kurz: "Länge & Zeit", levels: [1] },
+  { klasse: "Klasse 6", kurz: "auch Masse & Fläche", levels: [1, 2] },
+  { klasse: "Klasse 7", kurz: "auch Volumen", levels: [2, 3] },
+  { klasse: "Klasse 8", kurz: "alles gemischt", levels: [3] }
 ];
 
 // Umrechnungskatalog. art steuert die erlaubten Werte der großen Einheit:
@@ -142,7 +152,11 @@ export const TESTS = [
       pruefeAntwort("3,5", 3.5) && pruefeAntwort(" 3500 ", 3500) && !pruefeAntwort("", 0) },
   { name: "punkteFuer: Basis 10·Level, Combo ab Serie 3 (+2 je weiterer)", ok: () =>
       punkteFuer(1, 1) === 10 && punkteFuer(1, 3) === 12 && punkteFuer(2, 4) === 24 &&
-      punkteFuer(3, 1) === 30 && punkteFuer(3, 6) === 38 }
+      punkteFuer(3, 1) === 30 && punkteFuer(3, 6) === 38 },
+  { name: "STUFEN: jede Klasse mappt auf gültige Levels (1–3)", ok: () =>
+      STUFEN.length >= 4 && STUFEN.every(s => s.levels.length >= 1 && s.levels.every(l => l >= 1 && l <= 3)) },
+  { name: "STUFEN: je Klasse 200 Aufgaben exakt & gültig", ok: () =>
+      STUFEN.every(s => { for (let i = 0; i < 200; i++) { const l = s.levels[i % s.levels.length]; const a = erzeugeAufgabe(l); const z = Math.round(a.loesung * 10); if (Math.abs(a.loesung * 10 - z) > 1e-9 || !pruefeAntwort(String(a.loesung), a.loesung)) return false; } return true; }) }
 ];
 
 // ---------- Spielablauf (DOM nur hier) ----------
@@ -156,19 +170,15 @@ export function starte(api) {
     api.versteckePanel();
     api.setzePunkte(0);
     api.setzeZeit(`${SPRINT_SEKUNDEN} s`);
-    api.flaeche.innerHTML = `
-      <div style="display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;min-height:280px;padding:20px;text-align:center;">
-        <p style="margin:0;font-weight:700;">Wähle dein Level — ${SPRINT_SEKUNDEN} Sekunden, so viele Aufgaben wie möglich:</p>
-        <div style="display:flex;flex-direction:column;gap:10px;align-items:stretch;width:min(100%,460px);">
-          ${LEVELS.map(l => `<button type="button" class="knopf" data-level="${l.nr}" style="flex-direction:column;gap:2px;"><span>Level ${l.nr}: ${l.name}</span><span style="font-weight:400;font-size:.85rem;">${l.kurz}</span></button>`).join("")}
-        </div>
-        <p style="margin:0;color:var(--text-leise);font-size:.92rem;">Antworte nur mit der Zahl — die Zieleinheit steht schon in der Aufgabe.</p>
-      </div>`;
-    api.flaeche.querySelectorAll("[data-level]").forEach(knopf =>
-      knopf.addEventListener("click", () => starteSprint(Number(knopf.dataset.level))));
+    zeigeStufenwahl(api.flaeche, {
+      titel: `Wähle deine Klasse — ${SPRINT_SEKUNDEN} Sekunden, so viele Aufgaben wie möglich:`,
+      hinweis: "Such dir deine Klassenstufe — oder nimm eine höhere, wenn du mehr willst. Antworte nur mit der Zahl — die Zieleinheit steht schon in der Aufgabe.",
+      stufen: STUFEN,
+      aufWahl: stufe => starteSprint(stufe)
+    });
   }
 
-  function starteSprint(level) {
+  function starteSprint(stufe) {
     let punkte = 0, serie = 0, besteSerie = 0, richtige = 0, versuche = 0;
     let rest = SPRINT_SEKUNDEN, gesperrt = false, fertig = false;
     let aufgabe = null, sperrTimer = 0;
@@ -177,7 +187,7 @@ export function starte(api) {
     api.setzeZeit(`${SPRINT_SEKUNDEN} s`);
     api.flaeche.innerHTML = `
       <div style="display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:center;min-height:280px;padding:20px;text-align:center;">
-        <p style="margin:0;color:var(--text-leise);font-size:.92rem;">Level ${level}: ${LEVELS[level - 1].name}</p>
+        <p style="margin:0;color:var(--text-leise);font-size:.92rem;">${stufe.klasse} — ${stufe.kurz}</p>
         <p id="em-frage" aria-live="polite" style="margin:0;font-weight:700;font-size:clamp(1.6rem,6.5vw,2.4rem);"></p>
         <form id="em-form" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;">
           <input id="em-eingabe" inputmode="decimal" autocomplete="off" autocapitalize="off" spellcheck="false"
@@ -195,7 +205,9 @@ export function starte(api) {
 
     function naechste() {
       if (fertig) return;
-      aufgabe = erzeugeAufgabe(level);
+      const lvl = zufallsWahl(stufe.levels);
+      aufgabe = erzeugeAufgabe(lvl);
+      aufgabe._lvl = lvl;
       frageEl.textContent = aufgabe.text;
       eingabe.value = "";
       gesperrt = false;
@@ -209,7 +221,7 @@ export function starte(api) {
       frageEl.textContent = "Zeit um!";
       eingabe.disabled = true;
       const serieText = besteSerie >= 3 ? ` — beste Serie: ${besteSerie} in Folge` : "";
-      api.vorbei(punkte, `<p>Gelöst: ${richtige} von ${versuche} Aufgaben (Level ${level})${serieText}.</p>`);
+      api.vorbei(punkte, `<p>Gelöst: ${richtige} von ${versuche} Aufgaben (${stufe.klasse})${serieText}.</p>`);
     }
 
     api.flaeche.querySelector("#em-form").addEventListener("submit", ev => {
@@ -220,7 +232,7 @@ export function starte(api) {
       if (pruefeAntwort(eingabe.value, aufgabe.loesung)) {
         serie++; richtige++;
         besteSerie = Math.max(besteSerie, serie);
-        punkte += punkteFuer(level, serie);
+        punkte += punkteFuer(aufgabe._lvl, serie);
         api.setzePunkte(punkte);
         feedbackEl.style.color = "var(--ok)";
         feedbackEl.textContent = serie >= 3 ? `✓ Richtig! Combo ×${serie}` : "✓ Richtig!";

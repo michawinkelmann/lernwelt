@@ -184,7 +184,7 @@ export function starteExperiment() {
     ctx.fillText("U₀ = 6,00 V", 4, 144);
     ctx.font = "11px system-ui, sans-serif"; ctx.textAlign = "center";
     ctx.fillText("C „470 µF ±20 %“", 185, 144);
-    ctx.fillText("R = " + w.label, 268, 158);
+    ctx.fillText("R = " + w.label, 268, 144);
     ctx.fillText("Oszi", 340, 144);
     ctx.textAlign = "start"; ctx.font = "12px system-ui, sans-serif";
 

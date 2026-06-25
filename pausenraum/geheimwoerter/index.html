@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geheimwörter — Pausenraum · Lernwelt</title>
+<meta name="description" content="Wortgitter-Teamspiel im Beamermodus: Zwei Hinweisgeber:innen kennen den geheimen Schlüssel, die Teams suchen ihre eigenen Wörter im 5×5-Raster.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+<style>
+  /* Geheimwörter — Wortgitter & Teamzähler (nutzt Farb-Tokens, Hell/Dunkel automatisch).
+     Team-Rot/Blau und neutral/Attentäter mit festen, kontraststarken Farben. */
+  .gw-kopf { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px 18px; }
+  .gw-team { display: flex; flex-direction: column; align-items: center; min-width: 120px; padding: 8px 18px; border: 3px solid var(--linie); border-radius: 14px; }
+  .gw-rot { border-color: #c0392b; }
+  .gw-blau { border-color: #2461b8; }
+  .gw-team.gw-aktiv { box-shadow: 0 0 0 3px var(--bg), 0 0 0 6px currentColor; }
+  .gw-rot.gw-aktiv { color: #c0392b; }
+  .gw-blau.gw-aktiv { color: #2461b8; }
+  .gw-team-name { font-size: clamp(.85rem,2vw,1.15rem); font-weight: 600; }
+  .gw-team-rest { font-size: clamp(1.8rem,6vw,3.4rem); font-weight: 800; line-height: 1; color: var(--text); }
+  .gw-rot .gw-team-rest { color: #c0392b; }
+  .gw-blau .gw-team-rest { color: #2461b8; }
+  .gw-status { text-align: center; display: grid; gap: 4px; }
+  .gw-dran, .gw-schluessel-status { font-size: clamp(1rem,3vw,1.6rem); font-weight: 700; }
+  .gw-schluessel-status { color: var(--fehler); }
+  .gw-sieg { font-size: clamp(1.4rem,4.5vw,2.4rem); font-weight: 800; }
+  .gw-rot-text { color: #c0392b; }
+  .gw-blau-text { color: #2461b8; }
+  .gw-grund { font-size: clamp(.85rem,2.2vw,1.2rem); color: var(--text-leise); }
+
+  .gw-raster { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(6px,1.2vw,12px); width: 100%; max-width: 1100px; margin: 0 auto; }
+  .gw-feld { aspect-ratio: 16 / 10; min-height: var(--beruehrziel); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+    border: 2px solid var(--linie); border-radius: 12px; background: var(--flaeche); color: var(--text);
+    font: inherit; cursor: pointer; padding: 4px; text-align: center; transition: transform .06s ease; }
+  .gw-feld:not([disabled]):hover { transform: translateY(-2px); border-color: var(--akzent); }
+  .gw-feld:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; }
+  .gw-feld[disabled] { cursor: default; }
+  .gw-wort { font-size: clamp(.85rem,2.1vw,1.5rem); font-weight: 700; line-height: 1.05; overflow-wrap: anywhere; }
+  .gw-marke { font-size: clamp(.6rem,1.4vw,.95rem); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* Rollen-Farben: kontraststark, Bedeutung zusätzlich über Marke (Rot/Blau/neutral/✗). */
+  .gw-r-verdeckt { background: var(--flaeche); }
+  .gw-r-a { background: #c0392b; color: #fff; border-color: #8e271c; }
+  .gw-r-b { background: #2461b8; color: #fff; border-color: #1a4685; }
+  .gw-r-neutral { background: #b9ad8f; color: #2c2823; border-color: #948a70; }
+  .gw-r-attentaeter { background: #1c1a16; color: #fff; border-color: #000; }
+  .gw-marke { color: inherit; }
+  /* Schlüssel-Ansicht: noch verdeckte Felder leicht eingefärbt zum Vorlesen. */
+  .gw-feld.gw-schluessel { opacity: .92; box-shadow: inset 0 0 0 2px rgba(255,255,255,.25); }
+  .gw-feld.gw-auf { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px currentColor; }
+  .gw-r-attentaeter.gw-auf { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px #c0392b; }
+
+  .gw-schluessel-box { text-align: center; display: grid; gap: 8px; justify-items: center; }
+  .gw-schluessel-box .bm-warn { font-size: clamp(1rem,2.6vw,1.5rem); }
+  .gw-steuer { margin-top: 4px; }
+</style>
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Geheimwörter <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Ein Klassenspiel für die digitale Tafel: Im 5×5-Raster verstecken sich die Wörter zweier Teams. Je eine <strong>Hinweisgeberin oder ein Hinweisgeber</strong> pro Team kennt den geheimen Schlüssel und gibt Tipps — ihr Team rät, welche Felder zum eigenen Team gehören. Wer zuerst alle eigenen Wörter findet, gewinnt. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Bildet zwei Teams (Rot und Blau) und bestimmt je eine hinweisgebende Person. Diese beiden tippen abwechselnd auf <strong>„🔑 Schlüssel anzeigen"</strong> — die 25 Felder erscheinen dann in ihren Farben (rot, blau, grau für neutral, schwarz für den Attentäter). <strong>Alle anderen schauen währenddessen kurz weg!</strong> Danach wieder mit <strong>„🔒 Schlüssel verbergen"</strong> ausblenden.</p>
+      <p>Team Rot beginnt (es hat 9 eigene Wörter, Blau 8). Die hinweisgebende Person nennt einen Hinweis, ihr Team tippt nacheinander Felder an. Jedes Feld deckt seine Farbe dauerhaft auf: Ein <strong>eigenes</strong> Feld → das Team darf weiterraten. Ein <strong>neutrales</strong> oder <strong>gegnerisches</strong> Feld → der Zug endet, das andere Team ist dran. Das <strong>Attentäter</strong>-Feld (✗) → das Spiel ist sofort verloren, das andere Team gewinnt.</p>
+      <p>Mit <strong>„Zug beenden"</strong> gibt ein Team freiwillig ab. Oben zeigen die Zähler, wie viele eigene Wörter jedes Team noch verdeckt hat. Sieg, wenn ein Team alle eigenen Felder aufgedeckt hat. <strong>„Neues Spiel"</strong> mischt ein frisches Raster.</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Montagsmaler — Pausenraum · Lernwelt</title>
+<meta name="description" content="Klassenspiel im Beamermodus: Eine Person zeichnet den Begriff, ihr Team rät. Tafel, Stifte, Punkte und Timer erscheinen groß auf der digitalen Tafel.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+<style>
+  /* Montagsmaler — Zeichenfläche & Werkzeuge (nutzt Farb-Tokens, Hell/Dunkel automatisch) */
+  .mm-tafel { width: 100%; display: grid; gap: 12px; }
+  .mm-werkzeuge { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; justify-content: center; }
+  .mm-farben, .mm-staerken { display: inline-flex; gap: 8px; }
+  .mm-farbe { width: var(--beruehrziel); height: var(--beruehrziel); min-width: 40px; min-height: 40px; border-radius: 50%; border: 3px solid var(--linie); background: var(--mm-f); cursor: pointer; padding: 0; }
+  .mm-farbe.mm-aktiv { border-color: var(--text); box-shadow: 0 0 0 3px var(--bg), 0 0 0 6px var(--akzent); }
+  .mm-farbe:focus-visible, .mm-staerke:focus-visible { outline: 3px solid var(--akzent); outline-offset: 3px; }
+  .mm-staerke { min-width: 44px; min-height: 44px; display: grid; place-items: center; border: 2px solid var(--linie); border-radius: 12px; background: var(--bg); cursor: pointer; }
+  .mm-staerke span { display: block; border-radius: 50%; background: var(--text); }
+  .mm-staerke.mm-aktiv, .mm-radierer.mm-aktiv { border-color: var(--akzent); background: color-mix(in srgb, var(--akzent) 16%, transparent); font-weight: 700; }
+  .mm-leinwand-box { width: 100%; }
+  .mm-leinwand { display: block; width: 100%; border: 2px solid var(--linie); border-radius: var(--radius); background: #fdfdfb; touch-action: none; cursor: crosshair; box-shadow: var(--schatten, none); }
+  .mm-geheim-zeile { margin-top: 4px; }
+</style>
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Montagsmaler <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Ein Klassenspiel für die digitale Tafel: Eine Person liest den Begriff <strong>heimlich</strong> ein und zeichnet ihn — ohne Worte, Buchstaben oder Zahlen. Das eigene Team rät, was entsteht. Tafel, Stifte, Punkte und Timer laufen groß auf der Tafel mit. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Stellt zuerst Teamzahl, Rundenzeit und Kategorien ein. Pro Runde ist ein Team dran: Eine Person tippt auf <strong>„Anzeigen"</strong>, prägt sich den Begriff ein, tippt auf <strong>„Verbergen"</strong> und zeichnet ihn dann auf der Tafel — alle anderen schauen während des Einlesens kurz weg. Erlaubt sind nur Bilder, keine Worte, Buchstaben oder Zahlen.</p>
+      <p>Errät das Team den Begriff, tippt jemand <strong>„Erraten ✓"</strong> — das gibt einen Punkt, leert die Tafel und zeigt der zeichnenden Person heimlich den nächsten Begriff. Ein zu schwerer Begriff lässt sich mit <strong>„Auslassen"</strong> überspringen. Über der Tafel gibt es Stifte in sechs Farben, drei Strichstärken, einen Radierer und „Leeren". Läuft die Zeit ab, ist das nächste Team dran. „Spiel beenden" zeigt den Endstand.</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

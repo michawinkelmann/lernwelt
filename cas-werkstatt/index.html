@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CAS-Werkstatt: ClassPad II von Anfang an — Lernwelt</title>
-<meta name="description" content="Schritt-für-Schritt-Einführung in den CASIO ClassPad II für Mathematik und Physik: erste Schritte, solve, Graphen mit G-Solve, Ableitungen und Integrale, Vektoren, Stochastik-Funktionen und die wichtigsten Stolperfallen — mit zwölfteiligem Übungsparcours.">
+<meta name="description" content="Schritt-für-Schritt-Einführung in den CASIO ClassPad II für Mathematik und Physik: erste Schritte, Grundeinstellungen, solve, Terme umformen, Graphen mit G-Solve, Fenster &amp; Wertetabelle, Analysis und Kurvendiskussion, Grenzwerte und Summen, Vektoren, Matrizen/LGS, Stochastik, Messreihen-Regression und Physik-Formeln, dazu Stolperfallen, Klausur-Dokumentation und Befehls-Referenzkarte — mit Übungsparcours.">
 <link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -12,6 +12,15 @@
 <link rel="stylesheet" href="../assets/css/design-tokens.css">
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="stylesheet" href="../assets/css/print.css" media="print">
+<style>
+  .tabelle-wrap { overflow-x: auto; }
+  table.cas-referenz { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
+  table.cas-referenz th, table.cas-referenz td { border: 1px solid var(--linie); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+  table.cas-referenz th { background: var(--flaeche); font-weight: 700; }
+  table.cas-referenz code { white-space: nowrap; }
+  .klick { display: block; font-size: 0.85em; color: var(--text-leise); margin-top: 0.2em; }
+  .klick::before { content: "▸ Menü: "; font-weight: 600; }
+</style>
 </head>
 <body data-seite="thema" data-fach="mathematik">
 <noscript><p class="noscript-hinweis">Diese Seite benötigt JavaScript für Formeln. <a href="../index.html">Zur Startseite</a></p></noscript>
@@ -22,6 +31,10 @@
     <span class="merk-etikett">Bevor es losgeht</span>
     <p>Der CAS ersetzt den Rechenweg nicht — in Klassenarbeiten musst du dokumentieren, <strong>was</strong> du rechnest: Ansatz, eingesetzte Werte und der verwendete Befehl gehören aufs Papier, der ClassPad liefert nur die Zahl. „Laut CAS“ ohne Ansatz gibt keine Punkte.</p>
   </div>
+  <div class="merkkasten">
+    <span class="merk-etikett">Lernpfad nach Stufe</span>
+    <p><strong>Klasse 8–10 (Gymnasialzweig):</strong> Abschnitte 1 (Erste Schritte), 2 (Modi &amp; Setup), 3 (solve), 4 (Terme umformen), 5 (Graph &amp; G-Solve) und 6 (Fenster &amp; Tabelle); dazu 15 (Stolperfallen). <strong>Einführungsphase:</strong> zusätzlich 7 (Analysis), 8 (Kurvendiskussion), 9 (Grenzwerte &amp; Summen), 13 (Messreihen) und 14 (Physik-Formeln). <strong>Qualifikationsphase:</strong> dazu 10 (Vektoren), 11 (Matrizen &amp; LGS) und 12 (Stochastik). Den <strong>Setup-Check</strong> (Abschnitt 2), die <strong>Stolperfallen</strong> (Abschnitt 15), das <strong>Dokumentieren in der Klausur</strong> (Abschnitt 16) und die <strong>Befehls-Referenzkarte</strong> (Abschnitt 17) nutzt jede:r — daran hängen die meisten Punkte.</p>
+  </div>
 
   <section aria-labelledby="ws-erste-schritte">
     <h2 id="ws-erste-schritte">1. Erste Schritte: Main-App und Tastatur</h2>
@@ -31,7 +44,7 @@
       <li><strong>Brüche eingeben:</strong> Bruchvorlage aus Math1 nutzen — Zähler eintragen, ins Nenner-Kästchen springen, fertig. <em>Beispiel:</em> $\frac{1}{3} + \frac{1}{4}$ und EXE ergibt $\frac{7}{12}$.</li>
       <li><strong>Standard ↔ Dezimal:</strong> Der ClassPad antwortet zunächst exakt (Bruch, Wurzel, $\pi$). Der Umschaltknopf mit dem Symbol <em>½↔0.5</em> in der Symbolleiste wechselt zwischen exakter und Dezimal-Darstellung: aus $\frac{7}{12}$ wird $0{,}5833\ldots$ — dieselbe Zahl, nur anders angezeigt.</li>
       <li><strong>Zehnerpotenzen mit der ᴇ-Taste:</strong> Sehr große und sehr kleine Zahlen (Physik!) tippst du mit der Exponenten-Taste <em>EXP</em> ein, angezeigt als kleines ᴇ: <code>1.6ᴇ-19</code> bedeutet $1{,}6 \cdot 10^{-19}$ (Elementarladung), <code>3ᴇ8</code> ist die Lichtgeschwindigkeit in m/s. EXE macht daraus bei Bedarf $300\,000\,000$.</li>
-      <li><strong>Grad oder Bogenmaß:</strong> Die <strong>Statusleiste</strong> am unteren Bildschirmrand zeigt die Winkeleinheit — <em>Deg</em> (Grad), <em>Rad</em> (Bogenmaß) oder <em>Gra</em> (Neugrad, im Unterricht nie gebraucht). Antippen schaltet um. Bis zur Oberstufe rechnest du fast immer in Grad; woran du eine falsche Einstellung erkennst, zeigt Abschnitt 7.</li>
+      <li><strong>Grad oder Bogenmaß:</strong> Die <strong>Statusleiste</strong> am unteren Bildschirmrand zeigt die Winkeleinheit als Symbol — <strong>360°</strong> für <em>Gradmaß</em> (Grad) und <strong>2π</strong> für <em>Bogenmaß</em> (ein weiterer Tipp führt zu <em>Neugrad</em>, im Unterricht nie gebraucht). Auf das Symbol tippen schaltet um. Bis zur Oberstufe rechnest du fast immer in Grad; woran du eine falsche Einstellung erkennst, zeigen die Abschnitte 2 und 8.</li>
       <li><strong>Variablen speichern und löschen:</strong> Mit dem Zuweisungspfeil ⇒ (Software-Tastatur; zur Not über das Register <em>cat</em>) speicherst du Werte: <code>12⇒a</code>. Ab jetzt rechnet jeder Term mit $a = 12$ weiter — bis du die Variable löschst: <em>Edit → Alle Variablen löschen</em> im Main-Menü oder der Befehl <code>DelVar a</code>.</li>
     </ol>
     <div class="beispiel">
@@ -44,15 +57,39 @@
     </details>
   </section>
 
+  <section aria-labelledby="ws-modi">
+    <h2 id="ws-modi">2. Modi &amp; Grundeinstellungen richtig setzen</h2>
+    <p>Vier Einstellungen entscheiden, <strong>was</strong> der ClassPad bei <em>gleicher</em> Eingabe anzeigt. Wer sie kennt, vermeidet die häufigsten „Der Rechner rechnet falsch“-Momente — stell sie einmal bewusst, bevor es losgeht.</p>
+    <ol>
+      <li><strong>Winkelmaß — Gradmaß / Bogenmaß / Neugrad:</strong> in der <strong>Statusleiste</strong> unten antippen (Anzeige <strong>360°</strong> = Gradmaß, <strong>2π</strong> = Bogenmaß) oder dauerhaft über <em>⚙ → Grundformat → Winkel</em>. Gradmaß für Geometrie und Sek I, Bogenmaß ab der Analysis — die Ableitung $(\sin x)' = \cos x$ gilt nur im Bogenmaß. Probe: <code>sin(30)</code> ergibt $0{,}5$ (Gradmaß) bzw. $-0{,}988$ (Bogenmaß).</li>
+      <li><strong>Exakt ↔ Dezimal — Standard / Dezimal:</strong> Umschaltknopf <em>½↔0.5</em> oben links in der Symbolleiste (dauerhaft: <em>⚙ → Grundformat → Erweitert → Dezimalzahlen</em>). <em>Standard</em> rechnet exakt mit Bruch, Wurzel und $\pi$ (gut für Zwischenergebnisse — keine Rundungsfehler), <em>Dezimal</em> zeigt die gerundete Kommazahl (gut für die Sachantwort). $\frac{100}{6}$ steht exakt als $\frac{50}{3}$, dezimal als $16{,}6667$ — dieselbe Zahl. Die Statusleiste zeigt den aktuellen Modus (<strong>Standard</strong> bzw. <strong>Dezimal</strong>).</li>
+      <li><strong>Reell ↔ Komplex:</strong> ob auch nicht-reelle Lösungen erscheinen (<em>⚙ → Grundformat → Erweitert → Komplexe Zahlen</em>). <code>solve(x^3-x^2+x-1=0,x)</code> liefert im <em>reellen</em> Modus nur $\{x=1\}$, mit eingeschaltetem <em>Komplexe Zahlen</em> zusätzlich $x=\pm i$. Für die Schule fast immer <em>reell</em> (Kästchen aus, Statusleiste zeigt <strong>Reell</strong>) — sonst erschrecken dich unerwartete $i$.</li>
+      <li><strong>Assistent ↔ Algebra:</strong> wie stark automatisch vereinfacht wird (<em>⚙ → Grundformat → Erweitert → Assistent</em>; die Statusleiste zeigt <strong>Algeb</strong> bzw. <strong>Assist</strong>). Im <em>Algebra</em>-Modus (Kästchen aus) fasst der Rechner sofort zusammen: <code>expand((x+1)^2)</code> → $x^2+2x+1$. Der <em>Assistent</em>-Modus lässt Terme eher stehen. Für die Oberstufe ist <em>Algebra</em> Standard.</li>
+    </ol>
+    <p>Schnell schalten: <strong>Winkelmaß</strong> über die Statusleiste (360° ↔ 2π), <strong>Exakt/Dezimal</strong> über den Umschaltknopf <em>½↔0.5</em>. Alle vier Modi dauerhaft in <em>⚙ → Grundformat</em>: oben <em>Winkel</em> (Gradmaß/Bogenmaß), darunter unter <em>Erweitert</em> die Kästchen <em>Dezimalzahlen</em>, <em>Komplexe Zahlen</em> und <em>Assistent</em> — mit <strong>Einst</strong> bestätigen.</p>
+    <div class="merkkasten">
+      <span class="merk-etikett">Setup-Check vor der Klausur</span>
+      <p>Einmal vor jeder Arbeit: <strong>Winkelmaß</strong> passend (Geometrie → Gradmaß, Analysis → Bogenmaß), <strong>reeller</strong> Modus (Komplexe Zahlen aus), alte <strong>Variablen gelöscht</strong> (<em>Edit → Alle Variablen löschen</em>), Zwischenergebnisse <strong>exakt</strong> lassen und erst die Endantwort auf Dezimal.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Zwei tippen <code>sin(30)</code> und bekommen $0{,}5$ bzw. $-0{,}988$. Wer hat sich verrechnet?</summary>
+      <div class="check-antwort"><p>Niemand — beide Ergebnisse sind korrekt, nur in <strong>verschiedenen Winkelmaßen</strong>: $0{,}5 = \sin(30^\circ)$ (Gradmaß), $-0{,}988 = \sin(30\,\text{rad})$ (Bogenmaß). Die Einstellung steht in der Statusleiste — nicht der Rechner ist schuld, sondern der Modus.</p></div>
+    </details>
+  </section>
+
   <section aria-labelledby="ws-gleichungen">
-    <h2 id="ws-gleichungen">2. Gleichungen und Gleichungssysteme: solve</h2>
+    <h2 id="ws-gleichungen">3. Gleichungen und Gleichungssysteme: solve</h2>
     <p>Der wichtigste Befehl des ClassPad heißt <strong>solve</strong>. Er löst Gleichungen nach einer Variablen auf — das Muster ist immer <code>solve(Gleichung, Variable)</code>:</p>
     <ol>
-      <li>In der Main-App eingeben: <code>solve(3x+7=22,x)</code>, dann EXE → Ergebnis <code>{x=5}</code>.</li>
+      <li>In der Main-App eingeben: <code>solve(3x+7=22,x)</code>, dann EXE → Ergebnis <code>{x=5}</code>.<span class="klick">Interaktiv → (Un-)Gleichungen → solve</span></li>
       <li>Hat eine Gleichung mehrere Lösungen, zeigt der ClassPad alle als <strong>Liste</strong>: <code>solve(x^2=4,x)</code> → <code>{x=-2, x=2}</code>. Keine Lösung im Reellen? Dann erscheint <code>{}</code> bzw. <em>No Solution</em>.</li>
       <li><strong>Gleichungssysteme</strong> löst die Systemvorlage aus dem Register Math1 (geschweifte Klammer): Sie öffnet zwei Zeilen für zwei Gleichungen; hinter dem senkrechten Strich nennst du die Variablen. Für eine dritte Zeile tippst du die Vorlage in der unteren Zeile erneut an.</li>
       <li><strong>Probe durch Einsetzen:</strong> Mit dem with-Strich | (Register Math3) prüfst du jede Lösung: <code>3x+7|x=5</code> → $22$ — passt zur rechten Seite.</li>
     </ol>
+    <div class="merkkasten">
+      <span class="merk-etikett">Zwei Wege zu jedem Befehl</span>
+      <p>Jeden CAS-Befehl erreichst du über zwei Menüs der Main-App. <strong>Aktion</strong> fügt den Befehl als Text ein (z. B. <code>solve(</code>) — die Argumente tippst du selbst. <strong>Interaktiv</strong> öffnet stattdessen einen <strong>Dialog mit Eingabefeldern</strong> (bei <em>(Un-)Gleichungen → solve</em> die Felder <em>Gleichung</em> und <em>Variable</em>) und baut den Befehl für dich zusammen — ideal zum Lernen. Beide Wege liefern dasselbe: <code>solve(2x+6=0,x)</code> → <code>{x=-3}</code>.</p>
+    </div>
     <div class="beispiel">
       <span class="beispiel-etikett">Durchklick-Beispiel: Gleichungssystem</span>
       <p>Systemvorlage öffnen, eintragen: obere Zeile <code>2x+y=8</code>, untere Zeile <code>x-y=1</code>, hinter dem Strich <code>x,y</code>. EXE → <code>{x=3, y=2}</code>. Probe: $2 \cdot 3 + 2 = 8$ ✓ und $3 - 2 = 1$ ✓.</p>
@@ -63,8 +100,27 @@
     </div>
   </section>
 
+  <section aria-labelledby="ws-terme">
+    <h2 id="ws-terme">4. Terme umformen: expand, factor, simplify</h2>
+    <p>Schon ab Klasse 8 nimmt dir der ClassPad das Ausmultiplizieren, Faktorisieren und Vereinfachen ab. Die Befehle liegen unter <em>Interaktiv → Umformungen</em>:</p>
+    <ol>
+      <li><strong>Ausmultiplizieren:</strong> <code>expand((x+3)^2)</code> → $x^2+6x+9$.<span class="klick">Interaktiv → Umformungen → expand</span></li>
+      <li><strong>Faktorisieren:</strong> <code>factor(x^2-9)</code> → $(x-3)(x+3)$ — der Menüpunkt heißt am Gerät <em>faktoris</em>.<span class="klick">Interaktiv → Umformungen → faktoris</span></li>
+      <li><strong>Vereinfachen:</strong> <code>simplify((x^2-1)/(x-1))</code> → $x+1$.<span class="klick">Interaktiv → Umformungen → simplify</span></li>
+      <li><strong>Nach Potenzen ordnen:</strong> <code>collect</code> sortiert einen Term nach Potenzen von $x$.<span class="klick">Interaktiv → Umformungen → collect</span></li>
+    </ol>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Durchklick-Beispiel: binomische Formel prüfen</span>
+      <p>Tippe <code>expand((2a-3)^2)</code>, EXE → $4a^2-12a+9$ — genau die zweite binomische Formel. Umgekehrt: <code>factor(4a^2-12a+9)</code> → $(2a-3)^2$. So kontrollierst du deine Handrechnung in Sekunden.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum gilt <code>simplify((x^2-1)/(x-1))</code> $=x+1$ nur mit Einschränkung?</summary>
+      <div class="check-antwort"><p>Der ClassPad kürzt zu $x+1$, aber das gilt nur für $x\ne 1$ — bei $x=1$ ist der Ausgangsterm gar nicht definiert (Nenner $0$). Diese Lücke schreibt der CAS nicht dazu; im Rechenweg vermerkst du $x\ne 1$ selbst.</p></div>
+    </details>
+  </section>
+
   <section aria-labelledby="ws-graph-tabelle">
-    <h2 id="ws-graph-tabelle">3. Funktionen: Graph und Wertetabelle</h2>
+    <h2 id="ws-graph-tabelle">5. Funktionen: Graph und Wertetabelle</h2>
     <p>Für alles rund um Funktionsgraphen gibt es die App <strong>Grafik&nbsp;&amp;&nbsp;Tabelle</strong>. Der Ablauf ist immer gleich:</p>
     <ol>
       <li><strong>Funktion eintragen:</strong> Bei <code>y1=</code> den Term eingeben, z. B. <code>x^2-4x+3</code> — das Häkchen davor bedeutet „wird gezeichnet“. Weitere Funktionen kommen in <code>y2=</code>, <code>y3=</code>, …</li>
@@ -83,15 +139,34 @@
     </details>
   </section>
 
+  <section aria-labelledby="ws-fenster">
+    <h2 id="ws-fenster">6. Grafik &amp; Tabelle: Fenster, Zoom und Wertetabelle einstellen</h2>
+    <p>Ein Graph ist nur so nützlich wie sein Ausschnitt. In <strong>Grafik &amp; Tabelle</strong> stellst du genau ein, von wo bis wo die Achsen gehen:</p>
+    <ol>
+      <li><strong>Betrachtungsfenster (genaue Achsen):</strong> in der Symbolleiste das <strong>Fenster-Symbol</strong> (Quadrat mit vier Pfeilen) antippen. Im Dialog <em>Fenster-Einst.</em> trägst du ein: <code>xmin</code>, <code>max</code> (= xmax), <code>Skala</code> (Abstand der x-Striche) und darunter <code>ymin</code>, <code>max</code>, <code>Skala</code>. Mit <strong>OK</strong> bestätigen, mit <strong>Vorgabe</strong> auf die Standardwerte zurück.</li>
+      <li><strong>Schnell zoomen:</strong> im Menü <em>Zoom</em> bringt <em>Original</em> die Standard-Ansicht, <em>Vergrößern</em> / <em>Verkleinern</em> ändern den Maßstab, <em>Quadratisch</em> macht die Skalen gleich (Kreise werden rund statt oval).</li>
+      <li><strong>Trace (Punkte ablesen):</strong> den Graphen antippen und mit den Pfeiltasten an der Kurve entlangfahren — unten erscheinen die Koordinaten $(x \mid y)$ des Cursors.</li>
+      <li><strong>Wertetabelle einstellen:</strong> das <strong>Tabellen-Symbol</strong> antippen; im Dialog <em>Tabelleneingabe</em> legst du <code>Startwert</code>, <code>Ende</code> und <code>Schrittw.</code> (Schrittweite) fest und bestätigst mit <strong>OK</strong>.</li>
+    </ol>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Durchklick-Beispiel: Parabel sauber einstellen</span>
+      <p>Für <code>y1=x^2-4x+3</code> setzt du im Dialog <em>Fenster-Einst.</em> die x-Achse von <code>xmin=-1</code> bis <code>max=5</code> (Skala $1$) und die y-Achse von <code>ymin=-2</code> bis <code>max=6</code> — dann liegen Scheitelpunkt $(2\mid -1)$ und beide Nullstellen $x=1$, $x=3$ schön im Bild. Für die Tabelle: <code>Startwert=0</code>, <code>Ende=4</code>, <code>Schrittw.=1</code> → die Werte $3,\ 0,\ -1,\ 0,\ 3$.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Der Graph bleibt leer — woran liegt's am häufigsten?</summary>
+      <div class="check-antwort"><p>Fast immer am <strong>Fenster</strong>: Die Kurve liegt außerhalb von xmin…max bzw. ymin…max. <em>Zoom → Original</em> oder die Grenzen passend setzen, dann erscheint sie. Zweithäufigste Ursache: Das Häkchen vor <code>y1</code> fehlt, der Graph wird gar nicht gezeichnet.</p></div>
+    </details>
+  </section>
+
   <section aria-labelledby="ws-analysis">
-    <h2 id="ws-analysis">4. Analysis: Ableiten und Integrieren (ab Einführungsphase)</h2>
+    <h2 id="ws-analysis">7. Analysis: Ableiten und Integrieren (ab Einführungsphase)</h2>
     <p>Ab der Einführungsphase übernimmt der ClassPad das Kalkül — du übernimmst Ansatz und Deutung:</p>
     <ol>
-      <li><strong>Ableitung als Term:</strong> <code>diff(f(x),x)</code> — zu finden unter <em>Aktion → Berechnungen → diff</em>. <em>Beispiel:</em> <code>diff(x^3-2x^2,x)</code> → $3x^2 - 4x$.</li>
+      <li><strong>Ableitung als Term:</strong> <code>diff(f(x),x)</code>. <em>Beispiel:</em> <code>diff(x^3-2x^2,x)</code> → $3x^2 - 4x$.<span class="klick">Interaktiv → Berechnungen → diff</span></li>
       <li><strong>Ableitung an einer Stelle:</strong> with-Strich anhängen: <code>diff(x^3-2x^2,x)|x=2</code> → $3 \cdot 4 - 4 \cdot 2 = 4$. Das ist die Tangentensteigung an der Stelle $2$.</li>
-      <li><strong>Bestimmtes Integral:</strong> Integral-Vorlage mit Grenz-Kästchen aus dem Register Math2 — oder als Befehl <code>∫(f(x),x,a,b)</code> mit der Reihenfolge Term, Variable, untere Grenze, obere Grenze. <em>Beispiel:</em> <code>∫(x^2,x,0,3)</code> → $9$.</li>
-      <li><strong>Tangentengleichung:</strong> <code>tanLine(f(x),x,a)</code> liefert die Tangente an der Stelle $a$ (unter <em>Aktion → Berechnungen → Linie</em>). <em>Beispiel:</em> <code>tanLine(x^2,x,1)</code> → $2x - 1$.</li>
-      <li><strong>Kleinster/größter Funktionswert:</strong> <code>fMin(f(x),x)</code> und <code>fMax(f(x),x)</code> nennen Extremstelle und Extremwert in einem Schritt: <code>fMin(x^2-4x,x)</code> → MinValü $= -4$ bei $x = 2$.</li>
+      <li><strong>Bestimmtes Integral:</strong> Integral-Vorlage mit Grenz-Kästchen aus dem Register Math2 — oder als Befehl <code>∫(f(x),x,a,b)</code> mit der Reihenfolge Term, Variable, untere Grenze, obere Grenze. <em>Beispiel:</em> <code>∫(x^2,x,0,3)</code> → $9$.<span class="klick">Interaktiv → Berechnungen → ∫</span></li>
+      <li><strong>Tangentengleichung:</strong> <code>tanLine(f(x),x,a)</code> liefert die Tangente an der Stelle $a$. <em>Beispiel:</em> <code>tanLine(x^2,x,1)</code> → $2x - 1$.<span class="klick">Interaktiv → Berechnungen → Linie → tanLine</span></li>
+      <li><strong>Kleinster/größter Funktionswert:</strong> <code>fMin(f(x),x)</code> und <code>fMax(f(x),x)</code> nennen Extremstelle und Extremwert in einem Schritt: <code>fMin(x^2-4x,x)</code> → MinValü $= -4$ bei $x = 2$.<span class="klick">Interaktiv → Berechnungen → fMin/fMax</span></li>
     </ol>
     <div class="beispiel">
       <span class="beispiel-etikett">Durchklick-Beispiel: Tangente prüfen</span>
@@ -99,14 +174,48 @@
     </div>
   </section>
 
-  <section aria-labelledby="ws-vektoren">
-    <h2 id="ws-vektoren">5. Vektoren und Geometrie (Qualifikationsphase)</h2>
-    <p>Vektoren gibst du in der Main-App als Zeilen in <strong>eckigen Klammern</strong> ein: <code>[1,2,2]</code> steht für den Vektor mit den Komponenten $1$, $2$, $2$. Die Befehle dazu liegen unter <em>Aktion → Vektor</em>:</p>
+  <section aria-labelledby="ws-kurvendiskussion">
+    <h2 id="ws-kurvendiskussion">8. Funktionen definieren &amp; Kurvendiskussion (Einführungsphase)</h2>
+    <p>Ab der Analysis lohnt es sich, die Funktion einmal zu <strong>benennen</strong> — dann nutzt jeder Befehl sie ohne erneute Tipparbeit. So baust du eine komplette Kurvendiskussion Schritt für Schritt:</p>
     <ol>
-      <li><strong>Skalarprodukt:</strong> <code>dotP([1,2,2],[2,-2,1])</code> → $0$ — die Vektoren sind senkrecht (orthogonal) zueinander.</li>
-      <li><strong>Kreuzprodukt:</strong> <code>crossP([1,0,0],[0,1,0])</code> → <code>[0,0,1]</code> — der Ergebnisvektor steht senkrecht auf beiden, wichtig für Normalenvektoren von Ebenen.</li>
-      <li><strong>Betrag (Länge):</strong> <code>norm([3,0,4])</code> → $5$, denn $\sqrt{9 + 16} = 5$.</li>
-      <li><strong>Winkel zwischen Vektoren:</strong> <code>angle([3,0,4],[5,0,0])</code> → $53{,}13^\circ$ — vorher die Winkeleinheit auf Deg stellen, sonst kommt das Bogenmaß $0{,}9273$ heraus.</li>
+      <li><strong>Funktion definieren:</strong> mit dem Befehl <code>Define</code> oder dem Zuweisungspfeil: <code>Define f(x)=x^3-3x^2+2</code>, dann EXE. Ab jetzt steht <code>f(x)</code> für diesen Term. Test: <code>f(0)</code> → $2$, <code>f(2)</code> → $-2$.<span class="klick">Interaktiv → Define</span></li>
+      <li><strong>Nullstellen:</strong> <code>solve(f(x)=0,x)</code> löst $f(x)=0$.<span class="klick">Interaktiv → (Un-)Gleichungen → solve</span></li>
+      <li><strong>Ableitung:</strong> <code>diff(f(x),x)</code> → $3x^2-6x$; an einer Stelle mit with-Strich: <code>diff(f(x),x)|x=1</code> liefert die Tangentensteigung dort.<span class="klick">Interaktiv → Berechnungen → diff</span></li>
+      <li><strong>Extremstellen:</strong> notwendige Bedingung $f'(x)=0$ lösen — <code>solve(diff(f(x),x)=0,x)</code> → $\{x=0,\ x=2\}$. Die zweite Ableitung <code>diff(f(x),x,2)</code> (drittes Argument <code>2</code> = zweimal ableiten) → $6x-6$ entscheidet über Hoch- oder Tiefpunkt.</li>
+      <li><strong>Wendestellen:</strong> <code>solve(diff(f(x),x,2)=0,x)</code> → $\{x=1\}$.</li>
+      <li><strong>Bestimmtes Integral / Fläche:</strong> Integral-Vorlage oder <code>∫(f(x),x,0,2)</code> für die Fläche von $0$ bis $2$.<span class="klick">Interaktiv → Berechnungen → ∫</span></li>
+    </ol>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Muster: Kurvendiskussion → aufs Papier</span>
+      <p><strong>① Ansatz:</strong> Extrempunkte über $f'(x)=0$, Art über das Vorzeichen von $f''$. <strong>② ClassPad:</strong> <code>Define f(x)=x^3-3x^2+2</code>; <code>solve(diff(f(x),x)=0,x)</code> → $\{x=0,\ x=2\}$; <code>diff(f(x),x,2)|x=0</code> → $-6$, <code>diff(f(x),x,2)|x=2</code> → $6$. <strong>③ Aufs Papier:</strong> „$f'(x)=3x^2-6x=0 \Rightarrow x=0 \lor x=2$; $f''(0)=-6<0$ → Hochpunkt $H(0\mid 2)$, $f''(2)=6>0$ → Tiefpunkt $T(2\mid -2)$.“ Der CAS liefert die Zahlen, der Rechenweg gehört aufs Papier.<span class="klick">Define = Interaktiv → Define · solve = Interaktiv → (Un-)Gleichungen → solve · diff = Interaktiv → Berechnungen → diff</span></p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Warum erst <code>f(x)</code> definieren, statt den Term jedes Mal neu zu tippen?</summary>
+      <div class="check-antwort"><p>Weil sonst jeder Befehl länger wird und ein Tippfehler alles verfälscht. Mit <code>Define f(x)=…</code> steckt der Term <strong>einmal</strong> sauber im Rechner; <code>diff(f(x),x)</code>, <code>solve(f(x)=0,x)</code> und <code>∫(f(x),…)</code> greifen alle auf dieselbe Funktion zu — weniger Fehlerquellen, kürzere Eingaben. Am Ende der Aufgabe die Definition wieder löschen (Stolperfalle „alte Belegung", Abschnitt 9).</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ws-grenzwerte">
+    <h2 id="ws-grenzwerte">9. Grenzwerte und Summen (Qualifikationsphase)</h2>
+    <p>Für Folgen, Reihen und das Verhalten im Unendlichen kennt der ClassPad eigene Befehle — unter <em>Interaktiv → Berechnungen</em>:</p>
+    <ol>
+      <li><strong>Grenzwert:</strong> <code>lim(f(x),x,a)</code> — Term, Variable, Stelle. <code>lim((2x+1)/(x-3),x,∞)</code> → $2$ (Verhalten im Unendlichen); <code>lim((1+1/x)^x,x,∞)</code> → $e$. Das $\infty$ liegt auf der <em>Math</em>-Tastatur.<span class="klick">Interaktiv → Berechnungen → lim</span></li>
+      <li><strong>Summe:</strong> <code>Σ(Term,k,Anfang,Ende)</code> summiert über den Laufindex $k$. <code>Σ(k,k,1,100)</code> → $5050$ (Gauß-Summe); <code>Σ(1/2^k,k,1,∞)</code> → $1$.<span class="klick">Interaktiv → Berechnungen → Σ</span></li>
+    </ol>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Durchklick-Beispiel: geometrische Reihe</span>
+      <p><code>Σ(0.5^k,k,1,∞)</code> und EXE → $1$. Die Idee: $\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\dots$ nähert sich $1$. Endliche Teilsumme: <code>Σ(0.5^k,k,1,10)</code> → $0{,}99902\ldots$ — schon dicht an $1$.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ws-vektoren">
+    <h2 id="ws-vektoren">10. Vektoren und Geometrie (Qualifikationsphase)</h2>
+    <p>Vektoren gibst du in der Main-App als Zeilen in <strong>eckigen Klammern</strong> ein: <code>[1,2,2]</code> steht für den Vektor mit den Komponenten $1$, $2$, $2$. Die Befehle dazu liegen unter <em>Interaktiv → Vektor</em>:</p>
+    <ol>
+      <li><strong>Skalarprodukt:</strong> <code>dotP([1,2,2],[2,-2,1])</code> → $0$ — die Vektoren sind senkrecht (orthogonal) zueinander.<span class="klick">Interaktiv → Vektor → dotP</span></li>
+      <li><strong>Kreuzprodukt:</strong> <code>crossP([1,0,0],[0,1,0])</code> → <code>[0,0,1]</code> — der Ergebnisvektor steht senkrecht auf beiden, wichtig für Normalenvektoren von Ebenen.<span class="klick">Interaktiv → Vektor → crossP</span></li>
+      <li><strong>Betrag (Länge):</strong> <code>norm([3,0,4])</code> → $5$, denn $\sqrt{9 + 16} = 5$.<span class="klick">Interaktiv → Vektor → norm</span></li>
+      <li><strong>Winkel zwischen Vektoren:</strong> <code>angle([3,0,4],[5,0,0])</code> → $53{,}13^\circ$ — vorher die Winkeleinheit auf Gradmaß stellen, sonst kommt das Bogenmaß $0{,}9273$ heraus.<span class="klick">Interaktiv → Vektor → angle</span></li>
       <li><strong>Schnittprobleme als LGS:</strong> Ob sich zwei Geraden schneiden oder wo eine Gerade eine Ebene durchstößt — komponentenweise gleichsetzen führt auf ein Gleichungssystem, das die Systemvorlage aus Abschnitt 2 löst (Variablen dann z. B. <code>t,s</code> statt <code>x,y</code>).</li>
     </ol>
     <div class="beispiel">
@@ -115,20 +224,38 @@
     </div>
   </section>
 
-  <section aria-labelledby="ws-stochastik">
-    <h2 id="ws-stochastik">6. Stochastik: Verteilungen, Listen, Regression (Qualifikationsphase)</h2>
-    <p>Die Verteilungsfunktionen erreichst du in der Main-App über <em>Interactive → Verteilungsfunktionen</em>. Entscheidend ist die <strong>Argument-Reihenfolge</strong> — und der <strong>Dezimalpunkt</strong> (immer <code>0.3</code>, nie <code>0,3</code>):</p>
+  <section aria-labelledby="ws-matrizen">
+    <h2 id="ws-matrizen">11. Matrizen und lineare Gleichungssysteme (Qualifikationsphase)</h2>
+    <p>Matrizen tippst du in der Main-App zeilenweise in <strong>doppelten eckigen Klammern</strong>: <code>[[2,1],[1,-1]]</code> ist die 2×2-Matrix mit den Zeilen $(2\ \ 1)$ und $(1\ \ {-1})$ — oder bequemer über die Matrix-Vorlage im Register <strong>Math2</strong>. Die Befehle liegen unter <em>Interaktiv → Matrix → Berechnungen</em>:</p>
     <ol>
-      <li><strong>binomialPDf(k, n, p)</strong> — Wahrscheinlichkeit für <em>genau</em> $k$ Treffer: <code>binomialPDf(2,10,0.2)</code> → $0{,}302$.</li>
-      <li><strong>binomialCDf(oberer Wert, n, p)</strong> — Wahrscheinlichkeit für <em>höchstens</em> so viele Treffer: <code>binomialCDf(4,20,0.3)</code> → $0{,}2375$. „Mindestens“-Fragen über das Gegenereignis: $P(X \ge 8) = 1 - P(X \le 7)$.</li>
-      <li><strong>invBinomialCDf(prob, n, p)</strong> — Umkehrfrage: kleinste Trefferzahl $k$, für die $P(X \le k)$ die Wahrscheinlichkeit prob erreicht. <code>invBinomialCDf(0.95,20,0.3)</code> → $9$, denn $P(X \le 9) \approx 0{,}952$.</li>
-      <li><strong>normCDf(untere Grenze, obere Grenze, σ, μ)</strong> — Fläche unter der Glockenkurve: erst die beiden Grenzen, dann $\sigma$ und erst <strong>danach</strong> $\mu$ — viele tippen reflexhaft $\mu$ zuerst! Einseitige Flächen mit $-\infty$ bzw. $\infty$ (mth-Tastatur, ersatzweise <code>-1E99</code>).</li>
-      <li><strong>invNormCDf</strong> — gegebene Wahrscheinlichkeit, gesuchte Grenze: Im Dialog <em>Tail</em> auf <em>Left</em>, <em>Right</em> oder <em>Center</em> stellen, dann prob, $\sigma$, $\mu$ eintragen.</li>
-      <li><strong>Listen und Statistik-App:</strong> In der App <em>Statistik</em> trägst du Messwerte in <code>list1</code> (und <code>list2</code>) ein. <em>Calc → Einvariablige Statistik</em> liefert Mittelwert $\bar{x}$, Median und Standardabweichung; <em>Calc → Regression → Lineare Reg.</em> legt die beste Gerade durch $(x \mid y)$-Datenpaare — das Werkzeug für Physik-Auswertungen.</li>
+      <li><strong>Determinante:</strong> <code>det([[2,1],[1,-1]])</code> → $-3$.<span class="klick">Interaktiv → Matrix → Berechnungen → det</span></li>
+      <li><strong>Produkt &amp; Potenz:</strong> mit <code>×</code> bzw. dem Dach — <code>[[0.9,0.2],[0.1,0.8]]^10</code> rechnet z. B. den Zustand einer Markow-Kette nach 10 Schritten.</li>
+      <li><strong>LGS über die erweiterte Koeffizientenmatrix:</strong> Schreibe das System als Matrix aus Koeffizienten + rechter Seite und bringe sie mit <code>rref</code> (reduzierte Stufenform) auf Diagonalgestalt. Für $2x+y=8$ und $x-y=1$: <code>rref([[2,1,8],[1,-1,1]])</code> → <code>[[1,0,3],[0,1,2]]</code> — die letzte Spalte liest sich als $x=3$, $y=2$.<span class="klick">Interaktiv → Matrix → Berechnungen → rref</span></li>
+    </ol>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Durchklick-Beispiel: 3×3-LGS</span>
+      <p>Für $x+y+z=6$, $2x-y+z=3$ und $x+2y-z=2$ tippst du <code>rref([[1,1,1,6],[2,-1,1,3],[1,2,-1,2]])</code>, dann EXE → <code>[[1,0,0,1],[0,1,0,2],[0,0,1,3]]</code>, also $x=1$, $y=2$, $z=3$. Probe in die erste Gleichung: $1+2+3=6$ ✓.</p>
+    </div>
+    <details class="check">
+      <summary>Verständnis-Check: Was bedeutet eine Nullzeile <code>[0 0 0 | 0]</code> in der rref-Form?</summary>
+      <div class="check-antwort"><p>Sie steht für die wahre Aussage $0=0$ — eine Gleichung war von den anderen abhängig. Das System ist dann <strong>unterbestimmt</strong> und hat unendlich viele Lösungen (eine freie Variable). Eine Zeile <code>[0 0 0 | 1]</code> hieße dagegen $0=1$ — ein Widerspruch, also <strong>keine Lösung</strong>.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ws-stochastik">
+    <h2 id="ws-stochastik">12. Stochastik: Verteilungen, Listen, Regression (Qualifikationsphase)</h2>
+    <p>Die Verteilungsfunktionen erreichst du in der Main-App über <em>Interaktiv → Verteilungsfunktionen</em> (oder <em>Aktion → Verteilungsfunktionen</em>, dann ohne Dialog). Entscheidend ist die <strong>Argument-Reihenfolge</strong> — und der <strong>Dezimalpunkt</strong> (immer <code>0.3</code>, nie <code>0,3</code>):</p>
+    <ol>
+      <li><strong>binomialPDf(k, n, p)</strong> — Wahrscheinlichkeit für <em>genau</em> $k$ Treffer: <code>binomialPDf(2,10,0.2)</code> → $0{,}302$.<span class="klick">Interaktiv → Verteilungsfunktionen → binomialPDf</span></li>
+      <li><strong>binomialCDf(oberer Wert, n, p)</strong> — Wahrscheinlichkeit für <em>höchstens</em> so viele Treffer: <code>binomialCDf(4,20,0.3)</code> → $0{,}2375$. „Mindestens“-Fragen über das Gegenereignis: $P(X \ge 8) = 1 - P(X \le 7)$.<span class="klick">Interaktiv → Verteilungsfunktionen → binomialCDf</span></li>
+      <li><strong>invBinomialCDf(prob, n, p)</strong> — Umkehrfrage: kleinste Trefferzahl $k$, für die $P(X \le k)$ die Wahrscheinlichkeit prob erreicht. <code>invBinomialCDf(0.95,20,0.3)</code> → $9$, denn $P(X \le 9) \approx 0{,}952$.<span class="klick">Interaktiv → Verteilungsfunktionen → invBinomialCDf</span></li>
+      <li><strong>normCDf(untere Grenze, obere Grenze, σ, μ)</strong> — Fläche unter der Glockenkurve: erst die beiden Grenzen, dann $\sigma$ und erst <strong>danach</strong> $\mu$ — viele tippen reflexhaft $\mu$ zuerst! Einseitige Flächen mit $-\infty$ bzw. $\infty$ (mth-Tastatur, ersatzweise <code>-1E99</code>).<span class="klick">Interaktiv → Verteilungsfunktionen → normCDf</span></li>
+      <li><strong>invNormCDf</strong> — gegebene Wahrscheinlichkeit, gesuchte Grenze: Im Dialog <em>Tail</em> auf <em>Left</em>, <em>Right</em> oder <em>Center</em> stellen, dann prob, $\sigma$, $\mu$ eintragen.<span class="klick">Interaktiv → Verteilungsfunktionen → invNormCDf</span></li>
+      <li><strong>Listen und Statistik-App:</strong> In der App <em>Statistik</em> trägst du Messwerte in <code>list1</code> (und <code>list2</code>) ein. <em>Calc → Eindim. Variable</em> liefert Mittelwert $\bar{x}$, Median und Standardabweichung; <em>Calc → Regressionen → Lineare Regression</em> legt die beste Gerade durch $(x \mid y)$-Datenpaare — das Werkzeug für Physik-Auswertungen.</li>
     </ol>
     <div class="beispiel">
       <span class="beispiel-etikett">Durchklick-Beispiel: Glockenfläche und Messreihe</span>
-      <p><code>normCDf(488,512,12,500)</code> → $0{,}6827$ — die bekannte $1\sigma$-Umgebung um $\mu = 500$ bei $\sigma = 12$. Und in der Statistik-App: <code>list1</code> mit $12, 15, 13, 16, 14$ füllen, <em>Calc → Einvariablige Statistik</em> → $\bar{x} = 14$, denn $\frac{70}{5} = 14$.</p>
+      <p><code>normCDf(488,512,12,500)</code> → $0{,}6827$ — die bekannte $1\sigma$-Umgebung um $\mu = 500$ bei $\sigma = 12$. Und in der Statistik-App: <code>list1</code> mit $12, 15, 13, 16, 14$ füllen, <em>Calc → Eindim. Variable</em> → $\bar{x} = 14$, denn $\frac{70}{5} = 14$.</p>
     </div>
     <details class="check">
       <summary>Verständnis-Check: Warum ist die σ-μ-Reihenfolge so gefährlich?</summary>
@@ -136,11 +263,44 @@
     </details>
   </section>
 
+  <section aria-labelledby="ws-regression">
+    <h2 id="ws-regression">13. Messreihen auswerten: Regression und Modellieren</h2>
+    <p>Für Physik-Auswertungen und Modellierungsaufgaben ist die App <strong>Statistik</strong> das richtige Werkzeug — sie legt die beste Kurve durch deine Messpunkte:</p>
+    <ol>
+      <li><strong>Daten eintragen:</strong> In der Statistik-App die $x$-Werte in <code>list1</code>, die $y$-Werte in <code>list2</code> (Spalten nebeneinander, Zeile für Zeile).</li>
+      <li><strong>Kennwerte einer Reihe:</strong> <em>Calc → Eindim. Variable</em> liefert Mittelwert $\bar{x}$, Median und Standardabweichung.</li>
+      <li><strong>Ausgleichsgerade:</strong> <em>Calc → Regressionen → Lineare Regression</em> legt die Gerade $y=a\cdot x+b$ durch die Punkte und nennt $a$, $b$ und den Korrelationskoeffizienten $r$ (je näher $|r|$ an $1$, desto besser der lineare Zusammenhang).</li>
+      <li><strong>Andere Modelle:</strong> im selben Menü <em>Quadratische Reg.</em>, <em>Exp. Regression</em> oder <em>Potenz-Reg.</em> — passend zum vermuteten Zusammenhang (z. B. quadratisch beim freien Fall $s\sim t^2$).</li>
+    </ol>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Durchklick-Beispiel: Federkonstante aus Messwerten</span>
+      <p>Auslenkung $s$ (in m) in <code>list1</code>: $0{,}05$; $0{,}10$; $0{,}15$; $0{,}20$ — Kraft $F$ (in N) in <code>list2</code>: $1{,}0$; $2{,}0$; $3{,}0$; $4{,}0$. <em>Calc → Regressionen → Lineare Regression</em> → $a=20$, $b=0$, also $F=20\cdot s$. Die Steigung $a=20\,\frac{\text{N}}{\text{m}}$ ist die <strong>Federkonstante</strong> $D$ — genau das, was du im Hooke-Experiment misst.</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">Brücke zu den Experimenten</span>
+      <p>Die digitalen Experimente der Lernwelt liefern Messreihen mit CSV-Export. Genau diese Werte trägst du in <code>list1</code>/<code>list2</code> ein und bestimmst die Ausgleichsgerade — so wird aus Einzelmessungen ein physikalisches Gesetz.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ws-physik">
+    <h2 id="ws-physik">14. Der CAS in der Physik: Formeln umstellen und numerisch lösen</h2>
+    <p>In der Physik hilft der ClassPad vor allem beim <strong>Umstellen von Formeln</strong> und beim Lösen von Gleichungen, die sich nicht „per Hand“ auflösen lassen:</p>
+    <ol>
+      <li><strong>Formel nach einer Größe umstellen:</strong> <code>solve</code> löst auch <em>symbolisch</em>. <code>solve(F=m*a,a)</code> → <code>{a=F/m}</code>; <code>solve(E=0.5*m*v^2,v)</code> → $v=\pm\sqrt{\frac{2E}{m}}$. So bekommst du jede Größe freigestellt, ohne dich zu verrechnen.<span class="klick">Interaktiv → (Un-)Gleichungen → solve</span></li>
+      <li><strong>Mit Werten und Zehnerpotenzen:</strong> Konstanten über den Zuweisungspfeil speichern (<code>9.81⇒g</code>), große/kleine Zahlen mit der <em>EXP</em>-Taste (<code>1.6ᴇ-19</code>). Danach rechnet jeder Term mit diesen Werten.</li>
+      <li><strong>Numerische Lösung:</strong> Wählst du <code>solve</code> über <em>Interaktiv → (Un-)Gleichungen → solve</em>, bietet der Dialog die Option <strong>Numerische Lösung</strong> — ideal für Gleichungen ohne geschlossene Lösung (z. B. gemischt aus $x$ und $\sin x$). Der Rechner sucht dann <em>eine</em> Lösung nahe einem Startwert.</li>
+    </ol>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Durchklick-Beispiel: Fallzeit freistellen und berechnen</span>
+      <p>Höhe beim freien Fall: $h=\frac{1}{2}g t^2$. Umstellen: <code>solve(h=0.5*g*t^2,t)</code> → $t=\pm\sqrt{\frac{2h}{g}}$. Werte einsetzen: <code>9.81⇒g</code>, dann <code>√(2·45/g)</code> → $t\approx 3{,}03\,\text{s}$ für $h=45\,\text{m}$. Aufs Papier schreibst du die umgestellte Formel und das Einsetzen — der CAS liefert nur die Zahl.</p>
+    </div>
+  </section>
+
   <section aria-labelledby="ws-stolperfallen">
-    <h2 id="ws-stolperfallen">7. Stolperfallen-Sammlung</h2>
+    <h2 id="ws-stolperfallen">15. Stolperfallen-Sammlung</h2>
     <p>Sieben Klassiker, die in Klassenarbeiten regelmäßig Punkte kosten — alle in zwei Minuten nachklickbar:</p>
     <ol>
-      <li><strong>Bogenmaß-Falle:</strong> <code>sin(30)</code> ergibt $0{,}5$ nur im Grad-Modus; steht die Statusleiste auf Rad, kommt $-0{,}988$ heraus. Vor jeder sin/cos/tan-Rechnung: Winkeleinheit prüfen.</li>
+      <li><strong>Bogenmaß-Falle:</strong> <code>sin(30)</code> ergibt $0{,}5$ nur im Gradmaß (360°); steht die Statusleiste auf Bogenmaß (2π), kommt $-0{,}988$ heraus. Vor jeder sin/cos/tan-Rechnung: Winkeleinheit prüfen.</li>
       <li><strong>Alte Variablenbelegung:</strong> Wer gestern <code>12⇒a</code> gespeichert hat, bekommt heute für <code>solve(a×x=24,x)</code> plötzlich $x = 2$ statt $x = \frac{24}{a}$. Vor neuen Aufgaben: <em>Edit → Alle Variablen löschen</em>.</li>
       <li><strong>Standard- vs. Dezimal-Anzeige täuscht:</strong> $\frac{17}{2}$ und $8{,}5$ sehen verschieden aus, sind aber dieselbe Zahl — erst denken, dann „falsch“ rufen. Umgekehrt bleibt $\sqrt{2}$ im Standard-Modus exakt stehen, statt $1{,}414$ zu zeigen.</li>
       <li><strong>x·y ist nicht xy:</strong> Über die abc-Tastatur ist <code>xy</code> ein einziger zweibuchstabiger Variablenname. Produkte deshalb immer mit Mal-Zeichen tippen: <code>x×y</code>.</li>
@@ -150,8 +310,66 @@
     </ol>
     <div class="beispiel">
       <span class="beispiel-etikett">Durchklick-Beispiel: die Bogenmaß-Falle auslösen</span>
-      <p>Statusleiste auf <em>Rad</em> stellen, <code>sin(30)</code> und EXE → $-0{,}9880$. Statusleiste antippen, auf <em>Deg</em> wechseln, noch einmal <code>sin(30)</code> → $0{,}5$. Merke dir das Gefühl — genau so sieht eine falsch eingestellte Winkeleinheit in der Klassenarbeit aus.</p>
+      <p>Statusleiste auf <em>Bogenmaß</em> (2π) stellen, <code>sin(30)</code> und EXE → $-0{,}9880$. Statusleiste antippen, auf <em>Gradmaß</em> (360°) wechseln, noch einmal <code>sin(30)</code> → $0{,}5$. Merke dir das Gefühl — genau so sieht eine falsch eingestellte Winkeleinheit in der Klassenarbeit aus.</p>
     </div>
+  </section>
+
+  <section aria-labelledby="ws-klausur">
+    <h2 id="ws-klausur">16. CAS in der Klausur richtig dokumentieren</h2>
+    <p>Der ClassPad liefert nur die Zahl — die <strong>Punkte</strong> gibt es für den nachvollziehbaren Weg. Schreibe jeden CAS-Schritt in drei Teilen auf: <strong>① Ansatz</strong> (welche Gleichung/Größe?), <strong>② Eingabe</strong> (welcher Befehl mit welchen Werten?), <strong>③ Ergebnis + Deutung</strong> (was bedeutet die Zahl im Sachzusammenhang?).</p>
+    <div class="beispiel">
+      <span class="beispiel-etikett">Muster: Ansatz → ClassPad → aufs Papier</span>
+      <p><strong>Aufgabe:</strong> Wann erreicht der Ball die Höhe $15\,\text{m}$, wenn $h(t)=20t-5t^2$ (in Metern, $t$ in Sekunden)?</p>
+      <p><strong>① Ansatz (Papier):</strong> $20t-5t^2 = 15$.<br>
+      <strong>② ClassPad:</strong> <code>solve(20t-5t^2=15,t)</code> und EXE → $\{t=1,\ t=3\}$.<br>
+      <strong>③ Aufs Papier + Deutung:</strong> „Mit dem CAS liefert $solve(20t-5t^2=15,t)$ die Lösungen $t_1=1\,\text{s}$ und $t_2=3\,\text{s}$ — der Ball ist auf dem Weg nach oben (1 s) und wieder nach unten (3 s) auf 15 m.“</p>
+    </div>
+    <div class="merkkasten">
+      <span class="merk-etikett">So schreibst du es auf — und so nicht</span>
+      <p><strong>✗ „Laut CAS: $t=1$ und $t=3$.“</strong> — ohne Ansatz und Eingabe ist kein Rechenweg erkennbar: wenige bis keine Punkte.<br>
+      <strong>✓ Ansatzgleichung hinschreiben, den Befehl notieren (<code>solve(…)</code>), Ergebnis mit Einheit und Deutung.</strong> So bleibt der Weg nachvollziehbar — auch wenn der Rechner die Arbeit gemacht hat.</p>
+    </div>
+    <ul>
+      <li><strong>Hilfsmittelfreier Teil:</strong> In Abitur (eA/gA) und vielen Arbeiten gibt es einen Teil <em>ohne</em> Rechner — Grundwissen und Kopfrechnen bleiben Pflicht.</li>
+      <li><strong>Plausibilität:</strong> jedes CAS-Ergebnis kurz überschlagen (Größenordnung, Vorzeichen, Anzahl der Lösungen) — so fällt ein Tippfehler oder ein falscher Modus sofort auf.</li>
+      <li><strong>Exakt vs. gerundet:</strong> im Rechenweg exakt rechnen, in der Sachantwort sinnvoll runden und mit Einheit angeben.</li>
+    </ul>
+    <details class="check">
+      <summary>Verständnis-Check: Reicht „$x=5$ (mit dem CAS)“ als vollständige Lösung?</summary>
+      <div class="check-antwort"><p>Nein. Es fehlen der <strong>Ansatz</strong> (welche Gleichung wurde gelöst?) und die <strong>Eingabe</strong> (welcher Befehl?). Ohne beides ist der Weg nicht nachvollziehbar und kann nicht voll gewertet werden — schreibe die Gleichung und <code>solve(…)</code> dazu.</p></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="ws-referenz">
+    <h2 id="ws-referenz">17. Befehls-Referenzkarte</h2>
+    <p>Die wichtigsten Befehle auf einen Blick — alle erreichbar über <strong>Aktion</strong> (fügt den Befehl als Text ein) oder <strong>Interaktiv</strong> (geführter Dialog) in der Main-App; tippen geht immer auch direkt.</p>
+    <div class="tabelle-wrap">
+    <table class="cas-referenz">
+      <thead><tr><th>Aufgabe</th><th>Befehl</th><th>Menüpfad (Interaktiv → …)</th></tr></thead>
+      <tbody>
+        <tr><td>Gleichung lösen</td><td><code>solve(gl,x)</code></td><td>(Un-)Gleichungen → solve</td></tr>
+        <tr><td>Ausmultiplizieren</td><td><code>expand(…)</code></td><td>Umformungen → expand</td></tr>
+        <tr><td>Faktorisieren</td><td><code>factor(…)</code></td><td>Umformungen → faktoris</td></tr>
+        <tr><td>Vereinfachen</td><td><code>simplify(…)</code></td><td>Umformungen → simplify</td></tr>
+        <tr><td>Funktion benennen</td><td><code>Define f(x)=…</code></td><td>Define</td></tr>
+        <tr><td>Ableiten</td><td><code>diff(f(x),x)</code></td><td>Berechnungen → diff</td></tr>
+        <tr><td>Integrieren</td><td><code>∫(f(x),x,a,b)</code></td><td>Berechnungen → ∫</td></tr>
+        <tr><td>Grenzwert</td><td><code>lim(f(x),x,a)</code></td><td>Berechnungen → lim</td></tr>
+        <tr><td>Summe</td><td><code>Σ(Term,k,a,b)</code></td><td>Berechnungen → Σ</td></tr>
+        <tr><td>Tangente</td><td><code>tanLine(f(x),x,a)</code></td><td>Berechnungen → Linie</td></tr>
+        <tr><td>Skalar-/Kreuzprodukt</td><td><code>dotP(…)</code>·<code>crossP(…)</code></td><td>Vektor</td></tr>
+        <tr><td>Betrag · Winkel</td><td><code>norm(…)</code>·<code>angle(…)</code></td><td>Vektor</td></tr>
+        <tr><td>LGS / Stufenform</td><td><code>rref([[…]])</code></td><td>Matrix → Berechnungen → rref</td></tr>
+        <tr><td>Determinante</td><td><code>det([[…]])</code></td><td>Matrix → Berechnungen → det</td></tr>
+        <tr><td>Binomialverteilung</td><td><code>binomialPDf</code>·<code>binomialCDf</code></td><td>Verteilungsfunktionen</td></tr>
+        <tr><td>Normalverteilung</td><td><code>normCDf</code>·<code>invNormCDf</code></td><td>Verteilungsfunktionen</td></tr>
+        <tr><td>Ausgleichsgerade</td><td>(Statistik-App)</td><td>Calc → Regressionen → Lineare Regression</td></tr>
+        <tr><td>Achsenfenster</td><td>xmin/max/Skala</td><td>Symbolleiste → Fenster-Einst.</td></tr>
+        <tr><td>Wertetabelle</td><td>Start/Ende/Schritt</td><td>Symbolleiste → Tabelleneingabe</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Winkelmaß (Statusleiste: <strong>360°</strong>/<strong>2π</strong>) und Exakt/Dezimal (<em>½↔0.5</em>) vor dem Rechnen prüfen — alle Modi dauerhaft in <em>⚙ → Grundformat</em>.</p>
   </section>
 
   <div class="weiter-karte">

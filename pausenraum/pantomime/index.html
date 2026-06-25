@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pantomime — Pausenraum · Lernwelt</title>
+<meta name="description" content="Klassenspiel im Beamermodus: Begriffe still darstellen, das eigene Team rät. Punkte und Timer erscheinen groß auf der digitalen Tafel.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Pantomime <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Ein Klassenspiel für die digitale Tafel: Eine Person pro Team dreht der Tafel den Rücken zu, das Team stellt den angezeigten Begriff <strong>stumm</strong> dar — die ratende Person ruft ihn. Punkte und Timer laufen groß auf der Tafel mit. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Stellt zuerst Teamzahl, Rundenzeit und Kategorien ein. Pro Runde ist ein Team dran: Eine Person dreht sich von der Tafel weg, ihr Team stellt den Begriff ohne Worte, Geräusche oder Zeigen auf echte Gegenstände dar. Wird er erraten, tippt jemand <strong>„Erraten ✓"</strong> — das gibt einen Punkt und blendet den nächsten Begriff ein. Passt ein Begriff gar nicht, mit <strong>„Auslassen"</strong> überspringen. Läuft die Zeit ab, ist das nächste Team dran. „Spiel beenden" zeigt den Endstand.</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

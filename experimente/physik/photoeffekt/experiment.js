@@ -299,7 +299,7 @@ export function starteExperiment() {
 
     // --- Messverstärker mit analoger pA-Anzeige (0…20 pA, Null-Markierung) ---
     ctx.strokeStyle = cText; ctx.lineWidth = 2; ctx.fillStyle = cFlaeche;
-    rrect(186, 300, 160, 170); ctx.fill(); ctx.stroke();
+    rrect(182, 300, 168, 170); ctx.fill(); ctx.stroke();
     ctx.fillStyle = cText; ctx.textAlign = "center"; ctx.font = "bold 13px system-ui, sans-serif"; ctx.fillText("Messverstärker", 266, 320);
     const px = 266, py = 446, R = 96, a0 = -2.3562, spann = 1.5708;
     ctx.strokeStyle = cLeise; ctx.lineWidth = 1.5;

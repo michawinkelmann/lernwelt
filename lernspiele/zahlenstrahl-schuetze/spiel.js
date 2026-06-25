@@ -10,6 +10,8 @@
 // zieheAufgabe, formatZahl) hängt nicht am DOM — die Modulebene benutzt kein
 // document/window und ist damit in Node testbar: selbsttest().
 
+import { zeigeStufenwahl } from "../../assets/js/spiel/stufenwahl.js";
+
 // ---------- Manifest ----------
 
 export const manifest = {
@@ -40,6 +42,17 @@ export const LEVELS = [
     beschreibung: "Negative Brüche und Dezimalzahlen wie −7/4 oder −2,5 links der Null." },
   { nr: 4, name: "Wurzeln (Gym)", bereichText: "0 bis 10", min: 0, max: 10, haupt: 1, neben: 0.5, mittel: null, zweig: "gym",
     beschreibung: "Quadratwurzeln von √2 bis √90 ohne Taschenrechner einschachteln." }
+];
+
+// ---------- Klassenstufen ----------
+// Eine Runde nutzt eine feste Skala je Level (kein Blend): jede Klasse mappt
+// auf genau ein Level (nr). Der „Gymnasium"-Knopf wählt bewusst Level 4 (Wurzeln,
+// zweig "gym").
+export const STUFEN = [
+  { klasse: "Klasse 5", kurz: "Brüche am Strahl 0–1", nr: 1 },
+  { klasse: "Klasse 6", kurz: "Dezimalzahlen 0–10", nr: 2 },
+  { klasse: "Klasse 7", kurz: "auch negative Zahlen", nr: 3 },
+  { klasse: "Gymnasium ab 9", kurz: "Wurzeln 0–10", nr: 4 }
 ];
 
 // ---------- Reine Logik (ohne DOM, in Node testbar) ----------
@@ -149,20 +162,12 @@ export function starte(api) {
     zustand = "wahl";
     punkte = 0;
     api.setzePunkte(0);
-    f.innerHTML = `
-      <div class="zs-levelwahl">
-        <h2>Wähle dein Level</h2>
-        <div class="zs-levels">
-          ${LEVELS.map(L => `
-            <button type="button" class="zs-levelknopf" data-level="${L.nr}">
-              <b>Level ${L.nr}: ${L.name}</b>
-              <span>Zahlenstrahl ${L.bereichText} — ${L.beschreibung}</span>
-            </button>`).join("")}
-        </div>
-        <p class="zs-hinweis">10 Aufgaben pro Runde · bis zu 100 Punkte pro Treffer · die Bestenliste zählt über alle Level.</p>
-      </div>`;
-    f.querySelectorAll(".zs-levelknopf").forEach(k =>
-      k.addEventListener("click", () => starteRunde(Number(k.dataset.level))));
+    zeigeStufenwahl(f, {
+      titel: "Wähle deine Klasse:",
+      hinweis: "Jede Klasse übt auf ihrem eigenen Zahlenstrahl — 10 Aufgaben pro Runde, bis zu 100 Punkte pro Treffer. Nimm gern eine höhere Klasse, wenn du mehr willst.",
+      stufen: STUFEN,
+      aufWahl: s => starteRunde(s.nr)
+    });
   }
 
   function starteRunde(nr) {
@@ -432,5 +437,22 @@ export function selbsttest() {
     formatZahl(0.625, 3) === "0,625" && formatZahl(-2.5, 1) === "−2,5" &&
     formatZahl(3, 1) === "3" && formatZahl(10, 1) === "10");
 
+  // STUFEN ↔ LEVELS
+  pruefe("STUFEN: jede Stufe hat ein gültiges nr (1…4)",
+    STUFEN.length >= 3 && STUFEN.every(s => Number.isInteger(s.nr) && s.nr >= 1 && s.nr <= 4));
+  pruefe("STUFEN: jede Stufe entspricht einem existierenden LEVELS-Eintrag",
+    STUFEN.every(s => LEVELS.some(L => L.nr === s.nr)));
+
   return { ok: ergebnisse.every(e => e.ok), ergebnisse };
 }
+
+// TESTS-Array (gleiches Format wie die anderen Trainer): bündelt selbsttest()
+// und die beiden STUFEN-Prüfungen für das gemeinsame Verifikations-Gerüst.
+export const TESTS = [
+  { name: "selbsttest(): alle internen Prüfungen bestehen", ok: () => selbsttest().ok },
+  { name: "STUFEN: jede Stufe hat ein gültiges nr (1…4) und einen existierenden LEVELS-Eintrag",
+    ok: () => STUFEN.length >= 3 &&
+      STUFEN.every(s => Number.isInteger(s.nr) && s.nr >= 1 && s.nr <= 4 && LEVELS.some(L => L.nr === s.nr)) },
+  { name: "STUFEN: jede Stufe zieht eine Aufgabe im Bereich ihres Levels",
+    ok: () => STUFEN.every(s => { const L = LEVELS.find(l => l.nr === s.nr); const a = zieheAufgabe(s.nr); return a.wert >= L.min - 1e-9 && a.wert <= L.max + 1e-9; }) }
+];

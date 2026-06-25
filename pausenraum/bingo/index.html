@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bingo — Pausenraum · Lernwelt</title>
+<meta name="description" content="Klassenspiel im Beamermodus: Ziehungsmaschine für die Tafel. Zahlen oder Begriffe werden zufällig ohne Wiederholung gezogen, alle markieren auf ihren eigenen Karten.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Bingo <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Eine Ziehungsmaschine für die digitale Tafel: Wählt einen Pool, dann wird mit jedem Knopfdruck zufällig ein Wert <strong>ohne Wiederholung</strong> gezogen. Die zuletzt gezogene Zahl bzw. der Begriff erscheint riesig, darunter wächst ein Verlaufsraster aller Ziehungen. Alle haben eigene oder gedruckte Bingo-Karten und markieren mit. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Jede:r braucht eine Bingo-Karte — selbst gemalt oder gedruckt. Ein 5×5-Raster, die Mitte ist frei. Wählt an der Tafel den Pool (Zahlen 1–75 oder allgemeine Begriffe) und tippt auf <strong>„Nächste Ziehung"</strong>. Der gezogene Wert wird groß angezeigt und ins Verlaufsraster aufgenommen; wer ihn auf seiner Karte hat, kreuzt ihn an. Wer zuerst eine volle Reihe, Spalte oder Diagonale hat, ruft „Bingo!". Mit <strong>„Neues Spiel"</strong> wird der Pool neu gemischt, und mit <strong>„Zufalls-Spielkarte"</strong> könnt ihr euch zur Übung eine Beispielkarte erzeugen lassen.</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

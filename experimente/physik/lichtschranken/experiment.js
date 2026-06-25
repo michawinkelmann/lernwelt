@@ -273,12 +273,18 @@ export function starteExperiment() {
       ctx.lineTo(p.x + nx * (4 + lang), p.y + ny * (4 + lang));
       ctx.stroke();
     }
-    ctx.fillStyle = cText; ctx.font = "12px system-ui, sans-serif"; ctx.textAlign = "center";
+    ctx.font = "12px system-ui, sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
     for (const cm of [0, 50, 100, 150]) {
       const p = P(cm / 100);
-      ctx.fillText(cm === 0 ? "0 cm" : String(cm), p.x + nx * 24, p.y + ny * 24 + 4);
+      const lx = p.x + nx * 24, ly = p.y + ny * 24 + 4;
+      const txt = cm === 0 ? "0 cm" : String(cm);
+      const tw = ctx.measureText(txt).width;
+      ctx.fillStyle = cFlaeche;                 // Chip, damit die Zahl auch über dem Standfuß lesbar bleibt
+      ctx.fillRect(lx - tw / 2 - 2, ly - 8, tw + 4, 15);
+      ctx.fillStyle = cText;
+      ctx.fillText(txt, lx, ly);
     }
-    ctx.textAlign = "start";
+    ctx.textAlign = "start"; ctx.textBaseline = "alphabetic";
 
     // Prellbock am Bahnende
     const pb = P(1.49);

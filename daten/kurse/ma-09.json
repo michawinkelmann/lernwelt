@@ -416,6 +416,44 @@
        "pfad": "simulationen/mathematik/pythagoras-quadrate/index.html",
        "linkLabel": "Simulation öffnen",
        "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      },
+      {
+       "typ": "experiment",
+       "titel": "Den Satz des Pythagoras selbst vermessen",
+       "pfad": "experimente/mathematik/pythagoras-messen/index.html",
+       "vorhersage": "Stimmt $a^2+b^2$ bei jedem rechtwinkligen Dreieck mit $c^2$ überein — oder hängt das von der Form ab?",
+       "auftraege": [
+        "Lies bei mindestens vier rechtwinkligen Dreiecken die Katheten $a$, $b$ und die Hypotenuse $c$ an den mm-Skalen ab.",
+        "Berechne für jedes Dreieck $a^2+b^2$ und $c^2$ und vergleiche beide Werte.",
+        "Trage $a^2+b^2$ über $c^2$ auf und bestimme die Steigung der Ursprungsgeraden."
+       ],
+       "material": "Geodreieck oder Lineal, ein paar selbst gezeichnete rechtwinklige Dreiecke auf Papier.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: a²+b² über c²",
+        "params": {
+         "xLabel": "c²",
+         "yLabel": "a²+b²",
+         "xEinheit": "cm²",
+         "yEinheit": "cm²",
+         "zeilen": 5,
+         "xVorgabe": [
+          56,
+          100,
+          169,
+          225,
+          144
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "Steigung (≈1)",
+          "einheit": "",
+          "ausSteigung": "direkt"
+         }
+        }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "lehrkraft": "<p><strong>Voraussetzungen:</strong> Rechtwinklige Dreiecke und die Begriffe Kathete/Hypotenuse (Lektion 1); Flächeninhalt des Quadrats.</p><p><strong>Angesprochene Kompetenzen:</strong> Mathematisch argumentieren (einen Satz über Flächen begründen), Darstellungen wechseln (Figur ↔ Gleichung).</p><p><strong>Erwartung:</strong> Die Lernenden stellen fest, dass $a^2+b^2=c^2$ genau im rechtwinkligen Fall gilt, und deuten den Satz als Flächengleichheit der Quadrate.</p><p><strong>Modellgrenzen:</strong> Die Simulation zeigt die Gleichheit nur an Beispielen; ein allgemeiner Beweis (z. B. durch Zerlegung) folgt erst danach.</p>"
@@ -4949,6 +4987,44 @@
         "Miss die vier Abschnitte und bilde die Verhältnisse $\\frac{ZA}{ZA'}$ und $\\frac{ZB}{ZB'}$.",
         "Verschiebe eine Parallele und prüfe, ob die Verhältnisse gleich bleiben."
        ]
+      },
+      {
+       "typ": "experiment",
+       "titel": "Den Strahlensatz selbst vermessen",
+       "pfad": "experimente/mathematik/strahlensatz/index.html",
+       "vorhersage": "Bleibt das Verhältnis $ZA':ZA$ gleich, wenn du die Parallele weiter vom Scheitel wegschiebst?",
+       "auftraege": [
+        "Lies für mindestens vier Stellungen der Parallele den Abschnitt $ZA$ auf Strahl 1 und $ZA'$ auf Strahl 2 ab.",
+        "Berechne für jede Stellung den Quotienten $\\frac{ZA'}{ZA}$ und vergleiche die Werte.",
+        "Trage $ZA'$ über $ZA$ auf und bestimme die Steigung der Ursprungsgeraden."
+       ],
+       "material": "Geodreieck und Lineal, um zwei Strahlen aus einem Punkt und mehrere Parallelen zu zeichnen.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: ZA′ über ZA",
+        "params": {
+         "xLabel": "ZA",
+         "yLabel": "ZA′",
+         "xEinheit": "cm",
+         "yEinheit": "cm",
+         "zeilen": 5,
+         "xVorgabe": [
+          3,
+          5,
+          6.5,
+          8,
+          10
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "Verhältnis ZA′/ZA",
+          "einheit": "",
+          "ausSteigung": "direkt"
+         }
+        }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -4998,7 +5074,10 @@
        "wort": "ähnliche Figuren",
        "lektion": "l21"
       }
-     ]
+     ],
+     "vorueberlegung": "<p>Bevor wir mit dem Strahlensatz rechnen, überlegen wir: Zwei Strahlen gehen vom Scheitel $Z$ aus, eine Parallele schneidet beide. Schiebt man die Parallele weiter weg, werden die Abschnitte $ZA$ und $ZA'$ beide größer. Vermutung: Ihr <em>Verhältnis</em> bleibt dabei gleich. Wir erwarten, dass beim Auftragen von $ZA'$ über $ZA$ eine Ursprungsgerade entsteht, deren Steigung dieses feste Verhältnis ist.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Ablesen von Strecken an einer mm-Skala, Bilden und Vergleichen von Verhältnissen (Quotienten), Ablesen einer Steigung. Begriffe Scheitel, Strahl, Parallele sollten bekannt sein.</p><p><strong>Angesprochene Kompetenzen:</strong> Strecken messen und protokollieren, das Verhältnis $\\frac{ZA'}{ZA}$ berechnen, eine Ursprungsgerade interpretieren und die Steigung als konstantes Verhältnis deuten (Strahlensatz; Modellieren K3, Werkzeuge K5).</p><p><strong>Erwartung:</strong> Die Quotienten $ZA'/ZA$ sind für alle Stellungen nahezu gleich; die Steigung der Ausgleichsgeraden bestätigt das feste Verhältnis. Die Lernenden formulieren den ersten Strahlensatz und verknüpfen ihn mit der Ähnlichkeit der entstehenden Dreiecke.</p><p><strong>Modellgrenzen:</strong> Der Strahlensatz gilt nur, wenn die schneidenden Geraden wirklich parallel sind. Nah am Scheitel sind die Abschnitte kurz, sodass 1 mm Ablesefehler relativ stark wirkt — weit außen wird die Messung genauer.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 18,
@@ -5963,6 +6042,44 @@
         "Berechne die Fläche mit $A=\\pi r^2$ und vergleiche mit deiner Zählung.",
         "Verdopple den Radius und prüfe: Wird die Fläche doppelt oder viermal so groß?"
        ]
+      },
+      {
+       "typ": "experiment",
+       "titel": "Die Kreisfläche selbst auszählen",
+       "pfad": "experimente/mathematik/kreisflaeche/index.html",
+       "vorhersage": "Wenn du den Radius verdoppelst: Wird die Kreisfläche doppelt, dreifach oder viermal so groß?",
+       "auftraege": [
+        "Zähle bei mindestens vier Kreisen die bedeckten Kästchen aus (ganze Kästchen voll, angeschnittene halb) und trage die Fläche $A$ in eine Tabelle ein.",
+        "Berechne für jeden Kreis den Quotienten $\\frac{A}{r^2}$ und vergleiche die Werte.",
+        "Trage $A$ über $r^2$ auf und bestimme die Steigung der Ursprungsgeraden."
+       ],
+       "material": "Karopapier (1-cm-Raster), Zirkel, Lineal und etwas Geduld beim Auszählen.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Fläche A über Radiusquadrat r²",
+        "params": {
+         "xLabel": "r²",
+         "yLabel": "A",
+         "xEinheit": "cm²",
+         "yEinheit": "cm²",
+         "zeilen": 5,
+         "xVorgabe": [
+          9,
+          16,
+          25,
+          36,
+          49
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "π (Steigung)",
+          "einheit": "",
+          "ausSteigung": "direkt"
+         }
+        }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -5996,7 +6113,10 @@
        "wort": "Kreiszahl Pi",
        "lektion": "l25"
       }
-     ]
+     ],
+     "vorueberlegung": "<p>Bevor wir die Kreisfläche ausrechnen, überlegen wir: Eine Pizza mit doppeltem Radius ist sicher größer — aber ist sie <em>doppelt</em> so groß? Vermutung: Wenn der Radius $r$ wächst, wächst die Fläche wohl stärker als die Länge $r$. Wir erwarten, dass beim Auftragen von $A$ über $r^2$ eine Ursprungsgerade entsteht, deren Steigung eine feste Zahl ist.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Sicheres Arbeiten mit dem Quadrat $r^2$, Flächeneinheit $\\text{cm}^2$, Ablesen einer Steigung am Diagramm. Die Kreiszahl $\\pi$ sollte aus dem Umfangs-Experiment bereits begegnet sein.</p><p><strong>Angesprochene Kompetenzen:</strong> Messen/Auszählen (Kästchenmethode), Daten in einer Tabelle ordnen, $A$ über $r^2$ auftragen, eine Ursprungsgerade interpretieren und die Steigung als $\\pi$ deuten (Modellieren K3, Werkzeuge K5).</p><p><strong>Erwartung:</strong> Die Quotienten $A/r^2$ streuen eng um $\\pi\\approx 3{,}14$; die Lernenden erkennen $A=\\pi\\cdot r^2$ und begründen, warum große Kreise genauer auszuzählen sind (relativer Randanteil $\\approx 2/r$).</p><p><strong>Modellgrenzen:</strong> Die Kästchenmethode ist nur eine Näherung — der angeschnittene Rand wird pauschal halb gezählt. Erst bei unendlich feinem Raster ergibt sich exakt $\\pi$; mit cm-Kästchen bleiben einige Prozent Abweichung.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 18,

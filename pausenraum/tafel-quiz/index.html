@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tafel-Quiz — Pausenraum · Lernwelt</title>
+<meta name="description" content="Team-Quiz im Beamermodus: Frage und vier Antworten erscheinen groß auf der digitalen Tafel, die Teams raten. Punkte und Bedenkzeit laufen mit.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Tafel-Quiz <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Ein Klassenquiz für die digitale Tafel: Eine Frage mit vier Antworten <strong>A–D</strong> erscheint groß, die Teams beraten sich und antworten per Handzeichen oder Buzzer. Du moderierst von vorn, löst auf und vergibst die Punkte. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Stellt zuerst die Teamzahl und die Bedenkzeit ein (aus, 20 s oder 30 s). Dann erscheinen die Fragen in zufälliger Reihenfolge: oben die Frage, darunter die vier Antworten A–D. Wenn du eine Bedenkzeit gewählt hast, startest du den Timer per Knopf — die Teams haben so lange Zeit, sich zu entscheiden. Antworten tun sie <strong>offline</strong> (Handzeichen, Buzzer, Zuruf).</p>
+      <p>Mit <strong>„Auflösen"</strong> hebt die Tafel die richtige Antwort grün mit ✓ hervor und zeigt eine kurze Erklärung. Danach gibst du jedem Team, das richtig lag, mit <strong>„+1"</strong> einen Punkt. <strong>„Nächste Frage"</strong> blendet die nächste ein; die Punktestände stehen oben. Nach der letzten Frage — oder jederzeit über <strong>„Quiz beenden"</strong> — erscheint der Endstand mit der Siegerin oder dem Sieger.</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

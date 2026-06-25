@@ -2,6 +2,8 @@
 // Reine Logik (Aufgaben-Generatoren, Antwortprüfung, Punkte) liegt auf Modulebene
 // und ist in Node testbar (export TESTS) — alles mit DOM passiert erst in starte().
 
+import { zeigeStufenwahl } from "../../assets/js/spiel/stufenwahl.js";
+
 export const manifest = {
   id: "ls-blitzrechnen",
   titel: "Blitzrechnen",
@@ -18,6 +20,15 @@ export const LEVELS = [
   { nr: 2, name: "Plus und Minus bis 100", kurz: "nie negativ" },
   { nr: 3, name: "Bis 1000 mit Mal und Geteilt", kurz: "geteilt geht immer glatt auf" },
   { nr: 4, name: "Gemischt mit Klammern", kurz: "alles plus a · (b + c)" }
+];
+
+// Klassenstufen → Levels (Blend). Jede Klasse zieht ihre Aufgaben aus diesen Levels.
+export const STUFEN = [
+  { klasse: "Klasse 5", kurz: "Einmaleins · + und − bis 100", levels: [1, 2] },
+  { klasse: "Klasse 6", kurz: "+ und − bis 1000 · Mal und Geteilt", levels: [2, 3] },
+  { klasse: "Klasse 7", kurz: "bis 1000 · Mal und Geteilt", levels: [3] },
+  { klasse: "Klasse 8", kurz: "bis 1000 · auch Klammerterme", levels: [3, 4] },
+  { klasse: "Klasse 9/10", kurz: "alles gemischt mit Klammern", levels: [4] }
 ];
 
 // ---------- reine Hilfsfunktionen ----------
@@ -156,7 +167,11 @@ export const TESTS = [
       pruefeAntwort(" 56 ", 56) && !pruefeAntwort("", 0) && !pruefeAntwort("abc", 0) },
   { name: "punkteFuer: Basis 10·Level, Combo ab Serie 3 (+2 je weiterer)", ok: () =>
       punkteFuer(1, 1) === 10 && punkteFuer(1, 2) === 10 && punkteFuer(1, 3) === 12 &&
-      punkteFuer(1, 4) === 14 && punkteFuer(3, 1) === 30 && punkteFuer(4, 5) === 46 }
+      punkteFuer(1, 4) === 14 && punkteFuer(3, 1) === 30 && punkteFuer(4, 5) === 46 },
+  { name: "STUFEN: jede Klasse mappt auf gültige Levels (1–4)", ok: () =>
+      STUFEN.length >= 4 && STUFEN.every(s => s.levels.length >= 1 && s.levels.every(l => l >= 1 && l <= 4)) },
+  { name: "STUFEN: je Klasse 200 Aufgaben exakt & nie negativ", ok: () =>
+      STUFEN.every(s => { for (let i = 0; i < 200; i++) { const l = s.levels[i % s.levels.length]; const a = erzeugeAufgabe(l); if (!Number.isInteger(a.loesung) || a.loesung < 0 || !pruefeAntwort(String(a.loesung), a.loesung)) return false; } return true; }) }
 ];
 
 // ---------- Spielablauf (DOM nur hier) ----------
@@ -170,18 +185,15 @@ export function starte(api) {
     api.versteckePanel();
     api.setzePunkte(0);
     api.setzeZeit(`${SPRINT_SEKUNDEN} s`);
-    api.flaeche.innerHTML = `
-      <div style="display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;min-height:280px;padding:20px;text-align:center;">
-        <p style="margin:0;font-weight:700;">Wähle dein Level — ${SPRINT_SEKUNDEN} Sekunden, so viele Aufgaben wie möglich:</p>
-        <div style="display:flex;flex-direction:column;gap:10px;align-items:stretch;width:min(100%,420px);">
-          ${LEVELS.map(l => `<button type="button" class="knopf" data-level="${l.nr}" style="flex-direction:column;gap:2px;"><span>Level ${l.nr}: ${l.name}</span><span style="font-weight:400;font-size:.85rem;">${l.kurz}</span></button>`).join("")}
-        </div>
-      </div>`;
-    api.flaeche.querySelectorAll("[data-level]").forEach(knopf =>
-      knopf.addEventListener("click", () => starteSprint(Number(knopf.dataset.level))));
+    zeigeStufenwahl(api.flaeche, {
+      titel: `Wähle deine Klasse — ${SPRINT_SEKUNDEN} Sekunden, so viele Aufgaben wie möglich:`,
+      hinweis: "Such dir deine Klassenstufe — oder nimm eine höhere, wenn du mehr willst.",
+      stufen: STUFEN,
+      aufWahl: stufe => starteSprint(stufe)
+    });
   }
 
-  function starteSprint(level) {
+  function starteSprint(stufe) {
     let punkte = 0, serie = 0, besteSerie = 0, richtige = 0, versuche = 0;
     let rest = SPRINT_SEKUNDEN, gesperrt = false, fertig = false;
     let aufgabe = null, sperrTimer = 0;
@@ -191,7 +203,7 @@ export function starte(api) {
     api.setzeZeit(`${SPRINT_SEKUNDEN} s`);
     api.flaeche.innerHTML = `
       <div style="display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:center;min-height:280px;padding:20px;text-align:center;">
-        <p style="margin:0;color:var(--text-leise);font-size:.92rem;">Level ${level}: ${LEVELS[level - 1].name}</p>
+        <p style="margin:0;color:var(--text-leise);font-size:.92rem;">${stufe.klasse} — ${stufe.kurz}</p>
         <p id="bz-frage" aria-live="polite" style="margin:0;font-weight:700;font-size:clamp(1.7rem,7vw,2.5rem);"></p>
         <form id="bz-form" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;">
           <input id="bz-eingabe" inputmode="decimal" autocomplete="off" autocapitalize="off" spellcheck="false"
@@ -211,9 +223,9 @@ export function starte(api) {
       if (fertig) return;
       // Keine direkte/baldige Wiederholung: erzeuge neu, bis die Aufgabe nicht im jüngsten Fenster liegt.
       // Fenster level-abhängig (Level 1 hat weniger mögliche Aufgaben -> kleineres Fenster).
-      const fenster = level === 1 ? 12 : 18;
+      const fenster = (stufe.levels.length === 1 && stufe.levels[0] === 1) ? 12 : 18;
       let neu, n = 0;
-      do { neu = erzeugeAufgabe(level); n++; } while (letzteTexte.includes(neu.text) && n < 25);
+      do { const lvl = zufallsWahl(stufe.levels); neu = erzeugeAufgabe(lvl); neu._lvl = lvl; n++; } while (letzteTexte.includes(neu.text) && n < 25);
       aufgabe = neu;
       letzteTexte.push(neu.text);
       if (letzteTexte.length > fenster) letzteTexte.shift();
@@ -230,7 +242,7 @@ export function starte(api) {
       frageEl.textContent = "Zeit um!";
       eingabe.disabled = true;
       const serieText = besteSerie >= 3 ? ` — beste Serie: ${besteSerie} in Folge` : "";
-      api.vorbei(punkte, `<p>Gelöst: ${richtige} von ${versuche} Aufgaben (Level ${level})${serieText}.</p>`);
+      api.vorbei(punkte, `<p>Gelöst: ${richtige} von ${versuche} Aufgaben (${stufe.klasse})${serieText}.</p>`);
     }
 
     api.flaeche.querySelector("#bz-form").addEventListener("submit", ev => {
@@ -241,7 +253,7 @@ export function starte(api) {
       if (pruefeAntwort(eingabe.value, aufgabe.loesung)) {
         serie++; richtige++;
         besteSerie = Math.max(besteSerie, serie);
-        punkte += punkteFuer(level, serie);
+        punkte += punkteFuer(aufgabe._lvl, serie);
         api.setzePunkte(punkte);
         feedbackEl.style.color = "var(--ok)";
         feedbackEl.textContent = serie >= 3 ? `✓ Richtig! Combo ×${serie}` : "✓ Richtig!";

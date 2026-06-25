@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fakt oder Fake — Pausenraum · Lernwelt</title>
+<meta name="description" content="Klassenspiel im Beamermodus: Eine Aussage erscheint groß auf der Tafel — die Teams stimmen per Handzeichen ab, ob sie wahr oder erfunden ist. Auflösen mit Erklärung, Punkte laufen groß mit.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Fakt oder Fake <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Ein Klassenspiel für die digitale Tafel: Eine Aussage erscheint <strong>groß</strong> — jedes Team berät kurz und stimmt per Handzeichen ab, ob sie <strong>Fakt</strong> (wahr) oder <strong>Fake</strong> (erfunden) ist. Die Moderation löst auf, zeigt die Erklärung und gibt jedem richtigen Team einen Punkt. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Stellt zuerst die Teamzahl ein. Pro Runde steht eine Aussage groß auf der Tafel. Jedes Team berät sich und legt sich fest: <strong>„Fakt"</strong> oder <strong>„Fake"</strong> — gezeigt per Handzeichen (z. B. Daumen hoch = Fakt, Daumen runter = Fake). Mit <strong>„Auflösen"</strong> zeigt die Tafel groß, ob die Aussage wahr (FAKT ✓) oder falsch (FAKE ✗) war, samt kurzer Erklärung. Danach gibst du jedem Team, das richtig lag, mit <strong>„+1"</strong> einen Punkt. Mit „Nächste Aussage" geht es weiter; „Spiel beenden" zeigt den Endstand.</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

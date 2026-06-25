@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schüler-Memory — Pausenraum · Lernwelt</title>
+<meta name="description" content="Klassenspiel im Beamermodus: das Kreisspiel Schüler-Memory. Plätze 10–34, Zahlen oder Spitznamen; die Klasse verteilt sich selbst, zwei Teams bringen per Platztausch alle zurück auf ihren Platz.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+<style>
+  /* Schüler-Memory — Sitzraster & Teamzähler (nutzt Farb-Tokens, Hell/Dunkel automatisch).
+     Team-Blau/Orange und Treffer-Grün mit festen, kontraststarken Farben.
+     Bedeutung läuft zusätzlich über Text (✓ richtig, „noch falsch: X"). */
+  .sm-kopf { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px 18px; }
+  .sm-team { display: flex; flex-direction: column; align-items: center; min-width: 120px; padding: 8px 18px; border: 3px solid var(--linie); border-radius: 14px; }
+  .sm-a { border-color: #2461b8; }
+  .sm-b { border-color: #b8631f; }
+  .sm-team.sm-aktiv { box-shadow: 0 0 0 3px var(--bg), 0 0 0 6px currentColor; }
+  .sm-a.sm-aktiv { color: #2461b8; }
+  .sm-b.sm-aktiv { color: #b8631f; }
+  .sm-team-name { font-size: clamp(.85rem,2vw,1.15rem); font-weight: 600; }
+  .sm-team-punkte { font-size: clamp(1.8rem,6vw,3.4rem); font-weight: 800; line-height: 1; color: var(--text); }
+  .sm-a .sm-team-punkte { color: #2461b8; }
+  .sm-b .sm-team-punkte { color: #b8631f; }
+  .sm-status { text-align: center; display: grid; gap: 4px; }
+  .sm-dran { font-size: clamp(1rem,3vw,1.6rem); font-weight: 700; }
+  .sm-rest { font-size: clamp(.9rem,2.4vw,1.3rem); color: var(--text-leise); }
+  .sm-sieg { font-size: clamp(1.4rem,4.5vw,2.4rem); font-weight: 800; }
+  .sm-a-text { color: #2461b8; }
+  .sm-b-text { color: #b8631f; }
+  .sm-grund { font-size: clamp(.85rem,2.2vw,1.2rem); color: var(--text-leise); }
+  .sm-teams-fest { font-weight: 700; font-size: clamp(1rem,2.4vw,1.3rem); }
+
+  /* Liste der Plätze als Chips (Zahlen oder Spitznamen). */
+  .sm-instruktion { text-align: center; max-width: 70ch; margin: 0 auto; color: var(--text-leise); font-size: clamp(.9rem,2.2vw,1.2rem); }
+  .sm-instruktion strong { color: var(--text); }
+  .sm-liste { display: flex; flex-wrap: wrap; gap: clamp(6px,1vw,12px); justify-content: center; align-content: flex-start; width: 100%; max-width: 1100px; margin: 0 auto; }
+  .sm-chip { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: clamp(78px,12vw,140px); min-height: var(--beruehrziel);
+    padding: 8px 12px; border: 2px solid var(--linie); border-radius: 12px; background: var(--flaeche); color: var(--text); font: inherit; cursor: pointer; text-align: center;
+    transition: transform .06s ease, background-color .12s ease, border-color .12s ease; }
+  .sm-chip:not([disabled]):hover { transform: translateY(-2px); border-color: var(--akzent); }
+  .sm-chip:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; }
+  .sm-chip[disabled] { cursor: default; }
+  @media (prefers-reduced-motion: reduce) { .sm-chip { transition: none; } .sm-chip:not([disabled]):hover { transform: none; } }
+  .sm-chip-label { font-size: clamp(1.1rem,3vw,1.9rem); font-weight: 800; line-height: 1.05; overflow-wrap: anywhere; }
+  .sm-chip-heim { font-size: clamp(.6rem,1.4vw,.9rem); font-weight: 600; color: var(--text-leise); text-transform: uppercase; letter-spacing: .03em; }
+  .sm-chip-ok { font-size: clamp(.6rem,1.4vw,.9rem); font-weight: 700; }
+  /* Heimgekehrt: durchgestrichen + Teamfarbe, gesperrt. */
+  .sm-chip.erledigt { background: #1f8a4c; color: #fff; border-color: #156236; opacity: .95; }
+  .sm-chip.erledigt .sm-chip-label { text-decoration: line-through; }
+  .sm-chip.erledigt .sm-chip-heim, .sm-chip.erledigt .sm-chip-ok { color: #fff; }
+  .sm-chip.erledigt.team-a { background: #2461b8; border-color: #1a4685; }
+  .sm-chip.erledigt.team-b { background: #b8631f; border-color: #8a4a17; }
+
+  /* Setup: Platzzahl-Schieber + Spitznamen-Feld. */
+  .sm-slider { display: flex; align-items: center; gap: 12px; }
+  .sm-slider input[type="range"] { width: min(60vw, 320px); }
+  .sm-nout { font-size: clamp(1.4rem,4vw,2.2rem); font-weight: 800; min-width: 2.2em; text-align: center; }
+  .bm-zeile-block { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .sm-namen { width: min(100%, 520px); font: inherit; font-size: 1rem; padding: 8px; border: 2px solid var(--linie); border-radius: var(--radius-klein); background: var(--bg); color: var(--text); resize: vertical; }
+  .sm-namzahl { font-weight: 700; color: var(--text-leise); }
+  .sm-namzahl.sm-ok { color: #1f8a4c; }
+  .sm-setupfehler { color: var(--fehler); font-weight: 700; text-align: center; min-height: 1.2em; margin: 0; }
+
+  .sm-meldung { text-align: center; min-height: 1.4em; font-size: clamp(1rem,2.6vw,1.5rem); font-weight: 700; color: var(--text); margin: 0; }
+  .sm-steuer { margin-top: 4px; }
+</style>
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Schüler-Memory <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Die digitale Tafel-Version des bekannten Kreisspiels: Die Plätze im Raum sind durchnummeriert (Anzahl frei wählbar, 10–34). Die beiden Rate-Teams gehen kurz hinaus, dann <strong>verteilt sich die Klasse selbst</strong> auf falsche Plätze. Anschließend bringen die Teams per Platztausch nach und nach alle wieder auf ihren eigenen Platz — wahlweise mit <strong>Zahlen</strong> oder frei gewählten <strong>Spitznamen</strong>. Wer wieder richtig sitzt, wird hier angetippt und von der Liste gestrichen. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>So bereitet ihr vor: Die Plätze im Raum werden <strong>durchnummeriert</strong> (1, 2, 3 …). Wählt am Brett die <strong>Variante</strong> — Zahlen <em>oder</em> Spitznamen — und die <strong>Anzahl der Plätze</strong> (10–34). Bei Spitznamen tippt jede:r seinen Namen ein; die Reihenfolge legt die Heimatplätze fest (1. Name = Platz 1 usw.). Dann gehen die beiden Rate-Teams kurz <strong>hinaus</strong>.</p>
+      <p>Jetzt <strong>verteilt sich die Klasse selbst</strong>: Alle setzen sich auf einen anderen (falschen) Platz. Die Ratenden kommen zurück und sehen am Brett die Liste aller Plätze bzw. Namen. <strong>Team A</strong> und <strong>Team B</strong> rufen abwechselnd zwei Plätze auf — die beiden Personen tauschen ihre Plätze.</p>
+      <p>Sitzt danach jemand wieder auf <strong>seinem eigenen Platz</strong>, tippt am Brett auf seinen Eintrag: Er wird durchgestrichen, das ratende Team bekommt einen <strong>Punkt</strong> und darf gleich noch einmal. Bringt ein Aufruf niemanden heim, drückt <strong>„Niemand heim → anderes Team"</strong>. Ein Vertipper lässt sich mit <strong>„↶ Letzten zurücknehmen"</strong> korrigieren. Sitzen alle wieder richtig, gewinnt das Team mit den meisten Punkten (bei Gleichstand: Unentschieden).</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

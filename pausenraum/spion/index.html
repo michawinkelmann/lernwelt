@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wer ist der Spion? — Pausenraum · Lernwelt</title>
+<meta name="description" content="Klassenspiel im Beamermodus: Ein Ort, ein verdeckter Spion. Das Gerät wird herumgereicht, dann diskutieren und abstimmen — wer ist der Spion?">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Wer ist der Spion? <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Ein Spiel für die ganze Gruppe mit nur <strong>einem Gerät</strong>: Alle bekommen denselben geheimen Ort — bis auf eine (oder zwei) Personen, die zum <strong>Spion</strong> werden. Das Gerät wird reihum gereicht, jede Person sieht heimlich ihre Rolle. Dann wird diskutiert: Wer kennt den Ort wirklich? Am Ende stimmt ihr ab. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Stellt zuerst die Spieleranzahl und die Zahl der Spione ein. Dann verteilt das Spiel zufällig <strong>einen Ort</strong>: Alle außer den Spionen erfahren ihn. Gebt das Gerät reihum — jede Person tippt auf „Rolle ansehen", merkt sich Ort oder Spion-Rolle, verbirgt sie wieder und reicht das Gerät weiter.</p>
+      <p>Danach läuft der <strong>Timer</strong>. Reihum stellt ihr euch Fragen zum Ort („Was würdest du hier anziehen?", „Wie laut ist es hier?"). Wer den Ort nicht kennt, ist der Spion und muss bluffen. Der Spion versucht, unentdeckt zu bleiben und den Ort zu erraten. Über „Abstimmung" (oder am Timer-Ende) wählt ihr per Stimmen-Knopf, wen ihr verdächtigt. „Auflösen" zeigt, wer Spion war und welcher Ort gesucht wurde.</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

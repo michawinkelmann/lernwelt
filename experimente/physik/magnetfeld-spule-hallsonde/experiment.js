@@ -226,9 +226,10 @@ export function starteExperiment() {
       ctx.lineWidth = 2;
     }
 
-    // Beschriftung Spule
+    // Beschriftung Spule (zwei Zeilen — passt in die Canvas-Breite, kein Überlauf am Rand)
     ctx.fillStyle = cLeise; ctx.textAlign = "center";
-    ctx.fillText("lange Zylinderspule · N = 500 · L = 0,500 m → n = 1000 1/m", w / 2, 24);
+    ctx.fillText("lange Zylinderspule · N = 500 Windungen", w / 2, 16);
+    ctx.fillText("L = 0,500 m → n = N/L = 1000 1/m", w / 2, 32);
     ctx.textAlign = "start";
     ctx.fillStyle = cLeise;
     ctx.fillText("Windungen (Längsschnitt)", SP_X, SP_Y - 14);

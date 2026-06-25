@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Themen-Brett — Pausenraum · Lernwelt</title>
+<meta name="description" content="Quiz-Brett im Beamermodus: Teams wählen Kategorie und Punktwert, beantworten Wissensfragen und sammeln Punkte. Spielbrett, Frage und Punkte erscheinen groß auf der digitalen Tafel.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Themen-Brett <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Ein Quiz-Brett für die digitale Tafel: Auf einem Raster aus fünf Kategorien und Punktwerten von 100 bis 500 wählt das Team an der Reihe ein Feld. Die Frage erscheint groß, das Team antwortet, dann wird aufgelöst und es gibt Punkte. Brett und Punktestand laufen groß mit. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Stellt zuerst die Teamzahl ein (2–4). Dann erscheint das Brett: fünf Spalten (Kategorien) und fünf Zeilen (Werte 100–500). Das Team, das dran ist, wählt ein freies Feld. Die Frage erscheint groß. Beratet euch, dann tippt jemand auf <strong>„Antwort zeigen"</strong>. Stimmt eure Lösung, gebt die Punkte mit <strong>„Punkte an …"</strong> dem richtigen Team; hat niemand die Frage richtig beantwortet, tippt <strong>„niemand"</strong>. Das Feld ist danach ausgegraut und kann nicht erneut gewählt werden.</p>
+      <p>Sind alle 25 Felder gespielt — oder per <strong>„Spiel beenden"</strong> — erscheint der Endstand mit dem Siegerteam. Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

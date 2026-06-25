@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verbotene Wörter — Pausenraum · Lernwelt</title>
+<meta name="description" content="Klassenspiel im Beamermodus: einen Begriff erklären, ohne die verbotenen Wörter zu benutzen — das eigene Team rät. Punkte und Timer erscheinen groß auf der digitalen Tafel.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Verbotene Wörter <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Ein Klassenspiel für die digitale Tafel: Eine Person pro Team erklärt den angezeigten Begriff — aber <strong>ohne die fünf verbotenen Wörter</strong> zu benutzen. Das eigene Team rät. Die Karte sieht nur die erklärende Person; Punkte und Timer laufen groß auf der Tafel mit. Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Stellt zuerst Teamzahl und Rundenzeit ein. Pro Runde ist ein Team dran: Eine Person daraus schaut sich heimlich die Karte an (alle anderen schauen weg), verbirgt sie wieder und erklärt dann den Begriff mit eigenen Worten — die fünf verbotenen Wörter und Teile davon sind dabei tabu. Errät das Team den Begriff, tippt jemand <strong>„Erraten ✓"</strong> (+1 Punkt). Rutscht ein verbotenes Wort heraus, drückt das gegnerische Team <strong>„Tabu verletzt"</strong> (−1 Punkt, nie unter 0). Passt eine Karte gar nicht, mit <strong>„Auslassen"</strong> überspringen. Läuft die Zeit ab, ist das nächste Team dran. „Spiel beenden" zeigt den Endstand.</p>
+      <p>Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt. Die Karten sind frei erfunden und für die ganze Klasse gedacht.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

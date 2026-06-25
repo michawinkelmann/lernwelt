@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galgenraten — Pausenraum · Lernwelt</title>
+<meta name="description" content="Hangman im Beamermodus: Die ganze Klasse rät gemeinsam Buchstabe für Buchstabe gegen die Tafel, bevor das Galgenmännchen vollständig ist.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/beamer.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+<style>
+  /* Galgenraten — Galgen, Wortlücken & Tastatur (nutzt Farb-Tokens, Hell/Dunkel automatisch) */
+  .ga-galgen { display: flex; justify-content: center; }
+  .ga-svg { width: clamp(120px, 22vh, 220px); height: auto; }
+  .ga-svg .ga-strich { fill: none; stroke: var(--text); stroke-width: 4; stroke-linecap: round; }
+  .ga-svg circle { fill: none; stroke: var(--text); stroke-width: 4; }
+  .ga-fehlerstand { margin: 0; font-weight: 600; }
+
+  .ga-wort { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(6px, 1.4vw, 14px); margin: 0 auto; }
+  .ga-zeichen { display: inline-flex; align-items: center; justify-content: center; min-width: clamp(1.4rem, 5vw, 3rem); font-size: clamp(1.8rem, 7vw, 4rem); font-weight: 800; line-height: 1.1; border-bottom: 4px solid var(--linie); }
+  .ga-zeichen.ga-auf { border-bottom-color: var(--akzent); }
+  .ga-zeichen.ga-fehlstelle { color: var(--fehler); }
+  .ga-zeichen.ga-trenn { border-bottom: none; color: var(--text-leise); }
+
+  .ga-tastatur { display: grid; gap: clamp(6px, 1vw, 10px); justify-items: center; }
+  .ga-reihe { display: flex; flex-wrap: wrap; gap: clamp(5px, 0.9vw, 9px); justify-content: center; }
+  .knopf.ga-taste { min-width: clamp(2.2rem, 5.4vw, 3.2rem); padding: clamp(8px, 1.4vh, 14px) clamp(6px, 1vw, 12px); font-size: clamp(1rem, 2.4vw, 1.5rem); font-weight: 700; }
+  .knopf.ga-taste.ga-treffer { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 20%, transparent); color: var(--text); }
+  .knopf.ga-taste.ga-daneben { border-color: var(--fehler); background: color-mix(in srgb, var(--fehler) 16%, transparent); opacity: .7; }
+  .knopf.ga-taste:disabled { cursor: default; }
+
+  .ga-ergebnis { text-align: center; }
+  .ga-gewonnen { color: var(--ok); }
+  .ga-verloren { color: var(--fehler); }
+
+  .ga-eingabe-zeile { justify-content: center; gap: 12px 18px; }
+  .ga-feld { font: inherit; font-size: clamp(1rem, 2.4vw, 1.4rem); padding: 10px 14px; min-height: var(--beruehrziel); border: 2px solid var(--linie); border-radius: 12px; background: var(--bg); color: var(--text); min-width: min(20rem, 70vw); }
+  .ga-feld:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; }
+  .ga-zeigen { display: inline-flex; align-items: center; gap: 6px; color: var(--text-leise); }
+  .ga-fehler { color: var(--fehler); font-weight: 600; }
+</style>
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../../index.html">Zur Startseite</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Galgenraten <span class="abzeichen sim">Beamermodus</span></h1>
+  <p class="einleitung">Der Klassiker für die digitale Tafel: Ein Wort steht als Lücken groß an der Wand, die ganze Klasse ruft Buchstaben. Jeder richtige Buchstabe wird aufgedeckt — jeder falsche lässt das Galgenmännchen ein Stück weiter wachsen. Schafft ihr das Wort, bevor es vollständig ist? Tipp: oben rechts auf <strong>Vollbild</strong> schalten.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert's</summary>
+    <div class="vertiefung-inhalt">
+      <p>Wählt zuerst, woher das Wort kommt: <strong>Zufallswort</strong> zieht einen Begriff aus der Liste, <strong>Eigenes Wort eingeben</strong> lässt eine Person ein Wort verdeckt eintippen (die anderen schauen kurz weg). Dann ruft die Klasse Buchstaben — wer am Zug ist, tippt sie auf der Tafel-Tastatur an oder drückt sie direkt auf der Computertastatur. Richtige Buchstaben erscheinen an allen passenden Stellen, falsche zeichnen einen weiteren Teil des Galgenmännchens. Nach <strong>11</strong> Fehlern ist die Runde verloren und das Wort wird aufgelöst. Mit <strong>„Neues Wort"</strong> geht es weiter.</p>
+      <p>Leerzeichen und Bindestriche sind im Wort schon sichtbar; Groß- und Kleinschreibung spielt beim Raten keine Rolle. Alles läuft auf einem Gerät (der Tafel) — es wird nichts gespeichert und nichts ins Netz geschickt.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteBeamerSpiel } from "../../assets/js/spiel/beamer.js";
+  import * as spiel from "./spiel.js";
+  starteBeamerSpiel(spiel);
+</script>
+</body>
+</html>

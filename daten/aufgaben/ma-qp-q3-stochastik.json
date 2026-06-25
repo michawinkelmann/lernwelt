@@ -73,7 +73,7 @@
       "kc": [
         "bernoulli-formel"
       ],
-      "cas": "<p>Einzelwahrscheinlichkeiten $P(X = k)$ liefert der ClassPad II über die binomiale Dichtefunktion:</p><ol><li>Im <b>Main</b>-Menü <b>Interactive → Verteilungsfunktionen → binomialPDf</b> wählen.</li><li>Im Dialog <b>x</b> = <code>3</code>, <b>n</b> = <code>10</code> und <b>p</b> = <code>0.25</code> eintragen — Wahrscheinlichkeiten immer mit Dezimal<b>punkt</b> (<code>0.25</code>, nicht <code>0,25</code>!). <b>OK</b> liefert ≈ 0.2503.</li><li>Für $P(X = 0)$ denselben Dialog mit <b>x</b> = <code>0</code> aufrufen: ≈ 0.0563.</li></ol><p>Das CAS ersetzt die Begründung nicht: Der Ansatz $P(X = 3) = \\binom{10}{3} \\cdot 0{,}25^3 \\cdot 0{,}75^7$ gehört in der Klausur aufs Papier — binomialPDf ist deine Kontrolle.</p>"
+      "cas": "<p>Einzelwahrscheinlichkeiten $P(X = k)$ liefert der ClassPad II über die binomiale Dichtefunktion:</p><ol><li>Im <b>Main</b>-Menü <b>Interaktiv → Verteilungsfunktionen → binomialPDf</b> wählen.</li><li>Im Dialog <b>x</b> = <code>3</code>, <b>n</b> = <code>10</code> und <b>p</b> = <code>0.25</code> eintragen — Wahrscheinlichkeiten immer mit Dezimal<b>punkt</b> (<code>0.25</code>, nicht <code>0,25</code>!). <b>OK</b> liefert ≈ 0.2503.</li><li>Für $P(X = 0)$ denselben Dialog mit <b>x</b> = <code>0</code> aufrufen: ≈ 0.0563.</li></ol><p>Das CAS ersetzt die Begründung nicht: Der Ansatz $P(X = 3) = \\binom{10}{3} \\cdot 0{,}25^3 \\cdot 0{,}75^7$ gehört in der Klausur aufs Papier — binomialPDf ist deine Kontrolle.</p>"
     },
     {
       "id": "ma-qp-q3-003",
@@ -400,7 +400,7 @@
         "einseitiger-test",
         "ablehnungsbereich"
       ],
-      "cas": "<p>Den Ablehnungsbereich eines linksseitigen Tests findest du auf dem ClassPad II durch systematisches Probieren mit binomialCDf:</p><ol><li><b>Interactive → Verteilungsfunktionen → binomialCDf</b> wählen und <b>x</b> = <code>22</code>, <b>n</b> = <code>100</code>, <b>p</b> = <code>0.3</code> eintragen ($p$ mit Dezimal<b>punkt</b>!): $P(X \\le 22) \\approx 0.0479 \\le 0.05$ ✓.</li><li>Gegenprobe mit <b>x</b> = <code>23</code>: $P(X \\le 23) \\approx 0.0755 > 0.05$ — eine Stufe höher reißt das Niveau. Also $A = \\{0;\\ \\dots;\\ 22\\}$.</li><li>Schneller wird das Eingrenzen, wenn du in der Nähe von $\\mu - 1{,}6\\sigma \\approx 22{,}7$ zu probieren beginnst.</li></ol><p>In der Klausur gehören Hypothesen, die Bedingung $P(X \\le k) \\le \\alpha$ und beide Kontrollwerte aufs Papier — das CAS liefert nur die Zahlen.</p>"
+      "cas": "<p>Den Ablehnungsbereich eines linksseitigen Tests findest du auf dem ClassPad II durch systematisches Probieren mit binomialCDf:</p><ol><li><b>Interaktiv → Verteilungsfunktionen → binomialCDf</b> wählen und <b>x</b> = <code>22</code>, <b>n</b> = <code>100</code>, <b>p</b> = <code>0.3</code> eintragen ($p$ mit Dezimal<b>punkt</b>!): $P(X \\le 22) \\approx 0.0479 \\le 0.05$ ✓.</li><li>Gegenprobe mit <b>x</b> = <code>23</code>: $P(X \\le 23) \\approx 0.0755 > 0.05$ — eine Stufe höher reißt das Niveau. Also $A = \\{0;\\ \\dots;\\ 22\\}$.</li><li>Schneller wird das Eingrenzen, wenn du in der Nähe von $\\mu - 1{,}6\\sigma \\approx 22{,}7$ zu probieren beginnst.</li></ol><p>In der Klausur gehören Hypothesen, die Bedingung $P(X \\le k) \\le \\alpha$ und beide Kontrollwerte aufs Papier — das CAS liefert nur die Zahlen.</p>"
     },
     {
       "id": "ma-qp-q3-010",
@@ -489,7 +489,7 @@
         "normal-naeherung",
         "stetigkeitskorrektur"
       ],
-      "cas": "<p>Auf dem ClassPad II berechnet normCDf Flächen unter der Glockenkurve — Parameterreihenfolge: <b>untere Grenze, obere Grenze, σ, μ</b>:</p><ol><li><b>Interactive → Verteilungsfunktionen → normCDf</b>: <code>normCDf(159.5,∞,9.6,144)</code> ≈ 0.0532 — das ∞ findest du auf der Softtastatur (ersatzweise eine riesige Zahl wie <code>1×10^99</code> eintragen).</li><li><code>normCDf(134.5,155.5,9.6,144)</code> ≈ 0.7233.</li><li>Kontrolle mit der exakten Binomialverteilung: <code>1-binomialCDf(159,400,0.36)</code> ≈ 0.0540 und <code>binomialCDf(155,400,0.36)-binomialCDf(134,400,0.36)</code> ≈ 0.7229 — die Näherung stimmt auf zwei Nachkommastellen.</li></ol><p>Häufigster CAS-Fehler: $\\sigma$ und $\\mu$ vertauscht — der Rechner meldet nichts und liefert trotzdem Unsinn. Reihenfolge laut mitsprechen: „von, bis, Sigma, Mü“.</p>"
+      "cas": "<p>Auf dem ClassPad II berechnet normCDf Flächen unter der Glockenkurve — Parameterreihenfolge: <b>untere Grenze, obere Grenze, σ, μ</b>:</p><ol><li><b>Interaktiv → Verteilungsfunktionen → normCDf</b>: <code>normCDf(159.5,∞,9.6,144)</code> ≈ 0.0532 — das ∞ findest du auf der Softtastatur (ersatzweise eine riesige Zahl wie <code>1×10^99</code> eintragen).</li><li><code>normCDf(134.5,155.5,9.6,144)</code> ≈ 0.7233.</li><li>Kontrolle mit der exakten Binomialverteilung: <code>1-binomialCDf(159,400,0.36)</code> ≈ 0.0540 und <code>binomialCDf(155,400,0.36)-binomialCDf(134,400,0.36)</code> ≈ 0.7229 — die Näherung stimmt auf zwei Nachkommastellen.</li></ol><p>Häufigster CAS-Fehler: $\\sigma$ und $\\mu$ vertauscht — der Rechner meldet nichts und liefert trotzdem Unsinn. Reihenfolge laut mitsprechen: „von, bis, Sigma, Mü“.</p>"
     },
     {
       "id": "ma-qp-q3-013",

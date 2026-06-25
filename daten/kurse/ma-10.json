@@ -3762,7 +3762,49 @@
        "wort": "Prisma und Zylinder",
        "lektion": "l16"
       }
-     ]
+     ],
+     "erkunden": [
+      {
+       "typ": "experiment",
+       "titel": "Das Kegelvolumen durch Umfüllen vermessen",
+       "pfad": "experimente/mathematik/kegel-volumen/index.html",
+       "vorhersage": "Wie oft musst du den Kegel ins Messglas leeren, bis dieselbe Höhe wie im Zylinder erreicht ist — zweimal, dreimal oder viermal? Welcher Bruchteil von V_Zyl ist also eine Kegelfüllung?",
+       "auftraege": [
+        "Lies bei jedem Körperpaar das Zylindervolumen V_Zyl ab und gieße eine Kegelfüllung Sand ins Messglas, um V_Kegel abzulesen.",
+        "Trage V_Kegel über V_Zyl auf und bestimme die Steigung der Ursprungsgeraden.",
+        "Formuliere die Formel für das Kegelvolumen und berechne damit das Volumen eines Kegels mit r = 5 cm und h = 6 cm."
+       ],
+       "material": "Ein Kegel und ein Zylinder gleicher Grundfläche und Höhe (z. B. aus Bastelpappe), Sand oder Reis und ein Messglas mit cm³-Skala.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Kegelvolumen über Zylindervolumen",
+        "params": {
+         "xLabel": "V_Zylinder",
+         "yLabel": "V_Kegel",
+         "xEinheit": "cm³",
+         "yEinheit": "cm³",
+         "zeilen": 4,
+         "xVorgabe": [
+          113,
+          198,
+          302,
+          339
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "Verhältnis V_Kegel/V_Zylinder",
+          "einheit": "",
+          "ausSteigung": "direkt"
+         }
+        }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      }
+     ],
+     "vorueberlegung": "<p>Bevor wir gießen, überlegen wir: Ein Kegel ist deutlich spitzer als ein Zylinder gleicher Grundfläche und Höhe, fasst also weniger. Vermutung: Eine Kegelfüllung ist ein einfacher Bruchteil des Zylindervolumens — wir tippen auf die Hälfte oder ein Drittel. Wir erwarten, dass dieses Verhältnis bei allen Körperpaaren gleich bleibt, egal ob das Paar schmal, breit oder hoch ist.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Die Lernenden kennen Grundfläche und Volumen des Zylinders ($V=\\pi\\cdot r^2\\cdot h$) und können an einer Messglas-Skala ein Volumen in $\\text{cm}^3$ ablesen.</p><p><strong>Angesprochene Kompetenzen:</strong> Messen und Protokollieren (Umfüllen und Ablesen für mehrere Körperpaare), Mathematisieren (Messwertpaare $(V_{\\text{Zyl}}\\mid V_{\\text{Kegel}})$ auftragen), Erkennen einer proportionalen Beziehung über die Steigung $\\frac{1}{3}$, Verallgemeinern zu $V_{\\text{Kegel}}=\\frac{1}{3}\\cdot\\pi\\cdot r^2\\cdot h$ und Anwenden der Formel.</p><p><strong>Erwartung:</strong> Das Verhältnis $V_{\\text{Kegel}}:V_{\\text{Zyl}}$ liegt für alle Paare dicht bei $\\frac{1}{3}\\approx 0{,}33$; drei Kegelfüllungen füllen den Zylinder. Im Diagramm liegen die Punkte auf einer Ursprungsgeraden der Steigung $\\frac{1}{3}$.</p><p><strong>Modellgrenzen:</strong> Sand bildet keine glatte Oberfläche wie Wasser und setzt sich beim Klopfen; zusammen mit Parallaxe und unvollständiger Füllung verbleiben kleine Abweichungen vom exakten Drittel. Das Verhältnis ist eine geometrische Tatsache, das Experiment bestätigt sie nur näherungsweise.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 18,

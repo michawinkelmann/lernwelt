@@ -194,6 +194,43 @@
         }
        },
        "hinweis": "Kein Material zur Hand? Trag deine Werte direkt unten ins <strong>Messlabor</strong> ein — die Auswertung läuft genauso."
+      },
+      {
+       "typ": "experiment",
+       "titel": "Reflexion am ebenen Spiegel vermessen",
+       "pfad": "experimente/physik/reflexionsgesetz/index.html",
+       "vorhersage": "Wie groß wird der Reflexionswinkel $\\beta$ im Vergleich zum Einfallswinkel $\\alpha$ — kleiner, gleich oder größer?",
+       "auftraege": [
+        "Schicke den Lichtstrahl unter dem Einfallswinkel $\\alpha=20°$ auf den Spiegel und lies den Reflexionswinkel $\\beta$ am Winkelmesser ab.",
+        "Wiederhole die Messung für $\\alpha=30°$, $45°$ und $60°$ und trage alle Paare in die Tabelle ein.",
+        "Vergleiche in jeder Zeile $\\alpha$ und $\\beta$: Welche Beziehung erkennst du?"
+       ],
+       "material": "Optische Scheibe mit Winkelmesser, ebener Spiegel, Lichtquelle (Laser oder Lichtkasten mit Spalt).",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Einfallswinkel α und Reflexionswinkel β",
+        "params": {
+         "xLabel": "α",
+         "yLabel": "β",
+         "xEinheit": "°",
+         "yEinheit": "°",
+         "zeilen": 4,
+         "xVorgabe": [
+          20,
+          30,
+          45,
+          60
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "Verhältnis β/α",
+          "einheit": "",
+          "ausSteigung": "direkt"
+         }
+        }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "interaktiv": {
@@ -1382,8 +1419,48 @@
         "Verschiebe eine Lochkarte ein Stück zur Seite und beobachte, was mit dem Lichtfleck passiert.",
         "Fädle eine Schnur durch alle Löcher und spanne sie: Liegt sie gerade? Was sagt das über den Weg des Lichts?"
        ]
+      },
+      {
+       "typ": "experiment",
+       "titel": "Bildgröße in der Lochkamera vermessen",
+       "pfad": "experimente/physik/lochkamera/index.html",
+       "vorhersage": "Wie ändert sich die Bildgröße $B$, wenn die Kameralänge $b$ größer wird?",
+       "auftraege": [
+        "Stelle die Kameralänge auf $b=5$ cm ein und lies die Bildgröße $B$ an der mm-Skala der Mattscheibe ab.",
+        "Wiederhole die Messung für längere Kameras ($b=8$, $10$, $15$ cm) und trage die Paare in die Tabelle ein.",
+        "Bilde in jeder Zeile den Quotienten $B/b$: Was fällt dir auf?"
+       ],
+       "material": "Lochkamera (oder Schachtel mit Loch und Transparentpapier), leuchtender Gegenstand, Lineal mit mm-Skala.",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Kameralänge b und Bildgröße B",
+        "params": {
+         "xLabel": "b",
+         "yLabel": "B",
+         "xEinheit": "cm",
+         "yEinheit": "cm",
+         "zeilen": 4,
+         "xVorgabe": [
+          5,
+          8,
+          10,
+          15
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "Verhältnis B/b (= G/g)",
+          "einheit": "",
+          "ausSteigung": "direkt"
+         }
+        }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
-     ]
+     ],
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: In einer Lochkamera entsteht durch ein kleines Loch ein umgekehrtes Bild auf der Mattscheibe. Der Gegenstand und sein Abstand bleiben fest, nur die Kameralänge $b$ ändern wir. Vermutung: Was passiert mit der Bildgröße $B$, wenn wir die Kamera länger machen? Wir erwarten einen klaren Zusammenhang zwischen $B$ und $b$.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> geradlinige Ausbreitung des Lichts kennen, eine mm-/cm-Skala ablesen können, mit den Begriffen Gegenstand, Bild und Bildgröße umgehen.</p><p><strong>Angesprochene Kompetenzen:</strong> eine Messreihe planen und protokollieren, Bildgrößen am Maßstab ablesen, aus dem Quotienten $B/b$ die Proportionalität erkennen und mit dem Strahlensatz begründen.</p><p><strong>Erwartung:</strong> Die Lernenden stellen fest: Die Bildgröße wächst proportional zur Kameralänge ($B/b$ ist konstant), denn $B/G=b/g$. Bei $G=20$ cm und $g=100$ cm gilt $B=0{,}2\\cdot b$ (z. B. $b=5$ cm $\\to B=1{,}0$ cm). Das Bild steht auf dem Kopf.</p><p><strong>Modellgrenzen:</strong> Nur bei einem sehr kleinen Loch ist das Bild scharf; ein größeres Loch macht es heller, aber unschärfer. Ablesen und Scharfurteil sind mit kleinen Ungenauigkeiten behaftet.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 13,

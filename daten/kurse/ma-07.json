@@ -4591,6 +4591,43 @@
         "Lege die drei Ecken mit den Spitzen aneinander an eine gerade Linie.",
         "Beschreibe, warum sie zusammen einen gestreckten Winkel ($180^\\circ$) bilden."
        ]
+      },
+      {
+       "typ": "experiment",
+       "titel": "Die Winkelsumme im Vieleck vermessen",
+       "pfad": "experimente/mathematik/winkelsumme/index.html",
+       "vorhersage": "Wie groß ist die Winkelsumme im Dreieck? Und was passiert, wenn die Figur eine Ecke mehr bekommt — bleibt die Summe gleich oder wächst sie, und wenn ja, um welchen festen Betrag?",
+       "auftraege": [
+        "Lies bei jeder Figur alle Innenwinkel mit dem Winkelmesser ab und addiere sie zur Winkelsumme.",
+        "Trage die Winkelsumme über die Zahl der Teildreiecke (n − 2) auf und bestimme die Steigung der Geraden.",
+        "Stelle eine Formel für die Winkelsumme eines n-Ecks auf und prüfe sie an einem Achteck (n = 8)."
+       ],
+       "material": "Geodreieck (Winkelmesser), Bleistift und ein paar selbst gezeichnete unregelmäßige Vielecke (Dreieck bis Sechseck).",
+       "interaktiv": {
+        "id": "messreihe",
+        "titel": "Messlabor: Winkelsumme über (n − 2)",
+        "params": {
+         "xLabel": "n − 2",
+         "yLabel": "Winkelsumme",
+         "xEinheit": "",
+         "yEinheit": "°",
+         "zeilen": 4,
+         "xVorgabe": [
+          1,
+          2,
+          3,
+          4
+         ],
+         "modell": "proportional",
+         "groesse": {
+          "name": "Grad je (n − 2)",
+          "einheit": "°",
+          "ausSteigung": "direkt"
+         }
+        }
+       },
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -4612,7 +4649,10 @@
        "wort": "Dreiecksarten",
        "lektion": "l21"
       }
-     ]
+     ],
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Im Dreieck ergänzen sich die drei Winkel zu einem halben Vollwinkel. Vermutung: Eine Figur mit einer Ecke mehr hat auch eine größere Winkelsumme. Wir erwarten, dass die Summe nicht beliebig ist, sondern einer einfachen Regel folgt, die nur von der Eckenzahl $n$ abhängt — und dass jede zusätzliche Ecke denselben festen Betrag dazugibt.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Die Lernenden können mit dem Geodreieck einen Winkel anlegen und auf Grad genau ablesen; der Begriff Innenwinkel und die Winkelsumme im Dreieck ($180°$) sind bekannt.</p><p><strong>Angesprochene Kompetenzen:</strong> Messen und Protokollieren (Winkel an mehreren Ecken), Mathematisieren (Messwerte zu einer Summe verdichten und als Punkt $(n-2 \\mid \\text{Summe})$ auftragen), Erkennen einer proportionalen Beziehung über die Steigung, Verallgemeinern zur Formel $(n-2)\\cdot 180°$.</p><p><strong>Erwartung:</strong> Die abgelesenen Winkelsummen liegen wegen der Rundung auf ganze Grad dicht bei $180°$, $360°$, $540°$ und $720°$. Im Diagramm liegen die vier Punkte auf einer Ursprungsgeraden der Steigung $180°$; daraus gewinnen die Lernenden selbstständig die Formel.</p><p><strong>Modellgrenzen:</strong> Die Regel gilt für ebene, einfache (nicht überschlagene) Vielecke. Bei sehr genauer Messung verbleiben kleine Abweichungen durch Anlege- und Rundungsfehler; haargenaue glatte Werte sind im Experiment nicht zu erwarten, das Muster ist aber robust.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 18,

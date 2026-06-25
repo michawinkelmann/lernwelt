@@ -233,7 +233,7 @@ export function starteExperiment() {
     ctx.fillText("Voltmeter — parallel", 230, 186);
     ctx.fillStyle = cText; ctx.textAlign = "right";
     ctx.font = "bold 12px system-ui, sans-serif";
-    ctx.fillText("Bauteil: " + b.kurz, 350, 26);
+    ctx.fillText("Bauteil: " + b.kurz, 350, 15);
     ctx.font = "12px system-ui, sans-serif"; ctx.textAlign = "left";
   }
 

@@ -142,7 +142,7 @@ export function starteExperiment() {
   const ST_X = 170, ST_Y = 150;     // Strahlteiler (45°)
   const SP_FEST_X = 320;            // fester Spiegel (rechts, in der Strahlhöhe)
   const SP_BEW_Y = 30;              // beweglicher Spiegel (oben)
-  const SCHIRM_X = ST_X, SCHIRM_Y = 290; // Schirm (unten)
+  const SCHIRM_X = ST_X, SCHIRM_Y = 250; // Schirm (unten) — über den Anzeige-Kästen, damit Ringe/Label nicht überlappen
 
   const zustand = {
     phase: "aufbau",

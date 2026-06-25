@@ -26,6 +26,10 @@ export function aktuellerZweig() {
   return (z === "gym" || z === "rs") ? z : "alle";
 }
 
+// Zweig früh an die Wurzel schreiben — erlaubt rein CSS-gesteuertes Ein-/Ausblenden
+// zweigspezifischer Inhalte (z. B. CAS-Hinweise nur im Gymnasialzweig) ohne Re-Render.
+try { document.documentElement.setAttribute("data-zweig", aktuellerZweig()); } catch (e) { /* ignorieren */ }
+
 // Pfadsegmente der aktuellen Seite relativ zur Projektwurzel, z. B. ["mathematik", "klasse-9"]
 function pfadSegmente() {
   let p = location.pathname;
@@ -105,6 +109,7 @@ function baueKopfzeile() {
   const zweigKnoepfe = kopf.querySelectorAll(".zweig button");
   function zeigeZweig(z) {
     zweigKnoepfe.forEach(k => k.setAttribute("aria-pressed", String(k.dataset.zweig === z)));
+    document.documentElement.setAttribute("data-zweig", z);
   }
   zeigeZweig(aktuellerZweig());
   zweigKnoepfe.forEach(k => k.addEventListener("click", () => {

@@ -158,7 +158,7 @@ export function starteExperiment() {
 
   // ---------- Canvas-Geometrie (Strahlengang von links nach rechts) ----------
   const BANK_Y = 150;              // Höhe der optischen Achse
-  const X_QUELLE = 44;             // Einzelphotonenquelle
+  const X_QUELLE = 62;             // Einzelphotonenquelle (rechts gerückt, damit das lange Label „Einzelphotonen" nicht links abgeschnitten wird)
   const X_PRAEP = 138;             // Präparator (fest, Winkel α)
   const X_ANA = 258;               // drehbarer Analysator (Winkel β)
   const X_DET = 372;               // Einzelphotonendetektor

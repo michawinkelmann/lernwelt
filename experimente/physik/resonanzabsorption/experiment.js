@@ -218,8 +218,11 @@ export function starteExperiment() {
     if (ctx.roundRect) ctx.roundRect(QUELLE_X - 22, STRAHL_Y - 20, 44, 40, 5); else ctx.rect(QUELLE_X - 22, STRAHL_Y - 20, 44, 40);
     ctx.fill(); ctx.stroke();
     ctx.fillStyle = cLeise; ctx.textAlign = "center";
-    ctx.fillText("Lichtquelle", QUELLE_X, STRAHL_Y + 36);
-    ctx.fillText("(durchstimmbar)", QUELLE_X, STRAHL_Y + 50);
+    // Label-Mitte leicht nach rechts gerückt, damit die breitere Zeile "(durchstimmbar)"
+    // nicht am linken Canvas-Rand abgeschnitten wird.
+    const QUELLE_LABEL_X = QUELLE_X + 12;
+    ctx.fillText("Lichtquelle", QUELLE_LABEL_X, STRAHL_Y + 36);
+    ctx.fillText("(durchstimmbar)", QUELLE_LABEL_X, STRAHL_Y + 50);
 
     // Einfallender Strahl (volle Helligkeit) Quelle → Zelle
     if (aktiv) {

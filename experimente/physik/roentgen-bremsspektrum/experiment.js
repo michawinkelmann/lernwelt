@@ -261,7 +261,7 @@ export function starteExperiment() {
     ctx.beginPath(); ctx.moveTo(DIA_X0, DIA_Y1); ctx.lineTo(DIA_X0, DIA_Y0); ctx.lineTo(DIA_X1, DIA_Y0); ctx.stroke();
     ctx.fillStyle = cText; ctx.textAlign = "start";
     ctx.fillText("Intensität", DIA_X0 - 40, DIA_Y1 - 4);
-    ctx.textAlign = "right"; ctx.fillText("λ in pm", DIA_X1, DIA_Y0 + 24); ctx.textAlign = "start";
+    ctx.textAlign = "right"; ctx.fillText("λ in pm", DIA_X1, DIA_Y0 + 35); ctx.textAlign = "start";
     // λ-Skala (pm) mit Strichen alle 10 pm, Beschriftung alle 20 pm
     ctx.font = "10px system-ui, sans-serif";
     for (let pm = LAMBDA_ACHSE_MIN; pm <= LAMBDA_ACHSE_MAX; pm += 10) {

@@ -267,10 +267,10 @@ export function starteExperiment() {
     // Koinzidenz-Verbindungen (gestrichelt) von D1, D2 zur "&"-Logik
     ctx.save();
     ctx.setLineDash([4, 3]); ctx.strokeStyle = cLeise; ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.moveTo(D1X, D1Y + 16); ctx.lineTo(D1X, 250); ctx.lineTo(265, 250); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(D2X + 16, D2Y); ctx.lineTo(285, D2Y); ctx.lineTo(285, 242); ctx.lineTo(265, 250); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(D1X, D1Y + 16); ctx.lineTo(D1X, 222); ctx.lineTo(265, 222); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(D2X + 16, D2Y); ctx.lineTo(285, D2Y); ctx.lineTo(285, 214); ctx.lineTo(265, 222); ctx.stroke();
     ctx.restore();
-    bauteil(255, 250, 26, 22, "Koinzidenz (&)", true);
+    bauteil(255, 222, 26, 22, "Koinzidenz (&)", true);
 
     // Strahlteiler (50:50) — als gedrehtes Quadrat
     ctx.save();

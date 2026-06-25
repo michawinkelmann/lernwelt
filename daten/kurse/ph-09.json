@@ -1061,6 +1061,21 @@
        "pfad": "simulationen/physik/energiefluss/index.html",
        "linkLabel": "Simulation öffnen",
        "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+      },
+      {
+       "typ": "experiment",
+       "titel": "Wie hängt die elektrische Leistung von Spannung und Strom ab?",
+       "pfad": "experimente/physik/elektrische-leistung/index.html",
+       "vorhersage": "Du verdoppelst die Spannung an einem Lämpchen. Wie ändert sich die umgesetzte Leistung $P$ — bleibt sie gleich, verdoppelt sie sich oder wird sie noch größer? Notiere deine Vermutung.",
+       "auftraege": [
+        "Stelle verschiedene Spannungen ein, lies $U$ am Voltmeter und $I$ am Amperemeter selbst ab und trage beide Werte in eine Tabelle ein.",
+        "Berechne für jede Zeile die Leistung $P = U \\cdot I$ (rechne die Stromstärke zuerst von mA in A um).",
+        "Vergleiche die Leistung bei einer Spannung und bei ihrer doppelten Spannung.",
+        "Beschreibe im $P$-$U$-Diagramm, wie die Leistung mit der Spannung wächst."
+       ],
+       "material": "Ein regelbares Netzgerät, ein kleines Glühlämpchen (oder ein Widerstand) als Verbraucher, ein Voltmeter und ein Amperemeter (Milliamperebereich) sowie Kabel.",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "lehrkraft": "<p><strong>Voraussetzungen:</strong> Energieformen unterscheiden; den Energieerhaltungssatz qualitativ kennen; einen Bruch in Prozent umrechnen.</p><p><strong>Angesprochene Kompetenzen:</strong> auswerten (Energiebilanz aus abgelesenen Strömen aufstellen), mathematisieren ($\\eta$ berechnen), bewerten (Energieentwertung als Grund für $\\eta<100\\,\\%$).</p><p><strong>Erwartung:</strong> Die Summe aus Nutz- und Verlustenergie ergibt die zugeführte Energie; $\\eta$ liegt stets unter $100\\,\\%$ und sinkt, wenn der Verluststrom wächst. Bei einer Glühlampe sind nur wenige Prozent Nutzlicht.</p><p><strong>Modellgrenzen:</strong> Das Sankey-Modell zeigt nur eine Momentaufnahme idealisierter Energieströme; reale Geräte haben zusätzliche, schwer trennbare Verlustpfade, und Energie wird hier nicht gemessen, sondern bilanziert.</p>",
@@ -1317,8 +1332,26 @@
         "Vergleiche mit einem Metall wie Natrium (11): Wie viele Außenelektronen hat es?",
         "Notiere, warum die Zahl der Außenelektronen mitentscheidet, wie ein Stoff sich elektrisch verhält."
        ]
+      },
+      {
+       "typ": "experiment",
+       "titel": "Wie ändert sich der Widerstand eines Heißleiters mit der Temperatur?",
+       "pfad": "experimente/physik/ldr-ntc/index.html",
+       "vorhersage": "Ein NTC-Widerstand wird im Wasserbad erwärmt. Wird sein Widerstand dabei größer (wie beim Metalldraht) oder kleiner? Notiere deine Vermutung mit Begründung.",
+       "auftraege": [
+        "Stelle verschiedene Wassertemperaturen ein, lies $T$ am Thermometer und $R$ selbst am Ohmmeter ab und trage die Wertepaare in eine Tabelle ein.",
+        "Zeichne die $R$-$T$-Kurve und beschreibe ihre Form (steigt/fällt, gerade/gekrümmt).",
+        "Vergleiche den Widerstand im kalten und im heißen Bad: um welchen Faktor ändert er sich?",
+        "Erkläre den Unterschied zu einem Metalldraht, dessen Widerstand mit der Temperatur steigt."
+       ],
+       "material": "Ein NTC-Widerstand (Heißleiter), ein Becherglas mit Wasser, eine Heizplatte und etwas Eis, ein Thermometer und ein Ohmmeter (Multimeter im Widerstandsbereich).",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
-     ]
+     ],
+     "vorueberlegung": "<p>Bevor wir messen, überlegen wir: Bei einem Metalldraht steigt der Widerstand, wenn er wärmer wird. Ein <strong>Heißleiter (NTC)</strong> ist aber ein Halbleiter. Vermutung: Erwärmt man ihn, werden zusätzliche Ladungsträger frei — der Strom fließt leichter, also <strong>sinkt</strong> der Widerstand mit steigender Temperatur. Wir erwarten eine fallende, gekrümmte $R$-$T$-Kurve.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Widerstand mit dem Ohmmeter ablesen, Temperatur am Thermometer; Unterschied Leiter/Halbleiter; eine Kurve auswerten (keine Gerade).</p><p><strong>Angesprochene Kompetenzen:</strong> messen und protokollieren (Wertepaare $T$, $R$), auswerten (Kennlinie zeichnen), deuten (Halbleiterverhalten gegenüber dem Metall abgrenzen).</p><p><strong>Erwartung:</strong> $R$ fällt mit steigender Temperatur stark und nichtlinear. Beispiel: nahe $0\\,°\\text{C}$ ist der NTC einige Kiloohm, bei rund $80\\,°\\text{C}$ nur noch ein Bruchteil davon.</p><p><strong>Modellgrenzen:</strong> Der NTC muss die Wassertemperatur erst angenommen haben; der Messstrom erwärmt ihn minimal (Eigenerwärmung). Die genaue Kennlinie hängt vom Bauteil ab — die Aussage „R fällt mit T\" gilt für alle Heißleiter.</p>",
+     "erkundenZuerst": true
     },
     "ueben": {
      "zeit": 18,

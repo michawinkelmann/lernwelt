@@ -160,7 +160,7 @@ export function starteExperiment() {
   wurzel.insertAdjacentHTML("beforeend", `
     <div class="exp-flaeche">
       <div class="exp-links">
-        <canvas id="exp-canvas" width="420" height="300" aria-label="Optische Bank von links nach rechts: Lichtquelle, fester Polarisator, drehbarer Analysator mit einstellbarem Winkel und am Ende ein Fotosensor. Über dem Analysator zeigt ein Pfeil die aktuelle Durchlassrichtung; rechts unten zeigt der Sensor die abgelesene relative Intensität in Prozent von I null."></canvas>
+        <canvas id="exp-canvas" width="448" height="300" aria-label="Optische Bank von links nach rechts: Lichtquelle, fester Polarisator, drehbarer Analysator mit einstellbarem Winkel und am Ende ein Fotosensor. Über dem Analysator zeigt ein Pfeil die aktuelle Durchlassrichtung; rechts unten zeigt der Sensor die abgelesene relative Intensität in Prozent von I null."></canvas>
       </div>
       <div class="exp-rechts" id="exp-panel"></div>
     </div>`);
@@ -253,7 +253,7 @@ export function starteExperiment() {
     ctx.fillText("Sensor", X_SENS, BANK_Y + 40);
 
     // Sensor-Anzeige (Display) — der ABLESBARE Wert
-    const dispX = 320, dispY = 232, dispW = 92, dispH = 46;
+    const dispX = 326, dispY = 232, dispW = 116, dispH = 46;
     ctx.fillStyle = cFlaeche; ctx.strokeStyle = cText; ctx.lineWidth = 2;
     ctx.beginPath();
     if (ctx.roundRect) ctx.roundRect(dispX, dispY, dispW, dispH, 6); else ctx.rect(dispX, dispY, dispW, dispH);

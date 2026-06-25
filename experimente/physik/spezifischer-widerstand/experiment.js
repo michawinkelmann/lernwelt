@@ -265,8 +265,13 @@ export function starteExperiment() {
     ctx.setLineDash([]);
 
     // Drahtname
-    ctx.fillStyle = cText; ctx.font = "bold 12px system-ui, sans-serif"; ctx.textAlign = "center";
-    ctx.fillText("Messdraht: " + d.name, 180, 140);
+    ctx.font = "bold 12px system-ui, sans-serif"; ctx.textAlign = "center";
+    const drahtLabel = "Messdraht: " + d.name;
+    const dlBreite = ctx.measureText(drahtLabel).width;
+    ctx.fillStyle = cBg;                                   // Hintergrund-Chip, damit Leitungen das Label nicht durchkreuzen
+    ctx.fillRect(180 - dlBreite / 2 - 5, 128, dlBreite + 10, 16);
+    ctx.fillStyle = cText;
+    ctx.fillText(drahtLabel, 180, 140);
     ctx.font = "12px system-ui, sans-serif"; ctx.textAlign = "left";
 
     // Messdraht: stromdurchflossen bis zur Klemme, dahinter stromlos.

@@ -188,7 +188,7 @@ export function starteExperiment() {
   wurzel.insertAdjacentHTML("beforeend", `
     <div class="exp-flaeche">
       <div class="exp-links">
-        <canvas id="exp-canvas" width="360" height="380" aria-label="Frontalansicht der Stromwaage: ein Hufeisen- bzw. Polschuh-Magnet bildet einen waagerechten Luftspalt, durch den ein gerader Leiterbügel verläuft. Der Bügel hängt an einer elektronischen Waage darunter. Fließt Strom, wirkt eine senkrechte Kraft, die die Waage als Massenänderung anzeigt. Unten zwei Anzeigen für Stromstärke und Waagenwert."></canvas>
+        <canvas id="exp-canvas" width="360" height="410" aria-label="Frontalansicht der Stromwaage: ein Hufeisen- bzw. Polschuh-Magnet bildet einen waagerechten Luftspalt, durch den ein gerader Leiterbügel verläuft. Der Bügel hängt an einer elektronischen Waage darunter. Fließt Strom, wirkt eine senkrechte Kraft, die die Waage als Massenänderung anzeigt. Unten zwei Anzeigen für Stromstärke und Waagenwert."></canvas>
       </div>
       <div class="exp-rechts" id="exp-panel"></div>
     </div>`);
@@ -282,11 +282,11 @@ export function starteExperiment() {
     const kasten = (x, etikett, wert) => {
       ctx.strokeStyle = cText; ctx.lineWidth = 2; ctx.fillStyle = cFlaeche;
       ctx.beginPath();
-      if (ctx.roundRect) ctx.roundRect(x, 338, 160, 36, 6); else ctx.rect(x, 338, 160, 36);
+      if (ctx.roundRect) ctx.roundRect(x, 370, 160, 36, 6); else ctx.rect(x, 370, 160, 36);
       ctx.fill(); ctx.stroke();
       ctx.textAlign = "center";
-      ctx.fillStyle = cLeise; ctx.font = "11px system-ui, sans-serif"; ctx.fillText(etikett, x + 80, 352);
-      ctx.fillStyle = cText; ctx.font = "bold 14px system-ui, sans-serif"; ctx.fillText(wert, x + 80, 368);
+      ctx.fillStyle = cLeise; ctx.font = "11px system-ui, sans-serif"; ctx.fillText(etikett, x + 80, 384);
+      ctx.fillStyle = cText; ctx.font = "bold 14px system-ui, sans-serif"; ctx.fillText(wert, x + 80, 400);
       ctx.font = "12px system-ui, sans-serif";
     };
     kasten(CX - 80, "Stromquelle", "I = " + komma(zustand.I, 1) + " A");
