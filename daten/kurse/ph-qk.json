@@ -378,13 +378,18 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Zerfallsketten mit Stellvertretern legen",
-       "material": "Karten oder Spielsteine (zwei Farben für Protonen/Neutronen), Ausschnitt einer Nuklidkarte.",
+       "titel": "γ-Spektrum mit dem Halbleiterdetektor",
+       "material": "γ-Strahler (Cs-137, Co-60, Na-22), Halbleiterdetektor mit Vielkanalanalysator und ein unbekannter Prüfstrahler.",
+       "vorhersage": "Eine Quelle mit nur einer festen γ-Energie (z. B. Cs-137, 662 keV) — was erwartest du im Spektrum: einen scharfen Peak bei einer bestimmten Kanalnummer, einen breiten Berg oder eine waagerechte Linie?",
        "auftraege": [
-        "Lege $^{238}_{92}\\text{U}$ als Steinmodell und führe einen $\\alpha$-Zerfall durch: notiere $A$ und $Z$ des Tochterkerns.",
-        "Führe danach einen $\\beta^-$-Zerfall durch und vergleiche das Ergebnis mit deiner Vorhersage vom Einstieg.",
-        "Stelle beide Zerfälle als Gleichungen auf und prüfe für jede Zeile die beiden Erhaltungssätze."
-       ]
+        "Miss die bekannten Quellen und lies die Kanalnummern ihrer Photopeaks ab.",
+        "Stelle aus den Punkten (Energie $E$, Kanal $K$) die Kalibriergerade $K=m\\cdot E+b$ auf.",
+        "Miss die unbekannte Probe und rechne ihre Peak-Kanäle mit $E=(K-b)/m$ in Energien um.",
+        "Identifiziere das Nuklid an seinem charakteristischen Linienmuster."
+       ],
+       "pfad": "experimente/physik/gamma-spektrum/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -406,7 +411,10 @@
        "wort": "Atomkern",
        "lektion": "l1"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir ein γ-Spektrum aufnehmen, überlegen wir: γ-Strahlung entsteht beim Übergang eines Kerns in einen energieärmeren Zustand. Vermutung: Da Kerne diskrete Energieniveaus haben, sendet ein Nuklid γ-Quanten ganz bestimmter Energien aus — im Spektrum scharfe Linien, kein breites Band. Damit ließe sich ein unbekanntes Nuklid an seinem Linienmuster erkennen.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Kernumwandlungen (α, β, γ) und diskrete Energieniveaus sind bekannt; lineare Regression steht zur Verfügung.</p><p><strong>Angesprochene Kompetenzen:</strong> Photopeaks ablesen, eine Energiekalibrierung $K=m\\cdot E+b$ aufstellen, Energien berechnen und ein Nuklid identifizieren.</p><p><strong>Erwartung:</strong> Bekannte Quellen liefern eine lineare Kalibrierung; die unbekannte Probe wird über ihre Peak-Energien zugeordnet.</p><p><strong>Modellgrenzen:</strong> Endliche Energieauflösung, Compton-Untergrund und Effizienz werden idealisiert; die Kalibrierung gilt nur im gemessenen Bereich.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1307,13 +1315,33 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Flammenfärbung — Elementlinien sichtbar machen",
-       "material": "Magnesiastäbchen, Bunsenbrenner, Salze von Natrium, Kalium, Lithium und Kupfer, optional eine einfache Handspektroskop-Folie (Gitter).",
+       "titel": "Resonanzabsorption am Natriumdampf",
+       "material": "Natriumdampfzelle, durchstimmbare Lichtquelle (560–620 nm) und ein Fotodetektor für die durchgelassene Intensität.",
+       "vorhersage": "Wie verhält sich die durchgelassene Intensität, wenn du die Wellenlänge von 560 nm bis 620 nm durchstimmst — gleichmäßig, oder gibt es eine Auffälligkeit?",
        "auftraege": [
-        "Halte nacheinander die Salze in die Flamme und notiere die jeweilige Färbung.",
-        "Betrachte die gefärbte Flamme durch das Gitter — beschreibe, ob du ein kontinuierliches Spektrum oder einzelne Linien siehst.",
-        "Erkläre, warum verschiedene Elemente verschiedene Farben/Linien zeigen, und ordne die Beobachtung dem Begriff „Fingerabdruck“ zu."
-       ]
+        "Miss die durchgelassene Intensität $I$ für mindestens sechs Wellenlängen über einen Bereich von $\\ge 12$ nm; verdichte die Punkte dort, wo $I$ einbricht.",
+        "Trage $I$ gegen $\\lambda$ auf und lies die Resonanzwellenlänge $\\lambda_0$ am tiefsten Punkt ab.",
+        "Berechne die Anregungsenergie $\\Delta E = h\\,c/\\lambda_0$ in eV.",
+        "Begründe, warum nur Photonen mit $E=\\Delta E$ absorbiert werden, und stelle den Bezug zur gelben Natrium-Emission her."
+       ],
+       "pfad": "experimente/physik/resonanzabsorption/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      },
+      {
+       "typ": "experiment",
+       "titel": "Das Moseley-Gesetz aus charakteristischen Röntgenlinien",
+       "material": "Röntgenröhre mit auswechselbaren Anoden verschiedener Elemente und ein Kristall-Spektrometer mit Wellenlängenskala.",
+       "vorhersage": "Wie hängt die Wellenlänge der charakteristischen Kα-Linie von der Ordnungszahl $Z$ ab — und welche Größe muss man auftragen, damit ein linearer Zusammenhang sichtbar wird?",
+       "auftraege": [
+        "Wähle mindestens fünf Anodenmaterialien und lies jeweils die Wellenlänge $\\lambda$ der Kα-Linie ab.",
+        "Berechne $f=c/\\lambda$ und trage $\\sqrt{f}$ gegen $Z$ auf.",
+        "Bestimme die Steigung und prüfe, ob die Punkte auf einer Geraden durch $Z-1$ liegen — deute das Minus-Eins als Abschirmung der Kernladung.",
+        "Gewinne aus der Steigung die Rydbergfrequenz zurück und vergleiche mit dem Literaturwert."
+       ],
+       "pfad": "experimente/physik/moseley/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -1337,7 +1365,10 @@
        "nEnd": 2,
        "nStartInit": 3
       }
-     }
+     },
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir Linienspektren als Fingerabdrücke nutzen, überlegen wir: Jedes Element hat eigene Energieniveaus. Vermutung: Im Sichtbaren absorbiert ein Gas genau die Wellenlänge seiner Anregung (Resonanzabsorption), und im Röntgenbereich verschieben sich die charakteristischen Linien systematisch mit der Ordnungszahl. Wir erwarten, aus beidem element-typische Größen zu gewinnen.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Diskrete Energieniveaus, $E=h\\,f$ und der Zusammenhang Spektrum–Atombau sind eingeführt.</p><p><strong>Angesprochene Kompetenzen:</strong> Absorptionskurve bzw. charakteristische Linie ablesen, $\\Delta E=h\\,c/\\lambda_0$ berechnen und das Moseley-Gesetz ($\\sqrt{f}$ über $Z$) linearisieren.</p><p><strong>Erwartung:</strong> Die Resonanzabsorption zeigt ein scharfes Minimum bei $\\lambda_0$; die Moseley-Geraden bestätigen $\\sqrt{f}\\propto (Z-1)$.</p><p><strong>Modellgrenzen:</strong> Idealisierte Linienform ohne Verbreiterung/Feinstruktur; die Moseley-Näherung nutzt eine effektive Abschirmung.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1953,13 +1984,33 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Balmer-Linien berechnen und einordnen",
-       "material": "Taschenrechner, $h c \\approx 1240\\,\\text{eV·nm}$, Bereich des sichtbaren Lichts ($\\sim 380$–$780\\,\\text{nm}$).",
+       "titel": "Wellenlänge der Röntgenstrahlung am NaCl-Kristall (Bragg)",
+       "material": "Röntgengerät mit Goniometer, NaCl-Einkristall ($d=282$ pm), Zählrohr.",
+       "vorhersage": "Du findest den Bragg-Reflex 1. Ordnung bei einem Glanzwinkel $\\theta_1$. Bei welchem Winkel erwartest du den Reflex 2. Ordnung — kleiner, gleich oder größer? Begründe mit $n\\lambda=2d\\sin\\theta$.",
        "auftraege": [
-        "Berechne $\\Delta E$ für die Übergänge $3\\to2$, $4\\to2$ und $5\\to2$.",
-        "Wandle mit $\\lambda = \\frac{1240\\,\\text{eV·nm}}{\\Delta E}$ in Wellenlängen um und ordne sie Farben zu.",
-        "Prüfe, ob alle drei im Sichtbaren liegen, und vergleiche, welcher Übergang am kurzwelligsten ist."
-       ]
+        "Fahre den Glanzwinkel $\\theta$ langsam durch und notiere alle Winkel scharfer Reflexe (mindestens sechs über mehrere Ordnungen).",
+        "Berechne je Reflex $\\lambda=\\dfrac{2d\\sin\\theta}{n}$ und mittle.",
+        "Prüfe die Konsistenz über die Ordnungen: liefert dieselbe Linie in 1., 2., 3. Ordnung dasselbe $\\lambda$?",
+        "Erkläre, warum einige Reflexe ein deutlich kürzeres $\\lambda$ ergeben (zweite charakteristische Linie)."
+       ],
+       "pfad": "experimente/physik/bragg/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      },
+      {
+       "typ": "experiment",
+       "titel": "Röntgenbremsspektrum: Grenzwellenlänge und h",
+       "material": "Röntgenröhre mit regelbarer Röhrenspannung (15–35 kV) und ein Spektrometer für das Bremsspektrum.",
+       "vorhersage": "Du erhöhst die Röhrenspannung $U$. Wohin wandert die kurzwellige Grenze $\\lambda_\\text{min}$ — zu kürzeren, längeren Wellenlängen, oder bleibt sie?",
+       "auftraege": [
+        "Nimm das Bremsspektrum für mindestens sechs Spannungen $U$ auf und lies jeweils $\\lambda_\\text{min}$ ab.",
+        "Trage $\\lambda_\\text{min}$ gegen $1/U$ auf und prüfe die Ursprungsgerade.",
+        "Bestimme aus der Steigung $h\\,c/e$ das Plancksche Wirkungsquantum $h$.",
+        "Begründe (Duane-Hunt), warum $\\lambda_\\text{min}$ nur von $U$ abhängt."
+       ],
+       "pfad": "experimente/physik/roentgen-bremsspektrum/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -1993,7 +2044,10 @@
        "wort": "Linienspektren",
        "lektion": "l6"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir Röntgenstrahlung vermessen, überlegen wir: Auch Röntgenlicht hat eine Wellenlänge — nur viel kürzer als sichtbares Licht. Vermutung: Mit einem Kristall als Gitter lässt sich diese winzige Wellenlänge bestimmen, und die kurzwellige Grenze des Bremsspektrums hängt allein von der Röhrenspannung ab. Wir erwarten, daraus $\\lambda$ bzw. das Plancksche Wirkungsquantum $h$ zu gewinnen.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Wellenlänge/Frequenz von Strahlung, die Gitter-/Bragg-Bedingung und $E=h\\,f$ sind bekannt; der Bogen vom Balmer-Spektrum zur Röntgenstrahlung wird gespannt.</p><p><strong>Angesprochene Kompetenzen:</strong> Bragg-Reflexe bzw. die Grenzwellenlänge ablesen, $\\lambda=2d\\sin\\theta/n$ anwenden und $\\lambda_\\text{min}$ über $1/U$ linearisieren, um $h$ zu bestimmen.</p><p><strong>Erwartung:</strong> Bragg liefert über mehrere Ordnungen ein konsistentes $\\lambda$; das Bremsspektrum ergibt eine Ursprungsgerade mit Steigung $h\\,c/e$.</p><p><strong>Modellgrenzen:</strong> Idealisierte scharfe Reflexe/Kanten; Linienbreite, Detektorauflösung und Justage begrenzen die reale Genauigkeit.</p>"
     },
     "ueben": {
      "zeit": 18,

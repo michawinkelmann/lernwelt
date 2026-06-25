@@ -821,13 +821,18 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Auslenkung und Geschwindigkeit vergleichen",
-       "material": "Ein Federpendel (Masse an Feder am Stativ), eine Handy-Kamera für eine Zeitlupenaufnahme (Slow-Motion).",
+       "titel": "Den elektrischen Schwingkreis vermessen",
+       "material": "LC-Schwingkreis aus Spule (feste Induktivität) und Drehkondensator (1–50 nF), kurze Anregung (Taster), Oszilloskop/Frequenzmesser.",
+       "vorhersage": "Ein LC-Kreis schwingt wie ein Feder-Masse-Pendel. Was passiert mit der Schwingfrequenz $f$, wenn du die Kapazität $C$ vergrößerst — größer, kleiner oder gleich?",
        "auftraege": [
-        "Filme die schwingende Masse in Zeitlupe. Spiele die Aufnahme Bild für Bild ab: Wo bewegt sich die Masse zwischen zwei Bildern am weitesten (= schnellste Stelle)?",
-        "Suche die Umkehrpunkte: Dort steht die Masse kurz still. Stimmt das mit $v=0$ am Umkehrpunkt überein?",
-        "Beschreibe in eigenen Worten, wie sich die Geschwindigkeit von der Ruhelage zum Umkehrpunkt ändert — und verknüpfe es mit $v(t)=\\hat{s}\\,\\omega\\cos(\\omega t)$."
-       ]
+        "Stelle mindestens sechs verschiedene Kapazitäten $C$ ein, rege den Kreis an und lies jedes Mal die Frequenz $f$ ab.",
+        "Trage $f$ über $1/\\sqrt{C}$ auf — es entsteht eine Ursprungsgerade (Thomson-Formel $f=\\frac{1}{2\\pi\\sqrt{LC}}$).",
+        "Bestimme aus der Steigung die unbekannte Induktivität $L$ der Spule.",
+        "Ordne zu: Welches Bauteil entspricht der Feder, welches der Masse des mechanischen Pendels?"
+       ],
+       "pfad": "experimente/physik/em-schwingkreis/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -914,7 +919,10 @@
        "wort": "Feder-Masse-Pendel",
        "lektion": "l2"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir die harmonische Schwingung mathematisch fassen, überlegen wir: Federpendel und elektrischer LC-Schwingkreis sehen verschieden aus, doch in beiden pendelt Energie zwischen zwei Speichern. Vermutung: Beide gehorchen demselben Sinusgesetz, und eine Frequenz bestimmt das Tempo. Wir erwarten, aus der Frequenz die verborgene Induktivität $L$ zu gewinnen.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Sinusansatz und Kreisfrequenz $\\omega=2\\pi f$; Energie bei Schwingungen; Kondensator und Spule als Energiespeicher; Umstellen einer Wurzelgleichung.</p><p><strong>Angesprochene Kompetenzen:</strong> Messreihe planen, linearisieren ($f$ über $1/\\sqrt{C}$), aus der Steigung eine Größe gewinnen; LC-Kreis als elektrisches Analogon des harmonischen Oszillators modellieren.</p><p><strong>Erwartung:</strong> Größeres $C$ senkt die Frequenz ($f\\propto 1/\\sqrt{C}$); aus der Steigung folgt $L\\approx 10$ mH. Der LC-Kreis ist das Gegenstück zum Feder-Masse-Pendel.</p><p><strong>Modellgrenzen:</strong> Die Thomson-Formel gilt verlustfrei; ohmscher Widerstand dämpft und senkt die Frequenz minimal; Bauteiltoleranzen und Streukapazitäten streuen die Punkte.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1072,13 +1080,17 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Resonanz mit gekoppelten Pendeln zeigen",
-       "material": "Zwei gleich lange Fadenpendel und ein bis zwei unterschiedlich lange, alle an einer gespannten waagerechten Schnur aufgehängt.",
+       "titel": "Resonanzkurve eines angetriebenen Federpendels aufnehmen",
+       "material": "Federpendel (z. B. 0,2 kg an einer weichen Feder), Motor/Exzenter mit einstellbarer Antriebsfrequenz, senkrechtes Lineal, Stoppuhr.",
+       "vorhersage": "Bei welcher Erregerfrequenz $f$ wird die Amplitude am größten — bei sehr tiefer, bei sehr hoher oder nahe der Eigenfrequenz $f_0=\\frac{1}{2\\pi}\\sqrt{\\frac{D}{m}}$?",
        "auftraege": [
-        "Hänge mehrere Pendel an die gemeinsame Schnur. Stoße eines der gleich langen an und beobachte über eine Minute, welches Pendel die größte Amplitude aufbaut.",
-        "Erkläre mit den Begriffen Eigenfrequenz und Resonanz, warum gerade das gleich lange Pendel mitschwingt und die anderen kaum.",
-        "Dämpfe das mitschwingende Pendel leicht mit dem Finger an. Wie ändert sich die aufgebaute Amplitude — und was bedeutet das für reale Bauwerke (Stoßdämpfer)?"
-       ]
+        "Stelle mindestens sechs Erregerfrequenzen $f$ ein, warte das Einschwingen ab und lies jeweils die stationäre Amplitude $A$ ab; trage $A$ gegen $f$ auf.",
+        "Bestimme aus der Resonanzkurve die Resonanzfrequenz $f_\\text{res}$ und vergleiche mit $f_0=\\frac{1}{2\\pi}\\sqrt{\\frac{D}{m}}$.",
+        "Erkläre mit Energie und Takt das Aufschaukeln nahe $f_0$ und warum stärkere Dämpfung den Gipfel niedriger und breiter macht."
+       ],
+       "pfad": "experimente/physik/resonanz/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -1103,7 +1115,10 @@
        "wort": "harmonische Schwingung",
        "lektion": "l4"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir die erzwungene Schwingung untersuchen, überlegen wir: Ein periodischer Antrieb schaukelt ein Pendel auf — aber nur bei der richtigen Frequenz. Vermutung: Die Amplitude wird am größten, wenn die Erregerfrequenz nahe der Eigenfrequenz $f_0$ liegt. Wir erwarten eine Resonanzkurve mit deutlichem Maximum.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Harmonische Schwingung, Eigenfrequenz $f_0=\\frac{1}{2\\pi}\\sqrt{D/m}$ und der Begriff der Dämpfung sind bekannt.</p><p><strong>Angesprochene Kompetenzen:</strong> Eine Resonanzkurve aufnehmen, das Maximum bestimmen, mit der berechneten Eigenfrequenz vergleichen und den Einfluss der Dämpfung deuten.</p><p><strong>Erwartung:</strong> Die Amplitude wird nahe $f_0$ maximal (Aufschaukeln); stärkere Dämpfung macht den Gipfel niedriger und breiter.</p><p><strong>Modellgrenzen:</strong> Die lineare Dämpfung ist idealisiert; Nichtlinearitäten, Reibung und Einschwingzeiten begrenzen die Genauigkeit.</p>"
     },
     "ueben": {
      "zeit": 18,

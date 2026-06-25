@@ -360,13 +360,17 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Probeladung im Feld",
-       "material": "Geladene Kunststoffkugel an einem Faden, ein geladener Stab oder eine Plattenanordnung – als Real- oder Gedankenexperiment.",
+       "titel": "Elektrische Feldstärke aus Kraftmessung",
+       "material": "Plattenkondensator (fester Abstand $d = 0{,}050\\ \\mathrm{m}$), regelbares Hochspannungsnetzgerät (0–6000 V), kleine geladene Probekugel mit fester (unbekannter) Ladung $q$ an einem empfindlichen Kraftmesser.",
+       "vorhersage": "Du verdoppelst die Plattenspannung $U$ bei festem Abstand $d$. Was passiert mit der Kraft $F$ auf die Probekugel — wird sie doppelt so groß, nur um den Faktor $\\sqrt{2}$ größer, oder bleibt sie (fast) gleich?",
        "auftraege": [
-        "Bringe die geladene Kugel ins Feld und beobachte die Richtung, in die sie ausgelenkt wird.",
-        "Überlege, wie sich die Kraft (Auslenkung) ändert, wenn du die Kugelladung erhöhst.",
-        "Begründe, warum die berechnete Feldstärke $E=F/q$ trotzdem gleich bleibt."
-       ]
+        "Stelle mindestens sechs verschiedene Spannungen $U$ ein und lies jeweils die Kraft $F$ am Kraftmesser ab. Protokolliere $U$ und $F$.",
+        "Berechne zu jeder Zeile die Feldstärke $E = U/d$ und trage $F$ gegen $E$ auf. Welche Form hat der Zusammenhang?",
+        "Bestimme die Steigung der $F$-$E$-Geraden und begründe mit $F = q\\cdot E$, warum die Steigung die gesuchte Ladung $q$ ist; gib $q$ in $\\mathrm{nC}$ an."
+       ],
+       "pfad": "experimente/physik/e-feldstaerke-kraftmessung/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "interaktiv": {
@@ -405,7 +409,10 @@
        "wort": "Feldbegriff",
        "lektion": "l1"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir die elektrische Feldstärke messen, überlegen wir: Auf eine Ladung im Feld wirkt eine Kraft. Vermutung: Je größer die Spannung am Plattenkondensator (also je stärker das Feld), desto größer die Kraft auf eine feste Probeladung. Wir erwarten einen einfachen, womöglich proportionalen Zusammenhang zwischen Feldstärke und Kraft.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Die Lernenden kennen den Feldbegriff und wissen, dass auf eine Ladung im elektrischen Feld eine Kraft wirkt; der Plattenkondensator als Quelle eines homogenen Feldes ist eingeführt.</p><p><strong>Angesprochene Kompetenzen:</strong> Messreihen planen und protokollieren, einen linearen Zusammenhang grafisch darstellen, aus der Steigung eine Größe gewinnen; $E=U/d$ und $F=q\\cdot E$ anwenden.</p><p><strong>Erwartung:</strong> Die $F$-$E$-Paare liegen auf einer Ursprungsgeraden; die Steigung liefert die Probeladung $q\\approx 8\\ \\mathrm{nC}$. Über $E=U/d$ wird die Feldstärke aus der gut messbaren Spannung bestimmt.</p><p><strong>Modellgrenzen:</strong> Das Feld gilt nur im Platteninneren als homogen; Randfeld, Influenz auf die Kugel und die Ablesegenauigkeit des Kraftmessers begrenzen die Genauigkeit.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -626,24 +633,25 @@
        "formel": "E = U / d"
       }
      },
-     "vorueberlegung": "<p>Bevor wir die Simulation starten, überlegen wir: Im Plattenkondensator vermuten wir ein <strong>homogenes</strong> Feld — überall gleich starke, parallele Feldlinien. Aus $E=\\frac{U}{d}$ erwarten wir zwei klare Zusammenhänge: Verdoppeln wir die Spannung $U$, sollte sich auch die Feldstärke $E$ verdoppeln; vergrößern wir dagegen den Plattenabstand $d$, sollte $E$ kleiner werden. Unsere Vermutung: $E$ ist zu $U$ direkt und zu $d$ umgekehrt proportional, und das Probeladungs-Pfeilbild bleibt im Inneren überall gleich lang.</p>",
+     "vorueberlegung": "Bevor wir die Kapazität bestimmen, überlegen wir: Wie viel Ladung fasst ein Plattenkondensator bei gegebener Spannung? Vermutung: Ziehen wir die Platten auseinander, passt weniger Ladung hinein. Wir erwarten, dass die Kapazität mit wachsendem Plattenabstand abnimmt.",
      "erkundenZuerst": true,
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Feld im Plattenkondensator erkunden",
-       "vorhersage": "Was passiert mit der Feldstärke $E$, wenn du bei festem Abstand die Spannung $U$ verdoppelst — und was, wenn du bei fester Spannung den Plattenabstand $d$ verdoppelst?",
+       "titel": "Kapazität des Plattenkondensators bestimmen",
+       "material": "Plattenkondensator mit verstellbarem Plattenabstand $d$, Netzgerät (feste Ladespannung $U_0 = 100\\ \\mathrm{V}$), Ladungsmessverstärker.",
+       "vorhersage": "Du lädst den Kondensator mit fester Spannung $U_0$ auf und vergrößerst dann den Plattenabstand $d$. Wie ändern sich die gespeicherte Ladung $Q$ und die Kapazität $C = Q/U$?",
        "auftraege": [
-        "Stelle eine Spannung ein und lies $E$ ab. Verdopple dann $U$ und prüfe, ob sich $E$ ebenfalls verdoppelt.",
-        "Halte $U$ fest und vergrößere den Plattenabstand $d$ schrittweise. Trage drei Wertepaare $(d, E)$ auf und prüfe, ob $E\\cdot d$ konstant bleibt.",
-        "Beobachte die Feldlinien im Inneren und am Rand: Wo ist das Feld homogen, wo nicht? Begründe mit dem Feldlinienbild."
+        "Stelle bei fester Spannung $U_0 = 100\\ \\mathrm{V}$ mindestens sechs verschiedene Plattenabstände $d$ ein und lies jeweils die Ladung $Q$ ab.",
+        "Berechne für jede Zeile $C = Q/U_0$ und prüfe: Verdoppelst du $d$, halbiert sich $C$? Bleibt $C\\cdot d$ konstant?",
+        "Trage $C$ gegen $1/d$ auf, bestimme die Steigung und gewinne daraus $\\varepsilon_0 = \\text{Steigung}/A$."
        ],
-       "pfad": "simulationen/physik/plattenkondensator/index.html",
-       "linkLabel": "Simulation öffnen",
-       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
+       "pfad": "experimente/physik/kondensator-kapazitaet/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
-     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Feldbegriff und Feldlinienbild (l1), elektrische Feldstärke $E=F/q$ (l2); Umgang mit Proportionalitäten.</p><p><strong>Angesprochene Kompetenzen:</strong> erkunden (Parameter gezielt variieren), mathematisieren (Proportionalität $E\\propto U$ und $E\\propto 1/d$ aus Messreihen ablesen), bewerten (Homogenität am Feldlinienbild beurteilen).</p><p><strong>Erwartung:</strong> Doppelte Spannung $\\Rightarrow$ doppelte Feldstärke; doppelter Abstand $\\Rightarrow$ halbe Feldstärke. Das Produkt $E\\cdot d=U$ bleibt konstant. Im Inneren sind die Pfeile überall gleich lang (homogen).</p><p><strong>Modellgrenzen:</strong> $E=U/d$ gilt nur für das idealisierte homogene Innenfeld. An den Plattenrändern wölbt sich das Feld (Randeffekte), die die Simulation andeutet, die Formel aber nicht erfasst.</p>",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Der Plattenkondensator und das homogene Feld sind bekannt; der Zusammenhang $Q=C\\cdot U$ wird eingeführt.</p><p><strong>Angesprochene Kompetenzen:</strong> Ladung messen, $C=Q/U$ berechnen, einen Zusammenhang $C\\propto 1/d$ durch Auftragen über $1/d$ linearisieren und aus der Steigung eine Konstante ($\\varepsilon_0$) gewinnen.</p><p><strong>Erwartung:</strong> $C$ über $1/d$ ergibt eine Ursprungsgerade mit Steigung $\\varepsilon_0\\cdot A$; daraus folgt $\\varepsilon_0\\approx 8{,}85\\cdot10^{-12}\\ \\mathrm{F/m}$.</p><p><strong>Modellgrenzen:</strong> Reale Randfelder, endliche Plattengröße und Restladungen führen zu systematischen Abweichungen; das Modell setzt ein ideales homogenes Feld voraus.</p>",
      "begriffe": [
       {
        "wort": "elektrische Feldstärke",
@@ -1060,14 +1068,16 @@
      "erkunden": [
       {
        "typ": "simulation",
-       "titel": "Plattenkondensator: Ablenkung von Elektronen",
-       "pfad": "simulationen/physik/plattenkondensator/index.html",
+       "titel": "Das Feld im Plattenkondensator erkunden",
+       "vorhersage": "Wie ändert sich das Feld zwischen den Platten, wenn du die Spannung erhöhst oder die Platten näher zusammenschiebst — wird es stärker, schwächer oder bleibt es gleich?",
        "auftraege": [
-        "Lass den Strahl laufen und beschreibe die Form der Bahnkurve im Feld.",
-        "Verdopple $U_a$ und vergleiche die abgelesene Ablenkung mit deiner Vorhersage.",
-        "Erhöhe $U_0$ (also $v_0$) und beobachte, wie sich die Ablenkung ändert – passt das zu $y\\sim 1/v_0^2$?",
-        "Lies einen Messwert ab und prüfe ihn mit $y=\\frac{eE}{2mv_0^2}x^2$ nach."
-       ]
+        "Verändere Spannung und Plattenabstand und beobachte Feldliniendichte und Feldstärke.",
+        "Prüfe den Zusammenhang $E = U/d$ an mehreren Einstellungen.",
+        "Schicke ein Elektron ins Querfeld und beschreibe, wie es abgelenkt wird."
+       ],
+       "pfad": "simulationen/physik/plattenkondensator/index.html",
+       "linkLabel": "Simulation öffnen",
+       "hinweis": "Kein Material zur Hand? Nutze die <strong>Simulation</strong> — die Auswertung läuft genauso."
       }
      ],
      "interaktiv": {
@@ -1085,7 +1095,10 @@
        "wort": "homogenes Feld",
        "lektion": "l3"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir Elektronen im Querfeld ablenken, überlegen wir: Zwischen den Platten herrscht ein homogenes Feld. Vermutung: Ein eintretendes Elektron wird zur positiven Platte hin abgelenkt und beschreibt dabei eine gekrümmte Bahn — ähnlich einem waagerechten Wurf.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Homogenes Feld und Kraft auf Ladungen sind behandelt; die Analogie zum waagerechten Wurf ist verfügbar.</p><p><strong>Angesprochene Kompetenzen:</strong> Felder qualitativ und quantitativ deuten, $E=U/d$ anwenden, die Querablenkung als überlagerte Bewegung beschreiben.</p><p><strong>Erwartung:</strong> Die Lernenden erkennen die parabelförmige Bahn und den Einfluss von Spannung und Plattenabstand auf die Ablenkung.</p><p><strong>Modellgrenzen:</strong> Die Simulation idealisiert das Feld als homogen und vernachlässigt Randeffekte und die endliche Plattenlänge.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1424,13 +1437,17 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Magnetfeld sichtbar machen",
-       "material": "Stabmagnet, Blatt Papier, Eisenspäne und eine kleine Kompassnadel – als Real- oder Gedankenexperiment.",
+       "titel": "Das Magnetfeld einer Spule ausmessen",
+       "material": "Lange Zylinderspule ($N = 500$ Windungen, Länge $0{,}50\\ \\mathrm{m}$), regelbare Stromquelle, Hallsonde mit Anzeige.",
+       "vorhersage": "Wie hängt das Magnetfeld $B$ im Inneren einer langen Spule vom Spulenstrom $I$ ab? Verdoppelst du $I$ — wird $B$ doppelt so groß, um $\\sqrt{2}$ größer oder bleibt es gleich?",
        "auftraege": [
-        "Streue die Eisenspäne über den Magneten und beschreibe, wo das Muster am dichtesten ist.",
-        "Lege die Kompassnadel an verschiedene Stellen und prüfe, dass ihr Nordpol außen von N nach S zeigt.",
-        "Begründe, warum die Feldlinien geschlossen sein müssen (kein Anfang/Ende sichtbar)."
-       ]
+        "Stelle nacheinander mindestens sechs verschiedene Spulenströme ein und lies das Feld $B$ an der Hallsonde ab.",
+        "Trage $B$ gegen $I$ auf und prüfe, ob die Punkte auf einer Ursprungsgeraden liegen ($B \\propto I$).",
+        "Bestimme die Steigung und gewinne daraus mit $n = 1000\\ \\mathrm{m^{-1}}$ die Feldkonstante $\\mu_0 = \\text{Steigung}/n$; vergleiche mit $12{,}566\\cdot10^{-7}\\ \\mathrm{Vs/(Am)}$."
+       ],
+       "pfad": "experimente/physik/magnetfeld-spule-hallsonde/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "begriffe": [
@@ -1438,7 +1455,10 @@
        "wort": "Feldbegriff",
        "lektion": "l1"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir das Spulenfeld messen, überlegen wir: Ein Strom erzeugt ein Magnetfeld. Vermutung: Im Inneren einer langen Spule ist das Feld nahezu homogen und wird mit größerem Strom stärker. Wir erwarten einen proportionalen Zusammenhang $B\\propto I$.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Das Magnetfeld stromdurchflossener Leiter und Spulen ist eingeführt; die Hallsonde als Messgerät wird vorgestellt.</p><p><strong>Angesprochene Kompetenzen:</strong> Messreihe aufnehmen, $B(I)$ grafisch darstellen, Proportionalität prüfen und aus der Steigung mit bekannter Windungsdichte $\\mu_0$ bestimmen.</p><p><strong>Erwartung:</strong> $B$ über $I$ ergibt eine Ursprungsgerade mit Steigung $\\mu_0\\cdot n$; daraus folgt $\\mu_0\\approx 12{,}57\\cdot10^{-7}\\ \\mathrm{Vs/(Am)}$.</p><p><strong>Modellgrenzen:</strong> Nur im mittleren Spulenbereich ist das Feld homogen; endliche Spulenlänge und Sondenlage verursachen Abweichungen.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1626,13 +1646,18 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Leiterschaukel im Hufeisenmagnet",
-       "material": "Hufeisenmagnet, eine als Schaukel aufgehängte Leiterstange, regelbare Stromquelle, Amperemeter – als Real- oder Gedankenexperiment.",
+       "titel": "Magnetische Flussdichte mit der Stromwaage",
+       "material": "Stromwaage (Leiterstück bekannter Länge $L$ im Magnetfeld), regelbare Stromquelle, elektronische Waage.",
+       "vorhersage": "Du schickst Strom durch einen Leiter im Magnetfeld und liest die Massenänderung an einer Waage ab. Was passiert mit dem Wert, wenn du den Strom verdoppelst — und was, wenn du die Stromrichtung umkehrst?",
        "auftraege": [
-        "Schalte den Strom ein und beobachte die Auslenkung – stimmt sie mit der Dreifingerregel überein?",
-        "Polung des Stroms umkehren: Wie ändert sich die Kraftrichtung?",
-        "Erhöhe die Stromstärke und beschreibe, wie sich die Auslenkung (die Kraft) ändert."
-       ]
+        "Halte die Leiterlänge fest und miss die Massenänderung $\\Delta m$ für mindestens sechs Stromstärken zwischen 0 und 6 A.",
+        "Berechne $F = \\Delta m\\cdot g$, trage $F$ über $I$ auf und bestimme aus der Steigung $B\\cdot L$ die Flussdichte $B$.",
+        "Kehre die Stromrichtung um und beschreibe die Änderung (Drei-Finger-Regel).",
+        "eA: Variiere die wirksame Länge $L$ und prüfe $F \\propto L$."
+       ],
+       "pfad": "experimente/physik/stromwaage/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "interaktiv": {
@@ -1670,7 +1695,10 @@
        "wort": "Magnetfeld",
        "lektion": "l6"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir die Flussdichte messen, überlegen wir: Auf einen stromdurchflossenen Leiter im Magnetfeld wirkt eine Kraft. Vermutung: Je größer der Strom, desto größer die Kraft — vermutlich proportional. Die Waage zeigt die Kraft als scheinbare Massenänderung an.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Die Lorentzkraft auf bewegte Ladungen bzw. auf stromdurchflossene Leiter ist eingeführt; $F=B\\cdot I\\cdot L$ steht zur Verfügung.</p><p><strong>Angesprochene Kompetenzen:</strong> Kraft aus einer Massenänderung gewinnen ($F=\\Delta m\\cdot g$), $F(I)$ auftragen, aus der Steigung $B\\cdot L$ die Flussdichte bestimmen; eA: $F\\propto L$ prüfen.</p><p><strong>Erwartung:</strong> $F$ über $I$ ergibt eine Ursprungsgerade mit Steigung $B\\cdot L$; daraus folgt $B\\approx 0{,}42\\ \\mathrm{T}$.</p><p><strong>Modellgrenzen:</strong> Feldinhomogenität an den Leiterenden, Auftrieb der Zuleitungen und Waagengenauigkeit begrenzen das Ergebnis.</p>"
     },
     "ueben": {
      "zeit": 18,

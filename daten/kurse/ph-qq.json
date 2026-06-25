@@ -418,6 +418,21 @@
        "pfad": "experimente/physik/photoeffekt/index.html",
        "linkLabel": "Digitales Experiment öffnen",
        "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      },
+      {
+       "typ": "experiment",
+       "titel": "Plancksches Wirkungsquantum h mit LEDs",
+       "material": "LEDs verschiedener Farbe mit bekannter Wellenlänge, regelbare Spannungsquelle, Voltmeter, lichtempfindlicher Detektor (abgedunkelter Raum).",
+       "vorhersage": "Mehrere LEDs verschiedener Farbe beginnen jeweils bei einer eigenen Schwellenspannung $U_S$ zu leuchten. Welche LED braucht das höchste $U_S$ — die infrarote oder die violette? Welcher Zusammenhang zwischen $U_S$ und der Frequenz $f$ ist zu erwarten?",
+       "auftraege": [
+        "Bestimme für mindestens fünf LEDs die Schwellenspannung $U_S$ (Spannung langsam hochfahren, einsetzendes Leuchten suchen).",
+        "Trage $U_S$ gegen die Frequenz $f=c/\\lambda$ auf und prüfe, ob die Punkte auf einer Ursprungsgeraden liegen.",
+        "Bestimme die Steigung und berechne $h=\\text{Steigung}\\cdot e$; vergleiche mit $6{,}626\\cdot10^{-34}$ Js.",
+        "Begründe, warum die $U_S$-$f$-Gerade durch den Ursprung verläuft."
+       ],
+       "pfad": "experimente/physik/h-led/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -639,15 +654,18 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Gedankenexperiment: Einzelphotonen sammeln",
-       "material": "Vorstellung (oder eine Aufnahmeserie eines Einzelphotonen-Doppelspalts): Schirmbilder nach 10, 100, 1000 und 50000 registrierten Photonen.",
-       "vorhersage": "Skizziere vorher, wie das Schirmbild nach 10, nach 1000 und nach 50000 Einschlägen aussieht. Wann erwartest du erstmals Streifen?",
+       "titel": "Koinzidenzmethode: Einzelphotonennachweis",
+       "material": "Getriggerte Einzelphotonenquelle, 50:50-Strahlteiler, zwei Detektoren $D_1$/$D_2$ und Koinzidenzzähler; zum Vergleich eine abgeschwächte klassische Lichtquelle.",
+       "vorhersage": "Eine klassische Welle teilt sich am Strahlteiler und könnte beide Detektoren gleichzeitig auslösen. Was erwartest du für ein einzelnes Photon — kann es $D_1$ und $D_2$ zugleich auslösen? Vermutung für $g^2(0)$ der Einzelphotonenquelle (kleiner/gleich/größer als 1)?",
        "auftraege": [
-        "Vergleiche deine Skizzen mit den realen Bildern (z. B. Tonomura-Experiment) und beschreibe, wie sich das Muster aufbaut.",
-        "Markiere im fertigen Muster einen hellen und einen dunklen Streifen und schätze das Verhältnis der Trefferzahlen.",
-        "Begründe, warum man die Helligkeit als Wahrscheinlichkeit deuten muss und nicht als 'Lichtmenge eines Photons'.",
-        "Diskutiere: Was würde passieren, wenn ein Detektor an einem Spalt verrät, welchen Weg das Photon nimmt?"
-       ]
+        "Miss $g^2(0)$ für die getriggerte Einzelphotonenquelle und für eine abgeschwächte klassische Quelle bei gleicher Gate-Zeit.",
+        "Berechne je Zeile $g^2(0)=\\frac{N_K\\cdot N_T}{N_1\\cdot N_2}$ aus den abgelesenen Zählerständen.",
+        "Stelle fest, ob $g^2(0)$ der Einzelphotonenquelle unter 0,5 fällt, und begründe, warum eine klassische Welle $g^2(0)\\ge1$ liefert.",
+        "Erkläre, warum bloßes Abschwächen klassischen Lichts kein echtes Einzelphotonenlicht erzeugt (Poisson)."
+       ],
+       "pfad": "experimente/physik/koinzidenz/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -679,7 +697,10 @@
        "wort": "Lichtquanten",
        "lektion": "l2"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir einzelne Photonen nachweisen, überlegen wir: Eine klassische Lichtwelle teilt sich am Strahlteiler und könnte beide Detektoren gleichzeitig auslösen. Vermutung: Schicken wir wirklich nur EIN Photon, kann es sich nicht teilen — es löst nur einen Detektor aus. Wir erwarten, dass gleichzeitige Klicks (Koinzidenzen) fast ganz verschwinden.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Das Photon als Lichtquant, der Strahlteiler und einfache Zählstatistik sind bekannt.</p><p><strong>Angesprochene Kompetenzen:</strong> Zählerstände auswerten, $g^2(0)$ berechnen und klassische mit quantenhafter Lichtquelle vergleichen.</p><p><strong>Erwartung:</strong> Für echte Einzelphotonen ist $g^2(0)<1$ (Antikorrelation), für klassisches/abgeschwächtes Licht $g^2(0)\\ge1$ — ein direkter Nachweis der Teilchennatur.</p><p><strong>Modellgrenzen:</strong> Idealisierte Quelle und Detektoren; Dunkelzählrate, Zeitfenster und die Poisson-Statistik abgeschwächten Lichts begrenzen die Aussage.</p>"
     },
     "ueben": {
      "zeit": 17,
@@ -841,15 +862,32 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Elektronenbeugungsröhre an Graphit",
-       "material": "Elektronenbeugungsröhre mit Graphitfolie, Hochspannungsnetzgerät (einige kV) mit Voltmeter, abgedunkelter Raum, Lineal zum Ausmessen der Ringradien.",
-       "vorhersage": "Sage vorher: Wie ändern sich die Durchmesser der Beugungsringe, wenn du die Beschleunigungsspannung erhöhst — werden die Ringe größer oder kleiner?",
+       "titel": "Doppelspalt mit Elektronen — Materiewellen vermessen",
+       "material": "Elektronen-Doppelspaltröhre mit regelbarer Beschleunigungsspannung (2–10 kV), Leuchtschirm mit mm-Skala (Abstand $L$), Doppelspalt mit Spaltabstand $d$.",
+       "vorhersage": "Du erhöhst die Beschleunigungsspannung $U$. Wird der Streifenabstand $\\Delta x$ größer, kleiner oder bleibt er gleich? Begründe über die Wellenlänge schnellerer Elektronen.",
        "auftraege": [
-        "Stelle eine Spannung von einigen Kilovolt ein und beschreibe das Ringmuster auf dem Leuchtschirm.",
-        "Erhöhe die Spannung schrittweise und beobachte, wie sich die Ringdurchmesser verändern — vergleiche mit deiner Vorhersage.",
-        "Berechne für zwei Spannungen die de-Broglie-Wellenlänge $\\lambda = h/\\sqrt{2 m_\\text{e} e U}$ und prüfe die Tendenz (kleinere $\\lambda$ -> kleinere Ringe).",
-        "Begründe, warum dieses Ringmuster den Wellencharakter der Elektronen belegt."
-       ]
+        "Miss für mindestens sechs Spannungen $U$ den Streifenabstand $\\Delta x$ (über mehrere Streifen ablesen und teilen).",
+        "Berechne je Zeile $\\lambda=\\frac{\\Delta x\\cdot d}{L}$ und prüfe, ob $\\lambda$ mit steigendem $U$ kleiner wird.",
+        "Trage $\\Delta x$ gegen $1/\\sqrt{U}$ auf und begründe die Ursprungsgerade ($\\lambda\\propto 1/\\sqrt{U}$).",
+        "Bestimme aus der Steigung die Planck-Konstante und vergleiche mit dem Literaturwert."
+       ],
+       "pfad": "experimente/physik/doppelspalt-elektronen/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      },
+      {
+       "typ": "experiment",
+       "titel": "Elektronen beugen an Graphit — Netzebenenabstand bestimmen",
+       "material": "Elektronenbeugungsröhre (Graphitfolie, Leuchtschirm), regelbare Hochspannungsquelle (3–7 kV), mm-Skala am Schirm.",
+       "vorhersage": "Wenn du die Beschleunigungsspannung $U$ erhöhst — werden die Beugungsringe größer, kleiner oder bleiben sie gleich? Begründe mit der de-Broglie-Wellenlänge.",
+       "auftraege": [
+        "Stelle mindestens sechs Spannungen $U$ ein und lies jeweils den Radius beider Ringe ab.",
+        "Trage $r$ gegen $1/\\sqrt{U}$ auf — was bestätigt die Ursprungsgerade über $\\lambda$ und $U$?",
+        "Bestimme aus der Steigung den Netzebenenabstand und vergleiche ihn für beide Ringe."
+       ],
+       "pfad": "experimente/physik/elektronenbeugung/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -904,7 +942,10 @@
        "wort": "Photonen",
        "lektion": "l3"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir Elektronen durch den Doppelspalt schicken, überlegen wir: Elektronen gelten als Teilchen. Vermutung: Bei kleiner Wellenlänge zeigen auch sie Interferenz wie Licht — und schnellere (stärker beschleunigte) Elektronen haben eine kleinere Wellenlänge. Wir erwarten Streifen bzw. Ringe, die mit steigender Spannung enger werden.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Die de-Broglie-Beziehung $\\lambda=h/p$, Doppelspalt/Gitter und die Beschleunigung im elektrischen Feld sind bekannt.</p><p><strong>Angesprochene Kompetenzen:</strong> Streifenabstand bzw. Ringradius messen, $\\lambda$ bestimmen, $\\propto 1/\\sqrt{U}$ linearisieren, daraus $h$ bzw. den Netzebenenabstand gewinnen; die stochastische Deutung der Einzeltreffer.</p><p><strong>Erwartung:</strong> Auch Materie zeigt Interferenz; $\\Delta x$ bzw. $r$ sind $\\propto 1/\\sqrt{U}$; die Einzeltreffer bauen das Muster nach und nach auf.</p><p><strong>Modellgrenzen:</strong> Kleinwinkel-/Geometrienäherung, Ablese- und Schirmgenauigkeit sowie die nichtrelativistische Rechnung begrenzen die Genauigkeit.</p>"
     },
     "ueben": {
      "zeit": 17,
@@ -1058,15 +1099,32 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Welcher-Weg-Information am Doppelspalt",
-       "material": "Vorstellung bzw. Demonstrationsvideo: Doppelspalt mit und ohne 'Welcher-Weg'-Detektor an einem der Spalte (z. B. Polarisationsmarkierung der beiden Wege).",
-       "vorhersage": "Sage vorher: Was passiert mit dem Schirmbild, sobald ein Detektor verrät, durch welchen Spalt jedes Quantenobjekt geht — bleibt das Streifenmuster erhalten?",
+       "titel": "Interferenz einzelner Photonen am Mach-Zehnder-Interferometer",
+       "material": "Mach-Zehnder-Interferometer (zwei Strahlteiler, zwei Spiegel), abschwächbare Lichtquelle/Einzelphotonenquelle, zwei Detektoren mit Zählwerk, Phasenschieber.",
+       "vorhersage": "Es ist stets nur ein einziges Photon im Gerät. Kann trotzdem ein Interferenzmuster entstehen — oder registriert $D_1$ unabhängig von der Phase $\\varphi$ einfach die Hälfte der Photonen?",
        "auftraege": [
-        "Vergleiche das Schirmbild ohne und mit Wegmarkierung und beschreibe den Unterschied.",
-        "Ordne den beiden Fällen die Begriffe 'Welleninformation' und 'Wegelement-Information' zu.",
-        "Erkläre mit dem Begriff Komplementarität, warum beide Informationen nicht gleichzeitig vorliegen können.",
-        "Löse eine gemischte Aufgabe (Photoeffekt + Doppelspalt) und dokumentiere, an welcher Stelle du Teilchen- bzw. Wellenbild verwendest."
-       ]
+        "Stelle mehrere Phasen $\\varphi$ ein (u. a. 0°, 90°, 180°), sende je 1000 Photonen einzeln und lies an $D_1$ die relative Häufigkeit $P(D_1)$ ab.",
+        "Trage $P(D_1)$ über $\\varphi$ auf und prüfe den Verlauf $\\cos^2(\\varphi/2)$ (Maximum 0°, Minimum 180°, ½ bei 90°).",
+        "Schalte den Welcher-Weg-Markierer ein und beschreibe, was mit der Interferenz geschieht (Komplementarität)."
+       ],
+       "pfad": "experimente/physik/mach-zehnder/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
+      },
+      {
+       "typ": "experiment",
+       "titel": "Quantenzustände an polarisiertem Licht",
+       "material": "Einzelphotonenquelle, Präparator-Polarisator (fester Winkel) und drehbarer Analysator mit Gradskala, Einzelphotonenzähler.",
+       "vorhersage": "Du präparierst einzelne Photonen vertikal ($\\alpha=0°$) und drehst den Analysator von 0° auf 90°. Was passiert mit dem Anteil $P$ der durchkommenden Photonen — und kannst du für ein einzelnes Photon vorhersagen, ob es durchgeht?",
+       "auftraege": [
+        "Miss die relative Häufigkeit $P$ für mindestens sechs Winkel $\\beta$ zwischen 0° und 180° (Durchgänge von $N=500$ durch $N$ teilen).",
+        "Bestimme die Sonderfälle $P\\approx1$, $P\\approx0$, $P\\approx0{,}5$ und deute den 45°-Fall als Superposition.",
+        "Berechne $\\cos^2(\\beta-\\alpha)$, trage $P$ dagegen auf und begründe die Ursprungsgerade (Projektionsregel).",
+        "Erkläre mit dem Messpostulat, warum der Ausgang pro Einzelphoton zufällig ist und in welchem Zustand das Photon nach dem Analysator ist."
+       ],
+       "pfad": "experimente/physik/quantenzustaende-polarisation/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -1108,7 +1166,10 @@
        "wort": "Quantenobjekte",
        "lektion": "l4"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir die Wesenszüge der Quantenphysik untersuchen, überlegen wir: Kann ein einzelnes Quantenobjekt 'beide Wege zugleich' nehmen und mit sich selbst interferieren? Vermutung: Solange wir nicht 'nachschauen', zeigt sich Interferenz; messen wir den Weg, verschwindet sie. Pro Einzelereignis ist der Ausgang zufällig, nur die Häufigkeit folgt einem Gesetz.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Superposition, der Wahrscheinlichkeitsbegriff sowie Polarisation und Interferometer sind eingeführt.</p><p><strong>Angesprochene Kompetenzen:</strong> Zählraten als Wahrscheinlichkeiten deuten, die $\\cos^2$-Gesetze prüfen, Komplementarität und Messpostulat erklären.</p><p><strong>Erwartung:</strong> Interferenz einzelner Photonen ($P=\\cos^2(\\varphi/2)$), die Projektionsregel ($P=\\cos^2(\\beta-\\alpha)$), Welcher-Weg-Information zerstört die Interferenz; das Einzelereignis bleibt zufällig.</p><p><strong>Modellgrenzen:</strong> Idealisierte, verlustfreie Geräte; Schrotrauschen und technische Imperfektionen werden vernachlässigt.</p>"
     },
     "ueben": {
      "zeit": 18,
@@ -1279,15 +1340,18 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Doppelspalt mit dem Laserpointer",
-       "material": "Laserpointer (Schutzbrille / nie ins Auge!), Doppelspalt-Dia oder zwei feine Spalte, weißer Schirm im Abstand einiger Meter, zum Vergleich eine kleine Glühlampe.",
-       "vorhersage": "Sage vorher: Erwartest du hinter dem Doppelspalt zwei Lichtflecke oder mehrere Streifen? Und was passiert, wenn du einen der beiden Spalte abdeckst?",
+       "titel": "Polarisation mit zwei Filtern — das Gesetz von Malus",
+       "material": "Zwei Polarisationsfilter (eines drehbar mit Gradskala), möglichst monochromatische Lichtquelle, Luxmeter/Fotodiode; abgedunkelter Raum.",
+       "vorhersage": "Du hast einen festen Polarisator und einen drehbaren Analysator dahinter. Wie ändert sich die Helligkeit beim Drehen von 0° auf 90° — und kann es eine Stellung geben, bei der (fast) kein Licht durchkommt?",
        "auftraege": [
-        "Beleuchte den Doppelspalt mit dem Laser und beschreibe das Schirmbild — zähle die hellen Streifen.",
-        "Decke einen Spalt ab: Was bleibt vom Streifenmuster übrig, und was sagt das über den Ursprung der Streifen?",
-        "Ersetze den Laser durch eine Glühlampe und vergleiche Schärfe und Kontrast des Musters.",
-        "Erkläre mit dem Begriff Kohärenz, warum der Laser das deutlich bessere Muster liefert."
-       ]
+        "Stelle mindestens sechs Analysatorwinkel zwischen 0° und 180° ein und lies am Sensor die relative Intensität $I$ ab.",
+        "Bestimme die Winkel für maximale Helligkeit und für Auslöschung.",
+        "Berechne je Zeile $\\cos^2\\theta$, trage $I$ gegen $\\cos^2\\theta$ auf und prüfe die Ursprungsgerade (Malus).",
+        "Begründe, warum die Auslöschung bei 90° die Transversalität des Lichts zeigt."
+       ],
+       "pfad": "experimente/physik/polarisation/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -1331,7 +1395,10 @@
       "params": {
        "phiInit": 0
       }
-     }
+     },
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir mit zwei Filtern arbeiten, überlegen wir: Licht schwingt quer zur Ausbreitung. Vermutung: Ein zweiter, gedrehter Filter lässt je nach Winkel mehr oder weniger Licht durch — bei 90° vielleicht gar keins. Wir erwarten einen $\\cos^2$-Zusammenhang (Malus).",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Licht als Transversalwelle und der Begriff der linearen Polarisation sind eingeführt.</p><p><strong>Angesprochene Kompetenzen:</strong> Eine Messreihe $I(\\theta)$ aufnehmen, über $\\cos^2\\theta$ linearisieren und das Gesetz von Malus nachweisen.</p><p><strong>Erwartung:</strong> Maximum bei 0°/180°, Auslöschung bei 90°; $I$ über $\\cos^2\\theta$ ergibt eine Ursprungsgerade.</p><p><strong>Modellgrenzen:</strong> Ideale Filter vorausgesetzt; reale Polarisatoren haben Reflexionsverluste und einen kleinen Restdurchlass bei 90°.</p>"
     },
     "ueben": {
      "zeit": 17,
@@ -1701,15 +1768,18 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Wellenlänge eines Laserpointers bestimmen",
-       "material": "Laserpointer, Doppelspalt mit angegebenem Spaltabstand $g$, Schirm in mehreren Metern Abstand, langes Maßband, Bleistift.",
-       "vorhersage": "Sage vorher: Welche Größenordnung erwartest du für die Wellenlänge eines roten Laserpointers (in Nanometern)?",
+       "titel": "Wellenlänge mit dem Gitter (subjektiv)",
+       "material": "Handgitter mit bekannter Gitterkonstante, entfernte Lichtquelle (Spektrallampe/farbige LED), Maßskala im festen Abstand $L$.",
+       "vorhersage": "Du blickst durch ein feines und ein gröberes Handgitter auf dieselbe Quelle. Liegen die farbigen Maxima beim feineren Gitter weiter außen, enger zusammen oder gleich? Begründe mit $\\sin\\theta=k\\lambda/g$.",
        "auftraege": [
-        "Miss den Schirmabstand $e$ und markiere die Maxima möglichst hoher Ordnung links und rechts der Mitte.",
-        "Bestimme $a_k$ über den Abstand vom $-k$- zum $+k$-Maximum (also $2a_k$), um den Fehler zu verkleinern.",
-        "Berechne die Wellenlänge mit $\\lambda = \\frac{a_k\\,g}{k\\,e}$ und vergleiche mit dem erwarteten Wert (rot $\\approx 630$–$680\\,\\text{nm}$).",
-        "Schätze die größten Fehlerquellen ab (Ablesen von $a_k$, Genauigkeit von $g$ und $e$)."
-       ]
+        "Notiere den Skalenabstand $L$ und lies für mindestens sechs Messungen die Auslenkung $x$ ab — variiere Ordnung $k$ und Lichtquelle.",
+        "Rechne je Zeile $\\theta=\\arctan(x/L)$ und $\\lambda=g\\sin\\theta/k$ und mittle pro Quelle.",
+        "Vergleiche $\\lambda$ derselben Quelle aus $k=1$ und $k=2$ — sollte es gleich sein? Prüfe es.",
+        "Ordne jede Wellenlänge der passenden Farbe zu und schätze die Messunsicherheit ab."
+       ],
+       "pfad": "experimente/physik/gitter-subjektiv/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -1744,7 +1814,10 @@
        "wort": "Maximabedingung",
        "lektion": "l7"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir die Wellenlänge bestimmen, überlegen wir: Ein Gitter lenkt Licht in farbige Maxima ab. Vermutung: Je feiner das Gitter (kleineres $g$), desto weiter außen die Maxima. Wir erwarten, dass sich aus dem Ablenkwinkel die Wellenlänge ergibt: $\\lambda=g\\sin\\theta/k$.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Die Gitterbedingung $g\\sin\\theta=k\\lambda$ und die nötige Trigonometrie sind bekannt.</p><p><strong>Angesprochene Kompetenzen:</strong> Eine subjektive Messung planen, $\\theta$ aus $x/L$ gewinnen, $\\lambda$ berechnen, über Ordnungen mitteln und die Unsicherheit abschätzen.</p><p><strong>Erwartung:</strong> Das berechnete $\\lambda$ ist über verschiedene Ordnungen konsistent und lässt sich der Lichtfarbe zuordnen.</p><p><strong>Modellgrenzen:</strong> Augenposition/Parallaxe, der endliche Abstand $L$ und die Toleranz der Gitterkonstante begrenzen die Genauigkeit.</p>"
     },
     "ueben": {
      "zeit": 17,
@@ -2152,15 +2225,18 @@
      "erkunden": [
       {
        "typ": "experiment",
-       "titel": "Seifenhaut-Farben und Einzelspalt",
-       "material": "Drahtring mit Seifenlösung (oder eine ruhige Seifenblase), dunkler Hintergrund, Laserpointer und ein Einzelspalt (oder ein schmaler, regelbarer Spalt), Schirm, Maßband.",
-       "vorhersage": "Sage vorher: Welche Farben erwartest du an der senkrecht stehenden Seifenhaut, und wie verändert sich das Einzelspalt-Bild, wenn du den Spalt schmaler machst?",
+       "titel": "Wellenlänge mit dem Michelson-Interferometer",
+       "material": "Michelson-Interferometer (Strahlteiler, fester + beweglicher Spiegel auf Mikrometertisch), Laser mit Schutzbrille, Schirm.",
+       "vorhersage": "Du verschiebst den beweglichen Spiegel um eine größere Strecke $\\Delta s$. Wandern dann mehr, weniger oder gleich viele Ringe durch das Zentrum? Notiere deine Vermutung.",
        "auftraege": [
-        "Halte die Seifenhaut senkrecht ins Licht und beschreibe die Farbbänder — beobachte, wie sie wandern, während die Haut nach unten dünner abläuft.",
-        "Beleuchte den Einzelspalt mit dem Laser und beschreibe das Muster (breites Zentralmaximum, schwächere Nebenmaxima).",
-        "Verkleinere die Spaltbreite $b$ und beobachte, wie sich die Breite des Zentralmaximums ändert.",
-        "Begründe mit $2a_1 = \\frac{2\\lambda e}{b}$, warum ein schmalerer Spalt ein breiteres Zentralmaximum liefert."
-       ]
+        "Stelle mindestens sechs Spiegelverschiebungen $\\Delta s$ ein und lies jeweils die gezählte Ringzahl $\\Delta N$ ab.",
+        "Trage $\\Delta N$ gegen $\\Delta s$ auf — welche Kurve ergibt sich?",
+        "Bestimme aus der Steigung (oder zeilenweise über $\\lambda=2\\Delta s/\\Delta N$) die Wellenlänge $\\lambda$ in nm.",
+        "Erkläre den Faktor 2 in $\\Delta N=2\\Delta s/\\lambda$ und warum große $\\Delta s$ genauer sind."
+       ],
+       "pfad": "experimente/physik/michelson/index.html",
+       "linkLabel": "Digitales Experiment öffnen",
+       "hinweis": "Kein Material zur Hand? Öffne das <strong>digitale Experiment</strong> — die Auswertung läuft genauso."
       }
      ],
      "selbstcheck": [
@@ -2196,7 +2272,10 @@
        "wort": "optisches Gitter",
        "lektion": "l9"
       }
-     ]
+     ],
+     "erkundenZuerst": true,
+     "vorueberlegung": "Bevor wir messen, überlegen wir: Verschiebt man im Interferometer einen Spiegel, wandern Interferenzringe durch das Zentrum. Vermutung: Je weiter die Verschiebung, desto mehr Ringe — proportional. Wir erwarten $\\Delta N=2\\Delta s/\\lambda$, also lässt sich $\\lambda$ aus der Steigung gewinnen.",
+     "lehrkraft": "<p><strong>Voraussetzungen:</strong> Zweistrahlinterferenz, Gangunterschied und kohärentes Laserlicht sind eingeführt.</p><p><strong>Angesprochene Kompetenzen:</strong> Ringe zählen, $\\Delta N$ über $\\Delta s$ auftragen, $\\lambda$ aus der Steigung bestimmen und den Faktor 2 (Hin- und Rückweg) begründen.</p><p><strong>Erwartung:</strong> Es entsteht eine Ursprungsgerade; $\\lambda\\approx 633$ nm; große $\\Delta s$ liefern genauere Werte.</p><p><strong>Modellgrenzen:</strong> Die ganzzahlige Zählung (±1 Ring), die Kalibrierung des Mikrometertischs und Justage/Stabilität begrenzen die Genauigkeit.</p>"
     },
     "ueben": {
      "zeit": 17,
