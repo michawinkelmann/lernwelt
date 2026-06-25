@@ -79,8 +79,8 @@ html[data-theme="dunkel"] .knopf.zweitrangig { color: var(--akzent); }
 /* ===== Kacheln ===== */
 .kacheln { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: var(--abstand-3); margin: var(--abstand-4) 0; }
 .kachel { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); box-shadow: var(--schatten); padding: var(--abstand-3); border-top: 4px solid var(--kachel-farbe, var(--akzent)); display: flex; flex-direction: column; gap: var(--abstand-2); }
-.kachel h2, .kachel h3 { margin: 0; font-size: 1.18rem; }
-.kachel p { margin: 0; font-size: .95rem; color: var(--text-leise); }
+.kachel h2, .kachel h3 { margin: 0; font-size: 1.18rem; -webkit-hyphens: auto; hyphens: auto; overflow-wrap: break-word; }
+.kachel p { margin: 0; font-size: .95rem; color: var(--text-leise); -webkit-hyphens: auto; hyphens: auto; overflow-wrap: break-word; }
 .kachel .kachel-fuss { margin-top: auto; display: flex; flex-wrap: wrap; gap: var(--abstand-2); align-items: center; }
 .kachel a.kachel-link { color: var(--text); text-decoration: none; }
 .kachel a.kachel-link:hover { color: var(--kachel-farbe, var(--akzent)); text-decoration: underline; }
