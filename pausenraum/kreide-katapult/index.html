@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kreide-Katapult — Pausenraum · Lernwelt</title>
+<meta name="description" content="Wurfparabel-Duell für zwei: Stellt abwechselnd Winkel und Stärke ein und trefft über den Hügel hinweg die gegnerische Kanone — der Wind macht es spannend.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel" data-fach="physik">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../index.html">Zurück zum Pausenraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Kreide-Katapult</h1>
+  <p class="einleitung">Wurfparabel-Duell für zwei am selben Gerät: Stellt abwechselnd Winkel und Stärke ein und trefft über den Hügel hinweg die gegnerische Kanone. Der Wind redet mit.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert&rsquo;s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Ziel:</strong> Zwei Spielerinnen oder Spieler sitzen am selben Gerät (Hot-Seat). Wer zuerst <strong>3 Treffer</strong> landet, gewinnt das Duell. Spieler&nbsp;1 steht links (blau), Spieler&nbsp;2 rechts (rot). Zwischen euch liegt ein Hügel — er blockiert flache Schüsse, ihr müsst also drüber zielen.</p>
+      <p><strong>Steuerung:</strong> Wer am Zug ist, stellt mit&nbsp;↑&nbsp;↓ den <strong>Winkel</strong> (0–90°) und mit&nbsp;←&nbsp;→ die <strong>Stärke</strong> (10–100&nbsp;%) ein; die aktuellen Werte stehen groß in der oberen Ecke. Die <strong>Leertaste</strong> schießt. Am Touch-Gerät könnt ihr stattdessen wie an einer Schleuder <strong>an der eigenen Kanone ziehen</strong> — Richtung und Länge des Ziehens bestimmen Winkel und Stärke, Loslassen schießt.</p>
+      <p><strong>Physik:</strong> Das Kreidegeschoss fliegt eine <strong>Wurfparabel</strong> — schräg gestartet, von der Schwerkraft heruntergezogen. Pro Runde weht ein zufälliger <strong>Wind</strong> (Pfeil&nbsp;← oder&nbsp;→ mit Wert oben in der Mitte); er beschleunigt das Geschoss seitwärts und verbiegt die Bahn. Trefft ihr die gegnerische Kanone, gibt es einen Punkt und der Getroffene ist als Nächstes dran. Geht der Schuss daneben — Einschlag im Hügel oder Geschoss verlässt das Feld — wechselt einfach der Zug. Die letzten Bahnen bleiben blass gepunktet stehen, damit ihr nachkorrigieren könnt.</p>
+      <p><strong>Tipp:</strong> Erst Winkel grob wählen (steiler = höher, weniger weit), dann mit der Stärke die Weite feinjustieren. Bei Gegenwind etwas mehr Stärke, bei Rückenwind weniger. Das ist genau der schiefe Wurf aus dem Physikunterricht — nur mit Kreide.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+  import * as spiel from "./spiel.js";
+  starteSpielSeite(spiel);
+</script>
+</body>
+</html>

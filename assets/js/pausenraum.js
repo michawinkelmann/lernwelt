@@ -19,13 +19,18 @@ export function ladeSpiele() {
 }
 
 function kachel(s) {
-  const klasse = s.kategorie === "klasse";
-  const badge = klasse
-    ? `<span class="abzeichen sim">🖥️ Beamer · ganze Klasse</span>`
-    : `<span class="abzeichen eignung-${s.eignung === "pc" ? "pc" : "touch"}" title="${s.eignung === "pc" ? "Braucht Tastatur bzw. Maus — am Tablet nur eingeschränkt spielbar." : "Am Tablet (Tippen/Wischen) und am PC gut spielbar."}">${s.eignung === "pc" ? "Am PC" : "Touch + PC"}</span>`;
-  const zweitBadge = klasse
-    ? (s.spieler ? `<span class="abzeichen">${s.spieler}</span>` : "")
-    : `<span class="abzeichen">${s.fach ? "Passt zu " + FACH_LABEL[s.fach] : "Einfach Pause"}</span>`;
+  const eignBadge = `<span class="abzeichen eignung-${s.eignung === "pc" ? "pc" : "touch"}" title="${s.eignung === "pc" ? "Braucht Tastatur bzw. Maus — am Tablet nur eingeschränkt spielbar." : "Am Tablet (Tippen/Wischen) und am PC gut spielbar."}">${s.eignung === "pc" ? "Am PC" : "Touch + PC"}</span>`;
+  let badge, zweitBadge;
+  if (s.kategorie === "klasse") {
+    badge = `<span class="abzeichen sim">🖥️ Beamer · ganze Klasse</span>`;
+    zweitBadge = s.spieler ? `<span class="abzeichen">${s.spieler}</span>` : "";
+  } else if (s.kategorie === "projekt") {
+    badge = `<span class="abzeichen sim">🗓️ Projektwoche · mehrtägig</span>`;
+    zweitBadge = eignBadge;
+  } else {
+    badge = eignBadge;
+    zweitBadge = `<span class="abzeichen">${s.fach ? "Passt zu " + FACH_LABEL[s.fach] : "Einfach Pause"}</span>`;
+  }
   return `
     <article class="kachel ${s.fach || ""}">
       <h3><a class="kachel-link" href="${WURZEL.href}${s.ordner}index.html">${s.titel}</a></h3>
@@ -54,11 +59,15 @@ export async function renderePausenraum() {
   if (!ziel) return;
   ziel.classList.remove("kacheln");   // Container wird zum Abschnitts-Halter
   const spiele = await ladeSpiele();
-  const solo = spiele.filter(s => s.kategorie !== "klasse");
+  const solo = spiele.filter(s => !s.kategorie);
   const klasse = spiele.filter(s => s.kategorie === "klasse");
+  const projekt = spiele.filter(s => s.kategorie === "projekt");
   ziel.innerHTML =
     sektion("Für zwischendurch — allein oder zu zweit", "", solo) +
     sektion("Für die ganze Klasse · Beamermodus",
       "Spiele für die digitale Tafel: Begriffe, Punkte und Timer erscheinen groß — eine Person bedient, die ganze Klasse oder Teilgruppen spielen mit. Am besten oben rechts auf Vollbild schalten.",
-      klasse);
+      klasse) +
+    sektion("Für die Projektwoche · mehrtägiges Arbeiten",
+      "Größere Programmier-Projekte zum Dranbleiben über mehrere Stunden oder Tage — gedacht für die Projektwoche oder längere freie Phasen, nicht für die kurze Pause zwischendurch.",
+      projekt);
 }

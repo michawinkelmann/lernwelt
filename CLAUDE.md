@@ -38,7 +38,7 @@ Stufen-Ordnernamen: `klasse-5` … `klasse-10`, `einfuehrungsphase`, `qualifikat
 - Numerische Eingaben: Komma und Punkt als Dezimaltrennzeichen akzeptieren, sinnvolle Toleranzen, Einheiten anzeigen.
 - Zuordnungen per Dropdown statt Drag & Drop (Touch & Tastatur).
 - Simulationen ausschließlich über die gemeinsame Engine (`assets/js/sim/`), niemals als Einzel-App: Modell rechnet in SI-Einheiten/Weltkoordinaten, fester Zeitschritt, Darstellung strikt getrennt. Pro Sim nur Manifest + `update()` + `zeichne()` in `sim.js`. Drei Modi: kontinuierlich, schrittweise, statisch-interaktiv (Details: `UMSETZUNGSPLAN.md` §8).
-- Jede Sim: Parameter-Slider mit Live-Wert + Einheit, Presets, ablesbare Messgrößen/Diagramme mit CSV-Export, POE-Vorhersagefrage vor dem Start, 2–4 „Beobachtungsaufträge“, Beamer-Modus, Zustand im URL-Hash, Hinweis auf Modellgrenzen, `prefers-reduced-motion` respektieren.
+- Jede Sim: Parameter-Slider mit Live-Wert + Einheit, Presets, ablesbare Messgrößen/Diagramme mit CSV-Export, POE-Vorhersagefrage vor dem Start, 2–4 „Beobachtungsaufträge“, Beamer-Modus, Zustand im URL-Hash, Hinweis auf Modellgrenzen, `prefers-reduced-motion` respektieren. Messwerkzeuge je Sim über `manifest.werkzeuge`: **Standard nur Lineal**; der **Winkelmesser** erscheint nur mit `werkzeuge:["lineal","winkel"]` (wo Winkelmessen sinnvoll ist, z. B. schiefer Wurf); `werkzeuge:false` = keine Werkzeuge.
 - Pflicht vor `status: online`: 2–3 Prüffälle mit analytisch bekannter Lösung in `sim.js`; `simulationen/validierung.html` muss alle Fälle ✓ zeigen.
 - Feedback nie nur über Farbe (zusätzlich ✓/✗ + Text). Keine Noten, kein Druck — Formulierungen ermutigend.
 

@@ -126,7 +126,7 @@ export function starte(api) {
     spielzeit = 0;
     stufe = 1;
     spawnKuehl = 1.0;
-    bossTimer = 48;          // erster Boss nach ~48 s
+    bossTimer = 42;          // erster Boss nach ~42 s
     bossNr = 0;
     wischBlitz = 0;
     abschuesse = 0;
@@ -154,11 +154,11 @@ export function starte(api) {
     spielzeit += dt;
 
     // Welt-Schwierigkeit: alle 22 s eine Stufe höher (zusätzlich nach Bossen)
-    const zeitStufe = 1 + Math.floor(spielzeit / 22);
+    const zeitStufe = 1 + Math.floor(spielzeit / 18);
     if (zeitStufe > stufe) stufe = zeitStufe;
 
     // Scrollgeschwindigkeit (reduzierte Bewegung -> langsamer)
-    const scrollTempo = reduziert ? 60 : 120;
+    const scrollTempo = reduziert ? Math.min(92, 54 + stufe * 3) : Math.min(220, 108 + stufe * 9);
     scrollY += scrollTempo * dt;
     strecke += scrollTempo * dt;
     // Streckenpunkte: ~1 Punkt pro 12 Welt-Pixel
@@ -179,7 +179,7 @@ export function starte(api) {
       if (spawnKuehl <= 0) {
         spawneGegner();
         // Spawnrate steigt mit der Stufe (untere Schranke 0,45 s)
-        const basis = Math.max(0.45, 1.15 - stufe * 0.07);
+        const basis = Math.max(0.34, 1.05 - stufe * 0.085);
         spawnKuehl = basis * (0.7 + Math.random() * 0.6);
       }
       if (bossTimer <= 0) starteBoss();
@@ -280,7 +280,7 @@ export function starte(api) {
         typ: "monster", x, y: -28, b: 34, h: 34,
         vy: 70 + stufe * 6, vx: 0, hp: hp + 1, maxHp: hp + 1,
         phase: Math.random() * Math.PI * 2,
-        schiesst: stufe >= 2 && Math.random() < 0.5,
+        schiesst: stufe >= 2 && Math.random() < 0.62,
         schussKuehl: 1.2 + Math.random(),
         wert: 60, dreh: 0
       });

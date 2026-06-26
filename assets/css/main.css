@@ -414,3 +414,14 @@ select.exp-wahl { font: inherit; padding: 6px 10px; border: 2px solid var(--lini
    „RS" ausgeblendet. Das Attribut data-zweig setzt komponenten.js an <html>. */
 html[data-zweig="rs"] details.cas,
 html[data-zweig="rs"] .nur-gym { display: none; }
+
+/* ---------- Klassenarbeiten: Klassen-Akkordeon (Fach-Überschrift, Klasse ausklappbar) ---------- */
+details.ka-stufe { border: 1px solid var(--linie); border-radius: var(--radius); background: var(--flaeche); margin: var(--abstand-3) 0; }
+details.ka-stufe > summary { cursor: pointer; font-weight: 700; padding: 12px 14px; min-height: var(--beruehrziel); display: flex; align-items: center; justify-content: space-between; gap: 8px 14px; flex-wrap: wrap; }
+details.ka-stufe[open] > summary { border-bottom: 1px solid var(--linie); }
+.ka-stufe-titel { font-size: 1.05rem; }
+.ka-stufe-meta { font-weight: 600; color: var(--text-leise); font-size: .9rem; }
+.ka-stufe-inhalt { padding: 0 14px; }
+
+/* Startseiten-Fachkacheln: zwei Wege je Fach (Üben / Lernbüro) */
+.kachel-aktionen { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--abstand-3); }

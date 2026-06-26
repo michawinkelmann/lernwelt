@@ -1,3 +1,43 @@
+# Runde 45 — 9 neue Pausenraum-Minispiele (Adaptionen beliebter Genres) (2026-06-26)
+
+- Aus der Recherche-Vorschlagsliste **neun eigenständige, selbst geschriebene Minispiele** gebaut (Gerüst-Konvention: `manifest` + `starte(api)` + reine Logik als Exporte; Vanilla-JS, keine externen Requests; je `pausenraum/<name>/` index.html+spiel.js):
+  - **Kisten-Schieber** (Sokoban · Info), **Reagenzglas-Sortierer** (Water Sort), **Kreide-Katapult** (Wurfparabel-Duell, 2 Spieler · Physik), **Antwort-Schnitt** (Slice + Kopfrechnen), **Wachstums-Tycoon** (Idle, macht exp. Wachstum sichtbar), **Tinten-Tropfen** (Linie-zeichnen-Physik), **Tropfen-Verschmelzen** (Suika-Merge), **Revier-Kreide** (Paper.io-Territorium, Flächen-%), **Feuer & Wasser** (Koop-Plattformer, 2 Spieler).
+- Bau über parallele Subagenten in 3 Wellen; je **4 Checks grün** (node --check · ESM-Import · Logiktest der reinen Funktionen · Mock-Canvas-Smoke). Mehrere Edit-Truncations (bekannte Falle) sauber repariert. Gefundene/behobene Logikfehler u. a.: Suika-Überlauferkennung, unlösbare Feuer&Wasser-Level (jetzt solver-verifiziert), Water-Sort-Lösbarkeit (DFS-Solver).
+- Registry `daten/spiele.json`: **+9 → 35 Spiele**. Zentral verifiziert: 9/9 ESM-Import, 9/9 Mock-Canvas-Smoke (~1000 Ticks), Pausenraum-Render zeigt 35 Kacheln (alle 9 sichtbar, in „Für zwischendurch"), alle Asset-/Skript-Links lösen auf. **Browser-Klicktest + Spielgefühl/Feinbalancing: Betreiber.**
+
+# Runde 44 — Pausenraum: Projektspiele getrennt · Papierflieger schwerer · Mauerbrecher ausgebaut (2026-06-26)
+
+- **Projektspiele eigene Sektion:** PyWinkelix, SchwarmShell, Der Algorithmus stehen jetzt unter „Für die Projektwoche · mehrtägiges Arbeiten" (Feld `kategorie:"projekt"` in `daten/spiele.json`, dritte Sektion + Badge 🗓️ in `assets/js/pausenraum.js`).
+- **Papierflieger-Pilot herausfordernder:** Welt-Tempo rampt jetzt mit der Stufe (≈108→220 statt konstant 120), Stufe steigt schneller (alle 18 s), dichtere Gegner-Spawns (Floor 0,34 s), Gegner schießen früher/öfter, erster Boss nach 42 s.
+- **Mauerbrecher komplett ausgebaut** (`pausenraum/mauerbrecher/spiel.js`, exportierte Logik erhalten): Raster **12×8 mit Lücken**, **vier Level-Layouts**, **Spezialsteine** — Stahl (unzerstörbar, Hindernis), Fest (3 Treffer), Explosiv (sprengt 3×3-Nachbarschaft, Kettenreaktion), Gold (lässt **Power-ups** fallen: breiter Schläger / +Leben / +50). `alleWeg` ignoriert Stahl, damit Level lösbar bleiben.
+- Verifikation: ESM-Import + Logik-Tests (Layouts, Stahl-`alleWeg`, dichtes Raster) + jsdom-Loop-Smoke (2400 Ticks ohne Absturz); Pausenraum-Render zeigt die 3 Sektionen korrekt. **Browser-Klicktest/Spielgefühl: Betreiber.**
+
+# Runde 43 — Lernbüro auf der Hauptseite gleichrangig (Fach-Kacheln mit Üben/Lernbüro) (2026-06-26)
+
+- **Hauptseite:** „Jetzt üben"-Button aus dem Hero entfernt; QR-Code wieder auf Originalgröße (172 px, mobil 150 px). Die drei **Fach-Kacheln** (Mathematik/Physik/Informatik) bieten jetzt je **zwei Wege**: Button „Üben" (→ `<fach>/index.html`) und „Lernbüro" (→ `selbstlernen/index.html#lb-<fach>`). CSS `.kachel-aktionen` in `main.css`; Fach-Titel jetzt schlichte Überschrift statt Link.
+- **Lernbüro-Übersicht (`assets/js/selbstlernen/uebersicht.js`):** Fach-Überschriften tragen jetzt `id="lb-<fach>"`; nach dem JS-Aufbau scrollt `rendereKursliste` einmalig zum `#lb-<fach>`-Anker (defensiv abgesichert).
+- Verifikation: jsdom-Render — jede Fach-Kachel mit Üben+Lernbüro (6 Aktions-Links), Hero ohne Button, Anker `lb-mathematik/physik/informatik` vorhanden. **Browser-Klicktest: Betreiber.**
+
+# Runde 42 — Hauptseite entschlackt + Copy-Politur (2026-06-26)
+
+- **Hauptseite (`index.html`):** Hero auf **einen** Haupt-Button („Jetzt üben") reduziert — die redundanten Buttons „Unterricht im Lernbüro" und „Heutige Tagesmischung" entfernt (beide weiterhin über die „Was brauchst du gerade?"-Kacheln erreichbar). Die vier Aufgaben-Kacheln auf je eine knappe Zeile gekürzt. **QR-Code kleiner & dezenter** (116 px, mobil 104 px, leichterer Schatten/Caption).
+- **Trainingsraum (`lernspiele/index.html`):** „Neu:" vor Tagesmischung und Lernzirkel entfernt — beide stehen jetzt als normale beschriftete Verweise.
+- **`simulationen/index.html`:** fehlende Meta-Beschreibung ergänzt.
+- **Copy-Check:** übrige Landing-Page-Texte (Üben, Lernbüro, Experimente, Suche, Klassenarbeiten, CAS-Werkstatt) sind aktuell und passend; Pausenraum-Meta nutzt generische statt echter Spielnamen (kosmetisch, gelassen). **Browser-Klicktest: Betreiber.**
+
+# Runde 41 — Klassenarbeiten-Übersicht als Akkordeon + 5 kaputte PDF-Links (Umlaut) (2026-06-26)
+
+- **Übersichtlicher:** `assets/js/klassenarbeiten.js` rendert je Klasse ein **eingeklapptes** `<details class="ka-stufe">` mit Summary „Klasse X · N Arbeiten"; das Fach bleibt Überschrift. Klick auf die Klasse klappt die Kacheln + Lernzettel aus. CSS in `main.css` (`details.ka-stufe`). Zweig-Umschaltung (Gym/RS/Alle) unverändert — Anzahl aktualisiert sich.
+- **5 tote PDF-Links repariert:** `daten/klassenarbeiten.json` zeigte bei 5 Einträgen auf Dateinamen **mit Umlaut** (natürliche-zahlen ×2, energieübertragung-Arbeit + -Lernzettel, funktionen-im-überblick) — die realen PDFs heißen umlautfrei (ue/oe). „Natürliche Zahlen" (Mathe 5) öffnet jetzt. Ursache: Verstoß gegen die Projektregel „keine Umlaute in Dateinamen". (Titel im Text bleiben korrekt mit Umlaut.)
+- Verifikation: jsdom-Render der echten Seite mit echten Daten — 3 Fächer, 18 eingeklappte Klassen-Akkordeons, 224 PDF-Links, **0 mit Umlaut im Pfad**. **Browser-Klicktest: Betreiber.**
+
+# Runde 40 — Sim-Messwerkzeuge je Manifest (Winkelmesser nur wo sinnvoll) + Verlinkungs-Audit (2026-06-26)
+
+- **Winkelmesser nicht mehr überall:** `assets/js/sim/ui.js` leitet die Werkzeugleiste jetzt aus `manifest.werkzeuge` ab — Standard **nur Lineal**; der Winkelmesser erscheint nur bei `werkzeuge:["lineal","winkel"]`. Gesetzt bei **schiefer-wurf** (Abwurfwinkel); alle anderen Sims zeigen ihn nicht mehr (u. a. Bewegungsdiagramme — gemeldeter Fall). `werkzeuge:false` bleibt „keine Werkzeuge". Konvention in CLAUDE.md (Didaktische Konventionen, Sim-Bullet).
+- **Bewegungsdiagramme v-t:** kein Fehler — bei konstantem a sinkt v linear (Nulldurchgang bei „Wende"); auf Wunsch unverändert gelassen.
+- **Verlinkungs-Audit aller 51 Sims:** keine verwaiste Sim — jede ist im **Lernbüro** und auf **Erklärseiten** verlinkt und zusätzlich in mindestens einem Kurs ihres **eigenen Fachs** (fachlich am richtigen Ort).
+- Verifikation: Werkzeug-Logik standalone bewiesen (undefined→Lineal, ["lineal","winkel"]→beide, false→keine); reale `ui.js` über Read-Tool als vollständig bestätigt. **Hinweis:** der bash-Mount zeigte `ui.js` zeitweise abgeschnitten (Sync-Lag) — die echte Datei (Windows-Pfad, was der Browser lädt) ist korrekt; im Zweifel mit dem Read-Tool gegenprüfen, nicht nur per bash. **Browser-Klicktest: Betreiber.**
+
 # Runde 39 — CAS-Werkstatt voll ausgebaut, gerätegenau verifiziert + Realschul-Filter (2026-06-26)
 
 - **CAS-Werkstatt von 9 → 17 Abschnitte** (`cas-werkstatt/index.html`): neu Modi/Setup · Funktionen definieren & Kurvendiskussion · Terme umformen · Grafik & Tabelle (Fenster-Einst./Zoom/Trace/Wertetabelle) · Matrizen & LGS (rref) · Messreihen & Regression · Grenzwerte & Summen (lim/Σ) · CAS in der Physik (Formeln umstellen + numerischer Solver) · Klausur-Dokumentation · Befehls-Referenzkarte. Parcours `daten/aufgaben/cas-werkstatt.json` **12 → 19 Stationen**.

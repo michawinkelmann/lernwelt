@@ -79,12 +79,23 @@ export async function rendereKlassenarbeiten() {
       return `
         <section class="ka-fach" aria-labelledby="ka-${fach}">
           <h2 id="ka-${fach}">${FACH_LABEL[fach]}</h2>
-          ${stufen.map(stufe => `
-            <h3 id="${fach}-${stufe}">${STUFEN_LABEL[stufe]}</h3>
-            <div class="kacheln">
-              ${sichtbar.filter(a => a.fach === fach && a.stufe === stufe).map(karte).join("")}
-            </div>
-            ${zettelZeile(zettelSichtbar.filter(z => z.fach === fach && z.stufe === stufe))}`).join("")}
+          ${stufen.map(stufe => {
+            const stArbeiten = sichtbar.filter(a => a.fach === fach && a.stufe === stufe);
+            const stZettel = zettelSichtbar.filter(z => z.fach === fach && z.stufe === stufe);
+            const teile = [];
+            if (stArbeiten.length) teile.push(stArbeiten.length === 1 ? "1 Arbeit" : stArbeiten.length + " Arbeiten");
+            if (stZettel.length) teile.push(stZettel.length === 1 ? "1 Lernzettel" : stZettel.length + " Lernzettel");
+            return `
+            <details class="ka-stufe">
+              <summary><span class="ka-stufe-titel">${STUFEN_LABEL[stufe]}</span><span class="ka-stufe-meta">${teile.join(" · ")}</span></summary>
+              <div class="ka-stufe-inhalt">
+                <div class="kacheln">
+                  ${stArbeiten.map(karte).join("")}
+                </div>
+                ${zettelZeile(stZettel)}
+              </div>
+            </details>`;
+          }).join("")}
         </section>`;
     }).join("");
   }

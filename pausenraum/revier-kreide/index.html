@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revier-Kreide — Pausenraum · Lernwelt</title>
+<meta name="description" content="Territorium-Eroberung für die Pause: Zieh eine Kreideschleife aus deinem Revier, kehre zurück und erobere die eingeschlossene Fläche — wie Paper.io, mit lokaler Bestenliste.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../index.html">Zurück zum Pausenraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Revier-Kreide</h1>
+  <p class="einleitung">Mal mit Kreide eine Schleife aufs Schulhofpflaster: Lauf aus deinem Revier hinaus, zieh eine Linie und kehre zurück — die eingeschlossene Fläche gehört dann dir. Aber kreuze nie deine eigene Spur, und pass auf die beiden Gegner auf!</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert&rsquo;s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Ziel:</strong> Erobere möglichst viel vom Schulhof. Dein Punktestand ist der größte Flächenanteil (in Prozent), den du im Lauf der Runde besessen hast. Wer die <strong>50&nbsp;%</strong>-Marke knackt, hat das Feld klar dominiert. Die Bestenliste (Top&nbsp;10 mit Initialen) gilt je Gerät und bleibt im Browser gespeichert.</p>
+      <p><strong>So eroberst du Fläche:</strong> Solange du in deinem eigenen, eingefärbten Revier läufst, passiert nichts. Verlässt du es, ziehst du eine <strong>Kreidespur</strong> hinter dir her. Kehrst du in dein Revier zurück, schließt sich die Schleife: Die Spur und alles, was sie umschließt, wird zu deinem Revier. Größere Schleifen bringen mehr Fläche — aber auch mehr Risiko.</p>
+      <p><strong>Steuerung:</strong> Pfeiltasten oder WASD lenken, auf dem Handy wischst du in die gewünschte Richtung oder nutzt die Richtungstasten unter der Spielfläche. Deine Figur läuft von allein weiter; eine Wende um 180° wird ignoriert, damit du dir nicht versehentlich in die eigene Spur fährst.</p>
+      <p><strong>Tod &amp; Gegner:</strong> Du verlierst sofort, wenn du deine <em>eigene</em> Kreidespur kreuzt oder über den Spielfeldrand läufst. Zwei einfache Gegner erobern ebenfalls Fläche. Berührst du <em>ihre</em> Spur, schlägst du sie aus dem Feld (sie starten klein neu). Läuft aber ein Gegner in <em>deine</em> Spur, ist deine Runde vorbei. Lege deine Schleifen also zügig und kehr rechtzeitig heim!</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+  import * as spiel from "./spiel.js";
+  starteSpielSeite(spiel);
+</script>
+</body>
+</html>

@@ -74,11 +74,15 @@ export async function rendereStartseite() {
       return `
         <article class="kachel ${fach}">
           ${kachelBild(fach)}
-          <h2><a class="kachel-link" href="${WURZEL.href}${fach}/index.html">${FACH_LABEL[fach]}</a></h2>
+          <h2 class="kachel-titel">${FACH_LABEL[fach]}</h2>
           <p>${FACH_BESCHREIBUNG[fach]}</p>
           <div class="kachel-fuss">
             <span class="abzeichen">${liste.length} Themen</span>
             <span class="abzeichen sim">${sims} mit Simulation</span>
+          </div>
+          <div class="kachel-aktionen">
+            <a class="knopf klein" href="${WURZEL.href}${fach}/index.html">Üben</a>
+            <a class="knopf klein zweitrangig" href="${WURZEL.href}selbstlernen/index.html#lb-${fach}">Lernbüro</a>
           </div>
         </article>`;
     }).join("");

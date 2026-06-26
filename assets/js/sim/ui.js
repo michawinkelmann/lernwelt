@@ -7,6 +7,9 @@ import { formatZahl, formatGroesse } from "./welt.js";
 export function baueOberflaeche(manifest, halter) {
   const modus = manifest.modus;
   const mitWerkzeugen = manifest.werkzeuge !== false;
+  // Werkzeug-Auswahl je Sim: Array im Manifest = genau diese Werkzeuge; sonst Standard nur Lineal
+  // (der Winkelmesser erscheint nur, wo Winkelmessen sinnvoll ist, z. B. schiefer Wurf → 'winkel').
+  const werkzeugIds = Array.isArray(manifest.werkzeuge) ? manifest.werkzeuge : ["lineal"];
   const mitMessreihe = modus !== "statisch";
 
   const steuer = modus === "statisch" ? `
@@ -54,8 +57,8 @@ export function baueOberflaeche(manifest, halter) {
     ${mitWerkzeugen ? `
     <div class="sim-werkzeuge" role="group" aria-label="Messwerkzeuge">
       <span class="sim-werkzeug-label">Messwerkzeuge:</span>
-      <button type="button" class="knopf zweitrangig klein" data-werkzeug="lineal" aria-pressed="false">Lineal</button>
-      <button type="button" class="knopf zweitrangig klein" data-werkzeug="winkel" aria-pressed="false">Winkelmesser</button>
+      ${werkzeugIds.includes("lineal") ? `<button type="button" class="knopf zweitrangig klein" data-werkzeug="lineal" aria-pressed="false">Lineal</button>` : ""}
+      ${werkzeugIds.includes("winkel") ? `<button type="button" class="knopf zweitrangig klein" data-werkzeug="winkel" aria-pressed="false">Winkelmesser</button>` : ""}
       ${modus === "kontinuierlich" ? `<button type="button" class="knopf zweitrangig klein" data-aktion="stoppuhr">Zwischenzeit</button>` : ""}
     </div>` : ""}
 

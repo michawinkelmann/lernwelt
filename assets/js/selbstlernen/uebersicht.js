@@ -27,6 +27,11 @@ export async function rendereKursliste() {
     catch (_e) { PROJEKTE = []; }
   }
   zeichne(halter);
+  // Von der Startseite mit #lb-<fach> verlinkt: nach dem JS-Aufbau einmalig dorthin scrollen.
+  if (location.hash) {
+    const ziel = document.getElementById(location.hash.slice(1));
+    if (ziel && ziel.scrollIntoView) ziel.scrollIntoView({ block: "start" });
+  }
   document.addEventListener("zweig-geaendert", () => zeichne(halter));
 }
 
@@ -61,7 +66,7 @@ function zeichne(halter) {
     const fp = fach === "informatik" ? projekte : [];
     if (!fk.length && !fp.length) continue;
     etwas = true;
-    halter.append(el(`<h2 class="lb-fach">${label}</h2>`));
+    halter.append(el(`<h2 class="lb-fach" id="lb-${fach}">${label}</h2>`));
     if (fk.length) halter.append(gitter(fk, "Zum Kurs"));
     if (fp.length) {
       halter.append(el(`<h3 class="lb-projekte-titel">Projekte zum Selbermachen</h3>`));

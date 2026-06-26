@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tropfen-Verschmelzen — Pausenraum · Lernwelt</title>
+<meta name="description" content="Merge-Drop für die Pause: Lass Tropfen in den Becher fallen, zwei gleiche verschmelzen zum nächstgrößeren. Wie weit kommst du, bevor der Becher überläuft? Mit lokaler Bestenliste.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../index.html">Zurück zum Pausenraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Tropfen-Verschmelzen</h1>
+  <p class="einleitung">Lass Tropfen in den Becher fallen. Berühren sich zwei gleiche, verschmelzen sie zum nächstgrößeren — und der Wert verdoppelt sich. Wie weit kommst du, bevor der Becher überläuft?</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert&rsquo;s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Regeln:</strong> Oben hängt ein Tropfen an der Stelle, die du wählst. Lässt du ihn fallen, kullert er unter Schwerkraft in den Becher und stapelt sich mit den anderen. Treffen <strong>zwei gleiche</strong> Tropfen aufeinander, verschmelzen sie zu <strong>einem</strong> der nächsthöheren Stufe — der Wert verdoppelt sich (2&nbsp;→&nbsp;4&nbsp;→&nbsp;8&nbsp;→&nbsp;16&nbsp;…). Das kann Kettenreaktionen auslösen. Die beiden größten Tropfen verschmelzen zu einem dicken Punkte-Bonus und verschwinden, damit wieder Platz wird.</p>
+      <p><strong>Steuerung:</strong> Maus oder Finger über der Spielfläche bewegt die Fallposition, alternativ die Pfeiltasten ← →. Leertaste (oder ein Tipp auf die Fläche) lässt den Tropfen fallen. Nach jedem Wurf gibt es eine kurze Pause, bis der nächste Tropfen bereitliegt; rechts oben siehst du, welcher als Nächstes kommt.</p>
+      <p><strong>Punkte &amp; Ende:</strong> Je höher die Stufe, die beim Verschmelzen entsteht, desto mehr Punkte. Ragt ein liegender Tropfen zu lange über die rote <strong>Überlauf-Linie</strong> oben hinaus, ist Schluss. Plane also deine Würfe so, dass gleiche Tropfen zueinanderfinden und der Becher nicht voll wird. Die Bestenliste (Top&nbsp;10 mit Initialen) gilt je Gerät und bleibt im Browser gespeichert.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+  import * as spiel from "./spiel.js";
+  starteSpielSeite(spiel);
+</script>
+</body>
+</html>

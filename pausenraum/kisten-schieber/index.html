@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kisten-Schieber — Pausenraum · Lernwelt</title>
+<meta name="description" content="Sokoban für die Pause: Schieb alle Kisten auf die Zielfelder. Ein ruhiges Logikrätsel mit immer kniffligeren Leveln und lokaler Bestenliste.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../index.html">Zurück zum Pausenraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Kisten-Schieber</h1>
+  <p class="einleitung">Schieb alle Kisten auf die markierten Zielfelder. Kisten lassen sich nur schieben, nie ziehen — und niemals zwei auf einmal. Ein ruhiges Logikrätsel: Es zählt der kluge Plan, nicht die schnelle Hand.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert&rsquo;s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Ziel:</strong> Bring jede Kiste auf ein Zielfeld (die markierten Kreise). Liegen alle Kisten auf Zielen, ist das Level gelöst und das nächste startet — schwerer als das vorige. Jedes gelöste Level zählt einen Punkt; nach dem letzten Level kommst du in die Bestenliste (Top 10 mit Initialen, je Gerät im Browser gespeichert).</p>
+      <p><strong>Regeln:</strong> Die Figur bewegt sich um ein Feld in Pfeilrichtung. Steht direkt davor eine Kiste, schiebst du sie mit — aber nur, wenn das Feld dahinter frei ist (keine Wand, keine zweite Kiste). Ziehen geht nie, und zwei Kisten auf einmal lassen sich nicht bewegen. Hast du eine Kiste in eine Ecke geschoben, aus der sie nicht mehr herauskommt, hilft Zurücknehmen oder Neustart.</p>
+      <p><strong>Steuerung:</strong> Bewege dich mit den Pfeiltasten <span aria-hidden="true">↑ ↓ ← →</span> (oder W A S D), am Handy durch Wischen in die gewünschte Richtung. <strong>U</strong> nimmt den letzten Zug zurück (beliebig oft), <strong>R</strong> setzt das aktuelle Level wieder auf den Anfang. Es gibt keinen Zeitdruck — überlege in Ruhe.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+  import * as spiel from "./spiel.js";
+  starteSpielSeite(spiel);
+</script>
+</body>
+</html>

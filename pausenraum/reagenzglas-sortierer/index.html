@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reagenzglas-Sortierer — Pausenraum · Lernwelt</title>
+<meta name="description" content="Water-Sort-Puzzle für die Pause: Gieße Farbschichten zwischen Reagenzgläsern um, bis jedes Glas einfarbig ist. Reines Logik-Knobeln mit lokaler Bestenliste.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../index.html">Zurück zum Pausenraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Reagenzglas-Sortierer</h1>
+  <p class="einleitung">Bunte Farbschichten stecken durcheinander in den Reagenzgläsern. Gieße sie clever um, bis jedes Glas nur noch eine Farbe enthält. Ein ruhiges Logik-Puzzle, das von Level zu Level kniffliger wird.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert&rsquo;s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Ziel:</strong> Jedes Reagenzglas fasst vier Farbsegmente. Am Ende soll jedes Glas vollständig einfarbig (oder leer) sein. Zu Beginn gibt es einige volle Gläser mit gemischten Farben und ein bis zwei leere Gläser zum Umschichten.</p>
+      <p><strong>Umgießen:</strong> Tippe ein Glas an, um es aufzunehmen — der gewählte Rahmen wird hervorgehoben und die oberste Schicht hebt sich leicht an. Tippe dann ein zweites Glas an, um die <em>oberste zusammenhängende Farbschicht</em> dorthin zu gießen. Das klappt nur, wenn das Zielglas leer ist oder oben dieselbe Farbe liegt und noch Platz hat. Es fließt so viel, wie oben zusammenhängt und hineinpasst. Passt der Zug nicht, wird die Auswahl wieder gelöst.</p>
+      <p><strong>Steuerung:</strong> Glas antippen zum Aufnehmen, zweites Glas antippen zum Umgießen. Taste <strong>Z</strong> macht den letzten Zug rückgängig (beliebig oft), Taste <strong>R</strong> mischt dasselbe Level neu, Esc hebt die Auswahl auf. Jede Farbe trägt zusätzlich einen Buchstaben und ein eigenes Muster — so bleiben sie auch ohne Farbsehen unterscheidbar.</p>
+      <p><strong>Punkte &amp; Bestenliste:</strong> Gezählt wird das erreichte <em>Level</em> — je weiter du kommst, desto besser. Jedes gelöste Level startet automatisch das nächste mit einer Farbe mehr (bis sieben Farben). Da ein klassisches Spielende fehlt, ist die Runde ein <em>Endlos-Modus</em>: Wenn du aufhörst (oder über „Neustart" neu beginnst), trägt sich dein bestes Level in die lokale Bestenliste ein (Top&nbsp;10 mit Initialen, je Gerät im Browser gespeichert). Jede Startaufstellung ist garantiert lösbar — du kommst also immer durch.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+  import * as spiel from "./spiel.js";
+  starteSpielSeite(spiel);
+</script>
+</body>
+</html>

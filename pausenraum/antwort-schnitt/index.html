@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antwort-Schnitt — Pausenraum · Lernwelt</title>
+<meta name="description" content="Slice-Spiel fürs Kopfrechnen: Zahlenkacheln fliegen hoch, wisch nur durch die richtigen Antworten — falsche und Bomben verschonen. Mit lokaler Bestenliste.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel" data-fach="mathematik">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../index.html">Zurück zum Pausenraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Antwort-Schnitt</h1>
+  <p class="einleitung">Zahlenkacheln fliegen wie geworfen nach oben und wieder herunter. Über der Fläche steht eine Aufgabe — wisch mit Maus oder Finger nur durch die Kacheln, die passen. Falsche Antworten und Bomben (☠) musst du verschonen.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert&rsquo;s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Regeln:</strong> Du startest mit 3 Leben. Oben steht eine Aufgabe, z.&nbsp;B. „Triff alle, die = 12 ergeben&ldquo;, „Vielfache von 4&ldquo; oder „7 × 8 = ?&ldquo;. Halte die Maus gedrückt (oder zieh den Finger) und ziehe die <strong>Klinge</strong> durch die Kacheln. Eine richtige Kachel zu schneiden gibt Punkte, eine falsche kostet ein Leben, eine Bombe (☠) ebenfalls. Verpasste richtige Kacheln, die unten herausfallen, kosten kein Leben — nur die Punkte sind weg. Bei 0 Leben ist die Runde vorbei.</p>
+      <p><strong>Steuerung:</strong> Mit gedrückter Maus oder dem Finger über die Kacheln wischen. Die Klinge ist deine Wischspur; eine Kachel zählt als geschnitten, sobald die Spur sie kreuzt. So kannst du mehrere Kacheln in einem Zug erwischen.</p>
+      <p><strong>Punkte &amp; Combo:</strong> Jede richtige Kachel bringt Punkte. Schneidest du in einem einzigen Wisch mehrere richtige, gibt es einen wachsenden Combo-Bonus. Die Aufgabe wechselt regelmäßig und wird mit der Zeit anspruchsvoller — mehr Kacheln, mehr Tempo. Die Bestenliste (Top&nbsp;10 mit Initialen) gilt je Gerät und bleibt im Browser gespeichert.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+  import * as spiel from "./spiel.js";
+  starteSpielSeite(spiel);
+</script>
+</body>
+</html>

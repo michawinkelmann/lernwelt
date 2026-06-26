@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wachstums-Tycoon — Pausenraum · Lernwelt</title>
+<meta name="description" content="Idle-Spiel für die Pause: Sammle Wissen, kaufe Generatoren, die automatisch produzieren — und sieh an der Live-Kurve, wie exponentielles Wachstum das lineare Klicken überholt.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+<style>
+  /* Spielspezifisches Layout — Kurve oben, Klickfläche und Generatoren darunter. */
+  .wt-bereich { display: flex; flex-direction: column; gap: 0.75rem; }
+  .wt-rate { text-align: center; font-weight: 600; color: var(--text-leise); }
+  .wt-rate b { color: var(--akzent); }
+  .wt-klick {
+    display: block; width: 100%; border: 0; cursor: pointer;
+    background: var(--akzent); color: #fff;
+    font: 700 1.25rem 'Source Sans 3', system-ui, sans-serif;
+    border-radius: 0.75rem; padding: 1.1rem 1rem;
+    -webkit-tap-highlight-color: transparent; touch-action: manipulation; user-select: none;
+    transition: transform 0.06s ease;
+  }
+  .wt-klick:active { transform: scale(0.98); }
+  .wt-klick small { display: block; font-weight: 600; font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .wt-laden { display: grid; gap: 0.5rem; grid-template-columns: 1fr; }
+  @media (min-width: 30rem) { .wt-laden { grid-template-columns: 1fr 1fr; } }
+  .wt-gen {
+    display: flex; align-items: center; gap: 0.6rem; text-align: left;
+    border: 1px solid var(--rand, #d9cfba); border-radius: 0.6rem;
+    background: var(--flaeche); color: var(--text);
+    padding: 0.55rem 0.7rem; cursor: pointer; width: 100%;
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    transition: border-color 0.1s ease, background 0.1s ease;
+  }
+  .wt-gen:hover:not(:disabled) { border-color: var(--akzent); }
+  .wt-gen:disabled { opacity: 0.55; cursor: not-allowed; }
+  .wt-gen-sym { font-size: 1.5rem; line-height: 1; flex: 0 0 auto; }
+  .wt-gen-txt { flex: 1 1 auto; min-width: 0; }
+  .wt-gen-name { font-weight: 700; }
+  .wt-gen-info { font-size: 0.85rem; color: var(--text-leise); }
+  .wt-gen-anz { font-weight: 700; font-variant-numeric: tabular-nums; flex: 0 0 auto; }
+  .wt-gen.kaufbar { border-color: var(--akzent); }
+  .wt-mult { margin-top: 0.1rem; }
+  .wt-mult .wt-gen-sym { color: var(--gold, #c79a1e); }
+</style>
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../index.html">Zurück zum Pausenraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Wachstums-Tycoon</h1>
+  <p class="einleitung">Tippe für Wissen, kaufe Generatoren, die von allein weiterproduzieren — und beobachte an der Live-Kurve, wie das Wachstum exponentiell durchstartet. Du hast 90&nbsp;Sekunden.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert&rsquo;s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Ziel:</strong> In 90&nbsp;Sekunden so viel <em>Wissen</em> wie möglich anhäufen. Jeder Tipp auf die große Fläche bringt zu Beginn +1 Wissen. Mit dem Upgrade <strong>Lerntempo</strong> wird jeder Tipp wertvoller.</p>
+      <p><strong>Generatoren:</strong> Spickzettel, Lerngruppe, Bibliothek, KI-Tutor und Schwarmwissen produzieren <em>automatisch</em> Wissen pro Sekunde — du musst sie nur einmal kaufen. Jeder weitere Generator desselben Typs kostet mehr (die Kosten steigen geometrisch: <code>Kosten = Basis · Faktor<sup>Anzahl</sup></code>). Ein Knopf ist ausgegraut, solange du ihn nicht bezahlen kannst.</p>
+      <p><strong>Der Lernhaken:</strong> Die <strong>Kurve</strong> zeigt dein Wissen über die Zeit. Die blasse gerade Linie ist der Vergleich „nur Klicken&ldquo; — gleichmäßiges, <em>lineares</em> Wachstum. Sobald deine Generatoren laufen, biegt deine echte Kurve nach oben ab und lässt die Gerade weit hinter sich: Das ist <strong>exponentielles Wachstum</strong>. Je mehr du hast, desto schneller wächst es — genau wie beim Lernen, wenn Wissen neues Wissen trägt.</p>
+      <p><strong>Bestenliste:</strong> Die Top&nbsp;10 (mit Initialen) gilt je Gerät und bleibt im Browser gespeichert. Bewusst auf 90&nbsp;Sekunden begrenzt — kein endloses Weiterspielen.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+  import * as spiel from "./spiel.js";
+  starteSpielSeite(spiel);
+</script>
+</body>
+</html>

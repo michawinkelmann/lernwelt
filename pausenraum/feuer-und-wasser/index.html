@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feuer &amp; Wasser — Pausenraum · Lernwelt</title>
+<meta name="description" content="Kooperativer Plattformer für zwei: Feuer und Wasser meiden die jeweils tödlichen Seen und bringen einander zu ihren Ausgängen.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../index.html">Zurück zum Pausenraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Feuer &amp; Wasser</h1>
+  <p class="einleitung">Ein Spiel für zwei an einem Gerät: Eine Person steuert Feuer (rot), die andere Wasser (blau). Lava verbrennt das Wasser, Seen löschen das Feuer, grünes Gift ist für beide tödlich. Helft einander — geschafft ist ein Level erst, wenn <strong>beide gleichzeitig</strong> an ihrer Tür stehen.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert&rsquo;s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Ziel:</strong> Jede Figur hat ihre eigene Tür — Feuer die rote (F), Wasser die blaue (W). Stehen beide zugleich an ihrer Tür, ist das Level geschafft und das nächste beginnt. Es gibt fünf Level mit steigender Schwierigkeit.</p>
+      <p><strong>Steuerung:</strong> Feuer (Spieler 1) läuft mit <kbd>A</kbd> / <kbd>D</kbd> und springt mit <kbd>W</kbd>. Wasser (Spieler 2) läuft mit <kbd>←</kbd> / <kbd>→</kbd> und springt mit <kbd>↑</kbd>. Beide können gleichzeitig bewegt werden — sprecht euch ab!</p>
+      <p><strong>Gefahren:</strong> <span style="color:var(--physik)">Lava (orange)</span> tötet nur das Wasser, <span style="color:var(--mathe)">der See (blau)</span> tötet nur das Feuer, <span style="color:var(--ok)">Gift (grün)</span> tötet beide. Berührt eine Figur etwas Tödliches oder fällt aus der Welt, startet das Level neu — die Tode werden mitgezählt. Es geht nicht um Punkte, sondern darum, gemeinsam durchzukommen.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+  import * as spiel from "./spiel.js";
+  starteSpielSeite(spiel);
+</script>
+</body>
+</html>

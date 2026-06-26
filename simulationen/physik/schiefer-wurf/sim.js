@@ -8,6 +8,7 @@ export const manifest = {
   modus: "kontinuierlich",
   dt: 1 / 240,
   tMax: 60,
+  werkzeuge: ["lineal", "winkel"],   // Winkelmesser sinnvoll: Abwurfwinkel an der Bahn nachmessen
   parameter: [
     { id: "v0",    label: "Startgeschwindigkeit", einheit: "m/s",  min: 1, max: 30, schritt: 0.5,  start: 12 },
     { id: "alpha", label: "Abwurfwinkel",         einheit: "°",    min: 0, max: 90, schritt: 1,    start: 45 },

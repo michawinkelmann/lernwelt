@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tinten-Tropfen — Pausenraum · Lernwelt</title>
+<meta name="description" content="Zeichne-eine-Linie-Physik für die Pause: Mal eine Kreide-Rampe auf die Tafel und lass den Tintentropfen ins Tintenfass rollen. Weniger Kreide gibt mehr Punkte. Mit lokaler Bestenliste.">
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/source-sans-3/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/fraunces/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/design-tokens.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+<body data-seite="spiel">
+<noscript><p class="noscript-hinweis">Dieses Spiel benötigt JavaScript. <a href="../index.html">Zurück zum Pausenraum</a></p></noscript>
+<main id="inhalt" class="inhalt">
+  <h1>Tinten-Tropfen</h1>
+  <p class="einleitung">Zeichne-eine-Linie-Physik: Mal mit Kreide eine Rampe auf die Tafel und lass den Tintentropfen ins Tintenfass rollen. Wer mit weniger Kreide ans Ziel kommt, bekommt mehr Punkte.</p>
+  <div id="spiel-wurzel"></div>
+  <details class="vertiefung">
+    <summary>So funktioniert&rsquo;s</summary>
+    <div class="vertiefung-inhalt">
+      <p><strong>Ziel:</strong> Oben hängt ein Tintentropfen, unten (oder seitlich) steht ein Tintenfass. Du zeichnest Rampen und Brücken aus Kreide, sodass der Tropfen beim Loslassen genau ins Fass rollt. Schaffst du es, geht es ins nächste, schwerere Level — Basispunkte plus Bonus für gesparte Kreide und ein flottes Tempo.</p>
+      <p><strong>Zeichnen:</strong> Halte die Maus gedrückt (oder den Finger auf der Tafel) und ziehe — so entsteht ein Kreidestrich, der wie eine feste Rampe wirkt. Du darfst mehrere Striche ziehen, bis das <em>Kreide-Budget</em> aufgebraucht ist; oben siehst du, wie viel Kreide noch übrig ist. <em>Solange der Tropfen rollt, kannst du nicht zeichnen.</em></p>
+      <p><strong>Loslassen &amp; korrigieren:</strong> Mit der <strong>Leertaste</strong> (oder einem Tipp auf die Tafel) lässt du den Tropfen los. Taste <strong>z</strong> macht den letzten Strich rückgängig, Taste <strong>r</strong> wischt die ganze Tafel und setzt den Tropfen zurück. Geht ein Versuch daneben, zeichne einfach neu — nach drei Fehlversuchen darfst du das Level mit Taste <strong>n</strong> überspringen.</p>
+      <p><strong>Physik:</strong> Der Tropfen fällt unter Schwerkraft und rollt über deine Striche und die festen Plattformen. An jeder Rampe gleitet er mit etwas Reibung weiter, an steilen Kanten prallt er ab — wie ein echter Wassertropfen auf schräger Fläche. Die Bestenliste (Top 10 mit Initialen) gilt je Gerät und bleibt im Browser gespeichert.</p>
+    </div>
+  </details>
+</main>
+<script type="module" src="../../assets/js/komponenten.js"></script>
+<script type="module">
+  import { starteSpielSeite } from "../../assets/js/spiel/geruest.js";
+  import * as spiel from "./spiel.js";
+  starteSpielSeite(spiel);
+</script>
+</body>
+</html>
