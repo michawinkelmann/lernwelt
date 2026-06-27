@@ -9,10 +9,10 @@
 // angefasst, die DOM-Elemente entstehen erst in starte().
 
 export const SPIEL_DAUER = 90;        // Sekunden je Runde
-export const KLICK_BASIS = 1;         // Wissen pro Tipp ohne Upgrade
-export const MULT_BASIS = 50;         // Kosten des ersten Lerntempo-Upgrades
-export const MULT_FAKTOR = 4;         // Kostensteigerung je Upgrade
-export const MULT_SCHRITT = 1;        // jeder Kauf: +1 Wissen pro Tipp
+export const KLICK_BASIS = 2;         // Wissen pro Tipp ohne Upgrade
+export const MULT_BASIS = 25;         // Kosten des ersten Lerntempo-Upgrades
+export const MULT_FAKTOR = 2.6;       // Kostensteigerung je Upgrade
+export const MULT_SCHRITT = 2;        // jeder Kauf: +2 Wissen pro Tipp
 
 // ---------------------------------------------------------------------------
 // Generator-Definitionen (Definitionsliste, rein)
@@ -22,15 +22,15 @@ export const MULT_SCHRITT = 1;        // jeder Kauf: +1 Wissen pro Tipp
 //   basis — Grundkosten des ersten Stücks (Wissen)
 //   faktor— geometrische Kostensteigerung je Stück
 //   rate  — produziertes Wissen pro Sekunde je Stück
-// Bewusst gestaffelt: günstige Spickzettel als Einstieg, Schwarmwissen als
-// teure, weit überlegene „Late-Game"-Quelle — so wird die Kurve exponentiell.
+// Bewusst kurzrundentauglich gestaffelt: Die höheren Stufen sollen in 90 s
+// erreichbar sein, damit die Kurve den exponentiellen Effekt wirklich zeigt.
 // ---------------------------------------------------------------------------
 export const GENERATOREN = [
-  { id: "spickzettel",  name: "Spickzettel",  sym: "📝", basis: 10,    faktor: 1.15, rate: 1 },
-  { id: "lerngruppe",   name: "Lerngruppe",   sym: "👥", basis: 80,    faktor: 1.18, rate: 6 },
-  { id: "bibliothek",   name: "Bibliothek",   sym: "📚", basis: 600,   faktor: 1.20, rate: 40 },
-  { id: "kitutor",      name: "KI-Tutor",     sym: "🤖", basis: 5000,  faktor: 1.22, rate: 260 },
-  { id: "schwarm",      name: "Schwarmwissen", sym: "🐝", basis: 42000, faktor: 1.24, rate: 1700 }
+  { id: "spickzettel",  name: "Spickzettel",  sym: "📝", basis: 6,    faktor: 1.12, rate: 1.4 },
+  { id: "lerngruppe",   name: "Lerngruppe",   sym: "👥", basis: 35,   faktor: 1.14, rate: 7 },
+  { id: "bibliothek",   name: "Bibliothek",   sym: "📚", basis: 160,  faktor: 1.16, rate: 42 },
+  { id: "kitutor",      name: "KI-Tutor",     sym: "🤖", basis: 700,  faktor: 1.18, rate: 260 },
+  { id: "schwarm",      name: "Schwarmwissen", sym: "🐝", basis: 1500, faktor: 1.20, rate: 1400 }
 ];
 
 // ---------------------------------------------------------------------------
@@ -178,7 +178,7 @@ export function starte(api) {
   const klickBtn = document.createElement("button");
   klickBtn.type = "button";
   klickBtn.className = "wt-klick";
-  klickBtn.innerHTML = 'Wissen sammeln <small id="wt-klick-info">+1 pro Tipp</small>';
+  klickBtn.innerHTML = 'Wissen sammeln <small id="wt-klick-info">+' + formatGross(KLICK_BASIS) + ' pro Tipp</small>';
   bereich.appendChild(klickBtn);
   const klickInfo = klickBtn.querySelector("#wt-klick-info");
 
@@ -212,9 +212,9 @@ export function starte(api) {
   multBtn.className = "wt-gen wt-mult";
   multBtn.innerHTML =
     '<span class="wt-gen-sym" aria-hidden="true">⚡</span>' +
-    '<span class="wt-gen-txt">' +
-      '<span class="wt-gen-name">Lerntempo</span><br>' +
-      '<span class="wt-gen-info">Kosten <b class="wt-k">' + MULT_BASIS + '</b> · +1 pro Tipp</span>' +
+      '<span class="wt-gen-txt">' +
+        '<span class="wt-gen-name">Lerntempo</span><br>' +
+      '<span class="wt-gen-info">Kosten <b class="wt-k">' + MULT_BASIS + '</b> · +' + formatGross(MULT_SCHRITT) + ' pro Tipp</span>' +
     '</span>' +
     '<span class="wt-gen-anz">×<b class="wt-a">0</b></span>';
   laden.appendChild(multBtn);
@@ -342,7 +342,7 @@ export function starte(api) {
     ctx.fillStyle = F.bg;
     ctx.fillRect(0, 0, LOGIK_B, LOGIK_H);
 
-    const padL = 8, padR = 8, padT = 16, padB = 22;
+    const padL = 54, padR = 10, padT = 34, padB = 36;
     const innerB = LOGIK_B - padL - padR;
     const innerH = LOGIK_H - padT - padB;
     const x0 = padL, y0 = LOGIK_H - padB;
@@ -361,18 +361,22 @@ export function starte(api) {
     ctx.stroke();
     ctx.globalAlpha = 1;
 
-    // Achsenbeschriftung (knapp)
+    // Achsenbeschriftung: Skalenwerte stehen links außerhalb der Plotfläche,
+    // die Legende beginnt erst rechts der y-Achse.
     ctx.fillStyle = F.leise;
     ctx.font = "600 11px 'Source Sans 3', system-ui, sans-serif";
     ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
-    ctx.fillText("Wissen", x0 + 2, padT - 4);
+    ctx.fillText("Wissen", 8, padT - 14);
     ctx.textAlign = "right";
-    ctx.fillText("Zeit →", x0 + innerB, y0 + 16);
+    ctx.fillText(formatGross(maxWissen), x0 - 6, py(maxWissen) + 4);
+    ctx.fillText("0", x0 - 6, y0 + 4);
     ctx.textAlign = "left";
-    ctx.fillText("0 s", x0, y0 + 16);
+    ctx.fillText("0 s", x0, y0 + 18);
     ctx.textAlign = "center";
-    ctx.fillText("90 s", x0 + innerB / 2, y0 + 16);
-    ctx.fillText(formatGross(maxWissen), x0 + 26, py(maxWissen) + 9);
+    ctx.fillText("45 s", x0 + innerB / 2, y0 + 18);
+    ctx.textAlign = "right";
+    ctx.fillText("90 s", x0 + innerB, y0 + 18);
+    ctx.fillText("Zeit →", x0 + innerB, y0 + 32);
 
     // Vergleichslinie: lineares „nur Klicken" (blass)
     if (verlauf.length >= 2) {
@@ -432,17 +436,17 @@ export function starte(api) {
       ctx.fillStyle = F.ok;
       ctx.font = "700 12px 'Source Sans 3', system-ui, sans-serif";
       ctx.textAlign = "right";
-      ctx.fillText("📈 exponentielles Wachstum", x0 + innerB - 2, padT + 6);
+      ctx.fillText("📈 exponentielles Wachstum", x0 + innerB - 2, padT - 10);
     }
 
     // Legende
     ctx.textAlign = "left";
     ctx.font = "600 11px 'Source Sans 3', system-ui, sans-serif";
     ctx.fillStyle = F.akzent;
-    ctx.fillText("— dein Wissen", x0 + 4, padT + 6);
+    ctx.fillText("— dein Wissen", x0 + 8, padT + 14);
     ctx.fillStyle = F.leise;
     ctx.globalAlpha = 0.8;
-    ctx.fillText("- - nur Klicken", x0 + 4, padT + 20);
+    ctx.fillText("- - nur Klicken", x0 + 8, padT + 28);
     ctx.globalAlpha = 1;
 
     // Klick-Funken (Float-Texte am Klickknopf-Bereich, oben rechts der Kurve)
@@ -476,7 +480,7 @@ export function starte(api) {
     verlauf = [{ t: 0, wissen: 0, klick: 0 }];
     letzteAufz = 0;
     funken = [];
-    klickInfo.textContent = "+1 pro Tipp";
+    klickInfo.textContent = "+" + formatGross(KLICK_BASIS) + " pro Tipp";
     rateWert.textContent = "0";
     api.setzePunkte("0");
     api.setzeZeit(SPIEL_DAUER + " s");

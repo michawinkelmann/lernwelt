@@ -87,6 +87,7 @@ html[data-theme="dunkel"] .knopf.zweitrangig { color: var(--akzent); }
 .kachel.mathe { --kachel-farbe: var(--mathe); }
 .kachel.physik { --kachel-farbe: var(--physik); }
 .kachel.informatik { --kachel-farbe: var(--info); }
+.kachel.gemischt { --kachel-farbe: var(--akzent); }
 .kachel svg.kachel-bild { width: 100%; height: 60px; display: block; color: var(--kachel-farbe, var(--akzent)); }
 
 /* ===== Abzeichen ===== */
@@ -326,6 +327,47 @@ body.einbettung .sim-poe, body.einbettung .sim-beobachtung { display: none; }
 .spiel-touch-tasten { display: grid; grid-template-columns: repeat(3, 56px); gap: 6px; justify-content: center; margin-top: 10px; }
 .spiel-touch-tasten button { font-size: 1.3rem; min-height: var(--beruehrziel); border: 1.5px solid var(--linie); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--text); }
 @media (min-width: 900px) { .spiel-touch-tasten.nur-touch { display: none; } }
+
+/* Lerntheke */
+.lt-spiel { padding: 12px; }
+.lt-hud { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+.lt-hud span { border: 1px solid var(--linie); border-radius: 999px; padding: 4px 10px; background: var(--bg); font-size: .92rem; }
+.lt-layout { display: grid; grid-template-columns: minmax(190px, .9fr) minmax(260px, 1.25fr) minmax(210px, .95fr); gap: 12px; align-items: start; }
+.lt-panel { min-width: 0; border: 1px solid var(--linie); border-radius: var(--radius-klein); background: var(--bg); padding: 12px; }
+.lt-panel h2 { margin: 0 0 10px; font-size: 1.05rem; }
+.lt-queue, .lt-upgrades, .lt-stationen { display: grid; gap: 8px; }
+.lt-job, .lt-station, .lt-upgrade, .lt-option { width: 100%; min-height: var(--beruehrziel); border: 1.5px solid var(--linie); border-left-width: 5px; border-radius: var(--radius-klein); background: var(--flaeche); color: var(--text); font: inherit; text-align: left; cursor: pointer; }
+.lt-job { display: grid; gap: 3px; padding: 9px 10px; }
+.lt-job strong, .lt-job span { min-width: 0; overflow-wrap: anywhere; }
+.lt-job span { font-size: .88rem; color: var(--text-leise); }
+.lt-job.ist-aktiv, .lt-station.ist-gewaehlt { border-color: var(--akzent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--akzent) 20%, transparent); }
+.lt-person { font-weight: 700; color: var(--text) !important; }
+.lt-geduld { display: block; height: 7px; border-radius: 999px; background: var(--hauch); overflow: hidden; margin-top: 4px; }
+.lt-geduld span { display: block; height: 100%; background: var(--ok); transition: width .2s linear; }
+.lt-st-rechnen { border-left-color: var(--mathe); }
+.lt-st-einheiten { border-left-color: var(--ok); }
+.lt-st-formeln { border-left-color: var(--physik); }
+.lt-st-tafel { border-left-color: var(--info); }
+.lt-st-experiment { border-left-color: var(--akzent); }
+.lt-station { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; }
+.lt-station span { color: var(--text-leise); font-size: .84rem; overflow-wrap: anywhere; }
+.lt-auftrag { min-height: 156px; margin-top: 10px; }
+.lt-auftragkopf, .lt-aufgabenkarte { display: grid; gap: 10px; border: 1px solid var(--linie); border-radius: var(--radius-klein); padding: 12px; background: var(--flaeche); }
+.lt-auftragkopf h3, .lt-aufgabenkarte h3 { margin: 0; font-size: 1.08rem; overflow-wrap: anywhere; }
+.lt-auftragkopf p, .lt-aufgabenkarte p, .lt-leer { margin: 0; color: var(--text-leise); }
+.lt-aufgabenkarte label { font-weight: 700; font-size: 1.08rem; overflow-wrap: anywhere; }
+.lt-eingabezeile { display: grid; grid-template-columns: minmax(7ch, 1fr) auto auto; gap: 8px; align-items: center; }
+.lt-eingabezeile input { min-width: 0; width: 100%; border: 2px solid var(--linie); border-radius: var(--radius-klein); padding: 8px 10px; background: var(--bg); color: var(--text); font: inherit; font-size: 1.1rem; }
+.lt-optionen { display: grid; gap: 8px; }
+.lt-option { padding: 9px 10px; border-left-color: var(--akzent); }
+.lt-meldung { min-height: 1.5em; margin: 10px 0 0; font-weight: 700; color: var(--text); overflow-wrap: anywhere; }
+.lt-upgrade { display: grid; gap: 3px; padding: 9px 10px; border-left-color: var(--akzent); }
+.lt-upgrade span { font-size: .88rem; color: var(--text-leise); }
+.lt-upgrade small { color: var(--text-leise); overflow-wrap: anywhere; }
+.lt-upgrade[disabled] { cursor: default; opacity: .62; }
+.lt-upgrade.ist-gekauft { border-left-color: var(--ok); opacity: 1; }
+@media (max-width: 880px) { .lt-layout { grid-template-columns: 1fr; } .lt-stationen { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .lt-spiel { padding: 8px; } .lt-stationen { grid-template-columns: 1fr; } .lt-eingabezeile { grid-template-columns: 1fr; } .lt-eingabezeile .knopf { width: 100%; } }
 
 /* ===== Experimente (Runde 19) ===== */
 .exp-phasen { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 12px; }

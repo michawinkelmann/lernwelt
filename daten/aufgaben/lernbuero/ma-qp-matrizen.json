@@ -1,6 +1,6 @@
 {
  "thema": "ma-qp-matrizen",
- "hinweis": "Lernbüro-Ergänzungsaufgaben zum Thema Matrizen: Abbildungen und Prozesse (Qualifikationsphase, Gymnasium, eA). Marker ergänzung:lernbüro — zur fachlichen Prüfung durch die Lehrkraft ausstehend. IDs ma-qp-mx-101 bis ma-qp-mx-108 sowie ma-qp-mx-201 bis ma-qp-mx-208, ma-qp-mx-301 bis ma-qp-mx-308.",
+ "hinweis": "Lernbüro-Ergänzungsaufgaben mit gestuften Tipps und Lösungswegen.",
  "aufgaben": [
   {
    "id": "ma-qp-mx-101",
@@ -1072,6 +1072,11 @@
    "loesungsweg": "Schritt 1: Spalte 1 (von A): $0{,}85$ bleiben bei A, $0{,}15$ nach B. Spalte 2 (von B): $0{,}10$ nach A, $0{,}90$ bleiben bei B. Also $U=\\begin{pmatrix}0{,}85 & 0{,}10\\\\0{,}15 & 0{,}90\\end{pmatrix}$ — beide Spaltensummen sind $1$. Schritt 2: $\\vec{v}_1=U\\cdot\\vec{v}_0=\\begin{pmatrix}0{,}85\\cdot 8000+0{,}10\\cdot 2000\\\\0{,}15\\cdot 8000+0{,}90\\cdot 2000\\end{pmatrix}=\\begin{pmatrix}7000\\\\3000\\end{pmatrix}$. Nach einem Monat fahren $7000$ Pendler Auto und $3000$ Bus; die Gesamtzahl bleibt $10000$.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Matrizen"
+   ],
+   "tipps": [
+    "Ordne die Matrix spaltenweise: Die Spalte beschreibt, woher die Personen kommen.",
+    "Jede Spalte einer Übergangsmatrix muss die Summe $1$ haben.",
+    "Multipliziere $U$ mit dem Startvektor, um den Zustand nach einem Monat zu erhalten."
    ]
   },
   {
@@ -1131,6 +1136,11 @@
    "loesungsweg": "Schritt 1: $\\vec{v}_1=U\\cdot\\vec{v}_0=\\begin{pmatrix}0{,}3\\cdot 100+0{,}4\\cdot 300\\\\0{,}7\\cdot 100+0{,}6\\cdot 300\\end{pmatrix}=\\begin{pmatrix}150\\\\250\\end{pmatrix}$. Schritt 2: $\\vec{v}_2=U\\cdot\\vec{v}_1=\\begin{pmatrix}0{,}3\\cdot 150+0{,}4\\cdot 250\\\\0{,}7\\cdot 150+0{,}6\\cdot 250\\end{pmatrix}=\\begin{pmatrix}145\\\\255\\end{pmatrix}$. Gleichwertig über die Potenz: $U^2=\\begin{pmatrix}0{,}37 & 0{,}36\\\\0{,}63 & 0{,}64\\end{pmatrix}$ und $\\vec{v}_2=U^2\\cdot\\vec{v}_0=\\begin{pmatrix}145\\\\255\\end{pmatrix}$. Nach zwei Tagen sind $145$ Räder ausgeliehen und $255$ an der Station; die Gesamtzahl bleibt $400$.",
    "kc": [
     "KC Mathematik gymnasiale Oberstufe Niedersachsen (2018): Analytische Geometrie/Lineare Algebra, Qualifikationsphase — Matrizen"
+   ],
+   "tipps": [
+    "Der Zustandsvektor hat die Reihenfolge A, S wie in der Matrix.",
+    "Berechne erst $\\vec v_1=U\\cdot\\vec v_0$ und danach $\\vec v_2=U\\cdot\\vec v_1$.",
+    "Kontrolliere, dass die Gesamtzahl der Räder bei jeder Multiplikation $400$ bleibt."
    ]
   }
  ]

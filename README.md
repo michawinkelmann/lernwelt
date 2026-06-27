@@ -69,7 +69,7 @@ Differenzierung, Praxis-Leitfaden).
 - `daten/themen.json` — zentrale Themenlandkarte (Bauplan, Navigation, KC-Bezug)
 - `daten/aufgaben/` — Übungsaufgaben als JSON; `daten/aufgaben/lernbuero/` — Ergänzungsaufgaben fürs
   Lernbüro (Marker `ergaenzung:"lernbuero"`). Neu erstellte reguläre Aufgaben tragen den Marker
-  `ergaenzung:"kc-neu"`. Beide kennzeichnen Inhalte, deren fachliche Endprüfung durch die Lehrkraft noch aussteht
+  `ergaenzung:"kc-neu"`; die Marker dienen der Datenpflege und Filterung ergänzender Inhalte.
 - `daten/kurse.json`, `daten/kurse/` · `daten/projekte.json`, `daten/projekte/` — Lernbüro
 - `assets/css/` — `design-tokens.css`, `main.css`, `selbstlernen.css`, `print.css`
 - `assets/js/` — `komponenten.js` (Header/Nav/Fußzeile, Dunkelmodus, Zweig, **Lehrkraft-Schutz**),
@@ -78,15 +78,12 @@ Differenzierung, Praxis-Leitfaden).
 - `mathematik/`, `physik/`, `informatik/` — Inhaltsseiten · `simulationen/`, `experimente/`,
   `klassenarbeiten/`, `lernspiele/`, `pausenraum/`, `cas-werkstatt/`, `suche/`, `selbstlernen/`
 - `kc-quellen/` — Kerncurricula-PDFs (nur lokal, nicht im Repo)
-- Begleitdokumente: `LERNBUERO-AUFGABEN.md` (Standard fürs Aufgaben-Ergänzen), `INFORMATIK-VORSCHLAG.md`, `KC-ABGLEICH.md` (Abgleich mit den Kerncurricula), `OFFENE-PUNKTE.md` (offene Aufgaben & nächste Schritte)
-
-Konventionen und Regeln: siehe `CLAUDE.md`. Vollständiger Plan: `UMSETZUNGSPLAN.md`. **Aktueller Projektstand und Arbeitsmuster: `STATUS.md`** (zu Beginn jeder Arbeitssession lesen).
 
 **Ausnahme Dateinamen:** Die KaTeX-Fontdateien unter `assets/lib/katex/fonts/` behalten ihre Original-Namen mit Großbuchstaben (z. B. `KaTeX_Main-Regular.woff2`), weil `katex.min.css` sie intern exakt so referenziert. Da Referenz und Dateiname aus derselben Quelle stammen, besteht kein Case-Sensitivity-Risiko auf GitHub Pages. Eigene Dateien folgen strikt der kebab-case-Konvention.
 
 ## Deployment
 
-GitHub Pages, Branch `main`, Ordner `/ (root)`. Details: `UMSETZUNGSPLAN.md` Abschnitt 13, Phase 7.
+GitHub Pages, Branch `main`, Ordner `/ (root)`.
 
 ## Lizenz
 

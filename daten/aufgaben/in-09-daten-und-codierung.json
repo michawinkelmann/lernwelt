@@ -1,290 +1,490 @@
 {
-  "thema": "in-09-daten-und-codierung",
-  "fach": "informatik",
-  "stufe": "klasse-9",
-  "aufgaben": [
+ "thema": "in-09-daten-und-codierung",
+ "fach": "informatik",
+ "stufe": "klasse-9",
+ "aufgaben": [
+  {
+   "id": "in-09-dc-001",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Welche Aussagen über Bits und das Binärsystem sind richtig?",
+   "optionen": [
     {
-      "id": "in-09-dc-001",
-      "typ": "multiple-choice",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Welche Aussagen über Bits und das Binärsystem sind richtig?",
-      "optionen": [
-        { "text": "Ein Bit kann genau zwei Werte annehmen: 0 oder 1.", "richtig": true, "erklaerung": "Richtig — Bit steht für binary digit („Binärziffer“), die kleinste Informationseinheit." },
-        { "text": "Computer nutzen zwei Zustände, weil sich „Strom an“ und „Strom aus“ technisch zuverlässig unterscheiden lassen.", "richtig": true, "erklaerung": "Richtig: Zwei klar getrennte Zustände bleiben auch bei kleinen Störungen des Signals sicher erkennbar." },
-        { "text": "Im Binärsystem gibt es die Ziffern 0, 1 und 2.", "richtig": false, "erklaerung": "Nein — das Binärsystem hat genau zwei Ziffern: 0 und 1. Die 2 existiert dort nicht als Ziffer." },
-        { "text": "Ein Bit ist dasselbe wie ein Byte.", "richtig": false, "erklaerung": "Ein Byte besteht aus 8 Bit — das Bit ist die viel kleinere Einheit." }
-      ],
-      "tipps": [
-        "„Bit“ ist die Abkürzung von binary digit — wie viele Ziffern hat ein Zweiersystem?",
-        "Zwei deutlich getrennte Zustände bleiben auch bei kleinen Störungen unterscheidbar — zehn Spannungsstufen nicht.",
-        "Zwei Aussagen sind richtig."
-      ],
-      "loesungsweg": "Richtig sind Aussage 1 und 2: Ein Bit kennt genau die Werte 0 und 1, und zwei Zustände (an/aus) sind technisch robust unterscheidbar. Das Binärsystem hat nur die Ziffern 0 und 1, und ein Byte sind 8 Bit.",
-      "kc": ["daten-und-codierung"]
+     "text": "Ein Bit kann genau zwei Werte annehmen: 0 oder 1.",
+     "richtig": true,
+     "erklaerung": "Richtig — Bit steht für binary digit („Binärziffer“), die kleinste Informationseinheit."
     },
     {
-      "id": "in-09-dc-002",
-      "typ": "luecke",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Ergänze den Text zu den Grundeinheiten der Information.",
-      "text": "Die kleinste Informationseinheit des Computers heißt ___. Acht davon bilden zusammen ein ___. Damit lassen sich ___ verschiedene Werte darstellen.",
-      "luecken": [
-        { "art": "dropdown", "antwort": "Bit", "optionen": ["Bit", "Byte", "Hertz"] },
-        { "art": "dropdown", "antwort": "Byte", "optionen": ["Byte", "Kilobyte", "Bitpaar"] },
-        { "art": "dropdown", "antwort": "256", "optionen": ["256", "8", "1000"] }
-      ],
-      "tipps": [
-        "Bit = binary digit, die kleinste Einheit — kleiner geht es nicht.",
-        "8 Bit ergeben die nächstgrößere Einheit.",
-        "Jede der 8 Stellen verdoppelt die Möglichkeiten: $2^8 = ?$"
-      ],
-      "loesungsweg": "Die kleinste Einheit ist das Bit; 8 Bit bilden 1 Byte; damit sind $2^8 = 256$ verschiedene Werte darstellbar (als Zahl gelesen: 0 bis 255).",
-      "kc": ["daten-und-codierung"]
+     "text": "Computer nutzen zwei Zustände, weil sich „Strom an“ und „Strom aus“ technisch zuverlässig unterscheiden lassen.",
+     "richtig": true,
+     "erklaerung": "Richtig: Zwei klar getrennte Zustände bleiben auch bei kleinen Störungen des Signals sicher erkennbar."
     },
     {
-      "id": "in-09-dc-003",
-      "typ": "zuordnung",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 1,
-      "frage": "Ordne jeder Binärzahl ihren Dezimalwert zu.",
-      "paare": [
-        { "links": "101₂", "rechts": "5" },
-        { "links": "1000₂", "rechts": "8" },
-        { "links": "1101₂", "rechts": "13" },
-        { "links": "10100₂", "rechts": "20" }
-      ],
-      "tipps": [
-        "Schreibe unter jede Ziffer ihren Stellenwert — von rechts: 1, 2, 4, 8, 16.",
-        "Addiere nur die Stellenwerte, an denen eine 1 steht.",
-        "Beispiel: 1101₂ = 8 + 4 + 1."
-      ],
-      "loesungsweg": "$101_2 = 4 + 1 = 5$; $1000_2 = 8$; $1101_2 = 8 + 4 + 1 = 13$; $10100_2 = 16 + 4 = 20$.",
-      "kc": ["daten-und-codierung"]
+     "text": "Im Binärsystem gibt es die Ziffern 0, 1 und 2.",
+     "richtig": false,
+     "erklaerung": "Nein — das Binärsystem hat genau zwei Ziffern: 0 und 1. Die 2 existiert dort nicht als Ziffer."
     },
     {
-      "id": "in-09-dc-004",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 1,
-      "afb": 2,
-      "frage": "Wandle die Binärzahl $110110_2$ in eine Dezimalzahl um.",
-      "eingaben": [
-        { "label": "Dezimalwert", "antwort": 54, "toleranz": 0 }
-      ],
-      "tipps": [
-        "Die Stellenwerte von rechts nach links: 1, 2, 4, 8, 16, 32.",
-        "Addiere nur die Stellenwerte, an denen eine 1 steht.",
-        "$32 + 16 + 4 + 2 = ?$"
-      ],
-      "loesungsweg": "$110110_2 = 1 \\cdot 32 + 1 \\cdot 16 + 0 \\cdot 8 + 1 \\cdot 4 + 1 \\cdot 2 + 0 \\cdot 1 = 32 + 16 + 4 + 2 = 54$.",
-      "kc": ["daten-und-codierung"]
-    },
-    {
-      "id": "in-09-dc-005",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Welche ist die größte Dezimalzahl, die sich mit 6 Bit darstellen lässt?",
-      "eingaben": [
-        { "label": "Größte Zahl", "antwort": 63, "toleranz": 0 }
-      ],
-      "tipps": [
-        "Die größte Zahl entsteht, wenn alle 6 Stellen eine 1 tragen: $111111_2$.",
-        "Addiere die Stellenwerte 32, 16, 8, 4, 2, 1.",
-        "Kurzformel: $2^6 - 1$."
-      ],
-      "loesungsweg": "$111111_2 = 32 + 16 + 8 + 4 + 2 + 1 = 63 = 2^6 - 1$. Allgemein reicht der Bereich mit $n$ Bit von 0 bis $2^n - 1$.",
-      "kc": ["daten-und-codierung"]
-    },
-    {
-      "id": "in-09-dc-006",
-      "typ": "reihenfolge",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 1,
-      "frage": "Die Dezimalzahl 19 soll ins Binärsystem umgewandelt werden. Bringe die Schritte des Verfahrens in die richtige Reihenfolge.",
-      "elemente": [
-        "Teile 19 durch 2: Ergebnis 9, Rest 1 — den Rest notieren",
-        "Halbiere weiter (9 → 4 → 2 → 1) und notiere jeden Rest",
-        "Höre auf, sobald das Ergebnis 0 ist",
-        "Lies alle notierten Reste von unten nach oben ab und bilde daraus die Binärzahl"
-      ],
-      "tipps": [
-        "Das Verfahren beginnt mit der ersten Division der Ausgangszahl.",
-        "Das Abbruchkriterium lautet: Ergebnis 0 erreicht.",
-        "Die fertige Binärzahl entsteht ganz zum Schluss durch Ablesen der Reste."
-      ],
-      "loesungsweg": "Zuerst 19 durch 2 teilen und den Rest notieren, dann fortgesetzt halbieren (jeweils Rest notieren), stoppen beim Ergebnis 0 und zuletzt die Reste von unten nach oben ablesen: $19 = 10011_2$.",
-      "kc": ["daten-und-codierung"]
-    },
-    {
-      "id": "in-09-dc-007",
-      "typ": "multiple-choice",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Welche Aussagen über Bytes und Speichergrößen sind richtig?",
-      "optionen": [
-        { "text": "Ein Kilobyte (KB) sind 1000 Byte.", "richtig": true, "erklaerung": "Richtig — die Speicher-Treppe geht in Tausenderschritten: Byte, KB, MB, GB, TB." },
-        { "text": "Eine 2-GB-Datei ist doppelt so groß wie eine 1000-MB-Datei.", "richtig": true, "erklaerung": "Richtig: 2 GB = 2000 MB, also genau das Doppelte von 1000 MB." },
-        { "text": "Ein Megabyte ist kleiner als ein Kilobyte.", "richtig": false, "erklaerung": "Andersherum: 1 MB = 1000 KB — Mega ist die größere Stufe." },
-        { "text": "Ein einzelnes Byte kann 1000 verschiedene Werte speichern.", "richtig": false, "erklaerung": "Ein Byte hat 8 Bit und damit $2^8 = 256$ mögliche Werte." }
-      ],
-      "tipps": [
-        "Die Treppe: Byte → KB → MB → GB → TB, jede Stufe mal 1000.",
-        "Rechne 2 GB in MB um und vergleiche.",
-        "Zwei Aussagen sind richtig."
-      ],
-      "loesungsweg": "Richtig sind Aussage 1 und 2: 1 KB = 1000 Byte und 2 GB = 2000 MB. Ein MB ist 1000-mal so groß wie ein KB, und ein Byte fasst $2^8 = 256$ Werte — nicht 1000.",
-      "kc": ["daten-und-codierung"]
-    },
-    {
-      "id": "in-09-dc-008",
-      "typ": "rechenweg",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Wandle die Dezimalzahl 77 mit fortgesetztem Halbieren in eine Binärzahl um.",
-      "schritte": [
-        {
-          "frage": "Schritt 1: Die erste Division $77 : 2$ — welches Ergebnis und welcher Rest?",
-          "eingaben": [
-            { "label": "Ergebnis", "antwort": 38, "toleranz": 0 },
-            { "label": "Rest", "antwort": 1, "toleranz": 0 }
-          ],
-          "tipps": ["77 ist ungerade, also bleibt Rest 1: $77 = 2 \\cdot 38 + 1$."]
-        },
-        {
-          "frage": "Schritt 2: Halbiere weiter bis zum Ergebnis 0. Wie viele Divisionen sind insgesamt nötig (Schritt 1 mitgezählt)?",
-          "eingaben": [
-            { "label": "Divisionen", "antwort": 7, "toleranz": 0 }
-          ],
-          "tipps": ["$77 \\to 38 \\to 19 \\to 9 \\to 4 \\to 2 \\to 1 \\to 0$ — zähle die Pfeile."]
-        },
-        {
-          "frage": "Schritt 3: Lies alle Reste von unten nach oben ab. Wie lautet die Binärzahl? (Gib nur die Ziffernfolge ein.)",
-          "eingaben": [
-            { "label": "Binärzahl", "antwort": 1001101, "toleranz": 0 }
-          ],
-          "tipps": ["Die Reste in Rechenreihenfolge: 1, 0, 1, 1, 0, 0, 1 — rückwärts gelesen ergibt sich die Binärzahl."]
-        }
-      ],
-      "tipps": [
-        "Teile immer wieder durch 2 und notiere bei jeder Division den Rest (0 oder 1).",
-        "Gerade Zahl → Rest 0, ungerade Zahl → Rest 1.",
-        "Kontrolle am Ende über die Stellenwerte: $64 + 8 + 4 + 1 = 77$."
-      ],
-      "loesungsweg": "$77:2=38$ R $1$; $38:2=19$ R $0$; $19:2=9$ R $1$; $9:2=4$ R $1$; $4:2=2$ R $0$; $2:2=1$ R $0$; $1:2=0$ R $1$. Reste von unten nach oben: $77 = 1001101_2$. Probe: $64 + 8 + 4 + 1 = 77$ ✓",
-      "kc": ["daten-und-codierung"]
-    },
-    {
-      "id": "in-09-dc-009",
-      "typ": "rechenweg",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "frage": "Ein Smartphone-Foto belegt etwa 4 MB. Wie viele solcher Fotos passen auf eine leere 64-GB-Speicherkarte?",
-      "schritte": [
-        {
-          "frage": "Schritt 1: Wandle die Kartengröße in MB um (1 GB = 1000 MB).",
-          "eingaben": [
-            { "label": "Kartengröße", "antwort": 64000, "toleranz": 0, "einheit": "MB" }
-          ],
-          "tipps": ["Eine Stufe der Speicher-Treppe hinab: 64 mal 1000."]
-        },
-        {
-          "frage": "Schritt 2: Teile durch die Größe eines Fotos — wie viele Fotos passen auf die Karte?",
-          "eingaben": [
-            { "label": "Fotos", "antwort": 16000, "toleranz": 0 }
-          ],
-          "tipps": ["$64\\,000 : 4 = ?$"]
-        }
-      ],
-      "tipps": [
-        "Bring beide Größen auf dieselbe Einheit (MB), bevor du teilst.",
-        "Die Speicher-Treppe: 1 GB = 1000 MB.",
-        "Zum Schluss: Gesamtplatz geteilt durch den Platz pro Foto."
-      ],
-      "loesungsweg": "64 GB $= 64 \\cdot 1000$ MB $= 64\\,000$ MB. Anzahl der Fotos: $64\\,000 : 4 = 16\\,000$. Auf einer echten Karte ist es etwas weniger, weil Dateisystem und Apps einen Teil des Platzes belegen.",
-      "kc": ["daten-und-codierung"]
-    },
-    {
-      "id": "in-09-dc-010",
-      "typ": "parametrisiert",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 2,
-      "generator": "binaer-zu-dezimal",
-      "frage": "",
-      "tipps": [
-        "Schreibe unter jede Binärziffer ihren Stellenwert — von rechts beginnend: 1, 2, 4, 8, 16, 32.",
-        "Addiere genau die Stellenwerte, über denen eine 1 steht.",
-        "Beispiel zum Muster: $1011_2 = 8 + 2 + 1 = 11$."
-      ],
-      "loesungsweg": "",
-      "kc": ["daten-und-codierung"]
-    },
-    {
-      "id": "in-09-dc-011",
-      "typ": "freitext",
-      "zweig": ["gym", "rs"],
-      "niveau": 2,
-      "afb": 3,
-      "frage": "Begründe: Warum rechnen Computer im Binärsystem und nicht im Dezimalsystem? Nenne mindestens zwei Gründe.",
-      "musterloesung": "Im Binärsystem muss der Computer nur zwei Zustände unterscheiden, zum Beispiel „Strom an“ und „Strom aus“ beziehungsweise hohe und niedrige Spannung. Zwei deutlich getrennte Zustände lassen sich technisch sehr robust erkennen: Selbst wenn das Signal etwas schwankt oder gestört wird, bleibt eindeutig, ob 0 oder 1 gemeint ist (Störsicherheit). Müsste eine Leitung dagegen zehn verschiedene Spannungsstufen für die Ziffern 0 bis 9 sicher auseinanderhalten, würden schon kleine Störungen zu Verwechslungen führen. Außerdem lässt sich mit zwei Zuständen besonders einfache Schaltlogik bauen: Transistoren arbeiten als Schalter (an/aus), und daraus entstehen direkt die logischen Grundbausteine (UND, ODER, NICHT) des Rechners.",
-      "tipps": [
-        "Stell dir eine Leitung vor, die zehn verschiedene Spannungen sicher auseinanderhalten müsste.",
-        "Was passiert bei kleinen Störungen, wenn es nur zwei weit auseinanderliegende Zustände gibt?",
-        "Denke auch an die Bauteile: Ein Transistor ist im Kern ein Schalter — an oder aus."
-      ],
-      "loesungsweg": "Kernpunkte: (1) Zwei Zustände (an/aus) sind technisch robust und störsicher unterscheidbar, zehn Stufen wären fehleranfällig. (2) Aus einfachen An/Aus-Schaltern (Transistoren) lässt sich unmittelbar einfache Schaltlogik aufbauen.",
-      "kc": ["daten-und-codierung"]
-    },
-    {
-      "id": "in-09-dc-012",
-      "typ": "numerisch",
-      "zweig": ["gym", "rs"],
-      "niveau": 3,
-      "afb": 3,
-      "frage": "Zusatz: Im ASCII-Code steht 'A' für 65, und die weiteren Großbuchstaben folgen lückenlos ('B' = 66, 'C' = 67, …). a) Welcher Zahlencode steht für 'J'? b) Wie viele Bit belegt das Wort „JA“, wenn jedes Zeichen 1 Byte braucht?",
-      "eingaben": [
-        { "label": "Code für 'J'", "antwort": 74, "toleranz": 0 },
-        { "label": "Bit für „JA“", "antwort": 16, "toleranz": 0, "einheit": "Bit" }
-      ],
-      "tipps": [
-        "Zähle ab: A ist der 1. Buchstabe des Alphabets, J der 10. — wie viele Schritte liegen dazwischen?",
-        "Code von 'J' = 65 + (Schritte von A nach J).",
-        "Jedes Zeichen belegt 1 Byte = 8 Bit; „JA“ hat 2 Zeichen."
-      ],
-      "loesungsweg": "Von A nach J sind es 9 Schritte, also 'J' $= 65 + 9 = 74$. Das Wort „JA“ besteht aus 2 Zeichen zu je 1 Byte = 8 Bit, zusammen $2 \\cdot 8 = 16$ Bit. (Übrigens: $74 = 1001010_2$.)",
-      "kc": ["daten-und-codierung"]
-    },
-    {
-      "id": "in-09-dc-013",
-      "typ": "multiple-choice",
-      "zweig": ["gym"],
-      "niveau": 3,
-      "afb": 3,
-      "frage": "Zusatz: Hexadezimalzahlen nutzen die Ziffern 0–9 und die Buchstaben A–F (A = 10, B = 11, …, F = 15); die Stellenwerte sind 1, 16, 256, … Welche Aussagen sind richtig?",
-      "optionen": [
-        { "text": "$FF_{16} = 255$", "richtig": true, "erklaerung": "Richtig: $F \\cdot 16 + F = 15 \\cdot 16 + 15 = 240 + 15 = 255$." },
-        { "text": "Ein Byte lässt sich immer mit genau zwei Hex-Ziffern schreiben.", "richtig": true, "erklaerung": "Richtig: Eine Hex-Ziffer deckt 4 Bit ab (16 Möglichkeiten), zwei Ziffern also genau die 8 Bit eines Bytes — von 00 bis FF." },
-        { "text": "$1A_{16} = 110$", "richtig": false, "erklaerung": "Nein: $1A_{16} = 1 \\cdot 16 + 10 = 26$. Die Ziffernfolge darf nicht dezimal gelesen werden." },
-        { "text": "Im Farbcode #ff0000 ist der Blau-Anteil maximal.", "richtig": false, "erklaerung": "Die drei Byte-Paare stehen für Rot, Grün, Blau: Hier ist Rot maximal (ff = 255), Grün und Blau sind 0 — ein reines Rot." }
-      ],
-      "tipps": [
-        "Die Hex-Stellenwerte von rechts: 1, 16, 256, …",
-        "F steht für 15 — rechne $15 \\cdot 16 + 15$.",
-        "Im Farbcode #rrggbb gehören die ersten beiden Zeichen zu Rot. Zwei Aussagen sind richtig."
-      ],
-      "loesungsweg": "Richtig sind Aussage 1 und 2: $FF_{16} = 15 \\cdot 16 + 15 = 255$, und zwei Hex-Ziffern (je 4 Bit) ergeben genau ein Byte. Dagegen ist $1A_{16} = 16 + 10 = 26$, und #ff0000 ist reines Rot mit Blau-Anteil 0.",
-      "kc": ["daten-und-codierung"]
+     "text": "Ein Bit ist dasselbe wie ein Byte.",
+     "richtig": false,
+     "erklaerung": "Ein Byte besteht aus 8 Bit — das Bit ist die viel kleinere Einheit."
     }
-  ]
+   ],
+   "tipps": [
+    "„Bit“ ist die Abkürzung von binary digit — wie viele Ziffern hat ein Zweiersystem?",
+    "Zwei deutlich getrennte Zustände bleiben auch bei kleinen Störungen unterscheidbar — zehn Spannungsstufen nicht.",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussage 1 und 2: Ein Bit kennt genau die Werte 0 und 1, und zwei Zustände (an/aus) sind technisch robust unterscheidbar. Das Binärsystem hat nur die Ziffern 0 und 1, und ein Byte sind 8 Bit.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-002",
+   "typ": "luecke",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ergänze den Text zu den Grundeinheiten der Information.",
+   "text": "Die kleinste Informationseinheit des Computers heißt ___. Acht davon bilden zusammen ein ___. Damit lassen sich ___ verschiedene Werte darstellen.",
+   "luecken": [
+    {
+     "art": "dropdown",
+     "antwort": "Bit",
+     "optionen": [
+      "Bit",
+      "Byte",
+      "Hertz"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "Byte",
+     "optionen": [
+      "Byte",
+      "Kilobyte",
+      "Bitpaar"
+     ]
+    },
+    {
+     "art": "dropdown",
+     "antwort": "256",
+     "optionen": [
+      "256",
+      "8",
+      "1000"
+     ]
+    }
+   ],
+   "tipps": [
+    "Bit = binary digit, die kleinste Einheit — kleiner geht es nicht.",
+    "8 Bit ergeben die nächstgrößere Einheit.",
+    "Jede der 8 Stellen verdoppelt die Möglichkeiten: $2^8 = ?$"
+   ],
+   "loesungsweg": "Die kleinste Einheit ist das Bit; 8 Bit bilden 1 Byte; damit sind $2^8 = 256$ verschiedene Werte darstellbar (als Zahl gelesen: 0 bis 255).",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-003",
+   "typ": "zuordnung",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 1,
+   "frage": "Ordne jeder Binärzahl ihren Dezimalwert zu.",
+   "paare": [
+    {
+     "links": "101₂",
+     "rechts": "5"
+    },
+    {
+     "links": "1000₂",
+     "rechts": "8"
+    },
+    {
+     "links": "1101₂",
+     "rechts": "13"
+    },
+    {
+     "links": "10100₂",
+     "rechts": "20"
+    }
+   ],
+   "tipps": [
+    "Schreibe unter jede Ziffer ihren Stellenwert — von rechts: 1, 2, 4, 8, 16.",
+    "Addiere nur die Stellenwerte, an denen eine 1 steht.",
+    "Beispiel: 1101₂ = 8 + 4 + 1."
+   ],
+   "loesungsweg": "$101_2 = 4 + 1 = 5$; $1000_2 = 8$; $1101_2 = 8 + 4 + 1 = 13$; $10100_2 = 16 + 4 = 20$.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-004",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 1,
+   "afb": 2,
+   "frage": "Wandle die Binärzahl $110110_2$ in eine Dezimalzahl um.",
+   "eingaben": [
+    {
+     "label": "Dezimalwert",
+     "antwort": 54,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Die Stellenwerte von rechts nach links: 1, 2, 4, 8, 16, 32.",
+    "Addiere nur die Stellenwerte, an denen eine 1 steht.",
+    "$32 + 16 + 4 + 2 = ?$"
+   ],
+   "loesungsweg": "$110110_2 = 1 \\cdot 32 + 1 \\cdot 16 + 0 \\cdot 8 + 1 \\cdot 4 + 1 \\cdot 2 + 0 \\cdot 1 = 32 + 16 + 4 + 2 = 54$.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-005",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Welche ist die größte Dezimalzahl, die sich mit 6 Bit darstellen lässt?",
+   "eingaben": [
+    {
+     "label": "Größte Zahl",
+     "antwort": 63,
+     "toleranz": 0
+    }
+   ],
+   "tipps": [
+    "Die größte Zahl entsteht, wenn alle 6 Stellen eine 1 tragen: $111111_2$.",
+    "Addiere die Stellenwerte 32, 16, 8, 4, 2, 1.",
+    "Kurzformel: $2^6 - 1$."
+   ],
+   "loesungsweg": "$111111_2 = 32 + 16 + 8 + 4 + 2 + 1 = 63 = 2^6 - 1$. Allgemein reicht der Bereich mit $n$ Bit von 0 bis $2^n - 1$.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-006",
+   "typ": "reihenfolge",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 1,
+   "frage": "Die Dezimalzahl 19 soll ins Binärsystem umgewandelt werden. Bringe die Schritte des Verfahrens in die richtige Reihenfolge.",
+   "elemente": [
+    "Teile 19 durch 2: Ergebnis 9, Rest 1 — den Rest notieren",
+    "Halbiere weiter (9 → 4 → 2 → 1) und notiere jeden Rest",
+    "Höre auf, sobald das Ergebnis 0 ist",
+    "Lies alle notierten Reste von unten nach oben ab und bilde daraus die Binärzahl"
+   ],
+   "tipps": [
+    "Das Verfahren beginnt mit der ersten Division der Ausgangszahl.",
+    "Das Abbruchkriterium lautet: Ergebnis 0 erreicht.",
+    "Die fertige Binärzahl entsteht ganz zum Schluss durch Ablesen der Reste."
+   ],
+   "loesungsweg": "Zuerst 19 durch 2 teilen und den Rest notieren, dann fortgesetzt halbieren (jeweils Rest notieren), stoppen beim Ergebnis 0 und zuletzt die Reste von unten nach oben ablesen: $19 = 10011_2$.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-007",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Welche Aussagen über Bytes und Speichergrößen sind richtig?",
+   "optionen": [
+    {
+     "text": "Ein Kilobyte (KB) sind 1000 Byte.",
+     "richtig": true,
+     "erklaerung": "Richtig — die Speicher-Treppe geht in Tausenderschritten: Byte, KB, MB, GB, TB."
+    },
+    {
+     "text": "Eine 2-GB-Datei ist doppelt so groß wie eine 1000-MB-Datei.",
+     "richtig": true,
+     "erklaerung": "Richtig: 2 GB = 2000 MB, also genau das Doppelte von 1000 MB."
+    },
+    {
+     "text": "Ein Megabyte ist kleiner als ein Kilobyte.",
+     "richtig": false,
+     "erklaerung": "Andersherum: 1 MB = 1000 KB — Mega ist die größere Stufe."
+    },
+    {
+     "text": "Ein einzelnes Byte kann 1000 verschiedene Werte speichern.",
+     "richtig": false,
+     "erklaerung": "Ein Byte hat 8 Bit und damit $2^8 = 256$ mögliche Werte."
+    }
+   ],
+   "tipps": [
+    "Die Treppe: Byte → KB → MB → GB → TB, jede Stufe mal 1000.",
+    "Rechne 2 GB in MB um und vergleiche.",
+    "Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussage 1 und 2: 1 KB = 1000 Byte und 2 GB = 2000 MB. Ein MB ist 1000-mal so groß wie ein KB, und ein Byte fasst $2^8 = 256$ Werte — nicht 1000.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-008",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Wandle die Dezimalzahl 77 mit fortgesetztem Halbieren in eine Binärzahl um.",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Die erste Division $77 : 2$ — welches Ergebnis und welcher Rest?",
+     "eingaben": [
+      {
+       "label": "Ergebnis",
+       "antwort": 38,
+       "toleranz": 0
+      },
+      {
+       "label": "Rest",
+       "antwort": 1,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "77 ist ungerade, also bleibt Rest 1: $77 = 2 \\cdot 38 + 1$."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Halbiere weiter bis zum Ergebnis 0. Wie viele Divisionen sind insgesamt nötig (Schritt 1 mitgezählt)?",
+     "eingaben": [
+      {
+       "label": "Divisionen",
+       "antwort": 7,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "$77 \\to 38 \\to 19 \\to 9 \\to 4 \\to 2 \\to 1 \\to 0$ — zähle die Pfeile."
+     ]
+    },
+    {
+     "frage": "Schritt 3: Lies alle Reste von unten nach oben ab. Wie lautet die Binärzahl? (Gib nur die Ziffernfolge ein.)",
+     "eingaben": [
+      {
+       "label": "Binärzahl",
+       "antwort": 1001101,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "Die Reste in Rechenreihenfolge: 1, 0, 1, 1, 0, 0, 1 — rückwärts gelesen ergibt sich die Binärzahl."
+     ]
+    }
+   ],
+   "tipps": [
+    "Teile immer wieder durch 2 und notiere bei jeder Division den Rest (0 oder 1).",
+    "Gerade Zahl → Rest 0, ungerade Zahl → Rest 1.",
+    "Kontrolle am Ende über die Stellenwerte: $64 + 8 + 4 + 1 = 77$."
+   ],
+   "loesungsweg": "$77:2=38$ R $1$; $38:2=19$ R $0$; $19:2=9$ R $1$; $9:2=4$ R $1$; $4:2=2$ R $0$; $2:2=1$ R $0$; $1:2=0$ R $1$. Reste von unten nach oben: $77 = 1001101_2$. Probe: $64 + 8 + 4 + 1 = 77$ ✓",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-009",
+   "typ": "rechenweg",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "frage": "Ein Smartphone-Foto belegt etwa 4 MB. Wie viele solcher Fotos passen auf eine leere 64-GB-Speicherkarte?",
+   "schritte": [
+    {
+     "frage": "Schritt 1: Wandle die Kartengröße in MB um (1 GB = 1000 MB).",
+     "eingaben": [
+      {
+       "label": "Kartengröße",
+       "antwort": 64000,
+       "toleranz": 0,
+       "einheit": "MB"
+      }
+     ],
+     "tipps": [
+      "Eine Stufe der Speicher-Treppe hinab: 64 mal 1000."
+     ]
+    },
+    {
+     "frage": "Schritt 2: Teile durch die Größe eines Fotos — wie viele Fotos passen auf die Karte?",
+     "eingaben": [
+      {
+       "label": "Fotos",
+       "antwort": 16000,
+       "toleranz": 0
+      }
+     ],
+     "tipps": [
+      "$64\\,000 : 4 = ?$"
+     ]
+    }
+   ],
+   "tipps": [
+    "Bring beide Größen auf dieselbe Einheit (MB), bevor du teilst.",
+    "Die Speicher-Treppe: 1 GB = 1000 MB.",
+    "Zum Schluss: Gesamtplatz geteilt durch den Platz pro Foto."
+   ],
+   "loesungsweg": "64 GB $= 64 \\cdot 1000$ MB $= 64\\,000$ MB. Anzahl der Fotos: $64\\,000 : 4 = 16\\,000$. Auf einer echten Karte ist es etwas weniger, weil Dateisystem und Apps einen Teil des Platzes belegen.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-010",
+   "typ": "parametrisiert",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 2,
+   "generator": "binaer-zu-dezimal",
+   "frage": "Wandle eine zufällig erzeugte Binärzahl in eine Dezimalzahl um.",
+   "tipps": [
+    "Schreibe unter jede Binärziffer ihren Stellenwert — von rechts beginnend: 1, 2, 4, 8, 16, 32.",
+    "Addiere genau die Stellenwerte, über denen eine 1 steht.",
+    "Beispiel zum Muster: $1011_2 = 8 + 2 + 1 = 11$."
+   ],
+   "loesungsweg": "Schreibe die Stellenwerte der Binärziffern von rechts nach links auf ($1, 2, 4, 8, \\dots$) und addiere genau die Stellenwerte, bei denen eine $1$ steht. Die erzeugte Aufgabe zeigt die konkrete Binärzahl und prüft den Dezimalwert.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-011",
+   "typ": "freitext",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 2,
+   "afb": 3,
+   "frage": "Begründe: Warum rechnen Computer im Binärsystem und nicht im Dezimalsystem? Nenne mindestens zwei Gründe.",
+   "musterloesung": "Im Binärsystem muss der Computer nur zwei Zustände unterscheiden, zum Beispiel „Strom an“ und „Strom aus“ beziehungsweise hohe und niedrige Spannung. Zwei deutlich getrennte Zustände lassen sich technisch sehr robust erkennen: Selbst wenn das Signal etwas schwankt oder gestört wird, bleibt eindeutig, ob 0 oder 1 gemeint ist (Störsicherheit). Müsste eine Leitung dagegen zehn verschiedene Spannungsstufen für die Ziffern 0 bis 9 sicher auseinanderhalten, würden schon kleine Störungen zu Verwechslungen führen. Außerdem lässt sich mit zwei Zuständen besonders einfache Schaltlogik bauen: Transistoren arbeiten als Schalter (an/aus), und daraus entstehen direkt die logischen Grundbausteine (UND, ODER, NICHT) des Rechners.",
+   "tipps": [
+    "Stell dir eine Leitung vor, die zehn verschiedene Spannungen sicher auseinanderhalten müsste.",
+    "Was passiert bei kleinen Störungen, wenn es nur zwei weit auseinanderliegende Zustände gibt?",
+    "Denke auch an die Bauteile: Ein Transistor ist im Kern ein Schalter — an oder aus."
+   ],
+   "loesungsweg": "Kernpunkte: (1) Zwei Zustände (an/aus) sind technisch robust und störsicher unterscheidbar, zehn Stufen wären fehleranfällig. (2) Aus einfachen An/Aus-Schaltern (Transistoren) lässt sich unmittelbar einfache Schaltlogik aufbauen.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-012",
+   "typ": "numerisch",
+   "zweig": [
+    "gym",
+    "rs"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Zusatz: Im ASCII-Code steht 'A' für 65, und die weiteren Großbuchstaben folgen lückenlos ('B' = 66, 'C' = 67, …). a) Welcher Zahlencode steht für 'J'? b) Wie viele Bit belegt das Wort „JA“, wenn jedes Zeichen 1 Byte braucht?",
+   "eingaben": [
+    {
+     "label": "Code für 'J'",
+     "antwort": 74,
+     "toleranz": 0
+    },
+    {
+     "label": "Bit für „JA“",
+     "antwort": 16,
+     "toleranz": 0,
+     "einheit": "Bit"
+    }
+   ],
+   "tipps": [
+    "Zähle ab: A ist der 1. Buchstabe des Alphabets, J der 10. — wie viele Schritte liegen dazwischen?",
+    "Code von 'J' = 65 + (Schritte von A nach J).",
+    "Jedes Zeichen belegt 1 Byte = 8 Bit; „JA“ hat 2 Zeichen."
+   ],
+   "loesungsweg": "Von A nach J sind es 9 Schritte, also 'J' $= 65 + 9 = 74$. Das Wort „JA“ besteht aus 2 Zeichen zu je 1 Byte = 8 Bit, zusammen $2 \\cdot 8 = 16$ Bit. (Übrigens: $74 = 1001010_2$.)",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  },
+  {
+   "id": "in-09-dc-013",
+   "typ": "multiple-choice",
+   "zweig": [
+    "gym"
+   ],
+   "niveau": 3,
+   "afb": 3,
+   "frage": "Zusatz: Hexadezimalzahlen nutzen die Ziffern 0–9 und die Buchstaben A–F (A = 10, B = 11, …, F = 15); die Stellenwerte sind 1, 16, 256, … Welche Aussagen sind richtig?",
+   "optionen": [
+    {
+     "text": "$FF_{16} = 255$",
+     "richtig": true,
+     "erklaerung": "Richtig: $F \\cdot 16 + F = 15 \\cdot 16 + 15 = 240 + 15 = 255$."
+    },
+    {
+     "text": "Ein Byte lässt sich immer mit genau zwei Hex-Ziffern schreiben.",
+     "richtig": true,
+     "erklaerung": "Richtig: Eine Hex-Ziffer deckt 4 Bit ab (16 Möglichkeiten), zwei Ziffern also genau die 8 Bit eines Bytes — von 00 bis FF."
+    },
+    {
+     "text": "$1A_{16} = 110$",
+     "richtig": false,
+     "erklaerung": "Nein: $1A_{16} = 1 \\cdot 16 + 10 = 26$. Die Ziffernfolge darf nicht dezimal gelesen werden."
+    },
+    {
+     "text": "Im Farbcode #ff0000 ist der Blau-Anteil maximal.",
+     "richtig": false,
+     "erklaerung": "Die drei Byte-Paare stehen für Rot, Grün, Blau: Hier ist Rot maximal (ff = 255), Grün und Blau sind 0 — ein reines Rot."
+    }
+   ],
+   "tipps": [
+    "Die Hex-Stellenwerte von rechts: 1, 16, 256, …",
+    "F steht für 15 — rechne $15 \\cdot 16 + 15$.",
+    "Im Farbcode #rrggbb gehören die ersten beiden Zeichen zu Rot. Zwei Aussagen sind richtig."
+   ],
+   "loesungsweg": "Richtig sind Aussage 1 und 2: $FF_{16} = 15 \\cdot 16 + 15 = 255$, und zwei Hex-Ziffern (je 4 Bit) ergeben genau ein Byte. Dagegen ist $1A_{16} = 16 + 10 = 26$, und #ff0000 ist reines Rot mit Blau-Anteil 0.",
+   "kc": [
+    "daten-und-codierung"
+   ]
+  }
+ ]
 }

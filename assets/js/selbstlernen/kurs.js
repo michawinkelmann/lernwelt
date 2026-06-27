@@ -288,7 +288,7 @@ function baueLernlandkarte(reihenfolge) {
   if (!lk || !Array.isArray(lk.knoten) || !lk.knoten.length) return null;
   const NS = "http://www.w3.org/2000/svg";
   const W = lk.breite || 640, H = lk.hoehe || 320, bw = lk.knotenBreite || 124, bh = lk.knotenHoehe || 42;
-  const det = el(`<details class="lb-lernlandkarte" open><summary>🗺️ Lernlandkarte – der rote Faden</summary></details>`);
+  const det = el(`<details class="lb-lernlandkarte"><summary>🗺️ Lernlandkarte – der rote Faden</summary></details>`);
   const svg = document.createElementNS(NS, "svg");
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("role", "img");
   svg.setAttribute("aria-label", "Lernlandkarte: Themenübersicht mit deinem Fortschritt");
@@ -312,7 +312,7 @@ function baueLernlandkarte(reihenfolge) {
   svg.innerHTML = s;
   svg.querySelectorAll("g[data-lektion]").forEach(g => g.addEventListener("click", () => gehe("#lektion-" + g.dataset.lektion)));
   det.append(svg);
-  det.append(el(`<p class="lb-phase-hinweis">Tipp: Tippe auf ein freigeschaltetes Feld, um direkt zur Lektion zu springen. <span style="color:var(--ok)">Grün</span> = abgeschlossen.</p>`));
+  det.append(el(`<p class="lb-phase-hinweis">Die Lernlandkarte zeigt die wichtigsten Stationen als roten Faden. Alle Lektionen findest du vollständig in den Themenblöcken darunter. Tipp: Tippe auf ein freigeschaltetes Feld, um direkt zur Lektion zu springen. <span style="color:var(--ok)">Grün</span> = abgeschlossen.</p>`));
   return det;
 }
 
